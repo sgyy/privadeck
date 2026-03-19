@@ -339,6 +339,68 @@
           "q2": "支持命名捕获组吗？",
           "a2": "支持，使用 (?<name>...) 定义的命名组会显示在匹配详情中。"
         }
+      },
+      "timestamp": {
+        "name": "Unix 时间戳转换器",
+        "description": "在 Unix 时间戳和人类可读日期之间转换。",
+        "metaTitle": "Unix 时间戳转换器 - 免费在线时间戳工具",
+        "metaDescription": "将 Unix 时间戳转换为日期，或将日期转换为时间戳。显示 UTC、本地时间、ISO 8601 和相对时间格式。",
+        "keywords": "unix 时间戳, epoch 转换器, 时间戳转日期, 日期转时间戳, unix 时间",
+        "timestampLabel": "Unix 时间戳（秒）",
+        "timestampPlaceholder": "例如 1700000000",
+        "dateLabel": "日期和时间",
+        "now": "设为当前时间",
+        "utcFormat": "UTC",
+        "localFormat": "本地时间",
+        "isoFormat": "ISO 8601",
+        "relativeFormat": "相对时间",
+        "invalidTimestamp": "无效的时间戳值。",
+        "invalidDate": "无效的日期值。",
+        "faq": {
+          "q1": "什么是 Unix 时间戳？",
+          "a1": "Unix 时间戳是从 1970 年 1 月 1 日 00:00:00 UTC（Unix 纪元）以来经过的秒数。",
+          "q2": "支持毫秒时间戳吗？",
+          "a2": "支持。如果输入的数字大于 10^12，将自动被视为毫秒而非秒。"
+        }
+      },
+      "yaml-json": {
+        "name": "YAML ↔ JSON 转换器",
+        "description": "在 YAML 和 JSON 格式之间转换。",
+        "metaTitle": "YAML 转 JSON / JSON 转 YAML - 免费在线转换器",
+        "metaDescription": "即时将 YAML 转换为 JSON 或 JSON 转换为 YAML。免费在线工具，在浏览器中运行。",
+        "keywords": "yaml 转 json, json 转 yaml, yaml json 转换器, yaml 解析器, 数据格式转换",
+        "yamlLabel": "YAML",
+        "yamlPlaceholder": "在此粘贴 YAML...\n\nname: example\nversion: 1.0\nitems:\n  - one\n  - two",
+        "jsonLabel": "JSON",
+        "jsonPlaceholder": "在此粘贴 JSON...",
+        "yamlToJson": "YAML → JSON",
+        "jsonToYaml": "JSON → YAML",
+        "faq": {
+          "q1": "支持哪些 YAML 功能？",
+          "a1": "通过 js-yaml 库支持所有标准 YAML 功能，包括嵌套对象、数组、多行字符串和锚点/别名。",
+          "q2": "转换是否保留注释？",
+          "a2": "不保留。YAML 注释在解析时被删除。将 JSON 转换为 YAML 时输出不包含注释。"
+        }
+      },
+      "text-diff": {
+        "name": "文本差异比较",
+        "description": "比较两段文本并查看逐行差异。",
+        "metaTitle": "文本差异比较 - 免费在线文本对比工具",
+        "metaDescription": "并排比较两段文本，查看新增、删除和未更改的行。免费在线差异对比工具。",
+        "keywords": "文本差异, 文本比较, 差异工具, 在线文本对比, 逐行差异",
+        "originalLabel": "原始文本",
+        "originalPlaceholder": "在此粘贴原始文本...",
+        "modifiedLabel": "修改后文本",
+        "modifiedPlaceholder": "在此粘贴修改后的文本...",
+        "compare": "比较",
+        "resultLabel": "差异结果",
+        "noDifferences": "未发现差异。",
+        "faq": {
+          "q1": "使用什么差异算法？",
+          "a1": "基于行的最长公共子序列（LCS）算法，可识别新增、删除和未更改的行。",
+          "q2": "可以复制差异输出吗？",
+          "a2": "可以，使用复制按钮复制统一差异格式，新增行以 + 为前缀，删除行以 - 为前缀。"
+        }
       }
     },
     "image": {
@@ -623,6 +685,42 @@
           "q2": "可以一次下载所有块吗？",
           "a2": "可以，使用全部下载 (ZIP) 按钮将所有块打包为一个 ZIP 文件下载。"
         }
+      },
+      "heic-convert": {
+        "name": "HEIC 转换器",
+        "description": "将 HEIC/HEIF 图片转换为 JPG 或 PNG 格式。",
+        "metaTitle": "HEIC 转 JPG/PNG - 免费在线 HEIC 转换器",
+        "metaDescription": "将 HEIC 和 HEIF 图片转换为 JPG 或 PNG 格式。免费在线工具，无需上传。在浏览器中运行。",
+        "keywords": "heic 转 jpg, heic 转 png, heif 转换器, iPhone 照片转换, heic 转换器",
+        "selectedFile": "已选文件",
+        "outputFormat": "输出格式",
+        "quality": "质量",
+        "convert": "转换",
+        "processing": "转换中...",
+        "faq": {
+          "q1": "什么是 HEIC 文件？",
+          "a1": "HEIC（高效图像容器）是 Apple 设备默认使用的图片格式。它在保持质量的同时比 JPEG 有更好的压缩率。",
+          "q2": "我的图片会上传到服务器吗？",
+          "a2": "不会。所有转换都在浏览器中本地完成，您的文件不会离开设备。"
+        }
+      },
+      "collage": {
+        "name": "图片拼贴",
+        "description": "使用预设网格布局创建照片拼贴。",
+        "metaTitle": "图片拼贴制作 - 免费在线照片拼贴工具",
+        "metaDescription": "使用可自定义的网格布局、间距和背景色创建照片拼贴。免费在线工具，无需上传。",
+        "keywords": "图片拼贴, 照片拼贴, 照片网格, 拼贴制作, 图片网格布局",
+        "layout": "布局",
+        "gap": "间距",
+        "bgColor": "背景颜色",
+        "create": "创建拼贴",
+        "processing": "创建中...",
+        "faq": {
+          "q1": "有哪些布局可用？",
+          "a1": "可用布局取决于您上传的图片数量。选项包括 2x1、1x2、2x2、3x1、1x3 和 2x3 网格。",
+          "q2": "可以自定义间距和背景吗？",
+          "a2": "可以，您可以调整图片之间的间距（0-20像素）并使用颜色选择器选择任意背景颜色。"
+        }
       }
     },
     "pdf": {
@@ -866,6 +964,46 @@
           "a1": "PDF 使用点作为度量单位。1点 = 1/72英寸 ≈ 0.35毫米。标准 US Letter 页面为 612 × 792 点。",
           "q2": "裁剪会减小文件大小吗？",
           "a2": "裁剪会更改可见区域，但不会删除隐藏内容，因此文件大小可能不会显著减小。"
+        }
+      },
+      "esign": {
+        "name": "PDF 电子签名",
+        "description": "在 PDF 文档的任意页面上绘制并放置签名。",
+        "metaTitle": "PDF 电子签名 - 免费在线 PDF 签名工具",
+        "metaDescription": "在 PDF 文档上添加电子签名。绘制您的签名并放置在任意页面。免费在线工具。",
+        "keywords": "pdf电子签名, 在线签名pdf, 电子签名pdf, pdf签名工具",
+        "drawSignature": "绘制您的签名",
+        "clearSignature": "清除",
+        "page": "页码",
+        "pages": "页",
+        "points": "点",
+        "signatureWidth": "宽度",
+        "apply": "应用签名",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "我的签名会被存储在任何地方吗？",
+          "a1": "不会，所有操作都在您的浏览器中完成。您的签名和 PDF 永远不会上传到任何服务器。",
+          "q2": "我可以将签名放在特定页面上吗？",
+          "a2": "可以，您可以选择要签名的页面，并设置签名的精确位置（X、Y 坐标）和大小。"
+        }
+      },
+      "extract-images": {
+        "name": "从 PDF 提取图片",
+        "description": "从 PDF 文件中提取所有嵌入的图片并下载。",
+        "metaTitle": "从 PDF 提取图片 - 免费在线 PDF 图片提取工具",
+        "metaDescription": "从 PDF 文档中提取所有图片。可单独下载或打包为 ZIP 文件。免费在线工具。",
+        "keywords": "提取pdf图片, pdf图片提取器, 从pdf获取图片, pdf转图片",
+        "extract": "提取图片",
+        "extracting": "提取中",
+        "page": "页",
+        "imagesFound": "张图片已找到",
+        "noImagesFound": "此 PDF 中未找到图片。",
+        "downloadAllZip": "全部下载为 ZIP",
+        "faq": {
+          "q1": "提取的图片是什么格式？",
+          "a1": "在可能的情况下，图片以原始格式（JPEG）提取。其他图片将转换为 PNG 格式。",
+          "q2": "此工具能提取所有图片吗？",
+          "a2": "它可以提取 PDF 中嵌入的位图图片。矢量图形和渲染为路径的文字不会作为单独的图片提取。"
         }
       }
     },

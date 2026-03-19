@@ -339,6 +339,68 @@
           "q2": "Does it support named capture groups?",
           "a2": "Yes, named groups defined with (?<name>...) are displayed in the match details."
         }
+      },
+      "timestamp": {
+        "name": "Unix Timestamp Converter",
+        "description": "Convert between Unix timestamps and human-readable dates.",
+        "metaTitle": "Unix Timestamp Converter - Free Online Epoch Converter",
+        "metaDescription": "Convert Unix timestamps to dates and dates to timestamps. Shows UTC, local, ISO 8601, and relative formats.",
+        "keywords": "unix timestamp, epoch converter, timestamp to date, date to timestamp, unix time",
+        "timestampLabel": "Unix Timestamp (seconds)",
+        "timestampPlaceholder": "e.g. 1700000000",
+        "dateLabel": "Date & Time",
+        "now": "Set to Now",
+        "utcFormat": "UTC",
+        "localFormat": "Local Time",
+        "isoFormat": "ISO 8601",
+        "relativeFormat": "Relative",
+        "invalidTimestamp": "Invalid timestamp value.",
+        "invalidDate": "Invalid date value.",
+        "faq": {
+          "q1": "What is a Unix timestamp?",
+          "a1": "A Unix timestamp is the number of seconds that have elapsed since January 1, 1970 00:00:00 UTC (the Unix epoch).",
+          "q2": "Does it handle millisecond timestamps?",
+          "a2": "Yes. If you enter a number larger than 10^12, it is automatically treated as milliseconds instead of seconds."
+        }
+      },
+      "yaml-json": {
+        "name": "YAML ↔ JSON Converter",
+        "description": "Convert between YAML and JSON formats.",
+        "metaTitle": "YAML to JSON / JSON to YAML - Free Online Converter",
+        "metaDescription": "Convert YAML to JSON or JSON to YAML instantly. Free online tool that works in your browser.",
+        "keywords": "yaml to json, json to yaml, yaml json converter, yaml parser, data format converter",
+        "yamlLabel": "YAML",
+        "yamlPlaceholder": "Paste YAML here...\n\nname: example\nversion: 1.0\nitems:\n  - one\n  - two",
+        "jsonLabel": "JSON",
+        "jsonPlaceholder": "Paste JSON here...",
+        "yamlToJson": "YAML → JSON",
+        "jsonToYaml": "JSON → YAML",
+        "faq": {
+          "q1": "What YAML features are supported?",
+          "a1": "All standard YAML features including nested objects, arrays, multi-line strings, and anchors/aliases via the js-yaml library.",
+          "q2": "Does conversion preserve comments?",
+          "a2": "No. YAML comments are stripped during parsing. When converting JSON to YAML the output is clean YAML without comments."
+        }
+      },
+      "text-diff": {
+        "name": "Text Diff",
+        "description": "Compare two texts and see line-by-line differences.",
+        "metaTitle": "Text Diff - Free Online Text Comparison Tool",
+        "metaDescription": "Compare two texts side by side and see additions, removals, and unchanged lines. Free online diff tool.",
+        "keywords": "text diff, text compare, diff tool, compare text online, line diff",
+        "originalLabel": "Original",
+        "originalPlaceholder": "Paste original text here...",
+        "modifiedLabel": "Modified",
+        "modifiedPlaceholder": "Paste modified text here...",
+        "compare": "Compare",
+        "resultLabel": "Diff Result",
+        "noDifferences": "No differences found.",
+        "faq": {
+          "q1": "What diff algorithm is used?",
+          "a1": "A line-based Longest Common Subsequence (LCS) algorithm that identifies additions, removals, and unchanged lines.",
+          "q2": "Can I copy the diff output?",
+          "a2": "Yes, use the copy button to copy a unified diff format with + and - prefixes for additions and removals."
+        }
       }
     },
     "image": {
@@ -623,6 +685,42 @@
           "q2": "Can I download all pieces at once?",
           "a2": "Yes, use the Download All (ZIP) button to get all pieces in a single ZIP file."
         }
+      },
+      "heic-convert": {
+        "name": "HEIC Converter",
+        "description": "Convert HEIC/HEIF images to JPG or PNG format.",
+        "metaTitle": "HEIC to JPG/PNG Converter - Free Online HEIC Converter",
+        "metaDescription": "Convert HEIC and HEIF images to JPG or PNG format. Free online tool, no upload needed. Works in your browser.",
+        "keywords": "heic to jpg, heic to png, heif converter, iphone photo converter, heic converter online",
+        "selectedFile": "Selected file",
+        "outputFormat": "Output format",
+        "quality": "Quality",
+        "convert": "Convert",
+        "processing": "Converting...",
+        "faq": {
+          "q1": "What is a HEIC file?",
+          "a1": "HEIC (High Efficiency Image Container) is the default image format used by Apple devices. It offers better compression than JPEG while maintaining quality.",
+          "q2": "Is my image uploaded to a server?",
+          "a2": "No. All conversion happens locally in your browser. Your files never leave your device."
+        }
+      },
+      "collage": {
+        "name": "Image Collage",
+        "description": "Create photo collages with preset grid layouts.",
+        "metaTitle": "Image Collage Maker - Free Online Photo Collage",
+        "metaDescription": "Create photo collages with customizable grid layouts, gap, and background color. Free online tool, no upload needed.",
+        "keywords": "image collage, photo collage, photo grid, collage maker, image grid layout",
+        "layout": "Layout",
+        "gap": "Gap",
+        "bgColor": "Background color",
+        "create": "Create Collage",
+        "processing": "Creating...",
+        "faq": {
+          "q1": "What layouts are available?",
+          "a1": "Available layouts depend on the number of images you upload. Options include 2x1, 1x2, 2x2, 3x1, 1x3, and 2x3 grids.",
+          "q2": "Can I customize the spacing and background?",
+          "a2": "Yes, you can adjust the gap between images (0-20px) and choose any background color using the color picker."
+        }
       }
     },
     "pdf": {
@@ -866,6 +964,46 @@
           "a1": "PDF uses points as its unit of measurement. 1 point = 1/72 inch ≈ 0.35mm. A standard US Letter page is 612 × 792 points.",
           "q2": "Does cropping reduce file size?",
           "a2": "Cropping changes the visible area but does not remove the hidden content, so file size may not decrease significantly."
+        }
+      },
+      "esign": {
+        "name": "E-Sign PDF",
+        "description": "Draw a signature and place it on any page of a PDF document.",
+        "metaTitle": "E-Sign PDF - Free Online PDF Signature Tool",
+        "metaDescription": "Add your electronic signature to PDF documents. Draw your signature and place it on any page. Free online tool.",
+        "keywords": "esign pdf, sign pdf online, electronic signature pdf, pdf signature tool",
+        "drawSignature": "Draw Your Signature",
+        "clearSignature": "Clear",
+        "page": "Page",
+        "pages": "pages",
+        "points": "pt",
+        "signatureWidth": "Width",
+        "apply": "Apply Signature",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "Is my signature stored anywhere?",
+          "a1": "No, everything happens in your browser. Your signature and PDF are never uploaded to any server.",
+          "q2": "Can I place the signature on a specific page?",
+          "a2": "Yes, you can choose which page to sign and set the exact position (X, Y coordinates) and size of the signature."
+        }
+      },
+      "extract-images": {
+        "name": "Extract Images from PDF",
+        "description": "Extract all embedded images from a PDF file and download them.",
+        "metaTitle": "Extract Images from PDF - Free Online PDF Image Extractor",
+        "metaDescription": "Extract all images from PDF documents. Download individually or as a ZIP file. Free online tool.",
+        "keywords": "extract images pdf, pdf image extractor, get images from pdf, pdf to images",
+        "extract": "Extract Images",
+        "extracting": "Extracting",
+        "page": "Page",
+        "imagesFound": "images found",
+        "noImagesFound": "No images found in this PDF.",
+        "downloadAllZip": "Download All as ZIP",
+        "faq": {
+          "q1": "What image formats are extracted?",
+          "a1": "Images are extracted in their original format when possible (JPEG). Other images are converted to PNG format.",
+          "q2": "Does this tool extract all images?",
+          "a2": "It extracts embedded raster images from the PDF. Vector graphics and text rendered as paths are not extracted as separate images."
         }
       }
     },
