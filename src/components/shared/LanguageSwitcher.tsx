@@ -30,7 +30,11 @@ const languageNames: Record<Locale, string> = {
   uk: "Українська",
 };
 
-export function LanguageSwitcher() {
+interface LanguageSwitcherProps {
+  dropdownDirection?: "up" | "down";
+}
+
+export function LanguageSwitcher({ dropdownDirection = "down" }: LanguageSwitcherProps = {}) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -67,7 +71,7 @@ export function LanguageSwitcher() {
         </span>
       </button>
       {open && (
-        <div className="absolute right-0 top-full z-50 mt-1 w-48 max-h-80 overflow-y-auto rounded-lg border border-border bg-card py-1 shadow-lg">
+        <div className={`absolute right-0 z-50 w-48 max-h-80 overflow-y-auto rounded-lg border border-border bg-card py-1 shadow-lg ${dropdownDirection === "up" ? "bottom-full mb-1" : "top-full mt-1"}`}>
           {locales.map((l) => (
             <button
               key={l}

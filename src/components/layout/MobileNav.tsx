@@ -6,6 +6,8 @@ import { categories } from "@/lib/registry/categories";
 import { getToolsByCategory } from "@/lib/registry";
 import { cn } from "@/lib/utils/cn";
 import { X, Home, ChevronDown } from "lucide-react";
+import { ThemeToggle } from "@/components/shared/ThemeToggle";
+import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
 import { useEffect, useState } from "react";
 import type { ToolCategory } from "@/lib/registry/types";
 
@@ -135,6 +137,12 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
                 </div>
               );
             })}
+          </div>
+
+          {/* Language & Theme */}
+          <div className="mt-4 flex items-center gap-2 border-t border-border pt-4 px-3">
+            <LanguageSwitcher dropdownDirection="up" />
+            <ThemeToggle />
           </div>
         </nav>
       </div>

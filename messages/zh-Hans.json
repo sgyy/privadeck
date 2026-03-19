@@ -1211,5 +1211,107 @@
         }
       }
     }
+  },
+  "footer": {
+    "tagline": "免费的浏览器端媒体工具。无需上传，无需注册。",
+    "about": "关于",
+    "howItWorks": "工作原理",
+    "privacy": "隐私保护",
+    "allRightsReserved": "保留所有权利。"
+  },
+  "privacy": {
+    "metaTitle": "隐私政策 — 媒体工具箱",
+    "metaDescription": "了解媒体工具箱如何保护您的隐私。所有文件处理均在浏览器中完成，不会上传到任何服务器。",
+    "title": "隐私与安全",
+    "subtitle": "您的文件不会离开浏览器。我们从一开始就将隐私作为媒体工具箱的基石，而非事后补救。",
+    "corePromiseTitle": "核心承诺",
+    "corePromiseBody": "媒体工具箱的每一个工具都完全在您的浏览器中通过 JavaScript 和 WebAssembly 处理文件。您的文件永远不会被上传到任何服务器，不会被存储在任何地方，也不会被除您之外的任何人看到。关闭标签页后，数据即刻消失。",
+    "howItWorksTitle": "工作原理",
+    "steps": {
+      "step1": {
+        "title": "选择文件",
+        "description": "您的文件由浏览器中的 JavaScript 直接读取，全程不涉及任何网络请求。"
+      },
+      "step2": {
+        "title": "本地处理",
+        "description": "所有转换、压缩和编辑操作都在您的设备上运行，使用 Web API、Canvas、WebAssembly（FFmpeg、PDF.js）等浏览器技术。"
+      },
+      "step3": {
+        "title": "下载结果",
+        "description": "输出文件在内存中生成并提供下载。整个过程没有服务器参与。"
+      }
+    },
+    "features": {
+      "noUpload": {
+        "title": "无文件上传",
+        "description": "文件不会离开您的设备。处理使用浏览器的内置功能完成。"
+      },
+      "localStorage": {
+        "title": "无持久存储",
+        "description": "我们不使用 Cookie 或本地存储来跟踪您。您的偏好设置（语言、主题）仅保存在本地。"
+      },
+      "noTracking": {
+        "title": "无分析跟踪",
+        "description": "没有 Google Analytics，没有像素追踪器，没有浏览器指纹识别。我们不知道您是谁。"
+      },
+      "openSource": {
+        "title": "可验证的安全性",
+        "description": "您可以在浏览器的开发者工具中检查网络流量，确认没有文件被上传。"
+      },
+      "noLogs": {
+        "title": "无服务器日志",
+        "description": "由于一切都在客户端运行，不存在关于您文件操作的服务器日志。"
+      },
+      "transparent": {
+        "title": "完全透明",
+        "description": "这是一个托管在 Cloudflare Pages 上的静态网站。没有后端，没有数据库，没有 API 服务器。"
+      }
+    },
+    "thirdPartyTitle": "第三方资源",
+    "thirdPartyBody": "部分工具会从 unpkg.com 等 CDN 加载 WebAssembly 二进制文件（如 FFmpeg 核心）。这些是开源库，由浏览器获取一次后缓存。不会向这些 CDN 发送任何文件数据——它们仅提供处理代码。",
+    "lastUpdated": "最后更新：2026 年 3 月"
+  },
+  "howItWorks": {
+    "metaTitle": "工作原理 — 媒体工具箱",
+    "metaDescription": "了解媒体工具箱如何完全在浏览器中使用 JavaScript 和 WebAssembly 处理您的文件。无需上传，无需服务器。",
+    "title": "工作原理",
+    "subtitle": "简单三步——您的文件全程留在设备上。",
+    "steps": {
+      "select": {
+        "title": "选择文件",
+        "description": "从设备中选择文件或将其拖放到工具上。文件由浏览器中运行的 JavaScript 读取，绝不会通过网络发送。"
+      },
+      "process": {
+        "title": "即时本地处理",
+        "description": "工具直接在您的设备上使用 Canvas API、Web Audio API 和 WebAssembly（FFmpeg、PDF.js、Tesseract）等浏览器技术处理文件。处理速度取决于您的设备——大多数操作几秒内完成。"
+      },
+      "download": {
+        "title": "下载结果",
+        "description": "处理完成后，输出文件在内存中生成，随时可以下载。点击下载按钮即可保存到设备上的任意位置。无需账户或注册。"
+      }
+    },
+    "whyClientSideTitle": "为什么选择客户端处理？",
+    "whyClientSideBody": "传统在线工具会将您的文件上传到远程服务器进行处理，然后返回结果。这不仅速度慢，还会带来隐私顾虑，需要您信任该服务。媒体工具箱采用不同的方式：所有操作都在浏览器中运行。您的文件永远不会离开设备，没有上传大小限制，即使在网速较慢的情况下也能正常使用。",
+    "techTitle": "底层技术",
+    "tech": {
+      "canvas": {
+        "title": "Canvas 与 Web API",
+        "description": "裁剪、调整大小、格式转换等图像操作使用浏览器原生的 Canvas API，实现快速的 GPU 加速渲染。"
+      },
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "视频和音频工具使用编译为 WebAssembly 的 FFmpeg，在浏览器中以接近原生的速度运行。PDF 工具使用 PDF.js 和 pdf-lib。"
+      },
+      "webApis": {
+        "title": "现代 Web 标准",
+        "description": "我们利用 File API、Blob URL、Web Workers 等现代标准高效处理大文件，不会阻塞界面。"
+      },
+      "offline": {
+        "title": "离线可用",
+        "description": "由于不涉及服务器，大多数工具在网络断开后仍可继续使用——只要页面已加载即可。"
+      }
+    },
+    "privacyCta": "想了解更多关于我们如何保护您的数据？",
+    "privacyLink": "查看隐私政策 →"
   }
 }

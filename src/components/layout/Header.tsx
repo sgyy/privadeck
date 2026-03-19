@@ -3,8 +3,6 @@
 import { useTranslations } from "next-intl";
 import { useState, useRef, useEffect, useCallback } from "react";
 import { Menu, Search, Wrench, ChevronDown } from "lucide-react";
-import { ThemeToggle } from "@/components/shared/ThemeToggle";
-import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
 import { Link, usePathname } from "@/i18n/navigation";
 import { categories } from "@/lib/registry/categories";
 import { getFeaturedTools, getNonFeaturedTools } from "@/lib/registry";
@@ -79,7 +77,7 @@ export function Header({ onMenuClick, onSearchClick }: HeaderProps) {
         <button
           type="button"
           onClick={onSearchClick}
-          className="ml-auto flex h-9 items-center gap-2 rounded-lg border border-border bg-muted/50 px-3 text-sm text-muted-foreground transition-colors hover:bg-muted w-48 lg:w-64"
+          className="ml-auto flex h-9 items-center gap-2 rounded-lg border border-border bg-muted/50 px-3 text-sm text-muted-foreground transition-colors hover:bg-muted w-48 lg:w-72"
         >
           <Search className="h-4 w-4 shrink-0" />
           <span className="truncate">{t("search")}</span>
@@ -88,11 +86,6 @@ export function Header({ onMenuClick, onSearchClick }: HeaderProps) {
           </kbd>
         </button>
 
-        {/* Actions */}
-        <div className="flex items-center gap-1 shrink-0">
-          <LanguageSwitcher />
-          <ThemeToggle />
-        </div>
       </div>
     </header>
   );
