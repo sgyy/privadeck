@@ -1,0 +1,135 @@
+"use client";
+
+import { useState, useRef } from "react";
+import { useTranslations } from "next-intl";
+import { FileDropzone } from "@/components/shared/FileDropzone";
+import { DownloadButton } from "@/components/shared/DownloadButton";
+import { Button } from "@/components/ui/Button";
+import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
+import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { videoToGif, formatFileSize } from "./logic";
+
+export default function VideoToGif() {
+  const [file, setFile] = useState<File | null>(null);
+  const [duration, setDuration] = useState(0);
+  const [fps, setFps] = useState(10);
+  const [width, setWidth] = useState(480);
+  const [startTime, setStartTime] = useState(0);
+  const [endTime, setEndTime] = useState(0);
+  const [result, setResult] = useState<Blob | null>(null);
+  const [progress, setProgress] = useState(0);
+  const [processing, setProcessing] = useState(false);
+  const [error, setError] = useState("");
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const fileUrl = useObjectUrl(file);
+  const resultUrl = useObjectUrl(result);
+  const t = useTranslations("tools.video.to-gif");
+
+  if (!isSharedArrayBufferSupported()) {
+    return (
+      <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
+        <p className="text-sm text-muted-foreground">{t("unsupported")}</p>
+      </div>
+    );
+  }
+
+  function handleFile(files: File[]) {
+    const f = files[0];
+    if (!f) return;
+    setFile(f);
+    setResult(null);
+    setStartTime(0);
+    setError("");
+  }
+
+  function handleLoadedMetadata() {
+    if (videoRef.current) {
+      const dur = videoRef.current.duration;
+      setDuration(dur);
+      setEndTime(Math.min(dur, 10));
+    }
+  }
+
+  async function handleConvert() {
+    if (!file || startTime >= endTime) return;
+    setProcessing(true);
+    setResult(null);
+    setError("");
+    try {
+      const blob = await videoToGif(
+        file,
+        { fps, width, startTime, endTime },
+        setProgress,
+      );
+      setResult(blob);
+    } catch (e) {
+      console.error("GIF conversion failed:", e);
+      setError(String(e instanceof Error ? e.message : e));
+    } finally {
+      setProcessing(false);
+    }
+  }
+
+  return (
+    <div className="space-y-4">
+      <FileDropzone accept="video/*" onFiles={handleFile} />
+
+      {file && fileUrl && (
+        <div className="space-y-3">
+          <video
+            ref={videoRef}
+            src={fileUrl}
+            controls
+            onLoadedMetadata={handleLoadedMetadata}
+            className="max-h-[300px] w-full rounded-lg"
+          />
+
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div>
+              <label className="mb-1 block text-sm font-medium">FPS: {fps}</label>
+              <input type="range" min={5} max={30} value={fps} onChange={(e) => setFps(Number(e.target.value))} className="w-full" />
+            </div>
+            <div>
+              <label className="mb-1 block text-sm font-medium">{t("width")}: {width}px</label>
+              <input type="range" min={120} max={1280} step={40} value={width} onChange={(e) => setWidth(Number(e.target.value))} className="w-full" />
+            </div>
+            <div>
+              <label className="mb-1 block text-sm font-medium">{t("start")}: {startTime.toFixed(1)}s</label>
+              <input
+                type="range" min={0} max={duration} step={0.1} value={startTime}
+                onChange={(e) => setStartTime(Math.min(Number(e.target.value), endTime - 0.1))}
+                className="w-full"
+              />
+            </div>
+            <div>
+              <label className="mb-1 block text-sm font-medium">{t("end")}: {endTime.toFixed(1)}s</label>
+              <input
+                type="range" min={0} max={duration} step={0.1} value={endTime}
+                onChange={(e) => setEndTime(Math.max(Number(e.target.value), startTime + 0.1))}
+                className="w-full"
+              />
+            </div>
+          </div>
+
+          {error && (
+            <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">{error}</div>
+          )}
+
+          <Button onClick={handleConvert} disabled={processing || startTime >= endTime}>
+            {processing ? `${t("converting")} ${progress}%` : t("convert")}
+          </Button>
+
+          {result && resultUrl && (
+            <div className="space-y-2 rounded-lg border border-border bg-card p-3">
+              <img src={resultUrl} alt="GIF preview" className="max-h-[300px] rounded" />
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-muted-foreground">{formatFileSize(result.size)}</span>
+                <DownloadButton data={result} filename={file.name.replace(/\.[^.]+$/, ".gif")} />
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}

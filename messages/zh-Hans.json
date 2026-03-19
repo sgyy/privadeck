@@ -1,0 +1,582 @@
+{
+  "common": {
+    "siteName": "媒体工具箱",
+    "siteDescription": "免费的浏览器端媒体工具。无需上传，无需注册，100% 隐私。",
+    "search": "搜索工具...",
+    "searchShortcut": "Ctrl+K",
+    "allTools": "所有工具",
+    "download": "下载",
+    "save": "保存",
+    "copy": "复制",
+    "copied": "已复制！",
+    "clear": "清空",
+    "paste": "粘贴",
+    "reset": "重置",
+    "process": "处理",
+    "processing": "处理中...",
+    "dragDrop": "将文件拖放到此处",
+    "or": "或",
+    "browseFiles": "浏览文件",
+    "noFileSelected": "未选择文件",
+    "privacy": "您的文件不会离开浏览器",
+    "darkMode": "深色模式",
+    "lightMode": "浅色模式",
+    "systemMode": "跟随系统",
+    "language": "语言"
+  },
+  "nav": {
+    "home": "首页",
+    "tools": "工具",
+    "text": "文本工具",
+    "developer": "开发者工具",
+    "image": "图像工具",
+    "featured": "精选工具",
+    "otherTools": "其他工具",
+    "allCategoryTools": "查看所有工具",
+    "pdf": "PDF 工具",
+    "video": "视频工具",
+    "audio": "音频工具"
+  },
+  "home": {
+    "hero": "免费在线媒体工具",
+    "heroSub": "浏览器端处理。无需上传。无需注册。100% 隐私保护。",
+    "popular": "热门工具",
+    "allCategories": "所有分类",
+    "viewAll": "查看全部"
+  },
+  "categories": {
+    "text": {
+      "name": "文本工具",
+      "description": "分析、转换和生成文本"
+    },
+    "developer": {
+      "name": "开发者工具",
+      "description": "格式化、编码和解码数据"
+    },
+    "image": {
+      "name": "图像工具",
+      "description": "转换、压缩和编辑图像"
+    },
+    "pdf": {
+      "name": "PDF 工具",
+      "description": "合并、拆分、转换和编辑 PDF 文件"
+    },
+    "video": {
+      "name": "视频工具",
+      "description": "裁剪、转换和编辑视频"
+    },
+    "audio": {
+      "name": "音频工具",
+      "description": "裁剪、转换和提取音频"
+    }
+  },
+  "tools": {
+    "text": {
+      "word-counter": {
+        "name": "字数统计",
+        "description": "即时统计文本中的字数、字符数、句子数和段落数。",
+        "metaTitle": "字数统计 - 免费在线字数和字符计数工具",
+        "metaDescription": "即时统计字数、字符数、句子数和段落数。免费在线工具，无需注册。完全在浏览器中运行。",
+        "keywords": "字数统计, 字符计数, 文本分析, 在线字数统计",
+        "placeholder": "在此输入或粘贴文本...",
+        "words": "字数",
+        "characters": "字符",
+        "sentences": "句子",
+        "paragraphs": "段落",
+        "readingTime": "阅读时间",
+        "minutes": "分钟",
+        "faq": {
+          "q1": "字数统计工具如何工作？",
+          "a1": "粘贴或输入文本即可即时获取字数、字符数、句子数和段落数。所有处理在浏览器中完成，不会上传任何内容。",
+          "q2": "有字符限制吗？",
+          "a2": "没有，该工具可以直接在浏览器中处理任意长度的文本，没有限制。",
+          "q3": "阅读时间是如何计算的？",
+          "a3": "阅读时间按每分钟 300 个中文字符估算，这是成年人的平均阅读速度。"
+        }
+      },
+      "case-converter": {
+        "name": "大小写转换",
+        "description": "在大写、小写、标题大写、驼峰命名等格式间转换文本。",
+        "metaTitle": "大小写转换器 - 免费在线文本大小写转换工具",
+        "metaDescription": "将文本转换为大写、小写、标题大写、驼峰命名、下划线命名等格式。免费在线工具，无需注册。",
+        "keywords": "大小写转换, 大写, 小写, 标题大写, 驼峰命名, 下划线命名",
+        "placeholder": "在此输入或粘贴文本...",
+        "upper": "大写",
+        "lower": "小写",
+        "title": "标题大写",
+        "sentence": "句首大写",
+        "camel": "驼峰命名",
+        "pascal": "帕斯卡命名",
+        "snake": "下划线命名",
+        "kebab": "短横线命名",
+        "constant": "常量命名",
+        "faq": {
+          "q1": "支持哪些大小写格式？",
+          "a1": "支持大写、小写、标题大写、句首大写、驼峰命名、帕斯卡命名、下划线命名、短横线命名和常量命名。",
+          "q2": "可以转换代码变量名吗？",
+          "a2": "可以！使用驼峰命名、帕斯卡命名、下划线命名或短横线命名来转换编程变量名。"
+        }
+      },
+      "lorem-ipsum": {
+        "name": "Lorem Ipsum 生成器",
+        "description": "按段落、句子或单词数量生成占位文本。",
+        "metaTitle": "Lorem Ipsum 生成器 - 免费占位文本生成工具",
+        "metaDescription": "按段落、句子或单词数量生成 Lorem Ipsum 占位文本。为设计师和开发者提供的免费在线工具。",
+        "keywords": "lorem ipsum 生成器, 占位文本, 虚拟文本, 填充文本",
+        "generateBy": "生成方式",
+        "paragraphs": "段落",
+        "sentences": "句子",
+        "wordsOption": "单词",
+        "count": "数量",
+        "generate": "生成",
+        "startWithLorem": "以 \"Lorem ipsum dolor sit amet...\" 开头",
+        "faq": {
+          "q1": "什么是 Lorem Ipsum？",
+          "a1": "Lorem Ipsum 是设计和出版中常用的占位文本，用于填充最终将放置真实内容的空间。",
+          "q2": "可以自定义输出吗？",
+          "a2": "可以，您可以选择按段落、句子或单词生成，设置数量，并可选择以经典的 Lorem Ipsum 开头。"
+        }
+      }
+    },
+    "developer": {
+      "json-formatter": {
+        "name": "JSON 格式化",
+        "description": "格式化、验证和压缩 JSON 数据，支持语法高亮。",
+        "metaTitle": "JSON 格式化和验证器 - 免费在线 JSON 工具",
+        "metaDescription": "格式化、验证和压缩 JSON 数据，支持语法高亮。完全在浏览器中运行的免费在线工具。",
+        "keywords": "json 格式化, json 验证, json 美化, json 压缩, json 格式化工具",
+        "inputPlaceholder": "在此粘贴 JSON...",
+        "format": "格式化",
+        "minify": "压缩",
+        "validate": "验证",
+        "valid": "有效的 JSON",
+        "invalid": "无效的 JSON",
+        "indentSpaces": "缩进空格数",
+        "faq": {
+          "q1": "这个工具有什么功能？",
+          "a1": "它可以格式化（美化打印）JSON 数据并添加适当的缩进，验证 JSON 语法，还可以通过移除空白来压缩 JSON。",
+          "q2": "我的数据安全吗？",
+          "a2": "是的，所有处理都在浏览器中完成。您的数据不会离开您的设备。"
+        }
+      },
+      "base64": {
+        "name": "Base64 编解码",
+        "description": "将文本编码为 Base64 或将 Base64 解码回文本。",
+        "metaTitle": "Base64 编码器/解码器 - 免费在线 Base64 工具",
+        "metaDescription": "将文本编码为 Base64 或将 Base64 字符串解码回文本。完全在浏览器中运行的免费在线工具。",
+        "keywords": "base64 编码, base64 解码, base64 转换, base64 在线工具",
+        "inputPlaceholder": "输入文本或 Base64 字符串...",
+        "encode": "编码",
+        "decode": "解码",
+        "output": "输出",
+        "faq": {
+          "q1": "什么是 Base64 编码？",
+          "a1": "Base64 是一种将二进制数据转换为 ASCII 字符的编码方案。常用于数据 URL、电子邮件附件和 API 传输。",
+          "q2": "可以编码文件吗？",
+          "a2": "目前此工具支持文本的编码和解码。文件 Base64 编码功能将在未来更新中提供。"
+        }
+      },
+      "url-encoder": {
+        "name": "URL 编解码",
+        "description": "编码或解码 URL 组件，确保在网址中安全使用。",
+        "metaTitle": "URL 编码器/解码器 - 免费在线 URL 编码工具",
+        "metaDescription": "编码或解码 URL 组件。将特殊字符转换为安全的网址格式。免费在线工具。",
+        "keywords": "url 编码, url 解码, url 编码器, 百分号编码, uri 编码",
+        "inputPlaceholder": "输入 URL 或要编码/解码的文本...",
+        "encode": "编码",
+        "decode": "解码",
+        "encodeComponent": "编码组件",
+        "decodeComponent": "解码组件",
+        "output": "输出",
+        "faq": {
+          "q1": "什么是 URL 编码？",
+          "a1": "URL 编码将特殊字符转换为百分号编码格式（如空格变为 %20），以便在网址中安全使用。",
+          "q2": "编码和编码组件有什么区别？",
+          "a2": "编码会转换完整 URL 但保留结构字符（如 / 和 ?）。编码组件会编码所有字符，适用于查询参数值。"
+        }
+      },
+      "ocr": {
+        "name": "OCR 文字识别",
+        "description": "使用光学字符识别从图片中提取文字。",
+        "metaTitle": "OCR 文字识别 - 免费在线图片转文字",
+        "metaDescription": "使用 OCR 从图片中提取文字。支持多种语言。免费在线工具。",
+        "keywords": "ocr, 图片转文字, 文字识别, 光学字符识别",
+        "language": "语言",
+        "recognize": "识别文字",
+        "recognizing": "识别中",
+        "confidence": "置信度",
+        "faq": {
+          "q1": "支持哪些语言？",
+          "a1": "支持超过 12 种语言，包括英语、简体中文、繁体中文、日语、韩语、西班牙语、法语、德语等。",
+          "q2": "OCR 识别准确度如何？",
+          "a2": "准确度取决于图片质量和文字清晰度。清晰、高分辨率、对比度好的图片效果最佳。"
+        }
+      },
+      "archive": {
+        "name": "ZIP 解压",
+        "description": "在线解压和预览 ZIP 压缩包内容。",
+        "metaTitle": "ZIP 解压 - 免费在线压缩包查看器",
+        "metaDescription": "在线解压和预览 ZIP 文件。浏览内容并下载单个文件。免费在线工具。",
+        "keywords": "zip解压, 在线解压, 解压zip, 压缩包查看",
+        "extracting": "解压中...",
+        "files": "个文件",
+        "unsupportedFormat": "不支持的压缩格式。目前仅支持 ZIP 文件。",
+        "faq": {
+          "q1": "支持哪些压缩格式？",
+          "a1": "目前完整支持 ZIP 文件。文件完全在浏览器中解压。",
+          "q2": "可以从压缩包中下载单个文件吗？",
+          "a2": "可以，您可以浏览压缩包内容并点击下载按钮下载任意单个文件。"
+        }
+      }
+    },
+    "image": {
+      "format-converter": {
+        "name": "图像格式转换",
+        "description": "在 WebP、PNG、JPG 和 ICO 格式之间转换图像。",
+        "metaTitle": "图像格式转换器 - 免费在线 WebP/PNG/JPG/ICO 转换工具",
+        "metaDescription": "在 WebP、PNG、JPG 和 ICO 格式之间转换图像。无需上传的免费在线工具。图像完全在浏览器中处理。",
+        "keywords": "图像转换, webp 转 png, png 转 jpg, jpg 转 webp, ico 转换, 图像格式",
+        "selectFormat": "转换为",
+        "quality": "质量",
+        "convert": "转换",
+        "converting": "转换中...",
+        "original": "原始",
+        "converted": "已转换",
+        "fileSize": "文件大小",
+        "dimensions": "尺寸",
+        "supportedFormats": "支持格式：WebP、PNG、JPG、ICO",
+        "faq": {
+          "q1": "支持哪些图像格式？",
+          "a1": "您可以在 WebP、PNG、JPG（JPEG）和 ICO 格式之间转换。所有转换都在浏览器中使用 Canvas API 完成。",
+          "q2": "我的图像会上传到服务器吗？",
+          "a2": "不会。所有图像处理都在浏览器本地完成。您的图像不会离开您的设备。",
+          "q3": "可以一次转换多张图像吗？",
+          "a3": "可以，您可以拖放多张图像，它们都会被转换为您选择的格式。"
+        }
+      },
+      "compress": {
+        "name": "图片压缩",
+        "description": "压缩图片以减小文件大小，同时保持质量。",
+        "metaTitle": "图片压缩 - 免费在线图片压缩工具",
+        "metaDescription": "压缩图片以减小文件大小。支持批量压缩和质量控制。免费在线工具。",
+        "keywords": "图片压缩, 压缩图片, 减小图片大小, 图片优化",
+        "quality": "质量",
+        "maxSize": "最大大小",
+        "compress": "压缩",
+        "compressing": "压缩中...",
+        "results": "压缩结果",
+        "faq": {
+          "q1": "图片压缩如何工作？",
+          "a1": "该工具使用有损压缩来减小图片文件大小。您可以控制质量和最大大小。所有处理在浏览器中完成。",
+          "q2": "支持哪些格式？",
+          "a2": "支持 JPEG、PNG、WebP、GIF 和 BMP 图片压缩。"
+        },
+        "maxResolution": "最大分辨率"
+      },
+      "crop": {
+        "name": "图片裁剪",
+        "description": "使用交互式裁剪工具精确裁剪图片。",
+        "metaTitle": "图片裁剪 - 免费在线图片裁剪工具",
+        "metaDescription": "精确裁剪图片。选择宽高比或自由裁剪。免费在线工具。",
+        "keywords": "图片裁剪, 在线裁剪图片, 图片裁剪器, 照片裁剪",
+        "aspectRatio": "宽高比",
+        "free": "自由",
+        "zoom": "缩放",
+        "crop": "裁剪",
+        "cropping": "裁剪中...",
+        "reset": "重置",
+        "faq": {
+          "q1": "可以设定特定宽高比吗？",
+          "a1": "可以，您可以从预设比例（1:1、4:3、16:9、3:2）中选择，或使用自由裁剪。",
+          "q2": "原图会被修改吗？",
+          "a2": "不会，您的原始图片不会被修改。系统会创建一张新的裁剪后图片供下载。"
+        }
+      },
+      "resize": {
+        "name": "调整图片尺寸",
+        "description": "将图片调整为任意尺寸，支持锁定宽高比。",
+        "metaTitle": "调整图片尺寸 - 免费在线图片缩放工具",
+        "metaDescription": "将图片调整为自定义尺寸。锁定宽高比，使用社交媒体预设。免费在线工具。",
+        "keywords": "调整图片尺寸, 在线缩放图片, 图片缩放器, 改变图片大小",
+        "width": "宽度",
+        "height": "高度",
+        "lock": "锁定宽高比",
+        "unlock": "解锁宽高比",
+        "resize": "调整尺寸",
+        "resizing": "调整中...",
+        "presets": "尺寸预设",
+        "faq": {
+          "q1": "可以保持宽高比吗？",
+          "a1": "可以，默认锁定宽高比。点击链接图标可解锁进行自由缩放。",
+          "q2": "有哪些预设？",
+          "a2": "常用预设包括 HD (1280×720)、Full HD (1920×1080)、4K (3840×2160) 和社交媒体尺寸。"
+        }
+      },
+      "watermark": {
+        "name": "添加水印",
+        "description": "为图片添加可自定义样式和位置的文字水印。",
+        "metaTitle": "添加水印 - 免费在线图片水印工具",
+        "metaDescription": "为图片添加文字水印。自定义字体、颜色、透明度和位置。免费在线工具。",
+        "keywords": "添加水印, 图片水印, 文字水印, 照片水印",
+        "text": "水印文字",
+        "position": "位置",
+        "center": "居中",
+        "top-left": "左上",
+        "top-right": "右上",
+        "bottom-left": "左下",
+        "bottom-right": "右下",
+        "tile": "平铺（重复）",
+        "fontSize": "字体大小",
+        "color": "颜色",
+        "opacity": "透明度",
+        "apply": "添加水印",
+        "applying": "添加中...",
+        "faq": {
+          "q1": "可以在整张图片上平铺水印吗？",
+          "a1": "可以，选择「平铺（重复）」位置选项，即可在整张图片上以倾斜角度添加重复水印。",
+          "q2": "可以调整水印透明度吗？",
+          "a2": "可以，使用透明度滑块控制从几乎不可见到完全不透明。"
+        }
+      },
+      "remove-exif": {
+        "name": "清除 EXIF 数据",
+        "description": "清除照片的 EXIF 元数据以保护隐私。",
+        "metaTitle": "清除 EXIF 数据 - 免费在线 EXIF 清除工具",
+        "metaDescription": "清除图片中的 EXIF 元数据以保护隐私。删除 GPS 位置、相机信息等。免费在线工具。",
+        "keywords": "清除exif, exif删除, 去除元数据, 照片隐私",
+        "removeExif": "清除 EXIF 数据",
+        "processing": "处理中...",
+        "cleaned": "EXIF 数据已成功清除",
+        "faq": {
+          "q1": "哪些 EXIF 数据会被清除？",
+          "a1": "所有元数据都会被清除，包括 GPS 位置、相机型号、拍摄日期和其他嵌入信息。图片会在干净的画布上重新绘制。",
+          "q2": "这会影响图片质量吗？",
+          "a2": "JPEG 图片质量保持在 95%。PNG 图片以无损方式重新导出。"
+        }
+      }
+    },
+    "pdf": {
+      "merge": {
+        "name": "合并 PDF",
+        "description": "将多个 PDF 文件合并为一个文档。",
+        "metaTitle": "合并 PDF - 免费在线 PDF 合并工具",
+        "metaDescription": "将多个 PDF 文件合并为一个文档。免费在线工具，无需上传。文件不离开浏览器。",
+        "keywords": "合并pdf, pdf合并, 合并pdf文件, pdf合并工具",
+        "merge": "合并 PDF",
+        "merging": "合并中...",
+        "mergedSize": "合并后大小",
+        "faq": {
+          "q1": "PDF 合并如何工作？",
+          "a1": "上传多个 PDF 文件，按需排序，点击合并即可。所有处理在浏览器中完成，文件不会上传。",
+          "q2": "有文件大小限制吗？",
+          "a2": "没有硬性限制，但非常大的文件可能处理较慢，因为所有操作在浏览器中进行。"
+        }
+      },
+      "split": {
+        "name": "拆分 PDF",
+        "description": "将 PDF 拆分为单独的页面或自定义页面范围。",
+        "metaTitle": "拆分 PDF - 免费在线 PDF 拆分工具",
+        "metaDescription": "将 PDF 文件拆分为单独页面或自定义范围。免费在线工具，在浏览器中运行。",
+        "keywords": "拆分pdf, pdf拆分, 提取pdf页面, 分割pdf",
+        "pages": "页",
+        "splitEach": "逐页拆分",
+        "splitRange": "按范围拆分",
+        "rangePlaceholder": "例如 1-3, 4-6, 7-10",
+        "rangeHint": "输入用逗号分隔的页码范围",
+        "split": "拆分",
+        "splitting": "拆分中...",
+        "results": "拆分结果",
+        "faq": {
+          "q1": "可以按特定页码范围拆分吗？",
+          "a1": "可以，您可以逐页拆分或指定自定义范围，如 1-3、4-6、7-10。",
+          "q2": "文件会上传到服务器吗？",
+          "a2": "不会。所有处理在浏览器本地完成，文件不会离开您的设备。"
+        }
+      },
+      "delete-pages": {
+        "name": "删除 PDF 页面",
+        "description": "从 PDF 文档中删除指定页面。",
+        "metaTitle": "删除 PDF 页面 - 在线移除 PDF 页面",
+        "metaDescription": "从 PDF 文件中删除不需要的页面。免费在线工具，带可视化页面预览。完全在浏览器中运行。",
+        "keywords": "删除pdf页面, 移除pdf页面, pdf页面删除",
+        "selectPages": "点击选择要删除的页面",
+        "delete": "删除选中",
+        "deleting": "删除中...",
+        "remaining": "剩余",
+        "pages": "页",
+        "faq": {
+          "q1": "如何选择要删除的页面？",
+          "a1": "上传 PDF 后，点击要删除的页面缩略图。选中的页面会高亮显示。点击删除按钮即可生成不含这些页面的新 PDF。",
+          "q2": "可以撤销页面删除吗？",
+          "a2": "原始文件不会被修改。系统会生成一个不含所选页面的新 PDF。您随时可以重新上传原文件。"
+        }
+      },
+      "to-image": {
+        "name": "PDF 转图片",
+        "description": "将 PDF 页面转换为 JPG 或 PNG 图片。",
+        "metaTitle": "PDF 转图片 - 在线 PDF 转 JPG/PNG",
+        "metaDescription": "将 PDF 页面转换为高质量 JPG 或 PNG 图片。免费在线工具，可调节 DPI 和质量。",
+        "keywords": "pdf转图片, pdf转jpg, pdf转png, pdf转换图片",
+        "format": "格式",
+        "quality": "质量",
+        "scale": "缩放",
+        "convert": "转换",
+        "converting": "转换中",
+        "pages": "页",
+        "downloadAll": "全部下载 (ZIP)",
+        "faq": {
+          "q1": "支持哪些图片格式？",
+          "a1": "可以将 PDF 页面转换为 PNG（无损）或 JPG（文件更小，可控制质量）。",
+          "q2": "可以调整图片分辨率吗？",
+          "a2": "可以，使用缩放滑块。1x 为标准分辨率，2x 双倍，最高 4x 高分辨率输出。"
+        }
+      }
+    },
+    "video": {
+      "mute": {
+        "name": "视频静音",
+        "description": "即时移除视频中的音频。",
+        "metaTitle": "视频静音 - 在线移除视频音频",
+        "metaDescription": "从视频文件中移除音轨。快速处理，无需上传。免费在线工具。",
+        "keywords": "视频静音, 移除视频音频, 静音视频, 视频去声",
+        "mute": "移除音频",
+        "processing": "处理中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "视频静音如何工作？",
+          "a1": "该工具从视频中移除音轨，同时保持视频质量不变。无需重新编码。",
+          "q2": "支持哪些视频格式？",
+          "a2": "支持大多数常见格式，包括 MP4、WebM、MOV 和 AVI。"
+        }
+      },
+      "trim": {
+        "name": "视频裁剪",
+        "description": "将视频剪辑裁剪到所需长度。",
+        "metaTitle": "视频裁剪 - 免费在线视频剪辑工具",
+        "metaDescription": "将视频剪辑裁剪到任意长度。精确设置开始和结束点。免费在线工具。",
+        "keywords": "视频裁剪, 剪切视频, 视频剪辑器, 在线剪视频",
+        "start": "开始",
+        "end": "结束",
+        "duration": "时长",
+        "trim": "裁剪视频",
+        "processing": "处理中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "可以精确裁剪视频吗？",
+          "a1": "可以，使用范围滑块以 0.1 秒精度设置精确的开始和结束点。",
+          "q2": "视频会被重新编码吗？",
+          "a2": "该工具使用流复制模式，快速处理且不损失质量。"
+        }
+      },
+      "rotate": {
+        "name": "视频旋转",
+        "description": "将视频旋转 90、180 或 270 度。",
+        "metaTitle": "视频旋转 - 免费在线旋转视频",
+        "metaDescription": "将视频旋转 90、180 或 270 度。轻松修复视频方向。免费在线工具。",
+        "keywords": "视频旋转, 翻转视频, 旋转视频, 修复视频方向",
+        "rotate": "旋转",
+        "processing": "处理中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "有哪些旋转角度可选？",
+          "a1": "可以将视频旋转 90°（顺时针）、180°（上下翻转）或 270°（逆时针）。",
+          "q2": "旋转会影响视频质量吗？",
+          "a2": "旋转时视频会重新编码，但质量保持在较高水平。"
+        }
+      },
+      "to-gif": {
+        "name": "视频转 GIF",
+        "description": "将视频片段转换为 GIF 动画。",
+        "metaTitle": "视频转 GIF - 在线视频转 GIF",
+        "metaDescription": "将视频片段转换为 GIF 动画。控制帧率、尺寸和时长。免费在线工具。",
+        "keywords": "视频转gif, 视频转动图, gif制作, gif生成器",
+        "width": "宽度",
+        "start": "开始",
+        "end": "结束",
+        "convert": "转换为 GIF",
+        "converting": "转换中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "如何减小 GIF 文件大小？",
+          "a1": "降低帧率、减小宽度或缩短时长。该工具使用优化调色板以获得最佳质量与大小比。",
+          "q2": "GIF 最长可以多长？",
+          "a2": "没有硬性限制，但较长的 GIF 会产生非常大的文件。建议保持 GIF 在 10 秒以内。"
+        }
+      },
+      "to-webp": {
+        "name": "视频转 WebP",
+        "description": "将视频片段转换为 WebP 动画。",
+        "metaTitle": "视频转 WebP 动画 - 在线视频转 WebP",
+        "metaDescription": "将视频转换为 WebP 动画。比 GIF 更小，质量更好。免费在线工具。",
+        "keywords": "视频转webp, webp动画, webp动图, 视频转动图",
+        "width": "宽度",
+        "quality": "质量",
+        "start": "开始",
+        "convert": "转换为 WebP",
+        "converting": "转换中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "为什么使用 WebP 而不是 GIF？",
+          "a1": "WebP 动画文件通常比等效 GIF 小 25-35%，同时支持更好的色彩深度和透明度。",
+          "q2": "WebP 动画支持范围广吗？",
+          "a2": "是的，所有现代浏览器都支持 WebP 动画。只有非常老的浏览器不支持。"
+        }
+      }
+    },
+    "audio": {
+      "trim": {
+        "name": "音频剪辑",
+        "description": "将音频文件裁剪到所需长度。",
+        "metaTitle": "音频剪辑 - 免费在线音频裁剪工具",
+        "metaDescription": "将音频文件裁剪到任意长度。精确设置开始和结束点。免费在线工具。",
+        "keywords": "音频剪辑, 剪切音频, 裁剪mp3, 在线音频裁剪",
+        "start": "开始",
+        "end": "结束",
+        "duration": "时长",
+        "trim": "裁剪音频",
+        "processing": "处理中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "支持哪些音频格式？",
+          "a1": "支持大多数格式，包括 MP3、WAV、OGG、AAC、FLAC 和 M4A。",
+          "q2": "音频质量会保留吗？",
+          "a2": "是的，该工具使用流复制模式，原始质量不变，无需重新编码。"
+        }
+      },
+      "convert": {
+        "name": "音频格式转换",
+        "description": "在 MP3、WAV、OGG、AAC 和 FLAC 格式之间转换音频文件。",
+        "metaTitle": "音频格式转换 - 免费在线音频转换工具",
+        "metaDescription": "在 MP3、WAV、OGG、AAC 和 FLAC 之间转换音频。免费在线工具。",
+        "keywords": "音频转换, 转换mp3, wav转mp3, 音频格式转换",
+        "format": "输出格式",
+        "convert": "转换",
+        "converting": "转换中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "支持哪些音频格式？",
+          "a1": "支持 MP3、WAV、OGG、AAC 和 FLAC 格式之间的转换。",
+          "q2": "有文件大小限制吗？",
+          "a2": "处理在浏览器中进行，非常大的文件可能较慢。建议文件在 100MB 以下。"
+        }
+      },
+      "extract": {
+        "name": "提取音频",
+        "description": "从视频文件中提取音频轨道。",
+        "metaTitle": "提取视频音频 - 免费在线音频提取工具",
+        "metaDescription": "从视频文件中提取音频为 MP3、WAV 或 AAC。免费在线工具，无需上传。",
+        "keywords": "提取音频, 视频转音频, 提取mp3, 音频提取器",
+        "format": "输出格式",
+        "extract": "提取音频",
+        "extracting": "提取中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "可以从哪些视频格式提取音频？",
+          "a1": "支持大多数视频格式，包括 MP4、WebM、MOV 和 AVI。",
+          "q2": "可以导出为哪些音频格式？",
+          "a2": "可以导出为 MP3、WAV 或 AAC 格式。"
+        }
+      }
+    }
+  }
+}
