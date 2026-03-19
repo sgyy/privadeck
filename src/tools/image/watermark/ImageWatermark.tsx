@@ -34,6 +34,8 @@ export default function ImageWatermark() {
   const [resultUrl, setResultUrl] = useState("");
   const [results, setResults] = useState<ImageResultItem[]>([]);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const previewUrlRef = useRef("");
+  const resultUrlRef = useRef("");
   const t = useTranslations("tools.image.watermark");
   const tc = useTranslations("common");
 
@@ -44,10 +46,13 @@ export default function ImageWatermark() {
     setResult(null);
     setPreviewUrl((prev) => {
       if (prev) URL.revokeObjectURL(prev);
-      return URL.createObjectURL(f);
+      const newUrl = URL.createObjectURL(f);
+      previewUrlRef.current = newUrl;
+      return newUrl;
     });
     setResultUrl((prev) => {
       if (prev) URL.revokeObjectURL(prev);
+      resultUrlRef.current = "";
       return "";
     });
   }
@@ -66,7 +71,9 @@ export default function ImageWatermark() {
       setResult(blob);
       setResultUrl((prev) => {
         if (prev) URL.revokeObjectURL(prev);
-        return URL.createObjectURL(blob);
+        const newUrl = URL.createObjectURL(blob);
+        resultUrlRef.current = newUrl;
+        return newUrl;
       });
     } catch {
       // Silently ignore preview errors
@@ -81,11 +88,10 @@ export default function ImageWatermark() {
   }, [generatePreview, file]);
 
   // Cleanup URLs on unmount
-  // eslint-disable-next-line react-hooks/exhaustive-deps -- cleanup only on unmount
   useEffect(() => {
     return () => {
-      if (previewUrl) URL.revokeObjectURL(previewUrl);
-      if (resultUrl) URL.revokeObjectURL(resultUrl);
+      if (previewUrlRef.current) URL.revokeObjectURL(previewUrlRef.current);
+      if (resultUrlRef.current) URL.revokeObjectURL(resultUrlRef.current);
     };
   }, []);
 

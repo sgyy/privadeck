@@ -282,6 +282,63 @@
           "q2": "Does it support alpha/transparency?",
           "a2": "Currently the tool supports opaque colors only. RGBA and HSLA support will be added in a future update."
         }
+      },
+      "json-xml": {
+        "name": "JSON ↔ XML Converter",
+        "description": "Convert between JSON and XML formats.",
+        "metaTitle": "JSON to XML / XML to JSON - Free Online Converter",
+        "metaDescription": "Convert JSON to XML or XML to JSON instantly. Free online tool that works in your browser.",
+        "keywords": "json to xml, xml to json, json xml converter, data format converter",
+        "jsonLabel": "JSON",
+        "jsonPlaceholder": "Paste JSON here...",
+        "xmlLabel": "XML",
+        "xmlPlaceholder": "Paste XML here...",
+        "jsonToXml": "JSON → XML",
+        "xmlToJson": "XML → JSON",
+        "faq": {
+          "q1": "How is JSON mapped to XML?",
+          "a1": "Object keys become XML element names. Arrays produce repeated elements with the same name. Primitive values become text content.",
+          "q2": "Does it preserve XML attributes?",
+          "a2": "XML attributes are not preserved in the JSON output. Only element names and text content are converted."
+        }
+      },
+      "markdown-preview": {
+        "name": "Markdown Preview",
+        "description": "Write Markdown and see a live HTML preview side by side.",
+        "metaTitle": "Markdown Preview - Free Online Markdown Editor",
+        "metaDescription": "Write Markdown with live HTML preview. Free online tool for developers and writers.",
+        "keywords": "markdown preview, markdown editor, markdown to html, markdown viewer",
+        "markdownLabel": "Markdown",
+        "markdownPlaceholder": "Write Markdown here...\n\n# Heading\n\n**Bold** and *italic* text.",
+        "previewLabel": "Preview",
+        "copyHtml": "Copy HTML",
+        "faq": {
+          "q1": "Which Markdown features are supported?",
+          "a1": "Headings, bold, italic, links, images, code blocks, inline code, unordered lists, blockquotes, and horizontal rules.",
+          "q2": "Can I copy the HTML output?",
+          "a2": "Yes, use the Copy HTML button to copy the generated HTML to your clipboard."
+        }
+      },
+      "regex-tester": {
+        "name": "Regex Tester",
+        "description": "Test regular expressions with real-time matching and highlighting.",
+        "metaTitle": "Regex Tester - Free Online Regular Expression Tester",
+        "metaDescription": "Test regex patterns with real-time matching, highlighting, and match details. Free online tool.",
+        "keywords": "regex tester, regular expression, regex online, regex matcher, pattern tester",
+        "patternLabel": "Pattern",
+        "patternPlaceholder": "Enter regex pattern...",
+        "flagsLabel": "Flags",
+        "testStringLabel": "Test String",
+        "testStringPlaceholder": "Enter text to test against...",
+        "matchesLabel": "Matches",
+        "matchDetails": "Match Details",
+        "noMatches": "No matches found",
+        "faq": {
+          "q1": "Which regex flags are supported?",
+          "a1": "Global (g), case-insensitive (i), multiline (m), and dotAll (s) flags are available.",
+          "q2": "Does it support named capture groups?",
+          "a2": "Yes, named groups defined with (?<name>...) are displayed in the match details."
+        }
       }
     },
     "image": {
@@ -504,6 +561,68 @@
           "q2": "Are all SVG features supported?",
           "a2": "The tool renders SVGs using the browser's built-in SVG engine. Most standard SVG features are supported, but external resources or fonts may not render correctly."
         }
+      },
+      "add-text": {
+        "name": "Add Text to Image",
+        "description": "Overlay text on images with customizable font size, color, and position.",
+        "metaTitle": "Add Text to Image - Free Online Text Overlay Tool",
+        "metaDescription": "Add text to images with custom font, color, size, and position. Free online tool.",
+        "keywords": "add text to image, text overlay, image text, photo text",
+        "text": "Text",
+        "textPlaceholder": "Enter text to add...",
+        "position": "Position",
+        "positions": {
+          "center": "Center",
+          "top-left": "Top Left",
+          "top-right": "Top Right",
+          "bottom-left": "Bottom Left",
+          "bottom-right": "Bottom Right"
+        },
+        "fontSize": "Font Size",
+        "color": "Color",
+        "apply": "Add Text",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "Can I choose where the text appears?",
+          "a1": "Yes, choose from five positions: center, top-left, top-right, bottom-left, or bottom-right.",
+          "q2": "Which fonts are available?",
+          "a2": "The tool uses the browser's default sans-serif font, which varies by system but is always clean and readable."
+        }
+      },
+      "combine": {
+        "name": "Combine Images",
+        "description": "Merge multiple images side by side or stacked vertically.",
+        "metaTitle": "Combine Images - Free Online Image Merger",
+        "metaDescription": "Merge multiple images horizontally or vertically. Free online tool, no upload needed.",
+        "keywords": "combine images, merge images, join images, image collage, side by side",
+        "horizontal": "Horizontal",
+        "vertical": "Vertical",
+        "combine": "Combine Images",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "What layout options are available?",
+          "a1": "You can combine images horizontally (side by side) or vertically (stacked top to bottom).",
+          "q2": "Do images need to be the same size?",
+          "a2": "No, images of different sizes are combined at their original dimensions. The canvas expands to fit all images."
+        }
+      },
+      "split": {
+        "name": "Split Image",
+        "description": "Split an image into a grid of equal-sized pieces.",
+        "metaTitle": "Split Image - Free Online Image Splitter",
+        "metaDescription": "Split images into a grid of equal pieces. Download individually or as ZIP. Free online tool.",
+        "keywords": "split image, image splitter, divide image, grid split, image cutter",
+        "rows": "Rows",
+        "columns": "Columns",
+        "split": "Split Image",
+        "processing": "Processing...",
+        "downloadAll": "Download All (ZIP)",
+        "faq": {
+          "q1": "How does image splitting work?",
+          "a1": "Choose the number of rows and columns. The image is divided into equal-sized pieces based on the grid you specify.",
+          "q2": "Can I download all pieces at once?",
+          "a2": "Yes, use the Download All (ZIP) button to get all pieces in a single ZIP file."
+        }
       }
     },
     "pdf": {
@@ -663,6 +782,91 @@
           "q2": "Is the formatting preserved?",
           "a2": "Basic text content is extracted page by page. Complex formatting like tables and columns may not be perfectly preserved."
         }
+      },
+      "rearrange": {
+        "name": "Rearrange PDF Pages",
+        "description": "Drag and drop to reorder pages in a PDF document.",
+        "metaTitle": "Rearrange PDF Pages - Free Online PDF Page Reorder Tool",
+        "metaDescription": "Reorder PDF pages by dragging and dropping. Free online tool, works in your browser.",
+        "keywords": "rearrange pdf, reorder pdf pages, pdf page order, sort pdf pages",
+        "dragHint": "Drag to reorder pages",
+        "pages": "pages",
+        "page": "Page",
+        "moveUp": "Move up",
+        "moveDown": "Move down",
+        "apply": "Apply New Order",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "How do I reorder PDF pages?",
+          "a1": "Upload a PDF, then use the arrow buttons to move pages up or down. Click Apply to create a new PDF with the new page order.",
+          "q2": "Is the original PDF modified?",
+          "a2": "No, a new PDF is created with the reordered pages. Your original file is never changed."
+        }
+      },
+      "compress": {
+        "name": "Compress PDF",
+        "description": "Reduce PDF file size by re-rendering pages at lower quality.",
+        "metaTitle": "Compress PDF - Free Online PDF Compressor",
+        "metaDescription": "Compress PDF files to reduce size. Choose quality level. Free online tool, no upload needed.",
+        "keywords": "compress pdf, pdf compressor, reduce pdf size, shrink pdf",
+        "quality": "Quality",
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low",
+        "compress": "Compress",
+        "compressing": "Compressing...",
+        "pages": "pages",
+        "originalSize": "Original size",
+        "compressedSize": "Compressed size",
+        "saved": "Size reduction",
+        "noReduction": "No size reduction",
+        "faq": {
+          "q1": "How does PDF compression work?",
+          "a1": "Pages are re-rendered as JPEG images at the chosen quality level and re-embedded. Lower quality means smaller files but reduced visual fidelity.",
+          "q2": "Will text remain selectable?",
+          "a2": "No, since pages are converted to images during compression, text is no longer selectable in the compressed PDF."
+        }
+      },
+      "add-watermark": {
+        "name": "PDF Watermark",
+        "description": "Add a diagonal text watermark to every page of a PDF.",
+        "metaTitle": "Add Watermark to PDF - Free Online PDF Watermark Tool",
+        "metaDescription": "Add text watermarks to PDF documents. Customize opacity and font size. Free online tool.",
+        "keywords": "pdf watermark, add watermark pdf, stamp pdf, pdf text overlay",
+        "watermarkText": "Watermark Text",
+        "textPlaceholder": "Enter watermark text...",
+        "opacity": "Opacity",
+        "fontSize": "Font Size",
+        "apply": "Apply Watermark",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "Can I customize the watermark appearance?",
+          "a1": "Yes, you can adjust the text, opacity (transparency), and font size. The watermark is placed diagonally across each page.",
+          "q2": "Is the watermark applied to all pages?",
+          "a2": "Yes, the same watermark is applied to every page of the PDF."
+        }
+      },
+      "crop": {
+        "name": "Crop PDF",
+        "description": "Crop PDF pages by setting margins to remove from each side.",
+        "metaTitle": "Crop PDF - Free Online PDF Cropping Tool",
+        "metaDescription": "Crop PDF pages by removing margins from each side. Free online tool, works in your browser.",
+        "keywords": "crop pdf, trim pdf, pdf margins, pdf crop tool",
+        "pages": "pages",
+        "margins": "Crop Margins (points)",
+        "marginsHint": "Enter the amount to crop from each side (1 point ≈ 0.35mm)",
+        "top": "Top",
+        "bottom": "Bottom",
+        "left": "Left",
+        "right": "Right",
+        "apply": "Apply Crop",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "What are PDF points?",
+          "a1": "PDF uses points as its unit of measurement. 1 point = 1/72 inch ≈ 0.35mm. A standard US Letter page is 612 × 792 points.",
+          "q2": "Does cropping reduce file size?",
+          "a2": "Cropping changes the visible area but does not remove the hidden content, so file size may not decrease significantly."
+        }
       }
     },
     "video": {
@@ -793,6 +997,24 @@
           "a1": "You can convert between MP4, WebM, MKV, and AVI formats. MP4 and AVI use H.264 encoding, WebM uses VP9, and MKV uses stream copy for fast conversion.",
           "q2": "Will the video quality change?",
           "a2": "Converting to MKV uses stream copy so quality is preserved exactly. Other conversions re-encode with high quality settings."
+        }
+      },
+      "resize": {
+        "name": "Resize Video",
+        "description": "Change video resolution with preset or custom dimensions.",
+        "metaTitle": "Resize Video - Free Online Video Resizer",
+        "metaDescription": "Resize videos to 720p, 480p, 360p or custom dimensions. Free online tool, no upload needed.",
+        "keywords": "resize video, video resizer, change video resolution, scale video",
+        "resolution": "Resolution",
+        "width": "Width",
+        "resize": "Resize",
+        "processing": "Resizing",
+        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
+        "faq": {
+          "q1": "What resolution presets are available?",
+          "a1": "720p (1280px wide), 480p (854px wide), and 360p (640px wide). You can also enter a custom width.",
+          "q2": "Is the aspect ratio preserved?",
+          "a2": "Yes, the height is automatically calculated to maintain the original aspect ratio."
         }
       }
     },

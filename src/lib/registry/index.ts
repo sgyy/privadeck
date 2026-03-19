@@ -42,6 +42,17 @@ import pdfImagesToPdf from "@/tools/pdf/images-to-pdf";
 import pdfRotate from "@/tools/pdf/rotate";
 import pdfAddPageNumbers from "@/tools/pdf/add-page-numbers";
 import pdfExtractText from "@/tools/pdf/extract-text";
+import pdfRearrange from "@/tools/pdf/rearrange";
+import pdfCompress from "@/tools/pdf/compress";
+import pdfAddWatermark from "@/tools/pdf/add-watermark";
+import pdfCrop from "@/tools/pdf/crop";
+import imageAddText from "@/tools/image/add-text";
+import imageCombine from "@/tools/image/combine";
+import imageSplit from "@/tools/image/split";
+import videoResize from "@/tools/video/resize";
+import jsonXml from "@/tools/developer/json-xml";
+import markdownPreview from "@/tools/developer/markdown-preview";
+import regexTester from "@/tools/developer/regex-tester";
 
 const ALL_TOOLS: ToolDefinition[] = [
   wordCounter,
@@ -55,6 +66,9 @@ const ALL_TOOLS: ToolDefinition[] = [
   csvJson,
   hashGenerator,
   colorConverter,
+  jsonXml,
+  markdownPreview,
+  regexTester,
   formatConverter,
   imageCompress,
   imageCrop,
@@ -67,6 +81,9 @@ const ALL_TOOLS: ToolDefinition[] = [
   imageAddBorder,
   imageCircleCrop,
   imageSvgToPng,
+  imageAddText,
+  imageCombine,
+  imageSplit,
   pdfMerge,
   pdfSplit,
   pdfDeletePages,
@@ -75,6 +92,10 @@ const ALL_TOOLS: ToolDefinition[] = [
   pdfRotate,
   pdfAddPageNumbers,
   pdfExtractText,
+  pdfRearrange,
+  pdfCompress,
+  pdfAddWatermark,
+  pdfCrop,
   videoMute,
   videoTrim,
   videoRotate,
@@ -82,6 +103,7 @@ const ALL_TOOLS: ToolDefinition[] = [
   videoToWebp,
   videoCompress,
   videoFormatConvert,
+  videoResize,
   audioTrim,
   audioConvert,
   audioExtract,

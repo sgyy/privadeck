@@ -282,6 +282,63 @@
           "q2": "支持透明度吗？",
           "a2": "目前工具仅支持不透明颜色。RGBA 和 HSLA 支持将在未来更新中添加。"
         }
+      },
+      "json-xml": {
+        "name": "JSON ↔ XML 转换器",
+        "description": "在 JSON 和 XML 格式之间转换。",
+        "metaTitle": "JSON 转 XML / XML 转 JSON - 免费在线转换器",
+        "metaDescription": "即时将 JSON 转换为 XML 或将 XML 转换为 JSON。免费在线工具，在浏览器中运行。",
+        "keywords": "json转xml, xml转json, json xml转换器, 数据格式转换",
+        "jsonLabel": "JSON",
+        "jsonPlaceholder": "在此粘贴 JSON...",
+        "xmlLabel": "XML",
+        "xmlPlaceholder": "在此粘贴 XML...",
+        "jsonToXml": "JSON → XML",
+        "xmlToJson": "XML → JSON",
+        "faq": {
+          "q1": "JSON 如何映射到 XML？",
+          "a1": "对象键成为 XML 元素名。数组产生同名的重复元素。原始值成为文本内容。",
+          "q2": "能保留 XML 属性吗？",
+          "a2": "XML 属性不会保留在 JSON 输出中。只转换元素名和文本内容。"
+        }
+      },
+      "markdown-preview": {
+        "name": "Markdown 预览",
+        "description": "编写 Markdown 并实时查看 HTML 预览。",
+        "metaTitle": "Markdown 预览 - 免费在线 Markdown 编辑器",
+        "metaDescription": "编写 Markdown 并实时预览 HTML。为开发者和写作者提供的免费在线工具。",
+        "keywords": "markdown预览, markdown编辑器, markdown转html, markdown查看器",
+        "markdownLabel": "Markdown",
+        "markdownPlaceholder": "在此编写 Markdown...\n\n# 标题\n\n**粗体** 和 *斜体* 文本。",
+        "previewLabel": "预览",
+        "copyHtml": "复制 HTML",
+        "faq": {
+          "q1": "支持哪些 Markdown 功能？",
+          "a1": "支持标题、粗体、斜体、链接、图片、代码块、行内代码、无序列表、引用和水平线。",
+          "q2": "可以复制 HTML 输出吗？",
+          "a2": "可以，使用复制 HTML 按钮将生成的 HTML 复制到剪贴板。"
+        }
+      },
+      "regex-tester": {
+        "name": "正则表达式测试器",
+        "description": "使用实时匹配和高亮测试正则表达式。",
+        "metaTitle": "正则表达式测试器 - 免费在线正则测试工具",
+        "metaDescription": "使用实时匹配、高亮和匹配详情测试正则表达式。免费在线工具。",
+        "keywords": "正则测试, 正则表达式, 在线正则, 正则匹配器, 模式测试",
+        "patternLabel": "模式",
+        "patternPlaceholder": "输入正则表达式模式...",
+        "flagsLabel": "标志",
+        "testStringLabel": "测试字符串",
+        "testStringPlaceholder": "输入要测试的文本...",
+        "matchesLabel": "匹配项",
+        "matchDetails": "匹配详情",
+        "noMatches": "未找到匹配项",
+        "faq": {
+          "q1": "支持哪些正则标志？",
+          "a1": "支持全局 (g)、不区分大小写 (i)、多行 (m) 和 dotAll (s) 标志。",
+          "q2": "支持命名捕获组吗？",
+          "a2": "支持，使用 (?<name>...) 定义的命名组会显示在匹配详情中。"
+        }
       }
     },
     "image": {
@@ -504,6 +561,68 @@
           "q2": "是否支持所有 SVG 功能？",
           "a2": "该工具使用浏览器内置的 SVG 引擎渲染。支持大多数标准 SVG 功能，但外部资源或字体可能无法正确渲染。"
         }
+      },
+      "add-text": {
+        "name": "图片添加文字",
+        "description": "在图片上叠加可自定义字号、颜色和位置的文字。",
+        "metaTitle": "图片添加文字 - 免费在线文字叠加工具",
+        "metaDescription": "为图片添加自定义字体、颜色、大小和位置的文字。免费在线工具。",
+        "keywords": "图片添加文字, 文字叠加, 图片文字, 照片文字",
+        "text": "文字",
+        "textPlaceholder": "输入要添加的文字...",
+        "position": "位置",
+        "positions": {
+          "center": "居中",
+          "top-left": "左上",
+          "top-right": "右上",
+          "bottom-left": "左下",
+          "bottom-right": "右下"
+        },
+        "fontSize": "字号",
+        "color": "颜色",
+        "apply": "添加文字",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "可以选择文字显示位置吗？",
+          "a1": "可以，从五个位置中选择：居中、左上、右上、左下或右下。",
+          "q2": "有哪些字体可用？",
+          "a2": "该工具使用浏览器默认的无衬线字体，因系统而异，但始终清晰可读。"
+        }
+      },
+      "combine": {
+        "name": "拼接图片",
+        "description": "将多张图片水平并排或垂直堆叠拼接。",
+        "metaTitle": "拼接图片 - 免费在线图片拼接工具",
+        "metaDescription": "水平或垂直拼接多张图片。免费在线工具，无需上传。",
+        "keywords": "拼接图片, 合并图片, 图片拼接, 图片拼贴, 并排",
+        "horizontal": "水平",
+        "vertical": "垂直",
+        "combine": "拼接图片",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "有哪些布局选项？",
+          "a1": "可以水平拼接（并排）或垂直拼接（从上到下堆叠）。",
+          "q2": "图片需要相同大小吗？",
+          "a2": "不需要，不同大小的图片会以原始尺寸拼接。画布会自动扩展以适应所有图片。"
+        }
+      },
+      "split": {
+        "name": "分割图片",
+        "description": "将图片分割为等大的网格块。",
+        "metaTitle": "分割图片 - 免费在线图片分割工具",
+        "metaDescription": "将图片分割为等大的网格块。可单独下载或打包 ZIP 下载。免费在线工具。",
+        "keywords": "分割图片, 图片分割器, 切割图片, 网格分割, 图片切割",
+        "rows": "行数",
+        "columns": "列数",
+        "split": "分割图片",
+        "processing": "处理中...",
+        "downloadAll": "全部下载 (ZIP)",
+        "faq": {
+          "q1": "图片分割是如何工作的？",
+          "a1": "选择行数和列数，图片会根据您指定的网格被分割成等大的块。",
+          "q2": "可以一次下载所有块吗？",
+          "a2": "可以，使用全部下载 (ZIP) 按钮将所有块打包为一个 ZIP 文件下载。"
+        }
       }
     },
     "pdf": {
@@ -663,6 +782,91 @@
           "q2": "提取后能保留格式吗？",
           "a2": "基本文本内容按页提取。复杂格式（如表格和多栏排版）可能无法完美保留。"
         }
+      },
+      "rearrange": {
+        "name": "重新排列 PDF 页面",
+        "description": "拖放重新排序 PDF 文档中的页面。",
+        "metaTitle": "重新排列 PDF 页面 - 免费在线 PDF 页面排序工具",
+        "metaDescription": "通过拖放重新排序 PDF 页面。免费在线工具，在浏览器中运行。",
+        "keywords": "重新排列pdf, 重新排序pdf页面, pdf页面顺序, 排序pdf页面",
+        "dragHint": "拖动以重新排序页面",
+        "pages": "页",
+        "page": "页面",
+        "moveUp": "上移",
+        "moveDown": "下移",
+        "apply": "应用新顺序",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "如何重新排序 PDF 页面？",
+          "a1": "上传 PDF，然后使用箭头按钮上下移动页面。点击应用即可创建新页面顺序的 PDF。",
+          "q2": "原始 PDF 会被修改吗？",
+          "a2": "不会，系统会创建一个新的 PDF 文件。您的原始文件不会被更改。"
+        }
+      },
+      "compress": {
+        "name": "压缩 PDF",
+        "description": "通过以较低质量重新渲染页面来减小 PDF 文件大小。",
+        "metaTitle": "压缩 PDF - 免费在线 PDF 压缩工具",
+        "metaDescription": "压缩 PDF 文件以减小大小。选择质量级别。免费在线工具，无需上传。",
+        "keywords": "压缩pdf, pdf压缩器, 减小pdf大小, 缩小pdf",
+        "quality": "质量",
+        "high": "高",
+        "medium": "中",
+        "low": "低",
+        "compress": "压缩",
+        "compressing": "压缩中...",
+        "pages": "页",
+        "originalSize": "原始大小",
+        "compressedSize": "压缩后大小",
+        "saved": "缩小比例",
+        "noReduction": "未能缩小",
+        "faq": {
+          "q1": "PDF 压缩是如何工作的？",
+          "a1": "页面以所选质量级别重新渲染为 JPEG 图像并重新嵌入。质量越低文件越小，但视觉保真度会降低。",
+          "q2": "文本还能选择吗？",
+          "a2": "不能，因为压缩过程中页面被转换为图像，压缩后的 PDF 中文本不再可选。"
+        }
+      },
+      "add-watermark": {
+        "name": "PDF 水印",
+        "description": "在 PDF 每一页添加对角线文字水印。",
+        "metaTitle": "PDF 添加水印 - 免费在线 PDF 水印工具",
+        "metaDescription": "为 PDF 文档添加文字水印。自定义透明度和字号。免费在线工具。",
+        "keywords": "pdf水印, 添加pdf水印, pdf印章, pdf文字覆盖",
+        "watermarkText": "水印文字",
+        "textPlaceholder": "输入水印文字...",
+        "opacity": "透明度",
+        "fontSize": "字号",
+        "apply": "应用水印",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "可以自定义水印外观吗？",
+          "a1": "可以，您可以调整文字、透明度和字号。水印以对角线方式放置在每一页上。",
+          "q2": "水印会应用到所有页面吗？",
+          "a2": "是的，相同的水印会应用到 PDF 的每一页。"
+        }
+      },
+      "crop": {
+        "name": "裁剪 PDF",
+        "description": "通过设置每侧的边距来裁剪 PDF 页面。",
+        "metaTitle": "裁剪 PDF - 免费在线 PDF 裁剪工具",
+        "metaDescription": "通过移除每侧边距来裁剪 PDF 页面。免费在线工具，在浏览器中运行。",
+        "keywords": "裁剪pdf, 修剪pdf, pdf边距, pdf裁剪工具",
+        "pages": "页",
+        "margins": "裁剪边距（点）",
+        "marginsHint": "输入每侧要裁剪的量（1点 ≈ 0.35毫米）",
+        "top": "上",
+        "bottom": "下",
+        "left": "左",
+        "right": "右",
+        "apply": "应用裁剪",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "什么是 PDF 点？",
+          "a1": "PDF 使用点作为度量单位。1点 = 1/72英寸 ≈ 0.35毫米。标准 US Letter 页面为 612 × 792 点。",
+          "q2": "裁剪会减小文件大小吗？",
+          "a2": "裁剪会更改可见区域，但不会删除隐藏内容，因此文件大小可能不会显著减小。"
+        }
       }
     },
     "video": {
@@ -793,6 +997,24 @@
           "a1": "支持 MP4、WebM、MKV 和 AVI 格式之间的转换。MP4 和 AVI 使用 H.264 编码，WebM 使用 VP9，MKV 使用流复制以快速转换。",
           "q2": "视频质量会改变吗？",
           "a2": "转换为 MKV 使用流复制，质量完全保留。其他转换以高质量设置重新编码。"
+        }
+      },
+      "resize": {
+        "name": "调整视频尺寸",
+        "description": "使用预设或自定义尺寸更改视频分辨率。",
+        "metaTitle": "调整视频尺寸 - 免费在线视频缩放工具",
+        "metaDescription": "将视频调整为 720p、480p、360p 或自定义尺寸。免费在线工具，无需上传。",
+        "keywords": "调整视频尺寸, 视频缩放, 更改视频分辨率, 缩放视频",
+        "resolution": "分辨率",
+        "width": "宽度",
+        "resize": "调整尺寸",
+        "processing": "调整中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "有哪些分辨率预设？",
+          "a1": "720p（宽 1280px）、480p（宽 854px）和 360p（宽 640px）。您也可以输入自定义宽度。",
+          "q2": "会保持宽高比吗？",
+          "a2": "是的，高度会自动计算以保持原始宽高比。"
         }
       }
     },

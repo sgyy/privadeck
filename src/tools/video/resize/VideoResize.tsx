@@ -1,0 +1,142 @@
+"use client";
+
+import { useState, useRef } from "react";
+import { useTranslations } from "next-intl";
+import { FileDropzone } from "@/components/shared/FileDropzone";
+import { DownloadButton } from "@/components/shared/DownloadButton";
+import { Button } from "@/components/ui/Button";
+import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
+import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { resizeVideo, type ResizePreset } from "./logic";
+
+const PRESETS: { value: ResizePreset; label: string }[] = [
+  { value: "720p", label: "720p (1280)" },
+  { value: "480p", label: "480p (854)" },
+  { value: "360p", label: "360p (640)" },
+  { value: "custom", label: "Custom" },
+];
+
+export default function VideoResize() {
+  const [file, setFile] = useState<File | null>(null);
+  const [preset, setPreset] = useState<ResizePreset>("720p");
+  const [customWidth, setCustomWidth] = useState(1920);
+  const [result, setResult] = useState<Blob | null>(null);
+  const [progress, setProgress] = useState(0);
+  const [processing, setProcessing] = useState(false);
+  const [error, setError] = useState("");
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const fileUrl = useObjectUrl(file);
+  const t = useTranslations("tools.video.resize");
+
+  if (!isSharedArrayBufferSupported()) {
+    return (
+      <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
+        <p className="text-sm text-muted-foreground">{t("unsupported")}</p>
+      </div>
+    );
+  }
+
+  function handleFile(files: File[]) {
+    const f = files[0];
+    if (!f) return;
+    setFile(f);
+    setResult(null);
+    setError("");
+  }
+
+  async function handleResize() {
+    if (!file) return;
+    if (preset === "custom" && (!Number.isFinite(customWidth) || customWidth < 2)) {
+      setError("Width must be at least 2px");
+      return;
+    }
+    setProcessing(true);
+    setResult(null);
+    setError("");
+    try {
+      const blob = await resizeVideo(
+        file,
+        preset,
+        preset === "custom" ? customWidth : undefined,
+        setProgress
+      );
+      setResult(blob);
+    } catch (e) {
+      console.error("Resize failed:", e);
+      setError(String(e instanceof Error ? e.message : e));
+    } finally {
+      setProcessing(false);
+    }
+  }
+
+  return (
+    <div className="space-y-4">
+      <FileDropzone accept="video/*" onFiles={handleFile} />
+
+      {file && fileUrl && (
+        <div className="space-y-3">
+          <video
+            ref={videoRef}
+            src={fileUrl}
+            controls
+            className="max-h-[300px] w-full rounded-lg"
+          />
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium">{t("resolution")}</label>
+            <div className="flex flex-wrap gap-2">
+              {PRESETS.map((p) => (
+                <Button
+                  key={p.value}
+                  variant={preset === p.value ? "primary" : "outline"}
+                  size="sm"
+                  onClick={() => setPreset(p.value)}
+                >
+                  {p.label}
+                </Button>
+              ))}
+            </div>
+
+            {preset === "custom" && (
+              <div className="flex items-center gap-2">
+                <label className="text-sm text-muted-foreground">
+                  {t("width")}:
+                </label>
+                <input
+                  type="number"
+                  min={100}
+                  max={7680}
+                  step={2}
+                  value={customWidth}
+                  onChange={(e) => setCustomWidth(Number(e.target.value))}
+                  className="w-28 rounded-lg border border-border bg-background px-3 py-1.5 text-sm"
+                />
+                <span className="text-xs text-muted-foreground">px</span>
+              </div>
+            )}
+          </div>
+
+          {error && (
+            <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
+              {error}
+            </div>
+          )}
+
+          <div className="flex items-center gap-4">
+            <Button onClick={handleResize} disabled={processing}>
+              {processing
+                ? `${t("processing")} ${progress}%`
+                : t("resize")}
+            </Button>
+            {result && (
+              <DownloadButton
+                data={result}
+                filename={`resized_${file.name.replace(/\.[^.]+$/, "")}.mp4`}
+              />
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
