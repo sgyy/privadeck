@@ -1,6 +1,73 @@
 {
-    "i18n-ally.localesPaths": [
-        "messages",
-        "src/i18n"
-    ]
+    // ==================== 搜索 & 文件排除 ====================
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/.next": true,
+        "**/out": true,
+        "**/pnpm-lock.yaml": true
+    },
+    "files.watcherExclude": {
+        "**/.next/**": true,
+        "**/out/**": true,
+        "**/node_modules/**": true
+    },
+
+    // ==================== 文件嵌套 ====================
+    "explorer.fileNesting.enabled": true,
+    "explorer.fileNesting.patterns": {
+        "tsconfig.json": "tsconfig.*.json, tsconfig.tsbuildinfo",
+        "package.json": "pnpm-lock.yaml, pnpm-workspace.yaml, turbo.json, .npmrc, .nvmrc, postcss.config.*, next.config.*, next-env.d.ts, eslint.config.*",
+        ".gitignore": ".gitattributes, .editorconfig, .prettierrc, .prettierignore",
+        "README.md": "CLAUDE.md, AGENTS.md, LICENSE"
+    },
+
+    // ==================== 编辑器行为 ====================
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+
+    // ==================== 语言特定设置 ====================
+    "[typescript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+
+    // ==================== TypeScript ====================
+    "typescript.preferences.preferTypeOnlyAutoImports": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+
+    // ==================== Tailwind CSS ====================
+    "files.associations": {
+        "*.css": "tailwindcss"
+    },
+    "tailwindCSS.includeLanguages": {
+        "typescriptreact": "html"
+    },
+
+    // ==================== i18n Ally ====================
+    "i18n-ally.localesPaths": ["messages"],
+    "i18n-ally.sourceLanguage": "en",
+    "i18n-ally.keystyle": "nested",
+    "i18n-ally.framework": "next-intl",
+
+    // ==================== Git ====================
+    "git.ignoreLimitWarning": true
 }
