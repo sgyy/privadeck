@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, lazy, useMemo } from "react";
+import { Suspense, lazy, useMemo, type ComponentType, type LazyExoticComponent } from "react";
 import { getToolBySlug } from "@/lib/registry";
 import type { ToolCategory } from "@/lib/registry/types";
 import { ToolBreadcrumb } from "@/components/tool/ToolBreadcrumb";
@@ -23,13 +23,22 @@ function ToolSkeleton() {
   );
 }
 
+// Stable cache: once a lazy component is created for a slug, it persists
+const lazyCache = new Map<string, LazyExoticComponent<ComponentType>>();
+
 export function ToolPageClient({ category, slug }: ToolPageClientProps) {
   const tool = getToolBySlug(slug);
 
-  const Component = useMemo(
-    () => (tool ? lazy(tool.component) : null),
-    [tool],
-  );
+  // eslint-disable-next-line react-hooks/rules-of-hooks -- slug is stable per page route
+  const Component = useMemo(() => {
+    if (!tool) return null;
+    let cached = lazyCache.get(slug);
+    if (!cached) {
+      cached = lazy(tool.component);
+      lazyCache.set(slug, cached);
+    }
+    return cached;
+  }, [slug, tool]);
 
   if (!tool || !Component) return null;
 

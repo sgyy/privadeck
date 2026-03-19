@@ -63,7 +63,7 @@ export default function ImageCrop() {
     setCrop(initialCrop);
   }
 
-  const onComplete = useCallback((pixelCrop: PixelCrop, _percentCrop: PercentCrop) => {
+  const onComplete = useCallback((pixelCrop: PixelCrop, _: PercentCrop) => {
     setCroppedArea(pixelCrop);
   }, []);
 

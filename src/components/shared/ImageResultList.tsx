@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { Download, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
@@ -19,38 +19,40 @@ interface ImageResultListProps {
 export function ImageResultList({ results, onRemove }: ImageResultListProps) {
   const t = useTranslations("common");
   const [previewIndex, setPreviewIndex] = useState<number | null>(null);
-  const urlMapRef = useRef<Map<Blob, string>>(new Map());
+  const urlCacheRef = useRef(new Map<Blob, string>());
 
-  const getUrl = useCallback((blob: Blob) => {
-    const map = urlMapRef.current;
-    let url = map.get(blob);
-    if (!url) {
-      url = URL.createObjectURL(blob);
-      map.set(blob, url);
-    }
-    return url;
-  }, []);
-
-  // Cleanup URLs for blobs no longer in results
-  useEffect(() => {
-    const map = urlMapRef.current;
+  // Sync URL cache with current results: create URLs for new blobs, revoke stale ones
+  /* eslint-disable react-hooks/refs -- intentional: persistent URL cache across renders */
+  const urlEntries = useMemo(() => {
+    const cache = urlCacheRef.current;
     const currentBlobs = new Set(results.map((r) => r.blob));
-    for (const [blob, url] of map) {
+
+    // Revoke URLs for blobs no longer in results
+    for (const [blob, url] of cache) {
       if (!currentBlobs.has(blob)) {
         URL.revokeObjectURL(url);
-        map.delete(blob);
+        cache.delete(blob);
       }
     }
+
+    // Build entries, creating URLs for new blobs
+    return results.map((r) => {
+      let url = cache.get(r.blob);
+      if (!url) {
+        url = URL.createObjectURL(r.blob);
+        cache.set(r.blob, url);
+      }
+      return { blob: r.blob, url };
+    });
   }, [results]);
+  /* eslint-enable react-hooks/refs */
 
   // Cleanup all URLs on unmount
   useEffect(() => {
-    const map = urlMapRef.current;
+    const cache = urlCacheRef.current;
     return () => {
-      for (const url of map.values()) {
-        URL.revokeObjectURL(url);
-      }
-      map.clear();
+      for (const url of cache.values()) URL.revokeObjectURL(url);
+      cache.clear();
     };
   }, []);
 
@@ -63,6 +65,16 @@ export function ImageResultList({ results, onRemove }: ImageResultListProps) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [previewIndex]);
+
+  // Derive a Blob→URL lookup from state (pure computation, no ref access)
+  const urlMap = useMemo(
+    () => new Map(urlEntries.map((e) => [e.blob, e.url])),
+    [urlEntries],
+  );
+
+  function getUrl(blob: Blob): string {
+    return urlMap.get(blob) ?? "";
+  }
 
   function handleDownload(item: ImageResultItem) {
     const url = getUrl(item.blob);

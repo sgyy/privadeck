@@ -227,6 +227,61 @@
           "q2": "可以从压缩包中下载单个文件吗？",
           "a2": "可以，您可以浏览压缩包内容并点击下载按钮下载任意单个文件。"
         }
+      },
+      "csv-json": {
+        "name": "CSV/JSON 转换器",
+        "description": "在 CSV 和 JSON 格式之间即时转换。",
+        "metaTitle": "CSV 转 JSON / JSON 转 CSV - 免费在线转换器",
+        "metaDescription": "即时将 CSV 数据转换为 JSON 或将 JSON 转换为 CSV。免费在线工具，在浏览器中运行。",
+        "keywords": "csv转json, json转csv, csv转换器, json转换器, 数据格式转换",
+        "csvLabel": "CSV",
+        "csvPlaceholder": "在此粘贴 CSV 数据...\nname,age,city\nAlice,30,NYC",
+        "jsonLabel": "JSON",
+        "jsonPlaceholder": "在此粘贴 JSON 数组...\n[{\"name\":\"Alice\"}]",
+        "csvToJson": "CSV → JSON",
+        "jsonToCsv": "JSON → CSV",
+        "faq": {
+          "q1": "支持什么 CSV 格式？",
+          "a1": "标准逗号分隔值，支持双引号转义。包含逗号、引号或换行的字段会正确处理。",
+          "q2": "支持嵌套 JSON 吗？",
+          "a2": "JSON 转 CSV 最适合扁平的对象数组。嵌套对象会被转换为字符串形式。"
+        }
+      },
+      "hash-generator": {
+        "name": "哈希生成器",
+        "description": "从文本或文件生成 SHA-1、SHA-256、SHA-384 和 SHA-512 哈希值。",
+        "metaTitle": "哈希生成器 - 免费在线 SHA 哈希计算工具",
+        "metaDescription": "为文本和文件生成 SHA-1、SHA-256、SHA-384、SHA-512 哈希值。使用 Web Crypto API。免费在线工具。",
+        "keywords": "哈希生成器, sha256, sha512, sha1, 文件哈希, 校验和计算",
+        "textMode": "文本",
+        "fileMode": "文件",
+        "inputPlaceholder": "输入要计算哈希的文本...",
+        "compute": "计算哈希",
+        "computing": "计算中...",
+        "faq": {
+          "q1": "支持哪些哈希算法？",
+          "a1": "使用浏览器内置 Web Crypto API 同时计算 SHA-1、SHA-256、SHA-384 和 SHA-512。",
+          "q2": "可以对文件计算哈希吗？",
+          "a2": "可以，切换到文件模式并上传任意文件。哈希在浏览器本地计算，文件不会上传。"
+        }
+      },
+      "color-converter": {
+        "name": "颜色转换器",
+        "description": "在 HEX、RGB 和 HSL 颜色格式之间转换，带实时预览。",
+        "metaTitle": "颜色转换器 - 免费在线 HEX/RGB/HSL 工具",
+        "metaDescription": "在 HEX、RGB 和 HSL 颜色格式之间转换。实时颜色预览。免费在线工具。",
+        "keywords": "颜色转换, hex转rgb, rgb转hsl, 取色器, 颜色格式",
+        "inputLabel": "颜色值",
+        "inputPlaceholder": "#ff6600、rgb(255, 102, 0) 或 hsl(24, 100%, 50%)",
+        "invalidColor": "无法解析颜色。请尝试 HEX (#ff6600)、RGB (rgb(255,102,0)) 或 HSL (hsl(24,100%,50%))。",
+        "preview": "预览",
+        "values": "颜色数值",
+        "faq": {
+          "q1": "支持哪些颜色格式？",
+          "a1": "支持 HEX (#ff6600 或 #f60)、RGB (rgb(255, 102, 0)) 和 HSL (hsl(24, 100%, 50%)) 格式。所有其他格式自动显示。",
+          "q2": "支持透明度吗？",
+          "a2": "目前工具仅支持不透明颜色。RGBA 和 HSLA 支持将在未来更新中添加。"
+        }
       }
     },
     "image": {
@@ -353,6 +408,102 @@
           "q2": "这会影响图片质量吗？",
           "a2": "JPEG 图片质量保持在 95%。PNG 图片以无损方式重新导出。"
         }
+      },
+      "flip": {
+        "name": "翻转图片",
+        "description": "一键水平或垂直翻转图片。",
+        "metaTitle": "翻转图片 - 免费在线图片翻转工具",
+        "metaDescription": "免费在线水平或垂直翻转图片。无需上传，所有处理在浏览器中完成。",
+        "keywords": "翻转图片, 镜像图片, 水平翻转, 垂直翻转",
+        "horizontal": "水平翻转",
+        "vertical": "垂直翻转",
+        "flipImage": "翻转图片",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "水平翻转和垂直翻转有什么区别？",
+          "a1": "水平翻转将图片左右镜像，就像照镜子一样。垂直翻转将图片上下镜像。",
+          "q2": "翻转会降低图片质量吗？",
+          "a2": "不会。图片以原始分辨率重新绘制。JPEG 图片以 92% 质量重新编码。"
+        }
+      },
+      "grayscale": {
+        "name": "灰度图片",
+        "description": "将任何图片转换为灰度（黑白）。",
+        "metaTitle": "灰度图片 - 免费在线黑白转换工具",
+        "metaDescription": "免费在线将彩色图片转换为灰度。无需上传，所有处理在浏览器中完成。",
+        "keywords": "灰度, 黑白, 去饱和度, 图片转换",
+        "convert": "转换为灰度",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "灰度转换是如何工作的？",
+          "a1": "该工具使用标准亮度公式（0.299R + 0.587G + 0.114B）将每个像素转换为灰度，保留感知亮度。",
+          "q2": "可以调整灰度效果的强度吗？",
+          "a2": "此工具应用完全灰度转换。如需部分去饱和，建议使用专业图片编辑器。"
+        }
+      },
+      "pixelate": {
+        "name": "像素化图片",
+        "description": "对任何图片应用可调像素大小的像素化效果。",
+        "metaTitle": "像素化图片 - 免费在线像素化工具",
+        "metaDescription": "在线对图片进行像素化处理，可调节块大小。适合打码或创建复古效果。免费浏览器工具。",
+        "keywords": "像素化图片, 马赛克效果, 图片打码, 像素艺术",
+        "pixelSize": "像素大小",
+        "pixelate": "像素化图片",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "像素化有什么用途？",
+          "a1": "像素化常用于对截图中的敏感信息打码、创建复古像素艺术效果或对照片中的人脸进行匿名处理。",
+          "q2": "可以控制像素化程度吗？",
+          "a2": "可以。使用像素大小滑块可以从 2px（轻微）调整到 50px（重度像素化）。"
+        }
+      },
+      "add-border": {
+        "name": "添加边框",
+        "description": "为任何图片添加可自定义的边框。",
+        "metaTitle": "添加图片边框 - 免费在线边框工具",
+        "metaDescription": "为图片添加自定义宽度和颜色的边框。免费在线工具，无需上传。",
+        "keywords": "添加边框, 图片边框, 照片相框, 边框制作",
+        "borderWidth": "边框宽度",
+        "borderColor": "边框颜色",
+        "addBorder": "添加边框",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "有哪些边框选项？",
+          "a1": "您可以自定义 1 到 100 像素的边框宽度，并使用颜色选择器选择任何颜色。",
+          "q2": "输出格式是什么？",
+          "a2": "输出始终为 PNG 格式，以确保边框颜色完全按所选颜色保留。"
+        }
+      },
+      "circle-crop": {
+        "name": "圆形裁剪",
+        "description": "将任何图片裁剪为带透明背景的完美圆形。",
+        "metaTitle": "圆形裁剪图片 - 免费在线圆形裁剪工具",
+        "metaDescription": "将图片裁剪为带透明背景的圆形。适合头像和个人资料图片。免费在线工具。",
+        "keywords": "圆形裁剪, 圆形图片, 头像裁剪, 个人资料图片",
+        "cropCircle": "裁剪为圆形",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "圆形裁剪是如何工作的？",
+          "a1": "该工具取图片中心，以最短边为直径，将其裁剪为完美圆形。背景为透明。",
+          "q2": "输出格式是什么？",
+          "a2": "输出始终为 PNG 格式，因为 PNG 支持透明度，这是圆形裁剪所需的。"
+        }
+      },
+      "svg-to-png": {
+        "name": "SVG 转 PNG",
+        "description": "将 SVG 矢量图形以任意比例转换为 PNG 光栅图像。",
+        "metaTitle": "SVG 转 PNG - 免费在线 SVG 转换工具",
+        "metaDescription": "将 SVG 文件转换为自定义缩放比例的 PNG 图像。免费浏览器工具，无需上传。",
+        "keywords": "svg转png, svg转换器, 矢量转位图, svg导出",
+        "scaleFactor": "缩放比例",
+        "convert": "转换为 PNG",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "有哪些缩放比例可选？",
+          "a1": "您可以选择 1x（原始大小）、2x、3x 或 4x。更高的比例会生成更大、更清晰的 PNG 文件，适合高 DPI 显示器。",
+          "q2": "是否支持所有 SVG 功能？",
+          "a2": "该工具使用浏览器内置的 SVG 引擎渲染。支持大多数标准 SVG 功能，但外部资源或字体可能无法正确渲染。"
+        }
       }
     },
     "pdf": {
@@ -429,6 +580,88 @@
           "a1": "可以将 PDF 页面转换为 PNG（无损）或 JPG（文件更小，可控制质量）。",
           "q2": "可以调整图片分辨率吗？",
           "a2": "可以，使用缩放滑块。1x 为标准分辨率，2x 双倍，最高 4x 高分辨率输出。"
+        }
+      },
+      "images-to-pdf": {
+        "name": "图片转 PDF",
+        "description": "将多张图片合并为一个 PDF 文档。",
+        "metaTitle": "图片转 PDF - 在线免费图片转 PDF 工具",
+        "metaDescription": "将 JPG、PNG 等图片转换为 PDF 文档。支持排序，免费在线工具，无需上传。",
+        "keywords": "图片转pdf, jpg转pdf, png转pdf, 图片合并pdf, 照片转pdf",
+        "convert": "转换为 PDF",
+        "converting": "转换中...",
+        "resultSize": "文件大小",
+        "faq": {
+          "q1": "支持哪些图片格式转换为 PDF？",
+          "a1": "支持 JPG、PNG、GIF、WebP、BMP 等常见图片格式。非标准格式会在嵌入前自动转换。",
+          "q2": "转换前可以调整图片顺序吗？",
+          "a2": "可以，使用每张图片缩略图上的箭头按钮来调整顺序。最终 PDF 的页面顺序与显示一致。"
+        }
+      },
+      "rotate": {
+        "name": "旋转 PDF",
+        "description": "将 PDF 所有页面旋转 90°、180° 或 270°。",
+        "metaTitle": "旋转 PDF - 在线免费旋转 PDF 页面",
+        "metaDescription": "旋转 PDF 页面，支持顺时针、逆时针或 180 度旋转。免费在线工具，在浏览器中运行。",
+        "keywords": "旋转pdf, pdf旋转页面, pdf翻转, pdf方向",
+        "pages": "页",
+        "direction": "方向",
+        "clockwise": "顺时针 90°",
+        "counterClockwise": "逆时针 90°",
+        "rotateAll": "旋转所有页面",
+        "rotating": "旋转中...",
+        "resultSize": "文件大小",
+        "faq": {
+          "q1": "可以单独旋转某一页吗？",
+          "a1": "目前工具会以相同角度旋转所有页面。如需逐页旋转，可以多次处理 PDF。",
+          "q2": "旋转会影响 PDF 内容质量吗？",
+          "a2": "不会，旋转仅改变页面方向元数据。内容、文字和图片保持不变。"
+        }
+      },
+      "add-page-numbers": {
+        "name": "添加页码",
+        "description": "为 PDF 文档的每一页添加页码。",
+        "metaTitle": "PDF 添加页码 - 免费在线工具",
+        "metaDescription": "为 PDF 文档添加页码。可选择位置、格式和字号。免费在线工具，无需上传。",
+        "keywords": "pdf添加页码, pdf页码编号, pdf页脚, 给pdf加页码",
+        "pages": "页",
+        "position": "位置",
+        "positions": {
+          "bottom-center": "底部居中",
+          "bottom-left": "底部居左",
+          "bottom-right": "底部居右",
+          "top-center": "顶部居中",
+          "top-left": "顶部居左",
+          "top-right": "顶部居右"
+        },
+        "format": "格式",
+        "fontSize": "字号",
+        "startPage": "从第几页开始",
+        "apply": "添加页码",
+        "applying": "处理中...",
+        "resultSize": "文件大小",
+        "faq": {
+          "q1": "可以选择页码显示位置吗？",
+          "a1": "可以，提供六个位置选项：顶部或底部，配合左对齐、居中或右对齐。",
+          "q2": "可以跳过某些页面不编号吗？",
+          "a2": "可以，使用「从第几页开始」选项跳过前 N 页（适用于封面或目录页）。"
+        }
+      },
+      "extract-text": {
+        "name": "PDF 提取文本",
+        "description": "从 PDF 文档中提取所有文本内容。",
+        "metaTitle": "PDF 提取文本 - 免费在线 PDF 文本提取器",
+        "metaDescription": "即时从 PDF 文件中提取文本。从任何 PDF 文档复制文本内容。免费在线工具，在浏览器中运行。",
+        "keywords": "pdf提取文本, pdf转文字, 从pdf复制文本, pdf文本提取",
+        "extract": "提取文本",
+        "extracting": "提取中...",
+        "extractedText": "提取的文本",
+        "noTextFound": "未在此 PDF 中找到文本内容。",
+        "faq": {
+          "q1": "扫描版 PDF 也能提取文本吗？",
+          "a1": "本工具仅提取嵌入的文本。对于扫描版 PDF（图片），请使用我们的 OCR 工具来识别图片中的文字。",
+          "q2": "提取后能保留格式吗？",
+          "a2": "基本文本内容按页提取。复杂格式（如表格和多栏排版）可能无法完美保留。"
         }
       }
     },
@@ -520,6 +753,46 @@
           "a1": "WebP 动画文件通常比等效 GIF 小 25-35%，同时支持更好的色彩深度和透明度。",
           "q2": "WebP 动画支持范围广吗？",
           "a2": "是的，所有现代浏览器都支持 WebP 动画。只有非常老的浏览器不支持。"
+        }
+      },
+      "compress": {
+        "name": "视频压缩",
+        "description": "通过可调质量预设减小视频文件大小。",
+        "metaTitle": "视频压缩 - 免费在线视频压缩工具",
+        "metaDescription": "压缩视频文件以减小大小。选择高、中、低质量。免费在线工具，无需上传。",
+        "keywords": "视频压缩, 压缩视频, 减小视频大小, 视频缩小",
+        "quality": "质量",
+        "high": "高质量",
+        "medium": "中等质量",
+        "low": "低质量",
+        "compress": "压缩",
+        "processing": "压缩中",
+        "originalSize": "原始大小",
+        "compressedSize": "压缩后大小",
+        "saved": "缩小比例",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "视频压缩如何工作？",
+          "a1": "该工具使用 H.264 编码器以 CRF（恒定速率因子）值重新编码视频。质量越高文件越大；质量越低文件越小但压缩伪影更多。",
+          "q2": "输出使用什么格式？",
+          "a2": "压缩后的视频始终输出为 MP4（H.264 视频 + AAC 音频），以确保最大兼容性。"
+        }
+      },
+      "format-convert": {
+        "name": "视频格式转换",
+        "description": "在 MP4、MKV 和 AVI 格式之间转换视频。",
+        "metaTitle": "视频格式转换器 - 免费在线视频转换工具",
+        "metaDescription": "在 MP4、MKV 和 AVI 之间转换视频。免费在线工具，无需上传，在浏览器中运行。",
+        "keywords": "视频转换, 格式转换, avi转mp4, mkv转mp4, 视频格式",
+        "format": "输出格式",
+        "convert": "转换",
+        "converting": "转换中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "支持哪些视频格式？",
+          "a1": "支持 MP4、WebM、MKV 和 AVI 格式之间的转换。MP4 和 AVI 使用 H.264 编码，WebM 使用 VP9，MKV 使用流复制以快速转换。",
+          "q2": "视频质量会改变吗？",
+          "a2": "转换为 MKV 使用流复制，质量完全保留。其他转换以高质量设置重新编码。"
         }
       }
     },

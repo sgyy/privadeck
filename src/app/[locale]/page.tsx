@@ -19,7 +19,6 @@ export default async function HomePage({
 
 function HomeUI() {
   const t = useTranslations("home");
-  const tc = useTranslations("common");
   const tcat = useTranslations("categories");
   const tt = useTranslations("tools");
   const allTools = getAllTools();

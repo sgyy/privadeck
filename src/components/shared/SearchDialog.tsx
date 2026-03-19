@@ -41,6 +41,7 @@ export function SearchDialog({ open, onClose }: SearchDialogProps) {
     [filtered, router, onClose],
   );
 
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     if (open) {
       inputRef.current?.focus();
@@ -48,9 +49,8 @@ export function SearchDialog({ open, onClose }: SearchDialogProps) {
     }
   }, [open]);
 
-  useEffect(() => {
-    setSelectedIndex(0);
-  }, [query]);
+  useEffect(() => { setSelectedIndex(0); }, [query]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {

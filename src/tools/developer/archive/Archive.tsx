@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
-import { Button } from "@/components/ui/Button";
-import { File as FileIcon, Folder, Download, Image, FileCode } from "lucide-react";
+import { File as FileIcon, Folder, Download, Image as ImageIcon, FileCode } from "lucide-react";
 import {
   extractZip,
   downloadEntry,
@@ -14,7 +13,7 @@ import {
 } from "./logic";
 
 export default function Archive() {
-  const [file, setFile] = useState<File | null>(null);
+  const [, setFile] = useState<File | null>(null);
   const [entries, setEntries] = useState<ArchiveEntry[]>([]);
   const [extracting, setExtracting] = useState(false);
   const [error, setError] = useState("");
@@ -31,7 +30,7 @@ export default function Archive() {
     try {
       const result = await extractZip(f);
       setEntries(result);
-    } catch (e) {
+    } catch {
       setError(t("unsupportedFormat"));
     } finally {
       setExtracting(false);
@@ -41,7 +40,7 @@ export default function Archive() {
   function getIcon(entry: ArchiveEntry) {
     if (entry.isDirectory) return <Folder className="h-4 w-4 text-yellow-500" />;
     const type = getFileIcon(entry.path);
-    if (type === "image") return <Image className="h-4 w-4 text-blue-500" />;
+    if (type === "image") return <ImageIcon className="h-4 w-4 text-blue-500" />;
     if (type === "code") return <FileCode className="h-4 w-4 text-green-500" />;
     return <FileIcon className="h-4 w-4 text-muted-foreground" />;
   }

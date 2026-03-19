@@ -21,7 +21,7 @@ const definition: ToolDefinition = {
       answerKey: "tools.image.format-converter.faq.a3",
     },
   ],
-  relatedSlugs: ["word-counter"],
+  relatedSlugs: ["compress", "resize", "crop"],
 };
 
 export default definition;

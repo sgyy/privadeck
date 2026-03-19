@@ -43,6 +43,7 @@ export function PdfPagePreview({
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
 
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any -- pdfjs-dist v5 render() requires canvas prop not in type defs
       await page.render({ canvasContext: ctx, viewport: scaledViewport, canvas } as any).promise;
       if (!cancelled) setLoading(false);
     }

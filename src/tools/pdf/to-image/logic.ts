@@ -40,6 +40,7 @@ export async function convertPdfToImages(
     const ctx = canvas.getContext("2d");
     if (!ctx) throw new Error("Canvas context not available");
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any -- pdfjs-dist v5 render() requires canvas prop not in type defs
     await page.render({ canvasContext: ctx, viewport, canvas } as any).promise;
 
     const blob = await new Promise<Blob>((resolve, reject) => {

@@ -22,11 +22,26 @@ import videoTrim from "@/tools/video/trim";
 import videoRotate from "@/tools/video/rotate";
 import videoToGif from "@/tools/video/to-gif";
 import videoToWebp from "@/tools/video/to-webp";
+import videoCompress from "@/tools/video/compress";
+import videoFormatConvert from "@/tools/video/format-convert";
 import audioTrim from "@/tools/audio/trim";
 import audioConvert from "@/tools/audio/convert";
 import audioExtract from "@/tools/audio/extract";
 import ocr from "@/tools/developer/ocr";
 import archive from "@/tools/developer/archive";
+import csvJson from "@/tools/developer/csv-json";
+import hashGenerator from "@/tools/developer/hash-generator";
+import colorConverter from "@/tools/developer/color-converter";
+import imageFlip from "@/tools/image/flip";
+import imageGrayscale from "@/tools/image/grayscale";
+import imagePixelate from "@/tools/image/pixelate";
+import imageAddBorder from "@/tools/image/add-border";
+import imageCircleCrop from "@/tools/image/circle-crop";
+import imageSvgToPng from "@/tools/image/svg-to-png";
+import pdfImagesToPdf from "@/tools/pdf/images-to-pdf";
+import pdfRotate from "@/tools/pdf/rotate";
+import pdfAddPageNumbers from "@/tools/pdf/add-page-numbers";
+import pdfExtractText from "@/tools/pdf/extract-text";
 
 const ALL_TOOLS: ToolDefinition[] = [
   wordCounter,
@@ -37,21 +52,36 @@ const ALL_TOOLS: ToolDefinition[] = [
   urlEncoder,
   ocr,
   archive,
+  csvJson,
+  hashGenerator,
+  colorConverter,
   formatConverter,
   imageCompress,
   imageCrop,
   imageResize,
   imageWatermark,
   imageRemoveExif,
+  imageFlip,
+  imageGrayscale,
+  imagePixelate,
+  imageAddBorder,
+  imageCircleCrop,
+  imageSvgToPng,
   pdfMerge,
   pdfSplit,
   pdfDeletePages,
   pdfToImage,
+  pdfImagesToPdf,
+  pdfRotate,
+  pdfAddPageNumbers,
+  pdfExtractText,
   videoMute,
   videoTrim,
   videoRotate,
   videoToGif,
   videoToWebp,
+  videoCompress,
+  videoFormatConvert,
   audioTrim,
   audioConvert,
   audioExtract,

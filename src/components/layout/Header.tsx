@@ -23,9 +23,8 @@ export function Header({ onMenuClick, onSearchClick }: HeaderProps) {
   const pathname = usePathname();
 
   // Close menu on route change
-  useEffect(() => {
-    setActiveMenu(null);
-  }, [pathname]);
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => { setActiveMenu(null); }, [pathname]);
 
   const openMenu = useCallback((cat: ToolCategory) => {
     if (closeTimer.current) clearTimeout(closeTimer.current);

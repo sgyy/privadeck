@@ -81,6 +81,7 @@ export default function ImageWatermark() {
   }, [generatePreview, file]);
 
   // Cleanup URLs on unmount
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- cleanup only on unmount
   useEffect(() => {
     return () => {
       if (previewUrl) URL.revokeObjectURL(previewUrl);

@@ -226,6 +226,61 @@
           "q2": "Can I download individual files from an archive?",
           "a2": "Yes, you can browse the archive contents and download any individual file by clicking its download button."
         }
+      },
+      "csv-json": {
+        "name": "CSV/JSON Converter",
+        "description": "Convert between CSV and JSON formats instantly.",
+        "metaTitle": "CSV to JSON / JSON to CSV - Free Online Converter",
+        "metaDescription": "Convert CSV data to JSON or JSON to CSV format. Handles quoted fields, nested data. Free online tool.",
+        "keywords": "csv to json, json to csv, csv converter, json converter, data converter",
+        "csvLabel": "CSV",
+        "jsonLabel": "JSON",
+        "csvPlaceholder": "Paste CSV data here...\nname,age,city\nAlice,30,NYC",
+        "jsonPlaceholder": "Paste JSON array here...\n[{\"name\":\"Alice\"}]",
+        "csvToJson": "CSV → JSON",
+        "jsonToCsv": "JSON → CSV",
+        "faq": {
+          "q1": "What CSV formats are supported?",
+          "a1": "Standard comma-separated values with optional double-quote escaping. Fields containing commas, quotes, or newlines are handled correctly.",
+          "q2": "Does it support nested JSON?",
+          "a2": "JSON to CSV works best with flat arrays of objects. Nested objects are converted to their string representation."
+        }
+      },
+      "hash-generator": {
+        "name": "Hash Generator",
+        "description": "Compute SHA-1, SHA-256, SHA-384, and SHA-512 hashes for text or files.",
+        "metaTitle": "Hash Generator - Free Online SHA Hash Calculator",
+        "metaDescription": "Generate SHA-1, SHA-256, SHA-384, and SHA-512 hashes for text and files. Uses Web Crypto API. Free online tool.",
+        "keywords": "hash generator, sha256, sha512, sha1, file hash, checksum calculator",
+        "textMode": "Text",
+        "fileMode": "File",
+        "inputPlaceholder": "Enter text to hash...",
+        "compute": "Compute Hashes",
+        "computing": "Computing...",
+        "faq": {
+          "q1": "Which hash algorithms are supported?",
+          "a1": "SHA-1, SHA-256, SHA-384, and SHA-512 are all computed simultaneously using the browser's Web Crypto API.",
+          "q2": "Can I hash files?",
+          "a2": "Yes, switch to File mode and drop any file. The hash is computed locally in your browser — the file is never uploaded."
+        }
+      },
+      "color-converter": {
+        "name": "Color Converter",
+        "description": "Convert colors between HEX, RGB, and HSL formats with live preview.",
+        "metaTitle": "Color Converter - Free Online HEX/RGB/HSL Tool",
+        "metaDescription": "Convert colors between HEX, RGB, and HSL formats. Live color preview swatch. Free online tool.",
+        "keywords": "color converter, hex to rgb, rgb to hsl, color picker, color format",
+        "inputLabel": "Color Value",
+        "inputPlaceholder": "#ff6600, rgb(255, 102, 0), or hsl(24, 100%, 50%)",
+        "invalidColor": "Could not parse color. Try HEX (#ff6600), RGB (rgb(255,102,0)), or HSL (hsl(24,100%,50%)).",
+        "preview": "Preview",
+        "values": "Individual Values",
+        "faq": {
+          "q1": "Which color formats are supported?",
+          "a1": "You can input colors as HEX (#ff6600 or #f60), RGB (rgb(255, 102, 0)), or HSL (hsl(24, 100%, 50%)). All other formats are shown automatically.",
+          "q2": "Does it support alpha/transparency?",
+          "a2": "Currently the tool supports opaque colors only. RGBA and HSLA support will be added in a future update."
+        }
       }
     },
     "image": {
@@ -352,6 +407,102 @@
           "q2": "Does this affect image quality?",
           "a2": "The image quality is preserved at 95% for JPEG. PNG images are losslessly re-exported."
         }
+      },
+      "flip": {
+        "name": "Flip Image",
+        "description": "Flip images horizontally or vertically with one click.",
+        "metaTitle": "Flip Image - Free Online Image Flipper",
+        "metaDescription": "Flip images horizontally or vertically online for free. No upload needed, all processing happens in your browser.",
+        "keywords": "flip image, mirror image, horizontal flip, vertical flip",
+        "horizontal": "Horizontal",
+        "vertical": "Vertical",
+        "flipImage": "Flip Image",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "What is the difference between horizontal and vertical flip?",
+          "a1": "Horizontal flip mirrors the image left to right, like looking in a mirror. Vertical flip mirrors the image top to bottom.",
+          "q2": "Does flipping reduce image quality?",
+          "a2": "No. The image is redrawn at its original resolution. JPEG images are re-encoded at 92% quality."
+        }
+      },
+      "grayscale": {
+        "name": "Grayscale Image",
+        "description": "Convert any image to grayscale (black and white).",
+        "metaTitle": "Grayscale Image - Free Online B&W Converter",
+        "metaDescription": "Convert color images to grayscale online for free. No upload needed, all processing happens in your browser.",
+        "keywords": "grayscale, black and white, desaturate, image converter",
+        "convert": "Convert to Grayscale",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "How does grayscale conversion work?",
+          "a1": "The tool uses the Canvas API grayscale filter to remove all color information, converting each pixel to a shade of gray based on its luminance.",
+          "q2": "Can I adjust the intensity of the grayscale effect?",
+          "a2": "This tool applies a full grayscale conversion. For partial desaturation, consider using a dedicated photo editor."
+        }
+      },
+      "pixelate": {
+        "name": "Pixelate Image",
+        "description": "Apply a pixelation effect to any image with adjustable pixel size.",
+        "metaTitle": "Pixelate Image - Free Online Pixelation Tool",
+        "metaDescription": "Pixelate images online with adjustable block size. Great for censoring or creating retro effects. Free browser-based tool.",
+        "keywords": "pixelate image, mosaic effect, censor image, pixel art",
+        "pixelSize": "Pixel Size",
+        "pixelate": "Pixelate Image",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "What can I use pixelation for?",
+          "a1": "Pixelation is commonly used to censor sensitive information in screenshots, create retro pixel-art effects, or anonymize faces in photos.",
+          "q2": "Can I control the level of pixelation?",
+          "a2": "Yes. Use the pixel size slider to adjust from 2px (subtle) to 50px (heavy pixelation)."
+        }
+      },
+      "add-border": {
+        "name": "Add Border",
+        "description": "Add a customizable border around any image.",
+        "metaTitle": "Add Border to Image - Free Online Border Tool",
+        "metaDescription": "Add borders to images with custom width and color. Free online tool, no upload needed.",
+        "keywords": "add border, image border, photo frame, border maker",
+        "borderWidth": "Border Width",
+        "borderColor": "Border Color",
+        "addBorder": "Add Border",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "What border options are available?",
+          "a1": "You can customize the border width from 1 to 100 pixels and choose any color using the color picker.",
+          "q2": "What format is the output?",
+          "a2": "The output is always PNG to ensure the border color is preserved exactly as chosen."
+        }
+      },
+      "circle-crop": {
+        "name": "Circle Crop",
+        "description": "Crop any image into a perfect circle with transparent background.",
+        "metaTitle": "Circle Crop Image - Free Online Circle Cropper",
+        "metaDescription": "Crop images into a circle with transparent background. Perfect for profile pictures and avatars. Free online tool.",
+        "keywords": "circle crop, round image, avatar crop, profile picture",
+        "cropCircle": "Crop to Circle",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "How does circle cropping work?",
+          "a1": "The tool takes the center of your image, uses the shortest dimension as the diameter, and clips it to a perfect circle. The background is transparent.",
+          "q2": "What format is the output?",
+          "a2": "The output is always PNG because it supports transparency, which is needed for the circular crop."
+        }
+      },
+      "svg-to-png": {
+        "name": "SVG to PNG",
+        "description": "Convert SVG vector graphics to PNG raster images at any scale.",
+        "metaTitle": "SVG to PNG - Free Online SVG Converter",
+        "metaDescription": "Convert SVG files to PNG images with custom scale factor. Free browser-based tool, no upload needed.",
+        "keywords": "svg to png, svg converter, vector to raster, svg export",
+        "scaleFactor": "Scale Factor",
+        "convert": "Convert to PNG",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "What scale factors are available?",
+          "a1": "You can choose 1x (original size), 2x, 3x, or 4x. Higher scales produce larger, more detailed PNG files suitable for high-DPI displays.",
+          "q2": "Are all SVG features supported?",
+          "a2": "The tool renders SVGs using the browser's built-in SVG engine. Most standard SVG features are supported, but external resources or fonts may not render correctly."
+        }
       }
     },
     "pdf": {
@@ -428,6 +579,88 @@
           "a1": "You can convert PDF pages to PNG (lossless) or JPG (smaller file size with quality control).",
           "q2": "Can I adjust the image resolution?",
           "a2": "Yes, use the scale slider. 1x gives standard resolution, 2x doubles it, up to 4x for high-resolution output."
+        }
+      },
+      "images-to-pdf": {
+        "name": "Images to PDF",
+        "description": "Convert multiple images into a single PDF document.",
+        "metaTitle": "Images to PDF - Convert Images to PDF Online Free",
+        "metaDescription": "Convert JPG, PNG, and other images into a single PDF document. Reorder pages, free online tool. No upload needed.",
+        "keywords": "images to pdf, jpg to pdf, png to pdf, convert images to pdf, photo to pdf",
+        "convert": "Convert to PDF",
+        "converting": "Converting...",
+        "resultSize": "File size",
+        "faq": {
+          "q1": "What image formats can I convert to PDF?",
+          "a1": "You can convert JPG, PNG, GIF, WebP, BMP, and other common image formats. Non-standard formats are automatically converted before embedding.",
+          "q2": "Can I reorder the images before converting?",
+          "a2": "Yes, use the arrow buttons on each image thumbnail to reorder them. The final PDF pages will match the order shown."
+        }
+      },
+      "rotate": {
+        "name": "Rotate PDF",
+        "description": "Rotate all pages of a PDF by 90, 180, or 270 degrees.",
+        "metaTitle": "Rotate PDF - Rotate PDF Pages Online Free",
+        "metaDescription": "Rotate PDF pages clockwise, counter-clockwise, or 180 degrees. Free online tool, works in your browser.",
+        "keywords": "rotate pdf, pdf rotate pages, turn pdf, pdf orientation",
+        "pages": "pages",
+        "direction": "Direction",
+        "clockwise": "90° CW",
+        "counterClockwise": "90° CCW",
+        "rotateAll": "Rotate All Pages",
+        "rotating": "Rotating...",
+        "resultSize": "File size",
+        "faq": {
+          "q1": "Can I rotate individual pages?",
+          "a1": "Currently the tool rotates all pages by the same angle. For per-page rotation, you can apply different rotations by processing the PDF multiple times.",
+          "q2": "Does rotation affect the PDF content quality?",
+          "a2": "No, rotation only changes the page orientation metadata. The content, text, and images remain unchanged."
+        }
+      },
+      "add-page-numbers": {
+        "name": "Add Page Numbers",
+        "description": "Add page numbers to every page of a PDF document.",
+        "metaTitle": "Add Page Numbers to PDF - Free Online Tool",
+        "metaDescription": "Add page numbers to your PDF documents. Choose position, format, and font size. Free online tool, no upload needed.",
+        "keywords": "add page numbers pdf, pdf page numbering, number pdf pages, pdf footer",
+        "pages": "pages",
+        "position": "Position",
+        "positions": {
+          "bottom-center": "Bottom Center",
+          "bottom-left": "Bottom Left",
+          "bottom-right": "Bottom Right",
+          "top-center": "Top Center",
+          "top-left": "Top Left",
+          "top-right": "Top Right"
+        },
+        "format": "Format",
+        "fontSize": "Font Size",
+        "startPage": "Start from page",
+        "apply": "Add Page Numbers",
+        "applying": "Applying...",
+        "resultSize": "File size",
+        "faq": {
+          "q1": "Can I choose where page numbers appear?",
+          "a1": "Yes, you can place page numbers at any of six positions: top or bottom, combined with left, center, or right alignment.",
+          "q2": "Can I skip numbering on certain pages?",
+          "a2": "Yes, use the 'Start from page' option to skip the first N pages (useful for title pages or table of contents)."
+        }
+      },
+      "extract-text": {
+        "name": "Extract Text from PDF",
+        "description": "Extract all text content from a PDF document.",
+        "metaTitle": "Extract Text from PDF - Free Online PDF Text Extractor",
+        "metaDescription": "Extract text from PDF files instantly. Copy text content from any PDF document. Free online tool, works in your browser.",
+        "keywords": "extract text pdf, pdf to text, copy text from pdf, pdf text extractor",
+        "extract": "Extract Text",
+        "extracting": "Extracting...",
+        "extractedText": "Extracted Text",
+        "noTextFound": "No text content found in this PDF.",
+        "faq": {
+          "q1": "Does this work with scanned PDFs?",
+          "a1": "This tool extracts embedded text only. For scanned PDFs (images), use our OCR tool to recognize text from images.",
+          "q2": "Is the formatting preserved?",
+          "a2": "Basic text content is extracted page by page. Complex formatting like tables and columns may not be perfectly preserved."
         }
       }
     },
@@ -519,6 +752,46 @@
           "a1": "Animated WebP files are typically 25-35% smaller than equivalent GIFs while supporting better color depth and transparency.",
           "q2": "Is animated WebP widely supported?",
           "a2": "Yes, all modern browsers support animated WebP. Only very old browsers lack support."
+        }
+      },
+      "compress": {
+        "name": "Compress Video",
+        "description": "Reduce video file size with adjustable quality presets.",
+        "metaTitle": "Compress Video - Free Online Video Compressor",
+        "metaDescription": "Compress video files to reduce size. Choose high, medium, or low quality. Free online tool, no upload needed.",
+        "keywords": "compress video, video compressor, reduce video size, shrink video",
+        "quality": "Quality",
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low",
+        "compress": "Compress",
+        "processing": "Compressing",
+        "originalSize": "Original size",
+        "compressedSize": "Compressed size",
+        "saved": "Size reduction",
+        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
+        "faq": {
+          "q1": "How does video compression work?",
+          "a1": "The tool re-encodes the video using H.264 with a CRF (Constant Rate Factor) value. Higher quality means larger files; lower quality means smaller files with more compression artifacts.",
+          "q2": "Which output format is used?",
+          "a2": "Compressed videos are always output as MP4 (H.264 video + AAC audio) for maximum compatibility."
+        }
+      },
+      "format-convert": {
+        "name": "Convert Video Format",
+        "description": "Convert videos between MP4, WebM, MKV, and AVI formats.",
+        "metaTitle": "Video Format Converter - Free Online Video Converter",
+        "metaDescription": "Convert videos between MP4, WebM, MKV, and AVI. Free online tool, no upload needed. Runs in your browser.",
+        "keywords": "video converter, convert video, mp4 to webm, mkv to mp4, video format",
+        "format": "Output Format",
+        "convert": "Convert",
+        "converting": "Converting",
+        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
+        "faq": {
+          "q1": "Which video formats are supported?",
+          "a1": "You can convert between MP4, WebM, MKV, and AVI formats. MP4 and AVI use H.264 encoding, WebM uses VP9, and MKV uses stream copy for fast conversion.",
+          "q2": "Will the video quality change?",
+          "a2": "Converting to MKV uses stream copy so quality is preserved exactly. Other conversions re-encode with high quality settings."
         }
       }
     },
