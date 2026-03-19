@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { locales } from "@/i18n/routing";
-import { Shield, Eye, EyeOff, HardDrive, Globe, Lock, FileX } from "lucide-react";
+import { Shield, Eye, EyeOff, HardDrive, Lock, FileX } from "lucide-react";
 import type { Metadata } from "next";
 
 const SITE_URL = "https://mediatoolbox.app";
@@ -49,7 +49,6 @@ function PrivacyUI() {
   const features = [
     { icon: EyeOff, key: "noUpload" },
     { icon: HardDrive, key: "localStorage" },
-    { icon: Globe, key: "noTracking" },
     { icon: Lock, key: "openSource" },
     { icon: FileX, key: "noLogs" },
     { icon: Eye, key: "transparent" },
