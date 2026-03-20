@@ -8,7 +8,7 @@ interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 }
 
 const variantStyles: Record<Variant, string> = {
-  default: "bg-primary text-primary-foreground",
+  default: "bg-gradient-to-r from-primary to-emerald-500 text-primary-foreground",
   secondary: "bg-muted text-muted-foreground",
   outline: "border border-border text-foreground",
 };

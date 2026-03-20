@@ -47,7 +47,7 @@ export function AccordionItem({
         />
       </button>
       {open && (
-        <div className="pb-4 text-sm text-muted-foreground">{children}</div>
+        <div className="pb-4 text-sm text-muted-foreground animate-fade-in">{children}</div>
       )}
     </div>
   );

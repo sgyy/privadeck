@@ -30,6 +30,11 @@
   --card-foreground: #1E293B;
   --accent: #ECFDF5;
   --accent-foreground: #059669;
+  --glow-primary: 0 0 20px rgba(6, 182, 212, 0.15);
+  --glow-primary-strong: 0 0 30px rgba(6, 182, 212, 0.25);
+  --gradient-primary: linear-gradient(135deg, #06B6D4, #10B981);
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-card-hover: 0 8px 25px rgba(6, 182, 212, 0.08), 0 2px 10px rgba(15, 23, 42, 0.06);
 }
 
 .dark {
@@ -44,6 +49,11 @@
   --card-foreground: #F1F5F9;
   --accent: #0F766E;
   --accent-foreground: #2DD4BF;
+  --glow-primary: 0 0 20px rgba(34, 211, 238, 0.12);
+  --glow-primary-strong: 0 0 40px rgba(34, 211, 238, 0.2);
+  --gradient-primary: linear-gradient(135deg, #22D3EE, #2DD4BF);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 8px 30px rgba(34, 211, 238, 0.1), 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -55,4 +65,63 @@ body {
 @keyframes indeterminate {
   0% { translate: -100% 0; }
   100% { translate: 300% 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-scale {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: var(--glow-primary); }
+  50% { box-shadow: var(--glow-primary-strong); }
+}
+
+.animate-fade-in { animation: fade-in 0.4s ease-out both; }
+.animate-fade-in-scale { animation: fade-in-scale 0.3s ease-out both; }
+
+.text-gradient {
+  color: var(--primary);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dot-pattern {
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.gradient-border {
+  position: relative;
+}
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: var(--gradient-primary);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.gradient-border:hover::before {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-fade-in-scale {
+    animation: none;
+  }
 }

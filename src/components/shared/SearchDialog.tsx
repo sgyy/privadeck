@@ -119,8 +119,8 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
 
   return (
     <>
-      <div className="fixed inset-0 z-50 bg-black/50" onClick={onClose} />
-      <div className="fixed left-1/2 top-[20%] z-50 w-full max-w-lg -translate-x-1/2 rounded-xl border border-border bg-card shadow-2xl">
+      <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm" onClick={onClose} />
+      <div className="fixed left-1/2 top-[20%] z-50 w-full max-w-lg -translate-x-1/2 rounded-xl border border-border/50 bg-card/95 backdrop-blur-xl shadow-2xl shadow-primary/5 animate-fade-in-scale">
         <div className="flex items-center gap-3 border-b border-border px-4 py-3">
           <Search className="h-5 w-5 text-muted-foreground shrink-0" />
           <input
@@ -157,7 +157,7 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
                 type="button"
                 onClick={() => navigate(i)}
                 className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm transition-colors ${
-                  i === selectedIndex ? "bg-accent" : "hover:bg-muted"
+                  i === selectedIndex ? "bg-primary/10 ring-1 ring-primary/20" : "hover:bg-muted"
                 }`}
               >
                 <span className={`h-2 w-2 shrink-0 rounded-full ${categoryColors[tool.category] || "bg-gray-500"}`} />

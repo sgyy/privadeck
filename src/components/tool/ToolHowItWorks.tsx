@@ -37,9 +37,9 @@ export function ToolHowItWorks({ category }: ToolHowItWorksProps) {
       {steps.map((step, i) => (
         <div
           key={i}
-          className="flex items-start gap-3 rounded-lg bg-muted/50 p-3"
+          className="flex items-start gap-3 rounded-lg bg-muted/30 border border-border/30 p-3"
         >
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground text-sm font-bold">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-emerald-500 shadow-sm text-primary-foreground text-sm font-bold">
             {i + 1}
           </div>
           <div className="min-w-0">

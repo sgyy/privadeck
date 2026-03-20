@@ -44,8 +44,11 @@ function HomeUI() {
   return (
     <div className="space-y-12">
       {/* Hero */}
-      <section className="text-center py-8 sm:py-12">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+      <section className="relative text-center py-12 sm:py-16">
+        <div className="absolute inset-0 dot-pattern opacity-40 dark:opacity-20 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.04] to-transparent pointer-events-none" />
+        <div className="relative">
+        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-gradient">
           {t("hero")}
         </h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -56,6 +59,7 @@ function HomeUI() {
           <FeatureBadge icon={<Shield className="h-4 w-4" />} label={t("featurePrivate")} />
           <FeatureBadge icon={<Zap className="h-4 w-4" />} label={t("featureInstant")} />
           <FeatureBadge icon={<Globe className="h-4 w-4" />} label={t("featureNoUpload")} />
+        </div>
         </div>
       </section>
 
@@ -68,12 +72,15 @@ function HomeUI() {
           <section key={deck.titleKey}>
             <h2 className="text-xl font-semibold mb-4">{t(deck.titleKey)}</h2>
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {deckTools.map((tool) => (
+              {deckTools.map((tool, i) => (
                 <Link
                   key={tool.slug}
                   href={`/tools/${tool.category}/${tool.slug}`}
                 >
-                  <Card className="p-4 transition-all hover:bg-muted/50 hover:shadow-md h-full">
+                  <Card
+                    className="p-4 h-full gradient-border animate-fade-in"
+                    style={{ animationDelay: `${i * 50}ms` }}
+                  >
                     <div className="flex-1 min-w-0">
                       <h3 className="font-medium">
                         {tt(`${tool.category}.${tool.slug}.name`)}
@@ -106,7 +113,7 @@ function HomeUI() {
                 key={tool.slug}
                 href={`/tools/${tool.category}/${tool.slug}`}
               >
-                <Card className="p-4 transition-all hover:bg-muted/50 hover:shadow-md h-full">
+                <Card className="p-4 h-full gradient-border">
                   <div className="flex-1 min-w-0">
                     <h3 className="font-medium">
                       {tt(`${tool.category}.${tool.slug}.name`)}
@@ -133,7 +140,7 @@ function HomeUI() {
             const catTools = allTools.filter((t) => t.category === cat.key);
             return (
               <Link key={cat.key} href={`/tools/${cat.key}`}>
-                <Card className="p-5 transition-all hover:bg-muted/50 hover:shadow-md">
+                <Card className="p-5 gradient-border">
                   <h3 className="font-semibold">{tcat(`${cat.key}.name`)}</h3>
                   <p className="mt-1 text-sm text-muted-foreground">
                     {tcat(`${cat.key}.description`)}
@@ -153,7 +160,7 @@ function HomeUI() {
 
 function FeatureBadge({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
-    <div className="flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm text-muted-foreground">
+    <div className="flex items-center gap-2 rounded-full border border-border/50 bg-card/50 backdrop-blur-sm px-4 py-2 text-sm text-muted-foreground hover:border-primary/30 hover:shadow-[var(--glow-primary)] transition-all duration-300">
       {icon}
       {label}
     </div>

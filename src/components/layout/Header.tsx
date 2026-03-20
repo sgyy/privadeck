@@ -51,7 +51,7 @@ export function Header({ onMenuClick, onSearchClick, toolNavData }: HeaderProps)
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-40 border-b border-border/50 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/50">
       <div className="mx-auto max-w-7xl flex h-16 items-center gap-2 px-4 lg:px-6">
         {/* Mobile menu button */}
         <button
@@ -68,7 +68,7 @@ export function Header({ onMenuClick, onSearchClick, toolNavData }: HeaderProps)
           href="/"
           className="flex items-center gap-2 text-lg font-bold text-foreground shrink-0"
         >
-          <Shield className="h-6 w-6 text-primary" />
+          <Shield className="h-6 w-6 text-primary drop-shadow-[0_0_6px_rgba(6,182,212,0.4)]" />
           <span className="hidden sm:inline">{t("siteName")}</span>
         </Link>
 
@@ -160,7 +160,7 @@ function CategoryDropdown({
           onMouseEnter={onCancelClose}
           onMouseLeave={onClose}
         >
-          <div className="rounded-xl border border-border bg-card shadow-xl w-max max-w-[90vw] p-5">
+          <div className="rounded-xl border border-border/50 bg-card/95 backdrop-blur-xl shadow-2xl shadow-primary/5 animate-fade-in-scale w-max max-w-[90vw] p-5">
             <div className="flex gap-8">
               {/* Featured tools column */}
               {featured.length > 0 && (

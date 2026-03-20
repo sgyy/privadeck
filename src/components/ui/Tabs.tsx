@@ -47,7 +47,7 @@ export function TabsList({
   return (
     <div
       className={cn(
-        "inline-flex items-center gap-1 rounded-lg bg-muted p-1",
+        "inline-flex items-center gap-1 rounded-lg bg-muted/70 backdrop-blur-sm p-1",
         className,
       )}
     >
@@ -75,7 +75,7 @@ export function TabsTrigger({
       className={cn(
         "inline-flex items-center justify-center rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
         isActive
-          ? "bg-background text-foreground shadow-sm"
+          ? "bg-background text-foreground shadow-sm ring-1 ring-primary/20"
           : "text-muted-foreground hover:text-foreground",
         className,
       )}

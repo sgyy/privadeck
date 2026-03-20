@@ -89,15 +89,15 @@ export function FileDropzone({
       }}
       onClick={() => inputRef.current?.click()}
       className={cn(
-        "flex cursor-pointer flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed border-border p-8 transition-colors hover:border-primary/50 hover:bg-muted/50",
-        dragging && "border-primary bg-accent",
+        "flex cursor-pointer flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed border-border p-8 transition-all duration-300 hover:border-primary/50 hover:bg-muted/50 hover:shadow-[var(--glow-primary)]",
+        dragging && "border-primary bg-primary/5 shadow-[var(--glow-primary-strong)]",
         className,
       )}
     >
       {/* Prominent upload button */}
       <button
         type="button"
-        className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+        className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-primary to-emerald-500 px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-sm transition-all duration-200 hover:shadow-[var(--glow-primary)] active:scale-[0.98]"
         onClick={(e) => {
           e.stopPropagation();
           inputRef.current?.click();
