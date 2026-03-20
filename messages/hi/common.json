@@ -22,22 +22,32 @@
     "lightMode": "लाइट मोड",
     "systemMode": "सिस्टम",
     "language": "भाषा",
-    "share": "Share",
-    "shareCopied": "Link copied!",
-    "uploadFiles": "Upload Files",
-    "maxFileSize": "Max size",
+    "share": "शेयर करें",
+    "shareCopied": "लिंक कॉपी हो गया!",
+    "uploadFiles": "फ़ाइलें अपलोड करें",
+    "maxFileSize": "अधिकतम आकार",
     "howItWorks": {
-      "step1FileTitle": "Upload your file",
-      "step1FileDesc": "Drag & drop or click to select a file from your device.",
-      "step1TextTitle": "Enter your text",
-      "step1TextDesc": "Paste or type your content into the input field.",
-      "step2Title": "Adjust settings",
-      "step2Desc": "Configure options to get the result you want.",
-      "step3FileTitle": "Download result",
-      "step3FileDesc": "Get your processed file instantly. No waiting.",
-      "step3TextTitle": "Copy or save",
-      "step3TextDesc": "Copy the output to clipboard or save it."
-    }
+      "step1FileTitle": "अपनी फ़ाइल अपलोड करें",
+      "step1FileDesc": "ड्रैग एंड ड्रॉप करें या क्लिक करके फ़ाइल चुनें।",
+      "step1TextTitle": "अपना टेक्स्ट दर्ज करें",
+      "step1TextDesc": "फ़ील्ड में अपनी सामग्री पेस्ट या टाइप करें।",
+      "step2Title": "सेटिंग समायोजित करें",
+      "step2Desc": "वांछित परिणाम के लिए विकल्प कॉन्फ़िगर करें।",
+      "step3FileTitle": "परिणाम डाउनलोड करें",
+      "step3FileDesc": "अपनी प्रोसेस की गई फ़ाइल तुरंत प्राप्त करें।",
+      "step3TextTitle": "कॉपी या सेव करें",
+      "step3TextDesc": "आउटपुट को क्लिपबोर्ड पर कॉपी या सेव करें।"
+    },
+    "toggleMenu": "मेनू टॉगल करें",
+    "switchLanguage": "भाषा बदलें",
+    "switchTheme": "{theme} थीम पर स्विच करें",
+    "searchPlaceholder": "टूल खोजें...",
+    "noToolsFound": "कोई टूल नहीं मिला",
+    "noToolsYet": "अभी कोई टूल नहीं",
+    "relatedTools": "संबंधित टूल",
+    "faq": "अक्सर पूछे जाने वाले प्रश्न",
+    "pageNotFound": "पेज नहीं मिला",
+    "save": "सहेजें"
   },
   "nav": {
     "home": "होम",
@@ -57,7 +67,11 @@
     "heroSub": "ब्राउज़र-आधारित। कोई अपलोड नहीं। कोई साइनअप नहीं। 100% निजी।",
     "popular": "लोकप्रिय टूल",
     "allCategories": "सभी श्रेणियाँ",
-    "viewAll": "सभी देखें"
+    "viewAll": "सभी देखें",
+    "featurePrivate": "100% निजी",
+    "featureInstant": "तत्काल प्रसंस्करण",
+    "featureNoUpload": "अपलोड की आवश्यकता नहीं",
+    "toolCount": "{count} टूल →"
   },
   "categories": {
     "text": {
@@ -86,102 +100,102 @@
     }
   },
   "footer": {
-    "tagline": "Free browser-based media tools. No uploads, no signups.",
-    "about": "About",
-    "howItWorks": "How It Works",
-    "privacy": "Privacy",
-    "allRightsReserved": "All rights reserved."
+    "tagline": "मुफ़्त ब्राउज़र-आधारित मीडिया टूल। अपलोड नहीं, साइनअप नहीं।",
+    "about": "जानकारी",
+    "howItWorks": "कैसे काम करता है",
+    "privacy": "गोपनीयता",
+    "allRightsReserved": "सर्वाधिकार सुरक्षित।"
   },
   "privacy": {
-    "metaTitle": "Privacy Policy — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
-    "title": "Privacy & Security",
-    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
-    "corePromiseTitle": "Our Core Promise",
-    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
-    "howItWorksTitle": "How It Works",
+    "metaTitle": "गोपनीयता नीति — मीडिया टूलबॉक्स",
+    "metaDescription": "जानें कि मीडिया टूलबॉक्स आपकी गोपनीयता की रक्षा कैसे करता है। सभी फ़ाइल प्रसंस्करण आपके ब्राउज़र में होता है।",
+    "title": "गोपनीयता और सुरक्षा",
+    "subtitle": "आपकी फ़ाइलें ब्राउज़र से बाहर नहीं जातीं। गोपनीयता हमारी नींव है।",
+    "corePromiseTitle": "हमारा वादा",
+    "corePromiseBody": "हर टूल आपके ब्राउज़र में JavaScript और WebAssembly का उपयोग करके फ़ाइलें प्रोसेस करता है। फ़ाइलें कभी सर्वर पर अपलोड नहीं होतीं।",
+    "howItWorksTitle": "कैसे काम करता है",
     "steps": {
       "step1": {
-        "title": "You select a file",
-        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+        "title": "फ़ाइल चुनें",
+        "description": "आपकी फ़ाइल ब्राउज़र में JavaScript द्वारा पढ़ी जाती है। कोई नेटवर्क अनुरोध नहीं।"
       },
       "step2": {
-        "title": "Processing happens locally",
-        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+        "title": "स्थानीय प्रसंस्करण",
+        "description": "सभी रूपांतरण और संपादन आपके डिवाइस पर चलते हैं।"
       },
       "step3": {
-        "title": "You download the result",
-        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+        "title": "परिणाम डाउनलोड करें",
+        "description": "आउटपुट मेमोरी में बनता है। कोई सर्वर शामिल नहीं।"
       }
     },
     "features": {
       "noUpload": {
-        "title": "No File Uploads",
-        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+        "title": "फ़ाइल अपलोड नहीं",
+        "description": "फ़ाइलें आपका डिवाइस नहीं छोड़तीं।"
       },
       "localStorage": {
-        "title": "No Persistent Storage",
-        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+        "title": "स्थायी संग्रहण नहीं",
+        "description": "हम ट्रैकिंग के लिए कुकीज़ का उपयोग नहीं करते।"
       },
       "openSource": {
-        "title": "Verifiable Security",
-        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+        "title": "सत्यापन योग्य सुरक्षा",
+        "description": "आप ब्राउज़र DevTools में नेटवर्क ट्रैफ़िक जाँच सकते हैं।"
       },
       "noLogs": {
-        "title": "No Server Logs",
-        "description": "Since everything runs client-side, there are no server logs of your file operations."
+        "title": "सर्वर लॉग नहीं",
+        "description": "सब कुछ क्लाइंट-साइड चलता है।"
       },
       "transparent": {
-        "title": "Fully Transparent",
-        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+        "title": "पूर्ण पारदर्शिता",
+        "description": "Cloudflare Pages पर होस्ट की गई स्टैटिक साइट। कोई बैकएंड नहीं।"
       }
     },
-    "thirdPartyTitle": "Third-Party Resources",
-    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
-    "lastUpdated": "Last updated: March 2026"
+    "thirdPartyTitle": "तृतीय-पक्ष संसाधन",
+    "thirdPartyBody": "कुछ टूल unpkg.com जैसे CDN से WebAssembly बाइनरी लोड करते हैं। ये ओपन-सोर्स लाइब्रेरी हैं जो ब्राउज़र में कैश होती हैं। कोई फ़ाइल डेटा नहीं भेजा जाता। हम Google Analytics का उपयोग अनाम उपयोग आँकड़ों के लिए करते हैं।",
+    "lastUpdated": "अंतिम अपडेट: मार्च 2026"
   },
   "howItWorks": {
-    "metaTitle": "How It Works — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
-    "title": "How It Works",
-    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "metaTitle": "कैसे काम करता है — मीडिया टूलबॉक्स",
+    "metaDescription": "जानें कि मीडिया टूलबॉक्स ब्राउज़र में फ़ाइलें कैसे प्रोसेस करता है।",
+    "title": "कैसे काम करता है",
+    "subtitle": "तीन सरल चरण — आपकी फ़ाइलें हमेशा आपके डिवाइस पर।",
     "steps": {
       "select": {
-        "title": "Pick Your File",
-        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+        "title": "अपनी फ़ाइल चुनें",
+        "description": "फ़ाइल चुनें या खींचकर छोड़ें। JavaScript इसे ब्राउज़र में पढ़ता है।"
       },
       "process": {
-        "title": "Instant Local Processing",
-        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+        "title": "तत्काल स्थानीय प्रसंस्करण",
+        "description": "ब्राउज़र Canvas API, WebAssembly और अन्य तकनीकों से फ़ाइल प्रोसेस करता है।"
       },
       "download": {
-        "title": "Download the Result",
-        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+        "title": "परिणाम डाउनलोड करें",
+        "description": "फ़ाइल मेमोरी में बनती है और डाउनलोड के लिए तैयार। कोई अकाउंट नहीं।"
       }
     },
-    "whyClientSideTitle": "Why Client-Side Processing?",
-    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
-    "techTitle": "Technology Under the Hood",
+    "whyClientSideTitle": "क्लाइंट-साइड प्रसंस्करण क्यों?",
+    "whyClientSideBody": "पारंपरिक टूल फ़ाइलें सर्वर पर अपलोड करते हैं। मीडिया टूलबॉक्स सब कुछ ब्राउज़र में करता है।",
+    "techTitle": "अंतर्निहित तकनीक",
     "tech": {
       "canvas": {
-        "title": "Canvas & Web APIs",
-        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+        "title": "Canvas और Web API",
+        "description": "इमेज ऑपरेशन GPU-त्वरित Canvas API का उपयोग करते हैं।"
       },
       "wasm": {
         "title": "WebAssembly",
-        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+        "description": "वीडियो और ऑडियो टूल WebAssembly में संकलित FFmpeg का उपयोग करते हैं।"
       },
       "webApis": {
-        "title": "Modern Web Standards",
-        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+        "title": "आधुनिक वेब मानक",
+        "description": "File API, Blob URLs और Web Workers बड़ी फ़ाइलों को कुशलतापूर्वक संसाधित करते हैं।"
       },
       "offline": {
-        "title": "Works Offline",
-        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+        "title": "ऑफ़लाइन काम करता है",
+        "description": "सर्वर की ज़रूरत नहीं, अधिकांश टूल बिना इंटरनेट भी काम करते हैं।"
       }
     },
-    "privacyCta": "Want to learn more about how we protect your data?",
-    "privacyLink": "Read our Privacy Policy →"
+    "privacyCta": "अपने डेटा की सुरक्षा के बारे में और जानना चाहते हैं?",
+    "privacyLink": "गोपनीयता नीति पढ़ें →"
   },
   "toolNames": {
     "text": {

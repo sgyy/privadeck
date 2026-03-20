@@ -7,7 +7,7 @@ import { categories } from "@/lib/registry/categories";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Shield, Zap, Globe } from "lucide-react";
-import { loadAllToolMessages } from "@/lib/i18n/loadMessages";
+import { loadCommonMessages, loadAllToolMessages } from "@/lib/i18n/loadMessages";
 
 export default async function HomePage({
   params,
@@ -16,9 +16,12 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const toolMessages = await loadAllToolMessages(locale);
+  const [commonMessages, toolMessages] = await Promise.all([
+    loadCommonMessages(locale),
+    loadAllToolMessages(locale),
+  ]);
   return (
-    <NextIntlClientProvider messages={toolMessages}>
+    <NextIntlClientProvider messages={{ ...commonMessages, ...toolMessages }}>
       <HomeUI />
     </NextIntlClientProvider>
   );

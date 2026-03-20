@@ -22,22 +22,32 @@
     "lightMode": "โหมดสว่าง",
     "systemMode": "ตามระบบ",
     "language": "ภาษา",
-    "share": "Share",
-    "shareCopied": "Link copied!",
-    "uploadFiles": "Upload Files",
-    "maxFileSize": "Max size",
+    "share": "แชร์",
+    "shareCopied": "คัดลอกลิงก์แล้ว!",
+    "uploadFiles": "อัปโหลดไฟล์",
+    "maxFileSize": "ขนาดสูงสุด",
     "howItWorks": {
-      "step1FileTitle": "Upload your file",
-      "step1FileDesc": "Drag & drop or click to select a file from your device.",
-      "step1TextTitle": "Enter your text",
-      "step1TextDesc": "Paste or type your content into the input field.",
-      "step2Title": "Adjust settings",
-      "step2Desc": "Configure options to get the result you want.",
-      "step3FileTitle": "Download result",
-      "step3FileDesc": "Get your processed file instantly. No waiting.",
-      "step3TextTitle": "Copy or save",
-      "step3TextDesc": "Copy the output to clipboard or save it."
-    }
+      "step1FileTitle": "อัปโหลดไฟล์ของคุณ",
+      "step1FileDesc": "ลากและวางหรือคลิกเพื่อเลือกไฟล์",
+      "step1TextTitle": "ป้อนข้อความของคุณ",
+      "step1TextDesc": "วางหรือพิมพ์เนื้อหาในช่องป้อนข้อมูล",
+      "step2Title": "ปรับการตั้งค่า",
+      "step2Desc": "กำหนดค่าตัวเลือกเพื่อให้ได้ผลลัพธ์ที่ต้องการ",
+      "step3FileTitle": "ดาวน์โหลดผลลัพธ์",
+      "step3FileDesc": "รับไฟล์ที่ประมวลผลทันที ไม่ต้องรอ",
+      "step3TextTitle": "คัดลอกหรือบันทึก",
+      "step3TextDesc": "คัดลอกผลลัพธ์ไปยังคลิปบอร์ดหรือบันทึก"
+    },
+    "toggleMenu": "สลับเมนู",
+    "switchLanguage": "เปลี่ยนภาษา",
+    "switchTheme": "เปลี่ยนเป็นธีม {theme}",
+    "searchPlaceholder": "ค้นหาเครื่องมือ...",
+    "noToolsFound": "ไม่พบเครื่องมือ",
+    "noToolsYet": "ยังไม่มีเครื่องมือ",
+    "relatedTools": "เครื่องมือที่เกี่ยวข้อง",
+    "faq": "คำถามที่พบบ่อย",
+    "pageNotFound": "ไม่พบหน้า",
+    "save": "บันทึก"
   },
   "nav": {
     "home": "หน้าแรก",
@@ -57,7 +67,11 @@
     "heroSub": "ทำงานในเบราว์เซอร์ ไม่ต้องอัปโหลด ไม่ต้องสมัครสมาชิก เป็นส่วนตัว 100%",
     "popular": "เครื่องมือยอดนิยม",
     "allCategories": "หมวดหมู่ทั้งหมด",
-    "viewAll": "ดูทั้งหมด"
+    "viewAll": "ดูทั้งหมด",
+    "featurePrivate": "ความเป็นส่วนตัว 100%",
+    "featureInstant": "ประมวลผลทันที",
+    "featureNoUpload": "ไม่ต้องอัปโหลด",
+    "toolCount": "{count} เครื่องมือ →"
   },
   "categories": {
     "text": {
@@ -86,102 +100,102 @@
     }
   },
   "footer": {
-    "tagline": "Free browser-based media tools. No uploads, no signups.",
-    "about": "About",
-    "howItWorks": "How It Works",
-    "privacy": "Privacy",
-    "allRightsReserved": "All rights reserved."
+    "tagline": "เครื่องมือสื่อฟรีในเบราว์เซอร์ ไม่ต้องอัปโหลด ไม่ต้องสมัคร",
+    "about": "เกี่ยวกับ",
+    "howItWorks": "วิธีการทำงาน",
+    "privacy": "ความเป็นส่วนตัว",
+    "allRightsReserved": "สงวนลิขสิทธิ์"
   },
   "privacy": {
-    "metaTitle": "Privacy Policy — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
-    "title": "Privacy & Security",
-    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
-    "corePromiseTitle": "Our Core Promise",
-    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
-    "howItWorksTitle": "How It Works",
+    "metaTitle": "นโยบายความเป็นส่วนตัว — Media Toolbox",
+    "metaDescription": "เรียนรู้วิธีที่ Media Toolbox ปกป้องความเป็นส่วนตัวของคุณ การประมวลผลไฟล์ทั้งหมดเกิดขึ้นในเบราว์เซอร์",
+    "title": "ความเป็นส่วนตัวและความปลอดภัย",
+    "subtitle": "ไฟล์ของคุณไม่เคยออกจากเบราว์เซอร์ ความเป็นส่วนตัวคือรากฐานของเรา",
+    "corePromiseTitle": "คำมั่นสัญญาของเรา",
+    "corePromiseBody": "ทุกเครื่องมือประมวลผลไฟล์ทั้งหมดในเบราว์เซอร์ของคุณด้วย JavaScript และ WebAssembly ไฟล์ของคุณไม่เคยถูกอัปโหลดไปยังเซิร์ฟเวอร์",
+    "howItWorksTitle": "วิธีการทำงาน",
     "steps": {
       "step1": {
-        "title": "You select a file",
-        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+        "title": "เลือกไฟล์",
+        "description": "ไฟล์ของคุณถูกอ่านโดย JavaScript ในเบราว์เซอร์โดยตรง ไม่มีคำขอเครือข่าย"
       },
       "step2": {
-        "title": "Processing happens locally",
-        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+        "title": "ประมวลผลในเครื่อง",
+        "description": "การแปลงและการแก้ไขทั้งหมดทำงานบนอุปกรณ์ของคุณ"
       },
       "step3": {
-        "title": "You download the result",
-        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+        "title": "ดาวน์โหลดผลลัพธ์",
+        "description": "ผลลัพธ์ถูกสร้างในหน่วยความจำ ไม่มีเซิร์ฟเวอร์เกี่ยวข้อง"
       }
     },
     "features": {
       "noUpload": {
-        "title": "No File Uploads",
-        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+        "title": "ไม่มีการอัปโหลดไฟล์",
+        "description": "ไฟล์ไม่เคยออกจากอุปกรณ์ของคุณ"
       },
       "localStorage": {
-        "title": "No Persistent Storage",
-        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+        "title": "ไม่มีการจัดเก็บถาวร",
+        "description": "เราไม่ใช้คุกกี้ในการติดตามคุณ"
       },
       "openSource": {
-        "title": "Verifiable Security",
-        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+        "title": "ความปลอดภัยที่ตรวจสอบได้",
+        "description": "คุณสามารถตรวจสอบทราฟฟิกเครือข่ายใน DevTools ของเบราว์เซอร์"
       },
       "noLogs": {
-        "title": "No Server Logs",
-        "description": "Since everything runs client-side, there are no server logs of your file operations."
+        "title": "ไม่มีบันทึกเซิร์ฟเวอร์",
+        "description": "ทุกอย่างทำงานฝั่งไคลเอนต์"
       },
       "transparent": {
-        "title": "Fully Transparent",
-        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+        "title": "โปร่งใสทั้งหมด",
+        "description": "เว็บไซต์แบบ static บน Cloudflare Pages ไม่มี backend หรือฐานข้อมูล"
       }
     },
-    "thirdPartyTitle": "Third-Party Resources",
-    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
-    "lastUpdated": "Last updated: March 2026"
+    "thirdPartyTitle": "ทรัพยากรจากบุคคลที่สาม",
+    "thirdPartyBody": "เครื่องมือบางตัวโหลดไบนารี WebAssembly จาก CDN เช่น unpkg.com เหล่านี้เป็นไลบรารีโอเพนซอร์สที่ถูกแคชโดยเบราว์เซอร์ ไม่มีข้อมูลไฟล์ถูกส่ง เรายังใช้ Google Analytics สำหรับสถิติการใช้งานแบบไม่ระบุตัวตน",
+    "lastUpdated": "อัปเดตล่าสุด: มีนาคม 2026"
   },
   "howItWorks": {
-    "metaTitle": "How It Works — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
-    "title": "How It Works",
-    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "metaTitle": "วิธีการทำงาน — Media Toolbox",
+    "metaDescription": "เรียนรู้วิธีที่ Media Toolbox ประมวลผลไฟล์ของคุณในเบราว์เซอร์",
+    "title": "วิธีการทำงาน",
+    "subtitle": "สามขั้นตอนง่ายๆ — ไฟล์ของคุณอยู่บนอุปกรณ์ของคุณเสมอ",
     "steps": {
       "select": {
-        "title": "Pick Your File",
-        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+        "title": "เลือกไฟล์ของคุณ",
+        "description": "เลือกหรือลากไฟล์ JavaScript อ่านในเบราว์เซอร์โดยไม่ส่งผ่านเครือข่าย"
       },
       "process": {
-        "title": "Instant Local Processing",
-        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+        "title": "ประมวลผลในเครื่องทันที",
+        "description": "เบราว์เซอร์ประมวลผลไฟล์ด้วย Canvas API, WebAssembly และเทคโนโลยีอื่นๆ"
       },
       "download": {
-        "title": "Download the Result",
-        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+        "title": "ดาวน์โหลดผลลัพธ์",
+        "description": "ไฟล์ถูกสร้างในหน่วยความจำและพร้อมดาวน์โหลด ไม่ต้องมีบัญชี"
       }
     },
-    "whyClientSideTitle": "Why Client-Side Processing?",
-    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
-    "techTitle": "Technology Under the Hood",
+    "whyClientSideTitle": "ทำไมต้องประมวลผลฝั่งไคลเอนต์?",
+    "whyClientSideBody": "เครื่องมือแบบดั้งเดิมอัปโหลดไฟล์ไปยังเซิร์ฟเวอร์ Media Toolbox ทำทุกอย่างในเบราว์เซอร์ของคุณ",
+    "techTitle": "เทคโนโลยีที่ใช้",
     "tech": {
       "canvas": {
-        "title": "Canvas & Web APIs",
-        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+        "title": "Canvas และ Web API",
+        "description": "การดำเนินการกับรูปภาพใช้ Canvas API แบบเนทีฟสำหรับการเรนเดอร์ด้วย GPU"
       },
       "wasm": {
         "title": "WebAssembly",
-        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+        "description": "เครื่องมือวิดีโอและเสียงใช้ FFmpeg ที่คอมไพล์เป็น WebAssembly"
       },
       "webApis": {
-        "title": "Modern Web Standards",
-        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+        "title": "มาตรฐานเว็บสมัยใหม่",
+        "description": "เราใช้ File API, Blob URL และ Web Workers สำหรับการประมวลผลไฟล์ขนาดใหญ่อย่างมีประสิทธิภาพ"
       },
       "offline": {
-        "title": "Works Offline",
-        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+        "title": "ทำงานแบบออฟไลน์",
+        "description": "ไม่ต้องมีเซิร์ฟเวอร์ เครื่องมือส่วนใหญ่ทำงานได้แม้ไม่มีอินเทอร์เน็ต"
       }
     },
-    "privacyCta": "Want to learn more about how we protect your data?",
-    "privacyLink": "Read our Privacy Policy →"
+    "privacyCta": "ต้องการทราบเพิ่มเติมเกี่ยวกับการปกป้องข้อมูลของคุณ?",
+    "privacyLink": "อ่านนโยบายความเป็นส่วนตัว →"
   },
   "toolNames": {
     "text": {

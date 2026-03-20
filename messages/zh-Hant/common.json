@@ -22,22 +22,32 @@
     "lightMode": "淺色模式",
     "systemMode": "跟隨系統",
     "language": "語言",
-    "share": "Share",
-    "shareCopied": "Link copied!",
-    "uploadFiles": "Upload Files",
-    "maxFileSize": "Max size",
+    "share": "分享",
+    "shareCopied": "連結已複製！",
+    "uploadFiles": "上傳檔案",
+    "maxFileSize": "最大檔案",
     "howItWorks": {
-      "step1FileTitle": "Upload your file",
-      "step1FileDesc": "Drag & drop or click to select a file from your device.",
-      "step1TextTitle": "Enter your text",
-      "step1TextDesc": "Paste or type your content into the input field.",
-      "step2Title": "Adjust settings",
-      "step2Desc": "Configure options to get the result you want.",
-      "step3FileTitle": "Download result",
-      "step3FileDesc": "Get your processed file instantly. No waiting.",
-      "step3TextTitle": "Copy or save",
-      "step3TextDesc": "Copy the output to clipboard or save it."
-    }
+      "step1FileTitle": "上傳您的檔案",
+      "step1FileDesc": "拖放或點擊選擇裝置上的檔案。",
+      "step1TextTitle": "輸入文字",
+      "step1TextDesc": "貼上或輸入您的內容。",
+      "step2Title": "調整設定",
+      "step2Desc": "配置選項以獲得所需結果。",
+      "step3FileTitle": "下載結果",
+      "step3FileDesc": "即時取得處理後的檔案，無需等待。",
+      "step3TextTitle": "複製或儲存",
+      "step3TextDesc": "將輸出複製到剪貼簿或儲存。"
+    },
+    "toggleMenu": "切換選單",
+    "switchLanguage": "切換語言",
+    "switchTheme": "切換到{theme}主題",
+    "searchPlaceholder": "搜尋工具...",
+    "noToolsFound": "未找到工具",
+    "noToolsYet": "暫無工具",
+    "relatedTools": "相關工具",
+    "faq": "常見問題",
+    "pageNotFound": "找不到頁面",
+    "save": "儲存"
   },
   "nav": {
     "home": "首頁",
@@ -57,7 +67,11 @@
     "heroSub": "瀏覽器端處理。無需上傳。無需註冊。100% 隱私保護。",
     "popular": "熱門工具",
     "allCategories": "所有分類",
-    "viewAll": "查看全部"
+    "viewAll": "查看全部",
+    "featurePrivate": "100% 隱私保護",
+    "featureInstant": "即時處理",
+    "featureNoUpload": "無需上傳",
+    "toolCount": "{count} 個工具 →"
   },
   "categories": {
     "text": {
@@ -86,102 +100,102 @@
     }
   },
   "footer": {
-    "tagline": "Free browser-based media tools. No uploads, no signups.",
-    "about": "About",
-    "howItWorks": "How It Works",
-    "privacy": "Privacy",
-    "allRightsReserved": "All rights reserved."
+    "tagline": "免費的瀏覽器端媒體工具。無需上傳，無需註冊。",
+    "about": "關於",
+    "howItWorks": "工作原理",
+    "privacy": "隱私",
+    "allRightsReserved": "保留所有權利。"
   },
   "privacy": {
-    "metaTitle": "Privacy Policy — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
-    "title": "Privacy & Security",
-    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
-    "corePromiseTitle": "Our Core Promise",
-    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
-    "howItWorksTitle": "How It Works",
+    "metaTitle": "隱私政策 — 媒體工具箱",
+    "metaDescription": "了解媒體工具箱如何保護您的隱私。所有檔案處理都在瀏覽器中進行，不會上傳到任何伺服器。",
+    "title": "隱私與安全",
+    "subtitle": "您的檔案不會離開瀏覽器。我們將隱私作為媒體工具箱的根基，而非事後補救。",
+    "corePromiseTitle": "核心承諾",
+    "corePromiseBody": "媒體工具箱的每個工具都完全在您的瀏覽器中使用客戶端 JavaScript 和 WebAssembly 處理檔案。您的檔案不會上傳到任何伺服器，不會儲存在任何地方，也不會被任何人看到。關閉標籤頁後，資料即消失。",
+    "howItWorksTitle": "工作原理",
     "steps": {
       "step1": {
-        "title": "You select a file",
-        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+        "title": "選擇檔案",
+        "description": "您的檔案由瀏覽器中的 JavaScript 直接讀取，不會觸及網路請求。"
       },
       "step2": {
-        "title": "Processing happens locally",
-        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+        "title": "本地處理",
+        "description": "所有轉換、壓縮和編輯都使用 Web API、Canvas、WebAssembly（FFmpeg、PDF.js）等瀏覽器技術在您的裝置上執行。"
       },
       "step3": {
-        "title": "You download the result",
-        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+        "title": "下載結果",
+        "description": "輸出在記憶體中生成並提供下載。整個過程不涉及任何伺服器。"
       }
     },
     "features": {
       "noUpload": {
-        "title": "No File Uploads",
-        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+        "title": "無需上傳檔案",
+        "description": "檔案不會離開您的裝置。處理使用瀏覽器內建功能。"
       },
       "localStorage": {
-        "title": "No Persistent Storage",
-        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+        "title": "無持久儲存",
+        "description": "我們不使用 Cookie 或本地儲存來追蹤您。您的偏好（語言、主題）僅儲存在本地。"
       },
       "openSource": {
-        "title": "Verifiable Security",
-        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+        "title": "可驗證的安全性",
+        "description": "您可以在瀏覽器的開發者工具中檢查網路流量，確認零檔案上傳。"
       },
       "noLogs": {
-        "title": "No Server Logs",
-        "description": "Since everything runs client-side, there are no server logs of your file operations."
+        "title": "無伺服器日誌",
+        "description": "由於一切都在客戶端運行，不存在關於您檔案操作的伺服器日誌。"
       },
       "transparent": {
-        "title": "Fully Transparent",
-        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+        "title": "完全透明",
+        "description": "這是一個部署在 Cloudflare Pages 上的靜態網站。無後端、無資料庫、無 API 伺服器。"
       }
     },
-    "thirdPartyTitle": "Third-Party Resources",
-    "thirdPartyBody": "部分工具會從 unpkg.com 等 CDN 載入 WebAssembly 二進位檔案（如 FFmpeg 核心）。這些是開源函式庫，由瀏覽器取得一次後快取。不會向這些 CDN 傳送任何檔案資料——它們僅提供處理程式碼。我們還使用 Google Analytics 收集匿名使用統計資料（頁面瀏覽量、大致地理位置、瀏覽器類型）。您的工具使用不會關聯任何個人身分資訊。",
-    "lastUpdated": "Last updated: March 2026"
+    "thirdPartyTitle": "第三方資源",
+    "thirdPartyBody": "某些工具會從 unpkg.com 等 CDN 載入 WebAssembly 二進位檔（例如 FFmpeg 核心）。這些是開源函式庫，僅載入一次並由瀏覽器快取。不會向這些 CDN 傳送任何檔案資料——它們僅提供處理程式碼。我們也使用 Google Analytics 收集匿名使用統計（頁面瀏覽量、大致位置、瀏覽器類型）。不會將任何個人識別資訊與您的工具使用關聯。",
+    "lastUpdated": "最後更新：2026 年 3 月"
   },
   "howItWorks": {
-    "metaTitle": "How It Works — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
-    "title": "How It Works",
-    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "metaTitle": "工作原理 — 媒體工具箱",
+    "metaDescription": "了解媒體工具箱如何在瀏覽器中使用 JavaScript 和 WebAssembly 處理您的檔案。無需上傳，無需伺服器。",
+    "title": "工作原理",
+    "subtitle": "三個簡單步驟——您的檔案始終留在您的裝置上。",
     "steps": {
       "select": {
-        "title": "Pick Your File",
-        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+        "title": "選擇檔案",
+        "description": "從裝置中選擇檔案或將其拖放到工具上。檔案由瀏覽器中的 JavaScript 讀取，不會透過網路傳送。"
       },
       "process": {
-        "title": "Instant Local Processing",
-        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+        "title": "即時本地處理",
+        "description": "工具使用 Canvas API、Web Audio API 和 WebAssembly（FFmpeg、PDF.js、Tesseract）等瀏覽器技術直接在您的裝置上處理檔案。處理速度取決於您的裝置——大多數操作在幾秒內完成。"
       },
       "download": {
-        "title": "Download the Result",
-        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+        "title": "下載結果",
+        "description": "處理完成後，輸出檔案在記憶體中生成，可供下載。點擊下載按鈕即可儲存到裝置的任何位置。無需帳號或註冊。"
       }
     },
-    "whyClientSideTitle": "Why Client-Side Processing?",
-    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
-    "techTitle": "Technology Under the Hood",
+    "whyClientSideTitle": "為什麼選擇客戶端處理？",
+    "whyClientSideBody": "傳統的線上工具會將您的檔案上傳到遠端伺服器進行處理，然後將結果傳回。這不僅速度慢，還會引發隱私問題，需要您信任該服務。媒體工具箱採用不同的方式：所有操作都在您的瀏覽器中執行。您的檔案不會離開裝置，沒有上傳大小限制，即使網路連線緩慢也能使用。",
+    "techTitle": "底層技術",
     "tech": {
       "canvas": {
-        "title": "Canvas & Web APIs",
-        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+        "title": "Canvas 和 Web API",
+        "description": "裁剪、調整大小和格式轉換等圖片操作使用瀏覽器原生的 Canvas API，實現快速的 GPU 加速渲染。"
       },
       "wasm": {
         "title": "WebAssembly",
-        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+        "description": "影片和音訊工具使用編譯為 WebAssembly 的 FFmpeg，在瀏覽器中以接近原生的速度運行。PDF 工具使用 PDF.js 和 pdf-lib。"
       },
       "webApis": {
-        "title": "Modern Web Standards",
-        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+        "title": "現代 Web 標準",
+        "description": "我們利用 File API、Blob URL、Web Workers 和其他現代標準來高效處理大型檔案，不會阻塞 UI。"
       },
       "offline": {
-        "title": "Works Offline",
-        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+        "title": "離線可用",
+        "description": "由於不涉及伺服器，只要頁面已載入，大多數工具在網路斷線時也能繼續使用。"
       }
     },
-    "privacyCta": "Want to learn more about how we protect your data?",
-    "privacyLink": "Read our Privacy Policy →"
+    "privacyCta": "想了解更多關於我們如何保護您的資料？",
+    "privacyLink": "閱讀隱私政策 →"
   },
   "toolNames": {
     "text": {

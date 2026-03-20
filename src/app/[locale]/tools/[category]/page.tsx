@@ -7,7 +7,7 @@ import { locales } from "@/i18n/routing";
 import { Card } from "@/components/ui/Card";
 import { generateCategoryMetadata } from "@/lib/seo/metadata";
 import type { ToolCategory } from "@/lib/registry/types";
-import { loadCategoryMessages } from "@/lib/i18n/loadMessages";
+import { loadCommonMessages, loadCategoryMessages } from "@/lib/i18n/loadMessages";
 
 export function generateStaticParams() {
   const params = [];
@@ -35,10 +35,13 @@ export default async function CategoryPage({
 }) {
   const { locale, category } = await params;
   setRequestLocale(locale);
-  const toolMessages = await loadCategoryMessages(locale, category);
+  const [commonMessages, toolMessages] = await Promise.all([
+    loadCommonMessages(locale),
+    loadCategoryMessages(locale, category),
+  ]);
 
   return (
-    <NextIntlClientProvider messages={toolMessages}>
+    <NextIntlClientProvider messages={{ ...commonMessages, ...toolMessages }}>
       <CategoryPageUI category={category as ToolCategory} />
     </NextIntlClientProvider>
   );

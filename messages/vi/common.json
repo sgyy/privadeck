@@ -22,22 +22,32 @@
     "lightMode": "Chế độ sáng",
     "systemMode": "Hệ thống",
     "language": "Ngôn ngữ",
-    "share": "Share",
-    "shareCopied": "Link copied!",
-    "uploadFiles": "Upload Files",
-    "maxFileSize": "Max size",
+    "share": "Chia sẻ",
+    "shareCopied": "Đã sao chép liên kết!",
+    "uploadFiles": "Tải lên tệp",
+    "maxFileSize": "Kích thước tối đa",
     "howItWorks": {
-      "step1FileTitle": "Upload your file",
-      "step1FileDesc": "Drag & drop or click to select a file from your device.",
-      "step1TextTitle": "Enter your text",
-      "step1TextDesc": "Paste or type your content into the input field.",
-      "step2Title": "Adjust settings",
-      "step2Desc": "Configure options to get the result you want.",
-      "step3FileTitle": "Download result",
-      "step3FileDesc": "Get your processed file instantly. No waiting.",
-      "step3TextTitle": "Copy or save",
-      "step3TextDesc": "Copy the output to clipboard or save it."
-    }
+      "step1FileTitle": "Tải lên tệp của bạn",
+      "step1FileDesc": "Kéo thả hoặc nhấp để chọn tệp từ thiết bị.",
+      "step1TextTitle": "Nhập văn bản",
+      "step1TextDesc": "Dán hoặc nhập nội dung vào trường.",
+      "step2Title": "Điều chỉnh cài đặt",
+      "step2Desc": "Cấu hình các tùy chọn để có kết quả mong muốn.",
+      "step3FileTitle": "Tải xuống kết quả",
+      "step3FileDesc": "Nhận tệp đã xử lý ngay lập tức. Không cần chờ đợi.",
+      "step3TextTitle": "Sao chép hoặc lưu",
+      "step3TextDesc": "Sao chép đầu ra vào clipboard hoặc lưu."
+    },
+    "toggleMenu": "Chuyển đổi menu",
+    "switchLanguage": "Đổi ngôn ngữ",
+    "switchTheme": "Chuyển sang giao diện {theme}",
+    "searchPlaceholder": "Tìm kiếm công cụ...",
+    "noToolsFound": "Không tìm thấy công cụ",
+    "noToolsYet": "Chưa có công cụ",
+    "relatedTools": "Công cụ liên quan",
+    "faq": "Câu hỏi thường gặp",
+    "pageNotFound": "Không tìm thấy trang",
+    "save": "Lưu"
   },
   "nav": {
     "home": "Trang chủ",
@@ -57,7 +67,11 @@
     "heroSub": "Hoạt động trên trình duyệt. Không tải lên. Không đăng ký. Riêng tư 100%.",
     "popular": "Công cụ phổ biến",
     "allCategories": "Tất cả danh mục",
-    "viewAll": "Xem tất cả"
+    "viewAll": "Xem tất cả",
+    "featurePrivate": "100% riêng tư",
+    "featureInstant": "Xử lý tức thì",
+    "featureNoUpload": "Không cần tải lên",
+    "toolCount": "{count} công cụ →"
   },
   "categories": {
     "text": {
@@ -86,102 +100,102 @@
     }
   },
   "footer": {
-    "tagline": "Free browser-based media tools. No uploads, no signups.",
-    "about": "About",
-    "howItWorks": "How It Works",
-    "privacy": "Privacy",
-    "allRightsReserved": "All rights reserved."
+    "tagline": "Công cụ phương tiện miễn phí trong trình duyệt. Không tải lên, không đăng ký.",
+    "about": "Giới thiệu",
+    "howItWorks": "Cách hoạt động",
+    "privacy": "Quyền riêng tư",
+    "allRightsReserved": "Đã đăng ký bản quyền."
   },
   "privacy": {
-    "metaTitle": "Privacy Policy — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
-    "title": "Privacy & Security",
-    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
-    "corePromiseTitle": "Our Core Promise",
-    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
-    "howItWorksTitle": "How It Works",
+    "metaTitle": "Chính sách quyền riêng tư — Media Toolbox",
+    "metaDescription": "Tìm hiểu cách Media Toolbox bảo vệ quyền riêng tư của bạn. Mọi xử lý tệp đều diễn ra trong trình duyệt.",
+    "title": "Quyền riêng tư và Bảo mật",
+    "subtitle": "Tệp của bạn không bao giờ rời khỏi trình duyệt. Quyền riêng tư là nền tảng của chúng tôi.",
+    "corePromiseTitle": "Cam kết của chúng tôi",
+    "corePromiseBody": "Mọi công cụ xử lý tệp hoàn toàn trong trình duyệt của bạn bằng JavaScript và WebAssembly. Tệp của bạn không bao giờ được tải lên máy chủ.",
+    "howItWorksTitle": "Cách hoạt động",
     "steps": {
       "step1": {
-        "title": "You select a file",
-        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+        "title": "Chọn tệp",
+        "description": "Tệp của bạn được JavaScript trong trình duyệt đọc trực tiếp. Không có yêu cầu mạng."
       },
       "step2": {
-        "title": "Processing happens locally",
-        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+        "title": "Xử lý cục bộ",
+        "description": "Mọi chuyển đổi và chỉnh sửa chạy trên thiết bị của bạn."
       },
       "step3": {
-        "title": "You download the result",
-        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+        "title": "Tải xuống kết quả",
+        "description": "Đầu ra được tạo trong bộ nhớ. Không có máy chủ nào tham gia."
       }
     },
     "features": {
       "noUpload": {
-        "title": "No File Uploads",
-        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+        "title": "Không tải tệp lên",
+        "description": "Tệp không bao giờ rời khỏi thiết bị."
       },
       "localStorage": {
-        "title": "No Persistent Storage",
-        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+        "title": "Không lưu trữ vĩnh viễn",
+        "description": "Chúng tôi không dùng cookie để theo dõi bạn."
       },
       "openSource": {
-        "title": "Verifiable Security",
-        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+        "title": "Bảo mật có thể xác minh",
+        "description": "Bạn có thể kiểm tra lưu lượng mạng trong DevTools của trình duyệt."
       },
       "noLogs": {
-        "title": "No Server Logs",
-        "description": "Since everything runs client-side, there are no server logs of your file operations."
+        "title": "Không có nhật ký máy chủ",
+        "description": "Mọi thứ chạy phía máy khách."
       },
       "transparent": {
-        "title": "Fully Transparent",
-        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+        "title": "Hoàn toàn minh bạch",
+        "description": "Trang tĩnh trên Cloudflare Pages. Không backend hay cơ sở dữ liệu."
       }
     },
-    "thirdPartyTitle": "Third-Party Resources",
-    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
-    "lastUpdated": "Last updated: March 2026"
+    "thirdPartyTitle": "Tài nguyên bên thứ ba",
+    "thirdPartyBody": "Một số công cụ tải nhị phân WebAssembly từ CDN như unpkg.com. Đây là thư viện mã nguồn mở được trình duyệt lưu cache. Không có dữ liệu tệp nào được gửi. Chúng tôi cũng sử dụng Google Analytics cho thống kê ẩn danh.",
+    "lastUpdated": "Cập nhật lần cuối: Tháng 3 năm 2026"
   },
   "howItWorks": {
-    "metaTitle": "How It Works — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
-    "title": "How It Works",
-    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "metaTitle": "Cách hoạt động — Media Toolbox",
+    "metaDescription": "Tìm hiểu cách Media Toolbox xử lý tệp trong trình duyệt.",
+    "title": "Cách hoạt động",
+    "subtitle": "Ba bước đơn giản — tệp của bạn luôn ở trên thiết bị.",
     "steps": {
       "select": {
-        "title": "Pick Your File",
-        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+        "title": "Chọn tệp của bạn",
+        "description": "Chọn hoặc kéo thả tệp. JavaScript đọc nó trong trình duyệt."
       },
       "process": {
-        "title": "Instant Local Processing",
-        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+        "title": "Xử lý cục bộ tức thì",
+        "description": "Trình duyệt xử lý tệp bằng Canvas API, WebAssembly và các công nghệ khác."
       },
       "download": {
-        "title": "Download the Result",
-        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+        "title": "Tải xuống kết quả",
+        "description": "Tệp được tạo trong bộ nhớ và sẵn sàng tải xuống. Không cần tài khoản."
       }
     },
-    "whyClientSideTitle": "Why Client-Side Processing?",
-    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
-    "techTitle": "Technology Under the Hood",
+    "whyClientSideTitle": "Tại sao xử lý phía máy khách?",
+    "whyClientSideBody": "Công cụ truyền thống tải tệp lên máy chủ. Media Toolbox thực hiện mọi thứ trong trình duyệt.",
+    "techTitle": "Công nghệ sử dụng",
     "tech": {
       "canvas": {
-        "title": "Canvas & Web APIs",
-        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+        "title": "Canvas & Web API",
+        "description": "Thao tác hình ảnh sử dụng Canvas API gốc để render tăng tốc GPU."
       },
       "wasm": {
         "title": "WebAssembly",
-        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+        "description": "Công cụ video và âm thanh sử dụng FFmpeg biên dịch sang WebAssembly."
       },
       "webApis": {
-        "title": "Modern Web Standards",
-        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+        "title": "Tiêu chuẩn web hiện đại",
+        "description": "Chúng tôi sử dụng File API, Blob URL và Web Workers để xử lý tệp lớn hiệu quả."
       },
       "offline": {
-        "title": "Works Offline",
-        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+        "title": "Hoạt động ngoại tuyến",
+        "description": "Không cần máy chủ, hầu hết công cụ hoạt động ngay cả khi không có internet."
       }
     },
-    "privacyCta": "Want to learn more about how we protect your data?",
-    "privacyLink": "Read our Privacy Policy →"
+    "privacyCta": "Muốn tìm hiểu thêm về cách chúng tôi bảo vệ dữ liệu của bạn?",
+    "privacyLink": "Đọc chính sách quyền riêng tư →"
   },
   "toolNames": {
     "text": {

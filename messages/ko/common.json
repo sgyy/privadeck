@@ -22,22 +22,32 @@
     "lightMode": "라이트 모드",
     "systemMode": "시스템 설정",
     "language": "언어",
-    "share": "Share",
-    "shareCopied": "Link copied!",
-    "uploadFiles": "Upload Files",
-    "maxFileSize": "Max size",
+    "share": "공유",
+    "shareCopied": "링크가 복사되었습니다!",
+    "uploadFiles": "파일 업로드",
+    "maxFileSize": "최대 크기",
     "howItWorks": {
-      "step1FileTitle": "Upload your file",
-      "step1FileDesc": "Drag & drop or click to select a file from your device.",
-      "step1TextTitle": "Enter your text",
-      "step1TextDesc": "Paste or type your content into the input field.",
-      "step2Title": "Adjust settings",
-      "step2Desc": "Configure options to get the result you want.",
-      "step3FileTitle": "Download result",
-      "step3FileDesc": "Get your processed file instantly. No waiting.",
-      "step3TextTitle": "Copy or save",
-      "step3TextDesc": "Copy the output to clipboard or save it."
-    }
+      "step1FileTitle": "파일 업로드",
+      "step1FileDesc": "드래그 앤 드롭하거나 클릭하여 파일을 선택하세요.",
+      "step1TextTitle": "텍스트 입력",
+      "step1TextDesc": "내용을 붙여넣거나 입력하세요.",
+      "step2Title": "설정 조정",
+      "step2Desc": "원하는 결과를 얻을 수 있도록 옵션을 설정하세요.",
+      "step3FileTitle": "결과 다운로드",
+      "step3FileDesc": "처리된 파일을 즉시 받으세요. 대기 시간 없음.",
+      "step3TextTitle": "복사 또는 저장",
+      "step3TextDesc": "출력을 클립보드에 복사하거나 저장하세요."
+    },
+    "toggleMenu": "메뉴 전환",
+    "switchLanguage": "언어 전환",
+    "switchTheme": "{theme} 테마로 전환",
+    "searchPlaceholder": "도구 검색...",
+    "noToolsFound": "도구를 찾을 수 없습니다",
+    "noToolsYet": "아직 도구가 없습니다",
+    "relatedTools": "관련 도구",
+    "faq": "자주 묻는 질문",
+    "pageNotFound": "페이지를 찾을 수 없습니다",
+    "save": "저장"
   },
   "nav": {
     "home": "홈",
@@ -57,7 +67,11 @@
     "heroSub": "브라우저 기반. 업로드 불필요. 가입 불필요. 100% 프라이버시.",
     "popular": "인기 도구",
     "allCategories": "모든 카테고리",
-    "viewAll": "모두 보기"
+    "viewAll": "모두 보기",
+    "featurePrivate": "100% 프라이버시",
+    "featureInstant": "즉시 처리",
+    "featureNoUpload": "업로드 불필요",
+    "toolCount": "{count}개 도구 →"
   },
   "categories": {
     "text": {
@@ -86,102 +100,102 @@
     }
   },
   "footer": {
-    "tagline": "Free browser-based media tools. No uploads, no signups.",
-    "about": "About",
-    "howItWorks": "How It Works",
-    "privacy": "Privacy",
+    "tagline": "무료 브라우저 기반 미디어 도구. 업로드 불필요, 가입 불필요.",
+    "about": "소개",
+    "howItWorks": "작동 방식",
+    "privacy": "개인정보",
     "allRightsReserved": "All rights reserved."
   },
   "privacy": {
-    "metaTitle": "Privacy Policy — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
-    "title": "Privacy & Security",
-    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
-    "corePromiseTitle": "Our Core Promise",
-    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
-    "howItWorksTitle": "How It Works",
+    "metaTitle": "개인정보 처리방침 — 미디어 도구상자",
+    "metaDescription": "미디어 도구상자가 개인정보를 어떻게 보호하는지 알아보세요. 모든 파일 처리는 브라우저에서 이루어집니다.",
+    "title": "개인정보 및 보안",
+    "subtitle": "파일은 브라우저를 떠나지 않습니다. 개인정보 보호를 기반으로 구축했습니다.",
+    "corePromiseTitle": "핵심 약속",
+    "corePromiseBody": "미디어 도구상자의 모든 도구는 클라이언트 측 JavaScript와 WebAssembly를 사용하여 브라우저 내에서 파일을 처리합니다. 파일은 서버에 업로드되거나 저장되지 않으며, 탭을 닫으면 데이터는 사라집니다.",
+    "howItWorksTitle": "작동 방식",
     "steps": {
       "step1": {
-        "title": "You select a file",
-        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+        "title": "파일 선택",
+        "description": "파일은 브라우저 내 JavaScript가 직접 읽습니다. 네트워크 요청은 발생하지 않습니다."
       },
       "step2": {
-        "title": "Processing happens locally",
-        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+        "title": "로컬 처리",
+        "description": "모든 변환, 압축, 편집은 Web API, Canvas, WebAssembly 등 브라우저 기술을 사용하여 기기에서 실행됩니다."
       },
       "step3": {
-        "title": "You download the result",
-        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+        "title": "결과 다운로드",
+        "description": "출력은 메모리에서 생성되어 다운로드로 제공됩니다. 어떤 단계에서도 서버가 관여하지 않습니다."
       }
     },
     "features": {
       "noUpload": {
-        "title": "No File Uploads",
-        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+        "title": "파일 업로드 없음",
+        "description": "파일은 기기를 떠나지 않습니다. 브라우저 내장 기능을 사용합니다."
       },
       "localStorage": {
-        "title": "No Persistent Storage",
-        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+        "title": "영구 저장 없음",
+        "description": "쿠키나 로컬 스토리지로 추적하지 않습니다. 설정(언어, 테마)은 로컬에 저장됩니다."
       },
       "openSource": {
-        "title": "Verifiable Security",
-        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+        "title": "검증 가능한 보안",
+        "description": "브라우저 개발자 도구에서 네트워크 트래픽을 검사하여 파일 업로드가 없음을 확인할 수 있습니다."
       },
       "noLogs": {
-        "title": "No Server Logs",
-        "description": "Since everything runs client-side, there are no server logs of your file operations."
+        "title": "서버 로그 없음",
+        "description": "모든 것이 클라이언트 측에서 실행되므로 파일 작업에 대한 서버 로그가 없습니다."
       },
       "transparent": {
-        "title": "Fully Transparent",
-        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+        "title": "완전한 투명성",
+        "description": "Cloudflare Pages에 호스팅된 정적 사이트입니다. 백엔드, 데이터베이스, API 서버가 없습니다."
       }
     },
-    "thirdPartyTitle": "Third-Party Resources",
-    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
-    "lastUpdated": "Last updated: March 2026"
+    "thirdPartyTitle": "서드파티 리소스",
+    "thirdPartyBody": "일부 도구는 unpkg.com 등의 CDN에서 WebAssembly 바이너리를 로드합니다. 이는 오픈소스 라이브러리로 한 번 로드되어 브라우저에 캐시됩니다. 파일 데이터는 CDN에 전송되지 않습니다. 또한 Google Analytics를 사용하여 익명 사용 통계를 수집합니다.",
+    "lastUpdated": "마지막 업데이트: 2026년 3월"
   },
   "howItWorks": {
-    "metaTitle": "How It Works — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
-    "title": "How It Works",
-    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "metaTitle": "작동 방식 — 미디어 도구상자",
+    "metaDescription": "미디어 도구상자가 브라우저에서 JavaScript와 WebAssembly를 사용하여 파일을 처리하는 방법을 알아보세요.",
+    "title": "작동 방식",
+    "subtitle": "세 가지 간단한 단계 — 파일은 항상 기기에 있습니다.",
     "steps": {
       "select": {
-        "title": "Pick Your File",
-        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+        "title": "파일 선택",
+        "description": "기기에서 파일을 선택하거나 도구에 드래그 앤 드롭하세요. 파일은 브라우저 내 JavaScript가 읽으며 네트워크로 전송되지 않습니다."
       },
       "process": {
-        "title": "Instant Local Processing",
-        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+        "title": "즉시 로컬 처리",
+        "description": "Canvas API, Web Audio API, WebAssembly 등의 브라우저 기술을 사용하여 기기에서 파일을 처리합니다."
       },
       "download": {
-        "title": "Download the Result",
-        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+        "title": "결과 다운로드",
+        "description": "처리 완료 후 출력 파일이 메모리에 생성되어 다운로드할 수 있습니다. 계정이나 가입이 필요 없습니다."
       }
     },
-    "whyClientSideTitle": "Why Client-Side Processing?",
-    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
-    "techTitle": "Technology Under the Hood",
+    "whyClientSideTitle": "왜 클라이언트 측 처리인가?",
+    "whyClientSideBody": "기존 온라인 도구는 파일을 원격 서버에 업로드하여 처리합니다. 이는 느리고 개인정보 문제가 있습니다. 미디어 도구상자는 모든 작업을 브라우저에서 실행합니다.",
+    "techTitle": "사용 기술",
     "tech": {
       "canvas": {
-        "title": "Canvas & Web APIs",
-        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+        "title": "Canvas & Web API",
+        "description": "자르기, 크기 조정, 형식 변환 등의 이미지 작업은 브라우저 네이티브 Canvas API를 사용합니다."
       },
       "wasm": {
         "title": "WebAssembly",
-        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+        "description": "비디오 및 오디오 도구는 WebAssembly로 컴파일된 FFmpeg을 사용하여 브라우저에서 네이티브에 가까운 속도로 실행됩니다."
       },
       "webApis": {
-        "title": "Modern Web Standards",
-        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+        "title": "최신 웹 표준",
+        "description": "File API, Blob URL, Web Workers 등을 활용하여 대용량 파일을 효율적으로 처리합니다."
       },
       "offline": {
-        "title": "Works Offline",
-        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+        "title": "오프라인 지원",
+        "description": "서버가 필요 없으므로 페이지가 로드된 상태에서는 네트워크 연결이 끊겨도 대부분의 도구가 작동합니다."
       }
     },
-    "privacyCta": "Want to learn more about how we protect your data?",
-    "privacyLink": "Read our Privacy Policy →"
+    "privacyCta": "데이터 보호 방법에 대해 더 알고 싶으신가요?",
+    "privacyLink": "개인정보 처리방침 읽기 →"
   },
   "toolNames": {
     "text": {

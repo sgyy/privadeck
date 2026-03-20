@@ -22,22 +22,32 @@
     "lightMode": "Lichte modus",
     "systemMode": "Systeem",
     "language": "Taal",
-    "share": "Share",
-    "shareCopied": "Link copied!",
-    "uploadFiles": "Upload Files",
-    "maxFileSize": "Max size",
+    "share": "Delen",
+    "shareCopied": "Link gekopieerd!",
+    "uploadFiles": "Bestanden uploaden",
+    "maxFileSize": "Max. grootte",
     "howItWorks": {
-      "step1FileTitle": "Upload your file",
-      "step1FileDesc": "Drag & drop or click to select a file from your device.",
-      "step1TextTitle": "Enter your text",
-      "step1TextDesc": "Paste or type your content into the input field.",
-      "step2Title": "Adjust settings",
-      "step2Desc": "Configure options to get the result you want.",
-      "step3FileTitle": "Download result",
-      "step3FileDesc": "Get your processed file instantly. No waiting.",
-      "step3TextTitle": "Copy or save",
-      "step3TextDesc": "Copy the output to clipboard or save it."
-    }
+      "step1FileTitle": "Upload uw bestand",
+      "step1FileDesc": "Sleep en laat los of klik om een bestand te selecteren.",
+      "step1TextTitle": "Voer uw tekst in",
+      "step1TextDesc": "Plak of typ uw inhoud in het veld.",
+      "step2Title": "Instellingen aanpassen",
+      "step2Desc": "Configureer opties om het gewenste resultaat te krijgen.",
+      "step3FileTitle": "Resultaat downloaden",
+      "step3FileDesc": "Ontvang uw verwerkte bestand direct. Geen wachttijd.",
+      "step3TextTitle": "Kopiëren of opslaan",
+      "step3TextDesc": "Kopieer de uitvoer naar het klembord of sla op."
+    },
+    "toggleMenu": "Menu wisselen",
+    "switchLanguage": "Taal wijzigen",
+    "switchTheme": "Overschakelen naar {theme} thema",
+    "searchPlaceholder": "Gereedschap zoeken...",
+    "noToolsFound": "Geen gereedschap gevonden",
+    "noToolsYet": "Nog geen gereedschap",
+    "relatedTools": "Gerelateerd gereedschap",
+    "faq": "FAQ",
+    "pageNotFound": "Pagina niet gevonden",
+    "save": "Opslaan"
   },
   "nav": {
     "home": "Home",
@@ -57,7 +67,11 @@
     "heroSub": "In de browser. Geen uploads. Geen registratie. 100% privé.",
     "popular": "Populaire gereedschappen",
     "allCategories": "Alle categorieën",
-    "viewAll": "Alles bekijken"
+    "viewAll": "Alles bekijken",
+    "featurePrivate": "100% privé",
+    "featureInstant": "Directe verwerking",
+    "featureNoUpload": "Geen upload vereist",
+    "toolCount": "{count} gereedschappen →"
   },
   "categories": {
     "text": {
@@ -86,102 +100,102 @@
     }
   },
   "footer": {
-    "tagline": "Free browser-based media tools. No uploads, no signups.",
-    "about": "About",
-    "howItWorks": "How It Works",
+    "tagline": "Gratis mediagereedschap in de browser. Geen uploads, geen registratie.",
+    "about": "Over",
+    "howItWorks": "Hoe het werkt",
     "privacy": "Privacy",
-    "allRightsReserved": "All rights reserved."
+    "allRightsReserved": "Alle rechten voorbehouden."
   },
   "privacy": {
-    "metaTitle": "Privacy Policy — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
-    "title": "Privacy & Security",
-    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
-    "corePromiseTitle": "Our Core Promise",
-    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
-    "howItWorksTitle": "How It Works",
+    "metaTitle": "Privacybeleid — Media Toolbox",
+    "metaDescription": "Ontdek hoe Media Toolbox uw privacy beschermt. Alle verwerking gebeurt in uw browser.",
+    "title": "Privacy en beveiliging",
+    "subtitle": "Uw bestanden verlaten nooit uw browser. Privacy is onze basis.",
+    "corePromiseTitle": "Onze belofte",
+    "corePromiseBody": "Elk gereedschap verwerkt bestanden volledig in uw browser met JavaScript en WebAssembly. Uw bestanden worden nooit geüpload.",
+    "howItWorksTitle": "Hoe het werkt",
     "steps": {
       "step1": {
-        "title": "You select a file",
-        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+        "title": "Selecteer een bestand",
+        "description": "Uw bestand wordt door JavaScript in uw browser gelezen. Geen netwerkverzoeken."
       },
       "step2": {
-        "title": "Processing happens locally",
-        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+        "title": "Lokale verwerking",
+        "description": "Alle conversies worden op uw apparaat uitgevoerd."
       },
       "step3": {
-        "title": "You download the result",
-        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+        "title": "Download het resultaat",
+        "description": "De uitvoer wordt in het geheugen gegenereerd. Geen server betrokken."
       }
     },
     "features": {
       "noUpload": {
-        "title": "No File Uploads",
-        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+        "title": "Geen bestandsuploads",
+        "description": "Bestanden verlaten nooit uw apparaat."
       },
       "localStorage": {
-        "title": "No Persistent Storage",
-        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+        "title": "Geen permanente opslag",
+        "description": "We gebruiken geen cookies om u te volgen."
       },
       "openSource": {
-        "title": "Verifiable Security",
-        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+        "title": "Verifieerbare beveiliging",
+        "description": "U kunt het netwerkverkeer in de DevTools van uw browser inspecteren."
       },
       "noLogs": {
-        "title": "No Server Logs",
-        "description": "Since everything runs client-side, there are no server logs of your file operations."
+        "title": "Geen serverlogs",
+        "description": "Alles draait aan de clientzijde."
       },
       "transparent": {
-        "title": "Fully Transparent",
-        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+        "title": "Volledig transparant",
+        "description": "Statische site op Cloudflare Pages. Geen backend of database."
       }
     },
-    "thirdPartyTitle": "Third-Party Resources",
-    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
-    "lastUpdated": "Last updated: March 2026"
+    "thirdPartyTitle": "Bronnen van derden",
+    "thirdPartyBody": "Sommige tools laden WebAssembly-binaries van CDN's zoals unpkg.com. Dit zijn open-source bibliotheken die door uw browser worden gecacht. Er worden geen bestandsgegevens verzonden. We gebruiken ook Google Analytics voor anonieme statistieken.",
+    "lastUpdated": "Laatst bijgewerkt: maart 2026"
   },
   "howItWorks": {
-    "metaTitle": "How It Works — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
-    "title": "How It Works",
-    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "metaTitle": "Hoe het werkt — Media Toolbox",
+    "metaDescription": "Ontdek hoe Media Toolbox uw bestanden in de browser verwerkt.",
+    "title": "Hoe het werkt",
+    "subtitle": "Drie eenvoudige stappen — uw bestanden blijven op uw apparaat.",
     "steps": {
       "select": {
-        "title": "Pick Your File",
-        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+        "title": "Kies uw bestand",
+        "description": "Selecteer of sleep een bestand. JavaScript leest het in uw browser."
       },
       "process": {
-        "title": "Instant Local Processing",
-        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+        "title": "Directe lokale verwerking",
+        "description": "Uw browser verwerkt het bestand met Canvas API, WebAssembly en andere technologieën."
       },
       "download": {
-        "title": "Download the Result",
-        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+        "title": "Download het resultaat",
+        "description": "Het bestand wordt in het geheugen gegenereerd en is klaar om te downloaden. Geen account nodig."
       }
     },
-    "whyClientSideTitle": "Why Client-Side Processing?",
-    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
-    "techTitle": "Technology Under the Hood",
+    "whyClientSideTitle": "Waarom verwerking aan clientzijde?",
+    "whyClientSideBody": "Traditionele tools uploaden bestanden naar servers. Media Toolbox voert alles uit in uw browser.",
+    "techTitle": "Gebruikte technologieën",
     "tech": {
       "canvas": {
         "title": "Canvas & Web APIs",
-        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+        "description": "Beeldoperaties gebruiken de native Canvas API voor GPU-versnelde rendering."
       },
       "wasm": {
         "title": "WebAssembly",
-        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+        "description": "Video- en audiotools gebruiken FFmpeg gecompileerd naar WebAssembly."
       },
       "webApis": {
-        "title": "Modern Web Standards",
-        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+        "title": "Moderne webstandaarden",
+        "description": "We gebruiken File API, Blob URLs en Web Workers voor efficiënte verwerking van grote bestanden."
       },
       "offline": {
-        "title": "Works Offline",
-        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+        "title": "Werkt offline",
+        "description": "Zonder server werken de meeste tools ook zonder internetverbinding."
       }
     },
-    "privacyCta": "Want to learn more about how we protect your data?",
-    "privacyLink": "Read our Privacy Policy →"
+    "privacyCta": "Wilt u meer weten over hoe we uw gegevens beschermen?",
+    "privacyLink": "Lees het privacybeleid →"
   },
   "toolNames": {
     "text": {

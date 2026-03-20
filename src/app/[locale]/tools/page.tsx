@@ -4,7 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { getAllTools } from "@/lib/registry";
 import { categories } from "@/lib/registry/categories";
 import { Card } from "@/components/ui/Card";
-import { loadAllToolMessages } from "@/lib/i18n/loadMessages";
+import { loadCommonMessages, loadAllToolMessages } from "@/lib/i18n/loadMessages";
 
 export default async function ToolsPage({
   params,
@@ -13,9 +13,12 @@ export default async function ToolsPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const toolMessages = await loadAllToolMessages(locale);
+  const [commonMessages, toolMessages] = await Promise.all([
+    loadCommonMessages(locale),
+    loadAllToolMessages(locale),
+  ]);
   return (
-    <NextIntlClientProvider messages={toolMessages}>
+    <NextIntlClientProvider messages={{ ...commonMessages, ...toolMessages }}>
       <ToolsPageUI />
     </NextIntlClientProvider>
   );

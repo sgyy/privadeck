@@ -5,7 +5,7 @@ import { locales } from "@/i18n/routing";
 import { getAllSlugs, getToolBySlug } from "@/lib/registry";
 import { generateToolMetadata } from "@/lib/seo/metadata";
 import type { ToolCategory } from "@/lib/registry/types";
-import { loadCategoryMessages } from "@/lib/i18n/loadMessages";
+import { loadCommonMessages, loadCategoryMessages } from "@/lib/i18n/loadMessages";
 import { ToolPageClient } from "./ToolPageClient";
 
 export function generateStaticParams() {
@@ -41,14 +41,18 @@ export default async function ToolPage({
     notFound();
   }
 
-  const catMessages = await loadCategoryMessages(locale, category);
-  // Only pass the single tool's translations, not the entire category
-  const toolMessages = {
+  const [commonMessages, catMessages] = await Promise.all([
+    loadCommonMessages(locale),
+    loadCategoryMessages(locale, category),
+  ]);
+  // Merge common messages with single tool's translations
+  const messages = {
+    ...commonMessages,
     tools: { [category]: { [slug]: catMessages.tools[category][slug] } },
   };
 
   return (
-    <NextIntlClientProvider messages={toolMessages}>
+    <NextIntlClientProvider messages={messages}>
       <ToolPageClient
         category={category as ToolCategory}
         slug={slug}

@@ -22,22 +22,32 @@
     "lightMode": "Світла тема",
     "systemMode": "Системна",
     "language": "Мова",
-    "share": "Share",
-    "shareCopied": "Link copied!",
-    "uploadFiles": "Upload Files",
-    "maxFileSize": "Max size",
+    "share": "Поділитися",
+    "shareCopied": "Посилання скопійовано!",
+    "uploadFiles": "Завантажити файли",
+    "maxFileSize": "Макс. розмір",
     "howItWorks": {
-      "step1FileTitle": "Upload your file",
-      "step1FileDesc": "Drag & drop or click to select a file from your device.",
-      "step1TextTitle": "Enter your text",
-      "step1TextDesc": "Paste or type your content into the input field.",
-      "step2Title": "Adjust settings",
-      "step2Desc": "Configure options to get the result you want.",
-      "step3FileTitle": "Download result",
-      "step3FileDesc": "Get your processed file instantly. No waiting.",
-      "step3TextTitle": "Copy or save",
-      "step3TextDesc": "Copy the output to clipboard or save it."
-    }
+      "step1FileTitle": "Завантажте файл",
+      "step1FileDesc": "Перетягніть або натисніть, щоб вибрати файл з пристрою.",
+      "step1TextTitle": "Введіть текст",
+      "step1TextDesc": "Вставте або введіть вміст у поле.",
+      "step2Title": "Налаштуйте параметри",
+      "step2Desc": "Налаштуйте параметри для отримання бажаного результату.",
+      "step3FileTitle": "Завантажте результат",
+      "step3FileDesc": "Отримайте оброблений файл миттєво. Без очікування.",
+      "step3TextTitle": "Скопіюйте або збережіть",
+      "step3TextDesc": "Скопіюйте вивід у буфер обміну або збережіть."
+    },
+    "toggleMenu": "Перемкнути меню",
+    "switchLanguage": "Змінити мову",
+    "switchTheme": "Перемкнути на тему {theme}",
+    "searchPlaceholder": "Пошук інструментів...",
+    "noToolsFound": "Інструменти не знайдено",
+    "noToolsYet": "Поки що немає інструментів",
+    "relatedTools": "Пов'язані інструменти",
+    "faq": "Часті запитання",
+    "pageNotFound": "Сторінку не знайдено",
+    "save": "Зберегти"
   },
   "nav": {
     "home": "Головна",
@@ -57,7 +67,11 @@
     "heroSub": "У браузері. Без завантажень. Без реєстрації. 100% конфіденційність.",
     "popular": "Популярні інструменти",
     "allCategories": "Усі категорії",
-    "viewAll": "Переглянути всі"
+    "viewAll": "Переглянути всі",
+    "featurePrivate": "100% конфіденційність",
+    "featureInstant": "Миттєва обробка",
+    "featureNoUpload": "Завантаження не потрібне",
+    "toolCount": "{count} інструментів →"
   },
   "categories": {
     "text": {
@@ -86,102 +100,102 @@
     }
   },
   "footer": {
-    "tagline": "Free browser-based media tools. No uploads, no signups.",
-    "about": "About",
-    "howItWorks": "How It Works",
-    "privacy": "Privacy",
-    "allRightsReserved": "All rights reserved."
+    "tagline": "Безкоштовні медіа-інструменти у браузері. Без завантажень, без реєстрації.",
+    "about": "Про нас",
+    "howItWorks": "Як це працює",
+    "privacy": "Конфіденційність",
+    "allRightsReserved": "Усі права захищені."
   },
   "privacy": {
-    "metaTitle": "Privacy Policy — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
-    "title": "Privacy & Security",
-    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
-    "corePromiseTitle": "Our Core Promise",
-    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
-    "howItWorksTitle": "How It Works",
+    "metaTitle": "Політика конфіденційності — Media Toolbox",
+    "metaDescription": "Дізнайтеся, як Media Toolbox захищає вашу конфіденційність. Уся обробка файлів відбувається у вашому браузері.",
+    "title": "Конфіденційність і безпека",
+    "subtitle": "Ваші файли ніколи не залишають ваш браузер. Конфіденційність — наша основа.",
+    "corePromiseTitle": "Наша обіцянка",
+    "corePromiseBody": "Кожен інструмент обробляє файли повністю у вашому браузері за допомогою JavaScript і WebAssembly. Ваші файли ніколи не завантажуються на сервер.",
+    "howItWorksTitle": "Як це працює",
     "steps": {
       "step1": {
-        "title": "You select a file",
-        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+        "title": "Виберіть файл",
+        "description": "Ваш файл читається JavaScript безпосередньо у браузері. Жодних мережевих запитів."
       },
       "step2": {
-        "title": "Processing happens locally",
-        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+        "title": "Локальна обробка",
+        "description": "Усі перетворення виконуються на вашому пристрої."
       },
       "step3": {
-        "title": "You download the result",
-        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+        "title": "Завантажте результат",
+        "description": "Вивід створюється в пам'яті. Жоден сервер не задіяний."
       }
     },
     "features": {
       "noUpload": {
-        "title": "No File Uploads",
-        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+        "title": "Без завантаження файлів",
+        "description": "Файли ніколи не залишають ваш пристрій."
       },
       "localStorage": {
-        "title": "No Persistent Storage",
-        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+        "title": "Без постійного сховища",
+        "description": "Ми не використовуємо cookies для відстеження."
       },
       "openSource": {
-        "title": "Verifiable Security",
-        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+        "title": "Перевірена безпека",
+        "description": "Ви можете перевірити мережевий трафік у DevTools браузера."
       },
       "noLogs": {
-        "title": "No Server Logs",
-        "description": "Since everything runs client-side, there are no server logs of your file operations."
+        "title": "Без серверних логів",
+        "description": "Усе виконується на стороні клієнта."
       },
       "transparent": {
-        "title": "Fully Transparent",
-        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+        "title": "Повна прозорість",
+        "description": "Статичний сайт на Cloudflare Pages. Без бекенду чи бази даних."
       }
     },
-    "thirdPartyTitle": "Third-Party Resources",
-    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
-    "lastUpdated": "Last updated: March 2026"
+    "thirdPartyTitle": "Сторонні ресурси",
+    "thirdPartyBody": "Деякі інструменти завантажують WebAssembly з CDN, таких як unpkg.com. Це відкриті бібліотеки, кешовані браузером. Дані файлів не надсилаються. Ми також використовуємо Google Analytics для анонімної статистики.",
+    "lastUpdated": "Останнє оновлення: березень 2026"
   },
   "howItWorks": {
-    "metaTitle": "How It Works — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
-    "title": "How It Works",
-    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "metaTitle": "Як це працює — Media Toolbox",
+    "metaDescription": "Дізнайтеся, як Media Toolbox обробляє файли у браузері.",
+    "title": "Як це працює",
+    "subtitle": "Три прості кроки — ваші файли залишаються на вашому пристрої.",
     "steps": {
       "select": {
-        "title": "Pick Your File",
-        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+        "title": "Виберіть файл",
+        "description": "Виберіть або перетягніть файл. JavaScript читає його у браузері."
       },
       "process": {
-        "title": "Instant Local Processing",
-        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+        "title": "Миттєва локальна обробка",
+        "description": "Браузер обробляє файл за допомогою Canvas API, WebAssembly та інших технологій."
       },
       "download": {
-        "title": "Download the Result",
-        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+        "title": "Завантажте результат",
+        "description": "Файл створюється в пам'яті та готовий до завантаження. Без акаунту."
       }
     },
-    "whyClientSideTitle": "Why Client-Side Processing?",
-    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
-    "techTitle": "Technology Under the Hood",
+    "whyClientSideTitle": "Чому обробка на стороні клієнта?",
+    "whyClientSideBody": "Традиційні інструменти завантажують файли на сервери. Media Toolbox виконує все у вашому браузері.",
+    "techTitle": "Використані технології",
     "tech": {
       "canvas": {
-        "title": "Canvas & Web APIs",
-        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+        "title": "Canvas і Web API",
+        "description": "Операції із зображеннями використовують нативний Canvas API для GPU-прискореного рендерингу."
       },
       "wasm": {
         "title": "WebAssembly",
-        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+        "description": "Відео та аудіо інструменти використовують FFmpeg, скомпільований у WebAssembly."
       },
       "webApis": {
-        "title": "Modern Web Standards",
-        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+        "title": "Сучасні веб-стандарти",
+        "description": "Ми використовуємо File API, Blob URLs та Web Workers для ефективної обробки великих файлів."
       },
       "offline": {
-        "title": "Works Offline",
-        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+        "title": "Працює офлайн",
+        "description": "Без сервера більшість інструментів працюють навіть без інтернету."
       }
     },
-    "privacyCta": "Want to learn more about how we protect your data?",
-    "privacyLink": "Read our Privacy Policy →"
+    "privacyCta": "Хочете дізнатися більше про захист ваших даних?",
+    "privacyLink": "Читати політику конфіденційності →"
   },
   "toolNames": {
     "text": {

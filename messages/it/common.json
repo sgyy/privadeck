@@ -22,22 +22,32 @@
     "lightMode": "Tema chiaro",
     "systemMode": "Sistema",
     "language": "Lingua",
-    "share": "Share",
-    "shareCopied": "Link copied!",
-    "uploadFiles": "Upload Files",
-    "maxFileSize": "Max size",
+    "share": "Condividi",
+    "shareCopied": "Link copiato!",
+    "uploadFiles": "Carica file",
+    "maxFileSize": "Dimensione max",
     "howItWorks": {
-      "step1FileTitle": "Upload your file",
-      "step1FileDesc": "Drag & drop or click to select a file from your device.",
-      "step1TextTitle": "Enter your text",
-      "step1TextDesc": "Paste or type your content into the input field.",
-      "step2Title": "Adjust settings",
-      "step2Desc": "Configure options to get the result you want.",
-      "step3FileTitle": "Download result",
-      "step3FileDesc": "Get your processed file instantly. No waiting.",
-      "step3TextTitle": "Copy or save",
-      "step3TextDesc": "Copy the output to clipboard or save it."
-    }
+      "step1FileTitle": "Carica il tuo file",
+      "step1FileDesc": "Trascina e rilascia o clicca per selezionare un file.",
+      "step1TextTitle": "Inserisci il testo",
+      "step1TextDesc": "Incolla o digita il contenuto nel campo.",
+      "step2Title": "Regola le impostazioni",
+      "step2Desc": "Configura le opzioni per ottenere il risultato desiderato.",
+      "step3FileTitle": "Scarica il risultato",
+      "step3FileDesc": "Ottieni il file elaborato istantaneamente. Nessuna attesa.",
+      "step3TextTitle": "Copia o salva",
+      "step3TextDesc": "Copia l'output negli appunti o salvalo."
+    },
+    "toggleMenu": "Apri/chiudi menu",
+    "switchLanguage": "Cambia lingua",
+    "switchTheme": "Passa al tema {theme}",
+    "searchPlaceholder": "Cerca strumenti...",
+    "noToolsFound": "Nessuno strumento trovato",
+    "noToolsYet": "Nessuno strumento ancora",
+    "relatedTools": "Strumenti correlati",
+    "faq": "FAQ",
+    "pageNotFound": "Pagina non trovata",
+    "save": "Salva"
   },
   "nav": {
     "home": "Home",
@@ -57,7 +67,11 @@
     "heroSub": "Nel browser. Nessun caricamento. Nessuna registrazione. 100% privato.",
     "popular": "Strumenti popolari",
     "allCategories": "Tutte le categorie",
-    "viewAll": "Vedi tutti"
+    "viewAll": "Vedi tutti",
+    "featurePrivate": "100% privato",
+    "featureInstant": "Elaborazione istantanea",
+    "featureNoUpload": "Nessun caricamento richiesto",
+    "toolCount": "{count} strumenti →"
   },
   "categories": {
     "text": {
@@ -86,102 +100,102 @@
     }
   },
   "footer": {
-    "tagline": "Free browser-based media tools. No uploads, no signups.",
-    "about": "About",
-    "howItWorks": "How It Works",
+    "tagline": "Strumenti multimediali gratuiti nel browser. Senza upload, senza registrazione.",
+    "about": "Info",
+    "howItWorks": "Come funziona",
     "privacy": "Privacy",
-    "allRightsReserved": "All rights reserved."
+    "allRightsReserved": "Tutti i diritti riservati."
   },
   "privacy": {
-    "metaTitle": "Privacy Policy — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
-    "title": "Privacy & Security",
-    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
-    "corePromiseTitle": "Our Core Promise",
-    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
-    "howItWorksTitle": "How It Works",
+    "metaTitle": "Informativa sulla privacy — Media Toolbox",
+    "metaDescription": "Scopri come Media Toolbox protegge la tua privacy. Tutto il trattamento avviene nel browser.",
+    "title": "Privacy e sicurezza",
+    "subtitle": "I tuoi file non lasciano mai il browser. La privacy è la nostra fondazione.",
+    "corePromiseTitle": "La nostra promessa",
+    "corePromiseBody": "Ogni strumento elabora i file interamente nel browser con JavaScript e WebAssembly. I tuoi file non vengono mai caricati su server.",
+    "howItWorksTitle": "Come funziona",
     "steps": {
       "step1": {
-        "title": "You select a file",
-        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+        "title": "Seleziona un file",
+        "description": "Il tuo file viene letto da JavaScript nel browser. Nessuna richiesta di rete."
       },
       "step2": {
-        "title": "Processing happens locally",
-        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+        "title": "Elaborazione locale",
+        "description": "Tutte le conversioni e modifiche vengono eseguite sul tuo dispositivo."
       },
       "step3": {
-        "title": "You download the result",
-        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+        "title": "Scarica il risultato",
+        "description": "L'output viene generato in memoria. Nessun server coinvolto."
       }
     },
     "features": {
       "noUpload": {
-        "title": "No File Uploads",
-        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+        "title": "Nessun caricamento file",
+        "description": "I file non lasciano mai il tuo dispositivo."
       },
       "localStorage": {
-        "title": "No Persistent Storage",
-        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+        "title": "Nessun archivio persistente",
+        "description": "Non usiamo cookie per il tracciamento."
       },
       "openSource": {
-        "title": "Verifiable Security",
-        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+        "title": "Sicurezza verificabile",
+        "description": "Puoi ispezionare il traffico di rete nei DevTools del browser."
       },
       "noLogs": {
-        "title": "No Server Logs",
-        "description": "Since everything runs client-side, there are no server logs of your file operations."
+        "title": "Nessun log server",
+        "description": "Tutto funziona lato client, nessun log delle tue operazioni."
       },
       "transparent": {
-        "title": "Fully Transparent",
-        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+        "title": "Completamente trasparente",
+        "description": "Sito statico su Cloudflare Pages. Nessun backend o database."
       }
     },
-    "thirdPartyTitle": "Third-Party Resources",
-    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
-    "lastUpdated": "Last updated: March 2026"
+    "thirdPartyTitle": "Risorse di terze parti",
+    "thirdPartyBody": "Alcuni strumenti caricano binari WebAssembly da CDN come unpkg.com. Sono librerie open source cachate dal browser. Nessun dato file viene inviato. Usiamo anche Google Analytics per statistiche anonime.",
+    "lastUpdated": "Ultimo aggiornamento: marzo 2026"
   },
   "howItWorks": {
-    "metaTitle": "How It Works — Media Toolbox",
-    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
-    "title": "How It Works",
-    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "metaTitle": "Come funziona — Media Toolbox",
+    "metaDescription": "Scopri come Media Toolbox elabora i tuoi file nel browser.",
+    "title": "Come funziona",
+    "subtitle": "Tre semplici passi — i tuoi file restano sul tuo dispositivo.",
     "steps": {
       "select": {
-        "title": "Pick Your File",
-        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+        "title": "Scegli il tuo file",
+        "description": "Seleziona o trascina un file. JavaScript lo legge nel browser senza inviarlo in rete."
       },
       "process": {
-        "title": "Instant Local Processing",
-        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+        "title": "Elaborazione locale istantanea",
+        "description": "Il browser elabora il file con Canvas API, WebAssembly e altre tecnologie."
       },
       "download": {
-        "title": "Download the Result",
-        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+        "title": "Scarica il risultato",
+        "description": "Il file viene generato in memoria e pronto per il download. Senza account."
       }
     },
-    "whyClientSideTitle": "Why Client-Side Processing?",
-    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
-    "techTitle": "Technology Under the Hood",
+    "whyClientSideTitle": "Perché l'elaborazione lato client?",
+    "whyClientSideBody": "Gli strumenti tradizionali caricano file su server remoti. Media Toolbox esegue tutto nel browser.",
+    "techTitle": "Tecnologie utilizzate",
     "tech": {
       "canvas": {
-        "title": "Canvas & Web APIs",
-        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+        "title": "Canvas e Web API",
+        "description": "Le operazioni sulle immagini usano l'API Canvas nativa per rendering accelerato via GPU."
       },
       "wasm": {
         "title": "WebAssembly",
-        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+        "description": "Gli strumenti video e audio usano FFmpeg compilato in WebAssembly."
       },
       "webApis": {
-        "title": "Modern Web Standards",
-        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+        "title": "Standard web moderni",
+        "description": "Usiamo File API, Blob URL e Web Workers per elaborare file grandi in modo efficiente."
       },
       "offline": {
-        "title": "Works Offline",
-        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+        "title": "Funziona offline",
+        "description": "Senza server, la maggior parte degli strumenti funziona anche senza connessione internet."
       }
     },
-    "privacyCta": "Want to learn more about how we protect your data?",
-    "privacyLink": "Read our Privacy Policy →"
+    "privacyCta": "Vuoi saperne di più su come proteggiamo i tuoi dati?",
+    "privacyLink": "Leggi l'informativa sulla privacy →"
   },
   "toolNames": {
     "text": {
