@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
 import { Search, X } from "lucide-react";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
@@ -16,6 +17,7 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
+  const t = useTranslations("common");
 
   const filtered = query.trim()
     ? toolNavData.filter((tool) => {
@@ -97,7 +99,7 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Search tools..."
+            placeholder={t("searchPlaceholder")}
             className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
           />
           <button
@@ -112,7 +114,7 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
         <div className="max-h-72 overflow-y-auto p-2">
           {filtered.length === 0 ? (
             <p className="px-3 py-6 text-center text-sm text-muted-foreground">
-              No tools found
+              {t("noToolsFound")}
             </p>
           ) : (
             filtered.map((tool, i) => (

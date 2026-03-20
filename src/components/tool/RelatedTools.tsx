@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getToolBySlug } from "@/lib/registry";
 import type { ToolCategory } from "@/lib/registry/types";
@@ -13,6 +14,7 @@ interface RelatedToolsProps {
 }
 
 export function RelatedTools({ slugs, currentSlug, category }: RelatedToolsProps) {
+  const t = useTranslations("common");
   const toolNavData = useToolNavData();
   if (!slugs || slugs.length === 0) return null;
 
@@ -30,7 +32,7 @@ export function RelatedTools({ slugs, currentSlug, category }: RelatedToolsProps
 
   return (
     <div className="mt-8">
-      <h2 className="mb-4 text-lg font-semibold">Related Tools</h2>
+      <h2 className="mb-4 text-lg font-semibold">{t("relatedTools")}</h2>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {tools.map((tool) => (
           <Link key={tool!.slug} href={`/tools/${tool!.category}/${tool!.slug}`}>

@@ -57,7 +57,7 @@ export function Header({ onMenuClick, onSearchClick, toolNavData }: HeaderProps)
           type="button"
           onClick={onMenuClick}
           className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-muted-foreground hover:bg-muted hover:text-foreground lg:hidden"
-          aria-label="Toggle menu"
+          aria-label={t("toggleMenu")}
         >
           <Menu className="h-5 w-5" />
         </button>
@@ -125,11 +125,11 @@ function CategoryDropdown({
   onClose: () => void;
   onCancelClose: () => void;
 }) {
-  const tc = useTranslations("categories");
+  const t = useTranslations("common");
   const tNav = useTranslations("nav");
 
-  const featured = tools.filter((t) => t.featured);
-  const others = tools.filter((t) => !t.featured);
+  const featured = tools.filter((item) => item.featured);
+  const others = tools.filter((item) => !item.featured);
 
   return (
     <div
@@ -214,7 +214,7 @@ function CategoryDropdown({
               {/* If no featured/other split, show all in one column */}
               {featured.length === 0 && others.length === 0 && (
                 <p className="text-sm text-muted-foreground py-4">
-                  No tools yet
+                  {t("noToolsYet")}
                 </p>
               )}
             </div>

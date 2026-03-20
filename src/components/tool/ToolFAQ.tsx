@@ -16,6 +16,7 @@ export function ToolFAQ({ tool }: ToolFAQProps) {
 
 function ToolFAQContent({ tool }: { tool: ToolDefinition }) {
   const t = useTranslations();
+  const tc = useTranslations("common");
 
   const faqItems = tool.faq!.map((item) => ({
     question: t(item.questionKey),
@@ -24,7 +25,7 @@ function ToolFAQContent({ tool }: { tool: ToolDefinition }) {
 
   return (
     <div className="mt-8">
-      <h2 className="mb-4 text-lg font-semibold">FAQ</h2>
+      <h2 className="mb-4 text-lg font-semibold">{tc("faq")}</h2>
       <Accordion className="rounded-xl border border-border bg-card px-4">
         {faqItems.map((item, i) => (
           <AccordionItem key={i} title={item.question}>

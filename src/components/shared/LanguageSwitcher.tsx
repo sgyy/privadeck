@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
 import { Languages } from "lucide-react";
@@ -36,6 +36,7 @@ interface LanguageSwitcherProps {
 
 export function LanguageSwitcher({ dropdownDirection = "down" }: LanguageSwitcherProps = {}) {
   const locale = useLocale();
+  const t = useTranslations("common");
   const router = useRouter();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -63,7 +64,7 @@ export function LanguageSwitcher({ dropdownDirection = "down" }: LanguageSwitche
         type="button"
         onClick={() => setOpen(!open)}
         className="inline-flex h-10 items-center gap-1.5 rounded-lg px-2.5 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-        aria-label="Switch language"
+        aria-label={t("switchLanguage")}
       >
         <Languages className="h-5 w-5" />
         <span className="hidden sm:inline">

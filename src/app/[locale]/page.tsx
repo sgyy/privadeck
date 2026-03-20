@@ -42,9 +42,9 @@ function HomeUI() {
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <FeatureBadge icon={<Shield className="h-4 w-4" />} label="100% Private" />
-          <FeatureBadge icon={<Zap className="h-4 w-4" />} label="Instant Processing" />
-          <FeatureBadge icon={<Globe className="h-4 w-4" />} label="No Upload Required" />
+          <FeatureBadge icon={<Shield className="h-4 w-4" />} label={t("featurePrivate")} />
+          <FeatureBadge icon={<Zap className="h-4 w-4" />} label={t("featureInstant")} />
+          <FeatureBadge icon={<Globe className="h-4 w-4" />} label={t("featureNoUpload")} />
         </div>
       </section>
 
@@ -99,7 +99,7 @@ function HomeUI() {
                     {tcat(`${cat.key}.description`)}
                   </p>
                   <p className="mt-3 text-xs text-primary">
-                    {tools.length} tools →
+                    {t("toolCount", { count: tools.length })}
                   </p>
                 </Card>
               </Link>
