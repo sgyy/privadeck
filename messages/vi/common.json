@@ -1,7 +1,7 @@
 {
   "common": {
     "siteName": "PrivaDeck",
-    "siteDescription": "Công cụ đa phương tiện miễn phí trên trình duyệt. Không tải lên, không đăng ký, riêng tư 100%.",
+    "siteDescription": "Công cụ tất-cả-trong-một trên trình duyệt. Không tải lên, không đăng ký, xử lý nội bộ 100%.",
     "localOnlyIndicator": "Browser Processing Only (Offline Ready)",
     "compareBefore": "Before",
     "compareAfter": "After",
@@ -69,13 +69,13 @@
     "audio": "Âm thanh"
   },
   "home": {
-    "hero": "Công cụ đa phương tiện trực tuyến miễn phí",
-    "heroSub": "Hoạt động trên trình duyệt. Không tải lên. Không đăng ký. Riêng tư 100%.",
-    "mediaDeck": "Media Deck",
-    "pdfDeck": "PDF Deck",
-    "devDeck": "Dev Deck",
-    "metaDeck": "Meta Deck",
-    "metaDeckDesc": "Privacy & security tools for your digital life",
+    "hero": "Công cụ trực tuyến ưu tiên quyền riêng tư",
+    "heroSub": "Mọi xử lý đều diễn ra trong trình duyệt của bạn. Không tải lên. Không máy chủ. Tệp của bạn không bao giờ rời khỏi thiết bị.",
+    "mediaDeck": "Công cụ đa phương tiện",
+    "pdfDeck": "Công cụ PDF",
+    "devDeck": "Công cụ nhà phát triển",
+    "metaDeck": "Quyền riêng tư & Bảo mật",
+    "metaDeckDesc": "Công cụ bảo mật và quyền riêng tư cho cuộc sống số của bạn",
     "allCategories": "Tất cả danh mục",
     "featurePrivate": "100% riêng tư",
     "featureInstant": "Xử lý tức thì",
@@ -217,48 +217,48 @@
         "description": "Mã hóa hoặc giải mã các thành phần URL để sử dụng an toàn trong địa chỉ web."
       },
       "ocr": {
-        "name": "OCR Text Recognition",
-        "description": "Extract text from images using optical character recognition."
+        "name": "Nhận dạng văn bản OCR",
+        "description": "Trích xuất văn bản từ hình ảnh bằng nhận dạng ký tự quang học."
       },
       "archive": {
-        "name": "ZIP Extractor",
-        "description": "Extract and preview ZIP archive contents online."
+        "name": "Giải nén ZIP",
+        "description": "Giải nén và xem trước nội dung tệp ZIP trực tuyến."
       },
       "csv-json": {
-        "name": "CSV/JSON Converter",
-        "description": "Convert between CSV and JSON formats instantly."
+        "name": "Chuyển đổi CSV/JSON",
+        "description": "Chuyển đổi giữa định dạng CSV và JSON ngay lập tức."
       },
       "hash-generator": {
-        "name": "Hash Generator",
-        "description": "Compute SHA-1, SHA-256, SHA-384, and SHA-512 hashes for text or files."
+        "name": "Tạo mã băm",
+        "description": "Tính toán mã băm SHA-1, SHA-256, SHA-384 và SHA-512 cho văn bản hoặc tệp."
       },
       "color-converter": {
-        "name": "Color Converter",
-        "description": "Convert colors between HEX, RGB, and HSL formats with live preview."
+        "name": "Chuyển đổi màu sắc",
+        "description": "Chuyển đổi màu giữa định dạng HEX, RGB và HSL với xem trước trực tiếp."
       },
       "json-xml": {
-        "name": "JSON ↔ XML Converter",
-        "description": "Convert between JSON and XML formats."
+        "name": "Chuyển đổi JSON ↔ XML",
+        "description": "Chuyển đổi giữa định dạng JSON và XML."
       },
       "markdown-preview": {
-        "name": "Markdown Preview",
-        "description": "Write Markdown and see a live HTML preview side by side."
+        "name": "Xem trước Markdown",
+        "description": "Viết Markdown và xem trước HTML trực tiếp song song."
       },
       "regex-tester": {
-        "name": "Regex Tester",
-        "description": "Test regular expressions with real-time matching and highlighting."
+        "name": "Kiểm tra Regex",
+        "description": "Kiểm tra biểu thức chính quy với kết quả khớp và tô sáng theo thời gian thực."
       },
       "timestamp": {
-        "name": "Unix Timestamp Converter",
-        "description": "Convert between Unix timestamps and human-readable dates."
+        "name": "Chuyển đổi Unix Timestamp",
+        "description": "Chuyển đổi giữa dấu thời gian Unix và ngày giờ dễ đọc."
       },
       "yaml-json": {
-        "name": "YAML ↔ JSON Converter",
-        "description": "Convert between YAML and JSON formats."
+        "name": "Chuyển đổi YAML ↔ JSON",
+        "description": "Chuyển đổi giữa định dạng YAML và JSON."
       },
       "text-diff": {
-        "name": "Text Diff",
-        "description": "Compare two texts and see line-by-line differences."
+        "name": "So sánh văn bản",
+        "description": "So sánh hai văn bản và xem sự khác biệt theo từng dòng."
       },
       "word-counter": {
         "name": "Bộ đếm từ",
@@ -275,178 +275,178 @@
     },
     "image": {
       "format-converter": {
-        "name": "Trình chuyển đổi định dạng ảnh",
+        "name": "Chuyển đổi định dạng ảnh",
         "description": "Chuyển đổi hình ảnh giữa các định dạng WebP, PNG, JPG và ICO."
       },
       "compress": {
-        "name": "Image Compressor",
-        "description": "Compress images to reduce file size while maintaining quality."
+        "name": "Nén ảnh",
+        "description": "Nén hình ảnh để giảm kích thước tệp mà vẫn giữ chất lượng."
       },
       "crop": {
-        "name": "Image Crop",
-        "description": "Crop images with precision using an interactive cropping tool."
+        "name": "Cắt ảnh",
+        "description": "Cắt hình ảnh chính xác bằng công cụ cắt tương tác."
       },
       "resize": {
-        "name": "Image Resize",
-        "description": "Resize images to any dimension with aspect ratio lock."
+        "name": "Thay đổi kích thước ảnh",
+        "description": "Thay đổi kích thước hình ảnh theo bất kỳ kích thước nào với khóa tỷ lệ."
       },
       "watermark": {
-        "name": "Add Watermark",
-        "description": "Add text watermarks to images with customizable style and position."
+        "name": "Thêm hình mờ",
+        "description": "Thêm hình mờ văn bản vào hình ảnh với kiểu và vị trí tùy chỉnh."
       },
       "remove-exif": {
-        "name": "Remove EXIF Data",
-        "description": "Strip EXIF metadata from photos to protect your privacy."
+        "name": "Xóa dữ liệu EXIF",
+        "description": "Xóa siêu dữ liệu EXIF khỏi ảnh để bảo vệ quyền riêng tư."
       },
       "flip": {
-        "name": "Flip Image",
-        "description": "Flip images horizontally or vertically with one click."
+        "name": "Lật ảnh",
+        "description": "Lật hình ảnh theo chiều ngang hoặc chiều dọc chỉ với một cú nhấp."
       },
       "grayscale": {
-        "name": "Grayscale Image",
-        "description": "Convert any image to grayscale (black and white)."
+        "name": "Ảnh xám",
+        "description": "Chuyển đổi bất kỳ hình ảnh nào sang thang độ xám (đen trắng)."
       },
       "pixelate": {
-        "name": "Pixelate Image",
-        "description": "Apply a pixelation effect to any image with adjustable pixel size."
+        "name": "Mã hóa điểm ảnh",
+        "description": "Áp dụng hiệu ứng mã hóa điểm ảnh với kích thước pixel có thể điều chỉnh."
       },
       "add-border": {
-        "name": "Add Border",
-        "description": "Add a customizable border around any image."
+        "name": "Thêm viền",
+        "description": "Thêm viền tùy chỉnh xung quanh bất kỳ hình ảnh nào."
       },
       "circle-crop": {
-        "name": "Circle Crop",
-        "description": "Crop any image into a perfect circle with transparent background."
+        "name": "Cắt tròn",
+        "description": "Cắt bất kỳ hình ảnh nào thành hình tròn hoàn hảo với nền trong suốt."
       },
       "svg-to-png": {
-        "name": "SVG to PNG",
-        "description": "Convert SVG vector graphics to PNG raster images at any scale."
+        "name": "SVG sang PNG",
+        "description": "Chuyển đổi đồ họa vector SVG sang ảnh raster PNG ở bất kỳ tỷ lệ nào."
       },
       "add-text": {
-        "name": "Add Text to Image",
-        "description": "Overlay text on images with customizable font size, color, and position."
+        "name": "Thêm văn bản vào ảnh",
+        "description": "Chèn văn bản lên hình ảnh với cỡ chữ, màu sắc và vị trí tùy chỉnh."
       },
       "combine": {
-        "name": "Combine Images",
-        "description": "Merge multiple images side by side or stacked vertically."
+        "name": "Ghép ảnh",
+        "description": "Ghép nhiều hình ảnh cạnh nhau hoặc xếp chồng theo chiều dọc."
       },
       "split": {
-        "name": "Split Image",
-        "description": "Split an image into a grid of equal-sized pieces."
+        "name": "Chia ảnh",
+        "description": "Chia hình ảnh thành lưới các mảnh có kích thước bằng nhau."
       },
       "heic-convert": {
-        "name": "HEIC Converter",
-        "description": "Convert HEIC/HEIF images to JPG or PNG format."
+        "name": "Chuyển đổi HEIC",
+        "description": "Chuyển đổi hình ảnh HEIC/HEIF sang định dạng JPG hoặc PNG."
       },
       "collage": {
-        "name": "Image Collage",
-        "description": "Create photo collages with preset grid layouts."
+        "name": "Ghép ảnh collage",
+        "description": "Tạo ảnh ghép collage với bố cục lưới có sẵn."
       }
     },
     "pdf": {
       "merge": {
-        "name": "Merge PDF",
-        "description": "Combine multiple PDF files into a single document."
+        "name": "Gộp PDF",
+        "description": "Kết hợp nhiều tệp PDF thành một tài liệu duy nhất."
       },
       "split": {
-        "name": "Split PDF",
-        "description": "Split a PDF into individual pages or custom page ranges."
+        "name": "Tách PDF",
+        "description": "Tách PDF thành các trang riêng lẻ hoặc phạm vi trang tùy chỉnh."
       },
       "delete-pages": {
-        "name": "Delete PDF Pages",
-        "description": "Remove specific pages from a PDF document."
+        "name": "Xóa trang PDF",
+        "description": "Xóa các trang cụ thể khỏi tài liệu PDF."
       },
       "to-image": {
-        "name": "PDF to Image",
-        "description": "Convert PDF pages to JPG or PNG images."
+        "name": "PDF sang ảnh",
+        "description": "Chuyển đổi các trang PDF sang ảnh JPG hoặc PNG."
       },
       "images-to-pdf": {
-        "name": "Images to PDF",
-        "description": "Convert multiple images into a single PDF document."
+        "name": "Ảnh sang PDF",
+        "description": "Chuyển đổi nhiều hình ảnh thành một tài liệu PDF duy nhất."
       },
       "rotate": {
-        "name": "Rotate PDF",
-        "description": "Rotate all pages of a PDF by 90, 180, or 270 degrees."
+        "name": "Xoay PDF",
+        "description": "Xoay tất cả các trang PDF 90, 180 hoặc 270 độ."
       },
       "add-page-numbers": {
-        "name": "Add Page Numbers",
-        "description": "Add page numbers to every page of a PDF document."
+        "name": "Thêm số trang",
+        "description": "Thêm số trang vào mọi trang của tài liệu PDF."
       },
       "extract-text": {
-        "name": "Extract Text from PDF",
-        "description": "Extract all text content from a PDF document."
+        "name": "Trích xuất văn bản từ PDF",
+        "description": "Trích xuất toàn bộ nội dung văn bản từ tài liệu PDF."
       },
       "rearrange": {
-        "name": "Rearrange PDF Pages",
-        "description": "Drag and drop to reorder pages in a PDF document."
+        "name": "Sắp xếp lại trang PDF",
+        "description": "Kéo và thả để sắp xếp lại các trang trong tài liệu PDF."
       },
       "compress": {
-        "name": "Compress PDF",
-        "description": "Reduce PDF file size by re-rendering pages at lower quality."
+        "name": "Nén PDF",
+        "description": "Giảm kích thước tệp PDF bằng cách kết xuất lại trang với chất lượng thấp hơn."
       },
       "add-watermark": {
-        "name": "PDF Watermark",
-        "description": "Add a diagonal text watermark to every page of a PDF."
+        "name": "Hình mờ PDF",
+        "description": "Thêm hình mờ văn bản chéo vào mọi trang của PDF."
       },
       "crop": {
-        "name": "Crop PDF",
-        "description": "Crop PDF pages by setting margins to remove from each side."
+        "name": "Cắt PDF",
+        "description": "Cắt các trang PDF bằng cách đặt lề cần xóa ở mỗi cạnh."
       },
       "esign": {
-        "name": "E-Sign PDF",
-        "description": "Draw a signature and place it on any page of a PDF document."
+        "name": "Ký điện tử PDF",
+        "description": "Vẽ chữ ký và đặt vào bất kỳ trang nào của tài liệu PDF."
       },
       "extract-images": {
-        "name": "Extract Images from PDF",
-        "description": "Extract all embedded images from a PDF file and download them."
+        "name": "Trích xuất ảnh từ PDF",
+        "description": "Trích xuất tất cả hình ảnh nhúng từ tệp PDF và tải xuống."
       }
     },
     "video": {
       "mute": {
-        "name": "Mute Video",
-        "description": "Remove audio from video files instantly."
+        "name": "Tắt tiếng video",
+        "description": "Xóa âm thanh khỏi tệp video ngay lập tức."
       },
       "trim": {
-        "name": "Trim Video",
-        "description": "Cut and trim video clips to the desired length."
+        "name": "Cắt video",
+        "description": "Cắt và chỉnh sửa video clip theo độ dài mong muốn."
       },
       "rotate": {
-        "name": "Rotate Video",
-        "description": "Rotate videos by 90, 180, or 270 degrees."
+        "name": "Xoay video",
+        "description": "Xoay video 90, 180 hoặc 270 độ."
       },
       "to-gif": {
-        "name": "Video to GIF",
-        "description": "Convert video clips to animated GIF images."
+        "name": "Video sang GIF",
+        "description": "Chuyển đổi video clip thành ảnh GIF động."
       },
       "to-webp": {
-        "name": "Video to WebP",
-        "description": "Convert video clips to animated WebP images."
+        "name": "Video sang WebP",
+        "description": "Chuyển đổi video clip thành ảnh WebP động."
       },
       "compress": {
-        "name": "Compress Video",
-        "description": "Reduce video file size with adjustable quality presets."
+        "name": "Nén video",
+        "description": "Giảm kích thước tệp video với các cài đặt chất lượng có thể điều chỉnh."
       },
       "format-convert": {
-        "name": "Convert Video Format",
-        "description": "Convert videos between MP4, WebM, MKV, and AVI formats."
+        "name": "Chuyển đổi định dạng video",
+        "description": "Chuyển đổi video giữa các định dạng MP4, WebM, MKV và AVI."
       },
       "resize": {
-        "name": "Resize Video",
-        "description": "Change video resolution with preset or custom dimensions."
+        "name": "Thay đổi kích thước video",
+        "description": "Thay đổi độ phân giải video với kích thước có sẵn hoặc tùy chỉnh."
       }
     },
     "audio": {
       "trim": {
-        "name": "Audio Trimmer",
-        "description": "Cut and trim audio files to the desired length."
+        "name": "Cắt âm thanh",
+        "description": "Cắt và chỉnh sửa tệp âm thanh theo độ dài mong muốn."
       },
       "convert": {
-        "name": "Audio Converter",
-        "description": "Convert audio files between MP3, WAV, OGG, AAC, and FLAC formats."
+        "name": "Chuyển đổi âm thanh",
+        "description": "Chuyển đổi tệp âm thanh giữa các định dạng MP3, WAV, OGG, AAC và FLAC."
       },
       "extract": {
-        "name": "Extract Audio",
-        "description": "Extract audio track from video files."
+        "name": "Trích xuất âm thanh",
+        "description": "Trích xuất track âm thanh từ tệp video."
       }
     }
   }
