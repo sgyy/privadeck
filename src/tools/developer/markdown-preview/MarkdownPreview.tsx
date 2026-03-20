@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { CopyButton } from "@/components/shared/CopyButton";
+import { TextDropZone } from "@/components/shared/TextDropZone";
 import { markdownToHtml } from "./logic";
 
 export default function MarkdownPreview() {
@@ -16,12 +17,16 @@ export default function MarkdownPreview() {
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-2">
           <label className="text-sm font-medium">{t("markdownLabel")}</label>
-          <textarea
-            value={markdown}
-            onChange={(e) => setMarkdown(e.target.value)}
-            placeholder={t("markdownPlaceholder")}
-            className="w-full min-h-[350px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y"
-          />
+          <TextDropZone onTextLoaded={(text) => setMarkdown(text)} accept={[".md", ".markdown", ".txt"]} isEmpty={!markdown}>
+            {({ dropClassName }) => (
+              <textarea
+                value={markdown}
+                onChange={(e) => setMarkdown(e.target.value)}
+                placeholder={t("markdownPlaceholder")}
+                className={`w-full min-h-[350px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y ${dropClassName}`}
+              />
+            )}
+          </TextDropZone>
         </div>
 
         <div className="space-y-2">

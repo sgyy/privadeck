@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { CopyButton } from "@/components/shared/CopyButton";
+import { TextFileDownloadButton } from "@/components/shared/TextFileDownloadButton";
+import { TextDropZone } from "@/components/shared/TextDropZone";
 import { csvToJson, jsonToCsv } from "./logic";
 
 export default function CsvJsonTool() {
@@ -38,27 +40,41 @@ export default function CsvJsonTool() {
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <label className="text-sm font-medium">{t("csvLabel")}</label>
-            {csv && <CopyButton text={csv} />}
+            <div className="flex gap-2">
+              {csv && <TextFileDownloadButton text={csv} filename="data.csv" mimeType="text/csv" />}
+              {csv && <CopyButton text={csv} />}
+            </div>
           </div>
-          <textarea
-            value={csv}
-            onChange={(e) => setCsv(e.target.value)}
-            placeholder={t("csvPlaceholder")}
-            className="w-full min-h-[250px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y"
-          />
+          <TextDropZone onTextLoaded={(text) => setCsv(text)} accept={[".csv", ".tsv", ".txt"]} isEmpty={!csv}>
+            {({ dropClassName }) => (
+              <textarea
+                value={csv}
+                onChange={(e) => setCsv(e.target.value)}
+                placeholder={t("csvPlaceholder")}
+                className={`w-full min-h-[250px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y ${dropClassName}`}
+              />
+            )}
+          </TextDropZone>
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <label className="text-sm font-medium">{t("jsonLabel")}</label>
-            {json && <CopyButton text={json} />}
+            <div className="flex gap-2">
+              {json && <TextFileDownloadButton text={json} filename="data.json" mimeType="application/json" />}
+              {json && <CopyButton text={json} />}
+            </div>
           </div>
-          <textarea
-            value={json}
-            onChange={(e) => setJson(e.target.value)}
-            placeholder={t("jsonPlaceholder")}
-            className="w-full min-h-[250px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y"
-          />
+          <TextDropZone onTextLoaded={(text) => setJson(text)} accept={[".json", ".txt"]} isEmpty={!json}>
+            {({ dropClassName }) => (
+              <textarea
+                value={json}
+                onChange={(e) => setJson(e.target.value)}
+                placeholder={t("jsonPlaceholder")}
+                className={`w-full min-h-[250px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y ${dropClassName}`}
+              />
+            )}
+          </TextDropZone>
         </div>
       </div>
 

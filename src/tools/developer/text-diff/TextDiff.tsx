@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { CopyButton } from "@/components/shared/CopyButton";
+import { TextDropZone } from "@/components/shared/TextDropZone";
 import { computeDiff, toUnifiedDiff, type DiffLine } from "./logic";
 
 export default function TextDiff() {
@@ -40,21 +41,29 @@ export default function TextDiff() {
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-2">
           <label className="text-sm font-medium">{t("originalLabel")}</label>
-          <textarea
-            value={original}
-            onChange={(e) => setOriginal(e.target.value)}
-            placeholder={t("originalPlaceholder")}
-            className="w-full min-h-[200px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y"
-          />
+          <TextDropZone onTextLoaded={(text) => setOriginal(text)} isEmpty={!original}>
+            {({ dropClassName }) => (
+              <textarea
+                value={original}
+                onChange={(e) => setOriginal(e.target.value)}
+                placeholder={t("originalPlaceholder")}
+                className={`w-full min-h-[200px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y ${dropClassName}`}
+              />
+            )}
+          </TextDropZone>
         </div>
         <div className="space-y-2">
           <label className="text-sm font-medium">{t("modifiedLabel")}</label>
-          <textarea
-            value={modified}
-            onChange={(e) => setModified(e.target.value)}
-            placeholder={t("modifiedPlaceholder")}
-            className="w-full min-h-[200px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y"
-          />
+          <TextDropZone onTextLoaded={(text) => setModified(text)} isEmpty={!modified}>
+            {({ dropClassName }) => (
+              <textarea
+                value={modified}
+                onChange={(e) => setModified(e.target.value)}
+                placeholder={t("modifiedPlaceholder")}
+                className={`w-full min-h-[200px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y ${dropClassName}`}
+              />
+            )}
+          </TextDropZone>
         </div>
       </div>
 

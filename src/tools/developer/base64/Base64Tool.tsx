@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { TextArea } from "@/components/shared/TextArea";
 import { CopyButton } from "@/components/shared/CopyButton";
+import { TextFileDownloadButton } from "@/components/shared/TextFileDownloadButton";
 import { Button } from "@/components/ui/Button";
 import { encodeBase64, decodeBase64 } from "./logic";
 
@@ -17,6 +18,7 @@ export default function Base64Tool() {
       <TextArea
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        onFileDrop={(text) => setInput(text)}
         placeholder={t("inputPlaceholder")}
         className="min-h-[150px] font-mono text-sm"
       />
@@ -34,7 +36,10 @@ export default function Base64Tool() {
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-sm font-medium">{t("output")}</span>
-            <CopyButton text={output} />
+            <div className="flex gap-2">
+              <TextFileDownloadButton text={output} filename="base64-output.txt" />
+              <CopyButton text={output} />
+            </div>
           </div>
           <pre className="rounded-lg border border-border bg-muted/30 p-4 text-sm overflow-auto max-h-96 font-mono break-all whitespace-pre-wrap">
             {output}

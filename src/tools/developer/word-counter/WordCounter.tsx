@@ -15,6 +15,7 @@ export default function WordCounter() {
       <TextArea
         value={text}
         onChange={(e) => setText(e.target.value)}
+        onFileDrop={(content) => setText(content)}
         placeholder={t("placeholder")}
         className="min-h-[200px]"
       />

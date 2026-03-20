@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { CopyButton } from "@/components/shared/CopyButton";
+import { TextDropZone } from "@/components/shared/TextDropZone";
 import { testRegex, highlightMatches } from "./logic";
 
 const FLAG_OPTIONS = [
@@ -73,12 +74,16 @@ export default function RegexTester() {
 
       <div className="space-y-2">
         <label className="text-sm font-medium">{t("testStringLabel")}</label>
-        <textarea
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          placeholder={t("testStringPlaceholder")}
-          className="w-full min-h-[150px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y"
-        />
+        <TextDropZone onTextLoaded={(content) => setText(content)} isEmpty={!text}>
+          {({ dropClassName }) => (
+            <textarea
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+              placeholder={t("testStringPlaceholder")}
+              className={`w-full min-h-[150px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y ${dropClassName}`}
+            />
+          )}
+        </TextDropZone>
       </div>
 
       {error && (

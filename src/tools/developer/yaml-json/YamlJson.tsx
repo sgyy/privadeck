@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { CopyButton } from "@/components/shared/CopyButton";
+import { TextFileDownloadButton } from "@/components/shared/TextFileDownloadButton";
+import { TextDropZone } from "@/components/shared/TextDropZone";
 import { yamlToJson, jsonToYaml } from "./logic";
 
 export default function YamlJson() {
@@ -38,27 +40,41 @@ export default function YamlJson() {
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <label className="text-sm font-medium">{t("yamlLabel")}</label>
-            {yamlText && <CopyButton text={yamlText} />}
+            <div className="flex gap-2">
+              {yamlText && <TextFileDownloadButton text={yamlText} filename="data.yaml" mimeType="text/yaml" />}
+              {yamlText && <CopyButton text={yamlText} />}
+            </div>
           </div>
-          <textarea
-            value={yamlText}
-            onChange={(e) => setYamlText(e.target.value)}
-            placeholder={t("yamlPlaceholder")}
-            className="w-full min-h-[250px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y"
-          />
+          <TextDropZone onTextLoaded={(text) => setYamlText(text)} accept={[".yaml", ".yml", ".txt"]} isEmpty={!yamlText}>
+            {({ dropClassName }) => (
+              <textarea
+                value={yamlText}
+                onChange={(e) => setYamlText(e.target.value)}
+                placeholder={t("yamlPlaceholder")}
+                className={`w-full min-h-[250px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y ${dropClassName}`}
+              />
+            )}
+          </TextDropZone>
         </div>
 
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <label className="text-sm font-medium">{t("jsonLabel")}</label>
-            {jsonText && <CopyButton text={jsonText} />}
+            <div className="flex gap-2">
+              {jsonText && <TextFileDownloadButton text={jsonText} filename="data.json" mimeType="application/json" />}
+              {jsonText && <CopyButton text={jsonText} />}
+            </div>
           </div>
-          <textarea
-            value={jsonText}
-            onChange={(e) => setJsonText(e.target.value)}
-            placeholder={t("jsonPlaceholder")}
-            className="w-full min-h-[250px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y"
-          />
+          <TextDropZone onTextLoaded={(text) => setJsonText(text)} accept={[".json", ".txt"]} isEmpty={!jsonText}>
+            {({ dropClassName }) => (
+              <textarea
+                value={jsonText}
+                onChange={(e) => setJsonText(e.target.value)}
+                placeholder={t("jsonPlaceholder")}
+                className={`w-full min-h-[250px] rounded-lg border border-border bg-background p-3 font-mono text-sm resize-y ${dropClassName}`}
+              />
+            )}
+          </TextDropZone>
         </div>
       </div>
 

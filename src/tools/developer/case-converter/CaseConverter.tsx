@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { TextArea } from "@/components/shared/TextArea";
 import { CopyButton } from "@/components/shared/CopyButton";
+import { TextFileDownloadButton } from "@/components/shared/TextFileDownloadButton";
 import { Button } from "@/components/ui/Button";
 import { convertCase, type CaseType } from "./logic";
 
@@ -33,6 +34,7 @@ export default function CaseConverter() {
       <TextArea
         value={text}
         onChange={(e) => setText(e.target.value)}
+        onFileDrop={(content) => setText(content)}
         placeholder={t("placeholder")}
         className="min-h-[120px]"
       />
@@ -53,8 +55,11 @@ export default function CaseConverter() {
       {output && (
         <div className="space-y-2">
           <div className="flex items-center justify-between">
-            <span className="text-sm font-medium">Output</span>
-            <CopyButton text={output} />
+            <span className="text-sm font-medium">{t("output")}</span>
+            <div className="flex gap-2">
+              <TextFileDownloadButton text={output} filename="converted.txt" />
+              <CopyButton text={output} />
+            </div>
           </div>
           <div className="rounded-lg border border-border bg-muted/30 p-4 text-sm whitespace-pre-wrap break-all">
             {output}

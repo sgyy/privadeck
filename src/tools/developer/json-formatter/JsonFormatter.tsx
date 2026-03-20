@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { TextArea } from "@/components/shared/TextArea";
 import { CopyButton } from "@/components/shared/CopyButton";
 import { Button } from "@/components/ui/Button";
+import { TextFileDownloadButton } from "@/components/shared/TextFileDownloadButton";
 import { formatJson, minifyJson, validateJson, type JsonResult } from "./logic";
 import { Check, X } from "lucide-react";
 
@@ -37,6 +38,8 @@ export default function JsonFormatter() {
       <TextArea
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        onFileDrop={(text) => setInput(text)}
+        acceptFileTypes={[".json", ".txt"]}
         placeholder={t("inputPlaceholder")}
         className="min-h-[200px] font-mono text-sm"
       />
@@ -83,7 +86,8 @@ export default function JsonFormatter() {
 
       {output && (
         <div className="space-y-2">
-          <div className="flex justify-end">
+          <div className="flex justify-end gap-2">
+            <TextFileDownloadButton text={output} filename="formatted.json" mimeType="application/json" />
             <CopyButton text={output} />
           </div>
           <pre className="rounded-lg border border-border bg-muted/30 p-4 text-sm overflow-auto max-h-96 font-mono">

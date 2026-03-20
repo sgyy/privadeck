@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { TextArea } from "@/components/shared/TextArea";
 import { CopyButton } from "@/components/shared/CopyButton";
+import { TextFileDownloadButton } from "@/components/shared/TextFileDownloadButton";
 import { Button } from "@/components/ui/Button";
 import {
   encodeUrl,
@@ -22,6 +23,7 @@ export default function UrlEncoder() {
       <TextArea
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        onFileDrop={(text) => setInput(text)}
         placeholder={t("inputPlaceholder")}
         className="min-h-[120px] font-mono text-sm"
       />
@@ -43,7 +45,10 @@ export default function UrlEncoder() {
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-sm font-medium">{t("output")}</span>
-            <CopyButton text={output} />
+            <div className="flex gap-2">
+              <TextFileDownloadButton text={output} filename="url-encoded.txt" />
+              <CopyButton text={output} />
+            </div>
           </div>
           <pre className="rounded-lg border border-border bg-muted/30 p-4 text-sm overflow-auto max-h-96 font-mono break-all whitespace-pre-wrap">
             {output}
