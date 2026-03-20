@@ -15,12 +15,15 @@ export function ToolFAQ({ tool }: ToolFAQProps) {
 }
 
 function ToolFAQContent({ tool }: { tool: ToolDefinition }) {
-  const t = useTranslations();
+  const t = useTranslations(`tools.${tool.category}.${tool.slug}`);
   const tc = useTranslations("common");
 
+  // FAQ keys in registry are absolute (e.g. "tools.text.word-counter.faq.q1")
+  // Strip the prefix to get the relative key (e.g. "faq.q1")
+  const prefix = `tools.${tool.category}.${tool.slug}.`;
   const faqItems = tool.faq!.map((item) => ({
-    question: t(item.questionKey),
-    answer: t(item.answerKey),
+    question: t(item.questionKey.replace(prefix, "")),
+    answer: t(item.answerKey.replace(prefix, "")),
   }));
 
   return (

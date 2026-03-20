@@ -140,9 +140,9 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
         </div>
 
         <div className="border-t border-border px-4 py-2 text-xs text-muted-foreground flex gap-4">
-          <span>↑↓ Navigate</span>
-          <span>↵ Open</span>
-          <span>Esc Close</span>
+          <span>↑↓ {t("searchNavigate")}</span>
+          <span>↵ {t("searchOpen")}</span>
+          <span>Esc {t("searchClose")}</span>
         </div>
       </div>
     </>
