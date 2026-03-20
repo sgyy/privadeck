@@ -6,6 +6,7 @@ import { FileDropzone } from "@/components/shared/FileDropzone";
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
 import { Download, X } from "lucide-react";
+import { brandFilename } from "@/lib/brand";
 import {
   convertPdfToImages,
   downloadAsZip,
@@ -114,7 +115,7 @@ export default function PdfToImage() {
     const url = URL.createObjectURL(zip);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `${file?.name.replace(/\.pdf$/i, "")}_images.zip`;
+    a.download = brandFilename(`${file?.name.replace(/\.pdf$/i, "")}_images.zip`);
     a.click();
     URL.revokeObjectURL(url);
   }
@@ -187,7 +188,7 @@ export default function PdfToImage() {
                       const url = getUrl(page.blob);
                       const a = document.createElement("a");
                       a.href = url;
-                      a.download = page.filename;
+                      a.download = brandFilename(page.filename);
                       a.click();
                     }}>
                       <Download className="h-3.5 w-3.5" />

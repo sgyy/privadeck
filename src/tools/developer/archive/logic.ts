@@ -1,4 +1,5 @@
 import { unzip } from "fflate";
+import { brandFilename } from "@/lib/brand";
 
 export interface ArchiveEntry {
   path: string;
@@ -40,7 +41,7 @@ export function downloadEntry(entry: ArchiveEntry) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = entry.path.split("/").pop() || entry.path;
+  a.download = brandFilename(entry.path.split("/").pop() || entry.path);
   a.click();
   URL.revokeObjectURL(url);
 }

@@ -18,10 +18,12 @@ export function AccordionItem({
   title,
   children,
   defaultOpen = false,
+  onValueChange,
 }: {
   title: string;
   children: ReactNode;
   defaultOpen?: boolean;
+  onValueChange?: (open: boolean) => void;
 }) {
   const [open, setOpen] = useState(defaultOpen);
 
@@ -29,7 +31,11 @@ export function AccordionItem({
     <div>
       <button
         type="button"
-        onClick={() => setOpen(!open)}
+        onClick={() => {
+          const next = !open;
+          setOpen(next);
+          onValueChange?.(next);
+        }}
         className="flex w-full items-center justify-between py-4 text-left text-sm font-medium transition-colors hover:text-foreground/80"
       >
         {title}

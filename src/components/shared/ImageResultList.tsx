@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import { Download, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
+import { brandFilename } from "@/lib/brand";
 
 export interface ImageResultItem {
   blob: Blob;
@@ -80,7 +81,7 @@ export function ImageResultList({ results, onRemove }: ImageResultListProps) {
     const url = getUrl(item.blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = item.filename;
+    a.download = brandFilename(item.filename);
     a.click();
   }
 

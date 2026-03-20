@@ -14,6 +14,7 @@ import {
   formatFileSize,
   type ExtractedImage,
 } from "./logic";
+import { brandFilename } from "@/lib/brand";
 
 export default function ExtractImages() {
   const [file, setFile] = useState<File | null>(null);
@@ -58,7 +59,7 @@ export default function ExtractImages() {
     const url = URL.createObjectURL(zip);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `${file?.name.replace(/\.pdf$/i, "")}_images.zip`;
+    a.download = brandFilename(`${file?.name.replace(/\.pdf$/i, "")}_images.zip`);
     a.click();
     URL.revokeObjectURL(url);
   }

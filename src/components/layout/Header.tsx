@@ -9,6 +9,7 @@ import { categories } from "@/lib/registry/categories";
 import type { ToolCategory } from "@/lib/registry/types";
 import { cn } from "@/lib/utils/cn";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
+import { trackEvent } from "@/lib/analytics";
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -241,16 +242,19 @@ function ShareButton() {
   const handleShare = useCallback(async () => {
     const url = window.location.href;
     const title = document.title;
+    const canShare = typeof navigator.share === "function";
 
-    if (navigator.share) {
+    if (canShare) {
       try {
         await navigator.share({ title, url });
       } catch {
         // User cancelled or share failed — ignore
+        return;
       }
     } else {
       await navigator.clipboard.writeText(url);
     }
+    trackEvent("share_click", { method: canShare ? "native_share" : "clipboard" });
   }, []);
 
   return (

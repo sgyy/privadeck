@@ -66,6 +66,14 @@ Each tool in `src/tools/{category}/{slug}/`:
 - `{Name}.tsx` — `"use client"` component, default export, uses `useTranslations()` for all text
 - `logic.ts` — Pure processing functions, no React imports
 
+### Analytics
+
+`src/lib/analytics.ts` provides type-safe GA4 event tracking via `window.gtag`. Key exports:
+- `trackEvent(event, params)` — sends a GA4 event; silently no-ops when GA is not loaded
+- `createToolTracker(slug, category)` — factory returning `trackProcessComplete(duration_ms)` and `trackProcessError(error_message)` helpers for tool components
+
+Shared components (FileDropzone, DownloadButton, CopyButton) accept optional `analyticsSlug`/`analyticsCategory` props to enable tracking without breaking existing usage. To add `process_complete`/`process_error` tracking to a tool, call `createToolTracker` in the tool component and invoke the returned helpers after processing.
+
 ### Cloudflare Headers
 
 `public/_headers` pre-configures `Cross-Origin-Embedder-Policy: require-corp` and `Cross-Origin-Opener-Policy: same-origin` for future FFmpeg.wasm support.

@@ -4,6 +4,7 @@ import { useCallback, useState, useRef } from "react";
 import { Upload } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils/cn";
+import { trackEvent } from "@/lib/analytics";
 
 interface FileDropzoneProps {
   accept?: string;
@@ -11,6 +12,8 @@ interface FileDropzoneProps {
   onFiles: (files: File[]) => void;
   maxSize?: number; // bytes
   className?: string;
+  analyticsSlug?: string;
+  analyticsCategory?: string;
 }
 
 function formatSize(bytes: number): string {
@@ -42,6 +45,8 @@ export function FileDropzone({
   onFiles,
   maxSize,
   className,
+  analyticsSlug,
+  analyticsCategory,
 }: FileDropzoneProps) {
   const t = useTranslations("common");
   const [dragging, setDragging] = useState(false);
@@ -56,9 +61,18 @@ export function FileDropzone({
       }
       if (files.length > 0) {
         onFiles(files);
+        if (analyticsSlug && analyticsCategory) {
+          const ext = files[0].name.split(".").pop()?.toLowerCase() || "unknown";
+          trackEvent("file_upload", {
+            tool_slug: analyticsSlug,
+            tool_category: analyticsCategory,
+            file_type: ext,
+            file_count: files.length,
+          });
+        }
       }
     },
-    [onFiles, maxSize],
+    [onFiles, maxSize, analyticsSlug, analyticsCategory],
   );
 
   return (

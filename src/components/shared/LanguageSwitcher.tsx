@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
 import { Languages } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
 import { useState, useRef, useEffect } from "react";
 
 const languageNames: Record<Locale, string> = {
@@ -53,6 +54,7 @@ export function LanguageSwitcher({ dropdownDirection = "down" }: LanguageSwitche
   }, []);
 
   function switchLocale(newLocale: Locale) {
+    trackEvent("language_change", { from_locale: locale, to_locale: newLocale });
     localStorage.setItem("locale", newLocale);
     router.replace(pathname, { locale: newLocale });
     setOpen(false);

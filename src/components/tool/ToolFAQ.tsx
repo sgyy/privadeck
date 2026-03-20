@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import type { ToolDefinition } from "@/lib/registry/types";
 import { Accordion, AccordionItem } from "@/components/ui/Accordion";
+import { trackEvent } from "@/lib/analytics";
 
 interface ToolFAQProps {
   tool: ToolDefinition;
@@ -31,7 +32,15 @@ function ToolFAQContent({ tool }: { tool: ToolDefinition }) {
       <h2 className="mb-4 text-lg font-semibold">{tc("faq")}</h2>
       <Accordion className="rounded-xl border border-border bg-card px-4">
         {faqItems.map((item, i) => (
-          <AccordionItem key={i} title={item.question}>
+          <AccordionItem
+            key={i}
+            title={item.question}
+            onValueChange={(isOpen) => {
+              if (isOpen) {
+                trackEvent("faq_expand", { tool_slug: tool.slug, tool_category: tool.category, question_index: i });
+              }
+            }}
+          >
             {item.answer}
           </AccordionItem>
         ))}

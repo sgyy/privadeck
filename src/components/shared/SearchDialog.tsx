@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
 import { Search, X } from "lucide-react";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
+import { trackEvent } from "@/lib/analytics";
 
 const categoryColors: Record<string, string> = {
   developer: "bg-purple-500",
@@ -45,12 +46,18 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
     (index: number) => {
       const tool = filtered[index];
       if (tool) {
+        trackEvent("search_select", {
+          tool_slug: tool.slug,
+          tool_category: tool.category,
+          query: query.trim(),
+          position: index,
+        });
         router.push(`/tools/${tool.category}/${tool.slug}`);
         onClose();
         setQuery("");
       }
     },
-    [filtered, router, onClose],
+    [filtered, router, onClose, query],
   );
 
   /* eslint-disable react-hooks/set-state-in-effect */
@@ -59,11 +66,21 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
       inputRef.current?.focus();
       setSelectedIndex(0);
       setQuery("");
+      trackEvent("search_open");
     }
   }, [open]);
 
   useEffect(() => { setSelectedIndex(0); }, [query]);
   /* eslint-enable react-hooks/set-state-in-effect */
+
+  // Debounced search query tracking
+  useEffect(() => {
+    if (!open || !query.trim()) return;
+    const timer = setTimeout(() => {
+      trackEvent("search_query", { query: query.trim(), result_count: filtered.length });
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [open, query, filtered.length]);
 
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
