@@ -21,7 +21,11 @@ export function CopyButton({
   const t = useTranslations("common");
 
   const handleCopy = useCallback(async () => {
-    await navigator.clipboard.writeText(text);
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      return;
+    }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
     if (analyticsSlug && analyticsCategory) {

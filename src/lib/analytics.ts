@@ -109,19 +109,18 @@ export function trackEvent<E extends AnalyticsEvent>(
 ): void {
   if (typeof window === "undefined" || !window.gtag) return;
 
-  const params = args[0] as Record<string, unknown> | undefined;
+  const raw = args[0] as Record<string, unknown> | undefined;
+  const params = raw ? { ...raw } : {};
 
   // Privacy: truncate sensitive fields, never record file names
-  if (params) {
-    if ("error_message" in params && typeof params.error_message === "string") {
-      params.error_message = truncate(params.error_message);
-    }
-    if ("query" in params && typeof params.query === "string") {
-      params.query = truncate(params.query);
-    }
+  if ("error_message" in params && typeof params.error_message === "string") {
+    params.error_message = truncate(params.error_message);
+  }
+  if ("query" in params && typeof params.query === "string") {
+    params.query = truncate(params.query);
   }
 
-  window.gtag("event", event, params ?? {});
+  window.gtag("event", event, params);
 }
 
 // ─── Tool page convenience factory ───

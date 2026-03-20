@@ -252,7 +252,11 @@ function ShareButton() {
         return;
       }
     } else {
-      await navigator.clipboard.writeText(url);
+      try {
+        await navigator.clipboard.writeText(url);
+      } catch {
+        return;
+      }
     }
     trackEvent("share_click", { method: canShare ? "native_share" : "clipboard" });
   }, []);
