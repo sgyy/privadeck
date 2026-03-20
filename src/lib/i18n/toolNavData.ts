@@ -5,6 +5,8 @@ export interface ToolNavItem {
   featured: boolean;
   name: string;
   description: string;
+  nameEn?: string;
+  descriptionEn?: string;
 }
 
 /**
@@ -15,8 +17,15 @@ export async function buildToolNavData(
   locale: string,
 ): Promise<ToolNavItem[]> {
   const { getTranslations } = await import("next-intl/server");
-  const tt = await getTranslations({ locale, namespace: "toolNames" });
   const { getAllTools } = await import("@/lib/registry");
+
+  const isEn = locale === "en";
+  const [tt, ttEn] = await Promise.all([
+    getTranslations({ locale, namespace: "toolNames" }),
+    isEn
+      ? Promise.resolve(null)
+      : getTranslations({ locale: "en", namespace: "toolNames" }),
+  ]);
 
   return getAllTools().map((tool) => ({
     slug: tool.slug,
@@ -25,5 +34,9 @@ export async function buildToolNavData(
     featured: tool.featured ?? false,
     name: tt(`${tool.category}.${tool.slug}.name`),
     description: tt(`${tool.category}.${tool.slug}.description`),
+    ...(ttEn && {
+      nameEn: ttEn(`${tool.category}.${tool.slug}.name`),
+      descriptionEn: ttEn(`${tool.category}.${tool.slug}.description`),
+    }),
   }));
 }

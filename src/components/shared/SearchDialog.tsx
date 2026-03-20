@@ -34,7 +34,9 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
         const q = query.toLowerCase();
         return (
           tool.name.toLowerCase().includes(q) ||
-          tool.description.toLowerCase().includes(q)
+          tool.description.toLowerCase().includes(q) ||
+          (tool.nameEn && tool.nameEn.toLowerCase().includes(q)) ||
+          (tool.descriptionEn && tool.descriptionEn.toLowerCase().includes(q))
         );
       })
     : [];
