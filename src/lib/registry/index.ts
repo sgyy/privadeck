@@ -1,9 +1,9 @@
 import type { ToolDefinition, ToolCategory } from "./types";
 
 // Tool definitions are registered here - import only metadata, not components
-import wordCounter from "@/tools/text/word-counter";
-import caseConverter from "@/tools/text/case-converter";
-import loremIpsum from "@/tools/text/lorem-ipsum";
+import wordCounter from "@/tools/developer/word-counter";
+import caseConverter from "@/tools/developer/case-converter";
+import loremIpsum from "@/tools/developer/lorem-ipsum";
 import jsonFormatter from "@/tools/developer/json-formatter";
 import base64 from "@/tools/developer/base64";
 import urlEncoder from "@/tools/developer/url-encoder";

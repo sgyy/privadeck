@@ -6,7 +6,6 @@ import { usePathname, Link } from "@/i18n/navigation";
 import { categories } from "@/lib/registry/categories";
 import { cn } from "@/lib/utils/cn";
 import {
-  Type,
   Code,
   ImageIcon,
   Home,
@@ -16,7 +15,6 @@ import {
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 
 const iconMap: Record<string, LucideIcon> = {
-  Type,
   Code,
   Image: ImageIcon,
 };

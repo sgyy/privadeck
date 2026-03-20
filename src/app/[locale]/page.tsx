@@ -30,7 +30,7 @@ export default async function HomePage({
 const decks = [
   { titleKey: "mediaDeck" as const, categories: ["image", "video", "audio"] as const },
   { titleKey: "pdfDeck" as const, categories: ["pdf"] as const },
-  { titleKey: "devDeck" as const, categories: ["developer", "text"] as const },
+  { titleKey: "devDeck" as const, categories: ["developer"] as const },
 ];
 
 const metaDeckSlugs = ["remove-exif", "hash-generator", "archive"] as const;

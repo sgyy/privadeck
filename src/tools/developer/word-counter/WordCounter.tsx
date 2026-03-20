@@ -7,7 +7,7 @@ import { countWords } from "./logic";
 
 export default function WordCounter() {
   const [text, setText] = useState("");
-  const t = useTranslations("tools.text.word-counter");
+  const t = useTranslations("tools.developer.word-counter");
   const result = countWords(text);
 
   return (

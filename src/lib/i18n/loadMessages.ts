@@ -31,7 +31,6 @@ export async function loadCategoryMessages(
  */
 export async function loadAllToolMessages(locale: string) {
   const categories = [
-    "text",
     "developer",
     "image",
     "pdf",

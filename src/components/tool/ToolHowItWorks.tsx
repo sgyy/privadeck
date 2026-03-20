@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Upload, Settings, Download } from "lucide-react";
 import type { ToolCategory } from "@/lib/registry/types";
 
-const textCategories: ToolCategory[] = ["text", "developer"];
+const textCategories: ToolCategory[] = ["developer"];
 
 interface ToolHowItWorksProps {
   category: ToolCategory;

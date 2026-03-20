@@ -12,7 +12,7 @@ export default function LoremIpsum() {
   const [count, setCount] = useState(3);
   const [startWithLorem, setStartWithLorem] = useState(true);
   const [output, setOutput] = useState("");
-  const t = useTranslations("tools.text.lorem-ipsum");
+  const t = useTranslations("tools.developer.lorem-ipsum");
 
   function handleGenerate() {
     setOutput(generateLoremIpsum(mode, count, startWithLorem));

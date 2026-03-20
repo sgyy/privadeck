@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 
-export type ToolCategory = "text" | "developer" | "image" | "pdf" | "video" | "audio";
+export type ToolCategory = "developer" | "image" | "pdf" | "video" | "audio";
 
 export interface ToolDefinition {
   slug: string;

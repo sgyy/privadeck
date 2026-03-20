@@ -22,7 +22,7 @@ const CASES: CaseType[] = [
 export default function CaseConverter() {
   const [text, setText] = useState("");
   const [output, setOutput] = useState("");
-  const t = useTranslations("tools.text.case-converter");
+  const t = useTranslations("tools.developer.case-converter");
 
   function handleConvert(caseType: CaseType) {
     setOutput(convertCase(text, caseType));

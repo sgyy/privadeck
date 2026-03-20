@@ -7,7 +7,6 @@ import { Search, X } from "lucide-react";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 
 const categoryColors: Record<string, string> = {
-  text: "bg-blue-500",
   developer: "bg-purple-500",
   image: "bg-pink-500",
   pdf: "bg-red-500",

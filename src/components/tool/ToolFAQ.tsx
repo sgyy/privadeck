@@ -18,7 +18,7 @@ function ToolFAQContent({ tool }: { tool: ToolDefinition }) {
   const t = useTranslations(`tools.${tool.category}.${tool.slug}`);
   const tc = useTranslations("common");
 
-  // FAQ keys in registry are absolute (e.g. "tools.text.word-counter.faq.q1")
+  // FAQ keys in registry are absolute (e.g. "tools.developer.word-counter.faq.q1")
   // Strip the prefix to get the relative key (e.g. "faq.q1")
   const prefix = `tools.${tool.category}.${tool.slug}.`;
   const faqItems = tool.faq!.map((item) => ({
