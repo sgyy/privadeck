@@ -1,5 +1,4 @@
 import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
-import { fetchFile } from "@ffmpeg/util";
 
 export type RotateAngle = 90 | 180 | 270;
 
@@ -15,6 +14,7 @@ export async function rotateVideo(
   onProgress?: (progress: number) => void,
 ): Promise<Blob> {
   const ffmpeg = await getFFmpeg();
+  const { fetchFile } = await import("@ffmpeg/util");
   setProgressHandler(onProgress ?? null);
   const inputName = "input" + getExtension(file.name);
   const outputName = "output" + getExtension(file.name);

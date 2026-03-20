@@ -1,5 +1,4 @@
 import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
-import { fetchFile } from "@ffmpeg/util";
 
 export type ResizePreset = "720p" | "480p" | "360p" | "custom";
 
@@ -16,6 +15,7 @@ export async function resizeVideo(
   onProgress?: (progress: number) => void
 ): Promise<Blob> {
   const ffmpeg = await getFFmpeg();
+  const { fetchFile } = await import("@ffmpeg/util");
   setProgressHandler(onProgress ?? null);
   const ext = getExtension(file.name);
   const inputName = "input" + ext;

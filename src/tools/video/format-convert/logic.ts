@@ -1,5 +1,4 @@
 import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
-import { fetchFile } from "@ffmpeg/util";
 
 export type VideoFormat = "mp4" | "mkv" | "avi";
 
@@ -32,6 +31,7 @@ export async function convertVideoFormat(
   onProgress?: (progress: number) => void
 ): Promise<{ blob: Blob; filename: string }> {
   const ffmpeg = await getFFmpeg();
+  const { fetchFile } = await import("@ffmpeg/util");
   setProgressHandler(onProgress ?? null);
   const inputName = "input" + getExtension(file.name);
   const config = FORMAT_CONFIG[format];

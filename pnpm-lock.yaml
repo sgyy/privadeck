@@ -4,13 +4,18 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@ffmpeg/ffmpeg@0.12.15':
+    hash: f55527f3022194f7b69fe7c6738205502700fc36c88ec389287b252d82f8a778
+    path: patches/@ffmpeg__ffmpeg@0.12.15.patch
+
 importers:
 
   .:
     dependencies:
       '@ffmpeg/ffmpeg':
         specifier: ^0.12.15
-        version: 0.12.15
+        version: 0.12.15(patch_hash=f55527f3022194f7b69fe7c6738205502700fc36c88ec389287b252d82f8a778)
       '@ffmpeg/util':
         specifier: ^0.12.2
         version: 0.12.2
@@ -2584,7 +2589,7 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@ffmpeg/ffmpeg@0.12.15':
+  '@ffmpeg/ffmpeg@0.12.15(patch_hash=f55527f3022194f7b69fe7c6738205502700fc36c88ec389287b252d82f8a778)':
     dependencies:
       '@ffmpeg/types': 0.12.4
 

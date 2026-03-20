@@ -1,5 +1,4 @@
 import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
-import { fetchFile } from "@ffmpeg/util";
 
 export interface GifOptions {
   fps: number;
@@ -14,6 +13,7 @@ export async function videoToGif(
   onProgress?: (progress: number) => void,
 ): Promise<Blob> {
   const ffmpeg = await getFFmpeg();
+  const { fetchFile } = await import("@ffmpeg/util");
   setProgressHandler(onProgress ?? null);
   const inputName = "input" + getExtension(file.name);
   const outputName = "output.gif";

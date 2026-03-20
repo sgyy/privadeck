@@ -1,5 +1,4 @@
 import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
-import { fetchFile } from "@ffmpeg/util";
 
 export type AudioFormat = "mp3" | "wav" | "ogg" | "aac" | "flac";
 
@@ -25,6 +24,7 @@ export async function convertAudio(
   onProgress?: (progress: number) => void,
 ): Promise<Blob> {
   const ffmpeg = await getFFmpeg();
+  const { fetchFile } = await import("@ffmpeg/util");
   setProgressHandler(onProgress ?? null);
   const inputExt = getExtension(file.name);
   const inputName = "input" + inputExt;
