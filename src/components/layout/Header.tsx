@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";
-import { Menu, Search, Wrench, ChevronDown, Share2 } from "lucide-react";
+import { Menu, Search, Shield, ChevronDown, Share2 } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { categories } from "@/lib/registry/categories";
@@ -67,7 +67,7 @@ export function Header({ onMenuClick, onSearchClick, toolNavData }: HeaderProps)
           href="/"
           className="flex items-center gap-2 text-lg font-bold text-foreground shrink-0"
         >
-          <Wrench className="h-6 w-6 text-primary" />
+          <Shield className="h-6 w-6 text-primary" />
           <span className="hidden sm:inline">{t("siteName")}</span>
         </Link>
 

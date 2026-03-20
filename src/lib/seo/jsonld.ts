@@ -1,6 +1,6 @@
 import type { ToolDefinition } from "@/lib/registry/types";
 
-const SITE_URL = "https://mediatoolbox.app";
+const SITE_URL = "https://privadeck.app";
 
 export function generateToolJsonLd(
   tool: ToolDefinition,

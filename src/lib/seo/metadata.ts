@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { locales } from "@/i18n/routing";
 
-const SITE_URL = "https://mediatoolbox.app";
+const SITE_URL = "https://privadeck.app";
 
 export async function generateToolMetadata(
   locale: string,
@@ -34,7 +34,7 @@ export async function generateToolMetadata(
       description: t("metaDescription"),
       url,
       type: "website",
-      siteName: "Media Toolbox",
+      siteName: "PrivaDeck",
     },
   };
 }

@@ -25,13 +25,20 @@ export function ToolPageShell({ tool, children }: ToolPageShellProps) {
 
       <ToolHowItWorks category={tool.category} />
 
-      <div className="rounded-xl border border-border bg-card p-4 sm:p-6">
-        {children}
+      {/* Local-Only privacy indicator */}
+      <div className="flex items-center gap-2 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-2.5 dark:border-emerald-800 dark:bg-emerald-950">
+        <span className="relative flex h-2.5 w-2.5 shrink-0">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+        </span>
+        <Shield className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+        <span className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
+          {tc("localOnlyIndicator")}
+        </span>
       </div>
 
-      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-        <Shield className="h-4 w-4" />
-        <span>{tc("privacy")}</span>
+      <div className="rounded-xl border border-border bg-card p-4 sm:p-6">
+        {children}
       </div>
     </div>
   );

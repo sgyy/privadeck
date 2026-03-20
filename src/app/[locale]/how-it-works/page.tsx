@@ -6,7 +6,7 @@ import { Cog, FileInput, Download, ShieldCheck, MonitorSmartphone, Wifi, WifiOff
 import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
 
-const SITE_URL = "https://mediatoolbox.app";
+const SITE_URL = "https://privadeck.app";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

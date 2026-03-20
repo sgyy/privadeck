@@ -6,6 +6,15 @@ import { useRouter } from "@/i18n/navigation";
 import { Search, X } from "lucide-react";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 
+const categoryColors: Record<string, string> = {
+  text: "bg-blue-500",
+  developer: "bg-purple-500",
+  image: "bg-pink-500",
+  pdf: "bg-red-500",
+  video: "bg-orange-500",
+  audio: "bg-green-500",
+};
+
 interface SearchDialogProps {
   open: boolean;
   onClose: () => void;
@@ -19,6 +28,8 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
   const router = useRouter();
   const t = useTranslations("common");
 
+  const tNav = useTranslations("nav");
+
   const filtered = query.trim()
     ? toolNavData.filter((tool) => {
         const q = query.toLowerCase();
@@ -27,7 +38,7 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
           tool.description.toLowerCase().includes(q)
         );
       })
-    : toolNavData;
+    : [];
 
   const navigate = useCallback(
     (index: number) => {
@@ -46,6 +57,7 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
     if (open) {
       inputRef.current?.focus();
       setSelectedIndex(0);
+      setQuery("");
     }
   }, [open]);
 
@@ -111,8 +123,12 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
           </button>
         </div>
 
-        <div className="max-h-72 overflow-y-auto p-2">
-          {filtered.length === 0 ? (
+        <div className="max-h-96 overflow-y-auto p-2">
+          {!query.trim() ? (
+            <p className="px-3 py-6 text-center text-sm text-muted-foreground">
+              {t("searchPlaceholder")}
+            </p>
+          ) : filtered.length === 0 ? (
             <p className="px-3 py-6 text-center text-sm text-muted-foreground">
               {t("noToolsFound")}
             </p>
@@ -122,11 +138,12 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
                 key={tool.slug}
                 type="button"
                 onClick={() => navigate(i)}
-                className={`flex w-full items-start gap-3 rounded-lg px-3 py-2 text-left text-sm transition-colors ${
+                className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm transition-colors ${
                   i === selectedIndex ? "bg-accent" : "hover:bg-muted"
                 }`}
               >
-                <div className="min-w-0">
+                <span className={`h-2 w-2 shrink-0 rounded-full ${categoryColors[tool.category] || "bg-gray-500"}`} />
+                <div className="min-w-0 flex-1">
                   <p className="font-medium">
                     {tool.name}
                   </p>
@@ -134,6 +151,9 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
                     {tool.description}
                   </p>
                 </div>
+                <span className="shrink-0 rounded-md bg-muted px-1.5 py-0.5 text-xs text-muted-foreground">
+                  {tNav(tool.category)}
+                </span>
               </button>
             ))
           )}

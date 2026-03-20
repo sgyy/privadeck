@@ -5,7 +5,7 @@ import { locales } from "@/i18n/routing";
 import { Shield, Eye, EyeOff, HardDrive, Lock, FileX } from "lucide-react";
 import type { Metadata } from "next";
 
-const SITE_URL = "https://mediatoolbox.app";
+const SITE_URL = "https://privadeck.app";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

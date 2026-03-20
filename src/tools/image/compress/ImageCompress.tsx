@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import {
   ImageResultList,
   type ImageResultItem,
 } from "@/components/shared/ImageResultList";
+import { CompareSlider } from "@/components/shared/CompareSlider";
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
 import { X } from "lucide-react";
@@ -16,6 +17,12 @@ import {
   RESOLUTION_PRESETS,
 } from "./logic";
 
+interface CompareData {
+  beforeUrl: string;
+  afterUrl: string;
+  savedPercent: number;
+}
+
 export default function ImageCompress() {
   const [files, setFiles] = useState<File[]>([]);
   const [quality, setQuality] = useState(80);
@@ -24,12 +31,29 @@ export default function ImageCompress() {
   const [results, setResults] = useState<ImageResultItem[]>([]);
   const [compressing, setCompressing] = useState(false);
   const [error, setError] = useState("");
+  const [compareData, setCompareData] = useState<CompareData | null>(null);
   const t = useTranslations("tools.image.compress");
+
+  // Clean up object URLs on unmount or when compare data changes
+  useEffect(() => {
+    return () => {
+      if (compareData) {
+        URL.revokeObjectURL(compareData.beforeUrl);
+        URL.revokeObjectURL(compareData.afterUrl);
+      }
+    };
+  }, [compareData]);
 
   async function handleCompress() {
     if (files.length === 0) return;
     setCompressing(true);
     setError("");
+    // Revoke previous compare URLs
+    if (compareData) {
+      URL.revokeObjectURL(compareData.beforeUrl);
+      URL.revokeObjectURL(compareData.afterUrl);
+      setCompareData(null);
+    }
     try {
       const resolution = maxResolution || 16384;
       const compressed = await Promise.all(
@@ -47,6 +71,16 @@ export default function ImageCompress() {
         };
       });
       setResults((prev) => [...newItems, ...prev]);
+
+      // Set up compare slider for the first image
+      if (compressed.length > 0) {
+        const first = compressed[0];
+        setCompareData({
+          beforeUrl: URL.createObjectURL(first.original),
+          afterUrl: URL.createObjectURL(first.compressed),
+          savedPercent: first.savings,
+        });
+      }
     } catch (e) {
       console.error("Compression failed:", e);
       setError(String(e instanceof Error ? e.message : e));
@@ -147,6 +181,14 @@ export default function ImageCompress() {
         <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
           {error}
         </div>
+      )}
+
+      {compareData && (
+        <CompareSlider
+          beforeSrc={compareData.beforeUrl}
+          afterSrc={compareData.afterUrl}
+          savedPercent={compareData.savedPercent}
+        />
       )}
 
       {results.length > 0 && (

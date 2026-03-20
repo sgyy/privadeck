@@ -1,7 +1,11 @@
 {
   "common": {
-    "siteName": "媒體工具箱",
+    "siteName": "PrivaDeck",
     "siteDescription": "免費的瀏覽器端媒體工具。無需上傳，無需註冊，100% 隱私。",
+    "localOnlyIndicator": "Browser Processing Only (Offline Ready)",
+    "compareBefore": "Before",
+    "compareAfter": "After",
+    "compareSaved": "Saved {percent}%",
     "search": "搜尋工具...",
     "searchShortcut": "Ctrl+K",
     "allTools": "所有工具",
@@ -68,9 +72,12 @@
   "home": {
     "hero": "免費線上媒體工具",
     "heroSub": "瀏覽器端處理。無需上傳。無需註冊。100% 隱私保護。",
-    "popular": "熱門工具",
+    "mediaDeck": "Media Deck",
+    "pdfDeck": "PDF Deck",
+    "devDeck": "Dev Deck",
+    "metaDeck": "Meta Deck",
+    "metaDeckDesc": "Privacy & security tools for your digital life",
     "allCategories": "所有分類",
-    "viewAll": "查看全部",
     "featurePrivate": "100% 隱私保護",
     "featureInstant": "即時處理",
     "featureNoUpload": "無需上傳",
@@ -110,12 +117,12 @@
     "allRightsReserved": "保留所有權利。"
   },
   "privacy": {
-    "metaTitle": "隱私政策 — 媒體工具箱",
-    "metaDescription": "了解媒體工具箱如何保護您的隱私。所有檔案處理都在瀏覽器中進行，不會上傳到任何伺服器。",
+    "metaTitle": "隱私政策 — PrivaDeck",
+    "metaDescription": "了解PrivaDeck如何保護您的隱私。所有檔案處理都在瀏覽器中進行，不會上傳到任何伺服器。",
     "title": "隱私與安全",
-    "subtitle": "您的檔案不會離開瀏覽器。我們將隱私作為媒體工具箱的根基，而非事後補救。",
+    "subtitle": "您的檔案不會離開瀏覽器。我們將隱私作為PrivaDeck的根基，而非事後補救。",
     "corePromiseTitle": "核心承諾",
-    "corePromiseBody": "媒體工具箱的每個工具都完全在您的瀏覽器中使用客戶端 JavaScript 和 WebAssembly 處理檔案。您的檔案不會上傳到任何伺服器，不會儲存在任何地方，也不會被任何人看到。關閉標籤頁後，資料即消失。",
+    "corePromiseBody": "PrivaDeck的每個工具都完全在您的瀏覽器中使用客戶端 JavaScript 和 WebAssembly 處理檔案。您的檔案不會上傳到任何伺服器，不會儲存在任何地方，也不會被任何人看到。關閉標籤頁後，資料即消失。",
     "howItWorksTitle": "工作原理",
     "steps": {
       "step1": {
@@ -158,8 +165,8 @@
     "lastUpdated": "最後更新：2026 年 3 月"
   },
   "howItWorks": {
-    "metaTitle": "工作原理 — 媒體工具箱",
-    "metaDescription": "了解媒體工具箱如何在瀏覽器中使用 JavaScript 和 WebAssembly 處理您的檔案。無需上傳，無需伺服器。",
+    "metaTitle": "工作原理 — PrivaDeck",
+    "metaDescription": "了解PrivaDeck如何在瀏覽器中使用 JavaScript 和 WebAssembly 處理您的檔案。無需上傳，無需伺服器。",
     "title": "工作原理",
     "subtitle": "三個簡單步驟——您的檔案始終留在您的裝置上。",
     "steps": {
@@ -177,7 +184,7 @@
       }
     },
     "whyClientSideTitle": "為什麼選擇客戶端處理？",
-    "whyClientSideBody": "傳統的線上工具會將您的檔案上傳到遠端伺服器進行處理，然後將結果傳回。這不僅速度慢，還會引發隱私問題，需要您信任該服務。媒體工具箱採用不同的方式：所有操作都在您的瀏覽器中執行。您的檔案不會離開裝置，沒有上傳大小限制，即使網路連線緩慢也能使用。",
+    "whyClientSideBody": "傳統的線上工具會將您的檔案上傳到遠端伺服器進行處理，然後將結果傳回。這不僅速度慢，還會引發隱私問題，需要您信任該服務。PrivaDeck採用不同的方式：所有操作都在您的瀏覽器中執行。您的檔案不會離開裝置，沒有上傳大小限制，即使網路連線緩慢也能使用。",
     "techTitle": "底層技術",
     "tech": {
       "canvas": {

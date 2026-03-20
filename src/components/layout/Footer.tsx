@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useMemo } from "react";
-import { Shield, Wrench } from "lucide-react";
+import { Shield } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { categories } from "@/lib/registry/categories";
 import type { ToolCategory } from "@/lib/registry/types";
@@ -65,7 +65,7 @@ export function Footer({ toolNavData }: FooterProps) {
           {/* Brand */}
           <div className="lg:w-56 shrink-0">
             <Link href="/" className="flex items-center gap-2 text-lg font-bold text-foreground">
-              <Wrench className="h-5 w-5 text-primary" />
+              <Shield className="h-5 w-5 text-primary" />
               {t("siteName")}
             </Link>
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
