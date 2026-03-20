@@ -1,0 +1,153 @@
+{
+  "tools": {
+    "video": {
+      "mute": {
+        "name": "视频静音",
+        "description": "即时移除视频中的音频。",
+        "metaTitle": "视频静音 - 在线移除视频音频",
+        "metaDescription": "从视频文件中移除音轨。快速处理，无需上传。免费在线工具。",
+        "keywords": "视频静音, 移除视频音频, 静音视频, 视频去声",
+        "mute": "移除音频",
+        "processing": "处理中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "视频静音如何工作？",
+          "a1": "该工具从视频中移除音轨，同时保持视频质量不变。无需重新编码。",
+          "q2": "支持哪些视频格式？",
+          "a2": "支持大多数常见格式，包括 MP4、WebM、MOV 和 AVI。"
+        }
+      },
+      "trim": {
+        "name": "视频裁剪",
+        "description": "将视频剪辑裁剪到所需长度。",
+        "metaTitle": "视频裁剪 - 免费在线视频剪辑工具",
+        "metaDescription": "将视频剪辑裁剪到任意长度。精确设置开始和结束点。免费在线工具。",
+        "keywords": "视频裁剪, 剪切视频, 视频剪辑器, 在线剪视频",
+        "start": "开始",
+        "end": "结束",
+        "duration": "时长",
+        "trim": "裁剪视频",
+        "processing": "处理中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "可以精确裁剪视频吗？",
+          "a1": "可以，使用范围滑块以 0.1 秒精度设置精确的开始和结束点。",
+          "q2": "视频会被重新编码吗？",
+          "a2": "该工具使用流复制模式，快速处理且不损失质量。"
+        }
+      },
+      "rotate": {
+        "name": "视频旋转",
+        "description": "将视频旋转 90、180 或 270 度。",
+        "metaTitle": "视频旋转 - 免费在线旋转视频",
+        "metaDescription": "将视频旋转 90、180 或 270 度。轻松修复视频方向。免费在线工具。",
+        "keywords": "视频旋转, 翻转视频, 旋转视频, 修复视频方向",
+        "rotate": "旋转",
+        "processing": "处理中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "有哪些旋转角度可选？",
+          "a1": "可以将视频旋转 90°（顺时针）、180°（上下翻转）或 270°（逆时针）。",
+          "q2": "旋转会影响视频质量吗？",
+          "a2": "旋转时视频会重新编码，但质量保持在较高水平。"
+        }
+      },
+      "to-gif": {
+        "name": "视频转 GIF",
+        "description": "将视频片段转换为 GIF 动画。",
+        "metaTitle": "视频转 GIF - 在线视频转 GIF",
+        "metaDescription": "将视频片段转换为 GIF 动画。控制帧率、尺寸和时长。免费在线工具。",
+        "keywords": "视频转gif, 视频转动图, gif制作, gif生成器",
+        "width": "宽度",
+        "start": "开始",
+        "end": "结束",
+        "convert": "转换为 GIF",
+        "converting": "转换中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "如何减小 GIF 文件大小？",
+          "a1": "降低帧率、减小宽度或缩短时长。该工具使用优化调色板以获得最佳质量与大小比。",
+          "q2": "GIF 最长可以多长？",
+          "a2": "没有硬性限制，但较长的 GIF 会产生非常大的文件。建议保持 GIF 在 10 秒以内。"
+        }
+      },
+      "to-webp": {
+        "name": "视频转 WebP",
+        "description": "将视频片段转换为 WebP 动画。",
+        "metaTitle": "视频转 WebP 动画 - 在线视频转 WebP",
+        "metaDescription": "将视频转换为 WebP 动画。比 GIF 更小，质量更好。免费在线工具。",
+        "keywords": "视频转webp, webp动画, webp动图, 视频转动图",
+        "width": "宽度",
+        "quality": "质量",
+        "start": "开始",
+        "convert": "转换为 WebP",
+        "converting": "转换中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "为什么使用 WebP 而不是 GIF？",
+          "a1": "WebP 动画文件通常比等效 GIF 小 25-35%，同时支持更好的色彩深度和透明度。",
+          "q2": "WebP 动画支持范围广吗？",
+          "a2": "是的，所有现代浏览器都支持 WebP 动画。只有非常老的浏览器不支持。"
+        }
+      },
+      "compress": {
+        "name": "视频压缩",
+        "description": "通过可调质量预设减小视频文件大小。",
+        "metaTitle": "视频压缩 - 免费在线视频压缩工具",
+        "metaDescription": "压缩视频文件以减小大小。选择高、中、低质量。免费在线工具，无需上传。",
+        "keywords": "视频压缩, 压缩视频, 减小视频大小, 视频缩小",
+        "quality": "质量",
+        "high": "高质量",
+        "medium": "中等质量",
+        "low": "低质量",
+        "compress": "压缩",
+        "processing": "压缩中",
+        "originalSize": "原始大小",
+        "compressedSize": "压缩后大小",
+        "saved": "缩小比例",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "视频压缩如何工作？",
+          "a1": "该工具使用 H.264 编码器以 CRF（恒定速率因子）值重新编码视频。质量越高文件越大；质量越低文件越小但压缩伪影更多。",
+          "q2": "输出使用什么格式？",
+          "a2": "压缩后的视频始终输出为 MP4（H.264 视频 + AAC 音频），以确保最大兼容性。"
+        }
+      },
+      "format-convert": {
+        "name": "视频格式转换",
+        "description": "在 MP4、MKV 和 AVI 格式之间转换视频。",
+        "metaTitle": "视频格式转换器 - 免费在线视频转换工具",
+        "metaDescription": "在 MP4、MKV 和 AVI 之间转换视频。免费在线工具，无需上传，在浏览器中运行。",
+        "keywords": "视频转换, 格式转换, avi转mp4, mkv转mp4, 视频格式",
+        "format": "输出格式",
+        "convert": "转换",
+        "converting": "转换中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "支持哪些视频格式？",
+          "a1": "支持 MP4、WebM、MKV 和 AVI 格式之间的转换。MP4 和 AVI 使用 H.264 编码，WebM 使用 VP9，MKV 使用流复制以快速转换。",
+          "q2": "视频质量会改变吗？",
+          "a2": "转换为 MKV 使用流复制，质量完全保留。其他转换以高质量设置重新编码。"
+        }
+      },
+      "resize": {
+        "name": "调整视频尺寸",
+        "description": "使用预设或自定义尺寸更改视频分辨率。",
+        "metaTitle": "调整视频尺寸 - 免费在线视频缩放工具",
+        "metaDescription": "将视频调整为 720p、480p、360p 或自定义尺寸。免费在线工具，无需上传。",
+        "keywords": "调整视频尺寸, 视频缩放, 更改视频分辨率, 缩放视频",
+        "resolution": "分辨率",
+        "width": "宽度",
+        "resize": "调整尺寸",
+        "processing": "调整中",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "faq": {
+          "q1": "有哪些分辨率预设？",
+          "a1": "720p（宽 1280px）、480p（宽 854px）和 360p（宽 640px）。您也可以输入自定义宽度。",
+          "q2": "会保持宽高比吗？",
+          "a2": "是的，高度会自动计算以保持原始宽高比。"
+        }
+      }
+    }
+  }
+}

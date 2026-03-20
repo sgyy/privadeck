@@ -1,0 +1,153 @@
+{
+  "tools": {
+    "video": {
+      "mute": {
+        "name": "Tắt tiếng video",
+        "description": "Xóa âm thanh khỏi tệp video ngay lập tức.",
+        "metaTitle": "Tắt tiếng video - Xóa âm thanh khỏi video trực tuyến",
+        "metaDescription": "Xóa track âm thanh khỏi tệp video. Xử lý nhanh, không cần tải lên. Công cụ trực tuyến miễn phí.",
+        "keywords": "tắt tiếng video, xóa âm thanh video, video không tiếng, video im lặng",
+        "mute": "Xóa âm thanh",
+        "processing": "Đang xử lý",
+        "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Vui lòng sử dụng trình duyệt hiện đại với HTTPS.",
+        "faq": {
+          "q1": "Tắt tiếng video hoạt động như thế nào?",
+          "a1": "Công cụ xóa track âm thanh khỏi video trong khi giữ nguyên chất lượng video. Không cần mã hóa lại.",
+          "q2": "Hỗ trợ những định dạng video nào?",
+          "a2": "Hầu hết các định dạng phổ biến bao gồm MP4, WebM, MOV và AVI được hỗ trợ."
+        }
+      },
+      "trim": {
+        "name": "Cắt video",
+        "description": "Cắt và chỉnh sửa clip video đến độ dài mong muốn.",
+        "metaTitle": "Cắt video - Trình cắt video trực tuyến miễn phí",
+        "metaDescription": "Cắt chỉnh clip video đến bất kỳ độ dài nào. Đặt điểm bắt đầu và kết thúc chính xác. Công cụ trực tuyến miễn phí.",
+        "keywords": "cắt video, chỉnh video, trình cắt video, cắt video trực tuyến",
+        "start": "Bắt đầu",
+        "end": "Kết thúc",
+        "duration": "Thời lượng",
+        "trim": "Cắt video",
+        "processing": "Đang xử lý",
+        "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Vui lòng sử dụng trình duyệt hiện đại với HTTPS.",
+        "faq": {
+          "q1": "Tôi có thể cắt video chính xác không?",
+          "a1": "Có, sử dụng thanh trượt phạm vi để đặt điểm bắt đầu và kết thúc chính xác với độ chính xác 0,1 giây.",
+          "q2": "Video có bị mã hóa lại không?",
+          "a2": "Công cụ sử dụng chế độ sao chép luồng để xử lý nhanh không mất chất lượng."
+        }
+      },
+      "rotate": {
+        "name": "Xoay video",
+        "description": "Xoay video 90, 180 hoặc 270 độ.",
+        "metaTitle": "Xoay video - Xoay video trực tuyến miễn phí",
+        "metaDescription": "Xoay video 90, 180 hoặc 270 độ. Sửa hướng video dễ dàng. Công cụ trực tuyến miễn phí.",
+        "keywords": "xoay video, lật video, xoay chiều video, sửa hướng video",
+        "rotate": "Xoay",
+        "processing": "Đang xử lý",
+        "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Vui lòng sử dụng trình duyệt hiện đại với HTTPS.",
+        "faq": {
+          "q1": "Có những góc xoay nào?",
+          "a1": "Bạn có thể xoay video 90° (theo chiều kim đồng hồ), 180° (lật ngược) hoặc 270° (ngược chiều kim đồng hồ).",
+          "q2": "Xoay có ảnh hưởng đến chất lượng video không?",
+          "a2": "Video được mã hóa lại khi xoay, nhưng chất lượng được duy trì ở mức cao."
+        }
+      },
+      "to-gif": {
+        "name": "Video sang GIF",
+        "description": "Chuyển đổi clip video thành ảnh GIF động.",
+        "metaTitle": "Video sang GIF - Chuyển đổi video sang GIF trực tuyến",
+        "metaDescription": "Chuyển đổi clip video thành ảnh GIF động. Kiểm soát tốc độ khung hình, kích thước và thời lượng. Công cụ trực tuyến miễn phí.",
+        "keywords": "video sang gif, chuyển video sang gif, tạo gif, trình tạo gif",
+        "width": "Chiều rộng",
+        "start": "Bắt đầu",
+        "end": "Kết thúc",
+        "convert": "Chuyển sang GIF",
+        "converting": "Đang chuyển đổi",
+        "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Vui lòng sử dụng trình duyệt hiện đại với HTTPS.",
+        "faq": {
+          "q1": "Làm thế nào để giảm kích thước tệp GIF?",
+          "a1": "Giảm FPS, giảm chiều rộng hoặc rút ngắn thời lượng. Công cụ sử dụng bảng màu tối ưu để có tỷ lệ chất lượng/kích thước tốt nhất.",
+          "q2": "Độ dài tối đa của GIF là bao nhiêu?",
+          "a2": "Không có giới hạn cứng, nhưng GIF dài hơn tạo tệp rất lớn. Chúng tôi khuyên GIF dưới 10 giây."
+        }
+      },
+      "to-webp": {
+        "name": "Video sang WebP",
+        "description": "Chuyển đổi clip video thành ảnh WebP động.",
+        "metaTitle": "Video sang WebP động - Chuyển đổi video sang WebP trực tuyến",
+        "metaDescription": "Chuyển đổi video sang ảnh WebP động. Nhỏ hơn GIF với chất lượng tốt hơn. Công cụ trực tuyến miễn phí.",
+        "keywords": "video sang webp, webp động, hoạt ảnh webp, chuyển video webp",
+        "width": "Chiều rộng",
+        "quality": "Chất lượng",
+        "start": "Bắt đầu",
+        "convert": "Chuyển sang WebP",
+        "converting": "Đang chuyển đổi",
+        "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Vui lòng sử dụng trình duyệt hiện đại với HTTPS.",
+        "faq": {
+          "q1": "Tại sao dùng WebP thay vì GIF?",
+          "a1": "Tệp WebP động thường nhỏ hơn GIF tương đương 25-35% trong khi hỗ trợ độ sâu màu và độ trong suốt tốt hơn.",
+          "q2": "WebP động có được hỗ trợ rộng rãi không?",
+          "a2": "Có, tất cả trình duyệt hiện đại đều hỗ trợ WebP động. Chỉ trình duyệt rất cũ mới không hỗ trợ."
+        }
+      },
+      "compress": {
+        "name": "Nén video",
+        "description": "Giảm kích thước tệp video với các mức chất lượng có thể điều chỉnh.",
+        "metaTitle": "Nén video - Trình nén video trực tuyến miễn phí",
+        "metaDescription": "Nén tệp video để giảm kích thước. Chọn chất lượng cao, trung bình hoặc thấp. Công cụ trực tuyến miễn phí, không cần tải lên.",
+        "keywords": "nén video, trình nén video, giảm kích thước video, thu nhỏ video",
+        "quality": "Chất lượng",
+        "high": "Cao",
+        "medium": "Trung bình",
+        "low": "Thấp",
+        "compress": "Nén",
+        "processing": "Đang nén",
+        "originalSize": "Kích thước gốc",
+        "compressedSize": "Kích thước sau nén",
+        "saved": "Giảm kích thước",
+        "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Vui lòng sử dụng trình duyệt hiện đại với HTTPS.",
+        "faq": {
+          "q1": "Nén video hoạt động như thế nào?",
+          "a1": "Công cụ mã hóa lại video bằng H.264 với giá trị CRF (Constant Rate Factor). Chất lượng cao hơn nghĩa là tệp lớn hơn; chất lượng thấp hơn nghĩa là tệp nhỏ hơn với nhiều hiện tượng nén hơn.",
+          "q2": "Định dạng đầu ra là gì?",
+          "a2": "Video nén luôn xuất dưới dạng MP4 (video H.264 + âm thanh AAC) để tương thích tối đa."
+        }
+      },
+      "format-convert": {
+        "name": "Chuyển đổi định dạng video",
+        "description": "Chuyển đổi video giữa các định dạng MP4, MKV và AVI.",
+        "metaTitle": "Trình chuyển đổi định dạng video - Trình chuyển đổi video trực tuyến miễn phí",
+        "metaDescription": "Chuyển đổi video giữa MP4, MKV và AVI. Công cụ trực tuyến miễn phí, không cần tải lên. Chạy trong trình duyệt.",
+        "keywords": "chuyển đổi video, đổi định dạng video, mkv sang mp4, avi sang mp4, định dạng video",
+        "format": "Định dạng đầu ra",
+        "convert": "Chuyển đổi",
+        "converting": "Đang chuyển đổi",
+        "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Vui lòng sử dụng trình duyệt hiện đại với HTTPS.",
+        "faq": {
+          "q1": "Hỗ trợ những định dạng video nào?",
+          "a1": "Bạn có thể chuyển đổi giữa các định dạng MP4, WebM, MKV và AVI. MP4 và AVI sử dụng mã hóa H.264, WebM sử dụng VP9, và MKV sử dụng sao chép luồng để chuyển đổi nhanh.",
+          "q2": "Chất lượng video có thay đổi không?",
+          "a2": "Chuyển đổi sang MKV sử dụng sao chép luồng nên chất lượng được bảo toàn chính xác. Các chuyển đổi khác mã hóa lại với cài đặt chất lượng cao."
+        }
+      },
+      "resize": {
+        "name": "Thay đổi kích thước video",
+        "description": "Thay đổi độ phân giải video với kích thước đặt sẵn hoặc tùy chỉnh.",
+        "metaTitle": "Thay đổi kích thước video - Trình thay đổi kích thước video trực tuyến miễn phí",
+        "metaDescription": "Thay đổi kích thước video sang 720p, 480p, 360p hoặc kích thước tùy chỉnh. Công cụ trực tuyến miễn phí, không cần tải lên.",
+        "keywords": "thay đổi kích thước video, đổi kích cỡ video, thay đổi độ phân giải video, thu phóng video",
+        "resolution": "Độ phân giải",
+        "width": "Chiều rộng",
+        "resize": "Thay đổi kích thước",
+        "processing": "Đang thay đổi kích thước",
+        "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Vui lòng sử dụng trình duyệt hiện đại với HTTPS.",
+        "faq": {
+          "q1": "Có những mẫu độ phân giải nào?",
+          "a1": "720p (rộng 1280px), 480p (rộng 854px) và 360p (rộng 640px). Bạn cũng có thể nhập chiều rộng tùy chỉnh.",
+          "q2": "Tỷ lệ khung hình có được bảo toàn không?",
+          "a2": "Có, chiều cao được tự động tính toán để duy trì tỷ lệ khung hình gốc."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "common": {
+    "siteName": "メディアツールボックス",
+    "siteDescription": "無料のブラウザベースメディアツール。アップロード不要、登録不要、100%プライベート。",
+    "search": "ツールを検索...",
+    "searchShortcut": "Ctrl+K",
+    "allTools": "すべてのツール",
+    "download": "ダウンロード",
+    "copy": "コピー",
+    "copied": "コピーしました！",
+    "clear": "クリア",
+    "paste": "貼り付け",
+    "reset": "リセット",
+    "process": "処理",
+    "processing": "処理中...",
+    "dragDrop": "ここにファイルをドラッグ＆ドロップ",
+    "or": "または",
+    "browseFiles": "ファイルを選択",
+    "noFileSelected": "ファイルが選択されていません",
+    "privacy": "ファイルはブラウザの外に送信されません",
+    "darkMode": "ダークモード",
+    "lightMode": "ライトモード",
+    "systemMode": "システム設定",
+    "language": "言語",
+    "share": "Share",
+    "shareCopied": "Link copied!",
+    "uploadFiles": "Upload Files",
+    "maxFileSize": "Max size",
+    "howItWorks": {
+      "step1FileTitle": "Upload your file",
+      "step1FileDesc": "Drag & drop or click to select a file from your device.",
+      "step1TextTitle": "Enter your text",
+      "step1TextDesc": "Paste or type your content into the input field.",
+      "step2Title": "Adjust settings",
+      "step2Desc": "Configure options to get the result you want.",
+      "step3FileTitle": "Download result",
+      "step3FileDesc": "Get your processed file instantly. No waiting.",
+      "step3TextTitle": "Copy or save",
+      "step3TextDesc": "Copy the output to clipboard or save it."
+    }
+  },
+  "nav": {
+    "home": "ホーム",
+    "tools": "ツール",
+    "text": "テキスト",
+    "developer": "開発",
+    "image": "画像",
+    "featured": "注目ツール",
+    "otherTools": "その他のツール",
+    "allCategoryTools": "すべてのツールを見る",
+    "pdf": "PDF",
+    "video": "動画",
+    "audio": "音声"
+  },
+  "home": {
+    "hero": "無料オンラインメディアツール",
+    "heroSub": "ブラウザで完結。アップロード不要。登録不要。100%プライベート。",
+    "popular": "人気ツール",
+    "allCategories": "すべてのカテゴリ",
+    "viewAll": "すべて表示"
+  },
+  "categories": {
+    "text": {
+      "name": "テキストツール",
+      "description": "テキストの分析、変換、生成"
+    },
+    "developer": {
+      "name": "開発者ツール",
+      "description": "データのフォーマット、エンコード、デコード"
+    },
+    "image": {
+      "name": "画像ツール",
+      "description": "画像の変換、圧縮、編集"
+    },
+    "pdf": {
+      "name": "PDFツール",
+      "description": "PDFの結合、分割、変換、編集"
+    },
+    "video": {
+      "name": "動画ツール",
+      "description": "動画のトリミング、変換、編集"
+    },
+    "audio": {
+      "name": "音声ツール",
+      "description": "音声のトリミング、変換、抽出"
+    }
+  },
+  "footer": {
+    "tagline": "Free browser-based media tools. No uploads, no signups.",
+    "about": "About",
+    "howItWorks": "How It Works",
+    "privacy": "Privacy",
+    "allRightsReserved": "All rights reserved."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
+    "title": "Privacy & Security",
+    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
+    "corePromiseTitle": "Our Core Promise",
+    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
+    "howItWorksTitle": "How It Works",
+    "steps": {
+      "step1": {
+        "title": "You select a file",
+        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+      },
+      "step2": {
+        "title": "Processing happens locally",
+        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+      },
+      "step3": {
+        "title": "You download the result",
+        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+      }
+    },
+    "features": {
+      "noUpload": {
+        "title": "No File Uploads",
+        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+      },
+      "localStorage": {
+        "title": "No Persistent Storage",
+        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+      },
+      "openSource": {
+        "title": "Verifiable Security",
+        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+      },
+      "noLogs": {
+        "title": "No Server Logs",
+        "description": "Since everything runs client-side, there are no server logs of your file operations."
+      },
+      "transparent": {
+        "title": "Fully Transparent",
+        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+      }
+    },
+    "thirdPartyTitle": "Third-Party Resources",
+    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
+    "lastUpdated": "Last updated: March 2026"
+  },
+  "howItWorks": {
+    "metaTitle": "How It Works — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
+    "title": "How It Works",
+    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "steps": {
+      "select": {
+        "title": "Pick Your File",
+        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+      },
+      "process": {
+        "title": "Instant Local Processing",
+        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+      },
+      "download": {
+        "title": "Download the Result",
+        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+      }
+    },
+    "whyClientSideTitle": "Why Client-Side Processing?",
+    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
+    "techTitle": "Technology Under the Hood",
+    "tech": {
+      "canvas": {
+        "title": "Canvas & Web APIs",
+        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+      },
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+      },
+      "webApis": {
+        "title": "Modern Web Standards",
+        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+      },
+      "offline": {
+        "title": "Works Offline",
+        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+      }
+    },
+    "privacyCta": "Want to learn more about how we protect your data?",
+    "privacyLink": "Read our Privacy Policy →"
+  },
+  "toolNames": {
+    "text": {
+      "word-counter": {
+        "name": "文字数カウンター",
+        "description": "テキストの単語数、文字数、文数、段落数を瞬時にカウントします。"
+      },
+      "case-converter": {
+        "name": "大文字小文字変換",
+        "description": "テキストをUPPERCASE、lowercase、Title Case、camelCaseなどの形式に変換します。"
+      },
+      "lorem-ipsum": {
+        "name": "Lorem Ipsum ジェネレーター",
+        "description": "段落、文、または単語数を指定してプレースホルダーテキストを生成します。"
+      }
+    },
+    "developer": {
+      "json-formatter": {
+        "name": "JSON フォーマッター",
+        "description": "JSON データのフォーマット、検証、圧縮をシンタックスハイライト付きで行います。"
+      },
+      "base64": {
+        "name": "Base64 エンコード/デコード",
+        "description": "テキストを Base64 にエンコード、または Base64 をテキストにデコードします。"
+      },
+      "url-encoder": {
+        "name": "URL エンコード/デコード",
+        "description": "URL コンポーネントをエンコードまたはデコードし、ウェブアドレスで安全に使用できるようにします。"
+      },
+      "ocr": {
+        "name": "OCR 文字認識",
+        "description": "光学文字認識を使用して画像からテキストを抽出します。"
+      },
+      "archive": {
+        "name": "ZIP 解凍ツール",
+        "description": "ZIP アーカイブの内容をオンラインで解凍・プレビューします。"
+      },
+      "csv-json": {
+        "name": "CSV/JSON 変換",
+        "description": "CSV と JSON 形式を即座に相互変換します。"
+      },
+      "hash-generator": {
+        "name": "ハッシュ生成",
+        "description": "テキストやファイルの SHA-1、SHA-256、SHA-384、SHA-512 ハッシュを計算します。"
+      },
+      "color-converter": {
+        "name": "カラー変換",
+        "description": "HEX、RGB、HSL 形式間でカラーをライブプレビュー付きで変換します。"
+      },
+      "json-xml": {
+        "name": "JSON ↔ XML 変換",
+        "description": "JSON と XML 形式を相互変換します。"
+      },
+      "markdown-preview": {
+        "name": "Markdown プレビュー",
+        "description": "Markdown を記述し、HTML プレビューをリアルタイムで並べて表示します。"
+      },
+      "regex-tester": {
+        "name": "正規表現テスター",
+        "description": "リアルタイムのマッチングとハイライトで正規表現をテストします。"
+      },
+      "timestamp": {
+        "name": "Unix タイムスタンプ変換",
+        "description": "Unix タイムスタンプと人が読める日付を相互変換します。"
+      },
+      "yaml-json": {
+        "name": "YAML ↔ JSON 変換",
+        "description": "YAML と JSON 形式を相互変換します。"
+      },
+      "text-diff": {
+        "name": "テキスト差分比較",
+        "description": "2つのテキストを比較し、行ごとの差分を表示します。"
+      }
+    },
+    "image": {
+      "format-converter": {
+        "name": "画像フォーマット変換",
+        "description": "WebP、PNG、JPG、ICO 形式間で画像を変換します。"
+      },
+      "compress": {
+        "name": "画像圧縮",
+        "description": "品質を維持しながら画像のファイルサイズを圧縮します。"
+      },
+      "crop": {
+        "name": "画像切り抜き",
+        "description": "インタラクティブな切り抜きツールで画像を精密にクロップします。"
+      },
+      "resize": {
+        "name": "画像リサイズ",
+        "description": "アスペクト比ロック付きで画像を任意のサイズに変更します。"
+      },
+      "watermark": {
+        "name": "透かし追加",
+        "description": "カスタマイズ可能なスタイルと位置でテキスト透かしを画像に追加します。"
+      },
+      "remove-exif": {
+        "name": "EXIF データ削除",
+        "description": "写真から EXIF メタデータを除去してプライバシーを保護します。"
+      },
+      "flip": {
+        "name": "画像反転",
+        "description": "ワンクリックで画像を水平または垂直に反転します。"
+      },
+      "grayscale": {
+        "name": "グレースケール変換",
+        "description": "画像をグレースケール（モノクロ）に変換します。"
+      },
+      "pixelate": {
+        "name": "画像モザイク",
+        "description": "調整可能なピクセルサイズで画像にモザイク効果を適用します。"
+      },
+      "add-border": {
+        "name": "枠線追加",
+        "description": "画像にカスタマイズ可能な枠線を追加します。"
+      },
+      "circle-crop": {
+        "name": "円形切り抜き",
+        "description": "画像を透明背景の完全な円形に切り抜きます。"
+      },
+      "svg-to-png": {
+        "name": "SVG から PNG 変換",
+        "description": "SVG ベクターグラフィックスを任意のスケールで PNG ラスター画像に変換します。"
+      },
+      "add-text": {
+        "name": "画像にテキスト追加",
+        "description": "カスタマイズ可能なフォントサイズ、色、位置で画像にテキストを重ねます。"
+      },
+      "combine": {
+        "name": "画像結合",
+        "description": "複数の画像を横並びまたは縦に結合します。"
+      },
+      "split": {
+        "name": "画像分割",
+        "description": "画像を均等なサイズのグリッドに分割します。"
+      },
+      "heic-convert": {
+        "name": "HEIC 変換",
+        "description": "HEIC/HEIF 画像を JPG または PNG 形式に変換します。"
+      },
+      "collage": {
+        "name": "画像コラージュ",
+        "description": "プリセットグリッドレイアウトでフォトコラージュを作成します。"
+      }
+    },
+    "pdf": {
+      "merge": {
+        "name": "PDF 結合",
+        "description": "複数の PDF ファイルを1つのドキュメントに結合します。"
+      },
+      "split": {
+        "name": "PDF 分割",
+        "description": "PDF を個別ページまたはカスタムページ範囲で分割します。"
+      },
+      "delete-pages": {
+        "name": "PDF ページ削除",
+        "description": "PDF ドキュメントから特定のページを削除します。"
+      },
+      "to-image": {
+        "name": "PDF を画像に変換",
+        "description": "PDF ページを JPG または PNG 画像に変換します。"
+      },
+      "images-to-pdf": {
+        "name": "画像を PDF に変換",
+        "description": "複数の画像を1つの PDF ドキュメントに変換します。"
+      },
+      "rotate": {
+        "name": "PDF 回転",
+        "description": "PDF のすべてのページを 90、180、270 度回転させます。"
+      },
+      "add-page-numbers": {
+        "name": "ページ番号追加",
+        "description": "PDF のすべてのページにページ番号を追加します。"
+      },
+      "extract-text": {
+        "name": "PDF テキスト抽出",
+        "description": "PDF からすべてのテキスト内容を抽出します。"
+      },
+      "rearrange": {
+        "name": "PDF ページ並べ替え",
+        "description": "ドラッグ＆ドロップで PDF のページ順序を変更します。"
+      },
+      "compress": {
+        "name": "PDF 圧縮",
+        "description": "ページを低品質で再レンダリングして PDF のファイルサイズを削減します。"
+      },
+      "add-watermark": {
+        "name": "PDF 透かし",
+        "description": "PDF のすべてのページに斜めのテキスト透かしを追加します。"
+      },
+      "crop": {
+        "name": "PDF 切り抜き",
+        "description": "各辺のマージンを設定して PDF ページを切り抜きます。"
+      },
+      "esign": {
+        "name": "PDF 電子署名",
+        "description": "署名を描いて PDF の任意のページに配置します。"
+      },
+      "extract-images": {
+        "name": "PDF 画像抽出",
+        "description": "PDF からすべての埋め込み画像を抽出してダウンロードします。"
+      }
+    },
+    "video": {
+      "mute": {
+        "name": "動画ミュート",
+        "description": "動画ファイルから音声を即座に削除します。"
+      },
+      "trim": {
+        "name": "動画トリミング",
+        "description": "動画クリップを希望の長さにカット・トリミングします。"
+      },
+      "rotate": {
+        "name": "動画回転",
+        "description": "動画を 90、180、270 度に回転させます。"
+      },
+      "to-gif": {
+        "name": "動画を GIF に変換",
+        "description": "動画クリップをアニメーション GIF 画像に変換します。"
+      },
+      "to-webp": {
+        "name": "動画を WebP に変換",
+        "description": "動画クリップをアニメーション WebP 画像に変換します。"
+      },
+      "compress": {
+        "name": "動画圧縮",
+        "description": "調整可能な品質プリセットで動画のファイルサイズを削減します。"
+      },
+      "format-convert": {
+        "name": "動画フォーマット変換",
+        "description": "MP4、MKV、AVI 形式間で動画を変換します。"
+      },
+      "resize": {
+        "name": "動画リサイズ",
+        "description": "プリセットまたはカスタムサイズで動画の解像度を変更します。"
+      }
+    },
+    "audio": {
+      "trim": {
+        "name": "オーディオトリミング",
+        "description": "オーディオファイルを希望の長さにカット・トリミングします。"
+      },
+      "convert": {
+        "name": "オーディオ変換",
+        "description": "MP3、WAV、OGG、AAC、FLAC 間でオーディオファイルを変換します。"
+      },
+      "extract": {
+        "name": "オーディオ抽出",
+        "description": "動画ファイルからオーディオトラックを抽出します。"
+      }
+    }
+  }
+}

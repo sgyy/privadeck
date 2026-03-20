@@ -1,0 +1,269 @@
+{
+  "tools": {
+    "developer": {
+      "json-formatter": {
+        "name": "Formattatore JSON",
+        "description": "Formatta, valida e minifica dati JSON con evidenziazione della sintassi.",
+        "metaTitle": "Formattatore e validatore JSON - Strumento JSON online gratuito",
+        "metaDescription": "Formatta, valida e minifica dati JSON con evidenziazione della sintassi. Strumento online gratuito che funziona interamente nel browser.",
+        "keywords": "formattatore json, validatore json, json beautifier, json minifier, json pretty print",
+        "inputPlaceholder": "Incolla il tuo JSON qui...",
+        "format": "Formatta",
+        "minify": "Minifica",
+        "validate": "Valida",
+        "valid": "JSON valido",
+        "invalid": "JSON non valido",
+        "indentSpaces": "Spazi di indentazione",
+        "faq": {
+          "q1": "Cosa fa questo strumento?",
+          "a1": "Formatta (pretty-print) i dati JSON con indentazione corretta, valida la sintassi JSON e può minificare il JSON rimuovendo gli spazi bianchi.",
+          "q2": "I miei dati sono al sicuro?",
+          "a2": "Sì, tutta l'elaborazione avviene nel browser. I tuoi dati non lasciano mai il dispositivo."
+        }
+      },
+      "base64": {
+        "name": "Codifica/Decodifica Base64",
+        "description": "Codifica testo in Base64 o decodifica Base64 in testo.",
+        "metaTitle": "Codificatore/Decodificatore Base64 - Strumento Base64 online gratuito",
+        "metaDescription": "Codifica testo in Base64 o decodifica stringhe Base64 in testo. Strumento online gratuito, funziona interamente nel browser.",
+        "keywords": "codifica base64, decodifica base64, convertitore base64, base64 online",
+        "inputPlaceholder": "Inserisci testo o stringa Base64...",
+        "encode": "Codifica",
+        "decode": "Decodifica",
+        "output": "Risultato",
+        "faq": {
+          "q1": "Cos'è la codifica Base64?",
+          "a1": "Base64 è uno schema di codifica binario-testo che converte dati binari in caratteri ASCII. È comunemente usato in URL di dati, allegati email e payload API.",
+          "q2": "Posso codificare file?",
+          "a2": "Attualmente questo strumento codifica e decodifica testo. La codifica Base64 dei file sarà disponibile in un aggiornamento futuro."
+        }
+      },
+      "url-encoder": {
+        "name": "Codifica/Decodifica URL",
+        "description": "Codifica o decodifica componenti URL per un uso sicuro negli indirizzi web.",
+        "metaTitle": "Codificatore/Decodificatore URL - Strumento gratuito di codifica URL online",
+        "metaDescription": "Codifica o decodifica componenti URL. Converti caratteri speciali per un uso sicuro negli indirizzi web. Strumento online gratuito.",
+        "keywords": "codifica url, decodifica url, codificatore url, percent encoding, codifica uri",
+        "inputPlaceholder": "Inserisci URL o testo da codificare/decodificare...",
+        "encode": "Codifica",
+        "decode": "Decodifica",
+        "encodeComponent": "Codifica componente",
+        "decodeComponent": "Decodifica componente",
+        "output": "Risultato",
+        "faq": {
+          "q1": "Cos'è la codifica URL?",
+          "a1": "La codifica URL converte i caratteri speciali in formato percent-encoded (ad es. lo spazio diventa %20) in modo che possano essere usati in sicurezza negli indirizzi web.",
+          "q2": "Qual è la differenza tra Codifica e Codifica componente?",
+          "a2": "Codifica converte l'intero URL preservando i caratteri strutturali come / e ?. Codifica componente codifica tutto, compresi quei caratteri, utile per i valori dei parametri di query."
+        }
+      },
+      "ocr": {
+        "name": "Riconoscimento testo OCR",
+        "description": "Estrarre testo dalle immagini tramite riconoscimento ottico dei caratteri.",
+        "metaTitle": "OCR - Convertitore gratuito da immagine a testo online",
+        "metaDescription": "Estrarre testo dalle immagini con OCR. Supporta più lingue. Strumento gratuito online.",
+        "keywords": "OCR, immagine a testo, riconoscimento testo, riconoscimento ottico dei caratteri",
+        "language": "Lingua",
+        "recognize": "Riconosci testo",
+        "recognizing": "Riconoscimento in corso",
+        "confidence": "Affidabilità",
+        "faq": {
+          "q1": "Quali lingue sono supportate?",
+          "a1": "Oltre 12 lingue, tra cui inglese, cinese (semplificato/tradizionale), giapponese, coreano, spagnolo, francese, tedesco e altre.",
+          "q2": "Quanto è preciso l'OCR?",
+          "a2": "La precisione dipende dalla qualità dell'immagine e dalla chiarezza del testo. Le immagini nitide ad alta risoluzione con un buon contrasto producono i migliori risultati."
+        }
+      },
+      "archive": {
+        "name": "Estrattore ZIP",
+        "description": "Estrarre e visualizzare in anteprima il contenuto di archivi ZIP online.",
+        "metaTitle": "Estrattore ZIP - Visualizzatore di archivi gratuito online",
+        "metaDescription": "Estrarre e visualizzare file ZIP online. Sfogliare il contenuto e scaricare file singoli. Strumento gratuito online.",
+        "keywords": "estrattore ZIP, decomprimere online, estrarre ZIP, visualizzatore archivi",
+        "extracting": "Estrazione in corso...",
+        "files": "file",
+        "unsupportedFormat": "Formato di archivio non supportato. Attualmente sono supportati solo i file ZIP.",
+        "faq": {
+          "q1": "Quali formati di archivio sono supportati?",
+          "a1": "Attualmente i file ZIP sono completamente supportati. I file vengono estratti interamente nel tuo browser.",
+          "q2": "Posso scaricare singoli file da un archivio?",
+          "a2": "Sì, puoi sfogliare il contenuto dell'archivio e scaricare qualsiasi file singolo cliccando sul pulsante di download."
+        }
+      },
+      "csv-json": {
+        "name": "Convertitore CSV/JSON",
+        "description": "Convertire istantaneamente tra i formati CSV e JSON.",
+        "metaTitle": "CSV a JSON / JSON a CSV - Convertitore gratuito online",
+        "metaDescription": "Convertire dati CSV in JSON o JSON in CSV. Gestisce campi tra virgolette e dati annidati. Strumento gratuito online.",
+        "keywords": "CSV a JSON, JSON a CSV, convertitore CSV, convertitore JSON, convertitore dati",
+        "csvLabel": "CSV",
+        "jsonLabel": "JSON",
+        "csvPlaceholder": "Incolla dati CSV qui...\nnome,eta,citta\nAlice,30,Roma",
+        "jsonPlaceholder": "Incolla array JSON qui...\n[{\"nome\":\"Alice\"}]",
+        "csvToJson": "CSV → JSON",
+        "jsonToCsv": "JSON → CSV",
+        "faq": {
+          "q1": "Quali formati CSV sono supportati?",
+          "a1": "Valori separati da virgola standard con escape opzionale tramite virgolette doppie. I campi contenenti virgole, virgolette o a capo vengono gestiti correttamente.",
+          "q2": "Il JSON annidato è supportato?",
+          "a2": "La conversione da JSON a CSV funziona meglio con array piatti di oggetti. Gli oggetti annidati vengono convertiti nella loro rappresentazione testuale."
+        }
+      },
+      "hash-generator": {
+        "name": "Generatore di hash",
+        "description": "Calcolare hash SHA-1, SHA-256, SHA-384 e SHA-512 per testo o file.",
+        "metaTitle": "Generatore di hash - Calcolatore SHA gratuito online",
+        "metaDescription": "Generare hash SHA-1, SHA-256, SHA-384 e SHA-512 per testo e file. Usa la Web Crypto API. Strumento gratuito online.",
+        "keywords": "generatore hash, SHA256, SHA512, SHA1, hash file, calcolatore checksum",
+        "textMode": "Testo",
+        "fileMode": "File",
+        "inputPlaceholder": "Inserisci il testo da cui calcolare l'hash...",
+        "compute": "Calcola hash",
+        "computing": "Calcolo in corso...",
+        "faq": {
+          "q1": "Quali algoritmi di hash sono supportati?",
+          "a1": "SHA-1, SHA-256, SHA-384 e SHA-512 vengono tutti calcolati simultaneamente usando la Web Crypto API del browser.",
+          "q2": "Posso calcolare l'hash dei file?",
+          "a2": "Sì, passa alla modalità File e trascina un file qualsiasi. L'hash viene calcolato localmente nel tuo browser — il file non viene mai caricato."
+        }
+      },
+      "color-converter": {
+        "name": "Convertitore di colori",
+        "description": "Convertire colori tra i formati HEX, RGB e HSL con anteprima dal vivo.",
+        "metaTitle": "Convertitore di colori - Strumento HEX/RGB/HSL gratuito online",
+        "metaDescription": "Convertire colori tra i formati HEX, RGB e HSL. Anteprima colore dal vivo. Strumento gratuito online.",
+        "keywords": "convertitore colori, HEX a RGB, RGB a HSL, selettore colore, formato colore",
+        "inputLabel": "Valore colore",
+        "inputPlaceholder": "#ff6600, rgb(255, 102, 0) o hsl(24, 100%, 50%)",
+        "invalidColor": "Impossibile interpretare il colore. Prova HEX (#ff6600), RGB (rgb(255,102,0)) o HSL (hsl(24,100%,50%)).",
+        "preview": "Anteprima",
+        "values": "Valori individuali",
+        "faq": {
+          "q1": "Quali formati di colore sono supportati?",
+          "a1": "Puoi inserire colori come HEX (#ff6600 o #f60), RGB (rgb(255, 102, 0)) o HSL (hsl(24, 100%, 50%)). Tutti gli altri formati vengono mostrati automaticamente.",
+          "q2": "La trasparenza alfa è supportata?",
+          "a2": "Attualmente lo strumento supporta solo colori opachi. Il supporto per RGBA e HSLA sarà aggiunto in un futuro aggiornamento."
+        }
+      },
+      "json-xml": {
+        "name": "Convertitore JSON ↔ XML",
+        "description": "Convertire tra i formati JSON e XML.",
+        "metaTitle": "JSON a XML / XML a JSON - Convertitore gratuito online",
+        "metaDescription": "Convertire JSON in XML o XML in JSON istantaneamente. Strumento gratuito online che funziona nel tuo browser.",
+        "keywords": "JSON a XML, XML a JSON, convertitore JSON XML, convertitore formato dati",
+        "jsonLabel": "JSON",
+        "jsonPlaceholder": "Incolla JSON qui...",
+        "xmlLabel": "XML",
+        "xmlPlaceholder": "Incolla XML qui...",
+        "jsonToXml": "JSON → XML",
+        "xmlToJson": "XML → JSON",
+        "faq": {
+          "q1": "Come viene mappato il JSON in XML?",
+          "a1": "Le chiavi degli oggetti diventano nomi di elementi XML. Gli array producono elementi ripetuti con lo stesso nome. I valori primitivi diventano contenuto testuale.",
+          "q2": "Gli attributi XML vengono preservati?",
+          "a2": "Gli attributi XML non vengono preservati nell'output JSON. Solo i nomi degli elementi e il contenuto testuale vengono convertiti."
+        }
+      },
+      "markdown-preview": {
+        "name": "Anteprima Markdown",
+        "description": "Scrivi Markdown e visualizza un'anteprima HTML dal vivo affiancata.",
+        "metaTitle": "Anteprima Markdown - Editor Markdown gratuito online",
+        "metaDescription": "Scrivi Markdown con anteprima HTML dal vivo. Strumento gratuito online per sviluppatori e scrittori.",
+        "keywords": "anteprima Markdown, editor Markdown, Markdown a HTML, visualizzatore Markdown",
+        "markdownLabel": "Markdown",
+        "markdownPlaceholder": "Scrivi Markdown qui...\n\n# Titolo\n\n**Grassetto** e *corsivo*.",
+        "previewLabel": "Anteprima",
+        "copyHtml": "Copia HTML",
+        "faq": {
+          "q1": "Quali funzionalità Markdown sono supportate?",
+          "a1": "Titoli, grassetto, corsivo, link, immagini, blocchi di codice, codice inline, elenchi non ordinati, citazioni e linee orizzontali.",
+          "q2": "Posso copiare l'output HTML?",
+          "a2": "Sì, usa il pulsante Copia HTML per copiare l'HTML generato negli appunti."
+        }
+      },
+      "regex-tester": {
+        "name": "Tester Regex",
+        "description": "Testare espressioni regolari con corrispondenza ed evidenziazione in tempo reale.",
+        "metaTitle": "Tester Regex - Tester di espressioni regolari gratuito online",
+        "metaDescription": "Testare pattern regex con corrispondenza in tempo reale, evidenziazione e dettagli. Strumento gratuito online.",
+        "keywords": "tester regex, espressione regolare, regex online, corrispondenza regex, tester di pattern",
+        "patternLabel": "Pattern",
+        "patternPlaceholder": "Inserisci pattern regex...",
+        "flagsLabel": "Flag",
+        "testStringLabel": "Stringa di test",
+        "testStringPlaceholder": "Inserisci testo da testare...",
+        "matchesLabel": "Corrispondenze",
+        "matchDetails": "Dettagli corrispondenza",
+        "noMatches": "Nessuna corrispondenza trovata",
+        "faq": {
+          "q1": "Quali flag regex sono supportati?",
+          "a1": "Sono disponibili i flag Global (g), insensibile alle maiuscole (i), multilinea (m) e dotAll (s).",
+          "q2": "I gruppi di cattura con nome sono supportati?",
+          "a2": "Sì, i gruppi con nome definiti con (?<nome>...) vengono visualizzati nei dettagli di corrispondenza."
+        }
+      },
+      "timestamp": {
+        "name": "Convertitore timestamp Unix",
+        "description": "Convertire tra timestamp Unix e date leggibili.",
+        "metaTitle": "Convertitore timestamp Unix - Convertitore Epoch gratuito online",
+        "metaDescription": "Convertire timestamp Unix in date e date in timestamp. Mostra UTC, ora locale, ISO 8601 e formati relativi.",
+        "keywords": "timestamp Unix, convertitore epoch, timestamp a data, data a timestamp, tempo Unix",
+        "timestampLabel": "Timestamp Unix (secondi)",
+        "timestampPlaceholder": "es. 1700000000",
+        "dateLabel": "Data e ora",
+        "now": "Imposta a adesso",
+        "utcFormat": "UTC",
+        "localFormat": "Ora locale",
+        "isoFormat": "ISO 8601",
+        "relativeFormat": "Relativo",
+        "invalidTimestamp": "Valore timestamp non valido.",
+        "invalidDate": "Valore data non valido.",
+        "faq": {
+          "q1": "Cos'è un timestamp Unix?",
+          "a1": "Un timestamp Unix è il numero di secondi trascorsi dal 1° gennaio 1970 00:00:00 UTC (l'epoca Unix).",
+          "q2": "Gestisce i timestamp in millisecondi?",
+          "a2": "Sì. Se inserisci un numero maggiore di 10^12, viene automaticamente trattato come millisecondi anziché secondi."
+        }
+      },
+      "yaml-json": {
+        "name": "Convertitore YAML ↔ JSON",
+        "description": "Convertire tra i formati YAML e JSON.",
+        "metaTitle": "YAML a JSON / JSON a YAML - Convertitore gratuito online",
+        "metaDescription": "Convertire YAML in JSON o JSON in YAML istantaneamente. Strumento gratuito online che funziona nel tuo browser.",
+        "keywords": "YAML a JSON, JSON a YAML, convertitore YAML JSON, parser YAML, convertitore formato dati",
+        "yamlLabel": "YAML",
+        "yamlPlaceholder": "Incolla YAML qui...\n\nnome: esempio\nversione: 1.0\nitems:\n  - uno\n  - due",
+        "jsonLabel": "JSON",
+        "jsonPlaceholder": "Incolla JSON qui...",
+        "yamlToJson": "YAML → JSON",
+        "jsonToYaml": "JSON → YAML",
+        "faq": {
+          "q1": "Quali funzionalità YAML sono supportate?",
+          "a1": "Tutte le funzionalità YAML standard, inclusi oggetti annidati, array, stringhe multilinea e ancore/alias tramite la libreria js-yaml.",
+          "q2": "I commenti vengono preservati nella conversione?",
+          "a2": "No. I commenti YAML vengono rimossi durante l'analisi. Nella conversione da JSON a YAML l'output è YAML pulito senza commenti."
+        }
+      },
+      "text-diff": {
+        "name": "Confronto testo",
+        "description": "Confrontare due testi e vedere le differenze riga per riga.",
+        "metaTitle": "Confronto testo - Strumento gratuito di confronto online",
+        "metaDescription": "Confrontare due testi affiancati e vedere aggiunte, rimozioni e righe invariate. Strumento diff gratuito online.",
+        "keywords": "confronto testo, confrontare testo, strumento diff, confronta testo online, diff per riga",
+        "originalLabel": "Originale",
+        "originalPlaceholder": "Incolla il testo originale qui...",
+        "modifiedLabel": "Modificato",
+        "modifiedPlaceholder": "Incolla il testo modificato qui...",
+        "compare": "Confronta",
+        "resultLabel": "Risultato del confronto",
+        "noDifferences": "Nessuna differenza trovata.",
+        "faq": {
+          "q1": "Quale algoritmo diff viene utilizzato?",
+          "a1": "Un algoritmo di Sottosequenza Comune più Lunga (LCS) basato sulle righe che identifica aggiunte, rimozioni e righe invariate.",
+          "q2": "Posso copiare l'output diff?",
+          "a2": "Sì, usa il pulsante di copia per copiare un formato diff unificato con prefissi + e - per aggiunte e rimozioni."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "tools": {
+    "developer": {
+      "json-formatter": {
+        "name": "JSON Formatter",
+        "description": "Format, validate, and minify JSON data with syntax highlighting.",
+        "metaTitle": "JSON Formatter & Validator - Free Online JSON Tool",
+        "metaDescription": "Format, validate and minify JSON data with syntax highlighting. Free online tool that works entirely in your browser.",
+        "keywords": "json formatter, json validator, json beautifier, json minifier, json pretty print",
+        "inputPlaceholder": "Paste your JSON here...",
+        "format": "Format",
+        "minify": "Minify",
+        "validate": "Validate",
+        "valid": "Valid JSON",
+        "invalid": "Invalid JSON",
+        "indentSpaces": "Indent spaces",
+        "faq": {
+          "q1": "What does this tool do?",
+          "a1": "It formats (pretty-prints) JSON data with proper indentation, validates JSON syntax, and can minify JSON by removing whitespace.",
+          "q2": "Is my data safe?",
+          "a2": "Yes, all processing happens in your browser. Your data never leaves your device."
+        }
+      },
+      "base64": {
+        "name": "Base64 Encode/Decode",
+        "description": "Encode text to Base64 or decode Base64 back to text.",
+        "metaTitle": "Base64 Encoder/Decoder - Free Online Base64 Tool",
+        "metaDescription": "Encode text to Base64 or decode Base64 strings back to text. Free online tool, works entirely in your browser.",
+        "keywords": "base64 encode, base64 decode, base64 converter, base64 online",
+        "inputPlaceholder": "Enter text or Base64 string...",
+        "encode": "Encode",
+        "decode": "Decode",
+        "output": "Output",
+        "faq": {
+          "q1": "What is Base64 encoding?",
+          "a1": "Base64 is a binary-to-text encoding scheme that converts binary data into ASCII characters. It's commonly used in data URLs, email attachments, and API payloads.",
+          "q2": "Can I encode files?",
+          "a2": "Currently this tool encodes and decodes text. File Base64 encoding will be available in a future update."
+        }
+      },
+      "url-encoder": {
+        "name": "URL Encode/Decode",
+        "description": "Encode or decode URL components for safe use in web addresses.",
+        "metaTitle": "URL Encoder/Decoder - Free Online URL Encoding Tool",
+        "metaDescription": "Encode or decode URL components. Convert special characters for safe use in web addresses. Free online tool.",
+        "keywords": "url encode, url decode, url encoder, percent encoding, uri encode",
+        "inputPlaceholder": "Enter URL or text to encode/decode...",
+        "encode": "Encode",
+        "decode": "Decode",
+        "encodeComponent": "Encode Component",
+        "decodeComponent": "Decode Component",
+        "output": "Output",
+        "faq": {
+          "q1": "What is URL encoding?",
+          "a1": "URL encoding converts special characters into percent-encoded format (e.g., space becomes %20) so they can be safely used in web addresses.",
+          "q2": "What's the difference between Encode and Encode Component?",
+          "a2": "Encode converts the full URL preserving structure characters like / and ?. Encode Component encodes everything including those characters, useful for query parameter values."
+        }
+      },
+      "ocr": {
+        "name": "OCR Text Recognition",
+        "description": "Extract text from images using optical character recognition.",
+        "metaTitle": "OCR - Free Online Image to Text Converter",
+        "metaDescription": "Extract text from images using OCR. Supports multiple languages. Free online tool.",
+        "keywords": "ocr, image to text, text recognition, optical character recognition",
+        "language": "Language",
+        "recognize": "Recognize Text",
+        "recognizing": "Recognizing",
+        "confidence": "Confidence",
+        "faq": {
+          "q1": "Which languages are supported?",
+          "a1": "Over 12 languages including English, Chinese (Simplified/Traditional), Japanese, Korean, Spanish, French, German, and more.",
+          "q2": "How accurate is the OCR?",
+          "a2": "Accuracy depends on image quality and text clarity. Clear, high-resolution images with good contrast produce the best results."
+        }
+      },
+      "archive": {
+        "name": "ZIP Extractor",
+        "description": "Extract and preview ZIP archive contents online.",
+        "metaTitle": "ZIP Extractor - Free Online Archive Viewer",
+        "metaDescription": "Extract and preview ZIP files online. Browse contents and download individual files. Free online tool.",
+        "keywords": "zip extractor, unzip online, extract zip, archive viewer",
+        "extracting": "Extracting...",
+        "files": "files",
+        "unsupportedFormat": "Unsupported archive format. Currently only ZIP files are supported.",
+        "faq": {
+          "q1": "Which archive formats are supported?",
+          "a1": "Currently ZIP files are fully supported. Files are extracted entirely in your browser.",
+          "q2": "Can I download individual files from an archive?",
+          "a2": "Yes, you can browse the archive contents and download any individual file by clicking its download button."
+        }
+      },
+      "csv-json": {
+        "name": "CSV/JSON Converter",
+        "description": "Convert between CSV and JSON formats instantly.",
+        "metaTitle": "CSV to JSON / JSON to CSV - Free Online Converter",
+        "metaDescription": "Convert CSV data to JSON or JSON to CSV format. Handles quoted fields, nested data. Free online tool.",
+        "keywords": "csv to json, json to csv, csv converter, json converter, data converter",
+        "csvLabel": "CSV",
+        "jsonLabel": "JSON",
+        "csvPlaceholder": "Paste CSV data here...\nname,age,city\nAlice,30,NYC",
+        "jsonPlaceholder": "Paste JSON array here...\n['{'\"name\":\"Alice\"'}']",
+        "csvToJson": "CSV → JSON",
+        "jsonToCsv": "JSON → CSV",
+        "faq": {
+          "q1": "What CSV formats are supported?",
+          "a1": "Standard comma-separated values with optional double-quote escaping. Fields containing commas, quotes, or newlines are handled correctly.",
+          "q2": "Does it support nested JSON?",
+          "a2": "JSON to CSV works best with flat arrays of objects. Nested objects are converted to their string representation."
+        }
+      },
+      "hash-generator": {
+        "name": "Hash Generator",
+        "description": "Compute SHA-1, SHA-256, SHA-384, and SHA-512 hashes for text or files.",
+        "metaTitle": "Hash Generator - Free Online SHA Hash Calculator",
+        "metaDescription": "Generate SHA-1, SHA-256, SHA-384, and SHA-512 hashes for text and files. Uses Web Crypto API. Free online tool.",
+        "keywords": "hash generator, sha256, sha512, sha1, file hash, checksum calculator",
+        "textMode": "Text",
+        "fileMode": "File",
+        "inputPlaceholder": "Enter text to hash...",
+        "compute": "Compute Hashes",
+        "computing": "Computing...",
+        "faq": {
+          "q1": "Which hash algorithms are supported?",
+          "a1": "SHA-1, SHA-256, SHA-384, and SHA-512 are all computed simultaneously using the browser's Web Crypto API.",
+          "q2": "Can I hash files?",
+          "a2": "Yes, switch to File mode and drop any file. The hash is computed locally in your browser — the file is never uploaded."
+        }
+      },
+      "color-converter": {
+        "name": "Color Converter",
+        "description": "Convert colors between HEX, RGB, and HSL formats with live preview.",
+        "metaTitle": "Color Converter - Free Online HEX/RGB/HSL Tool",
+        "metaDescription": "Convert colors between HEX, RGB, and HSL formats. Live color preview swatch. Free online tool.",
+        "keywords": "color converter, hex to rgb, rgb to hsl, color picker, color format",
+        "inputLabel": "Color Value",
+        "inputPlaceholder": "#ff6600, rgb(255, 102, 0), or hsl(24, 100%, 50%)",
+        "invalidColor": "Could not parse color. Try HEX (#ff6600), RGB (rgb(255,102,0)), or HSL (hsl(24,100%,50%)).",
+        "preview": "Preview",
+        "values": "Individual Values",
+        "faq": {
+          "q1": "Which color formats are supported?",
+          "a1": "You can input colors as HEX (#ff6600 or #f60), RGB (rgb(255, 102, 0)), or HSL (hsl(24, 100%, 50%)). All other formats are shown automatically.",
+          "q2": "Does it support alpha/transparency?",
+          "a2": "Currently the tool supports opaque colors only. RGBA and HSLA support will be added in a future update."
+        }
+      },
+      "json-xml": {
+        "name": "JSON ↔ XML Converter",
+        "description": "Convert between JSON and XML formats.",
+        "metaTitle": "JSON to XML / XML to JSON - Free Online Converter",
+        "metaDescription": "Convert JSON to XML or XML to JSON instantly. Free online tool that works in your browser.",
+        "keywords": "json to xml, xml to json, json xml converter, data format converter",
+        "jsonLabel": "JSON",
+        "jsonPlaceholder": "Paste JSON here...",
+        "xmlLabel": "XML",
+        "xmlPlaceholder": "Paste XML here...",
+        "jsonToXml": "JSON → XML",
+        "xmlToJson": "XML → JSON",
+        "faq": {
+          "q1": "How is JSON mapped to XML?",
+          "a1": "Object keys become XML element names. Arrays produce repeated elements with the same name. Primitive values become text content.",
+          "q2": "Does it preserve XML attributes?",
+          "a2": "XML attributes are not preserved in the JSON output. Only element names and text content are converted."
+        }
+      },
+      "markdown-preview": {
+        "name": "Markdown Preview",
+        "description": "Write Markdown and see a live HTML preview side by side.",
+        "metaTitle": "Markdown Preview - Free Online Markdown Editor",
+        "metaDescription": "Write Markdown with live HTML preview. Free online tool for developers and writers.",
+        "keywords": "markdown preview, markdown editor, markdown to html, markdown viewer",
+        "markdownLabel": "Markdown",
+        "markdownPlaceholder": "Write Markdown here...\n\n# Heading\n\n**Bold** and *italic* text.",
+        "previewLabel": "Preview",
+        "copyHtml": "Copy HTML",
+        "faq": {
+          "q1": "Which Markdown features are supported?",
+          "a1": "Headings, bold, italic, links, images, code blocks, inline code, unordered lists, blockquotes, and horizontal rules.",
+          "q2": "Can I copy the HTML output?",
+          "a2": "Yes, use the Copy HTML button to copy the generated HTML to your clipboard."
+        }
+      },
+      "regex-tester": {
+        "name": "Regex Tester",
+        "description": "Test regular expressions with real-time matching and highlighting.",
+        "metaTitle": "Regex Tester - Free Online Regular Expression Tester",
+        "metaDescription": "Test regex patterns with real-time matching, highlighting, and match details. Free online tool.",
+        "keywords": "regex tester, regular expression, regex online, regex matcher, pattern tester",
+        "patternLabel": "Pattern",
+        "patternPlaceholder": "Enter regex pattern...",
+        "flagsLabel": "Flags",
+        "testStringLabel": "Test String",
+        "testStringPlaceholder": "Enter text to test against...",
+        "matchesLabel": "Matches",
+        "matchDetails": "Match Details",
+        "noMatches": "No matches found",
+        "faq": {
+          "q1": "Which regex flags are supported?",
+          "a1": "Global (g), case-insensitive (i), multiline (m), and dotAll (s) flags are available.",
+          "q2": "Does it support named capture groups?",
+          "a2": "Yes, named groups defined with (?'<'name'>'...) are displayed in the match details."
+        }
+      },
+      "timestamp": {
+        "name": "Unix Timestamp Converter",
+        "description": "Convert between Unix timestamps and human-readable dates.",
+        "metaTitle": "Unix Timestamp Converter - Free Online Epoch Converter",
+        "metaDescription": "Convert Unix timestamps to dates and dates to timestamps. Shows UTC, local, ISO 8601, and relative formats.",
+        "keywords": "unix timestamp, epoch converter, timestamp to date, date to timestamp, unix time",
+        "timestampLabel": "Unix Timestamp (seconds)",
+        "timestampPlaceholder": "e.g. 1700000000",
+        "dateLabel": "Date & Time",
+        "now": "Set to Now",
+        "utcFormat": "UTC",
+        "localFormat": "Local Time",
+        "isoFormat": "ISO 8601",
+        "relativeFormat": "Relative",
+        "invalidTimestamp": "Invalid timestamp value.",
+        "invalidDate": "Invalid date value.",
+        "faq": {
+          "q1": "What is a Unix timestamp?",
+          "a1": "A Unix timestamp is the number of seconds that have elapsed since January 1, 1970 00:00:00 UTC (the Unix epoch).",
+          "q2": "Does it handle millisecond timestamps?",
+          "a2": "Yes. If you enter a number larger than 10^12, it is automatically treated as milliseconds instead of seconds."
+        }
+      },
+      "yaml-json": {
+        "name": "YAML ↔ JSON Converter",
+        "description": "Convert between YAML and JSON formats.",
+        "metaTitle": "YAML to JSON / JSON to YAML - Free Online Converter",
+        "metaDescription": "Convert YAML to JSON or JSON to YAML instantly. Free online tool that works in your browser.",
+        "keywords": "yaml to json, json to yaml, yaml json converter, yaml parser, data format converter",
+        "yamlLabel": "YAML",
+        "yamlPlaceholder": "Paste YAML here...\n\nname: example\nversion: 1.0\nitems:\n  - one\n  - two",
+        "jsonLabel": "JSON",
+        "jsonPlaceholder": "Paste JSON here...",
+        "yamlToJson": "YAML → JSON",
+        "jsonToYaml": "JSON → YAML",
+        "faq": {
+          "q1": "What YAML features are supported?",
+          "a1": "All standard YAML features including nested objects, arrays, multi-line strings, and anchors/aliases via the js-yaml library.",
+          "q2": "Does conversion preserve comments?",
+          "a2": "No. YAML comments are stripped during parsing. When converting JSON to YAML the output is clean YAML without comments."
+        }
+      },
+      "text-diff": {
+        "name": "Text Diff",
+        "description": "Compare two texts and see line-by-line differences.",
+        "metaTitle": "Text Diff - Free Online Text Comparison Tool",
+        "metaDescription": "Compare two texts side by side and see additions, removals, and unchanged lines. Free online diff tool.",
+        "keywords": "text diff, text compare, diff tool, compare text online, line diff",
+        "originalLabel": "Original",
+        "originalPlaceholder": "Paste original text here...",
+        "modifiedLabel": "Modified",
+        "modifiedPlaceholder": "Paste modified text here...",
+        "compare": "Compare",
+        "resultLabel": "Diff Result",
+        "noDifferences": "No differences found.",
+        "faq": {
+          "q1": "What diff algorithm is used?",
+          "a1": "A line-based Longest Common Subsequence (LCS) algorithm that identifies additions, removals, and unchanged lines.",
+          "q2": "Can I copy the diff output?",
+          "a2": "Yes, use the copy button to copy a unified diff format with + and - prefixes for additions and removals."
+        }
+      }
+    }
+  }
+}

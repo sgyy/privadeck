@@ -27,15 +27,16 @@ function ToolSkeleton() {
 const lazyCache = new Map<string, LazyExoticComponent<ComponentType>>();
 
 export function ToolPageClient({ category, slug }: ToolPageClientProps) {
-  const tool = getToolBySlug(slug);
+  const tool = getToolBySlug(slug, category);
 
   // eslint-disable-next-line react-hooks/rules-of-hooks -- slug is stable per page route
   const Component = useMemo(() => {
     if (!tool) return null;
-    let cached = lazyCache.get(slug);
+    const cacheKey = `${category}/${slug}`;
+    let cached = lazyCache.get(cacheKey);
     if (!cached) {
       cached = lazy(tool.component);
-      lazyCache.set(slug, cached);
+      lazyCache.set(cacheKey, cached);
     }
     return cached;
   }, [slug, tool]);
@@ -50,7 +51,7 @@ export function ToolPageClient({ category, slug }: ToolPageClientProps) {
           <Component />
         </Suspense>
       </ToolPageShell>
-      <RelatedTools slugs={tool.relatedSlugs} currentSlug={slug} />
+      <RelatedTools slugs={tool.relatedSlugs} currentSlug={slug} category={category} />
       <ToolFAQ tool={tool} />
     </>
   );

@@ -1,0 +1,436 @@
+{
+  "common": {
+    "siteName": "Media Toolbox",
+    "siteDescription": "Alat media gratis berbasis browser. Tanpa unggah, tanpa pendaftaran, 100% pribadi.",
+    "search": "Cari alat...",
+    "searchShortcut": "Ctrl+K",
+    "allTools": "Semua Alat",
+    "download": "Unduh",
+    "copy": "Salin",
+    "copied": "Tersalin!",
+    "clear": "Hapus",
+    "paste": "Tempel",
+    "reset": "Atur Ulang",
+    "process": "Proses",
+    "processing": "Memproses...",
+    "dragDrop": "Seret & lepas file di sini",
+    "or": "atau",
+    "browseFiles": "Pilih file",
+    "noFileSelected": "Belum ada file dipilih",
+    "privacy": "File Anda tidak pernah meninggalkan browser",
+    "darkMode": "Mode gelap",
+    "lightMode": "Mode terang",
+    "systemMode": "Sistem",
+    "language": "Bahasa",
+    "share": "Share",
+    "shareCopied": "Link copied!",
+    "uploadFiles": "Upload Files",
+    "maxFileSize": "Max size",
+    "howItWorks": {
+      "step1FileTitle": "Upload your file",
+      "step1FileDesc": "Drag & drop or click to select a file from your device.",
+      "step1TextTitle": "Enter your text",
+      "step1TextDesc": "Paste or type your content into the input field.",
+      "step2Title": "Adjust settings",
+      "step2Desc": "Configure options to get the result you want.",
+      "step3FileTitle": "Download result",
+      "step3FileDesc": "Get your processed file instantly. No waiting.",
+      "step3TextTitle": "Copy or save",
+      "step3TextDesc": "Copy the output to clipboard or save it."
+    }
+  },
+  "nav": {
+    "home": "Beranda",
+    "tools": "Alat",
+    "text": "Teks",
+    "developer": "Developer",
+    "image": "Gambar",
+    "featured": "Alat Unggulan",
+    "otherTools": "Alat Lainnya",
+    "allCategoryTools": "Lihat semua alat",
+    "pdf": "PDF",
+    "video": "Video",
+    "audio": "Audio"
+  },
+  "home": {
+    "hero": "Alat Media Online Gratis",
+    "heroSub": "Berbasis browser. Tanpa unggah. Tanpa pendaftaran. 100% pribadi.",
+    "popular": "Alat Populer",
+    "allCategories": "Semua Kategori",
+    "viewAll": "Lihat Semua"
+  },
+  "categories": {
+    "text": {
+      "name": "Alat Teks",
+      "description": "Analisis, ubah, dan buat teks"
+    },
+    "developer": {
+      "name": "Alat Pengembang",
+      "description": "Format, enkode, dan dekode data"
+    },
+    "image": {
+      "name": "Alat Gambar",
+      "description": "Konversi, kompres, dan edit gambar"
+    },
+    "pdf": {
+      "name": "Alat PDF",
+      "description": "Gabung, pisah, konversi dan edit file PDF"
+    },
+    "video": {
+      "name": "Alat Video",
+      "description": "Potong, konversi dan edit video"
+    },
+    "audio": {
+      "name": "Alat Audio",
+      "description": "Potong, konversi dan ekstrak audio"
+    }
+  },
+  "footer": {
+    "tagline": "Free browser-based media tools. No uploads, no signups.",
+    "about": "About",
+    "howItWorks": "How It Works",
+    "privacy": "Privacy",
+    "allRightsReserved": "All rights reserved."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
+    "title": "Privacy & Security",
+    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
+    "corePromiseTitle": "Our Core Promise",
+    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
+    "howItWorksTitle": "How It Works",
+    "steps": {
+      "step1": {
+        "title": "You select a file",
+        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+      },
+      "step2": {
+        "title": "Processing happens locally",
+        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+      },
+      "step3": {
+        "title": "You download the result",
+        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+      }
+    },
+    "features": {
+      "noUpload": {
+        "title": "No File Uploads",
+        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+      },
+      "localStorage": {
+        "title": "No Persistent Storage",
+        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+      },
+      "openSource": {
+        "title": "Verifiable Security",
+        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+      },
+      "noLogs": {
+        "title": "No Server Logs",
+        "description": "Since everything runs client-side, there are no server logs of your file operations."
+      },
+      "transparent": {
+        "title": "Fully Transparent",
+        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+      }
+    },
+    "thirdPartyTitle": "Third-Party Resources",
+    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
+    "lastUpdated": "Last updated: March 2026"
+  },
+  "howItWorks": {
+    "metaTitle": "How It Works — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
+    "title": "How It Works",
+    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "steps": {
+      "select": {
+        "title": "Pick Your File",
+        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+      },
+      "process": {
+        "title": "Instant Local Processing",
+        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+      },
+      "download": {
+        "title": "Download the Result",
+        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+      }
+    },
+    "whyClientSideTitle": "Why Client-Side Processing?",
+    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
+    "techTitle": "Technology Under the Hood",
+    "tech": {
+      "canvas": {
+        "title": "Canvas & Web APIs",
+        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+      },
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+      },
+      "webApis": {
+        "title": "Modern Web Standards",
+        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+      },
+      "offline": {
+        "title": "Works Offline",
+        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+      }
+    },
+    "privacyCta": "Want to learn more about how we protect your data?",
+    "privacyLink": "Read our Privacy Policy →"
+  },
+  "toolNames": {
+    "text": {
+      "word-counter": {
+        "name": "Penghitung Kata",
+        "description": "Hitung kata, karakter, kalimat, dan paragraf dalam teks Anda secara instan."
+      },
+      "case-converter": {
+        "name": "Pengubah Huruf Besar/Kecil",
+        "description": "Ubah teks antara UPPERCASE, lowercase, Title Case, camelCase, dan lainnya."
+      },
+      "lorem-ipsum": {
+        "name": "Generator Lorem Ipsum",
+        "description": "Buat teks placeholder berdasarkan paragraf, kalimat, atau kata."
+      }
+    },
+    "developer": {
+      "json-formatter": {
+        "name": "Pemformat JSON",
+        "description": "Format, validasi, dan minifikasi data JSON dengan penyorotan sintaks."
+      },
+      "base64": {
+        "name": "Enkode/Dekode Base64",
+        "description": "Enkode teks ke Base64 atau dekode Base64 kembali ke teks."
+      },
+      "url-encoder": {
+        "name": "Enkode/Dekode URL",
+        "description": "Enkode atau dekode komponen URL untuk penggunaan aman dalam alamat web."
+      },
+      "ocr": {
+        "name": "Pengenalan Teks OCR",
+        "description": "Ekstrak teks dari gambar menggunakan pengenalan karakter optik."
+      },
+      "archive": {
+        "name": "Ekstraktor ZIP",
+        "description": "Ekstrak dan pratinjau isi arsip ZIP secara online."
+      },
+      "csv-json": {
+        "name": "Konverter CSV/JSON",
+        "description": "Konversi antara format CSV dan JSON secara instan."
+      },
+      "hash-generator": {
+        "name": "Generator Hash",
+        "description": "Hitung hash SHA-1, SHA-256, SHA-384, dan SHA-512 untuk teks atau file."
+      },
+      "color-converter": {
+        "name": "Konverter Warna",
+        "description": "Konversi warna antara format HEX, RGB, dan HSL dengan pratinjau langsung."
+      },
+      "json-xml": {
+        "name": "Konverter JSON ↔ XML",
+        "description": "Konversi antara format JSON dan XML."
+      },
+      "markdown-preview": {
+        "name": "Pratinjau Markdown",
+        "description": "Tulis Markdown dan lihat pratinjau HTML langsung secara berdampingan."
+      },
+      "regex-tester": {
+        "name": "Penguji Regex",
+        "description": "Uji ekspresi reguler dengan pencocokan dan penyorotan real-time."
+      },
+      "timestamp": {
+        "name": "Konverter Unix Timestamp",
+        "description": "Konversi antara Unix timestamp dan tanggal yang mudah dibaca."
+      },
+      "yaml-json": {
+        "name": "Konverter YAML ↔ JSON",
+        "description": "Konversi antara format YAML dan JSON."
+      },
+      "text-diff": {
+        "name": "Perbandingan Teks",
+        "description": "Bandingkan dua teks dan lihat perbedaan baris per baris."
+      }
+    },
+    "image": {
+      "format-converter": {
+        "name": "Konverter Format Gambar",
+        "description": "Konversi gambar antara format WebP, PNG, JPG, dan ICO."
+      },
+      "compress": {
+        "name": "Kompresor Gambar",
+        "description": "Kompres gambar untuk mengurangi ukuran file sambil mempertahankan kualitas."
+      },
+      "crop": {
+        "name": "Potong Gambar",
+        "description": "Potong gambar dengan presisi menggunakan alat pemotongan interaktif."
+      },
+      "resize": {
+        "name": "Ubah Ukuran Gambar",
+        "description": "Ubah ukuran gambar ke dimensi apa pun dengan kunci rasio aspek."
+      },
+      "watermark": {
+        "name": "Tambah Watermark",
+        "description": "Tambahkan watermark teks ke gambar dengan gaya dan posisi yang dapat disesuaikan."
+      },
+      "remove-exif": {
+        "name": "Hapus Data EXIF",
+        "description": "Hapus metadata EXIF dari foto untuk melindungi privasi Anda."
+      },
+      "flip": {
+        "name": "Balik Gambar",
+        "description": "Balik gambar secara horizontal atau vertikal dengan satu klik."
+      },
+      "grayscale": {
+        "name": "Gambar Grayscale",
+        "description": "Konversi gambar apa pun ke grayscale (hitam putih)."
+      },
+      "pixelate": {
+        "name": "Pikselasi Gambar",
+        "description": "Terapkan efek pikselasi pada gambar apa pun dengan ukuran piksel yang dapat disesuaikan."
+      },
+      "add-border": {
+        "name": "Tambah Bingkai",
+        "description": "Tambahkan bingkai yang dapat disesuaikan di sekeliling gambar apa pun."
+      },
+      "circle-crop": {
+        "name": "Potong Lingkaran",
+        "description": "Potong gambar apa pun menjadi lingkaran sempurna dengan latar belakang transparan."
+      },
+      "svg-to-png": {
+        "name": "SVG ke PNG",
+        "description": "Konversi grafik vektor SVG ke gambar raster PNG pada skala apa pun."
+      },
+      "add-text": {
+        "name": "Tambah Teks ke Gambar",
+        "description": "Overlay teks pada gambar dengan ukuran font, warna, dan posisi yang dapat disesuaikan."
+      },
+      "combine": {
+        "name": "Gabungkan Gambar",
+        "description": "Gabungkan beberapa gambar secara berdampingan atau ditumpuk vertikal."
+      },
+      "split": {
+        "name": "Bagi Gambar",
+        "description": "Bagi gambar menjadi grid potongan berukuran sama."
+      },
+      "heic-convert": {
+        "name": "Konverter HEIC",
+        "description": "Konversi gambar HEIC/HEIF ke format JPG atau PNG."
+      },
+      "collage": {
+        "name": "Kolase Gambar",
+        "description": "Buat kolase foto dengan tata letak grid preset."
+      }
+    },
+    "pdf": {
+      "merge": {
+        "name": "Gabungkan PDF",
+        "description": "Gabungkan beberapa file PDF menjadi satu dokumen."
+      },
+      "split": {
+        "name": "Pisahkan PDF",
+        "description": "Pisahkan PDF menjadi halaman individual atau rentang halaman kustom."
+      },
+      "delete-pages": {
+        "name": "Hapus Halaman PDF",
+        "description": "Hapus halaman tertentu dari dokumen PDF."
+      },
+      "to-image": {
+        "name": "PDF ke Gambar",
+        "description": "Konversi halaman PDF ke gambar JPG atau PNG."
+      },
+      "images-to-pdf": {
+        "name": "Gambar ke PDF",
+        "description": "Konversi beberapa gambar menjadi satu dokumen PDF."
+      },
+      "rotate": {
+        "name": "Putar PDF",
+        "description": "Putar semua halaman PDF sebesar 90, 180, atau 270 derajat."
+      },
+      "add-page-numbers": {
+        "name": "Tambah Nomor Halaman",
+        "description": "Tambahkan nomor halaman ke setiap halaman dokumen PDF."
+      },
+      "extract-text": {
+        "name": "Ekstrak Teks dari PDF",
+        "description": "Ekstrak semua konten teks dari dokumen PDF."
+      },
+      "rearrange": {
+        "name": "Susun Ulang Halaman PDF",
+        "description": "Seret dan lepas untuk mengurutkan ulang halaman dalam dokumen PDF."
+      },
+      "compress": {
+        "name": "Kompres PDF",
+        "description": "Kurangi ukuran file PDF dengan merender ulang halaman pada kualitas lebih rendah."
+      },
+      "add-watermark": {
+        "name": "Watermark PDF",
+        "description": "Tambahkan watermark teks diagonal ke setiap halaman PDF."
+      },
+      "crop": {
+        "name": "Potong PDF",
+        "description": "Potong halaman PDF dengan mengatur margin yang akan dihapus dari setiap sisi."
+      },
+      "esign": {
+        "name": "Tanda Tangan Elektronik PDF",
+        "description": "Gambar tanda tangan dan tempatkan di halaman mana pun dari dokumen PDF."
+      },
+      "extract-images": {
+        "name": "Ekstrak Gambar dari PDF",
+        "description": "Ekstrak semua gambar tertanam dari file PDF dan unduh."
+      }
+    },
+    "video": {
+      "mute": {
+        "name": "Bisukan Video",
+        "description": "Hapus audio dari file video secara instan."
+      },
+      "trim": {
+        "name": "Potong Video",
+        "description": "Potong dan pangkas klip video ke panjang yang diinginkan."
+      },
+      "rotate": {
+        "name": "Putar Video",
+        "description": "Putar video sebesar 90, 180, atau 270 derajat."
+      },
+      "to-gif": {
+        "name": "Video ke GIF",
+        "description": "Konversi klip video menjadi gambar GIF animasi."
+      },
+      "to-webp": {
+        "name": "Video ke WebP",
+        "description": "Konversi klip video menjadi gambar WebP animasi."
+      },
+      "compress": {
+        "name": "Kompres Video",
+        "description": "Kurangi ukuran file video dengan preset kualitas yang dapat disesuaikan."
+      },
+      "format-convert": {
+        "name": "Konversi Format Video",
+        "description": "Konversi video antara format MP4, MKV, dan AVI."
+      },
+      "resize": {
+        "name": "Ubah Ukuran Video",
+        "description": "Ubah resolusi video dengan dimensi preset atau kustom."
+      }
+    },
+    "audio": {
+      "trim": {
+        "name": "Pemotong Audio",
+        "description": "Potong dan pangkas file audio ke panjang yang diinginkan."
+      },
+      "convert": {
+        "name": "Konverter Audio",
+        "description": "Konversi file audio antara format MP3, WAV, OGG, AAC, dan FLAC."
+      },
+      "extract": {
+        "name": "Ekstrak Audio",
+        "description": "Ekstrak trek audio dari file video."
+      }
+    }
+  }
+}

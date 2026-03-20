@@ -1,0 +1,436 @@
+{
+  "common": {
+    "siteName": "Media Toolbox",
+    "siteDescription": "Безкоштовні медіаінструменти у браузері. Без завантажень, без реєстрації, 100% конфіденційність.",
+    "search": "Пошук інструментів...",
+    "searchShortcut": "Ctrl+K",
+    "allTools": "Усі інструменти",
+    "download": "Завантажити",
+    "copy": "Копіювати",
+    "copied": "Скопійовано!",
+    "clear": "Очистити",
+    "paste": "Вставити",
+    "reset": "Скинути",
+    "process": "Обробити",
+    "processing": "Обробка...",
+    "dragDrop": "Перетягніть файли сюди",
+    "or": "або",
+    "browseFiles": "Вибрати файли",
+    "noFileSelected": "Файл не вибрано",
+    "privacy": "Ваші файли ніколи не залишають браузер",
+    "darkMode": "Темна тема",
+    "lightMode": "Світла тема",
+    "systemMode": "Системна",
+    "language": "Мова",
+    "share": "Share",
+    "shareCopied": "Link copied!",
+    "uploadFiles": "Upload Files",
+    "maxFileSize": "Max size",
+    "howItWorks": {
+      "step1FileTitle": "Upload your file",
+      "step1FileDesc": "Drag & drop or click to select a file from your device.",
+      "step1TextTitle": "Enter your text",
+      "step1TextDesc": "Paste or type your content into the input field.",
+      "step2Title": "Adjust settings",
+      "step2Desc": "Configure options to get the result you want.",
+      "step3FileTitle": "Download result",
+      "step3FileDesc": "Get your processed file instantly. No waiting.",
+      "step3TextTitle": "Copy or save",
+      "step3TextDesc": "Copy the output to clipboard or save it."
+    }
+  },
+  "nav": {
+    "home": "Головна",
+    "tools": "Інструменти",
+    "text": "Текст",
+    "developer": "Розробка",
+    "image": "Зображення",
+    "featured": "Популярні інструменти",
+    "otherTools": "Інші інструменти",
+    "allCategoryTools": "Переглянути всі інструменти",
+    "pdf": "PDF",
+    "video": "Відео",
+    "audio": "Аудіо"
+  },
+  "home": {
+    "hero": "Безкоштовні онлайн-медіаінструменти",
+    "heroSub": "У браузері. Без завантажень. Без реєстрації. 100% конфіденційність.",
+    "popular": "Популярні інструменти",
+    "allCategories": "Усі категорії",
+    "viewAll": "Переглянути всі"
+  },
+  "categories": {
+    "text": {
+      "name": "Текстові інструменти",
+      "description": "Аналізуйте, перетворюйте та генеруйте текст"
+    },
+    "developer": {
+      "name": "Інструменти розробника",
+      "description": "Форматуйте, кодуйте та декодуйте дані"
+    },
+    "image": {
+      "name": "Інструменти для зображень",
+      "description": "Конвертуйте, стискайте та редагуйте зображення"
+    },
+    "pdf": {
+      "name": "PDF-інструменти",
+      "description": "Об'єднання, розділення, конвертація та редагування PDF"
+    },
+    "video": {
+      "name": "Відео-інструменти",
+      "description": "Обрізка, конвертація та редагування відео"
+    },
+    "audio": {
+      "name": "Аудіо-інструменти",
+      "description": "Обрізка, конвертація та вилучення аудіо"
+    }
+  },
+  "footer": {
+    "tagline": "Free browser-based media tools. No uploads, no signups.",
+    "about": "About",
+    "howItWorks": "How It Works",
+    "privacy": "Privacy",
+    "allRightsReserved": "All rights reserved."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
+    "title": "Privacy & Security",
+    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
+    "corePromiseTitle": "Our Core Promise",
+    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
+    "howItWorksTitle": "How It Works",
+    "steps": {
+      "step1": {
+        "title": "You select a file",
+        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+      },
+      "step2": {
+        "title": "Processing happens locally",
+        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+      },
+      "step3": {
+        "title": "You download the result",
+        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+      }
+    },
+    "features": {
+      "noUpload": {
+        "title": "No File Uploads",
+        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+      },
+      "localStorage": {
+        "title": "No Persistent Storage",
+        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+      },
+      "openSource": {
+        "title": "Verifiable Security",
+        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+      },
+      "noLogs": {
+        "title": "No Server Logs",
+        "description": "Since everything runs client-side, there are no server logs of your file operations."
+      },
+      "transparent": {
+        "title": "Fully Transparent",
+        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+      }
+    },
+    "thirdPartyTitle": "Third-Party Resources",
+    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
+    "lastUpdated": "Last updated: March 2026"
+  },
+  "howItWorks": {
+    "metaTitle": "How It Works — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
+    "title": "How It Works",
+    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "steps": {
+      "select": {
+        "title": "Pick Your File",
+        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+      },
+      "process": {
+        "title": "Instant Local Processing",
+        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+      },
+      "download": {
+        "title": "Download the Result",
+        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+      }
+    },
+    "whyClientSideTitle": "Why Client-Side Processing?",
+    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
+    "techTitle": "Technology Under the Hood",
+    "tech": {
+      "canvas": {
+        "title": "Canvas & Web APIs",
+        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+      },
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+      },
+      "webApis": {
+        "title": "Modern Web Standards",
+        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+      },
+      "offline": {
+        "title": "Works Offline",
+        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+      }
+    },
+    "privacyCta": "Want to learn more about how we protect your data?",
+    "privacyLink": "Read our Privacy Policy →"
+  },
+  "toolNames": {
+    "text": {
+      "word-counter": {
+        "name": "Лічильник слів",
+        "description": "Миттєво підраховуйте слова, символи, речення та абзаци у вашому тексті."
+      },
+      "case-converter": {
+        "name": "Конвертер регістру",
+        "description": "Перетворюйте текст між ВЕЛИКИМИ ЛІТЕРАМИ, малими літерами, Регістром Заголовка, camelCase та іншими."
+      },
+      "lorem-ipsum": {
+        "name": "Генератор Lorem Ipsum",
+        "description": "Генеруйте текст-заповнювач за абзацами, реченнями або словами."
+      }
+    },
+    "developer": {
+      "json-formatter": {
+        "name": "Форматування JSON",
+        "description": "Форматуйте, перевіряйте та мініфікуйте дані JSON з підсвічуванням синтаксису."
+      },
+      "base64": {
+        "name": "Кодування/Декодування Base64",
+        "description": "Кодуйте текст у Base64 або декодуйте Base64 назад у текст."
+      },
+      "url-encoder": {
+        "name": "Кодування/Декодування URL",
+        "description": "Кодуйте або декодуйте компоненти URL для безпечного використання у веб-адресах."
+      },
+      "ocr": {
+        "name": "Розпізнавання тексту (OCR)",
+        "description": "Витягуйте текст із зображень за допомогою оптичного розпізнавання символів."
+      },
+      "archive": {
+        "name": "Розпакування ZIP",
+        "description": "Розпаковуйте та переглядайте вміст ZIP-архівів онлайн."
+      },
+      "csv-json": {
+        "name": "Конвертер CSV/JSON",
+        "description": "Миттєва конвертація між форматами CSV та JSON."
+      },
+      "hash-generator": {
+        "name": "Генератор хешів",
+        "description": "Обчислення хешів SHA-1, SHA-256, SHA-384 та SHA-512 для тексту або файлів."
+      },
+      "color-converter": {
+        "name": "Конвертер кольорів",
+        "description": "Конвертація кольорів між форматами HEX, RGB та HSL з попереднім переглядом."
+      },
+      "json-xml": {
+        "name": "Конвертер JSON ↔ XML",
+        "description": "Конвертація між форматами JSON та XML."
+      },
+      "markdown-preview": {
+        "name": "Попередній перегляд Markdown",
+        "description": "Пишіть на Markdown та переглядайте HTML-прев'ю поруч."
+      },
+      "regex-tester": {
+        "name": "Тестер регулярних виразів",
+        "description": "Перевіряйте регулярні вирази з підсвічуванням збігів у реальному часі."
+      },
+      "timestamp": {
+        "name": "Конвертер Unix-міток часу",
+        "description": "Конвертація між Unix-мітками часу та зрозумілими датами."
+      },
+      "yaml-json": {
+        "name": "Конвертер YAML ↔ JSON",
+        "description": "Конвертація між форматами YAML та JSON."
+      },
+      "text-diff": {
+        "name": "Порівняння текстів",
+        "description": "Порівняйте два тексти та перегляньте порядкові відмінності."
+      }
+    },
+    "image": {
+      "format-converter": {
+        "name": "Конвертер форматів зображень",
+        "description": "Конвертуйте зображення між форматами WebP, PNG, JPG та ICO."
+      },
+      "compress": {
+        "name": "Стиснення зображень",
+        "description": "Стискайте зображення для зменшення розміру зі збереженням якості."
+      },
+      "crop": {
+        "name": "Обрізка зображень",
+        "description": "Точна обрізка зображень за допомогою інтерактивного інструменту."
+      },
+      "resize": {
+        "name": "Зміна розміру зображень",
+        "description": "Змінюйте розмір зображень до будь-яких розмірів із фіксацією пропорцій."
+      },
+      "watermark": {
+        "name": "Додати водяний знак",
+        "description": "Додавайте текстові водяні знаки на зображення з налаштовуваним стилем та розташуванням."
+      },
+      "remove-exif": {
+        "name": "Видалення EXIF-даних",
+        "description": "Видаляйте EXIF-метадані з фотографій для захисту конфіденційності."
+      },
+      "flip": {
+        "name": "Відзеркалення зображення",
+        "description": "Відзеркалюйте зображення по горизонталі або вертикалі одним натисканням."
+      },
+      "grayscale": {
+        "name": "Чорно-біле зображення",
+        "description": "Конвертуйте будь-яке зображення в відтінки сірого (чорно-біле)."
+      },
+      "pixelate": {
+        "name": "Піксельозація зображення",
+        "description": "Застосовуйте ефект піксельозації до будь-якого зображення з налаштовуваним розміром пікселів."
+      },
+      "add-border": {
+        "name": "Додати рамку",
+        "description": "Додавайте налаштовувану рамку навколо будь-якого зображення."
+      },
+      "circle-crop": {
+        "name": "Кругла обрізка",
+        "description": "Обріжте будь-яке зображення в ідеальне коло з прозорим фоном."
+      },
+      "svg-to-png": {
+        "name": "SVG у PNG",
+        "description": "Конвертуйте SVG-векторну графіку в растрові PNG-зображення з будь-яким масштабом."
+      },
+      "add-text": {
+        "name": "Додати текст на зображення",
+        "description": "Накладайте текст на зображення з налаштовуваним розміром шрифту, кольором та розташуванням."
+      },
+      "combine": {
+        "name": "Об'єднати зображення",
+        "description": "Об'єднуйте кілька зображень поруч або одне над одним."
+      },
+      "split": {
+        "name": "Розділити зображення",
+        "description": "Розділіть зображення на сітку однакових частин."
+      },
+      "heic-convert": {
+        "name": "Конвертер HEIC",
+        "description": "Конвертуйте зображення HEIC/HEIF у формат JPG або PNG."
+      },
+      "collage": {
+        "name": "Фотоколаж",
+        "description": "Створюйте фотоколажі з попередньо встановленими сітками."
+      }
+    },
+    "pdf": {
+      "merge": {
+        "name": "Об'єднати PDF",
+        "description": "Об'єднуйте кілька PDF-файлів в один документ."
+      },
+      "split": {
+        "name": "Розділити PDF",
+        "description": "Розділяйте PDF на окремі сторінки або довільні діапазони."
+      },
+      "delete-pages": {
+        "name": "Видалити сторінки PDF",
+        "description": "Видаляйте певні сторінки з PDF-документа."
+      },
+      "to-image": {
+        "name": "PDF у зображення",
+        "description": "Конвертуйте сторінки PDF у зображення JPG або PNG."
+      },
+      "images-to-pdf": {
+        "name": "Зображення у PDF",
+        "description": "Конвертуйте кілька зображень в один PDF-документ."
+      },
+      "rotate": {
+        "name": "Повернути PDF",
+        "description": "Поверніть усі сторінки PDF на 90, 180 або 270 градусів."
+      },
+      "add-page-numbers": {
+        "name": "Додати номери сторінок",
+        "description": "Додавайте номери на кожну сторінку PDF-документа."
+      },
+      "extract-text": {
+        "name": "Витягти текст із PDF",
+        "description": "Витягуйте весь текстовий вміст із PDF-документа."
+      },
+      "rearrange": {
+        "name": "Змінити порядок сторінок PDF",
+        "description": "Перетягуйте сторінки для зміни порядку у PDF-документі."
+      },
+      "compress": {
+        "name": "Стиснути PDF",
+        "description": "Зменшіть розмір PDF-файлу шляхом перемальовування сторінок з нижчою якістю."
+      },
+      "add-watermark": {
+        "name": "Водяний знак PDF",
+        "description": "Додавайте діагональний текстовий водяний знак на кожну сторінку PDF."
+      },
+      "crop": {
+        "name": "Обрізати PDF",
+        "description": "Обрізайте сторінки PDF, задаючи поля для видалення з кожного боку."
+      },
+      "esign": {
+        "name": "Електронний підпис PDF",
+        "description": "Намалюйте підпис та розмістіть його на будь-якій сторінці PDF-документа."
+      },
+      "extract-images": {
+        "name": "Витягти зображення з PDF",
+        "description": "Витягуйте всі вбудовані зображення з PDF-файлу та завантажуйте їх."
+      }
+    },
+    "video": {
+      "mute": {
+        "name": "Вимкнути звук відео",
+        "description": "Миттєво видаляйте звук із відеофайлів."
+      },
+      "trim": {
+        "name": "Обрізати відео",
+        "description": "Обрізайте відеокліпи до потрібної довжини."
+      },
+      "rotate": {
+        "name": "Повернути відео",
+        "description": "Повертайте відео на 90, 180 або 270 градусів."
+      },
+      "to-gif": {
+        "name": "Відео у GIF",
+        "description": "Конвертуйте відеокліпи в анімовані GIF-зображення."
+      },
+      "to-webp": {
+        "name": "Відео у WebP",
+        "description": "Конвертуйте відеокліпи в анімовані WebP-зображення."
+      },
+      "compress": {
+        "name": "Стиснути відео",
+        "description": "Зменшуйте розмір відеофайлів з налаштовуваними рівнями якості."
+      },
+      "format-convert": {
+        "name": "Конвертер відеоформатів",
+        "description": "Конвертуйте відео між форматами MP4, MKV та AVI."
+      },
+      "resize": {
+        "name": "Змінити розмір відео",
+        "description": "Змінюйте роздільність відео за допомогою пресетів або довільних розмірів."
+      }
+    },
+    "audio": {
+      "trim": {
+        "name": "Обрізка аудіо",
+        "description": "Обрізайте аудіофайли до потрібної довжини."
+      },
+      "convert": {
+        "name": "Конвертер аудіо",
+        "description": "Конвертуйте аудіофайли між форматами MP3, WAV, OGG, AAC та FLAC."
+      },
+      "extract": {
+        "name": "Витягти аудіо",
+        "description": "Витягуйте звукову доріжку з відеофайлів."
+      }
+    }
+  }
+}

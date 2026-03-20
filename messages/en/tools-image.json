@@ -1,0 +1,324 @@
+{
+  "tools": {
+    "image": {
+      "format-converter": {
+        "name": "Image Format Converter",
+        "description": "Convert images between WebP, PNG, JPG, and ICO formats.",
+        "metaTitle": "Image Format Converter - Free Online WebP/PNG/JPG/ICO Converter",
+        "metaDescription": "Convert images between WebP, PNG, JPG, and ICO formats. Free online tool, no upload needed. Your images stay in your browser.",
+        "keywords": "image converter, webp to png, png to jpg, jpg to webp, ico converter, image format",
+        "selectFormat": "Convert to",
+        "quality": "Quality",
+        "convert": "Convert",
+        "converting": "Converting...",
+        "original": "Original",
+        "converted": "Converted",
+        "fileSize": "File size",
+        "dimensions": "Dimensions",
+        "supportedFormats": "Supported formats: WebP, PNG, JPG, ICO",
+        "faq": {
+          "q1": "Which image formats are supported?",
+          "a1": "You can convert between WebP, PNG, JPG (JPEG), and ICO formats. All conversions happen in your browser using the Canvas API.",
+          "q2": "Are my images uploaded to a server?",
+          "a2": "No. All image processing happens locally in your browser. Your images never leave your device.",
+          "q3": "Can I convert multiple images at once?",
+          "a3": "Yes, you can drag and drop multiple images and they will all be converted to your selected format."
+        }
+      },
+      "compress": {
+        "name": "Image Compressor",
+        "description": "Compress images to reduce file size while maintaining quality.",
+        "metaTitle": "Image Compressor - Free Online Image Compression Tool",
+        "metaDescription": "Compress images to reduce file size. Supports batch compression with quality control. Free online tool.",
+        "keywords": "image compressor, compress image, reduce image size, image optimization",
+        "quality": "Quality",
+        "maxSize": "Max size",
+        "compress": "Compress",
+        "compressing": "Compressing...",
+        "results": "Compressed Results",
+        "faq": {
+          "q1": "How does image compression work?",
+          "a1": "The tool reduces image file size using lossy compression. You can control quality and maximum size. All processing happens in your browser.",
+          "q2": "Which formats are supported?",
+          "a2": "Supports JPEG, PNG, WebP, GIF, and BMP images for compression."
+        },
+        "maxResolution": "Max Resolution"
+      },
+      "crop": {
+        "name": "Image Crop",
+        "description": "Crop images with precision using an interactive cropping tool.",
+        "metaTitle": "Image Crop - Free Online Image Cropper",
+        "metaDescription": "Crop images with precision. Choose aspect ratios or crop freely. Free online tool.",
+        "keywords": "image crop, crop image online, image cropper, photo crop",
+        "aspectRatio": "Aspect Ratio",
+        "free": "Free",
+        "zoom": "Zoom",
+        "crop": "Crop",
+        "cropping": "Cropping...",
+        "reset": "Reset",
+        "faq": {
+          "q1": "Can I set a specific aspect ratio?",
+          "a1": "Yes, you can choose from preset ratios (1:1, 4:3, 16:9, 3:2) or use free-form cropping.",
+          "q2": "Is the original image modified?",
+          "a2": "No, your original image is never modified. A new cropped image is created for download."
+        }
+      },
+      "resize": {
+        "name": "Image Resize",
+        "description": "Resize images to any dimension with aspect ratio lock.",
+        "metaTitle": "Image Resize - Free Online Image Resizer",
+        "metaDescription": "Resize images to custom dimensions. Lock aspect ratio, use presets for social media. Free online tool.",
+        "keywords": "image resize, resize image online, image resizer, change image size",
+        "width": "Width",
+        "height": "Height",
+        "lock": "Lock aspect ratio",
+        "unlock": "Unlock aspect ratio",
+        "resize": "Resize",
+        "resizing": "Resizing...",
+        "presets": "Size Presets",
+        "faq": {
+          "q1": "Can I maintain the aspect ratio?",
+          "a1": "Yes, the aspect ratio is locked by default. Click the link icon to unlock it for free-form resizing.",
+          "q2": "What presets are available?",
+          "a2": "Common presets include HD (1280×720), Full HD (1920×1080), 4K (3840×2160), and social media sizes."
+        }
+      },
+      "watermark": {
+        "name": "Add Watermark",
+        "description": "Add text watermarks to images with customizable style and position.",
+        "metaTitle": "Add Watermark to Image - Free Online Watermark Tool",
+        "metaDescription": "Add text watermarks to your images. Customize font, color, opacity, and position. Free online tool.",
+        "keywords": "add watermark, image watermark, text watermark, photo watermark",
+        "text": "Watermark Text",
+        "position": "Position",
+        "center": "Center",
+        "top-left": "Top Left",
+        "top-right": "Top Right",
+        "bottom-left": "Bottom Left",
+        "bottom-right": "Bottom Right",
+        "tile": "Tile (Repeat)",
+        "fontSize": "Font Size",
+        "color": "Color",
+        "opacity": "Opacity",
+        "apply": "Apply Watermark",
+        "applying": "Applying...",
+        "faq": {
+          "q1": "Can I tile watermarks across the entire image?",
+          "a1": "Yes, select the 'Tile (Repeat)' position option to add repeating watermarks at an angle across the entire image.",
+          "q2": "Can I adjust the watermark transparency?",
+          "a2": "Yes, use the opacity slider to control transparency from barely visible to fully opaque."
+        }
+      },
+      "remove-exif": {
+        "name": "Remove EXIF Data",
+        "description": "Strip EXIF metadata from photos to protect your privacy.",
+        "metaTitle": "Remove EXIF Data - Free Online EXIF Remover",
+        "metaDescription": "Remove EXIF metadata from images to protect privacy. Strip GPS location, camera info, and more. Free online tool.",
+        "keywords": "remove exif, exif remover, strip metadata, photo privacy",
+        "removeExif": "Remove EXIF Data",
+        "processing": "Processing...",
+        "cleaned": "EXIF data removed successfully",
+        "faq": {
+          "q1": "What EXIF data is removed?",
+          "a1": "All metadata is removed including GPS location, camera model, date taken, and other embedded information. The image is redrawn on a clean canvas.",
+          "q2": "Does this affect image quality?",
+          "a2": "The image quality is preserved at 95% for JPEG. PNG images are losslessly re-exported."
+        }
+      },
+      "flip": {
+        "name": "Flip Image",
+        "description": "Flip images horizontally or vertically with one click.",
+        "metaTitle": "Flip Image - Free Online Image Flipper",
+        "metaDescription": "Flip images horizontally or vertically online for free. No upload needed, all processing happens in your browser.",
+        "keywords": "flip image, mirror image, horizontal flip, vertical flip",
+        "horizontal": "Horizontal",
+        "vertical": "Vertical",
+        "flipImage": "Flip Image",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "What is the difference between horizontal and vertical flip?",
+          "a1": "Horizontal flip mirrors the image left to right, like looking in a mirror. Vertical flip mirrors the image top to bottom.",
+          "q2": "Does flipping reduce image quality?",
+          "a2": "No. The image is redrawn at its original resolution. JPEG images are re-encoded at 92% quality."
+        }
+      },
+      "grayscale": {
+        "name": "Grayscale Image",
+        "description": "Convert any image to grayscale (black and white).",
+        "metaTitle": "Grayscale Image - Free Online B&W Converter",
+        "metaDescription": "Convert color images to grayscale online for free. No upload needed, all processing happens in your browser.",
+        "keywords": "grayscale, black and white, desaturate, image converter",
+        "convert": "Convert to Grayscale",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "How does grayscale conversion work?",
+          "a1": "The tool converts each pixel to a shade of gray using a standard luminance formula (0.299R + 0.587G + 0.114B), preserving perceived brightness.",
+          "q2": "Can I adjust the intensity of the grayscale effect?",
+          "a2": "This tool applies a full grayscale conversion. For partial desaturation, consider using a dedicated photo editor."
+        }
+      },
+      "pixelate": {
+        "name": "Pixelate Image",
+        "description": "Apply a pixelation effect to any image with adjustable pixel size.",
+        "metaTitle": "Pixelate Image - Free Online Pixelation Tool",
+        "metaDescription": "Pixelate images online with adjustable block size. Great for censoring or creating retro effects. Free browser-based tool.",
+        "keywords": "pixelate image, mosaic effect, censor image, pixel art",
+        "pixelSize": "Pixel Size",
+        "pixelate": "Pixelate Image",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "What can I use pixelation for?",
+          "a1": "Pixelation is commonly used to censor sensitive information in screenshots, create retro pixel-art effects, or anonymize faces in photos.",
+          "q2": "Can I control the level of pixelation?",
+          "a2": "Yes. Use the pixel size slider to adjust from 2px (subtle) to 50px (heavy pixelation)."
+        }
+      },
+      "add-border": {
+        "name": "Add Border",
+        "description": "Add a customizable border around any image.",
+        "metaTitle": "Add Border to Image - Free Online Border Tool",
+        "metaDescription": "Add borders to images with custom width and color. Free online tool, no upload needed.",
+        "keywords": "add border, image border, photo frame, border maker",
+        "borderWidth": "Border Width",
+        "borderColor": "Border Color",
+        "addBorder": "Add Border",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "What border options are available?",
+          "a1": "You can customize the border width from 1 to 100 pixels and choose any color using the color picker.",
+          "q2": "What format is the output?",
+          "a2": "The output is always PNG to ensure the border color is preserved exactly as chosen."
+        }
+      },
+      "circle-crop": {
+        "name": "Circle Crop",
+        "description": "Crop any image into a perfect circle with transparent background.",
+        "metaTitle": "Circle Crop Image - Free Online Circle Cropper",
+        "metaDescription": "Crop images into a circle with transparent background. Perfect for profile pictures and avatars. Free online tool.",
+        "keywords": "circle crop, round image, avatar crop, profile picture",
+        "cropCircle": "Crop to Circle",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "How does circle cropping work?",
+          "a1": "The tool takes the center of your image, uses the shortest dimension as the diameter, and clips it to a perfect circle. The background is transparent.",
+          "q2": "What format is the output?",
+          "a2": "The output is always PNG because it supports transparency, which is needed for the circular crop."
+        }
+      },
+      "svg-to-png": {
+        "name": "SVG to PNG",
+        "description": "Convert SVG vector graphics to PNG raster images at any scale.",
+        "metaTitle": "SVG to PNG - Free Online SVG Converter",
+        "metaDescription": "Convert SVG files to PNG images with custom scale factor. Free browser-based tool, no upload needed.",
+        "keywords": "svg to png, svg converter, vector to raster, svg export",
+        "scaleFactor": "Scale Factor",
+        "convert": "Convert to PNG",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "What scale factors are available?",
+          "a1": "You can choose 1x (original size), 2x, 3x, or 4x. Higher scales produce larger, more detailed PNG files suitable for high-DPI displays.",
+          "q2": "Are all SVG features supported?",
+          "a2": "The tool renders SVGs using the browser's built-in SVG engine. Most standard SVG features are supported, but external resources or fonts may not render correctly."
+        }
+      },
+      "add-text": {
+        "name": "Add Text to Image",
+        "description": "Overlay text on images with customizable font size, color, and position.",
+        "metaTitle": "Add Text to Image - Free Online Text Overlay Tool",
+        "metaDescription": "Add text to images with custom font, color, size, and position. Free online tool.",
+        "keywords": "add text to image, text overlay, image text, photo text",
+        "text": "Text",
+        "textPlaceholder": "Enter text to add...",
+        "position": "Position",
+        "positions": {
+          "center": "Center",
+          "top-left": "Top Left",
+          "top-right": "Top Right",
+          "bottom-left": "Bottom Left",
+          "bottom-right": "Bottom Right"
+        },
+        "fontSize": "Font Size",
+        "color": "Color",
+        "apply": "Add Text",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "Can I choose where the text appears?",
+          "a1": "Yes, choose from five positions: center, top-left, top-right, bottom-left, or bottom-right.",
+          "q2": "Which fonts are available?",
+          "a2": "The tool uses the browser's default sans-serif font, which varies by system but is always clean and readable."
+        }
+      },
+      "combine": {
+        "name": "Combine Images",
+        "description": "Merge multiple images side by side or stacked vertically.",
+        "metaTitle": "Combine Images - Free Online Image Merger",
+        "metaDescription": "Merge multiple images horizontally or vertically. Free online tool, no upload needed.",
+        "keywords": "combine images, merge images, join images, image collage, side by side",
+        "horizontal": "Horizontal",
+        "vertical": "Vertical",
+        "combine": "Combine Images",
+        "processing": "Processing...",
+        "faq": {
+          "q1": "What layout options are available?",
+          "a1": "You can combine images horizontally (side by side) or vertically (stacked top to bottom).",
+          "q2": "Do images need to be the same size?",
+          "a2": "No, images of different sizes are combined at their original dimensions. The canvas expands to fit all images."
+        }
+      },
+      "split": {
+        "name": "Split Image",
+        "description": "Split an image into a grid of equal-sized pieces.",
+        "metaTitle": "Split Image - Free Online Image Splitter",
+        "metaDescription": "Split images into a grid of equal pieces. Download individually or as ZIP. Free online tool.",
+        "keywords": "split image, image splitter, divide image, grid split, image cutter",
+        "rows": "Rows",
+        "columns": "Columns",
+        "split": "Split Image",
+        "processing": "Processing...",
+        "downloadAll": "Download All (ZIP)",
+        "faq": {
+          "q1": "How does image splitting work?",
+          "a1": "Choose the number of rows and columns. The image is divided into equal-sized pieces based on the grid you specify.",
+          "q2": "Can I download all pieces at once?",
+          "a2": "Yes, use the Download All (ZIP) button to get all pieces in a single ZIP file."
+        }
+      },
+      "heic-convert": {
+        "name": "HEIC Converter",
+        "description": "Convert HEIC/HEIF images to JPG or PNG format.",
+        "metaTitle": "HEIC to JPG/PNG Converter - Free Online HEIC Converter",
+        "metaDescription": "Convert HEIC and HEIF images to JPG or PNG format. Free online tool, no upload needed. Works in your browser.",
+        "keywords": "heic to jpg, heic to png, heif converter, iphone photo converter, heic converter online",
+        "selectedFile": "Selected file",
+        "outputFormat": "Output format",
+        "quality": "Quality",
+        "convert": "Convert",
+        "processing": "Converting...",
+        "faq": {
+          "q1": "What is a HEIC file?",
+          "a1": "HEIC (High Efficiency Image Container) is the default image format used by Apple devices. It offers better compression than JPEG while maintaining quality.",
+          "q2": "Is my image uploaded to a server?",
+          "a2": "No. All conversion happens locally in your browser. Your files never leave your device."
+        }
+      },
+      "collage": {
+        "name": "Image Collage",
+        "description": "Create photo collages with preset grid layouts.",
+        "metaTitle": "Image Collage Maker - Free Online Photo Collage",
+        "metaDescription": "Create photo collages with customizable grid layouts, gap, and background color. Free online tool, no upload needed.",
+        "keywords": "image collage, photo collage, photo grid, collage maker, image grid layout",
+        "layout": "Layout",
+        "gap": "Gap",
+        "bgColor": "Background color",
+        "create": "Create Collage",
+        "processing": "Creating...",
+        "faq": {
+          "q1": "What layouts are available?",
+          "a1": "Available layouts depend on the number of images you upload. Options include 2x1, 1x2, 2x2, 3x1, 1x3, and 2x3 grids.",
+          "q2": "Can I customize the spacing and background?",
+          "a2": "Yes, you can adjust the gap between images (0-20px) and choose any background color using the color picker."
+        }
+      }
+    }
+  }
+}

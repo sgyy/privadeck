@@ -1,0 +1,288 @@
+{
+  "tools": {
+    "pdf": {
+      "merge": {
+        "name": "合并 PDF",
+        "description": "将多个 PDF 文件合并为一个文档。",
+        "metaTitle": "合并 PDF - 免费在线 PDF 合并工具",
+        "metaDescription": "将多个 PDF 文件合并为一个文档。免费在线工具，无需上传。文件不离开浏览器。",
+        "keywords": "合并pdf, pdf合并, 合并pdf文件, pdf合并工具",
+        "merge": "合并 PDF",
+        "merging": "合并中...",
+        "mergedSize": "合并后大小",
+        "faq": {
+          "q1": "PDF 合并如何工作？",
+          "a1": "上传多个 PDF 文件，按需排序，点击合并即可。所有处理在浏览器中完成，文件不会上传。",
+          "q2": "有文件大小限制吗？",
+          "a2": "没有硬性限制，但非常大的文件可能处理较慢，因为所有操作在浏览器中进行。"
+        }
+      },
+      "split": {
+        "name": "拆分 PDF",
+        "description": "将 PDF 拆分为单独的页面或自定义页面范围。",
+        "metaTitle": "拆分 PDF - 免费在线 PDF 拆分工具",
+        "metaDescription": "将 PDF 文件拆分为单独页面或自定义范围。免费在线工具，在浏览器中运行。",
+        "keywords": "拆分pdf, pdf拆分, 提取pdf页面, 分割pdf",
+        "pages": "页",
+        "splitEach": "逐页拆分",
+        "splitRange": "按范围拆分",
+        "rangePlaceholder": "例如 1-3, 4-6, 7-10",
+        "rangeHint": "输入用逗号分隔的页码范围",
+        "split": "拆分",
+        "splitting": "拆分中...",
+        "results": "拆分结果",
+        "faq": {
+          "q1": "可以按特定页码范围拆分吗？",
+          "a1": "可以，您可以逐页拆分或指定自定义范围，如 1-3、4-6、7-10。",
+          "q2": "文件会上传到服务器吗？",
+          "a2": "不会。所有处理在浏览器本地完成，文件不会离开您的设备。"
+        }
+      },
+      "delete-pages": {
+        "name": "删除 PDF 页面",
+        "description": "从 PDF 文档中删除指定页面。",
+        "metaTitle": "删除 PDF 页面 - 在线移除 PDF 页面",
+        "metaDescription": "从 PDF 文件中删除不需要的页面。免费在线工具，带可视化页面预览。完全在浏览器中运行。",
+        "keywords": "删除pdf页面, 移除pdf页面, pdf页面删除",
+        "selectPages": "点击选择要删除的页面",
+        "delete": "删除选中",
+        "deleting": "删除中...",
+        "remaining": "剩余",
+        "pages": "页",
+        "faq": {
+          "q1": "如何选择要删除的页面？",
+          "a1": "上传 PDF 后，点击要删除的页面缩略图。选中的页面会高亮显示。点击删除按钮即可生成不含这些页面的新 PDF。",
+          "q2": "可以撤销页面删除吗？",
+          "a2": "原始文件不会被修改。系统会生成一个不含所选页面的新 PDF。您随时可以重新上传原文件。"
+        }
+      },
+      "to-image": {
+        "name": "PDF 转图片",
+        "description": "将 PDF 页面转换为 JPG 或 PNG 图片。",
+        "metaTitle": "PDF 转图片 - 在线 PDF 转 JPG/PNG",
+        "metaDescription": "将 PDF 页面转换为高质量 JPG 或 PNG 图片。免费在线工具，可调节 DPI 和质量。",
+        "keywords": "pdf转图片, pdf转jpg, pdf转png, pdf转换图片",
+        "format": "格式",
+        "quality": "质量",
+        "scale": "缩放",
+        "convert": "转换",
+        "converting": "转换中",
+        "pages": "页",
+        "downloadAll": "全部下载 (ZIP)",
+        "faq": {
+          "q1": "支持哪些图片格式？",
+          "a1": "可以将 PDF 页面转换为 PNG（无损）或 JPG（文件更小，可控制质量）。",
+          "q2": "可以调整图片分辨率吗？",
+          "a2": "可以，使用缩放滑块。1x 为标准分辨率，2x 双倍，最高 4x 高分辨率输出。"
+        }
+      },
+      "images-to-pdf": {
+        "name": "图片转 PDF",
+        "description": "将多张图片合并为一个 PDF 文档。",
+        "metaTitle": "图片转 PDF - 在线免费图片转 PDF 工具",
+        "metaDescription": "将 JPG、PNG 等图片转换为 PDF 文档。支持排序，免费在线工具，无需上传。",
+        "keywords": "图片转pdf, jpg转pdf, png转pdf, 图片合并pdf, 照片转pdf",
+        "convert": "转换为 PDF",
+        "converting": "转换中...",
+        "resultSize": "文件大小",
+        "faq": {
+          "q1": "支持哪些图片格式转换为 PDF？",
+          "a1": "支持 JPG、PNG、GIF、WebP、BMP 等常见图片格式。非标准格式会在嵌入前自动转换。",
+          "q2": "转换前可以调整图片顺序吗？",
+          "a2": "可以，使用每张图片缩略图上的箭头按钮来调整顺序。最终 PDF 的页面顺序与显示一致。"
+        }
+      },
+      "rotate": {
+        "name": "旋转 PDF",
+        "description": "将 PDF 所有页面旋转 90°、180° 或 270°。",
+        "metaTitle": "旋转 PDF - 在线免费旋转 PDF 页面",
+        "metaDescription": "旋转 PDF 页面，支持顺时针、逆时针或 180 度旋转。免费在线工具，在浏览器中运行。",
+        "keywords": "旋转pdf, pdf旋转页面, pdf翻转, pdf方向",
+        "pages": "页",
+        "direction": "方向",
+        "clockwise": "顺时针 90°",
+        "counterClockwise": "逆时针 90°",
+        "rotateAll": "旋转所有页面",
+        "rotating": "旋转中...",
+        "resultSize": "文件大小",
+        "faq": {
+          "q1": "可以单独旋转某一页吗？",
+          "a1": "目前工具会以相同角度旋转所有页面。如需逐页旋转，可以多次处理 PDF。",
+          "q2": "旋转会影响 PDF 内容质量吗？",
+          "a2": "不会，旋转仅改变页面方向元数据。内容、文字和图片保持不变。"
+        }
+      },
+      "add-page-numbers": {
+        "name": "添加页码",
+        "description": "为 PDF 文档的每一页添加页码。",
+        "metaTitle": "PDF 添加页码 - 免费在线工具",
+        "metaDescription": "为 PDF 文档添加页码。可选择位置、格式和字号。免费在线工具，无需上传。",
+        "keywords": "pdf添加页码, pdf页码编号, pdf页脚, 给pdf加页码",
+        "pages": "页",
+        "position": "位置",
+        "positions": {
+          "bottom-center": "底部居中",
+          "bottom-left": "底部居左",
+          "bottom-right": "底部居右",
+          "top-center": "顶部居中",
+          "top-left": "顶部居左",
+          "top-right": "顶部居右"
+        },
+        "format": "格式",
+        "fontSize": "字号",
+        "startPage": "从第几页开始",
+        "apply": "添加页码",
+        "applying": "处理中...",
+        "resultSize": "文件大小",
+        "faq": {
+          "q1": "可以选择页码显示位置吗？",
+          "a1": "可以，提供六个位置选项：顶部或底部，配合左对齐、居中或右对齐。",
+          "q2": "可以跳过某些页面不编号吗？",
+          "a2": "可以，使用「从第几页开始」选项跳过前 N 页（适用于封面或目录页）。"
+        }
+      },
+      "extract-text": {
+        "name": "PDF 提取文本",
+        "description": "从 PDF 文档中提取所有文本内容。",
+        "metaTitle": "PDF 提取文本 - 免费在线 PDF 文本提取器",
+        "metaDescription": "即时从 PDF 文件中提取文本。从任何 PDF 文档复制文本内容。免费在线工具，在浏览器中运行。",
+        "keywords": "pdf提取文本, pdf转文字, 从pdf复制文本, pdf文本提取",
+        "extract": "提取文本",
+        "extracting": "提取中...",
+        "extractedText": "提取的文本",
+        "noTextFound": "未在此 PDF 中找到文本内容。",
+        "faq": {
+          "q1": "扫描版 PDF 也能提取文本吗？",
+          "a1": "本工具仅提取嵌入的文本。对于扫描版 PDF（图片），请使用我们的 OCR 工具来识别图片中的文字。",
+          "q2": "提取后能保留格式吗？",
+          "a2": "基本文本内容按页提取。复杂格式（如表格和多栏排版）可能无法完美保留。"
+        }
+      },
+      "rearrange": {
+        "name": "重新排列 PDF 页面",
+        "description": "拖放重新排序 PDF 文档中的页面。",
+        "metaTitle": "重新排列 PDF 页面 - 免费在线 PDF 页面排序工具",
+        "metaDescription": "通过拖放重新排序 PDF 页面。免费在线工具，在浏览器中运行。",
+        "keywords": "重新排列pdf, 重新排序pdf页面, pdf页面顺序, 排序pdf页面",
+        "dragHint": "拖动以重新排序页面",
+        "pages": "页",
+        "page": "页面",
+        "moveUp": "上移",
+        "moveDown": "下移",
+        "apply": "应用新顺序",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "如何重新排序 PDF 页面？",
+          "a1": "上传 PDF，然后使用箭头按钮上下移动页面。点击应用即可创建新页面顺序的 PDF。",
+          "q2": "原始 PDF 会被修改吗？",
+          "a2": "不会，系统会创建一个新的 PDF 文件。您的原始文件不会被更改。"
+        }
+      },
+      "compress": {
+        "name": "压缩 PDF",
+        "description": "通过以较低质量重新渲染页面来减小 PDF 文件大小。",
+        "metaTitle": "压缩 PDF - 免费在线 PDF 压缩工具",
+        "metaDescription": "压缩 PDF 文件以减小大小。选择质量级别。免费在线工具，无需上传。",
+        "keywords": "压缩pdf, pdf压缩器, 减小pdf大小, 缩小pdf",
+        "quality": "质量",
+        "high": "高",
+        "medium": "中",
+        "low": "低",
+        "compress": "压缩",
+        "compressing": "压缩中...",
+        "pages": "页",
+        "originalSize": "原始大小",
+        "compressedSize": "压缩后大小",
+        "saved": "缩小比例",
+        "noReduction": "未能缩小",
+        "faq": {
+          "q1": "PDF 压缩是如何工作的？",
+          "a1": "页面以所选质量级别重新渲染为 JPEG 图像并重新嵌入。质量越低文件越小，但视觉保真度会降低。",
+          "q2": "文本还能选择吗？",
+          "a2": "不能，因为压缩过程中页面被转换为图像，压缩后的 PDF 中文本不再可选。"
+        }
+      },
+      "add-watermark": {
+        "name": "PDF 水印",
+        "description": "在 PDF 每一页添加对角线文字水印。",
+        "metaTitle": "PDF 添加水印 - 免费在线 PDF 水印工具",
+        "metaDescription": "为 PDF 文档添加文字水印。自定义透明度和字号。免费在线工具。",
+        "keywords": "pdf水印, 添加pdf水印, pdf印章, pdf文字覆盖",
+        "watermarkText": "水印文字",
+        "textPlaceholder": "输入水印文字...",
+        "opacity": "透明度",
+        "fontSize": "字号",
+        "apply": "应用水印",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "可以自定义水印外观吗？",
+          "a1": "可以，您可以调整文字、透明度和字号。水印以对角线方式放置在每一页上。",
+          "q2": "水印会应用到所有页面吗？",
+          "a2": "是的，相同的水印会应用到 PDF 的每一页。"
+        }
+      },
+      "crop": {
+        "name": "裁剪 PDF",
+        "description": "通过设置每侧的边距来裁剪 PDF 页面。",
+        "metaTitle": "裁剪 PDF - 免费在线 PDF 裁剪工具",
+        "metaDescription": "通过移除每侧边距来裁剪 PDF 页面。免费在线工具，在浏览器中运行。",
+        "keywords": "裁剪pdf, 修剪pdf, pdf边距, pdf裁剪工具",
+        "pages": "页",
+        "margins": "裁剪边距（点）",
+        "marginsHint": "输入每侧要裁剪的量（1点 ≈ 0.35毫米）",
+        "top": "上",
+        "bottom": "下",
+        "left": "左",
+        "right": "右",
+        "apply": "应用裁剪",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "什么是 PDF 点？",
+          "a1": "PDF 使用点作为度量单位。1点 = 1/72英寸 ≈ 0.35毫米。标准 US Letter 页面为 612 × 792 点。",
+          "q2": "裁剪会减小文件大小吗？",
+          "a2": "裁剪会更改可见区域，但不会删除隐藏内容，因此文件大小可能不会显著减小。"
+        }
+      },
+      "esign": {
+        "name": "PDF 电子签名",
+        "description": "在 PDF 文档的任意页面上绘制并放置签名。",
+        "metaTitle": "PDF 电子签名 - 免费在线 PDF 签名工具",
+        "metaDescription": "在 PDF 文档上添加电子签名。绘制您的签名并放置在任意页面。免费在线工具。",
+        "keywords": "pdf电子签名, 在线签名pdf, 电子签名pdf, pdf签名工具",
+        "drawSignature": "绘制您的签名",
+        "clearSignature": "清除",
+        "page": "页码",
+        "pages": "页",
+        "points": "点",
+        "signatureWidth": "宽度",
+        "apply": "应用签名",
+        "processing": "处理中...",
+        "faq": {
+          "q1": "我的签名会被存储在任何地方吗？",
+          "a1": "不会，所有操作都在您的浏览器中完成。您的签名和 PDF 永远不会上传到任何服务器。",
+          "q2": "我可以将签名放在特定页面上吗？",
+          "a2": "可以，您可以选择要签名的页面，并设置签名的精确位置（X、Y 坐标）和大小。"
+        }
+      },
+      "extract-images": {
+        "name": "从 PDF 提取图片",
+        "description": "从 PDF 文件中提取所有嵌入的图片并下载。",
+        "metaTitle": "从 PDF 提取图片 - 免费在线 PDF 图片提取工具",
+        "metaDescription": "从 PDF 文档中提取所有图片。可单独下载或打包为 ZIP 文件。免费在线工具。",
+        "keywords": "提取pdf图片, pdf图片提取器, 从pdf获取图片, pdf转图片",
+        "extract": "提取图片",
+        "extracting": "提取中",
+        "page": "页",
+        "imagesFound": "张图片已找到",
+        "noImagesFound": "此 PDF 中未找到图片。",
+        "downloadAllZip": "全部下载为 ZIP",
+        "faq": {
+          "q1": "提取的图片是什么格式？",
+          "a1": "在可能的情况下，图片以原始格式（JPEG）提取。其他图片将转换为 PNG 格式。",
+          "q2": "此工具能提取所有图片吗？",
+          "a2": "它可以提取 PDF 中嵌入的位图图片。矢量图形和渲染为路径的文字不会作为单独的图片提取。"
+        }
+      }
+    }
+  }
+}

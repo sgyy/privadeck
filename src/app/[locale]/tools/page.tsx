@@ -1,9 +1,10 @@
 import { setRequestLocale } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { useTranslations, NextIntlClientProvider } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getAllTools } from "@/lib/registry";
 import { categories } from "@/lib/registry/categories";
 import { Card } from "@/components/ui/Card";
+import { loadAllToolMessages } from "@/lib/i18n/loadMessages";
 
 export default async function ToolsPage({
   params,
@@ -12,7 +13,12 @@ export default async function ToolsPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <ToolsPageUI />;
+  const toolMessages = await loadAllToolMessages(locale);
+  return (
+    <NextIntlClientProvider messages={toolMessages}>
+      <ToolsPageUI />
+    </NextIntlClientProvider>
+  );
 }
 
 function ToolsPageUI() {

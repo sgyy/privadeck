@@ -1,9 +1,9 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useMemo } from "react";
 import { usePathname, Link } from "@/i18n/navigation";
 import { categories } from "@/lib/registry/categories";
-import { getToolsByCategory } from "@/lib/registry";
 import { cn } from "@/lib/utils/cn";
 import {
   Type,
@@ -13,6 +13,7 @@ import {
   LayoutGrid,
   type LucideIcon,
 } from "lucide-react";
+import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 
 const iconMap: Record<string, LucideIcon> = {
   Type,
@@ -22,13 +23,23 @@ const iconMap: Record<string, LucideIcon> = {
 
 interface SidebarProps {
   className?: string;
+  toolNavData: ToolNavItem[];
 }
 
-export function Sidebar({ className }: SidebarProps) {
+export function Sidebar({ className, toolNavData }: SidebarProps) {
   const t = useTranslations("nav");
   const tc = useTranslations("categories");
-  const tt = useTranslations("tools");
   const pathname = usePathname();
+
+  const toolsByCategory = useMemo(() => {
+    const map = new Map<string, ToolNavItem[]>();
+    for (const item of toolNavData) {
+      const arr = map.get(item.category) || [];
+      arr.push(item);
+      map.set(item.category, arr);
+    }
+    return map;
+  }, [toolNavData]);
 
   return (
     <aside
@@ -58,7 +69,7 @@ export function Sidebar({ className }: SidebarProps) {
         <div className="pt-4">
           {categories.map((cat) => {
             const Icon = iconMap[cat.icon] || LayoutGrid;
-            const tools = getToolsByCategory(cat.key);
+            const tools = toolsByCategory.get(cat.key) || [];
             const catPath = `/tools/${cat.key}`;
             const isCatActive =
               pathname === catPath || pathname.startsWith(`${catPath}/`);
@@ -87,7 +98,7 @@ export function Sidebar({ className }: SidebarProps) {
                               : "text-muted-foreground hover:text-foreground hover:bg-muted",
                           )}
                         >
-                          {tt(`${cat.key}.${tool.slug}.name`)}
+                          {tool.name}
                         </Link>
                       );
                     })}

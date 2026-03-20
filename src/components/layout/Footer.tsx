@@ -1,20 +1,24 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useMemo } from "react";
 import { Shield, Wrench } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { categories } from "@/lib/registry/categories";
-import { getToolsByCategory } from "@/lib/registry";
 import type { ToolCategory } from "@/lib/registry/types";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
+import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 
 const MAX_TOOLS = 3;
 
-function CategoryLinks({ category }: { category: ToolCategory }) {
+interface FooterProps {
+  toolNavData: ToolNavItem[];
+}
+
+function CategoryLinks({ category, tools }: { category: ToolCategory; tools: ToolNavItem[] }) {
   const tcat = useTranslations("categories");
-  const tt = useTranslations("tools");
-  const tools = getToolsByCategory(category).slice(0, MAX_TOOLS);
+  const displayTools = tools.slice(0, MAX_TOOLS);
 
   return (
     <div>
@@ -24,13 +28,13 @@ function CategoryLinks({ category }: { category: ToolCategory }) {
         </Link>
       </h4>
       <ul className="space-y-0.5">
-        {tools.map((tool) => (
+        {displayTools.map((tool) => (
           <li key={tool.slug}>
             <Link
               href={`/tools/${category}/${tool.slug}`}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
-              {tt(`${category}.${tool.slug}.name`)}
+              {tool.name}
             </Link>
           </li>
         ))}
@@ -39,9 +43,19 @@ function CategoryLinks({ category }: { category: ToolCategory }) {
   );
 }
 
-export function Footer() {
+export function Footer({ toolNavData }: FooterProps) {
   const t = useTranslations("common");
   const tf = useTranslations("footer");
+
+  const toolsByCategory = useMemo(() => {
+    const map = new Map<string, ToolNavItem[]>();
+    for (const item of toolNavData) {
+      const arr = map.get(item.category) || [];
+      arr.push(item);
+      map.set(item.category, arr);
+    }
+    return map;
+  }, [toolNavData]);
 
   return (
     <footer className="border-t border-border bg-muted/30">
@@ -66,7 +80,7 @@ export function Footer() {
           {/* 6 categories in a 3x2 grid (desktop) / 2x3 (tablet) / stacked (mobile) */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 flex-1">
             {categories.map((cat) => (
-              <CategoryLinks key={cat.key} category={cat.key} />
+              <CategoryLinks key={cat.key} category={cat.key} tools={toolsByCategory.get(cat.key) || []} />
             ))}
           </div>
 
@@ -90,7 +104,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar — inline with brand column's privacy line */}
+        {/* Bottom bar */}
         <div className="mt-6 flex items-center justify-between gap-3">
           <p className="text-xs text-muted-foreground" suppressHydrationWarning>
             &copy; {new Date().getFullYear()} {t("siteName")}. {tf("allRightsReserved")}

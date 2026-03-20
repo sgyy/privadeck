@@ -1,0 +1,436 @@
+{
+  "common": {
+    "siteName": "미디어 툴박스",
+    "siteDescription": "무료 브라우저 기반 미디어 도구. 업로드 불필요, 가입 불필요, 100% 프라이버시.",
+    "search": "도구 검색...",
+    "searchShortcut": "Ctrl+K",
+    "allTools": "모든 도구",
+    "download": "다운로드",
+    "copy": "복사",
+    "copied": "복사됨!",
+    "clear": "지우기",
+    "paste": "붙여넣기",
+    "reset": "초기화",
+    "process": "처리",
+    "processing": "처리 중...",
+    "dragDrop": "여기에 파일을 드래그 앤 드롭하세요",
+    "or": "또는",
+    "browseFiles": "파일 찾기",
+    "noFileSelected": "선택된 파일 없음",
+    "privacy": "파일이 브라우저를 떠나지 않습니다",
+    "darkMode": "다크 모드",
+    "lightMode": "라이트 모드",
+    "systemMode": "시스템 설정",
+    "language": "언어",
+    "share": "Share",
+    "shareCopied": "Link copied!",
+    "uploadFiles": "Upload Files",
+    "maxFileSize": "Max size",
+    "howItWorks": {
+      "step1FileTitle": "Upload your file",
+      "step1FileDesc": "Drag & drop or click to select a file from your device.",
+      "step1TextTitle": "Enter your text",
+      "step1TextDesc": "Paste or type your content into the input field.",
+      "step2Title": "Adjust settings",
+      "step2Desc": "Configure options to get the result you want.",
+      "step3FileTitle": "Download result",
+      "step3FileDesc": "Get your processed file instantly. No waiting.",
+      "step3TextTitle": "Copy or save",
+      "step3TextDesc": "Copy the output to clipboard or save it."
+    }
+  },
+  "nav": {
+    "home": "홈",
+    "tools": "도구",
+    "text": "텍스트",
+    "developer": "개발",
+    "image": "이미지",
+    "featured": "추천 도구",
+    "otherTools": "기타 도구",
+    "allCategoryTools": "모든 도구 보기",
+    "pdf": "PDF",
+    "video": "비디오",
+    "audio": "오디오"
+  },
+  "home": {
+    "hero": "무료 온라인 미디어 도구",
+    "heroSub": "브라우저 기반. 업로드 불필요. 가입 불필요. 100% 프라이버시.",
+    "popular": "인기 도구",
+    "allCategories": "모든 카테고리",
+    "viewAll": "모두 보기"
+  },
+  "categories": {
+    "text": {
+      "name": "텍스트 도구",
+      "description": "텍스트 분석, 변환 및 생성"
+    },
+    "developer": {
+      "name": "개발자 도구",
+      "description": "데이터 포맷, 인코딩 및 디코딩"
+    },
+    "image": {
+      "name": "이미지 도구",
+      "description": "이미지 변환, 압축 및 편집"
+    },
+    "pdf": {
+      "name": "PDF 도구",
+      "description": "PDF 파일 병합, 분할, 변환 및 편집"
+    },
+    "video": {
+      "name": "동영상 도구",
+      "description": "동영상 자르기, 변환 및 편집"
+    },
+    "audio": {
+      "name": "오디오 도구",
+      "description": "오디오 자르기, 변환 및 추출"
+    }
+  },
+  "footer": {
+    "tagline": "Free browser-based media tools. No uploads, no signups.",
+    "about": "About",
+    "howItWorks": "How It Works",
+    "privacy": "Privacy",
+    "allRightsReserved": "All rights reserved."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
+    "title": "Privacy & Security",
+    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
+    "corePromiseTitle": "Our Core Promise",
+    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
+    "howItWorksTitle": "How It Works",
+    "steps": {
+      "step1": {
+        "title": "You select a file",
+        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+      },
+      "step2": {
+        "title": "Processing happens locally",
+        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+      },
+      "step3": {
+        "title": "You download the result",
+        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+      }
+    },
+    "features": {
+      "noUpload": {
+        "title": "No File Uploads",
+        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+      },
+      "localStorage": {
+        "title": "No Persistent Storage",
+        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+      },
+      "openSource": {
+        "title": "Verifiable Security",
+        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+      },
+      "noLogs": {
+        "title": "No Server Logs",
+        "description": "Since everything runs client-side, there are no server logs of your file operations."
+      },
+      "transparent": {
+        "title": "Fully Transparent",
+        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+      }
+    },
+    "thirdPartyTitle": "Third-Party Resources",
+    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
+    "lastUpdated": "Last updated: March 2026"
+  },
+  "howItWorks": {
+    "metaTitle": "How It Works — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
+    "title": "How It Works",
+    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "steps": {
+      "select": {
+        "title": "Pick Your File",
+        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+      },
+      "process": {
+        "title": "Instant Local Processing",
+        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+      },
+      "download": {
+        "title": "Download the Result",
+        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+      }
+    },
+    "whyClientSideTitle": "Why Client-Side Processing?",
+    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
+    "techTitle": "Technology Under the Hood",
+    "tech": {
+      "canvas": {
+        "title": "Canvas & Web APIs",
+        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+      },
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+      },
+      "webApis": {
+        "title": "Modern Web Standards",
+        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+      },
+      "offline": {
+        "title": "Works Offline",
+        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+      }
+    },
+    "privacyCta": "Want to learn more about how we protect your data?",
+    "privacyLink": "Read our Privacy Policy →"
+  },
+  "toolNames": {
+    "text": {
+      "word-counter": {
+        "name": "글자 수 카운터",
+        "description": "텍스트의 단어 수, 글자 수, 문장 수, 단락 수를 즉시 계산합니다."
+      },
+      "case-converter": {
+        "name": "대소문자 변환기",
+        "description": "텍스트를 UPPERCASE, lowercase, Title Case, camelCase 등으로 변환합니다."
+      },
+      "lorem-ipsum": {
+        "name": "Lorem Ipsum 생성기",
+        "description": "단락, 문장 또는 단어 수를 지정하여 자리 표시 텍스트를 생성합니다."
+      }
+    },
+    "developer": {
+      "json-formatter": {
+        "name": "JSON 포맷터",
+        "description": "구문 강조를 지원하며 JSON 데이터를 포맷, 검증, 압축합니다."
+      },
+      "base64": {
+        "name": "Base64 인코딩/디코딩",
+        "description": "텍스트를 Base64로 인코딩하거나 Base64를 텍스트로 디코딩합니다."
+      },
+      "url-encoder": {
+        "name": "URL 인코딩/디코딩",
+        "description": "URL 구성 요소를 인코딩 또는 디코딩하여 웹 주소에서 안전하게 사용합니다."
+      },
+      "ocr": {
+        "name": "OCR 텍스트 인식",
+        "description": "광학 문자 인식을 사용하여 이미지에서 텍스트를 추출합니다."
+      },
+      "archive": {
+        "name": "ZIP 압축 해제",
+        "description": "ZIP 아카이브 내용을 온라인에서 추출하고 미리봅니다."
+      },
+      "csv-json": {
+        "name": "CSV/JSON 변환기",
+        "description": "CSV와 JSON 형식을 즉시 상호 변환합니다."
+      },
+      "hash-generator": {
+        "name": "해시 생성기",
+        "description": "텍스트나 파일의 SHA-1, SHA-256, SHA-384, SHA-512 해시를 계산합니다."
+      },
+      "color-converter": {
+        "name": "색상 변환기",
+        "description": "HEX, RGB, HSL 형식 간 색상을 실시간 미리보기와 함께 변환합니다."
+      },
+      "json-xml": {
+        "name": "JSON ↔ XML 변환기",
+        "description": "JSON과 XML 형식을 상호 변환합니다."
+      },
+      "markdown-preview": {
+        "name": "Markdown 미리보기",
+        "description": "Markdown을 작성하고 실시간 HTML 미리보기를 나란히 확인합니다."
+      },
+      "regex-tester": {
+        "name": "정규식 테스터",
+        "description": "실시간 매칭과 하이라이트로 정규 표현식을 테스트합니다."
+      },
+      "timestamp": {
+        "name": "Unix 타임스탬프 변환기",
+        "description": "Unix 타임스탬프와 사람이 읽을 수 있는 날짜를 상호 변환합니다."
+      },
+      "yaml-json": {
+        "name": "YAML ↔ JSON 변환기",
+        "description": "YAML과 JSON 형식을 상호 변환합니다."
+      },
+      "text-diff": {
+        "name": "텍스트 비교",
+        "description": "두 텍스트를 비교하고 줄 단위 차이를 확인합니다."
+      }
+    },
+    "image": {
+      "format-converter": {
+        "name": "이미지 형식 변환기",
+        "description": "WebP, PNG, JPG, ICO 형식 간에 이미지를 변환합니다."
+      },
+      "compress": {
+        "name": "이미지 압축",
+        "description": "품질을 유지하면서 이미지 파일 크기를 줄입니다."
+      },
+      "crop": {
+        "name": "이미지 자르기",
+        "description": "인터랙티브 자르기 도구로 이미지를 정밀하게 잘라냅니다."
+      },
+      "resize": {
+        "name": "이미지 크기 조정",
+        "description": "종횡비 잠금으로 이미지를 원하는 크기로 조정합니다."
+      },
+      "watermark": {
+        "name": "워터마크 추가",
+        "description": "사용자 정의 스타일과 위치로 이미지에 텍스트 워터마크를 추가합니다."
+      },
+      "remove-exif": {
+        "name": "EXIF 데이터 제거",
+        "description": "사진에서 EXIF 메타데이터를 제거하여 개인정보를 보호합니다."
+      },
+      "flip": {
+        "name": "이미지 뒤집기",
+        "description": "한 번의 클릭으로 이미지를 수평 또는 수직으로 뒤집습니다."
+      },
+      "grayscale": {
+        "name": "그레이스케일 변환",
+        "description": "이미지를 그레이스케일(흑백)로 변환합니다."
+      },
+      "pixelate": {
+        "name": "이미지 모자이크",
+        "description": "조절 가능한 픽셀 크기로 이미지에 모자이크 효과를 적용합니다."
+      },
+      "add-border": {
+        "name": "테두리 추가",
+        "description": "이미지에 사용자 정의 테두리를 추가합니다."
+      },
+      "circle-crop": {
+        "name": "원형 자르기",
+        "description": "투명 배경의 완벽한 원형으로 이미지를 잘라냅니다."
+      },
+      "svg-to-png": {
+        "name": "SVG를 PNG로",
+        "description": "SVG 벡터 그래픽을 원하는 배율의 PNG 래스터 이미지로 변환합니다."
+      },
+      "add-text": {
+        "name": "이미지에 텍스트 추가",
+        "description": "사용자 정의 글꼴 크기, 색상, 위치로 이미지에 텍스트를 오버레이합니다."
+      },
+      "combine": {
+        "name": "이미지 합치기",
+        "description": "여러 이미지를 나란히 또는 세로로 쌓아서 합칩니다."
+      },
+      "split": {
+        "name": "이미지 분할",
+        "description": "이미지를 동일한 크기의 격자로 분할합니다."
+      },
+      "heic-convert": {
+        "name": "HEIC 변환기",
+        "description": "HEIC/HEIF 이미지를 JPG 또는 PNG 형식으로 변환합니다."
+      },
+      "collage": {
+        "name": "이미지 콜라주",
+        "description": "프리셋 격자 레이아웃으로 포토 콜라주를 만듭니다."
+      }
+    },
+    "pdf": {
+      "merge": {
+        "name": "PDF 병합",
+        "description": "여러 PDF 파일을 하나의 문서로 합칩니다."
+      },
+      "split": {
+        "name": "PDF 분할",
+        "description": "PDF를 개별 페이지 또는 사용자 정의 페이지 범위로 분할합니다."
+      },
+      "delete-pages": {
+        "name": "PDF 페이지 삭제",
+        "description": "PDF 문서에서 특정 페이지를 제거합니다."
+      },
+      "to-image": {
+        "name": "PDF를 이미지로",
+        "description": "PDF 페이지를 JPG 또는 PNG 이미지로 변환합니다."
+      },
+      "images-to-pdf": {
+        "name": "이미지를 PDF로",
+        "description": "여러 이미지를 하나의 PDF 문서로 변환합니다."
+      },
+      "rotate": {
+        "name": "PDF 회전",
+        "description": "PDF의 모든 페이지를 90, 180, 270도로 회전합니다."
+      },
+      "add-page-numbers": {
+        "name": "페이지 번호 추가",
+        "description": "PDF 문서의 모든 페이지에 페이지 번호를 추가합니다."
+      },
+      "extract-text": {
+        "name": "PDF 텍스트 추출",
+        "description": "PDF 문서에서 모든 텍스트 내용을 추출합니다."
+      },
+      "rearrange": {
+        "name": "PDF 페이지 재정렬",
+        "description": "드래그 앤 드롭으로 PDF 페이지 순서를 변경합니다."
+      },
+      "compress": {
+        "name": "PDF 압축",
+        "description": "페이지를 낮은 품질로 다시 렌더링하여 PDF 파일 크기를 줄입니다."
+      },
+      "add-watermark": {
+        "name": "PDF 워터마크",
+        "description": "PDF의 모든 페이지에 대각선 텍스트 워터마크를 추가합니다."
+      },
+      "crop": {
+        "name": "PDF 자르기",
+        "description": "각 면에서 제거할 여백을 설정하여 PDF 페이지를 자릅니다."
+      },
+      "esign": {
+        "name": "PDF 전자 서명",
+        "description": "서명을 그려 PDF 문서의 원하는 페이지에 배치합니다."
+      },
+      "extract-images": {
+        "name": "PDF 이미지 추출",
+        "description": "PDF 파일에서 모든 포함된 이미지를 추출하여 다운로드합니다."
+      }
+    },
+    "video": {
+      "mute": {
+        "name": "동영상 음소거",
+        "description": "동영상 파일에서 오디오를 즉시 제거합니다."
+      },
+      "trim": {
+        "name": "동영상 자르기",
+        "description": "동영상 클립을 원하는 길이로 자르고 트리밍합니다."
+      },
+      "rotate": {
+        "name": "동영상 회전",
+        "description": "동영상을 90, 180, 270도로 회전합니다."
+      },
+      "to-gif": {
+        "name": "동영상을 GIF로",
+        "description": "동영상 클립을 애니메이션 GIF 이미지로 변환합니다."
+      },
+      "to-webp": {
+        "name": "동영상을 WebP로",
+        "description": "동영상 클립을 애니메이션 WebP 이미지로 변환합니다."
+      },
+      "compress": {
+        "name": "동영상 압축",
+        "description": "조절 가능한 품질 프리셋으로 동영상 파일 크기를 줄입니다."
+      },
+      "format-convert": {
+        "name": "동영상 형식 변환",
+        "description": "MP4, MKV, AVI 형식 간 동영상을 변환합니다."
+      },
+      "resize": {
+        "name": "동영상 크기 조정",
+        "description": "프리셋 또는 사용자 정의 크기로 동영상 해상도를 변경합니다."
+      }
+    },
+    "audio": {
+      "trim": {
+        "name": "오디오 자르기",
+        "description": "오디오 파일을 원하는 길이로 자르고 트리밍합니다."
+      },
+      "convert": {
+        "name": "오디오 변환기",
+        "description": "MP3, WAV, OGG, AAC, FLAC 간 오디오 파일을 변환합니다."
+      },
+      "extract": {
+        "name": "오디오 추출",
+        "description": "동영상 파일에서 오디오 트랙을 추출합니다."
+      }
+    }
+  }
+}

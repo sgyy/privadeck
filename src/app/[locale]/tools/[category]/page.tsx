@@ -1,5 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
-import { useTranslations } from "next-intl";
+import { useTranslations, NextIntlClientProvider } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getToolsByCategory } from "@/lib/registry";
 import { categories } from "@/lib/registry/categories";
@@ -7,6 +7,7 @@ import { locales } from "@/i18n/routing";
 import { Card } from "@/components/ui/Card";
 import { generateCategoryMetadata } from "@/lib/seo/metadata";
 import type { ToolCategory } from "@/lib/registry/types";
+import { loadCategoryMessages } from "@/lib/i18n/loadMessages";
 
 export function generateStaticParams() {
   const params = [];
@@ -34,8 +35,13 @@ export default async function CategoryPage({
 }) {
   const { locale, category } = await params;
   setRequestLocale(locale);
+  const toolMessages = await loadCategoryMessages(locale, category);
 
-  return <CategoryPageUI category={category as ToolCategory} />;
+  return (
+    <NextIntlClientProvider messages={toolMessages}>
+      <CategoryPageUI category={category as ToolCategory} />
+    </NextIntlClientProvider>
+  );
 }
 
 function CategoryPageUI({ category }: { category: ToolCategory }) {

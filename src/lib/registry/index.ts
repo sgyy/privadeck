@@ -127,7 +127,13 @@ export function getAllTools(): ToolDefinition[] {
   return ALL_TOOLS;
 }
 
-export function getToolBySlug(slug: string): ToolDefinition | undefined {
+export function getToolBySlug(
+  slug: string,
+  category?: ToolCategory,
+): ToolDefinition | undefined {
+  if (category) {
+    return ALL_TOOLS.find((t) => t.slug === slug && t.category === category);
+  }
   return ALL_TOOLS.find((t) => t.slug === slug);
 }
 

@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { getAllTools } from "@/lib/registry";
@@ -6,6 +7,7 @@ import { categories } from "@/lib/registry/categories";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Shield, Zap, Globe } from "lucide-react";
+import { loadAllToolMessages } from "@/lib/i18n/loadMessages";
 
 export default async function HomePage({
   params,
@@ -14,7 +16,12 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return <HomeUI />;
+  const toolMessages = await loadAllToolMessages(locale);
+  return (
+    <NextIntlClientProvider messages={toolMessages}>
+      <HomeUI />
+    </NextIntlClientProvider>
+  );
 }
 
 function HomeUI() {

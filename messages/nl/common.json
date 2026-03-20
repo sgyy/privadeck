@@ -1,0 +1,436 @@
+{
+  "common": {
+    "siteName": "Media Toolbox",
+    "siteDescription": "Gratis mediagereedschap in de browser. Geen uploads, geen registratie, 100% privé.",
+    "search": "Gereedschap zoeken...",
+    "searchShortcut": "Ctrl+K",
+    "allTools": "Alle gereedschappen",
+    "download": "Downloaden",
+    "copy": "Kopiëren",
+    "copied": "Gekopieerd!",
+    "clear": "Wissen",
+    "paste": "Plakken",
+    "reset": "Herstellen",
+    "process": "Verwerken",
+    "processing": "Verwerken...",
+    "dragDrop": "Sleep bestanden hierheen",
+    "or": "of",
+    "browseFiles": "Bestanden bladeren",
+    "noFileSelected": "Geen bestand geselecteerd",
+    "privacy": "Je bestanden verlaten nooit je browser",
+    "darkMode": "Donkere modus",
+    "lightMode": "Lichte modus",
+    "systemMode": "Systeem",
+    "language": "Taal",
+    "share": "Share",
+    "shareCopied": "Link copied!",
+    "uploadFiles": "Upload Files",
+    "maxFileSize": "Max size",
+    "howItWorks": {
+      "step1FileTitle": "Upload your file",
+      "step1FileDesc": "Drag & drop or click to select a file from your device.",
+      "step1TextTitle": "Enter your text",
+      "step1TextDesc": "Paste or type your content into the input field.",
+      "step2Title": "Adjust settings",
+      "step2Desc": "Configure options to get the result you want.",
+      "step3FileTitle": "Download result",
+      "step3FileDesc": "Get your processed file instantly. No waiting.",
+      "step3TextTitle": "Copy or save",
+      "step3TextDesc": "Copy the output to clipboard or save it."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "tools": "Gereedschappen",
+    "text": "Tekst",
+    "developer": "Developer",
+    "image": "Afbeelding",
+    "featured": "Uitgelichte tools",
+    "otherTools": "Overige tools",
+    "allCategoryTools": "Bekijk alle tools",
+    "pdf": "PDF",
+    "video": "Video",
+    "audio": "Audio"
+  },
+  "home": {
+    "hero": "Gratis online mediagereedschap",
+    "heroSub": "In de browser. Geen uploads. Geen registratie. 100% privé.",
+    "popular": "Populaire gereedschappen",
+    "allCategories": "Alle categorieën",
+    "viewAll": "Alles bekijken"
+  },
+  "categories": {
+    "text": {
+      "name": "Tekstgereedschap",
+      "description": "Analyseer, transformeer en genereer tekst"
+    },
+    "developer": {
+      "name": "Ontwikkelaarsgereedschap",
+      "description": "Formatteer, codeer en decodeer data"
+    },
+    "image": {
+      "name": "Afbeeldingsgereedschap",
+      "description": "Converteer, comprimeer en bewerk afbeeldingen"
+    },
+    "pdf": {
+      "name": "PDF-tools",
+      "description": "PDF-bestanden samenvoegen, splitsen, converteren en bewerken"
+    },
+    "video": {
+      "name": "Videotools",
+      "description": "Video's bijsnijden, converteren en bewerken"
+    },
+    "audio": {
+      "name": "Audiotools",
+      "description": "Audio bijsnijden, converteren en extraheren"
+    }
+  },
+  "footer": {
+    "tagline": "Free browser-based media tools. No uploads, no signups.",
+    "about": "About",
+    "howItWorks": "How It Works",
+    "privacy": "Privacy",
+    "allRightsReserved": "All rights reserved."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
+    "title": "Privacy & Security",
+    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
+    "corePromiseTitle": "Our Core Promise",
+    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
+    "howItWorksTitle": "How It Works",
+    "steps": {
+      "step1": {
+        "title": "You select a file",
+        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+      },
+      "step2": {
+        "title": "Processing happens locally",
+        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+      },
+      "step3": {
+        "title": "You download the result",
+        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+      }
+    },
+    "features": {
+      "noUpload": {
+        "title": "No File Uploads",
+        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+      },
+      "localStorage": {
+        "title": "No Persistent Storage",
+        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+      },
+      "openSource": {
+        "title": "Verifiable Security",
+        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+      },
+      "noLogs": {
+        "title": "No Server Logs",
+        "description": "Since everything runs client-side, there are no server logs of your file operations."
+      },
+      "transparent": {
+        "title": "Fully Transparent",
+        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+      }
+    },
+    "thirdPartyTitle": "Third-Party Resources",
+    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
+    "lastUpdated": "Last updated: March 2026"
+  },
+  "howItWorks": {
+    "metaTitle": "How It Works — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
+    "title": "How It Works",
+    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "steps": {
+      "select": {
+        "title": "Pick Your File",
+        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+      },
+      "process": {
+        "title": "Instant Local Processing",
+        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+      },
+      "download": {
+        "title": "Download the Result",
+        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+      }
+    },
+    "whyClientSideTitle": "Why Client-Side Processing?",
+    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
+    "techTitle": "Technology Under the Hood",
+    "tech": {
+      "canvas": {
+        "title": "Canvas & Web APIs",
+        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+      },
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+      },
+      "webApis": {
+        "title": "Modern Web Standards",
+        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+      },
+      "offline": {
+        "title": "Works Offline",
+        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+      }
+    },
+    "privacyCta": "Want to learn more about how we protect your data?",
+    "privacyLink": "Read our Privacy Policy →"
+  },
+  "toolNames": {
+    "text": {
+      "word-counter": {
+        "name": "Woordenteller",
+        "description": "Tel direct woorden, tekens, zinnen en alinea's in je tekst."
+      },
+      "case-converter": {
+        "name": "Hoofdletterconverter",
+        "description": "Converteer tekst tussen HOOFDLETTERS, kleine letters, Eerste Letter Groot, camelCase en meer."
+      },
+      "lorem-ipsum": {
+        "name": "Lorem Ipsum Generator",
+        "description": "Genereer opvultekst op basis van alinea's, zinnen of woorden."
+      }
+    },
+    "developer": {
+      "json-formatter": {
+        "name": "JSON Formatter",
+        "description": "Formatteer, valideer en minificeer JSON-data met syntaxiskleuring."
+      },
+      "base64": {
+        "name": "Base64 Coderen/Decoderen",
+        "description": "Codeer tekst naar Base64 of decodeer Base64 terug naar tekst."
+      },
+      "url-encoder": {
+        "name": "URL Coderen/Decoderen",
+        "description": "Codeer of decodeer URL-componenten voor veilig gebruik in webadressen."
+      },
+      "ocr": {
+        "name": "OCR-tekstherkenning",
+        "description": "Extraheer tekst uit afbeeldingen met optische tekenherkenning."
+      },
+      "archive": {
+        "name": "ZIP-uitpakker",
+        "description": "Bekijk en pak ZIP-archieven online uit."
+      },
+      "csv-json": {
+        "name": "CSV/JSON-converter",
+        "description": "Converteer direct tussen CSV- en JSON-formaten."
+      },
+      "hash-generator": {
+        "name": "Hash-generator",
+        "description": "Bereken SHA-1-, SHA-256-, SHA-384- en SHA-512-hashes voor tekst of bestanden."
+      },
+      "color-converter": {
+        "name": "Kleurenconverter",
+        "description": "Converteer kleuren tussen HEX-, RGB- en HSL-formaten met live voorbeeld."
+      },
+      "json-xml": {
+        "name": "JSON ↔ XML-converter",
+        "description": "Converteer tussen JSON- en XML-formaten."
+      },
+      "markdown-preview": {
+        "name": "Markdown-voorbeeld",
+        "description": "Schrijf Markdown en bekijk een live HTML-voorbeeld naast elkaar."
+      },
+      "regex-tester": {
+        "name": "Regex-tester",
+        "description": "Test reguliere expressies met realtime matching en markering."
+      },
+      "timestamp": {
+        "name": "Unix Timestamp-converter",
+        "description": "Converteer tussen Unix-timestamps en leesbare datums."
+      },
+      "yaml-json": {
+        "name": "YAML ↔ JSON-converter",
+        "description": "Converteer tussen YAML- en JSON-formaten."
+      },
+      "text-diff": {
+        "name": "Tekstvergelijking",
+        "description": "Vergelijk twee teksten en bekijk de verschillen per regel."
+      }
+    },
+    "image": {
+      "format-converter": {
+        "name": "Afbeeldingsformaatconverter",
+        "description": "Converteer afbeeldingen tussen WebP, PNG, JPG en ICO formaten."
+      },
+      "compress": {
+        "name": "Afbeeldingscompressor",
+        "description": "Comprimeer afbeeldingen om de bestandsgrootte te verkleinen met behoud van kwaliteit."
+      },
+      "crop": {
+        "name": "Afbeelding bijsnijden",
+        "description": "Snijd afbeeldingen nauwkeurig bij met een interactieve bijsnijdtool."
+      },
+      "resize": {
+        "name": "Afbeelding formaat wijzigen",
+        "description": "Wijzig het formaat van afbeeldingen naar elke afmeting met vergrendeling van de beeldverhouding."
+      },
+      "watermark": {
+        "name": "Watermerk toevoegen",
+        "description": "Voeg tekstwatermerken toe aan afbeeldingen met aanpasbare stijl en positie."
+      },
+      "remove-exif": {
+        "name": "EXIF-gegevens verwijderen",
+        "description": "Verwijder EXIF-metadata uit foto's om je privacy te beschermen."
+      },
+      "flip": {
+        "name": "Afbeelding spiegelen",
+        "description": "Spiegel afbeeldingen horizontaal of verticaal met één klik."
+      },
+      "grayscale": {
+        "name": "Grijswaarden",
+        "description": "Converteer elke afbeelding naar grijswaarden (zwart-wit)."
+      },
+      "pixelate": {
+        "name": "Afbeelding pixeleren",
+        "description": "Pas een pixeleffect toe op elke afbeelding met instelbare pixelgrootte."
+      },
+      "add-border": {
+        "name": "Rand toevoegen",
+        "description": "Voeg een aanpasbare rand toe rond elke afbeelding."
+      },
+      "circle-crop": {
+        "name": "Rond bijsnijden",
+        "description": "Snijd elke afbeelding bij tot een perfecte cirkel met transparante achtergrond."
+      },
+      "svg-to-png": {
+        "name": "SVG naar PNG",
+        "description": "Converteer SVG-vectorafbeeldingen naar PNG-rasterafbeeldingen op elke schaal."
+      },
+      "add-text": {
+        "name": "Tekst toevoegen aan afbeelding",
+        "description": "Plaats tekst op afbeeldingen met aanpasbare lettergrootte, kleur en positie."
+      },
+      "combine": {
+        "name": "Afbeeldingen samenvoegen",
+        "description": "Voeg meerdere afbeeldingen samen naast elkaar of boven elkaar."
+      },
+      "split": {
+        "name": "Afbeelding splitsen",
+        "description": "Splits een afbeelding in een raster van gelijke stukken."
+      },
+      "heic-convert": {
+        "name": "HEIC-converter",
+        "description": "Converteer HEIC/HEIF-afbeeldingen naar JPG- of PNG-formaat."
+      },
+      "collage": {
+        "name": "Fotocollage",
+        "description": "Maak fotocollages met vooringestelde rasterlay-outs."
+      }
+    },
+    "pdf": {
+      "merge": {
+        "name": "PDF samenvoegen",
+        "description": "Combineer meerdere PDF-bestanden tot één document."
+      },
+      "split": {
+        "name": "PDF splitsen",
+        "description": "Splits een PDF in afzonderlijke pagina's of aangepaste paginabereiken."
+      },
+      "delete-pages": {
+        "name": "PDF-pagina's verwijderen",
+        "description": "Verwijder specifieke pagina's uit een PDF-document."
+      },
+      "to-image": {
+        "name": "PDF naar afbeelding",
+        "description": "Converteer PDF-pagina's naar JPG- of PNG-afbeeldingen."
+      },
+      "images-to-pdf": {
+        "name": "Afbeeldingen naar PDF",
+        "description": "Converteer meerdere afbeeldingen naar één PDF-document."
+      },
+      "rotate": {
+        "name": "PDF roteren",
+        "description": "Roteer alle pagina's van een PDF met 90, 180 of 270 graden."
+      },
+      "add-page-numbers": {
+        "name": "Paginanummers toevoegen",
+        "description": "Voeg paginanummers toe aan elke pagina van een PDF-document."
+      },
+      "extract-text": {
+        "name": "Tekst uit PDF extraheren",
+        "description": "Extraheer alle tekstinhoud uit een PDF-document."
+      },
+      "rearrange": {
+        "name": "PDF-pagina's herschikken",
+        "description": "Sleep pagina's om de volgorde in een PDF-document te wijzigen."
+      },
+      "compress": {
+        "name": "PDF comprimeren",
+        "description": "Verklein de PDF-bestandsgrootte door pagina's opnieuw te renderen op lagere kwaliteit."
+      },
+      "add-watermark": {
+        "name": "PDF-watermerk",
+        "description": "Voeg een diagonaal tekstwatermerk toe aan elke pagina van een PDF."
+      },
+      "crop": {
+        "name": "PDF bijsnijden",
+        "description": "Snijd PDF-pagina's bij door marges aan elke zijde in te stellen."
+      },
+      "esign": {
+        "name": "PDF elektronisch ondertekenen",
+        "description": "Teken een handtekening en plaats deze op elke pagina van een PDF-document."
+      },
+      "extract-images": {
+        "name": "Afbeeldingen uit PDF extraheren",
+        "description": "Extraheer alle ingesloten afbeeldingen uit een PDF-bestand en download ze."
+      }
+    },
+    "video": {
+      "mute": {
+        "name": "Video dempen",
+        "description": "Verwijder direct het geluid uit videobestanden."
+      },
+      "trim": {
+        "name": "Video bijsnijden",
+        "description": "Knip en snijd videoclips bij tot de gewenste lengte."
+      },
+      "rotate": {
+        "name": "Video roteren",
+        "description": "Roteer video's met 90, 180 of 270 graden."
+      },
+      "to-gif": {
+        "name": "Video naar GIF",
+        "description": "Converteer videoclips naar geanimeerde GIF-afbeeldingen."
+      },
+      "to-webp": {
+        "name": "Video naar WebP",
+        "description": "Converteer videoclips naar geanimeerde WebP-afbeeldingen."
+      },
+      "compress": {
+        "name": "Video comprimeren",
+        "description": "Verklein de videobestandsgrootte met instelbare kwaliteitspresets."
+      },
+      "format-convert": {
+        "name": "Videoformaat converteren",
+        "description": "Converteer video's tussen MP4-, WebM-, MKV- en AVI-formaten."
+      },
+      "resize": {
+        "name": "Video formaat wijzigen",
+        "description": "Wijzig de videoresolutie met preset of aangepaste afmetingen."
+      }
+    },
+    "audio": {
+      "trim": {
+        "name": "Audio bijsnijden",
+        "description": "Knip en snijd audiobestanden bij tot de gewenste lengte."
+      },
+      "convert": {
+        "name": "Audioconverter",
+        "description": "Converteer audiobestanden tussen MP3-, WAV-, OGG-, AAC- en FLAC-formaten."
+      },
+      "extract": {
+        "name": "Audio extraheren",
+        "description": "Extraheer de audiotrack uit videobestanden."
+      }
+    }
+  }
+}

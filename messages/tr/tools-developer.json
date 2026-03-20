@@ -1,0 +1,269 @@
+{
+  "tools": {
+    "developer": {
+      "json-formatter": {
+        "name": "JSON Biçimlendirici",
+        "description": "JSON verilerini söz dizimi vurgulamasıyla biçimlendirin, doğrulayın ve küçültün.",
+        "metaTitle": "JSON Biçimlendirici ve Doğrulayıcı - Ücretsiz Çevrimiçi JSON Aracı",
+        "metaDescription": "JSON verilerini söz dizimi vurgulamasıyla biçimlendirin, doğrulayın ve küçültün. Tamamen tarayıcınızda çalışan ücretsiz çevrimiçi araç.",
+        "keywords": "json biçimlendirici, json doğrulayıcı, json beautifier, json minifier, json pretty print",
+        "inputPlaceholder": "JSON verinizi buraya yapıştırın...",
+        "format": "Biçimlendir",
+        "minify": "Küçült",
+        "validate": "Doğrula",
+        "valid": "Geçerli JSON",
+        "invalid": "Geçersiz JSON",
+        "indentSpaces": "Girinti boşlukları",
+        "faq": {
+          "q1": "Bu araç ne yapar?",
+          "a1": "JSON verilerini doğru girintilemeyle biçimlendirir (pretty-print), JSON söz dizimini doğrular ve boşlukları kaldırarak JSON'u küçültebilir.",
+          "q2": "Verilerim güvende mi?",
+          "a2": "Evet, tüm işlemler tarayıcınızda gerçekleşir. Verileriniz asla cihazınızdan çıkmaz."
+        }
+      },
+      "base64": {
+        "name": "Base64 Kodlama/Çözme",
+        "description": "Metni Base64 olarak kodlayın veya Base64 verilerini metne çözün.",
+        "metaTitle": "Base64 Kodlayıcı/Çözücü - Ücretsiz Çevrimiçi Base64 Aracı",
+        "metaDescription": "Metni Base64 olarak kodlayın veya Base64 dizelerini metne çözün. Ücretsiz çevrimiçi araç, tamamen tarayıcınızda çalışır.",
+        "keywords": "base64 kodlama, base64 çözme, base64 dönüştürücü, base64 çevrimiçi",
+        "inputPlaceholder": "Metin veya Base64 dizesi girin...",
+        "encode": "Kodla",
+        "decode": "Çöz",
+        "output": "Çıktı",
+        "faq": {
+          "q1": "Base64 kodlama nedir?",
+          "a1": "Base64, ikili verileri ASCII karakterlerine dönüştüren bir ikili-metin kodlama şemasıdır. Veri URL'lerinde, e-posta eklerinde ve API yüklerinde yaygın olarak kullanılır.",
+          "q2": "Dosyaları kodlayabilir miyim?",
+          "a2": "Şu anda bu araç metin kodlar ve çözer. Dosya Base64 kodlaması gelecek bir güncellemede kullanılabilir olacaktır."
+        }
+      },
+      "url-encoder": {
+        "name": "URL Kodlama/Çözme",
+        "description": "Web adreslerinde güvenli kullanım için URL bileşenlerini kodlayın veya çözün.",
+        "metaTitle": "URL Kodlayıcı/Çözücü - Ücretsiz Çevrimiçi URL Kodlama Aracı",
+        "metaDescription": "URL bileşenlerini kodlayın veya çözün. Web adreslerinde güvenli kullanım için özel karakterleri dönüştürün. Ücretsiz çevrimiçi araç.",
+        "keywords": "url kodlama, url çözme, url kodlayıcı, percent encoding, uri kodlama",
+        "inputPlaceholder": "Kodlanacak/çözülecek URL veya metin girin...",
+        "encode": "Kodla",
+        "decode": "Çöz",
+        "encodeComponent": "Bileşeni Kodla",
+        "decodeComponent": "Bileşeni Çöz",
+        "output": "Çıktı",
+        "faq": {
+          "q1": "URL kodlama nedir?",
+          "a1": "URL kodlama, özel karakterleri yüzde kodlu biçime dönüştürür (ör. boşluk %20 olur), böylece web adreslerinde güvenle kullanılabilirler.",
+          "q2": "Kodla ve Bileşeni Kodla arasındaki fark nedir?",
+          "a2": "Kodla, / ve ? gibi yapısal karakterleri koruyarak tam URL'yi dönüştürür. Bileşeni Kodla, bu karakterler dahil her şeyi kodlar ve sorgu parametresi değerleri için kullanışlıdır."
+        }
+      },
+      "ocr": {
+        "name": "OCR Metin Tanıma",
+        "description": "Optik karakter tanıma ile görsellerden metin çıkarın.",
+        "metaTitle": "OCR — Ücretsiz Çevrimiçi Görsel-Metin Dönüştürücü",
+        "metaDescription": "OCR ile görsellerden metin çıkarın. Birden fazla dil desteği. Ücretsiz çevrimiçi araç.",
+        "keywords": "ocr, görselden metin, metin tanıma, optik karakter tanıma",
+        "language": "Dil",
+        "recognize": "Metni Tanı",
+        "recognizing": "Tanınıyor",
+        "confidence": "Doğruluk",
+        "faq": {
+          "q1": "Hangi diller destekleniyor?",
+          "a1": "İngilizce, Çince (Basitleştirilmiş/Geleneksel), Japonca, Korece, İspanyolca, Fransızca, Almanca ve daha fazlası dahil 12'den fazla dil destekleniyor.",
+          "q2": "OCR ne kadar doğru?",
+          "a2": "Doğruluk, görsel kalitesine ve metin netliğine bağlıdır. Net, yüksek çözünürlüklü ve iyi kontrastlı görseller en iyi sonuçları verir."
+        }
+      },
+      "archive": {
+        "name": "ZIP Çıkarıcı",
+        "description": "ZIP arşiv içeriklerini çevrimiçi çıkarın ve önizleyin.",
+        "metaTitle": "ZIP Çıkarıcı — Ücretsiz Çevrimiçi Arşiv Görüntüleyici",
+        "metaDescription": "ZIP dosyalarını çevrimiçi çıkarın ve önizleyin. İçeriğe göz atın ve tek tek dosyaları indirin. Ücretsiz çevrimiçi araç.",
+        "keywords": "zip çıkarıcı, çevrimiçi zip aç, zip çıkar, arşiv görüntüleyici",
+        "extracting": "Çıkarılıyor...",
+        "files": "dosya",
+        "unsupportedFormat": "Desteklenmeyen arşiv formatı. Şu anda yalnızca ZIP dosyaları desteklenmektedir.",
+        "faq": {
+          "q1": "Hangi arşiv formatları destekleniyor?",
+          "a1": "Şu anda ZIP dosyaları tam olarak desteklenmektedir. Dosyalar tamamen tarayıcınızda çıkarılır.",
+          "q2": "Arşivden tek tek dosya indirebilir miyim?",
+          "a2": "Evet, arşiv içeriğine göz atabilir ve indirme düğmesine tıklayarak herhangi bir dosyayı indirebilirsiniz."
+        }
+      },
+      "csv-json": {
+        "name": "CSV/JSON Dönüştürücü",
+        "description": "CSV ve JSON formatları arasında anında dönüştürme yapın.",
+        "metaTitle": "CSV - JSON / JSON - CSV — Ücretsiz Çevrimiçi Dönüştürücü",
+        "metaDescription": "CSV verilerini JSON'a veya JSON'u CSV formatına dönüştürün. Tırnaklı alanlar ve iç içe veriler desteklenir. Ücretsiz çevrimiçi araç.",
+        "keywords": "csv json dönüştürücü, json csv, csv dönüştürücü, json dönüştürücü, veri dönüştürücü",
+        "csvLabel": "CSV",
+        "jsonLabel": "JSON",
+        "csvPlaceholder": "CSV verilerini buraya yapıştırın...\nname,age,city\nAlice,30,NYC",
+        "jsonPlaceholder": "JSON dizisini buraya yapıştırın...\n['{\"name\":\"Alice\"}']",
+        "csvToJson": "CSV → JSON",
+        "jsonToCsv": "JSON → CSV",
+        "faq": {
+          "q1": "Hangi CSV formatları destekleniyor?",
+          "a1": "İsteğe bağlı çift tırnak kaçışlı standart virgülle ayrılmış değerler. Virgül, tırnak veya satır sonu içeren alanlar doğru şekilde işlenir.",
+          "q2": "İç içe JSON destekleniyor mu?",
+          "a2": "JSON'dan CSV'ye dönüştürme, düz nesne dizileriyle en iyi şekilde çalışır. İç içe nesneler dize temsiline dönüştürülür."
+        }
+      },
+      "hash-generator": {
+        "name": "Hash Oluşturucu",
+        "description": "Metin veya dosyalar için SHA-1, SHA-256, SHA-384 ve SHA-512 hash'leri hesaplayın.",
+        "metaTitle": "Hash Oluşturucu — Ücretsiz Çevrimiçi SHA Hash Hesaplayıcı",
+        "metaDescription": "Metin ve dosyalar için SHA-1, SHA-256, SHA-384 ve SHA-512 hash'leri oluşturun. Web Crypto API kullanır. Ücretsiz çevrimiçi araç.",
+        "keywords": "hash oluşturucu, sha256, sha512, sha1, dosya hash, sağlama toplamı hesaplayıcı",
+        "textMode": "Metin",
+        "fileMode": "Dosya",
+        "inputPlaceholder": "Hash'lemek için metin girin...",
+        "compute": "Hash'leri Hesapla",
+        "computing": "Hesaplanıyor...",
+        "faq": {
+          "q1": "Hangi hash algoritmaları destekleniyor?",
+          "a1": "SHA-1, SHA-256, SHA-384 ve SHA-512, tarayıcının Web Crypto API'si kullanılarak eş zamanlı olarak hesaplanır.",
+          "q2": "Dosyaları hash'leyebilir miyim?",
+          "a2": "Evet, Dosya moduna geçin ve herhangi bir dosyayı sürükleyin. Hash, tarayıcınızda yerel olarak hesaplanır — dosya hiçbir yere yüklenmez."
+        }
+      },
+      "color-converter": {
+        "name": "Renk Dönüştürücü",
+        "description": "Renkleri HEX, RGB ve HSL formatları arasında canlı önizleme ile dönüştürün.",
+        "metaTitle": "Renk Dönüştürücü — Ücretsiz Çevrimiçi HEX/RGB/HSL Aracı",
+        "metaDescription": "Renkleri HEX, RGB ve HSL formatları arasında dönüştürün. Gerçek zamanlı renk önizlemesi. Ücretsiz çevrimiçi araç.",
+        "keywords": "renk dönüştürücü, hex rgb, rgb hsl, renk seçici, renk formatı",
+        "inputLabel": "Renk Değeri",
+        "inputPlaceholder": "#ff6600, rgb(255, 102, 0) veya hsl(24, 100%, 50%)",
+        "invalidColor": "Renk ayrıştırılamadı. HEX (#ff6600), RGB (rgb(255,102,0)) veya HSL (hsl(24,100%,50%)) deneyin.",
+        "preview": "Önizleme",
+        "values": "Ayrı Değerler",
+        "faq": {
+          "q1": "Hangi renk formatları destekleniyor?",
+          "a1": "Renkleri HEX (#ff6600 veya #f60), RGB (rgb(255, 102, 0)) veya HSL (hsl(24, 100%, 50%)) olarak girebilirsiniz. Diğer tüm formatlar otomatik olarak gösterilir.",
+          "q2": "Alfa/saydamlık destekleniyor mu?",
+          "a2": "Şu anda araç yalnızca opak renkleri desteklemektedir. RGBA ve HSLA desteği gelecek bir güncellemede eklenecektir."
+        }
+      },
+      "json-xml": {
+        "name": "JSON ↔ XML Dönüştürücü",
+        "description": "JSON ve XML formatları arasında dönüştürme yapın.",
+        "metaTitle": "JSON - XML / XML - JSON — Ücretsiz Çevrimiçi Dönüştürücü",
+        "metaDescription": "JSON'u XML'e veya XML'i JSON'a anında dönüştürün. Tarayıcınızda çalışan ücretsiz çevrimiçi araç.",
+        "keywords": "json xml, xml json, json xml dönüştürücü, veri formatı dönüştürücü",
+        "jsonLabel": "JSON",
+        "jsonPlaceholder": "JSON'u buraya yapıştırın...",
+        "xmlLabel": "XML",
+        "xmlPlaceholder": "XML'i buraya yapıştırın...",
+        "jsonToXml": "JSON → XML",
+        "xmlToJson": "XML → JSON",
+        "faq": {
+          "q1": "JSON, XML'e nasıl eşlenir?",
+          "a1": "Nesne anahtarları XML eleman adlarına dönüşür. Diziler aynı adla tekrarlanan elemanlar oluşturur. İlkel değerler metin içeriği olur.",
+          "q2": "XML nitelikleri korunuyor mu?",
+          "a2": "XML nitelikleri JSON çıktısında korunmaz. Yalnızca eleman adları ve metin içeriği dönüştürülür."
+        }
+      },
+      "markdown-preview": {
+        "name": "Markdown Önizleme",
+        "description": "Markdown yazın ve yan yana canlı HTML önizlemesi görün.",
+        "metaTitle": "Markdown Önizleme — Ücretsiz Çevrimiçi Markdown Düzenleyici",
+        "metaDescription": "Canlı HTML önizlemesi ile Markdown yazın. Geliştiriciler ve yazarlar için ücretsiz çevrimiçi araç.",
+        "keywords": "markdown önizleme, markdown düzenleyici, markdown html, markdown görüntüleyici",
+        "markdownLabel": "Markdown",
+        "markdownPlaceholder": "Markdown'u buraya yazın...\n\n# Başlık\n\n**Kalın** ve *italik* metin.",
+        "previewLabel": "Önizleme",
+        "copyHtml": "HTML Kopyala",
+        "faq": {
+          "q1": "Hangi Markdown özellikleri destekleniyor?",
+          "a1": "Başlıklar, kalın, italik, bağlantılar, görseller, kod blokları, satır içi kod, sırasız listeler, alıntılar ve yatay çizgiler.",
+          "q2": "HTML çıktısını kopyalayabilir miyim?",
+          "a2": "Evet, oluşturulan HTML'i panonuza kopyalamak için HTML Kopyala düğmesini kullanın."
+        }
+      },
+      "regex-tester": {
+        "name": "Regex Test Aracı",
+        "description": "Gerçek zamanlı eşleştirme ve vurgulama ile düzenli ifadeleri test edin.",
+        "metaTitle": "Regex Test Aracı — Ücretsiz Çevrimiçi Düzenli İfade Test Aracı",
+        "metaDescription": "Regex kalıplarını gerçek zamanlı eşleştirme, vurgulama ve eşleşme detaylarıyla test edin. Ücretsiz çevrimiçi araç.",
+        "keywords": "regex test, düzenli ifade, regex çevrimiçi, regex eşleştirici, kalıp test",
+        "patternLabel": "Kalıp",
+        "patternPlaceholder": "Regex kalıbı girin...",
+        "flagsLabel": "Bayraklar",
+        "testStringLabel": "Test Dizesi",
+        "testStringPlaceholder": "Test edilecek metin girin...",
+        "matchesLabel": "Eşleşmeler",
+        "matchDetails": "Eşleşme Detayları",
+        "noMatches": "Eşleşme bulunamadı",
+        "faq": {
+          "q1": "Hangi regex bayrakları destekleniyor?",
+          "a1": "Global (g), büyük/küçük harf duyarsız (i), çok satırlı (m) ve dotAll (s) bayrakları kullanılabilir.",
+          "q2": "Adlandırılmış yakalama grupları destekleniyor mu?",
+          "a2": "Evet, (?<ad>...) ile tanımlanan adlandırılmış gruplar eşleşme detaylarında gösterilir."
+        }
+      },
+      "timestamp": {
+        "name": "Unix Zaman Damgası Dönüştürücü",
+        "description": "Unix zaman damgaları ile okunabilir tarihler arasında dönüştürme yapın.",
+        "metaTitle": "Unix Zaman Damgası Dönüştürücü — Ücretsiz Çevrimiçi Epoch Dönüştürücü",
+        "metaDescription": "Unix zaman damgalarını tarihlere ve tarihleri zaman damgalarına dönüştürün. UTC, yerel saat, ISO 8601 ve göreli formatları gösterir.",
+        "keywords": "unix zaman damgası, epoch dönüştürücü, zaman damgası tarih, tarih zaman damgası, unix zamanı",
+        "timestampLabel": "Unix Zaman Damgası (saniye)",
+        "timestampPlaceholder": "ör. 1700000000",
+        "dateLabel": "Tarih ve Saat",
+        "now": "Şimdiki Zamana Ayarla",
+        "utcFormat": "UTC",
+        "localFormat": "Yerel Saat",
+        "isoFormat": "ISO 8601",
+        "relativeFormat": "Göreli",
+        "invalidTimestamp": "Geçersiz zaman damgası değeri.",
+        "invalidDate": "Geçersiz tarih değeri.",
+        "faq": {
+          "q1": "Unix zaman damgası nedir?",
+          "a1": "Unix zaman damgası, 1 Ocak 1970 00:00:00 UTC'den (Unix epoch) bu yana geçen saniye sayısıdır.",
+          "q2": "Milisaniye zaman damgalarını işleyebilir mi?",
+          "a2": "Evet. 10^12'den büyük bir sayı girerseniz, otomatik olarak saniye yerine milisaniye olarak işlenir."
+        }
+      },
+      "yaml-json": {
+        "name": "YAML ↔ JSON Dönüştürücü",
+        "description": "YAML ve JSON formatları arasında dönüştürme yapın.",
+        "metaTitle": "YAML - JSON / JSON - YAML — Ücretsiz Çevrimiçi Dönüştürücü",
+        "metaDescription": "YAML'ı JSON'a veya JSON'u YAML'a anında dönüştürün. Tarayıcınızda çalışan ücretsiz çevrimiçi araç.",
+        "keywords": "yaml json, json yaml, yaml json dönüştürücü, yaml ayrıştırıcı, veri formatı dönüştürücü",
+        "yamlLabel": "YAML",
+        "yamlPlaceholder": "YAML'ı buraya yapıştırın...\n\nname: example\nversion: 1.0\nitems:\n  - one\n  - two",
+        "jsonLabel": "JSON",
+        "jsonPlaceholder": "JSON'u buraya yapıştırın...",
+        "yamlToJson": "YAML → JSON",
+        "jsonToYaml": "JSON → YAML",
+        "faq": {
+          "q1": "Hangi YAML özellikleri destekleniyor?",
+          "a1": "İç içe nesneler, diziler, çok satırlı dizeler ve çapalar/takma adlar dahil tüm standart YAML özellikleri js-yaml kütüphanesi aracılığıyla desteklenir.",
+          "q2": "Dönüştürme sırasında yorumlar korunuyor mu?",
+          "a2": "Hayır. YAML yorumları ayrıştırma sırasında kaldırılır. JSON'dan YAML'a dönüştürme yapılırken çıktı, yorumsuz temiz YAML olur."
+        }
+      },
+      "text-diff": {
+        "name": "Metin Karşılaştırma",
+        "description": "İki metni karşılaştırın ve satır satır farkları görün.",
+        "metaTitle": "Metin Karşılaştırma — Ücretsiz Çevrimiçi Metin Fark Aracı",
+        "metaDescription": "İki metni yan yana karşılaştırın ve eklemeleri, silmeleri ve değişmemiş satırları görün. Ücretsiz çevrimiçi diff aracı.",
+        "keywords": "metin farkı, metin karşılaştırma, diff aracı, çevrimiçi metin karşılaştır, satır farkı",
+        "originalLabel": "Orijinal",
+        "originalPlaceholder": "Orijinal metni buraya yapıştırın...",
+        "modifiedLabel": "Değiştirilmiş",
+        "modifiedPlaceholder": "Değiştirilmiş metni buraya yapıştırın...",
+        "compare": "Karşılaştır",
+        "resultLabel": "Fark Sonucu",
+        "noDifferences": "Fark bulunamadı.",
+        "faq": {
+          "q1": "Hangi fark algoritması kullanılıyor?",
+          "a1": "Eklemeleri, silmeleri ve değişmemiş satırları belirleyen satır tabanlı En Uzun Ortak Alt Dizi (LCS) algoritması.",
+          "q2": "Fark çıktısını kopyalayabilir miyim?",
+          "a2": "Evet, eklemeler ve silmeler için + ve - önekleriyle birleştirilmiş diff formatını kopyalamak için kopyala düğmesini kullanın."
+        }
+      }
+    }
+  }
+}

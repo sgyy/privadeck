@@ -3,26 +3,36 @@
 import { useTranslations } from "next-intl";
 import { usePathname, Link } from "@/i18n/navigation";
 import { categories } from "@/lib/registry/categories";
-import { getToolsByCategory } from "@/lib/registry";
 import { cn } from "@/lib/utils/cn";
 import { X, Home, ChevronDown } from "lucide-react";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import type { ToolCategory } from "@/lib/registry/types";
+import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 
 interface MobileNavProps {
   open: boolean;
   onClose: () => void;
+  toolNavData: ToolNavItem[];
 }
 
-export function MobileNav({ open, onClose }: MobileNavProps) {
+export function MobileNav({ open, onClose, toolNavData }: MobileNavProps) {
   const tc = useTranslations("common");
   const tcat = useTranslations("categories");
   const tn = useTranslations("nav");
-  const tt = useTranslations("tools");
   const pathname = usePathname();
   const [expanded, setExpanded] = useState<ToolCategory | null>(null);
+
+  const toolsByCategory = useMemo(() => {
+    const map = new Map<string, ToolNavItem[]>();
+    for (const item of toolNavData) {
+      const arr = map.get(item.category) || [];
+      arr.push(item);
+      map.set(item.category, arr);
+    }
+    return map;
+  }, [toolNavData]);
 
   // Close on route change
   useEffect(() => {
@@ -82,7 +92,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
           {/* Categories */}
           <div className="mt-3 space-y-1">
             {categories.map((cat) => {
-              const tools = getToolsByCategory(cat.key);
+              const tools = toolsByCategory.get(cat.key) || [];
               const isExpanded = expanded === cat.key;
 
               return (
@@ -120,7 +130,7 @@ export function MobileNav({ open, onClose }: MobileNavProps) {
                                 : "text-muted-foreground hover:text-foreground hover:bg-muted",
                             )}
                           >
-                            {tt(`${cat.key}.${tool.slug}.name`)}
+                            {tool.name}
                           </Link>
                         );
                       })}

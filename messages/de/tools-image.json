@@ -1,0 +1,324 @@
+{
+  "tools": {
+    "image": {
+      "format-converter": {
+        "name": "Bildformat-Konverter",
+        "description": "Konvertieren Sie Bilder zwischen den Formaten WebP, PNG, JPG und ICO.",
+        "metaTitle": "Bildformat-Konverter - Kostenloser Online-WebP/PNG/JPG/ICO-Konverter",
+        "metaDescription": "Konvertieren Sie Bilder zwischen WebP, PNG, JPG und ICO. Kostenloses Online-Tool, kein Upload nötig. Ihre Bilder bleiben in Ihrem Browser.",
+        "keywords": "Bildkonverter, WebP zu PNG, PNG zu JPG, JPG zu WebP, ICO-Konverter, Bildformat",
+        "selectFormat": "Konvertieren zu",
+        "quality": "Qualität",
+        "convert": "Konvertieren",
+        "converting": "Wird konvertiert...",
+        "original": "Original",
+        "converted": "Konvertiert",
+        "fileSize": "Dateigröße",
+        "dimensions": "Abmessungen",
+        "supportedFormats": "Unterstützte Formate: WebP, PNG, JPG, ICO",
+        "faq": {
+          "q1": "Welche Bildformate werden unterstützt?",
+          "a1": "Sie können zwischen WebP, PNG, JPG (JPEG) und ICO konvertieren. Alle Konvertierungen erfolgen in Ihrem Browser mithilfe der Canvas API.",
+          "q2": "Werden meine Bilder auf einen Server hochgeladen?",
+          "a2": "Nein. Die gesamte Bildverarbeitung erfolgt lokal in Ihrem Browser. Ihre Bilder verlassen niemals Ihr Gerät.",
+          "q3": "Kann ich mehrere Bilder gleichzeitig konvertieren?",
+          "a3": "Ja, Sie können mehrere Bilder per Drag-and-Drop einfügen und alle werden in das ausgewählte Format konvertiert."
+        }
+      },
+      "compress": {
+        "name": "Bildkomprimierer",
+        "description": "Bilder komprimieren, um die Dateigröße bei gleichbleibender Qualität zu reduzieren.",
+        "metaTitle": "Bildkomprimierer - Kostenloses Online-Bildkomprimierungstool",
+        "metaDescription": "Bilder komprimieren, um die Dateigröße zu reduzieren. Unterstützt Stapelkomprimierung mit Qualitätskontrolle. Kostenloses Online-Tool.",
+        "keywords": "Bildkomprimierer, Bild komprimieren, Bildgröße reduzieren, Bildoptimierung",
+        "quality": "Qualität",
+        "maxSize": "Max. Größe",
+        "compress": "Komprimieren",
+        "compressing": "Wird komprimiert...",
+        "results": "Komprimierte Ergebnisse",
+        "maxResolution": "Max. Auflösung",
+        "faq": {
+          "q1": "Wie funktioniert die Bildkomprimierung?",
+          "a1": "Das Tool reduziert die Bilddateigröße durch verlustbehaftete Komprimierung. Sie können Qualität und maximale Größe steuern. Die gesamte Verarbeitung erfolgt in Ihrem Browser.",
+          "q2": "Welche Formate werden unterstützt?",
+          "a2": "Unterstützt werden JPEG, PNG, WebP, GIF und BMP zur Komprimierung."
+        }
+      },
+      "crop": {
+        "name": "Bild zuschneiden",
+        "description": "Bilder mit einem interaktiven Zuschneidewerkzeug präzise zuschneiden.",
+        "metaTitle": "Bild zuschneiden - Kostenloses Online-Zuschneidewerkzeug",
+        "metaDescription": "Bilder präzise zuschneiden. Seitenverhältnisse wählen oder frei zuschneiden. Kostenloses Online-Tool.",
+        "keywords": "Bild zuschneiden, Bild Zuschnitt online, Bildzuschnitt, Foto zuschneiden",
+        "aspectRatio": "Seitenverhältnis",
+        "free": "Frei",
+        "zoom": "Zoom",
+        "crop": "Zuschneiden",
+        "cropping": "Wird zugeschnitten...",
+        "reset": "Zurücksetzen",
+        "faq": {
+          "q1": "Kann ich ein bestimmtes Seitenverhältnis einstellen?",
+          "a1": "Ja, Sie können aus voreingestellten Verhältnissen (1:1, 4:3, 16:9, 3:2) wählen oder frei zuschneiden.",
+          "q2": "Wird das Originalbild verändert?",
+          "a2": "Nein, Ihr Originalbild wird niemals verändert. Ein neues zugeschnittenes Bild wird zum Download erstellt."
+        }
+      },
+      "resize": {
+        "name": "Bildgröße ändern",
+        "description": "Bilder auf beliebige Abmessungen mit Seitenverhältnis-Sperre skalieren.",
+        "metaTitle": "Bildgröße ändern - Kostenloser Online-Bildskalierer",
+        "metaDescription": "Bilder auf benutzerdefinierte Abmessungen skalieren. Seitenverhältnis sperren, Voreinstellungen für Social Media nutzen. Kostenloses Online-Tool.",
+        "keywords": "Bildgröße ändern, Bild skalieren online, Bildskalierer, Bildabmessungen ändern",
+        "width": "Breite",
+        "height": "Höhe",
+        "lock": "Seitenverhältnis sperren",
+        "unlock": "Seitenverhältnis entsperren",
+        "resize": "Skalieren",
+        "resizing": "Wird skaliert...",
+        "presets": "Größenvoreinstellungen",
+        "faq": {
+          "q1": "Kann ich das Seitenverhältnis beibehalten?",
+          "a1": "Ja, das Seitenverhältnis ist standardmäßig gesperrt. Klicken Sie auf das Verknüpfungssymbol, um es für freie Skalierung zu entsperren.",
+          "q2": "Welche Voreinstellungen sind verfügbar?",
+          "a2": "Gängige Voreinstellungen umfassen HD (1280×720), Full HD (1920×1080), 4K (3840×2160) und Social-Media-Größen."
+        }
+      },
+      "watermark": {
+        "name": "Wasserzeichen hinzufügen",
+        "description": "Text-Wasserzeichen mit anpassbarem Stil und Position zu Bildern hinzufügen.",
+        "metaTitle": "Wasserzeichen zu Bild hinzufügen - Kostenloses Online-Wasserzeichen-Tool",
+        "metaDescription": "Text-Wasserzeichen zu Ihren Bildern hinzufügen. Schriftart, Farbe, Deckkraft und Position anpassen. Kostenloses Online-Tool.",
+        "keywords": "Wasserzeichen hinzufügen, Bild-Wasserzeichen, Text-Wasserzeichen, Foto-Wasserzeichen",
+        "text": "Wasserzeichentext",
+        "position": "Position",
+        "center": "Mitte",
+        "top-left": "Oben links",
+        "top-right": "Oben rechts",
+        "bottom-left": "Unten links",
+        "bottom-right": "Unten rechts",
+        "tile": "Kachel (Wiederholen)",
+        "fontSize": "Schriftgröße",
+        "color": "Farbe",
+        "opacity": "Deckkraft",
+        "apply": "Wasserzeichen anwenden",
+        "applying": "Wird angewendet...",
+        "faq": {
+          "q1": "Kann ich Wasserzeichen über das gesamte Bild kacheln?",
+          "a1": "Ja, wählen Sie die Option Kachel (Wiederholen), um sich wiederholende Wasserzeichen schräg über das gesamte Bild hinzuzufügen.",
+          "q2": "Kann ich die Transparenz des Wasserzeichens anpassen?",
+          "a2": "Ja, verwenden Sie den Deckkraft-Regler, um die Transparenz von kaum sichtbar bis vollständig deckend einzustellen."
+        }
+      },
+      "remove-exif": {
+        "name": "EXIF-Daten entfernen",
+        "description": "EXIF-Metadaten aus Fotos entfernen, um Ihre Privatsphäre zu schützen.",
+        "metaTitle": "EXIF-Daten entfernen - Kostenloser Online-EXIF-Entferner",
+        "metaDescription": "EXIF-Metadaten aus Bildern entfernen zum Schutz der Privatsphäre. GPS-Standort, Kamerainfos und mehr entfernen. Kostenloses Online-Tool.",
+        "keywords": "EXIF entfernen, EXIF-Entferner, Metadaten entfernen, Foto-Privatsphäre",
+        "removeExif": "EXIF-Daten entfernen",
+        "processing": "Wird verarbeitet...",
+        "cleaned": "EXIF-Daten erfolgreich entfernt",
+        "faq": {
+          "q1": "Welche EXIF-Daten werden entfernt?",
+          "a1": "Alle Metadaten werden entfernt, einschließlich GPS-Standort, Kameramodell, Aufnahmedatum und andere eingebettete Informationen. Das Bild wird auf einer sauberen Leinwand neu gezeichnet.",
+          "q2": "Beeinflusst dies die Bildqualität?",
+          "a2": "Die Bildqualität bleibt bei 95% für JPEG erhalten. PNG-Bilder werden verlustfrei re-exportiert."
+        }
+      },
+      "flip": {
+        "name": "Bild spiegeln",
+        "description": "Bilder mit einem Klick horizontal oder vertikal spiegeln.",
+        "metaTitle": "Bild spiegeln - Kostenloser Online-Bildspiegel",
+        "metaDescription": "Bilder kostenlos online horizontal oder vertikal spiegeln. Kein Upload nötig, die gesamte Verarbeitung erfolgt in Ihrem Browser.",
+        "keywords": "Bild spiegeln, Spiegelbild, horizontal spiegeln, vertikal spiegeln",
+        "horizontal": "Horizontal",
+        "vertical": "Vertikal",
+        "flipImage": "Bild spiegeln",
+        "processing": "Wird verarbeitet...",
+        "faq": {
+          "q1": "Was ist der Unterschied zwischen horizontalem und vertikalem Spiegeln?",
+          "a1": "Horizontales Spiegeln spiegelt das Bild von links nach rechts, wie ein Spiegel. Vertikales Spiegeln spiegelt das Bild von oben nach unten.",
+          "q2": "Verringert das Spiegeln die Bildqualität?",
+          "a2": "Nein. Das Bild wird in seiner Originalauflösung neu gezeichnet. JPEG-Bilder werden mit 92% Qualität neu kodiert."
+        }
+      },
+      "grayscale": {
+        "name": "Graustufenbild",
+        "description": "Beliebiges Bild in Graustufen (Schwarz-Weiß) konvertieren.",
+        "metaTitle": "Graustufenbild - Kostenloser Online-Schwarz-Weiß-Konverter",
+        "metaDescription": "Farbbilder kostenlos online in Graustufen konvertieren. Kein Upload nötig, die gesamte Verarbeitung erfolgt in Ihrem Browser.",
+        "keywords": "Graustufen, Schwarz-Weiß, entsättigen, Bildkonverter",
+        "convert": "In Graustufen konvertieren",
+        "processing": "Wird verarbeitet...",
+        "faq": {
+          "q1": "Wie funktioniert die Graustufenkonvertierung?",
+          "a1": "Das Tool konvertiert jeden Pixel in einen Grauton mittels einer Standard-Luminanzformel (0,299R + 0,587G + 0,114B) und bewahrt die wahrgenommene Helligkeit.",
+          "q2": "Kann ich die Intensität des Graustufeneffekts anpassen?",
+          "a2": "Dieses Tool wendet eine vollständige Graustufenkonvertierung an. Für partielle Entsättigung verwenden Sie einen dedizierten Bildeditor."
+        }
+      },
+      "pixelate": {
+        "name": "Bild verpixeln",
+        "description": "Einen Verpixelungseffekt auf beliebige Bilder mit einstellbarer Pixelgröße anwenden.",
+        "metaTitle": "Bild verpixeln - Kostenloses Online-Verpixelungstool",
+        "metaDescription": "Bilder online verpixeln mit einstellbarer Blockgröße. Ideal zum Zensieren oder für Retro-Effekte. Kostenloses Browser-Tool.",
+        "keywords": "Bild verpixeln, Mosaikeffekt, Bild zensieren, Pixel-Art",
+        "pixelSize": "Pixelgröße",
+        "pixelate": "Bild verpixeln",
+        "processing": "Wird verarbeitet...",
+        "faq": {
+          "q1": "Wofür kann ich Verpixelung verwenden?",
+          "a1": "Verpixelung wird häufig verwendet, um sensible Informationen in Screenshots zu zensieren, Retro-Pixel-Art-Effekte zu erzeugen oder Gesichter in Fotos zu anonymisieren.",
+          "q2": "Kann ich den Grad der Verpixelung steuern?",
+          "a2": "Ja. Verwenden Sie den Pixelgröße-Regler, um von 2px (dezent) bis 50px (starke Verpixelung) einzustellen."
+        }
+      },
+      "add-border": {
+        "name": "Rahmen hinzufügen",
+        "description": "Einen anpassbaren Rahmen um jedes Bild hinzufügen.",
+        "metaTitle": "Rahmen zu Bild hinzufügen - Kostenloses Online-Rahmen-Tool",
+        "metaDescription": "Rahmen mit benutzerdefinierter Breite und Farbe zu Bildern hinzufügen. Kostenloses Online-Tool, kein Upload nötig.",
+        "keywords": "Rahmen hinzufügen, Bildrahmen, Fotorahmen, Rahmen erstellen",
+        "borderWidth": "Rahmenbreite",
+        "borderColor": "Rahmenfarbe",
+        "addBorder": "Rahmen hinzufügen",
+        "processing": "Wird verarbeitet...",
+        "faq": {
+          "q1": "Welche Rahmenoptionen sind verfügbar?",
+          "a1": "Sie können die Rahmenbreite von 1 bis 100 Pixel anpassen und eine beliebige Farbe mit dem Farbwähler auswählen.",
+          "q2": "Welches Format hat die Ausgabe?",
+          "a2": "Die Ausgabe ist immer PNG, damit die Rahmenfarbe exakt wie gewählt erhalten bleibt."
+        }
+      },
+      "circle-crop": {
+        "name": "Kreiszuschnitt",
+        "description": "Jedes Bild zu einem perfekten Kreis mit transparentem Hintergrund zuschneiden.",
+        "metaTitle": "Kreiszuschnitt - Kostenloser Online-Kreiszuschneider",
+        "metaDescription": "Bilder zu einem Kreis mit transparentem Hintergrund zuschneiden. Perfekt für Profilbilder und Avatare. Kostenloses Online-Tool.",
+        "keywords": "Kreiszuschnitt, rundes Bild, Avatar zuschneiden, Profilbild",
+        "cropCircle": "Zum Kreis zuschneiden",
+        "processing": "Wird verarbeitet...",
+        "faq": {
+          "q1": "Wie funktioniert der Kreiszuschnitt?",
+          "a1": "Das Tool nimmt die Mitte Ihres Bildes, verwendet die kürzeste Seite als Durchmesser und schneidet es zu einem perfekten Kreis zu. Der Hintergrund ist transparent.",
+          "q2": "Welches Format hat die Ausgabe?",
+          "a2": "Die Ausgabe ist immer PNG, da es Transparenz unterstützt, die für den Kreiszuschnitt benötigt wird."
+        }
+      },
+      "svg-to-png": {
+        "name": "SVG zu PNG",
+        "description": "SVG-Vektorgrafiken in PNG-Rasterbilder in beliebiger Skalierung konvertieren.",
+        "metaTitle": "SVG zu PNG - Kostenloser Online-SVG-Konverter",
+        "metaDescription": "SVG-Dateien in PNG-Bilder mit benutzerdefiniertem Skalierungsfaktor konvertieren. Kostenloses Browser-Tool, kein Upload nötig.",
+        "keywords": "SVG zu PNG, SVG-Konverter, Vektor zu Raster, SVG-Export",
+        "scaleFactor": "Skalierungsfaktor",
+        "convert": "In PNG konvertieren",
+        "processing": "Wird verarbeitet...",
+        "faq": {
+          "q1": "Welche Skalierungsfaktoren sind verfügbar?",
+          "a1": "Sie können 1x (Originalgröße), 2x, 3x oder 4x wählen. Höhere Skalierungen erzeugen größere, detailliertere PNG-Dateien für hochauflösende Displays.",
+          "q2": "Werden alle SVG-Funktionen unterstützt?",
+          "a2": "Das Tool rendert SVGs mit der eingebauten SVG-Engine des Browsers. Die meisten Standard-SVG-Funktionen werden unterstützt, aber externe Ressourcen oder Schriftarten werden möglicherweise nicht korrekt dargestellt."
+        }
+      },
+      "add-text": {
+        "name": "Text zu Bild hinzufügen",
+        "description": "Text auf Bilder mit anpassbarer Schriftgröße, Farbe und Position überlagern.",
+        "metaTitle": "Text zu Bild hinzufügen - Kostenloses Online-Textüberlagerungstool",
+        "metaDescription": "Text zu Bildern mit benutzerdefinierter Schriftart, Farbe, Größe und Position hinzufügen. Kostenloses Online-Tool.",
+        "keywords": "Text zu Bild hinzufügen, Textüberlagerung, Bildtext, Fototext",
+        "text": "Text",
+        "textPlaceholder": "Text zum Hinzufügen eingeben...",
+        "position": "Position",
+        "positions": {
+          "center": "Mitte",
+          "top-left": "Oben links",
+          "top-right": "Oben rechts",
+          "bottom-left": "Unten links",
+          "bottom-right": "Unten rechts"
+        },
+        "fontSize": "Schriftgröße",
+        "color": "Farbe",
+        "apply": "Text hinzufügen",
+        "processing": "Wird verarbeitet...",
+        "faq": {
+          "q1": "Kann ich wählen, wo der Text erscheint?",
+          "a1": "Ja, wählen Sie aus fünf Positionen: Mitte, oben links, oben rechts, unten links oder unten rechts.",
+          "q2": "Welche Schriftarten sind verfügbar?",
+          "a2": "Das Tool verwendet die Standard-Sans-Serif-Schriftart des Browsers, die je nach System variiert, aber immer sauber und lesbar ist."
+        }
+      },
+      "combine": {
+        "name": "Bilder kombinieren",
+        "description": "Mehrere Bilder nebeneinander oder vertikal gestapelt zusammenfügen.",
+        "metaTitle": "Bilder kombinieren - Kostenloser Online-Bildzusammenfüger",
+        "metaDescription": "Mehrere Bilder horizontal oder vertikal zusammenfügen. Kostenloses Online-Tool, kein Upload nötig.",
+        "keywords": "Bilder kombinieren, Bilder zusammenfügen, Bilder verbinden, Bildcollage, nebeneinander",
+        "horizontal": "Horizontal",
+        "vertical": "Vertikal",
+        "combine": "Bilder kombinieren",
+        "processing": "Wird verarbeitet...",
+        "faq": {
+          "q1": "Welche Layoutoptionen sind verfügbar?",
+          "a1": "Sie können Bilder horizontal (nebeneinander) oder vertikal (übereinander gestapelt) kombinieren.",
+          "q2": "Müssen die Bilder die gleiche Größe haben?",
+          "a2": "Nein, Bilder unterschiedlicher Größe werden in ihren Originalabmessungen kombiniert. Die Leinwand wird erweitert, um alle Bilder aufzunehmen."
+        }
+      },
+      "split": {
+        "name": "Bild teilen",
+        "description": "Ein Bild in ein Raster gleich großer Teile aufteilen.",
+        "metaTitle": "Bild teilen - Kostenloser Online-Bildteiler",
+        "metaDescription": "Bilder in ein Raster gleicher Teile aufteilen. Einzeln oder als ZIP herunterladen. Kostenloses Online-Tool.",
+        "keywords": "Bild teilen, Bildteiler, Bild aufteilen, Raster teilen, Bildschneider",
+        "rows": "Zeilen",
+        "columns": "Spalten",
+        "split": "Bild teilen",
+        "processing": "Wird verarbeitet...",
+        "downloadAll": "Alle herunterladen (ZIP)",
+        "faq": {
+          "q1": "Wie funktioniert das Bildteilen?",
+          "a1": "Wählen Sie die Anzahl der Zeilen und Spalten. Das Bild wird basierend auf dem angegebenen Raster in gleich große Teile aufgeteilt.",
+          "q2": "Kann ich alle Teile auf einmal herunterladen?",
+          "a2": "Ja, verwenden Sie die Schaltfläche Alle herunterladen (ZIP), um alle Teile in einer einzigen ZIP-Datei zu erhalten."
+        }
+      },
+      "heic-convert": {
+        "name": "HEIC-Konverter",
+        "description": "HEIC/HEIF-Bilder in JPG- oder PNG-Format konvertieren.",
+        "metaTitle": "HEIC zu JPG/PNG Konverter - Kostenloser Online-HEIC-Konverter",
+        "metaDescription": "HEIC- und HEIF-Bilder in JPG- oder PNG-Format konvertieren. Kostenloses Online-Tool, kein Upload nötig. Funktioniert in Ihrem Browser.",
+        "keywords": "HEIC zu JPG, HEIC zu PNG, HEIF-Konverter, iPhone-Foto-Konverter, HEIC-Konverter online",
+        "selectedFile": "Ausgewählte Datei",
+        "outputFormat": "Ausgabeformat",
+        "quality": "Qualität",
+        "convert": "Konvertieren",
+        "processing": "Wird konvertiert...",
+        "faq": {
+          "q1": "Was ist eine HEIC-Datei?",
+          "a1": "HEIC (High Efficiency Image Container) ist das Standard-Bildformat von Apple-Geräten. Es bietet bessere Komprimierung als JPEG bei gleichbleibender Qualität.",
+          "q2": "Wird mein Bild auf einen Server hochgeladen?",
+          "a2": "Nein. Die gesamte Konvertierung erfolgt lokal in Ihrem Browser. Ihre Dateien verlassen niemals Ihr Gerät."
+        }
+      },
+      "collage": {
+        "name": "Bildcollage",
+        "description": "Fotocollagen mit voreingestellten Rasterlayouts erstellen.",
+        "metaTitle": "Bildcollage-Ersteller - Kostenlose Online-Fotocollage",
+        "metaDescription": "Fotocollagen mit anpassbaren Rasterlayouts, Abstand und Hintergrundfarbe erstellen. Kostenloses Online-Tool, kein Upload nötig.",
+        "keywords": "Bildcollage, Fotocollage, Fotoraster, Collage-Ersteller, Bildraster-Layout",
+        "layout": "Layout",
+        "gap": "Abstand",
+        "bgColor": "Hintergrundfarbe",
+        "create": "Collage erstellen",
+        "processing": "Wird erstellt...",
+        "faq": {
+          "q1": "Welche Layouts sind verfügbar?",
+          "a1": "Verfügbare Layouts hängen von der Anzahl der hochgeladenen Bilder ab. Optionen umfassen 2x1, 1x2, 2x2, 3x1, 1x3 und 2x3 Raster.",
+          "q2": "Kann ich Abstand und Hintergrund anpassen?",
+          "a2": "Ja, Sie können den Abstand zwischen Bildern (0-20px) anpassen und eine beliebige Hintergrundfarbe mit dem Farbwähler auswählen."
+        }
+      }
+    }
+  }
+}

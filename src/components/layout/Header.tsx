@@ -1,24 +1,36 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useState, useRef, useEffect, useCallback } from "react";
-import { Menu, Search, Wrench, ChevronDown } from "lucide-react";
+import { useState, useRef, useEffect, useCallback, useMemo } from "react";
+import { Menu, Search, Wrench, ChevronDown, Share2 } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
+import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { categories } from "@/lib/registry/categories";
-import { getFeaturedTools, getNonFeaturedTools } from "@/lib/registry";
 import type { ToolCategory } from "@/lib/registry/types";
 import { cn } from "@/lib/utils/cn";
+import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 
 interface HeaderProps {
   onMenuClick: () => void;
   onSearchClick: () => void;
+  toolNavData: ToolNavItem[];
 }
 
-export function Header({ onMenuClick, onSearchClick }: HeaderProps) {
+export function Header({ onMenuClick, onSearchClick, toolNavData }: HeaderProps) {
   const t = useTranslations("common");
   const [activeMenu, setActiveMenu] = useState<ToolCategory | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout>>(null);
   const pathname = usePathname();
+
+  const toolsByCategory = useMemo(() => {
+    const map = new Map<string, ToolNavItem[]>();
+    for (const item of toolNavData) {
+      const arr = map.get(item.category) || [];
+      arr.push(item);
+      map.set(item.category, arr);
+    }
+    return map;
+  }, [toolNavData]);
 
   // Close menu on route change
   // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -65,6 +77,7 @@ export function Header({ onMenuClick, onSearchClick }: HeaderProps) {
             <CategoryDropdown
               key={cat.key}
               category={cat.key}
+              tools={toolsByCategory.get(cat.key) || []}
               isOpen={activeMenu === cat.key}
               onOpen={() => openMenu(cat.key)}
               onClose={scheduleClose}
@@ -86,6 +99,12 @@ export function Header({ onMenuClick, onSearchClick }: HeaderProps) {
           </kbd>
         </button>
 
+        {/* Theme toggle */}
+        <ThemeToggle />
+
+        {/* Share button */}
+        <ShareButton />
+
       </div>
     </header>
   );
@@ -93,23 +112,24 @@ export function Header({ onMenuClick, onSearchClick }: HeaderProps) {
 
 function CategoryDropdown({
   category,
+  tools,
   isOpen,
   onOpen,
   onClose,
   onCancelClose,
 }: {
   category: ToolCategory;
+  tools: ToolNavItem[];
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
   onCancelClose: () => void;
 }) {
   const tc = useTranslations("categories");
-  const tt = useTranslations("tools");
   const tNav = useTranslations("nav");
 
-  const featured = getFeaturedTools(category);
-  const others = getNonFeaturedTools(category);
+  const featured = tools.filter((t) => t.featured);
+  const others = tools.filter((t) => !t.featured);
 
   return (
     <div
@@ -124,7 +144,7 @@ function CategoryDropdown({
           isOpen ? "bg-muted text-foreground" : "text-muted-foreground",
         )}
       >
-        {tc(`${category}.name`)}
+        {tNav(category)}
         <ChevronDown
           className={cn(
             "h-3.5 w-3.5 transition-transform",
@@ -159,10 +179,10 @@ function CategoryDropdown({
                         </div>
                         <div className="min-w-0">
                           <div className="text-sm font-medium">
-                            {tt(`${category}.${tool.slug}.name`)}
+                            {tool.name}
                           </div>
                           <div className="text-xs text-muted-foreground line-clamp-1 mt-0.5">
-                            {tt(`${category}.${tool.slug}.description`)}
+                            {tool.description}
                           </div>
                         </div>
                       </Link>
@@ -184,7 +204,7 @@ function CategoryDropdown({
                         href={`/tools/${category}/${tool.slug}`}
                         className="whitespace-nowrap rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-muted hover:text-foreground text-card-foreground"
                       >
-                        {tt(`${category}.${tool.slug}.name`)}
+                        {tool.name}
                       </Link>
                     ))}
                   </div>
@@ -215,9 +235,37 @@ function CategoryDropdown({
   );
 }
 
+function ShareButton() {
+  const t = useTranslations("common");
+
+  const handleShare = useCallback(async () => {
+    const url = window.location.href;
+    const title = document.title;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, url });
+      } catch {
+        // User cancelled or share failed — ignore
+      }
+    } else {
+      await navigator.clipboard.writeText(url);
+    }
+  }, []);
+
+  return (
+    <button
+      type="button"
+      onClick={handleShare}
+      className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+      aria-label={t("share")}
+    >
+      <Share2 className="h-5 w-5" />
+    </button>
+  );
+}
+
 function ToolIcon({ name }: { name: string }) {
-  // Dynamic Lucide icon - we use a simple mapping for the icons we use
-  // This avoids importing all Lucide icons
   const icons: Record<string, string> = {
     Type: "T",
     CaseSensitive: "Aa",

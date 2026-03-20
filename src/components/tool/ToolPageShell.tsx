@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import type { ToolDefinition } from "@/lib/registry/types";
 import { Shield } from "lucide-react";
+import { ToolHowItWorks } from "./ToolHowItWorks";
 
 interface ToolPageShellProps {
   tool: ToolDefinition;
@@ -21,6 +22,8 @@ export function ToolPageShell({ tool, children }: ToolPageShellProps) {
         </h1>
         <p className="mt-2 text-muted-foreground">{t("description")}</p>
       </div>
+
+      <ToolHowItWorks category={tool.category} />
 
       <div className="rounded-xl border border-border bg-card p-4 sm:p-6">
         {children}

@@ -1,0 +1,324 @@
+{
+  "tools": {
+    "image": {
+      "format-converter": {
+        "name": "Convertisseur de format d'image",
+        "description": "Convertissez des images entre les formats WebP, PNG, JPG et ICO.",
+        "metaTitle": "Convertisseur de format d'image - Convertisseur WebP/PNG/JPG/ICO gratuit en ligne",
+        "metaDescription": "Convertissez des images entre les formats WebP, PNG, JPG et ICO. Outil en ligne gratuit, aucun téléchargement nécessaire. Vos images restent dans votre navigateur.",
+        "keywords": "convertisseur d'images, webp en png, png en jpg, jpg en webp, convertisseur ico, format d'image",
+        "selectFormat": "Convertir en",
+        "quality": "Qualité",
+        "convert": "Convertir",
+        "converting": "Conversion...",
+        "original": "Original",
+        "converted": "Converti",
+        "fileSize": "Taille du fichier",
+        "dimensions": "Dimensions",
+        "supportedFormats": "Formats pris en charge : WebP, PNG, JPG, ICO",
+        "faq": {
+          "q1": "Quels formats d'image sont pris en charge ?",
+          "a1": "Vous pouvez convertir entre les formats WebP, PNG, JPG (JPEG) et ICO. Toutes les conversions se font dans votre navigateur grâce à la Canvas API.",
+          "q2": "Mes images sont-elles téléchargées sur un serveur ?",
+          "a2": "Non. Tout le traitement d'images se fait localement dans votre navigateur. Vos images ne quittent jamais votre appareil.",
+          "q3": "Puis-je convertir plusieurs images à la fois ?",
+          "a3": "Oui, vous pouvez glisser-déposer plusieurs images et elles seront toutes converties dans le format sélectionné."
+        }
+      },
+      "compress": {
+        "name": "Compresseur d'images",
+        "description": "Compresser les images pour réduire la taille du fichier tout en maintenant la qualité.",
+        "metaTitle": "Compresseur d'images - Outil gratuit de compression en ligne",
+        "metaDescription": "Compresser les images pour réduire la taille du fichier. Prend en charge la compression par lots avec contrôle de qualité. Outil gratuit en ligne.",
+        "keywords": "compresseur d'images, compresser image, réduire taille image, optimisation d'image",
+        "quality": "Qualité",
+        "maxSize": "Taille max.",
+        "compress": "Compresser",
+        "compressing": "Compression en cours...",
+        "results": "Résultats compressés",
+        "maxResolution": "Résolution max.",
+        "faq": {
+          "q1": "Comment fonctionne la compression d'images ?",
+          "a1": "L'outil réduit la taille du fichier par compression avec perte. Vous pouvez contrôler la qualité et la taille maximale. Tout le traitement se fait dans votre navigateur.",
+          "q2": "Quels formats sont pris en charge ?",
+          "a2": "Les images JPEG, PNG, WebP, GIF et BMP sont prises en charge pour la compression."
+        }
+      },
+      "crop": {
+        "name": "Recadrer l'image",
+        "description": "Recadrer les images avec précision à l'aide d'un outil de recadrage interactif.",
+        "metaTitle": "Recadrer l'image - Outil gratuit de recadrage en ligne",
+        "metaDescription": "Recadrer les images avec précision. Choisir des rapports d'aspect ou recadrer librement. Outil gratuit en ligne.",
+        "keywords": "recadrer image, recadrage d'image en ligne, outil de recadrage, recadrer photo",
+        "aspectRatio": "Rapport d'aspect",
+        "free": "Libre",
+        "zoom": "Zoom",
+        "crop": "Recadrer",
+        "cropping": "Recadrage en cours...",
+        "reset": "Réinitialiser",
+        "faq": {
+          "q1": "Puis-je définir un rapport d'aspect spécifique ?",
+          "a1": "Oui, vous pouvez choisir parmi des rapports prédéfinis (1:1, 4:3, 16:9, 3:2) ou recadrer librement.",
+          "q2": "L'image originale est-elle modifiée ?",
+          "a2": "Non, votre image originale n'est jamais modifiée. Une nouvelle image recadrée est créée pour le téléchargement."
+        }
+      },
+      "resize": {
+        "name": "Redimensionner l'image",
+        "description": "Redimensionner les images à n'importe quelle dimension avec verrouillage du rapport d'aspect.",
+        "metaTitle": "Redimensionner l'image - Outil gratuit en ligne",
+        "metaDescription": "Redimensionner les images à des dimensions personnalisées. Verrouiller le rapport d'aspect, utiliser des préréglages pour les réseaux sociaux. Outil gratuit en ligne.",
+        "keywords": "redimensionner image, changer taille image en ligne, redimensionneur d'images, modifier dimensions image",
+        "width": "Largeur",
+        "height": "Hauteur",
+        "lock": "Verrouiller le rapport d'aspect",
+        "unlock": "Déverrouiller le rapport d'aspect",
+        "resize": "Redimensionner",
+        "resizing": "Redimensionnement en cours...",
+        "presets": "Tailles prédéfinies",
+        "faq": {
+          "q1": "Puis-je maintenir le rapport d'aspect ?",
+          "a1": "Oui, le rapport d'aspect est verrouillé par défaut. Cliquez sur l'icône de lien pour le déverrouiller et redimensionner librement.",
+          "q2": "Quels préréglages sont disponibles ?",
+          "a2": "Les préréglages courants incluent HD (1280x720), Full HD (1920x1080), 4K (3840x2160) et les tailles pour les réseaux sociaux."
+        }
+      },
+      "watermark": {
+        "name": "Ajouter un filigrane",
+        "description": "Ajouter des filigranes textuels aux images avec style et position personnalisables.",
+        "metaTitle": "Ajouter un filigrane à l'image - Outil gratuit en ligne",
+        "metaDescription": "Ajouter des filigranes textuels à vos images. Personnaliser la police, la couleur, l'opacité et la position. Outil gratuit en ligne.",
+        "keywords": "ajouter filigrane, filigrane image, filigrane texte, filigrane photo",
+        "text": "Texte du filigrane",
+        "position": "Position",
+        "center": "Centre",
+        "top-left": "En haut à gauche",
+        "top-right": "En haut à droite",
+        "bottom-left": "En bas à gauche",
+        "bottom-right": "En bas à droite",
+        "tile": "Mosaïque (Répéter)",
+        "fontSize": "Taille de police",
+        "color": "Couleur",
+        "opacity": "Opacité",
+        "apply": "Appliquer le filigrane",
+        "applying": "Application en cours...",
+        "faq": {
+          "q1": "Puis-je répéter le filigrane sur toute l'image ?",
+          "a1": "Oui, sélectionnez l'option Mosaïque (Répéter) pour ajouter des filigranes répétés en diagonale sur toute l'image.",
+          "q2": "Puis-je ajuster la transparence du filigrane ?",
+          "a2": "Oui, utilisez le curseur d'opacité pour contrôler la transparence de à peine visible à entièrement opaque."
+        }
+      },
+      "remove-exif": {
+        "name": "Supprimer les données EXIF",
+        "description": "Supprimer les métadonnées EXIF des photos pour protéger votre vie privée.",
+        "metaTitle": "Supprimer les données EXIF - Outil gratuit en ligne",
+        "metaDescription": "Supprimer les métadonnées EXIF des images pour protéger la vie privée. Supprimer la localisation GPS, les infos de l'appareil photo et plus. Outil gratuit en ligne.",
+        "keywords": "supprimer EXIF, suppresseur EXIF, supprimer métadonnées, vie privée photo",
+        "removeExif": "Supprimer les données EXIF",
+        "processing": "Traitement en cours...",
+        "cleaned": "Données EXIF supprimées avec succès",
+        "faq": {
+          "q1": "Quelles données EXIF sont supprimées ?",
+          "a1": "Toutes les métadonnées sont supprimées, y compris la localisation GPS, le modèle d'appareil photo, la date de prise de vue et autres informations intégrées. L'image est redessinée sur un canevas vierge.",
+          "q2": "Cela affecte-t-il la qualité de l'image ?",
+          "a2": "La qualité de l'image est préservée à 95% pour les JPEG. Les images PNG sont réexportées sans perte."
+        }
+      },
+      "flip": {
+        "name": "Retourner l'image",
+        "description": "Retourner les images horizontalement ou verticalement en un clic.",
+        "metaTitle": "Retourner l'image - Outil gratuit en ligne",
+        "metaDescription": "Retourner les images horizontalement ou verticalement en ligne gratuitement. Pas d'envoi nécessaire, tout le traitement se fait dans votre navigateur.",
+        "keywords": "retourner image, image miroir, retournement horizontal, retournement vertical",
+        "horizontal": "Horizontal",
+        "vertical": "Vertical",
+        "flipImage": "Retourner l'image",
+        "processing": "Traitement en cours...",
+        "faq": {
+          "q1": "Quelle est la différence entre retournement horizontal et vertical ?",
+          "a1": "Le retournement horizontal reflète l'image de gauche à droite, comme un miroir. Le retournement vertical reflète l'image de haut en bas.",
+          "q2": "Le retournement réduit-il la qualité de l'image ?",
+          "a2": "Non. L'image est redessinée à sa résolution originale. Les images JPEG sont réencodées à 92% de qualité."
+        }
+      },
+      "grayscale": {
+        "name": "Image en niveaux de gris",
+        "description": "Convertir n'importe quelle image en niveaux de gris (noir et blanc).",
+        "metaTitle": "Image en niveaux de gris - Convertisseur N&B gratuit en ligne",
+        "metaDescription": "Convertir les images couleur en niveaux de gris en ligne gratuitement. Pas d'envoi nécessaire, tout le traitement se fait dans votre navigateur.",
+        "keywords": "niveaux de gris, noir et blanc, désaturer, convertisseur d'image",
+        "convert": "Convertir en niveaux de gris",
+        "processing": "Traitement en cours...",
+        "faq": {
+          "q1": "Comment fonctionne la conversion en niveaux de gris ?",
+          "a1": "L'outil convertit chaque pixel en nuance de gris à l'aide d'une formule de luminance standard (0,299R + 0,587V + 0,114B), préservant la luminosité perçue.",
+          "q2": "Puis-je ajuster l'intensité de l'effet niveaux de gris ?",
+          "a2": "Cet outil applique une conversion complète en niveaux de gris. Pour une désaturation partielle, envisagez d'utiliser un éditeur photo dédié."
+        }
+      },
+      "pixelate": {
+        "name": "Pixeliser l'image",
+        "description": "Appliquer un effet de pixelisation à n'importe quelle image avec taille de pixel ajustable.",
+        "metaTitle": "Pixeliser l'image - Outil gratuit de pixelisation en ligne",
+        "metaDescription": "Pixeliser les images en ligne avec taille de bloc ajustable. Idéal pour censurer ou créer des effets rétro. Outil gratuit en ligne.",
+        "keywords": "pixeliser image, effet mosaïque, censurer image, pixel art",
+        "pixelSize": "Taille du pixel",
+        "pixelate": "Pixeliser l'image",
+        "processing": "Traitement en cours...",
+        "faq": {
+          "q1": "À quoi peut servir la pixelisation ?",
+          "a1": "La pixelisation est couramment utilisée pour censurer des informations sensibles dans les captures d'écran, créer des effets rétro pixel art ou anonymiser des visages dans les photos.",
+          "q2": "Puis-je contrôler le niveau de pixelisation ?",
+          "a2": "Oui. Utilisez le curseur de taille de pixel pour ajuster de 2px (subtil) à 50px (forte pixelisation)."
+        }
+      },
+      "add-border": {
+        "name": "Ajouter une bordure",
+        "description": "Ajouter une bordure personnalisable autour de n'importe quelle image.",
+        "metaTitle": "Ajouter une bordure à l'image - Outil gratuit en ligne",
+        "metaDescription": "Ajouter des bordures aux images avec largeur et couleur personnalisées. Outil gratuit en ligne, pas d'envoi nécessaire.",
+        "keywords": "ajouter bordure, bordure image, cadre photo, créateur de bordure",
+        "borderWidth": "Largeur de bordure",
+        "borderColor": "Couleur de bordure",
+        "addBorder": "Ajouter une bordure",
+        "processing": "Traitement en cours...",
+        "faq": {
+          "q1": "Quelles options de bordure sont disponibles ?",
+          "a1": "Vous pouvez personnaliser la largeur de la bordure de 1 à 100 pixels et choisir n'importe quelle couleur avec le sélecteur de couleur.",
+          "q2": "Quel format a la sortie ?",
+          "a2": "La sortie est toujours en PNG pour garantir que la couleur de la bordure soit préservée exactement comme choisie."
+        }
+      },
+      "circle-crop": {
+        "name": "Recadrage circulaire",
+        "description": "Recadrer n'importe quelle image en un cercle parfait avec fond transparent.",
+        "metaTitle": "Recadrage circulaire - Outil gratuit en ligne",
+        "metaDescription": "Recadrer les images en cercle avec fond transparent. Parfait pour les photos de profil et avatars. Outil gratuit en ligne.",
+        "keywords": "recadrage circulaire, image ronde, recadrage avatar, photo de profil",
+        "cropCircle": "Recadrer en cercle",
+        "processing": "Traitement en cours...",
+        "faq": {
+          "q1": "Comment fonctionne le recadrage circulaire ?",
+          "a1": "L'outil prend le centre de votre image, utilise la dimension la plus courte comme diamètre et la découpe en un cercle parfait. Le fond est transparent.",
+          "q2": "Quel format a la sortie ?",
+          "a2": "La sortie est toujours en PNG car il prend en charge la transparence, nécessaire pour le recadrage circulaire."
+        }
+      },
+      "svg-to-png": {
+        "name": "SVG vers PNG",
+        "description": "Convertir les graphiques vectoriels SVG en images raster PNG à n'importe quelle échelle.",
+        "metaTitle": "SVG vers PNG - Convertisseur SVG gratuit en ligne",
+        "metaDescription": "Convertir les fichiers SVG en images PNG avec facteur d'échelle personnalisé. Outil gratuit en ligne, pas d'envoi nécessaire.",
+        "keywords": "SVG vers PNG, convertisseur SVG, vecteur vers raster, export SVG",
+        "scaleFactor": "Facteur d'échelle",
+        "convert": "Convertir en PNG",
+        "processing": "Traitement en cours...",
+        "faq": {
+          "q1": "Quels facteurs d'échelle sont disponibles ?",
+          "a1": "Vous pouvez choisir 1x (taille originale), 2x, 3x ou 4x. Les échelles supérieures produisent des fichiers PNG plus grands et détaillés pour les écrans haute résolution.",
+          "q2": "Toutes les fonctionnalités SVG sont-elles prises en charge ?",
+          "a2": "L'outil rend les SVG avec le moteur SVG intégré du navigateur. La plupart des fonctionnalités SVG standard sont prises en charge, mais les ressources externes ou polices pourraient ne pas s'afficher correctement."
+        }
+      },
+      "add-text": {
+        "name": "Ajouter du texte à l'image",
+        "description": "Superposer du texte sur les images avec taille de police, couleur et position personnalisables.",
+        "metaTitle": "Ajouter du texte à l'image - Outil gratuit en ligne",
+        "metaDescription": "Ajouter du texte aux images avec police, couleur, taille et position personnalisées. Outil gratuit en ligne.",
+        "keywords": "ajouter texte à image, superposition de texte, texte sur image, texte sur photo",
+        "text": "Texte",
+        "textPlaceholder": "Saisir le texte à ajouter...",
+        "position": "Position",
+        "positions": {
+          "center": "Centre",
+          "top-left": "En haut à gauche",
+          "top-right": "En haut à droite",
+          "bottom-left": "En bas à gauche",
+          "bottom-right": "En bas à droite"
+        },
+        "fontSize": "Taille de police",
+        "color": "Couleur",
+        "apply": "Ajouter le texte",
+        "processing": "Traitement en cours...",
+        "faq": {
+          "q1": "Puis-je choisir où le texte apparaît ?",
+          "a1": "Oui, choisissez parmi cinq positions : centre, en haut à gauche, en haut à droite, en bas à gauche ou en bas à droite.",
+          "q2": "Quelles polices sont disponibles ?",
+          "a2": "L'outil utilise la police sans-serif par défaut du navigateur, qui varie selon le système mais est toujours propre et lisible."
+        }
+      },
+      "combine": {
+        "name": "Combiner les images",
+        "description": "Fusionner plusieurs images côte à côte ou empilées verticalement.",
+        "metaTitle": "Combiner les images - Outil gratuit en ligne",
+        "metaDescription": "Fusionner plusieurs images horizontalement ou verticalement. Outil gratuit en ligne, pas d'envoi nécessaire.",
+        "keywords": "combiner images, fusionner images, joindre images, collage d'images, côte à côte",
+        "horizontal": "Horizontal",
+        "vertical": "Vertical",
+        "combine": "Combiner les images",
+        "processing": "Traitement en cours...",
+        "faq": {
+          "q1": "Quelles options de mise en page sont disponibles ?",
+          "a1": "Vous pouvez combiner les images horizontalement (côte à côte) ou verticalement (empilées de haut en bas).",
+          "q2": "Les images doivent-elles être de la même taille ?",
+          "a2": "Non, les images de tailles différentes sont combinées à leurs dimensions originales. Le canevas s'agrandit pour accueillir toutes les images."
+        }
+      },
+      "split": {
+        "name": "Diviser l'image",
+        "description": "Diviser une image en une grille de morceaux de taille égale.",
+        "metaTitle": "Diviser l'image - Outil gratuit en ligne",
+        "metaDescription": "Diviser les images en une grille de morceaux égaux. Télécharger individuellement ou en ZIP. Outil gratuit en ligne.",
+        "keywords": "diviser image, diviseur d'images, découper image, division en grille, découpeur d'images",
+        "rows": "Lignes",
+        "columns": "Colonnes",
+        "split": "Diviser l'image",
+        "processing": "Traitement en cours...",
+        "downloadAll": "Tout télécharger (ZIP)",
+        "faq": {
+          "q1": "Comment fonctionne la division d'images ?",
+          "a1": "Choisissez le nombre de lignes et colonnes. L'image est divisée en morceaux de taille égale selon la grille que vous spécifiez.",
+          "q2": "Puis-je télécharger tous les morceaux en une fois ?",
+          "a2": "Oui, utilisez le bouton Tout télécharger (ZIP) pour obtenir tous les morceaux dans un seul fichier ZIP."
+        }
+      },
+      "heic-convert": {
+        "name": "Convertisseur HEIC",
+        "description": "Convertir les images HEIC/HEIF au format JPG ou PNG.",
+        "metaTitle": "Convertisseur HEIC vers JPG/PNG - Outil gratuit en ligne",
+        "metaDescription": "Convertir les images HEIC et HEIF au format JPG ou PNG. Outil gratuit en ligne, pas d'envoi nécessaire. Fonctionne dans votre navigateur.",
+        "keywords": "HEIC vers JPG, HEIC vers PNG, convertisseur HEIF, convertisseur photos iPhone, convertisseur HEIC en ligne",
+        "selectedFile": "Fichier sélectionné",
+        "outputFormat": "Format de sortie",
+        "quality": "Qualité",
+        "convert": "Convertir",
+        "processing": "Conversion en cours...",
+        "faq": {
+          "q1": "Qu'est-ce qu'un fichier HEIC ?",
+          "a1": "HEIC (High Efficiency Image Container) est le format d'image par défaut des appareils Apple. Il offre une meilleure compression que le JPEG tout en maintenant la qualité.",
+          "q2": "Mon image est-elle envoyée sur un serveur ?",
+          "a2": "Non. Toute la conversion se fait localement dans votre navigateur. Vos fichiers ne quittent jamais votre appareil."
+        }
+      },
+      "collage": {
+        "name": "Collage d'images",
+        "description": "Créer des collages photo avec des dispositions en grille prédéfinies.",
+        "metaTitle": "Créateur de collages - Collage photo gratuit en ligne",
+        "metaDescription": "Créer des collages photo avec des dispositions en grille personnalisables, espacement et couleur de fond. Outil gratuit en ligne.",
+        "keywords": "collage d'images, collage photo, grille photo, créateur de collages, disposition en grille",
+        "layout": "Disposition",
+        "gap": "Espacement",
+        "bgColor": "Couleur de fond",
+        "create": "Créer le collage",
+        "processing": "Création en cours...",
+        "faq": {
+          "q1": "Quelles dispositions sont disponibles ?",
+          "a1": "Les dispositions disponibles dépendent du nombre d'images que vous envoyez. Les options incluent des grilles 2x1, 1x2, 2x2, 3x1, 1x3 et 2x3.",
+          "q2": "Puis-je personnaliser l'espacement et le fond ?",
+          "a2": "Oui, vous pouvez ajuster l'espacement entre les images (0-20px) et choisir n'importe quelle couleur de fond avec le sélecteur de couleur."
+        }
+      }
+    }
+  }
+}

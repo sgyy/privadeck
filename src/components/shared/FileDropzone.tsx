@@ -13,6 +13,29 @@ interface FileDropzoneProps {
   className?: string;
 }
 
+function formatSize(bytes: number): string {
+  if (bytes >= 1024 * 1024 * 1024) return `${(bytes / (1024 * 1024 * 1024)).toFixed(0)} GB`;
+  if (bytes >= 1024 * 1024) return `${(bytes / (1024 * 1024)).toFixed(0)} MB`;
+  if (bytes >= 1024) return `${(bytes / 1024).toFixed(0)} KB`;
+  return `${bytes} B`;
+}
+
+function formatAccept(accept: string): string {
+  return accept
+    .split(",")
+    .map((s) => s.trim())
+    .map((s) => {
+      // ".pdf" -> "PDF"
+      if (s.startsWith(".")) return s.slice(1).toUpperCase();
+      // "image/*" -> "Image"
+      if (s.endsWith("/*")) return s.split("/")[0].charAt(0).toUpperCase() + s.split("/")[0].slice(1);
+      // "image/png" -> "PNG"
+      const ext = s.split("/").pop();
+      return ext ? ext.toUpperCase() : s;
+    })
+    .join(", ");
+}
+
 export function FileDropzone({
   accept,
   multiple = false,
@@ -52,19 +75,42 @@ export function FileDropzone({
       }}
       onClick={() => inputRef.current?.click()}
       className={cn(
-        "flex cursor-pointer flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed border-border p-8 transition-colors hover:border-primary/50 hover:bg-muted/50",
+        "flex cursor-pointer flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed border-border p-8 transition-colors hover:border-primary/50 hover:bg-muted/50",
         dragging && "border-primary bg-accent",
         className,
       )}
     >
-      <Upload className="h-8 w-8 text-muted-foreground" />
-      <div className="text-center">
-        <p className="text-sm font-medium">{t("dragDrop")}</p>
-        <p className="mt-1 text-xs text-muted-foreground">
-          {t("or")}{" "}
-          <span className="text-primary underline">{t("browseFiles")}</span>
-        </p>
-      </div>
+      {/* Prominent upload button */}
+      <button
+        type="button"
+        className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+        onClick={(e) => {
+          e.stopPropagation();
+          inputRef.current?.click();
+        }}
+      >
+        <Upload className="h-4 w-4" />
+        {t("uploadFiles")}
+      </button>
+
+      {/* Drag drop hint */}
+      <p className="text-sm text-muted-foreground">
+        {t("or")} {t("dragDrop").toLowerCase()}
+      </p>
+
+      {/* Format and size hints */}
+      {(accept || maxSize) && (
+        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-muted-foreground">
+          {accept && <span>{formatAccept(accept)}</span>}
+          {accept && maxSize && <span>·</span>}
+          {maxSize && (
+            <span>
+              {t("maxFileSize")}: {formatSize(maxSize)}
+            </span>
+          )}
+        </div>
+      )}
+
       <input
         ref={inputRef}
         type="file"

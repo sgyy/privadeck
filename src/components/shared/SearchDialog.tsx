@@ -1,33 +1,31 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
-import { getAllTools } from "@/lib/registry";
 import { Search, X } from "lucide-react";
+import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 
 interface SearchDialogProps {
   open: boolean;
   onClose: () => void;
+  toolNavData: ToolNavItem[];
 }
 
-export function SearchDialog({ open, onClose }: SearchDialogProps) {
+export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) {
   const [query, setQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
-  const tt = useTranslations("tools");
-
-  const allTools = getAllTools();
 
   const filtered = query.trim()
-    ? allTools.filter((tool) => {
-        const name = tt(`${tool.category}.${tool.slug}.name`).toLowerCase();
-        const desc = tt(`${tool.category}.${tool.slug}.description`).toLowerCase();
+    ? toolNavData.filter((tool) => {
         const q = query.toLowerCase();
-        return name.includes(q) || desc.includes(q);
+        return (
+          tool.name.toLowerCase().includes(q) ||
+          tool.description.toLowerCase().includes(q)
+        );
       })
-    : allTools;
+    : toolNavData;
 
   const navigate = useCallback(
     (index: number) => {
@@ -128,10 +126,10 @@ export function SearchDialog({ open, onClose }: SearchDialogProps) {
               >
                 <div className="min-w-0">
                   <p className="font-medium">
-                    {tt(`${tool.category}.${tool.slug}.name`)}
+                    {tool.name}
                   </p>
                   <p className="text-xs text-muted-foreground line-clamp-1">
-                    {tt(`${tool.category}.${tool.slug}.description`)}
+                    {tool.description}
                   </p>
                 </div>
               </button>

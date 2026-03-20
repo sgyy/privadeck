@@ -1,0 +1,436 @@
+{
+  "common": {
+    "siteName": "媒體工具箱",
+    "siteDescription": "免費的瀏覽器端媒體工具。無需上傳，無需註冊，100% 隱私。",
+    "search": "搜尋工具...",
+    "searchShortcut": "Ctrl+K",
+    "allTools": "所有工具",
+    "download": "下載",
+    "copy": "複製",
+    "copied": "已複製！",
+    "clear": "清空",
+    "paste": "貼上",
+    "reset": "重設",
+    "process": "處理",
+    "processing": "處理中...",
+    "dragDrop": "將檔案拖放到此處",
+    "or": "或",
+    "browseFiles": "瀏覽檔案",
+    "noFileSelected": "未選擇檔案",
+    "privacy": "您的檔案不會離開瀏覽器",
+    "darkMode": "深色模式",
+    "lightMode": "淺色模式",
+    "systemMode": "跟隨系統",
+    "language": "語言",
+    "share": "Share",
+    "shareCopied": "Link copied!",
+    "uploadFiles": "Upload Files",
+    "maxFileSize": "Max size",
+    "howItWorks": {
+      "step1FileTitle": "Upload your file",
+      "step1FileDesc": "Drag & drop or click to select a file from your device.",
+      "step1TextTitle": "Enter your text",
+      "step1TextDesc": "Paste or type your content into the input field.",
+      "step2Title": "Adjust settings",
+      "step2Desc": "Configure options to get the result you want.",
+      "step3FileTitle": "Download result",
+      "step3FileDesc": "Get your processed file instantly. No waiting.",
+      "step3TextTitle": "Copy or save",
+      "step3TextDesc": "Copy the output to clipboard or save it."
+    }
+  },
+  "nav": {
+    "home": "首頁",
+    "tools": "工具",
+    "text": "文字",
+    "developer": "開發",
+    "image": "圖像",
+    "featured": "精選工具",
+    "otherTools": "其他工具",
+    "allCategoryTools": "查看所有工具",
+    "pdf": "PDF",
+    "video": "影片",
+    "audio": "音訊"
+  },
+  "home": {
+    "hero": "免費線上媒體工具",
+    "heroSub": "瀏覽器端處理。無需上傳。無需註冊。100% 隱私保護。",
+    "popular": "熱門工具",
+    "allCategories": "所有分類",
+    "viewAll": "查看全部"
+  },
+  "categories": {
+    "text": {
+      "name": "文字工具",
+      "description": "分析、轉換和產生文字"
+    },
+    "developer": {
+      "name": "開發者工具",
+      "description": "格式化、編碼和解碼資料"
+    },
+    "image": {
+      "name": "圖片工具",
+      "description": "轉換、壓縮和編輯圖片"
+    },
+    "pdf": {
+      "name": "PDF 工具",
+      "description": "合併、拆分、轉換和編輯 PDF 檔案"
+    },
+    "video": {
+      "name": "影片工具",
+      "description": "裁剪、轉換和編輯影片"
+    },
+    "audio": {
+      "name": "音訊工具",
+      "description": "裁剪、轉換和擷取音訊"
+    }
+  },
+  "footer": {
+    "tagline": "Free browser-based media tools. No uploads, no signups.",
+    "about": "About",
+    "howItWorks": "How It Works",
+    "privacy": "Privacy",
+    "allRightsReserved": "All rights reserved."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
+    "title": "Privacy & Security",
+    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
+    "corePromiseTitle": "Our Core Promise",
+    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
+    "howItWorksTitle": "How It Works",
+    "steps": {
+      "step1": {
+        "title": "You select a file",
+        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+      },
+      "step2": {
+        "title": "Processing happens locally",
+        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+      },
+      "step3": {
+        "title": "You download the result",
+        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+      }
+    },
+    "features": {
+      "noUpload": {
+        "title": "No File Uploads",
+        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+      },
+      "localStorage": {
+        "title": "No Persistent Storage",
+        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+      },
+      "openSource": {
+        "title": "Verifiable Security",
+        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+      },
+      "noLogs": {
+        "title": "No Server Logs",
+        "description": "Since everything runs client-side, there are no server logs of your file operations."
+      },
+      "transparent": {
+        "title": "Fully Transparent",
+        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+      }
+    },
+    "thirdPartyTitle": "Third-Party Resources",
+    "thirdPartyBody": "部分工具會從 unpkg.com 等 CDN 載入 WebAssembly 二進位檔案（如 FFmpeg 核心）。這些是開源函式庫，由瀏覽器取得一次後快取。不會向這些 CDN 傳送任何檔案資料——它們僅提供處理程式碼。我們還使用 Google Analytics 收集匿名使用統計資料（頁面瀏覽量、大致地理位置、瀏覽器類型）。您的工具使用不會關聯任何個人身分資訊。",
+    "lastUpdated": "Last updated: March 2026"
+  },
+  "howItWorks": {
+    "metaTitle": "How It Works — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
+    "title": "How It Works",
+    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "steps": {
+      "select": {
+        "title": "Pick Your File",
+        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+      },
+      "process": {
+        "title": "Instant Local Processing",
+        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+      },
+      "download": {
+        "title": "Download the Result",
+        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+      }
+    },
+    "whyClientSideTitle": "Why Client-Side Processing?",
+    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
+    "techTitle": "Technology Under the Hood",
+    "tech": {
+      "canvas": {
+        "title": "Canvas & Web APIs",
+        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+      },
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+      },
+      "webApis": {
+        "title": "Modern Web Standards",
+        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+      },
+      "offline": {
+        "title": "Works Offline",
+        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+      }
+    },
+    "privacyCta": "Want to learn more about how we protect your data?",
+    "privacyLink": "Read our Privacy Policy →"
+  },
+  "toolNames": {
+    "text": {
+      "word-counter": {
+        "name": "字數統計",
+        "description": "即時統計文字中的字數、字元數、句子數和段落數。"
+      },
+      "case-converter": {
+        "name": "大小寫轉換",
+        "description": "在大寫、小寫、標題大寫、駝峰命名等格式間轉換文字。"
+      },
+      "lorem-ipsum": {
+        "name": "Lorem Ipsum 產生器",
+        "description": "按段落、句子或單字數量產生佔位文字。"
+      }
+    },
+    "developer": {
+      "json-formatter": {
+        "name": "JSON 格式化",
+        "description": "格式化、驗證和壓縮 JSON 資料，支援語法高亮。"
+      },
+      "base64": {
+        "name": "Base64 編解碼",
+        "description": "將文字編碼為 Base64 或將 Base64 解碼回文字。"
+      },
+      "url-encoder": {
+        "name": "URL 編解碼",
+        "description": "編碼或解碼 URL 組件，確保在網址中安全使用。"
+      },
+      "ocr": {
+        "name": "OCR 文字辨識",
+        "description": "使用光學字元辨識從圖片中擷取文字。"
+      },
+      "archive": {
+        "name": "ZIP 解壓工具",
+        "description": "線上解壓並預覽 ZIP 壓縮檔內容。"
+      },
+      "csv-json": {
+        "name": "CSV/JSON 轉換器",
+        "description": "即時互相轉換 CSV 和 JSON 格式。"
+      },
+      "hash-generator": {
+        "name": "雜湊產生器",
+        "description": "計算文字或檔案的 SHA-1、SHA-256、SHA-384、SHA-512 雜湊值。"
+      },
+      "color-converter": {
+        "name": "色彩轉換器",
+        "description": "在 HEX、RGB、HSL 格式之間轉換色彩，附即時預覽。"
+      },
+      "json-xml": {
+        "name": "JSON ↔ XML 轉換器",
+        "description": "在 JSON 和 XML 格式之間互相轉換。"
+      },
+      "markdown-preview": {
+        "name": "Markdown 預覽",
+        "description": "撰寫 Markdown 並即時並排查看 HTML 預覽。"
+      },
+      "regex-tester": {
+        "name": "正規表示式測試器",
+        "description": "使用即時配對和醒目提示來測試正規表示式。"
+      },
+      "timestamp": {
+        "name": "Unix 時間戳轉換器",
+        "description": "在 Unix 時間戳和可讀日期之間互相轉換。"
+      },
+      "yaml-json": {
+        "name": "YAML ↔ JSON 轉換器",
+        "description": "在 YAML 和 JSON 格式之間互相轉換。"
+      },
+      "text-diff": {
+        "name": "文字差異比較",
+        "description": "比較兩段文字並查看逐行差異。"
+      }
+    },
+    "image": {
+      "format-converter": {
+        "name": "圖片格式轉換",
+        "description": "在 WebP、PNG、JPG 和 ICO 格式之間轉換圖片。"
+      },
+      "compress": {
+        "name": "圖片壓縮",
+        "description": "在維持品質的同時壓縮圖片檔案大小。"
+      },
+      "crop": {
+        "name": "圖片裁剪",
+        "description": "使用互動式裁剪工具精確裁剪圖片。"
+      },
+      "resize": {
+        "name": "圖片調整大小",
+        "description": "使用長寬比鎖定將圖片調整為任意尺寸。"
+      },
+      "watermark": {
+        "name": "新增浮水印",
+        "description": "使用可自訂的樣式和位置在圖片上新增文字浮水印。"
+      },
+      "remove-exif": {
+        "name": "移除 EXIF 資料",
+        "description": "移除照片中的 EXIF 中繼資料以保護隱私。"
+      },
+      "flip": {
+        "name": "圖片翻轉",
+        "description": "一鍵水平或垂直翻轉圖片。"
+      },
+      "grayscale": {
+        "name": "灰階轉換",
+        "description": "將圖片轉換為灰階（黑白）。"
+      },
+      "pixelate": {
+        "name": "圖片馬賽克",
+        "description": "使用可調整的像素大小為圖片套用馬賽克效果。"
+      },
+      "add-border": {
+        "name": "新增邊框",
+        "description": "在圖片周圍新增可自訂的邊框。"
+      },
+      "circle-crop": {
+        "name": "圓形裁剪",
+        "description": "將圖片裁剪為透明背景的完美圓形。"
+      },
+      "svg-to-png": {
+        "name": "SVG 轉 PNG",
+        "description": "以任意比例將 SVG 向量圖轉換為 PNG 點陣圖。"
+      },
+      "add-text": {
+        "name": "圖片新增文字",
+        "description": "以可自訂的字型大小、色彩和位置在圖片上疊加文字。"
+      },
+      "combine": {
+        "name": "圖片合併",
+        "description": "將多張圖片水平並排或垂直堆疊合併。"
+      },
+      "split": {
+        "name": "圖片分割",
+        "description": "將圖片分割為等大的網格。"
+      },
+      "heic-convert": {
+        "name": "HEIC 轉換器",
+        "description": "將 HEIC/HEIF 圖片轉換為 JPG 或 PNG 格式。"
+      },
+      "collage": {
+        "name": "圖片拼貼",
+        "description": "使用預設網格版面建立照片拼貼。"
+      }
+    },
+    "pdf": {
+      "merge": {
+        "name": "PDF 合併",
+        "description": "將多個 PDF 檔案合併為單一文件。"
+      },
+      "split": {
+        "name": "PDF 拆分",
+        "description": "將 PDF 拆分為單獨頁面或自訂頁面範圍。"
+      },
+      "delete-pages": {
+        "name": "PDF 刪除頁面",
+        "description": "從 PDF 文件中移除特定頁面。"
+      },
+      "to-image": {
+        "name": "PDF 轉圖片",
+        "description": "將 PDF 頁面轉換為 JPG 或 PNG 圖片。"
+      },
+      "images-to-pdf": {
+        "name": "圖片轉 PDF",
+        "description": "將多張圖片轉換為單一 PDF 文件。"
+      },
+      "rotate": {
+        "name": "PDF 旋轉",
+        "description": "將 PDF 的所有頁面旋轉 90、180 或 270 度。"
+      },
+      "add-page-numbers": {
+        "name": "新增頁碼",
+        "description": "為 PDF 文件的每一頁新增頁碼。"
+      },
+      "extract-text": {
+        "name": "PDF 文字擷取",
+        "description": "從 PDF 文件中擷取所有文字內容。"
+      },
+      "rearrange": {
+        "name": "PDF 頁面重新排序",
+        "description": "拖放重新排列 PDF 頁面順序。"
+      },
+      "compress": {
+        "name": "PDF 壓縮",
+        "description": "以較低品質重新渲染頁面來縮減 PDF 檔案大小。"
+      },
+      "add-watermark": {
+        "name": "PDF 浮水印",
+        "description": "為 PDF 每一頁新增對角線文字浮水印。"
+      },
+      "crop": {
+        "name": "PDF 裁剪",
+        "description": "設定各邊要移除的邊距來裁剪 PDF 頁面。"
+      },
+      "esign": {
+        "name": "PDF 電子簽名",
+        "description": "繪製簽名並放置在 PDF 文件的任意頁面上。"
+      },
+      "extract-images": {
+        "name": "PDF 圖片擷取",
+        "description": "從 PDF 檔案中擷取所有嵌入圖片並下載。"
+      }
+    },
+    "video": {
+      "mute": {
+        "name": "影片靜音",
+        "description": "即時移除影片檔案中的音訊。"
+      },
+      "trim": {
+        "name": "影片裁剪",
+        "description": "將影片剪輯裁剪到所需長度。"
+      },
+      "rotate": {
+        "name": "影片旋轉",
+        "description": "將影片旋轉 90、180 或 270 度。"
+      },
+      "to-gif": {
+        "name": "影片轉 GIF",
+        "description": "將影片剪輯轉換為動畫 GIF 圖片。"
+      },
+      "to-webp": {
+        "name": "影片轉 WebP",
+        "description": "將影片剪輯轉換為動畫 WebP 圖片。"
+      },
+      "compress": {
+        "name": "影片壓縮",
+        "description": "使用可調整的品質預設縮減影片檔案大小。"
+      },
+      "format-convert": {
+        "name": "影片格式轉換",
+        "description": "在 MP4、MKV、AVI 格式之間轉換影片。"
+      },
+      "resize": {
+        "name": "影片調整大小",
+        "description": "使用預設或自訂尺寸變更影片解析度。"
+      }
+    },
+    "audio": {
+      "trim": {
+        "name": "音訊裁剪",
+        "description": "將音訊檔案裁剪到所需長度。"
+      },
+      "convert": {
+        "name": "音訊轉換器",
+        "description": "在 MP3、WAV、OGG、AAC、FLAC 之間轉換音訊檔案。"
+      },
+      "extract": {
+        "name": "音訊擷取",
+        "description": "從影片檔案中擷取音訊軌。"
+      }
+    }
+  }
+}

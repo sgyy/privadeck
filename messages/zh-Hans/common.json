@@ -1,0 +1,437 @@
+{
+  "common": {
+    "siteName": "媒体工具箱",
+    "siteDescription": "免费的浏览器端媒体工具。无需上传，无需注册，100% 隐私。",
+    "search": "搜索工具...",
+    "searchShortcut": "Ctrl+K",
+    "allTools": "所有工具",
+    "download": "下载",
+    "save": "保存",
+    "copy": "复制",
+    "copied": "已复制！",
+    "clear": "清空",
+    "paste": "粘贴",
+    "reset": "重置",
+    "process": "处理",
+    "processing": "处理中...",
+    "dragDrop": "将文件拖放到此处",
+    "or": "或",
+    "browseFiles": "浏览文件",
+    "noFileSelected": "未选择文件",
+    "privacy": "您的文件不会离开浏览器",
+    "darkMode": "深色模式",
+    "lightMode": "浅色模式",
+    "systemMode": "跟随系统",
+    "language": "语言",
+    "share": "分享",
+    "shareCopied": "链接已复制！",
+    "uploadFiles": "上传文件",
+    "maxFileSize": "最大文件",
+    "howItWorks": {
+      "step1FileTitle": "上传文件",
+      "step1FileDesc": "拖放或点击选择您设备上的文件。",
+      "step1TextTitle": "输入文本",
+      "step1TextDesc": "粘贴或输入您的内容。",
+      "step2Title": "调整设置",
+      "step2Desc": "配置选项以获得您想要的结果。",
+      "step3FileTitle": "下载结果",
+      "step3FileDesc": "即时获取处理后的文件，无需等待。",
+      "step3TextTitle": "复制或保存",
+      "step3TextDesc": "将输出复制到剪贴板或保存。"
+    }
+  },
+  "nav": {
+    "home": "首页",
+    "tools": "工具",
+    "text": "文本",
+    "developer": "开发",
+    "image": "图像",
+    "featured": "精选工具",
+    "otherTools": "其他工具",
+    "allCategoryTools": "查看所有工具",
+    "pdf": "PDF",
+    "video": "视频",
+    "audio": "音频"
+  },
+  "home": {
+    "hero": "免费在线媒体工具",
+    "heroSub": "浏览器端处理。无需上传。无需注册。100% 隐私保护。",
+    "popular": "热门工具",
+    "allCategories": "所有分类",
+    "viewAll": "查看全部"
+  },
+  "categories": {
+    "text": {
+      "name": "文本工具",
+      "description": "分析、转换和生成文本"
+    },
+    "developer": {
+      "name": "开发者工具",
+      "description": "格式化、编码和解码数据"
+    },
+    "image": {
+      "name": "图像工具",
+      "description": "转换、压缩和编辑图像"
+    },
+    "pdf": {
+      "name": "PDF 工具",
+      "description": "合并、拆分、转换和编辑 PDF 文件"
+    },
+    "video": {
+      "name": "视频工具",
+      "description": "裁剪、转换和编辑视频"
+    },
+    "audio": {
+      "name": "音频工具",
+      "description": "裁剪、转换和提取音频"
+    }
+  },
+  "footer": {
+    "tagline": "免费的浏览器端媒体工具。无需上传，无需注册。",
+    "about": "关于",
+    "howItWorks": "工作原理",
+    "privacy": "隐私保护",
+    "allRightsReserved": "保留所有权利。"
+  },
+  "privacy": {
+    "metaTitle": "隐私政策 — 媒体工具箱",
+    "metaDescription": "了解媒体工具箱如何保护您的隐私。所有文件处理均在浏览器中完成，不会上传到任何服务器。",
+    "title": "隐私与安全",
+    "subtitle": "您的文件不会离开浏览器。我们从一开始就将隐私作为媒体工具箱的基石，而非事后补救。",
+    "corePromiseTitle": "核心承诺",
+    "corePromiseBody": "媒体工具箱的每一个工具都完全在您的浏览器中通过 JavaScript 和 WebAssembly 处理文件。您的文件永远不会被上传到任何服务器，不会被存储在任何地方，也不会被除您之外的任何人看到。关闭标签页后，数据即刻消失。",
+    "howItWorksTitle": "工作原理",
+    "steps": {
+      "step1": {
+        "title": "选择文件",
+        "description": "您的文件由浏览器中的 JavaScript 直接读取，全程不涉及任何网络请求。"
+      },
+      "step2": {
+        "title": "本地处理",
+        "description": "所有转换、压缩和编辑操作都在您的设备上运行，使用 Web API、Canvas、WebAssembly（FFmpeg、PDF.js）等浏览器技术。"
+      },
+      "step3": {
+        "title": "下载结果",
+        "description": "输出文件在内存中生成并提供下载。整个过程没有服务器参与。"
+      }
+    },
+    "features": {
+      "noUpload": {
+        "title": "无文件上传",
+        "description": "文件不会离开您的设备。处理使用浏览器的内置功能完成。"
+      },
+      "localStorage": {
+        "title": "无持久存储",
+        "description": "我们不使用 Cookie 或本地存储来跟踪您。您的偏好设置（语言、主题）仅保存在本地。"
+      },
+      "openSource": {
+        "title": "可验证的安全性",
+        "description": "您可以在浏览器的开发者工具中检查网络流量，确认没有文件被上传。"
+      },
+      "noLogs": {
+        "title": "无服务器日志",
+        "description": "由于一切都在客户端运行，不存在关于您文件操作的服务器日志。"
+      },
+      "transparent": {
+        "title": "完全透明",
+        "description": "这是一个托管在 Cloudflare Pages 上的静态网站。没有后端，没有数据库，没有 API 服务器。"
+      }
+    },
+    "thirdPartyTitle": "第三方资源",
+    "thirdPartyBody": "部分工具会从 unpkg.com 等 CDN 加载 WebAssembly 二进制文件（如 FFmpeg 核心）。这些是开源库，由浏览器获取一次后缓存。不会向这些 CDN 发送任何文件数据——它们仅提供处理代码。我们还使用 Google Analytics 收集匿名使用统计数据（页面浏览量、大致地理位置、浏览器类型）。您的工具使用不会关联任何个人身份信息。",
+    "lastUpdated": "最后更新：2026 年 3 月"
+  },
+  "howItWorks": {
+    "metaTitle": "工作原理 — 媒体工具箱",
+    "metaDescription": "了解媒体工具箱如何完全在浏览器中使用 JavaScript 和 WebAssembly 处理您的文件。无需上传，无需服务器。",
+    "title": "工作原理",
+    "subtitle": "简单三步——您的文件全程留在设备上。",
+    "steps": {
+      "select": {
+        "title": "选择文件",
+        "description": "从设备中选择文件或将其拖放到工具上。文件由浏览器中运行的 JavaScript 读取，绝不会通过网络发送。"
+      },
+      "process": {
+        "title": "即时本地处理",
+        "description": "工具直接在您的设备上使用 Canvas API、Web Audio API 和 WebAssembly（FFmpeg、PDF.js、Tesseract）等浏览器技术处理文件。处理速度取决于您的设备——大多数操作几秒内完成。"
+      },
+      "download": {
+        "title": "下载结果",
+        "description": "处理完成后，输出文件在内存中生成，随时可以下载。点击下载按钮即可保存到设备上的任意位置。无需账户或注册。"
+      }
+    },
+    "whyClientSideTitle": "为什么选择客户端处理？",
+    "whyClientSideBody": "传统在线工具会将您的文件上传到远程服务器进行处理，然后返回结果。这不仅速度慢，还会带来隐私顾虑，需要您信任该服务。媒体工具箱采用不同的方式：所有操作都在浏览器中运行。您的文件永远不会离开设备，没有上传大小限制，即使在网速较慢的情况下也能正常使用。",
+    "techTitle": "底层技术",
+    "tech": {
+      "canvas": {
+        "title": "Canvas 与 Web API",
+        "description": "裁剪、调整大小、格式转换等图像操作使用浏览器原生的 Canvas API，实现快速的 GPU 加速渲染。"
+      },
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "视频和音频工具使用编译为 WebAssembly 的 FFmpeg，在浏览器中以接近原生的速度运行。PDF 工具使用 PDF.js 和 pdf-lib。"
+      },
+      "webApis": {
+        "title": "现代 Web 标准",
+        "description": "我们利用 File API、Blob URL、Web Workers 等现代标准高效处理大文件，不会阻塞界面。"
+      },
+      "offline": {
+        "title": "离线可用",
+        "description": "由于不涉及服务器，大多数工具在网络断开后仍可继续使用——只要页面已加载即可。"
+      }
+    },
+    "privacyCta": "想了解更多关于我们如何保护您的数据？",
+    "privacyLink": "查看隐私政策 →"
+  },
+  "toolNames": {
+    "text": {
+      "word-counter": {
+        "name": "字数统计",
+        "description": "即时统计文本中的字数、字符数、句子数和段落数。"
+      },
+      "case-converter": {
+        "name": "大小写转换",
+        "description": "在大写、小写、标题大写、驼峰命名等格式间转换文本。"
+      },
+      "lorem-ipsum": {
+        "name": "Lorem Ipsum 生成器",
+        "description": "按段落、句子或单词数量生成占位文本。"
+      }
+    },
+    "developer": {
+      "json-formatter": {
+        "name": "JSON 格式化",
+        "description": "格式化、验证和压缩 JSON 数据，支持语法高亮。"
+      },
+      "base64": {
+        "name": "Base64 编解码",
+        "description": "将文本编码为 Base64 或将 Base64 解码回文本。"
+      },
+      "url-encoder": {
+        "name": "URL 编解码",
+        "description": "编码或解码 URL 组件，确保在网址中安全使用。"
+      },
+      "ocr": {
+        "name": "OCR 文字识别",
+        "description": "使用光学字符识别从图片中提取文字。"
+      },
+      "archive": {
+        "name": "ZIP 解压",
+        "description": "在线解压和预览 ZIP 压缩包内容。"
+      },
+      "csv-json": {
+        "name": "CSV/JSON 转换器",
+        "description": "在 CSV 和 JSON 格式之间即时转换。"
+      },
+      "hash-generator": {
+        "name": "哈希生成器",
+        "description": "从文本或文件生成 SHA-1、SHA-256、SHA-384 和 SHA-512 哈希值。"
+      },
+      "color-converter": {
+        "name": "颜色转换器",
+        "description": "在 HEX、RGB 和 HSL 颜色格式之间转换，带实时预览。"
+      },
+      "json-xml": {
+        "name": "JSON ↔ XML 转换器",
+        "description": "在 JSON 和 XML 格式之间转换。"
+      },
+      "markdown-preview": {
+        "name": "Markdown 预览",
+        "description": "编写 Markdown 并实时查看 HTML 预览。"
+      },
+      "regex-tester": {
+        "name": "正则表达式测试器",
+        "description": "使用实时匹配和高亮测试正则表达式。"
+      },
+      "timestamp": {
+        "name": "Unix 时间戳转换器",
+        "description": "在 Unix 时间戳和人类可读日期之间转换。"
+      },
+      "yaml-json": {
+        "name": "YAML ↔ JSON 转换器",
+        "description": "在 YAML 和 JSON 格式之间转换。"
+      },
+      "text-diff": {
+        "name": "文本差异比较",
+        "description": "比较两段文本并查看逐行差异。"
+      }
+    },
+    "image": {
+      "format-converter": {
+        "name": "图像格式转换",
+        "description": "在 WebP、PNG、JPG 和 ICO 格式之间转换图像。"
+      },
+      "compress": {
+        "name": "图片压缩",
+        "description": "压缩图片以减小文件大小，同时保持质量。"
+      },
+      "crop": {
+        "name": "图片裁剪",
+        "description": "使用交互式裁剪工具精确裁剪图片。"
+      },
+      "resize": {
+        "name": "调整图片尺寸",
+        "description": "将图片调整为任意尺寸，支持锁定宽高比。"
+      },
+      "watermark": {
+        "name": "添加水印",
+        "description": "为图片添加可自定义样式和位置的文字水印。"
+      },
+      "remove-exif": {
+        "name": "清除 EXIF 数据",
+        "description": "清除照片的 EXIF 元数据以保护隐私。"
+      },
+      "flip": {
+        "name": "翻转图片",
+        "description": "一键水平或垂直翻转图片。"
+      },
+      "grayscale": {
+        "name": "灰度图片",
+        "description": "将任何图片转换为灰度（黑白）。"
+      },
+      "pixelate": {
+        "name": "像素化图片",
+        "description": "对任何图片应用可调像素大小的像素化效果。"
+      },
+      "add-border": {
+        "name": "添加边框",
+        "description": "为任何图片添加可自定义的边框。"
+      },
+      "circle-crop": {
+        "name": "圆形裁剪",
+        "description": "将任何图片裁剪为带透明背景的完美圆形。"
+      },
+      "svg-to-png": {
+        "name": "SVG 转 PNG",
+        "description": "将 SVG 矢量图形以任意比例转换为 PNG 光栅图像。"
+      },
+      "add-text": {
+        "name": "图片添加文字",
+        "description": "在图片上叠加可自定义字号、颜色和位置的文字。"
+      },
+      "combine": {
+        "name": "拼接图片",
+        "description": "将多张图片水平并排或垂直堆叠拼接。"
+      },
+      "split": {
+        "name": "分割图片",
+        "description": "将图片分割为等大的网格块。"
+      },
+      "heic-convert": {
+        "name": "HEIC 转换器",
+        "description": "将 HEIC/HEIF 图片转换为 JPG 或 PNG 格式。"
+      },
+      "collage": {
+        "name": "图片拼贴",
+        "description": "使用预设网格布局创建照片拼贴。"
+      }
+    },
+    "pdf": {
+      "merge": {
+        "name": "合并 PDF",
+        "description": "将多个 PDF 文件合并为一个文档。"
+      },
+      "split": {
+        "name": "拆分 PDF",
+        "description": "将 PDF 拆分为单独的页面或自定义页面范围。"
+      },
+      "delete-pages": {
+        "name": "删除 PDF 页面",
+        "description": "从 PDF 文档中删除指定页面。"
+      },
+      "to-image": {
+        "name": "PDF 转图片",
+        "description": "将 PDF 页面转换为 JPG 或 PNG 图片。"
+      },
+      "images-to-pdf": {
+        "name": "图片转 PDF",
+        "description": "将多张图片合并为一个 PDF 文档。"
+      },
+      "rotate": {
+        "name": "旋转 PDF",
+        "description": "将 PDF 所有页面旋转 90°、180° 或 270°。"
+      },
+      "add-page-numbers": {
+        "name": "添加页码",
+        "description": "为 PDF 文档的每一页添加页码。"
+      },
+      "extract-text": {
+        "name": "PDF 提取文本",
+        "description": "从 PDF 文档中提取所有文本内容。"
+      },
+      "rearrange": {
+        "name": "重新排列 PDF 页面",
+        "description": "拖放重新排序 PDF 文档中的页面。"
+      },
+      "compress": {
+        "name": "压缩 PDF",
+        "description": "通过以较低质量重新渲染页面来减小 PDF 文件大小。"
+      },
+      "add-watermark": {
+        "name": "PDF 水印",
+        "description": "在 PDF 每一页添加对角线文字水印。"
+      },
+      "crop": {
+        "name": "裁剪 PDF",
+        "description": "通过设置每侧的边距来裁剪 PDF 页面。"
+      },
+      "esign": {
+        "name": "PDF 电子签名",
+        "description": "在 PDF 文档的任意页面上绘制并放置签名。"
+      },
+      "extract-images": {
+        "name": "从 PDF 提取图片",
+        "description": "从 PDF 文件中提取所有嵌入的图片并下载。"
+      }
+    },
+    "video": {
+      "mute": {
+        "name": "视频静音",
+        "description": "即时移除视频中的音频。"
+      },
+      "trim": {
+        "name": "视频裁剪",
+        "description": "将视频剪辑裁剪到所需长度。"
+      },
+      "rotate": {
+        "name": "视频旋转",
+        "description": "将视频旋转 90、180 或 270 度。"
+      },
+      "to-gif": {
+        "name": "视频转 GIF",
+        "description": "将视频片段转换为 GIF 动画。"
+      },
+      "to-webp": {
+        "name": "视频转 WebP",
+        "description": "将视频片段转换为 WebP 动画。"
+      },
+      "compress": {
+        "name": "视频压缩",
+        "description": "通过可调质量预设减小视频文件大小。"
+      },
+      "format-convert": {
+        "name": "视频格式转换",
+        "description": "在 MP4、MKV 和 AVI 格式之间转换视频。"
+      },
+      "resize": {
+        "name": "调整视频尺寸",
+        "description": "使用预设或自定义尺寸更改视频分辨率。"
+      }
+    },
+    "audio": {
+      "trim": {
+        "name": "音频剪辑",
+        "description": "将音频文件裁剪到所需长度。"
+      },
+      "convert": {
+        "name": "音频格式转换",
+        "description": "在 MP3、WAV、OGG、AAC 和 FLAC 格式之间转换音频文件。"
+      },
+      "extract": {
+        "name": "提取音频",
+        "description": "从视频文件中提取音频轨道。"
+      }
+    }
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "common": {
+    "siteName": "Media Toolbox",
+    "siteDescription": "Ücretsiz tarayıcı tabanlı medya araçları. Yükleme yok, kayıt yok, %100 gizlilik.",
+    "search": "Araç ara...",
+    "searchShortcut": "Ctrl+K",
+    "allTools": "Tüm Araçlar",
+    "download": "İndir",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı!",
+    "clear": "Temizle",
+    "paste": "Yapıştır",
+    "reset": "Sıfırla",
+    "process": "İşle",
+    "processing": "İşleniyor...",
+    "dragDrop": "Dosyaları buraya sürükleyip bırakın",
+    "or": "veya",
+    "browseFiles": "Dosya seç",
+    "noFileSelected": "Dosya seçilmedi",
+    "privacy": "Dosyalarınız asla tarayıcınızdan çıkmaz",
+    "darkMode": "Karanlık mod",
+    "lightMode": "Aydınlık mod",
+    "systemMode": "Sistem",
+    "language": "Dil",
+    "share": "Share",
+    "shareCopied": "Link copied!",
+    "uploadFiles": "Upload Files",
+    "maxFileSize": "Max size",
+    "howItWorks": {
+      "step1FileTitle": "Upload your file",
+      "step1FileDesc": "Drag & drop or click to select a file from your device.",
+      "step1TextTitle": "Enter your text",
+      "step1TextDesc": "Paste or type your content into the input field.",
+      "step2Title": "Adjust settings",
+      "step2Desc": "Configure options to get the result you want.",
+      "step3FileTitle": "Download result",
+      "step3FileDesc": "Get your processed file instantly. No waiting.",
+      "step3TextTitle": "Copy or save",
+      "step3TextDesc": "Copy the output to clipboard or save it."
+    }
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "tools": "Araçlar",
+    "text": "Metin",
+    "developer": "Geliştirici",
+    "image": "Görsel",
+    "featured": "Öne Çıkan Araçlar",
+    "otherTools": "Diğer Araçlar",
+    "allCategoryTools": "Tüm araçları görüntüle",
+    "pdf": "PDF",
+    "video": "Video",
+    "audio": "Ses"
+  },
+  "home": {
+    "hero": "Ücretsiz Çevrimiçi Medya Araçları",
+    "heroSub": "Tarayıcı tabanlı. Yükleme yok. Kayıt yok. %100 gizlilik.",
+    "popular": "Popüler Araçlar",
+    "allCategories": "Tüm Kategoriler",
+    "viewAll": "Tümünü Gör"
+  },
+  "categories": {
+    "text": {
+      "name": "Metin Araçları",
+      "description": "Metni analiz edin, dönüştürün ve oluşturun"
+    },
+    "developer": {
+      "name": "Geliştirici Araçları",
+      "description": "Verileri biçimlendirin, kodlayın ve çözün"
+    },
+    "image": {
+      "name": "Görsel Araçları",
+      "description": "Görselleri dönüştürün, sıkıştırın ve düzenleyin"
+    },
+    "pdf": {
+      "name": "PDF Araçları",
+      "description": "PDF dosyalarını birleştirin, bölün, dönüştürün ve düzenleyin"
+    },
+    "video": {
+      "name": "Video Araçları",
+      "description": "Videoları kırpın, dönüştürün ve düzenleyin"
+    },
+    "audio": {
+      "name": "Ses Araçları",
+      "description": "Sesi kırpın, dönüştürün ve çıkarın"
+    }
+  },
+  "footer": {
+    "tagline": "Free browser-based media tools. No uploads, no signups.",
+    "about": "About",
+    "howItWorks": "How It Works",
+    "privacy": "Privacy",
+    "allRightsReserved": "All rights reserved."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
+    "title": "Privacy & Security",
+    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
+    "corePromiseTitle": "Our Core Promise",
+    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
+    "howItWorksTitle": "How It Works",
+    "steps": {
+      "step1": {
+        "title": "You select a file",
+        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+      },
+      "step2": {
+        "title": "Processing happens locally",
+        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+      },
+      "step3": {
+        "title": "You download the result",
+        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+      }
+    },
+    "features": {
+      "noUpload": {
+        "title": "No File Uploads",
+        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+      },
+      "localStorage": {
+        "title": "No Persistent Storage",
+        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+      },
+      "openSource": {
+        "title": "Verifiable Security",
+        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+      },
+      "noLogs": {
+        "title": "No Server Logs",
+        "description": "Since everything runs client-side, there are no server logs of your file operations."
+      },
+      "transparent": {
+        "title": "Fully Transparent",
+        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+      }
+    },
+    "thirdPartyTitle": "Third-Party Resources",
+    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
+    "lastUpdated": "Last updated: March 2026"
+  },
+  "howItWorks": {
+    "metaTitle": "How It Works — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
+    "title": "How It Works",
+    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "steps": {
+      "select": {
+        "title": "Pick Your File",
+        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+      },
+      "process": {
+        "title": "Instant Local Processing",
+        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+      },
+      "download": {
+        "title": "Download the Result",
+        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+      }
+    },
+    "whyClientSideTitle": "Why Client-Side Processing?",
+    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
+    "techTitle": "Technology Under the Hood",
+    "tech": {
+      "canvas": {
+        "title": "Canvas & Web APIs",
+        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+      },
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+      },
+      "webApis": {
+        "title": "Modern Web Standards",
+        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+      },
+      "offline": {
+        "title": "Works Offline",
+        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+      }
+    },
+    "privacyCta": "Want to learn more about how we protect your data?",
+    "privacyLink": "Read our Privacy Policy →"
+  },
+  "toolNames": {
+    "text": {
+      "word-counter": {
+        "name": "Kelime Sayacı",
+        "description": "Metninizde kelimeleri, karakterleri, cümleleri ve paragrafları anında sayın."
+      },
+      "case-converter": {
+        "name": "Büyük/Küçük Harf Dönüştürücü",
+        "description": "Metni BÜYÜK HARF, küçük harf, Başlık Harfi, camelCase ve daha fazlası arasında dönüştürün."
+      },
+      "lorem-ipsum": {
+        "name": "Lorem Ipsum Oluşturucu",
+        "description": "Paragraflara, cümlelere veya kelimelere göre yer tutucu metin oluşturun."
+      }
+    },
+    "developer": {
+      "json-formatter": {
+        "name": "JSON Biçimlendirici",
+        "description": "JSON verilerini söz dizimi vurgulamasıyla biçimlendirin, doğrulayın ve küçültün."
+      },
+      "base64": {
+        "name": "Base64 Kodlama/Çözme",
+        "description": "Metni Base64 olarak kodlayın veya Base64 verilerini metne çözün."
+      },
+      "url-encoder": {
+        "name": "URL Kodlama/Çözme",
+        "description": "Web adreslerinde güvenli kullanım için URL bileşenlerini kodlayın veya çözün."
+      },
+      "ocr": {
+        "name": "OCR Metin Tanıma",
+        "description": "Optik karakter tanıma ile görsellerden metin çıkarın."
+      },
+      "archive": {
+        "name": "ZIP Çıkarıcı",
+        "description": "ZIP arşiv içeriklerini çevrimiçi çıkarın ve önizleyin."
+      },
+      "csv-json": {
+        "name": "CSV/JSON Dönüştürücü",
+        "description": "CSV ve JSON formatları arasında anında dönüştürme yapın."
+      },
+      "hash-generator": {
+        "name": "Hash Oluşturucu",
+        "description": "Metin veya dosyalar için SHA-1, SHA-256, SHA-384 ve SHA-512 hash'leri hesaplayın."
+      },
+      "color-converter": {
+        "name": "Renk Dönüştürücü",
+        "description": "Renkleri HEX, RGB ve HSL formatları arasında canlı önizleme ile dönüştürün."
+      },
+      "json-xml": {
+        "name": "JSON ↔ XML Dönüştürücü",
+        "description": "JSON ve XML formatları arasında dönüştürme yapın."
+      },
+      "markdown-preview": {
+        "name": "Markdown Önizleme",
+        "description": "Markdown yazın ve yan yana canlı HTML önizlemesi görün."
+      },
+      "regex-tester": {
+        "name": "Regex Test Aracı",
+        "description": "Gerçek zamanlı eşleştirme ve vurgulama ile düzenli ifadeleri test edin."
+      },
+      "timestamp": {
+        "name": "Unix Zaman Damgası Dönüştürücü",
+        "description": "Unix zaman damgaları ile okunabilir tarihler arasında dönüştürme yapın."
+      },
+      "yaml-json": {
+        "name": "YAML ↔ JSON Dönüştürücü",
+        "description": "YAML ve JSON formatları arasında dönüştürme yapın."
+      },
+      "text-diff": {
+        "name": "Metin Karşılaştırma",
+        "description": "İki metni karşılaştırın ve satır satır farkları görün."
+      }
+    },
+    "image": {
+      "format-converter": {
+        "name": "Görsel Format Dönüştürücü",
+        "description": "Görselleri WebP, PNG, JPG ve ICO formatları arasında dönüştürün."
+      },
+      "compress": {
+        "name": "Görsel Sıkıştırıcı",
+        "description": "Kaliteyi koruyarak görsel dosya boyutunu küçültün."
+      },
+      "crop": {
+        "name": "Görsel Kırpma",
+        "description": "Etkileşimli kırpma aracıyla görselleri hassas şekilde kırpın."
+      },
+      "resize": {
+        "name": "Görsel Boyutlandırma",
+        "description": "Görselleri en boy oranı kilidi ile herhangi bir boyuta yeniden boyutlandırın."
+      },
+      "watermark": {
+        "name": "Filigran Ekle",
+        "description": "Özelleştirilebilir stil ve konumla görsellere metin filigranı ekleyin."
+      },
+      "remove-exif": {
+        "name": "EXIF Verisi Kaldır",
+        "description": "Gizliliğinizi korumak için fotoğraflardan EXIF meta verilerini kaldırın."
+      },
+      "flip": {
+        "name": "Görsel Çevir",
+        "description": "Görselleri tek tıklamayla yatay veya dikey çevirin."
+      },
+      "grayscale": {
+        "name": "Gri Tonlamalı Görsel",
+        "description": "Herhangi bir görseli gri tonlamaya (siyah beyaz) dönüştürün."
+      },
+      "pixelate": {
+        "name": "Görsel Pikselleştirme",
+        "description": "Ayarlanabilir piksel boyutuyla herhangi bir görsele pikselleştirme efekti uygulayın."
+      },
+      "add-border": {
+        "name": "Kenarlık Ekle",
+        "description": "Herhangi bir görselin etrafına özelleştirilebilir kenarlık ekleyin."
+      },
+      "circle-crop": {
+        "name": "Dairesel Kırpma",
+        "description": "Herhangi bir görseli şeffaf arka planla mükemmel bir daireye kırpın."
+      },
+      "svg-to-png": {
+        "name": "SVG - PNG",
+        "description": "SVG vektör grafiklerini herhangi bir ölçekte PNG raster görsellerine dönüştürün."
+      },
+      "add-text": {
+        "name": "Görsele Metin Ekle",
+        "description": "Özelleştirilebilir yazı boyutu, renk ve konumla görsellere metin yerleştirin."
+      },
+      "combine": {
+        "name": "Görselleri Birleştir",
+        "description": "Birden fazla görseli yan yana veya üst üste birleştirin."
+      },
+      "split": {
+        "name": "Görsel Böl",
+        "description": "Bir görseli eşit boyutlu parçalardan oluşan bir ızgaraya bölün."
+      },
+      "heic-convert": {
+        "name": "HEIC Dönüştürücü",
+        "description": "HEIC/HEIF görsellerini JPG veya PNG formatına dönüştürün."
+      },
+      "collage": {
+        "name": "Görsel Kolaj",
+        "description": "Hazır ızgara düzenleriyle fotoğraf kolajları oluşturun."
+      }
+    },
+    "pdf": {
+      "merge": {
+        "name": "PDF Birleştir",
+        "description": "Birden fazla PDF dosyasını tek bir belgede birleştirin."
+      },
+      "split": {
+        "name": "PDF Böl",
+        "description": "Bir PDF'i tek tek sayfalara veya özel sayfa aralıklarına bölün."
+      },
+      "delete-pages": {
+        "name": "PDF Sayfalarını Sil",
+        "description": "Bir PDF belgesinden belirli sayfaları kaldırın."
+      },
+      "to-image": {
+        "name": "PDF - Görsel",
+        "description": "PDF sayfalarını JPG veya PNG görsellerine dönüştürün."
+      },
+      "images-to-pdf": {
+        "name": "Görseller - PDF",
+        "description": "Birden fazla görseli tek bir PDF belgesine dönüştürün."
+      },
+      "rotate": {
+        "name": "PDF Döndür",
+        "description": "Bir PDF'in tüm sayfalarını 90, 180 veya 270 derece döndürün."
+      },
+      "add-page-numbers": {
+        "name": "Sayfa Numarası Ekle",
+        "description": "Bir PDF belgesinin her sayfasına sayfa numarası ekleyin."
+      },
+      "extract-text": {
+        "name": "PDF'den Metin Çıkar",
+        "description": "Bir PDF belgesinden tüm metin içeriğini çıkarın."
+      },
+      "rearrange": {
+        "name": "PDF Sayfalarını Yeniden Sırala",
+        "description": "Bir PDF belgesindeki sayfaları sürükleyip bırakarak yeniden sıralayın."
+      },
+      "compress": {
+        "name": "PDF Sıkıştır",
+        "description": "Sayfaları daha düşük kaliteyle yeniden işleyerek PDF dosya boyutunu küçültün."
+      },
+      "add-watermark": {
+        "name": "PDF Filigranı",
+        "description": "Bir PDF'in her sayfasına çapraz metin filigranı ekleyin."
+      },
+      "crop": {
+        "name": "PDF Kırp",
+        "description": "Her taraftan kaldırılacak kenar boşluklarını ayarlayarak PDF sayfalarını kırpın."
+      },
+      "esign": {
+        "name": "PDF E-İmza",
+        "description": "Bir imza çizin ve PDF belgesinin herhangi bir sayfasına yerleştirin."
+      },
+      "extract-images": {
+        "name": "PDF'den Görsel Çıkar",
+        "description": "Bir PDF dosyasından tüm gömülü görselleri çıkarın ve indirin."
+      }
+    },
+    "video": {
+      "mute": {
+        "name": "Video Sesini Kapat",
+        "description": "Video dosyalarından sesi anında kaldırın."
+      },
+      "trim": {
+        "name": "Video Kırp",
+        "description": "Video klipleri istenen uzunluğa kırpın."
+      },
+      "rotate": {
+        "name": "Video Döndür",
+        "description": "Videoları 90, 180 veya 270 derece döndürün."
+      },
+      "to-gif": {
+        "name": "Video - GIF",
+        "description": "Video klipleri animasyonlu GIF görsellerine dönüştürün."
+      },
+      "to-webp": {
+        "name": "Video - WebP",
+        "description": "Video klipleri animasyonlu WebP görsellerine dönüştürün."
+      },
+      "compress": {
+        "name": "Video Sıkıştır",
+        "description": "Ayarlanabilir kalite hazır ayarlarıyla video dosya boyutunu küçültün."
+      },
+      "format-convert": {
+        "name": "Video Format Dönüştürücü",
+        "description": "Videoları MP4, MKV ve AVI formatları arasında dönüştürün."
+      },
+      "resize": {
+        "name": "Video Boyutlandır",
+        "description": "Hazır ayar veya özel boyutlarla video çözünürlüğünü değiştirin."
+      }
+    },
+    "audio": {
+      "trim": {
+        "name": "Ses Kırpıcı",
+        "description": "Ses dosyalarını istenen uzunluğa kırpın."
+      },
+      "convert": {
+        "name": "Ses Dönüştürücü",
+        "description": "Ses dosyalarını MP3, WAV, OGG, AAC ve FLAC formatları arasında dönüştürün."
+      },
+      "extract": {
+        "name": "Ses Çıkar",
+        "description": "Video dosyalarından ses parçasını çıkarın."
+      }
+    }
+  }
+}

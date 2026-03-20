@@ -1,9 +1,11 @@
 import { setRequestLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { locales } from "@/i18n/routing";
 import { getAllSlugs, getToolBySlug } from "@/lib/registry";
 import { generateToolMetadata } from "@/lib/seo/metadata";
 import type { ToolCategory } from "@/lib/registry/types";
+import { loadCategoryMessages } from "@/lib/i18n/loadMessages";
 import { ToolPageClient } from "./ToolPageClient";
 
 export function generateStaticParams() {
@@ -34,15 +36,23 @@ export default async function ToolPage({
   const { locale, category, slug } = await params;
   setRequestLocale(locale);
 
-  const tool = getToolBySlug(slug);
-  if (!tool || tool.category !== category) {
+  const tool = getToolBySlug(slug, category as ToolCategory);
+  if (!tool) {
     notFound();
   }
 
+  const catMessages = await loadCategoryMessages(locale, category);
+  // Only pass the single tool's translations, not the entire category
+  const toolMessages = {
+    tools: { [category]: { [slug]: catMessages.tools[category][slug] } },
+  };
+
   return (
-    <ToolPageClient
-      category={category as ToolCategory}
-      slug={slug}
-    />
+    <NextIntlClientProvider messages={toolMessages}>
+      <ToolPageClient
+        category={category as ToolCategory}
+        slug={slug}
+      />
+    </NextIntlClientProvider>
   );
 }

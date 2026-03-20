@@ -1,0 +1,153 @@
+{
+  "tools": {
+    "video": {
+      "mute": {
+        "name": "Video stumm schalten",
+        "description": "Audio sofort aus Videodateien entfernen.",
+        "metaTitle": "Video stumm schalten - Audio aus Video online entfernen",
+        "metaDescription": "Audiospur aus Videodateien entfernen. Schnelle Verarbeitung, kein Upload nötig. Kostenloses Online-Tool.",
+        "keywords": "Video stumm schalten, Audio aus Video entfernen, stummes Video, Video ohne Ton",
+        "mute": "Audio entfernen",
+        "processing": "Wird verarbeitet",
+        "unsupported": "Dieses Tool erfordert SharedArrayBuffer-Unterstützung. Bitte verwenden Sie einen modernen Browser mit HTTPS.",
+        "faq": {
+          "q1": "Wie funktioniert das Stummschalten von Videos?",
+          "a1": "Das Tool entfernt die Audiospur aus dem Video, während die Videoqualität intakt bleibt. Keine Neukodierung erforderlich.",
+          "q2": "Welche Videoformate werden unterstützt?",
+          "a2": "Die gängigsten Formate einschließlich MP4, WebM, MOV und AVI werden unterstützt."
+        }
+      },
+      "trim": {
+        "name": "Video schneiden",
+        "description": "Videoclips auf die gewünschte Länge schneiden und kürzen.",
+        "metaTitle": "Video schneiden - Videoclips kostenlos online schneiden",
+        "metaDescription": "Videoclips auf beliebige Länge schneiden und kürzen. Start- und Endpunkte präzise festlegen. Kostenloses Online-Tool.",
+        "keywords": "Video schneiden, Video kürzen, Video-Trimmer, Video-Schneider online",
+        "start": "Start",
+        "end": "Ende",
+        "duration": "Dauer",
+        "trim": "Video schneiden",
+        "processing": "Wird verarbeitet",
+        "unsupported": "Dieses Tool erfordert SharedArrayBuffer-Unterstützung. Bitte verwenden Sie einen modernen Browser mit HTTPS.",
+        "faq": {
+          "q1": "Kann ich Videos präzise schneiden?",
+          "a1": "Ja, verwenden Sie die Bereichsregler, um genaue Start- und Endpunkte mit 0,1 Sekunden Präzision festzulegen.",
+          "q2": "Wird das Video neu kodiert?",
+          "a2": "Das Tool verwendet den Stream-Copy-Modus für schnelle Verarbeitung ohne Qualitätsverlust."
+        }
+      },
+      "rotate": {
+        "name": "Video drehen",
+        "description": "Videos um 90, 180 oder 270 Grad drehen.",
+        "metaTitle": "Video drehen - Video kostenlos online drehen",
+        "metaDescription": "Videos um 90, 180 oder 270 Grad drehen. Videoausrichtung einfach korrigieren. Kostenloses Online-Tool.",
+        "keywords": "Video drehen, Video spiegeln, Video-Rotation, Videoausrichtung korrigieren",
+        "rotate": "Drehen",
+        "processing": "Wird verarbeitet",
+        "unsupported": "Dieses Tool erfordert SharedArrayBuffer-Unterstützung. Bitte verwenden Sie einen modernen Browser mit HTTPS.",
+        "faq": {
+          "q1": "Welche Drehwinkel sind verfügbar?",
+          "a1": "Sie können Videos um 90° (im Uhrzeigersinn), 180° (auf den Kopf) oder 270° (gegen den Uhrzeigersinn) drehen.",
+          "q2": "Beeinflusst das Drehen die Videoqualität?",
+          "a2": "Das Video wird bei der Drehung neu kodiert, aber die Qualität wird auf hohem Niveau beibehalten."
+        }
+      },
+      "to-gif": {
+        "name": "Video zu GIF",
+        "description": "Videoclips in animierte GIF-Bilder konvertieren.",
+        "metaTitle": "Video zu GIF - Video zu GIF online konvertieren",
+        "metaDescription": "Videoclips in animierte GIF-Bilder konvertieren. Bildrate, Größe und Dauer steuern. Kostenloses Online-Tool.",
+        "keywords": "Video zu GIF, Video in GIF konvertieren, GIF-Ersteller, GIF-Maker",
+        "width": "Breite",
+        "start": "Start",
+        "end": "Ende",
+        "convert": "In GIF konvertieren",
+        "converting": "Wird konvertiert",
+        "unsupported": "Dieses Tool erfordert SharedArrayBuffer-Unterstützung. Bitte verwenden Sie einen modernen Browser mit HTTPS.",
+        "faq": {
+          "q1": "Wie kann ich die GIF-Dateigröße reduzieren?",
+          "a1": "Senken Sie die FPS, reduzieren Sie die Breite oder verkürzen Sie die Dauer. Das Tool verwendet eine optimierte Farbpalette für das beste Qualitäts-Größen-Verhältnis.",
+          "q2": "Was ist die maximale Länge für ein GIF?",
+          "a2": "Es gibt keine feste Grenze, aber längere GIFs erzeugen sehr große Dateien. Wir empfehlen, GIFs unter 10 Sekunden zu halten."
+        }
+      },
+      "to-webp": {
+        "name": "Video zu WebP",
+        "description": "Videoclips in animierte WebP-Bilder konvertieren.",
+        "metaTitle": "Video zu WebP-Animation - Video zu WebP online konvertieren",
+        "metaDescription": "Video in animierte WebP-Bilder konvertieren. Kleiner als GIF bei besserer Qualität. Kostenloses Online-Tool.",
+        "keywords": "Video zu WebP, animiertes WebP, WebP-Animation, Video zu WebP konvertieren",
+        "width": "Breite",
+        "quality": "Qualität",
+        "start": "Start",
+        "convert": "In WebP konvertieren",
+        "converting": "Wird konvertiert",
+        "unsupported": "Dieses Tool erfordert SharedArrayBuffer-Unterstützung. Bitte verwenden Sie einen modernen Browser mit HTTPS.",
+        "faq": {
+          "q1": "Warum WebP statt GIF verwenden?",
+          "a1": "Animierte WebP-Dateien sind typischerweise 25-35% kleiner als vergleichbare GIFs bei besserer Farbtiefe und Transparenzunterstützung.",
+          "q2": "Wird animiertes WebP weitgehend unterstützt?",
+          "a2": "Ja, alle modernen Browser unterstützen animiertes WebP. Nur sehr alte Browser bieten keine Unterstützung."
+        }
+      },
+      "compress": {
+        "name": "Video komprimieren",
+        "description": "Videodateigröße mit einstellbaren Qualitätsvoreinstellungen reduzieren.",
+        "metaTitle": "Video komprimieren - Kostenloser Online-Videokomprimierer",
+        "metaDescription": "Videodateien komprimieren, um die Größe zu reduzieren. Hoch, Mittel oder Niedrig wählen. Kostenloses Online-Tool, kein Upload nötig.",
+        "keywords": "Video komprimieren, Videokomprimierer, Videogröße reduzieren, Video verkleinern",
+        "quality": "Qualität",
+        "high": "Hoch",
+        "medium": "Mittel",
+        "low": "Niedrig",
+        "compress": "Komprimieren",
+        "processing": "Wird komprimiert",
+        "originalSize": "Originalgröße",
+        "compressedSize": "Komprimierte Größe",
+        "saved": "Größenreduzierung",
+        "unsupported": "Dieses Tool erfordert SharedArrayBuffer-Unterstützung. Bitte verwenden Sie einen modernen Browser mit HTTPS.",
+        "faq": {
+          "q1": "Wie funktioniert die Videokomprimierung?",
+          "a1": "Das Tool kodiert das Video mit H.264 und einem CRF-Wert (Constant Rate Factor) neu. Höhere Qualität bedeutet größere Dateien; niedrigere Qualität bedeutet kleinere Dateien mit mehr Kompressionsartefakten.",
+          "q2": "Welches Ausgabeformat wird verwendet?",
+          "a2": "Komprimierte Videos werden immer als MP4 (H.264 Video + AAC Audio) für maximale Kompatibilität ausgegeben."
+        }
+      },
+      "format-convert": {
+        "name": "Videoformat konvertieren",
+        "description": "Videos zwischen MP4-, WebM-, MKV- und AVI-Formaten konvertieren.",
+        "metaTitle": "Videoformat-Konverter - Kostenloser Online-Videokonverter",
+        "metaDescription": "Videos zwischen MP4, WebM, MKV und AVI konvertieren. Kostenloses Online-Tool, kein Upload nötig. Läuft in Ihrem Browser.",
+        "keywords": "Videokonverter, Video konvertieren, MP4 zu WebM, MKV zu MP4, Videoformat",
+        "format": "Ausgabeformat",
+        "convert": "Konvertieren",
+        "converting": "Wird konvertiert",
+        "unsupported": "Dieses Tool erfordert SharedArrayBuffer-Unterstützung. Bitte verwenden Sie einen modernen Browser mit HTTPS.",
+        "faq": {
+          "q1": "Welche Videoformate werden unterstützt?",
+          "a1": "Sie können zwischen MP4, WebM, MKV und AVI konvertieren. MP4 und AVI verwenden H.264-Kodierung, WebM verwendet VP9 und MKV verwendet Stream-Copy für schnelle Konvertierung.",
+          "q2": "Ändert sich die Videoqualität?",
+          "a2": "Die Konvertierung zu MKV verwendet Stream-Copy, sodass die Qualität exakt erhalten bleibt. Andere Konvertierungen kodieren mit hohen Qualitätseinstellungen neu."
+        }
+      },
+      "resize": {
+        "name": "Videogröße ändern",
+        "description": "Videoauflösung mit voreingestellten oder benutzerdefinierten Abmessungen ändern.",
+        "metaTitle": "Videogröße ändern - Kostenloser Online-Videoskalierer",
+        "metaDescription": "Videos auf 720p, 480p, 360p oder benutzerdefinierte Abmessungen skalieren. Kostenloses Online-Tool, kein Upload nötig.",
+        "keywords": "Videogröße ändern, Videoskalierer, Videoauflösung ändern, Video skalieren",
+        "resolution": "Auflösung",
+        "width": "Breite",
+        "resize": "Skalieren",
+        "processing": "Wird skaliert",
+        "unsupported": "Dieses Tool erfordert SharedArrayBuffer-Unterstützung. Bitte verwenden Sie einen modernen Browser mit HTTPS.",
+        "faq": {
+          "q1": "Welche Auflösungsvoreinstellungen sind verfügbar?",
+          "a1": "720p (1280px breit), 480p (854px breit) und 360p (640px breit). Sie können auch eine benutzerdefinierte Breite eingeben.",
+          "q2": "Wird das Seitenverhältnis beibehalten?",
+          "a2": "Ja, die Höhe wird automatisch berechnet, um das ursprüngliche Seitenverhältnis beizubehalten."
+        }
+      }
+    }
+  }
+}

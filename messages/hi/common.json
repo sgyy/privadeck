@@ -1,0 +1,436 @@
+{
+  "common": {
+    "siteName": "Media Toolbox",
+    "siteDescription": "मुफ़्त ब्राउज़र-आधारित मीडिया टूल। कोई अपलोड नहीं, कोई साइनअप नहीं, 100% निजी।",
+    "search": "टूल खोजें...",
+    "searchShortcut": "Ctrl+K",
+    "allTools": "सभी टूल",
+    "download": "डाउनलोड",
+    "copy": "कॉपी",
+    "copied": "कॉपी हो गया!",
+    "clear": "साफ़ करें",
+    "paste": "पेस्ट",
+    "reset": "रीसेट",
+    "process": "प्रोसेस",
+    "processing": "प्रोसेस हो रहा है...",
+    "dragDrop": "फ़ाइलें यहाँ खींचें और छोड़ें",
+    "or": "या",
+    "browseFiles": "फ़ाइलें चुनें",
+    "noFileSelected": "कोई फ़ाइल चयनित नहीं",
+    "privacy": "आपकी फ़ाइलें कभी आपके ब्राउज़र से बाहर नहीं जातीं",
+    "darkMode": "डार्क मोड",
+    "lightMode": "लाइट मोड",
+    "systemMode": "सिस्टम",
+    "language": "भाषा",
+    "share": "Share",
+    "shareCopied": "Link copied!",
+    "uploadFiles": "Upload Files",
+    "maxFileSize": "Max size",
+    "howItWorks": {
+      "step1FileTitle": "Upload your file",
+      "step1FileDesc": "Drag & drop or click to select a file from your device.",
+      "step1TextTitle": "Enter your text",
+      "step1TextDesc": "Paste or type your content into the input field.",
+      "step2Title": "Adjust settings",
+      "step2Desc": "Configure options to get the result you want.",
+      "step3FileTitle": "Download result",
+      "step3FileDesc": "Get your processed file instantly. No waiting.",
+      "step3TextTitle": "Copy or save",
+      "step3TextDesc": "Copy the output to clipboard or save it."
+    }
+  },
+  "nav": {
+    "home": "होम",
+    "tools": "टूल",
+    "text": "टेक्स्ट",
+    "developer": "डेवलपर",
+    "image": "इमेज",
+    "featured": "प्रमुख उपकरण",
+    "otherTools": "अन्य उपकरण",
+    "allCategoryTools": "सभी उपकरण देखें",
+    "pdf": "PDF",
+    "video": "वीडियो",
+    "audio": "ऑडियो"
+  },
+  "home": {
+    "hero": "मुफ़्त ऑनलाइन मीडिया टूल",
+    "heroSub": "ब्राउज़र-आधारित। कोई अपलोड नहीं। कोई साइनअप नहीं। 100% निजी।",
+    "popular": "लोकप्रिय टूल",
+    "allCategories": "सभी श्रेणियाँ",
+    "viewAll": "सभी देखें"
+  },
+  "categories": {
+    "text": {
+      "name": "टेक्स्ट टूल",
+      "description": "टेक्स्ट का विश्लेषण, रूपांतरण और निर्माण करें"
+    },
+    "developer": {
+      "name": "डेवलपर टूल",
+      "description": "डेटा को फ़ॉर्मेट, एन्कोड और डिकोड करें"
+    },
+    "image": {
+      "name": "इमेज टूल",
+      "description": "इमेज को कन्वर्ट, कंप्रेस और एडिट करें"
+    },
+    "pdf": {
+      "name": "PDF उपकरण",
+      "description": "PDF फ़ाइलें मर्ज, विभाजित, कन्वर्ट और संपादित करें"
+    },
+    "video": {
+      "name": "वीडियो उपकरण",
+      "description": "वीडियो ट्रिम, कन्वर्ट और संपादित करें"
+    },
+    "audio": {
+      "name": "ऑडियो उपकरण",
+      "description": "ऑडियो ट्रिम, कन्वर्ट और एक्सट्रैक्ट करें"
+    }
+  },
+  "footer": {
+    "tagline": "Free browser-based media tools. No uploads, no signups.",
+    "about": "About",
+    "howItWorks": "How It Works",
+    "privacy": "Privacy",
+    "allRightsReserved": "All rights reserved."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox protects your privacy. All file processing happens in your browser — nothing is uploaded to any server.",
+    "title": "Privacy & Security",
+    "subtitle": "Your files never leave your browser. We built Media Toolbox with privacy as the foundation, not an afterthought.",
+    "corePromiseTitle": "Our Core Promise",
+    "corePromiseBody": "Every tool on Media Toolbox processes files entirely within your browser using client-side JavaScript and WebAssembly. Your files are never uploaded to any server, never stored anywhere, and never seen by anyone but you. When you close the tab, the data is gone.",
+    "howItWorksTitle": "How It Works",
+    "steps": {
+      "step1": {
+        "title": "You select a file",
+        "description": "Your file is read directly by JavaScript in your browser. It never touches a network request."
+      },
+      "step2": {
+        "title": "Processing happens locally",
+        "description": "All conversions, compressions, and edits run on your device using Web APIs, Canvas, WebAssembly (FFmpeg, PDF.js), and other browser technologies."
+      },
+      "step3": {
+        "title": "You download the result",
+        "description": "The output is generated in-memory and offered as a download. No server is involved at any step."
+      }
+    },
+    "features": {
+      "noUpload": {
+        "title": "No File Uploads",
+        "description": "Files never leave your device. Processing uses your browser's built-in capabilities."
+      },
+      "localStorage": {
+        "title": "No Persistent Storage",
+        "description": "We don't use cookies or local storage to track you. Your preferences (language, theme) are stored locally."
+      },
+      "openSource": {
+        "title": "Verifiable Security",
+        "description": "You can inspect network traffic in your browser's DevTools to confirm zero file uploads."
+      },
+      "noLogs": {
+        "title": "No Server Logs",
+        "description": "Since everything runs client-side, there are no server logs of your file operations."
+      },
+      "transparent": {
+        "title": "Fully Transparent",
+        "description": "This is a static site hosted on Cloudflare Pages. No backend, no database, no API servers."
+      }
+    },
+    "thirdPartyTitle": "Third-Party Resources",
+    "thirdPartyBody": "Some tools load WebAssembly binaries (e.g., FFmpeg core) from CDNs like unpkg.com. These are open-source libraries fetched once and cached by your browser. No file data is sent to these CDNs — they only provide the processing code. We also use Google Analytics to collect anonymous usage statistics (page views, general location, browser type). No personally identifiable information is linked to your tool usage.",
+    "lastUpdated": "Last updated: March 2026"
+  },
+  "howItWorks": {
+    "metaTitle": "How It Works — Media Toolbox",
+    "metaDescription": "Learn how Media Toolbox processes your files entirely in the browser using JavaScript and WebAssembly. No uploads, no servers.",
+    "title": "How It Works",
+    "subtitle": "Three simple steps — your files stay on your device the entire time.",
+    "steps": {
+      "select": {
+        "title": "Pick Your File",
+        "description": "Choose a file from your device or drag and drop it onto the tool. The file is read by JavaScript running inside your browser — it is never sent over the network."
+      },
+      "process": {
+        "title": "Instant Local Processing",
+        "description": "The tool processes your file right on your device using browser technologies like Canvas API, Web Audio API, and WebAssembly (FFmpeg, PDF.js, Tesseract). Processing speed depends on your device — most operations finish in seconds."
+      },
+      "download": {
+        "title": "Download the Result",
+        "description": "Once processing is complete, the output file is generated in memory and ready to download. Click the download button and save it anywhere on your device. No account or signup needed."
+      }
+    },
+    "whyClientSideTitle": "Why Client-Side Processing?",
+    "whyClientSideBody": "Traditional online tools upload your files to a remote server, process them, and send the result back. This is slow, raises privacy concerns, and requires you to trust the service. Media Toolbox takes a different approach: every operation runs in your browser. Your files never leave your device, there are no upload size limits, and the tools work even on slow connections.",
+    "techTitle": "Technology Under the Hood",
+    "tech": {
+      "canvas": {
+        "title": "Canvas & Web APIs",
+        "description": "Image operations like crop, resize, and format conversion use the browser's native Canvas API for fast, GPU-accelerated rendering."
+      },
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "Video and audio tools use FFmpeg compiled to WebAssembly, running natively in the browser at near-native speed. PDF tools use PDF.js and pdf-lib."
+      },
+      "webApis": {
+        "title": "Modern Web Standards",
+        "description": "We leverage File API, Blob URLs, Web Workers, and other modern standards to handle large files efficiently without blocking the UI."
+      },
+      "offline": {
+        "title": "Works Offline",
+        "description": "Since no server is involved, most tools continue to work even when your internet connection drops — as long as the page is already loaded."
+      }
+    },
+    "privacyCta": "Want to learn more about how we protect your data?",
+    "privacyLink": "Read our Privacy Policy →"
+  },
+  "toolNames": {
+    "text": {
+      "word-counter": {
+        "name": "शब्द गणक",
+        "description": "अपने टेक्स्ट में शब्दों, अक्षरों, वाक्यों और पैराग्राफ़ की तुरंत गणना करें।"
+      },
+      "case-converter": {
+        "name": "केस कन्वर्टर",
+        "description": "टेक्स्ट को UPPERCASE, lowercase, Title Case, camelCase और अन्य में बदलें।"
+      },
+      "lorem-ipsum": {
+        "name": "Lorem Ipsum जनरेटर",
+        "description": "पैराग्राफ़, वाक्यों या शब्दों के अनुसार प्लेसहोल्डर टेक्स्ट बनाएँ।"
+      }
+    },
+    "developer": {
+      "json-formatter": {
+        "name": "JSON फ़ॉर्मेटर",
+        "description": "सिंटैक्स हाइलाइटिंग के साथ JSON डेटा को फ़ॉर्मेट, वैलिडेट और मिनिफ़ाई करें।"
+      },
+      "base64": {
+        "name": "Base64 एन्कोड/डिकोड",
+        "description": "टेक्स्ट को Base64 में एन्कोड करें या Base64 को वापस टेक्स्ट में डिकोड करें।"
+      },
+      "url-encoder": {
+        "name": "URL एन्कोड/डिकोड",
+        "description": "वेब पतों में सुरक्षित उपयोग के लिए URL कम्पोनेंट को एन्कोड या डिकोड करें।"
+      },
+      "ocr": {
+        "name": "OCR टेक्स्ट पहचान",
+        "description": "ऑप्टिकल कैरेक्टर रिकग्निशन का उपयोग करके छवियों से टेक्स्ट निकालें।"
+      },
+      "archive": {
+        "name": "ZIP एक्सट्रैक्टर",
+        "description": "ऑनलाइन ZIP आर्काइव की सामग्री निकालें और देखें।"
+      },
+      "csv-json": {
+        "name": "CSV/JSON कनवर्टर",
+        "description": "CSV और JSON फ़ॉर्मैट के बीच तुरंत कनवर्ट करें।"
+      },
+      "hash-generator": {
+        "name": "हैश जनरेटर",
+        "description": "टेक्स्ट या फ़ाइलों के लिए SHA-1, SHA-256, SHA-384, और SHA-512 हैश की गणना करें।"
+      },
+      "color-converter": {
+        "name": "रंग कनवर्टर",
+        "description": "HEX, RGB, और HSL फ़ॉर्मैट के बीच रंगों को लाइव प्रीव्यू के साथ कनवर्ट करें।"
+      },
+      "json-xml": {
+        "name": "JSON ↔ XML कनवर्टर",
+        "description": "JSON और XML फ़ॉर्मैट के बीच कनवर्ट करें।"
+      },
+      "markdown-preview": {
+        "name": "Markdown प्रीव्यू",
+        "description": "Markdown लिखें और साथ-साथ लाइव HTML प्रीव्यू देखें।"
+      },
+      "regex-tester": {
+        "name": "Regex टेस्टर",
+        "description": "रियल-टाइम मैचिंग और हाइलाइटिंग के साथ रेगुलर एक्सप्रेशन टेस्ट करें।"
+      },
+      "timestamp": {
+        "name": "Unix टाइमस्टैम्प कनवर्टर",
+        "description": "Unix टाइमस्टैम्प और मानव-पठनीय तारीखों के बीच कनवर्ट करें।"
+      },
+      "yaml-json": {
+        "name": "YAML ↔ JSON कनवर्टर",
+        "description": "YAML और JSON फ़ॉर्मैट के बीच कनवर्ट करें।"
+      },
+      "text-diff": {
+        "name": "टेक्स्ट डिफ़",
+        "description": "दो टेक्स्ट की तुलना करें और लाइन-दर-लाइन अंतर देखें।"
+      }
+    },
+    "image": {
+      "format-converter": {
+        "name": "इमेज फ़ॉर्मेट कन्वर्टर",
+        "description": "WebP, PNG, JPG और ICO फ़ॉर्मेट के बीच इमेज कन्वर्ट करें।"
+      },
+      "compress": {
+        "name": "इमेज कंप्रेसर",
+        "description": "गुणवत्ता बनाए रखते हुए फ़ाइल आकार कम करने के लिए इमेज कंप्रेस करें।"
+      },
+      "crop": {
+        "name": "इमेज क्रॉप",
+        "description": "इंटरैक्टिव क्रॉपिंग टूल का उपयोग करके सटीकता से इमेज क्रॉप करें।"
+      },
+      "resize": {
+        "name": "इमेज रीसाइज़",
+        "description": "आस्पेक्ट रेशियो लॉक के साथ इमेज को किसी भी डाइमेंशन में रीसाइज़ करें।"
+      },
+      "watermark": {
+        "name": "वॉटरमार्क जोड़ें",
+        "description": "कस्टमाइज़ करने योग्य स्टाइल और स्थिति के साथ इमेज में टेक्स्ट वॉटरमार्क जोड़ें।"
+      },
+      "remove-exif": {
+        "name": "EXIF डेटा हटाएँ",
+        "description": "गोपनीयता की रक्षा के लिए फ़ोटो से EXIF मेटाडेटा हटाएँ।"
+      },
+      "flip": {
+        "name": "इमेज फ़्लिप",
+        "description": "एक क्लिक में इमेज को क्षैतिज या लंबवत फ़्लिप करें।"
+      },
+      "grayscale": {
+        "name": "ग्रेस्केल इमेज",
+        "description": "किसी भी इमेज को ग्रेस्केल (ब्लैक एंड व्हाइट) में बदलें।"
+      },
+      "pixelate": {
+        "name": "पिक्सेलेट इमेज",
+        "description": "समायोज्य पिक्सेल आकार के साथ किसी भी इमेज पर पिक्सेलेशन प्रभाव लगाएँ।"
+      },
+      "add-border": {
+        "name": "बॉर्डर जोड़ें",
+        "description": "किसी भी इमेज के चारों ओर कस्टमाइज़ करने योग्य बॉर्डर जोड़ें।"
+      },
+      "circle-crop": {
+        "name": "सर्कल क्रॉप",
+        "description": "किसी भी इमेज को पारदर्शी बैकग्राउंड के साथ परफ़ेक्ट सर्कल में क्रॉप करें।"
+      },
+      "svg-to-png": {
+        "name": "SVG से PNG",
+        "description": "किसी भी स्केल पर SVG वेक्टर ग्राफ़िक्स को PNG रास्टर इमेज में कनवर्ट करें।"
+      },
+      "add-text": {
+        "name": "इमेज में टेक्स्ट जोड़ें",
+        "description": "कस्टमाइज़ करने योग्य फ़ॉन्ट आकार, रंग, और स्थिति के साथ इमेज पर टेक्स्ट ओवरले करें।"
+      },
+      "combine": {
+        "name": "इमेज कंबाइन",
+        "description": "कई इमेज को साथ-साथ या लंबवत स्टैक करके मर्ज करें।"
+      },
+      "split": {
+        "name": "इमेज स्प्लिट",
+        "description": "एक इमेज को समान आकार के टुकड़ों के ग्रिड में विभाजित करें।"
+      },
+      "heic-convert": {
+        "name": "HEIC कनवर्टर",
+        "description": "HEIC/HEIF इमेज को JPG या PNG फ़ॉर्मैट में कनवर्ट करें।"
+      },
+      "collage": {
+        "name": "इमेज कोलाज",
+        "description": "प्रीसेट ग्रिड लेआउट के साथ फ़ोटो कोलाज बनाएँ।"
+      }
+    },
+    "pdf": {
+      "merge": {
+        "name": "PDF मर्ज",
+        "description": "कई PDF फ़ाइलों को एक दस्तावेज़ में जोड़ें।"
+      },
+      "split": {
+        "name": "PDF स्प्लिट",
+        "description": "PDF को अलग-अलग पेज या कस्टम पेज रेंज में विभाजित करें।"
+      },
+      "delete-pages": {
+        "name": "PDF पेज हटाएँ",
+        "description": "PDF दस्तावेज़ से विशिष्ट पेज हटाएँ।"
+      },
+      "to-image": {
+        "name": "PDF से इमेज",
+        "description": "PDF पेज को JPG या PNG इमेज में कनवर्ट करें।"
+      },
+      "images-to-pdf": {
+        "name": "इमेज से PDF",
+        "description": "कई इमेज को एक PDF दस्तावेज़ में कनवर्ट करें।"
+      },
+      "rotate": {
+        "name": "PDF रोटेट",
+        "description": "PDF के सभी पेज को 90, 180, या 270 डिग्री घुमाएँ।"
+      },
+      "add-page-numbers": {
+        "name": "पेज नंबर जोड़ें",
+        "description": "PDF दस्तावेज़ के हर पेज पर पेज नंबर जोड़ें।"
+      },
+      "extract-text": {
+        "name": "PDF से टेक्स्ट निकालें",
+        "description": "PDF दस्तावेज़ से सभी टेक्स्ट कंटेंट निकालें।"
+      },
+      "rearrange": {
+        "name": "PDF पेज पुनर्व्यवस्थित करें",
+        "description": "PDF दस्तावेज़ में पेज का क्रम बदलने के लिए ड्रैग और ड्रॉप करें।"
+      },
+      "compress": {
+        "name": "PDF कंप्रेस",
+        "description": "कम गुणवत्ता पर पेज को पुनः रेंडर करके PDF फ़ाइल आकार कम करें।"
+      },
+      "add-watermark": {
+        "name": "PDF वॉटरमार्क",
+        "description": "PDF के हर पेज पर विकर्ण टेक्स्ट वॉटरमार्क जोड़ें।"
+      },
+      "crop": {
+        "name": "PDF क्रॉप",
+        "description": "प्रत्येक तरफ से हटाने के लिए मार्जिन सेट करके PDF पेज क्रॉप करें।"
+      },
+      "esign": {
+        "name": "PDF ई-साइन",
+        "description": "हस्ताक्षर बनाएँ और PDF दस्तावेज़ के किसी भी पेज पर रखें।"
+      },
+      "extract-images": {
+        "name": "PDF से इमेज निकालें",
+        "description": "PDF फ़ाइल से सभी एम्बेडेड इमेज निकालें और डाउनलोड करें।"
+      }
+    },
+    "video": {
+      "mute": {
+        "name": "वीडियो म्यूट",
+        "description": "वीडियो फ़ाइलों से तुरंत ऑडियो हटाएँ।"
+      },
+      "trim": {
+        "name": "वीडियो ट्रिम",
+        "description": "वीडियो क्लिप को वांछित लंबाई में काटें और ट्रिम करें।"
+      },
+      "rotate": {
+        "name": "वीडियो रोटेट",
+        "description": "वीडियो को 90, 180, या 270 डिग्री घुमाएँ।"
+      },
+      "to-gif": {
+        "name": "वीडियो से GIF",
+        "description": "वीडियो क्लिप को एनिमेटेड GIF इमेज में कनवर्ट करें।"
+      },
+      "to-webp": {
+        "name": "वीडियो से WebP",
+        "description": "वीडियो क्लिप को एनिमेटेड WebP इमेज में कनवर्ट करें।"
+      },
+      "compress": {
+        "name": "वीडियो कंप्रेस",
+        "description": "समायोज्य गुणवत्ता प्रीसेट के साथ वीडियो फ़ाइल आकार कम करें।"
+      },
+      "format-convert": {
+        "name": "वीडियो फ़ॉर्मैट कनवर्ट",
+        "description": "MP4, MKV, और AVI फ़ॉर्मैट के बीच वीडियो कनवर्ट करें।"
+      },
+      "resize": {
+        "name": "वीडियो रीसाइज़",
+        "description": "प्रीसेट या कस्टम डाइमेंशन के साथ वीडियो रिज़ॉल्यूशन बदलें।"
+      }
+    },
+    "audio": {
+      "trim": {
+        "name": "ऑडियो ट्रिमर",
+        "description": "ऑडियो फ़ाइलों को वांछित लंबाई में काटें और ट्रिम करें।"
+      },
+      "convert": {
+        "name": "ऑडियो कनवर्टर",
+        "description": "MP3, WAV, OGG, AAC, और FLAC फ़ॉर्मैट के बीच ऑडियो फ़ाइलें कनवर्ट करें।"
+      },
+      "extract": {
+        "name": "ऑडियो निकालें",
+        "description": "वीडियो फ़ाइलों से ऑडियो ट्रैक निकालें।"
+      }
+    }
+  }
+}
