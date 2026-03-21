@@ -47,6 +47,12 @@ export async function generateToolMetadata(
       siteName: "PrivaDeck",
       images: [OG_IMAGE],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      images: [OG_IMAGE.url],
+    },
   };
 }
 
@@ -64,6 +70,7 @@ export async function generateCategoryMetadata(
   return {
     title: t("name"),
     description: t("description"),
+    keywords: t("keywords"),
     alternates: {
       canonical: url,
       languages: {
@@ -80,6 +87,12 @@ export async function generateCategoryMetadata(
       type: "website",
       siteName: "PrivaDeck",
       images: [OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("name"),
+      description: t("description"),
+      images: [OG_IMAGE.url],
     },
   };
 }

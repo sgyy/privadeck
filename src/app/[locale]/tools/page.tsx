@@ -6,10 +6,11 @@ import { categories } from "@/lib/registry/categories";
 import { locales } from "@/i18n/routing";
 import { Card } from "@/components/ui/Card";
 import { loadCommonMessages, loadAllToolMessages } from "@/lib/i18n/loadMessages";
-import { SITE_URL } from "@/lib/seo/jsonld";
+import { generateBreadcrumbJsonLd, SITE_URL } from "@/lib/seo/jsonld";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
+// ... (rest of imports and generateStaticParams)
   return locales.map((locale) => ({ locale }));
 }
 
@@ -28,9 +29,12 @@ export async function generateMetadata({
     description: t("metaDescription"),
     alternates: {
       canonical: url,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `${SITE_URL}/${l}/tools/`]),
-      ),
+      languages: {
+        "x-default": `${SITE_URL}/en/tools/`,
+        ...Object.fromEntries(
+          locales.map((l) => [l, `${SITE_URL}/${l}/tools/`]),
+        ),
+      },
     },
     openGraph: {
       title: t("metaTitle"),
@@ -47,6 +51,12 @@ export async function generateMetadata({
         },
       ],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      images: [`${SITE_URL}/og-default.png`],
+    },
   };
 }
 
@@ -61,10 +71,23 @@ export default async function ToolsPage({
     loadCommonMessages(locale),
     loadAllToolMessages(locale),
   ]);
+
+  const t = await getTranslations({ locale, namespace: "common" });
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: t("nav.home"), url: `${SITE_URL}/${locale}/` },
+    { name: t("nav.tools"), url: `${SITE_URL}/${locale}/tools/` },
+  ]);
+
   return (
-    <NextIntlClientProvider messages={{ ...commonMessages, ...toolMessages }}>
-      <ToolsPageUI />
-    </NextIntlClientProvider>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <NextIntlClientProvider messages={{ ...commonMessages, ...toolMessages }}>
+        <ToolsPageUI />
+      </NextIntlClientProvider>
+    </>
   );
 }
 

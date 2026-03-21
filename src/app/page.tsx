@@ -1,8 +1,14 @@
-"use client";
-
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { locales, defaultLocale, type Locale } from "@/i18n/routing";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function RootPage() {
   const router = useRouter();

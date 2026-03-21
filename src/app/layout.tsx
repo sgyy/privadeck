@@ -1,7 +1,19 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
+export const viewport: Viewport = {
+  themeColor: "#06b6d4",
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://privadeck.app"),
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+  },
   title: {
     default: "PrivaDeck - Free Online Privacy-First Tools",
     template: "%s | PrivaDeck",
@@ -13,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "PrivaDeck",
     images: [
       {
-        url: "https://privadeck.app/og-default.png",
+        url: "/og-default.png",
         width: 1200,
         height: 630,
         alt: "PrivaDeck - Privacy-First Online Tools",
@@ -22,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://privadeck.app/og-default.png"],
+    images: ["/og-default.png"],
   },
 };
 

@@ -35,9 +35,10 @@ export async function generateMetadata({
     description: t("metaDescription"),
     alternates: {
       canonical: url,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `${SITE_URL}/${l}/`]),
-      ),
+      languages: {
+        "x-default": `${SITE_URL}/en/`,
+        ...Object.fromEntries(locales.map((l) => [l, `${SITE_URL}/${l}/`])),
+      },
     },
     openGraph: {
       title: t("metaTitle"),
@@ -53,6 +54,12 @@ export async function generateMetadata({
           alt: "PrivaDeck - Privacy-First Online Tools",
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      images: [`${SITE_URL}/og-default.png`],
     },
   };
 }

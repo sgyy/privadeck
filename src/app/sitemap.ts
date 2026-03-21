@@ -8,9 +8,15 @@ export const dynamic = "force-static";
 const BASE_URL = "https://privadeck.app";
 
 function buildAlternates(pathFn: (locale: string) => string) {
-  return Object.fromEntries(
-    locales.map((locale) => [locale, `${BASE_URL}/${locale}${pathFn(locale)}`])
-  );
+  return {
+    "x-default": `${BASE_URL}/en${pathFn("en")}`,
+    ...Object.fromEntries(
+      locales.map((locale) => [
+        locale,
+        `${BASE_URL}/${locale}${pathFn(locale)}`,
+      ])
+    ),
+  };
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {

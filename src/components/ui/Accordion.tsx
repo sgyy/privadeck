@@ -31,6 +31,7 @@ export function AccordionItem({
     <div>
       <button
         type="button"
+        aria-expanded={open}
         onClick={() => {
           const next = !open;
           setOpen(next);
@@ -46,9 +47,16 @@ export function AccordionItem({
           )}
         />
       </button>
-      {open && (
-        <div className="pb-4 text-sm text-muted-foreground animate-fade-in">{children}</div>
-      )}
+      <div
+        className={cn(
+          "overflow-hidden transition-all duration-300 ease-in-out",
+          open ? "max-h-[5000px] pb-4 opacity-100" : "max-h-0 opacity-0",
+        )}
+      >
+        <div className="text-sm text-muted-foreground animate-fade-in">
+          {children}
+        </div>
+      </div>
     </div>
   );
 }

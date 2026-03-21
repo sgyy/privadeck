@@ -40,6 +40,12 @@ export async function generateMetadata({
       siteName: "PrivaDeck",
       images: [{ url: `${SITE_URL}/og-default.png`, width: 1200, height: 630, alt: "PrivaDeck - Privacy-First Online Tools" }],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      images: [`${SITE_URL}/og-default.png`],
+    },
   };
 }
 
