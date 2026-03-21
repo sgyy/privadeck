@@ -13,21 +13,32 @@ export async function trimVideo(
   const inputName = "input" + ext;
   const outputName = "output" + ext;
 
-  await ffmpeg.writeFile(inputName, await fetchFile(file));
-  // Input seek (-ss before -i) for fast seek; -t for duration relative to seek
-  await ffmpeg.exec([
-    "-ss", formatTime(startTime),
-    "-i", inputName,
-    "-t", formatTime(endTime - startTime),
-    "-c", "copy",
-    outputName,
-  ]);
+  try {
+    await ffmpeg.writeFile(inputName, await fetchFile(file));
+    // Input seek (-ss before -i) for fast seek; -t for duration relative to seek
+    await ffmpeg.exec([
+      "-ss", formatTime(startTime),
+      "-i", inputName,
+      "-t", formatTime(endTime - startTime),
+      "-c", "copy",
+      outputName,
+    ]);
 
-  const data = await ffmpeg.readFile(outputName);
-  await ffmpeg.deleteFile(inputName);
-  await ffmpeg.deleteFile(outputName);
-
-  return new Blob([data as BlobPart], { type: file.type || "video/mp4" });
+    const data = await ffmpeg.readFile(outputName);
+    return new Blob([data as BlobPart], { type: file.type || "video/mp4" });
+  } finally {
+    setProgressHandler(null);
+    try {
+      await ffmpeg.deleteFile(inputName);
+    } catch {
+      /* ignore */
+    }
+    try {
+      await ffmpeg.deleteFile(outputName);
+    } catch {
+      /* ignore */
+    }
+  }
 }
 
 export function formatTime(seconds: number): string {

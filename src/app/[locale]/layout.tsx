@@ -6,6 +6,8 @@ import { ThemeProvider } from "next-themes";
 import Script from "next/script";
 import { locales, rtlLocales, type Locale } from "@/i18n/routing";
 import { MainLayout } from "@/components/layout/MainLayout";
+import { ServiceWorkerRegistration } from "@/components/shared/ServiceWorkerRegistration";
+import { InstallPrompt } from "@/components/shared/InstallPrompt";
 import { loadCommonMessages } from "@/lib/i18n/loadMessages";
 import { buildToolNavData } from "@/lib/i18n/toolNavData";
 
@@ -47,10 +49,19 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={rtlLocales.includes(locale as Locale) ? "rtl" : "ltr"} suppressHydrationWarning>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#06b6d4" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider messages={messages}>
             <MainLayout toolNavData={toolNavData}>{children}</MainLayout>
+            <InstallPrompt />
+            <ServiceWorkerRegistration />
           </NextIntlClientProvider>
         </ThemeProvider>
         {gaId && (

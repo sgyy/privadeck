@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.pdf.rotate.faq.q2",
       answerKey: "tools.pdf.rotate.faq.a2",
     },
+  
+    {
+      questionKey: "tools.pdf.rotate.faq.q3",
+      answerKey: "tools.pdf.rotate.faq.a3",
+    },
+    {
+      questionKey: "tools.pdf.rotate.faq.q4",
+      answerKey: "tools.pdf.rotate.faq.a4",
+    },
+    {
+      questionKey: "tools.pdf.rotate.faq.q5",
+      answerKey: "tools.pdf.rotate.faq.a5",
+    },
   ],
   relatedSlugs: ["merge", "split", "delete-pages"],
 };

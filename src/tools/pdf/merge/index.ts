@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.pdf.merge.faq.q2",
       answerKey: "tools.pdf.merge.faq.a2",
     },
+  
+    {
+      questionKey: "tools.pdf.merge.faq.q3",
+      answerKey: "tools.pdf.merge.faq.a3",
+    },
+    {
+      questionKey: "tools.pdf.merge.faq.q4",
+      answerKey: "tools.pdf.merge.faq.a4",
+    },
+    {
+      questionKey: "tools.pdf.merge.faq.q5",
+      answerKey: "tools.pdf.merge.faq.a5",
+    },
   ],
   relatedSlugs: ["split", "delete-pages", "to-image"],
 };

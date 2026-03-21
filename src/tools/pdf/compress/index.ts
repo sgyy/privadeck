@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.pdf.compress.faq.q2",
       answerKey: "tools.pdf.compress.faq.a2",
     },
+  
+    {
+      questionKey: "tools.pdf.compress.faq.q3",
+      answerKey: "tools.pdf.compress.faq.a3",
+    },
+    {
+      questionKey: "tools.pdf.compress.faq.q4",
+      answerKey: "tools.pdf.compress.faq.a4",
+    },
+    {
+      questionKey: "tools.pdf.compress.faq.q5",
+      answerKey: "tools.pdf.compress.faq.a5",
+    },
   ],
   relatedSlugs: ["merge", "images-to-pdf", "rotate"],
 };

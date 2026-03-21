@@ -33,6 +33,7 @@ export async function compressVideo(
     const data = await ffmpeg.readFile(outputName);
     return new Blob([data as BlobPart], { type: "video/mp4" });
   } finally {
+    setProgressHandler(null);
     try { await ffmpeg.deleteFile(inputName); } catch { /* ignore */ }
     try { await ffmpeg.deleteFile(outputName); } catch { /* ignore */ }
   }

@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.developer.csv-json.faq.q2",
       answerKey: "tools.developer.csv-json.faq.a2",
     },
+  
+    {
+      questionKey: "tools.developer.csv-json.faq.q3",
+      answerKey: "tools.developer.csv-json.faq.a3",
+    },
+    {
+      questionKey: "tools.developer.csv-json.faq.q4",
+      answerKey: "tools.developer.csv-json.faq.a4",
+    },
+    {
+      questionKey: "tools.developer.csv-json.faq.q5",
+      answerKey: "tools.developer.csv-json.faq.a5",
+    },
   ],
   relatedSlugs: ["json-formatter", "base64", "url-encoder"],
 };

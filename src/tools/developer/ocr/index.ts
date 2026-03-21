@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.developer.ocr.faq.q2",
       answerKey: "tools.developer.ocr.faq.a2",
     },
+  
+    {
+      questionKey: "tools.developer.ocr.faq.q3",
+      answerKey: "tools.developer.ocr.faq.a3",
+    },
+    {
+      questionKey: "tools.developer.ocr.faq.q4",
+      answerKey: "tools.developer.ocr.faq.a4",
+    },
+    {
+      questionKey: "tools.developer.ocr.faq.q5",
+      answerKey: "tools.developer.ocr.faq.a5",
+    },
   ],
   relatedSlugs: ["json-formatter", "base64"],
 };

@@ -18,7 +18,13 @@
           "q1": "이 도구는 어떤 기능을 하나요?",
           "a1": "JSON 데이터를 적절한 들여쓰기로 포맷(정리)하고, JSON 구문을 검증하며, 공백을 제거하여 JSON을 압축할 수 있습니다.",
           "q2": "제 데이터는 안전한가요?",
-          "a2": "네, 모든 처리는 브라우저에서 이루어집니다. 데이터가 기기를 떠나지 않습니다."
+          "a2": "네, 모든 처리는 브라우저에서 이루어집니다. 데이터가 기기를 떠나지 않습니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "base64": {
@@ -35,7 +41,13 @@
           "q1": "Base64 인코딩이란 무엇인가요?",
           "a1": "Base64는 바이너리 데이터를 ASCII 문자로 변환하는 인코딩 방식입니다. 데이터 URL, 이메일 첨부 파일, API 페이로드 등에 널리 사용됩니다.",
           "q2": "파일을 인코딩할 수 있나요?",
-          "a2": "현재 이 도구는 텍스트의 인코딩과 디코딩을 지원합니다. 파일 Base64 인코딩 기능은 향후 업데이트에서 제공될 예정입니다."
+          "a2": "현재 이 도구는 텍스트의 인코딩과 디코딩을 지원합니다. 파일 Base64 인코딩 기능은 향후 업데이트에서 제공될 예정입니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "url-encoder": {
@@ -54,7 +66,13 @@
           "q1": "URL 인코딩이란 무엇인가요?",
           "a1": "URL 인코딩은 특수 문자를 퍼센트 인코딩 형식(예: 공백이 %20으로 변환)으로 변환하여 웹 주소에서 안전하게 사용할 수 있도록 합니다.",
           "q2": "인코딩과 컴포넌트 인코딩의 차이는 무엇인가요?",
-          "a2": "인코딩은 전체 URL을 변환하되 / 및 ? 같은 구조 문자를 보존합니다. 컴포넌트 인코딩은 그러한 문자를 포함하여 모든 것을 인코딩하며, 쿼리 매개변수 값에 유용합니다."
+          "a2": "인코딩은 전체 URL을 변환하되 / 및 ? 같은 구조 문자를 보존합니다. 컴포넌트 인코딩은 그러한 문자를 포함하여 모든 것을 인코딩하며, 쿼리 매개변수 값에 유용합니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "ocr": {
@@ -71,7 +89,13 @@
           "q1": "어떤 언어를 지원하나요?",
           "a1": "영어, 중국어(간체/번체), 일본어, 한국어, 스페인어, 프랑스어, 독일어 등 12개 이상의 언어를 지원합니다.",
           "q2": "OCR 정확도는 어떤가요?",
-          "a2": "정확도는 이미지 품질과 텍스트 선명도에 따라 달라집니다. 대비가 좋고 고해상도인 이미지가 최상의 결과를 제공합니다."
+          "a2": "정확도는 이미지 품질과 텍스트 선명도에 따라 달라집니다. 대비가 좋고 고해상도인 이미지가 최상의 결과를 제공합니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "archive": {
@@ -87,7 +111,13 @@
           "q1": "어떤 아카이브 형식을 지원하나요?",
           "a1": "현재 ZIP 파일을 완전히 지원합니다. 파일은 브라우저에서 완전히 추출됩니다.",
           "q2": "아카이브에서 개별 파일을 다운로드할 수 있나요?",
-          "a2": "네, 아카이브 내용을 탐색하고 다운로드 버튼을 클릭하여 개별 파일을 다운로드할 수 있습니다."
+          "a2": "네, 아카이브 내용을 탐색하고 다운로드 버튼을 클릭하여 개별 파일을 다운로드할 수 있습니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "csv-json": {
@@ -106,7 +136,13 @@
           "q1": "어떤 CSV 형식을 지원하나요?",
           "a1": "표준 쉼표 구분 값을 지원하며 큰따옴표 이스케이프도 처리합니다. 쉼표, 따옴표, 줄바꿈이 포함된 필드도 올바르게 처리됩니다.",
           "q2": "중첩된 JSON을 지원하나요?",
-          "a2": "JSON에서 CSV로의 변환은 평면 객체 배열에서 가장 잘 작동합니다. 중첩 객체는 문자열 표현으로 변환됩니다."
+          "a2": "JSON에서 CSV로의 변환은 평면 객체 배열에서 가장 잘 작동합니다. 중첩 객체는 문자열 표현으로 변환됩니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "hash-generator": {
@@ -124,7 +160,13 @@
           "q1": "어떤 해시 알고리즘을 지원하나요?",
           "a1": "SHA-1, SHA-256, SHA-384, SHA-512를 브라우저의 Web Crypto API를 사용하여 동시에 계산합니다.",
           "q2": "파일 해시가 가능한가요?",
-          "a2": "네, 파일 모드로 전환하여 파일을 드롭하세요. 해시는 브라우저에서 로컬로 계산되며 파일이 업로드되지 않습니다."
+          "a2": "네, 파일 모드로 전환하여 파일을 드롭하세요. 해시는 브라우저에서 로컬로 계산되며 파일이 업로드되지 않습니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "color-converter": {
@@ -142,7 +184,13 @@
           "q1": "어떤 색상 형식을 지원하나요?",
           "a1": "HEX (#ff6600 또는 #f60), RGB (rgb(255, 102, 0)), HSL (hsl(24, 100%, 50%))로 입력할 수 있습니다. 다른 형식은 자동으로 표시됩니다.",
           "q2": "알파/투명도를 지원하나요?",
-          "a2": "현재 불투명 색상만 지원합니다. RGBA와 HSLA 지원은 향후 업데이트에서 추가될 예정입니다."
+          "a2": "현재 불투명 색상만 지원합니다. RGBA와 HSLA 지원은 향후 업데이트에서 추가될 예정입니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "json-xml": {
@@ -161,7 +209,13 @@
           "q1": "JSON은 XML에 어떻게 매핑되나요?",
           "a1": "객체 키가 XML 요소 이름이 됩니다. 배열은 같은 이름의 반복 요소를 생성합니다. 원시 값은 텍스트 콘텐츠가 됩니다.",
           "q2": "XML 속성이 보존되나요?",
-          "a2": "XML 속성은 JSON 출력에서 보존되지 않습니다. 요소 이름과 텍스트 콘텐츠만 변환됩니다."
+          "a2": "XML 속성은 JSON 출력에서 보존되지 않습니다. 요소 이름과 텍스트 콘텐츠만 변환됩니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "markdown-preview": {
@@ -178,7 +232,13 @@
           "q1": "어떤 Markdown 기능을 지원하나요?",
           "a1": "제목, 굵게, 기울임, 링크, 이미지, 코드 블록, 인라인 코드, 목록, 인용문, 수평선을 지원합니다.",
           "q2": "HTML 출력을 복사할 수 있나요?",
-          "a2": "네, \"HTML 복사\" 버튼으로 생성된 HTML을 클립보드에 복사할 수 있습니다."
+          "a2": "네, \"HTML 복사\" 버튼으로 생성된 HTML을 클립보드에 복사할 수 있습니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "regex-tester": {
@@ -199,7 +259,13 @@
           "q1": "어떤 정규식 플래그를 지원하나요?",
           "a1": "전역 (g), 대소문자 무시 (i), 여러 줄 (m), dotAll (s) 플래그를 사용할 수 있습니다.",
           "q2": "명명된 캡처 그룹을 지원하나요?",
-          "a2": "네, (?<name>...)으로 정의된 명명 그룹이 매치 세부 정보에 표시됩니다."
+          "a2": "네, (?<name>...)으로 정의된 명명 그룹이 매치 세부 정보에 표시됩니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "timestamp": {
@@ -222,7 +288,13 @@
           "q1": "Unix 타임스탬프란?",
           "a1": "Unix 타임스탬프는 1970년 1월 1일 00:00:00 UTC(Unix 에포크)부터 경과한 초 수입니다.",
           "q2": "밀리초 타임스탬프를 처리하나요?",
-          "a2": "네. 10^12보다 큰 숫자를 입력하면 자동으로 초 대신 밀리초로 처리됩니다."
+          "a2": "네. 10^12보다 큰 숫자를 입력하면 자동으로 초 대신 밀리초로 처리됩니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "yaml-json": {
@@ -241,7 +313,13 @@
           "q1": "어떤 YAML 기능을 지원하나요?",
           "a1": "js-yaml 라이브러리를 통해 중첩 객체, 배열, 여러 줄 문자열, 앵커/별칭 등 모든 표준 YAML 기능을 지원합니다.",
           "q2": "변환 시 주석이 보존되나요?",
-          "a2": "아니요. YAML 주석은 파싱 시 제거됩니다. JSON에서 YAML로 변환 시 주석 없는 깔끔한 YAML이 출력됩니다."
+          "a2": "아니요. YAML 주석은 파싱 시 제거됩니다. JSON에서 YAML로 변환 시 주석 없는 깔끔한 YAML이 출력됩니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "text-diff": {
@@ -261,7 +339,13 @@
           "q1": "어떤 diff 알고리즘을 사용하나요?",
           "a1": "줄 기반 최장 공통 부분 수열(LCS) 알고리즘으로 추가, 삭제, 변경 없는 줄을 식별합니다.",
           "q2": "diff 출력을 복사할 수 있나요?",
-          "a2": "네, 복사 버튼으로 추가에는 + , 삭제에는 - 접두사가 붙은 통합 diff 형식으로 복사할 수 있습니다."
+          "a2": "네, 복사 버튼으로 추가에는 + , 삭제에는 - 접두사가 붙은 통합 diff 형식으로 복사할 수 있습니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "word-counter": {
@@ -283,7 +367,11 @@
           "q2": "글자 수 제한이 있나요?",
           "a2": "아니요, 이 도구는 브라우저에서 어떤 길이의 텍스트든 제한 없이 처리합니다.",
           "q3": "읽기 시간은 어떻게 계산되나요?",
-          "a3": "읽기 시간은 성인의 평균 독서 속도인 분당 200단어를 기준으로 추정됩니다."
+          "a3": "읽기 시간은 성인의 평균 독서 속도인 분당 200단어를 기준으로 추정됩니다.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "case-converter": {
@@ -306,7 +394,13 @@
           "q1": "어떤 대소문자 형식을 지원하나요?",
           "a1": "UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE를 지원합니다.",
           "q2": "코드 변수명을 변환할 수 있나요?",
-          "a2": "네! camelCase, PascalCase, snake_case, kebab-case 변환을 사용하여 프로그래밍 변수명을 변환할 수 있습니다."
+          "a2": "네! camelCase, PascalCase, snake_case, kebab-case 변환을 사용하여 프로그래밍 변수명을 변환할 수 있습니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "lorem-ipsum": {
@@ -326,7 +420,13 @@
           "q1": "Lorem Ipsum이란 무엇인가요?",
           "a1": "Lorem Ipsum은 디자인과 출판에서 실제 콘텐츠가 들어갈 공간을 채우기 위해 사용하는 자리 표시 텍스트입니다.",
           "q2": "출력을 사용자 정의할 수 있나요?",
-          "a2": "네, 단락, 문장 또는 단어 단위로 생성할 수 있고, 개수를 설정하며, 선택적으로 전통적인 Lorem Ipsum 시작 문구로 시작할 수 있습니다."
+          "a2": "네, 단락, 문장 또는 단어 단위로 생성할 수 있고, 개수를 설정하며, 선택적으로 전통적인 Lorem Ipsum 시작 문구로 시작할 수 있습니다.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       }
     }

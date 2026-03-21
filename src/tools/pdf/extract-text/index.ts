@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.pdf.extract-text.faq.q2",
       answerKey: "tools.pdf.extract-text.faq.a2",
     },
+  
+    {
+      questionKey: "tools.pdf.extract-text.faq.q3",
+      answerKey: "tools.pdf.extract-text.faq.a3",
+    },
+    {
+      questionKey: "tools.pdf.extract-text.faq.q4",
+      answerKey: "tools.pdf.extract-text.faq.a4",
+    },
+    {
+      questionKey: "tools.pdf.extract-text.faq.q5",
+      answerKey: "tools.pdf.extract-text.faq.a5",
+    },
   ],
   relatedSlugs: ["to-image", "merge", "split"],
 };

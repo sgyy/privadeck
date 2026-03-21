@@ -14,7 +14,13 @@
           "q1": "Bagaimana cara kerja pembisuan video?",
           "a1": "Alat ini menghapus trek audio dari video sambil mempertahankan kualitas video. Tidak perlu encoding ulang.",
           "q2": "Format video apa yang didukung?",
-          "a2": "Sebagian besar format umum termasuk MP4, WebM, MOV, dan AVI didukung."
+          "a2": "Sebagian besar format umum termasuk MP4, WebM, MOV, dan AVI didukung.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "trim": {
@@ -33,7 +39,13 @@
           "q1": "Bisakah saya memotong video dengan presisi?",
           "a1": "Ya, gunakan slider rentang untuk mengatur titik awal dan akhir yang tepat dengan presisi 0,1 detik.",
           "q2": "Apakah video di-encode ulang?",
-          "a2": "Alat ini menggunakan mode stream copy untuk pemrosesan cepat tanpa kehilangan kualitas."
+          "a2": "Alat ini menggunakan mode stream copy untuk pemrosesan cepat tanpa kehilangan kualitas.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "rotate": {
@@ -49,7 +61,13 @@
           "q1": "Sudut rotasi apa yang tersedia?",
           "a1": "Anda dapat memutar video sebesar 90° (searah jarum jam), 180° (terbalik), atau 270° (berlawanan jarum jam).",
           "q2": "Apakah memutar memengaruhi kualitas video?",
-          "a2": "Video di-encode ulang selama rotasi, tetapi kualitas dipertahankan pada level tinggi."
+          "a2": "Video di-encode ulang selama rotasi, tetapi kualitas dipertahankan pada level tinggi.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "to-gif": {
@@ -68,7 +86,13 @@
           "q1": "Bagaimana cara mengurangi ukuran file GIF?",
           "a1": "Turunkan FPS, kurangi lebar, atau persingkat durasi. Alat ini menggunakan palet teroptimasi untuk rasio kualitas-ukuran terbaik.",
           "q2": "Berapa panjang maksimum GIF?",
-          "a2": "Tidak ada batas ketat, tetapi GIF yang lebih panjang menghasilkan file yang sangat besar. Kami sarankan GIF di bawah 10 detik."
+          "a2": "Tidak ada batas ketat, tetapi GIF yang lebih panjang menghasilkan file yang sangat besar. Kami sarankan GIF di bawah 10 detik.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "to-webp": {
@@ -87,7 +111,13 @@
           "q1": "Mengapa menggunakan WebP daripada GIF?",
           "a1": "File WebP animasi biasanya 25-35% lebih kecil dari GIF setara sambil mendukung kedalaman warna dan transparansi yang lebih baik.",
           "q2": "Apakah WebP animasi didukung secara luas?",
-          "a2": "Ya, semua browser modern mendukung WebP animasi. Hanya browser yang sangat lama yang tidak mendukung."
+          "a2": "Ya, semua browser modern mendukung WebP animasi. Hanya browser yang sangat lama yang tidak mendukung.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "compress": {
@@ -110,7 +140,13 @@
           "q1": "Bagaimana cara kerja kompresi video?",
           "a1": "Alat ini meng-encode ulang video menggunakan H.264 dengan nilai CRF (Constant Rate Factor). Kualitas lebih tinggi berarti file lebih besar; kualitas lebih rendah berarti file lebih kecil dengan lebih banyak artefak kompresi.",
           "q2": "Format output apa yang digunakan?",
-          "a2": "Video terkompres selalu dikeluarkan sebagai MP4 (video H.264 + audio AAC) untuk kompatibilitas maksimum."
+          "a2": "Video terkompres selalu dikeluarkan sebagai MP4 (video H.264 + audio AAC) untuk kompatibilitas maksimum.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "format-convert": {
@@ -127,7 +163,13 @@
           "q1": "Format video apa yang didukung?",
           "a1": "Anda dapat mengonversi antara format MP4, WebM, MKV, dan AVI. MP4 dan AVI menggunakan encoding H.264, WebM menggunakan VP9, dan MKV menggunakan stream copy untuk konversi cepat.",
           "q2": "Apakah kualitas video berubah?",
-          "a2": "Konversi ke MKV menggunakan stream copy sehingga kualitas dipertahankan persis. Konversi lain meng-encode ulang dengan pengaturan kualitas tinggi."
+          "a2": "Konversi ke MKV menggunakan stream copy sehingga kualitas dipertahankan persis. Konversi lain meng-encode ulang dengan pengaturan kualitas tinggi.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "resize": {
@@ -145,7 +187,13 @@
           "q1": "Preset resolusi apa yang tersedia?",
           "a1": "720p (lebar 1280px), 480p (lebar 854px), dan 360p (lebar 640px). Anda juga dapat memasukkan lebar kustom.",
           "q2": "Apakah rasio aspek dipertahankan?",
-          "a2": "Ya, tinggi dihitung secara otomatis untuk mempertahankan rasio aspek asli."
+          "a2": "Ya, tinggi dihitung secara otomatis untuk mempertahankan rasio aspek asli.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       }
     }

@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.developer.yaml-json.faq.q2",
       answerKey: "tools.developer.yaml-json.faq.a2",
     },
+  
+    {
+      questionKey: "tools.developer.yaml-json.faq.q3",
+      answerKey: "tools.developer.yaml-json.faq.a3",
+    },
+    {
+      questionKey: "tools.developer.yaml-json.faq.q4",
+      answerKey: "tools.developer.yaml-json.faq.a4",
+    },
+    {
+      questionKey: "tools.developer.yaml-json.faq.q5",
+      answerKey: "tools.developer.yaml-json.faq.a5",
+    },
   ],
   relatedSlugs: ["json-formatter", "json-xml", "csv-json"],
 };

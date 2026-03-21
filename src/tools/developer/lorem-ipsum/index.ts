@@ -15,6 +15,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.developer.lorem-ipsum.faq.q2",
       answerKey: "tools.developer.lorem-ipsum.faq.a2",
     },
+  
+    {
+      questionKey: "tools.developer.lorem-ipsum.faq.q3",
+      answerKey: "tools.developer.lorem-ipsum.faq.a3",
+    },
+    {
+      questionKey: "tools.developer.lorem-ipsum.faq.q4",
+      answerKey: "tools.developer.lorem-ipsum.faq.a4",
+    },
+    {
+      questionKey: "tools.developer.lorem-ipsum.faq.q5",
+      answerKey: "tools.developer.lorem-ipsum.faq.a5",
+    },
   ],
   relatedSlugs: ["word-counter", "case-converter"],
 };

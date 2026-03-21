@@ -6,6 +6,8 @@ import { FileDropzone } from "@/components/shared/FileDropzone";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
+import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
+import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { convertVideoFormat, FORMATS, type VideoFormat } from "./logic";
 
@@ -22,6 +24,8 @@ export default function VideoFormatConvert() {
   const fileUrl = useObjectUrl(file);
   const t = useTranslations("tools.video.format-convert");
 
+  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg();
+
   if (!isSharedArrayBufferSupported()) {
     return (
       <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
@@ -36,6 +40,7 @@ export default function VideoFormatConvert() {
     setResult(null);
     setError("");
     setProgress(0);
+    await loadFFmpeg();
     try {
       const output = await convertVideoFormat(file, format, setProgress);
       setResult(output);
@@ -57,6 +62,14 @@ export default function VideoFormatConvert() {
           setError("");
         }}
       />
+
+      {ffmpegStatus === "loading" && <FFmpegLoadingState />}
+
+      {ffmpegStatus === "error" && (
+        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
+          Failed to load processing engine. Please refresh and try again.
+        </div>
+      )}
 
       {file && (
         <div className="space-y-4">

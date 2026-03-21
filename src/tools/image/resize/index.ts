@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.image.resize.faq.q2",
       answerKey: "tools.image.resize.faq.a2",
     },
+  
+    {
+      questionKey: "tools.image.resize.faq.q3",
+      answerKey: "tools.image.resize.faq.a3",
+    },
+    {
+      questionKey: "tools.image.resize.faq.q4",
+      answerKey: "tools.image.resize.faq.a4",
+    },
+    {
+      questionKey: "tools.image.resize.faq.q5",
+      answerKey: "tools.image.resize.faq.a5",
+    },
   ],
   relatedSlugs: ["crop", "compress", "format-converter"],
 };

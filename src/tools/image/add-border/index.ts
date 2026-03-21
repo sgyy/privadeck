@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.image.add-border.faq.q2",
       answerKey: "tools.image.add-border.faq.a2",
     },
+  
+    {
+      questionKey: "tools.image.add-border.faq.q3",
+      answerKey: "tools.image.add-border.faq.a3",
+    },
+    {
+      questionKey: "tools.image.add-border.faq.q4",
+      answerKey: "tools.image.add-border.faq.a4",
+    },
+    {
+      questionKey: "tools.image.add-border.faq.q5",
+      answerKey: "tools.image.add-border.faq.a5",
+    },
   ],
   relatedSlugs: ["crop", "resize", "watermark"],
 };

@@ -1,6 +1,6 @@
 import type { ToolDefinition } from "@/lib/registry/types";
 
-const SITE_URL = "https://privadeck.app";
+export const SITE_URL = "https://privadeck.app";
 
 export function generateToolJsonLd(
   tool: ToolDefinition,
@@ -16,6 +16,13 @@ export function generateToolJsonLd(
     url: `${SITE_URL}/${locale}/tools/${tool.category}/${tool.slug}`,
     applicationCategory: "UtilityApplication",
     operatingSystem: "Any",
+    browserRequirements: "Modern browser with JavaScript and WebAssembly",
+    permissions: "none",
+    author: {
+      "@type": "Organization",
+      name: "PrivaDeck",
+      url: SITE_URL,
+    },
     offers: {
       "@type": "Offer",
       price: "0",

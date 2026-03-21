@@ -22,7 +22,11 @@
           "q2": "画像はサーバーにアップロードされますか？",
           "a2": "いいえ。すべての画像処理はブラウザ内でローカルに行われます。画像がデバイスの外に送信されることはありません。",
           "q3": "複数の画像を一度に変換できますか？",
-          "a3": "はい、複数の画像をドラッグ＆ドロップでき、すべて選択した形式に変換されます。"
+          "a3": "はい、複数の画像をドラッグ＆ドロップでき、すべて選択した形式に変換されます。",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "compress": {
@@ -41,7 +45,13 @@
           "q1": "画像圧縮の仕組みは？",
           "a1": "非可逆圧縮により画像ファイルサイズを削減します。品質と最大サイズを制御できます。すべての処理はブラウザ内で行われます。",
           "q2": "対応するフォーマットは？",
-          "a2": "JPEG、PNG、WebP、GIF、BMP 画像の圧縮に対応しています。"
+          "a2": "JPEG、PNG、WebP、GIF、BMP 画像の圧縮に対応しています。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "crop": {
@@ -60,7 +70,13 @@
           "q1": "特定のアスペクト比を設定できますか？",
           "a1": "はい、プリセット比率（1:1、4:3、16:9、3:2）から選択するか、自由な切り抜きが可能です。",
           "q2": "元の画像は変更されますか？",
-          "a2": "いいえ、元の画像は変更されません。ダウンロード用に新しい切り抜き画像が作成されます。"
+          "a2": "いいえ、元の画像は変更されません。ダウンロード用に新しい切り抜き画像が作成されます。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "resize": {
@@ -80,7 +96,13 @@
           "q1": "アスペクト比を維持できますか？",
           "a1": "はい、デフォルトでアスペクト比が固定されています。リンクアイコンをクリックして解除すると自由にリサイズできます。",
           "q2": "どのようなプリセットがありますか？",
-          "a2": "HD (1280x720)、Full HD (1920x1080)、4K (3840x2160)、SNS用サイズなどの一般的なプリセットがあります。"
+          "a2": "HD (1280x720)、Full HD (1920x1080)、4K (3840x2160)、SNS用サイズなどの一般的なプリセットがあります。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "watermark": {
@@ -106,7 +128,13 @@
           "q1": "画像全体に透かしをタイル状に配置できますか？",
           "a1": "はい、「タイル（繰り返し）」位置オプションを選択すると、画像全体に斜めに繰り返し透かしが配置されます。",
           "q2": "透かしの透明度を調整できますか？",
-          "a2": "はい、不透明度スライダーでほぼ見えない状態から完全に不透明な状態まで調整できます。"
+          "a2": "はい、不透明度スライダーでほぼ見えない状態から完全に不透明な状態まで調整できます。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "remove-exif": {
@@ -122,7 +150,13 @@
           "q1": "どの EXIF データが削除されますか？",
           "a1": "GPS 位置情報、カメラモデル、撮影日時、その他の埋め込み情報を含むすべてのメタデータが削除されます。画像はクリーンなキャンバスに再描画されます。",
           "q2": "画像品質に影響しますか？",
-          "a2": "JPEG では 95% の品質で保持されます。PNG 画像はロスレスで再エクスポートされます。"
+          "a2": "JPEG では 95% の品質で保持されます。PNG 画像はロスレスで再エクスポートされます。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "flip": {
@@ -139,7 +173,13 @@
           "q1": "水平反転と垂直反転の違いは？",
           "a1": "水平反転は鏡を見るように画像を左右に反転します。垂直反転は画像を上下に反転します。",
           "q2": "反転で画像品質は低下しますか？",
-          "a2": "いいえ。画像は元の解像度で再描画されます。JPEG 画像は 92% の品質で再エンコードされます。"
+          "a2": "いいえ。画像は元の解像度で再描画されます。JPEG 画像は 92% の品質で再エンコードされます。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "grayscale": {
@@ -154,7 +194,13 @@
           "q1": "グレースケール変換の仕組みは？",
           "a1": "標準的な輝度公式（0.299R + 0.587G + 0.114B）を使用して各ピクセルをグレーの階調に変換し、知覚される明るさを保持します。",
           "q2": "グレースケール効果の強さを調整できますか？",
-          "a2": "このツールは完全なグレースケール変換を適用します。部分的な彩度低下は専用のフォトエディターをご利用ください。"
+          "a2": "このツールは完全なグレースケール変換を適用します。部分的な彩度低下は専用のフォトエディターをご利用ください。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "pixelate": {
@@ -170,7 +216,13 @@
           "q1": "モザイクの用途は？",
           "a1": "モザイクはスクリーンショットの機密情報の検閲、レトロなピクセルアート効果の作成、写真内の顔の匿名化などに使用されます。",
           "q2": "モザイクのレベルを調整できますか？",
-          "a2": "はい。ピクセルサイズスライダーで 2px（控えめ）から 50px（強いモザイク）まで調整できます。"
+          "a2": "はい。ピクセルサイズスライダーで 2px（控えめ）から 50px（強いモザイク）まで調整できます。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "add-border": {
@@ -187,7 +239,13 @@
           "q1": "どのような枠線オプションがありますか？",
           "a1": "枠線の幅を 1〜100 ピクセルでカスタマイズし、カラーピッカーで任意の色を選択できます。",
           "q2": "出力フォーマットは？",
-          "a2": "枠線の色が正確に保持されるよう、出力は常に PNG 形式です。"
+          "a2": "枠線の色が正確に保持されるよう、出力は常に PNG 形式です。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "circle-crop": {
@@ -202,7 +260,13 @@
           "q1": "円形切り抜きの仕組みは？",
           "a1": "画像の中心を取り、短い辺を直径として使用し、完全な円形にクリップします。背景は透明になります。",
           "q2": "出力フォーマットは？",
-          "a2": "円形切り抜きに必要な透明度をサポートするため、出力は常に PNG 形式です。"
+          "a2": "円形切り抜きに必要な透明度をサポートするため、出力は常に PNG 形式です。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "svg-to-png": {
@@ -218,7 +282,13 @@
           "q1": "利用可能なスケールファクターは？",
           "a1": "1x（元のサイズ）、2x、3x、4x から選択できます。高いスケールは高 DPI ディスプレイに適した、より大きく詳細な PNG ファイルを生成します。",
           "q2": "すべての SVG 機能に対応していますか？",
-          "a2": "ブラウザ内蔵の SVG エンジンで SVG をレンダリングします。標準的な SVG 機能のほとんどに対応していますが、外部リソースやフォントは正しくレンダリングされない場合があります。"
+          "a2": "ブラウザ内蔵の SVG エンジンで SVG をレンダリングします。標準的な SVG 機能のほとんどに対応していますが、外部リソースやフォントは正しくレンダリングされない場合があります。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "add-text": {
@@ -245,7 +315,13 @@
           "q1": "テキストの表示位置を選べますか？",
           "a1": "はい、中央、左上、右上、左下、右下の5つの位置から選択できます。",
           "q2": "使用できるフォントは？",
-          "a2": "ブラウザのデフォルトのサンセリフフォントを使用します。システムにより異なりますが、常にクリーンで読みやすいフォントです。"
+          "a2": "ブラウザのデフォルトのサンセリフフォントを使用します。システムにより異なりますが、常にクリーンで読みやすいフォントです。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "combine": {
@@ -262,7 +338,13 @@
           "q1": "どのようなレイアウトオプションがありますか？",
           "a1": "画像を水平（横並び）または垂直（上下に積み重ね）に結合できます。",
           "q2": "画像のサイズを揃える必要がありますか？",
-          "a2": "いいえ、異なるサイズの画像は元のサイズのまま結合されます。キャンバスがすべての画像に合わせて拡張されます。"
+          "a2": "いいえ、異なるサイズの画像は元のサイズのまま結合されます。キャンバスがすべての画像に合わせて拡張されます。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "split": {
@@ -280,7 +362,13 @@
           "q1": "画像分割の仕組みは？",
           "a1": "行数と列数を選択してください。指定したグリッドに基づいて画像が均等なピースに分割されます。",
           "q2": "すべてのピースを一度にダウンロードできますか？",
-          "a2": "はい、「すべてダウンロード (ZIP)」ボタンで全ピースを1つの ZIP ファイルで取得できます。"
+          "a2": "はい、「すべてダウンロード (ZIP)」ボタンで全ピースを1つの ZIP ファイルで取得できます。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "heic-convert": {
@@ -298,7 +386,13 @@
           "q1": "HEIC ファイルとは？",
           "a1": "HEIC（High Efficiency Image Container）は Apple デバイスで使用されるデフォルトの画像形式です。品質を維持しながら JPEG より優れた圧縮率を提供します。",
           "q2": "画像はサーバーにアップロードされますか？",
-          "a2": "いいえ。すべての変換はブラウザ内でローカルに行われます。ファイルがデバイスを離れることはありません。"
+          "a2": "いいえ。すべての変換はブラウザ内でローカルに行われます。ファイルがデバイスを離れることはありません。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "collage": {
@@ -316,7 +410,13 @@
           "q1": "利用可能なレイアウトは？",
           "a1": "利用可能なレイアウトはアップロードする画像数によって異なります。2x1、1x2、2x2、3x1、1x3、2x3 のグリッドが選択できます。",
           "q2": "間隔と背景をカスタマイズできますか？",
-          "a2": "はい、画像間の間隔（0〜20px）を調整し、カラーピッカーで任意の背景色を選択できます。"
+          "a2": "はい、画像間の間隔（0〜20px）を調整し、カラーピッカーで任意の背景色を選択できます。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       }
     }

@@ -22,7 +22,11 @@
           "q2": "Загружаются ли мои изображения на сервер?",
           "a2": "Нет. Вся обработка изображений происходит локально в вашем браузере. Ваши изображения никогда не покидают ваше устройство.",
           "q3": "Можно ли конвертировать несколько изображений одновременно?",
-          "a3": "Да, вы можете перетащить несколько изображений, и все они будут конвертированы в выбранный формат."
+          "a3": "Да, вы можете перетащить несколько изображений, и все они будут конвертированы в выбранный формат.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "compress": {
@@ -40,7 +44,13 @@
           "q1": "Как работает сжатие изображений?",
           "a1": "Инструмент уменьшает размер файла изображения с помощью сжатия с потерями. Вы можете контролировать качество и максимальный размер. Вся обработка происходит в вашем браузере.",
           "q2": "Какие форматы поддерживаются?",
-          "a2": "Поддерживается сжатие изображений JPEG, PNG, WebP, GIF и BMP."
+          "a2": "Поддерживается сжатие изображений JPEG, PNG, WebP, GIF и BMP.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
         "maxResolution": "Макс. разрешение"
       },
@@ -60,7 +70,13 @@
           "q1": "Можно ли задать определённое соотношение сторон?",
           "a1": "Да, вы можете выбрать из предустановленных соотношений (1:1, 4:3, 16:9, 3:2) или использовать произвольную обрезку.",
           "q2": "Изменяется ли оригинальное изображение?",
-          "a2": "Нет, ваше оригинальное изображение никогда не изменяется. Для скачивания создаётся новое обрезанное изображение."
+          "a2": "Нет, ваше оригинальное изображение никогда не изменяется. Для скачивания создаётся новое обрезанное изображение.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "resize": {
@@ -80,7 +96,13 @@
           "q1": "Можно ли сохранить пропорции?",
           "a1": "Да, пропорции заблокированы по умолчанию. Нажмите на значок связи, чтобы разблокировать их для произвольного изменения размера.",
           "q2": "Какие пресеты доступны?",
-          "a2": "Популярные пресеты: HD (1280×720), Full HD (1920×1080), 4K (3840×2160) и размеры для социальных сетей."
+          "a2": "Популярные пресеты: HD (1280×720), Full HD (1920×1080), 4K (3840×2160) и размеры для социальных сетей.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "watermark": {
@@ -106,7 +128,13 @@
           "q1": "Можно ли замостить водяные знаки по всему изображению?",
           "a1": "Да, выберите опцию «Замостить (Повтор)», чтобы добавить повторяющиеся водяные знаки под углом по всему изображению.",
           "q2": "Можно ли настроить прозрачность водяного знака?",
-          "a2": "Да, используйте ползунок прозрачности для настройки от едва заметного до полностью непрозрачного."
+          "a2": "Да, используйте ползунок прозрачности для настройки от едва заметного до полностью непрозрачного.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "remove-exif": {
@@ -122,7 +150,13 @@
           "q1": "Какие EXIF-данные удаляются?",
           "a1": "Удаляются все метаданные, включая GPS-локацию, модель камеры, дату съёмки и другую встроенную информацию. Изображение перерисовывается на чистом холсте.",
           "q2": "Влияет ли это на качество изображения?",
-          "a2": "Качество изображения сохраняется на уровне 95% для JPEG. PNG-изображения реэкспортируются без потерь."
+          "a2": "Качество изображения сохраняется на уровне 95% для JPEG. PNG-изображения реэкспортируются без потерь.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "flip": {
@@ -139,7 +173,13 @@
           "q1": "В чём разница между горизонтальным и вертикальным отражением?",
           "a1": "Горизонтальное отражение зеркально переворачивает изображение слева направо, как в зеркале. Вертикальное отражение переворачивает сверху вниз.",
           "q2": "Ухудшается ли качество при отражении?",
-          "a2": "Нет. Изображение перерисовывается в исходном разрешении. JPEG-изображения перекодируются с качеством 92%."
+          "a2": "Нет. Изображение перерисовывается в исходном разрешении. JPEG-изображения перекодируются с качеством 92%.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "grayscale": {
@@ -154,7 +194,13 @@
           "q1": "Как работает конвертация в оттенки серого?",
           "a1": "Инструмент преобразует каждый пиксель в оттенок серого по стандартной формуле яркости (0.299R + 0.587G + 0.114B), сохраняя воспринимаемую яркость.",
           "q2": "Можно ли настроить интенсивность эффекта?",
-          "a2": "Этот инструмент выполняет полную конвертацию в оттенки серого. Для частичного обесцвечивания используйте специализированный фоторедактор."
+          "a2": "Этот инструмент выполняет полную конвертацию в оттенки серого. Для частичного обесцвечивания используйте специализированный фоторедактор.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "pixelate": {
@@ -170,7 +216,13 @@
           "q1": "Для чего можно использовать пикселизацию?",
           "a1": "Пикселизация часто используется для цензурирования конфиденциальной информации на скриншотах, создания ретро-эффектов пиксель-арта или анонимизации лиц на фотографиях.",
           "q2": "Можно ли регулировать уровень пикселизации?",
-          "a2": "Да. Используйте ползунок размера пикселей для настройки от 2px (тонкая) до 50px (сильная пикселизация)."
+          "a2": "Да. Используйте ползунок размера пикселей для настройки от 2px (тонкая) до 50px (сильная пикселизация).",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "add-border": {
@@ -187,7 +239,13 @@
           "q1": "Какие параметры рамки доступны?",
           "a1": "Вы можете настроить ширину рамки от 1 до 100 пикселей и выбрать любой цвет с помощью палитры.",
           "q2": "В каком формате сохраняется результат?",
-          "a2": "Результат всегда сохраняется в формате PNG для точного сохранения выбранного цвета рамки."
+          "a2": "Результат всегда сохраняется в формате PNG для точного сохранения выбранного цвета рамки.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "circle-crop": {
@@ -202,7 +260,13 @@
           "q1": "Как работает круглая обрезка?",
           "a1": "Инструмент берёт центр изображения, использует наименьшую сторону как диаметр и обрезает в идеальный круг. Фон становится прозрачным.",
           "q2": "В каком формате сохраняется результат?",
-          "a2": "Результат всегда сохраняется в формате PNG, так как он поддерживает прозрачность, необходимую для круглой обрезки."
+          "a2": "Результат всегда сохраняется в формате PNG, так как он поддерживает прозрачность, необходимую для круглой обрезки.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "svg-to-png": {
@@ -218,7 +282,13 @@
           "q1": "Какие масштабы доступны?",
           "a1": "Вы можете выбрать 1x (исходный размер), 2x, 3x или 4x. Больший масштаб создаёт более крупные и детализированные PNG-файлы для дисплеев высокого разрешения.",
           "q2": "Поддерживаются ли все возможности SVG?",
-          "a2": "Инструмент отображает SVG с помощью встроенного SVG-движка браузера. Поддерживается большинство стандартных возможностей SVG, но внешние ресурсы или шрифты могут отображаться некорректно."
+          "a2": "Инструмент отображает SVG с помощью встроенного SVG-движка браузера. Поддерживается большинство стандартных возможностей SVG, но внешние ресурсы или шрифты могут отображаться некорректно.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "add-text": {
@@ -245,7 +315,13 @@
           "q1": "Можно ли выбрать расположение текста?",
           "a1": "Да, выберите из пяти позиций: по центру, сверху слева, сверху справа, снизу слева или снизу справа.",
           "q2": "Какие шрифты доступны?",
-          "a2": "Инструмент использует стандартный шрифт sans-serif браузера, который зависит от системы, но всегда чёткий и хорошо читаемый."
+          "a2": "Инструмент использует стандартный шрифт sans-serif браузера, который зависит от системы, но всегда чёткий и хорошо читаемый.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "combine": {
@@ -262,7 +338,13 @@
           "q1": "Какие варианты расположения доступны?",
           "a1": "Вы можете объединять изображения горизонтально (рядом) или вертикально (одно над другим).",
           "q2": "Должны ли изображения быть одного размера?",
-          "a2": "Нет, изображения разных размеров объединяются в исходных размерах. Холст расширяется для размещения всех изображений."
+          "a2": "Нет, изображения разных размеров объединяются в исходных размерах. Холст расширяется для размещения всех изображений.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "split": {
@@ -280,7 +362,13 @@
           "q1": "Как работает разделение изображения?",
           "a1": "Выберите количество строк и столбцов. Изображение делится на одинаковые части в соответствии с указанной сеткой.",
           "q2": "Можно ли скачать все части сразу?",
-          "a2": "Да, используйте кнопку «Скачать всё (ZIP)», чтобы получить все части в одном ZIP-файле."
+          "a2": "Да, используйте кнопку «Скачать всё (ZIP)», чтобы получить все части в одном ZIP-файле.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "heic-convert": {
@@ -298,7 +386,13 @@
           "q1": "Что такое файл HEIC?",
           "a1": "HEIC (High Efficiency Image Container) — формат изображений по умолчанию на устройствах Apple. Он обеспечивает лучшее сжатие, чем JPEG, при сохранении качества.",
           "q2": "Загружается ли моё изображение на сервер?",
-          "a2": "Нет. Вся конвертация происходит локально в вашем браузере. Ваши файлы никогда не покидают ваше устройство."
+          "a2": "Нет. Вся конвертация происходит локально в вашем браузере. Ваши файлы никогда не покидают ваше устройство.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "collage": {
@@ -316,7 +410,13 @@
           "q1": "Какие компоновки доступны?",
           "a1": "Доступные компоновки зависят от количества загруженных изображений. Варианты включают сетки 2x1, 1x2, 2x2, 3x1, 1x3 и 2x3.",
           "q2": "Можно ли настроить отступы и фон?",
-          "a2": "Да, вы можете настроить отступ между изображениями (0-20px) и выбрать любой цвет фона с помощью палитры."
+          "a2": "Да, вы можете настроить отступ между изображениями (0-20px) и выбрать любой цвет фона с помощью палитры.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       }
     }

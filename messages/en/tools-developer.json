@@ -18,7 +18,13 @@
           "q1": "What does this tool do?",
           "a1": "It formats (pretty-prints) JSON data with proper indentation, validates JSON syntax, and can minify JSON by removing whitespace.",
           "q2": "Is my data safe?",
-          "a2": "Yes, all processing happens in your browser. Your data never leaves your device."
+          "a2": "Yes, all processing happens in your browser. Your data never leaves your device.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "base64": {
@@ -35,7 +41,13 @@
           "q1": "What is Base64 encoding?",
           "a1": "Base64 is a binary-to-text encoding scheme that converts binary data into ASCII characters. It's commonly used in data URLs, email attachments, and API payloads.",
           "q2": "Can I encode files?",
-          "a2": "Currently this tool encodes and decodes text. File Base64 encoding will be available in a future update."
+          "a2": "Currently this tool encodes and decodes text. File Base64 encoding will be available in a future update.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "url-encoder": {
@@ -54,7 +66,13 @@
           "q1": "What is URL encoding?",
           "a1": "URL encoding converts special characters into percent-encoded format (e.g., space becomes %20) so they can be safely used in web addresses.",
           "q2": "What's the difference between Encode and Encode Component?",
-          "a2": "Encode converts the full URL preserving structure characters like / and ?. Encode Component encodes everything including those characters, useful for query parameter values."
+          "a2": "Encode converts the full URL preserving structure characters like / and ?. Encode Component encodes everything including those characters, useful for query parameter values.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "ocr": {
@@ -71,7 +89,13 @@
           "q1": "Which languages are supported?",
           "a1": "Over 12 languages including English, Chinese (Simplified/Traditional), Japanese, Korean, Spanish, French, German, and more.",
           "q2": "How accurate is the OCR?",
-          "a2": "Accuracy depends on image quality and text clarity. Clear, high-resolution images with good contrast produce the best results."
+          "a2": "Accuracy depends on image quality and text clarity. Clear, high-resolution images with good contrast produce the best results.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "archive": {
@@ -87,7 +111,13 @@
           "q1": "Which archive formats are supported?",
           "a1": "Currently ZIP files are fully supported. Files are extracted entirely in your browser.",
           "q2": "Can I download individual files from an archive?",
-          "a2": "Yes, you can browse the archive contents and download any individual file by clicking its download button."
+          "a2": "Yes, you can browse the archive contents and download any individual file by clicking its download button.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "csv-json": {
@@ -106,7 +136,13 @@
           "q1": "What CSV formats are supported?",
           "a1": "Standard comma-separated values with optional double-quote escaping. Fields containing commas, quotes, or newlines are handled correctly.",
           "q2": "Does it support nested JSON?",
-          "a2": "JSON to CSV works best with flat arrays of objects. Nested objects are converted to their string representation."
+          "a2": "JSON to CSV works best with flat arrays of objects. Nested objects are converted to their string representation.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "hash-generator": {
@@ -124,7 +160,13 @@
           "q1": "Which hash algorithms are supported?",
           "a1": "SHA-1, SHA-256, SHA-384, and SHA-512 are all computed simultaneously using the browser's Web Crypto API.",
           "q2": "Can I hash files?",
-          "a2": "Yes, switch to File mode and drop any file. The hash is computed locally in your browser — the file is never uploaded."
+          "a2": "Yes, switch to File mode and drop any file. The hash is computed locally in your browser — the file is never uploaded.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "color-converter": {
@@ -142,7 +184,13 @@
           "q1": "Which color formats are supported?",
           "a1": "You can input colors as HEX (#ff6600 or #f60), RGB (rgb(255, 102, 0)), or HSL (hsl(24, 100%, 50%)). All other formats are shown automatically.",
           "q2": "Does it support alpha/transparency?",
-          "a2": "Currently the tool supports opaque colors only. RGBA and HSLA support will be added in a future update."
+          "a2": "Currently the tool supports opaque colors only. RGBA and HSLA support will be added in a future update.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "json-xml": {
@@ -161,7 +209,13 @@
           "q1": "How is JSON mapped to XML?",
           "a1": "Object keys become XML element names. Arrays produce repeated elements with the same name. Primitive values become text content.",
           "q2": "Does it preserve XML attributes?",
-          "a2": "XML attributes are not preserved in the JSON output. Only element names and text content are converted."
+          "a2": "XML attributes are not preserved in the JSON output. Only element names and text content are converted.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "markdown-preview": {
@@ -178,7 +232,13 @@
           "q1": "Which Markdown features are supported?",
           "a1": "Headings, bold, italic, links, images, code blocks, inline code, unordered lists, blockquotes, and horizontal rules.",
           "q2": "Can I copy the HTML output?",
-          "a2": "Yes, use the Copy HTML button to copy the generated HTML to your clipboard."
+          "a2": "Yes, use the Copy HTML button to copy the generated HTML to your clipboard.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "regex-tester": {
@@ -199,7 +259,13 @@
           "q1": "Which regex flags are supported?",
           "a1": "Global (g), case-insensitive (i), multiline (m), and dotAll (s) flags are available.",
           "q2": "Does it support named capture groups?",
-          "a2": "Yes, named groups defined with (?'<'name'>'...) are displayed in the match details."
+          "a2": "Yes, named groups defined with (?'<'name'>'...) are displayed in the match details.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "timestamp": {
@@ -222,7 +288,13 @@
           "q1": "What is a Unix timestamp?",
           "a1": "A Unix timestamp is the number of seconds that have elapsed since January 1, 1970 00:00:00 UTC (the Unix epoch).",
           "q2": "Does it handle millisecond timestamps?",
-          "a2": "Yes. If you enter a number larger than 10^12, it is automatically treated as milliseconds instead of seconds."
+          "a2": "Yes. If you enter a number larger than 10^12, it is automatically treated as milliseconds instead of seconds.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "yaml-json": {
@@ -241,7 +313,13 @@
           "q1": "What YAML features are supported?",
           "a1": "All standard YAML features including nested objects, arrays, multi-line strings, and anchors/aliases via the js-yaml library.",
           "q2": "Does conversion preserve comments?",
-          "a2": "No. YAML comments are stripped during parsing. When converting JSON to YAML the output is clean YAML without comments."
+          "a2": "No. YAML comments are stripped during parsing. When converting JSON to YAML the output is clean YAML without comments.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "text-diff": {
@@ -261,7 +339,13 @@
           "q1": "What diff algorithm is used?",
           "a1": "A line-based Longest Common Subsequence (LCS) algorithm that identifies additions, removals, and unchanged lines.",
           "q2": "Can I copy the diff output?",
-          "a2": "Yes, use the copy button to copy a unified diff format with + and - prefixes for additions and removals."
+          "a2": "Yes, use the copy button to copy a unified diff format with + and - prefixes for additions and removals.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "word-counter": {
@@ -283,7 +367,11 @@
           "q2": "Is there a character limit?",
           "a2": "No, the tool processes text of any length directly in your browser with no limits.",
           "q3": "How is reading time calculated?",
-          "a3": "Reading time is estimated at 200 words per minute, which is the average adult reading speed."
+          "a3": "Reading time is estimated at 200 words per minute, which is the average adult reading speed.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "case-converter": {
@@ -306,7 +394,13 @@
           "q1": "What case formats are supported?",
           "a1": "We support UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, and CONSTANT_CASE.",
           "q2": "Can I convert code variable names?",
-          "a2": "Yes! Use camelCase, PascalCase, snake_case, or kebab-case conversions for programming variable names."
+          "a2": "Yes! Use camelCase, PascalCase, snake_case, or kebab-case conversions for programming variable names.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "lorem-ipsum": {
@@ -326,7 +420,13 @@
           "q1": "What is Lorem Ipsum?",
           "a1": "Lorem Ipsum is placeholder text commonly used in design and publishing to fill spaces where real content will eventually go.",
           "q2": "Can I customize the output?",
-          "a2": "Yes, you can choose to generate by paragraphs, sentences, or words, set the count, and optionally start with the classic Lorem Ipsum opening."
+          "a2": "Yes, you can choose to generate by paragraphs, sentences, or words, set the count, and optionally start with the classic Lorem Ipsum opening.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       }
     }

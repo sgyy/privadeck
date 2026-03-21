@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.pdf.crop.faq.q2",
       answerKey: "tools.pdf.crop.faq.a2",
     },
+  
+    {
+      questionKey: "tools.pdf.crop.faq.q3",
+      answerKey: "tools.pdf.crop.faq.a3",
+    },
+    {
+      questionKey: "tools.pdf.crop.faq.q4",
+      answerKey: "tools.pdf.crop.faq.a4",
+    },
+    {
+      questionKey: "tools.pdf.crop.faq.q5",
+      answerKey: "tools.pdf.crop.faq.a5",
+    },
   ],
   relatedSlugs: ["rotate", "delete-pages", "add-page-numbers"],
 };

@@ -19,36 +19,47 @@ export async function videoToWebp(
   const inputName = "input" + getExtension(file.name);
   const outputName = "output.webp";
 
-  await ffmpeg.writeFile(inputName, await fetchFile(file));
+  try {
+    await ffmpeg.writeFile(inputName, await fetchFile(file));
 
-  const args: string[] = [];
-  if (options.startTime !== undefined && options.startTime > 0) {
-    args.push("-ss", String(options.startTime));
+    const args: string[] = [];
+    if (options.startTime !== undefined && options.startTime > 0) {
+      args.push("-ss", String(options.startTime));
+    }
+    args.push("-i", inputName);
+    if (options.endTime !== undefined) {
+      const duration = options.endTime - (options.startTime || 0);
+      if (duration > 0) args.push("-t", String(duration));
+    }
+
+    args.push(
+      "-vf", `fps=${options.fps},scale=${options.width}:-1`,
+      "-vcodec", "libwebp",
+      "-lossless", "0",
+      "-compression_level", "3",
+      "-q:v", String(options.quality),
+      "-loop", "0",
+      "-an",
+      outputName,
+    );
+
+    await ffmpeg.exec(args);
+
+    const data = await ffmpeg.readFile(outputName);
+    return new Blob([data as BlobPart], { type: "image/webp" });
+  } finally {
+    setProgressHandler(null);
+    try {
+      await ffmpeg.deleteFile(inputName);
+    } catch {
+      /* ignore */
+    }
+    try {
+      await ffmpeg.deleteFile(outputName);
+    } catch {
+      /* ignore */
+    }
   }
-  args.push("-i", inputName);
-  if (options.endTime !== undefined) {
-    const duration = options.endTime - (options.startTime || 0);
-    if (duration > 0) args.push("-t", String(duration));
-  }
-
-  args.push(
-    "-vf", `fps=${options.fps},scale=${options.width}:-1`,
-    "-vcodec", "libwebp",
-    "-lossless", "0",
-    "-compression_level", "3",
-    "-q:v", String(options.quality),
-    "-loop", "0",
-    "-an",
-    outputName,
-  );
-
-  await ffmpeg.exec(args);
-
-  const data = await ffmpeg.readFile(outputName);
-  await ffmpeg.deleteFile(inputName);
-  await ffmpeg.deleteFile(outputName);
-
-  return new Blob([data as BlobPart], { type: "image/webp" });
 }
 
 function getExtension(filename: string): string {

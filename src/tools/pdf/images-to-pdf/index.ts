@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.pdf.images-to-pdf.faq.q2",
       answerKey: "tools.pdf.images-to-pdf.faq.a2",
     },
+  
+    {
+      questionKey: "tools.pdf.images-to-pdf.faq.q3",
+      answerKey: "tools.pdf.images-to-pdf.faq.a3",
+    },
+    {
+      questionKey: "tools.pdf.images-to-pdf.faq.q4",
+      answerKey: "tools.pdf.images-to-pdf.faq.a4",
+    },
+    {
+      questionKey: "tools.pdf.images-to-pdf.faq.q5",
+      answerKey: "tools.pdf.images-to-pdf.faq.a5",
+    },
   ],
   relatedSlugs: ["merge", "to-image"],
 };

@@ -1,9 +1,10 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import type { ToolDefinition } from "@/lib/registry/types";
 import { Shield } from "lucide-react";
 import { ToolHowItWorks } from "./ToolHowItWorks";
+import { generateToolJsonLd } from "@/lib/seo/jsonld";
 
 interface ToolPageShellProps {
   tool: ToolDefinition;
@@ -13,9 +14,16 @@ interface ToolPageShellProps {
 export function ToolPageShell({ tool, children }: ToolPageShellProps) {
   const t = useTranslations(`tools.${tool.category}.${tool.slug}`);
   const tc = useTranslations("common");
+  const locale = useLocale();
+
+  const toolJsonLd = generateToolJsonLd(tool, locale, t("name"), t("description"));
 
   return (
     <div className="space-y-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolJsonLd) }}
+      />
       <div>
         <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
           {t("name")}
@@ -23,7 +31,7 @@ export function ToolPageShell({ tool, children }: ToolPageShellProps) {
         <p className="mt-2 text-muted-foreground">{t("description")}</p>
       </div>
 
-      <ToolHowItWorks category={tool.category} />
+      <ToolHowItWorks category={tool.category} toolName={t("name")} />
 
       {/* Local-Only privacy indicator */}
       <div className="flex items-center gap-2 rounded-lg border border-emerald-200/70 bg-emerald-50/80 backdrop-blur-sm px-4 py-2.5 dark:border-emerald-800/70 dark:bg-emerald-950/80">

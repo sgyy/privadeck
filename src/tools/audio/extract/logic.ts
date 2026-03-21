@@ -20,19 +20,30 @@ export async function extractAudio(
   const inputName = "input" + inputExt;
   const outputName = "output." + format;
 
-  await ffmpeg.writeFile(inputName, await fetchFile(file));
-  await ffmpeg.exec([
-    "-i", inputName,
-    "-vn",
-    ...FORMAT_OPTIONS[format].args,
-    outputName,
-  ]);
+  try {
+    await ffmpeg.writeFile(inputName, await fetchFile(file));
+    await ffmpeg.exec([
+      "-i", inputName,
+      "-vn",
+      ...FORMAT_OPTIONS[format].args,
+      outputName,
+    ]);
 
-  const data = await ffmpeg.readFile(outputName);
-  await ffmpeg.deleteFile(inputName);
-  await ffmpeg.deleteFile(outputName);
-
-  return new Blob([data as BlobPart], { type: FORMAT_OPTIONS[format].mime });
+    const data = await ffmpeg.readFile(outputName);
+    return new Blob([data as BlobPart], { type: FORMAT_OPTIONS[format].mime });
+  } finally {
+    setProgressHandler(null);
+    try {
+      await ffmpeg.deleteFile(inputName);
+    } catch {
+      /* ignore */
+    }
+    try {
+      await ffmpeg.deleteFile(outputName);
+    } catch {
+      /* ignore */
+    }
+  }
 }
 
 function getExtension(filename: string): string {

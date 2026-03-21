@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useState, useRef } from "react";
-import { Upload } from "lucide-react";
+import { Upload, Lock } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils/cn";
 import { trackEvent } from "@/lib/analytics";
@@ -133,6 +133,11 @@ export function FileDropzone({
         onChange={(e) => handleFiles(e.target.files)}
         className="hidden"
       />
+
+      <p className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground/60 mt-1">
+        <Lock className="h-3 w-3" />
+        <span>{t("privacyHint")}</span>
+      </p>
     </div>
   );
 }

@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.developer.markdown-preview.faq.q2",
       answerKey: "tools.developer.markdown-preview.faq.a2",
     },
+  
+    {
+      questionKey: "tools.developer.markdown-preview.faq.q3",
+      answerKey: "tools.developer.markdown-preview.faq.a3",
+    },
+    {
+      questionKey: "tools.developer.markdown-preview.faq.q4",
+      answerKey: "tools.developer.markdown-preview.faq.a4",
+    },
+    {
+      questionKey: "tools.developer.markdown-preview.faq.q5",
+      answerKey: "tools.developer.markdown-preview.faq.a5",
+    },
   ],
   relatedSlugs: ["json-formatter", "csv-json", "base64"],
 };

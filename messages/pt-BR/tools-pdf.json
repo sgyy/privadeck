@@ -14,7 +14,13 @@
           "q1": "Como funciona a mesclagem de PDF?",
           "a1": "Envie vários arquivos PDF, reordene conforme necessário e clique em mesclar. Todo o processamento acontece no seu navegador — os arquivos nunca são enviados.",
           "q2": "Existe um limite de tamanho de arquivo?",
-          "a2": "Não há limite fixo, mas arquivos muito grandes podem ficar lentos já que o processamento acontece no seu navegador."
+          "a2": "Não há limite fixo, mas arquivos muito grandes podem ficar lentos já que o processamento acontece no seu navegador.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "split": {
@@ -35,7 +41,13 @@
           "q1": "Posso dividir um PDF em intervalos de páginas específicos?",
           "a1": "Sim, você pode dividir por páginas individuais ou especificar intervalos personalizados como 1-3, 4-6, 7-10.",
           "q2": "Meus arquivos são enviados para um servidor?",
-          "a2": "Não. Todo o processamento acontece localmente no seu navegador. Seus arquivos nunca saem do seu dispositivo."
+          "a2": "Não. Todo o processamento acontece localmente no seu navegador. Seus arquivos nunca saem do seu dispositivo.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "delete-pages": {
@@ -53,7 +65,13 @@
           "q1": "Como seleciono páginas para excluir?",
           "a1": "Envie um PDF e clique nas miniaturas das páginas que deseja remover. As páginas selecionadas são destacadas. Clique no botão excluir para criar um novo PDF sem essas páginas.",
           "q2": "Posso desfazer a exclusão de páginas?",
-          "a2": "O arquivo original não é modificado. Um novo PDF é criado sem as páginas selecionadas. Você sempre pode reenviar o original."
+          "a2": "O arquivo original não é modificado. Um novo PDF é criado sem as páginas selecionadas. Você sempre pode reenviar o original.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "to-image": {
@@ -73,7 +91,13 @@
           "q1": "Quais formatos de imagem são suportados?",
           "a1": "Você pode converter páginas PDF para PNG (sem perdas) ou JPG (arquivo menor com controle de qualidade).",
           "q2": "Posso ajustar a resolução da imagem?",
-          "a2": "Sim, use o controle de escala. 1x dá resolução padrão, 2x dobra, até 4x para saída de alta resolução."
+          "a2": "Sim, use o controle de escala. 1x dá resolução padrão, 2x dobra, até 4x para saída de alta resolução.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "images-to-pdf": {
@@ -89,7 +113,13 @@
           "q1": "Quais formatos de imagem posso converter para PDF?",
           "a1": "Você pode converter JPG, PNG, GIF, WebP, BMP e outros formatos comuns. Formatos não padrão são convertidos automaticamente antes da incorporação.",
           "q2": "Posso reordenar as imagens antes de converter?",
-          "a2": "Sim, use os botões de seta em cada miniatura para reordená-las. As páginas finais do PDF corresponderão à ordem exibida."
+          "a2": "Sim, use os botões de seta em cada miniatura para reordená-las. As páginas finais do PDF corresponderão à ordem exibida.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "rotate": {
@@ -109,7 +139,13 @@
           "q1": "Posso girar páginas individuais?",
           "a1": "Atualmente a ferramenta gira todas as páginas pelo mesmo ângulo. Para rotação por página, você pode aplicar rotações diferentes processando o PDF múltiplas vezes.",
           "q2": "A rotação afeta a qualidade do conteúdo do PDF?",
-          "a2": "Não, a rotação apenas altera os metadados de orientação da página. O conteúdo, texto e imagens permanecem inalterados."
+          "a2": "Não, a rotação apenas altera os metadados de orientação da página. O conteúdo, texto e imagens permanecem inalterados.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "add-page-numbers": {
@@ -138,7 +174,13 @@
           "q1": "Posso escolher onde os números de página aparecem?",
           "a1": "Sim, você pode posicionar números de página em qualquer uma das seis posições: superior ou inferior, combinado com alinhamento à esquerda, centro ou direita.",
           "q2": "Posso pular a numeração em certas páginas?",
-          "a2": "Sim, use a opção 'Começar da página' para pular as primeiras N páginas (útil para páginas de título ou sumário)."
+          "a2": "Sim, use a opção 'Começar da página' para pular as primeiras N páginas (útil para páginas de título ou sumário).",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "extract-text": {
@@ -155,7 +197,13 @@
           "q1": "Funciona com PDFs digitalizados?",
           "a1": "Esta ferramenta extrai apenas texto incorporado. Para PDFs digitalizados (imagens), use nossa ferramenta OCR para reconhecer texto a partir de imagens.",
           "q2": "A formatação é preservada?",
-          "a2": "O conteúdo básico de texto é extraído página por página. Formatação complexa como tabelas e colunas pode não ser perfeitamente preservada."
+          "a2": "O conteúdo básico de texto é extraído página por página. Formatação complexa como tabelas e colunas pode não ser perfeitamente preservada.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "rearrange": {
@@ -175,7 +223,13 @@
           "q1": "Como reordeno páginas do PDF?",
           "a1": "Envie um PDF e use os botões de seta para mover páginas para cima ou para baixo. Clique em Aplicar para criar um novo PDF com a nova ordem de páginas.",
           "q2": "O PDF original é modificado?",
-          "a2": "Não, um novo PDF é criado com as páginas reordenadas. Seu arquivo original nunca é alterado."
+          "a2": "Não, um novo PDF é criado com as páginas reordenadas. Seu arquivo original nunca é alterado.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "compress": {
@@ -199,7 +253,13 @@
           "q1": "Como funciona a compressão de PDF?",
           "a1": "As páginas são re-renderizadas como imagens JPEG no nível de qualidade escolhido e re-incorporadas. Menor qualidade significa arquivos menores, mas com menor fidelidade visual.",
           "q2": "O texto permanecerá selecionável?",
-          "a2": "Não, como as páginas são convertidas em imagens durante a compressão, o texto não é mais selecionável no PDF comprimido."
+          "a2": "Não, como as páginas são convertidas em imagens durante a compressão, o texto não é mais selecionável no PDF comprimido.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "add-watermark": {
@@ -218,7 +278,13 @@
           "q1": "Posso personalizar a aparência da marca d'água?",
           "a1": "Sim, você pode ajustar o texto, opacidade (transparência) e tamanho da fonte. A marca d'água é posicionada diagonalmente em cada página.",
           "q2": "A marca d'água é aplicada em todas as páginas?",
-          "a2": "Sim, a mesma marca d'água é aplicada em todas as páginas do PDF."
+          "a2": "Sim, a mesma marca d'água é aplicada em todas as páginas do PDF.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "crop": {
@@ -240,7 +306,13 @@
           "q1": "O que são pontos PDF?",
           "a1": "PDF usa pontos como unidade de medida. 1 ponto = 1/72 polegada ≈ 0,35mm. Uma página carta padrão US tem 612 × 792 pontos.",
           "q2": "O recorte reduz o tamanho do arquivo?",
-          "a2": "O recorte altera a área visível, mas não remove o conteúdo oculto, portanto o tamanho do arquivo pode não diminuir significativamente."
+          "a2": "O recorte altera a área visível, mas não remove o conteúdo oculto, portanto o tamanho do arquivo pode não diminuir significativamente.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "esign": {
@@ -261,7 +333,13 @@
           "q1": "Minha assinatura é armazenada em algum lugar?",
           "a1": "Não, tudo acontece no seu navegador. Sua assinatura e PDF nunca são enviados para nenhum servidor.",
           "q2": "Posso colocar a assinatura em uma página específica?",
-          "a2": "Sim, você pode escolher qual página assinar e definir a posição exata (coordenadas X, Y) e o tamanho da assinatura."
+          "a2": "Sim, você pode escolher qual página assinar e definir a posição exata (coordenadas X, Y) e o tamanho da assinatura.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "extract-images": {
@@ -280,7 +358,13 @@
           "q1": "Quais formatos de imagem são extraídos?",
           "a1": "As imagens são extraídas no formato original quando possível (JPEG). Outras imagens são convertidas para formato PNG.",
           "q2": "Esta ferramenta extrai todas as imagens?",
-          "a2": "Ela extrai imagens raster incorporadas do PDF. Gráficos vetoriais e texto renderizado como caminhos não são extraídos como imagens separadas."
+          "a2": "Ela extrai imagens raster incorporadas do PDF. Gráficos vetoriais e texto renderizado como caminhos não são extraídos como imagens separadas.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       }
     }

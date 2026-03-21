@@ -18,7 +18,13 @@
           "q1": "เครื่องมือนี้ทำอะไรได้บ้าง?",
           "a1": "จัดรูปแบบ (pretty-print) ข้อมูล JSON ด้วยการย่อหน้าที่ถูกต้อง ตรวจสอบไวยากรณ์ JSON และสามารถย่อ JSON โดยลบช่องว่าง",
           "q2": "ข้อมูลของฉันปลอดภัยไหม?",
-          "a2": "ปลอดภัย การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่เคยออกจากอุปกรณ์"
+          "a2": "ปลอดภัย การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่เคยออกจากอุปกรณ์",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "base64": {
@@ -35,7 +41,13 @@
           "q1": "การเข้ารหัส Base64 คืออะไร?",
           "a1": "Base64 เป็นรูปแบบการเข้ารหัสไบนารีเป็นข้อความที่แปลงข้อมูลไบนารีเป็นอักขระ ASCII ใช้กันทั่วไปในข้อมูล URL, ไฟล์แนบอีเมล และเนื้อหา API",
           "q2": "สามารถเข้ารหัสไฟล์ได้ไหม?",
-          "a2": "ปัจจุบันเครื่องมือนี้เข้ารหัสและถอดรหัสข้อความ การเข้ารหัสไฟล์ Base64 จะพร้อมใช้งานในการอัปเดตในอนาคต"
+          "a2": "ปัจจุบันเครื่องมือนี้เข้ารหัสและถอดรหัสข้อความ การเข้ารหัสไฟล์ Base64 จะพร้อมใช้งานในการอัปเดตในอนาคต",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "url-encoder": {
@@ -54,7 +66,13 @@
           "q1": "การเข้ารหัส URL คืออะไร?",
           "a1": "การเข้ารหัส URL แปลงอักขระพิเศษเป็นรูปแบบ percent-encoded (เช่น ช่องว่างกลายเป็น %20) เพื่อให้สามารถใช้งานได้อย่างปลอดภัยในที่อยู่เว็บ",
           "q2": "ความแตกต่างระหว่างเข้ารหัสและเข้ารหัสส่วนประกอบคืออะไร?",
-          "a2": "เข้ารหัสจะแปลง URL ทั้งหมดโดยรักษาอักขระโครงสร้างเช่น / และ ? ไว้ เข้ารหัสส่วนประกอบจะเข้ารหัสทุกอย่างรวมถึงอักขระเหล่านั้น เหมาะสำหรับค่าพารามิเตอร์ของคิวรี"
+          "a2": "เข้ารหัสจะแปลง URL ทั้งหมดโดยรักษาอักขระโครงสร้างเช่น / และ ? ไว้ เข้ารหัสส่วนประกอบจะเข้ารหัสทุกอย่างรวมถึงอักขระเหล่านั้น เหมาะสำหรับค่าพารามิเตอร์ของคิวรี",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "ocr": {
@@ -71,7 +89,13 @@
           "q1": "รองรับภาษาใดบ้าง?",
           "a1": "รองรับมากกว่า 12 ภาษา รวมถึงอังกฤษ, จีน (ตัวย่อ/ตัวเต็ม), ญี่ปุ่น, เกาหลี, สเปน, ฝรั่งเศส, เยอรมัน และอื่นๆ",
           "q2": "OCR แม่นยำแค่ไหน?",
-          "a2": "ความแม่นยำขึ้นอยู่กับคุณภาพของรูปภาพและความชัดเจนของข้อความ รูปภาพที่ชัดเจน ความละเอียดสูง มีคอนทราสต์ดีจะให้ผลลัพธ์ที่ดีที่สุด"
+          "a2": "ความแม่นยำขึ้นอยู่กับคุณภาพของรูปภาพและความชัดเจนของข้อความ รูปภาพที่ชัดเจน ความละเอียดสูง มีคอนทราสต์ดีจะให้ผลลัพธ์ที่ดีที่สุด",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "archive": {
@@ -87,7 +111,13 @@
           "q1": "รองรับรูปแบบไฟล์เก็บถาวรใดบ้าง?",
           "a1": "ขณะนี้รองรับไฟล์ ZIP อย่างเต็มรูปแบบ ไฟล์ถูกแตกทั้งหมดในเบราว์เซอร์ของคุณ",
           "q2": "ดาวน์โหลดไฟล์แต่ละไฟล์จากไฟล์เก็บถาวรได้หรือไม่?",
-          "a2": "ได้ คุณสามารถเรียกดูเนื้อหาของไฟล์เก็บถาวรและดาวน์โหลดไฟล์ใดก็ได้โดยคลิกปุ่มดาวน์โหลด"
+          "a2": "ได้ คุณสามารถเรียกดูเนื้อหาของไฟล์เก็บถาวรและดาวน์โหลดไฟล์ใดก็ได้โดยคลิกปุ่มดาวน์โหลด",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "csv-json": {
@@ -106,7 +136,13 @@
           "q1": "รองรับรูปแบบ CSV ใดบ้าง?",
           "a1": "ค่าที่คั่นด้วยจุลภาคมาตรฐานพร้อมการ escape เครื่องหมายคำพูดคู่ ฟิลด์ที่มีจุลภาค เครื่องหมายคำพูด หรือบรรทัดใหม่จะถูกจัดการอย่างถูกต้อง",
           "q2": "รองรับ JSON ซ้อนหรือไม่?",
-          "a2": "JSON เป็น CSV ทำงานได้ดีที่สุดกับอาร์เรย์ของอ็อบเจ็กต์แบบแบน อ็อบเจ็กต์ซ้อนจะถูกแปลงเป็นสตริง"
+          "a2": "JSON เป็น CSV ทำงานได้ดีที่สุดกับอาร์เรย์ของอ็อบเจ็กต์แบบแบน อ็อบเจ็กต์ซ้อนจะถูกแปลงเป็นสตริง",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "hash-generator": {
@@ -124,7 +160,13 @@
           "q1": "รองรับอัลกอริทึมแฮชใดบ้าง?",
           "a1": "SHA-1, SHA-256, SHA-384 และ SHA-512 ทั้งหมดถูกคำนวณพร้อมกันโดยใช้ Web Crypto API ของเบราว์เซอร์",
           "q2": "สามารถแฮชไฟล์ได้หรือไม่?",
-          "a2": "ได้ สลับไปที่โหมดไฟล์และวางไฟล์ใดก็ได้ แฮชถูกคำนวณในเบราว์เซอร์ — ไฟล์ไม่เคยถูกอัปโหลด"
+          "a2": "ได้ สลับไปที่โหมดไฟล์และวางไฟล์ใดก็ได้ แฮชถูกคำนวณในเบราว์เซอร์ — ไฟล์ไม่เคยถูกอัปโหลด",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "color-converter": {
@@ -142,7 +184,13 @@
           "q1": "รองรับรูปแบบสีใดบ้าง?",
           "a1": "คุณสามารถป้อนสีเป็น HEX (#ff6600 หรือ #f60), RGB (rgb(255, 102, 0)) หรือ HSL (hsl(24, 100%, 50%)) รูปแบบอื่นๆ ทั้งหมดจะแสดงโดยอัตโนมัติ",
           "q2": "รองรับอัลฟา/ความโปร่งใสหรือไม่?",
-          "a2": "ขณะนี้เครื่องมือรองรับเฉพาะสีทึบเท่านั้น การรองรับ RGBA และ HSLA จะเพิ่มในการอัปเดตในอนาคต"
+          "a2": "ขณะนี้เครื่องมือรองรับเฉพาะสีทึบเท่านั้น การรองรับ RGBA และ HSLA จะเพิ่มในการอัปเดตในอนาคต",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "json-xml": {
@@ -161,7 +209,13 @@
           "q1": "JSON ถูกแมปเป็น XML อย่างไร?",
           "a1": "คีย์ของอ็อบเจ็กต์กลายเป็นชื่อองค์ประกอบ XML อาร์เรย์สร้างองค์ประกอบซ้ำที่มีชื่อเดียวกัน ค่าพื้นฐานกลายเป็นเนื้อหาข้อความ",
           "q2": "แอตทริบิวต์ XML ถูกรักษาไว้หรือไม่?",
-          "a2": "แอตทริบิวต์ XML ไม่ถูกรักษาในเอาต์พุต JSON เฉพาะชื่อองค์ประกอบและเนื้อหาข้อความเท่านั้นที่ถูกแปลง"
+          "a2": "แอตทริบิวต์ XML ไม่ถูกรักษาในเอาต์พุต JSON เฉพาะชื่อองค์ประกอบและเนื้อหาข้อความเท่านั้นที่ถูกแปลง",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "markdown-preview": {
@@ -178,7 +232,13 @@
           "q1": "รองรับฟีเจอร์ Markdown ใดบ้าง?",
           "a1": "หัวข้อ, ตัวหนา, ตัวเอียง, ลิงก์, รูปภาพ, บล็อกโค้ด, โค้ดอินไลน์, รายการไม่เรียงลำดับ, บล็อกอ้างอิง และเส้นแนวนอน",
           "q2": "สามารถคัดลอกเอาต์พุต HTML ได้หรือไม่?",
-          "a2": "ได้ ใช้ปุ่มคัดลอก HTML เพื่อคัดลอก HTML ที่สร้างขึ้นไปยังคลิปบอร์ด"
+          "a2": "ได้ ใช้ปุ่มคัดลอก HTML เพื่อคัดลอก HTML ที่สร้างขึ้นไปยังคลิปบอร์ด",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "regex-tester": {
@@ -199,7 +259,13 @@
           "q1": "รองรับแฟล็ก regex ใดบ้าง?",
           "a1": "แฟล็ก global (g), ไม่คำนึงตัวพิมพ์ (i), multiline (m) และ dotAll (s) พร้อมใช้งาน",
           "q2": "รองรับ named capture group หรือไม่?",
-          "a2": "ได้ กลุ่มที่ตั้งชื่อด้วย (?<name>...) จะแสดงในรายละเอียดการจับคู่"
+          "a2": "ได้ กลุ่มที่ตั้งชื่อด้วย (?<name>...) จะแสดงในรายละเอียดการจับคู่",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "timestamp": {
@@ -222,7 +288,13 @@
           "q1": "Unix timestamp คืออะไร?",
           "a1": "Unix timestamp คือจำนวนวินาทีที่ผ่านไปตั้งแต่วันที่ 1 มกราคม 1970 00:00:00 UTC (Unix epoch)",
           "q2": "รองรับ timestamp แบบมิลลิวินาทีหรือไม่?",
-          "a2": "ได้ หากคุณป้อนตัวเลขที่มากกว่า 10^12 จะถูกถือเป็นมิลลิวินาทีโดยอัตโนมัติแทนวินาที"
+          "a2": "ได้ หากคุณป้อนตัวเลขที่มากกว่า 10^12 จะถูกถือเป็นมิลลิวินาทีโดยอัตโนมัติแทนวินาที",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "yaml-json": {
@@ -241,7 +313,13 @@
           "q1": "รองรับฟีเจอร์ YAML ใดบ้าง?",
           "a1": "ฟีเจอร์ YAML มาตรฐานทั้งหมด รวมถึงอ็อบเจ็กต์ซ้อน อาร์เรย์ สตริงหลายบรรทัด และ anchor/alias ผ่านไลบรารี js-yaml",
           "q2": "การแปลงรักษาความคิดเห็นหรือไม่?",
-          "a2": "ไม่ ความคิดเห็น YAML จะถูกลบระหว่างการแยกวิเคราะห์ เมื่อแปลง JSON เป็น YAML เอาต์พุตจะเป็น YAML สะอาดไม่มีความคิดเห็น"
+          "a2": "ไม่ ความคิดเห็น YAML จะถูกลบระหว่างการแยกวิเคราะห์ เมื่อแปลง JSON เป็น YAML เอาต์พุตจะเป็น YAML สะอาดไม่มีความคิดเห็น",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "text-diff": {
@@ -261,7 +339,13 @@
           "q1": "ใช้อัลกอริทึม diff ใด?",
           "a1": "อัลกอริทึม Longest Common Subsequence (LCS) แบบบรรทัดที่ระบุการเพิ่ม การลบ และบรรทัดที่ไม่เปลี่ยนแปลง",
           "q2": "สามารถคัดลอกเอาต์พุต diff ได้หรือไม่?",
-          "a2": "ได้ ใช้ปุ่มคัดลอกเพื่อคัดลอกรูปแบบ diff แบบ unified พร้อมคำนำหน้า + และ - สำหรับการเพิ่มและการลบ"
+          "a2": "ได้ ใช้ปุ่มคัดลอกเพื่อคัดลอกรูปแบบ diff แบบ unified พร้อมคำนำหน้า + และ - สำหรับการเพิ่มและการลบ",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "word-counter": {
@@ -283,7 +367,11 @@
           "q2": "มีจำกัดจำนวนตัวอักษรไหม?",
           "a2": "ไม่ เครื่องมือนี้ประมวลผลข้อความทุกความยาวโดยตรงในเบราว์เซอร์ของคุณโดยไม่มีข้อจำกัด",
           "q3": "เวลาในการอ่านคำนวณอย่างไร?",
-          "a3": "เวลาในการอ่านประมาณที่ 200 คำต่อนาที ซึ่งเป็นความเร็วเฉลี่ยในการอ่านของผู้ใหญ่"
+          "a3": "เวลาในการอ่านประมาณที่ 200 คำต่อนาที ซึ่งเป็นความเร็วเฉลี่ยในการอ่านของผู้ใหญ่",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "case-converter": {
@@ -306,7 +394,13 @@
           "q1": "รองรับรูปแบบตัวพิมพ์ใดบ้าง?",
           "a1": "เรารองรับ UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case และ CONSTANT_CASE",
           "q2": "สามารถแปลงชื่อตัวแปรในโค้ดได้ไหม?",
-          "a2": "ได้! ใช้การแปลง camelCase, PascalCase, snake_case หรือ kebab-case สำหรับชื่อตัวแปรในการเขียนโปรแกรม"
+          "a2": "ได้! ใช้การแปลง camelCase, PascalCase, snake_case หรือ kebab-case สำหรับชื่อตัวแปรในการเขียนโปรแกรม",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "lorem-ipsum": {
@@ -326,7 +420,13 @@
           "q1": "Lorem Ipsum คืออะไร?",
           "a1": "Lorem Ipsum คือข้อความตัวอย่างที่ใช้กันทั่วไปในงานออกแบบและสิ่งพิมพ์เพื่อเติมพื้นที่ที่จะมีเนื้อหาจริงในภายหลัง",
           "q2": "สามารถปรับแต่งผลลัพธ์ได้ไหม?",
-          "a2": "ได้ คุณสามารถเลือกสร้างตามย่อหน้า ประโยค หรือคำ กำหนดจำนวน และเลือกเริ่มต้นด้วยข้อความ Lorem Ipsum แบบดั้งเดิมได้"
+          "a2": "ได้ คุณสามารถเลือกสร้างตามย่อหน้า ประโยค หรือคำ กำหนดจำนวน และเลือกเริ่มต้นด้วยข้อความ Lorem Ipsum แบบดั้งเดิมได้",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       }
     }

@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.image.watermark.faq.q2",
       answerKey: "tools.image.watermark.faq.a2",
     },
+  
+    {
+      questionKey: "tools.image.watermark.faq.q3",
+      answerKey: "tools.image.watermark.faq.a3",
+    },
+    {
+      questionKey: "tools.image.watermark.faq.q4",
+      answerKey: "tools.image.watermark.faq.a4",
+    },
+    {
+      questionKey: "tools.image.watermark.faq.q5",
+      answerKey: "tools.image.watermark.faq.a5",
+    },
   ],
   relatedSlugs: ["crop", "resize", "compress"],
 };

@@ -19,19 +19,30 @@ export async function rotateVideo(
   const inputName = "input" + getExtension(file.name);
   const outputName = "output" + getExtension(file.name);
 
-  await ffmpeg.writeFile(inputName, await fetchFile(file));
-  await ffmpeg.exec([
-    "-i", inputName,
-    ...TRANSPOSE_MAP[angle],
-    "-c:a", "copy",
-    outputName,
-  ]);
+  try {
+    await ffmpeg.writeFile(inputName, await fetchFile(file));
+    await ffmpeg.exec([
+      "-i", inputName,
+      ...TRANSPOSE_MAP[angle],
+      "-c:a", "copy",
+      outputName,
+    ]);
 
-  const data = await ffmpeg.readFile(outputName);
-  await ffmpeg.deleteFile(inputName);
-  await ffmpeg.deleteFile(outputName);
-
-  return new Blob([data as BlobPart], { type: file.type || "video/mp4" });
+    const data = await ffmpeg.readFile(outputName);
+    return new Blob([data as BlobPart], { type: file.type || "video/mp4" });
+  } finally {
+    setProgressHandler(null);
+    try {
+      await ffmpeg.deleteFile(inputName);
+    } catch {
+      /* ignore */
+    }
+    try {
+      await ffmpeg.deleteFile(outputName);
+    } catch {
+      /* ignore */
+    }
+  }
 }
 
 function getExtension(filename: string): string {

@@ -47,6 +47,7 @@ export async function convertVideoFormat(
       filename: baseName + config.ext,
     };
   } finally {
+    setProgressHandler(null);
     try { await ffmpeg.deleteFile(inputName); } catch { /* ignore */ }
     try { await ffmpeg.deleteFile(outputName); } catch { /* ignore */ }
   }

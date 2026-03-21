@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.image.heic-convert.faq.q2",
       answerKey: "tools.image.heic-convert.faq.a2",
     },
+  
+    {
+      questionKey: "tools.image.heic-convert.faq.q3",
+      answerKey: "tools.image.heic-convert.faq.a3",
+    },
+    {
+      questionKey: "tools.image.heic-convert.faq.q4",
+      answerKey: "tools.image.heic-convert.faq.a4",
+    },
+    {
+      questionKey: "tools.image.heic-convert.faq.q5",
+      answerKey: "tools.image.heic-convert.faq.a5",
+    },
   ],
   relatedSlugs: ["format-converter", "compress", "remove-exif"],
 };

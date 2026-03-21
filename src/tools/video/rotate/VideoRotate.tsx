@@ -7,6 +7,8 @@ import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { RotateCw } from "lucide-react";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
+import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
+import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { rotateVideo, type RotateAngle } from "./logic";
 
@@ -21,6 +23,8 @@ export default function VideoRotate() {
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.video.rotate");
 
+  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg();
+
   if (!isSharedArrayBufferSupported()) {
     return (
       <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
@@ -34,6 +38,7 @@ export default function VideoRotate() {
     setProcessing(true);
     setResult(null);
     setError("");
+    await loadFFmpeg();
     try {
       const blob = await rotateVideo(file, angle, setProgress);
       setResult(blob);
@@ -51,6 +56,14 @@ export default function VideoRotate() {
         accept="video/*"
         onFiles={(f) => { setFile(f[0]); setResult(null); setError(""); }}
       />
+
+      {ffmpegStatus === "loading" && <FFmpegLoadingState />}
+
+      {ffmpegStatus === "error" && (
+        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
+          Failed to load processing engine. Please refresh and try again.
+        </div>
+      )}
 
       {file && fileUrl && (
         <div className="space-y-3">

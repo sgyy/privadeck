@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.pdf.add-page-numbers.faq.q2",
       answerKey: "tools.pdf.add-page-numbers.faq.a2",
     },
+  
+    {
+      questionKey: "tools.pdf.add-page-numbers.faq.q3",
+      answerKey: "tools.pdf.add-page-numbers.faq.a3",
+    },
+    {
+      questionKey: "tools.pdf.add-page-numbers.faq.q4",
+      answerKey: "tools.pdf.add-page-numbers.faq.a4",
+    },
+    {
+      questionKey: "tools.pdf.add-page-numbers.faq.q5",
+      answerKey: "tools.pdf.add-page-numbers.faq.a5",
+    },
   ],
   relatedSlugs: ["merge", "rotate"],
 };

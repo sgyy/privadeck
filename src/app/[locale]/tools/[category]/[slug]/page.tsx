@@ -51,12 +51,22 @@ export default async function ToolPage({
     tools: { [category]: { [slug]: catMessages.tools[category][slug] } },
   };
 
+  const needsFFmpeg = category === "video" || category === "audio";
+
   return (
-    <NextIntlClientProvider messages={messages}>
-      <ToolPageClient
-        category={category as ToolCategory}
-        slug={slug}
-      />
-    </NextIntlClientProvider>
+    <>
+      {needsFFmpeg && (
+        <>
+          <link rel="prefetch" href="https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm/ffmpeg-core.js" />
+          <link rel="prefetch" href="https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm/ffmpeg-core.wasm" />
+        </>
+      )}
+      <NextIntlClientProvider messages={messages}>
+        <ToolPageClient
+          category={category as ToolCategory}
+          slug={slug}
+        />
+      </NextIntlClientProvider>
+    </>
   );
 }

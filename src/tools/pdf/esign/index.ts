@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.pdf.esign.faq.q2",
       answerKey: "tools.pdf.esign.faq.a2",
     },
+  
+    {
+      questionKey: "tools.pdf.esign.faq.q3",
+      answerKey: "tools.pdf.esign.faq.a3",
+    },
+    {
+      questionKey: "tools.pdf.esign.faq.q4",
+      answerKey: "tools.pdf.esign.faq.a4",
+    },
+    {
+      questionKey: "tools.pdf.esign.faq.q5",
+      answerKey: "tools.pdf.esign.faq.a5",
+    },
   ],
   relatedSlugs: ["add-watermark", "add-page-numbers", "merge"],
 };

@@ -18,7 +18,13 @@
           "q1": "這個工具有什麼功能？",
           "a1": "它可以格式化（美化列印）JSON 資料並加入適當的縮排，驗證 JSON 語法，還可以透過移除空白來壓縮 JSON。",
           "q2": "我的資料安全嗎？",
-          "a2": "是的，所有處理都在瀏覽器中完成。您的資料不會離開您的裝置。"
+          "a2": "是的，所有處理都在瀏覽器中完成。您的資料不會離開您的裝置。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "base64": {
@@ -35,7 +41,13 @@
           "q1": "什麼是 Base64 編碼？",
           "a1": "Base64 是一種將二進位資料轉換為 ASCII 字元的編碼方案。常用於資料 URL、電子郵件附件和 API 傳輸。",
           "q2": "可以編碼檔案嗎？",
-          "a2": "目前此工具支援文字的編碼和解碼。檔案 Base64 編碼功能將在未來更新中提供。"
+          "a2": "目前此工具支援文字的編碼和解碼。檔案 Base64 編碼功能將在未來更新中提供。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "url-encoder": {
@@ -54,7 +66,13 @@
           "q1": "什麼是 URL 編碼？",
           "a1": "URL 編碼將特殊字元轉換為百分號編碼格式（如空格變為 %20），以便在網址中安全使用。",
           "q2": "編碼和編碼組件有什麼區別？",
-          "a2": "編碼會轉換完整 URL 但保留結構字元（如 / 和 ?）。編碼組件會編碼所有字元，適用於查詢參數值。"
+          "a2": "編碼會轉換完整 URL 但保留結構字元（如 / 和 ?）。編碼組件會編碼所有字元，適用於查詢參數值。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "ocr": {
@@ -71,7 +89,13 @@
           "q1": "支援哪些語言？",
           "a1": "支援超過 12 種語言，包括英語、中文（簡體/繁體）、日語、韓語、西班牙語、法語、德語等。",
           "q2": "OCR 的準確度如何？",
-          "a2": "準確度取決於圖片品質和文字清晰度。對比度高的高解析度圖片能產生最佳結果。"
+          "a2": "準確度取決於圖片品質和文字清晰度。對比度高的高解析度圖片能產生最佳結果。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "archive": {
@@ -87,7 +111,13 @@
           "q1": "支援哪些壓縮格式？",
           "a1": "目前完全支援 ZIP 檔案。檔案完全在瀏覽器中解壓。",
           "q2": "可以從壓縮檔中下載個別檔案嗎？",
-          "a2": "可以，您可以瀏覽壓縮檔內容，點擊下載按鈕下載個別檔案。"
+          "a2": "可以，您可以瀏覽壓縮檔內容，點擊下載按鈕下載個別檔案。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "csv-json": {
@@ -106,7 +136,13 @@
           "q1": "支援哪些 CSV 格式？",
           "a1": "支援標準逗號分隔值，可選擇性使用雙引號轉義。包含逗號、引號或換行符的欄位都能正確處理。",
           "q2": "支援巢狀 JSON 嗎？",
-          "a2": "JSON 轉 CSV 在扁平物件陣列中效果最佳。巢狀物件會轉換為其字串表示。"
+          "a2": "JSON 轉 CSV 在扁平物件陣列中效果最佳。巢狀物件會轉換為其字串表示。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "hash-generator": {
@@ -124,7 +160,13 @@
           "q1": "支援哪些雜湊演算法？",
           "a1": "SHA-1、SHA-256、SHA-384、SHA-512 使用瀏覽器的 Web Crypto API 同時計算。",
           "q2": "可以雜湊檔案嗎？",
-          "a2": "可以，切換到檔案模式並拖放任意檔案。雜湊在瀏覽器中本機計算，檔案不會被上傳。"
+          "a2": "可以，切換到檔案模式並拖放任意檔案。雜湊在瀏覽器中本機計算，檔案不會被上傳。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "color-converter": {
@@ -142,7 +184,13 @@
           "q1": "支援哪些色彩格式？",
           "a1": "可以輸入 HEX (#ff6600 或 #f60)、RGB (rgb(255, 102, 0))、HSL (hsl(24, 100%, 50%))。其他格式會自動顯示。",
           "q2": "支援透明度嗎？",
-          "a2": "目前僅支援不透明色彩。RGBA 和 HSLA 支援將在未來更新中加入。"
+          "a2": "目前僅支援不透明色彩。RGBA 和 HSLA 支援將在未來更新中加入。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "json-xml": {
@@ -161,7 +209,13 @@
           "q1": "JSON 如何對應到 XML？",
           "a1": "物件鍵成為 XML 元素名稱。陣列產生相同名稱的重複元素。原始值成為文字內容。",
           "q2": "XML 屬性會被保留嗎？",
-          "a2": "XML 屬性不會在 JSON 輸出中保留。只有元素名稱和文字內容會被轉換。"
+          "a2": "XML 屬性不會在 JSON 輸出中保留。只有元素名稱和文字內容會被轉換。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "markdown-preview": {
@@ -178,7 +232,13 @@
           "q1": "支援哪些 Markdown 功能？",
           "a1": "支援標題、粗體、斜體、連結、圖片、程式碼區塊、行內程式碼、項目清單、引用和水平線。",
           "q2": "可以複製 HTML 輸出嗎？",
-          "a2": "可以，使用「複製 HTML」按鈕將產生的 HTML 複製到剪貼簿。"
+          "a2": "可以，使用「複製 HTML」按鈕將產生的 HTML 複製到剪貼簿。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "regex-tester": {
@@ -199,7 +259,13 @@
           "q1": "支援哪些正規表示式旗標？",
           "a1": "全域 (g)、不區分大小寫 (i)、多行 (m) 和 dotAll (s) 旗標可供使用。",
           "q2": "支援命名擷取群組嗎？",
-          "a2": "支援，以 (?<name>...) 定義的命名群組會顯示在配對詳情中。"
+          "a2": "支援，以 (?<name>...) 定義的命名群組會顯示在配對詳情中。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "timestamp": {
@@ -222,7 +288,13 @@
           "q1": "什麼是 Unix 時間戳？",
           "a1": "Unix 時間戳是自 1970 年 1 月 1 日 00:00:00 UTC（Unix 紀元）以來經過的秒數。",
           "q2": "支援毫秒時間戳嗎？",
-          "a2": "支援。如果輸入大於 10^12 的數字，會自動視為毫秒而非秒。"
+          "a2": "支援。如果輸入大於 10^12 的數字，會自動視為毫秒而非秒。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "yaml-json": {
@@ -241,7 +313,13 @@
           "q1": "支援哪些 YAML 功能？",
           "a1": "透過 js-yaml 函式庫支援所有標準 YAML 功能，包括巢狀物件、陣列、多行字串和錨點/別名。",
           "q2": "轉換時會保留註解嗎？",
-          "a2": "不會。YAML 註解在剖析時會被移除。JSON 轉 YAML 時會輸出不含註解的乾淨 YAML。"
+          "a2": "不會。YAML 註解在剖析時會被移除。JSON 轉 YAML 時會輸出不含註解的乾淨 YAML。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "text-diff": {
@@ -261,7 +339,13 @@
           "q1": "使用什麼 diff 演算法？",
           "a1": "使用行基礎的最長公共子序列（LCS）演算法來識別新增、刪除和未變更的行。",
           "q2": "可以複製 diff 輸出嗎？",
-          "a2": "可以，使用複製按鈕以 + 和 - 前綴的統一 diff 格式複製。"
+          "a2": "可以，使用複製按鈕以 + 和 - 前綴的統一 diff 格式複製。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "word-counter": {
@@ -283,7 +367,11 @@
           "q2": "有字元限制嗎？",
           "a2": "沒有，該工具可以直接在瀏覽器中處理任意長度的文字，沒有限制。",
           "q3": "閱讀時間是如何計算的？",
-          "a3": "閱讀時間按每分鐘 300 個中文字元估算，這是成年人的平均閱讀速度。"
+          "a3": "閱讀時間按每分鐘 300 個中文字元估算，這是成年人的平均閱讀速度。",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "case-converter": {
@@ -306,7 +394,13 @@
           "q1": "支援哪些大小寫格式？",
           "a1": "支援大寫、小寫、標題大寫、句首大寫、駝峰命名、帕斯卡命名、底線命名、短橫線命名和常數命名。",
           "q2": "可以轉換程式碼變數名稱嗎？",
-          "a2": "可以！使用駝峰命名、帕斯卡命名、底線命名或短橫線命名來轉換程式變數名稱。"
+          "a2": "可以！使用駝峰命名、帕斯卡命名、底線命名或短橫線命名來轉換程式變數名稱。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "lorem-ipsum": {
@@ -326,7 +420,13 @@
           "q1": "什麼是 Lorem Ipsum？",
           "a1": "Lorem Ipsum 是設計和出版中常用的佔位文字，用於填充最終將放置真實內容的空間。",
           "q2": "可以自訂輸出嗎？",
-          "a2": "可以，您可以選擇按段落、句子或單字產生，設定數量，並可選擇以經典的 Lorem Ipsum 開頭。"
+          "a2": "可以，您可以選擇按段落、句子或單字產生，設定數量，並可選擇以經典的 Lorem Ipsum 開頭。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       }
     }

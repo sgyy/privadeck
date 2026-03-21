@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.video.mute.faq.q2",
       answerKey: "tools.video.mute.faq.a2",
     },
+  
+    {
+      questionKey: "tools.video.mute.faq.q3",
+      answerKey: "tools.video.mute.faq.a3",
+    },
+    {
+      questionKey: "tools.video.mute.faq.q4",
+      answerKey: "tools.video.mute.faq.a4",
+    },
+    {
+      questionKey: "tools.video.mute.faq.q5",
+      answerKey: "tools.video.mute.faq.a5",
+    },
   ],
   relatedSlugs: ["trim", "rotate", "to-gif"],
 };

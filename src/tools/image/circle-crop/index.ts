@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.image.circle-crop.faq.q2",
       answerKey: "tools.image.circle-crop.faq.a2",
     },
+  
+    {
+      questionKey: "tools.image.circle-crop.faq.q3",
+      answerKey: "tools.image.circle-crop.faq.a3",
+    },
+    {
+      questionKey: "tools.image.circle-crop.faq.q4",
+      answerKey: "tools.image.circle-crop.faq.a4",
+    },
+    {
+      questionKey: "tools.image.circle-crop.faq.q5",
+      answerKey: "tools.image.circle-crop.faq.a5",
+    },
   ],
   relatedSlugs: ["crop", "resize", "remove-exif"],
 };

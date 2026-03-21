@@ -29,7 +29,7 @@ const lazyCache = new Map<string, LazyExoticComponent<ComponentType>>();
 export function ToolPageClient({ category, slug }: ToolPageClientProps) {
   const tool = getToolBySlug(slug, category);
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks -- slug is stable per page route
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- lazyCache keyed by category/slug, stable per SSG route
   const Component = useMemo(() => {
     if (!tool) return null;
     const cacheKey = `${category}/${slug}`;
@@ -39,7 +39,7 @@ export function ToolPageClient({ category, slug }: ToolPageClientProps) {
       lazyCache.set(cacheKey, cached);
     }
     return cached;
-  }, [slug, tool]);
+  }, [slug, category, tool]);
 
   if (!tool || !Component) return null;
 

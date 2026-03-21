@@ -22,7 +22,11 @@
           "q2": "我的圖片會上傳到伺服器嗎？",
           "a2": "不會。所有圖片處理都在瀏覽器本機完成。您的圖片不會離開您的裝置。",
           "q3": "可以一次轉換多張圖片嗎？",
-          "a3": "可以，您可以拖放多張圖片，它們都會被轉換為您選擇的格式。"
+          "a3": "可以，您可以拖放多張圖片，它們都會被轉換為您選擇的格式。",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "compress": {
@@ -41,7 +45,13 @@
           "q1": "圖片壓縮如何運作？",
           "a1": "使用有損壓縮來縮減圖片檔案大小。您可以控制品質和最大大小。所有處理在瀏覽器中完成。",
           "q2": "支援哪些格式？",
-          "a2": "支援 JPEG、PNG、WebP、GIF、BMP 圖片壓縮。"
+          "a2": "支援 JPEG、PNG、WebP、GIF、BMP 圖片壓縮。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "crop": {
@@ -60,7 +70,13 @@
           "q1": "可以設定特定的長寬比嗎？",
           "a1": "可以，從預設比例（1:1、4:3、16:9、3:2）中選擇或使用自由裁剪。",
           "q2": "原始圖片會被修改嗎？",
-          "a2": "不會，原始圖片不會被修改。會建立新的裁剪圖片供下載。"
+          "a2": "不會，原始圖片不會被修改。會建立新的裁剪圖片供下載。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "resize": {
@@ -80,7 +96,13 @@
           "q1": "可以維持長寬比嗎？",
           "a1": "可以，預設會鎖定長寬比。點擊連結圖示解鎖以自由調整大小。",
           "q2": "有哪些預設？",
-          "a2": "常見預設包括 HD (1280×720)、Full HD (1920×1080)、4K (3840×2160) 和社群媒體尺寸。"
+          "a2": "常見預設包括 HD (1280×720)、Full HD (1920×1080)、4K (3840×2160) 和社群媒體尺寸。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "watermark": {
@@ -106,7 +128,13 @@
           "q1": "可以在整張圖片上平鋪浮水印嗎？",
           "a1": "可以，選擇「平鋪（重複）」位置選項，在整張圖片上斜向重複添加浮水印。",
           "q2": "可以調整浮水印的透明度嗎？",
-          "a2": "可以，使用不透明度滑桿從幾乎不可見調整到完全不透明。"
+          "a2": "可以，使用不透明度滑桿從幾乎不可見調整到完全不透明。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "remove-exif": {
@@ -122,7 +150,13 @@
           "q1": "會移除哪些 EXIF 資料？",
           "a1": "移除所有中繼資料，包括 GPS 位置、相機型號、拍攝日期和其他嵌入資訊。圖片會在乾淨的畫布上重新繪製。",
           "q2": "這會影響圖片品質嗎？",
-          "a2": "JPEG 以 95% 的品質保留。PNG 圖片以無損方式重新匯出。"
+          "a2": "JPEG 以 95% 的品質保留。PNG 圖片以無損方式重新匯出。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "flip": {
@@ -139,7 +173,13 @@
           "q1": "水平翻轉和垂直翻轉有什麼區別？",
           "a1": "水平翻轉像照鏡子一樣左右反轉。垂直翻轉則上下反轉。",
           "q2": "翻轉會降低圖片品質嗎？",
-          "a2": "不會。圖片以原始解析度重新繪製。JPEG 圖片以 92% 品質重新編碼。"
+          "a2": "不會。圖片以原始解析度重新繪製。JPEG 圖片以 92% 品質重新編碼。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "grayscale": {
@@ -154,7 +194,13 @@
           "q1": "灰階轉換如何運作？",
           "a1": "使用標準亮度公式（0.299R + 0.587G + 0.114B）將每個像素轉換為灰色色調，保留感知亮度。",
           "q2": "可以調整灰階效果的強度嗎？",
-          "a2": "此工具套用完全灰階轉換。部分去飽和請使用專用照片編輯器。"
+          "a2": "此工具套用完全灰階轉換。部分去飽和請使用專用照片編輯器。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "pixelate": {
@@ -170,7 +216,13 @@
           "q1": "馬賽克有什麼用途？",
           "a1": "馬賽克常用於審查螢幕截圖中的敏感資訊、建立復古像素藝術效果或匿名化照片中的面部。",
           "q2": "可以控制馬賽克程度嗎？",
-          "a2": "可以。使用像素大小滑桿從 2px（輕微）調整到 50px（強烈馬賽克）。"
+          "a2": "可以。使用像素大小滑桿從 2px（輕微）調整到 50px（強烈馬賽克）。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "add-border": {
@@ -187,7 +239,13 @@
           "q1": "有哪些邊框選項？",
           "a1": "可以自訂邊框寬度從 1 到 100 像素，並使用色彩選擇器選擇任意色彩。",
           "q2": "輸出格式是什麼？",
-          "a2": "輸出始終為 PNG 以確保邊框色彩完全保留。"
+          "a2": "輸出始終為 PNG 以確保邊框色彩完全保留。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "circle-crop": {
@@ -202,7 +260,13 @@
           "q1": "圓形裁剪如何運作？",
           "a1": "取圖片中心，以較短邊為直徑，裁剪為完美圓形。背景為透明。",
           "q2": "輸出格式是什麼？",
-          "a2": "輸出始終為 PNG，因為它支援圓形裁剪所需的透明度。"
+          "a2": "輸出始終為 PNG，因為它支援圓形裁剪所需的透明度。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "svg-to-png": {
@@ -218,7 +282,13 @@
           "q1": "可用的縮放倍率有哪些？",
           "a1": "可選擇 1x（原始大小）、2x、3x 或 4x。較高倍率會產生更大、更精細的 PNG 檔案，適合高 DPI 顯示器。",
           "q2": "支援所有 SVG 功能嗎？",
-          "a2": "使用瀏覽器內建的 SVG 引擎來渲染 SVG。支援大多數標準 SVG 功能，但外部資源或字型可能無法正確渲染。"
+          "a2": "使用瀏覽器內建的 SVG 引擎來渲染 SVG。支援大多數標準 SVG 功能，但外部資源或字型可能無法正確渲染。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "add-text": {
@@ -245,7 +315,13 @@
           "q1": "可以選擇文字顯示的位置嗎？",
           "a1": "可以，從五個位置中選擇：置中、左上、右上、左下或右下。",
           "q2": "可用的字型有哪些？",
-          "a2": "使用瀏覽器的預設無襯線字型，因系統而異但始終清晰易讀。"
+          "a2": "使用瀏覽器的預設無襯線字型，因系統而異但始終清晰易讀。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "combine": {
@@ -262,7 +338,13 @@
           "q1": "有哪些版面配置選項？",
           "a1": "可以水平（並排）或垂直（上下堆疊）合併圖片。",
           "q2": "圖片需要相同大小嗎？",
-          "a2": "不需要，不同大小的圖片會以原始尺寸合併。畫布會擴展以容納所有圖片。"
+          "a2": "不需要，不同大小的圖片會以原始尺寸合併。畫布會擴展以容納所有圖片。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "split": {
@@ -280,7 +362,13 @@
           "q1": "圖片分割如何運作？",
           "a1": "選擇列數和欄數。圖片根據您指定的網格被分割為等大的片段。",
           "q2": "可以一次下載所有片段嗎？",
-          "a2": "可以，使用「全部下載 (ZIP)」按鈕將所有片段打包為一個 ZIP 檔案。"
+          "a2": "可以，使用「全部下載 (ZIP)」按鈕將所有片段打包為一個 ZIP 檔案。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "heic-convert": {
@@ -298,7 +386,13 @@
           "q1": "什麼是 HEIC 檔案？",
           "a1": "HEIC（高效率圖片容器）是 Apple 裝置使用的預設圖片格式。在維持品質的同時提供比 JPEG 更好的壓縮率。",
           "q2": "我的圖片會上傳到伺服器嗎？",
-          "a2": "不會。所有轉換都在瀏覽器中本機完成。您的檔案不會離開您的裝置。"
+          "a2": "不會。所有轉換都在瀏覽器中本機完成。您的檔案不會離開您的裝置。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "collage": {
@@ -316,7 +410,13 @@
           "q1": "有哪些可用的版面？",
           "a1": "可用版面取決於上傳的圖片數量。選項包括 2x1、1x2、2x2、3x1、1x3 和 2x3 網格。",
           "q2": "可以自訂間距和背景嗎？",
-          "a2": "可以，您可以調整圖片間距（0-20px）並使用色彩選擇器選擇任意背景色。"
+          "a2": "可以，您可以調整圖片間距（0-20px）並使用色彩選擇器選擇任意背景色。",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       }
     }

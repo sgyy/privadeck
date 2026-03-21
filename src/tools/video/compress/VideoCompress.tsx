@@ -6,6 +6,8 @@ import { FileDropzone } from "@/components/shared/FileDropzone";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
+import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
+import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { compressVideo, type Quality } from "./logic";
 
@@ -21,6 +23,8 @@ export default function VideoCompress() {
   const fileUrl = useObjectUrl(file);
   const t = useTranslations("tools.video.compress");
 
+  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg();
+
   if (!isSharedArrayBufferSupported()) {
     return (
       <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
@@ -35,6 +39,7 @@ export default function VideoCompress() {
     setResult(null);
     setError("");
     setProgress(0);
+    await loadFFmpeg();
     try {
       const blob = await compressVideo(file, quality, setProgress);
       setResult(blob);
@@ -62,6 +67,14 @@ export default function VideoCompress() {
           setError("");
         }}
       />
+
+      {ffmpegStatus === "loading" && <FFmpegLoadingState />}
+
+      {ffmpegStatus === "error" && (
+        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
+          Failed to load processing engine. Please refresh and try again.
+        </div>
+      )}
 
       {file && (
         <div className="space-y-4">

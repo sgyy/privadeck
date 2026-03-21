@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.image.remove-exif.faq.q2",
       answerKey: "tools.image.remove-exif.faq.a2",
     },
+  
+    {
+      questionKey: "tools.image.remove-exif.faq.q3",
+      answerKey: "tools.image.remove-exif.faq.a3",
+    },
+    {
+      questionKey: "tools.image.remove-exif.faq.q4",
+      answerKey: "tools.image.remove-exif.faq.a4",
+    },
+    {
+      questionKey: "tools.image.remove-exif.faq.q5",
+      answerKey: "tools.image.remove-exif.faq.a5",
+    },
   ],
   relatedSlugs: ["compress", "format-converter"],
 };

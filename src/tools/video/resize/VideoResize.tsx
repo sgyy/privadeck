@@ -6,6 +6,8 @@ import { FileDropzone } from "@/components/shared/FileDropzone";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
+import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
+import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { resizeVideo, type ResizePreset } from "./logic";
 
@@ -27,6 +29,8 @@ export default function VideoResize() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const fileUrl = useObjectUrl(file);
   const t = useTranslations("tools.video.resize");
+
+  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg();
 
   if (!isSharedArrayBufferSupported()) {
     return (
@@ -53,6 +57,7 @@ export default function VideoResize() {
     setProcessing(true);
     setResult(null);
     setError("");
+    await loadFFmpeg();
     try {
       const blob = await resizeVideo(
         file,
@@ -72,6 +77,14 @@ export default function VideoResize() {
   return (
     <div className="space-y-4">
       <FileDropzone accept="video/*" onFiles={handleFile} />
+
+      {ffmpegStatus === "loading" && <FFmpegLoadingState />}
+
+      {ffmpegStatus === "error" && (
+        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
+          Failed to load processing engine. Please refresh and try again.
+        </div>
+      )}
 
       {file && fileUrl && (
         <div className="space-y-3">

@@ -22,7 +22,11 @@
           "q2": "Apakah gambar saya diunggah ke server?",
           "a2": "Tidak. Semua pemrosesan gambar terjadi secara lokal di browser Anda. Gambar Anda tidak pernah meninggalkan perangkat.",
           "q3": "Bisakah saya mengonversi beberapa gambar sekaligus?",
-          "a3": "Ya, Anda dapat menyeret dan melepas beberapa gambar dan semuanya akan dikonversi ke format yang Anda pilih."
+          "a3": "Ya, Anda dapat menyeret dan melepas beberapa gambar dan semuanya akan dikonversi ke format yang Anda pilih.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "compress": {
@@ -41,7 +45,13 @@
           "q1": "Bagaimana cara kerja kompresi gambar?",
           "a1": "Alat ini mengurangi ukuran file gambar menggunakan kompresi lossy. Anda dapat mengontrol kualitas dan ukuran maksimum. Semua pemrosesan terjadi di browser Anda.",
           "q2": "Format apa yang didukung?",
-          "a2": "Mendukung gambar JPEG, PNG, WebP, GIF, dan BMP untuk kompresi."
+          "a2": "Mendukung gambar JPEG, PNG, WebP, GIF, dan BMP untuk kompresi.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "crop": {
@@ -60,7 +70,13 @@
           "q1": "Bisakah saya mengatur rasio aspek tertentu?",
           "a1": "Ya, Anda dapat memilih dari rasio preset (1:1, 4:3, 16:9, 3:2) atau menggunakan pemotongan bentuk bebas.",
           "q2": "Apakah gambar asli dimodifikasi?",
-          "a2": "Tidak, gambar asli Anda tidak pernah dimodifikasi. Gambar baru yang dipotong dibuat untuk diunduh."
+          "a2": "Tidak, gambar asli Anda tidak pernah dimodifikasi. Gambar baru yang dipotong dibuat untuk diunduh.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "resize": {
@@ -80,7 +96,13 @@
           "q1": "Bisakah saya mempertahankan rasio aspek?",
           "a1": "Ya, rasio aspek dikunci secara default. Klik ikon tautan untuk membukanya untuk pengubahan ukuran bentuk bebas.",
           "q2": "Preset apa yang tersedia?",
-          "a2": "Preset umum meliputi HD (1280×720), Full HD (1920×1080), 4K (3840×2160), dan ukuran media sosial."
+          "a2": "Preset umum meliputi HD (1280×720), Full HD (1920×1080), 4K (3840×2160), dan ukuran media sosial.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "watermark": {
@@ -106,7 +128,13 @@
           "q1": "Bisakah saya membuat watermark berulang di seluruh gambar?",
           "a1": "Ya, pilih opsi posisi 'Ubin (Berulang)' untuk menambahkan watermark berulang secara miring di seluruh gambar.",
           "q2": "Bisakah saya mengatur transparansi watermark?",
-          "a2": "Ya, gunakan slider opasitas untuk mengontrol transparansi dari hampir tidak terlihat hingga sepenuhnya opak."
+          "a2": "Ya, gunakan slider opasitas untuk mengontrol transparansi dari hampir tidak terlihat hingga sepenuhnya opak.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "remove-exif": {
@@ -122,7 +150,13 @@
           "q1": "Data EXIF apa yang dihapus?",
           "a1": "Semua metadata dihapus termasuk lokasi GPS, model kamera, tanggal pengambilan, dan informasi tertanam lainnya. Gambar digambar ulang di kanvas bersih.",
           "q2": "Apakah ini memengaruhi kualitas gambar?",
-          "a2": "Kualitas gambar dipertahankan pada 95% untuk JPEG. Gambar PNG diekspor ulang secara lossless."
+          "a2": "Kualitas gambar dipertahankan pada 95% untuk JPEG. Gambar PNG diekspor ulang secara lossless.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "flip": {
@@ -139,7 +173,13 @@
           "q1": "Apa perbedaan antara balik horizontal dan vertikal?",
           "a1": "Balik horizontal mencerminkan gambar dari kiri ke kanan, seperti melihat di cermin. Balik vertikal mencerminkan gambar dari atas ke bawah.",
           "q2": "Apakah membalik mengurangi kualitas gambar?",
-          "a2": "Tidak. Gambar digambar ulang pada resolusi aslinya. Gambar JPEG dikodekan ulang pada kualitas 92%."
+          "a2": "Tidak. Gambar digambar ulang pada resolusi aslinya. Gambar JPEG dikodekan ulang pada kualitas 92%.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "grayscale": {
@@ -154,7 +194,13 @@
           "q1": "Bagaimana cara kerja konversi grayscale?",
           "a1": "Alat ini mengonversi setiap piksel ke nuansa abu-abu menggunakan formula luminansi standar (0.299R + 0.587G + 0.114B), mempertahankan kecerahan yang dirasakan.",
           "q2": "Bisakah saya mengatur intensitas efek grayscale?",
-          "a2": "Alat ini menerapkan konversi grayscale penuh. Untuk desaturasi parsial, pertimbangkan menggunakan editor foto khusus."
+          "a2": "Alat ini menerapkan konversi grayscale penuh. Untuk desaturasi parsial, pertimbangkan menggunakan editor foto khusus.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "pixelate": {
@@ -170,7 +216,13 @@
           "q1": "Untuk apa pikselasi bisa digunakan?",
           "a1": "Pikselasi umumnya digunakan untuk menyensor informasi sensitif di tangkapan layar, membuat efek pixel-art retro, atau menganonimkan wajah di foto.",
           "q2": "Bisakah saya mengontrol tingkat pikselasi?",
-          "a2": "Ya. Gunakan slider ukuran piksel untuk menyesuaikan dari 2px (halus) hingga 50px (pikselasi berat)."
+          "a2": "Ya. Gunakan slider ukuran piksel untuk menyesuaikan dari 2px (halus) hingga 50px (pikselasi berat).",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "add-border": {
@@ -187,7 +239,13 @@
           "q1": "Opsi bingkai apa yang tersedia?",
           "a1": "Anda dapat menyesuaikan lebar bingkai dari 1 hingga 100 piksel dan memilih warna apa pun menggunakan pemilih warna.",
           "q2": "Apa format outputnya?",
-          "a2": "Output selalu PNG untuk memastikan warna bingkai dipertahankan persis seperti yang dipilih."
+          "a2": "Output selalu PNG untuk memastikan warna bingkai dipertahankan persis seperti yang dipilih.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "circle-crop": {
@@ -202,7 +260,13 @@
           "q1": "Bagaimana cara kerja pemotongan lingkaran?",
           "a1": "Alat ini mengambil bagian tengah gambar Anda, menggunakan dimensi terpendek sebagai diameter, dan memotongnya menjadi lingkaran sempurna. Latar belakangnya transparan.",
           "q2": "Apa format outputnya?",
-          "a2": "Output selalu PNG karena mendukung transparansi, yang diperlukan untuk potongan lingkaran."
+          "a2": "Output selalu PNG karena mendukung transparansi, yang diperlukan untuk potongan lingkaran.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "svg-to-png": {
@@ -218,7 +282,13 @@
           "q1": "Faktor skala apa yang tersedia?",
           "a1": "Anda dapat memilih 1x (ukuran asli), 2x, 3x, atau 4x. Skala lebih tinggi menghasilkan file PNG yang lebih besar dan detail, cocok untuk layar DPI tinggi.",
           "q2": "Apakah semua fitur SVG didukung?",
-          "a2": "Alat ini merender SVG menggunakan mesin SVG bawaan browser. Sebagian besar fitur SVG standar didukung, tetapi sumber daya atau font eksternal mungkin tidak dirender dengan benar."
+          "a2": "Alat ini merender SVG menggunakan mesin SVG bawaan browser. Sebagian besar fitur SVG standar didukung, tetapi sumber daya atau font eksternal mungkin tidak dirender dengan benar.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "add-text": {
@@ -245,7 +315,13 @@
           "q1": "Bisakah saya memilih posisi teks?",
           "a1": "Ya, pilih dari lima posisi: tengah, kiri atas, kanan atas, kiri bawah, atau kanan bawah.",
           "q2": "Font apa yang tersedia?",
-          "a2": "Alat ini menggunakan font sans-serif default browser, yang bervariasi menurut sistem tetapi selalu bersih dan mudah dibaca."
+          "a2": "Alat ini menggunakan font sans-serif default browser, yang bervariasi menurut sistem tetapi selalu bersih dan mudah dibaca.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "combine": {
@@ -262,7 +338,13 @@
           "q1": "Opsi tata letak apa yang tersedia?",
           "a1": "Anda dapat menggabungkan gambar secara horizontal (berdampingan) atau vertikal (ditumpuk atas ke bawah).",
           "q2": "Apakah gambar harus berukuran sama?",
-          "a2": "Tidak, gambar dengan ukuran berbeda digabungkan pada dimensi aslinya. Kanvas diperluas untuk menampung semua gambar."
+          "a2": "Tidak, gambar dengan ukuran berbeda digabungkan pada dimensi aslinya. Kanvas diperluas untuk menampung semua gambar.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "split": {
@@ -280,7 +362,13 @@
           "q1": "Bagaimana cara kerja pembagian gambar?",
           "a1": "Pilih jumlah baris dan kolom. Gambar dibagi menjadi potongan berukuran sama berdasarkan grid yang Anda tentukan.",
           "q2": "Bisakah saya mengunduh semua potongan sekaligus?",
-          "a2": "Ya, gunakan tombol Unduh Semua (ZIP) untuk mendapatkan semua potongan dalam satu file ZIP."
+          "a2": "Ya, gunakan tombol Unduh Semua (ZIP) untuk mendapatkan semua potongan dalam satu file ZIP.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "heic-convert": {
@@ -298,7 +386,13 @@
           "q1": "Apa itu file HEIC?",
           "a1": "HEIC (High Efficiency Image Container) adalah format gambar default yang digunakan perangkat Apple. Menawarkan kompresi lebih baik daripada JPEG sambil mempertahankan kualitas.",
           "q2": "Apakah gambar saya diunggah ke server?",
-          "a2": "Tidak. Semua konversi terjadi secara lokal di browser Anda. File Anda tidak pernah meninggalkan perangkat."
+          "a2": "Tidak. Semua konversi terjadi secara lokal di browser Anda. File Anda tidak pernah meninggalkan perangkat.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       },
       "collage": {
@@ -316,7 +410,13 @@
           "q1": "Tata letak apa yang tersedia?",
           "a1": "Tata letak yang tersedia bergantung pada jumlah gambar yang Anda unggah. Opsi meliputi grid 2x1, 1x2, 2x2, 3x1, 1x3, dan 2x3.",
           "q2": "Bisakah saya menyesuaikan jarak dan latar belakang?",
-          "a2": "Ya, Anda dapat mengatur jarak antar gambar (0-20px) dan memilih warna latar belakang apa pun menggunakan pemilih warna."
+          "a2": "Ya, Anda dapat mengatur jarak antar gambar (0-20px) dan memilih warna latar belakang apa pun menggunakan pemilih warna.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "Can I use this tool offline?",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
       }
     }

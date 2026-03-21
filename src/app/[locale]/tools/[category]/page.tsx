@@ -50,6 +50,7 @@ export default async function CategoryPage({
 function CategoryPageUI({ category }: { category: ToolCategory }) {
   const tc = useTranslations("categories");
   const tt = useTranslations("tools");
+  const tCommon = useTranslations("common");
   const tools = getToolsByCategory(category);
 
   return (
@@ -61,6 +62,10 @@ function CategoryPageUI({ category }: { category: ToolCategory }) {
         <p className="mt-2 text-muted-foreground">
           {tc(`${category}.description`)}
         </p>
+      </div>
+
+      <div className="rounded-lg border border-border/50 bg-muted/20 p-4 text-sm text-muted-foreground leading-relaxed">
+        {tCommon(`categoryIntro.${category}`)}
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

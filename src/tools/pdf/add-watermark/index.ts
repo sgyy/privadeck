@@ -16,6 +16,19 @@ const definition: ToolDefinition = {
       questionKey: "tools.pdf.add-watermark.faq.q2",
       answerKey: "tools.pdf.add-watermark.faq.a2",
     },
+  
+    {
+      questionKey: "tools.pdf.add-watermark.faq.q3",
+      answerKey: "tools.pdf.add-watermark.faq.a3",
+    },
+    {
+      questionKey: "tools.pdf.add-watermark.faq.q4",
+      answerKey: "tools.pdf.add-watermark.faq.a4",
+    },
+    {
+      questionKey: "tools.pdf.add-watermark.faq.q5",
+      answerKey: "tools.pdf.add-watermark.faq.a5",
+    },
   ],
   relatedSlugs: ["add-page-numbers", "rotate", "merge"],
 };
