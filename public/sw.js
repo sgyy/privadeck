@@ -37,10 +37,12 @@ self.addEventListener("fetch", (event) => {
         cache.match(event.request).then(
           (cached) =>
             cached ||
-            fetch(event.request).then((response) => {
-              if (response.ok) cache.put(event.request, response.clone());
-              return response;
-            })
+            fetch(event.request)
+              .then((response) => {
+                if (response.ok) cache.put(event.request, response.clone());
+                return response;
+              })
+              .catch(() => Response.error())
         )
       )
     );

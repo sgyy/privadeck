@@ -40,7 +40,8 @@ export default function VideoCompress() {
     setResult(null);
     setError("");
     setProgress(0);
-    await loadFFmpeg();
+    const ff = await loadFFmpeg();
+    if (!ff) { setProcessing(false); return; }
     try {
       const blob = await compressVideo(file, quality, setProgress);
       setResult(blob);

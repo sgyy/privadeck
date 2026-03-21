@@ -36,7 +36,8 @@ export default function VideoMute() {
     setProcessing(true);
     setResult(null);
     setError("");
-    await loadFFmpeg();
+    const ff = await loadFFmpeg();
+    if (!ff) { setProcessing(false); return; }
     try {
       const blob = await muteVideo(file, setProgress);
       setResult(blob);

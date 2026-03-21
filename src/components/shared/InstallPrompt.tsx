@@ -17,7 +17,6 @@ export function InstallPrompt() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
     if (localStorage.getItem(DISMISS_KEY)) return;
 
     const handler = (e: Event) => {

@@ -41,7 +41,8 @@ export default function AudioExtract() {
     setProcessing(true);
     setResult(null);
     setError("");
-    await loadFFmpeg();
+    const ff = await loadFFmpeg();
+    if (!ff) { setProcessing(false); return; }
     try {
       const blob = await extractAudio(file, format, setProgress);
       setResult(blob);

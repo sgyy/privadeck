@@ -61,7 +61,8 @@ export default function VideoToWebp() {
     setProcessing(true);
     setResult(null);
     setError("");
-    await loadFFmpeg();
+    const ff = await loadFFmpeg();
+    if (!ff) { setProcessing(false); return; }
     try {
       const blob = await videoToWebp(
         file,

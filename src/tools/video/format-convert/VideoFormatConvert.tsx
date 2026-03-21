@@ -41,7 +41,8 @@ export default function VideoFormatConvert() {
     setResult(null);
     setError("");
     setProgress(0);
-    await loadFFmpeg();
+    const ff = await loadFFmpeg();
+    if (!ff) { setProcessing(false); return; }
     try {
       const output = await convertVideoFormat(file, format, setProgress);
       setResult(output);

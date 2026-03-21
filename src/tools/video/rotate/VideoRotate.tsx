@@ -39,7 +39,8 @@ export default function VideoRotate() {
     setProcessing(true);
     setResult(null);
     setError("");
-    await loadFFmpeg();
+    const ff = await loadFFmpeg();
+    if (!ff) { setProcessing(false); return; }
     try {
       const blob = await rotateVideo(file, angle, setProgress);
       setResult(blob);

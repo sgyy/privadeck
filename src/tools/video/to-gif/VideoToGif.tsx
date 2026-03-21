@@ -60,7 +60,8 @@ export default function VideoToGif() {
     setProcessing(true);
     setResult(null);
     setError("");
-    await loadFFmpeg();
+    const ff = await loadFFmpeg();
+    if (!ff) { setProcessing(false); return; }
     try {
       const blob = await videoToGif(
         file,

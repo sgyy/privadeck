@@ -57,8 +57,8 @@ export default async function ToolPage({
     <>
       {needsFFmpeg && (
         <>
-          <link rel="prefetch" href="https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm/ffmpeg-core.js" />
-          <link rel="prefetch" href="https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm/ffmpeg-core.wasm" />
+          <link rel="prefetch" href="https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm/ffmpeg-core.js" crossOrigin="anonymous" />
+          <link rel="prefetch" href="https://unpkg.com/@ffmpeg/core@0.12.6/dist/esm/ffmpeg-core.wasm" crossOrigin="anonymous" />
         </>
       )}
       <NextIntlClientProvider messages={messages}>

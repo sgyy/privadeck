@@ -57,7 +57,8 @@ export default function VideoTrim() {
     setProcessing(true);
     setResult(null);
     setError("");
-    await loadFFmpeg();
+    const ff = await loadFFmpeg();
+    if (!ff) { setProcessing(false); return; }
     try {
       const blob = await trimVideo(file, start, end, setProgress);
       setResult(blob);
