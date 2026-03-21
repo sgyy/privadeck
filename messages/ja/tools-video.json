@@ -15,33 +15,33 @@
           "a1": "動画の品質を維持したまま音声トラックを削除します。再エンコードは不要です。",
           "q2": "対応する動画フォーマットは？",
           "a2": "MP4、WebM、MOV、AVI など一般的なフォーマットに対応しています。",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q3": "ファイルはサーバーにアップロードされますか？",
+          "a3": "いいえ。すべての処理はブラウザ内で完結します。ファイルがデバイスから出ることはありません。DevTools（F12）を開いて Network タブを確認すれば、アップロードリクエストがゼロであることを確認できます。",
+          "q4": "オフラインで使えますか？",
+          "a4": "はい。ページが読み込まれた後は、完全にオフラインで動作します。最高の体験のために、ブラウザから PrivaDeck を PWA としてインストールしてください。",
+          "q5": "ファイルサイズの制限はありますか？",
+          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能メモリとブラウザの性能に依存します。最新のデバイスであれば数百 MB のファイルも問題なく処理できます。"
         },
         "seoContent": {
           "intro": {
-            "title": "What is Mute Video?",
-            "content": "<p><strong>Mute Video</strong> removes the audio track from video files while keeping the video quality intact. Create silent versions of videos for background loops, presentations, or social media posts where audio isn't needed.</p><p>Powered by FFmpeg.wasm — full video processing running locally in your browser.</p>"
+            "title": "動画ミュートとは？",
+            "content": "<p><strong>動画ミュート</strong>は、動画ファイルから音声トラックを削除しながら映像品質をそのまま維持するツールです。バックグラウンドループ、プレゼンテーション、音声不要なソーシャルメディア投稿用に無音バージョンの動画を作成できます。</p><p>FFmpeg.wasm を使用してブラウザ内でフル動画処理を実行します。</p>"
           },
           "howToUse": {
-            "title": "How to Use Mute Video",
-            "content": "<ol><li>Upload a video file (MP4, WebM, MKV, AVI supported)</li><li>Click <strong>Mute</strong> to remove the audio track</li><li>Download the silent video</li></ol><p>The video stream is copied without re-encoding, so processing is fast and quality is preserved.</p>"
+            "title": "動画ミュートの使い方",
+            "content": "<ol><li>動画ファイルをアップロード（MP4、WebM、MKV、AVI 対応）</li><li><strong>音声を削除</strong>をクリックして音声トラックを除去</li><li>無音の動画をダウンロード</li></ol><p>動画ストリームは再エンコードなしにコピーされるため、処理が高速で品質が保持されます。</p>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Audio Track Removal</strong>: Completely strips audio while keeping video untouched</li><li><strong>No Re-encoding</strong>: Video stream is copied directly — no quality loss</li><li><strong>Fast Processing</strong>: Stream copy is much faster than re-encoding</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI input</li><li><strong>Powered by FFmpeg.wasm</strong>: Industry-standard video processing in your browser</li><li><strong>Preview</strong>: Play the video before and after muting</li></ul>"
+            "title": "主な機能",
+            "content": "<ul><li><strong>音声トラック除去</strong>：映像を維持したまま音声を完全に削除</li><li><strong>再エンコード不要</strong>：動画ストリームを直接コピー — 品質劣化なし</li><li><strong>高速処理</strong>：ストリームコピーは再エンコードより大幅に高速</li><li><strong>複数フォーマット対応</strong>：MP4、WebM、MKV、AVI の入力に対応</li><li><strong>FFmpeg.wasm 搭載</strong>：業界標準の動画処理をブラウザで実現</li><li><strong>プレビュー機能</strong>：ミュート前後の動画を再生して確認</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>Presentations</strong>: Remove distracting audio from background videos in slides</li><li><strong>Social Media</strong>: Create silent looping videos for Instagram or TikTok backgrounds</li><li><strong>Web Design</strong>: Prepare silent hero videos for website backgrounds</li><li><strong>Privacy</strong>: Remove conversations or identifiable audio from recordings</li><li><strong>Video Editing</strong>: Strip audio before replacing with a different soundtrack</li></ul>"
+            "title": "主な活用例",
+            "content": "<ul><li><strong>プレゼンテーション</strong>：スライドのバックグラウンド動画から邪魔な音声を除去</li><li><strong>ソーシャルメディア</strong>：Instagram や TikTok のバックグラウンド用に無音ループ動画を作成</li><li><strong>Web デザイン</strong>：ウェブサイトの背景用に無音ヒーロー動画を準備</li><li><strong>プライバシー保護</strong>：録画から会話や個人を特定できる音声を除去</li><li><strong>動画編集</strong>：別のサウンドトラックに差し替える前に音声を除去</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Processing",
-            "content": "<p>Video processing runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly).</p><ul><li>Your videos <strong>never leave your device</strong> — no server uploads</li><li>No cloud processing or third-party access to your media</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "プライバシー優先の動画処理",
+            "content": "<p>動画処理は <strong>FFmpeg.wasm</strong>（WebAssembly）を使用して<strong>完全にブラウザ内</strong>で実行されます。</p><ul><li>動画が<strong>デバイスから出ることはありません</strong> — サーバーへのアップロードなし</li><li>クラウド処理やサードパーティによるメディアへのアクセスなし</li><li>FFmpeg コアの読み込み後は<strong>オフラインでも</strong>動作</li></ul>"
           }
         }
       },
@@ -62,33 +62,33 @@
           "a1": "はい、レンジスライダーで 0.1 秒精度で開始点と終了点を設定できます。",
           "q2": "動画は再エンコードされますか？",
           "a2": "ストリームコピーモードで品質を損なわず高速処理します。",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q3": "ファイルはサーバーにアップロードされますか？",
+          "a3": "いいえ。すべての処理はブラウザ内で完結します。ファイルがデバイスから出ることはありません。DevTools（F12）を開いて Network タブを確認すれば、アップロードリクエストがゼロであることを確認できます。",
+          "q4": "オフラインで使えますか？",
+          "a4": "はい。ページが読み込まれた後は、完全にオフラインで動作します。最高の体験のために、ブラウザから PrivaDeck を PWA としてインストールしてください。",
+          "q5": "ファイルサイズの制限はありますか？",
+          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能メモリとブラウザの性能に依存します。最新のデバイスであれば数百 MB のファイルも問題なく処理できます。"
         },
         "seoContent": {
           "intro": {
-            "title": "What is Trim Video?",
-            "content": "<p><strong>Trim Video</strong> cuts video clips to your desired length with precise start and end time controls. Set times down to 0.1-second precision, preview the selection, and download the trimmed clip.</p><p>Uses FFmpeg.wasm for professional-grade video trimming directly in your browser.</p>"
+            "title": "動画トリミングとは？",
+            "content": "<p><strong>動画トリミング</strong>は、開始・終了時間を精密に制御して動画クリップを希望の長さにカットするツールです。0.1 秒精度で時間を設定し、選択範囲をプレビューしてからトリミングしたクリップをダウンロードできます。</p><p>ブラウザ内でプロ品質の動画トリミングを実現する FFmpeg.wasm を使用しています。</p>"
           },
           "howToUse": {
-            "title": "How to Use Trim Video",
-            "content": "<ol><li>Upload a video file</li><li>Set the <strong>start time</strong> and <strong>end time</strong> for the clip you want to keep</li><li>Preview the selected range in the video player</li><li>Click <strong>Trim</strong> to extract the clip</li><li>Download the trimmed video</li></ol><p>Supports precise time selection with 0.1-second increments.</p>"
+            "title": "動画トリミングの使い方",
+            "content": "<ol><li>動画ファイルをアップロード</li><li>保持したいクリップの<strong>開始時間</strong>と<strong>終了時間</strong>を設定</li><li>動画プレーヤーで選択した範囲をプレビュー</li><li><strong>トリミング</strong>をクリックしてクリップを切り出す</li><li>トリミングした動画をダウンロード</li></ol><p>0.1 秒刻みで精密な時間選択が可能です。</p>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Precise Timing</strong>: Set start and end times with 0.1-second accuracy</li><li><strong>Video Preview</strong>: Play the selected range before trimming</li><li><strong>Fast Processing</strong>: Stream copy mode for instant trimming without re-encoding</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional video processing in the browser</li><li><strong>Quality Preservation</strong>: No quality loss when stream copying</li></ul>"
+            "title": "主な機能",
+            "content": "<ul><li><strong>精密なタイミング設定</strong>：0.1 秒精度で開始・終了時間を設定</li><li><strong>動画プレビュー</strong>：トリミング前に選択した範囲を再生確認</li><li><strong>高速処理</strong>：再エンコードなしの瞬時トリミングを可能にするストリームコピーモード</li><li><strong>複数フォーマット対応</strong>：MP4、WebM、MKV、AVI に対応</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質の動画処理</li><li><strong>品質保持</strong>：ストリームコピー時に品質劣化なし</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>Social Media Clips</strong>: Cut highlights from longer videos for social platforms</li><li><strong>Meeting Recordings</strong>: Extract key moments from recorded meetings</li><li><strong>Content Creation</strong>: Trim raw footage to create polished clips</li><li><strong>Presentations</strong>: Cut video clips to exact lengths for presentations</li><li><strong>Personal Videos</strong>: Trim home videos to keep the best moments</li></ul>"
+            "title": "主な活用例",
+            "content": "<ul><li><strong>ソーシャルメディアクリップ</strong>：長い動画からソーシャルプラットフォーム向けのハイライトを切り出す</li><li><strong>会議録画</strong>：録画された会議から重要な瞬間を抽出</li><li><strong>コンテンツ制作</strong>：素材映像をトリミングして洗練されたクリップを作成</li><li><strong>プレゼンテーション</strong>：プレゼン用に動画クリップをちょうどよい長さにカット</li><li><strong>個人動画</strong>：家族の動画をトリミングして最良の瞬間だけ残す</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Trimming",
-            "content": "<p>Video trimming runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server uploads — your personal and business videos stay private</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "プライバシー優先の動画トリミング",
+            "content": "<p>動画トリミングは <strong>FFmpeg.wasm</strong> を使用して<strong>完全にブラウザ内</strong>で実行されます。</p><ul><li>動画が<strong>デバイスから出ることはありません</strong></li><li>サーバーへのアップロードなし — 個人・業務用の動画はプライベートに保持</li><li>FFmpeg コアの読み込み後は<strong>オフラインでも</strong>動作</li></ul>"
           }
         }
       },
@@ -106,33 +106,33 @@
           "a1": "90°（時計回り）、180°（上下逆）、270°（反時計回り）で回転できます。",
           "q2": "回転は品質に影響しますか？",
           "a2": "回転時に再エンコードされますが、品質は高いレベルで維持されます。",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q3": "ファイルはサーバーにアップロードされますか？",
+          "a3": "いいえ。すべての処理はブラウザ内で完結します。ファイルがデバイスから出ることはありません。DevTools（F12）を開いて Network タブを確認すれば、アップロードリクエストがゼロであることを確認できます。",
+          "q4": "オフラインで使えますか？",
+          "a4": "はい。ページが読み込まれた後は、完全にオフラインで動作します。最高の体験のために、ブラウザから PrivaDeck を PWA としてインストールしてください。",
+          "q5": "ファイルサイズの制限はありますか？",
+          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能メモリとブラウザの性能に依存します。最新のデバイスであれば数百 MB のファイルも問題なく処理できます。"
         },
         "seoContent": {
           "intro": {
-            "title": "What is Rotate Video?",
-            "content": "<p><strong>Rotate Video</strong> rotates video files by 90°, 180°, or 270° to fix orientation issues. Correct sideways phone videos, fix upside-down recordings, or adjust orientation for specific display needs.</p>"
+            "title": "動画回転とは？",
+            "content": "<p><strong>動画回転</strong>は、向きの問題を修正するために動画ファイルを 90°、180°、270° 回転するツールです。横向きのスマートフォン動画、上下逆さまの録画を修正したり、特定の表示ニーズに合わせて向きを調整したりできます。</p>"
           },
           "howToUse": {
-            "title": "How to Use Rotate Video",
-            "content": "<ol><li>Upload a video file</li><li>Select the rotation angle: <strong>90°</strong>, <strong>180°</strong>, or <strong>270°</strong></li><li>Click <strong>Rotate</strong> to process</li><li>Download the rotated video</li></ol>"
+            "title": "動画回転の使い方",
+            "content": "<ol><li>動画ファイルをアップロード</li><li>回転角度を選択：<strong>90°</strong>、<strong>180°</strong>、または <strong>270°</strong></li><li><strong>回転</strong>をクリックして処理を開始</li><li>回転した動画をダウンロード</li></ol>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Three Angles</strong>: Rotate by 90° (clockwise), 180°, or 270° (counter-clockwise)</li><li><strong>Video Preview</strong>: See the video before and after rotation</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional video processing in the browser</li><li><strong>Quality Output</strong>: High-quality rotation with FFmpeg encoding</li><li><strong>Audio Preserved</strong>: Audio track remains synchronized after rotation</li></ul>"
+            "title": "主な機能",
+            "content": "<ul><li><strong>3つの角度</strong>：90°（時計回り）、180°、270°（反時計回り）で回転</li><li><strong>動画プレビュー</strong>：回転前後の動画を確認</li><li><strong>複数フォーマット対応</strong>：MP4、WebM、MKV、AVI に対応</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質の動画処理</li><li><strong>高品質出力</strong>：FFmpeg エンコーディングによる高品質な回転</li><li><strong>音声保持</strong>：回転後も音声トラックが同期されたまま維持</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>Phone Videos</strong>: Fix sideways videos recorded on mobile phones</li><li><strong>Camera Footage</strong>: Correct orientation from cameras mounted at angles</li><li><strong>Screen Recordings</strong>: Rotate screen recordings for vertical display</li><li><strong>Social Media</strong>: Adjust orientation for platform requirements (portrait/landscape)</li><li><strong>Presentations</strong>: Fix video orientation for use in slides</li></ul>"
+            "title": "主な活用例",
+            "content": "<ul><li><strong>スマートフォン動画</strong>：スマートフォンで録画した横向き動画を修正</li><li><strong>カメラ映像</strong>：斜めに取り付けられたカメラからの映像の向きを補正</li><li><strong>スクリーン録画</strong>：縦表示用にスクリーン録画を回転</li><li><strong>ソーシャルメディア</strong>：プラットフォームの要件に合わせて向きを調整（縦向き/横向き）</li><li><strong>プレゼンテーション</strong>：スライドで使用する動画の向きを修正</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Processing",
-            "content": "<p>Video rotation runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "プライバシー優先の動画処理",
+            "content": "<p>動画回転は <strong>FFmpeg.wasm</strong> を使用して<strong>完全にブラウザ内</strong>で実行されます。</p><ul><li>動画が<strong>デバイスから出ることはありません</strong></li><li>サーバー処理やアップロードなし</li><li>FFmpeg コアの読み込み後は<strong>オフラインでも</strong>動作</li></ul>"
           }
         }
       },
@@ -153,33 +153,33 @@
           "a1": "FPS を下げるか、幅を減らすか、長さを短くしてください。最適化パレットを使用します。",
           "q2": "GIF の最大長は？",
           "a2": "厳密な制限はありませんが、長い GIF は大きなファイルになります。10 秒以内をお勧めします。",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q3": "ファイルはサーバーにアップロードされますか？",
+          "a3": "いいえ。すべての処理はブラウザ内で完結します。ファイルがデバイスから出ることはありません。DevTools（F12）を開いて Network タブを確認すれば、アップロードリクエストがゼロであることを確認できます。",
+          "q4": "オフラインで使えますか？",
+          "a4": "はい。ページが読み込まれた後は、完全にオフラインで動作します。最高の体験のために、ブラウザから PrivaDeck を PWA としてインストールしてください。",
+          "q5": "ファイルサイズの制限はありますか？",
+          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能メモリとブラウザの性能に依存します。最新のデバイスであれば数百 MB のファイルも問題なく処理できます。"
         },
         "seoContent": {
           "intro": {
-            "title": "What is Video to GIF?",
-            "content": "<p><strong>Video to GIF</strong> converts video clips into animated GIF images with control over frame rate, resolution, and quality. Create shareable GIFs from any video for social media, chat, or documentation.</p><p>Powered by FFmpeg.wasm for high-quality GIF generation directly in your browser.</p>"
+            "title": "動画を GIF に変換とは？",
+            "content": "<p><strong>動画を GIF に変換</strong>は、フレームレート、解像度、品質を制御しながら動画クリップをアニメーション GIF 画像に変換するツールです。ソーシャルメディア、チャット、ドキュメント用にあらゆる動画から共有可能な GIF を作成できます。</p><p>ブラウザ内で高品質な GIF 生成を実現する FFmpeg.wasm を使用しています。</p>"
           },
           "howToUse": {
-            "title": "How to Use Video to GIF",
-            "content": "<ol><li>Upload a video file</li><li>Set the start and end time for the GIF clip</li><li>Adjust <strong>frame rate</strong> (fps) and output <strong>width</strong></li><li>Click <strong>Convert</strong> to generate the GIF</li><li>Preview and download the animated GIF</li></ol><p>Lower frame rates and smaller widths produce smaller GIF files.</p>"
+            "title": "動画を GIF に変換する使い方",
+            "content": "<ol><li>動画ファイルをアップロード</li><li>GIF クリップの開始時間と終了時間を設定</li><li><strong>フレームレート</strong>（fps）と出力<strong>幅</strong>を調整</li><li><strong>変換</strong>をクリックして GIF を生成</li><li>アニメーション GIF をプレビューしてダウンロード</li></ol><p>フレームレートを下げるか幅を小さくすると GIF のファイルサイズが小さくなります。</p>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Frame Rate Control</strong>: Set GIF frame rate (e.g., 10, 15, 24 fps)</li><li><strong>Size Control</strong>: Adjust output width for file size optimization</li><li><strong>Time Selection</strong>: Choose which part of the video to convert</li><li><strong>Preview</strong>: See the GIF before downloading</li><li><strong>Powered by FFmpeg.wasm</strong>: High-quality palette generation for optimal GIF colors</li><li><strong>Multiple Input Formats</strong>: Convert from MP4, WebM, MKV, AVI</li></ul>"
+            "title": "主な機能",
+            "content": "<ul><li><strong>フレームレート制御</strong>：GIF のフレームレートを設定（例：10、15、24 fps）</li><li><strong>サイズ制御</strong>：ファイルサイズ最適化のために出力幅を調整</li><li><strong>時間選択</strong>：動画のどの部分を変換するかを選択</li><li><strong>プレビュー機能</strong>：ダウンロード前に GIF を確認</li><li><strong>FFmpeg.wasm 搭載</strong>：最適な GIF カラーのための高品質パレット生成</li><li><strong>複数入力フォーマット</strong>：MP4、WebM、MKV、AVI から変換</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>Social Media</strong>: Create reaction GIFs or highlights from videos</li><li><strong>Documentation</strong>: Create animated demonstrations for tutorials or docs</li><li><strong>Chat & Messaging</strong>: Make custom GIFs for group chats and Slack</li><li><strong>Bug Reports</strong>: Record and share animated bug reproductions</li><li><strong>Marketing</strong>: Create eye-catching animated content for campaigns</li></ul>"
+            "title": "主な活用例",
+            "content": "<ul><li><strong>ソーシャルメディア</strong>：動画からリアクション GIF やハイライトを作成</li><li><strong>ドキュメント</strong>：チュートリアルやドキュメント用のアニメーションデモを作成</li><li><strong>チャット・メッセージング</strong>：グループチャットや Slack 用のカスタム GIF を作成</li><li><strong>バグレポート</strong>：アニメーションによるバグ再現を記録して共有</li><li><strong>マーケティング</strong>：キャンペーン用の目を引くアニメーションコンテンツを作成</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First GIF Creation",
-            "content": "<p>GIF conversion runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing — your content stays private</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "プライバシー優先の GIF 作成",
+            "content": "<p>GIF 変換は <strong>FFmpeg.wasm</strong> を使用して<strong>完全にブラウザ内</strong>で実行されます。</p><ul><li>動画が<strong>デバイスから出ることはありません</strong></li><li>サーバー処理なし — コンテンツはプライベートに保持</li><li>FFmpeg コアの読み込み後は<strong>オフラインでも</strong>動作</li></ul>"
           }
         }
       },
@@ -200,33 +200,33 @@
           "a1": "アニメーション WebP は同等の GIF より通常 25〜35% 小さく、より良い色深度と透明度をサポートします。",
           "q2": "アニメーション WebP は広くサポートされていますか？",
           "a2": "はい、すべてのモダンブラウザがサポートしています。",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q3": "ファイルはサーバーにアップロードされますか？",
+          "a3": "いいえ。すべての処理はブラウザ内で完結します。ファイルがデバイスから出ることはありません。DevTools（F12）を開いて Network タブを確認すれば、アップロードリクエストがゼロであることを確認できます。",
+          "q4": "オフラインで使えますか？",
+          "a4": "はい。ページが読み込まれた後は、完全にオフラインで動作します。最高の体験のために、ブラウザから PrivaDeck を PWA としてインストールしてください。",
+          "q5": "ファイルサイズの制限はありますか？",
+          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能メモリとブラウザの性能に依存します。最新のデバイスであれば数百 MB のファイルも問題なく処理できます。"
         },
         "seoContent": {
           "intro": {
-            "title": "What is Video to WebP?",
-            "content": "<p><strong>Video to WebP</strong> converts video clips into animated WebP images. WebP animations are <strong>25-35% smaller</strong> than equivalent GIFs with better color reproduction and transparency support.</p><p>The modern alternative to GIFs for web use.</p>"
+            "title": "動画を WebP に変換とは？",
+            "content": "<p><strong>動画を WebP に変換</strong>は、動画クリップをアニメーション WebP 画像に変換するツールです。WebP アニメーションは同等の GIF より<strong>25〜35% 小さく</strong>、より優れた色再現と透明度をサポートします。</p><p>ウェブ用 GIF のモダンな代替フォーマットです。</p>"
           },
           "howToUse": {
-            "title": "How to Use Video to WebP",
-            "content": "<ol><li>Upload a video file</li><li>Set the start and end time for the animation clip</li><li>Adjust frame rate and output dimensions</li><li>Click <strong>Convert</strong> to generate the animated WebP</li><li>Download the WebP animation</li></ol>"
+            "title": "動画を WebP に変換する使い方",
+            "content": "<ol><li>動画ファイルをアップロード</li><li>アニメーションクリップの開始時間と終了時間を設定</li><li>フレームレートと出力サイズを調整</li><li><strong>変換</strong>をクリックしてアニメーション WebP を生成</li><li>WebP アニメーションをダウンロード</li></ol>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Smaller Than GIF</strong>: WebP animations are 25-35% smaller than equivalent GIFs</li><li><strong>Better Colors</strong>: Full 24-bit color depth (vs. GIF's 256 color limit)</li><li><strong>Transparency</strong>: Alpha channel support for transparent animations</li><li><strong>Frame Rate Control</strong>: Adjustable fps for size optimization</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional encoding in the browser</li><li><strong>Wide Browser Support</strong>: Supported by all modern browsers</li></ul>"
+            "title": "主な機能",
+            "content": "<ul><li><strong>GIF より小さい</strong>：WebP アニメーションは同等の GIF より 25〜35% 小さい</li><li><strong>優れた色品質</strong>：24 ビットフルカラー（GIF の 256 色制限に対して）</li><li><strong>透明度対応</strong>：透明アニメーション用のアルファチャンネルサポート</li><li><strong>フレームレート制御</strong>：ファイルサイズ最適化のための fps 調整</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質のエンコーディング</li><li><strong>幅広いブラウザ対応</strong>：すべてのモダンブラウザでサポート</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>Web Performance</strong>: Replace GIFs with smaller WebP animations on websites</li><li><strong>Chat Apps</strong>: Create animated stickers and reactions</li><li><strong>Documentation</strong>: Smaller animated demos for technical documentation</li><li><strong>Social Media</strong>: Create animated content where WebP is supported</li><li><strong>App Design</strong>: Create loading animations and micro-interactions</li></ul>"
+            "title": "主な活用例",
+            "content": "<ul><li><strong>Web パフォーマンス</strong>：ウェブサイト上の GIF をより小さな WebP アニメーションに置き換え</li><li><strong>チャットアプリ</strong>：アニメーションステッカーやリアクションを作成</li><li><strong>ドキュメント</strong>：技術ドキュメント用のより小さなアニメーションデモを作成</li><li><strong>ソーシャルメディア</strong>：WebP 対応プラットフォーム向けのアニメーションコンテンツを作成</li><li><strong>アプリデザイン</strong>：ローディングアニメーションやマイクロインタラクションを作成</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Conversion",
-            "content": "<p>WebP conversion runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "プライバシー優先の動画変換",
+            "content": "<p>WebP 変換は <strong>FFmpeg.wasm</strong> を使用して<strong>完全にブラウザ内</strong>で実行されます。</p><ul><li>動画が<strong>デバイスから出ることはありません</strong></li><li>サーバー処理やアップロードなし</li><li>FFmpeg コアの読み込み後は<strong>オフラインでも</strong>動作</li></ul>"
           }
         }
       },
@@ -251,33 +251,33 @@
           "a1": "H.264 と CRF 値を使用して動画を再エンコードします。高品質ほどファイルが大きくなります。",
           "q2": "出力フォーマットは？",
           "a2": "常に MP4（H.264 動画 + AAC 音声）で出力されます。",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q3": "ファイルはサーバーにアップロードされますか？",
+          "a3": "いいえ。すべての処理はブラウザ内で完結します。ファイルがデバイスから出ることはありません。DevTools（F12）を開いて Network タブを確認すれば、アップロードリクエストがゼロであることを確認できます。",
+          "q4": "オフラインで使えますか？",
+          "a4": "はい。ページが読み込まれた後は、完全にオフラインで動作します。最高の体験のために、ブラウザから PrivaDeck を PWA としてインストールしてください。",
+          "q5": "ファイルサイズの制限はありますか？",
+          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能メモリとブラウザの性能に依存します。最新のデバイスであれば数百 MB のファイルも問題なく処理できます。"
         },
         "seoContent": {
           "intro": {
-            "title": "What is Compress Video?",
-            "content": "<p><strong>Compress Video</strong> reduces video file size with selectable quality presets. Choose High, Medium, or Low quality to balance file size against visual quality — perfect for sharing videos via email or messaging apps.</p><p>Uses FFmpeg.wasm with H.264 encoding for maximum compatibility.</p>"
+            "title": "動画圧縮とは？",
+            "content": "<p><strong>動画圧縮</strong>は、選択可能な品質プリセットで動画ファイルサイズを削減するツールです。高・中・低品質を選んでファイルサイズと映像品質のバランスを調整でき、メールやメッセージングアプリで動画を共有するのに最適です。</p><p>H.264 エンコーディングと FFmpeg.wasm を使用して最大限の互換性を実現します。</p>"
           },
           "howToUse": {
-            "title": "How to Use Compress Video",
-            "content": "<ol><li>Upload a video file</li><li>Select compression level: <strong>High Quality</strong> (larger), <strong>Medium</strong>, or <strong>Low Quality</strong> (smallest)</li><li>Click <strong>Compress</strong> to start processing</li><li>See file size comparison and download the compressed video</li></ol><p>Processing time depends on video length and your device performance.</p>"
+            "title": "動画圧縮の使い方",
+            "content": "<ol><li>動画ファイルをアップロード</li><li>圧縮レベルを選択：<strong>高品質</strong>（大きめ）、<strong>中品質</strong>、または <strong>低品質</strong>（最小）</li><li><strong>圧縮</strong>をクリックして処理を開始</li><li>ファイルサイズの比較を確認し、圧縮された動画をダウンロード</li></ol><p>処理時間は動画の長さとデバイスの性能によって異なります。</p>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Three Quality Levels</strong>: High, Medium, and Low compression presets</li><li><strong>Size Comparison</strong>: See original vs. compressed file sizes</li><li><strong>H.264 Encoding</strong>: Maximum compatibility across devices and platforms</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional-grade video encoding in the browser</li><li><strong>Multiple Input Formats</strong>: Compress MP4, WebM, MKV, and AVI files</li><li><strong>Preview</strong>: Play the compressed video before downloading</li></ul>"
+            "title": "主な機能",
+            "content": "<ul><li><strong>3つの品質レベル</strong>：高・中・低の圧縮プリセット</li><li><strong>サイズ比較</strong>：圧縮前後のファイルサイズを表示</li><li><strong>H.264 エンコーディング</strong>：デバイスとプラットフォームを問わず最大限の互換性</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質の動画エンコーディング</li><li><strong>複数入力フォーマット</strong>：MP4、WebM、MKV、AVI ファイルを圧縮</li><li><strong>プレビュー機能</strong>：ダウンロード前に圧縮された動画を再生確認</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>Email</strong>: Reduce video size to fit email attachment limits</li><li><strong>Messaging</strong>: Compress videos for WhatsApp, Telegram, or iMessage sharing</li><li><strong>Storage</strong>: Save device storage by compressing large video files</li><li><strong>Web Upload</strong>: Meet upload size limits for websites and portals</li><li><strong>Social Media</strong>: Compress for faster uploads to social platforms</li></ul>"
+            "title": "主な活用例",
+            "content": "<ul><li><strong>メール</strong>：メール添付ファイルの制限に合わせて動画サイズを削減</li><li><strong>メッセージング</strong>：WhatsApp、Telegram、iMessage での共有用に動画を圧縮</li><li><strong>ストレージ節約</strong>：大きな動画ファイルを圧縮してデバイスのストレージを節約</li><li><strong>Web アップロード</strong>：ウェブサイトやポータルのアップロードサイズ制限に対応</li><li><strong>ソーシャルメディア</strong>：ソーシャルプラットフォームへの高速アップロードのために圧縮</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Compression",
-            "content": "<p>Video compression runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong> — no server uploads</li><li>No cloud processing or third-party access</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "プライバシー優先の動画圧縮",
+            "content": "<p>動画圧縮は <strong>FFmpeg.wasm</strong> を使用して<strong>完全にブラウザ内</strong>で実行されます。</p><ul><li>動画が<strong>デバイスから出ることはありません</strong> — サーバーへのアップロードなし</li><li>クラウド処理やサードパーティアクセスなし</li><li>FFmpeg コアの読み込み後は<strong>オフラインでも</strong>動作</li></ul>"
           }
         }
       },
@@ -296,33 +296,33 @@
           "a1": "MP4、WebM、MKV、AVI 間で変換できます。MKV はストリームコピーで高速変換。",
           "q2": "動画品質は変わりますか？",
           "a2": "MKV への変換はストリームコピーで品質を正確に保持。その他は高品質設定で再エンコード。",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q3": "ファイルはサーバーにアップロードされますか？",
+          "a3": "いいえ。すべての処理はブラウザ内で完結します。ファイルがデバイスから出ることはありません。DevTools（F12）を開いて Network タブを確認すれば、アップロードリクエストがゼロであることを確認できます。",
+          "q4": "オフラインで使えますか？",
+          "a4": "はい。ページが読み込まれた後は、完全にオフラインで動作します。最高の体験のために、ブラウザから PrivaDeck を PWA としてインストールしてください。",
+          "q5": "ファイルサイズの制限はありますか？",
+          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能メモリとブラウザの性能に依存します。最新のデバイスであれば数百 MB のファイルも問題なく処理できます。"
         },
         "seoContent": {
           "intro": {
-            "title": "What is Convert Video Format?",
-            "content": "<p><strong>Convert Video Format</strong> transforms videos between popular formats: MP4, WebM, MKV, and AVI. Need to convert a WebM recording to MP4 for wider compatibility? Or an AVI to WebM for web use? This tool handles it.</p><p>Powered by FFmpeg.wasm for reliable format conversion in your browser.</p>"
+            "title": "動画フォーマット変換とは？",
+            "content": "<p><strong>動画フォーマット変換</strong>は、MP4、WebM、MKV、AVI などの人気フォーマット間で動画を変換するツールです。WebM 録画を互換性の高い MP4 に変換したり、AVI を Web 用の WebM に変換したりする際に活用できます。</p><p>ブラウザ内で信頼性の高いフォーマット変換を実現する FFmpeg.wasm を使用しています。</p>"
           },
           "howToUse": {
-            "title": "How to Use Convert Video Format",
-            "content": "<ol><li>Upload a video file in any supported format</li><li>Select the target format: <strong>MP4</strong>, <strong>WebM</strong>, <strong>MKV</strong>, or <strong>AVI</strong></li><li>Click <strong>Convert</strong> to start processing</li><li>Download the converted video</li></ol><p>MP4 (H.264) is recommended for maximum compatibility across devices and platforms.</p>"
+            "title": "動画フォーマット変換の使い方",
+            "content": "<ol><li>対応フォーマットの動画ファイルをアップロード</li><li>出力フォーマットを選択：<strong>MP4</strong>、<strong>WebM</strong>、<strong>MKV</strong>、または <strong>AVI</strong></li><li><strong>変換</strong>をクリックして処理を開始</li><li>変換した動画をダウンロード</li></ol><p>デバイスとプラットフォームを問わず最大限の互換性のために MP4（H.264）を推奨します。</p>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Four Formats</strong>: Convert between MP4, WebM, MKV, and AVI</li><li><strong>H.264 Encoding</strong>: MP4 output uses H.264 for universal compatibility</li><li><strong>VP8/VP9 for WebM</strong>: Proper codec selection for each format</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional encoding in the browser</li><li><strong>Preview</strong>: Play the converted video before downloading</li><li><strong>Audio Preservation</strong>: Audio track is properly transcoded</li></ul>"
+            "title": "主な機能",
+            "content": "<ul><li><strong>4つのフォーマット</strong>：MP4、WebM、MKV、AVI 間で変換</li><li><strong>H.264 エンコーディング</strong>：ユニバーサル互換性のための MP4 出力</li><li><strong>WebM 用 VP8/VP9</strong>：各フォーマットに適したコーデック選択</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質のエンコーディング</li><li><strong>プレビュー機能</strong>：ダウンロード前に変換された動画を再生確認</li><li><strong>音声保持</strong>：音声トラックを適切にトランスコード</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>Compatibility</strong>: Convert WebM screen recordings to universally playable MP4</li><li><strong>Web Optimization</strong>: Convert videos to WebM for smaller file sizes on the web</li><li><strong>Legacy Support</strong>: Convert modern formats to AVI for older media players</li><li><strong>Editing</strong>: Convert to a format your video editor supports</li><li><strong>Cross-Platform</strong>: Ensure videos play on any device or platform</li></ul>"
+            "title": "主な活用例",
+            "content": "<ul><li><strong>互換性確保</strong>：WebM スクリーン録画を誰でも再生できる MP4 に変換</li><li><strong>Web 最適化</strong>：Web 上でファイルサイズを小さくするために動画を WebM に変換</li><li><strong>レガシーサポート</strong>：古いメディアプレーヤー用に現代的なフォーマットを AVI に変換</li><li><strong>編集ワークフロー</strong>：動画編集ソフトが対応するフォーマットに変換</li><li><strong>クロスプラットフォーム</strong>：あらゆるデバイスやプラットフォームで動画を再生できるように</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Conversion",
-            "content": "<p>Format conversion runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or cloud encoding</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "プライバシー優先の動画変換",
+            "content": "<p>フォーマット変換は <strong>FFmpeg.wasm</strong> を使用して<strong>完全にブラウザ内</strong>で実行されます。</p><ul><li>動画が<strong>デバイスから出ることはありません</strong></li><li>サーバー処理やクラウドエンコーディングなし</li><li>FFmpeg コアの読み込み後は<strong>オフラインでも</strong>動作</li></ul>"
           }
         }
       },
@@ -342,33 +342,33 @@
           "a1": "720p（幅 1280px）、480p（幅 854px）、360p（幅 640px）。カスタム幅も入力できます。",
           "q2": "アスペクト比は保持されますか？",
           "a2": "はい、高さが自動計算されます。",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q3": "ファイルはサーバーにアップロードされますか？",
+          "a3": "いいえ。すべての処理はブラウザ内で完結します。ファイルがデバイスから出ることはありません。DevTools（F12）を開いて Network タブを確認すれば、アップロードリクエストがゼロであることを確認できます。",
+          "q4": "オフラインで使えますか？",
+          "a4": "はい。ページが読み込まれた後は、完全にオフラインで動作します。最高の体験のために、ブラウザから PrivaDeck を PWA としてインストールしてください。",
+          "q5": "ファイルサイズの制限はありますか？",
+          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能メモリとブラウザの性能に依存します。最新のデバイスであれば数百 MB のファイルも問題なく処理できます。"
         },
         "seoContent": {
           "intro": {
-            "title": "What is Resize Video?",
-            "content": "<p><strong>Resize Video</strong> changes video resolution with preset options (720p, 480p, 360p) or custom dimensions. Downscale large videos for web, mobile, or social media, or adjust resolution for specific platform requirements.</p>"
+            "title": "動画リサイズとは？",
+            "content": "<p><strong>動画リサイズ</strong>は、プリセット（720p、480p、360p）またはカスタムサイズで動画の解像度を変更するツールです。Web、モバイル、ソーシャルメディア向けに大きな動画をダウンスケールしたり、特定のプラットフォーム要件に合わせて解像度を調整したりできます。</p>"
           },
           "howToUse": {
-            "title": "How to Use Resize Video",
-            "content": "<ol><li>Upload a video file</li><li>Select a preset resolution (<strong>720p</strong>, <strong>480p</strong>, <strong>360p</strong>) or enter custom dimensions</li><li>Click <strong>Resize</strong> to process</li><li>Download the resized video</li></ol><p>Aspect ratio is maintained automatically to prevent distortion.</p>"
+            "title": "動画リサイズの使い方",
+            "content": "<ol><li>動画ファイルをアップロード</li><li>プリセット解像度（<strong>720p</strong>、<strong>480p</strong>、<strong>360p</strong>）を選択するか、カスタムサイズを入力</li><li><strong>リサイズ</strong>をクリックして処理を開始</li><li>リサイズした動画をダウンロード</li></ol><p>アスペクト比は変形防止のため自動的に維持されます。</p>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Preset Resolutions</strong>: Quick-select 720p, 480p, or 360p</li><li><strong>Custom Dimensions</strong>: Enter specific width and height</li><li><strong>Aspect Ratio Lock</strong>: Automatically maintains video proportions</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional-grade video scaling</li><li><strong>Multiple Formats</strong>: Resize MP4, WebM, MKV, and AVI</li><li><strong>Preview</strong>: Play the resized video before downloading</li></ul>"
+            "title": "主な機能",
+            "content": "<ul><li><strong>プリセット解像度</strong>：720p、480p、360p をクイック選択</li><li><strong>カスタムサイズ</strong>：特定の幅と高さを入力</li><li><strong>アスペクト比ロック</strong>：動画の比率を自動的に維持</li><li><strong>FFmpeg.wasm 搭載</strong>：プロ品質の動画スケーリング</li><li><strong>複数フォーマット対応</strong>：MP4、WebM、MKV、AVI をリサイズ</li><li><strong>プレビュー機能</strong>：ダウンロード前にリサイズされた動画を再生確認</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>Social Media</strong>: Resize for Instagram, TikTok, or YouTube requirements</li><li><strong>Mobile Optimization</strong>: Downscale 4K/1080p videos for mobile viewing</li><li><strong>Web Embedding</strong>: Resize for optimal web player dimensions</li><li><strong>Storage Savings</strong>: Reduce resolution to save storage space</li><li><strong>Email</strong>: Downscale videos for email-friendly file sizes</li></ul>"
+            "title": "主な活用例",
+            "content": "<ul><li><strong>ソーシャルメディア</strong>：Instagram、TikTok、YouTube の要件に合わせてリサイズ</li><li><strong>モバイル最適化</strong>：モバイル視聴用に 4K/1080p 動画をダウンスケール</li><li><strong>Web 埋め込み</strong>：最適な Web プレーヤーサイズにリサイズ</li><li><strong>ストレージ節約</strong>：解像度を下げてストレージスペースを節約</li><li><strong>メール</strong>：メール対応のファイルサイズにするために動画をダウンスケール</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Resizing",
-            "content": "<p>Video resizing runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "プライバシー優先の動画リサイズ",
+            "content": "<p>動画リサイズは <strong>FFmpeg.wasm</strong> を使用して<strong>完全にブラウザ内</strong>で実行されます。</p><ul><li>動画が<strong>デバイスから出ることはありません</strong></li><li>サーバー処理やアップロードなし</li><li>FFmpeg コアの読み込み後は<strong>オフラインでも</strong>動作</li></ul>"
           }
         }
       }
