@@ -4,6 +4,13 @@ import { locales } from "@/i18n/routing";
 
 const SITE_URL = "https://privadeck.app";
 
+const OG_IMAGE = {
+  url: `${SITE_URL}/og-default.png`,
+  width: 1200,
+  height: 630,
+  alt: "PrivaDeck - Privacy-First Online Tools",
+};
+
 export async function generateToolMetadata(
   locale: string,
   category: string,
@@ -14,7 +21,7 @@ export async function generateToolMetadata(
     namespace: `tools.${category}.${slug}`,
   });
 
-  const url = `${SITE_URL}/${locale}/tools/${category}/${slug}`;
+  const url = `${SITE_URL}/${locale}/tools/${category}/${slug}/`;
 
   return {
     title: t("metaTitle"),
@@ -25,7 +32,7 @@ export async function generateToolMetadata(
       languages: Object.fromEntries(
         locales.map((l) => [
           l,
-          `${SITE_URL}/${l}/tools/${category}/${slug}`,
+          `${SITE_URL}/${l}/tools/${category}/${slug}/`,
         ]),
       ),
     },
@@ -35,6 +42,7 @@ export async function generateToolMetadata(
       url,
       type: "website",
       siteName: "PrivaDeck",
+      images: [OG_IMAGE],
     },
   };
 }
@@ -48,7 +56,7 @@ export async function generateCategoryMetadata(
     namespace: `categories.${category}`,
   });
 
-  const url = `${SITE_URL}/${locale}/tools/${category}`;
+  const url = `${SITE_URL}/${locale}/tools/${category}/`;
 
   return {
     title: t("name"),
@@ -56,8 +64,16 @@ export async function generateCategoryMetadata(
     alternates: {
       canonical: url,
       languages: Object.fromEntries(
-        locales.map((l) => [l, `${SITE_URL}/${l}/tools/${category}`]),
+        locales.map((l) => [l, `${SITE_URL}/${l}/tools/${category}/`]),
       ),
+    },
+    openGraph: {
+      title: t("name"),
+      description: t("description"),
+      url,
+      type: "website",
+      siteName: "PrivaDeck",
+      images: [OG_IMAGE],
     },
   };
 }

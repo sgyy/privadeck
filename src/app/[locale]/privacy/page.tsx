@@ -3,9 +3,8 @@ import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { locales } from "@/i18n/routing";
 import { Shield, Eye, EyeOff, HardDrive, Lock, FileX } from "lucide-react";
+import { SITE_URL } from "@/lib/seo/jsonld";
 import type { Metadata } from "next";
-
-const SITE_URL = "https://privadeck.app";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -19,7 +18,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "privacy" });
 
-  const url = `${SITE_URL}/${locale}/privacy`;
+  const url = `${SITE_URL}/${locale}/privacy/`;
 
   return {
     title: t("metaTitle"),
@@ -27,8 +26,16 @@ export async function generateMetadata({
     alternates: {
       canonical: url,
       languages: Object.fromEntries(
-        locales.map((l) => [l, `${SITE_URL}/${l}/privacy`]),
+        locales.map((l) => [l, `${SITE_URL}/${l}/privacy/`]),
       ),
+    },
+    openGraph: {
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      url,
+      type: "website",
+      siteName: "PrivaDeck",
+      images: [{ url: `${SITE_URL}/og-default.png`, width: 1200, height: 630, alt: "PrivaDeck - Privacy-First Online Tools" }],
     },
   };
 }

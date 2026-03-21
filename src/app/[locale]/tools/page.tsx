@@ -1,10 +1,54 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations, NextIntlClientProvider } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getAllTools } from "@/lib/registry";
 import { categories } from "@/lib/registry/categories";
+import { locales } from "@/i18n/routing";
 import { Card } from "@/components/ui/Card";
 import { loadCommonMessages, loadAllToolMessages } from "@/lib/i18n/loadMessages";
+import { SITE_URL } from "@/lib/seo/jsonld";
+import type { Metadata } from "next";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "allTools" });
+
+  const url = `${SITE_URL}/${locale}/tools/`;
+
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    alternates: {
+      canonical: url,
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `${SITE_URL}/${l}/tools/`]),
+      ),
+    },
+    openGraph: {
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      url,
+      type: "website",
+      siteName: "PrivaDeck",
+      images: [
+        {
+          url: `${SITE_URL}/og-default.png`,
+          width: 1200,
+          height: 630,
+          alt: "PrivaDeck - Privacy-First Online Tools",
+        },
+      ],
+    },
+  };
+}
 
 export default async function ToolsPage({
   params,

@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { NextIntlClientProvider } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { getAllTools } from "@/lib/registry";
 import { categories } from "@/lib/registry/categories";
@@ -9,9 +9,52 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Shield, Zap, Globe } from "lucide-react";
 import { loadCommonMessages, loadAllToolMessages } from "@/lib/i18n/loadMessages";
+import {
+  generateOrganizationJsonLd,
+  generateWebSiteJsonLd,
+  SITE_URL,
+} from "@/lib/seo/jsonld";
+import type { Metadata } from "next";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "home" });
+
+  const url = `${SITE_URL}/${locale}/`;
+
+  return {
+    title: { absolute: t("metaTitle") },
+    description: t("metaDescription"),
+    alternates: {
+      canonical: url,
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `${SITE_URL}/${l}/`]),
+      ),
+    },
+    openGraph: {
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      url,
+      type: "website",
+      siteName: "PrivaDeck",
+      images: [
+        {
+          url: `${SITE_URL}/og-default.png`,
+          width: 1200,
+          height: 630,
+          alt: "PrivaDeck - Privacy-First Online Tools",
+        },
+      ],
+    },
+  };
 }
 
 export default async function HomePage({
@@ -25,10 +68,23 @@ export default async function HomePage({
     loadCommonMessages(locale),
     loadAllToolMessages(locale),
   ]);
+  const orgJsonLd = generateOrganizationJsonLd();
+  const siteJsonLd = generateWebSiteJsonLd();
+
   return (
-    <NextIntlClientProvider messages={{ ...commonMessages, ...toolMessages }}>
-      <HomeUI />
-    </NextIntlClientProvider>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+      />
+      <NextIntlClientProvider messages={{ ...commonMessages, ...toolMessages }}>
+        <HomeUI />
+      </NextIntlClientProvider>
+    </>
   );
 }
 
