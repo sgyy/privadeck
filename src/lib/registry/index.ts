@@ -27,6 +27,7 @@ import videoFormatConvert from "@/tools/video/format-convert";
 import audioTrim from "@/tools/audio/trim";
 import audioConvert from "@/tools/audio/convert";
 import audioExtract from "@/tools/audio/extract";
+import audioVolume from "@/tools/audio/volume";
 import ocr from "@/tools/developer/ocr";
 import archive from "@/tools/developer/archive";
 import csvJson from "@/tools/developer/csv-json";
@@ -93,6 +94,7 @@ const ALL_TOOLS: ToolDefinition[] = [
   audioTrim,
   audioConvert,
   audioExtract,
+  audioVolume,
   // PDF — featured first
   pdfMerge,
   pdfSplit,

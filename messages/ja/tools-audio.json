@@ -71,6 +71,31 @@
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         }
+      },
+      "volume": {
+        "name": "音量調整",
+        "description": "オーディオファイルの音量レベルを調整します。適用前にプレビューで確認できます。",
+        "metaTitle": "オーディオ音量調整 - オンラインで音量を無料変更",
+        "metaDescription": "オーディオの音量を上げたり下げたり。エクスポート前にリアルタイムで変更をプレビュー。無料オンラインツール。",
+        "keywords": "オーディオ音量, 音量調整, 音量アップ, 音量ダウン, オーディオゲイン",
+        "volume": "音量",
+        "preview": "プレビュー",
+        "stop": "停止",
+        "apply": "適用",
+        "processing": "処理中",
+        "unsupported": "このツールは SharedArrayBuffer のサポートが必要です。HTTPS 対応のモダンブラウザをご利用ください。",
+        "faq": {
+          "q1": "対応するオーディオフォーマットは？",
+          "a1": "MP3、WAV、OGG、AAC、FLAC、M4A などに対応しています。",
+          "q2": "元のレベルを超えて音量を上げられますか？",
+          "a2": "はい、元の音量の300%まで増幅できます。ただし、極端な増幅はクリッピング歪みを引き起こす可能性があります。",
+          "q3": "ファイルはサーバーにアップロードされますか？",
+          "a3": "いいえ。すべての処理はブラウザ内で完結します。ファイルがデバイスから出ることはありません。DevTools（F12）を開いて Network タブを確認すれば、アップロードリクエストがゼロであることを確認できます。",
+          "q4": "オフラインで使えますか？",
+          "a4": "はい。ページが読み込まれた後は、完全にオフラインで動作します。最高の体験のために、ブラウザから PrivaDeck を PWA としてインストールしてください。",
+          "q5": "適用前に音量の変更をプレビューできますか？",
+          "a5": "はい。プレビューボタンをクリックすると、調整後の音量でオーディオがどのように聞こえるか確認できます。プレビューはブラウザ内蔵のオーディオ処理を使用して即座に再生されます。"
+        }
       }
     }
   }

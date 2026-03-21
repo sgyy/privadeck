@@ -30,7 +30,7 @@ const definition: ToolDefinition = {
       answerKey: "tools.audio.convert.faq.a5",
     },
   ],
-  relatedSlugs: ["trim", "extract"],
+  relatedSlugs: ["trim", "extract", "volume"],
 };
 
 export default definition;

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
-import { Download, X } from "lucide-react";
+import { Shield, X } from "lucide-react";
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -47,7 +47,7 @@ export function InstallPrompt() {
   return (
     <div className="fixed bottom-4 left-4 right-4 z-50 mx-auto max-w-lg animate-in slide-in-from-bottom-4 fade-in duration-300">
       <div className="flex items-center gap-3 rounded-xl border border-border bg-card/95 backdrop-blur-sm px-4 py-3 shadow-lg">
-        <Download className="h-5 w-5 shrink-0 text-primary" />
+        <Shield className="h-5 w-5 shrink-0 text-primary" />
         <p className="flex-1 text-sm">{t("installPrompt")}</p>
         <button
           type="button"
