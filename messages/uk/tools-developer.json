@@ -120,24 +120,24 @@
         },
         "seoContent": {
           "intro": {
-            "title": "What is URL Encoder/Decoder?",
-            "content": "<p><strong>URL Encoder/Decoder</strong> converts special characters in URLs to their percent-encoded equivalents and back. This is essential for creating valid URLs that contain spaces, ampersands, non-ASCII characters, or other reserved characters.</p><p>Use it to safely pass query parameters, encode file paths, or debug malformed URLs.</p>"
+            "title": "Що таке кодувальник/декодувальник URL?",
+            "content": "<p><strong>Кодувальник/Декодувальник URL</strong> перетворює спеціальні символи у URL-адресах у їх відсотково-кодовані еквіваленти та назад. Це необхідно для створення валідних URL-адрес, які містять пробіли, амперсанди, не-ASCII символи чи інші зарезервовані символи.</p><p>Використовуйте для безпечної передачі параметрів запиту, кодування файлових шляхів чи налагодження деформованих URL-адрес.</p>"
           },
           "howToUse": {
-            "title": "How to Use URL Encoder/Decoder",
-            "content": "<ol><li>Enter your text or URL component in the input field</li><li>Select <strong>Encode</strong> to percent-encode special characters, or <strong>Decode</strong> to convert encoded URLs back to readable text</li><li>The result updates instantly</li><li>Click <strong>Copy</strong> to copy the encoded/decoded result</li></ol><p>Encodes all characters that are unsafe in URLs per RFC 3986, including spaces, &amp;, =, ?, #, and non-ASCII characters.</p>"
+            "title": "Як користуватися кодувальником/декодувальником URL",
+            "content": "<ol><li>Введіть ваш текст чи компонент URL у поле введення</li><li>Виберіть <strong>Кодувати</strong> для кодування спеціальних символів або <strong>Декодувати</strong> для конвертування закодованих URL назад у читаний текст</li><li>Результат оновлюється миттєво</li><li>Натисніть <strong>Копіювати</strong> для копіювання результату</li></ol><p>Кодує всі символи, які небезпечні в URL згідно RFC 3986, включаючи пробіли, &amp;, =, ?, # та не-ASCII символи.</p>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>RFC 3986 Compliant</strong>: Encodes all reserved and unsafe URL characters correctly</li><li><strong>Real-Time Processing</strong>: Results update as you type</li><li><strong>Unicode Support</strong>: Correctly handles international characters and emojis in URLs</li><li><strong>Component Encoding</strong>: Encodes individual URL components (query params, path segments)</li><li><strong>One-Click Copy</strong>: Instantly copy encoded results</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
+            "title": "Основні функції",
+            "content": "<ul><li><strong>RFC 3986 Відповідність</strong>: Кодує всі зарезервовані та небезпечні символи URL правильно</li><li><strong>Обробка в реальному часі</strong>: Результати оновлюються під час введення</li><li><strong>Підтримка Unicode</strong>: Правильно обробляє міжнародні символи та емодзі в URL</li><li><strong>Кодування компонентів</strong>: Кодує окремі компоненти URL (параметри запиту, сегменти шляхів)</li><li><strong>Копіювання одним кліком</strong>: Миттєво копіюйте результати</li><li><strong>100% на основі браузера</strong>: Жодних завантажень на сервер — ваші дані залишаються на вашому пристрої</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>Query Parameters</strong>: Encode values for safe inclusion in URL query strings</li><li><strong>API Requests</strong>: Properly encode request parameters for REST APIs</li><li><strong>Redirect URLs</strong>: Encode callback URLs for OAuth flows and redirects</li><li><strong>File Paths</strong>: Encode file names with spaces or special characters for web servers</li><li><strong>Debugging</strong>: Decode mangled URLs to see the original text</li></ul>"
+            "title": "Типові варіанти використання",
+            "content": "<ul><li><strong>Параметри запиту</strong>: Кодуйте значення для безпечного включення в рядки запиту URL</li><li><strong>Запити API</strong>: Правильно кодуйте параметри запиту для REST API</li><li><strong>URL перенаправлення</strong>: Кодуйте URL зворотного дзвінка для потоків OAuth та перенаправлень</li><li><strong>Файлові шляхи</strong>: Кодуйте імена файлів зі пробілами чи спеціальними символами для вебсерверів</li><li><strong>Налагодження</strong>: Декодуйте деформовані URL для перегляду оригінального тексту</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First URL Processing",
-            "content": "<p>All encoding and decoding runs <strong>entirely in your browser</strong> using native <code>encodeURIComponent()</code> and <code>decodeURIComponent()</code> functions.</p><ul><li>Your URLs and parameters <strong>never leave your device</strong></li><li>Safe for encoding URLs containing API keys, tokens, or session IDs</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Обробка URL з пріоритетом приватності",
+            "content": "<p>Уся кодування та декодування запускається <strong>цілком у браузері</strong> за допомогою вбудованих функцій <code>encodeURIComponent()</code> та <code>decodeURIComponent()</code>.</p><ul><li>Ваші URL та параметри <strong>ніколи не залишають ваш пристрій</strong></li><li>Безпечно для кодування URL-адрес, що містять ключі API, токени чи ідентифікатори сеансу</li><li>Працює <strong>офлайн</strong> після завантаження сторінки</li></ul>"
           }
         }
       },
@@ -302,24 +302,24 @@
         },
         "seoContent": {
           "intro": {
-            "title": "What is Hash Generator?",
-            "content": "<p><strong>Hash Generator</strong> computes cryptographic hash values for text or files using SHA-1, SHA-256, SHA-384, and SHA-512 algorithms. Hashes are one-way fingerprints used to verify data integrity, compare files, and validate downloads.</p><p>Generate hashes instantly in your browser — ideal for verifying file integrity or creating content digests.</p>"
+            "title": "Що таке генератор хешів?",
+            "content": "<p><strong>Генератор хешів</strong> обчислює криптографічні значення хешів для тексту або файлів за допомогою алгоритмів SHA-1, SHA-256, SHA-384 та SHA-512. Хеші — це односпрямовані відбитки пальців, що використовуються для перевірки цілісності даних, порівняння файлів та валідації завантажень.</p><p>Генеруйте хеші миттєво у браузері — ідеально для перевірки цілісності файлів та створення дайджестів вмісту.</p>"
           },
           "howToUse": {
-            "title": "How to Use Hash Generator",
-            "content": "<ol><li>Enter text directly or upload a file to hash</li><li>Select the hash algorithm(s): SHA-1, SHA-256, SHA-384, or SHA-512</li><li>The hash value is computed instantly and displayed</li><li>Copy the hash to compare with known checksums or use in your project</li></ol><p>For file integrity verification, compare the generated hash with the checksum provided by the file's source.</p>"
+            "title": "Як користуватися генератором хешів",
+            "content": "<ol><li>Введіть текст безпосередньо або завантажте файл для хешування</li><li>Виберіть алгоритм хеш-функції: SHA-1, SHA-256, SHA-384 або SHA-512</li><li>Значення хешу обчислюється миттєво та відображається</li><li>Скопіюйте хеш для порівняння з відомими контрольними сумами або використання у вашому проекті</li></ol><p>Для перевірки цілісності файлу порівняйте згенерований хеш з контрольною сумою, наданою джерелом файлу.</p>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Multiple Algorithms</strong>: SHA-1, SHA-256, SHA-384, and SHA-512 computed simultaneously</li><li><strong>Text & File Hashing</strong>: Hash typed text or uploaded files of any type</li><li><strong>Instant Computation</strong>: Hash values appear in real-time</li><li><strong>Web Crypto API</strong>: Uses the browser's native cryptographic engine for maximum performance</li><li><strong>Copy to Clipboard</strong>: One-click copy for each hash value</li><li><strong>Large File Support</strong>: Efficiently hash files of any size</li></ul>"
+            "title": "Основні функції",
+            "content": "<ul><li><strong>Декілька алгоритмів</strong>: SHA-1, SHA-256, SHA-384 та SHA-512 обчислюються одночасно</li><li><strong>Хешування тексту та файлів</strong>: Хешуйте введений текст або завантажені файли будь-якого типу</li><li><strong>Миттєве обчислення</strong>: Значення хешу з'являються в реальному часі</li><li><strong>Web Crypto API</strong>: Використовує вбудований криптографічний рушій браузера для максимальної продуктивності</li><li><strong>Копіювання одним кліком</strong>: Скопіюйте кожне значення хешу до буфера обміну</li><li><strong>Підтримка великих файлів</strong>: Ефективно хешує файли будь-якого розміру</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>File Integrity</strong>: Verify downloaded files haven't been tampered with by comparing checksums</li><li><strong>Content Deduplication</strong>: Compare hashes to find duplicate files</li><li><strong>Digital Signatures</strong>: Create content digests for signing workflows</li><li><strong>Software Distribution</strong>: Generate checksums for your own file releases</li><li><strong>Security Auditing</strong>: Hash files to detect unauthorized modifications</li></ul>"
+            "title": "Типові варіанти використання",
+            "content": "<ul><li><strong>Цілісність файлів</strong>: Перевірте завантажені файли, порівнявши контрольні суми</li><li><strong>Дедублікація вмісту</strong>: Порівняйте хеші для пошуку дублікованих файлів</li><li><strong>Цифрові підписи</strong>: Створіть дайджести вмісту для робочих процесів підписування</li><li><strong>Розповсюдження програмного забезпечення</strong>: Генеруйте контрольні суми для власних випусків файлів</li><li><strong>Аудит безпеки</strong>: Хешуйте файли для виявлення несанкціонованих змін</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Hash Generation",
-            "content": "<p>Hashes are computed <strong>entirely in your browser</strong> using the native <strong>Web Crypto API</strong> (<code>crypto.subtle.digest</code>).</p><ul><li>Your text and files <strong>never leave your device</strong> — critical when hashing sensitive content</li><li>Uses hardware-accelerated cryptographic implementations when available</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Генерування хешів з пріоритетом приватності",
+            "content": "<p>Хеші обчислюються <strong>цілком у вашому браузері</strong> за допомогою вбудованого <strong>Web Crypto API</strong> (<code>crypto.subtle.digest</code>).</p><ul><li>Ваш текст і файли <strong>ніколи не залишають ваш пристрій</strong> — критично при хешуванні конфіденційного вмісту</li><li>Використовує апаратно-прискорені криптографічні реалізації, якщо доступні</li><li>Працює <strong>офлайн</strong> після завантаження сторінки</li></ul>"
           }
         }
       },
@@ -348,24 +348,24 @@
         },
         "seoContent": {
           "intro": {
-            "title": "What is Color Converter?",
-            "content": "<p><strong>Color Converter</strong> transforms colors between HEX, RGB, and HSL formats with a live visual preview. Enter a color in any format and instantly see its equivalent in all other formats, along with a color swatch.</p><p>Perfect for designers and developers who need to convert between color notations for CSS, design tools, or brand guidelines.</p>"
+            "title": "Що таке конвертер кольорів?",
+            "content": "<p><strong>Конвертер кольорів</strong> трансформує кольори між форматами HEX, RGB та HSL з живим попереднім переглядом. Введіть колір у будь-якому форматі й миттєво побачите його еквівалент у всіх інших форматах разом із зразком кольору.</p><p>Ідеально для дизайнерів та розробників, які повинні конвертувати між колірними позначеннями для CSS, інструментів дизайну чи брендових рекомендацій.</p>"
           },
           "howToUse": {
-            "title": "How to Use Color Converter",
-            "content": "<ol><li>Enter a color value in any supported format: HEX (e.g., #3B82F6), RGB (e.g., rgb(59, 130, 246)), or HSL (e.g., hsl(217, 91%, 60%))</li><li>See instant conversion to all other formats with a live color preview</li><li>Click any value to copy it to your clipboard</li></ol><p>The color picker also lets you visually select colors and get all format values at once.</p>"
+            "title": "Як користуватися конвертером кольорів",
+            "content": "<ol><li>Введіть значення кольору у будь-якому підтримуваному форматі: HEX (наприклад, #3B82F6), RGB (наприклад, rgb(59, 130, 246)) або HSL (наприклад, hsl(217, 91%, 60%))</li><li>Побачите миттєву конвертацію у всі інші формати з живим попереднім переглядом кольору</li><li>Натисніть будь-яке значення, щоб скопіювати його до буфера обміну</li></ol><p>Селектор кольору також дозволяє вибирати кольори візуально та отримувати всі значення форматів відразу.</p>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Three Format Support</strong>: Convert between HEX, RGB, and HSL color notations</li><li><strong>Live Preview</strong>: See the actual color displayed as you type or adjust values</li><li><strong>Visual Color Picker</strong>: Select colors visually and get all format values</li><li><strong>Instant Conversion</strong>: Results update in real-time as you type</li><li><strong>One-Click Copy</strong>: Copy any color format value to clipboard</li><li><strong>CSS-Ready Output</strong>: Values formatted for direct use in CSS stylesheets</li></ul>"
+            "title": "Основні функції",
+            "content": "<ul><li><strong>Підтримка трьох форматів</strong>: Конвертуйте між позначеннями кольорів HEX, RGB та HSL</li><li><strong>Живий попередній перегляд</strong>: Побачите справжній колір, відображений під час введення чи зміни значень</li><li><strong>Візуальний селектор кольору</strong>: Оберіть кольори візуально й отримайте всі значення форматів</li><li><strong>Миттєва конвертація</strong>: Результати оновлюються в реальному часі під час введення</li><li><strong>Копіювання одним кліком</strong>: Скопіюйте будь-яке значення кольору до буфера обміну</li><li><strong>Готово для CSS</strong>: Значення відформатовані для прямого використання у таблицях стилів CSS</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>CSS Development</strong>: Convert between color formats for stylesheets</li><li><strong>Design Handoff</strong>: Translate design spec colors to code-ready values</li><li><strong>Brand Guidelines</strong>: Convert brand colors between formats for documentation</li><li><strong>Accessibility</strong>: Adjust HSL lightness to meet contrast ratio requirements</li><li><strong>Theme Development</strong>: Generate color values for light/dark theme variables</li></ul>"
+            "title": "Типові варіанти використання",
+            "content": "<ul><li><strong>Розробка CSS</strong>: Конвертуйте між форматами кольорів для таблиць стилів</li><li><strong>Передача дизайну</strong>: Переведіть кольори з дизайн-специфікацій на готові для коду значення</li><li><strong>Брендові рекомендації</strong>: Конвертуйте брендові кольори між форматами для документації</li><li><strong>Доступність</strong>: Налаштуйте світлість HSL для дотримання вимог коефіцієнта контрасту</li><li><strong>Розробка тем</strong>: Генеруйте значення кольорів для змінних світлої/темної теми</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Color Processing",
-            "content": "<p>Color conversion uses <strong>pure JavaScript math</strong> in your browser — no server calls, no tracking.</p><ul><li>No data is transmitted — color values stay entirely on your device</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Обробка кольорів з пріоритетом приватності",
+            "content": "<p>Конвертація кольорів використовує <strong>чистої математики JavaScript</strong> у вашому браузері — жодних серверних викликів, жодного отримання даних.</p><ul><li>Жодних даних не передається — значення кольорів залишаються цілком на вашому пристрої</li><li>Працює <strong>офлайн</strong> після завантаження сторінки</li></ul>"
           }
         }
       },
