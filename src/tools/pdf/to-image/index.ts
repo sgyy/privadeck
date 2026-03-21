@@ -3,7 +3,7 @@ import type { ToolDefinition } from "@/lib/registry/types";
 const definition: ToolDefinition = {
   slug: "to-image",
   category: "pdf",
-  icon: "FileText",
+  icon: "FileImage",
   featured: true,
   component: () => import("./PdfToImage"),
   seo: { structuredDataType: "WebApplication" },

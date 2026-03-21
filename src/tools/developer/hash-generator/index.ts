@@ -4,7 +4,7 @@ const definition: ToolDefinition = {
   slug: "hash-generator",
   category: "developer",
   icon: "Hash",
-  featured: false,
+  featured: true,
   component: () => import("./HashGenerator"),
   seo: { structuredDataType: "WebApplication" },
   faq: [

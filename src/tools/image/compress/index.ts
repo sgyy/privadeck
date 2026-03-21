@@ -3,7 +3,7 @@ import type { ToolDefinition } from "@/lib/registry/types";
 const definition: ToolDefinition = {
   slug: "compress",
   category: "image",
-  icon: "Image",
+  icon: "ImageDown",
   featured: true,
   component: () => import("./ImageCompress"),
   seo: { structuredDataType: "WebApplication" },

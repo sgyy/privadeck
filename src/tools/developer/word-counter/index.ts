@@ -4,7 +4,7 @@ const definition: ToolDefinition = {
   slug: "word-counter",
   category: "developer",
   icon: "Type",
-  featured: true,
+  featured: false,
   component: () => import("./WordCounter"),
   seo: { structuredDataType: "WebApplication" },
   faq: [

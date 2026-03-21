@@ -4,7 +4,7 @@ const definition: ToolDefinition = {
   slug: "compress",
   category: "video",
   icon: "FileDown",
-  featured: false,
+  featured: true,
   component: () => import("./VideoCompress"),
   seo: { structuredDataType: "WebApplication" },
   faq: [

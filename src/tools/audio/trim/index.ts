@@ -3,7 +3,7 @@ import type { ToolDefinition } from "@/lib/registry/types";
 const definition: ToolDefinition = {
   slug: "trim",
   category: "audio",
-  icon: "Music",
+  icon: "Scissors",
   featured: true,
   component: () => import("./AudioTrim"),
   seo: { structuredDataType: "WebApplication" },

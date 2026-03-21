@@ -3,7 +3,7 @@ import type { ToolDefinition } from "@/lib/registry/types";
 const definition: ToolDefinition = {
   slug: "to-gif",
   category: "video",
-  icon: "Video",
+  icon: "Film",
   featured: true,
   component: () => import("./VideoToGif"),
   seo: { structuredDataType: "WebApplication" },

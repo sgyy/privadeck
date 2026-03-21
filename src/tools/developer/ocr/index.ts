@@ -4,7 +4,7 @@ const definition: ToolDefinition = {
   slug: "ocr",
   category: "developer",
   icon: "Code",
-  featured: true,
+  featured: false,
   component: () => import("./Ocr"),
   seo: { structuredDataType: "WebApplication" },
   faq: [

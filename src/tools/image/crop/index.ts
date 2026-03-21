@@ -3,8 +3,8 @@ import type { ToolDefinition } from "@/lib/registry/types";
 const definition: ToolDefinition = {
   slug: "crop",
   category: "image",
-  icon: "Image",
-  featured: false,
+  icon: "Crop",
+  featured: true,
   component: () => import("./ImageCrop"),
   seo: { structuredDataType: "WebApplication" },
   faq: [

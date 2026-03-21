@@ -4,7 +4,7 @@ const definition: ToolDefinition = {
   slug: "mute",
   category: "video",
   icon: "Video",
-  featured: true,
+  featured: false,
   component: () => import("./VideoMute"),
   seo: { structuredDataType: "WebApplication" },
   faq: [

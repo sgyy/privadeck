@@ -3,8 +3,8 @@ import type { ToolDefinition } from "@/lib/registry/types";
 const definition: ToolDefinition = {
   slug: "resize",
   category: "image",
-  icon: "Image",
-  featured: false,
+  icon: "Scaling",
+  featured: true,
   component: () => import("./ImageResize"),
   seo: { structuredDataType: "WebApplication" },
   faq: [

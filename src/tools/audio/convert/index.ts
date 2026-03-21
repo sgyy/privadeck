@@ -3,7 +3,7 @@ import type { ToolDefinition } from "@/lib/registry/types";
 const definition: ToolDefinition = {
   slug: "convert",
   category: "audio",
-  icon: "Music",
+  icon: "FileAudio",
   featured: true,
   component: () => import("./AudioConvert"),
   seo: { structuredDataType: "WebApplication" },

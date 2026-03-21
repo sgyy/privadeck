@@ -3,8 +3,8 @@ import type { ToolDefinition } from "@/lib/registry/types";
 const definition: ToolDefinition = {
   slug: "extract",
   category: "audio",
-  icon: "Music",
-  featured: false,
+  icon: "AudioLines",
+  featured: true,
   component: () => import("./AudioExtract"),
   seo: { structuredDataType: "WebApplication" },
   faq: [

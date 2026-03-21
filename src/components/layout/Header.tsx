@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";
-import { Menu, Search, Shield, ChevronDown, Share2 } from "lucide-react";
+import { Menu, Search, Shield, ChevronDown, Share2, ImageDown, FileOutput, Scaling, Crop, Scissors, FileDown, Film, FileAudio, AudioLines, FilePlus2, FileImage, Braces, Binary, Hash } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
@@ -277,20 +277,13 @@ function ShareButton() {
   );
 }
 
-function ToolIcon({ name }: { name: string }) {
-  const icons: Record<string, string> = {
-    Type: "T",
-    CaseSensitive: "Aa",
-    FileText: "¶",
-    Braces: "{}",
-    Binary: "01",
-    Link: "🔗",
-    Image: "🖼",
-  };
+const TOOL_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
+  ImageDown, FileOutput, Scaling, Crop, Scissors, FileDown, Film,
+  FileAudio, AudioLines, FilePlus2, FileImage, Braces, Binary, Hash,
+};
 
-  return (
-    <span className="text-sm font-bold text-accent-foreground">
-      {icons[name] || "•"}
-    </span>
-  );
+function ToolIcon({ name }: { name: string }) {
+  const Icon = TOOL_ICONS[name];
+  if (Icon) return <Icon className="h-4 w-4" />;
+  return <span className="text-sm font-bold text-accent-foreground">•</span>;
 }

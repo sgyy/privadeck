@@ -3,7 +3,7 @@ import type { ToolDefinition } from "@/lib/registry/types";
 const definition: ToolDefinition = {
   slug: "merge",
   category: "pdf",
-  icon: "FileText",
+  icon: "FilePlus2",
   featured: true,
   component: () => import("./MergePdf"),
   seo: { structuredDataType: "WebApplication" },

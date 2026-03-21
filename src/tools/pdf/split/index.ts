@@ -3,7 +3,7 @@ import type { ToolDefinition } from "@/lib/registry/types";
 const definition: ToolDefinition = {
   slug: "split",
   category: "pdf",
-  icon: "FileText",
+  icon: "FileOutput",
   featured: true,
   component: () => import("./SplitPdf"),
   seo: { structuredDataType: "WebApplication" },

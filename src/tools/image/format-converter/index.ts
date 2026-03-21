@@ -3,7 +3,7 @@ import type { ToolDefinition } from "@/lib/registry/types";
 const definition: ToolDefinition = {
   slug: "format-converter",
   category: "image",
-  icon: "Image",
+  icon: "FileOutput",
   featured: true,
   component: () => import("./FormatConverter"),
   seo: { structuredDataType: "WebApplication" },

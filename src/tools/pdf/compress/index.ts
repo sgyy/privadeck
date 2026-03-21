@@ -4,7 +4,7 @@ const definition: ToolDefinition = {
   slug: "compress",
   category: "pdf",
   icon: "FileDown",
-  featured: false,
+  featured: true,
   component: () => import("./CompressPdf"),
   seo: { structuredDataType: "WebApplication" },
   faq: [
