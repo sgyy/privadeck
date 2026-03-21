@@ -29,12 +29,15 @@ export async function generateToolMetadata(
     keywords: t("keywords"),
     alternates: {
       canonical: url,
-      languages: Object.fromEntries(
-        locales.map((l) => [
-          l,
-          `${SITE_URL}/${l}/tools/${category}/${slug}/`,
-        ]),
-      ),
+      languages: {
+        "x-default": `${SITE_URL}/en/tools/${category}/${slug}/`,
+        ...Object.fromEntries(
+          locales.map((l) => [
+            l,
+            `${SITE_URL}/${l}/tools/${category}/${slug}/`,
+          ]),
+        ),
+      },
     },
     openGraph: {
       title: t("metaTitle"),
@@ -63,9 +66,12 @@ export async function generateCategoryMetadata(
     description: t("description"),
     alternates: {
       canonical: url,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `${SITE_URL}/${l}/tools/${category}/`]),
-      ),
+      languages: {
+        "x-default": `${SITE_URL}/en/tools/${category}/`,
+        ...Object.fromEntries(
+          locales.map((l) => [l, `${SITE_URL}/${l}/tools/${category}/`]),
+        ),
+      },
     },
     openGraph: {
       title: t("name"),

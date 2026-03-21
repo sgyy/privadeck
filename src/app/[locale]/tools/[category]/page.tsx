@@ -8,6 +8,8 @@ import { Card } from "@/components/ui/Card";
 import { generateCategoryMetadata } from "@/lib/seo/metadata";
 import type { ToolCategory } from "@/lib/registry/types";
 import { loadCommonMessages, loadCategoryMessages } from "@/lib/i18n/loadMessages";
+import { getTranslations } from "next-intl/server";
+import { generateBreadcrumbJsonLd, SITE_URL } from "@/lib/seo/jsonld";
 
 export function generateStaticParams() {
   const params = [];
@@ -40,10 +42,24 @@ export default async function CategoryPage({
     loadCategoryMessages(locale, category),
   ]);
 
+  const t = await getTranslations({ locale, namespace: "common" });
+  const tc = await getTranslations({ locale, namespace: "categories" });
+
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: t("nav.home"), url: `${SITE_URL}/${locale}/` },
+    { name: tc(`${category}.name`), url: `${SITE_URL}/${locale}/tools/${category}/` },
+  ]);
+
   return (
-    <NextIntlClientProvider messages={{ ...commonMessages, ...toolMessages }}>
-      <CategoryPageUI category={category as ToolCategory} />
-    </NextIntlClientProvider>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <NextIntlClientProvider messages={{ ...commonMessages, ...toolMessages }}>
+        <CategoryPageUI category={category as ToolCategory} />
+      </NextIntlClientProvider>
+    </>
   );
 }
 

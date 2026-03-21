@@ -26,9 +26,12 @@ export async function generateMetadata({
     description: t("metaDescription"),
     alternates: {
       canonical: url,
-      languages: Object.fromEntries(
-        locales.map((l) => [l, `${SITE_URL}/${l}/how-it-works/`]),
-      ),
+      languages: {
+        "x-default": `${SITE_URL}/en/how-it-works/`,
+        ...Object.fromEntries(
+          locales.map((l) => [l, `${SITE_URL}/${l}/how-it-works/`]),
+        ),
+      },
     },
     openGraph: {
       title: t("metaTitle"),
