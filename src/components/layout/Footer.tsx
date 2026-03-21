@@ -6,8 +6,6 @@ import { Shield } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { categories } from "@/lib/registry/categories";
 import type { ToolCategory } from "@/lib/registry/types";
-import { ThemeToggle } from "@/components/shared/ThemeToggle";
-import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 
 const MAX_TOOLS = 3;
@@ -84,7 +82,7 @@ export function Footer({ toolNavData }: FooterProps) {
             ))}
           </div>
 
-          {/* About links */}
+          {/* About links + language */}
           <div className="lg:w-28 shrink-0">
             <h4 className="text-sm font-semibold text-foreground mb-1.5">
               {tf("about")}
@@ -105,14 +103,10 @@ export function Footer({ toolNavData }: FooterProps) {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-6 flex items-center justify-between gap-3">
-          <p className="text-xs text-muted-foreground" suppressHydrationWarning>
+        <div className="mt-6 border-t border-border/50 pt-4">
+          <p className="text-center text-xs text-muted-foreground" suppressHydrationWarning>
             &copy; {new Date().getFullYear()} {t("siteName")}. {tf("allRightsReserved")}
           </p>
-          <div className="flex items-center gap-1">
-            <LanguageSwitcher dropdownDirection="up" />
-            <ThemeToggle />
-          </div>
         </div>
       </div>
     </footer>

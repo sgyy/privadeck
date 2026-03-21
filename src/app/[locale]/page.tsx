@@ -4,10 +4,15 @@ import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { getAllTools } from "@/lib/registry";
 import { categories } from "@/lib/registry/categories";
+import { locales } from "@/i18n/routing";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Shield, Zap, Globe } from "lucide-react";
 import { loadCommonMessages, loadAllToolMessages } from "@/lib/i18n/loadMessages";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export default async function HomePage({
   params,

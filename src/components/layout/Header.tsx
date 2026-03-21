@@ -5,6 +5,7 @@ import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import { Menu, Search, Shield, ChevronDown, Share2 } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
+import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
 import { categories } from "@/lib/registry/categories";
 import type { ToolCategory } from "@/lib/registry/types";
 import { cn } from "@/lib/utils/cn";
@@ -99,6 +100,9 @@ export function Header({ onMenuClick, onSearchClick, toolNavData }: HeaderProps)
             {t("searchShortcut")}
           </kbd>
         </button>
+
+        {/* Language switcher */}
+        <LanguageSwitcher />
 
         {/* Theme toggle */}
         <ThemeToggle />
