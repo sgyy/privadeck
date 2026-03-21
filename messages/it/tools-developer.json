@@ -44,7 +44,7 @@
             "content": "<ul><li><strong>API Development</strong>: Format raw API responses for debugging and inspection</li><li><strong>Configuration Files</strong>: Clean up package.json, tsconfig.json, or other config files</li><li><strong>Data Validation</strong>: Quickly verify JSON payloads before sending to APIs</li><li><strong>Documentation</strong>: Prepare well-formatted JSON examples for technical docs</li><li><strong>Database Records</strong>: Inspect and format JSON stored in NoSQL databases</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First JSON Processing",
+            "title": "Elaborazione JSON con privacy come priorità",
             "content": "<p>Your JSON data is processed <strong>entirely in your browser</strong> using native JavaScript parsing. No data is transmitted to any server.</p><ul><li>Your data <strong>never leaves your device</strong> — zero network requests during processing</li><li>Safe for sensitive API keys, tokens, and configuration data</li><li>Works <strong>offline</strong> after the page loads</li><li>Verify: open DevTools (F12) → Network tab and watch — zero upload requests</li></ul>"
           }
         }
@@ -89,7 +89,7 @@
             "content": "<ul><li><strong>Data URIs</strong>: Encode images or fonts as Base64 data URIs for embedding in HTML/CSS</li><li><strong>API Authentication</strong>: Encode credentials for HTTP Basic Authentication headers</li><li><strong>Email Attachments</strong>: Encode/decode MIME attachments in email protocols</li><li><strong>JWT Tokens</strong>: Decode JWT token payloads for inspection</li><li><strong>Configuration</strong>: Encode binary data for inclusion in JSON or YAML config files</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Base64 Processing",
+            "title": "Elaborazione Base64 con privacy come priorità",
             "content": "<p>All encoding and decoding happens <strong>directly in your browser</strong> using the built-in <code>btoa()</code> and <code>atob()</code> APIs.</p><ul><li>Your text <strong>never leaves your device</strong> — ideal for encoding sensitive credentials or tokens</li><li>No server-side processing or logging</li><li>Works completely <strong>offline</strong> after initial page load</li><li>Verify: open DevTools (F12) → Network tab during use — zero data transmitted</li></ul>"
           }
         }
@@ -136,7 +136,7 @@
             "content": "<ul><li><strong>Query Parameters</strong>: Encode values for safe inclusion in URL query strings</li><li><strong>API Requests</strong>: Properly encode request parameters for REST APIs</li><li><strong>Redirect URLs</strong>: Encode callback URLs for OAuth flows and redirects</li><li><strong>File Paths</strong>: Encode file names with spaces or special characters for web servers</li><li><strong>Debugging</strong>: Decode mangled URLs to see the original text</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First URL Processing",
+            "title": "Elaborazione URL con privacy come priorità",
             "content": "<p>All encoding and decoding runs <strong>entirely in your browser</strong> using native <code>encodeURIComponent()</code> and <code>decodeURIComponent()</code> functions.</p><ul><li>Your URLs and parameters <strong>never leave your device</strong></li><li>Safe for encoding URLs containing API keys, tokens, or session IDs</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
           }
         }
@@ -181,7 +181,7 @@
             "content": "<ul><li><strong>Document Digitization</strong>: Convert printed documents, receipts, or letters into editable text</li><li><strong>Screenshot Text Extraction</strong>: Pull text from screenshots of web pages, error messages, or chat logs</li><li><strong>Translation Prep</strong>: Extract foreign-language text from images for translation</li><li><strong>Data Entry</strong>: Quickly digitize text from forms, invoices, or business cards</li><li><strong>Accessibility</strong>: Make image-based text accessible to screen readers</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First OCR Processing",
+            "title": "Elaborazione OCR con privacy come priorità",
             "content": "<p>OCR runs <strong>entirely in your browser</strong> using <strong>Tesseract.js</strong> (WebAssembly). Language models are downloaded once and cached locally.</p><ul><li>Your images and documents <strong>never leave your device</strong> — critical for sensitive documents</li><li>No cloud API calls — zero data transmitted during recognition</li><li>Works <strong>offline</strong> after language models are cached</li><li>Ideal for confidential documents: medical records, financial statements, legal papers</li></ul>"
           }
         }
@@ -225,7 +225,7 @@
             "content": "<ul><li><strong>Quick File Inspection</strong>: Check what's inside a ZIP before extracting everything</li><li><strong>Single File Download</strong>: Extract just the file you need from a large archive</li><li><strong>Mobile Use</strong>: Open ZIP files on phones and tablets without a file manager</li><li><strong>Chromebook Users</strong>: Extract archives when native tools aren't available</li><li><strong>Email Attachments</strong>: Quickly peek inside ZIP attachments</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Archive Extraction",
+            "title": "Estrazione di archivi con privacy come priorità",
             "content": "<p>ZIP extraction runs <strong>entirely in your browser</strong> using the <strong>fflate</strong> decompression library. No files are uploaded anywhere.</p><ul><li>Your archives <strong>never leave your device</strong> — safe for confidential documents</li><li>No server-side processing or temporary storage</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
           }
         }
@@ -272,7 +272,7 @@
             "content": "<ul><li><strong>API Integration</strong>: Convert spreadsheet exports to JSON for API payloads</li><li><strong>Data Analysis</strong>: Transform JSON API responses into CSV for Excel or Google Sheets</li><li><strong>Database Migration</strong>: Convert between data formats during database import/export</li><li><strong>Reporting</strong>: Convert JSON logs or records to CSV for reporting tools</li><li><strong>Prototyping</strong>: Quickly create sample JSON data from spreadsheet mockups</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Data Conversion",
+            "title": "Conversione dati con privacy come priorità",
             "content": "<p>All conversion happens <strong>locally in your browser</strong> using JavaScript parsing — no server round-trips.</p><ul><li>Your data <strong>never leaves your device</strong> — safe for converting sensitive business data or financial reports</li><li>No server processing, no logging, no third-party access</li><li>Works <strong>offline</strong> after initial page load</li></ul>"
           }
         }
@@ -318,7 +318,7 @@
             "content": "<ul><li><strong>File Integrity</strong>: Verify downloaded files haven't been tampered with by comparing checksums</li><li><strong>Content Deduplication</strong>: Compare hashes to find duplicate files</li><li><strong>Digital Signatures</strong>: Create content digests for signing workflows</li><li><strong>Software Distribution</strong>: Generate checksums for your own file releases</li><li><strong>Security Auditing</strong>: Hash files to detect unauthorized modifications</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Hash Generation",
+            "title": "Generazione hash con privacy come priorità",
             "content": "<p>Hashes are computed <strong>entirely in your browser</strong> using the native <strong>Web Crypto API</strong> (<code>crypto.subtle.digest</code>).</p><ul><li>Your text and files <strong>never leave your device</strong> — critical when hashing sensitive content</li><li>Uses hardware-accelerated cryptographic implementations when available</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
           }
         }
@@ -364,7 +364,7 @@
             "content": "<ul><li><strong>CSS Development</strong>: Convert between color formats for stylesheets</li><li><strong>Design Handoff</strong>: Translate design spec colors to code-ready values</li><li><strong>Brand Guidelines</strong>: Convert brand colors between formats for documentation</li><li><strong>Accessibility</strong>: Adjust HSL lightness to meet contrast ratio requirements</li><li><strong>Theme Development</strong>: Generate color values for light/dark theme variables</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Color Processing",
+            "title": "Elaborazione colori con privacy come priorità",
             "content": "<p>Color conversion uses <strong>pure JavaScript math</strong> in your browser — no server calls, no tracking.</p><ul><li>No data is transmitted — color values stay entirely on your device</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
           }
         }
@@ -411,7 +411,7 @@
             "content": "<ul><li><strong>API Integration</strong>: Convert between JSON REST APIs and XML SOAP services</li><li><strong>Legacy Systems</strong>: Transform XML data from older systems to JSON for modern apps</li><li><strong>Configuration</strong>: Convert between JSON and XML configuration file formats</li><li><strong>Data Migration</strong>: Transform data formats during system migrations</li><li><strong>Testing</strong>: Generate XML test data from JSON or vice versa</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Data Conversion",
+            "title": "Conversione dati con privacy come priorità",
             "content": "<p>All conversion runs <strong>locally in your browser</strong> using JavaScript XML parsing — no server communication.</p><ul><li>Your data <strong>never leaves your device</strong></li><li>Safe for converting sensitive business data or configuration files</li><li>Works <strong>offline</strong> after initial page load</li></ul>"
           }
         }
@@ -603,7 +603,7 @@
             "content": "<ul><li><strong>DevOps</strong>: Convert Kubernetes, Docker Compose, or Ansible YAML to JSON for API calls</li><li><strong>CI/CD</strong>: Transform GitHub Actions or GitLab CI YAML configs to JSON</li><li><strong>Configuration</strong>: Convert between YAML and JSON configuration file formats</li><li><strong>API Development</strong>: Transform YAML API specs (OpenAPI) to JSON format</li><li><strong>Data Migration</strong>: Convert data between YAML and JSON for different systems</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Data Conversion",
+            "title": "Conversione dati con privacy come priorità",
             "content": "<p>Conversion runs <strong>locally in your browser</strong> using the <strong>js-yaml</strong> library — no server communication.</p><ul><li>Your configuration files and data <strong>never leave your device</strong></li><li>Safe for converting secrets, environment variables, and sensitive configs</li><li>Works <strong>offline</strong> after initial page load</li></ul>"
           }
         }
@@ -651,7 +651,7 @@
             "content": "<ul><li><strong>Code Review</strong>: Compare two versions of a code file to see what changed</li><li><strong>Config Changes</strong>: Spot differences between development and production config files</li><li><strong>Document Revision</strong>: Compare draft versions of documents or contracts</li><li><strong>Database Records</strong>: Compare exported records to find data discrepancies</li><li><strong>Debugging</strong>: Compare expected vs. actual output in test scenarios</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Text Comparison",
+            "title": "Confronto testo con privacy come priorità",
             "content": "<p>Text comparison runs <strong>entirely in your browser</strong> using a JavaScript diff algorithm — no server processing.</p><ul><li>Your text <strong>never leaves your device</strong> — safe for comparing sensitive code, contracts, or confidential documents</li><li>No server storage or third-party access</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
           }
         }
