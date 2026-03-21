@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";
-import { Menu, Search, Shield, ChevronDown, Share2, ImageDown, FileOutput, Scaling, Crop, Scissors, FileDown, Film, FileAudio, AudioLines, FilePlus2, FileImage, Braces, Binary, Hash } from "lucide-react";
+import { Menu, Search, Shield, ChevronDown, Share2, ImageDown, FileOutput, Scaling, Crop, Scissors, FileDown, Film, FileAudio, AudioLines, FilePlus2, FileImage, Braces, Binary, Hash, FileVideo, Link as LinkIcon } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
@@ -280,6 +280,7 @@ function ShareButton() {
 const TOOL_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
   ImageDown, FileOutput, Scaling, Crop, Scissors, FileDown, Film,
   FileAudio, AudioLines, FilePlus2, FileImage, Braces, Binary, Hash,
+  FileVideo, Link: LinkIcon,
 };
 
 function ToolIcon({ name }: { name: string }) {

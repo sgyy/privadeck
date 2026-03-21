@@ -4,6 +4,7 @@ const definition: ToolDefinition = {
   slug: "base64",
   category: "developer",
   icon: "Binary",
+  featured: true,
   component: () => import("./Base64Tool"),
   seo: { structuredDataType: "WebApplication" },
   faq: [

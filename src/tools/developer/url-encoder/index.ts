@@ -4,6 +4,7 @@ const definition: ToolDefinition = {
   slug: "url-encoder",
   category: "developer",
   icon: "Link",
+  featured: true,
   component: () => import("./UrlEncoder"),
   seo: { structuredDataType: "WebApplication" },
   faq: [

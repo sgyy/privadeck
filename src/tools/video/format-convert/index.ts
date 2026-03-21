@@ -4,7 +4,7 @@ const definition: ToolDefinition = {
   slug: "format-convert",
   category: "video",
   icon: "FileVideo",
-  featured: false,
+  featured: true,
   component: () => import("./VideoFormatConvert"),
   seo: { structuredDataType: "WebApplication" },
   faq: [
