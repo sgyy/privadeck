@@ -4,6 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import type { ToolDefinition } from "@/lib/registry/types";
 import { Shield } from "lucide-react";
 import { ToolHowItWorks } from "./ToolHowItWorks";
+import { ToolDescription } from "./ToolDescription";
 import { generateToolJsonLd } from "@/lib/seo/jsonld";
 
 interface ToolPageShellProps {
@@ -31,8 +32,6 @@ export function ToolPageShell({ tool, children }: ToolPageShellProps) {
         <p className="mt-2 text-muted-foreground">{t("description")}</p>
       </div>
 
-      <ToolHowItWorks category={tool.category} toolName={t("name")} />
-
       {/* Local-Only privacy indicator */}
       <div className="flex items-center gap-2 rounded-lg border border-emerald-200/70 bg-emerald-50/80 backdrop-blur-sm px-4 py-2.5 dark:border-emerald-800/70 dark:bg-emerald-950/80">
         <span className="relative flex h-2.5 w-2.5 shrink-0">
@@ -48,6 +47,10 @@ export function ToolPageShell({ tool, children }: ToolPageShellProps) {
       <div className="rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm p-4 sm:p-6">
         {children}
       </div>
+
+      <ToolHowItWorks category={tool.category} toolName={t("name")} />
+
+      <ToolDescription tool={tool} />
     </div>
   );
 }

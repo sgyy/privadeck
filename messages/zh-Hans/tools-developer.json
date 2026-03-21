@@ -25,6 +25,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是 JSON 格式化工具？",
+            "content": "<p><strong>JSON 格式化工具</strong>是一款免费的浏览器端 JSON 处理工具，支持格式化、语法验证和压缩功能。将杂乱或压缩的 JSON 数据粘贴进来，即可获得排版清晰、缩进规范、语法高亮的可读输出。</p><p>无论是调试 API 响应、审查配置文件，还是为文档准备数据示例，本工具都能让 JSON 数据一目了然——所有处理100%在浏览器中完成。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用 JSON 格式化工具",
+            "content": "<ol><li>将 JSON 数据粘贴或输入到编辑区</li><li>选择偏好的缩进级别（2 或 4 个空格）</li><li>点击<strong>格式化</strong>美化输出、<strong>压缩</strong>去除空白、或<strong>验证</strong>检查语法</li><li>复制格式化结果或下载为文件</li></ol><p>无效的 JSON 会显示清晰的错误提示，精确指出语法问题的位置。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>美化打印</strong>：支持自定义缩进（2 或 4 个空格）的 JSON 格式化</li><li><strong>一键压缩</strong>：移除所有空白字符，生成紧凑格式便于存储和传输</li><li><strong>语法验证</strong>：即时检查 JSON 语法正确性，并提供详细的错误报告</li><li><strong>语法高亮</strong>：键名、字符串、数字、布尔值和 null 以不同颜色显示，阅读更轻松</li><li><strong>大数据支持</strong>：流畅处理大型 JSON 文件</li><li><strong>100%浏览器端</strong>：无需上传服务器——数据始终留在您的设备上</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>API 开发</strong>：格式化原始 API 响应数据，便于调试和检查</li><li><strong>配置文件</strong>：整理 package.json、tsconfig.json 等配置文件</li><li><strong>数据验证</strong>：在发送 API 请求前快速验证 JSON 数据格式</li><li><strong>技术文档</strong>：为文档准备排版规范的 JSON 示例</li><li><strong>数据库记录</strong>：查看和格式化 NoSQL 数据库中存储的 JSON 数据</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的 JSON 处理",
+            "content": "<p>您的 JSON 数据<strong>完全在浏览器中</strong>通过原生 JavaScript 解析处理，不会向任何服务器传输数据。</p><ul><li>数据<strong>永远不会离开您的设备</strong>——处理过程中零网络请求</li><li>可安全处理敏感的 API 密钥、令牌和配置数据</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页，确认零上传请求</li></ul>"
+          }
         }
       },
       "base64": {
@@ -48,6 +70,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是 Base64 编解码工具？",
+            "content": "<p><strong>Base64 编解码工具</strong>可将文本转换为 Base64 编码，或将 Base64 字符串解码为可读文本。Base64 是一种二进制到文本的编码方案，广泛用于在 URL、电子邮件、HTML 和 JSON 中嵌入数据。</p><p>即时编码任意文本为 Base64，或将 Base64 字符串还原为原始文本——无需安装任何软件。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用 Base64 编解码工具",
+            "content": "<ol><li>在输入框中输入文本内容</li><li>选择<strong>编码</strong>将文本转为 Base64，或选择<strong>解码</strong>将 Base64 还原为文本</li><li>结果即时显示在输出区域</li><li>点击<strong>复制</strong>将结果复制到剪贴板</li></ol><p>完整支持 UTF-8 文本，包括特殊字符、表情符号和非拉丁文字。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>即时编码</strong>：输入文本实时转换为 Base64</li><li><strong>即时解码</strong>：将 Base64 字符串还原为可读文本</li><li><strong>UTF-8 支持</strong>：正确处理 Unicode 字符、表情符号和多字节文本</li><li><strong>错误检测</strong>：解码时自动提示无效的 Base64 输入</li><li><strong>一键复制</strong>：瞬间将结果复制到剪贴板</li><li><strong>无长度限制</strong>：可处理任意长度的文本</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>Data URI</strong>：将图片或字体编码为 Base64 Data URI，嵌入 HTML/CSS</li><li><strong>API 认证</strong>：为 HTTP Basic Authentication 请求头编码凭证</li><li><strong>邮件附件</strong>：编解码电子邮件协议中的 MIME 附件</li><li><strong>JWT 令牌</strong>：解码 JWT Token 的 Payload 进行检查</li><li><strong>配置文件</strong>：将二进制数据编码后存入 JSON 或 YAML 配置文件</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的 Base64 处理",
+            "content": "<p>所有编码和解码操作<strong>直接在浏览器中</strong>使用内置的 <code>btoa()</code> 和 <code>atob()</code> API 完成。</p><ul><li>文本<strong>永远不会离开您的设备</strong>——非常适合编码敏感的凭证和令牌</li><li>无服务器端处理，无日志记录</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：使用时打开开发者工具（F12）→ 网络标签页——零数据传输</li></ul>"
+          }
         }
       },
       "url-encoder": {
@@ -73,6 +117,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是 URL 编解码工具？",
+            "content": "<p><strong>URL 编解码工具</strong>可将文本中的特殊字符转换为 URL 安全的百分号编码格式，或将已编码的 URL 还原为可读文本。在构建 Web 应用和 API 时，正确的 URL 编码至关重要。</p><p>支持完整 URL 编码和组件编码两种模式，轻松处理查询参数、路径段和表单数据。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用 URL 编解码工具",
+            "content": "<ol><li>在输入框中输入需要编码或解码的文本</li><li>选择<strong>编码</strong>或<strong>解码</strong>操作</li><li>转换结果即时显示</li><li>点击<strong>复制</strong>将结果复制到剪贴板</li></ol><p>支持 <code>encodeURIComponent</code> 和 <code>encodeURI</code> 两种编码模式。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>组件编码</strong>：使用 encodeURIComponent 编码查询参数和路径段</li><li><strong>完整 URL 编码</strong>：使用 encodeURI 编码完整 URL，保留结构字符</li><li><strong>即时转换</strong>：输入即刻显示编解码结果</li><li><strong>Unicode 支持</strong>：正确处理中文、日文等非 ASCII 字符</li><li><strong>一键复制</strong>：快速复制编码结果</li><li><strong>100%本地处理</strong>：数据不会离开您的浏览器</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>API 开发</strong>：编码查询参数确保 API 请求正确传输</li><li><strong>前端开发</strong>：处理表单数据和 URL 中的特殊字符</li><li><strong>数据分析</strong>：解码跟踪链接和分析 URL 参数</li><li><strong>SEO 优化</strong>：检查和修正 URL 中的编码问题</li><li><strong>调试排错</strong>：解码复杂的 URL 查看真实参数值</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的 URL 处理",
+            "content": "<p>URL 编解码<strong>完全在浏览器中</strong>使用原生 JavaScript API 完成。</p><ul><li>URL 和参数数据<strong>永远不会离开您的设备</strong></li><li>适合处理包含敏感信息的 URL（如 API 密钥、令牌）</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零上传请求</li></ul>"
+          }
         }
       },
       "ocr": {
@@ -96,6 +162,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是 OCR 文字识别工具？",
+            "content": "<p><strong>OCR 文字识别工具</strong>基于 Tesseract.js 引擎，可从图片中提取文字内容。支持中文、英文、日文等12种以上语言，能够识别截图、扫描文档、照片中的文字。</p><p>所有识别过程100%在浏览器本地完成，图片不会上传到任何服务器——特别适合处理包含敏感信息的文档。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用 OCR 文字识别工具",
+            "content": "<ol><li>上传包含文字的图片（支持 JPG、PNG、WebP 等格式）</li><li>选择图片中文字所使用的语言</li><li>点击<strong>识别</strong>开始文字提取</li><li>查看识别结果，可一键复制或下载为文本文件</li></ol><p>识别准确率取决于图片质量、文字清晰度和字体类型。建议使用高分辨率、对比度良好的图片。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>多语言支持</strong>：支持中文、英文、日文、韩文等12种以上语言识别</li><li><strong>Tesseract.js 引擎</strong>：业界领先的开源 OCR 引擎，浏览器端运行</li><li><strong>多格式输入</strong>：支持 JPG、PNG、WebP、BMP 等常见图片格式</li><li><strong>识别进度显示</strong>：实时显示 OCR 处理进度</li><li><strong>结果导出</strong>：一键复制识别文字或下载为文本文件</li><li><strong>100%本地处理</strong>：图片不会上传到任何服务器</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>文档数字化</strong>：将纸质文档、扫描件中的文字提取为可编辑文本</li><li><strong>截图文字提取</strong>：从屏幕截图中快速提取文字内容</li><li><strong>翻译辅助</strong>：提取外语图片中的文字用于翻译</li><li><strong>数据录入</strong>：从票据、表格图片中提取数据</li><li><strong>无障碍访问</strong>：将图片中的文字信息转为可访问的文本格式</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的 OCR 处理",
+            "content": "<p>OCR 识别<strong>完全在浏览器中</strong>通过 Tesseract.js 引擎本地执行，您的图片不会被上传到任何服务器。</p><ul><li>图片和识别结果<strong>永远不会离开您的设备</strong></li><li>适合处理含有身份证、合同等敏感信息的文档</li><li>语言模型数据在首次使用时下载后即可<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——处理过程中零上传请求</li></ul>"
+          }
         }
       },
       "archive": {
@@ -118,6 +206,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是 ZIP 解压预览工具？",
+            "content": "<p><strong>ZIP 解压预览工具</strong>可直接在浏览器中打开和预览 ZIP 压缩包的内容。无需安装解压软件，即可查看压缩包中的文件列表、目录结构，并选择性下载所需文件。</p><p>基于 fflate 库实现高效解压，所有处理100%在浏览器中本地完成。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用 ZIP 解压预览工具",
+            "content": "<ol><li>将 ZIP 文件拖拽到上传区域或点击选择文件</li><li>工具自动解析并显示压缩包内的文件结构</li><li>浏览文件列表，查看文件名、大小等信息</li><li>选择需要的文件进行下载</li></ol><p>支持标准 ZIP 格式，可处理包含多级目录结构的压缩包。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>即时预览</strong>：无需完全解压即可浏览压缩包内容</li><li><strong>目录结构</strong>：清晰展示压缩包内的文件和文件夹层次</li><li><strong>文件信息</strong>：显示每个文件的名称、大小和压缩比</li><li><strong>选择性下载</strong>：可单独下载压缩包中的特定文件</li><li><strong>高性能</strong>：基于 fflate 库，解压速度快</li><li><strong>无需安装</strong>：浏览器内直接使用，无需安装任何解压软件</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>快速查看</strong>：在下载大型压缩包前先预览内容</li><li><strong>文件提取</strong>：只需要压缩包中的某几个文件时，无需全部解压</li><li><strong>移动设备</strong>：在手机或平板上查看 ZIP 文件内容</li><li><strong>安全检查</strong>：在解压前查看压缩包是否包含可疑文件</li><li><strong>文档管理</strong>：快速浏览压缩归档的文档资料</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的压缩包处理",
+            "content": "<p>ZIP 文件的解压和预览<strong>完全在浏览器中</strong>通过 fflate 库本地完成。</p><ul><li>压缩包和其中的文件<strong>永远不会离开您的设备</strong></li><li>适合查看包含机密文档的压缩包</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零上传请求</li></ul>"
+          }
         }
       },
       "csv-json": {
@@ -143,6 +253,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是 CSV 与 JSON 互转工具？",
+            "content": "<p><strong>CSV 与 JSON 互转工具</strong>可在 CSV（逗号分隔值）和 JSON 两种数据格式之间自由转换。将 CSV 表格数据转为结构化的 JSON 数组，或将 JSON 数据导出为 CSV 格式用于电子表格。</p><p>支持自定义分隔符、表头设置等选项，转换过程100%在浏览器中本地完成。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用 CSV 与 JSON 互转工具",
+            "content": "<ol><li>粘贴 CSV 或 JSON 数据到输入区域</li><li>选择转换方向：CSV → JSON 或 JSON → CSV</li><li>按需配置分隔符等选项</li><li>点击<strong>转换</strong>获取结果，可复制或下载</li></ol><p>CSV 转 JSON 时，第一行默认作为字段名。JSON 转 CSV 时，支持扁平化嵌套对象。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>双向转换</strong>：CSV 转 JSON 和 JSON 转 CSV 双向支持</li><li><strong>自定义分隔符</strong>：支持逗号、制表符、分号等多种分隔符</li><li><strong>表头识别</strong>：自动将首行识别为字段名生成 JSON 键</li><li><strong>即时预览</strong>：转换结果实时显示</li><li><strong>大文件支持</strong>：高效处理大数据量文件</li><li><strong>100%本地处理</strong>：数据不会上传到任何服务器</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>数据集成</strong>：将 CSV 数据转为 JSON 格式供 API 和应用使用</li><li><strong>数据分析</strong>：将 JSON 数据导出为 CSV 在 Excel 中分析</li><li><strong>数据库迁移</strong>：在不同数据格式间转换以适配数据库导入需求</li><li><strong>报表生成</strong>：将 JSON API 响应转为 CSV 便于制作报表</li><li><strong>前端开发</strong>：将 CSV 配置文件转为 JSON 供应用程序使用</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的数据转换",
+            "content": "<p>CSV 与 JSON 的转换<strong>完全在浏览器中</strong>使用 JavaScript 本地完成。</p><ul><li>您的数据<strong>永远不会离开您的设备</strong>——适合处理敏感业务数据</li><li>无服务器端处理，无数据存储</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零上传请求</li></ul>"
+          }
         }
       },
       "hash-generator": {
@@ -167,6 +299,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是哈希生成工具？",
+            "content": "<p><strong>哈希生成工具</strong>使用 Web Crypto API 为文本和文件生成安全的哈希值。支持 SHA-1、SHA-256、SHA-384、SHA-512 等多种哈希算法，可用于数据完整性校验和文件验证。</p><p>所有哈希计算100%在浏览器中本地完成，敏感数据无需上传到任何服务器。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用哈希生成工具",
+            "content": "<ol><li>输入需要计算哈希的文本，或上传文件</li><li>选择哈希算法（SHA-1、SHA-256、SHA-384 或 SHA-512）</li><li>哈希值即时生成并显示</li><li>点击复制将哈希值复制到剪贴板</li></ol><p>基于浏览器原生的 Web Crypto API，确保计算结果的准确性和安全性。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>多种算法</strong>：支持 SHA-1、SHA-256、SHA-384、SHA-512 哈希算法</li><li><strong>Web Crypto API</strong>：使用浏览器原生加密 API，安全可靠</li><li><strong>文本和文件</strong>：同时支持文本输入和文件上传的哈希计算</li><li><strong>即时计算</strong>：输入即刻显示哈希结果</li><li><strong>一键复制</strong>：快速复制生成的哈希值</li><li><strong>100%本地处理</strong>：哈希计算在浏览器中完成，零数据外传</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>文件校验</strong>：验证下载文件的 SHA 哈希值确保完整性</li><li><strong>密码学应用</strong>：生成数据摘要用于签名和验证</li><li><strong>数据去重</strong>：通过哈希比对识别重复文件</li><li><strong>区块链开发</strong>：计算交易数据的哈希值</li><li><strong>安全审计</strong>：校验配置文件和代码文件是否被篡改</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的哈希计算",
+            "content": "<p>哈希值通过浏览器原生 <strong>Web Crypto API</strong> 在本地计算，不依赖任何外部服务。</p><ul><li>输入数据<strong>永远不会离开您的设备</strong>——安全处理密码、密钥等敏感信息</li><li>无服务器端计算或存储</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零上传请求</li></ul>"
+          }
         }
       },
       "color-converter": {
@@ -191,6 +345,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是颜色转换工具？",
+            "content": "<p><strong>颜色转换工具</strong>可在 HEX、RGB、HSL 等常用颜色格式之间自由转换。输入任意格式的颜色值，即时获取其他格式的等效值，并提供实时颜色预览。</p><p>前端开发和设计工作中的必备工具，轻松在不同颜色表示方式间切换。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用颜色转换工具",
+            "content": "<ol><li>在输入框中输入颜色值（如 #FF5733、rgb(255,87,51) 或 hsl(11,100%,60%)）</li><li>工具自动识别格式并转换为其他所有格式</li><li>查看颜色预览确认转换结果</li><li>复制所需格式的颜色值</li></ol><p>支持带透明度的颜色值（如 RGBA、HSLA）。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>多格式支持</strong>：HEX、RGB、HSL 等格式自由互转</li><li><strong>实时预览</strong>：颜色预览块实时显示当前颜色</li><li><strong>自动识别</strong>：自动检测输入颜色的格式类型</li><li><strong>一键复制</strong>：快速复制所需格式的颜色代码</li><li><strong>透明度支持</strong>：支持 RGBA、HSLA 等带透明度的颜色</li><li><strong>100%本地处理</strong>：所有转换在浏览器中完成</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>前端开发</strong>：在 CSS 中使用的 HEX、RGB、HSL 格式间快速转换</li><li><strong>UI 设计</strong>：将设计稿中的颜色值转为开发所需的格式</li><li><strong>品牌规范</strong>：统一不同格式的品牌色代码</li><li><strong>主题定制</strong>：为暗色/亮色主题调整颜色值</li><li><strong>教学演示</strong>：直观理解不同颜色空间的表示方式</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的颜色转换",
+            "content": "<p>颜色转换<strong>完全在浏览器中</strong>通过 JavaScript 计算完成。</p><ul><li>颜色数据<strong>永远不会离开您的设备</strong></li><li>无需联网即可使用所有转换功能</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零数据传输</li></ul>"
+          }
         }
       },
       "json-xml": {
@@ -216,6 +392,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是 JSON 与 XML 互转工具？",
+            "content": "<p><strong>JSON 与 XML 互转工具</strong>可在 JSON 和 XML 两种数据交换格式之间双向转换。将 JSON 数据转为 XML 文档结构，或将 XML 解析为 JSON 对象——常用于系统集成和数据格式适配。</p><p>转换过程100%在浏览器中完成，适合处理包含敏感信息的数据。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用 JSON 与 XML 互转工具",
+            "content": "<ol><li>粘贴 JSON 或 XML 数据到输入区域</li><li>选择转换方向：JSON → XML 或 XML → JSON</li><li>点击<strong>转换</strong>获取结果</li><li>复制转换结果或下载为文件</li></ol><p>支持嵌套结构、数组和各种数据类型的正确转换。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>双向转换</strong>：JSON 转 XML 和 XML 转 JSON 双向支持</li><li><strong>结构保持</strong>：正确处理嵌套对象、数组等复杂结构</li><li><strong>格式化输出</strong>：生成缩进规范、可读性强的输出</li><li><strong>错误提示</strong>：无效输入时提供清晰的错误信息</li><li><strong>大数据处理</strong>：高效处理大型 JSON/XML 文档</li><li><strong>100%浏览器端</strong>：数据不离开您的设备</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>系统集成</strong>：在使用 JSON 和 XML 的系统之间转换数据格式</li><li><strong>API 适配</strong>：将 REST API 的 JSON 响应转为 SOAP 服务所需的 XML</li><li><strong>配置迁移</strong>：将 XML 配置文件转为 JSON 格式</li><li><strong>数据迁移</strong>：在遗留 XML 系统和现代 JSON 系统之间迁移数据</li><li><strong>学习参考</strong>：对比理解 JSON 和 XML 的结构差异</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的格式转换",
+            "content": "<p>JSON 与 XML 的转换<strong>完全在浏览器中</strong>通过 JavaScript 本地完成。</p><ul><li>数据<strong>永远不会离开您的设备</strong>——安全处理敏感的业务数据</li><li>无服务器端处理或数据存储</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零上传请求</li></ul>"
+          }
         }
       },
       "markdown-preview": {
@@ -239,6 +437,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是 Markdown 实时预览工具？",
+            "content": "<p><strong>Markdown 实时预览工具</strong>让您在编写 Markdown 的同时即时查看渲染效果。左侧编辑、右侧预览的分屏布局，所见即所得地创建格式优美的文档。</p><p>支持标准 Markdown 语法以及代码块、表格、任务列表等扩展语法，完全在浏览器中运行。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用 Markdown 实时预览工具",
+            "content": "<ol><li>在左侧编辑区域输入或粘贴 Markdown 文本</li><li>右侧自动实时渲染预览效果</li><li>使用工具栏按钮快速插入标题、加粗、链接等格式</li><li>复制渲染后的 HTML 或下载为文件</li></ol><p>支持标题、列表、链接、图片、代码块、表格、引用等全部标准语法。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>实时预览</strong>：编辑即刻渲染，所见即所得</li><li><strong>分屏布局</strong>：编辑区和预览区并排显示</li><li><strong>完整语法</strong>：支持标准 Markdown 和 GFM 扩展语法</li><li><strong>代码高亮</strong>：代码块支持语法高亮显示</li><li><strong>导出功能</strong>：可导出 HTML 或复制渲染结果</li><li><strong>100%浏览器端</strong>：无需服务器，本地即时渲染</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>文档编写</strong>：撰写 README、技术文档、博客文章</li><li><strong>笔记整理</strong>：使用 Markdown 格式整理学习和工作笔记</li><li><strong>邮件起草</strong>：用 Markdown 编写格式规范的邮件内容</li><li><strong>演示准备</strong>：快速预览 Markdown 幻灯片效果</li><li><strong>语法学习</strong>：边写边看效果，快速掌握 Markdown 语法</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的 Markdown 处理",
+            "content": "<p>Markdown 渲染<strong>完全在浏览器中</strong>通过 JavaScript 本地完成。</p><ul><li>文档内容<strong>永远不会离开您的设备</strong></li><li>适合编写包含敏感信息的内部文档</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零数据传输</li></ul>"
+          }
         }
       },
       "regex-tester": {
@@ -266,6 +486,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是正则表达式测试工具？",
+            "content": "<p><strong>正则表达式测试工具</strong>帮助您编写、测试和调试正则表达式。输入正则模式和测试文本，实时高亮显示匹配结果，支持捕获组和各种修饰符。</p><p>前端开发、数据清洗和文本处理中的实用工具，所有测试在浏览器中本地完成。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用正则表达式测试工具",
+            "content": "<ol><li>在正则输入框中输入正则表达式</li><li>设置修饰符（g 全局、i 忽略大小写、m 多行等）</li><li>在文本区域输入测试字符串</li><li>查看实时高亮的匹配结果和捕获组信息</li></ol><p>匹配内容会实时高亮显示，方便直观地验证正则表达式是否符合预期。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>实时匹配</strong>：输入即刻显示匹配结果</li><li><strong>高亮显示</strong>：匹配文本以彩色高亮标注</li><li><strong>捕获组</strong>：显示每个捕获组的匹配内容</li><li><strong>修饰符支持</strong>：支持 g、i、m、s、u 等修饰符</li><li><strong>匹配统计</strong>：显示匹配数量和位置信息</li><li><strong>100%本地处理</strong>：正则测试在浏览器中完成</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>模式开发</strong>：编写和调试复杂的正则表达式</li><li><strong>数据提取</strong>：测试从文本中提取特定信息的正则</li><li><strong>表单验证</strong>：验证邮箱、手机号、URL 等格式的正则</li><li><strong>文本替换</strong>：测试批量查找替换的正则模式</li><li><strong>学习练习</strong>：交互式学习正则表达式语法</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的正则测试",
+            "content": "<p>正则表达式的匹配和测试<strong>完全在浏览器中</strong>通过 JavaScript RegExp 引擎完成。</p><ul><li>测试文本和正则模式<strong>永远不会离开您的设备</strong></li><li>适合测试包含敏感数据的正则匹配</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零数据传输</li></ul>"
+          }
         }
       },
       "timestamp": {
@@ -295,6 +537,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是时间戳转换工具？",
+            "content": "<p><strong>时间戳转换工具</strong>可在 Unix 时间戳和人类可读的日期时间格式之间双向转换。支持秒级和毫秒级时间戳，还可获取当前时间的时间戳。</p><p>后端开发、日志分析和数据处理中的常用工具，帮助快速理解时间戳对应的确切时间。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用时间戳转换工具",
+            "content": "<ol><li>输入 Unix 时间戳（秒或毫秒）查看对应的日期时间</li><li>或选择日期时间获取对应的 Unix 时间戳</li><li>查看多种格式的转换结果（本地时间、UTC、ISO 8601 等）</li><li>点击复制所需的时间格式</li></ol><p>支持获取当前时间戳，以及常用时间点的快速转换。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>双向转换</strong>：时间戳转日期和日期转时间戳</li><li><strong>精度支持</strong>：支持秒级（10位）和毫秒级（13位）时间戳</li><li><strong>多种格式</strong>：输出本地时间、UTC、ISO 8601 等多种格式</li><li><strong>当前时间</strong>：一键获取当前时间的 Unix 时间戳</li><li><strong>时区显示</strong>：显示当前时区和 UTC 偏移</li><li><strong>100%本地处理</strong>：转换在浏览器中即时完成</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>后端开发</strong>：调试接口中的时间戳字段</li><li><strong>日志分析</strong>：将服务器日志中的时间戳转为可读时间</li><li><strong>数据库查询</strong>：生成用于查询条件的时间戳</li><li><strong>事件追踪</strong>：分析事件日志中的时间顺序</li><li><strong>API 调试</strong>：检查 API 请求和响应中的时间字段</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的时间戳处理",
+            "content": "<p>时间戳转换<strong>完全在浏览器中</strong>通过 JavaScript Date API 完成。</p><ul><li>时间数据<strong>永远不会离开您的设备</strong></li><li>无任何网络请求，完全本地计算</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零数据传输</li></ul>"
+          }
         }
       },
       "yaml-json": {
@@ -320,6 +584,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是 YAML 与 JSON 互转工具？",
+            "content": "<p><strong>YAML 与 JSON 互转工具</strong>可在 YAML 和 JSON 两种配置文件格式之间双向转换。基于 js-yaml 库实现准确的格式解析和转换，支持复杂嵌套结构。</p><p>DevOps、后端开发和配置管理中的常用工具，所有处理100%在浏览器中本地完成。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用 YAML 与 JSON 互转工具",
+            "content": "<ol><li>粘贴 YAML 或 JSON 数据到输入区域</li><li>选择转换方向：YAML → JSON 或 JSON → YAML</li><li>点击<strong>转换</strong>获取结果</li><li>复制转换结果或下载为文件</li></ol><p>支持 YAML 的锚点引用、多文档等高级特性。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>双向转换</strong>：YAML 转 JSON 和 JSON 转 YAML 双向支持</li><li><strong>js-yaml 引擎</strong>：使用成熟的 js-yaml 库确保准确解析</li><li><strong>复杂结构</strong>：正确处理嵌套对象、数组、多行文本等</li><li><strong>格式化输出</strong>：生成缩进规范的可读输出</li><li><strong>错误提示</strong>：语法错误时提供行号和详细提示</li><li><strong>100%本地处理</strong>：数据不离开您的浏览器</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>Kubernetes 配置</strong>：在 YAML 配置和 JSON 格式之间转换</li><li><strong>CI/CD 流水线</strong>：将 GitHub Actions、GitLab CI 的 YAML 转为 JSON 分析</li><li><strong>配置管理</strong>：在 YAML 和 JSON 配置文件格式间切换</li><li><strong>API 开发</strong>：将 OpenAPI YAML 规范转为 JSON</li><li><strong>数据处理</strong>：将 YAML 数据导出为 JSON 用于程序处理</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的格式转换",
+            "content": "<p>YAML 与 JSON 的转换<strong>完全在浏览器中</strong>通过 js-yaml 库本地完成。</p><ul><li>配置数据<strong>永远不会离开您的设备</strong>——安全处理包含密钥的配置文件</li><li>无服务器端处理或数据存储</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零上传请求</li></ul>"
+          }
         }
       },
       "text-diff": {
@@ -346,6 +632,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是文本差异对比工具？",
+            "content": "<p><strong>文本差异对比工具</strong>可逐行比较两段文本的差异，以彩色高亮方式清晰展示新增、删除和修改的内容。类似于 Git diff 的可视化效果。</p><p>代码审查、文档版本比较和内容校对中的实用工具，所有对比在浏览器中本地完成。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用文本差异对比工具",
+            "content": "<ol><li>在左侧输入原始文本（旧版本）</li><li>在右侧输入修改后的文本（新版本）</li><li>工具自动计算并高亮显示差异</li><li>查看逐行对比结果：绿色为新增，红色为删除</li></ol><p>支持并排对比和统一视图两种显示模式。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>逐行对比</strong>：精确到行级别的差异检测</li><li><strong>彩色高亮</strong>：新增内容绿色、删除内容红色直观显示</li><li><strong>多种视图</strong>：支持并排和统一两种对比模式</li><li><strong>即时对比</strong>：输入即刻显示差异结果</li><li><strong>行号标注</strong>：清晰显示差异所在的行号</li><li><strong>100%本地处理</strong>：文本对比在浏览器中完成</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>代码审查</strong>：对比代码修改前后的差异</li><li><strong>文档版本</strong>：比较文档不同版本的改动</li><li><strong>内容校对</strong>：检查编辑修改是否正确</li><li><strong>配置对比</strong>：比较不同环境的配置文件差异</li><li><strong>翻译对照</strong>：对比原文和译文的结构差异</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的文本对比",
+            "content": "<p>文本差异对比<strong>完全在浏览器中</strong>通过 JavaScript 本地算法完成。</p><ul><li>对比文本<strong>永远不会离开您的设备</strong>——安全比较机密文档</li><li>无服务器端处理或数据存储</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零数据传输</li></ul>"
+          }
         }
       },
       "word-counter": {
@@ -372,6 +680,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是字数统计工具？",
+            "content": "<p><strong>字数统计工具</strong>可即时统计文本的字数、字符数、句子数、段落数等关键指标。同时估算阅读时间和朗读时间，帮助您掌握文本的篇幅信息。</p><p>内容创作、学术写作和社交媒体发布中的实用工具，即时获取文字统计数据。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用字数统计工具",
+            "content": "<ol><li>在文本框中输入或粘贴文本内容</li><li>统计结果即时更新显示</li><li>查看字数、字符数（含/不含空格）、句子数、段落数</li><li>查看预估的阅读时间和朗读时间</li></ol><p>支持中文、英文等多种语言的文本统计。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>多维统计</strong>：字数、字符数、句子数、段落数一目了然</li><li><strong>时间估算</strong>：自动计算预估阅读时间和朗读时间</li><li><strong>实时更新</strong>：输入时统计数据即时变化</li><li><strong>多语言</strong>：正确统计中文、英文等不同语言的字数</li><li><strong>字符统计</strong>：分别显示含空格和不含空格的字符数</li><li><strong>100%本地处理</strong>：文本统计在浏览器中完成</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>内容创作</strong>：确保文章字数符合平台要求</li><li><strong>学术写作</strong>：检查论文、报告是否满足字数限制</li><li><strong>社交媒体</strong>：确认推文、帖子是否在字符限制内</li><li><strong>SEO 优化</strong>：检查页面内容字数是否达标</li><li><strong>翻译工作</strong>：对比原文和译文的字数差异</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的文字统计",
+            "content": "<p>字数统计<strong>完全在浏览器中</strong>通过 JavaScript 本地计算完成。</p><ul><li>文本内容<strong>永远不会离开您的设备</strong></li><li>适合统计包含机密内容的文档</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零数据传输</li></ul>"
+          }
         }
       },
       "case-converter": {
@@ -401,6 +731,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是大小写转换工具？",
+            "content": "<p><strong>大小写转换工具</strong>支持9种以上文本大小写格式的快速转换，包括 UPPER CASE、lower case、Title Case、camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE 和 Sentence case。</p><p>编程命名规范统一、文本格式化和内容处理中的高效工具，一键完成批量转换。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用大小写转换工具",
+            "content": "<ol><li>在输入框中输入或粘贴文本</li><li>选择目标大小写格式</li><li>转换结果即时显示</li><li>点击复制获取转换后的文本</li></ol><p>支持批量文本的一键转换，适合处理大量变量名或标题。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>9+格式</strong>：支持 UPPER、lower、Title、camelCase、PascalCase、snake_case 等</li><li><strong>即时转换</strong>：选择格式即刻显示结果</li><li><strong>批量处理</strong>：支持多行文本批量转换</li><li><strong>编程友好</strong>：包含 camelCase、snake_case、kebab-case 等编程常用格式</li><li><strong>一键复制</strong>：快速复制转换结果</li><li><strong>100%本地处理</strong>：文本转换在浏览器中完成</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>编程开发</strong>：将变量名转换为项目规范要求的命名格式</li><li><strong>数据库设计</strong>：统一字段名的命名风格（如 snake_case）</li><li><strong>内容编辑</strong>：将标题转为正确的 Title Case 格式</li><li><strong>API 设计</strong>：统一接口参数的命名规范</li><li><strong>代码重构</strong>：批量修改变量、函数的命名风格</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的文本转换",
+            "content": "<p>大小写转换<strong>完全在浏览器中</strong>通过 JavaScript 字符串操作完成。</p><ul><li>文本<strong>永远不会离开您的设备</strong></li><li>适合转换包含敏感变量名的代码文本</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零数据传输</li></ul>"
+          }
         }
       },
       "lorem-ipsum": {
@@ -427,6 +779,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是 Lorem Ipsum 生成工具？",
+            "content": "<p><strong>Lorem Ipsum 生成工具</strong>可快速生成占位文本，用于网页设计、排版布局和界面原型的内容填充。支持按段落、句子或单词数量生成经典的 Lorem Ipsum 文本。</p><p>设计师和开发者在制作原型和设计稿时必备的文本生成工具。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用 Lorem Ipsum 生成工具",
+            "content": "<ol><li>选择生成单位：段落、句子或单词</li><li>设置需要生成的数量</li><li>点击<strong>生成</strong>创建占位文本</li><li>复制生成的文本用于项目</li></ol><p>生成的文本遵循 Lorem Ipsum 经典格式，适合各类设计和开发场景。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>灵活控制</strong>：按段落、句子或单词数量精确生成</li><li><strong>经典格式</strong>：遵循标准 Lorem Ipsum 文本格式</li><li><strong>即时生成</strong>：点击即得，无需等待</li><li><strong>一键复制</strong>：快速复制到剪贴板</li><li><strong>可定制</strong>：自由调整生成的文本长度</li><li><strong>100%本地处理</strong>：文本在浏览器中生成</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>网页设计</strong>：为网页布局填充占位文本查看排版效果</li><li><strong>UI 原型</strong>：在设计稿和原型中使用占位内容</li><li><strong>排版测试</strong>：测试不同字体和排版样式的显示效果</li><li><strong>演示文稿</strong>：在模板中填充示例文本</li><li><strong>印刷设计</strong>：为平面设计作品添加占位文字</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的文本生成",
+            "content": "<p>Lorem Ipsum 文本<strong>完全在浏览器中</strong>通过 JavaScript 本地生成。</p><ul><li>不涉及任何用户数据的上传或处理</li><li>无需联网即可生成文本</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零网络请求</li></ul>"
+          }
         }
       }
     }

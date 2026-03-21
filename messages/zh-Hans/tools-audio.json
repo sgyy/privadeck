@@ -24,6 +24,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是音频剪辑工具？",
+            "content": "<p><strong>音频剪辑</strong>将音频文件切割到您需要的长度，通过设置精确的开始和结束时间。尽可能使用流复制实现<strong>无损剪辑</strong>——无重新编码、无质量损失。采用 FFmpeg.wasm 专业音频编辑。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用音频剪辑",
+            "content": "<ol><li>上传音频文件（支持 MP3、WAV、OGG、AAC、FLAC）</li><li>设置<strong>开始时间</strong>和<strong>结束时间</strong>用于要保留的片段</li><li>预览选定的音频范围</li><li>点击<strong>剪辑</strong>提取片段</li><li>下载剪切的音频</li></ol>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>无损剪辑</strong>：流复制模式保留原始音频质量</li><li><strong>精确计时</strong>：秒级精度的开始和结束时间设置</li><li><strong>音频预览</strong>：剪辑前播放选定范围</li><li><strong>多种格式</strong>：支持 MP3、WAV、OGG、AAC 和 FLAC</li><li><strong>采用 FFmpeg.wasm</strong>：专业音频处理在浏览器中</li><li><strong>快速处理</strong>：流复制比重新编码快得多</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>铃声</strong>：从您最喜欢的歌曲中切割片段用于手机铃声</li><li><strong>播客</strong>：从播客录音中修剪开场白、结尾或沉默</li><li><strong>音乐编辑</strong>：从歌曲中提取特定部分</li><li><strong>语音备忘录</strong>：修剪语音录音到相关部分</li><li><strong>音效</strong>：从较长的音频文件中切割特定的声音</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的音频处理",
+            "content": "<p>音频剪辑全部在浏览器本地使用 <strong>FFmpeg.wasm</strong> 进行。</p><ul><li>您的音频文件<strong>永远不会离开您的设备</strong></li><li>无服务器上传或云处理</li><li>加载 FFmpeg 核心后可<strong>离线</strong>工作</li></ul>"
+          }
         }
       },
       "convert": {
@@ -47,6 +69,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是音频转换工具？",
+            "content": "<p><strong>音频转换</strong>在热门音频格式间变换文件：MP3、WAV、OGG、AAC 和 FLAC。在有损和无损格式间转换以实现兼容性、质量或文件大小优化。采用 FFmpeg.wasm 可靠音频编码。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用音频转换",
+            "content": "<ol><li>上传任何支持格式的音频文件</li><li>选择目标格式：<strong>MP3</strong>、<strong>WAV</strong>、<strong>OGG</strong>、<strong>AAC</strong> 或 <strong>FLAC</strong></li><li>点击<strong>转换</strong>处理</li><li>下载转换后的音频文件</li></ol><p>MP3 用于普遍兼容，FLAC 用于无损质量，OGG 用于开源项目。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>五种格式</strong>：在 MP3、WAV、OGG、AAC 和 FLAC 间转换</li><li><strong>有损与无损</strong>：在压缩（MP3、OGG、AAC）和无损（WAV、FLAC）间选择</li><li><strong>批量转换</strong>：一次转换多个文件</li><li><strong>采用 FFmpeg.wasm</strong>：专业音频编码在浏览器中</li><li><strong>质量保留</strong>：高质量转码与最优设置</li><li><strong>预览</strong>：下载前播放转换后的音频</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>兼容性</strong>：将 OGG 或 FLAC 转为 MP3 以支持更广泛的设备</li><li><strong>质量升级</strong>：将 MP3 转为 WAV/FLAC 用于音频编辑工作流</li><li><strong>网络音频</strong>：为 HTML5 音频元素转为 OGG</li><li><strong>播客发布</strong>：将录音转为 MP3 用于播客分发</li><li><strong>存档</strong>：转为 FLAC 用于无损音频存档</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的音频转换",
+            "content": "<p>音频转换全部在浏览器本地使用 <strong>FFmpeg.wasm</strong> 进行。</p><ul><li>您的音频文件<strong>永远不会离开您的设备</strong></li><li>无服务器处理或云编码</li><li>加载 FFmpeg 核心后可<strong>离线</strong>工作</li></ul>"
+          }
         }
       },
       "extract": {
@@ -70,6 +114,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是提取音频工具？",
+            "content": "<p><strong>提取音频</strong>从视频文件中剔除音频轨道，并将其保存为 MP3、WAV 或 AAC。从音乐视频、访谈或录制的讲座中提取音频——采用 FFmpeg.wasm 快速提取。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用提取音频",
+            "content": "<ol><li>上传视频文件（支持 MP4、WebM、MKV、AVI）</li><li>选择输出音频格式：<strong>MP3</strong>、<strong>WAV</strong> 或 <strong>AAC</strong></li><li>点击<strong>提取</strong>拉取音频轨道</li><li>下载提取的音频文件</li></ol>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>三种输出格式</strong>：作为 MP3、WAV 或 AAC 提取</li><li><strong>快速提取</strong>：尽可能使用流复制实现即时提取</li><li><strong>多种视频输入</strong>：支持 MP4、WebM、MKV 和 AVI</li><li><strong>采用 FFmpeg.wasm</strong>：专业音频提取在浏览器中</li><li><strong>质量保留</strong>：流复制时保留原始音频质量</li><li><strong>预览</strong>：下载前播放提取的音频</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>音乐提取</strong>：从音乐视频中提取音频</li><li><strong>播客准备</strong>：从视频采访或录制中提取音频</li><li><strong>转录</strong>：提取音频进行语音转文本处理</li><li><strong>音效设计</strong>：从视频片段中提取音效或环境音</li><li><strong>离线听音</strong>：将视频内容转为离线听音用的音频</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的音频提取",
+            "content": "<p>音频提取全部在浏览器本地使用 <strong>FFmpeg.wasm</strong> 进行。</p><ul><li>您的视频<strong>永远不会离开您的设备</strong></li><li>无服务器处理或上传</li><li>加载 FFmpeg 核心后可<strong>离线</strong>工作</li></ul>"
+          }
         }
       },
       "volume": {
@@ -95,6 +161,28 @@
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "可以在应用前预览音量变化吗？",
           "a5": "可以。点击「试听」按钮即可听到调整后的音量效果。试听使用浏览器内置的音频处理，可即时播放。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是音量调节工具？",
+            "content": "<p><strong>音量调节</strong>增加或减少音频音量到 300%。增强安静的录音、减少响亮的音频或规范化音量级别——在保存前实时预听。采用 FFmpeg.wasm 精确音量控制。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用音量调节",
+            "content": "<ol><li>上传音频文件（支持 MP3、WAV、OGG、AAC、FLAC）</li><li>调整<strong>音量滑块</strong>（原始音量的 50% 到 300%）</li><li>实时预听调整后的音频</li><li>点击<strong>应用</strong>处理</li><li>下载音量调整后的音频</li></ol><p>谨慎使用 200% 以上的音量——对安静录音的极端放大可能导致失真。</p>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>音量范围</strong>：从原始音量的 50% 到 300% 调整</li><li><strong>实时预听</strong>：处理前听到音量变化</li><li><strong>多种格式</strong>：支持 MP3、WAV、OGG、AAC 和 FLAC</li><li><strong>采用 FFmpeg.wasm</strong>：专业音频处理在浏览器中</li><li><strong>精确控制</strong>：用滑块微调音量</li><li><strong>质量输出</strong>：高质量音频处理</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>安静录音</strong>：提升安静的语音录音或采访的音量</li><li><strong>响亮音频</strong>：降低过度响亮的录音音量</li><li><strong>播客平衡</strong>：规范化播客不同部分的音量</li><li><strong>音乐调整</strong>：调整视频项目的背景音乐音量</li><li><strong>演示音频</strong>：提升演示录音的音量</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的音频处理",
+            "content": "<p>音量调节全部在浏览器本地使用 <strong>FFmpeg.wasm</strong> 进行。</p><ul><li>您的音频文件<strong>永远不会离开您的设备</strong></li><li>无服务器处理或上传</li><li>加载 FFmpeg 核心后可<strong>离线</strong>工作</li></ul>"
+          }
         }
       }
     }
