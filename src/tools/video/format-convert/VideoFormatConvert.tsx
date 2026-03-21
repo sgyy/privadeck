@@ -23,6 +23,7 @@ export default function VideoFormatConvert() {
   const [error, setError] = useState("");
   const fileUrl = useObjectUrl(file);
   const t = useTranslations("tools.video.format-convert");
+  const tc = useTranslations("common");
 
   const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg();
 
@@ -67,7 +68,7 @@ export default function VideoFormatConvert() {
 
       {ffmpegStatus === "error" && (
         <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
-          Failed to load processing engine. Please refresh and try again.
+          {tc("ffmpegLoadError")}
         </div>
       )}
 
