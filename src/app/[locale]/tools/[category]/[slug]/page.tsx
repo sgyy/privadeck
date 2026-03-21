@@ -55,13 +55,13 @@ export default async function ToolPage({
 
   const needsFFmpeg = category === "video" || category === "audio";
 
-  const t = await getTranslations({ locale, namespace: "common" });
+  const tn = await getTranslations({ locale, namespace: "nav" });
   const tc = await getTranslations({ locale, namespace: "categories" });
   const tt = await getTranslations({ locale, namespace: `tools.${category}.${slug}` });
 
   const toolJsonLd = generateToolJsonLd(tool, locale, tt("name"), tt("description"));
   const breadcrumbJsonLd = generateBreadcrumbJsonLd([
-    { name: t("nav.home"), url: `${SITE_URL}/${locale}/` },
+    { name: tn("home"), url: `${SITE_URL}/${locale}/` },
     { name: tc(`${category}.name`), url: `${SITE_URL}/${locale}/tools/${category}/` },
     { name: tt("name"), url: `${SITE_URL}/${locale}/tools/${category}/${slug}/` },
   ]);

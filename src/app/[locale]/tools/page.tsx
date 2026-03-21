@@ -72,10 +72,10 @@ export default async function ToolsPage({
     loadAllToolMessages(locale),
   ]);
 
-  const t = await getTranslations({ locale, namespace: "common" });
+  const tn = await getTranslations({ locale, namespace: "nav" });
   const breadcrumbJsonLd = generateBreadcrumbJsonLd([
-    { name: t("nav.home"), url: `${SITE_URL}/${locale}/` },
-    { name: t("nav.tools"), url: `${SITE_URL}/${locale}/tools/` },
+    { name: tn("home"), url: `${SITE_URL}/${locale}/` },
+    { name: tn("tools"), url: `${SITE_URL}/${locale}/tools/` },
   ]);
 
   return (

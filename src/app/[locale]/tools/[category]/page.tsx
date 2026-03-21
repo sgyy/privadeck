@@ -42,11 +42,11 @@ export default async function CategoryPage({
     loadCategoryMessages(locale, category),
   ]);
 
-  const t = await getTranslations({ locale, namespace: "common" });
+  const tn = await getTranslations({ locale, namespace: "nav" });
   const tc = await getTranslations({ locale, namespace: "categories" });
 
   const breadcrumbJsonLd = generateBreadcrumbJsonLd([
-    { name: t("nav.home"), url: `${SITE_URL}/${locale}/` },
+    { name: tn("home"), url: `${SITE_URL}/${locale}/` },
     { name: tc(`${category}.name`), url: `${SITE_URL}/${locale}/tools/${category}/` },
   ]);
 
