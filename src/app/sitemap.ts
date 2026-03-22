@@ -8,8 +8,9 @@ export const dynamic = "force-static";
 const BASE_URL = "https://privadeck.app";
 
 function buildAlternates(pathFn: (locale: string) => string) {
+  const isHomepage = pathFn("en") === "/";
   return {
-    "x-default": `${BASE_URL}/en${pathFn("en")}`,
+    "x-default": isHomepage ? `${BASE_URL}/` : `${BASE_URL}/en${pathFn("en")}`,
     ...Object.fromEntries(
       locales.map((locale) => [
         locale,
@@ -22,6 +23,14 @@ function buildAlternates(pathFn: (locale: string) => string) {
 export default function sitemap(): MetadataRoute.Sitemap {
   const tools = getAllSlugs();
   const entries: MetadataRoute.Sitemap = [];
+
+  // Root homepage (/)
+  entries.push({
+    url: `${BASE_URL}/`,
+    changeFrequency: "weekly",
+    priority: 1.0,
+    alternates: { languages: buildAlternates(() => "/") },
+  });
 
   for (const locale of locales) {
     // 首页

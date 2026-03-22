@@ -37,7 +37,7 @@ pnpm lint         # ESLint 代码检查
 
 ### 国际化 (i18n)
 
-使用 `next-intl`，支持 21 个 locale，包括地区变体（zh-Hans/zh-Hant、pt-BR/pt-PT）。默认英语。无中间件（与静态导出不兼容）— 语言检测在客户端 `src/app/page.tsx` 中完成。阿拉伯语 (ar) 为 RTL。`/zh` URL 通过 `public/_redirects` 重定向到 `/zh-Hans`。
+使用 `next-intl`，支持 21 个 locale，包括地区变体（zh-Hans/zh-Hant、pt-BR/pt-PT）。默认英语。无中间件（与静态导出不兼容）。根路径 `/` 通过 Route Group `(home)` 直接渲染英文首页（可索引），语言建议由 `src/components/shared/LocaleSuggestionBanner.tsx` + `src/lib/i18n/detectLocale.ts` 在客户端完成（不自动跳转）。阿拉伯语 (ar) 为 RTL。`/zh` URL 通过 `public/_redirects` 重定向到 `/zh-Hans`。
 
 翻译文件位于 `messages/{locale}/`。工具翻译遵循命名空间模式 `tools.{category}.{slug}.{key}`，键包括：name、description、metaTitle、metaDescription、keywords、faq.q1/a1 等。
 

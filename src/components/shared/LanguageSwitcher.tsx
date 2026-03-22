@@ -5,31 +5,8 @@ import { usePathname, useRouter } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
 import { Languages } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
+import { languageNames } from "@/lib/i18n/languageNames";
 import { useState, useRef, useEffect } from "react";
-
-const languageNames: Record<Locale, string> = {
-  en: "English",
-  "zh-Hans": "简体中文",
-  "zh-Hant": "繁體中文",
-  ja: "日本語",
-  ko: "한국어",
-  es: "Español",
-  fr: "Français",
-  de: "Deutsch",
-  "pt-BR": "Português (Brasil)",
-  "pt-PT": "Português (Portugal)",
-  th: "ไทย",
-  vi: "Tiếng Việt",
-  id: "Bahasa Indonesia",
-  hi: "हिन्दी",
-  ar: "العربية",
-  it: "Italiano",
-  nl: "Nederlands",
-  pl: "Polski",
-  ru: "Русский",
-  tr: "Türkçe",
-  uk: "Українська",
-};
 
 interface LanguageSwitcherProps {
   dropdownDirection?: "up" | "down";

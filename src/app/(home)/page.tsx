@@ -10,27 +10,15 @@ import {
 import { HomeUI } from "@/components/home/HomeUI";
 import type { Metadata } from "next";
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "home" });
-
-  const url = `${SITE_URL}/${locale}/`;
-  // /en/ content is identical to /, so canonical consolidates to root
-  const canonical = locale === "en" ? `${SITE_URL}/` : url;
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations({ locale: "en", namespace: "home" });
 
   return {
     title: { absolute: t("metaTitle") },
     description: t("metaDescription"),
+    robots: { index: true, follow: true },
     alternates: {
-      canonical,
+      canonical: `${SITE_URL}/`,
       languages: {
         "x-default": `${SITE_URL}/`,
         ...Object.fromEntries(locales.map((l) => [l, `${SITE_URL}/${l}/`])),
@@ -39,7 +27,7 @@ export async function generateMetadata({
     openGraph: {
       title: t("metaTitle"),
       description: t("metaDescription"),
-      url,
+      url: `${SITE_URL}/`,
       type: "website",
       siteName: "PrivaDeck",
       images: [
@@ -60,16 +48,11 @@ export async function generateMetadata({
   };
 }
 
-export default async function HomePage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+export default async function RootHomePage() {
+  setRequestLocale("en");
   const [commonMessages, toolMessages] = await Promise.all([
-    loadCommonMessages(locale),
-    loadAllToolMessages(locale),
+    loadCommonMessages("en"),
+    loadAllToolMessages("en"),
   ]);
   const orgJsonLd = generateOrganizationJsonLd();
   const siteJsonLd = generateWebSiteJsonLd();
@@ -84,7 +67,7 @@ export default async function HomePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
       />
-      <NextIntlClientProvider messages={{ ...commonMessages, ...toolMessages }}>
+      <NextIntlClientProvider locale="en" messages={{ ...commonMessages, ...toolMessages }}>
         <HomeUI />
       </NextIntlClientProvider>
     </>

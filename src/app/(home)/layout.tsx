@@ -1,10 +1,8 @@
-import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import Script from "next/script";
-import { locales, rtlLocales, type Locale } from "@/i18n/routing";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { ServiceWorkerRegistration } from "@/components/shared/ServiceWorkerRegistration";
 import { InstallPrompt } from "@/components/shared/InstallPrompt";
@@ -25,35 +23,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
-
-export default async function LocaleLayout({
+export default async function HomeLayout({
   children,
-  params,
 }: {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
-
-  if (!hasLocale(locales, locale)) {
-    notFound();
-  }
-
-  setRequestLocale(locale);
+  setRequestLocale("en");
   const [messages, toolNavData] = await Promise.all([
-    loadCommonMessages(locale),
-    buildToolNavData(locale),
+    loadCommonMessages("en"),
+    buildToolNavData("en"),
   ]);
 
   return (
-    <html lang={locale} dir={rtlLocales.includes(locale as Locale) ? "rtl" : "ltr"} suppressHydrationWarning>
+    <html lang="en" dir="ltr" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <NextIntlClientProvider messages={messages}>
-            <LocaleSuggestionBanner currentLocale={locale} />
+          <NextIntlClientProvider locale="en" messages={messages}>
+            <LocaleSuggestionBanner currentLocale="en" />
             <MainLayout toolNavData={toolNavData}>{children}</MainLayout>
             <InstallPrompt />
             <ServiceWorkerRegistration />
