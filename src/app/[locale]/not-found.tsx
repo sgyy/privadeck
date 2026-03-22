@@ -1,6 +1,8 @@
-import { useTranslations } from "next-intl";
-import Link from "next/link";
 import type { Metadata } from "next";
+import { getAllTools } from "@/lib/registry";
+import { categories } from "@/lib/registry/categories";
+import { NotFound404 } from "@/components/shared/NotFound404";
+import enCommon from "../../../messages/en/common.json";
 
 export const metadata: Metadata = {
   robots: {
@@ -9,16 +11,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function NotFound() {
-  const t = useTranslations("common");
+const toolNames = enCommon.toolNames as Record<
+  string,
+  Record<string, { name: string; description: string }>
+>;
 
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-8">
-      <h1 className="text-4xl font-bold">404</h1>
-      <p className="mt-4 text-lg text-muted-foreground">Page not found</p>
-      <Link href="/" className="mt-8 text-primary hover:underline">
-        {t("siteName")}
-      </Link>
-    </div>
-  );
+export default function NotFound() {
+  const tools = getAllTools().map((t) => ({
+    slug: t.slug,
+    category: t.category,
+    name: toolNames[t.category]?.[t.slug]?.name ?? t.slug,
+    description: toolNames[t.category]?.[t.slug]?.description ?? "",
+  }));
+
+  const cats = categories.map((c) => ({
+    key: c.key,
+    label: enCommon.categories[c.key as keyof typeof enCommon.categories].name,
+  }));
+
+  return <NotFound404 tools={tools} categories={cats} pathPrefix="/en" />;
 }
