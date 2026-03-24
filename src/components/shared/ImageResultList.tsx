@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useMemo, useRef } from "react";
 import { Download, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
@@ -48,15 +48,6 @@ export function ImageResultList({ results, onRemove }: ImageResultListProps) {
     });
   }, [results]);
   /* eslint-enable react-hooks/refs */
-
-  // Cleanup all URLs on unmount
-  useEffect(() => {
-    const cache = urlCacheRef.current;
-    return () => {
-      for (const url of cache.values()) URL.revokeObjectURL(url);
-      cache.clear();
-    };
-  }, []);
 
   // Derive a Blob→URL lookup from state (pure computation, no ref access)
   const urlMap = useMemo(
