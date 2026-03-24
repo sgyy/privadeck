@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useEffect, useLayoutEffect, useRef } from "react";
-import { createPortal } from "react-dom";
+import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
+import { ImageLightbox } from "@/components/shared/ImageLightbox";
 import { formatFileSize } from "@/lib/utils/formatFileSize";
 import { X, Plus } from "lucide-react";
 
@@ -26,7 +26,6 @@ export function ImageFileGrid({
   const [previewIndex, setPreviewIndex] = useState<number | null>(null);
   const t = useTranslations("common");
   const addInputRef = useRef<HTMLInputElement>(null);
-  const closeBtnRef = useRef<HTMLButtonElement>(null);
   const filesRef = useRef(files);
   filesRef.current = files;
   const previewMapRef = useRef<Map<File, string>>(new Map());
@@ -39,26 +38,6 @@ export function ImageFileGrid({
       previewMapRef.current.clear();
     };
   }, []);
-
-  // Lightbox: focus close button after DOM commit
-  useLayoutEffect(() => {
-    if (previewIndex !== null) closeBtnRef.current?.focus();
-  }, [previewIndex]);
-
-  // Lightbox: scroll lock + Escape key
-  useEffect(() => {
-    if (previewIndex === null) return;
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setPreviewIndex(null);
-    }
-    window.addEventListener("keydown", onKey);
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prevOverflow;
-    };
-  }, [previewIndex]);
 
   // Incrementally sync preview URLs and load dimensions for new files
   useEffect(() => {
@@ -234,34 +213,13 @@ export function ImageFileGrid({
       />
     </div>
 
-    {/* Lightbox preview — portal to body to escape parent stacking context */}
-    {previewIndex !== null && previews[previewIndex] &&
-      createPortal(
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label={files[previewIndex]?.name ?? ""}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
-          onClick={() => setPreviewIndex(null)}
-        >
-          <button
-            ref={closeBtnRef}
-            type="button"
-            aria-label={t("close")}
-            onClick={() => setPreviewIndex(null)}
-            className="absolute right-4 top-4 rounded-full bg-black/50 p-2 text-white hover:bg-black/70"
-          >
-            <X className="h-6 w-6" />
-          </button>
-          <img
-            src={previews[previewIndex]}
-            alt={files[previewIndex]?.name ?? ""}
-            className="max-h-[90vh] max-w-[90vw] object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>,
-        document.body,
-      )}
+    {previewIndex !== null && previews[previewIndex] && (
+      <ImageLightbox
+        src={previews[previewIndex]}
+        alt={files[previewIndex]?.name ?? ""}
+        onClose={() => setPreviewIndex(null)}
+      />
+    )}
     </>
   );
 }

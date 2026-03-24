@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import { Download, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
+import { ImageLightbox } from "@/components/shared/ImageLightbox";
 import { brandFilename } from "@/lib/brand";
 
 export interface ImageResultItem {
@@ -56,16 +57,6 @@ export function ImageResultList({ results, onRemove }: ImageResultListProps) {
       cache.clear();
     };
   }, []);
-
-  // Close preview on Escape
-  useEffect(() => {
-    if (previewIndex === null) return;
-    function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setPreviewIndex(null);
-    }
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [previewIndex]);
 
   // Derive a Blob→URL lookup from state (pure computation, no ref access)
   const urlMap = useMemo(
@@ -146,26 +137,12 @@ export function ImageResultList({ results, onRemove }: ImageResultListProps) {
         ))}
       </div>
 
-      {/* Lightbox preview */}
       {previewIndex !== null && results[previewIndex] && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
-          onClick={() => setPreviewIndex(null)}
-        >
-          <button
-            type="button"
-            onClick={() => setPreviewIndex(null)}
-            className="absolute right-4 top-4 rounded-full bg-black/50 p-2 text-white hover:bg-black/70"
-          >
-            <X className="h-6 w-6" />
-          </button>
-          <img
-            src={getUrl(results[previewIndex].blob)}
-            alt={results[previewIndex].filename}
-            className="max-h-[90vh] max-w-[90vw] object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
+        <ImageLightbox
+          src={getUrl(results[previewIndex].blob)}
+          alt={results[previewIndex].filename}
+          onClose={() => setPreviewIndex(null)}
+        />
       )}
     </>
   );
