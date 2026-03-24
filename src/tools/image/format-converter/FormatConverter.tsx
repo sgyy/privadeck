@@ -2,14 +2,13 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { ImageFileGrid } from "@/components/shared/ImageFileGrid";
 import {
   ImageResultList,
   type ImageResultItem,
 } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
-import { X } from "lucide-react";
 import {
   convertImage,
   formatFileSize,
@@ -45,42 +44,13 @@ export default function FormatConverter() {
     }
   }
 
-  function removeFile(index: number) {
-    setFiles((prev) => prev.filter((_, i) => i !== index));
-  }
-
   return (
     <div className="space-y-4">
-      <FileDropzone
-        accept="image/*"
-        multiple
-        onFiles={(newFiles) => setFiles((prev) => [...prev, ...newFiles])}
+      <ImageFileGrid
+        files={files}
+        onFilesChange={setFiles}
+        disabled={converting}
       />
-
-      {files.length > 0 && (
-        <div className="space-y-2">
-          {files.map((file, i) => (
-            <div
-              key={`${file.name}-${i}`}
-              className="flex items-center justify-between rounded-lg bg-muted/50 px-3 py-2 text-sm"
-            >
-              <span className="truncate">{file.name}</span>
-              <div className="flex items-center gap-2">
-                <span className="text-muted-foreground">
-                  {formatFileSize(file.size)}
-                </span>
-                <button
-                  type="button"
-                  onClick={() => removeFile(i)}
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  <X className="h-4 w-4" />
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
 
       <div className="flex flex-wrap items-end gap-4">
         <div>

@@ -1,15 +1,15 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { ImageFileGrid } from "@/components/shared/ImageFileGrid";
 import {
   ImageResultList,
   type ImageResultItem,
 } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
-import { X, Plus, Link2, Link2Off } from "lucide-react";
+import { Link2, Link2Off } from "lucide-react";
 import {
   compressImage,
   formatFileSize,
@@ -75,27 +75,20 @@ export default function ImageCompress() {
   const [compressing, setCompressing] = useState(false);
   const [progress, setProgress] = useState({ done: 0, total: 0 });
   const [error, setError] = useState("");
-  const [previews, setPreviews] = useState<string[]>([]);
-  const [addDragging, setAddDragging] = useState(false);
   const t = useTranslations("tools.image.compress");
-  const addInputRef = useRef<HTMLInputElement>(null);
+  const prevFilesLenRef = useRef(0);
 
-  // Ref tracks latest previews for unmount cleanup
-  const previewsRef = useRef(previews);
-  previewsRef.current = previews;
-
-  useEffect(() => {
-    return () => {
-      previewsRef.current.forEach((url) => URL.revokeObjectURL(url));
-    };
-  }, []);
-
-  function handleFiles(newFiles: File[]) {
-    const newUrls = newFiles.map((f) => URL.createObjectURL(f));
-    setFiles((prev) => [...prev, ...newFiles]);
-    setPreviews((prev) => [...prev, ...newUrls]);
-    if (newFiles.length > 0) {
-      getImageDimensions(newFiles[0])
+  function handleFilesChange(newFiles: File[]) {
+    if (newFiles.length === 0) {
+      // Reset dimension state when all files are cleared
+      setOriginalWidth(0);
+      setOriginalHeight(0);
+      setCustomWidth(0);
+      setCustomHeight(0);
+    } else if (newFiles.length > prevFilesLenRef.current) {
+      // Detect newly added files for dimension reading
+      const firstNew = newFiles[prevFilesLenRef.current];
+      getImageDimensions(firstNew)
         .then((dims) => {
           setOriginalWidth(dims.width);
           setOriginalHeight(dims.height);
@@ -104,6 +97,8 @@ export default function ImageCompress() {
         })
         .catch(() => {});
     }
+    prevFilesLenRef.current = newFiles.length;
+    setFiles(newFiles);
   }
 
   function applyPreset(key: PresetKey) {
@@ -179,128 +174,16 @@ export default function ImageCompress() {
     setCompressing(false);
   }
 
-  function removeFile(index: number) {
-    setAddDragging(false);
-    setFiles((prev) => prev.filter((_, i) => i !== index));
-    setPreviews((prev) => {
-      URL.revokeObjectURL(prev[index]);
-      return prev.filter((_, i) => i !== index);
-    });
-  }
-
-  function clearFiles() {
-    setPreviews((prev) => {
-      prev.forEach((url) => URL.revokeObjectURL(url));
-      return [];
-    });
-    setFiles([]);
-  }
-
   const isCustom = preset === "custom";
   const isPngOutput = outputFormat === "image/png";
 
   return (
     <div className="space-y-4">
-      {files.length === 0 ? (
-        <FileDropzone
-          accept="image/*"
-          multiple
-          onFiles={handleFiles}
-        />
-      ) : (
-        <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
-          {files.map((file, i) => (
-            <div
-              key={`${file.name}-${i}`}
-              className="group relative overflow-hidden rounded-lg border border-border bg-muted/30"
-            >
-              <div className="aspect-square">
-                <img
-                  src={previews[i]}
-                  alt={file.name}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="px-2 py-1.5">
-                <p className="truncate text-xs font-medium">{file.name}</p>
-                <p className="text-xs text-muted-foreground">
-                  {formatFileSize(file.size)}
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() => removeFile(i)}
-                disabled={compressing}
-                className="absolute right-1 top-1 cursor-pointer rounded-full bg-black/60 p-1 text-white opacity-0 transition-opacity hover:bg-black/80 group-hover:opacity-100 disabled:hidden"
-              >
-                <X className="h-3.5 w-3.5" />
-              </button>
-            </div>
-          ))}
-          <div
-            role="button"
-            tabIndex={compressing ? -1 : 0}
-            aria-disabled={compressing}
-            onClick={() => { if (!compressing) addInputRef.current?.click(); }}
-            onKeyDown={(e) => {
-              if ((e.key === "Enter" || e.key === " ") && !compressing) {
-                e.preventDefault();
-                addInputRef.current?.click();
-              }
-            }}
-            onDragOver={(e) => { e.preventDefault(); if (!compressing) setAddDragging(true); }}
-            onDragLeave={(e) => {
-              if (!e.currentTarget.contains(e.relatedTarget as Node)) setAddDragging(false);
-            }}
-            onDrop={(e) => {
-              e.preventDefault();
-              setAddDragging(false);
-              if (compressing) return;
-              const dropped = Array.from(e.dataTransfer.files).filter((f) => f.type.startsWith("image/"));
-              if (dropped.length > 0) handleFiles(dropped);
-            }}
-            className={`group/add overflow-hidden rounded-lg border-2 border-dashed transition-all duration-200 ${
-              compressing
-                ? "opacity-40 cursor-not-allowed border-border text-muted-foreground"
-                : addDragging
-                  ? "cursor-pointer border-primary bg-primary/10 text-primary shadow-[var(--glow-primary)]"
-                  : "cursor-pointer border-primary/30 bg-primary/[0.03] text-primary/70 hover:border-primary/60 hover:bg-primary/[0.07] hover:text-primary"
-            }`}
-          >
-            <div className="aspect-square flex flex-col items-center justify-center px-2">
-              <div className="rounded-full bg-primary/10 p-2 group-hover/add:bg-primary/15 transition-colors">
-                <Plus className="h-5 w-5" />
-              </div>
-              <span className="mt-1.5 text-xs font-medium">{t("addMore")}</span>
-              <span className="mt-0.5 text-[10px] opacity-50">{t("addMoreHint")}</span>
-            </div>
-          </div>
-          <button
-            type="button"
-            onClick={clearFiles}
-            disabled={compressing}
-            className="group/del cursor-pointer overflow-hidden rounded-lg border border-dashed border-red-300/30 bg-red-50/30 text-red-400/60 hover:border-red-400/60 hover:bg-red-50/60 hover:text-red-500 dark:border-red-800/30 dark:bg-red-950/20 dark:text-red-500/40 dark:hover:border-red-700/50 dark:hover:bg-red-950/40 dark:hover:text-red-400 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
-          >
-            <div className="aspect-square flex flex-col items-center justify-center px-2">
-              <div className="rounded-full bg-red-100/60 p-2 group-hover/del:bg-red-100 dark:bg-red-900/30 dark:group-hover/del:bg-red-900/50 transition-colors">
-                <X className="h-5 w-5" />
-              </div>
-              <span className="mt-1.5 text-xs font-medium">{t("clearAll")}</span>
-            </div>
-          </button>
-          <input
-            ref={addInputRef}
-            type="file"
-            accept="image/*"
-            multiple
-            onChange={(e) => {
-              if (e.target.files) handleFiles(Array.from(e.target.files));
-              e.target.value = "";
-            }}
-            className="hidden"
-          />
-        </div>
-      )}
+      <ImageFileGrid
+        files={files}
+        onFilesChange={handleFilesChange}
+        disabled={compressing}
+      />
 
       {/* Compression Presets */}
       <div className="space-y-1.5">

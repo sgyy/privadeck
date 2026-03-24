@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useRef, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { ImageFileGrid } from "@/components/shared/ImageFileGrid";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
-import { X } from "lucide-react";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import {
   createCollage,
@@ -16,14 +15,12 @@ import {
 
 export default function Collage() {
   const [files, setFiles] = useState<File[]>([]);
-  const [previewUrls, setPreviewUrls] = useState<string[]>([]);
   const [layout, setLayout] = useState<CollageLayout>("2x1");
   const [gap, setGap] = useState(4);
   const [bgColor, setBgColor] = useState("#ffffff");
   const [result, setResult] = useState<Blob | null>(null);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
-  const previewUrlsRef = useRef<string[]>([]);
   const t = useTranslations("tools.image.collage");
 
   const resultUrl = useObjectUrl(result);
@@ -39,34 +36,10 @@ export default function Collage() {
     }
   }, [availableLayouts, layout]);
 
-  // Cleanup preview URLs on unmount
-  useEffect(() => {
-    return () => {
-      previewUrlsRef.current.forEach((u) => URL.revokeObjectURL(u));
-    };
-  }, []);
-
-  function handleFiles(newFiles: File[]) {
-    const newUrls = newFiles.map((f) => URL.createObjectURL(f));
-    setFiles((prev) => [...prev, ...newFiles]);
-    setPreviewUrls((prev) => {
-      const updated = [...prev, ...newUrls];
-      previewUrlsRef.current = updated;
-      return updated;
-    });
+  function handleFilesChange(newFiles: File[]) {
+    setFiles(newFiles);
     setResult(null);
     setError("");
-  }
-
-  function removeFile(index: number) {
-    URL.revokeObjectURL(previewUrls[index]);
-    setFiles((prev) => prev.filter((_, i) => i !== index));
-    setPreviewUrls((prev) => {
-      const updated = prev.filter((_, i) => i !== index);
-      previewUrlsRef.current = updated;
-      return updated;
-    });
-    setResult(null);
   }
 
   async function handleCreate() {
@@ -86,32 +59,11 @@ export default function Collage() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="image/*" multiple onFiles={handleFiles} />
-
-      {files.length > 0 && (
-        <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
-          {files.map((file, i) => (
-            <div
-              key={`${file.name}-${i}`}
-              className="group relative overflow-hidden rounded-lg border border-border"
-            >
-              <img
-                src={previewUrls[i]}
-                alt={file.name}
-                className="aspect-square w-full object-cover"
-              />
-              <button
-                type="button"
-                onClick={() => removeFile(i)}
-                className="absolute right-1 top-1 rounded-full bg-black/50 p-1 text-white opacity-0 transition-opacity hover:bg-black/70 group-hover:opacity-100"
-              >
-                <X className="h-3.5 w-3.5" />
-              </button>
-              <p className="truncate px-1 py-0.5 text-xs">{file.name}</p>
-            </div>
-          ))}
-        </div>
-      )}
+      <ImageFileGrid
+        files={files}
+        onFilesChange={handleFilesChange}
+        disabled={processing}
+      />
 
       {files.length >= 2 && (
         <div className="space-y-4">
