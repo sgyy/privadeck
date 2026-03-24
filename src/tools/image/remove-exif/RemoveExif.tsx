@@ -9,7 +9,7 @@ import {
 } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { ShieldCheck } from "lucide-react";
-import { removeExif, formatFileSize } from "./logic";
+import { removeExif } from "./logic";
 
 export default function RemoveExif() {
   const [files, setFiles] = useState<File[]>([]);
@@ -32,7 +32,6 @@ export default function RemoveExif() {
         const item: ImageResultItem = {
           blob: r.cleaned,
           filename: r.outputFilename,
-          meta: `${formatFileSize(r.originalSize)} → ${formatFileSize(r.cleanedSize)}`,
         };
         setResults((prev) => [...prev, item]);
       } catch (e) {
