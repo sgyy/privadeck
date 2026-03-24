@@ -53,50 +53,73 @@
       },
       "compress": {
         "name": "图片压缩",
-        "description": "压缩图片以减小文件大小，同时保持质量。",
-        "metaTitle": "图片压缩 - 免费在线图片压缩工具",
-        "metaDescription": "压缩图片以减小文件大小。支持批量压缩和质量控制。免费在线工具。",
-        "keywords": "图片压缩，压缩图片，减小图片大小，图片优化",
+        "description": "压缩和转换图片，支持预设模式、格式转换、EXIF 控制和自定义尺寸——全部在浏览器中完成。",
+        "metaTitle": "图片压缩 - 免费在线压缩、转换和调整图片",
+        "metaDescription": "将图片压缩为 JPG、PNG 或 WebP 格式，智能预设一键压缩。支持批量处理、格式转换、EXIF 元数据控制和自定义尺寸。免费、隐私安全、无需上传。",
+        "keywords": "图片压缩,压缩图片,减小图片大小,图片优化,转换为webp,转换为jpg,批量压缩,调整图片大小,去除exif,图片转换",
         "quality": "质量",
         "maxSize": "最大大小",
         "compress": "压缩",
         "compressing": "压缩中...",
         "results": "压缩结果",
         "faq": {
-          "q1": "图片压缩如何工作？",
-          "a1": "该工具使用有损压缩来减小图片文件大小。您可以控制质量和最大大小。所有处理在浏览器中完成。",
-          "q2": "支持哪些格式？",
-          "a2": "支持 JPEG、PNG、WebP、GIF 和 BMP 图片压缩。",
+          "q1": "图片压缩是如何工作的？",
+          "a1": "选择压缩预设（高质量、均衡或小文件）或手动自定义设置。工具使用有损压缩在保持视觉质量的同时减小文件大小。您还可以在格式之间转换——WebP 在相似质量下通常比 JPEG 小 25%–35%。",
+          "q2": "支持哪些图片格式？",
+          "a2": "可以压缩 JPEG、PNG、WebP、GIF 和 BMP 图片。工具还支持输出为 JPEG、PNG 和 WebP 格式，一步完成压缩和格式转换。",
           "q3": "我的文件会上传到服务器吗？",
-          "a3": "不会。所有处理完全在您的浏览器中完成，文件绝不离开您的设备。您可以按 F12 打开开发者工具，查看「网络」标签页验证——零上传请求。",
-          "q4": "这个工具能离线使用吗？",
-          "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
-          "q5": "文件大小有限制吗？",
-          "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+          "a3": "不会。所有处理通过 Web Worker 完全在浏览器中完成，文件绝不离开您的设备。按 F12 打开开发者工具，查看「网络」标签页验证——零上传请求。",
+          "q4": "压缩预设有什么作用？",
+          "a4": "高质量保留最大细节（90% 质量，最大 10 MB）。均衡提供良好的平衡（75% 质量，最大 2 MB）。小文件进行强力压缩（50% 质量，最大 1 MB，最大 1920px）。自定义模式可手动精调质量、文件大小、分辨率和尺寸。",
+          "q5": "可以保留或删除 EXIF 元数据吗？",
+          "a5": "可以。「保留 EXIF 元数据」开关可以保留照片元数据（相机信息、GPS、拍摄日期）或删除它以减小文件大小并保护隐私。默认为不保留，以减小文件体积并保护隐私。"
         },
         "maxResolution": "最大分辨率",
         "seoContent": {
           "intro": {
             "title": "什么是图片压缩工具？",
-            "content": "<p><strong>图片压缩工具</strong>可在保持视觉质量的前提下显著减小图片文件大小。支持 JPG、PNG 和 WebP 格式，提供可调节的质量参数——通过前后对比滑块实时查看压缩效果。</p><p>非常适合优化网站图片、缩小邮件附件、或节省设备存储空间。</p>"
+            "content": "<p><strong>图片压缩工具</strong>可在保持视觉质量的前提下显著减小图片文件大小。提供智能压缩预设或手动精调设置，支持 JPEG、PNG 和 WebP 格式互转，控制 EXIF 元数据，设置自定义输出尺寸——全部在浏览器本地处理。</p><p>非常适合优化网站图片、缩小邮件附件、准备社交媒体上传或节省设备存储空间。</p>"
           },
           "howToUse": {
             "title": "如何使用图片压缩工具",
-            "content": "<ol><li>将图片拖拽到上传区域或点击选择文件</li><li>调整<strong>质量滑块</strong>平衡文件大小与视觉质量</li><li>通过前后对比滑块预览压缩效果</li><li>下载压缩后的图片</li></ol><p>工具会显示每张图片的原始大小、压缩后大小和节省百分比。</p>"
+            "content": "<ol><li>将图片拖拽到上传区域或点击选择文件</li><li>选择<strong>压缩预设</strong>（高质量、均衡、小文件）或选择自定义进行手动控制</li><li>可选更改<strong>输出格式</strong>（原格式、JPEG、PNG 或 WebP）</li><li>切换<strong>保留 EXIF</strong>以保留或移除照片元数据</li><li>点击<strong>压缩</strong>，每张图片完成后实时显示结果</li><li>逐一下载压缩后的图片</li></ol><p>工具会显示每张图片的原始大小、压缩后大小和节省百分比。</p>"
           },
           "features": {
             "title": "核心功能",
-            "content": "<ul><li><strong>质量可调</strong>：通过滑块精细控制压缩级别</li><li><strong>前后对比</strong>：可视化对比滑块直观展示质量差异</li><li><strong>体积显示</strong>：显示原始大小、压缩大小和节省百分比</li><li><strong>批量处理</strong>：同时压缩多张图片</li><li><strong>格式支持</strong>：压缩 JPG、PNG 和 WebP 图片</li><li><strong>browser-image-compression</strong>：基于成熟算法的可靠压缩</li></ul>"
+            "content": "<ul><li><strong>智能预设</strong>：一键选择高质量、均衡或小文件压缩模式</li><li><strong>格式转换</strong>：压缩同时在 JPEG、PNG 和 WebP 之间转换</li><li><strong>EXIF 元数据控制</strong>：保留或移除相机信息、GPS 数据等元数据</li><li><strong>自定义尺寸</strong>：设置精确宽高并锁定宽高比</li><li><strong>批量处理</strong>：同时压缩多张图片，实时显示进度</li><li><strong>高级控制</strong>：在自定义模式下精调质量、最大文件大小和分辨率限制</li><li><strong>缩略图预览</strong>：上传图片以网格形式可视化预览</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
-            "content": "<ul><li><strong>网页性能</strong>：压缩网站图片缩短页面加载时间</li><li><strong>邮件附件</strong>：缩小图片以符合邮件大小限制</li><li><strong>存储优化</strong>：减小照片库占用的设备存储空间</li><li><strong>社交媒体</strong>：优化图片以更快上传至社交平台</li><li><strong>CMS 上传</strong>：满足 WordPress 等内容管理系统的文件大小限制</li></ul>"
+            "content": "<ul><li><strong>网页性能</strong>：将网站图片压缩并转换为 WebP 以加快页面加载</li><li><strong>邮件附件</strong>：在保持质量的同时缩小图片以满足邮件大小限制</li><li><strong>存储优化</strong>：批量压缩照片库以释放设备存储空间</li><li><strong>社交媒体</strong>：优化图片以更快上传至微信、微博等平台</li><li><strong>CMS 上传</strong>：满足 WordPress、Shopify 等平台的文件大小限制</li><li><strong>隐私保护</strong>：分享照片前移除 EXIF 元数据（GPS、相机信息）</li></ul>"
           },
           "privacy": {
             "title": "隐私优先的图片压缩",
-            "content": "<p>图片压缩<strong>在浏览器中本地</strong>通过 <strong>browser-image-compression</strong> 库和 Canvas API 完成。</p><ul><li>照片<strong>永远不会离开您的设备</strong>——安全处理个人和敏感图片</li><li>无云端处理，无服务器上传</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零上传请求</li></ul>"
+            "content": "<p>图片压缩通过 Web Worker <strong>在浏览器中本地</strong>完成——任何文件都不会上传到服务器。</p><ul><li>照片<strong>永远不会离开您的设备</strong>——安全处理个人和敏感图片</li><li>无云端处理、无服务器上传、无数据收集</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>可选 EXIF 移除功能可删除 GPS 和个人元数据以增强隐私</li><li>验证方式：打开开发者工具（F12）→ 网络标签页——零上传请求</li></ul>"
           }
-        }
+        },
+        "preset": {
+          "label": "压缩预设",
+          "high-quality": "高质量",
+          "balanced": "均衡",
+          "small-file": "小文件",
+          "custom": "自定义"
+        },
+        "outputFormat": "输出格式",
+        "format": {
+          "original": "原格式",
+          "jpeg": "JPEG",
+          "png": "PNG",
+          "webp": "WebP"
+        },
+        "preserveExif": "保留 EXIF 元数据",
+        "customDimensions": "自定义尺寸",
+        "width": "宽度",
+        "height": "高度",
+        "lockRatio": "锁定宽高比",
+        "unlockRatio": "解锁宽高比",
+        "advancedSettings": "高级设置",
+        "pngNote": "对 PNG 无效",
+        "clearAll": "清空全部"
       },
       "crop": {
         "name": "图片裁剪",

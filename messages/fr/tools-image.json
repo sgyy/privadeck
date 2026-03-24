@@ -52,11 +52,11 @@
         }
       },
       "compress": {
-        "name": "Compresseur d'images",
-        "description": "Compresser les images pour réduire la taille du fichier tout en maintenant la qualité.",
-        "metaTitle": "Compresseur d'images - Outil gratuit de compression en ligne",
-        "metaDescription": "Compresser les images pour réduire la taille du fichier. Prend en charge la compression par lots avec contrôle de qualité. Outil gratuit en ligne.",
-        "keywords": "compresseur d'images, compresser image, réduire taille image, optimisation d'image",
+        "name": "Image Compressor",
+        "description": "Compress and convert images with preset modes, format conversion, EXIF control, and custom dimensions — all in your browser.",
+        "metaTitle": "Image Compressor - Compress, Convert & Resize Images Online Free",
+        "metaDescription": "Compress images to JPG, PNG, or WebP with smart presets. Batch processing, format conversion, EXIF metadata control, and custom dimensions. Free, private, no upload.",
+        "keywords": "image compressor, compress image, reduce image size, image optimization, convert to webp, convert to jpg, batch compress, resize image, strip exif, image converter",
         "quality": "Qualité",
         "maxSize": "Taille max.",
         "compress": "Compresser",
@@ -64,39 +64,62 @@
         "results": "Résultats compressés",
         "maxResolution": "Résolution max.",
         "faq": {
-          "q1": "Comment fonctionne la compression d'images ?",
-          "a1": "L'outil réduit la taille du fichier par compression avec perte. Vous pouvez contrôler la qualité et la taille maximale. Tout le traitement se fait dans votre navigateur.",
-          "q2": "Quels formats sont pris en charge ?",
-          "a2": "Les images JPEG, PNG, WebP, GIF et BMP sont prises en charge pour la compression.",
+          "q1": "How does image compression work?",
+          "a1": "Choose a compression preset (High Quality, Balanced, or Small File) or customize settings manually. The tool uses lossy compression to reduce file size while preserving visual quality. You can also convert between formats — WebP typically offers 25–35% smaller files than JPEG at similar quality.",
+          "q2": "Which image formats are supported?",
+          "a2": "You can compress JPEG, PNG, WebP, GIF, and BMP images. The tool also lets you convert between JPEG, PNG, and WebP output formats, so you can compress and convert in one step.",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a3": "No. All processing happens entirely in your browser using Web Workers. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "What do the compression presets do?",
+          "a4": "High Quality preserves maximum detail (90% quality, up to 10 MB). Balanced offers a good tradeoff (75% quality, up to 2 MB). Small File aggressively compresses (50% quality, up to 1 MB, max 1920px). Custom lets you fine-tune quality, file size, resolution, and dimensions manually.",
+          "q5": "Can I preserve or remove EXIF metadata?",
+          "a5": "Yes. The Preserve EXIF toggle lets you keep photo metadata (camera info, GPS, date) or strip it to reduce file size and protect privacy. EXIF is stripped by default to reduce file size and protect privacy."
         },
         "seoContent": {
           "intro": {
-            "title": "Qu'est-ce que le Compresseur d'images ?",
-            "content": "<p><strong>Le Compresseur d'images</strong> réduit la taille des fichiers image tout en maintenant la qualité visuelle. Compressez des images JPG, PNG et WebP avec des paramètres de qualité ajustables — voyez la réduction de taille de fichier en temps réel avec un curseur de comparaison avant/après.</p><p>Idéal pour optimiser les images de sites web, réduire la taille des pièces jointes d'e-mails ou économiser de l'espace de stockage.</p>"
+            "title": "What is Image Compressor?",
+            "content": "<p><strong>Image Compressor</strong> reduces image file sizes while maintaining visual quality. Choose from smart compression presets or fine-tune settings manually. Convert between JPEG, PNG, and WebP formats, control EXIF metadata, and set custom output dimensions — all processed locally in your browser.</p><p>Ideal for optimizing website images, reducing email attachment sizes, preparing social media uploads, or saving device storage.</p>"
           },
           "howToUse": {
-            "title": "Comment utiliser le Compresseur d'images",
-            "content": "<ol><li>Téléchargez des images en cliquant sur la zone de dépôt ou en faisant glisser des fichiers sur la page</li><li>Ajustez le <strong>curseur de qualité</strong> pour équilibrer la taille du fichier et la qualité visuelle</li><li>Prévisualisez le résultat compressé avec le curseur de comparaison avant/après</li><li>Téléchargez les images compressées individuellement ou en lot</li></ol><p>L'outil affiche la taille originale, la taille compressée et le pourcentage économisé pour chaque image.</p>"
+            "title": "How to Use Image Compressor",
+            "content": "<ol><li>Upload images by clicking the dropzone or dragging files onto the page</li><li>Select a <strong>compression preset</strong> (High Quality, Balanced, Small File) or choose Custom for manual control</li><li>Optionally change the <strong>output format</strong> (Original, JPEG, PNG, or WebP)</li><li>Toggle <strong>Preserve EXIF</strong> to keep or strip photo metadata</li><li>Click <strong>Compress</strong> and watch results appear in real-time as each image completes</li><li>Download compressed images individually</li></ol><p>The tool shows original size, compressed size, and savings percentage for each image.</p>"
           },
           "features": {
-            "title": "Fonctionnalités clés",
-            "content": "<ul><li><strong>Qualité ajustable</strong> : Affinez le niveau de compression avec un curseur de qualité</li><li><strong>Aperçu avant/après</strong> : Curseur de comparaison visuelle pour voir les différences de qualité</li><li><strong>Affichage de la taille du fichier</strong> : Voyez la taille originale, la taille compressée et le pourcentage d'économie</li><li><strong>Traitement par lots</strong> : Compressez plusieurs images à la fois</li><li><strong>Prise en charge des formats</strong> : Compressez des images JPG, PNG et WebP</li><li><strong>Propulsé par browser-image-compression</strong> : Compression fiable utilisant des algorithmes éprouvés</li></ul>"
+            "title": "Key Features",
+            "content": "<ul><li><strong>Smart Presets</strong>: One-click High Quality, Balanced, or Small File compression modes</li><li><strong>Format Conversion</strong>: Convert between JPEG, PNG, and WebP during compression</li><li><strong>EXIF Metadata Control</strong>: Preserve or strip camera info, GPS data, and other metadata</li><li><strong>Custom Dimensions</strong>: Set exact width and height with aspect ratio lock</li><li><strong>Batch Processing</strong>: Compress multiple images with real-time progress tracking</li><li><strong>Advanced Controls</strong>: Fine-tune quality, max file size, and resolution limits in Custom mode</li><li><strong>Thumbnail Preview</strong>: Visual grid of uploaded images with instant preview</li></ul>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
-            "content": "<ul><li><strong>Performances web</strong> : Réduisez les temps de chargement des pages en compressant les images du site web</li><li><strong>Pièces jointes d'e-mails</strong> : Réduisez les images pour respecter les limites de taille des e-mails</li><li><strong>Économies de stockage</strong> : Réduisez la taille de la bibliothèque de photos sur votre appareil</li><li><strong>Réseaux sociaux</strong> : Optimisez les images pour des envois plus rapides sur les plateformes sociales</li><li><strong>Envois CMS</strong> : Respectez les limites de taille de fichier pour les systèmes de gestion de contenu comme WordPress</li></ul>"
+            "title": "Common Use Cases",
+            "content": "<ul><li><strong>Web Performance</strong>: Compress and convert website images to WebP for faster page loads</li><li><strong>Email Attachments</strong>: Shrink images to fit within email size limits while keeping quality</li><li><strong>Storage Savings</strong>: Batch compress photo libraries to free up device storage</li><li><strong>Social Media</strong>: Optimize images for faster uploads to Instagram, Twitter, and Facebook</li><li><strong>CMS Uploads</strong>: Meet file size limits for WordPress, Shopify, and other platforms</li><li><strong>Privacy Protection</strong>: Strip EXIF metadata (GPS, camera info) before sharing photos online</li></ul>"
           },
           "privacy": {
-            "title": "Compression d'images axée sur la confidentialité",
-            "content": "<p>Les images sont compressées <strong>localement dans votre navigateur</strong> à l'aide de la bibliothèque <strong>browser-image-compression</strong> et de la Canvas API.</p><ul><li>Vos photos <strong>ne quittent jamais votre appareil</strong> — sûr pour les images personnelles et sensibles</li><li>Pas de traitement cloud, pas d'envoi au serveur</li><li>Fonctionne <strong>hors connexion</strong> après le chargement de la page</li><li>Vérifiez : ouvrez DevTools (F12) → onglet Réseau — zéro requête d'envoi</li></ul>"
+            "title": "Privacy-First Image Compression",
+            "content": "<p>Images are compressed <strong>locally in your browser</strong> using Web Workers — no files are ever uploaded to any server.</p><ul><li>Your photos <strong>never leave your device</strong> — safe for personal and sensitive images</li><li>No cloud processing, no server uploads, no data collection</li><li>Works <strong>offline</strong> after the page loads</li><li>Optional EXIF stripping removes GPS and personal metadata for extra privacy</li><li>Verify: open DevTools (F12) → Network tab — zero upload requests</li></ul>"
           }
-        }
+        },
+        "preset": {
+          "label": "Compression Preset",
+          "high-quality": "High Quality",
+          "balanced": "Balanced",
+          "small-file": "Small File",
+          "custom": "Custom"
+        },
+        "outputFormat": "Output Format",
+        "format": {
+          "original": "Original",
+          "jpeg": "JPEG",
+          "png": "PNG",
+          "webp": "WebP"
+        },
+        "preserveExif": "Preserve EXIF metadata",
+        "customDimensions": "Custom Dimensions",
+        "width": "Width",
+        "height": "Height",
+        "lockRatio": "Lock aspect ratio",
+        "unlockRatio": "Unlock aspect ratio",
+        "advancedSettings": "Advanced Settings",
+        "pngNote": "No effect on PNG",
+        "clearAll": "Clear All"
       },
       "crop": {
         "name": "Recadrer l'image",

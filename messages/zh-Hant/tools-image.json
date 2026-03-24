@@ -52,11 +52,11 @@
         }
       },
       "compress": {
-        "name": "圖片壓縮",
-        "description": "在維持品質的同時壓縮圖片檔案大小。",
-        "metaTitle": "圖片壓縮工具 - 免費線上圖片壓縮",
-        "metaDescription": "壓縮圖片檔案大小。支援品質控制的批次壓縮。免費線上工具。",
-        "keywords": "圖片壓縮, 圖片大小縮減, 圖片最佳化, 圖片壓縮器",
+        "name": "Image Compressor",
+        "description": "Compress and convert images with preset modes, format conversion, EXIF control, and custom dimensions — all in your browser.",
+        "metaTitle": "Image Compressor - Compress, Convert & Resize Images Online Free",
+        "metaDescription": "Compress images to JPG, PNG, or WebP with smart presets. Batch processing, format conversion, EXIF metadata control, and custom dimensions. Free, private, no upload.",
+        "keywords": "image compressor, compress image, reduce image size, image optimization, convert to webp, convert to jpg, batch compress, resize image, strip exif, image converter",
         "quality": "品質",
         "maxSize": "最大大小",
         "compress": "壓縮",
@@ -64,39 +64,62 @@
         "results": "壓縮結果",
         "maxResolution": "最大解析度",
         "faq": {
-          "q1": "圖片壓縮如何運作？",
-          "a1": "使用有損壓縮來縮減圖片檔案大小。您可以控制品質和最大大小。所有處理在瀏覽器中完成。",
-          "q2": "支援哪些格式？",
-          "a2": "支援 JPEG、PNG、WebP、GIF、BMP 圖片壓縮。",
+          "q1": "How does image compression work?",
+          "a1": "Choose a compression preset (High Quality, Balanced, or Small File) or customize settings manually. The tool uses lossy compression to reduce file size while preserving visual quality. You can also convert between formats — WebP typically offers 25–35% smaller files than JPEG at similar quality.",
+          "q2": "Which image formats are supported?",
+          "a2": "You can compress JPEG, PNG, WebP, GIF, and BMP images. The tool also lets you convert between JPEG, PNG, and WebP output formats, so you can compress and convert in one step.",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a3": "No. All processing happens entirely in your browser using Web Workers. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "q4": "What do the compression presets do?",
+          "a4": "High Quality preserves maximum detail (90% quality, up to 10 MB). Balanced offers a good tradeoff (75% quality, up to 2 MB). Small File aggressively compresses (50% quality, up to 1 MB, max 1920px). Custom lets you fine-tune quality, file size, resolution, and dimensions manually.",
+          "q5": "Can I preserve or remove EXIF metadata?",
+          "a5": "Yes. The Preserve EXIF toggle lets you keep photo metadata (camera info, GPS, date) or strip it to reduce file size and protect privacy. EXIF is stripped by default to reduce file size and protect privacy."
         },
         "seoContent": {
           "intro": {
-            "title": "什麼是圖片壓縮工具？",
-            "content": "<p><strong>圖片壓縮工具</strong>可在保持視覺品質的前提下顯著減小圖片檔案大小。支援 JPG、PNG 和 WebP 格式，提供可調節的品質參數——透過前後對比滑桿即時查看壓縮效果。</p><p>非常適合最佳化網站圖片、縮小郵件附件、或節省裝置儲存空間。</p>"
+            "title": "What is Image Compressor?",
+            "content": "<p><strong>Image Compressor</strong> reduces image file sizes while maintaining visual quality. Choose from smart compression presets or fine-tune settings manually. Convert between JPEG, PNG, and WebP formats, control EXIF metadata, and set custom output dimensions — all processed locally in your browser.</p><p>Ideal for optimizing website images, reducing email attachment sizes, preparing social media uploads, or saving device storage.</p>"
           },
           "howToUse": {
-            "title": "如何使用圖片壓縮工具",
-            "content": "<ol><li>將圖片拖曳到上傳區域或點擊選擇檔案</li><li>調整<strong>品質滑桿</strong>平衡檔案大小與視覺品質</li><li>透過前後對比滑桿預覽壓縮效果</li><li>下載壓縮後的圖片</li></ol><p>工具會顯示每張圖片的原始大小、壓縮後大小和節省百分比。</p>"
+            "title": "How to Use Image Compressor",
+            "content": "<ol><li>Upload images by clicking the dropzone or dragging files onto the page</li><li>Select a <strong>compression preset</strong> (High Quality, Balanced, Small File) or choose Custom for manual control</li><li>Optionally change the <strong>output format</strong> (Original, JPEG, PNG, or WebP)</li><li>Toggle <strong>Preserve EXIF</strong> to keep or strip photo metadata</li><li>Click <strong>Compress</strong> and watch results appear in real-time as each image completes</li><li>Download compressed images individually</li></ol><p>The tool shows original size, compressed size, and savings percentage for each image.</p>"
           },
           "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>品質可調</strong>：透過滑桿精細控制壓縮級別</li><li><strong>前後對比</strong>：視覺化對比滑桿直觀展示品質差異</li><li><strong>體積顯示</strong>：顯示原始大小、壓縮大小和節省百分比</li><li><strong>批次處理</strong>：同時壓縮多張圖片</li><li><strong>格式支援</strong>：壓縮 JPG、PNG 和 WebP 圖片</li><li><strong>browser-image-compression</strong>：基於成熟演算法的可靠壓縮</li></ul>"
+            "title": "Key Features",
+            "content": "<ul><li><strong>Smart Presets</strong>: One-click High Quality, Balanced, or Small File compression modes</li><li><strong>Format Conversion</strong>: Convert between JPEG, PNG, and WebP during compression</li><li><strong>EXIF Metadata Control</strong>: Preserve or strip camera info, GPS data, and other metadata</li><li><strong>Custom Dimensions</strong>: Set exact width and height with aspect ratio lock</li><li><strong>Batch Processing</strong>: Compress multiple images with real-time progress tracking</li><li><strong>Advanced Controls</strong>: Fine-tune quality, max file size, and resolution limits in Custom mode</li><li><strong>Thumbnail Preview</strong>: Visual grid of uploaded images with instant preview</li></ul>"
           },
           "useCases": {
-            "title": "常見用途",
-            "content": "<ul><li><strong>網頁效能</strong>：壓縮網站圖片縮短頁面載入時間</li><li><strong>郵件附件</strong>：縮小圖片以符合郵件大小限制</li><li><strong>儲存最佳化</strong>：減小相片庫占用的裝置儲存空間</li><li><strong>社群媒體</strong>：最佳化圖片以更快上傳至社群平台</li><li><strong>CMS 上傳</strong>：滿足 WordPress 等內容管理系統的檔案大小限制</li></ul>"
+            "title": "Common Use Cases",
+            "content": "<ul><li><strong>Web Performance</strong>: Compress and convert website images to WebP for faster page loads</li><li><strong>Email Attachments</strong>: Shrink images to fit within email size limits while keeping quality</li><li><strong>Storage Savings</strong>: Batch compress photo libraries to free up device storage</li><li><strong>Social Media</strong>: Optimize images for faster uploads to Instagram, Twitter, and Facebook</li><li><strong>CMS Uploads</strong>: Meet file size limits for WordPress, Shopify, and other platforms</li><li><strong>Privacy Protection</strong>: Strip EXIF metadata (GPS, camera info) before sharing photos online</li></ul>"
           },
           "privacy": {
-            "title": "隱私優先的圖片壓縮",
-            "content": "<p>圖片壓縮<strong>在瀏覽器中本地</strong>透過 <strong>browser-image-compression</strong> 函式庫和 Canvas API 完成。</p><ul><li>照片<strong>永遠不會離開您的裝置</strong>——安全處理個人和敏感圖片</li><li>無雲端處理，無伺服器上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "title": "Privacy-First Image Compression",
+            "content": "<p>Images are compressed <strong>locally in your browser</strong> using Web Workers — no files are ever uploaded to any server.</p><ul><li>Your photos <strong>never leave your device</strong> — safe for personal and sensitive images</li><li>No cloud processing, no server uploads, no data collection</li><li>Works <strong>offline</strong> after the page loads</li><li>Optional EXIF stripping removes GPS and personal metadata for extra privacy</li><li>Verify: open DevTools (F12) → Network tab — zero upload requests</li></ul>"
           }
-        }
+        },
+        "preset": {
+          "label": "Compression Preset",
+          "high-quality": "High Quality",
+          "balanced": "Balanced",
+          "small-file": "Small File",
+          "custom": "Custom"
+        },
+        "outputFormat": "Output Format",
+        "format": {
+          "original": "Original",
+          "jpeg": "JPEG",
+          "png": "PNG",
+          "webp": "WebP"
+        },
+        "preserveExif": "Preserve EXIF metadata",
+        "customDimensions": "Custom Dimensions",
+        "width": "Width",
+        "height": "Height",
+        "lockRatio": "Lock aspect ratio",
+        "unlockRatio": "Unlock aspect ratio",
+        "advancedSettings": "Advanced Settings",
+        "pngNote": "No effect on PNG",
+        "clearAll": "Clear All"
       },
       "crop": {
         "name": "圖片裁剪",
