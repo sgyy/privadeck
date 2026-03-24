@@ -21,6 +21,7 @@ export function ImageFileGrid({
   accept = "image/*",
 }: ImageFileGridProps) {
   const [previews, setPreviews] = useState<string[]>([]);
+  const [dimensions, setDimensions] = useState<Map<File, { width: number; height: number }>>(new Map());
   const [addDragging, setAddDragging] = useState(false);
   const [previewIndex, setPreviewIndex] = useState<number | null>(null);
   const t = useTranslations("common");
@@ -29,6 +30,7 @@ export function ImageFileGrid({
   const filesRef = useRef(files);
   filesRef.current = files;
   const previewMapRef = useRef<Map<File, string>>(new Map());
+  const dimensionsMapRef = useRef<Map<File, { width: number; height: number }>>(new Map());
 
   // Cleanup all preview URLs on unmount
   useEffect(() => {
@@ -58,24 +60,38 @@ export function ImageFileGrid({
     };
   }, [previewIndex]);
 
-  // Incrementally sync preview URLs — reuse existing URLs for unchanged files
+  // Incrementally sync preview URLs and load dimensions for new files
   useEffect(() => {
+    let cancelled = false;
     const map = previewMapRef.current;
+    const dimMap = dimensionsMapRef.current;
     const currentFiles = new Set(files);
+    let dimChanged = false;
     // Revoke URLs for removed files
     for (const [file, url] of map) {
       if (!currentFiles.has(file)) {
         URL.revokeObjectURL(url);
         map.delete(file);
+        if (dimMap.delete(file)) dimChanged = true;
       }
     }
-    // Create URLs only for new files
+    // Create URLs only for new files and load their dimensions
     for (const file of files) {
       if (!map.has(file)) {
-        map.set(file, URL.createObjectURL(file));
+        const url = URL.createObjectURL(file);
+        map.set(file, url);
+        const img = new Image();
+        img.onload = () => {
+          if (cancelled) return;
+          dimMap.set(file, { width: img.naturalWidth, height: img.naturalHeight });
+          setDimensions(new Map(dimMap));
+        };
+        img.src = url;
       }
     }
     setPreviews(files.map((f) => map.get(f)!));
+    if (dimChanged) setDimensions(new Map(dimMap));
+    return () => { cancelled = true; };
   }, [files]);
 
   function handleAdd(newFiles: File[]) {
@@ -130,7 +146,9 @@ export function ImageFileGrid({
           <div className="px-2 py-1.5">
             <p className="truncate text-xs font-medium">{file.name}</p>
             <p className="text-xs text-muted-foreground">
-              {formatFileSize(file.size)}
+              {dimensions.get(file)
+                ? `${dimensions.get(file)!.width}×${dimensions.get(file)!.height} · ${formatFileSize(file.size)}`
+                : formatFileSize(file.size)}
             </p>
           </div>
           <button
