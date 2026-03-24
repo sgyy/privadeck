@@ -21,27 +21,37 @@ export default function FormatConverter() {
   const [quality, setQuality] = useState(90);
   const [results, setResults] = useState<ImageResultItem[]>([]);
   const [converting, setConverting] = useState(false);
+  const [progress, setProgress] = useState({ done: 0, total: 0 });
+  const [error, setError] = useState("");
   const t = useTranslations("tools.image.format-converter");
 
   async function handleConvert() {
     if (files.length === 0) return;
     setConverting(true);
+    setResults([]);
+    setProgress({ done: 0, total: files.length });
+    setError("");
 
-    try {
-      const converted = await Promise.all(
-        files.map((file) => convertImage(file, format, quality / 100)),
-      );
-      const newItems: ImageResultItem[] = converted.map((r) => ({
-        blob: r.blob,
-        filename: r.filename,
-        meta: `${r.width}×${r.height} · ${formatFileSize(r.originalSize)} → ${formatFileSize(r.convertedSize)}`,
-      }));
-      setResults((prev) => [...newItems, ...prev]);
-    } catch (e) {
-      console.error("Conversion failed:", e);
-    } finally {
-      setConverting(false);
+    for (const file of files) {
+      try {
+        const r = await convertImage(file, format, quality / 100);
+        const item: ImageResultItem = {
+          blob: r.blob,
+          filename: r.filename,
+          meta: `${r.width}×${r.height} · ${formatFileSize(r.originalSize)} → ${formatFileSize(r.convertedSize)}`,
+        };
+        setResults((prev) => [...prev, item]);
+      } catch (e) {
+        console.error(`Conversion failed for ${file.name}:`, e);
+        setError((prev) =>
+          prev
+            ? `${prev}\n${file.name}: ${e instanceof Error ? e.message : String(e)}`
+            : `${file.name}: ${e instanceof Error ? e.message : String(e)}`,
+        );
+      }
+      setProgress((prev) => ({ ...prev, done: prev.done + 1 }));
     }
+    setConverting(false);
   }
 
   return (
@@ -90,7 +100,18 @@ export default function FormatConverter() {
         >
           {converting ? t("converting") : t("convert")}
         </Button>
+        {converting && (
+          <span className="text-sm text-muted-foreground">
+            {progress.done}/{progress.total}
+          </span>
+        )}
       </div>
+
+      {error && (
+        <pre className="whitespace-pre-wrap rounded-md bg-destructive/10 p-3 text-sm text-destructive">
+          {error}
+        </pre>
+      )}
 
       {results.length > 0 && (
         <div className="space-y-3">

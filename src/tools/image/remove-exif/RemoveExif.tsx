@@ -15,24 +15,37 @@ export default function RemoveExif() {
   const [files, setFiles] = useState<File[]>([]);
   const [results, setResults] = useState<ImageResultItem[]>([]);
   const [processing, setProcessing] = useState(false);
+  const [progress, setProgress] = useState({ done: 0, total: 0 });
+  const [error, setError] = useState("");
   const t = useTranslations("tools.image.remove-exif");
 
   async function handleProcess() {
     if (files.length === 0) return;
     setProcessing(true);
-    try {
-      const cleaned = await Promise.all(files.map(removeExif));
-      const newItems: ImageResultItem[] = cleaned.map((r) => ({
-        blob: r.cleaned,
-        filename: r.outputFilename,
-        meta: `${formatFileSize(r.originalSize)} → ${formatFileSize(r.cleanedSize)}`,
-      }));
-      setResults((prev) => [...newItems, ...prev]);
-    } catch (e) {
-      console.error("EXIF removal failed:", e);
-    } finally {
-      setProcessing(false);
+    setResults([]);
+    setProgress({ done: 0, total: files.length });
+    setError("");
+
+    for (const file of files) {
+      try {
+        const r = await removeExif(file);
+        const item: ImageResultItem = {
+          blob: r.cleaned,
+          filename: r.outputFilename,
+          meta: `${formatFileSize(r.originalSize)} → ${formatFileSize(r.cleanedSize)}`,
+        };
+        setResults((prev) => [...prev, item]);
+      } catch (e) {
+        console.error(`EXIF removal failed for ${file.name}:`, e);
+        setError((prev) =>
+          prev
+            ? `${prev}\n${file.name}: ${e instanceof Error ? e.message : String(e)}`
+            : `${file.name}: ${e instanceof Error ? e.message : String(e)}`,
+        );
+      }
+      setProgress((prev) => ({ ...prev, done: prev.done + 1 }));
     }
+    setProcessing(false);
   }
 
   return (
@@ -43,12 +56,25 @@ export default function RemoveExif() {
         disabled={processing}
       />
 
-      <Button
-        onClick={handleProcess}
-        disabled={files.length === 0 || processing}
-      >
-        {processing ? t("processing") : t("removeExif")}
-      </Button>
+      <div className="flex items-center gap-3">
+        <Button
+          onClick={handleProcess}
+          disabled={files.length === 0 || processing}
+        >
+          {processing ? t("processing") : t("removeExif")}
+        </Button>
+        {processing && (
+          <span className="text-sm text-muted-foreground">
+            {progress.done}/{progress.total}
+          </span>
+        )}
+      </div>
+
+      {error && (
+        <pre className="whitespace-pre-wrap rounded-md bg-destructive/10 p-3 text-sm text-destructive">
+          {error}
+        </pre>
+      )}
 
       {results.length > 0 && (
         <div className="space-y-2">
