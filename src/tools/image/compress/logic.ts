@@ -1,6 +1,6 @@
 import imageCompression from "browser-image-compression";
 
-export type OutputFormat = "original" | "image/jpeg" | "image/png" | "image/webp";
+export type OutputFormat = "original" | "image/jpeg" | "image/png" | "image/webp" | "image/avif";
 
 export type PresetKey = "high-quality" | "balanced" | "small-file" | "custom";
 
@@ -33,10 +33,61 @@ export const COMPRESSION_PRESETS: Record<
   custom: { quality: 80, maxSizeMB: 1, maxWidthOrHeight: 0 },
 };
 
+async function compressImageToAvif(
+  file: File,
+  options: CompressOptions,
+): Promise<CompressResult> {
+  // Load image to canvas for pixel data
+  const img = await createImageBitmap(file);
+
+  let width = img.width;
+  let height = img.height;
+
+  // Apply scale if custom dimensions or maxWidthOrHeight is set
+  const maxDim =
+    options.customWidth && options.customHeight
+      ? Math.max(options.customWidth, options.customHeight)
+      : options.maxWidthOrHeight || 0;
+  if (maxDim > 0 && (width > maxDim || height > maxDim)) {
+    const ratio = Math.min(maxDim / width, maxDim / height);
+    width = Math.round(width * ratio);
+    height = Math.round(height * ratio);
+  }
+
+  const canvas = document.createElement("canvas");
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext("2d")!;
+  ctx.drawImage(img, 0, 0, width, height);
+  const imageData = ctx.getImageData(0, 0, width, height);
+
+  const { encode } = await import("@jsquash/avif");
+  const avifBuffer = await encode(imageData, {
+    quality: options.quality,
+    speed: 6,
+  });
+
+  const compressed = new Blob([avifBuffer], { type: "image/avif" });
+  const savings = Math.round((1 - compressed.size / file.size) * 100);
+
+  return {
+    original: file,
+    compressed,
+    originalSize: file.size,
+    compressedSize: compressed.size,
+    savings,
+    outputFormat: "image/avif",
+  };
+}
+
 export async function compressImage(
   file: File,
   options: CompressOptions,
 ): Promise<CompressResult> {
+  if (options.outputFormat === "image/avif") {
+    return compressImageToAvif(file, options);
+  }
+
   const maxDim =
     options.customWidth && options.customHeight
       ? Math.max(options.customWidth, options.customHeight)

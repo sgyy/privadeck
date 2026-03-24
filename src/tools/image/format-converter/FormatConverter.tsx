@@ -74,11 +74,12 @@ export default function FormatConverter() {
             <option value="png">PNG</option>
             <option value="jpeg">JPG</option>
             <option value="webp">WebP</option>
+            <option value="avif">AVIF</option>
             <option value="ico">ICO</option>
           </Select>
         </div>
 
-        {(format === "jpeg" || format === "webp") && (
+        {(format === "jpeg" || format === "webp" || format === "avif") && (
           <div>
             <label className="mb-1 block text-sm font-medium">
               {t("quality")}: {quality}%

@@ -32,12 +32,14 @@ const FORMAT_OPTIONS: { key: string; value: OutputFormat }[] = [
   { key: "jpeg", value: "image/jpeg" },
   { key: "png", value: "image/png" },
   { key: "webp", value: "image/webp" },
+  { key: "avif", value: "image/avif" },
 ];
 
 const MIME_TO_EXT: Record<string, string> = {
   "image/jpeg": "jpg",
   "image/png": "png",
   "image/webp": "webp",
+  "image/avif": "avif",
 };
 
 function getImageDimensions(
@@ -135,6 +137,7 @@ export default function ImageCompress() {
 
   async function handleCompress() {
     if (files.length === 0) return;
+
     setCompressing(true);
     setError("");
     setResults([]);
