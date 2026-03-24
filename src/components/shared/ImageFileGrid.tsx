@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { formatFileSize } from "@/lib/utils/formatFileSize";
@@ -21,8 +22,10 @@ export function ImageFileGrid({
 }: ImageFileGridProps) {
   const [previews, setPreviews] = useState<string[]>([]);
   const [addDragging, setAddDragging] = useState(false);
+  const [previewIndex, setPreviewIndex] = useState<number | null>(null);
   const t = useTranslations("common");
   const addInputRef = useRef<HTMLInputElement>(null);
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
   const filesRef = useRef(files);
   filesRef.current = files;
   const previewMapRef = useRef<Map<File, string>>(new Map());
@@ -34,6 +37,26 @@ export function ImageFileGrid({
       previewMapRef.current.clear();
     };
   }, []);
+
+  // Lightbox: focus close button after DOM commit
+  useLayoutEffect(() => {
+    if (previewIndex !== null) closeBtnRef.current?.focus();
+  }, [previewIndex]);
+
+  // Lightbox: scroll lock + Escape key
+  useEffect(() => {
+    if (previewIndex === null) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setPreviewIndex(null);
+    }
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [previewIndex]);
 
   // Incrementally sync preview URLs — reuse existing URLs for unchanged files
   useEffect(() => {
@@ -61,10 +84,13 @@ export function ImageFileGrid({
 
   function removeFile(index: number) {
     setAddDragging(false);
+    if (previewIndex === index) setPreviewIndex(null);
+    else if (previewIndex !== null && previewIndex > index) setPreviewIndex(previewIndex - 1);
     onFilesChange(filesRef.current.filter((_, i) => i !== index));
   }
 
   function clearFiles() {
+    setPreviewIndex(null);
     onFilesChange([]);
   }
 
@@ -79,21 +105,28 @@ export function ImageFileGrid({
   }
 
   return (
+    <>
     <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
       {files.map((file, i) => (
         <div
           key={`${file.name}-${file.size}-${i}`}
           className="group relative overflow-hidden rounded-lg border border-border bg-muted/30"
         >
-          <div className="aspect-square">
-            {previews[i] && (
-              <img
-                src={previews[i]}
-                alt={file.name}
-                className="h-full w-full object-cover"
-              />
-            )}
-          </div>
+          <button
+            type="button"
+            onClick={() => setPreviewIndex(i)}
+            className="block w-full cursor-zoom-in"
+          >
+            <div className="aspect-square">
+              {previews[i] && (
+                <img
+                  src={previews[i]}
+                  alt={file.name}
+                  className="h-full w-full object-cover"
+                />
+              )}
+            </div>
+          </button>
           <div className="px-2 py-1.5">
             <p className="truncate text-xs font-medium">{file.name}</p>
             <p className="text-xs text-muted-foreground">
@@ -131,7 +164,14 @@ export function ImageFileGrid({
           e.preventDefault();
           setAddDragging(false);
           if (disabled) return;
-          const dropped = Array.from(e.dataTransfer.files).filter((f) => f.type.startsWith("image/"));
+          const acceptParts = accept.split(",").map((s) => s.trim());
+          const dropped = Array.from(e.dataTransfer.files).filter((f) =>
+            acceptParts.some((a) => {
+              if (a.endsWith("/*")) return f.type.startsWith(a.slice(0, -1));
+              if (a.startsWith(".")) return f.name.toLowerCase().endsWith(a.toLowerCase());
+              return f.type === a;
+            }),
+          );
           if (dropped.length > 0) handleAdd(dropped);
         }}
         className={`group/add overflow-hidden rounded-lg border-2 border-dashed transition-all duration-200 ${
@@ -175,5 +215,35 @@ export function ImageFileGrid({
         className="hidden"
       />
     </div>
+
+    {/* Lightbox preview — portal to body to escape parent stacking context */}
+    {previewIndex !== null && previews[previewIndex] &&
+      createPortal(
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={files[previewIndex]?.name ?? ""}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+          onClick={() => setPreviewIndex(null)}
+        >
+          <button
+            ref={closeBtnRef}
+            type="button"
+            aria-label={t("close")}
+            onClick={() => setPreviewIndex(null)}
+            className="absolute right-4 top-4 rounded-full bg-black/50 p-2 text-white hover:bg-black/70"
+          >
+            <X className="h-6 w-6" />
+          </button>
+          <img
+            src={previews[previewIndex]}
+            alt={files[previewIndex]?.name ?? ""}
+            className="max-h-[90vh] max-w-[90vw] object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>,
+        document.body,
+      )}
+    </>
   );
 }
