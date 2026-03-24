@@ -9,7 +9,7 @@ import {
 } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
-import { X, Link2, Link2Off } from "lucide-react";
+import { X, Plus, Link2, Link2Off } from "lucide-react";
 import {
   compressImage,
   formatFileSize,
@@ -76,7 +76,9 @@ export default function ImageCompress() {
   const [progress, setProgress] = useState({ done: 0, total: 0 });
   const [error, setError] = useState("");
   const [previews, setPreviews] = useState<string[]>([]);
+  const [addDragging, setAddDragging] = useState(false);
   const t = useTranslations("tools.image.compress");
+  const addInputRef = useRef<HTMLInputElement>(null);
 
   // Ref tracks latest previews for unmount cleanup
   const previewsRef = useRef(previews);
@@ -93,12 +95,14 @@ export default function ImageCompress() {
     setFiles((prev) => [...prev, ...newFiles]);
     setPreviews((prev) => [...prev, ...newUrls]);
     if (newFiles.length > 0) {
-      getImageDimensions(newFiles[0]).then((dims) => {
-        setOriginalWidth(dims.width);
-        setOriginalHeight(dims.height);
-        setCustomWidth((prev) => (prev === 0 ? dims.width : prev));
-        setCustomHeight((prev) => (prev === 0 ? dims.height : prev));
-      });
+      getImageDimensions(newFiles[0])
+        .then((dims) => {
+          setOriginalWidth(dims.width);
+          setOriginalHeight(dims.height);
+          setCustomWidth((prev) => (prev === 0 ? dims.width : prev));
+          setCustomHeight((prev) => (prev === 0 ? dims.height : prev));
+        })
+        .catch(() => {});
     }
   }
 
@@ -114,14 +118,14 @@ export default function ImageCompress() {
 
   function handleWidth(w: number) {
     setCustomWidth(w);
-    if (lockRatio && originalWidth > 0) {
+    if (lockRatio && originalWidth > 0 && w > 0) {
       setCustomHeight(Math.round((w / originalWidth) * originalHeight));
     }
   }
 
   function handleHeight(h: number) {
     setCustomHeight(h);
-    if (lockRatio && originalHeight > 0) {
+    if (lockRatio && originalHeight > 0 && h > 0) {
       setCustomWidth(Math.round((h / originalHeight) * originalWidth));
     }
   }
@@ -164,7 +168,11 @@ export default function ImageCompress() {
         setResults((prev) => [...prev, item]);
       } catch (e) {
         console.error(`Compression failed for ${f.name}:`, e);
-        setError(String(e instanceof Error ? e.message : e));
+        setError((prev) =>
+          prev
+            ? `${prev}\n${f.name}: ${e instanceof Error ? e.message : String(e)}`
+            : `${f.name}: ${e instanceof Error ? e.message : String(e)}`,
+        );
       }
       setProgress((prev) => ({ ...prev, done: prev.done + 1 }));
     }
@@ -172,15 +180,20 @@ export default function ImageCompress() {
   }
 
   function removeFile(index: number) {
-    URL.revokeObjectURL(previews[index]);
+    setAddDragging(false);
     setFiles((prev) => prev.filter((_, i) => i !== index));
-    setPreviews((prev) => prev.filter((_, i) => i !== index));
+    setPreviews((prev) => {
+      URL.revokeObjectURL(prev[index]);
+      return prev.filter((_, i) => i !== index);
+    });
   }
 
   function clearFiles() {
-    previews.forEach((url) => URL.revokeObjectURL(url));
+    setPreviews((prev) => {
+      prev.forEach((url) => URL.revokeObjectURL(url));
+      return [];
+    });
     setFiles([]);
-    setPreviews([]);
   }
 
   const isCustom = preset === "custom";
@@ -188,14 +201,13 @@ export default function ImageCompress() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone
-        accept="image/*"
-        multiple
-        onFiles={handleFiles}
-      />
-
-      {files.length > 0 && (
-        <div className="space-y-2">
+      {files.length === 0 ? (
+        <FileDropzone
+          accept="image/*"
+          multiple
+          onFiles={handleFiles}
+        />
+      ) : (
         <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
           {files.map((file, i) => (
             <div
@@ -219,21 +231,74 @@ export default function ImageCompress() {
                 type="button"
                 onClick={() => removeFile(i)}
                 disabled={compressing}
-                className="absolute right-1 top-1 rounded-full bg-black/60 p-1 text-white opacity-0 transition-opacity hover:bg-black/80 group-hover:opacity-100 disabled:hidden"
+                className="absolute right-1 top-1 cursor-pointer rounded-full bg-black/60 p-1 text-white opacity-0 transition-opacity hover:bg-black/80 group-hover:opacity-100 disabled:hidden"
               >
                 <X className="h-3.5 w-3.5" />
               </button>
             </div>
           ))}
-        </div>
-        <button
-          type="button"
-          onClick={clearFiles}
-          disabled={compressing}
-          className="text-sm text-muted-foreground hover:text-foreground disabled:opacity-50"
-        >
-          {t("clearAll")}
-        </button>
+          <div
+            role="button"
+            tabIndex={compressing ? -1 : 0}
+            aria-disabled={compressing}
+            onClick={() => { if (!compressing) addInputRef.current?.click(); }}
+            onKeyDown={(e) => {
+              if ((e.key === "Enter" || e.key === " ") && !compressing) {
+                e.preventDefault();
+                addInputRef.current?.click();
+              }
+            }}
+            onDragOver={(e) => { e.preventDefault(); if (!compressing) setAddDragging(true); }}
+            onDragLeave={(e) => {
+              if (!e.currentTarget.contains(e.relatedTarget as Node)) setAddDragging(false);
+            }}
+            onDrop={(e) => {
+              e.preventDefault();
+              setAddDragging(false);
+              if (compressing) return;
+              const dropped = Array.from(e.dataTransfer.files).filter((f) => f.type.startsWith("image/"));
+              if (dropped.length > 0) handleFiles(dropped);
+            }}
+            className={`group/add overflow-hidden rounded-lg border-2 border-dashed transition-all duration-200 ${
+              compressing
+                ? "opacity-40 cursor-not-allowed border-border text-muted-foreground"
+                : addDragging
+                  ? "cursor-pointer border-primary bg-primary/10 text-primary shadow-[var(--glow-primary)]"
+                  : "cursor-pointer border-primary/30 bg-primary/[0.03] text-primary/70 hover:border-primary/60 hover:bg-primary/[0.07] hover:text-primary"
+            }`}
+          >
+            <div className="aspect-square flex flex-col items-center justify-center px-2">
+              <div className="rounded-full bg-primary/10 p-2 group-hover/add:bg-primary/15 transition-colors">
+                <Plus className="h-5 w-5" />
+              </div>
+              <span className="mt-1.5 text-xs font-medium">{t("addMore")}</span>
+              <span className="mt-0.5 text-[10px] opacity-50">{t("addMoreHint")}</span>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={clearFiles}
+            disabled={compressing}
+            className="group/del cursor-pointer overflow-hidden rounded-lg border border-dashed border-red-300/30 bg-red-50/30 text-red-400/60 hover:border-red-400/60 hover:bg-red-50/60 hover:text-red-500 dark:border-red-800/30 dark:bg-red-950/20 dark:text-red-500/40 dark:hover:border-red-700/50 dark:hover:bg-red-950/40 dark:hover:text-red-400 transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed"
+          >
+            <div className="aspect-square flex flex-col items-center justify-center px-2">
+              <div className="rounded-full bg-red-100/60 p-2 group-hover/del:bg-red-100 dark:bg-red-900/30 dark:group-hover/del:bg-red-900/50 transition-colors">
+                <X className="h-5 w-5" />
+              </div>
+              <span className="mt-1.5 text-xs font-medium">{t("clearAll")}</span>
+            </div>
+          </button>
+          <input
+            ref={addInputRef}
+            type="file"
+            accept="image/*"
+            multiple
+            onChange={(e) => {
+              if (e.target.files) handleFiles(Array.from(e.target.files));
+              e.target.value = "";
+            }}
+            className="hidden"
+          />
         </div>
       )}
 
@@ -246,7 +311,7 @@ export default function ImageCompress() {
               key={key}
               type="button"
               onClick={() => applyPreset(key)}
-              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+              className={`cursor-pointer rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
                 preset === key
                   ? "bg-primary text-primary-foreground"
                   : "bg-muted text-foreground hover:bg-muted/80"
@@ -279,7 +344,7 @@ export default function ImageCompress() {
                 max={100}
                 value={quality}
                 onChange={(e) => setQuality(Number(e.target.value))}
-                className="w-40"
+                className="w-40 cursor-pointer"
               />
             </div>
             <div>
@@ -293,7 +358,7 @@ export default function ImageCompress() {
                 step={0.1}
                 value={maxSize}
                 onChange={(e) => setMaxSize(Number(e.target.value))}
-                className="w-40"
+                className="w-40 cursor-pointer"
               />
             </div>
             <div>
@@ -339,7 +404,7 @@ export default function ImageCompress() {
               <button
                 type="button"
                 onClick={() => setLockRatio(!lockRatio)}
-                className="rounded-md p-1.5 text-muted-foreground hover:bg-muted hover:text-foreground"
+                className="cursor-pointer rounded-md p-1.5 text-muted-foreground hover:bg-muted hover:text-foreground"
                 title={lockRatio ? t("unlockRatio") : t("lockRatio")}
               >
                 {lockRatio ? (
@@ -362,7 +427,7 @@ export default function ImageCompress() {
               key={fmt.key}
               type="button"
               onClick={() => setOutputFormat(fmt.value)}
-              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+              className={`cursor-pointer rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
                 outputFormat === fmt.value
                   ? "bg-primary text-primary-foreground"
                   : "bg-muted text-foreground hover:bg-muted/80"
@@ -375,12 +440,12 @@ export default function ImageCompress() {
       </div>
 
       {/* Preserve EXIF */}
-      <label className="flex items-center gap-2 text-sm">
+      <label className="flex cursor-pointer items-center gap-2 text-sm">
         <input
           type="checkbox"
           checked={preserveExif}
           onChange={(e) => setPreserveExif(e.target.checked)}
-          className="rounded border-border"
+          className="cursor-pointer rounded border-border"
         />
         {t("preserveExif")}
       </label>
@@ -400,7 +465,7 @@ export default function ImageCompress() {
       </div>
 
       {error && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
+        <div className="whitespace-pre-line rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
           {error}
         </div>
       )}
