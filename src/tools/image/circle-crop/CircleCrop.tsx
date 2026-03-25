@@ -5,7 +5,10 @@ import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
+import { createToolTracker } from "@/lib/analytics";
 import { circleCrop } from "./logic";
+
+const tracker = createToolTracker("circle-crop", "image");
 
 export default function CircleCrop() {
   const t = useTranslations("tools.image.circle-crop");
@@ -19,12 +22,16 @@ export default function CircleCrop() {
     setProcessing(true);
     setError(null);
     setResults([]);
+    const start = Date.now();
     try {
       const blob = await circleCrop(file);
+      tracker.trackProcessComplete(Date.now() - start);
       const baseName = file.name.replace(/\.[^.]+$/, "") || "image";
       setResults((prev) => [...prev, { blob, filename: `circle-${baseName}.png` }]);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Processing failed");
+      const msg = e instanceof Error ? e.message : "Processing failed";
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

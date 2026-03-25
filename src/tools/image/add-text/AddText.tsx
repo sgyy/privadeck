@@ -6,6 +6,7 @@ import { FileDropzone } from "@/components/shared/FileDropzone";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
+import { createToolTracker } from "@/lib/analytics";
 import { addTextToImage, type TextPosition } from "./logic";
 
 const POSITIONS: TextPosition[] = [
@@ -15,6 +16,8 @@ const POSITIONS: TextPosition[] = [
   "bottom-left",
   "bottom-right",
 ];
+
+const tracker = createToolTracker("add-text", "image");
 
 export default function AddText() {
   const [file, setFile] = useState<File | null>(null);
@@ -40,6 +43,7 @@ export default function AddText() {
     setProcessing(true);
     setError("");
     setResults([]);
+    const start = Date.now();
     try {
       const blob = await addTextToImage(file, {
         text,
@@ -47,10 +51,15 @@ export default function AddText() {
         color,
         position,
       });
-      setResults((prev) => [...prev, { blob, filename: `text_${file.name}` }]);
+      tracker.trackProcessComplete(Date.now() - start);
+      const baseName = file.name.replace(/\.[^.]+$/, "") || "image";
+      const rawExt = blob.type.split("/")[1] || "png";
+      const ext = rawExt === "jpeg" ? "jpg" : rawExt;
+      setResults((prev) => [...prev, { blob, filename: `text_${baseName}.${ext}` }]);
     } catch (e) {
-      console.error("Add text failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : "Processing failed";
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

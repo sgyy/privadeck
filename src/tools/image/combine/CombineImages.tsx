@@ -5,7 +5,10 @@ import { useTranslations } from "next-intl";
 import { ImageFileGrid } from "@/components/shared/ImageFileGrid";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
+import { createToolTracker } from "@/lib/analytics";
 import { combineImages, type CombineLayout } from "./logic";
+
+const tracker = createToolTracker("combine", "image");
 
 export default function CombineImages() {
   const [files, setFiles] = useState<File[]>([]);
@@ -26,12 +29,15 @@ export default function CombineImages() {
     setProcessing(true);
     setError("");
     setResults([]);
+    const start = Date.now();
     try {
       const blob = await combineImages(files, layout);
+      tracker.trackProcessComplete(Date.now() - start);
       setResults((prev) => [...prev, { blob, filename: "combined.png" }]);
     } catch (e) {
-      console.error("Combine failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : "Processing failed";
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

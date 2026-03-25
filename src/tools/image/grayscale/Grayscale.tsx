@@ -5,7 +5,10 @@ import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
+import { createToolTracker } from "@/lib/analytics";
 import { grayscaleImage } from "./logic";
+
+const tracker = createToolTracker("grayscale", "image");
 
 export default function Grayscale() {
   const t = useTranslations("tools.image.grayscale");
@@ -19,11 +22,18 @@ export default function Grayscale() {
     setProcessing(true);
     setError(null);
     setResults([]);
+    const start = Date.now();
     try {
       const blob = await grayscaleImage(file);
-      setResults((prev) => [...prev, { blob, filename: `grayscale-${file.name}` }]);
+      tracker.trackProcessComplete(Date.now() - start);
+      const baseName = file.name.replace(/\.[^.]+$/, "") || "image";
+      const rawExt = blob.type.split("/")[1] || "png";
+      const ext = rawExt === "jpeg" ? "jpg" : rawExt;
+      setResults((prev) => [...prev, { blob, filename: `grayscale-${baseName}.${ext}` }]);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Processing failed");
+      const msg = e instanceof Error ? e.message : "Processing failed";
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

@@ -5,7 +5,10 @@ import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
+import { createToolTracker } from "@/lib/analytics";
 import { flipImage } from "./logic";
+
+const tracker = createToolTracker("flip", "image");
 
 export default function Flip() {
   const t = useTranslations("tools.image.flip");
@@ -22,11 +25,18 @@ export default function Flip() {
     setProcessing(true);
     setError(null);
     setResults([]);
+    const start = Date.now();
     try {
       const blob = await flipImage(file, direction);
-      setResults((prev) => [...prev, { blob, filename: `flipped-${file.name}` }]);
+      tracker.trackProcessComplete(Date.now() - start);
+      const baseName = file.name.replace(/\.[^.]+$/, "") || "image";
+      const rawExt = blob.type.split("/")[1] || "png";
+      const ext = rawExt === "jpeg" ? "jpg" : rawExt;
+      setResults((prev) => [...prev, { blob, filename: `flipped-${baseName}.${ext}` }]);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Processing failed");
+      const msg = e instanceof Error ? e.message : "Processing failed";
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

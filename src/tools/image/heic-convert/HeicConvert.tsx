@@ -5,7 +5,10 @@ import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
+import { createToolTracker } from "@/lib/analytics";
 import { convertHeic, type OutputFormat } from "./logic";
+
+const tracker = createToolTracker("heic-convert", "image");
 
 export default function HeicConvert() {
   const [file, setFile] = useState<File | null>(null);
@@ -29,14 +32,17 @@ export default function HeicConvert() {
     setProcessing(true);
     setError("");
     setResults([]);
+    const start = Date.now();
     try {
       const blob = await convertHeic(file, format, quality);
+      tracker.trackProcessComplete(Date.now() - start);
       const ext = format === "image/jpeg" ? "jpg" : "png";
       const base = file.name.replace(/\.[^.]+$/, "") || "converted";
       setResults((prev) => [...prev, { blob, filename: `${base}.${ext}` }]);
     } catch (e) {
-      console.error("HEIC conversion failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : "Processing failed";
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

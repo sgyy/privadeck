@@ -5,7 +5,10 @@ import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
+import { createToolTracker } from "@/lib/analytics";
 import { pixelateImage } from "./logic";
+
+const tracker = createToolTracker("pixelate", "image");
 
 export default function Pixelate() {
   const t = useTranslations("tools.image.pixelate");
@@ -20,11 +23,18 @@ export default function Pixelate() {
     setProcessing(true);
     setError(null);
     setResults([]);
+    const start = Date.now();
     try {
       const blob = await pixelateImage(file, pixelSize);
-      setResults((prev) => [...prev, { blob, filename: `pixelated-${file.name}` }]);
+      tracker.trackProcessComplete(Date.now() - start);
+      const baseName = file.name.replace(/\.[^.]+$/, "") || "image";
+      const rawExt = blob.type.split("/")[1] || "png";
+      const ext = rawExt === "jpeg" ? "jpg" : rawExt;
+      setResults((prev) => [...prev, { blob, filename: `pixelated-${baseName}.${ext}` }]);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Processing failed");
+      const msg = e instanceof Error ? e.message : "Processing failed";
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

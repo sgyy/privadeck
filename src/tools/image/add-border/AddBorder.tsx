@@ -5,7 +5,10 @@ import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
+import { createToolTracker } from "@/lib/analytics";
 import { addBorder } from "./logic";
+
+const tracker = createToolTracker("add-border", "image");
 
 export default function AddBorder() {
   const t = useTranslations("tools.image.add-border");
@@ -21,12 +24,16 @@ export default function AddBorder() {
     setProcessing(true);
     setError(null);
     setResults([]);
+    const start = Date.now();
     try {
       const blob = await addBorder(file, borderWidth, color);
+      tracker.trackProcessComplete(Date.now() - start);
       const baseName = file.name.replace(/\.[^.]+$/, "") || "image";
       setResults((prev) => [...prev, { blob, filename: `bordered-${baseName}.png` }]);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Processing failed");
+      const msg = e instanceof Error ? e.message : "Processing failed";
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

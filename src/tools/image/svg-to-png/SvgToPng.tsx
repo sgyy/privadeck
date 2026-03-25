@@ -5,7 +5,10 @@ import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
+import { createToolTracker } from "@/lib/analytics";
 import { svgToPng } from "./logic";
+
+const tracker = createToolTracker("svg-to-png", "image");
 
 export default function SvgToPng() {
   const t = useTranslations("tools.image.svg-to-png");
@@ -20,12 +23,16 @@ export default function SvgToPng() {
     setProcessing(true);
     setError(null);
     setResults([]);
+    const start = Date.now();
     try {
       const blob = await svgToPng(file, scale);
+      tracker.trackProcessComplete(Date.now() - start);
       const baseName = file.name.replace(/\.svg$/i, "") || "image";
       setResults((prev) => [...prev, { blob, filename: `${baseName}-${scale}x.png` }]);
     } catch (e) {
-      setError(e instanceof Error ? e.message : "Processing failed");
+      const msg = e instanceof Error ? e.message : "Processing failed";
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

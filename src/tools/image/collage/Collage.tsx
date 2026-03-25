@@ -5,12 +5,15 @@ import { useTranslations } from "next-intl";
 import { ImageFileGrid } from "@/components/shared/ImageFileGrid";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
+import { createToolTracker } from "@/lib/analytics";
 import {
   createCollage,
   getAvailableLayouts,
   getRequiredCount,
   type CollageLayout,
 } from "./logic";
+
+const tracker = createToolTracker("collage", "image");
 
 export default function Collage() {
   const [files, setFiles] = useState<File[]>([]);
@@ -44,12 +47,15 @@ export default function Collage() {
     setProcessing(true);
     setError("");
     setResults([]);
+    const start = Date.now();
     try {
       const blob = await createCollage(files, layout, gap, bgColor);
+      tracker.trackProcessComplete(Date.now() - start);
       setResults((prev) => [...prev, { blob, filename: "collage.png" }]);
     } catch (e) {
-      console.error("Collage creation failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : "Processing failed";
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }
