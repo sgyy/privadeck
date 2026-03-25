@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
+import { ImageLightbox } from "@/components/shared/ImageLightbox";
 import { formatFileSize } from "@/lib/utils/formatFileSize";
 import { ImageIcon, RefreshCw, X } from "lucide-react";
 
@@ -35,6 +36,7 @@ export function SingleImageUpload({
 }: SingleImageUploadProps) {
   const t = useTranslations("common");
   const [preview, setPreview] = useState<PreviewState | null>(null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const replaceInputRef = useRef<HTMLInputElement>(null);
   const activeUrlRef = useRef<string | null>(null);
 
@@ -104,7 +106,13 @@ export function SingleImageUpload({
   return (
     <div className="flex items-center gap-4 rounded-lg border border-border bg-muted/30 p-3">
       {/* Thumbnail */}
-      <div className="h-20 w-20 flex-shrink-0 overflow-hidden rounded-md bg-muted">
+      <div
+        className={[
+          "h-20 w-20 flex-shrink-0 overflow-hidden rounded-md bg-muted",
+          preview?.url && !preview.error && "cursor-pointer ring-offset-background transition-shadow hover:ring-2 hover:ring-ring hover:ring-offset-1",
+        ].filter(Boolean).join(" ")}
+        onClick={() => { if (preview?.url && !preview.error) setLightboxOpen(true); }}
+      >
         {preview?.url && !preview.error ? (
           <img
             src={preview.url}
@@ -148,6 +156,10 @@ export function SingleImageUpload({
           <X className="h-4 w-4" />
         </button>
       </div>
+
+      {lightboxOpen && preview?.url && (
+        <ImageLightbox src={preview.url} alt={file.name} onClose={() => setLightboxOpen(false)} />
+      )}
 
       <input
         ref={replaceInputRef}
