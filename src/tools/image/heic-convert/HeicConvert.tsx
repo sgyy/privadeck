@@ -3,26 +3,23 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
-import { DownloadButton } from "@/components/shared/DownloadButton";
+import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
-import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { convertHeic, type OutputFormat } from "./logic";
 
 export default function HeicConvert() {
   const [file, setFile] = useState<File | null>(null);
   const [format, setFormat] = useState<OutputFormat>("image/jpeg");
   const [quality, setQuality] = useState(0.85);
-  const [result, setResult] = useState<Blob | null>(null);
+  const [results, setResults] = useState<ImageResultItem[]>([]);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   const t = useTranslations("tools.image.heic-convert");
 
-  const resultUrl = useObjectUrl(result);
-
   function handleFiles(files: File[]) {
     if (files.length > 0) {
       setFile(files[0]);
-      setResult(null);
+      setResults([]);
       setError("");
     }
   }
@@ -31,9 +28,12 @@ export default function HeicConvert() {
     if (!file) return;
     setProcessing(true);
     setError("");
+    setResults([]);
     try {
       const blob = await convertHeic(file, format, quality);
-      setResult(blob);
+      const ext = format === "image/jpeg" ? "jpg" : "png";
+      const base = file.name.replace(/\.[^.]+$/, "") || "converted";
+      setResults((prev) => [...prev, { blob, filename: `${base}.${ext}` }]);
     } catch (e) {
       console.error("HEIC conversion failed:", e);
       setError(String(e instanceof Error ? e.message : e));
@@ -41,9 +41,6 @@ export default function HeicConvert() {
       setProcessing(false);
     }
   }
-
-  const extension = format === "image/jpeg" ? "jpg" : "png";
-  const baseName = file ? file.name.replace(/\.[^.]+$/, "") : "converted";
 
   return (
     <div className="space-y-4">
@@ -112,18 +109,11 @@ export default function HeicConvert() {
         </div>
       )}
 
-      {result && resultUrl && (
-        <div className="space-y-3">
-          <img
-            src={resultUrl}
-            alt="Result"
-            className="max-h-96 rounded-lg"
-          />
-          <DownloadButton
-            data={result}
-            filename={`${baseName}.${extension}`}
-          />
-        </div>
+      {results.length > 0 && (
+        <ImageResultList
+          results={results}
+          onRemove={(i) => setResults((prev) => prev.filter((_, idx) => idx !== i))}
+        />
       )}
     </div>
   );

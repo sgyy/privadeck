@@ -3,27 +3,27 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
-import { DownloadButton } from "@/components/shared/DownloadButton";
+import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
-import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { svgToPng } from "./logic";
 
 export default function SvgToPng() {
   const t = useTranslations("tools.image.svg-to-png");
   const [file, setFile] = useState<File | null>(null);
   const [scale, setScale] = useState(1);
-  const [result, setResult] = useState<Blob | null>(null);
+  const [results, setResults] = useState<ImageResultItem[]>([]);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const resultUrl = useObjectUrl(result);
 
   async function handleProcess() {
     if (!file) return;
     setProcessing(true);
     setError(null);
+    setResults([]);
     try {
       const blob = await svgToPng(file, scale);
-      setResult(blob);
+      const baseName = file.name.replace(/\.svg$/i, "") || "image";
+      setResults((prev) => [...prev, { blob, filename: `${baseName}-${scale}x.png` }]);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Processing failed");
     } finally {
@@ -39,7 +39,7 @@ export default function SvgToPng() {
         accept=".svg,image/svg+xml"
         onFiles={(files) => {
           setFile(files[0]);
-          setResult(null);
+          setResults([]);
           setError(null);
         }}
       />
@@ -76,18 +76,11 @@ export default function SvgToPng() {
         </div>
       )}
 
-      {result && resultUrl && (
-        <div className="space-y-3">
-          <img
-            src={resultUrl}
-            alt="Result"
-            className="max-h-96 rounded-lg"
-          />
-          <DownloadButton
-            data={result}
-            filename={`${file?.name?.replace(/\.svg$/i, "") || "image"}-${scale}x.png`}
-          />
-        </div>
+      {results.length > 0 && (
+        <ImageResultList
+          results={results}
+          onRemove={(i) => setResults((prev) => prev.filter((_, idx) => idx !== i))}
+        />
       )}
     </div>
   );

@@ -3,26 +3,26 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
-import { DownloadButton } from "@/components/shared/DownloadButton";
+import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
-import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { circleCrop } from "./logic";
 
 export default function CircleCrop() {
   const t = useTranslations("tools.image.circle-crop");
   const [file, setFile] = useState<File | null>(null);
-  const [result, setResult] = useState<Blob | null>(null);
+  const [results, setResults] = useState<ImageResultItem[]>([]);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const resultUrl = useObjectUrl(result);
 
   async function handleProcess() {
     if (!file) return;
     setProcessing(true);
     setError(null);
+    setResults([]);
     try {
       const blob = await circleCrop(file);
-      setResult(blob);
+      const baseName = file.name.replace(/\.[^.]+$/, "") || "image";
+      setResults((prev) => [...prev, { blob, filename: `circle-${baseName}.png` }]);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Processing failed");
     } finally {
@@ -36,7 +36,7 @@ export default function CircleCrop() {
         accept="image/*"
         onFiles={(files) => {
           setFile(files[0]);
-          setResult(null);
+          setResults([]);
           setError(null);
         }}
       />
@@ -57,18 +57,11 @@ export default function CircleCrop() {
         </div>
       )}
 
-      {result && resultUrl && (
-        <div className="space-y-3">
-          <img
-            src={resultUrl}
-            alt="Result"
-            className="max-h-96 rounded-lg"
-          />
-          <DownloadButton
-            data={result}
-            filename={`circle-${file?.name?.replace(/\.[^.]+$/, "") || "image"}.png`}
-          />
-        </div>
+      {results.length > 0 && (
+        <ImageResultList
+          results={results}
+          onRemove={(i) => setResults((prev) => prev.filter((_, idx) => idx !== i))}
+        />
       )}
     </div>
   );

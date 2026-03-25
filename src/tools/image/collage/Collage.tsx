@@ -3,9 +3,8 @@
 import { useState, useEffect, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { ImageFileGrid } from "@/components/shared/ImageFileGrid";
-import { DownloadButton } from "@/components/shared/DownloadButton";
+import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
-import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import {
   createCollage,
   getAvailableLayouts,
@@ -18,12 +17,10 @@ export default function Collage() {
   const [layout, setLayout] = useState<CollageLayout>("2x1");
   const [gap, setGap] = useState(4);
   const [bgColor, setBgColor] = useState("#ffffff");
-  const [result, setResult] = useState<Blob | null>(null);
+  const [results, setResults] = useState<ImageResultItem[]>([]);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   const t = useTranslations("tools.image.collage");
-
-  const resultUrl = useObjectUrl(result);
   const availableLayouts = useMemo(
     () => getAvailableLayouts(files.length),
     [files.length],
@@ -38,7 +35,7 @@ export default function Collage() {
 
   function handleFilesChange(newFiles: File[]) {
     setFiles(newFiles);
-    setResult(null);
+    setResults([]);
     setError("");
   }
 
@@ -46,9 +43,10 @@ export default function Collage() {
     if (files.length < getRequiredCount(layout)) return;
     setProcessing(true);
     setError("");
+    setResults([]);
     try {
       const blob = await createCollage(files, layout, gap, bgColor);
-      setResult(blob);
+      setResults((prev) => [...prev, { blob, filename: "collage.png" }]);
     } catch (e) {
       console.error("Collage creation failed:", e);
       setError(String(e instanceof Error ? e.message : e));
@@ -129,15 +127,11 @@ export default function Collage() {
         </div>
       )}
 
-      {result && resultUrl && (
-        <div className="space-y-3">
-          <img
-            src={resultUrl}
-            alt="Result"
-            className="max-h-96 rounded-lg"
-          />
-          <DownloadButton data={result} filename="collage.png" />
-        </div>
+      {results.length > 0 && (
+        <ImageResultList
+          results={results}
+          onRemove={(i) => setResults((prev) => prev.filter((_, idx) => idx !== i))}
+        />
       )}
     </div>
   );

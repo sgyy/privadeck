@@ -3,26 +3,25 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
-import { DownloadButton } from "@/components/shared/DownloadButton";
+import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
-import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { grayscaleImage } from "./logic";
 
 export default function Grayscale() {
   const t = useTranslations("tools.image.grayscale");
   const [file, setFile] = useState<File | null>(null);
-  const [result, setResult] = useState<Blob | null>(null);
+  const [results, setResults] = useState<ImageResultItem[]>([]);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const resultUrl = useObjectUrl(result);
 
   async function handleProcess() {
     if (!file) return;
     setProcessing(true);
     setError(null);
+    setResults([]);
     try {
       const blob = await grayscaleImage(file);
-      setResult(blob);
+      setResults((prev) => [...prev, { blob, filename: `grayscale-${file.name}` }]);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Processing failed");
     } finally {
@@ -36,7 +35,7 @@ export default function Grayscale() {
         accept="image/*"
         onFiles={(files) => {
           setFile(files[0]);
-          setResult(null);
+          setResults([]);
           setError(null);
         }}
       />
@@ -57,18 +56,11 @@ export default function Grayscale() {
         </div>
       )}
 
-      {result && resultUrl && (
-        <div className="space-y-3">
-          <img
-            src={resultUrl}
-            alt="Result"
-            className="max-h-96 rounded-lg"
-          />
-          <DownloadButton
-            data={result}
-            filename={`grayscale-${file?.name || "image.png"}`}
-          />
-        </div>
+      {results.length > 0 && (
+        <ImageResultList
+          results={results}
+          onRemove={(i) => setResults((prev) => prev.filter((_, idx) => idx !== i))}
+        />
       )}
     </div>
   );

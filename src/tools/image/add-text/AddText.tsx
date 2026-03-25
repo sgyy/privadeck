@@ -3,10 +3,9 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
-import { DownloadButton } from "@/components/shared/DownloadButton";
+import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
-import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { addTextToImage, type TextPosition } from "./logic";
 
 const POSITIONS: TextPosition[] = [
@@ -23,18 +22,16 @@ export default function AddText() {
   const [fontSize, setFontSize] = useState(48);
   const [color, setColor] = useState("#ffffff");
   const [position, setPosition] = useState<TextPosition>("center");
-  const [result, setResult] = useState<Blob | null>(null);
+  const [results, setResults] = useState<ImageResultItem[]>([]);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   const t = useTranslations("tools.image.add-text");
-
-  const resultUrl = useObjectUrl(result);
 
   function handleFile(files: File[]) {
     const f = files[0];
     if (!f) return;
     setFile(f);
-    setResult(null);
+    setResults([]);
     setError("");
   }
 
@@ -42,6 +39,7 @@ export default function AddText() {
     if (!file || !text) return;
     setProcessing(true);
     setError("");
+    setResults([]);
     try {
       const blob = await addTextToImage(file, {
         text,
@@ -49,7 +47,7 @@ export default function AddText() {
         color,
         position,
       });
-      setResult(blob);
+      setResults((prev) => [...prev, { blob, filename: `text_${file.name}` }]);
     } catch (e) {
       console.error("Add text failed:", e);
       setError(String(e instanceof Error ? e.message : e));
@@ -138,18 +136,11 @@ export default function AddText() {
             </div>
           )}
 
-          {result && resultUrl && (
-            <div className="space-y-3">
-              <img
-                src={resultUrl}
-                alt="Result"
-                className="max-h-96 rounded-lg"
-              />
-              <DownloadButton
-                data={result}
-                filename={`text_${file.name}`}
-              />
-            </div>
+          {results.length > 0 && (
+            <ImageResultList
+              results={results}
+              onRemove={(i) => setResults((prev) => prev.filter((_, idx) => idx !== i))}
+            />
           )}
         </>
       )}
