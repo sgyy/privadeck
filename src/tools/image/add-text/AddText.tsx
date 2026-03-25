@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { SingleImageUpload } from "@/components/shared/SingleImageUpload";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
@@ -30,9 +30,7 @@ export default function AddText() {
   const [error, setError] = useState("");
   const t = useTranslations("tools.image.add-text");
 
-  function handleFile(files: File[]) {
-    const f = files[0];
-    if (!f) return;
+  function handleFileChange(f: File | null) {
     setFile(f);
     setResults([]);
     setError("");
@@ -67,14 +65,14 @@ export default function AddText() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="image/*" onFiles={handleFile} />
+      <SingleImageUpload
+        file={file}
+        onFileChange={handleFileChange}
+        accept="image/*"
+      />
 
       {file && (
         <>
-          <div className="rounded-lg bg-muted/50 px-3 py-2 text-sm">
-            {file.name}
-          </div>
-
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <label className="mb-1 block text-sm font-medium">

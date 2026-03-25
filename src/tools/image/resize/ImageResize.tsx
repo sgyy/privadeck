@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { SingleImageUpload } from "@/components/shared/SingleImageUpload";
 import {
   ImageResultList,
   type ImageResultItem,
@@ -22,13 +22,20 @@ export default function ImageResize() {
   const [resizing, setResizing] = useState(false);
   const [error, setError] = useState("");
   const t = useTranslations("tools.image.resize");
+  const fileRef = useRef<File | null>(null);
 
-  async function handleFile(files: File[]) {
-    const f = files[0];
-    if (!f) return;
+  async function handleFileChange(f: File | null) {
+    fileRef.current = f;
     setFile(f);
+    setResults([]);
     setError("");
+    setOriginalWidth(0);
+    setOriginalHeight(0);
+    setWidth(0);
+    setHeight(0);
+    if (!f) return;
     const dims = await getImageDimensions(f);
+    if (fileRef.current !== f) return;
     setOriginalWidth(dims.width);
     setOriginalHeight(dims.height);
     setWidth(dims.width);
@@ -82,14 +89,14 @@ export default function ImageResize() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="image/*" onFiles={handleFile} />
+      <SingleImageUpload
+        file={file}
+        onFileChange={handleFileChange}
+        accept="image/*"
+      />
 
       {file && (
         <>
-          <div className="rounded-lg bg-muted/50 px-3 py-2 text-sm">
-            {file.name} — {originalWidth}×{originalHeight}
-          </div>
-
           <div className="flex flex-wrap items-end gap-4">
             <div>
               <label className="mb-1 block text-sm font-medium">

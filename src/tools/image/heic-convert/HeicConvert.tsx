@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { SingleImageUpload } from "@/components/shared/SingleImageUpload";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { createToolTracker } from "@/lib/analytics";
@@ -19,12 +19,10 @@ export default function HeicConvert() {
   const [error, setError] = useState("");
   const t = useTranslations("tools.image.heic-convert");
 
-  function handleFiles(files: File[]) {
-    if (files.length > 0) {
-      setFile(files[0]);
-      setResults([]);
-      setError("");
-    }
+  function handleFileChange(f: File | null) {
+    setFile(f);
+    setResults([]);
+    setError("");
   }
 
   async function handleConvert() {
@@ -50,17 +48,14 @@ export default function HeicConvert() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone
+      <SingleImageUpload
+        file={file}
+        onFileChange={handleFileChange}
         accept=".heic,.heif,image/heic,image/heif"
-        onFiles={handleFiles}
       />
 
       {file && (
         <div className="space-y-4">
-          <p className="text-sm text-muted-foreground">
-            {t("selectedFile")}: <span className="font-medium text-foreground">{file.name}</span>
-          </p>
-
           {/* Format selector */}
           <div className="space-y-2">
             <label className="text-sm font-medium">{t("outputFormat")}</label>

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { SingleImageUpload } from "@/components/shared/SingleImageUpload";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import {
   ImageResultList,
@@ -21,9 +21,7 @@ export default function SplitImage() {
   const [error, setError] = useState("");
   const t = useTranslations("tools.image.split");
 
-  function handleFile(files: File[]) {
-    const f = files[0];
-    if (!f) return;
+  function handleFileChange(f: File | null) {
     setFile(f);
     setResults([]);
     setZipBlob(null);
@@ -55,14 +53,14 @@ export default function SplitImage() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="image/*" onFiles={handleFile} />
+      <SingleImageUpload
+        file={file}
+        onFileChange={handleFileChange}
+        accept="image/*"
+      />
 
       {file && (
         <>
-          <div className="rounded-lg bg-muted/50 px-3 py-2 text-sm">
-            {file.name}
-          </div>
-
           <div className="flex flex-wrap items-end gap-4">
             <div>
               <label className="mb-1 block text-sm font-medium">

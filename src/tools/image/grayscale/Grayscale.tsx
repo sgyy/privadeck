@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { SingleImageUpload } from "@/components/shared/SingleImageUpload";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { createToolTracker } from "@/lib/analytics";
@@ -41,20 +41,11 @@ export default function Grayscale() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone
+      <SingleImageUpload
+        file={file}
+        onFileChange={(f) => { setFile(f); setResults([]); setError(null); }}
         accept="image/*"
-        onFiles={(files) => {
-          setFile(files[0]);
-          setResults([]);
-          setError(null);
-        }}
       />
-
-      {file && (
-        <div className="rounded-lg bg-muted/50 px-3 py-2 text-sm">
-          {file.name}
-        </div>
-      )}
 
       <Button onClick={handleProcess} disabled={!file || processing}>
         {processing ? t("processing") : t("convert")}

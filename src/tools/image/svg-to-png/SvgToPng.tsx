@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { SingleImageUpload } from "@/components/shared/SingleImageUpload";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { createToolTracker } from "@/lib/analytics";
@@ -42,20 +42,11 @@ export default function SvgToPng() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone
+      <SingleImageUpload
+        file={file}
+        onFileChange={(f) => { setFile(f); setResults([]); setError(null); }}
         accept=".svg,image/svg+xml"
-        onFiles={(files) => {
-          setFile(files[0]);
-          setResults([]);
-          setError(null);
-        }}
       />
-
-      {file && (
-        <div className="rounded-lg bg-muted/50 px-3 py-2 text-sm">
-          {file.name}
-        </div>
-      )}
 
       <div className="space-y-2">
         <label className="text-sm font-medium">{t("scaleFactor")}</label>
