@@ -20,7 +20,7 @@
           "q2": "我的資料安全嗎？",
           "a2": "是的，所有處理都在瀏覽器中完成。您的資料不會離開您的裝置。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -45,7 +45,7 @@
           },
           "privacy": {
             "title": "隱私優先的 JSON 處理",
-            "content": "<p>您的 JSON 資料<strong>完全在瀏覽器中</strong>透過原生 JavaScript 解析處理，不會向任何伺服器傳輸資料。</p><ul><li>資料<strong>永遠不會離開您的裝置</strong>——處理過程中零網路請求</li><li>可安全處理敏感的 API 金鑰、令牌和設定資料</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁，確認零上傳請求</li></ul>"
+            "content": "<p>您的 JSON 資料<strong>完全在瀏覽器中</strong>透過原生 JavaScript 解析處理，不會向任何伺服器傳輸資料。</p><ul><li>資料<strong>永遠不會離開您的裝置</strong>——處理過程中零網路請求</li><li>可安全處理敏感的 API 金鑰、令牌和設定資料</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -65,7 +65,7 @@
           "q2": "可以編碼檔案嗎？",
           "a2": "目前此工具支援文字的編碼和解碼。檔案 Base64 編碼功能將在未來更新中提供。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -90,7 +90,7 @@
           },
           "privacy": {
             "title": "隱私優先的 Base64 處理",
-            "content": "<p>所有編碼和解碼操作<strong>直接在瀏覽器中</strong>使用內建的 <code>btoa()</code> 和 <code>atob()</code> API 完成。</p><ul><li>文字<strong>永遠不會離開您的裝置</strong>——非常適合編碼敏感的憑證和令牌</li><li>無伺服器端處理，無記錄日誌</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：使用時開啟開發者工具（F12）→ 網路標籤頁——零資料傳輸</li></ul>"
+            "content": "<p>所有編碼和解碼操作<strong>直接在瀏覽器中</strong>使用內建的 <code>btoa()</code> 和 <code>atob()</code> API 完成。</p><ul><li>文字<strong>永遠不會離開您的裝置</strong>——非常適合編碼敏感的憑證和令牌</li><li>無伺服器端處理，無記錄日誌</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -112,7 +112,7 @@
           "q2": "編碼和編碼組件有什麼區別？",
           "a2": "編碼會轉換完整 URL 但保留結構字元（如 / 和 ?）。編碼組件會編碼所有字元，適用於查詢參數值。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -137,7 +137,7 @@
           },
           "privacy": {
             "title": "隱私優先的 URL 處理",
-            "content": "<p>URL 編解碼<strong>完全在瀏覽器中</strong>使用原生 JavaScript API 完成。</p><ul><li>URL 和參數資料<strong>永遠不會離開您的裝置</strong></li><li>適合處理包含敏感資訊的 URL（如 API 金鑰、令牌）</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>URL 編解碼<strong>完全在瀏覽器中</strong>使用原生 JavaScript API 完成。</p><ul><li>URL 和參數資料<strong>永遠不會離開您的裝置</strong></li><li>適合處理包含敏感資訊的 URL（如 API 金鑰、令牌）</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -157,7 +157,7 @@
           "q2": "OCR 的準確度如何？",
           "a2": "準確度取決於圖片品質和文字清晰度。對比度高的高解析度圖片能產生最佳結果。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -182,7 +182,7 @@
           },
           "privacy": {
             "title": "隱私優先的 OCR 處理",
-            "content": "<p>OCR 辨識<strong>完全在瀏覽器中</strong>透過 Tesseract.js 引擎本地執行，您的圖片不會被上傳到任何伺服器。</p><ul><li>圖片和辨識結果<strong>永遠不會離開您的裝置</strong></li><li>適合處理含有身分證、合約等敏感資訊的文件</li><li>語言模型資料在首次使用時下載後即可<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——處理過程中零上傳請求</li></ul>"
+            "content": "<p>OCR 辨識<strong>完全在瀏覽器中</strong>透過 Tesseract.js 引擎本地執行，您的圖片不會被上傳到任何伺服器。</p><ul><li>圖片和辨識結果<strong>永遠不會離開您的裝置</strong></li><li>適合處理含有身分證、合約等敏感資訊的文件</li><li>語言模型資料在首次使用時下載後即可<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -201,7 +201,7 @@
           "q2": "可以從壓縮檔中下載個別檔案嗎？",
           "a2": "可以，您可以瀏覽壓縮檔內容，點擊下載按鈕下載個別檔案。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -226,7 +226,7 @@
           },
           "privacy": {
             "title": "隱私優先的壓縮檔處理",
-            "content": "<p>ZIP 檔案的解壓和預覽<strong>完全在瀏覽器中</strong>透過 fflate 函式庫本地完成。</p><ul><li>壓縮檔和其中的檔案<strong>永遠不會離開您的裝置</strong></li><li>適合查看包含機密文件的壓縮檔</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>ZIP 檔案的解壓和預覽<strong>完全在瀏覽器中</strong>透過 fflate 函式庫本地完成。</p><ul><li>壓縮檔和其中的檔案<strong>永遠不會離開您的裝置</strong></li><li>適合查看包含機密文件的壓縮檔</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -248,7 +248,7 @@
           "q2": "支援巢狀 JSON 嗎？",
           "a2": "JSON 轉 CSV 在扁平物件陣列中效果最佳。巢狀物件會轉換為其字串表示。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -273,7 +273,7 @@
           },
           "privacy": {
             "title": "隱私優先的資料轉換",
-            "content": "<p>CSV 與 JSON 的轉換<strong>完全在瀏覽器中</strong>使用 JavaScript 本地完成。</p><ul><li>您的資料<strong>永遠不會離開您的裝置</strong>——適合處理敏感業務資料</li><li>無伺服器端處理，無資料儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>CSV 與 JSON 的轉換<strong>完全在瀏覽器中</strong>使用 JavaScript 本地完成。</p><ul><li>您的資料<strong>永遠不會離開您的裝置</strong>——適合處理敏感業務資料</li><li>無伺服器端處理，無資料儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -294,7 +294,7 @@
           "q2": "可以雜湊檔案嗎？",
           "a2": "可以，切換到檔案模式並拖放任意檔案。雜湊在瀏覽器中本機計算，檔案不會被上傳。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -319,7 +319,7 @@
           },
           "privacy": {
             "title": "隱私優先的雜湊計算",
-            "content": "<p>雜湊值透過瀏覽器原生 <strong>Web Crypto API</strong> 在本地計算，不依賴任何外部服務。</p><ul><li>輸入資料<strong>永遠不會離開您的裝置</strong>——安全處理密碼、金鑰等敏感資訊</li><li>無伺服器端計算或儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>雜湊值透過瀏覽器原生 <strong>Web Crypto API</strong> 在本地計算，不依賴任何外部服務。</p><ul><li>輸入資料<strong>永遠不會離開您的裝置</strong>——安全處理密碼、金鑰等敏感資訊</li><li>無伺服器端計算或儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -340,7 +340,7 @@
           "q2": "支援透明度嗎？",
           "a2": "目前僅支援不透明色彩。RGBA 和 HSLA 支援將在未來更新中加入。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -365,7 +365,7 @@
           },
           "privacy": {
             "title": "隱私優先的色彩轉換",
-            "content": "<p>色彩轉換<strong>完全在瀏覽器中</strong>透過 JavaScript 計算完成。</p><ul><li>色彩資料<strong>永遠不會離開您的裝置</strong></li><li>無需連線即可使用所有轉換功能</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零資料傳輸</li></ul>"
+            "content": "<p>色彩轉換<strong>完全在瀏覽器中</strong>透過 JavaScript 計算完成。</p><ul><li>色彩資料<strong>永遠不會離開您的裝置</strong></li><li>無需連線即可使用所有轉換功能</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -387,7 +387,7 @@
           "q2": "XML 屬性會被保留嗎？",
           "a2": "XML 屬性不會在 JSON 輸出中保留。只有元素名稱和文字內容會被轉換。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -412,7 +412,7 @@
           },
           "privacy": {
             "title": "隱私優先的格式轉換",
-            "content": "<p>JSON 與 XML 的轉換<strong>完全在瀏覽器中</strong>透過 JavaScript 本地完成。</p><ul><li>資料<strong>永遠不會離開您的裝置</strong>——安全處理敏感的業務資料</li><li>無伺服器端處理或資料儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>JSON 與 XML 的轉換<strong>完全在瀏覽器中</strong>透過 JavaScript 本地完成。</p><ul><li>資料<strong>永遠不會離開您的裝置</strong>——安全處理敏感的業務資料</li><li>無伺服器端處理或資料儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -432,7 +432,7 @@
           "q2": "可以複製 HTML 輸出嗎？",
           "a2": "可以，使用「複製 HTML」按鈕將產生的 HTML 複製到剪貼簿。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -457,7 +457,7 @@
           },
           "privacy": {
             "title": "隱私優先的 Markdown 處理",
-            "content": "<p>Markdown 渲染<strong>完全在瀏覽器中</strong>透過 JavaScript 本地完成。</p><ul><li>文件內容<strong>永遠不會離開您的裝置</strong></li><li>適合撰寫包含敏感資訊的內部文件</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零資料傳輸</li></ul>"
+            "content": "<p>Markdown 渲染<strong>完全在瀏覽器中</strong>透過 JavaScript 本地完成。</p><ul><li>文件內容<strong>永遠不會離開您的裝置</strong></li><li>適合撰寫包含敏感資訊的內部文件</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -481,7 +481,7 @@
           "q2": "支援命名擷取群組嗎？",
           "a2": "支援，以 (?<name>...) 定義的命名群組會顯示在配對詳情中。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -506,7 +506,7 @@
           },
           "privacy": {
             "title": "隱私優先的正規測試",
-            "content": "<p>正規表示式的配對和測試<strong>完全在瀏覽器中</strong>透過 JavaScript RegExp 引擎完成。</p><ul><li>測試文字和正規模式<strong>永遠不會離開您的裝置</strong></li><li>適合測試包含敏感資料的正規配對</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零資料傳輸</li></ul>"
+            "content": "<p>正規表示式的配對和測試<strong>完全在瀏覽器中</strong>透過 JavaScript RegExp 引擎完成。</p><ul><li>測試文字和正規模式<strong>永遠不會離開您的裝置</strong></li><li>適合測試包含敏感資料的正規配對</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -532,7 +532,7 @@
           "q2": "支援毫秒時間戳嗎？",
           "a2": "支援。如果輸入大於 10^12 的數字，會自動視為毫秒而非秒。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -557,7 +557,7 @@
           },
           "privacy": {
             "title": "隱私優先的時間戳處理",
-            "content": "<p>時間戳轉換<strong>完全在瀏覽器中</strong>透過 JavaScript Date API 完成。</p><ul><li>時間資料<strong>永遠不會離開您的裝置</strong></li><li>無任何網路請求，完全本地計算</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零資料傳輸</li></ul>"
+            "content": "<p>時間戳轉換<strong>完全在瀏覽器中</strong>透過 JavaScript Date API 完成。</p><ul><li>時間資料<strong>永遠不會離開您的裝置</strong></li><li>無任何網路請求，完全本地計算</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -579,7 +579,7 @@
           "q2": "轉換時會保留註解嗎？",
           "a2": "不會。YAML 註解在剖析時會被移除。JSON 轉 YAML 時會輸出不含註解的乾淨 YAML。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -604,7 +604,7 @@
           },
           "privacy": {
             "title": "隱私優先的格式轉換",
-            "content": "<p>YAML 與 JSON 的轉換<strong>完全在瀏覽器中</strong>透過 js-yaml 函式庫本地完成。</p><ul><li>設定資料<strong>永遠不會離開您的裝置</strong>——安全處理包含金鑰的設定檔</li><li>無伺服器端處理或資料儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>YAML 與 JSON 的轉換<strong>完全在瀏覽器中</strong>透過 js-yaml 函式庫本地完成。</p><ul><li>設定資料<strong>永遠不會離開您的裝置</strong>——安全處理包含金鑰的設定檔</li><li>無伺服器端處理或資料儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -627,7 +627,7 @@
           "q2": "可以複製 diff 輸出嗎？",
           "a2": "可以，使用複製按鈕以 + 和 - 前綴的統一 diff 格式複製。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -652,7 +652,7 @@
           },
           "privacy": {
             "title": "隱私優先的文字對比",
-            "content": "<p>文字差異對比<strong>完全在瀏覽器中</strong>透過 JavaScript 本地演算法完成。</p><ul><li>對比文字<strong>永遠不會離開您的裝置</strong>——安全比較機密文件</li><li>無伺服器端處理或資料儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零資料傳輸</li></ul>"
+            "content": "<p>文字差異對比<strong>完全在瀏覽器中</strong>透過 JavaScript 本地演算法完成。</p><ul><li>對比文字<strong>永遠不會離開您的裝置</strong>——安全比較機密文件</li><li>無伺服器端處理或資料儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -700,7 +700,7 @@
           },
           "privacy": {
             "title": "隱私優先的文字統計",
-            "content": "<p>字數統計<strong>完全在瀏覽器中</strong>透過 JavaScript 本地計算完成。</p><ul><li>文字內容<strong>永遠不會離開您的裝置</strong></li><li>適合統計包含機密內容的文件</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零資料傳輸</li></ul>"
+            "content": "<p>字數統計<strong>完全在瀏覽器中</strong>透過 JavaScript 本地計算完成。</p><ul><li>文字內容<strong>永遠不會離開您的裝置</strong></li><li>適合統計包含機密內容的文件</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -726,7 +726,7 @@
           "q2": "可以轉換程式碼變數名稱嗎？",
           "a2": "可以！使用駝峰命名、帕斯卡命名、底線命名或短橫線命名來轉換程式變數名稱。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -751,7 +751,7 @@
           },
           "privacy": {
             "title": "隱私優先的文字轉換",
-            "content": "<p>大小寫轉換<strong>完全在瀏覽器中</strong>透過 JavaScript 字串操作完成。</p><ul><li>文字<strong>永遠不會離開您的裝置</strong></li><li>適合轉換包含敏感變數名稱的程式碼文字</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零資料傳輸</li></ul>"
+            "content": "<p>大小寫轉換<strong>完全在瀏覽器中</strong>透過 JavaScript 字串操作完成。</p><ul><li>文字<strong>永遠不會離開您的裝置</strong></li><li>適合轉換包含敏感變數名稱的程式碼文字</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -774,7 +774,7 @@
           "q2": "可以自訂輸出嗎？",
           "a2": "可以，您可以選擇按段落、句子或單字產生，設定數量，並可選擇以經典的 Lorem Ipsum 開頭。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -799,7 +799,7 @@
           },
           "privacy": {
             "title": "隱私優先的文字產生",
-            "content": "<p>Lorem Ipsum 文字<strong>完全在瀏覽器中</strong>透過 JavaScript 本地產生。</p><ul><li>不涉及任何使用者資料的上傳或處理</li><li>無需連線即可產生文字</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零網路請求</li></ul>"
+            "content": "<p>Lorem Ipsum 文字<strong>完全在瀏覽器中</strong>透過 JavaScript 本地產生。</p><ul><li>不涉及任何使用者資料的上傳或處理</li><li>無需連線即可產生文字</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       }

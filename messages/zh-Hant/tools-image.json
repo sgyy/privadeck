@@ -47,7 +47,7 @@
           },
           "privacy": {
             "title": "隱私優先的圖片轉換",
-            "content": "<p>圖片格式轉換<strong>完全在瀏覽器中</strong>透過 HTML5 <strong>Canvas API</strong> 完成，不會上傳到任何伺服器。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無雲端儲存，無第三方存取</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>圖片格式轉換<strong>完全在瀏覽器中</strong>透過 HTML5 <strong>Canvas API</strong> 完成，不會上傳到任何伺服器。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無雲端儲存，無第三方存取</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -69,7 +69,7 @@
           "q2": "Which image formats are supported?",
           "a2": "You can compress JPEG, PNG, WebP, GIF, and BMP images. The tool also lets you convert between JPEG, PNG, WebP, and AVIF output formats, so you can compress and convert in one step. AVIF is available when your browser supports it.",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser using Web Workers. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "What do the compression presets do?",
           "a4": "High Quality preserves maximum detail (90% quality, up to 10 MB). Balanced offers a good tradeoff (75% quality, up to 2 MB). Small File aggressively compresses (50% quality, up to 1 MB, max 1920px). Custom lets you fine-tune quality, file size, resolution, and dimensions manually.",
           "q5": "Can I preserve or remove EXIF metadata?",
@@ -94,7 +94,7 @@
           },
           "privacy": {
             "title": "Privacy-First Image Compression",
-            "content": "<p>Images are compressed <strong>locally in your browser</strong> using Web Workers — no files are ever uploaded to any server.</p><ul><li>Your photos <strong>never leave your device</strong> — safe for personal and sensitive images</li><li>No cloud processing, no server uploads, no data collection</li><li>Works <strong>offline</strong> after the page loads</li><li>Optional EXIF stripping removes GPS and personal metadata for extra privacy</li><li>Verify: open DevTools (F12) → Network tab — zero upload requests</li></ul>"
+            "content": "<p>Images are compressed <strong>locally in your browser</strong> using Web Workers — no files are ever uploaded to any server.</p><ul><li>Your photos <strong>never leave your device</strong> — safe for personal and sensitive images</li><li>No cloud processing, no server uploads, no data collection</li><li>Works <strong>offline</strong> after the page loads</li><li>Optional EXIF stripping removes GPS and personal metadata for extra privacy</li></ul>"
           }
         },
         "preset": {
@@ -139,7 +139,7 @@
           "q2": "原始圖片會被修改嗎？",
           "a2": "不會，原始圖片不會被修改。會建立新的裁剪圖片供下載。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -164,7 +164,7 @@
           },
           "privacy": {
             "title": "隱私優先的圖片裁剪",
-            "content": "<p>圖片裁剪<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong>——安全處理私密照片</li><li>無伺服器上傳或第三方處理</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>圖片裁剪<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong>——安全處理私密照片</li><li>無伺服器上傳或第三方處理</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -187,7 +187,7 @@
           "q2": "有哪些預設？",
           "a2": "常見預設包括 HD (1280×720)、Full HD (1920×1080)、4K (3840×2160) 和社群媒體尺寸。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -212,7 +212,7 @@
           },
           "privacy": {
             "title": "隱私優先的尺寸調整",
-            "content": "<p>圖片尺寸調整<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無資料上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>圖片尺寸調整<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無資料上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -241,7 +241,7 @@
           "q2": "可以調整浮水印的透明度嗎？",
           "a2": "可以，使用不透明度滑桿從幾乎不可見調整到完全不透明。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -266,7 +266,7 @@
           },
           "privacy": {
             "title": "隱私優先的浮水印處理",
-            "content": "<p>浮水印添加<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong>——安全處理未發布的作品</li><li>無伺服器處理，無雲端儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>浮水印添加<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong>——安全處理未發布的作品</li><li>無伺服器處理，無雲端儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -285,7 +285,7 @@
           "q2": "這會影響圖片品質嗎？",
           "a2": "JPEG 以 95% 的品質保留。PNG 圖片以無損方式重新匯出。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -310,7 +310,7 @@
           },
           "privacy": {
             "title": "隱私優先的中繼資料處理",
-            "content": "<p>EXIF 移除<strong>完全在瀏覽器中</strong>本地完成——這本身就是一款隱私保護工具。</p><ul><li>您的照片<strong>永遠不會離開您的裝置</strong>——確保位置資料不被洩露</li><li>無伺服器上傳，無第三方存取您的原始照片</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>EXIF 移除<strong>完全在瀏覽器中</strong>本地完成——這本身就是一款隱私保護工具。</p><ul><li>您的照片<strong>永遠不會離開您的裝置</strong>——確保位置資料不被洩露</li><li>無伺服器上傳，無第三方存取您的原始照片</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -330,7 +330,7 @@
           "q2": "翻轉會降低圖片品質嗎？",
           "a2": "不會。圖片以原始解析度重新繪製。JPEG 圖片以 92% 品質重新編碼。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -355,7 +355,7 @@
           },
           "privacy": {
             "title": "隱私優先的圖片翻轉",
-            "content": "<p>圖片翻轉<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無資料上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>圖片翻轉<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無資料上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -373,7 +373,7 @@
           "q2": "可以調整灰階效果的強度嗎？",
           "a2": "此工具套用完全灰階轉換。部分去飽和請使用專用照片編輯器。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -398,7 +398,7 @@
           },
           "privacy": {
             "title": "隱私優先的灰階轉換",
-            "content": "<p>灰階轉換<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無雲端上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>灰階轉換<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無雲端上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -417,7 +417,7 @@
           "q2": "可以控制馬賽克程度嗎？",
           "a2": "可以。使用像素大小滑桿從 2px（輕微）調整到 50px（強烈馬賽克）。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -442,7 +442,7 @@
           },
           "privacy": {
             "title": "隱私優先的像素化處理",
-            "content": "<p>像素化處理<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成——這本身就是一款隱私保護工具。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong>——確保需要保護的資訊不被洩露</li><li>無伺服器上傳，無第三方存取</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>像素化處理<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成——這本身就是一款隱私保護工具。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong>——確保需要保護的資訊不被洩露</li><li>無伺服器上傳，無第三方存取</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -462,7 +462,7 @@
           "q2": "輸出格式是什麼？",
           "a2": "輸出始終為 PNG 以確保邊框色彩完全保留。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -487,7 +487,7 @@
           },
           "privacy": {
             "title": "隱私優先的邊框處理",
-            "content": "<p>邊框添加<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無資料上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤頁——零上傳請求</li></ul>"
+            "content": "<p>邊框添加<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無資料上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -505,7 +505,7 @@
           "q2": "輸出格式是什麼？",
           "a2": "輸出始終為 PNG，因為它支援圓形裁剪所需的透明度。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -530,7 +530,7 @@
           },
           "privacy": {
             "title": "隱私優先的圓形裁切",
-            "content": "<p>圓形裁切<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>照片<strong>永遠不會離開您的裝置</strong>——安全處理個人大頭貼</li><li>無伺服器上傳，無雲端儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤——零上傳請求</li></ul>"
+            "content": "<p>圓形裁切<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>照片<strong>永遠不會離開您的裝置</strong>——安全處理個人大頭貼</li><li>無伺服器上傳，無雲端儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -549,7 +549,7 @@
           "q2": "支援所有 SVG 功能嗎？",
           "a2": "使用瀏覽器內建的 SVG 引擎來渲染 SVG。支援大多數標準 SVG 功能，但外部資源或字型可能無法正確渲染。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -574,7 +574,7 @@
           },
           "privacy": {
             "title": "隱私優先的 SVG 轉換",
-            "content": "<p>SVG 到 PNG 的轉換<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>SVG 檔案和程式碼<strong>永遠不會離開您的裝置</strong></li><li>安全轉換包含企業 Logo 等品牌資產的檔案</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤——零上傳請求</li></ul>"
+            "content": "<p>SVG 到 PNG 的轉換<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>SVG 檔案和程式碼<strong>永遠不會離開您的裝置</strong></li><li>安全轉換包含企業 Logo 等品牌資產的檔案</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -604,7 +604,7 @@
           "q2": "可用的字型有哪些？",
           "a2": "使用瀏覽器的預設無襯線字型，因系統而異但始終清晰易讀。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -629,7 +629,7 @@
           },
           "privacy": {
             "title": "隱私優先的文字處理",
-            "content": "<p>圖片上的文字新增<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無資料上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤——零上傳請求</li></ul>"
+            "content": "<p>圖片上的文字新增<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無資料上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -649,7 +649,7 @@
           "q2": "圖片需要相同大小嗎？",
           "a2": "不需要，不同大小的圖片會以原始尺寸合併。畫布會擴展以容納所有圖片。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -674,7 +674,7 @@
           },
           "privacy": {
             "title": "隱私優先的圖片拼接",
-            "content": "<p>圖片拼接<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無雲端上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤——零上傳請求</li></ul>"
+            "content": "<p>圖片拼接<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無雲端上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -695,7 +695,7 @@
           "q2": "可以一次下載所有片段嗎？",
           "a2": "可以，使用「全部下載 (ZIP)」按鈕將所有片段打包為一個 ZIP 檔案。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -720,7 +720,7 @@
           },
           "privacy": {
             "title": "隱私優先的圖片分割",
-            "content": "<p>圖片分割<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無資料上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤——零上傳請求</li></ul>"
+            "content": "<p>圖片分割<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理，無資料上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -741,7 +741,7 @@
           "q2": "我的圖片會上傳到伺服器嗎？",
           "a2": "不會。所有轉換都在瀏覽器中本機完成。您的檔案不會離開您的裝置。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -766,7 +766,7 @@
           },
           "privacy": {
             "title": "隱私優先的 HEIC 轉換",
-            "content": "<p>HEIC 轉換<strong>完全在瀏覽器中</strong>透過 heic2any 函式庫本地完成。</p><ul><li>照片<strong>永遠不會離開您的裝置</strong>——安全轉換私人照片</li><li>無雲端處理，無伺服器上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤——零上傳請求</li></ul>"
+            "content": "<p>HEIC 轉換<strong>完全在瀏覽器中</strong>透過 heic2any 函式庫本地完成。</p><ul><li>照片<strong>永遠不會離開您的裝置</strong>——安全轉換私人照片</li><li>無雲端處理，無伺服器上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       },
@@ -787,7 +787,7 @@
           "q2": "可以自訂間距和背景嗎？",
           "a2": "可以，您可以調整圖片間距（0-20px）並使用色彩選擇器選擇任意背景色。",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your files never leave your device. You can verify this by opening DevTools (F12) and checking the Network tab — zero upload requests.",
+          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
@@ -812,7 +812,7 @@
           },
           "privacy": {
             "title": "隱私優先的照片拼貼",
-            "content": "<p>照片拼貼<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>照片<strong>永遠不會離開您的裝置</strong>——安全處理私人照片</li><li>無伺服器上傳，無雲端儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li><li>驗證方式：開啟開發者工具（F12）→ 網路標籤——零上傳請求</li></ul>"
+            "content": "<p>照片拼貼<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>照片<strong>永遠不會離開您的裝置</strong>——安全處理私人照片</li><li>無伺服器上傳，無雲端儲存</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
         }
       }
