@@ -164,12 +164,14 @@ export default function ImageResize() {
             </div>
           )}
 
-          <ImageResultList
-            results={results}
-            onRemove={(i) =>
-              setResults((prev) => prev.filter((_, idx) => idx !== i))
-            }
-          />
+          {results.length > 0 && (
+            <ImageResultList
+              results={results}
+              onRemove={(i) =>
+                setResults((prev) => prev.filter((_, idx) => idx !== i))
+              }
+            />
+          )}
         </>
       )}
     </div>
