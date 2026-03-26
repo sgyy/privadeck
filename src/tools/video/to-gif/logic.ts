@@ -63,9 +63,9 @@ export async function videoToGif(
 }
 
 const qualityPresets = {
-  small:    { palettegen: "stats_mode=diff",  paletteuse: "dither=bayer:bayer_scale=5" },
-  balanced: { palettegen: "stats_mode=diff",  paletteuse: "dither=bayer:bayer_scale=3" },
-  high:     { palettegen: "",                 paletteuse: "" },
+  small:    { palettegen: "stats_mode=diff", paletteuse: "dither=bayer:bayer_scale=5:diff_mode=rectangle" },
+  balanced: { palettegen: "stats_mode=diff", paletteuse: "dither=bayer:bayer_scale=3:diff_mode=rectangle" },
+  high:     { palettegen: "",                paletteuse: "" },
 };
 
 function buildFilterChain(options: GifOptions): string {

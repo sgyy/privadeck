@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { VideoUploader, formatSize } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
@@ -12,11 +12,19 @@ import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { videoToGif, type GifQuality } from "./logic";
 
+const PRESET_DEFAULTS: Record<GifQuality, { fps: number; scale: number }> = {
+  small:    { fps: 8,  scale: 50 },
+  balanced: { fps: 10, scale: 75 },
+  high:     { fps: 15, scale: 100 },
+};
+
 export default function VideoToGif() {
   const [file, setFile] = useState<File | null>(null);
   const [duration, setDuration] = useState(0);
+  const [videoWidth, setVideoWidth] = useState(0);
+  const [videoFps, setVideoFps] = useState(25);
   const [fps, setFps] = useState(10);
-  const [width, setWidth] = useState(480);
+  const [scale, setScale] = useState(75);
   const [startTime, setStartTime] = useState(0);
   const [endTime, setEndTime] = useState(0);
   const [quality, setQuality] = useState<GifQuality>("balanced");
@@ -29,6 +37,12 @@ export default function VideoToGif() {
   const tc = useTranslations("common");
 
   const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
+
+  const applyPreset = useCallback((q: GifQuality, srcFps: number) => {
+    const d = PRESET_DEFAULTS[q];
+    setFps(Math.min(d.fps, srcFps));
+    setScale(d.scale);
+  }, []);
 
   if (!isSharedArrayBufferSupported()) {
     return (
@@ -48,7 +62,7 @@ export default function VideoToGif() {
     try {
       const blob = await videoToGif(
         file,
-        { fps, width, startTime, endTime, quality },
+        { fps, width: Math.round(videoWidth * scale / 100), startTime, endTime, quality },
         setProgress,
       );
       setResult(blob);
@@ -59,6 +73,8 @@ export default function VideoToGif() {
       setProcessing(false);
     }
   }
+
+  const outputWidth = videoWidth ? Math.round(videoWidth * scale / 100) : 0;
 
   return (
     <div className="space-y-4">
@@ -71,8 +87,12 @@ export default function VideoToGif() {
           setError("");
         }}
         onMetadataLoaded={(meta) => {
+          const srcFps = meta.fps ?? 25;
           setDuration(meta.duration);
+          setVideoWidth(meta.width);
+          setVideoFps(srcFps);
           setEndTime(Math.min(meta.duration, 10));
+          applyPreset("balanced", srcFps);
         }}
       />
 
@@ -93,7 +113,10 @@ export default function VideoToGif() {
                 <button
                   key={q}
                   type="button"
-                  onClick={() => setQuality(q)}
+                  onClick={() => {
+                    setQuality(q);
+                    applyPreset(q, videoFps);
+                  }}
                   className={`flex-1 rounded-lg border px-3 py-2 text-sm transition-all ${
                     quality === q
                       ? "border-primary ring-2 ring-primary/20 bg-primary/5 font-semibold"
@@ -109,11 +132,11 @@ export default function VideoToGif() {
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             <div>
               <label className="mb-1 block text-sm font-medium">FPS: {fps}</label>
-              <input type="range" min={5} max={30} value={fps} onChange={(e) => setFps(Number(e.target.value))} className="w-full" />
+              <input type="range" min={3} max={Math.max(3, videoFps)} value={fps} onChange={(e) => setFps(Number(e.target.value))} className="w-full" />
             </div>
             <div>
-              <label className="mb-1 block text-sm font-medium">{t("width")}: {width}px</label>
-              <input type="range" min={120} max={1280} step={40} value={width} onChange={(e) => setWidth(Number(e.target.value))} className="w-full" />
+              <label className="mb-1 block text-sm font-medium">{t("scale")}: {scale}%{outputWidth > 0 && ` (${outputWidth}px)`}</label>
+              <input type="range" min={10} max={100} step={5} value={scale} onChange={(e) => setScale(Number(e.target.value))} className="w-full" />
             </div>
             <div>
               <label className="mb-1 block text-sm font-medium">{t("start")}: {startTime.toFixed(1)}s</label>
