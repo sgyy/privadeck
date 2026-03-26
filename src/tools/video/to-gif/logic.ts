@@ -1,10 +1,13 @@
 import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
 
+export type GifQuality = "small" | "balanced" | "high";
+
 export interface GifOptions {
   fps: number;
   width: number;
   startTime?: number;
   endTime?: number;
+  quality?: GifQuality;
 }
 
 export async function videoToGif(
@@ -35,7 +38,7 @@ export async function videoToGif(
 
     args.push(
       "-vf",
-      `fps=${options.fps},scale=${options.width}:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse`,
+      buildFilterChain(options),
       "-loop", "0",
       outputName,
     );
@@ -57,6 +60,17 @@ export async function videoToGif(
       /* ignore */
     }
   }
+}
+
+const qualityPresets = {
+  small:    { palettegen: "max_colors=64:stats_mode=diff",  paletteuse: "dither=bayer:bayer_scale=5" },
+  balanced: { palettegen: "max_colors=128:stats_mode=diff", paletteuse: "dither=bayer:bayer_scale=3" },
+  high:     { palettegen: "max_colors=256:stats_mode=full", paletteuse: "dither=sierra2_4a" },
+};
+
+function buildFilterChain(options: GifOptions): string {
+  const p = qualityPresets[options.quality ?? "balanced"];
+  return `fps=${options.fps},scale=${options.width}:-1:flags=lanczos,split[s0][s1];[s0]palettegen=${p.palettegen}[p];[s1][p]paletteuse=${p.paletteuse}`;
 }
 
 function getExtension(filename: string): string {

@@ -10,7 +10,7 @@ import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
 import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
-import { videoToGif } from "./logic";
+import { videoToGif, type GifQuality } from "./logic";
 
 export default function VideoToGif() {
   const [file, setFile] = useState<File | null>(null);
@@ -19,6 +19,7 @@ export default function VideoToGif() {
   const [width, setWidth] = useState(480);
   const [startTime, setStartTime] = useState(0);
   const [endTime, setEndTime] = useState(0);
+  const [quality, setQuality] = useState<GifQuality>("balanced");
   const [result, setResult] = useState<Blob | null>(null);
   const [progress, setProgress] = useState(0);
   const [processing, setProcessing] = useState(false);
@@ -47,7 +48,7 @@ export default function VideoToGif() {
     try {
       const blob = await videoToGif(
         file,
-        { fps, width, startTime, endTime },
+        { fps, width, startTime, endTime, quality },
         setProgress,
       );
       setResult(blob);
@@ -85,6 +86,26 @@ export default function VideoToGif() {
 
       {file && (
         <div className="space-y-3">
+          <div>
+            <label className="mb-1 block text-sm font-medium">{t("quality")}</label>
+            <div className="flex gap-2">
+              {(["small", "balanced", "high"] as const).map((q) => (
+                <button
+                  key={q}
+                  type="button"
+                  onClick={() => setQuality(q)}
+                  className={`flex-1 rounded-lg border px-3 py-2 text-sm transition-all ${
+                    quality === q
+                      ? "border-primary ring-2 ring-primary/20 bg-primary/5 font-semibold"
+                      : "border-border/50 hover:border-primary/30 hover:bg-muted/30"
+                  }`}
+                >
+                  {t(`quality_${q}`)}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             <div>
               <label className="mb-1 block text-sm font-medium">FPS: {fps}</label>
