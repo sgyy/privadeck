@@ -1,4 +1,4 @@
-import { getFFmpeg, setProgressHandler, getThreadArgs } from "@/lib/ffmpeg";
+import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
 
 export type ResizePreset = "720p" | "480p" | "360p" | "custom";
 
@@ -39,7 +39,6 @@ export async function resizeVideo(
       "libx264",
       "-c:a",
       "aac",
-      ...getThreadArgs(),
       outputName,
     ]);
     const data = await ffmpeg.readFile(outputName);

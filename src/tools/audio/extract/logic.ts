@@ -1,4 +1,4 @@
-import { getFFmpeg, setProgressHandler, getThreadArgs } from "@/lib/ffmpeg";
+import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
 
 export type OutputFormat = "mp3" | "wav" | "aac";
 
@@ -26,7 +26,6 @@ export async function extractAudio(
       "-i", inputName,
       "-vn",
       ...FORMAT_OPTIONS[format].args,
-      ...getThreadArgs(),
       outputName,
     ]);
 

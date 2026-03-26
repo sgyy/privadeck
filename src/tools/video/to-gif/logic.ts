@@ -63,14 +63,17 @@ export async function videoToGif(
 }
 
 const qualityPresets = {
-  small:    { palettegen: "max_colors=64:stats_mode=diff",  paletteuse: "dither=bayer:bayer_scale=5" },
-  balanced: { palettegen: "max_colors=128:stats_mode=diff", paletteuse: "dither=bayer:bayer_scale=3" },
-  high:     { palettegen: "max_colors=256:stats_mode=full", paletteuse: "dither=sierra2_4a" },
+  small:    { palettegen: "stats_mode=diff",  paletteuse: "dither=bayer:bayer_scale=5" },
+  balanced: { palettegen: "stats_mode=diff",  paletteuse: "dither=bayer:bayer_scale=3" },
+  high:     { palettegen: "",                 paletteuse: "" },
 };
 
 function buildFilterChain(options: GifOptions): string {
   const p = qualityPresets[options.quality ?? "balanced"];
-  return `fps=${options.fps},scale=${options.width}:-1:flags=lanczos,split[s0][s1];[s0]palettegen=${p.palettegen}[p];[s1][p]paletteuse=${p.paletteuse}`;
+  const base = `fps=${options.fps},scale=${options.width}:-1:flags=lanczos`;
+  const pg = p.palettegen ? `palettegen=${p.palettegen}` : "palettegen";
+  const pu = p.paletteuse ? `paletteuse=${p.paletteuse}` : "paletteuse";
+  return `${base},split[s0][s1];[s0]${pg}[p];[s1][p]${pu}`;
 }
 
 function getExtension(filename: string): string {

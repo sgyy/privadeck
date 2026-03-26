@@ -1,4 +1,4 @@
-import { getFFmpeg, setProgressHandler, getThreadArgs } from "@/lib/ffmpeg";
+import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
 
 export type AudioFormat = "mp3" | "wav" | "ogg" | "aac" | "flac";
 
@@ -35,7 +35,6 @@ export async function convertAudio(
     await ffmpeg.exec([
       "-i", inputName,
       ...FORMAT_OPTIONS[format],
-      ...getThreadArgs(),
       outputName,
     ]);
 

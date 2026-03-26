@@ -94,9 +94,6 @@ export default async function ToolPage({
         <>
           <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm/ffmpeg-core.js" crossOrigin="anonymous" />
           <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm/ffmpeg-core.wasm" crossOrigin="anonymous" />
-          <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/@ffmpeg/core-mt@0.12.6/dist/esm/ffmpeg-core.js" crossOrigin="anonymous" />
-          <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/@ffmpeg/core-mt@0.12.6/dist/esm/ffmpeg-core.wasm" crossOrigin="anonymous" />
-          <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/@ffmpeg/core-mt@0.12.6/dist/esm/ffmpeg-core.worker.js" crossOrigin="anonymous" />
         </>
       )}
       <NextIntlClientProvider messages={messages}>
