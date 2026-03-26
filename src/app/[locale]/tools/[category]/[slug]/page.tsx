@@ -50,7 +50,7 @@ export default async function ToolPage({
   // Merge common messages with single tool's translations
   const messages = {
     ...commonMessages,
-    tools: { [category]: { [slug]: catMessages.tools[category][slug] } },
+    tools: { [category]: { [slug]: catMessages.tools?.[category]?.[slug] ?? {} } },
   };
 
   const needsFFmpeg = category === "video" || category === "audio";

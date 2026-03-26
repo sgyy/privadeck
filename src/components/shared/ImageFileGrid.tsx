@@ -27,7 +27,7 @@ export function ImageFileGrid({
   const t = useTranslations("common");
   const addInputRef = useRef<HTMLInputElement>(null);
   const filesRef = useRef(files);
-  filesRef.current = files;
+  useEffect(() => { filesRef.current = files; });
   const previewMapRef = useRef<Map<File, string>>(new Map());
   const dimensionsMapRef = useRef<Map<File, { width: number; height: number }>>(new Map());
 

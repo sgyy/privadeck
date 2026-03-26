@@ -6,7 +6,7 @@ import type { ToolCategory } from "@/lib/registry/types";
  * Note: toolNames is excluded — use buildToolNavData() instead.
  */
 export async function loadCommonMessages(locale: string) {
-  const { toolNames: _stripped, ...rest } = (
+  const { toolNames: _toolNames, ...rest } = (
     await import(`../../../messages/${locale}/common.json`)
   ).default;
   return rest;
@@ -47,7 +47,7 @@ export async function loadAllToolMessages(locale: string) {
   );
 
   // Merge all { tools: { category: ... } } into one object
-  const merged: Record<string, any> = {};
+  const merged: Record<string, Record<string, unknown>> = {};
   for (const r of results) {
     Object.assign(merged, r.tools);
   }

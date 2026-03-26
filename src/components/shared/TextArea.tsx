@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils/cn";
-import { TextareaHTMLAttributes, forwardRef, useCallback, useRef } from "react";
+import { TextareaHTMLAttributes, forwardRef, useCallback, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Upload } from "lucide-react";
 import { useTextFileDrop } from "@/hooks/useTextFileDrop";
@@ -21,7 +21,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
     const t = useTranslations("common");
 
     const callbackRef = useRef(onFileDrop ?? noop);
-    callbackRef.current = onFileDrop ?? noop;
+    useEffect(() => { callbackRef.current = onFileDrop ?? noop; });
     const stableCallback = useCallback(
       (text: string, filename: string) => callbackRef.current(text, filename),
       [],

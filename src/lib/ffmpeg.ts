@@ -31,7 +31,13 @@ export async function getFFmpeg(): Promise<FFmpeg> {
           "text/javascript",
         );
       }
-      await ffmpeg.load(loadConfig);
+      try {
+        await ffmpeg.load(loadConfig);
+      } catch (e) {
+        // Terminate partially-initialized instance to avoid Worker leak
+        try { ffmpeg.terminate(); } catch { /* ignore */ }
+        throw e;
+      }
       return ffmpeg;
     }
 
@@ -51,6 +57,7 @@ export async function getFFmpeg(): Promise<FFmpeg> {
     }
 
     ffmpegInstance = ffmpeg;
+    loadingPromise = null;
     return ffmpeg;
   })().catch((e) => {
     loadingPromise = null;
