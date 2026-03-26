@@ -232,10 +232,10 @@
       },
       "compress": {
         "name": "動画圧縮",
-        "description": "調整可能な品質プリセットで動画のファイルサイズを削減します。",
-        "metaTitle": "動画圧縮 - 無料オンライン動画圧縮ツール",
-        "metaDescription": "動画を圧縮してサイズを削減。高、中、低品質を選択。無料オンラインツール。",
-        "keywords": "動画圧縮, 動画コンプレッサー, 動画サイズ削減",
+        "description": "Reduce video file size with quality presets or advanced controls for CRF, resolution, frame rate, and bitrate.",
+        "metaTitle": "Compress Video Online Free - Advanced Video Compressor | No Upload",
+        "metaDescription": "Compress videos in your browser with no upload. Choose simple presets or advanced mode with CRF, resolution, FPS, and bitrate controls. H.264 MP4 output. 100% private.",
+        "keywords": "compress video, video compressor, reduce video size, shrink video, CRF compression, video bitrate reducer, browser video compressor, no upload video compress",
         "quality": "品質",
         "high": "高",
         "medium": "中",
@@ -246,38 +246,76 @@
         "compressedSize": "圧縮後のサイズ",
         "saved": "サイズ削減",
         "unsupported": "このツールは SharedArrayBuffer のサポートが必要です。HTTPS 対応のモダンブラウザをご利用ください。",
+        "simpleMode": "Simple",
+        "advancedMode": "Advanced",
+        "sourceVideo": "Source",
+        "compressedVideo": "Compressed",
+        "fileSize": "File Size",
+        "resolutionLabel": "Resolution",
+        "duration": "Duration",
+        "bitrate": "Bitrate",
+        "highDesc": "Minimal compression with near-original visual quality. Moderate file size reduction.",
+        "highUseCase": "Best for: Social media, presentations, archiving",
+        "highSettings": "CRF 23 · Original resolution · 192k audio",
+        "mediumDesc": "Balanced compression. Good visual quality with significant size reduction.",
+        "mediumUseCase": "Best for: Email attachments, general sharing",
+        "mediumSettings": "CRF 28 · Original resolution · 128k audio",
+        "lowDesc": "Maximum compression. Noticeably reduced quality, smallest file size.",
+        "lowUseCase": "Best for: Messaging apps, quick previews, low bandwidth",
+        "lowSettings": "CRF 35 · 720p · 96k audio",
+        "crfLabel": "CRF (Quality)",
+        "crfHint": "0 = lossless, 23 = high quality, 28 = medium, 51 = worst. Lower values produce larger files.",
+        "encodingPreset": "Encoding Speed",
+        "encodingPresetHint": "Slower encoding produces smaller files at the same quality level.",
+        "resolutionOriginal": "Original",
+        "fpsLabel": "Frame Rate",
+        "fpsOriginal": "Original",
+        "audioBitrateLabel": "Audio Bitrate",
+        "maxBitrateLabel": "Max Bitrate (optional)",
+        "maxBitrateHint": "Cap the video bitrate. Leave empty for no limit.",
+        "maxBitratePlaceholder": "e.g. 2",
+        "maxBitrateUnit": "Mbps",
+        "preset_ultrafast": "Ultra Fast",
+        "preset_superfast": "Super Fast",
+        "preset_veryfast": "Very Fast",
+        "preset_faster": "Faster",
+        "preset_fast": "Fast",
+        "preset_medium": "Medium",
+        "preset_slow": "Slow",
+        "preset_slower": "Slower",
+        "preset_veryslow": "Very Slow",
         "faq": {
-          "q1": "動画圧縮の仕組みは？",
-          "a1": "H.264 と CRF 値を使用して動画を再エンコードします。高品質ほどファイルが大きくなります。",
-          "q2": "出力フォーマットは？",
-          "a2": "常に MP4（H.264 動画 + AAC 音声）で出力されます。",
-          "q3": "ファイルはサーバーにアップロードされますか？",
-          "a3": "いいえ。すべての処理はブラウザ内で完結します。データがデバイスから出ることは一切ありません。サーバーへのアップロードは行われません。",
-          "q4": "オフラインで使えますか？",
-          "a4": "はい。ページが読み込まれた後は、完全にオフラインで動作します。最高の体験のために、ブラウザから PrivaDeck を PWA としてインストールしてください。",
-          "q5": "ファイルサイズの制限はありますか？",
-          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能メモリとブラウザの性能に依存します。最新のデバイスであれば数百 MB のファイルも問題なく処理できます。"
+          "q1": "How does video compression work?",
+          "a1": "The tool re-encodes the video using H.264 with a CRF (Constant Rate Factor) value. In Simple Mode, choose High (CRF 23), Medium (CRF 28), or Low (CRF 35). In Advanced Mode, set CRF manually from 0 to 51, plus encoding speed, resolution, frame rate, audio bitrate, and an optional max bitrate cap.",
+          "q2": "What is the difference between Simple and Advanced Mode?",
+          "a2": "Simple Mode offers three one-click presets (High, Medium, Low) optimized for common scenarios. Advanced Mode gives full control over CRF quality, encoding speed (ultrafast to veryslow), output resolution, frame rate, audio bitrate, and maximum video bitrate — ideal for users who need precise control.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser using FFmpeg.wasm. Your data never leaves your device — nothing is uploaded to any server.",
+          "q4": "Can I upscale my video to a higher resolution?",
+          "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
+          "q5": "Are there file size limits?",
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
         "seoContent": {
           "intro": {
-            "title": "動画圧縮とは？",
-            "content": "<p><strong>動画圧縮</strong>は、選択可能な品質プリセットで動画ファイルサイズを削減するツールです。高・中・低品質を選んでファイルサイズと映像品質のバランスを調整でき、メールやメッセージングアプリで動画を共有するのに最適です。</p><p>H.264 エンコーディングと FFmpeg.wasm を使用して最大限の互換性を実現します。</p>"
+            "title": "What is Compress Video?",
+            "content": "<p><strong>Compress Video</strong> is a powerful browser-based video compressor that reduces file size without uploading to any server. Choose from three quality presets for quick compression, or switch to <strong>Advanced Mode</strong> for full control over CRF, encoding speed, resolution, frame rate, audio bitrate, and max bitrate cap.</p><p>Powered by FFmpeg.wasm with H.264/AAC encoding — the output plays everywhere. The tool displays detailed video metadata (resolution, duration, bitrate, FPS) and shows a side-by-side comparison after compression.</p>"
           },
           "howToUse": {
-            "title": "動画圧縮の使い方",
-            "content": "<ol><li>動画ファイルをアップロード</li><li>圧縮レベルを選択：<strong>高品質</strong>（大きめ）、<strong>中品質</strong>、または <strong>低品質</strong>（最小）</li><li><strong>圧縮</strong>をクリックして処理を開始</li><li>ファイルサイズの比較を確認し、圧縮された動画をダウンロード</li></ol><p>処理時間は動画の長さとデバイスの性能によって異なります。</p>"
+            "title": "How to Use Compress Video",
+            "content": "<ol><li>Upload a video file — the tool instantly shows resolution, duration, bitrate, and frame rate</li><li>Choose <strong>Simple Mode</strong> (High / Medium / Low presets) or switch to <strong>Advanced Mode</strong> to fine-tune CRF, encoding speed, resolution, FPS, and audio bitrate</li><li>Click <strong>Compress</strong> — a progress bar tracks the encoding</li><li>Compare source vs. compressed video: file size, resolution, bitrate, and reduction percentage</li><li>Preview the compressed video and download it</li></ol><p>Resolution and frame rate options that exceed the source are automatically disabled to prevent unnecessary upscaling.</p>"
           },
           "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>3つの品質レベル</strong>：高・中・低の圧縮プリセット</li><li><strong>サイズ比較</strong>：圧縮前後のファイルサイズを表示</li><li><strong>H.264 エンコーディング</strong>：デバイスとプラットフォームを問わず最大限の互換性</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質の動画エンコーディング</li><li><strong>複数入力フォーマット</strong>：MP4、WebM、MKV、AVI ファイルを圧縮</li><li><strong>プレビュー機能</strong>：ダウンロード前に圧縮された動画を再生確認</li></ul>"
+            "title": "Key Features",
+            "content": "<ul><li><strong>Simple &amp; Advanced Modes</strong>: Quick presets for beginners; full parameter control for power users</li><li><strong>Video Metadata Display</strong>: See resolution, duration, bitrate, and FPS for both source and compressed video</li><li><strong>Smart Upscale Prevention</strong>: Options exceeding the source resolution or frame rate are disabled</li><li><strong>Adjustable CRF</strong>: Fine-tune quality factor from 0 (lossless) to 51</li><li><strong>9 Encoding Speeds</strong>: From Ultra Fast to Very Slow — slower = smaller file at same quality</li><li><strong>Resolution &amp; FPS Control</strong>: Downscale to 1080p, 720p, 480p, or 360p; reduce frame rate to 30, 24, or 15 fps</li><li><strong>Audio Bitrate Selection</strong>: Choose from 64k to 256k AAC audio</li><li><strong>Max Bitrate Cap</strong>: Optionally limit peak video bitrate for streaming compatibility</li><li><strong>Side-by-Side Comparison</strong>: Full before/after stats table with compression percentage</li><li><strong>H.264 + AAC Output</strong>: MP4 format for universal device compatibility</li></ul>"
           },
           "useCases": {
-            "title": "主な活用例",
-            "content": "<ul><li><strong>メール</strong>：メール添付ファイルの制限に合わせて動画サイズを削減</li><li><strong>メッセージング</strong>：WhatsApp、Telegram、iMessage での共有用に動画を圧縮</li><li><strong>ストレージ節約</strong>：大きな動画ファイルを圧縮してデバイスのストレージを節約</li><li><strong>Web アップロード</strong>：ウェブサイトやポータルのアップロードサイズ制限に対応</li><li><strong>ソーシャルメディア</strong>：ソーシャルプラットフォームへの高速アップロードのために圧縮</li></ul>"
+            "title": "Common Use Cases",
+            "content": "<ul><li><strong>Email Attachments</strong>: Compress videos under 25 MB for Gmail, Outlook, or corporate mail</li><li><strong>Messaging Apps</strong>: Shrink videos for WhatsApp (16 MB limit), Telegram, Signal, or iMessage</li><li><strong>Social Media</strong>: Optimize file size for faster uploads to Instagram, TikTok, X, or YouTube</li><li><strong>Cloud Storage</strong>: Reduce file size to save Google Drive, Dropbox, or iCloud space</li><li><strong>Web &amp; CMS Upload</strong>: Meet upload size limits for WordPress, Shopify, or custom portals</li><li><strong>Video Archiving</strong>: Compress large recordings with High Quality preset for long-term storage</li><li><strong>Low-Bandwidth Sharing</strong>: Use Low Quality preset for quick transfer over slow connections</li></ul>"
           },
           "privacy": {
-            "title": "プライバシー優先の動画圧縮",
-            "content": "<p>動画圧縮は <strong>FFmpeg.wasm</strong> を使用して<strong>完全にブラウザ内</strong>で実行されます。</p><ul><li>動画が<strong>デバイスから出ることはありません</strong> — サーバーへのアップロードなし</li><li>クラウド処理やサードパーティアクセスなし</li><li>FFmpeg コアの読み込み後は<strong>オフラインでも</strong>動作</li></ul>"
+            "title": "Privacy-First Video Compression",
+            "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
         }
       },

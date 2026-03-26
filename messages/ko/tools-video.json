@@ -232,10 +232,10 @@
       },
       "compress": {
         "name": "동영상 압축",
-        "description": "조절 가능한 품질 프리셋으로 동영상 파일 크기를 줄입니다.",
-        "metaTitle": "동영상 압축 - 무료 온라인 동영상 압축 도구",
-        "metaDescription": "동영상을 압축하여 크기 줄이기. 높음, 보통, 낮음 품질 선택. 무료 온라인 도구.",
-        "keywords": "동영상 압축, 동영상 압축기, 동영상 크기 줄이기",
+        "description": "Reduce video file size with quality presets or advanced controls for CRF, resolution, frame rate, and bitrate.",
+        "metaTitle": "Compress Video Online Free - Advanced Video Compressor | No Upload",
+        "metaDescription": "Compress videos in your browser with no upload. Choose simple presets or advanced mode with CRF, resolution, FPS, and bitrate controls. H.264 MP4 output. 100% private.",
+        "keywords": "compress video, video compressor, reduce video size, shrink video, CRF compression, video bitrate reducer, browser video compressor, no upload video compress",
         "quality": "품질",
         "high": "높음",
         "medium": "보통",
@@ -246,38 +246,76 @@
         "compressedSize": "압축 크기",
         "saved": "크기 감소",
         "unsupported": "이 도구는 SharedArrayBuffer 지원이 필요합니다. HTTPS를 지원하는 최신 브라우저를 사용하세요.",
+        "simpleMode": "Simple",
+        "advancedMode": "Advanced",
+        "sourceVideo": "Source",
+        "compressedVideo": "Compressed",
+        "fileSize": "File Size",
+        "resolutionLabel": "Resolution",
+        "duration": "Duration",
+        "bitrate": "Bitrate",
+        "highDesc": "Minimal compression with near-original visual quality. Moderate file size reduction.",
+        "highUseCase": "Best for: Social media, presentations, archiving",
+        "highSettings": "CRF 23 · Original resolution · 192k audio",
+        "mediumDesc": "Balanced compression. Good visual quality with significant size reduction.",
+        "mediumUseCase": "Best for: Email attachments, general sharing",
+        "mediumSettings": "CRF 28 · Original resolution · 128k audio",
+        "lowDesc": "Maximum compression. Noticeably reduced quality, smallest file size.",
+        "lowUseCase": "Best for: Messaging apps, quick previews, low bandwidth",
+        "lowSettings": "CRF 35 · 720p · 96k audio",
+        "crfLabel": "CRF (Quality)",
+        "crfHint": "0 = lossless, 23 = high quality, 28 = medium, 51 = worst. Lower values produce larger files.",
+        "encodingPreset": "Encoding Speed",
+        "encodingPresetHint": "Slower encoding produces smaller files at the same quality level.",
+        "resolutionOriginal": "Original",
+        "fpsLabel": "Frame Rate",
+        "fpsOriginal": "Original",
+        "audioBitrateLabel": "Audio Bitrate",
+        "maxBitrateLabel": "Max Bitrate (optional)",
+        "maxBitrateHint": "Cap the video bitrate. Leave empty for no limit.",
+        "maxBitratePlaceholder": "e.g. 2",
+        "maxBitrateUnit": "Mbps",
+        "preset_ultrafast": "Ultra Fast",
+        "preset_superfast": "Super Fast",
+        "preset_veryfast": "Very Fast",
+        "preset_faster": "Faster",
+        "preset_fast": "Fast",
+        "preset_medium": "Medium",
+        "preset_slow": "Slow",
+        "preset_slower": "Slower",
+        "preset_veryslow": "Very Slow",
         "faq": {
-          "q1": "동영상 압축은 어떻게 작동하나요?",
-          "a1": "H.264와 CRF 값으로 동영상을 재인코딩합니다. 높은 품질은 큰 파일, 낮은 품질은 작은 파일을 만듭니다.",
-          "q2": "출력 형식은?",
-          "a2": "항상 MP4(H.264 비디오 + AAC 오디오)로 출력됩니다.",
+          "q1": "How does video compression work?",
+          "a1": "The tool re-encodes the video using H.264 with a CRF (Constant Rate Factor) value. In Simple Mode, choose High (CRF 23), Medium (CRF 28), or Low (CRF 35). In Advanced Mode, set CRF manually from 0 to 51, plus encoding speed, resolution, frame rate, audio bitrate, and an optional max bitrate cap.",
+          "q2": "What is the difference between Simple and Advanced Mode?",
+          "a2": "Simple Mode offers three one-click presets (High, Medium, Low) optimized for common scenarios. Advanced Mode gives full control over CRF quality, encoding speed (ultrafast to veryslow), output resolution, frame rate, audio bitrate, and maximum video bitrate — ideal for users who need precise control.",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "아니요. 모든 처리는 브라우저 내에서 완전히 이루어집니다. 데이터가 기기를 떠나지 않으며 어떤 서버에도 업로드되지 않습니다.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "a3": "No. All processing happens entirely in your browser using FFmpeg.wasm. Your data never leaves your device — nothing is uploaded to any server.",
+          "q4": "Can I upscale my video to a higher resolution?",
+          "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
         "seoContent": {
           "intro": {
-            "title": "동영상 압축이란?",
-            "content": "<p><strong>Compress Video</strong>는 선택 가능한 품질 프리셋으로 동영상 파일 크기를 줄입니다. 높음, 보통, 또는 낮음 품질을 선택하여 파일 크기와 화질의 균형을 맞추세요 — 이메일이나 메시지 앱을 통해 동영상을 공유하기에 완벽합니다.</p><p>최대 호환성을 위해 H.264 인코딩과 함께 FFmpeg.wasm을 사용합니다.</p>"
+            "title": "What is Compress Video?",
+            "content": "<p><strong>Compress Video</strong> is a powerful browser-based video compressor that reduces file size without uploading to any server. Choose from three quality presets for quick compression, or switch to <strong>Advanced Mode</strong> for full control over CRF, encoding speed, resolution, frame rate, audio bitrate, and max bitrate cap.</p><p>Powered by FFmpeg.wasm with H.264/AAC encoding — the output plays everywhere. The tool displays detailed video metadata (resolution, duration, bitrate, FPS) and shows a side-by-side comparison after compression.</p>"
           },
           "howToUse": {
-            "title": "동영상 압축 사용법",
-            "content": "<ol><li>동영상 파일 업로드</li><li>압축 수준 선택: <strong>높은 품질</strong>(큰 파일), <strong>보통</strong>, 또는 <strong>낮은 품질</strong>(가장 작음)</li><li><strong>압축</strong>을 클릭하여 처리 시작</li><li>파일 크기 비교 확인 및 압축된 동영상 다운로드</li></ol><p>처리 시간은 동영상 길이와 기기 성능에 따라 다릅니다.</p>"
+            "title": "How to Use Compress Video",
+            "content": "<ol><li>Upload a video file — the tool instantly shows resolution, duration, bitrate, and frame rate</li><li>Choose <strong>Simple Mode</strong> (High / Medium / Low presets) or switch to <strong>Advanced Mode</strong> to fine-tune CRF, encoding speed, resolution, FPS, and audio bitrate</li><li>Click <strong>Compress</strong> — a progress bar tracks the encoding</li><li>Compare source vs. compressed video: file size, resolution, bitrate, and reduction percentage</li><li>Preview the compressed video and download it</li></ol><p>Resolution and frame rate options that exceed the source are automatically disabled to prevent unnecessary upscaling.</p>"
           },
           "features": {
-            "title": "주요 기능",
-            "content": "<ul><li><strong>세 가지 품질 수준</strong>: 높음, 보통, 낮음 압축 프리셋</li><li><strong>크기 비교</strong>: 원본 대비 압축된 파일 크기 확인</li><li><strong>H.264 인코딩</strong>: 기기 및 플랫폼 전반에 걸친 최대 호환성</li><li><strong>FFmpeg.wasm 구동</strong>: 브라우저에서 전문가 수준의 동영상 인코딩</li><li><strong>다양한 입력 형식</strong>: MP4, WebM, MKV, AVI 파일 압축</li><li><strong>미리보기</strong>: 다운로드 전에 압축된 동영상 재생</li></ul>"
+            "title": "Key Features",
+            "content": "<ul><li><strong>Simple &amp; Advanced Modes</strong>: Quick presets for beginners; full parameter control for power users</li><li><strong>Video Metadata Display</strong>: See resolution, duration, bitrate, and FPS for both source and compressed video</li><li><strong>Smart Upscale Prevention</strong>: Options exceeding the source resolution or frame rate are disabled</li><li><strong>Adjustable CRF</strong>: Fine-tune quality factor from 0 (lossless) to 51</li><li><strong>9 Encoding Speeds</strong>: From Ultra Fast to Very Slow — slower = smaller file at same quality</li><li><strong>Resolution &amp; FPS Control</strong>: Downscale to 1080p, 720p, 480p, or 360p; reduce frame rate to 30, 24, or 15 fps</li><li><strong>Audio Bitrate Selection</strong>: Choose from 64k to 256k AAC audio</li><li><strong>Max Bitrate Cap</strong>: Optionally limit peak video bitrate for streaming compatibility</li><li><strong>Side-by-Side Comparison</strong>: Full before/after stats table with compression percentage</li><li><strong>H.264 + AAC Output</strong>: MP4 format for universal device compatibility</li></ul>"
           },
           "useCases": {
-            "title": "주요 활용 사례",
-            "content": "<ul><li><strong>이메일</strong>: 이메일 첨부 파일 한도에 맞게 동영상 크기 줄이기</li><li><strong>메시지</strong>: WhatsApp, Telegram, 또는 iMessage 공유를 위해 동영상 압축</li><li><strong>저장 공간</strong>: 대용량 동영상 파일을 압축하여 기기 저장 공간 절약</li><li><strong>웹 업로드</strong>: 웹사이트 및 포털의 업로드 크기 제한 충족</li><li><strong>소셜 미디어</strong>: 소셜 플랫폼에 더 빠른 업로드를 위해 압축</li></ul>"
+            "title": "Common Use Cases",
+            "content": "<ul><li><strong>Email Attachments</strong>: Compress videos under 25 MB for Gmail, Outlook, or corporate mail</li><li><strong>Messaging Apps</strong>: Shrink videos for WhatsApp (16 MB limit), Telegram, Signal, or iMessage</li><li><strong>Social Media</strong>: Optimize file size for faster uploads to Instagram, TikTok, X, or YouTube</li><li><strong>Cloud Storage</strong>: Reduce file size to save Google Drive, Dropbox, or iCloud space</li><li><strong>Web &amp; CMS Upload</strong>: Meet upload size limits for WordPress, Shopify, or custom portals</li><li><strong>Video Archiving</strong>: Compress large recordings with High Quality preset for long-term storage</li><li><strong>Low-Bandwidth Sharing</strong>: Use Low Quality preset for quick transfer over slow connections</li></ul>"
           },
           "privacy": {
-            "title": "프라이버시 우선 동영상 압축",
-            "content": "<p>동영상 압축은 <strong>FFmpeg.wasm</strong>을 사용하여 <strong>브라우저에서 완전히</strong> 실행됩니다.</p><ul><li>동영상이 <strong>기기를 떠나지 않습니다</strong> — 서버 업로드 없음</li><li>클라우드 처리나 제3자 접근 없음</li><li>FFmpeg 코어 로드 후 <strong>오프라인</strong>에서도 작동</li></ul>"
+            "title": "Privacy-First Video Compression",
+            "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
         }
       },

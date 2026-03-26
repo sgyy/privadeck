@@ -41,6 +41,7 @@ export function setProgressHandler(
 
   if (onProgress) {
     currentProgressHandler = ({ progress }) => {
+      if (progress < 0 || progress > 1) return;
       onProgress(Math.round(progress * 100));
     };
     ffmpegInstance.on("progress", currentProgressHandler);

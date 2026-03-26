@@ -232,10 +232,10 @@
       },
       "compress": {
         "name": "视频压缩",
-        "description": "通过可调质量预设减小视频文件大小。",
-        "metaTitle": "视频压缩 - 免费在线视频压缩工具",
-        "metaDescription": "压缩视频文件以减小大小。选择高、中、低质量。免费在线工具，无需上传。",
-        "keywords": "视频压缩, 压缩视频, 减小视频大小, 视频缩小",
+        "description": "通过质量预设或高级参数（CRF、分辨率、帧率、码率）精确控制视频压缩。",
+        "metaTitle": "在线视频压缩 - 免费高级视频压缩工具 | 无需上传",
+        "metaDescription": "在浏览器中压缩视频，无需上传。支持简单预设和高级模式（CRF、分辨率、帧率、码率控制）。H.264 MP4 输出，100% 隐私保护。",
+        "keywords": "视频压缩, 压缩视频, 减小视频大小, 视频缩小, CRF压缩, 视频码率调节, 浏览器视频压缩, 免上传视频压缩",
         "quality": "质量",
         "high": "高质量",
         "medium": "中等质量",
@@ -246,38 +246,76 @@
         "compressedSize": "压缩后大小",
         "saved": "缩小比例",
         "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "simpleMode": "简单模式",
+        "advancedMode": "高级模式",
+        "sourceVideo": "源视频",
+        "compressedVideo": "压缩后",
+        "fileSize": "文件大小",
+        "resolutionLabel": "分辨率",
+        "duration": "时长",
+        "bitrate": "码率",
+        "highDesc": "最小压缩，接近原始画质。文件大小适度减小。",
+        "highUseCase": "适合：社交媒体、演示文稿、存档",
+        "highSettings": "CRF 23 · 原始分辨率 · 192k 音频",
+        "mediumDesc": "均衡压缩。画质良好，文件大小显著减小。",
+        "mediumUseCase": "适合：邮件附件、日常分享",
+        "mediumSettings": "CRF 28 · 原始分辨率 · 128k 音频",
+        "lowDesc": "最大压缩。画质有明显下降，文件最小。",
+        "lowUseCase": "适合：即时通讯、快速预览、低带宽场景",
+        "lowSettings": "CRF 35 · 720p · 96k 音频",
+        "crfLabel": "CRF（质量因子）",
+        "crfHint": "0 = 无损，23 = 高质量，28 = 中等，51 = 最差。值越低文件越大。",
+        "encodingPreset": "编码速度",
+        "encodingPresetHint": "编码越慢，相同质量下文件越小。",
+        "resolutionOriginal": "原始",
+        "fpsLabel": "帧率",
+        "fpsOriginal": "原始",
+        "audioBitrateLabel": "音频码率",
+        "maxBitrateLabel": "最大码率（可选）",
+        "maxBitrateHint": "限制视频码率上限。留空则不限制。",
+        "maxBitratePlaceholder": "如 2",
+        "maxBitrateUnit": "Mbps",
+        "preset_ultrafast": "极速",
+        "preset_superfast": "超快",
+        "preset_veryfast": "很快",
+        "preset_faster": "较快",
+        "preset_fast": "快速",
+        "preset_medium": "中等",
+        "preset_slow": "慢速",
+        "preset_slower": "较慢",
+        "preset_veryslow": "极慢",
         "faq": {
           "q1": "视频压缩如何工作？",
-          "a1": "该工具使用 H.264 编码器以 CRF（恒定速率因子）值重新编码视频。质量越高文件越大；质量越低文件越小但压缩伪影更多。",
-          "q2": "输出使用什么格式？",
-          "a2": "压缩后的视频始终输出为 MP4（H.264 视频 + AAC 音频），以确保最大兼容性。",
+          "a1": "工具使用 H.264 编码器以 CRF（恒定速率因子）值重新编码视频。简单模式提供高质量（CRF 23）、中等（CRF 28）和低质量（CRF 35）三档预设。高级模式可手动设置 CRF（0-51）、编码速度、分辨率、帧率、音频码率及最大码率上限。",
+          "q2": "简单模式和高级模式有什么区别？",
+          "a2": "简单模式提供三个一键预设（高/中/低），适合大多数场景。高级模式允许完全控制 CRF 质量因子、编码速度（极速到极慢）、输出分辨率、帧率、音频码率和最大视频码率——适合需要精确控制的用户。",
           "q3": "我的文件会上传到服务器吗？",
-          "a3": "不会。所有处理完全在您的浏览器中完成，您的数据绝不离开设备，不会上传到任何服务器。",
-          "q4": "这个工具能离线使用吗？",
-          "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
+          "a3": "不会。所有处理通过 FFmpeg.wasm 完全在浏览器中完成，数据绝不离开设备，不会上传到任何服务器。",
+          "q4": "能把视频放大到更高分辨率吗？",
+          "a4": "不能，这是刻意设计。超过源视频的分辨率和帧率选项会自动禁用。放大只会增大文件体积而不会改善实际画质，本工具仅支持缩小以减小文件大小。",
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
         },
         "seoContent": {
           "intro": {
             "title": "什么是压缩视频工具？",
-            "content": "<p><strong>压缩视频</strong>通过可选择的质量预设减小视频文件大小。选择高质量、中等或低质量平衡文件大小与视觉质量——非常适合通过电子邮件或消息应用分享视频。采用 FFmpeg.wasm 和 H.264 编码。</p>"
+            "content": "<p><strong>压缩视频</strong>是一款强大的浏览器端视频压缩工具，无需将文件上传到任何服务器即可减小视频体积。提供三个质量预设快速压缩，也可切换到<strong>高级模式</strong>精确控制 CRF、编码速度、分辨率、帧率、音频码率和最大码率上限。</p><p>采用 FFmpeg.wasm + H.264/AAC 编码，输出通用 MP4 格式。上传后即刻显示视频详细参数（分辨率、时长、码率、帧率），压缩完成后展示源视频与压缩视频的逐项对比。</p>"
           },
           "howToUse": {
             "title": "如何使用压缩视频",
-            "content": "<ol><li>上传视频文件</li><li>选择压缩级别：<strong>高质量</strong>（较大）、<strong>中等</strong> 或 <strong>低质量</strong>（最小）</li><li>点击<strong>压缩</strong>开始处理</li><li>查看文件大小对比并下载压缩视频</li></ol><p>处理时间取决于视频长度和您的设备性能。</p>"
+            "content": "<ol><li>上传视频文件——工具会自动显示分辨率、时长、码率和帧率</li><li>选择<strong>简单模式</strong>（高/中/低质量预设）或切换到<strong>高级模式</strong>手动调节 CRF、编码速度、分辨率、帧率和音频码率</li><li>点击<strong>压缩</strong>——进度条实时显示编码进度</li><li>对比源视频与压缩结果：文件大小、分辨率、码率和压缩百分比</li><li>预览压缩视频并下载</li></ol><p>超过原始分辨率或帧率的选项会自动禁用，防止不必要的放大。</p>"
           },
           "features": {
             "title": "核心功能",
-            "content": "<ul><li><strong>三个质量级别</strong>：高、中、低压缩预设</li><li><strong>大小对比</strong>：查看原始与压缩文件大小</li><li><strong>H.264 编码</strong>：跨设备和平台最大兼容性</li><li><strong>采用 FFmpeg.wasm</strong>：专业级视频编码在浏览器中</li><li><strong>多种输入格式</strong>：压缩 MP4、WebM、MKV 和 AVI 文件</li><li><strong>预览</strong>：下载前播放压缩视频</li></ul>"
+            "content": "<ul><li><strong>简单 &amp; 高级双模式</strong>：新手快速预设；高级用户完全参数控制</li><li><strong>视频参数展示</strong>：源视频和压缩视频的分辨率、时长、码率、帧率一目了然</li><li><strong>智能防放大</strong>：超过原始分辨率或帧率的选项自动禁用</li><li><strong>可调 CRF</strong>：质量因子从 0（无损）到 51 精细调节</li><li><strong>9 档编码速度</strong>：从极速到极慢——越慢相同质量下文件越小</li><li><strong>分辨率 &amp; 帧率控制</strong>：降至 1080p/720p/480p/360p；帧率降至 30/24/15 fps</li><li><strong>音频码率选择</strong>：64k 至 256k AAC 音频</li><li><strong>最大码率上限</strong>：可选限制峰值视频码率，适配流媒体需求</li><li><strong>源 vs 压缩对比表</strong>：完整前后参数对比及压缩百分比</li><li><strong>H.264 + AAC 输出</strong>：MP4 格式，全平台通用</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
-            "content": "<ul><li><strong>电子邮件</strong>：减小视频以符合电子邮件附件限制</li><li><strong>消息</strong>：压缩用于 WhatsApp、Telegram 或 iMessage 分享</li><li><strong>存储</strong>：通过压缩大型视频文件节省设备存储</li><li><strong>网络上传</strong>：满足网站和门户网站的上传大小限制</li><li><strong>社交媒体</strong>：压缩以加快对社交平台的上传</li></ul>"
+            "content": "<ul><li><strong>邮件附件</strong>：压缩视频至 25 MB 以下满足 Gmail、Outlook 或企业邮箱附件限制</li><li><strong>即时通讯</strong>：为 WhatsApp（16 MB 限制）、Telegram、微信、iMessage 压缩视频</li><li><strong>社交媒体</strong>：优化体积以更快上传到抖音、B站、Instagram、YouTube</li><li><strong>云存储</strong>：减小文件节省网盘、iCloud、OneDrive 空间</li><li><strong>网站 &amp; CMS 上传</strong>：满足 WordPress、Shopify 等平台上传大小限制</li><li><strong>视频存档</strong>：使用高质量预设压缩大型录制文件用于长期存储</li><li><strong>低带宽分享</strong>：使用低质量预设在慢速网络下快速传输</li></ul>"
           },
           "privacy": {
-            "title": "隐私优先的视频处理",
-            "content": "<p>视频压缩全部在浏览器本地使用 <strong>FFmpeg.wasm</strong> 进行。</p><ul><li>您的视频<strong>永远不会离开您的设备</strong>——无服务器上传</li><li>无云处理或第三方访问</li><li>加载 FFmpeg 核心后可<strong>离线</strong>工作</li></ul>"
+            "title": "隐私优先的视频压缩",
+            "content": "<p>所有视频压缩均在<strong>浏览器本地</strong>使用 <strong>FFmpeg.wasm</strong>（WebAssembly）完成，文件从未上传到任何服务器。</p><ul><li><strong>零服务器接触</strong>——视频数据从头到尾留在您的设备上</li><li><strong>无需注册登录</strong>——打开页面即可使用</li><li><strong>离线可用</strong>——FFmpeg 核心（约 31 MB）仅需一次下载，之后由浏览器缓存</li><li>适合处理<strong>机密影像</strong>：监控录像、医疗视频、法律证据等</li></ul>"
           }
         }
       },

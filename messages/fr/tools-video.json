@@ -232,10 +232,10 @@
       },
       "compress": {
         "name": "Compresser la vidéo",
-        "description": "Réduire la taille du fichier vidéo avec des préréglages de qualité ajustables.",
-        "metaTitle": "Compresser la vidéo - Compresseur vidéo gratuit en ligne",
-        "metaDescription": "Compresser les fichiers vidéo pour réduire leur taille. Choisir qualité haute, moyenne ou basse. Outil gratuit en ligne.",
-        "keywords": "compresser vidéo, compresseur vidéo, réduire taille vidéo, diminuer vidéo",
+        "description": "Reduce video file size with quality presets or advanced controls for CRF, resolution, frame rate, and bitrate.",
+        "metaTitle": "Compress Video Online Free - Advanced Video Compressor | No Upload",
+        "metaDescription": "Compress videos in your browser with no upload. Choose simple presets or advanced mode with CRF, resolution, FPS, and bitrate controls. H.264 MP4 output. 100% private.",
+        "keywords": "compress video, video compressor, reduce video size, shrink video, CRF compression, video bitrate reducer, browser video compressor, no upload video compress",
         "quality": "Qualité",
         "high": "Haute",
         "medium": "Moyenne",
@@ -246,38 +246,76 @@
         "compressedSize": "Taille compressée",
         "saved": "Réduction de taille",
         "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
+        "simpleMode": "Simple",
+        "advancedMode": "Advanced",
+        "sourceVideo": "Source",
+        "compressedVideo": "Compressed",
+        "fileSize": "File Size",
+        "resolutionLabel": "Resolution",
+        "duration": "Duration",
+        "bitrate": "Bitrate",
+        "highDesc": "Minimal compression with near-original visual quality. Moderate file size reduction.",
+        "highUseCase": "Best for: Social media, presentations, archiving",
+        "highSettings": "CRF 23 · Original resolution · 192k audio",
+        "mediumDesc": "Balanced compression. Good visual quality with significant size reduction.",
+        "mediumUseCase": "Best for: Email attachments, general sharing",
+        "mediumSettings": "CRF 28 · Original resolution · 128k audio",
+        "lowDesc": "Maximum compression. Noticeably reduced quality, smallest file size.",
+        "lowUseCase": "Best for: Messaging apps, quick previews, low bandwidth",
+        "lowSettings": "CRF 35 · 720p · 96k audio",
+        "crfLabel": "CRF (Quality)",
+        "crfHint": "0 = lossless, 23 = high quality, 28 = medium, 51 = worst. Lower values produce larger files.",
+        "encodingPreset": "Encoding Speed",
+        "encodingPresetHint": "Slower encoding produces smaller files at the same quality level.",
+        "resolutionOriginal": "Original",
+        "fpsLabel": "Frame Rate",
+        "fpsOriginal": "Original",
+        "audioBitrateLabel": "Audio Bitrate",
+        "maxBitrateLabel": "Max Bitrate (optional)",
+        "maxBitrateHint": "Cap the video bitrate. Leave empty for no limit.",
+        "maxBitratePlaceholder": "e.g. 2",
+        "maxBitrateUnit": "Mbps",
+        "preset_ultrafast": "Ultra Fast",
+        "preset_superfast": "Super Fast",
+        "preset_veryfast": "Very Fast",
+        "preset_faster": "Faster",
+        "preset_fast": "Fast",
+        "preset_medium": "Medium",
+        "preset_slow": "Slow",
+        "preset_slower": "Slower",
+        "preset_veryslow": "Very Slow",
         "faq": {
-          "q1": "Comment fonctionne la compression vidéo ?",
-          "a1": "L'outil réencode la vidéo en H.264 avec une valeur CRF (Facteur de Taux Constant). Une qualité supérieure signifie des fichiers plus gros ; une qualité inférieure signifie des fichiers plus petits avec plus d'artefacts de compression.",
-          "q2": "Quel format de sortie est utilisé ?",
-          "a2": "Les vidéos compressées sont toujours exportées en MP4 (vidéo H.264 + audio AAC) pour une compatibilité maximale.",
+          "q1": "How does video compression work?",
+          "a1": "The tool re-encodes the video using H.264 with a CRF (Constant Rate Factor) value. In Simple Mode, choose High (CRF 23), Medium (CRF 28), or Low (CRF 35). In Advanced Mode, set CRF manually from 0 to 51, plus encoding speed, resolution, frame rate, audio bitrate, and an optional max bitrate cap.",
+          "q2": "What is the difference between Simple and Advanced Mode?",
+          "a2": "Simple Mode offers three one-click presets (High, Medium, Low) optimized for common scenarios. Advanced Mode gives full control over CRF quality, encoding speed (ultrafast to veryslow), output resolution, frame rate, audio bitrate, and maximum video bitrate — ideal for users who need precise control.",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "a3": "No. All processing happens entirely in your browser using FFmpeg.wasm. Your data never leaves your device — nothing is uploaded to any server.",
+          "q4": "Can I upscale my video to a higher resolution?",
+          "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
         "seoContent": {
           "intro": {
-            "title": "Qu'est-ce que Compresser la vidéo ?",
-            "content": "<p><strong>Compresser la vidéo</strong> réduit la taille des fichiers vidéo avec des préréglages de qualité sélectionnables. Choisissez une qualité Haute, Moyenne ou Basse pour équilibrer la taille du fichier et la qualité visuelle — idéal pour partager des vidéos par e-mail ou via des applications de messagerie.</p><p>Utilise FFmpeg.wasm avec l'encodage H.264 pour une compatibilité maximale.</p>"
+            "title": "What is Compress Video?",
+            "content": "<p><strong>Compress Video</strong> is a powerful browser-based video compressor that reduces file size without uploading to any server. Choose from three quality presets for quick compression, or switch to <strong>Advanced Mode</strong> for full control over CRF, encoding speed, resolution, frame rate, audio bitrate, and max bitrate cap.</p><p>Powered by FFmpeg.wasm with H.264/AAC encoding — the output plays everywhere. The tool displays detailed video metadata (resolution, duration, bitrate, FPS) and shows a side-by-side comparison after compression.</p>"
           },
           "howToUse": {
-            "title": "Comment utiliser Compresser la vidéo",
-            "content": "<ol><li>Téléchargez un fichier vidéo</li><li>Sélectionnez le niveau de compression : <strong>Haute qualité</strong> (plus grand), <strong>Moyenne</strong> ou <strong>Basse qualité</strong> (plus petit)</li><li>Cliquez sur <strong>Compresser</strong> pour démarrer le traitement</li><li>Voyez la comparaison de taille de fichier et téléchargez la vidéo compressée</li></ol><p>Le temps de traitement dépend de la durée de la vidéo et des performances de votre appareil.</p>"
+            "title": "How to Use Compress Video",
+            "content": "<ol><li>Upload a video file — the tool instantly shows resolution, duration, bitrate, and frame rate</li><li>Choose <strong>Simple Mode</strong> (High / Medium / Low presets) or switch to <strong>Advanced Mode</strong> to fine-tune CRF, encoding speed, resolution, FPS, and audio bitrate</li><li>Click <strong>Compress</strong> — a progress bar tracks the encoding</li><li>Compare source vs. compressed video: file size, resolution, bitrate, and reduction percentage</li><li>Preview the compressed video and download it</li></ol><p>Resolution and frame rate options that exceed the source are automatically disabled to prevent unnecessary upscaling.</p>"
           },
           "features": {
-            "title": "Fonctionnalités clés",
-            "content": "<ul><li><strong>Trois niveaux de qualité</strong> : Préréglages de compression Haute, Moyenne et Basse</li><li><strong>Comparaison de taille</strong> : Voyez les tailles originale et compressée</li><li><strong>Encodage H.264</strong> : Compatibilité maximale sur tous les appareils et plateformes</li><li><strong>Propulsé par FFmpeg.wasm</strong> : Encodage vidéo de qualité professionnelle dans le navigateur</li><li><strong>Formats d'entrée multiples</strong> : Compressez les fichiers MP4, WebM, MKV et AVI</li><li><strong>Aperçu</strong> : Lisez la vidéo compressée avant de télécharger</li></ul>"
+            "title": "Key Features",
+            "content": "<ul><li><strong>Simple &amp; Advanced Modes</strong>: Quick presets for beginners; full parameter control for power users</li><li><strong>Video Metadata Display</strong>: See resolution, duration, bitrate, and FPS for both source and compressed video</li><li><strong>Smart Upscale Prevention</strong>: Options exceeding the source resolution or frame rate are disabled</li><li><strong>Adjustable CRF</strong>: Fine-tune quality factor from 0 (lossless) to 51</li><li><strong>9 Encoding Speeds</strong>: From Ultra Fast to Very Slow — slower = smaller file at same quality</li><li><strong>Resolution &amp; FPS Control</strong>: Downscale to 1080p, 720p, 480p, or 360p; reduce frame rate to 30, 24, or 15 fps</li><li><strong>Audio Bitrate Selection</strong>: Choose from 64k to 256k AAC audio</li><li><strong>Max Bitrate Cap</strong>: Optionally limit peak video bitrate for streaming compatibility</li><li><strong>Side-by-Side Comparison</strong>: Full before/after stats table with compression percentage</li><li><strong>H.264 + AAC Output</strong>: MP4 format for universal device compatibility</li></ul>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
-            "content": "<ul><li><strong>E-mail</strong> : Réduisez la taille de la vidéo pour respecter les limites des pièces jointes</li><li><strong>Messagerie</strong> : Compressez les vidéos pour le partage via WhatsApp, Telegram ou iMessage</li><li><strong>Stockage</strong> : Économisez l'espace de stockage en compressant les grands fichiers vidéo</li><li><strong>Envoi web</strong> : Respectez les limites de taille d'envoi pour les sites web et portails</li><li><strong>Réseaux sociaux</strong> : Compressez pour des envois plus rapides sur les plateformes sociales</li></ul>"
+            "title": "Common Use Cases",
+            "content": "<ul><li><strong>Email Attachments</strong>: Compress videos under 25 MB for Gmail, Outlook, or corporate mail</li><li><strong>Messaging Apps</strong>: Shrink videos for WhatsApp (16 MB limit), Telegram, Signal, or iMessage</li><li><strong>Social Media</strong>: Optimize file size for faster uploads to Instagram, TikTok, X, or YouTube</li><li><strong>Cloud Storage</strong>: Reduce file size to save Google Drive, Dropbox, or iCloud space</li><li><strong>Web &amp; CMS Upload</strong>: Meet upload size limits for WordPress, Shopify, or custom portals</li><li><strong>Video Archiving</strong>: Compress large recordings with High Quality preset for long-term storage</li><li><strong>Low-Bandwidth Sharing</strong>: Use Low Quality preset for quick transfer over slow connections</li></ul>"
           },
           "privacy": {
-            "title": "Compression vidéo axée sur la confidentialité",
-            "content": "<p>La compression vidéo s'exécute <strong>entièrement dans votre navigateur</strong> à l'aide de <strong>FFmpeg.wasm</strong>.</p><ul><li>Vos vidéos <strong>ne quittent jamais votre appareil</strong> — pas d'envoi au serveur</li><li>Pas de traitement cloud ni d'accès tiers</li><li>Fonctionne <strong>hors connexion</strong> après le chargement du noyau FFmpeg</li></ul>"
+            "title": "Privacy-First Video Compression",
+            "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
         }
       },
