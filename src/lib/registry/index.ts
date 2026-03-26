@@ -18,6 +18,7 @@ import imageResize from "@/tools/image/resize";
 import imageWatermark from "@/tools/image/watermark";
 import imageRemoveExif from "@/tools/image/remove-exif";
 import videoMute from "@/tools/video/mute";
+import videoInfo from "@/tools/video/info";
 import videoTrim from "@/tools/video/trim";
 import videoRotate from "@/tools/video/rotate";
 import videoToGif from "@/tools/video/to-gif";
@@ -90,6 +91,7 @@ const ALL_TOOLS: ToolDefinition[] = [
   videoResize,
   videoToWebp,
   videoMute,
+  videoInfo,
   // Audio — all featured
   audioTrim,
   audioConvert,

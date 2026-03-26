@@ -413,6 +413,74 @@
             "content": "<p>El redimensionado de video se ejecuta <strong>completamente en tu navegador</strong> usando <strong>FFmpeg.wasm</strong>.</p><ul><li>Tus videos <strong>nunca salen de tu dispositivo</strong></li><li>Sin procesamiento ni subidas al servidor</li><li>Funciona <strong>sin conexión</strong> después de que el núcleo de FFmpeg se haya cargado</li></ul>"
           }
         }
+      },
+      "info": {
+        "name": "Info de Video",
+        "description": "Inspeccionar metadatos detallados del video incluyendo códecs, tasa de bits y flujos.",
+        "metaTitle": "Info de Video - Inspeccionar Metadatos de Video en Línea",
+        "metaDescription": "Analiza archivos de video para ver códec, resolución, tasa de bits, flujos de audio y más. Sin subir archivos. Herramienta online gratuita.",
+        "keywords": "info de video, metadatos de video, códec de video, info de medios, inspector de video",
+        "probe": "Analizar Video",
+        "probing": "Analizando…",
+        "unsupported": "Esta herramienta requiere soporte de SharedArrayBuffer. Por favor use un navegador moderno con HTTPS.",
+        "fileInfo": "Información del Archivo",
+        "containerInfo": "Información del Contenedor",
+        "videoStream": "Flujo de Video",
+        "audioStream": "Flujo de Audio",
+        "fileName": "Nombre del Archivo",
+        "fileSize": "Tamaño del Archivo",
+        "fileType": "Tipo de Archivo",
+        "container": "Formato del Contenedor",
+        "duration": "Duración",
+        "resolution": "Resolución",
+        "codec": "Códec",
+        "pixelFormat": "Formato de Píxel",
+        "fps": "Tasa de Fotogramas",
+        "bitrate": "Tasa de Bits",
+        "totalBitrate": "Tasa de Bits Total",
+        "estimatedBitrate": "Tasa de Bits Estimada",
+        "sampleRate": "Tasa de Muestreo",
+        "channels": "Canales",
+        "faq": {
+          "q1": "What information can this tool detect?",
+          "a1": "It detects video codec (H.264, VP9, AV1, etc.), audio codec (AAC, Opus, MP3, etc.), resolution, frame rate, bitrate, pixel format, sample rate, channel layout, and container format.",
+          "q2": "Which video formats are supported?",
+          "a2": "Most common formats including MP4, WebM, MKV, AVI, MOV, and more are supported through FFmpeg.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
+          "q4": "How is this different from just checking file properties?",
+          "a4": "Operating system file properties usually show only basic information like file size and type. This tool uses FFmpeg to extract detailed stream-level metadata including exact codec, profile, pixel format, and per-stream bitrates.",
+          "q5": "Can I use this tool offline?",
+          "a5": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "What is Video Info?",
+            "content": "<p><strong>Video Info</strong> is a free online tool that inspects and displays detailed metadata from your video files.</p>"
+          },
+          "howToUse": {
+            "title": "How to Use Video Info",
+            "content": "<ol><li>Upload your video file.</li><li>View basic metadata instantly.</li><li>Click <strong>Analyze Video</strong> for deep inspection.</li><li>Copy all metadata as text.</li></ol>"
+          },
+          "features": {
+            "title": "Key Features",
+            "content": "<ul><li>Two-layer analysis</li><li>Stream-level detail</li><li>Codec detection</li><li>One-click copy</li></ul>"
+          },
+          "useCases": {
+            "title": "Common Use Cases",
+            "content": "<ul><li>Pre-processing check</li><li>Compatibility check</li><li>Debugging playback issues</li><li>Quality assessment</li></ul>"
+          },
+          "privacy": {
+            "title": "Privacy-First Video Inspection",
+            "content": "<p>Video analysis runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p>"
+          }
+        },
+        "startTime": "Tiempo de Inicio",
+        "colorSpace": "Espacio de Color",
+        "scanType": "Tipo de Escaneo",
+        "rawLog": "Registro FFmpeg",
+        "thumbnails": "Vista previa",
+        "autoAnalyzing": "Analizando video…"
       }
     }
   }

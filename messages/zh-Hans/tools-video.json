@@ -413,6 +413,74 @@
             "content": "<p>视频调整大小全部在浏览器本地使用 <strong>FFmpeg.wasm</strong> 进行。</p><ul><li>您的视频<strong>永远不会离开您的设备</strong></li><li>无服务器处理或上传</li><li>加载 FFmpeg 核心后可<strong>离线</strong>工作</li></ul>"
           }
         }
+      },
+      "info": {
+        "name": "视频信息",
+        "description": "检测视频的详细元数据，包括编解码器、码率和流信息。",
+        "metaTitle": "视频信息检测 - 在线查看视频元数据",
+        "metaDescription": "分析视频文件，查看编解码器、分辨率、码率、音频流等详细信息。无需上传，免费在线工具。",
+        "keywords": "视频信息, 视频元数据, 视频编码, 媒体信息, 视频检测, ffprobe",
+        "probe": "分析视频",
+        "probing": "分析中…",
+        "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
+        "fileInfo": "文件信息",
+        "containerInfo": "容器信息",
+        "videoStream": "视频流",
+        "audioStream": "音频流",
+        "fileName": "文件名",
+        "fileSize": "文件大小",
+        "fileType": "文件类型",
+        "container": "容器格式",
+        "duration": "时长",
+        "resolution": "分辨率",
+        "codec": "编解码器",
+        "pixelFormat": "像素格式",
+        "fps": "帧率",
+        "bitrate": "码率",
+        "totalBitrate": "总码率",
+        "estimatedBitrate": "估算码率",
+        "sampleRate": "采样率",
+        "channels": "声道",
+        "startTime": "起始时间",
+        "colorSpace": "色彩空间",
+        "scanType": "扫描类型",
+        "rawLog": "原始 FFmpeg 日志",
+        "thumbnails": "画面预览",
+        "autoAnalyzing": "正在分析视频…",
+        "faq": {
+          "q1": "这个工具能检测哪些信息？",
+          "a1": "它可以检测视频编解码器（H.264、VP9、AV1 等）、音频编解码器（AAC、Opus、MP3 等）、分辨率、帧率、码率、像素格式、采样率、声道布局和容器格式。",
+          "q2": "支持哪些视频格式？",
+          "a2": "通过 FFmpeg 支持大多数常见格式，包括 MP4、WebM、MKV、AVI、MOV 等。",
+          "q3": "我的文件会被上传到服务器吗？",
+          "a3": "不会。所有处理完全在您的浏览器中进行。您的数据永远不会离开您的设备——不会上传到任何服务器。",
+          "q4": "这和查看文件属性有什么不同？",
+          "a4": "操作系统的文件属性通常只显示文件大小和类型等基本信息。此工具使用 FFmpeg 提取详细的流级别元数据，包括精确的编解码器、配置文件、像素格式和每个流的码率。",
+          "q5": "可以离线使用吗？",
+          "a5": "可以。页面加载完成后，该工具可完全离线使用。为获得最佳体验，请通过浏览器将 PrivaDeck 安装为 PWA。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是视频信息检测？",
+            "content": "<p><strong>视频信息检测</strong>是一款免费的在线工具，可以检查和显示视频文件的详细元数据。它能揭示<strong>视频编解码器</strong>、<strong>音频编解码器</strong>、<strong>码率</strong>、<strong>帧率</strong>和<strong>流详情</strong>等技术信息——所有操作无需上传文件。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用视频信息检测",
+            "content": "<ol><li>通过拖放或文件选择器<strong>上传</strong>视频文件。</li><li>即时查看基本元数据（分辨率、时长、估算码率）。</li><li>点击<strong>\u201c分析视频\u201d</strong>运行基于 FFmpeg 的深度检测。</li><li>查看详细的编解码器、流和容器信息。</li><li>使用<strong>复制</strong>按钮将所有元数据导出为文本。</li></ol>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>双层分析</strong>：即时浏览器元数据加深度 FFmpeg 检测</li><li><strong>流级别详情</strong>：独立的视频和音频流信息</li><li><strong>编解码器检测</strong>：识别 H.264、H.265、VP9、AV1、AAC、Opus 等</li><li><strong>一键复制</strong>：将所有元数据导出为格式化文本</li><li><strong>广泛格式支持</strong>：MP4、WebM、MKV、AVI、MOV 等</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>处理前检查</strong>：在压缩或转换前验证编解码器和质量</li><li><strong>兼容性检查</strong>：确保视频符合平台要求（YouTube、社交媒体）</li><li><strong>调试</strong>：通过检查编解码器和容器详情诊断播放问题</li><li><strong>质量评估</strong>：检查码率和分辨率以评估视频质量</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的视频检测",
+            "content": "<p>视频分析全部在浏览器本地使用 <strong>FFmpeg.wasm</strong> 进行。</p><ul><li>您的视频<strong>永远不会离开您的设备</strong></li><li>无服务器处理或上传</li><li>加载 FFmpeg 核心后可<strong>离线</strong>工作</li></ul>"
+          }
+        }
       }
     }
   }

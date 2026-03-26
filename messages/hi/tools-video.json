@@ -413,6 +413,74 @@
             "content": "<p><strong>Offline काम करता है</strong></p>"
           }
         }
+      },
+      "info": {
+        "name": "वीडियो जानकारी",
+        "description": "कोडेक, बिटरेट और स्ट्रीम सहित विस्तृत वीडियो मेटाडेटा का निरीक्षण करें।",
+        "metaTitle": "वीडियो जानकारी - ऑनलाइन वीडियो मेटाडेटा देखें",
+        "metaDescription": "कोडेक, रिज़ॉल्यूशन, बिटरेट, ऑडियो स्ट्रीम और अधिक देखने के लिए वीडियो फ़ाइलों का विश्लेषण करें। अपलोड की आवश्यकता नहीं।",
+        "keywords": "वीडियो जानकारी, वीडियो मेटाडेटा, वीडियो कोडेक, मीडिया जानकारी",
+        "probe": "वीडियो का विश्लेषण करें",
+        "probing": "विश्लेषण हो रहा है…",
+        "unsupported": "इस टूल के लिए SharedArrayBuffer सपोर्ट आवश्यक है। कृपया HTTPS के साथ आधुनिक ब्राउज़र का उपयोग करें।",
+        "fileInfo": "फ़ाइल जानकारी",
+        "containerInfo": "कंटेनर जानकारी",
+        "videoStream": "वीडियो स्ट्रीम",
+        "audioStream": "ऑडियो स्ट्रीम",
+        "fileName": "फ़ाइल का नाम",
+        "fileSize": "फ़ाइल का आकार",
+        "fileType": "फ़ाइल प्रकार",
+        "container": "कंटेनर प्रारूप",
+        "duration": "अवधि",
+        "resolution": "रिज़ॉल्यूशन",
+        "codec": "कोडेक",
+        "pixelFormat": "पिक्सेल प्रारूप",
+        "fps": "फ्रेम दर",
+        "bitrate": "बिटरेट",
+        "totalBitrate": "कुल बिटरेट",
+        "estimatedBitrate": "अनुमानित बिटरेट",
+        "sampleRate": "नमूना दर",
+        "channels": "चैनल",
+        "faq": {
+          "q1": "What information can this tool detect?",
+          "a1": "It detects video codec (H.264, VP9, AV1, etc.), audio codec (AAC, Opus, MP3, etc.), resolution, frame rate, bitrate, pixel format, sample rate, channel layout, and container format.",
+          "q2": "Which video formats are supported?",
+          "a2": "Most common formats including MP4, WebM, MKV, AVI, MOV, and more are supported through FFmpeg.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
+          "q4": "How is this different from just checking file properties?",
+          "a4": "Operating system file properties usually show only basic information like file size and type. This tool uses FFmpeg to extract detailed stream-level metadata including exact codec, profile, pixel format, and per-stream bitrates.",
+          "q5": "Can I use this tool offline?",
+          "a5": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "What is Video Info?",
+            "content": "<p><strong>Video Info</strong> is a free online tool that inspects and displays detailed metadata from your video files.</p>"
+          },
+          "howToUse": {
+            "title": "How to Use Video Info",
+            "content": "<ol><li>Upload your video file.</li><li>View basic metadata instantly.</li><li>Click <strong>Analyze Video</strong> for deep inspection.</li><li>Copy all metadata as text.</li></ol>"
+          },
+          "features": {
+            "title": "Key Features",
+            "content": "<ul><li>Two-layer analysis</li><li>Stream-level detail</li><li>Codec detection</li><li>One-click copy</li></ul>"
+          },
+          "useCases": {
+            "title": "Common Use Cases",
+            "content": "<ul><li>Pre-processing check</li><li>Compatibility check</li><li>Debugging playback issues</li><li>Quality assessment</li></ul>"
+          },
+          "privacy": {
+            "title": "Privacy-First Video Inspection",
+            "content": "<p>Video analysis runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p>"
+          }
+        },
+        "startTime": "प्रारंभ समय",
+        "colorSpace": "रंग स्थान",
+        "scanType": "स्कैन प्रकार",
+        "rawLog": "कच्चा FFmpeg लॉग",
+        "thumbnails": "फ्रेम पूर्वावलोकन",
+        "autoAnalyzing": "वीडियो का विश्लेषण हो रहा है…"
       }
     }
   }

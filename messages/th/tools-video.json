@@ -413,6 +413,74 @@
             "content": "<p>Video resizing runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก FFmpeg core is loaded</li></ul>"
           }
         }
+      },
+      "info": {
+        "name": "ข้อมูลวิดีโอ",
+        "description": "ตรวจสอบข้อมูลเมตาของวิดีโออย่างละเอียด รวมถึงตัวแปลงสัญญาณ บิตเรต และสตรีม",
+        "metaTitle": "ข้อมูลวิดีโอ - ตรวจสอบข้อมูลเมตาของวิดีโอออนไลน์",
+        "metaDescription": "วิเคราะห์ไฟล์วิดีโอเพื่อดูตัวแปลงสัญญาณ ความละเอียด บิตเรต สตรีมเสียง และอื่นๆ ไม่ต้องอัปโหลด เครื่องมือออนไลน์ฟรี",
+        "keywords": "ข้อมูลวิดีโอ, เมตาดาต้าวิดีโอ, ตัวแปลงสัญญาณวิดีโอ, ข้อมูลสื่อ",
+        "probe": "วิเคราะห์วิดีโอ",
+        "probing": "กำลังวิเคราะห์…",
+        "unsupported": "เครื่องมือนี้ต้องการการรองรับ SharedArrayBuffer กรุณาใช้เบราว์เซอร์สมัยใหม่ที่รองรับ HTTPS",
+        "fileInfo": "ข้อมูลไฟล์",
+        "containerInfo": "ข้อมูลคอนเทนเนอร์",
+        "videoStream": "สตรีมวิดีโอ",
+        "audioStream": "สตรีมเสียง",
+        "fileName": "ชื่อไฟล์",
+        "fileSize": "ขนาดไฟล์",
+        "fileType": "ประเภทไฟล์",
+        "container": "รูปแบบคอนเทนเนอร์",
+        "duration": "ระยะเวลา",
+        "resolution": "ความละเอียด",
+        "codec": "ตัวแปลงสัญญาณ",
+        "pixelFormat": "รูปแบบพิกเซล",
+        "fps": "อัตราเฟรม",
+        "bitrate": "บิตเรต",
+        "totalBitrate": "บิตเรตรวม",
+        "estimatedBitrate": "บิตเรตโดยประมาณ",
+        "sampleRate": "อัตราการสุ่มตัวอย่าง",
+        "channels": "ช่องสัญญาณ",
+        "faq": {
+          "q1": "What information can this tool detect?",
+          "a1": "It detects video codec (H.264, VP9, AV1, etc.), audio codec (AAC, Opus, MP3, etc.), resolution, frame rate, bitrate, pixel format, sample rate, channel layout, and container format.",
+          "q2": "Which video formats are supported?",
+          "a2": "Most common formats including MP4, WebM, MKV, AVI, MOV, and more are supported through FFmpeg.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
+          "q4": "How is this different from just checking file properties?",
+          "a4": "Operating system file properties usually show only basic information like file size and type. This tool uses FFmpeg to extract detailed stream-level metadata including exact codec, profile, pixel format, and per-stream bitrates.",
+          "q5": "Can I use this tool offline?",
+          "a5": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "What is Video Info?",
+            "content": "<p><strong>Video Info</strong> is a free online tool that inspects and displays detailed metadata from your video files.</p>"
+          },
+          "howToUse": {
+            "title": "How to Use Video Info",
+            "content": "<ol><li>Upload your video file.</li><li>View basic metadata instantly.</li><li>Click <strong>Analyze Video</strong> for deep inspection.</li><li>Copy all metadata as text.</li></ol>"
+          },
+          "features": {
+            "title": "Key Features",
+            "content": "<ul><li>Two-layer analysis</li><li>Stream-level detail</li><li>Codec detection</li><li>One-click copy</li></ul>"
+          },
+          "useCases": {
+            "title": "Common Use Cases",
+            "content": "<ul><li>Pre-processing check</li><li>Compatibility check</li><li>Debugging playback issues</li><li>Quality assessment</li></ul>"
+          },
+          "privacy": {
+            "title": "Privacy-First Video Inspection",
+            "content": "<p>Video analysis runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p>"
+          }
+        },
+        "startTime": "เวลาเริ่มต้น",
+        "colorSpace": "พื้นที่สี",
+        "scanType": "ประเภทการสแกน",
+        "rawLog": "ล็อก FFmpeg ดิบ",
+        "thumbnails": "ตัวอย่างเฟรม",
+        "autoAnalyzing": "กำลังวิเคราะห์วิดีโอ…"
       }
     }
   }

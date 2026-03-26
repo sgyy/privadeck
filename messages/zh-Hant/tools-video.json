@@ -413,6 +413,74 @@
             "content": "<p>影片調整大小全部在瀏覽器本地使用 <strong>FFmpeg.wasm</strong> 進行。</p><ul><li>您的影片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理或上傳</li><li>載入 FFmpeg 核心後可<strong>離線</strong>運作</li></ul>"
           }
         }
+      },
+      "info": {
+        "name": "影片資訊",
+        "description": "檢測影片的詳細中繼資料，包括編解碼器、位元率和串流資訊。",
+        "metaTitle": "影片資訊檢測 - 線上查看影片中繼資料",
+        "metaDescription": "分析影片檔案，查看編解碼器、解析度、位元率、音訊串流等詳細資訊。無需上傳，免費線上工具。",
+        "keywords": "影片資訊, 影片中繼資料, 影片編碼, 媒體資訊, 影片檢測",
+        "probe": "分析影片",
+        "probing": "分析中…",
+        "unsupported": "此工具需要 SharedArrayBuffer 支援。請使用支援 HTTPS 的現代瀏覽器。",
+        "fileInfo": "檔案資訊",
+        "containerInfo": "容器資訊",
+        "videoStream": "影片串流",
+        "audioStream": "音訊串流",
+        "fileName": "檔案名稱",
+        "fileSize": "檔案大小",
+        "fileType": "檔案類型",
+        "container": "容器格式",
+        "duration": "時長",
+        "resolution": "解析度",
+        "codec": "編解碼器",
+        "pixelFormat": "像素格式",
+        "fps": "影格率",
+        "bitrate": "位元率",
+        "totalBitrate": "總位元率",
+        "estimatedBitrate": "估算位元率",
+        "sampleRate": "取樣率",
+        "channels": "聲道",
+        "faq": {
+          "q1": "What information can this tool detect?",
+          "a1": "It detects video codec (H.264, VP9, AV1, etc.), audio codec (AAC, Opus, MP3, etc.), resolution, frame rate, bitrate, pixel format, sample rate, channel layout, and container format.",
+          "q2": "Which video formats are supported?",
+          "a2": "Most common formats including MP4, WebM, MKV, AVI, MOV, and more are supported through FFmpeg.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
+          "q4": "How is this different from just checking file properties?",
+          "a4": "Operating system file properties usually show only basic information like file size and type. This tool uses FFmpeg to extract detailed stream-level metadata including exact codec, profile, pixel format, and per-stream bitrates.",
+          "q5": "Can I use this tool offline?",
+          "a5": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "What is Video Info?",
+            "content": "<p><strong>Video Info</strong> is a free online tool that inspects and displays detailed metadata from your video files.</p>"
+          },
+          "howToUse": {
+            "title": "How to Use Video Info",
+            "content": "<ol><li>Upload your video file.</li><li>View basic metadata instantly.</li><li>Click <strong>Analyze Video</strong> for deep inspection.</li><li>Copy all metadata as text.</li></ol>"
+          },
+          "features": {
+            "title": "Key Features",
+            "content": "<ul><li>Two-layer analysis</li><li>Stream-level detail</li><li>Codec detection</li><li>One-click copy</li></ul>"
+          },
+          "useCases": {
+            "title": "Common Use Cases",
+            "content": "<ul><li>Pre-processing check</li><li>Compatibility check</li><li>Debugging playback issues</li><li>Quality assessment</li></ul>"
+          },
+          "privacy": {
+            "title": "Privacy-First Video Inspection",
+            "content": "<p>Video analysis runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p>"
+          }
+        },
+        "startTime": "開始時間",
+        "colorSpace": "色彩空間",
+        "scanType": "掃描類型",
+        "rawLog": "原始 FFmpeg 日誌",
+        "thumbnails": "畫面預覽",
+        "autoAnalyzing": "正在分析影片…"
       }
     }
   }

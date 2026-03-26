@@ -413,6 +413,74 @@
             "content": "<p>Video resizing runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
           }
         }
+      },
+      "info": {
+        "name": "Thông tin Video",
+        "description": "Kiểm tra siêu dữ liệu video chi tiết bao gồm codec, bitrate và luồng.",
+        "metaTitle": "Thông tin Video - Kiểm tra Siêu dữ liệu Video Trực tuyến",
+        "metaDescription": "Phân tích tệp video để xem codec, độ phân giải, bitrate, luồng âm thanh và nhiều hơn nữa. Không cần tải lên. Công cụ trực tuyến miễn phí.",
+        "keywords": "thông tin video, siêu dữ liệu video, codec video, thông tin phương tiện, trình kiểm tra video",
+        "probe": "Phân tích Video",
+        "probing": "Đang phân tích…",
+        "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Vui lòng sử dụng trình duyệt hiện đại với HTTPS.",
+        "fileInfo": "Thông tin Tệp",
+        "containerInfo": "Thông tin Bộ chứa",
+        "videoStream": "Luồng Video",
+        "audioStream": "Luồng Âm thanh",
+        "fileName": "Tên Tệp",
+        "fileSize": "Kích thước Tệp",
+        "fileType": "Loại Tệp",
+        "container": "Định dạng Bộ chứa",
+        "duration": "Thời lượng",
+        "resolution": "Độ phân giải",
+        "codec": "Codec",
+        "pixelFormat": "Định dạng Pixel",
+        "fps": "Tốc độ Khung hình",
+        "bitrate": "Bitrate",
+        "totalBitrate": "Bitrate Tổng",
+        "estimatedBitrate": "Bitrate Ước tính",
+        "sampleRate": "Tần số Mẫu",
+        "channels": "Kênh",
+        "faq": {
+          "q1": "What information can this tool detect?",
+          "a1": "It detects video codec (H.264, VP9, AV1, etc.), audio codec (AAC, Opus, MP3, etc.), resolution, frame rate, bitrate, pixel format, sample rate, channel layout, and container format.",
+          "q2": "Which video formats are supported?",
+          "a2": "Most common formats including MP4, WebM, MKV, AVI, MOV, and more are supported through FFmpeg.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
+          "q4": "How is this different from just checking file properties?",
+          "a4": "Operating system file properties usually show only basic information like file size and type. This tool uses FFmpeg to extract detailed stream-level metadata including exact codec, profile, pixel format, and per-stream bitrates.",
+          "q5": "Can I use this tool offline?",
+          "a5": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "What is Video Info?",
+            "content": "<p><strong>Video Info</strong> is a free online tool that inspects and displays detailed metadata from your video files.</p>"
+          },
+          "howToUse": {
+            "title": "How to Use Video Info",
+            "content": "<ol><li>Upload your video file.</li><li>View basic metadata instantly.</li><li>Click <strong>Analyze Video</strong> for deep inspection.</li><li>Copy all metadata as text.</li></ol>"
+          },
+          "features": {
+            "title": "Key Features",
+            "content": "<ul><li>Two-layer analysis</li><li>Stream-level detail</li><li>Codec detection</li><li>One-click copy</li></ul>"
+          },
+          "useCases": {
+            "title": "Common Use Cases",
+            "content": "<ul><li>Pre-processing check</li><li>Compatibility check</li><li>Debugging playback issues</li><li>Quality assessment</li></ul>"
+          },
+          "privacy": {
+            "title": "Privacy-First Video Inspection",
+            "content": "<p>Video analysis runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p>"
+          }
+        },
+        "startTime": "Thời gian Bắt đầu",
+        "colorSpace": "Không gian Màu",
+        "scanType": "Kiểu Quét",
+        "rawLog": "Nhật ký FFmpeg gốc",
+        "thumbnails": "Xem trước khung hình",
+        "autoAnalyzing": "Đang phân tích video…"
       }
     }
   }

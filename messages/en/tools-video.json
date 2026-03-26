@@ -413,6 +413,74 @@
             "content": "<p>Video resizing runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
           }
         }
+      },
+      "info": {
+        "name": "Video Info",
+        "description": "Inspect detailed video metadata including codecs, bitrate, and streams.",
+        "metaTitle": "Video Info - Inspect Video Metadata Online",
+        "metaDescription": "Analyze video files to see codec, resolution, bitrate, audio streams, and more. No upload needed. Free online tool.",
+        "keywords": "video info, video metadata, video codec, media info, video inspector, ffprobe",
+        "probe": "Analyze Video",
+        "probing": "Analyzing…",
+        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
+        "fileInfo": "File Information",
+        "containerInfo": "Container Information",
+        "videoStream": "Video Stream",
+        "audioStream": "Audio Stream",
+        "fileName": "File Name",
+        "fileSize": "File Size",
+        "fileType": "File Type",
+        "container": "Container Format",
+        "duration": "Duration",
+        "resolution": "Resolution",
+        "codec": "Codec",
+        "pixelFormat": "Pixel Format",
+        "fps": "Frame Rate",
+        "bitrate": "Bitrate",
+        "totalBitrate": "Total Bitrate",
+        "estimatedBitrate": "Estimated Bitrate",
+        "sampleRate": "Sample Rate",
+        "channels": "Channels",
+        "startTime": "Start Time",
+        "colorSpace": "Color Space",
+        "scanType": "Scan Type",
+        "rawLog": "Raw FFmpeg Log",
+        "thumbnails": "Frame Preview",
+        "autoAnalyzing": "Analyzing video…",
+        "faq": {
+          "q1": "What information can this tool detect?",
+          "a1": "It detects video codec (H.264, VP9, AV1, etc.), audio codec (AAC, Opus, MP3, etc.), resolution, frame rate, bitrate, pixel format, sample rate, channel layout, and container format.",
+          "q2": "Which video formats are supported?",
+          "a2": "Most common formats including MP4, WebM, MKV, AVI, MOV, and more are supported through FFmpeg.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
+          "q4": "How is this different from just checking file properties?",
+          "a4": "Operating system file properties usually show only basic information like file size and type. This tool uses FFmpeg to extract detailed stream-level metadata including exact codec, profile, pixel format, and per-stream bitrates.",
+          "q5": "Can I use this tool offline?",
+          "a5": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "What is Video Info?",
+            "content": "<p><strong>Video Info</strong> is a free online tool that inspects and displays detailed metadata from your video files. It reveals technical information like <strong>video codec</strong>, <strong>audio codec</strong>, <strong>bitrate</strong>, <strong>frame rate</strong>, and <strong>stream details</strong> — all without uploading your file.</p>"
+          },
+          "howToUse": {
+            "title": "How to Use Video Info",
+            "content": "<ol><li><strong>Upload</strong> your video file using drag-and-drop or file picker.</li><li>View basic metadata (resolution, duration, estimated bitrate) instantly.</li><li>Click <strong>\"Analyze Video\"</strong> to run FFmpeg-based deep inspection.</li><li>Review detailed codec, stream, and container information.</li><li>Use the <strong>Copy</strong> button to export all metadata as text.</li></ol>"
+          },
+          "features": {
+            "title": "Key Features",
+            "content": "<ul><li><strong>Two-layer analysis</strong>: instant browser-based metadata plus deep FFmpeg inspection</li><li><strong>Stream-level detail</strong>: separate video and audio stream information</li><li><strong>Codec detection</strong>: identifies H.264, H.265, VP9, AV1, AAC, Opus, and more</li><li><strong>One-click copy</strong>: export all metadata as formatted text</li><li><strong>Wide format support</strong>: MP4, WebM, MKV, AVI, MOV, and more</li></ul>"
+          },
+          "useCases": {
+            "title": "Common Use Cases",
+            "content": "<ul><li><strong>Pre-processing check</strong>: verify codec and quality before compressing or converting</li><li><strong>Compatibility check</strong>: ensure videos meet platform requirements (YouTube, social media)</li><li><strong>Debugging</strong>: diagnose playback issues by checking codec and container details</li><li><strong>Quality assessment</strong>: check bitrate and resolution to evaluate video quality</li></ul>"
+          },
+          "privacy": {
+            "title": "Privacy-First Video Inspection",
+            "content": "<p>Video analysis runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+          }
+        }
       }
     }
   }

@@ -413,6 +413,74 @@
             "content": "<p>動画リサイズは <strong>FFmpeg.wasm</strong> を使用して<strong>完全にブラウザ内</strong>で実行されます。</p><ul><li>動画が<strong>デバイスから出ることはありません</strong></li><li>サーバー処理やアップロードなし</li><li>FFmpeg コアの読み込み後は<strong>オフラインでも</strong>動作</li></ul>"
           }
         }
+      },
+      "info": {
+        "name": "ビデオ情報",
+        "description": "コーデック、ビットレート、ストリームを含む詳細なビデオメタデータを検査します。",
+        "metaTitle": "ビデオ情報 - オンラインでビデオメタデータを検査",
+        "metaDescription": "ビデオファイルを分析してコーデック、解像度、ビットレート、オーディオストリームなどを表示。アップロード不要。無料オンラインツール。",
+        "keywords": "ビデオ情報, ビデオメタデータ, ビデオコーデック, メディア情報, ビデオインスペクター",
+        "probe": "ビデオを分析",
+        "probing": "分析中…",
+        "unsupported": "このツールにはSharedArrayBufferのサポートが必要です。HTTPSを使用した最新のブラウザをご利用ください。",
+        "fileInfo": "ファイル情報",
+        "containerInfo": "コンテナ情報",
+        "videoStream": "ビデオストリーム",
+        "audioStream": "オーディオストリーム",
+        "fileName": "ファイル名",
+        "fileSize": "ファイルサイズ",
+        "fileType": "ファイルタイプ",
+        "container": "コンテナ形式",
+        "duration": "再生時間",
+        "resolution": "解像度",
+        "codec": "コーデック",
+        "pixelFormat": "ピクセル形式",
+        "fps": "フレームレート",
+        "bitrate": "ビットレート",
+        "totalBitrate": "合計ビットレート",
+        "estimatedBitrate": "推定ビットレート",
+        "sampleRate": "サンプルレート",
+        "channels": "チャンネル",
+        "faq": {
+          "q1": "What information can this tool detect?",
+          "a1": "It detects video codec (H.264, VP9, AV1, etc.), audio codec (AAC, Opus, MP3, etc.), resolution, frame rate, bitrate, pixel format, sample rate, channel layout, and container format.",
+          "q2": "Which video formats are supported?",
+          "a2": "Most common formats including MP4, WebM, MKV, AVI, MOV, and more are supported through FFmpeg.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
+          "q4": "How is this different from just checking file properties?",
+          "a4": "Operating system file properties usually show only basic information like file size and type. This tool uses FFmpeg to extract detailed stream-level metadata including exact codec, profile, pixel format, and per-stream bitrates.",
+          "q5": "Can I use this tool offline?",
+          "a5": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "What is Video Info?",
+            "content": "<p><strong>Video Info</strong> is a free online tool that inspects and displays detailed metadata from your video files.</p>"
+          },
+          "howToUse": {
+            "title": "How to Use Video Info",
+            "content": "<ol><li>Upload your video file.</li><li>View basic metadata instantly.</li><li>Click <strong>Analyze Video</strong> for deep inspection.</li><li>Copy all metadata as text.</li></ol>"
+          },
+          "features": {
+            "title": "Key Features",
+            "content": "<ul><li>Two-layer analysis</li><li>Stream-level detail</li><li>Codec detection</li><li>One-click copy</li></ul>"
+          },
+          "useCases": {
+            "title": "Common Use Cases",
+            "content": "<ul><li>Pre-processing check</li><li>Compatibility check</li><li>Debugging playback issues</li><li>Quality assessment</li></ul>"
+          },
+          "privacy": {
+            "title": "Privacy-First Video Inspection",
+            "content": "<p>Video analysis runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p>"
+          }
+        },
+        "startTime": "開始時間",
+        "colorSpace": "色空間",
+        "scanType": "走査タイプ",
+        "rawLog": "FFmpeg 生ログ",
+        "thumbnails": "フレームプレビュー",
+        "autoAnalyzing": "ビデオを分析中…"
       }
     }
   }

@@ -413,6 +413,74 @@
             "content": "<p>Уся обробка відбувається <strong>локально у браузері</strong>. Ваші відео <strong>ніколи не залишають ваш пристрій</strong>.</p>"
           }
         }
+      },
+      "info": {
+        "name": "Інформація про відео",
+        "description": "Перегляд детальних метаданих відео, включаючи кодеки, бітрейт та потоки.",
+        "metaTitle": "Інформація про відео - Перегляд метаданих відео онлайн",
+        "metaDescription": "Аналізуйте відеофайли для перегляду кодека, роздільної здатності, бітрейту, аудіопотоків та іншого. Без завантаження. Безкоштовний онлайн-інструмент.",
+        "keywords": "інформація про відео, метадані відео, відеокодек, медіаінформація, інспектор відео",
+        "probe": "Аналізувати відео",
+        "probing": "Аналіз…",
+        "unsupported": "Цей інструмент потребує підтримки SharedArrayBuffer. Будь ласка, використовуйте сучасний браузер з HTTPS.",
+        "fileInfo": "Інформація про файл",
+        "containerInfo": "Інформація про контейнер",
+        "videoStream": "Відеопотік",
+        "audioStream": "Аудіопотік",
+        "fileName": "Ім'я файлу",
+        "fileSize": "Розмір файлу",
+        "fileType": "Тип файлу",
+        "container": "Формат контейнера",
+        "duration": "Тривалість",
+        "resolution": "Роздільна здатність",
+        "codec": "Кодек",
+        "pixelFormat": "Формат пікселів",
+        "fps": "Частота кадрів",
+        "bitrate": "Бітрейт",
+        "totalBitrate": "Загальний бітрейт",
+        "estimatedBitrate": "Розрахунковий бітрейт",
+        "sampleRate": "Частота дискретизації",
+        "channels": "Канали",
+        "faq": {
+          "q1": "What information can this tool detect?",
+          "a1": "It detects video codec (H.264, VP9, AV1, etc.), audio codec (AAC, Opus, MP3, etc.), resolution, frame rate, bitrate, pixel format, sample rate, channel layout, and container format.",
+          "q2": "Which video formats are supported?",
+          "a2": "Most common formats including MP4, WebM, MKV, AVI, MOV, and more are supported through FFmpeg.",
+          "q3": "Will my files be uploaded to a server?",
+          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
+          "q4": "How is this different from just checking file properties?",
+          "a4": "Operating system file properties usually show only basic information like file size and type. This tool uses FFmpeg to extract detailed stream-level metadata including exact codec, profile, pixel format, and per-stream bitrates.",
+          "q5": "Can I use this tool offline?",
+          "a5": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "What is Video Info?",
+            "content": "<p><strong>Video Info</strong> is a free online tool that inspects and displays detailed metadata from your video files.</p>"
+          },
+          "howToUse": {
+            "title": "How to Use Video Info",
+            "content": "<ol><li>Upload your video file.</li><li>View basic metadata instantly.</li><li>Click <strong>Analyze Video</strong> for deep inspection.</li><li>Copy all metadata as text.</li></ol>"
+          },
+          "features": {
+            "title": "Key Features",
+            "content": "<ul><li>Two-layer analysis</li><li>Stream-level detail</li><li>Codec detection</li><li>One-click copy</li></ul>"
+          },
+          "useCases": {
+            "title": "Common Use Cases",
+            "content": "<ul><li>Pre-processing check</li><li>Compatibility check</li><li>Debugging playback issues</li><li>Quality assessment</li></ul>"
+          },
+          "privacy": {
+            "title": "Privacy-First Video Inspection",
+            "content": "<p>Video analysis runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p>"
+          }
+        },
+        "startTime": "Час початку",
+        "colorSpace": "Колірний простір",
+        "scanType": "Тип розгортки",
+        "rawLog": "Необроблений лог FFmpeg",
+        "thumbnails": "Попередній перегляд кадрів",
+        "autoAnalyzing": "Аналіз відео…"
       }
     }
   }
