@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { VideoUploader } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
@@ -22,8 +22,6 @@ export default function VideoToGif() {
   const [progress, setProgress] = useState(0);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const fileUrl = useObjectUrl(file);
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.video.to-gif");
   const tc = useTranslations("common");
@@ -36,23 +34,6 @@ export default function VideoToGif() {
         <p className="text-sm text-muted-foreground">{t("unsupported")}</p>
       </div>
     );
-  }
-
-  function handleFile(files: File[]) {
-    const f = files[0];
-    if (!f) return;
-    setFile(f);
-    setResult(null);
-    setStartTime(0);
-    setError("");
-  }
-
-  function handleLoadedMetadata() {
-    if (videoRef.current) {
-      const dur = videoRef.current.duration;
-      setDuration(dur);
-      setEndTime(Math.min(dur, 10));
-    }
   }
 
   async function handleConvert() {
@@ -79,7 +60,19 @@ export default function VideoToGif() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="video/*" onFiles={handleFile} />
+      <VideoUploader
+        file={file}
+        onFileChange={(f) => {
+          setFile(f);
+          setResult(null);
+          setStartTime(0);
+          setError("");
+        }}
+        onMetadataLoaded={(meta) => {
+          setDuration(meta.duration);
+          setEndTime(Math.min(meta.duration, 10));
+        }}
+      />
 
       {ffmpegStatus === "loading" && <FFmpegLoadingState />}
 
@@ -89,16 +82,8 @@ export default function VideoToGif() {
         </div>
       )}
 
-      {file && fileUrl && (
+      {file && (
         <div className="space-y-3">
-          <video
-            ref={videoRef}
-            src={fileUrl}
-            controls
-            onLoadedMetadata={handleLoadedMetadata}
-            className="max-h-[300px] w-full rounded-lg"
-          />
-
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             <div>
               <label className="mb-1 block text-sm font-medium">FPS: {fps}</label>

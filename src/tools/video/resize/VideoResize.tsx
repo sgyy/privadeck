@@ -1,14 +1,13 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { VideoUploader } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
 import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
-import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { resizeVideo, type ResizePreset } from "./logic";
 
 const PRESETS: { value: ResizePreset; label: string }[] = [
@@ -26,8 +25,6 @@ export default function VideoResize() {
   const [progress, setProgress] = useState(0);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const fileUrl = useObjectUrl(file);
   const t = useTranslations("tools.video.resize");
   const tc = useTranslations("common");
 
@@ -39,14 +36,6 @@ export default function VideoResize() {
         <p className="text-sm text-muted-foreground">{t("unsupported")}</p>
       </div>
     );
-  }
-
-  function handleFile(files: File[]) {
-    const f = files[0];
-    if (!f) return;
-    setFile(f);
-    setResult(null);
-    setError("");
   }
 
   async function handleResize() {
@@ -78,7 +67,14 @@ export default function VideoResize() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="video/*" onFiles={handleFile} />
+      <VideoUploader
+        file={file}
+        onFileChange={(f) => {
+          setFile(f);
+          setResult(null);
+          setError("");
+        }}
+      />
 
       {ffmpegStatus === "loading" && <FFmpegLoadingState />}
 
@@ -88,15 +84,8 @@ export default function VideoResize() {
         </div>
       )}
 
-      {file && fileUrl && (
+      {file && (
         <div className="space-y-3">
-          <video
-            ref={videoRef}
-            src={fileUrl}
-            controls
-            className="max-h-[300px] w-full rounded-lg"
-          />
-
           <div className="space-y-2">
             <label className="text-sm font-medium">{t("resolution")}</label>
             <div className="flex flex-wrap gap-2">

@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { VideoUploader } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
 import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
-import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { convertVideoFormat, FORMATS, type VideoFormat } from "./logic";
 
 export default function VideoFormatConvert() {
@@ -21,7 +20,6 @@ export default function VideoFormatConvert() {
   const [progress, setProgress] = useState(0);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
-  const fileUrl = useObjectUrl(file);
   const t = useTranslations("tools.video.format-convert");
   const tc = useTranslations("common");
 
@@ -56,10 +54,10 @@ export default function VideoFormatConvert() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone
-        accept="video/*"
-        onFiles={(f) => {
-          setFile(f[0]);
+      <VideoUploader
+        file={file}
+        onFileChange={(f) => {
+          setFile(f);
           setResult(null);
           setError("");
         }}
@@ -75,18 +73,6 @@ export default function VideoFormatConvert() {
 
       {file && (
         <div className="space-y-4">
-          <div className="rounded-lg bg-muted/50 px-3 py-2 text-sm">
-            {file.name}
-          </div>
-
-          {fileUrl && (
-            <video
-              src={fileUrl}
-              controls
-              className="max-h-[300px] w-full rounded-lg"
-            />
-          )}
-
           <div className="space-y-2">
             <label className="text-sm font-medium">{t("format")}</label>
             <div className="flex gap-2">

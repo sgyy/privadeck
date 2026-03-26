@@ -1,14 +1,13 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { VideoUploader } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
 import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
-import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { trimVideo, formatTimeDisplay } from "./logic";
 
 export default function VideoTrim() {
@@ -20,8 +19,6 @@ export default function VideoTrim() {
   const [progress, setProgress] = useState(0);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const fileUrl = useObjectUrl(file);
   const t = useTranslations("tools.video.trim");
   const tc = useTranslations("common");
 
@@ -33,23 +30,6 @@ export default function VideoTrim() {
         <p className="text-sm text-muted-foreground">{t("unsupported")}</p>
       </div>
     );
-  }
-
-  function handleFile(files: File[]) {
-    const f = files[0];
-    if (!f) return;
-    setFile(f);
-    setResult(null);
-    setStart(0);
-    setError("");
-  }
-
-  function handleLoadedMetadata() {
-    if (videoRef.current) {
-      const dur = videoRef.current.duration;
-      setDuration(dur);
-      setEnd(dur);
-    }
   }
 
   async function handleTrim() {
@@ -72,7 +52,20 @@ export default function VideoTrim() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="video/*" onFiles={handleFile} />
+      <VideoUploader
+        file={file}
+        onFileChange={(f) => {
+          setFile(f);
+          setResult(null);
+          setStart(0);
+          setEnd(0);
+          setError("");
+        }}
+        onMetadataLoaded={(meta) => {
+          setDuration(meta.duration);
+          setEnd(meta.duration);
+        }}
+      />
 
       {ffmpegStatus === "loading" && <FFmpegLoadingState />}
 
@@ -82,16 +75,8 @@ export default function VideoTrim() {
         </div>
       )}
 
-      {file && fileUrl && (
+      {file && (
         <div className="space-y-3">
-          <video
-            ref={videoRef}
-            src={fileUrl}
-            controls
-            onLoadedMetadata={handleLoadedMetadata}
-            className="max-h-[300px] w-full rounded-lg"
-          />
-
           <div className="space-y-2">
             <div className="flex items-center gap-4 text-sm">
               <span>{t("start")}: {formatTimeDisplay(start)}</span>

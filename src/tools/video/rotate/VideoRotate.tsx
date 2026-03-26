@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { FileDropzone } from "@/components/shared/FileDropzone";
+import { VideoUploader } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { RotateCw } from "lucide-react";
@@ -19,7 +19,6 @@ export default function VideoRotate() {
   const [progress, setProgress] = useState(0);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
-  const fileUrl = useObjectUrl(file);
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.video.rotate");
   const tc = useTranslations("common");
@@ -54,9 +53,9 @@ export default function VideoRotate() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone
-        accept="video/*"
-        onFiles={(f) => { setFile(f[0]); setResult(null); setError(""); }}
+      <VideoUploader
+        file={file}
+        onFileChange={(f) => { setFile(f); setResult(null); setError(""); }}
       />
 
       {ffmpegStatus === "loading" && <FFmpegLoadingState />}
@@ -67,10 +66,8 @@ export default function VideoRotate() {
         </div>
       )}
 
-      {file && fileUrl && (
+      {file && (
         <div className="space-y-3">
-          <video src={fileUrl} controls className="max-h-[300px] w-full rounded-lg" />
-
           <div className="flex flex-wrap items-end gap-4">
             <div className="flex gap-2">
               {([90, 180, 270] as RotateAngle[]).map((a) => (
