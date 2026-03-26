@@ -26,7 +26,7 @@ export default function AudioExtract() {
   const t = useTranslations("tools.audio.extract");
   const tc = useTranslations("common");
 
-  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg();
+  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
   if (!isSharedArrayBufferSupported()) {
     return (

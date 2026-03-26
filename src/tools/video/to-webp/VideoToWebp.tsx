@@ -28,7 +28,7 @@ export default function VideoToWebp() {
   const t = useTranslations("tools.video.to-webp");
   const tc = useTranslations("common");
 
-  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg();
+  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
   if (!isSharedArrayBufferSupported()) {
     return (

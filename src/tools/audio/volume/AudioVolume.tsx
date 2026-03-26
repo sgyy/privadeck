@@ -32,7 +32,7 @@ export default function AudioVolume() {
   const t = useTranslations("tools.audio.volume");
   const tc = useTranslations("common");
 
-  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg();
+  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
   const stopPreview = useCallback((skipStateUpdate = false) => {
     if (sourceRef.current) {

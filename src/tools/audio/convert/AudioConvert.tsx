@@ -26,7 +26,7 @@ export default function AudioConvert() {
   const t = useTranslations("tools.audio.convert");
   const tc = useTranslations("common");
 
-  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg();
+  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
   if (!isSharedArrayBufferSupported()) {
     return (

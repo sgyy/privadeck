@@ -22,7 +22,7 @@ export default function VideoMute() {
   const t = useTranslations("tools.video.mute");
   const tc = useTranslations("common");
 
-  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg();
+  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
   if (!isSharedArrayBufferSupported()) {
     return (

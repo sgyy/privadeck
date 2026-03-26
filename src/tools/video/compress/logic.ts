@@ -1,4 +1,4 @@
-import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
+import { getFFmpeg, setProgressHandler, getThreadArgs } from "@/lib/ffmpeg";
 
 export type Quality = "high" | "medium" | "low";
 
@@ -115,7 +115,7 @@ export async function compressVideo(
     // Audio
     args.push("-c:a", "aac", "-b:a", opts.audioBitrate);
 
-    args.push(outputName);
+    args.push(...getThreadArgs(), outputName);
 
     await ffmpeg.exec(args);
     const data = await ffmpeg.readFile(outputName);

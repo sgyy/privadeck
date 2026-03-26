@@ -1,4 +1,4 @@
-import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
+import { getFFmpeg, setProgressHandler, getThreadArgs } from "@/lib/ffmpeg";
 
 export type RotateAngle = 90 | 180 | 270;
 
@@ -25,6 +25,7 @@ export async function rotateVideo(
       "-i", inputName,
       ...TRANSPOSE_MAP[angle],
       "-c:a", "copy",
+      ...getThreadArgs(),
       outputName,
     ]);
 

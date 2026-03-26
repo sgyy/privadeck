@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import type { FFmpeg } from "@ffmpeg/ffmpeg";
 
 type FFmpegStatus = "idle" | "loading" | "ready" | "error";
 
-export function useFFmpeg() {
+export function useFFmpeg(options?: { preload?: boolean }) {
   const [status, setStatus] = useState<FFmpegStatus>("idle");
   const statusRef = useRef<FFmpegStatus>("idle");
   const ffmpegRef = useRef<FFmpeg | null>(null);
@@ -29,6 +29,12 @@ export function useFFmpeg() {
       return null;
     }
   }, []);
+
+  useEffect(() => {
+    if (options?.preload) {
+      load();
+    }
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return { status, load };
 }

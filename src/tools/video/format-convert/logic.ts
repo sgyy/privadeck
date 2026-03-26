@@ -1,4 +1,4 @@
-import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
+import { getFFmpeg, setProgressHandler, getThreadArgs } from "@/lib/ffmpeg";
 
 export type VideoFormat = "mp4" | "mkv" | "avi";
 
@@ -39,7 +39,8 @@ export async function convertVideoFormat(
 
   try {
     await ffmpeg.writeFile(inputName, await fetchFile(file));
-    await ffmpeg.exec(["-i", inputName, ...config.args, outputName]);
+    const threadArgs = format !== "mkv" ? getThreadArgs() : [];
+    await ffmpeg.exec(["-i", inputName, ...config.args, ...threadArgs, outputName]);
     const data = await ffmpeg.readFile(outputName);
     const baseName = file.name.replace(/\.[^.]+$/, "");
     return {
