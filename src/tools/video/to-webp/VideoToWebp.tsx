@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { VideoUploader } from "@/components/shared/VideoUploader";
+import { VideoUploader, formatSize } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
+import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
 import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
-import { videoToWebp, formatFileSize } from "./logic";
+import { videoToWebp } from "./logic";
 
 export default function VideoToWebp() {
   const [file, setFile] = useState<File | null>(null);
@@ -123,15 +124,25 @@ export default function VideoToWebp() {
             <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">{error}</div>
           )}
 
+          {processing && <ProcessingProgress progress={progress} />}
+
           <Button onClick={handleConvert} disabled={processing || startTime >= endTime}>
             {processing ? `${t("converting")} ${progress}%` : t("convert")}
           </Button>
 
           {result && resultUrl && (
-            <div className="space-y-2 rounded-lg border border-border bg-card p-3">
-              <img src={resultUrl} alt="WebP preview" className="max-h-[300px] rounded" />
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">{formatFileSize(result.size)}</span>
+            <div className="space-y-3">
+              <div className="overflow-hidden rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm">
+                <div className="bg-black/5 p-2 dark:bg-black/20">
+                  <img src={resultUrl} alt="WebP preview" className="mx-auto max-h-[400px] rounded" />
+                </div>
+              </div>
+              <div className="flex items-center justify-between rounded-lg border border-border/50 px-4 py-2.5">
+                <div className="flex items-center gap-3 text-sm">
+                  <span className="text-muted-foreground">{formatSize(file.size)}</span>
+                  <span className="text-muted-foreground">&rarr;</span>
+                  <span className="font-medium">{formatSize(result.size)}</span>
+                </div>
                 <DownloadButton data={result} filename={file.name.replace(/\.[^.]+$/, ".webp")} />
               </div>
             </div>
