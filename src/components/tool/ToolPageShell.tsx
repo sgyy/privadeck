@@ -4,6 +4,8 @@ import { useTranslations, useLocale } from "next-intl";
 import type { ToolDefinition } from "@/lib/registry/types";
 import { Shield } from "lucide-react";
 import { ToolHowItWorks } from "./ToolHowItWorks";
+import { ToolFeatureCards } from "./ToolFeatureCards";
+import { ToolWhySection } from "./ToolWhySection";
 import { ToolDescription } from "./ToolDescription";
 import { generateToolJsonLd } from "@/lib/seo/jsonld";
 
@@ -48,7 +50,11 @@ export function ToolPageShell({ tool, children }: ToolPageShellProps) {
         {children}
       </div>
 
-      <ToolHowItWorks category={tool.category} toolName={t("name")} />
+      <ToolHowItWorks category={tool.category} toolName={t("name")} toolSlug={tool.slug} />
+
+      <ToolFeatureCards tool={tool} />
+
+      <ToolWhySection tool={tool} />
 
       <ToolDescription tool={tool} />
     </div>

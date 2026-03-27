@@ -66,8 +66,9 @@ export default async function ToolPage({
     { name: tt("name"), url: `${SITE_URL}/${locale}/tools/${category}/${slug}/` },
   ]);
 
+  const faqCount = tool.faq?.length ?? 0;
   const faqItems = [];
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= faqCount; i++) {
     const q = tt.has(`faq.q${i}`) ? tt(`faq.q${i}`) : null;
     const a = tt.has(`faq.a${i}`) ? tt(`faq.a${i}`) : null;
     if (q && a) faqItems.push({ question: q, answer: a });

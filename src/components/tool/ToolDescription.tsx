@@ -1,7 +1,6 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { Accordion, AccordionItem } from "@/components/ui/Accordion";
 
 const DEFAULT_SECTIONS = ["intro", "howToUse", "features", "useCases", "privacy"];
 
@@ -24,27 +23,23 @@ export function ToolDescription({ tool, sections }: ToolDescriptionProps) {
   const t = useTranslations(`tools.${tool.category}.${tool.slug}`);
   const tc = useTranslations("common");
 
-  // Check if seoContent exists by trying to access first section
-  let hasSeoContent = false;
-  try {
-    t.raw(`seoContent.${sectionKeys[0]}.title`);
-    hasSeoContent = true;
-  } catch {
-    // No seoContent available
-  }
-
-  if (!hasSeoContent) return null;
+  // Check if seoContent exists
+  if (!t.has(`seoContent.${sectionKeys[0]}.title`)) return null;
 
   return (
-    <div className="mt-8 space-y-4">
+    <div className="mt-8 space-y-8">
       <h2 className="text-lg font-semibold">{tc("aboutThisTool")}</h2>
-      <Accordion className="rounded-xl border border-border bg-card px-4">
-        {sectionKeys.map((section) => (
-          <AccordionItem key={section} title={t(`seoContent.${section}.title`)}>
-            <RichContent html={t.raw(`seoContent.${section}.content`)} />
-          </AccordionItem>
-        ))}
-      </Accordion>
+      {sectionKeys.map((section) => {
+        if (!t.has(`seoContent.${section}.title`)) return null;
+        const title = t(`seoContent.${section}.title`);
+        const content = t.raw(`seoContent.${section}.content`) as string;
+        return (
+          <section key={section} className="space-y-3">
+            <h3 className="text-base font-semibold">{title}</h3>
+            <RichContent html={content} />
+          </section>
+        );
+      })}
     </div>
   );
 }

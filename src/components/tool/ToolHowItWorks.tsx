@@ -9,29 +9,52 @@ const textCategories: ToolCategory[] = ["developer"];
 interface ToolHowItWorksProps {
   category: ToolCategory;
   toolName?: string;
+  toolSlug?: string;
 }
 
-export function ToolHowItWorks({ category, toolName }: ToolHowItWorksProps) {
+export function ToolHowItWorks({ category, toolName, toolSlug }: ToolHowItWorksProps) {
   const t = useTranslations("common");
   const isTextBased = textCategories.includes(category);
 
-  const steps = [
-    {
-      icon: Upload,
-      title: t(isTextBased ? "howItWorks.step1TextTitle" : "howItWorks.step1FileTitle"),
-      description: t(isTextBased ? "howItWorks.step1TextDesc" : "howItWorks.step1FileDesc"),
-    },
-    {
-      icon: Settings,
-      title: t("howItWorks.step2Title"),
-      description: t("howItWorks.step2Desc"),
-    },
-    {
-      icon: Download,
-      title: t(isTextBased ? "howItWorks.step3TextTitle" : "howItWorks.step3FileTitle"),
-      description: t(isTextBased ? "howItWorks.step3TextDesc" : "howItWorks.step3FileDesc"),
-    },
-  ];
+  // Try tool-specific steps first
+  const tt = useTranslations(`tools.${category}.${toolSlug ?? ""}`);
+  const hasToolSteps = Boolean(toolSlug) && tt.has("howItWorks.step1Title");
+
+  const steps = hasToolSteps
+    ? [
+        {
+          icon: Upload,
+          title: tt("howItWorks.step1Title"),
+          description: tt("howItWorks.step1Desc"),
+        },
+        {
+          icon: Settings,
+          title: tt("howItWorks.step2Title"),
+          description: tt("howItWorks.step2Desc"),
+        },
+        {
+          icon: Download,
+          title: tt("howItWorks.step3Title"),
+          description: tt("howItWorks.step3Desc"),
+        },
+      ]
+    : [
+        {
+          icon: Upload,
+          title: t(isTextBased ? "howItWorks.step1TextTitle" : "howItWorks.step1FileTitle"),
+          description: t(isTextBased ? "howItWorks.step1TextDesc" : "howItWorks.step1FileDesc"),
+        },
+        {
+          icon: Settings,
+          title: t("howItWorks.step2Title"),
+          description: t("howItWorks.step2Desc"),
+        },
+        {
+          icon: Download,
+          title: t(isTextBased ? "howItWorks.step3TextTitle" : "howItWorks.step3FileTitle"),
+          description: t(isTextBased ? "howItWorks.step3TextDesc" : "howItWorks.step3FileDesc"),
+        },
+      ];
 
   const howToJsonLd = toolName
     ? {
