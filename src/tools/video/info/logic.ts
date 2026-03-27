@@ -1,4 +1,4 @@
-import { getFFmpeg } from "@/lib/ffmpeg";
+import { enqueueOperation } from "@/lib/ffmpeg";
 
 export interface StreamInfo {
   index: number;
@@ -31,31 +31,41 @@ export interface ProbeResult {
  * but the log contains full media info similar to ffprobe.
  */
 export async function probeVideo(file: File): Promise<ProbeResult> {
-  const ffmpeg = await getFFmpeg();
-  const { fetchFile } = await import("@ffmpeg/util");
-
-  const ext = file.name.match(/\.[^.]+$/)?.[0] ?? ".mp4";
-  const inputName = `probe_input${ext}`;
   const logLines: string[] = [];
 
-  const logHandler = ({ message }: { message: string }) => {
-    logLines.push(message);
-  };
+  await enqueueOperation(async (ffmpeg) => {
+    const ext = file.name.match(/\.[^.]+$/)?.[0] ?? ".mp4";
+    const safeInputName = `probe_input${ext}`;
+    const mountPoint = "/probe_input";
 
-  ffmpeg.on("log", logHandler);
+    const logHandler = ({ message }: { message: string }) => {
+      logLines.push(message);
+    };
 
-  try {
-    await ffmpeg.writeFile(inputName, await fetchFile(file));
-    // -i without output always exits non-zero; that's expected
-    await ffmpeg.exec(["-i", inputName]).catch(() => {});
-  } finally {
-    ffmpeg.off("log", logHandler);
     try {
-      await ffmpeg.deleteFile(inputName);
-    } catch {
-      /* ignore */
+      await ffmpeg.createDir(mountPoint);
+    } catch { /* already exists */ }
+
+    const { FFFSType } = await import("@ffmpeg/ffmpeg");
+    await ffmpeg.mount(
+      FFFSType.WORKERFS,
+      { blobs: [{ name: safeInputName, data: file }] },
+      mountPoint,
+    );
+
+    ffmpeg.on("log", logHandler);
+    try {
+      const inputPath = `${mountPoint}/${safeInputName}`;
+      // -i without output always exits non-zero; that's expected
+      await ffmpeg.exec(["-i", inputPath]).catch(() => {});
+    } finally {
+      ffmpeg.off("log", logHandler);
+      try {
+        await ffmpeg.unmount(mountPoint);
+        await ffmpeg.deleteDir(mountPoint);
+      } catch { /* ignore */ }
     }
-  }
+  });
 
   return parseFFmpegLog(logLines);
 }

@@ -1,4 +1,4 @@
-import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
+import { execWithMount } from "@/lib/ffmpeg";
 import { isWebCodecsSupported, validateConversion, WebCodecsFallbackError } from "@/lib/media-pipeline";
 
 export type ResizePreset = "720p" | "480p" | "360p" | "custom";
@@ -14,6 +14,7 @@ export async function resizeVideo(
   preset: ResizePreset,
   customWidth?: number,
   onProgress?: (progress: number) => void,
+  onFallback?: (isVideoCodecIssue: boolean) => void,
 ): Promise<Blob> {
   if (isWebCodecsSupported()) {
     try {
@@ -21,6 +22,7 @@ export async function resizeVideo(
     } catch (e) {
       if (e instanceof WebCodecsFallbackError) {
         console.warn("WebCodecs unavailable for this video, falling back to FFmpeg:", e.message);
+        onFallback?.(e.isVideoCodecIssue);
       } else {
         throw e;
       }
@@ -91,11 +93,6 @@ async function resizeWithFFmpeg(
   customWidth?: number,
   onProgress?: (progress: number) => void,
 ): Promise<Blob> {
-  const ffmpeg = await getFFmpeg();
-  const { fetchFile } = await import("@ffmpeg/util");
-  setProgressHandler(onProgress ?? null);
-  const ext = getExtension(file.name);
-  const inputName = "input" + ext;
   const outputName = "resized_out.mp4";
 
   const evenWidth = customWidth ? Math.round(customWidth / 2) * 2 : 1280;
@@ -104,37 +101,12 @@ async function resizeWithFFmpeg(
       ? `${evenWidth}:-2`
       : PRESET_MAP[preset as Exclude<ResizePreset, "custom">]?.ffmpegScale || "1280:-2";
 
-  try {
-    await ffmpeg.writeFile(inputName, await fetchFile(file));
-    await ffmpeg.exec([
-      "-i",
-      inputName,
-      "-vf",
-      `scale=${scale}`,
-      "-c:v",
-      "libx264",
-      "-c:a",
-      "aac",
-      outputName,
-    ]);
-    const data = await ffmpeg.readFile(outputName);
-    return new Blob([data as BlobPart], { type: "video/mp4" });
-  } finally {
-    setProgressHandler(null);
-    try {
-      await ffmpeg.deleteFile(inputName);
-    } catch {
-      /* ignore */
-    }
-    try {
-      await ffmpeg.deleteFile(outputName);
-    } catch {
-      /* ignore */
-    }
-  }
-}
-
-function getExtension(name: string): string {
-  const dot = name.lastIndexOf(".");
-  return dot >= 0 ? name.slice(dot) : ".mp4";
+  const data = await execWithMount(file, (inputPath) => [
+    "-i", inputPath,
+    "-vf", `scale=${scale}`,
+    "-c:v", "libx264",
+    "-c:a", "aac",
+    outputName,
+  ], outputName, onProgress);
+  return new Blob([data as BlobPart], { type: "video/mp4" });
 }

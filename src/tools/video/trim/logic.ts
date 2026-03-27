@@ -1,4 +1,4 @@
-import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
+import { execWithMount } from "@/lib/ffmpeg";
 
 export async function trimVideo(
   file: File,
@@ -6,39 +6,18 @@ export async function trimVideo(
   endTime: number,
   onProgress?: (progress: number) => void,
 ): Promise<Blob> {
-  const ffmpeg = await getFFmpeg();
-  const { fetchFile } = await import("@ffmpeg/util");
-  setProgressHandler(onProgress ?? null);
   const ext = getExtension(file.name);
-  const inputName = "input" + ext;
-  const outputName = "output" + ext;
+  const outputName = "trimmed_out" + ext;
 
-  try {
-    await ffmpeg.writeFile(inputName, await fetchFile(file));
-    // Input seek (-ss before -i) for fast seek; -t for duration relative to seek
-    await ffmpeg.exec([
-      "-ss", formatTime(startTime),
-      "-i", inputName,
-      "-t", formatTime(endTime - startTime),
-      "-c", "copy",
-      outputName,
-    ]);
-
-    const data = await ffmpeg.readFile(outputName);
-    return new Blob([data as BlobPart], { type: file.type || "video/mp4" });
-  } finally {
-    setProgressHandler(null);
-    try {
-      await ffmpeg.deleteFile(inputName);
-    } catch {
-      /* ignore */
-    }
-    try {
-      await ffmpeg.deleteFile(outputName);
-    } catch {
-      /* ignore */
-    }
-  }
+  // Input seek (-ss before -i) for fast seek; -t for duration relative to seek
+  const data = await execWithMount(file, (inputPath) => [
+    "-ss", formatTime(startTime),
+    "-i", inputPath,
+    "-t", formatTime(endTime - startTime),
+    "-c", "copy",
+    outputName,
+  ], outputName, onProgress);
+  return new Blob([data as BlobPart], { type: file.type || "video/mp4" });
 }
 
 export function formatTime(seconds: number): string {

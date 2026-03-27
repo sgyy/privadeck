@@ -1,4 +1,4 @@
-import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
+import { execWithMount } from "@/lib/ffmpeg";
 import { isWebCodecsSupported, validateConversion, WebCodecsFallbackError } from "@/lib/media-pipeline";
 
 export type VideoFormat = "mp4" | "mkv" | "avi";
@@ -33,6 +33,7 @@ export async function convertVideoFormat(
   file: File,
   format: VideoFormat,
   onProgress?: (progress: number) => void,
+  onFallback?: (isVideoCodecIssue: boolean) => void,
 ): Promise<{ blob: Blob; filename: string }> {
   // Use WebCodecs for MP4 and MKV; fall back to FFmpeg for AVI
   if (isWebCodecsSupported() && WEBCODECS_FORMATS.includes(format)) {
@@ -41,6 +42,7 @@ export async function convertVideoFormat(
     } catch (e) {
       if (e instanceof WebCodecsFallbackError) {
         console.warn("WebCodecs unavailable for this video, falling back to FFmpeg:", e.message);
+        onFallback?.(e.isVideoCodecIssue);
       } else {
         throw e;
       }
@@ -113,30 +115,15 @@ async function convertWithFFmpeg(
   format: VideoFormat,
   onProgress?: (progress: number) => void,
 ): Promise<{ blob: Blob; filename: string }> {
-  const ffmpeg = await getFFmpeg();
-  const { fetchFile } = await import("@ffmpeg/util");
-  setProgressHandler(onProgress ?? null);
-  const inputName = "input" + getExtension(file.name);
   const config = FORMAT_CONFIG[format];
   const outputName = "output" + config.ext;
 
-  try {
-    await ffmpeg.writeFile(inputName, await fetchFile(file));
-    await ffmpeg.exec(["-i", inputName, ...config.args, outputName]);
-    const data = await ffmpeg.readFile(outputName);
-    const baseName = file.name.replace(/\.[^.]+$/, "");
-    return {
-      blob: new Blob([data as BlobPart], { type: config.mime }),
-      filename: baseName + config.ext,
-    };
-  } finally {
-    setProgressHandler(null);
-    try { await ffmpeg.deleteFile(inputName); } catch { /* ignore */ }
-    try { await ffmpeg.deleteFile(outputName); } catch { /* ignore */ }
-  }
-}
-
-function getExtension(name: string): string {
-  const dot = name.lastIndexOf(".");
-  return dot >= 0 ? name.slice(dot) : ".mp4";
+  const data = await execWithMount(file, (inputPath) => [
+    "-i", inputPath, ...config.args, outputName,
+  ], outputName, onProgress);
+  const baseName = file.name.replace(/\.[^.]+$/, "");
+  return {
+    blob: new Blob([data as BlobPart], { type: config.mime }),
+    filename: baseName + config.ext,
+  };
 }

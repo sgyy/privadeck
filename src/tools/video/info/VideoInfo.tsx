@@ -4,8 +4,6 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { FileVideo, Video, Music, Loader2, Terminal, Images } from "lucide-react";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
-import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
-import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { CopyButton } from "@/components/shared/CopyButton";
 import {
   VideoUploader,
@@ -34,9 +32,6 @@ export default function VideoInfo() {
   const probeTriggered = useRef(false);
 
   const t = useTranslations("tools.video.info");
-  const tc = useTranslations("common");
-
-  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
   const handleProbe = useCallback(async () => {
     if (!file || probing) return;
@@ -44,8 +39,6 @@ export default function VideoInfo() {
     setError("");
     setProbeResult(null);
     try {
-      const ff = await loadFFmpeg();
-      if (!ff) return;
       const result = await probeVideo(file);
       setProbeResult(result);
     } catch (e) {
@@ -54,7 +47,7 @@ export default function VideoInfo() {
     } finally {
       setProbing(false);
     }
-  }, [file, probing, loadFFmpeg]);
+  }, [file, probing]);
 
   // Auto-trigger FFmpeg probe when browser metadata is ready
   useEffect(() => {
@@ -146,14 +139,6 @@ export default function VideoInfo() {
         }}
         onMetadataLoaded={setBrowserMeta}
       />
-
-      {ffmpegStatus === "loading" && <FFmpegLoadingState />}
-
-      {ffmpegStatus === "error" && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
-          {tc("ffmpegLoadError")}
-        </div>
-      )}
 
       {file && (
         <div className="space-y-4">

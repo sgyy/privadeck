@@ -6,8 +6,6 @@ import { FileDropzone } from "@/components/shared/FileDropzone";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
-import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
-import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { trimAudio, formatTimeDisplay } from "./logic";
 
@@ -23,9 +21,6 @@ export default function AudioTrim() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const fileUrl = useObjectUrl(file);
   const t = useTranslations("tools.audio.trim");
-  const tc = useTranslations("common");
-
-  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
   if (!isSharedArrayBufferSupported()) {
     return (
@@ -55,8 +50,6 @@ export default function AudioTrim() {
     setProcessing(true);
     setResult(null);
     setError("");
-    const ff = await loadFFmpeg();
-    if (!ff) { setProcessing(false); return; }
     try {
       const blob = await trimAudio(file, start, end, setProgress);
       setResult(blob);
@@ -71,14 +64,6 @@ export default function AudioTrim() {
   return (
     <div className="space-y-4">
       <FileDropzone accept="audio/*" onFiles={handleFile} />
-
-      {ffmpegStatus === "loading" && <FFmpegLoadingState />}
-
-      {ffmpegStatus === "error" && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
-          {tc("ffmpegLoadError")}
-        </div>
-      )}
 
       {file && fileUrl && (
         <div className="space-y-3">

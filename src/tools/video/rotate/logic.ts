@@ -1,4 +1,4 @@
-import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
+import { execWithMount } from "@/lib/ffmpeg";
 import { isWebCodecsSupported, validateConversion, WebCodecsFallbackError } from "@/lib/media-pipeline";
 
 export type RotateAngle = 90 | 180 | 270;
@@ -13,6 +13,7 @@ export async function rotateVideo(
   file: File,
   angle: RotateAngle,
   onProgress?: (progress: number) => void,
+  onFallback?: (isVideoCodecIssue: boolean) => void,
 ): Promise<Blob> {
   if (isWebCodecsSupported()) {
     try {
@@ -20,6 +21,7 @@ export async function rotateVideo(
     } catch (e) {
       if (e instanceof WebCodecsFallbackError) {
         console.warn("WebCodecs unavailable for this video, falling back to FFmpeg:", e.message);
+        onFallback?.(e.isVideoCodecIssue);
       } else {
         throw e;
       }
@@ -83,39 +85,13 @@ async function rotateWithFFmpeg(
   angle: RotateAngle,
   onProgress?: (progress: number) => void,
 ): Promise<Blob> {
-  const ffmpeg = await getFFmpeg();
-  const { fetchFile } = await import("@ffmpeg/util");
-  setProgressHandler(onProgress ?? null);
-  const inputName = "input" + getExtension(file.name);
-  const outputName = "output" + getExtension(file.name);
+  const outputName = "rotated_out.mp4";
 
-  try {
-    await ffmpeg.writeFile(inputName, await fetchFile(file));
-    await ffmpeg.exec([
-      "-i", inputName,
-      ...TRANSPOSE_MAP[angle],
-      "-c:a", "copy",
-      outputName,
-    ]);
-
-    const data = await ffmpeg.readFile(outputName);
-    return new Blob([data as BlobPart], { type: file.type || "video/mp4" });
-  } finally {
-    setProgressHandler(null);
-    try {
-      await ffmpeg.deleteFile(inputName);
-    } catch {
-      /* ignore */
-    }
-    try {
-      await ffmpeg.deleteFile(outputName);
-    } catch {
-      /* ignore */
-    }
-  }
-}
-
-function getExtension(filename: string): string {
-  const ext = filename.match(/\.[^.]+$/);
-  return ext ? ext[0] : ".mp4";
+  const data = await execWithMount(file, (inputPath) => [
+    "-i", inputPath,
+    ...TRANSPOSE_MAP[angle],
+    "-c:a", "copy",
+    outputName,
+  ], outputName, onProgress);
+  return new Blob([data as BlobPart], { type: file.type || "video/mp4" });
 }

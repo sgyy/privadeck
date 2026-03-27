@@ -6,9 +6,7 @@ import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
-import { isWebCodecsSupported } from "@/lib/media-pipeline";
-import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
-import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
+import { isWebCodecsSupported, shouldSuggestHevcExtension } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import {
   VideoUploader,
@@ -57,15 +55,13 @@ export default function VideoCompress() {
   const [error, setError] = useState("");
   const [sourceMetadata, setSourceMetadata] = useState<VideoMetadata | null>(null);
   const [outputMetadata, setOutputMetadata] = useState<VideoMetadata | null>(null);
+  const [hevcFallback, setHevcFallback] = useState(false);
 
   const outputVideoRef = useRef<HTMLVideoElement>(null);
   const resultUrl = useObjectUrl(result);
 
   const t = useTranslations("tools.video.compress");
   const tc = useTranslations("common");
-
-  // Always preload FFmpeg: WebCodecs may fall back to it for unsupported codecs
-  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
   if (!isSharedArrayBufferSupported() && !isWebCodecsSupported()) {
     return (
@@ -82,11 +78,7 @@ export default function VideoCompress() {
     setOutputMetadata(null);
     setError("");
     setProgress(0);
-    const ff = await loadFFmpeg();
-    if (!ff) {
-      setProcessing(false);
-      return;
-    }
+    setHevcFallback(false);
     try {
       const options = mode === "simple" ? quality : advancedOptions;
       const blob = await compressVideo(
@@ -95,6 +87,7 @@ export default function VideoCompress() {
         setProgress,
         sourceMetadata?.height,
         sourceMetadata?.fps,
+        (isVideoCodec) => setHevcFallback(isVideoCodec),
       );
       setResult(blob);
     } catch (e) {
@@ -169,14 +162,6 @@ export default function VideoCompress() {
         }}
         onMetadataLoaded={setSourceMetadata}
       />
-
-      {ffmpegStatus === "loading" && <FFmpegLoadingState />}
-
-      {ffmpegStatus === "error" && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
-          {tc("ffmpegLoadError")}
-        </div>
-      )}
 
       {file && (
         <div className="space-y-4">
@@ -387,6 +372,12 @@ export default function VideoCompress() {
           {error && (
             <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
               {error}
+            </div>
+          )}
+
+          {hevcFallback && shouldSuggestHevcExtension() && (
+            <div className="rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-blue-700 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-400">
+              {tc("hevcFallbackHint")}
             </div>
           )}
 

@@ -30,9 +30,13 @@ export function parseBitrate(value: string): number {
  * signaling that the caller should fall back to FFmpeg.
  */
 export class WebCodecsFallbackError extends Error {
-  constructor(reason: string) {
+  /** True when a video track was discarded due to an undecodable codec (likely HEVC) */
+  readonly isVideoCodecIssue: boolean;
+
+  constructor(reason: string, isVideoCodecIssue = false) {
     super(reason);
     this.name = "WebCodecsFallbackError";
+    this.isVideoCodecIssue = isVideoCodecIssue;
   }
 }
 
@@ -58,11 +62,28 @@ export function validateConversion(conversion: {
     codecReasons.has(d.reason),
   );
   if (discarded) {
+    const isVideoCodec =
+      discarded.track.type === "video" &&
+      discarded.reason === "undecodable_source_codec";
     throw new WebCodecsFallbackError(
       `${discarded.track.type} track discarded: ${discarded.reason}`,
+      isVideoCodec,
     );
   }
   if (!conversion.isValid) {
     throw new WebCodecsFallbackError("Conversion is not valid");
   }
+}
+
+/**
+ * Detect if the user could benefit from installing the HEVC Video Extensions
+ * on Windows to enable hardware-accelerated H.265 decoding via WebCodecs.
+ * Returns true on Windows + Chromium browsers where HEVC extensions may not be installed.
+ */
+export function shouldSuggestHevcExtension(): boolean {
+  if (typeof navigator === "undefined") return false;
+  const ua = navigator.userAgent;
+  const isWindows = ua.includes("Windows");
+  const isChromium = ua.includes("Chrome") || ua.includes("Edg");
+  return isWindows && isChromium && isWebCodecsSupported();
 }

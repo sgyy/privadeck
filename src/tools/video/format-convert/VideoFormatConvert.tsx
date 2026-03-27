@@ -7,9 +7,7 @@ import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
-import { isWebCodecsSupported } from "@/lib/media-pipeline";
-import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
-import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
+import { isWebCodecsSupported, shouldSuggestHevcExtension } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { convertVideoFormat, FORMATS, type VideoFormat } from "./logic";
 
@@ -23,12 +21,10 @@ export default function VideoFormatConvert() {
   const [progress, setProgress] = useState(0);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
+  const [hevcFallback, setHevcFallback] = useState(false);
   const resultUrl = useObjectUrl(result?.blob ?? null);
   const t = useTranslations("tools.video.format-convert");
   const tc = useTranslations("common");
-
-  // Always preload FFmpeg: AVI requires FFmpeg, and WebCodecs may fall back to it
-  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
   if (!isSharedArrayBufferSupported() && !isWebCodecsSupported()) {
     return (
@@ -44,10 +40,9 @@ export default function VideoFormatConvert() {
     setResult(null);
     setError("");
     setProgress(0);
-    const ff = await loadFFmpeg();
-    if (!ff) { setProcessing(false); return; }
+    setHevcFallback(false);
     try {
-      const output = await convertVideoFormat(file, format, setProgress);
+      const output = await convertVideoFormat(file, format, setProgress, (isVideoCodec) => setHevcFallback(isVideoCodec));
       setResult(output);
     } catch (e) {
       console.error("Convert failed:", e);
@@ -67,14 +62,6 @@ export default function VideoFormatConvert() {
           setError("");
         }}
       />
-
-      {ffmpegStatus === "loading" && <FFmpegLoadingState />}
-
-      {ffmpegStatus === "error" && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
-          {tc("ffmpegLoadError")}
-        </div>
-      )}
 
       {file && (
         <div className="space-y-4">
@@ -97,6 +84,12 @@ export default function VideoFormatConvert() {
           {error && (
             <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
               {error}
+            </div>
+          )}
+
+          {hevcFallback && shouldSuggestHevcExtension() && (
+            <div className="rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-blue-700 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-400">
+              {tc("hevcFallbackHint")}
             </div>
           )}
 

@@ -6,8 +6,6 @@ import { FileDropzone } from "@/components/shared/FileDropzone";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
-import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
-import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { createToolTracker } from "@/lib/analytics";
 import { adjustVolume } from "./logic";
@@ -30,9 +28,6 @@ export default function AudioVolume() {
   const resultUrl = useObjectUrl(result);
 
   const t = useTranslations("tools.audio.volume");
-  const tc = useTranslations("common");
-
-  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
   const stopPreview = useCallback((skipStateUpdate = false) => {
     if (sourceRef.current) {
@@ -122,8 +117,6 @@ export default function AudioVolume() {
     setResult(null);
     setError("");
     const startTime = performance.now();
-    const ff = await loadFFmpeg();
-    if (!ff) { setProcessing(false); return; }
     try {
       const blob = await adjustVolume(file, volume, setProgress);
       setResult(blob);
@@ -149,14 +142,6 @@ export default function AudioVolume() {
       ) : (
         <>
           <FileDropzone accept="audio/*" onFiles={handleFile} />
-
-          {ffmpegStatus === "loading" && <FFmpegLoadingState />}
-
-          {ffmpegStatus === "error" && (
-            <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
-              {tc("ffmpegLoadError")}
-            </div>
-          )}
 
           {file && fileUrl && (
             <div className="space-y-3">

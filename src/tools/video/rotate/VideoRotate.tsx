@@ -8,9 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { RotateCw } from "lucide-react";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
-import { isWebCodecsSupported } from "@/lib/media-pipeline";
-import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
-import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
+import { isWebCodecsSupported, shouldSuggestHevcExtension } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { rotateVideo, type RotateAngle } from "./logic";
 
@@ -21,12 +19,10 @@ export default function VideoRotate() {
   const [progress, setProgress] = useState(0);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
+  const [hevcFallback, setHevcFallback] = useState(false);
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.video.rotate");
   const tc = useTranslations("common");
-
-  // Always preload FFmpeg: WebCodecs may fall back to it for unsupported codecs
-  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
   if (!isSharedArrayBufferSupported() && !isWebCodecsSupported()) {
     return (
@@ -41,10 +37,9 @@ export default function VideoRotate() {
     setProcessing(true);
     setResult(null);
     setError("");
-    const ff = await loadFFmpeg();
-    if (!ff) { setProcessing(false); return; }
+    setHevcFallback(false);
     try {
-      const blob = await rotateVideo(file, angle, setProgress);
+      const blob = await rotateVideo(file, angle, setProgress, (isVideoCodec) => setHevcFallback(isVideoCodec));
       setResult(blob);
     } catch (e) {
       console.error("Rotate failed:", e);
@@ -60,14 +55,6 @@ export default function VideoRotate() {
         file={file}
         onFileChange={(f) => { setFile(f); setResult(null); setError(""); }}
       />
-
-      {ffmpegStatus === "loading" && <FFmpegLoadingState />}
-
-      {ffmpegStatus === "error" && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
-          {tc("ffmpegLoadError")}
-        </div>
-      )}
 
       {file && (
         <div className="space-y-3">
@@ -98,6 +85,12 @@ export default function VideoRotate() {
           {error && (
             <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
               {error}
+            </div>
+          )}
+
+          {hevcFallback && shouldSuggestHevcExtension() && (
+            <div className="rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-blue-700 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-400">
+              {tc("hevcFallbackHint")}
             </div>
           )}
 

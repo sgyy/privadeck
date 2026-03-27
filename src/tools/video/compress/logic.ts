@@ -1,4 +1,4 @@
-import { getFFmpeg, setProgressHandler } from "@/lib/ffmpeg";
+import { execWithMount } from "@/lib/ffmpeg";
 import { isWebCodecsSupported, parseBitrate, validateConversion, WebCodecsFallbackError } from "@/lib/media-pipeline";
 
 export type Quality = "high" | "medium" | "low";
@@ -88,6 +88,7 @@ export async function compressVideo(
   onProgress?: (progress: number) => void,
   sourceHeight?: number,
   sourceFps?: number,
+  onFallback?: (isVideoCodecIssue: boolean) => void,
 ): Promise<Blob> {
   if (isWebCodecsSupported()) {
     try {
@@ -95,6 +96,7 @@ export async function compressVideo(
     } catch (e) {
       if (e instanceof WebCodecsFallbackError) {
         console.warn("WebCodecs unavailable for this video, falling back to FFmpeg:", e.message);
+        onFallback?.(e.isVideoCodecIssue);
       } else {
         throw e;
       }
@@ -204,16 +206,10 @@ async function compressWithFFmpeg(
   const opts: CompressOptions =
     typeof options === "string" ? PRESET_OPTIONS[options] : options;
 
-  const ffmpeg = await getFFmpeg();
-  const { fetchFile } = await import("@ffmpeg/util");
-  setProgressHandler(onProgress ?? null);
-  const inputName = "input" + getExtension(file.name);
   const outputName = "compressed_out.mp4";
 
-  try {
-    await ffmpeg.writeFile(inputName, await fetchFile(file));
-
-    const args: string[] = ["-i", inputName];
+  const data = await execWithMount(file, (inputPath) => {
+    const args: string[] = ["-i", inputPath];
 
     // Video filters
     const filters: string[] = [];
@@ -250,26 +246,7 @@ async function compressWithFFmpeg(
     args.push("-c:a", "aac", "-b:a", opts.audioBitrate);
 
     args.push(outputName);
-
-    await ffmpeg.exec(args);
-    const data = await ffmpeg.readFile(outputName);
-    return new Blob([data as BlobPart], { type: "video/mp4" });
-  } finally {
-    setProgressHandler(null);
-    try {
-      await ffmpeg.deleteFile(inputName);
-    } catch {
-      /* ignore */
-    }
-    try {
-      await ffmpeg.deleteFile(outputName);
-    } catch {
-      /* ignore */
-    }
-  }
-}
-
-function getExtension(name: string): string {
-  const dot = name.lastIndexOf(".");
-  return dot >= 0 ? name.slice(dot) : ".mp4";
+    return args;
+  }, outputName, onProgress);
+  return new Blob([data as BlobPart], { type: "video/mp4" });
 }

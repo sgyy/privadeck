@@ -7,8 +7,6 @@ import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
-import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
-import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { extractAudio, type OutputFormat } from "./logic";
 
@@ -24,9 +22,6 @@ export default function AudioExtract() {
   const fileUrl = useObjectUrl(file);
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.audio.extract");
-  const tc = useTranslations("common");
-
-  const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
   if (!isSharedArrayBufferSupported()) {
     return (
@@ -41,8 +36,6 @@ export default function AudioExtract() {
     setProcessing(true);
     setResult(null);
     setError("");
-    const ff = await loadFFmpeg();
-    if (!ff) { setProcessing(false); return; }
     try {
       const blob = await extractAudio(file, format, setProgress);
       setResult(blob);
@@ -57,14 +50,6 @@ export default function AudioExtract() {
   return (
     <div className="space-y-4">
       <FileDropzone accept="video/*" onFiles={(f) => { setFile(f[0]); setResult(null); setError(""); }} />
-
-      {ffmpegStatus === "loading" && <FFmpegLoadingState />}
-
-      {ffmpegStatus === "error" && (
-        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
-          {tc("ffmpegLoadError")}
-        </div>
-      )}
 
       {file && fileUrl && (
         <div className="space-y-3">
