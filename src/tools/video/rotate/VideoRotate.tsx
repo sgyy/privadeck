@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { RotateCw } from "lucide-react";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
+import { isWebCodecsSupported } from "@/lib/media-pipeline";
 import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
 import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
@@ -24,9 +25,10 @@ export default function VideoRotate() {
   const t = useTranslations("tools.video.rotate");
   const tc = useTranslations("common");
 
+  // Always preload FFmpeg: WebCodecs may fall back to it for unsupported codecs
   const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
-  if (!isSharedArrayBufferSupported()) {
+  if (!isSharedArrayBufferSupported() && !isWebCodecsSupported()) {
     return (
       <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
         <p className="text-sm text-muted-foreground">{t("unsupported")}</p>

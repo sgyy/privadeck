@@ -6,6 +6,7 @@ import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
+import { isWebCodecsSupported } from "@/lib/media-pipeline";
 import { useFFmpeg } from "@/lib/hooks/useFFmpeg";
 import { FFmpegLoadingState } from "@/components/shared/FFmpegLoadingState";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
@@ -63,9 +64,10 @@ export default function VideoCompress() {
   const t = useTranslations("tools.video.compress");
   const tc = useTranslations("common");
 
+  // Always preload FFmpeg: WebCodecs may fall back to it for unsupported codecs
   const { status: ffmpegStatus, load: loadFFmpeg } = useFFmpeg({ preload: true });
 
-  if (!isSharedArrayBufferSupported()) {
+  if (!isSharedArrayBufferSupported() && !isWebCodecsSupported()) {
     return (
       <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
         <p className="text-sm text-muted-foreground">{t("unsupported")}</p>
