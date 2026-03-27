@@ -1,14 +1,12 @@
 "use client";
 
-import { useTranslations, useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import type { ToolDefinition } from "@/lib/registry/types";
 import { Shield } from "lucide-react";
 import { ToolHowItWorks } from "./ToolHowItWorks";
 import { ToolFeatureCards } from "./ToolFeatureCards";
 import { ToolWhySection } from "./ToolWhySection";
 import { ToolDescription } from "./ToolDescription";
-import { generateToolJsonLd } from "@/lib/seo/jsonld";
-
 interface ToolPageShellProps {
   tool: ToolDefinition;
   children: React.ReactNode;
@@ -17,16 +15,9 @@ interface ToolPageShellProps {
 export function ToolPageShell({ tool, children }: ToolPageShellProps) {
   const t = useTranslations(`tools.${tool.category}.${tool.slug}`);
   const tc = useTranslations("common");
-  const locale = useLocale();
-
-  const toolJsonLd = generateToolJsonLd(tool, locale, t("name"), t("description"));
 
   return (
     <div className="space-y-6">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolJsonLd) }}
-      />
       <div>
         <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
           {t("name")}
