@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "支援哪些影片格式？",
+          "a6": "可以上傳瀏覽器能解碼的任何格式，包括 MP4、WebM、MOV、MKV 和 AVI。輸出始終為 MP4（H.264 + AAC），確保在所有裝置和平台上相容。",
+          "q7": "能壓縮多少？",
+          "a7": "典型壓縮率為 30% 到 80%。100 MB 的影片在中等品質（CRF 28）下通常可壓縮到 20–40 MB。低品質（CRF 35）更小，高品質（CRF 23）幾乎看不出損失。",
+          "q8": "手機上能用嗎？",
+          "a8": "可以。本工具支援所有支援 SharedArrayBuffer 的現代手機瀏覽器——Chrome、Edge、Firefox 和 Safari 16.4+。大檔案（200 MB 以上）建議使用電腦。"
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "簡單 & 進階雙模式",
+            "description": "一鍵預設快速出結果，或完全控制 CRF、編碼速度、解析度和位元率。"
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100% 瀏覽器處理",
+            "description": "影片不離開裝置。FFmpeg.wasm 驅動，零伺服器接觸。"
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "前後對比",
+            "description": "壓縮前後的檔案大小、解析度、位元率、壓縮比一目了然。"
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "智慧解析度控制",
+            "description": "降至 1080p/720p/480p/360p，自動禁止放大操作。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 級編碼速度",
+            "description": "從極快到極慢——相同畫質下用編碼時間換更小的檔案。"
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "通用 MP4 輸出",
+            "description": "H.264 + AAC 編碼，確保在所有裝置、瀏覽器和平台上播放。"
+          }
+        },
+        "whySection": {
+          "title": "為什麼要壓縮影片？",
+          "content": "<p>影片檔案過大是郵件退信、上傳失敗和雲端儲存不足的頭號原因。</p><ul><li><strong>郵件限制</strong>：Gmail 25 MB，Outlook 20 MB。</li><li><strong>即時通訊</strong>：LINE 300 MB，WhatsApp 16 MB。</li><li><strong>社群媒體</strong>：YouTube、Instagram 會重新壓縮上傳影片。</li><li><strong>雲端費用</strong>：iCloud、Google Drive 按容量收費。</li><li><strong>傳輸速度</strong>：50 MB 秒傳，500 MB 要等幾分鐘。</li><li><strong>網頁嵌入</strong>：壓縮影片載入更快、佔用更少頻寬。</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "上傳影片檔案",
+          "step1Desc": "拖入任意影片——MP4、WebM、MOV、MKV 或 AVI。解析度、時長、位元率、影格率即時顯示。",
+          "step2Title": "選擇壓縮設定",
+          "step2Desc": "簡單模式（高/中/低）一鍵壓縮，或切換進階模式精調 CRF、速度、解析度和位元率。",
+          "step3Title": "下載壓縮影片",
+          "step3Desc": "對比前後各項參數，在瀏覽器中預覽效果，下載更小的 MP4 檔案。"
         }
       },
       "format-convert": {

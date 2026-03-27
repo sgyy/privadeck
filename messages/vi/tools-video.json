@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "Tôi có thể nén những định dạng video nào?",
+          "a6": "Bạn có thể tải lên bất kỳ định dạng nào mà trình duyệt giải mã được: MP4, WebM, MOV, MKV, AVI. Đầu ra luôn là MP4 (H.264 + AAC).",
+          "q7": "Có thể giảm bao nhiêu dung lượng?",
+          "a7": "Tỷ lệ nén thường từ 30% đến 80%. Video 100 MB ở chất lượng trung bình (CRF 28) thường giảm còn 20–40 MB.",
+          "q8": "Có hoạt động trên điện thoại không?",
+          "a8": "Có, trên mọi trình duyệt di động hỗ trợ SharedArrayBuffer — Chrome, Edge, Firefox và Safari 16.4+."
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Chế độ Đơn giản & Nâng cao",
+            "description": "Cài đặt sẵn một cú nhấp hoặc kiểm soát hoàn toàn CRF, tốc độ, độ phân giải và bitrate."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100% trên trình duyệt",
+            "description": "Video không bao giờ rời khỏi thiết bị. Chạy bằng FFmpeg.wasm, không liên hệ máy chủ."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "So sánh trước/sau",
+            "description": "Kích thước, độ phân giải, bitrate và tỷ lệ nén trước và sau."
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "Kiểm soát độ phân giải thông minh",
+            "description": "Giảm xuống 1080p, 720p, 480p hoặc 360p. Phóng to bị chặn theo thiết kế."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 tốc độ mã hóa",
+            "description": "Từ Cực nhanh đến Rất chậm — đổi thời gian mã hóa lấy file nhỏ hơn cùng chất lượng."
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "Đầu ra MP4 đa năng",
+            "description": "Mã hóa H.264 + AAC đảm bảo phát trên mọi thiết bị, trình duyệt và nền tảng."
+          }
+        },
+        "whySection": {
+          "title": "Tại sao nên nén video?",
+          "content": "<p>File video lớn là nguyên nhân hàng đầu khiến email bị trả lại, upload thất bại và bộ nhớ đám mây đầy.</p><ul><li><strong>Giới hạn email</strong>: Gmail 25 MB, Outlook 20 MB.</li><li><strong>Ứng dụng nhắn tin</strong>: WhatsApp 16 MB.</li><li><strong>Mạng xã hội</strong>: Instagram, TikTok, YouTube nén lại upload.</li><li><strong>Chi phí đám mây</strong>: Tính phí theo GB.</li><li><strong>Truyền nhanh hơn</strong>: 50 MB trong giây vs phút cho 500 MB.</li><li><strong>Nhúng web</strong>: Video nén tải nhanh hơn.</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "Tải lên video",
+          "step1Desc": "Kéo thả file video — MP4, WebM, MOV, MKV hoặc AVI. Độ phân giải, thời lượng, bitrate và fps hiển thị ngay.",
+          "step2Title": "Chọn cài đặt nén",
+          "step2Desc": "Chế độ Đơn giản (Cao/Trung bình/Thấp) một cú nhấp, hoặc Nâng cao để kiểm soát đầy đủ.",
+          "step3Title": "Tải xuống video đã nén",
+          "step3Desc": "So sánh thống kê trước/sau, xem trước kết quả và tải xuống MP4 nhỏ hơn."
         }
       },
       "format-convert": {

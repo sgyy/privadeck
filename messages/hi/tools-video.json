@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "मैं कौन से वीडियो फॉर्मेट कंप्रेस कर सकता हूं?",
+          "a6": "आप कोई भी फॉर्मेट अपलोड कर सकते हैं जिसे आपका ब्राउज़र डिकोड कर सकता है, जिसमें MP4, WebM, MOV, MKV और AVI शामिल हैं। आउटपुट हमेशा MP4 (H.264 वीडियो + AAC ऑडियो) होता है।",
+          "q7": "फ़ाइल का आकार कितना कम हो सकता है?",
+          "a7": "सामान्य कंप्रेशन दर 30% से 80% तक होती है। 100 MB का वीडियो मध्यम गुणवत्ता (CRF 28) पर आमतौर पर 20-40 MB हो जाता है।",
+          "q8": "क्या यह मोबाइल पर काम करता है?",
+          "a8": "हां, यह SharedArrayBuffer सपोर्ट वाले किसी भी आधुनिक मोबाइल ब्राउज़र में काम करता है — Chrome, Edge, Firefox और Safari 16.4+। बड़ी फ़ाइलों (200 MB से अधिक) के लिए डेस्कटॉप की सिफारिश की जाती है।"
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "सिंपल और एडवांस्ड मोड",
+            "description": "त्वरित परिणामों के लिए वन-क्लिक प्रीसेट, या CRF, एन्कोडिंग स्पीड, रिज़ॉल्यूशन और बिटरेट पर पूर्ण नियंत्रण।"
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100% ब्राउज़र-आधारित",
+            "description": "वीडियो आपके डिवाइस से बाहर नहीं जाते। FFmpeg.wasm द्वारा संचालित, सर्वर से कोई संपर्क नहीं।"
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "पहले-बाद तुलना",
+            "description": "कंप्रेशन से पहले और बाद फ़ाइल साइज़, रिज़ॉल्यूशन, बिटरेट और कंप्रेशन रेशियो देखें।"
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "स्मार्ट रिज़ॉल्यूशन कंट्रोल",
+            "description": "1080p, 720p, 480p या 360p तक डाउनस्केल। अपस्केलिंग डिज़ाइन से ब्लॉक है।"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 एन्कोडिंग स्पीड",
+            "description": "अल्ट्रा फास्ट से बहुत धीमे तक — समान गुणवत्ता पर छोटी फ़ाइल के लिए एन्कोडिंग समय बदलें।"
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "यूनिवर्सल MP4 आउटपुट",
+            "description": "H.264 + AAC एन्कोडिंग हर डिवाइस, ब्राउज़र और प्लेटफ़ॉर्म पर प्लेबैक सुनिश्चित करता है।"
+          }
+        },
+        "whySection": {
+          "title": "वीडियो कंप्रेस क्यों करें?",
+          "content": "<p>बड़ी वीडियो फ़ाइलें ईमेल बाउंस, अपलोड विफलता और क्लाउड स्टोरेज भरने का मुख्य कारण हैं।</p><ul><li><strong>ईमेल सीमा</strong>: Gmail 25 MB, Outlook 20 MB।</li><li><strong>मैसेजिंग ऐप्स</strong>: WhatsApp 16 MB।</li><li><strong>सोशल मीडिया</strong>: Instagram, TikTok और YouTube अपलोड को री-कंप्रेस करते हैं।</li><li><strong>क्लाउड स्टोरेज लागत</strong>: GB के हिसाब से चार्ज।</li><li><strong>तेज़ ट्रांसफर</strong>: 50 MB सेकंड में बनाम 500 MB मिनटों में।</li><li><strong>वेब एम्बेडिंग</strong>: कंप्रेस्ड वीडियो तेज़ लोड होते हैं।</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "वीडियो अपलोड करें",
+          "step1Desc": "कोई भी वीडियो फ़ाइल ड्रॉप करें — MP4, WebM, MOV, MKV या AVI। रिज़ॉल्यूशन, अवधि, बिटरेट तुरंत दिखाई देते हैं।",
+          "step2Title": "कंप्रेशन सेटिंग्स चुनें",
+          "step2Desc": "सिंपल मोड (हाई/मीडियम/लो) वन-क्लिक के लिए, या एडवांस्ड मोड पूर्ण नियंत्रण के लिए।",
+          "step3Title": "कंप्रेस्ड वीडियो डाउनलोड करें",
+          "step3Desc": "पहले/बाद के आंकड़ों की तुलना करें, ब्राउज़र में प्रीव्यू करें और छोटी MP4 फ़ाइल डाउनलोड करें।"
         }
       },
       "format-convert": {

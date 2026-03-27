@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "어떤 비디오 형식을 압축할 수 있나요?",
+          "a6": "브라우저가 디코딩할 수 있는 모든 형식(MP4, WebM, MOV, MKV, AVI)을 업로드할 수 있습니다. 출력은 항상 MP4(H.264 + AAC)입니다.",
+          "q7": "파일 크기를 얼마나 줄일 수 있나요?",
+          "a7": "일반적인 압축률은 30%~80%입니다. 100MB 비디오는 중간 품질(CRF 28)에서 보통 20~40MB로 줄어듭니다.",
+          "q8": "모바일에서도 작동하나요?",
+          "a8": "네, SharedArrayBuffer를 지원하는 최신 모바일 브라우저(Chrome, Edge, Firefox, Safari 16.4+)에서 작동합니다. 대용량 파일(200MB 이상)은 데스크톱 사용을 권장합니다."
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "심플 & 고급 모드",
+            "description": "원클릭 프리셋으로 빠른 결과, 또는 CRF·속도·해상도·비트레이트 완전 제어."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100% 브라우저 처리",
+            "description": "비디오가 기기를 떠나지 않습니다. FFmpeg.wasm 구동, 서버 접촉 없음."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "전후 비교",
+            "description": "파일 크기, 해상도, 비트레이트, 압축률을 전후로 확인."
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "스마트 해상도 제어",
+            "description": "1080p/720p/480p/360p 다운스케일. 업스케일링은 설계상 차단."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9단계 인코딩 속도",
+            "description": "초고속~초저속—같은 품질에서 인코딩 시간을 파일 크기 감소로 교환."
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "범용 MP4 출력",
+            "description": "H.264 + AAC 인코딩으로 모든 기기·브라우저·플랫폼에서 재생 보장."
+          }
+        },
+        "whySection": {
+          "title": "왜 비디오를 압축해야 하나요?",
+          "content": "<p>큰 비디오 파일은 이메일 반송, 업로드 실패, 클라우드 저장 공간 부족의 주요 원인입니다.</p><ul><li><strong>이메일 제한</strong>: Gmail 25MB, Outlook 20MB.</li><li><strong>메신저</strong>: WhatsApp 16MB.</li><li><strong>SNS</strong>: Instagram, TikTok, YouTube는 업로드를 재압축합니다.</li><li><strong>클라우드 비용</strong>: GB당 과금.</li><li><strong>빠른 전송</strong>: 50MB는 초, 500MB는 분.</li><li><strong>웹 임베딩</strong>: 압축 비디오는 더 빠르게 로드.</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "비디오 업로드",
+          "step1Desc": "MP4, WebM, MOV, MKV, AVI 파일을 드롭. 해상도·길이·비트레이트·fps 즉시 표시.",
+          "step2Title": "압축 설정 선택",
+          "step2Desc": "심플 모드(고/중/저) 원클릭, 또는 고급 모드로 CRF·속도·해상도·비트레이트 완전 제어.",
+          "step3Title": "압축 비디오 다운로드",
+          "step3Desc": "전후 통계 비교, 브라우저에서 미리보기, 더 작은 MP4 다운로드."
         }
       },
       "format-convert": {

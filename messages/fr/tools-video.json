@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "Quels formats vidéo puis-je compresser ?",
+          "a6": "Vous pouvez télécharger tout format décodable par votre navigateur : MP4, WebM, MOV, MKV, AVI. La sortie est toujours en MP4 (H.264 + AAC) pour une compatibilité maximale.",
+          "q7": "De combien puis-je réduire la taille ?",
+          "a7": "Les taux de compression vont de 30 % à 80 %. Une vidéo de 100 Mo en qualité moyenne (CRF 28) devient 20–40 Mo. Qualité basse (CRF 35) pour des fichiers plus petits, haute (CRF 23) pour une perte minimale.",
+          "q8": "Ça fonctionne sur mobile ?",
+          "a8": "Oui, dans tout navigateur mobile moderne supportant SharedArrayBuffer — Chrome, Edge, Firefox, Safari 16.4+. Pour les fichiers volumineux (+ de 200 Mo), un ordinateur est recommandé."
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Mode Simple et Avancé",
+            "description": "Préréglages en un clic ou contrôle total sur le CRF, la vitesse, la résolution et le débit."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100 % dans le navigateur",
+            "description": "Les vidéos ne quittent jamais votre appareil. Propulsé par FFmpeg.wasm sans contact serveur."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Comparaison avant/après",
+            "description": "Taille, résolution, débit et taux de compression avant et après."
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "Contrôle intelligent de résolution",
+            "description": "Réduction à 1080p, 720p, 480p ou 360p. L'agrandissement est bloqué par conception."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 vitesses d'encodage",
+            "description": "D'Ultra Rapide à Très Lent — échangez du temps contre des fichiers plus petits à qualité égale."
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "Sortie MP4 universelle",
+            "description": "L'encodage H.264 + AAC garantit la lecture sur tout appareil, navigateur et plateforme."
+          }
+        },
+        "whySection": {
+          "title": "Pourquoi compresser des vidéos ?",
+          "content": "<p>Les fichiers vidéo volumineux sont la cause n°1 des e-mails rejetés, des échecs d'envoi et du stockage saturé.</p><ul><li><strong>Limites d'e-mail</strong> : Gmail 25 Mo, Outlook 20 Mo.</li><li><strong>Messagerie</strong> : WhatsApp 16 Mo.</li><li><strong>Réseaux sociaux</strong> : Instagram, TikTok et YouTube recompressent vos envois — la précompression vous donne le contrôle.</li><li><strong>Coûts cloud</strong> : Google Drive, Dropbox, iCloud facturent au Go.</li><li><strong>Transferts rapides</strong> : 50 Mo en secondes vs. minutes pour 500 Mo.</li><li><strong>Web</strong> : Les vidéos compressées se chargent plus vite et consomment moins de bande passante.</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "Téléchargez votre vidéo",
+          "step1Desc": "Glissez n'importe quel fichier — MP4, WebM, MOV, MKV ou AVI. Résolution, durée, débit et fps s'affichent instantanément.",
+          "step2Title": "Choisissez les paramètres",
+          "step2Desc": "Mode Simple (Haut/Moyen/Bas) en un clic, ou mode Avancé pour contrôle total du CRF, vitesse, résolution et débit.",
+          "step3Title": "Téléchargez la vidéo compressée",
+          "step3Desc": "Comparez les statistiques avant/après, prévisualisez et téléchargez un MP4 plus petit."
         }
       },
       "format-convert": {

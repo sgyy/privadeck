@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "どのビデオ形式を圧縮できますか？",
+          "a6": "ブラウザがデコードできるあらゆる形式（MP4、WebM、MOV、MKV、AVI）をアップロードできます。出力は常にMP4（H.264 + AAC）で最大限の互換性を確保します。",
+          "q7": "ファイルサイズはどれくらい削減できますか？",
+          "a7": "一般的な圧縮率は30%～80%です。100MBのビデオは中品質（CRF 28）で通常20〜40MBになります。低品質（CRF 35）でさらに小さく、高品質（CRF 23）で劣化を最小限に。",
+          "q8": "モバイルでも使えますか？",
+          "a8": "はい。SharedArrayBuffer対応の最新モバイルブラウザ（Chrome、Edge、Firefox、Safari 16.4+）で動作します。大きなファイル（200MB超）にはPCの使用をお勧めします。"
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "シンプル＆アドバンスモード",
+            "description": "ワンクリックプリセットで素早い結果、またはCRF・速度・解像度・ビットレートを完全制御。"
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100%ブラウザ処理",
+            "description": "ビデオはデバイスから離れません。FFmpeg.wasmで動作、サーバー通信ゼロ。"
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "前後比較",
+            "description": "ファイルサイズ、解像度、ビットレート、圧縮率を圧縮前後で比較。"
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "スマート解像度制御",
+            "description": "1080p/720p/480p/360pにダウンスケール。アップスケーリングは設計上ブロック。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9段階のエンコード速度",
+            "description": "超高速から超低速まで—同じ品質でエンコード時間とファイルサイズを交換。"
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "ユニバーサルMP4出力",
+            "description": "H.264 + AAC エンコーディングで全デバイス・ブラウザ・プラットフォームで再生可能。"
+          }
+        },
+        "whySection": {
+          "title": "なぜビデオを圧縮するのか？",
+          "content": "<p>大きなビデオファイルは、メールバウンス、アップロード失敗、クラウドストレージ不足の最大の原因です。</p><ul><li><strong>メール制限</strong>：Gmail 25MB、Outlook 20MB。</li><li><strong>メッセージアプリ</strong>：WhatsApp 16MB。</li><li><strong>SNS</strong>：Instagram、TikTok、YouTubeはアップロードを再圧縮します。</li><li><strong>クラウドコスト</strong>：GB単位で課金。</li><li><strong>高速転送</strong>：50MBは数秒、500MBは数分。</li><li><strong>Web埋め込み</strong>：圧縮ビデオはより速くストリーム配信。</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "ビデオをアップロード",
+          "step1Desc": "任意のビデオファイルをドロップ—MP4、WebM、MOV、MKV、AVI。解像度・時間・ビットレート・フレームレートが即時表示。",
+          "step2Title": "圧縮設定を選択",
+          "step2Desc": "シンプルモード（高/中/低）でワンクリック、またはアドバンスモードで完全制御。",
+          "step3Title": "圧縮ビデオをダウンロード",
+          "step3Desc": "前後の統計を比較し、ブラウザでプレビュー、より小さなMP4をダウンロード。"
         }
       },
       "format-convert": {

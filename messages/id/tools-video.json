@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "Format video apa saja yang bisa dikompres?",
+          "a6": "Anda dapat mengunggah format apa pun yang didukung browser, termasuk MP4, WebM, MOV, MKV, dan AVI. Output selalu MP4 (H.264 video + AAC audio) untuk kompatibilitas maksimum.",
+          "q7": "Berapa banyak ukuran file yang bisa dikurangi?",
+          "a7": "Rasio kompresi tipikal berkisar 30% hingga 80%. Video 100 MB dengan kualitas sedang (CRF 28) biasanya menjadi 20–40 MB.",
+          "q8": "Apakah ini berfungsi di perangkat seluler?",
+          "a8": "Ya, di browser seluler modern yang mendukung SharedArrayBuffer — Chrome, Edge, Firefox, dan Safari 16.4+. Untuk file besar (lebih dari 200 MB), disarankan menggunakan desktop."
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Mode Sederhana & Lanjutan",
+            "description": "Preset sekali klik atau kontrol penuh atas CRF, kecepatan encoding, resolusi, dan bitrate."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100% Berbasis Browser",
+            "description": "Video tidak pernah meninggalkan perangkat Anda. Didukung FFmpeg.wasm tanpa kontak server."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Perbandingan Sebelum/Sesudah",
+            "description": "Lihat ukuran file, resolusi, bitrate, dan rasio kompresi sebelum dan sesudah."
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "Kontrol Resolusi Cerdas",
+            "description": "Turunkan ke 1080p, 720p, 480p, atau 360p. Upscaling diblokir secara desain."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 Kecepatan Encoding",
+            "description": "Dari Ultra Cepat ke Sangat Lambat — tukar waktu encoding dengan file lebih kecil pada kualitas sama."
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "Output MP4 Universal",
+            "description": "Encoding H.264 + AAC menjamin pemutaran di semua perangkat, browser, dan platform."
+          }
+        },
+        "whySection": {
+          "title": "Mengapa Mengompres Video?",
+          "content": "<p>File video besar adalah penyebab utama email terpental, upload gagal, dan penyimpanan cloud penuh.</p><ul><li><strong>Batas email</strong>: Gmail 25 MB, Outlook 20 MB.</li><li><strong>Aplikasi pesan</strong>: WhatsApp 16 MB.</li><li><strong>Media sosial</strong>: Instagram, TikTok, YouTube mengompres ulang upload Anda.</li><li><strong>Biaya cloud</strong>: Ditagih per GB.</li><li><strong>Transfer cepat</strong>: 50 MB dalam detik vs menit untuk 500 MB.</li><li><strong>Embed web</strong>: Video terkompresi dimuat lebih cepat.</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "Unggah Video",
+          "step1Desc": "Seret file video apa pun — MP4, WebM, MOV, MKV, atau AVI. Resolusi, durasi, bitrate, dan frame rate langsung ditampilkan.",
+          "step2Title": "Pilih Pengaturan Kompresi",
+          "step2Desc": "Mode Sederhana (Tinggi/Sedang/Rendah) sekali klik, atau Mode Lanjutan untuk kontrol penuh.",
+          "step3Title": "Unduh Video Terkompresi",
+          "step3Desc": "Bandingkan statistik sebelum/sesudah, pratinjau hasilnya, dan unduh file MP4 yang lebih kecil."
         }
       },
       "format-convert": {

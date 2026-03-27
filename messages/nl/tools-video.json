@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "Welke videoformaten kan ik comprimeren?",
+          "a6": "U kunt elk formaat uploaden dat uw browser kan decoderen: MP4, WebM, MOV, MKV, AVI. De uitvoer is altijd MP4 (H.264 + AAC).",
+          "q7": "Hoeveel kan ik de bestandsgrootte verkleinen?",
+          "a7": "Typische compressieverhoudingen zijn 30% tot 80%. Een video van 100 MB wordt bij gemiddelde kwaliteit (CRF 28) doorgaans 20–40 MB.",
+          "q8": "Werkt dit op mobiele apparaten?",
+          "a8": "Ja, in elke moderne mobiele browser met SharedArrayBuffer-ondersteuning — Chrome, Edge, Firefox en Safari 16.4+."
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Eenvoudige & Geavanceerde Modus",
+            "description": "Presets met één klik of volledige controle over CRF, snelheid, resolutie en bitrate."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100% browsergebaseerd",
+            "description": "Video's verlaten nooit uw apparaat. Aangedreven door FFmpeg.wasm zonder servercontact."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Voor/na vergelijking",
+            "description": "Bestandsgrootte, resolutie, bitrate en compressieverhouding voor en na."
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "Slimme resolutiebesturing",
+            "description": "Schaal naar 1080p, 720p, 480p of 360p. Opschaling wordt geblokkeerd."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 coderingssnelheden",
+            "description": "Van Ultra Snel tot Zeer Langzaam — ruil coderingstijd voor kleinere bestanden."
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "Universele MP4-uitvoer",
+            "description": "H.264 + AAC-codering garandeert afspelen op elk apparaat en platform."
+          }
+        },
+        "whySection": {
+          "title": "Waarom video's comprimeren?",
+          "content": "<p>Grote videobestanden zijn de hoofdoorzaak van teruggestuurde e-mails, mislukte uploads en volle cloudopslag.</p><ul><li><strong>E-maillimieten</strong>: Gmail 25 MB, Outlook 20 MB.</li><li><strong>Berichten-apps</strong>: WhatsApp 16 MB.</li><li><strong>Social media</strong>: Instagram, TikTok en YouTube hercomprimeren uploads.</li><li><strong>Cloudkosten</strong>: Per GB in rekening gebracht.</li><li><strong>Snellere overdracht</strong>: 50 MB in seconden vs. minuten voor 500 MB.</li><li><strong>Webinbedding</strong>: Gecomprimeerde video's laden sneller.</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "Upload je video",
+          "step1Desc": "Sleep een videobestand — MP4, WebM, MOV, MKV of AVI. Resolutie, duur, bitrate en fps worden direct getoond.",
+          "step2Title": "Kies compressie-instellingen",
+          "step2Desc": "Eenvoudige modus (Hoog/Gemiddeld/Laag) met één klik, of Geavanceerd voor volledige controle.",
+          "step3Title": "Download gecomprimeerde video",
+          "step3Desc": "Vergelijk voor/na-statistieken, bekijk het resultaat en download een kleinere MP4."
         }
       },
       "format-convert": {

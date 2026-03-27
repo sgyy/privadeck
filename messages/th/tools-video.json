@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "บีบอัดวิดีโอรูปแบบใดได้บ้าง?",
+          "a6": "อัปโหลดได้ทุกรูปแบบที่เบราว์เซอร์ถอดรหัสได้: MP4, WebM, MOV, MKV, AVI ผลลัพธ์เป็น MP4 (H.264 + AAC) เสมอ",
+          "q7": "ลดขนาดไฟล์ได้มากแค่ไหน?",
+          "a7": "อัตราการบีบอัดทั่วไปอยู่ที่ 30%–80% วิดีโอ 100 MB ที่คุณภาพปานกลาง (CRF 28) มักลดเหลือ 20–40 MB",
+          "q8": "ใช้งานบนมือถือได้ไหม?",
+          "a8": "ได้ ใช้งานได้บนเบราว์เซอร์มือถือสมัยใหม่ที่รองรับ SharedArrayBuffer — Chrome, Edge, Firefox และ Safari 16.4+"
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "โหมดง่ายและขั้นสูง",
+            "description": "พรีเซ็ตคลิกเดียวหรือควบคุม CRF ความเร็ว ความละเอียด และบิตเรตได้เต็มที่"
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "ประมวลผลในเบราว์เซอร์ 100%",
+            "description": "วิดีโอไม่ออกจากอุปกรณ์ ขับเคลื่อนด้วย FFmpeg.wasm ไม่มีการติดต่อเซิร์ฟเวอร์"
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "เปรียบเทียบก่อน/หลัง",
+            "description": "ดูขนาดไฟล์ ความละเอียด บิตเรต และอัตราการบีบอัดก่อนและหลัง"
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "ควบคุมความละเอียดอัจฉริยะ",
+            "description": "ลดเป็น 1080p, 720p, 480p หรือ 360p การขยายถูกบล็อกโดยการออกแบบ"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 ระดับความเร็วเข้ารหัส",
+            "description": "จากเร็วสุดถึงช้าสุด — แลกเวลาเข้ารหัสเป็นไฟล์ที่เล็กลงในคุณภาพเดียวกัน"
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "เอาต์พุต MP4 สากล",
+            "description": "การเข้ารหัส H.264 + AAC รับประกันการเล่นบนทุกอุปกรณ์และแพลตฟอร์ม"
+          }
+        },
+        "whySection": {
+          "title": "ทำไมต้องบีบอัดวิดีโอ?",
+          "content": "<p>ไฟล์วิดีโอขนาดใหญ่เป็นสาเหตุหลักที่อีเมลตีกลับ อัปโหลดล้มเหลว และพื้นที่คลาวด์เต็ม</p><ul><li><strong>จำกัดอีเมล</strong>: Gmail 25 MB, Outlook 20 MB</li><li><strong>แอปส่งข้อความ</strong>: WhatsApp 16 MB</li><li><strong>โซเชียลมีเดีย</strong>: Instagram, TikTok, YouTube บีบอัดซ้ำ</li><li><strong>ค่าคลาวด์</strong>: คิดค่าบริการต่อ GB</li><li><strong>ส่งเร็วขึ้น</strong>: 50 MB ในวินาที vs นาทีสำหรับ 500 MB</li><li><strong>ฝังเว็บ</strong>: วิดีโอบีบอัดโหลดเร็วกว่า</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "อัปโหลดวิดีโอ",
+          "step1Desc": "ลากไฟล์วิดีโอ — MP4, WebM, MOV, MKV หรือ AVI ความละเอียด ความยาว บิตเรต และ fps แสดงทันที",
+          "step2Title": "เลือกการตั้งค่าการบีบอัด",
+          "step2Desc": "โหมดง่าย (สูง/กลาง/ต่ำ) คลิกเดียว หรือโหมดขั้นสูงสำหรับการควบคุมเต็มรูปแบบ",
+          "step3Title": "ดาวน์โหลดวิดีโอที่บีบอัดแล้ว",
+          "step3Desc": "เปรียบเทียบสถิติก่อน/หลัง ดูตัวอย่างในเบราว์เซอร์ และดาวน์โหลด MP4 ที่เล็กลง"
         }
       },
       "format-convert": {

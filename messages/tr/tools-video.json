@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "Hangi video formatlarını sıkıştırabilirim?",
+          "a6": "Tarayıcınızın çözebileceği her formatı yükleyebilirsiniz: MP4, WebM, MOV, MKV, AVI. Çıktı her zaman MP4 (H.264 + AAC) olur.",
+          "q7": "Dosya boyutunu ne kadar küçültebilirim?",
+          "a7": "Tipik sıkıştırma oranları %30 ile %80 arasındadır. 100 MB'lık bir video orta kalitede (CRF 28) genellikle 20–40 MB olur.",
+          "q8": "Mobil cihazlarda çalışır mı?",
+          "a8": "Evet, SharedArrayBuffer destekli tüm modern mobil tarayıcılarda çalışır — Chrome, Edge, Firefox ve Safari 16.4+."
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Basit ve Gelişmiş Mod",
+            "description": "Tek tıkla hazır ayarlar veya CRF, hız, çözünürlük ve bit hızı üzerinde tam kontrol."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "%100 tarayıcı tabanlı",
+            "description": "Videolar cihazınızdan asla ayrılmaz. Sunucu teması olmadan FFmpeg.wasm ile çalışır."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Önce/sonra karşılaştırma",
+            "description": "Dosya boyutu, çözünürlük, bit hızı ve sıkıştırma oranını önce ve sonra görün."
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "Akıllı çözünürlük kontrolü",
+            "description": "1080p, 720p, 480p veya 360p'ye küçültün. Büyütme tasarım gereği engellenir."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 kodlama hızı",
+            "description": "Ultra Hızlı'dan Çok Yavaş'a — aynı kalitede kodlama süresini daha küçük dosyalarla değiştirin."
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "Evrensel MP4 çıktısı",
+            "description": "H.264 + AAC kodlama her cihaz, tarayıcı ve platformda oynatmayı garanti eder."
+          }
+        },
+        "whySection": {
+          "title": "Neden video sıkıştırmalısınız?",
+          "content": "<p>Büyük video dosyaları e-postaların geri dönmesinin, yüklemelerin başarısız olmasının ve bulut depolamanın dolmasının ana nedenidir.</p><ul><li><strong>E-posta limitleri</strong>: Gmail 25 MB, Outlook 20 MB.</li><li><strong>Mesajlaşma uygulamaları</strong>: WhatsApp 16 MB.</li><li><strong>Sosyal medya</strong>: Instagram, TikTok ve YouTube yüklemeleri yeniden sıkıştırır.</li><li><strong>Bulut maliyetleri</strong>: GB başına ücretlendirilir.</li><li><strong>Hızlı aktarım</strong>: 50 MB saniyeler vs 500 MB dakikalar.</li><li><strong>Web yerleştirme</strong>: Sıkıştırılmış videolar daha hızlı yüklenir.</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "Videonuzu yükleyin",
+          "step1Desc": "Herhangi bir dosyayı sürükleyin — MP4, WebM, MOV, MKV veya AVI. Çözünürlük, süre, bit hızı ve fps anında görüntülenir.",
+          "step2Title": "Sıkıştırma ayarlarını seçin",
+          "step2Desc": "Basit mod (Yüksek/Orta/Düşük) tek tıkla veya tam kontrol için Gelişmiş mod.",
+          "step3Title": "Sıkıştırılmış videoyu indirin",
+          "step3Desc": "Önce/sonra istatistiklerini karşılaştırın, sonucu önizleyin ve daha küçük MP4 indirin."
         }
       },
       "format-convert": {

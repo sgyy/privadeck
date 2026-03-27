@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "ما هي صيغ الفيديو التي يمكنني ضغطها؟",
+          "a6": "يمكنك رفع أي صيغة يمكن لمتصفحك فك تشفيرها، بما في ذلك MP4 وWebM وMOV وMKV وAVI. الإخراج دائمًا بصيغة MP4 (فيديو H.264 + صوت AAC) لأقصى توافق عبر جميع الأجهزة والمنصات.",
+          "q7": "كم يمكن تقليل حجم الملف؟",
+          "a7": "تتراوح نسب الضغط النموذجية بين 30% و80% حسب الفيديو المصدر وإعدادات الجودة. فيديو بحجم 100 ميجابايت بجودة متوسطة (CRF 28) يصبح عادة 20-40 ميجابايت. استخدم الجودة المنخفضة (CRF 35) لملفات أصغر، أو الجودة العالية (CRF 23) لأقل خسارة مرئية.",
+          "q8": "هل يعمل على الأجهزة المحمولة؟",
+          "a8": "نعم، تعمل الأداة في أي متصفح محمول حديث يدعم SharedArrayBuffer — بما في ذلك Chrome وEdge وFirefox وSafari 16.4+. تعتمد سرعة المعالجة على معالج جهازك. للملفات الكبيرة (أكثر من 200 ميجابايت)، يُنصح باستخدام جهاز مكتبي أو محمول."
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "الوضع البسيط والمتقدم",
+            "description": "إعدادات مسبقة بنقرة واحدة لنتائج سريعة، أو تحكم كامل في CRF وسرعة الترميز والدقة ومعدل البت."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100% في المتصفح",
+            "description": "لا تغادر مقاطع الفيديو جهازك أبدًا. مدعوم بـ FFmpeg.wasm بدون أي اتصال بالخوادم."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "مقارنة قبل وبعد",
+            "description": "شاهد حجم الملف والدقة ومعدل البت ونسبة الضغط قبل وبعد."
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "تحكم ذكي بالدقة",
+            "description": "تقليل إلى 1080p أو 720p أو 480p أو 360p. التكبير محظور بالتصميم."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 سرعات ترميز",
+            "description": "من فائق السرعة إلى بطيء جدًا — استبدل وقت الترميز بملفات أصغر بنفس الجودة."
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "إخراج MP4 عالمي",
+            "description": "ترميز H.264 + AAC يضمن التشغيل على كل جهاز ومتصفح ومنصة."
+          }
+        },
+        "whySection": {
+          "title": "لماذا تضغط مقاطع الفيديو؟",
+          "content": "<p>ملفات الفيديو الكبيرة هي السبب الأول لارتداد رسائل البريد الإلكتروني وفشل الرفع وامتلاء التخزين السحابي. ضغط مقاطع الفيديو يحل هذه المشاكل مع الحفاظ على جودة بصرية مقبولة.</p><ul><li><strong>حدود البريد الإلكتروني</strong>: Gmail يحد المرفقات بـ 25 ميجابايت، Outlook بـ 20 ميجابايت.</li><li><strong>تطبيقات المراسلة</strong>: WhatsApp يحد رسائل الفيديو بـ 16 ميجابايت.</li><li><strong>وسائل التواصل الاجتماعي</strong>: منصات مثل Instagram وTikTok وYouTube تعيد ضغط ما ترفعه — الضغط المسبق يمنحك التحكم في الجودة النهائية.</li><li><strong>تكاليف التخزين السحابي</strong>: Google Drive وDropbox وiCloud تتقاضى رسومًا لكل جيجابايت. مقاطع فيديو أصغر تعني فواتير أقل.</li><li><strong>نقل أسرع</strong>: على الاتصالات البطيئة، فيديو 50 ميجابايت يُرفع في ثوانٍ مقابل دقائق لـ 500 ميجابايت.</li><li><strong>تضمين الويب</strong>: الزوار يغادرون الصفحات البطيئة. مقاطع الفيديو المضغوطة تُبث بشكل أسرع.</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "ارفع الفيديو",
+          "step1Desc": "أسقط أي ملف فيديو — MP4 أو WebM أو MOV أو MKV أو AVI. تظهر الدقة والمدة ومعدل البت فورًا.",
+          "step2Title": "اختر إعدادات الضغط",
+          "step2Desc": "اختر الوضع البسيط (عالي/متوسط/منخفض) لنتائج بنقرة واحدة، أو انتقل للوضع المتقدم للتحكم الكامل.",
+          "step3Title": "حمّل الفيديو المضغوط",
+          "step3Desc": "قارن الإحصائيات قبل وبعد، واعرض النتيجة في المتصفح، وحمّل ملف MP4 أصغر."
         }
       },
       "format-convert": {

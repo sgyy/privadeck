@@ -299,7 +299,58 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "What video formats can I compress?",
+          "a6": "You can upload any format your browser can decode, including MP4, WebM, MOV, MKV, and AVI. The output is always MP4 (H.264 video + AAC audio) for maximum compatibility across all devices and platforms.",
+          "q7": "How much can I reduce the file size?",
+          "a7": "Typical compression ratios range from 30% to 80% reduction depending on the source video and quality settings. A 100 MB video at Medium quality (CRF 28) typically becomes 20–40 MB. Use Low quality (CRF 35) for even smaller files, or High quality (CRF 23) for minimal visible loss.",
+          "q8": "Does this work on mobile devices?",
+          "a8": "Yes, the tool works in any modern mobile browser that supports SharedArrayBuffer — including Chrome, Edge, Firefox, and Safari 16.4+. Processing speed depends on your device's CPU. For large files (over 200 MB), a desktop or laptop is recommended."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Simple & Advanced Modes",
+            "description": "One-click presets for quick results, or full control over CRF, encoding speed, resolution, and bitrate."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100% Browser-Based",
+            "description": "Videos never leave your device. Powered by FFmpeg.wasm with zero server contact."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Side-by-Side Comparison",
+            "description": "See file size, resolution, bitrate, and compression ratio before and after."
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "Smart Resolution Control",
+            "description": "Downscale to 1080p, 720p, 480p, or 360p. Upscaling is blocked by design to prevent bloat."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 Encoding Speeds",
+            "description": "From Ultra Fast to Very Slow — trade encoding time for smaller file size at the same quality."
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "Universal MP4 Output",
+            "description": "H.264 + AAC encoding ensures playback on every device, browser, and platform."
+          }
+        },
+        "whySection": {
+          "title": "Why Compress Videos?",
+          "content": "<p>Large video files are the #1 reason emails bounce, uploads fail, and cloud storage fills up. Compressing your videos solves these problems while keeping visual quality acceptable.</p><ul><li><strong>Email limits</strong>: Gmail caps attachments at 25 MB, Outlook at 20 MB. A single 1080p recording can exceed that in seconds.</li><li><strong>Messaging apps</strong>: WhatsApp limits video messages to 16 MB, Telegram to 2 GB but with slow uploads on mobile data.</li><li><strong>Social media</strong>: Platforms like Instagram, TikTok, and YouTube re-compress your uploads — pre-compressing gives you control over the final quality.</li><li><strong>Cloud storage costs</strong>: Google Drive, Dropbox, and iCloud charge per GB. Smaller videos mean lower bills and more room.</li><li><strong>Faster transfers</strong>: On slow or metered connections, a 50 MB video uploads in seconds vs. minutes for 500 MB.</li><li><strong>Web embedding</strong>: Visitors abandon pages that take too long to load. Compressed videos stream faster and use less bandwidth.</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "Upload Your Video",
+          "step1Desc": "Drop any video file — MP4, WebM, MOV, MKV, or AVI. Resolution, duration, bitrate, and frame rate are displayed instantly.",
+          "step2Title": "Choose Compression Settings",
+          "step2Desc": "Pick Simple mode (High / Medium / Low) for one-click results, or switch to Advanced for full CRF, speed, resolution, and bitrate control.",
+          "step3Title": "Download Compressed Video",
+          "step3Desc": "Compare before/after stats, preview the result in your browser, and download a smaller MP4 file."
         },
         "seoContent": {
           "intro": {

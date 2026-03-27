@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "Які формати відео можна стиснути?",
+          "a6": "Можна завантажити будь-який формат, який підтримує ваш браузер: MP4, WebM, MOV, MKV, AVI. Вихід завжди MP4 (H.264 + AAC).",
+          "q7": "Наскільки можна зменшити розмір файлу?",
+          "a7": "Типовий ступінь стиснення — від 30% до 80%. Відео 100 МБ при середній якості (CRF 28) зазвичай зменшується до 20–40 МБ.",
+          "q8": "Чи працює на мобільних пристроях?",
+          "a8": "Так, у будь-якому сучасному мобільному браузері з підтримкою SharedArrayBuffer — Chrome, Edge, Firefox та Safari 16.4+."
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Простий та розширений режим",
+            "description": "Пресети одним кліком або повний контроль над CRF, швидкістю, роздільністю та бітрейтом."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100% у браузері",
+            "description": "Відео не покидає ваш пристрій. Працює на FFmpeg.wasm без контакту з сервером."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Порівняння до/після",
+            "description": "Розмір файлу, роздільність, бітрейт та коефіцієнт стиснення до і після."
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "Розумне керування роздільністю",
+            "description": "Зменшення до 1080p, 720p, 480p або 360p. Збільшення заблоковано."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 швидкостей кодування",
+            "description": "Від Надшвидкого до Дуже Повільного — обміняйте час кодування на менший розмір файлу."
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "Універсальний вивід MP4",
+            "description": "Кодування H.264 + AAC забезпечує відтворення на всіх пристроях та платформах."
+          }
+        },
+        "whySection": {
+          "title": "Навіщо стискати відео?",
+          "content": "<p>Великі відеофайли — головна причина повернення листів, помилок завантаження та переповнення хмарного сховища.</p><ul><li><strong>Ліміти пошти</strong>: Gmail 25 МБ, Outlook 20 МБ.</li><li><strong>Месенджери</strong>: WhatsApp 16 МБ.</li><li><strong>Соцмережі</strong>: Instagram, TikTok і YouTube перестискають завантаження.</li><li><strong>Вартість хмари</strong>: Оплата за ГБ.</li><li><strong>Швидка передача</strong>: 50 МБ за секунди vs хвилини для 500 МБ.</li><li><strong>Вбудовування в веб</strong>: Стиснуті відео завантажуються швидше.</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "Завантажте відео",
+          "step1Desc": "Перетягніть будь-який файл — MP4, WebM, MOV, MKV або AVI. Роздільність, тривалість, бітрейт та fps відображаються миттєво.",
+          "step2Title": "Оберіть налаштування стиснення",
+          "step2Desc": "Простий режим (Висока/Середня/Низька) одним кліком або Розширений для повного контролю.",
+          "step3Title": "Завантажте стиснуте відео",
+          "step3Desc": "Порівняйте статистику до/після, перегляньте результат у браузері та завантажте менший MP4."
         }
       },
       "format-convert": {

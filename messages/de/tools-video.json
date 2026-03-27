@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "Welche Videoformate kann ich komprimieren?",
+          "a6": "Sie können jedes Format hochladen, das Ihr Browser dekodieren kann, einschließlich MP4, WebM, MOV, MKV und AVI. Die Ausgabe ist immer MP4 (H.264 Video + AAC Audio) für maximale Kompatibilität.",
+          "q7": "Wie stark kann die Dateigröße reduziert werden?",
+          "a7": "Typische Kompressionsraten liegen zwischen 30 % und 80 %. Ein 100-MB-Video wird bei mittlerer Qualität (CRF 28) typischerweise auf 20–40 MB komprimiert. Niedrige Qualität (CRF 35) für kleinere Dateien, hohe Qualität (CRF 23) für minimalen Verlust.",
+          "q8": "Funktioniert das auf Mobilgeräten?",
+          "a8": "Ja, in jedem modernen mobilen Browser mit SharedArrayBuffer-Unterstützung — Chrome, Edge, Firefox und Safari 16.4+. Für große Dateien (über 200 MB) wird ein Desktop empfohlen."
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Einfacher & Erweiterter Modus",
+            "description": "Ein-Klick-Voreinstellungen für schnelle Ergebnisse oder volle Kontrolle über CRF, Geschwindigkeit, Auflösung und Bitrate."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100 % browserbasiert",
+            "description": "Videos verlassen nie Ihr Gerät. Angetrieben von FFmpeg.wasm ohne Serverkontakt."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Vorher-Nachher-Vergleich",
+            "description": "Dateigröße, Auflösung, Bitrate und Kompressionsrate vor und nach der Komprimierung."
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "Intelligente Auflösungssteuerung",
+            "description": "Herunterskalieren auf 1080p, 720p, 480p oder 360p. Hochskalierung wird bewusst blockiert."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 Kodierungsgeschwindigkeiten",
+            "description": "Von Ultraschnell bis Sehr Langsam — Kodierungszeit gegen kleinere Dateien bei gleicher Qualität tauschen."
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "Universelle MP4-Ausgabe",
+            "description": "H.264 + AAC-Kodierung gewährleistet Wiedergabe auf jedem Gerät, Browser und jeder Plattform."
+          }
+        },
+        "whySection": {
+          "title": "Warum Videos komprimieren?",
+          "content": "<p>Große Videodateien sind der Hauptgrund für zurückgewiesene E-Mails, fehlgeschlagene Uploads und vollen Cloud-Speicher.</p><ul><li><strong>E-Mail-Limits</strong>: Gmail begrenzt Anhänge auf 25 MB, Outlook auf 20 MB.</li><li><strong>Messenger-Apps</strong>: WhatsApp begrenzt Videos auf 16 MB.</li><li><strong>Social Media</strong>: Instagram, TikTok und YouTube komprimieren Uploads erneut — Vorkomprimierung gibt Ihnen Kontrolle.</li><li><strong>Cloud-Kosten</strong>: Google Drive, Dropbox und iCloud berechnen pro GB.</li><li><strong>Schnellere Übertragung</strong>: 50 MB in Sekunden statt Minuten für 500 MB.</li><li><strong>Web-Einbettung</strong>: Komprimierte Videos laden schneller und sparen Bandbreite.</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "Video hochladen",
+          "step1Desc": "Beliebige Videodatei hineinziehen — MP4, WebM, MOV, MKV oder AVI. Auflösung, Dauer, Bitrate und Bildrate werden sofort angezeigt.",
+          "step2Title": "Komprimierungseinstellungen wählen",
+          "step2Desc": "Einfacher Modus (Hoch/Mittel/Niedrig) für Ein-Klick-Ergebnisse oder Erweiterter Modus für volle Kontrolle.",
+          "step3Title": "Komprimiertes Video herunterladen",
+          "step3Desc": "Vorher/Nachher-Statistiken vergleichen, Ergebnis im Browser ansehen und kleinere MP4-Datei herunterladen."
         }
       },
       "format-convert": {

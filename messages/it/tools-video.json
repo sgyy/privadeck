@@ -299,7 +299,13 @@
           "q4": "Can I upscale my video to a higher resolution?",
           "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "Quali formati video posso comprimere?",
+          "a6": "Puoi caricare qualsiasi formato decodificabile dal browser: MP4, WebM, MOV, MKV, AVI. L'output è sempre MP4 (H.264 + AAC) per massima compatibilità.",
+          "q7": "Di quanto posso ridurre la dimensione?",
+          "a7": "I rapporti di compressione tipici vanno dal 30% all'80%. Un video da 100 MB in qualità media (CRF 28) diventa di solito 20–40 MB.",
+          "q8": "Funziona su dispositivi mobili?",
+          "a8": "Sì, in qualsiasi browser mobile moderno con supporto SharedArrayBuffer — Chrome, Edge, Firefox e Safari 16.4+. Per file grandi (oltre 200 MB) si consiglia un desktop."
         },
         "seoContent": {
           "intro": {
@@ -322,6 +328,51 @@
             "title": "Privacy-First Video Compression",
             "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
           }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Modalità Semplice e Avanzata",
+            "description": "Preset con un clic o controllo completo su CRF, velocità, risoluzione e bitrate."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "100% nel browser",
+            "description": "I video non lasciano mai il tuo dispositivo. Alimentato da FFmpeg.wasm senza contatto server."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Confronto prima/dopo",
+            "description": "Dimensione, risoluzione, bitrate e rapporto di compressione prima e dopo."
+          },
+          "f4": {
+            "icon": "MonitorDown",
+            "title": "Controllo risoluzione intelligente",
+            "description": "Ridimensiona a 1080p, 720p, 480p o 360p. L'upscaling è bloccato per design."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "9 velocità di codifica",
+            "description": "Da Ultra Veloce a Molto Lento — scambia tempo di codifica per file più piccoli a parità di qualità."
+          },
+          "f6": {
+            "icon": "FileVideo",
+            "title": "Output MP4 universale",
+            "description": "La codifica H.264 + AAC garantisce la riproduzione su qualsiasi dispositivo, browser e piattaforma."
+          }
+        },
+        "whySection": {
+          "title": "Perché comprimere i video?",
+          "content": "<p>I file video grandi sono la causa principale di email respinte, upload falliti e spazio cloud esaurito.</p><ul><li><strong>Limiti email</strong>: Gmail 25 MB, Outlook 20 MB.</li><li><strong>App di messaggistica</strong>: WhatsApp 16 MB.</li><li><strong>Social media</strong>: Instagram, TikTok e YouTube ricomprimono i tuoi upload.</li><li><strong>Costi cloud</strong>: Addebitati per GB.</li><li><strong>Trasferimenti rapidi</strong>: 50 MB in secondi vs minuti per 500 MB.</li><li><strong>Web</strong>: I video compressi si caricano più velocemente.</li></ul>"
+        },
+        "howItWorks": {
+          "step1Title": "Carica il video",
+          "step1Desc": "Trascina qualsiasi file video — MP4, WebM, MOV, MKV o AVI. Risoluzione, durata, bitrate e fps appaiono subito.",
+          "step2Title": "Scegli le impostazioni di compressione",
+          "step2Desc": "Modalità Semplice (Alta/Media/Bassa) con un clic, o Avanzata per controllo completo.",
+          "step3Title": "Scarica il video compresso",
+          "step3Desc": "Confronta le statistiche, anteprima nel browser e scarica un MP4 più piccolo."
         }
       },
       "format-convert": {
