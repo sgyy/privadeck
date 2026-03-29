@@ -1,7 +1,13 @@
 import { execWithMount } from "@/lib/ffmpeg";
-import { isWebCodecsSupported, validateConversion, WebCodecsFallbackError, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
+import { isWebCodecsSupported, validateConversion, WebCodecsFallbackError, UnsupportedVideoCodecError, type VideoCodec } from "@/lib/media-pipeline";
 
 export type VideoFormat = "mp4" | "mkv" | "avi";
+
+export interface ConvertOptions {
+  codec?: VideoCodec;
+  /** Source video codec - used to determine if stream copy is possible for MKV */
+  sourceCodec?: VideoCodec;
+}
 
 const FORMAT_CONFIG: Record<
   VideoFormat,
@@ -33,11 +39,12 @@ export async function convertVideoFormat(
   file: File,
   format: VideoFormat,
   onProgress?: (progress: number) => void,
+  options?: ConvertOptions,
 ): Promise<{ blob: Blob; filename: string }> {
   // Use WebCodecs for MP4 and MKV; fall back to FFmpeg for AVI
   if (isWebCodecsSupported() && WEBCODECS_FORMATS.includes(format)) {
     try {
-      return await convertWithWebCodecs(file, format, onProgress);
+      return await convertWithWebCodecs(file, format, onProgress, options?.codec, options?.sourceCodec);
     } catch (e) {
       if (e instanceof WebCodecsFallbackError) {
         // Unsupported video codec detected (e.g., H.265/HEVC, VP9, AV1)
@@ -59,6 +66,8 @@ async function convertWithWebCodecs(
   file: File,
   format: VideoFormat,
   onProgress?: (progress: number) => void,
+  codec: VideoCodec = "avc",
+  sourceCodec?: VideoCodec,
 ): Promise<{ blob: Blob; filename: string }> {
   const {
     Input, Output, Conversion,
@@ -81,14 +90,23 @@ async function convertWithWebCodecs(
   const target = new BufferTarget();
   const output = new Output({ format: outputFormat, target });
 
-  // MKV: stream copy (no transcoding). MP4: transcode to H.264+AAC.
-  const needsTranscode = format !== "mkv";
+  // Determine if transcoding is needed:
+  // - MP4/AVI: always transcode (container format requires it)
+  // - MKV: stream copy if codec matches source, otherwise transcode
+  let needsTranscode: boolean;
+  if (format === "mkv") {
+    // For MKV, only transcode if the target codec differs from source
+    needsTranscode = sourceCodec !== codec;
+  } else {
+    // MP4/AVI always need transcoding
+    needsTranscode = true;
+  }
 
   const conversion = await Conversion.init({
     input,
     output,
     video: needsTranscode
-      ? { codec: "avc", hardwareAcceleration: "prefer-hardware" }
+      ? { codec, hardwareAcceleration: "prefer-hardware" }
       : undefined,
     audio: needsTranscode
       ? { codec: "aac" }

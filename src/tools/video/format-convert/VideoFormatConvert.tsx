@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { VideoUploader, formatSize } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
-import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
+import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError, canEncodeHevc, type VideoCodec } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { convertVideoFormat, FORMATS, type VideoFormat } from "./logic";
 
@@ -22,9 +22,38 @@ export default function VideoFormatConvert() {
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   const [isCodecError, setIsCodecError] = useState(false);
+
+  // Codec selection state
+  const [outputCodec, setOutputCodec] = useState<VideoCodec>("avc");
+  const [canUseHevc, setCanUseHevc] = useState(false);
+  const [checkingHevcSupport, setCheckingHevcSupport] = useState(false);
+  // Track source codec as state for proper reactivity
+  const [sourceCodec, setSourceCodec] = useState<VideoCodec | undefined>(undefined);
+
   const resultUrl = useObjectUrl(result?.blob ?? null);
   const t = useTranslations("tools.video.format-convert");
   const tc = useTranslations("common");
+
+  // Check H.265 encoding support when component mounts
+  useEffect(() => {
+    if (!isWebCodecsSupported()) return;
+    setCheckingHevcSupport(true);
+    canEncodeHevc().then((supported) => {
+      setCanUseHevc(supported);
+      setCheckingHevcSupport(false);
+    });
+  }, []);
+
+  // Set default output codec based on source video codec
+  useEffect(() => {
+    if (!sourceCodec) return;
+    // Default to same codec as source if available
+    if (sourceCodec === "hevc" && canUseHevc) {
+      setOutputCodec("hevc");
+    } else {
+      setOutputCodec("avc");
+    }
+  }, [sourceCodec, canUseHevc]);
 
   if (!isSharedArrayBufferSupported() && !isWebCodecsSupported()) {
     return (
@@ -42,7 +71,12 @@ export default function VideoFormatConvert() {
     setIsCodecError(false);
     setProgress(0);
     try {
-      const output = await convertVideoFormat(file, format, setProgress);
+      // Pass both output codec and source codec for smart stream copy detection
+      const options = {
+        codec: outputCodec,
+        sourceCodec: sourceCodec,
+      };
+      const output = await convertVideoFormat(file, format, setProgress, options);
       setResult(output);
     } catch (e) {
       console.error("Convert failed:", e);
@@ -66,6 +100,10 @@ export default function VideoFormatConvert() {
           setResult(null);
           setError("");
           setIsCodecError(false);
+          setSourceCodec(undefined);
+        }}
+        onMetadataLoaded={(meta) => {
+          setSourceCodec(meta.codec);
         }}
         onCodecWarning={(warning) => setIsCodecError(warning?.isUnsupported ?? false)}
       />
@@ -87,6 +125,51 @@ export default function VideoFormatConvert() {
               ))}
             </div>
           </div>
+
+          {/* Video codec selection for all formats */}
+          <div className="space-y-2">
+            <label className="text-sm font-medium">
+              {t("codecLabel")}
+            </label>
+            <div className="flex flex-wrap gap-2">
+              <Button
+                variant={outputCodec === "avc" ? "primary" : "outline"}
+                size="sm"
+                onClick={() => setOutputCodec("avc")}
+              >
+                H.264 (AVC)
+              </Button>
+              <Button
+                variant={outputCodec === "hevc" ? "primary" : "outline"}
+                size="sm"
+                disabled={!canUseHevc}
+                onClick={() => setOutputCodec("hevc")}
+              >
+                H.265 (HEVC)
+              </Button>
+            </div>
+            <p className="text-xs text-muted-foreground">
+              {canUseHevc
+                ? t("codecHint")
+                : checkingHevcSupport
+                  ? t("codecChecking")
+                  : t("codecHevcNotSupported")}
+            </p>
+          </div>
+
+          {/* Info for MKV format: stream copy or transcode */}
+          {format === "mkv" && sourceCodec === outputCodec && (
+            <div className="rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-blue-700 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-400">
+              {t("mkvStreamCopy")}
+            </div>
+          )}
+
+          {/* Warning for MKV: transcoding required when codec differs */}
+          {format === "mkv" && sourceCodec && sourceCodec !== outputCodec && (
+            <div className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-700 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-400">
+              {t("mkvTranscode")}
+            </div>
+          )}
 
           {error && (
             <div className={`rounded-lg border p-3 text-sm ${isCodecError
