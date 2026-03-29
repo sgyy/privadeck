@@ -2,10 +2,10 @@
   "common": {
     "siteName": "PrivaDeck",
     "siteDescription": "隱私優先的瀏覽器工具台。無需上傳，無需註冊，100% 本地處理。",
-    "localOnlyIndicator": "Browser Processing Only (Offline Ready)",
-    "compareBefore": "Before",
-    "compareAfter": "After",
-    "compareSaved": "Saved {percent}%",
+    "localOnlyIndicator": "僅瀏覽器處理（可離線使用）",
+    "compareBefore": "處理前",
+    "compareAfter": "處理後",
+    "compareSaved": "縮小 {percent}%",
     "search": "搜尋工具...",
     "searchShortcut": "Ctrl+K",
     "allTools": "所有工具",
@@ -41,13 +41,13 @@
       "step3FileDesc": "即時取得處理後的檔案，無需等待。",
       "step3TextTitle": "複製或儲存",
       "step3TextDesc": "將輸出複製到剪貼簿或儲存。",
-      "howToTitle": "How to use {toolName}"
+      "howToTitle": "如何使用 {toolName}"
     },
     "toggleMenu": "切換選單",
     "switchLanguage": "切換語言",
     "localeBanner": {
-      "message": "This site is available in {language}",
-      "switchTo": "Switch to {language}",
+      "message": "本站支援 {language}",
+      "switchTo": "切換為{language}",
       "dismiss": "Dismiss"
     },
     "switchTheme": "切換到{theme}主題",
@@ -64,23 +64,23 @@
     "dropTextFile": "拖放檔案到此處",
     "dropTextFileHint": "支援拖放檔案輸入",
     "privacyHint": "本地處理——您的資料始終留在裝置上。",
-    "ffmpegLoading": "Initializing secure processing engine...",
-    "ffmpegLoadingHint": "One-time WebAssembly download (~30MB)",
-    "installPrompt": "Add PrivaDeck to Home Screen — works offline, opens instantly",
-    "install": "Add",
-    "dismiss": "Dismiss",
+    "ffmpegLoading": "正在初始化安全處理引擎...",
+    "ffmpegLoadingHint": "首次載入 WebAssembly 引擎（約 30MB）",
+    "installPrompt": "將 PrivaDeck 加入主畫面 — 離線可用，秒開啟動",
+    "install": "加入",
+    "dismiss": "關閉",
     "categoryIntro": {
-      "developer": "A comprehensive suite of developer utilities that run entirely in your browser. Format, convert, encode, decode, and analyze data without sending anything to a server. Perfect for handling sensitive configuration files, API keys, and proprietary code.",
-      "image": "Professional image editing tools powered by client-side processing. Resize, compress, convert, crop, and enhance your images with zero upload latency and complete privacy. Supports all major formats including HEIC, WebP, SVG, and more.",
-      "pdf": "Complete PDF toolkit for merging, splitting, compressing, and editing PDF documents. All processing happens locally in your browser — ideal for confidential contracts, financial documents, and sensitive business files.",
-      "video": "Browser-based video editing powered by FFmpeg WebAssembly. Trim, compress, convert, and transform videos without uploading to any server. Supports MP4, WebM, MOV, and more.",
-      "audio": "Edit and convert audio files directly in your browser using FFmpeg WebAssembly. Trim, convert formats, and extract audio from video — all processed locally on your device."
+      "developer": "一套完整的開發者瀏覽器工具。格式化、轉換、編碼、解碼和分析資料，無需將任何內容傳送到伺服器。非常適合處理敏感設定檔、API 金鑰和專有程式碼。",
+      "image": "由客戶端處理驅動的專業圖片編輯工具。調整大小、壓縮、轉換、裁剪和增強圖片，零上傳延遲，完全隱私。支援所有主流格式，包括 HEIC、WebP、SVG 等。",
+      "pdf": "完整的 PDF 工具包，用於合併、拆分、壓縮和編輯 PDF 文件。所有處理均在瀏覽器本機完成——非常適合機密合約、財務文件和敏感商業檔案。",
+      "video": "基於 FFmpeg WebAssembly 的瀏覽器影片編輯工具。修剪、壓縮、轉換和變換影片，無需上傳到任何伺服器。支援 MP4、WebM、MOV 等格式。",
+      "audio": "直接在瀏覽器中使用 FFmpeg WebAssembly 編輯和轉換音訊檔案。修剪、轉換格式、從影片中擷取音訊——全部在您的裝置上本機處理。"
     },
-    "ffmpegLoadError": "Failed to load processing engine. Please refresh and try again.",
+    "ffmpegLoadError": "處理引擎載入失敗，請重新整理頁面後重試。",
     "unsupportedVideoCodec": "此影片使用了您的瀏覽器不支援的編解碼器。請嘗試使用其他瀏覽器或將影片轉換為支援的格式（如 H.264）。",
-    "hevcInstallHint": "Windows users: Install HEVC Video Extensions from Microsoft Store to enable H.265 support.",
+    "hevcInstallHint": "Windows 使用者：請在 Microsoft Store 安裝「HEVC 視訊延伸模組」以啟用 H.265 支援。",
     "aboutThisTool": "關於此工具",
-    "featureHighlights": "Key Features",
+    "featureHighlights": "核心功能",
     "addMore": "點擊或拖曳新增",
     "addMoreHint": "支援批次新增",
     "clearAll": "清空全部",
@@ -112,8 +112,8 @@
     "featureInstant": "即時處理",
     "featureNoUpload": "無需上傳",
     "toolCount": "{count} 個工具 →",
-    "metaTitle": "PrivaDeck — Free Online Privacy-First Tools",
-    "metaDescription": "Free browser-based tools for media, PDF, and developer tasks. 100% local processing, zero uploads, complete privacy."
+    "metaTitle": "PrivaDeck — 免費線上隱私優先工具箱",
+    "metaDescription": "免費瀏覽器端多媒體、PDF、開發者工具。100% 本機處理，零上傳，完全保護您的隱私。"
   },
   "categories": {
     "developer": {
@@ -497,12 +497,12 @@
     }
   },
   "allTools": {
-    "metaTitle": "All Tools",
-    "metaDescription": "Browse all 58+ free online tools for image, video, audio, PDF, and developer tasks. No uploads, 100% private."
+    "metaTitle": "全部工具",
+    "metaDescription": "瀏覽 58+ 免費線上工具，涵蓋圖片、影片、音訊、PDF 和開發者工具。無需上傳，100% 隱私保護。"
   },
   "notFound": {
-    "title": "Page Not Found",
-    "searchHint": "Try searching for the tool you need:"
+    "title": "頁面未找到",
+    "searchHint": "試試搜尋您需要的工具："
   },
   "featureHighlights": "核心功能"
 }
