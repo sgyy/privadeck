@@ -2,10 +2,10 @@
   "common": {
     "siteName": "PrivaDeck",
     "siteDescription": "Datenschutz-first All-in-One-Browsertools. Kein Upload, keine Anmeldung, 100% lokale Verarbeitung.",
-    "localOnlyIndicator": "Browser Processing Only (Offline Ready)",
-    "compareBefore": "Before",
-    "compareAfter": "After",
-    "compareSaved": "Saved {percent}%",
+    "localOnlyIndicator": "Nur Browser-Verarbeitung (Offline-fähig)",
+    "compareBefore": "Vorher",
+    "compareAfter": "Nachher",
+    "compareSaved": "{percent}% gespart",
     "search": "Tools durchsuchen...",
     "searchShortcut": "Ctrl+K",
     "allTools": "Alle Tools",
@@ -43,14 +43,14 @@
       "step3FileDesc": "Verarbeitete Datei sofort erhalten. Kein Warten.",
       "step3TextTitle": "Kopieren oder speichern",
       "step3TextDesc": "Ausgabe in die Zwischenablage kopieren oder speichern.",
-      "howToTitle": "How to use {toolName}"
+      "howToTitle": "So verwenden Sie {toolName}"
     },
     "toggleMenu": "Menü umschalten",
     "switchLanguage": "Sprache wechseln",
     "localeBanner": {
-      "message": "This site is available in {language}",
-      "switchTo": "Switch to {language}",
-      "dismiss": "Dismiss"
+      "message": "Diese Seite ist auf {language} verfügbar",
+      "switchTo": "Zu {language} wechseln",
+      "dismiss": "Schließen"
     },
     "switchTheme": "Zum {theme}-Modus wechseln",
     "searchPlaceholder": "Werkzeuge suchen...",
@@ -64,27 +64,27 @@
     "searchOpen": "Öffnen",
     "searchClose": "Schließen",
     "privacyHint": "Lokal verarbeitet — Ihre Daten verlassen niemals Ihr Gerät.",
-    "ffmpegLoading": "Initializing secure processing engine...",
-    "ffmpegLoadingHint": "One-time WebAssembly download (~30MB)",
-    "installPrompt": "Add PrivaDeck to Home Screen — works offline, opens instantly",
-    "install": "Add",
-    "dismiss": "Dismiss",
+    "ffmpegLoading": "Sichere Verarbeitungsengine wird initialisiert...",
+    "ffmpegLoadingHint": "Einmaliger WebAssembly-Download (~30 MB)",
+    "installPrompt": "PrivaDeck zum Startbildschirm hinzufügen — funktioniert offline, öffnet sofort",
+    "install": "Hinzufügen",
+    "dismiss": "Schließen",
     "categoryIntro": {
-      "developer": "A comprehensive suite of developer utilities that run entirely in your browser. Format, convert, encode, decode, and analyze data without sending anything to a server. Perfect for handling sensitive configuration files, API keys, and proprietary code.",
-      "image": "Professional image editing tools powered by client-side processing. Resize, compress, convert, crop, and enhance your images with zero upload latency and complete privacy. Supports all major formats including HEIC, WebP, SVG, and more.",
-      "pdf": "Complete PDF toolkit for merging, splitting, compressing, and editing PDF documents. All processing happens locally in your browser — ideal for confidential contracts, financial documents, and sensitive business files.",
-      "video": "Browser-based video editing powered by FFmpeg WebAssembly. Trim, compress, convert, and transform videos without uploading to any server. Supports MP4, WebM, MOV, and more.",
-      "audio": "Edit and convert audio files directly in your browser using FFmpeg WebAssembly. Trim, convert formats, and extract audio from video — all processed locally on your device."
+      "developer": "Eine umfassende Sammlung von Entwicklerwerkzeugen, die vollständig in Ihrem Browser laufen. Formatieren, konvertieren, kodieren, dekodieren und analysieren Sie Daten, ohne etwas an einen Server zu senden. Perfekt für den Umgang mit sensiblen Konfigurationsdateien, API-Schlüsseln und proprietärem Code.",
+      "image": "Professionelle Bildbearbeitungswerkzeuge mit clientseitiger Verarbeitung. Ändern Sie die Größe, komprimieren, konvertieren, schneiden und verbessern Sie Ihre Bilder mit null Upload-Latenz und vollständiger Privatsphäre. Unterstützt alle gängigen Formate einschließlich HEIC, WebP, SVG und mehr.",
+      "pdf": "Komplettes PDF-Toolkit zum Zusammenführen, Teilen, Komprimieren und Bearbeiten von PDF-Dokumenten. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser — ideal für vertrauliche Verträge, Finanzdokumente und sensible Geschäftsdateien.",
+      "video": "Browserbasierte Videobearbeitung mit FFmpeg WebAssembly. Schneiden, komprimieren, konvertieren und transformieren Sie Videos, ohne sie auf einen Server hochzuladen. Unterstützt MP4, WebM, MOV und mehr.",
+      "audio": "Bearbeiten und konvertieren Sie Audiodateien direkt in Ihrem Browser mit FFmpeg WebAssembly. Schneiden, konvertieren Sie Formate und extrahieren Sie Audio aus Videos — alles wird lokal auf Ihrem Gerät verarbeitet."
     },
-    "ffmpegLoadError": "Failed to load processing engine. Please refresh and try again.",
+    "ffmpegLoadError": "Fehler beim Laden der Verarbeitungsengine. Bitte aktualisieren Sie die Seite und versuchen Sie es erneut.",
     "unsupportedVideoCodec": "Dieses Video verwendet einen Codec, der von Ihrem Browser nicht unterstützt wird. Bitte versuchen Sie einen anderen Browser oder konvertieren Sie das Video in ein unterstütztes Format (z. B. H.264).",
-    "hevcInstallHint": "Windows users: Install HEVC Video Extensions from Microsoft Store to enable H.265 support.",
+    "hevcInstallHint": "Windows-Benutzer: Installieren Sie HEVC-Videoerweiterungen aus dem Microsoft Store, um H.265-Unterstützung zu aktivieren.",
     "aboutThisTool": "Über dieses Tool",
-    "featureHighlights": "Key Features",
-    "addMore": "Click or Drop",
-    "addMoreHint": "Add more images",
-    "clearAll": "Clear All",
-    "close": "Close",
+    "featureHighlights": "Hauptfunktionen",
+    "addMore": "Klicken oder Ziehen",
+    "addMoreHint": "Weitere Bilder hinzufügen",
+    "clearAll": "Alle löschen",
+    "close": "Schließen",
     "replaceFile": "Ersetzen"
   },
   "nav": {
@@ -112,8 +112,8 @@
     "featureInstant": "Sofortige Verarbeitung",
     "featureNoUpload": "Kein Upload erforderlich",
     "toolCount": "{count} Werkzeuge →",
-    "metaTitle": "PrivaDeck — Free Online Privacy-First Tools",
-    "metaDescription": "Free browser-based tools for media, PDF, and developer tasks. 100% local processing, zero uploads, complete privacy."
+    "metaTitle": "PrivaDeck — Kostenlose Online-Tools mit Datenschutzfokus",
+    "metaDescription": "Kostenlose browserbasierte Tools für Medien, PDF und Entwickleraufgaben. 100% lokale Verarbeitung, keine Uploads, vollständige Privatsphäre."
   },
   "categories": {
     "developer": {
@@ -497,11 +497,11 @@
     }
   },
   "allTools": {
-    "metaTitle": "All Tools",
+    "metaTitle": "Alle Tools",
     "metaDescription": "Browse all 58+ free online tools for image, video, audio, PDF, and developer tasks. No uploads, 100% private."
   },
   "notFound": {
-    "title": "Page Not Found",
+    "title": "Seite nicht gefunden",
     "searchHint": "Try searching for the tool you need:"
   },
   "featureHighlights": "Hauptfunktionen"
