@@ -1,5 +1,5 @@
 import { execWithMount } from "@/lib/ffmpeg";
-import { isWebCodecsSupported, parseBitrate, validateConversion, WebCodecsFallbackError } from "@/lib/media-pipeline";
+import { isWebCodecsSupported, parseBitrate, validateConversion, WebCodecsFallbackError, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
 
 export type Quality = "high" | "medium" | "low";
 
@@ -88,15 +88,19 @@ export async function compressVideo(
   onProgress?: (progress: number) => void,
   sourceHeight?: number,
   sourceFps?: number,
-  onFallback?: (isVideoCodecIssue: boolean) => void,
 ): Promise<Blob> {
   if (isWebCodecsSupported()) {
     try {
       return await compressWithWebCodecs(file, options, onProgress, sourceHeight, sourceFps);
     } catch (e) {
       if (e instanceof WebCodecsFallbackError) {
+        // Unsupported video codec detected (e.g., H.265/HEVC, VP9, AV1)
+        // Do not fall back to FFmpeg due to poor performance
+        if (e.isVideoCodecIssue) {
+          throw new UnsupportedVideoCodecError();
+        }
+        // For other codec issues (e.g., audio), still fall back to FFmpeg
         console.warn("WebCodecs unavailable for this video, falling back to FFmpeg:", e.message);
-        onFallback?.(e.isVideoCodecIssue);
       } else {
         throw e;
       }

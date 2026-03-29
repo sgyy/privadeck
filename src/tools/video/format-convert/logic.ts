@@ -1,5 +1,5 @@
 import { execWithMount } from "@/lib/ffmpeg";
-import { isWebCodecsSupported, validateConversion, WebCodecsFallbackError } from "@/lib/media-pipeline";
+import { isWebCodecsSupported, validateConversion, WebCodecsFallbackError, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
 
 export type VideoFormat = "mp4" | "mkv" | "avi";
 
@@ -33,7 +33,6 @@ export async function convertVideoFormat(
   file: File,
   format: VideoFormat,
   onProgress?: (progress: number) => void,
-  onFallback?: (isVideoCodecIssue: boolean) => void,
 ): Promise<{ blob: Blob; filename: string }> {
   // Use WebCodecs for MP4 and MKV; fall back to FFmpeg for AVI
   if (isWebCodecsSupported() && WEBCODECS_FORMATS.includes(format)) {
@@ -41,8 +40,13 @@ export async function convertVideoFormat(
       return await convertWithWebCodecs(file, format, onProgress);
     } catch (e) {
       if (e instanceof WebCodecsFallbackError) {
+        // Unsupported video codec detected (e.g., H.265/HEVC, VP9, AV1)
+        // Do not fall back to FFmpeg due to poor performance
+        if (e.isVideoCodecIssue) {
+          throw new UnsupportedVideoCodecError();
+        }
+        // For other codec issues (e.g., audio), still fall back to FFmpeg
         console.warn("WebCodecs unavailable for this video, falling back to FFmpeg:", e.message);
-        onFallback?.(e.isVideoCodecIssue);
       } else {
         throw e;
       }

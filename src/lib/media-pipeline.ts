@@ -30,13 +30,25 @@ export function parseBitrate(value: string): number {
  * signaling that the caller should fall back to FFmpeg.
  */
 export class WebCodecsFallbackError extends Error {
-  /** True when a video track was discarded due to an undecodable codec (likely HEVC) */
+  /** True when a video track was discarded due to an undecodable codec (e.g., HEVC, VP9, AV1) */
   readonly isVideoCodecIssue: boolean;
 
   constructor(reason: string, isVideoCodecIssue = false) {
     super(reason);
     this.name = "WebCodecsFallbackError";
     this.isVideoCodecIssue = isVideoCodecIssue;
+  }
+}
+
+/**
+ * Error thrown when a video uses an unsupported codec (e.g. H.265/HEVC, VP9, AV1)
+ * that the browser cannot decode via WebCodecs.
+ * This is a terminal error - we no longer fall back to FFmpeg due to poor performance.
+ */
+export class UnsupportedVideoCodecError extends Error {
+  constructor() {
+    super("Video codec is not supported by this browser");
+    this.name = "UnsupportedVideoCodecError";
   }
 }
 
@@ -58,16 +70,19 @@ export function validateConversion(conversion: {
     "unknown_source_codec",
     "no_encodable_target_codec",
   ]);
-  const discarded = conversion.discardedTracks.find((d) =>
+  const discardedCodecTracks = conversion.discardedTracks.filter((d) =>
     codecReasons.has(d.reason),
   );
-  if (discarded) {
-    const isVideoCodec =
-      discarded.track.type === "video" &&
-      discarded.reason === "undecodable_source_codec";
+  if (discardedCodecTracks.length > 0) {
+    const hasVideoCodecIssue = discardedCodecTracks.some(
+      (d) =>
+        d.track.type === "video" &&
+        d.reason === "undecodable_source_codec",
+    );
+    const first = discardedCodecTracks[0];
     throw new WebCodecsFallbackError(
-      `${discarded.track.type} track discarded: ${discarded.reason}`,
-      isVideoCodec,
+      `${first.track.type} track discarded: ${first.reason}`,
+      hasVideoCodecIssue,
     );
   }
   if (!conversion.isValid) {

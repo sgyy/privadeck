@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { RotateCw } from "lucide-react";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
-import { isWebCodecsSupported, shouldSuggestHevcExtension } from "@/lib/media-pipeline";
+import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { rotateVideo, type RotateAngle } from "./logic";
 
@@ -19,7 +19,7 @@ export default function VideoRotate() {
   const [progress, setProgress] = useState(0);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
-  const [hevcFallback, setHevcFallback] = useState(false);
+  const [isCodecError, setIsCodecError] = useState(false);
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.video.rotate");
   const tc = useTranslations("common");
@@ -37,13 +37,18 @@ export default function VideoRotate() {
     setProcessing(true);
     setResult(null);
     setError("");
-    setHevcFallback(false);
+    setIsCodecError(false);
     try {
-      const blob = await rotateVideo(file, angle, setProgress, (isVideoCodec) => setHevcFallback(isVideoCodec));
+      const blob = await rotateVideo(file, angle, setProgress);
       setResult(blob);
     } catch (e) {
       console.error("Rotate failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      if (e instanceof UnsupportedVideoCodecError) {
+        setIsCodecError(true);
+        setError(tc("unsupportedVideoCodec"));
+      } else {
+        setError(String(e instanceof Error ? e.message : e));
+      }
     } finally {
       setProcessing(false);
     }
@@ -53,7 +58,7 @@ export default function VideoRotate() {
     <div className="space-y-4">
       <VideoUploader
         file={file}
-        onFileChange={(f) => { setFile(f); setResult(null); setError(""); }}
+        onFileChange={(f) => { setFile(f); setResult(null); setError(""); setIsCodecError(false); }}
       />
 
       {file && (
@@ -83,14 +88,14 @@ export default function VideoRotate() {
           </div>
 
           {error && (
-            <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
+            <div className={`rounded-lg border p-3 text-sm ${isCodecError
+                ? "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-400"
+                : "border-red-200 bg-red-50 text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400"
+              }`}>
               {error}
-            </div>
-          )}
-
-          {hevcFallback && shouldSuggestHevcExtension() && (
-            <div className="rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-blue-700 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-400">
-              {tc("hevcFallbackHint")}
+              {isCodecError && shouldSuggestHevcExtension() && (
+                <p className="mt-1 text-xs opacity-80">{tc("hevcInstallHint")}</p>
+              )}
             </div>
           )}
 

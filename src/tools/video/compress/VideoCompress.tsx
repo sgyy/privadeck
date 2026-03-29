@@ -6,7 +6,7 @@ import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
-import { isWebCodecsSupported, shouldSuggestHevcExtension } from "@/lib/media-pipeline";
+import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import {
   VideoUploader,
@@ -53,9 +53,9 @@ export default function VideoCompress() {
   const [progress, setProgress] = useState(0);
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
+  const [isCodecError, setIsCodecError] = useState(false);
   const [sourceMetadata, setSourceMetadata] = useState<VideoMetadata | null>(null);
   const [outputMetadata, setOutputMetadata] = useState<VideoMetadata | null>(null);
-  const [hevcFallback, setHevcFallback] = useState(false);
 
   const outputVideoRef = useRef<HTMLVideoElement>(null);
   const resultUrl = useObjectUrl(result);
@@ -77,8 +77,8 @@ export default function VideoCompress() {
     setResult(null);
     setOutputMetadata(null);
     setError("");
+    setIsCodecError(false);
     setProgress(0);
-    setHevcFallback(false);
     try {
       const options = mode === "simple" ? quality : advancedOptions;
       const blob = await compressVideo(
@@ -87,12 +87,16 @@ export default function VideoCompress() {
         setProgress,
         sourceMetadata?.height,
         sourceMetadata?.fps,
-        (isVideoCodec) => setHevcFallback(isVideoCodec),
       );
       setResult(blob);
     } catch (e) {
       console.error("Compress failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      if (e instanceof UnsupportedVideoCodecError) {
+        setIsCodecError(true);
+        setError(tc("unsupportedVideoCodec"));
+      } else {
+        setError(String(e instanceof Error ? e.message : e));
+      }
     } finally {
       setProcessing(false);
     }
@@ -159,6 +163,7 @@ export default function VideoCompress() {
           setOutputMetadata(null);
           setSourceMetadata(null);
           setError("");
+          setIsCodecError(false);
         }}
         onMetadataLoaded={setSourceMetadata}
       />
@@ -370,14 +375,14 @@ export default function VideoCompress() {
 
           {/* Error */}
           {error && (
-            <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
+            <div className={`rounded-lg border p-3 text-sm ${isCodecError
+                ? "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-400"
+                : "border-red-200 bg-red-50 text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400"
+              }`}>
               {error}
-            </div>
-          )}
-
-          {hevcFallback && shouldSuggestHevcExtension() && (
-            <div className="rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-blue-700 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-400">
-              {tc("hevcFallbackHint")}
+              {isCodecError && shouldSuggestHevcExtension() && (
+                <p className="mt-1 text-xs opacity-80">{tc("hevcInstallHint")}</p>
+              )}
             </div>
           )}
 

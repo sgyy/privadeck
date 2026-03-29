@@ -1,5 +1,5 @@
 import { execWithMount } from "@/lib/ffmpeg";
-import { isWebCodecsSupported, validateConversion, WebCodecsFallbackError } from "@/lib/media-pipeline";
+import { isWebCodecsSupported, validateConversion, WebCodecsFallbackError, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
 
 export type RotateAngle = 90 | 180 | 270;
 
@@ -13,15 +13,19 @@ export async function rotateVideo(
   file: File,
   angle: RotateAngle,
   onProgress?: (progress: number) => void,
-  onFallback?: (isVideoCodecIssue: boolean) => void,
 ): Promise<Blob> {
   if (isWebCodecsSupported()) {
     try {
       return await rotateWithWebCodecs(file, angle, onProgress);
     } catch (e) {
       if (e instanceof WebCodecsFallbackError) {
+        // Unsupported video codec detected (e.g., H.265/HEVC, VP9, AV1)
+        // Do not fall back to FFmpeg due to poor performance
+        if (e.isVideoCodecIssue) {
+          throw new UnsupportedVideoCodecError();
+        }
+        // For other codec issues (e.g., audio), still fall back to FFmpeg
         console.warn("WebCodecs unavailable for this video, falling back to FFmpeg:", e.message);
-        onFallback?.(e.isVideoCodecIssue);
       } else {
         throw e;
       }
