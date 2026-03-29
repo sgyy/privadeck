@@ -1,5 +1,5 @@
 import { execWithMount } from "@/lib/ffmpeg";
-import { isWebCodecsSupported, parseBitrate, validateConversion, WebCodecsFallbackError, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
+import { isWebCodecsSupported, parseBitrate, validateConversion, WebCodecsFallbackError, UnsupportedVideoCodecError, type VideoCodec } from "@/lib/media-pipeline";
 
 export type Quality = "high" | "medium" | "low";
 
@@ -25,6 +25,8 @@ export interface CompressOptions {
   fps: FpsOption;
   audioBitrate: string;
   maxBitrate?: string;
+  /** Output video codec: "avc" (H.264) or "hevc" (H.265). Default is "avc". */
+  codec?: VideoCodec;
 }
 
 export const PRESET_OPTIONS: Record<Quality, CompressOptions> = {
@@ -169,11 +171,14 @@ async function compressWithWebCodecs(
 
   const audioBps = parseBitrate(opts.audioBitrate);
 
+  // Use selected codec or default to "avc"
+  const outputCodec = opts.codec ?? "avc";
+
   const conversion = await Conversion.init({
     input,
     output,
     video: {
-      codec: "avc",
+      codec: outputCodec,
       bitrate: videoBitrate,
       ...(targetWidth != null && { width: targetWidth }),
       ...(targetHeight != null && { height: targetHeight, fit: "contain" as const }),

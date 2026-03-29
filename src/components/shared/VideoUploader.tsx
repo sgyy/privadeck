@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { Button } from "@/components/ui/Button";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
-import { isWebCodecsSupported, shouldSuggestHevcExtension } from "@/lib/media-pipeline";
+import { isWebCodecsSupported, shouldSuggestHevcExtension, detectSourceVideoCodec, type VideoCodec } from "@/lib/media-pipeline";
 
 export interface VideoMetadata {
   width: number;
@@ -15,6 +15,8 @@ export interface VideoMetadata {
   estimatedBitrate: number;
   fileSize: number;
   fps?: number;
+  /** Source video codec: "avc" (H.264) or "hevc" (H.265) */
+  codec?: VideoCodec;
 }
 
 export interface CodecWarning {
@@ -111,6 +113,15 @@ export function VideoUploader({
     if (checkCodecSupport && isWebCodecsSupported()) {
       checkVideoCodecSupport(file);
     }
+
+    // Detect source video codec
+    detectSourceVideoCodec(file).then((codec) => {
+      if (codec && metadata) {
+        const updated = { ...metadata, codec };
+        setMetadata(updated);
+        onMetadataLoaded?.(updated);
+      }
+    });
   }
 
   /**

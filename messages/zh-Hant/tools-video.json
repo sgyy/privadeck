@@ -289,6 +289,10 @@
         "preset_slow": "Slow",
         "preset_slower": "Slower",
         "preset_veryslow": "Very Slow",
+        "codecLabel": "視訊編碼",
+        "codecHint": "H.264：相容性最佳。H.265：檔案更小（可減少 50%），但部分舊裝置可能無法播放。",
+        "codecChecking": "正在檢測 H.265 支援...",
+        "codecHevcNotSupported": "您的瀏覽器不支援 H.265 (HEVC) 編碼，將使用 H.264。",
         "faq": {
           "q1": "How does video compression work?",
           "a1": "The tool re-encodes the video using H.264 with a CRF (Constant Rate Factor) value. In Simple Mode, choose High (CRF 23), Medium (CRF 28), or Low (CRF 35). In Advanced Mode, set CRF manually from 0 to 51, plus encoding speed, resolution, frame rate, audio bitrate, and an optional max bitrate cap.",

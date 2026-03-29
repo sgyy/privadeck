@@ -102,3 +102,73 @@ export function shouldSuggestHevcExtension(): boolean {
   const isChromium = ua.includes("Chrome") || ua.includes("Edg");
   return isWindows && isChromium && isWebCodecsSupported();
 }
+
+/**
+ * Check if the browser supports encoding H.265 (HEVC) video.
+ * This requires both WebCodecs support and HEVC encoding capability.
+ */
+export async function canEncodeHevc(
+  width = 1280,
+  height = 720,
+  bitrate = 1_000_000,
+): Promise<boolean> {
+  if (!isWebCodecsSupported()) return false;
+
+  try {
+    const { canEncodeVideo } = await import("mediabunny");
+    return await canEncodeVideo("hevc", { width, height, bitrate });
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Check if the browser supports encoding H.264 (AVC) video.
+ */
+export async function canEncodeAvc(
+  width = 1280,
+  height = 720,
+  bitrate = 1_000_000,
+): Promise<boolean> {
+  if (!isWebCodecsSupported()) return false;
+
+  try {
+    const { canEncodeVideo } = await import("mediabunny");
+    return await canEncodeVideo("avc", { width, height, bitrate });
+  } catch {
+    return false;
+  }
+}
+
+export type VideoCodec = "avc" | "hevc";
+
+/**
+ * Detect the video codec of a source file.
+ * Returns "hevc" for H.265, "avc" for H.264, or undefined if unknown.
+ */
+export async function detectSourceVideoCodec(file: File): Promise<VideoCodec | undefined> {
+  try {
+    const { Input, BlobSource, ALL_FORMATS } = await import("mediabunny");
+
+    const input = new Input({
+      source: new BlobSource(file),
+      formats: ALL_FORMATS,
+    });
+
+    const videoTrack = await input.getPrimaryVideoTrack();
+    if (!videoTrack) return undefined;
+
+    // codec is "avc", "hevc", "vp9", "av1", or "vp8"
+    const codec = videoTrack.codec;
+    if (codec === "hevc") {
+      return "hevc";
+    }
+    if (codec === "avc") {
+      return "avc";
+    }
+
+    return undefined;
+  } catch {
+    return undefined;
+  }
+}

@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
-import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
+import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError, canEncodeHevc, type VideoCodec } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import {
   VideoUploader,
@@ -57,11 +57,38 @@ export default function VideoCompress() {
   const sourceMetadata = useRef<VideoMetadata | null>(null);
   const [outputMetadata, setOutputMetadata] = useState<VideoMetadata | null>(null);
 
+  // Codec selection state
+  const [outputCodec, setOutputCodec] = useState<VideoCodec>("avc");
+  const [canUseHevc, setCanUseHevc] = useState(false);
+  const [checkingHevcSupport, setCheckingHevcSupport] = useState(false);
+
   const outputVideoRef = useRef<HTMLVideoElement>(null);
   const resultUrl = useObjectUrl(result);
 
   const t = useTranslations("tools.video.compress");
   const tc = useTranslations("common");
+
+  // Check H.265 encoding support when component mounts
+  useEffect(() => {
+    if (!isWebCodecsSupported()) return;
+    setCheckingHevcSupport(true);
+    canEncodeHevc().then((supported) => {
+      setCanUseHevc(supported);
+      setCheckingHevcSupport(false);
+    });
+  }, []);
+
+  // Set default output codec based on source video codec
+  useEffect(() => {
+    if (!sourceMetadata.current?.codec) return;
+    const sourceCodec = sourceMetadata.current.codec;
+    // Default to same codec as source if available
+    if (sourceCodec === "hevc" && canUseHevc) {
+      setOutputCodec("hevc");
+    } else {
+      setOutputCodec("avc");
+    }
+  }, [sourceMetadata.current?.codec, canUseHevc]);
 
   if (!isSharedArrayBufferSupported() && !isWebCodecsSupported()) {
     return (
@@ -80,7 +107,11 @@ export default function VideoCompress() {
     setIsCodecError(false);
     setProgress(0);
     try {
-      const options = mode === "simple" ? quality : advancedOptions;
+      // For simple mode, use preset with selected codec
+      // For advanced mode, use full options with selected codec
+      const options = mode === "simple"
+        ? { ...PRESET_OPTIONS[quality], codec: outputCodec }
+        : { ...advancedOptions, codec: outputCodec };
       const blob = await compressVideo(
         file,
         options,
@@ -210,12 +241,74 @@ export default function VideoCompress() {
                     </p>
                   </button>
                 ))}
+
+                {/* Video codec selection in Simple mode */}
+                <div className="mt-4 space-y-2">
+                  <label className="text-sm font-medium">
+                    {t("codecLabel")}
+                  </label>
+                  <div className="flex flex-wrap gap-2">
+                    <Button
+                      variant={outputCodec === "avc" ? "primary" : "outline"}
+                      size="sm"
+                      onClick={() => setOutputCodec("avc")}
+                    >
+                      H.264 (AVC)
+                    </Button>
+                    <Button
+                      variant={outputCodec === "hevc" ? "primary" : "outline"}
+                      size="sm"
+                      disabled={!canUseHevc}
+                      onClick={() => setOutputCodec("hevc")}
+                    >
+                      H.265 (HEVC)
+                    </Button>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    {canUseHevc
+                      ? t("codecHint")
+                      : checkingHevcSupport
+                        ? t("codecChecking")
+                        : t("codecHevcNotSupported")}
+                  </p>
+                </div>
               </div>
             </TabsContent>
 
             {/* D. Advanced mode */}
             <TabsContent value="advanced">
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                {/* Video codec selection */}
+                <div className="space-y-2">
+                  <label className="text-sm font-medium">
+                    {t("codecLabel")}
+                  </label>
+                  <div className="flex flex-wrap gap-2">
+                    <Button
+                      variant={outputCodec === "avc" ? "primary" : "outline"}
+                      size="sm"
+                      onClick={() => setOutputCodec("avc")}
+                    >
+                      H.264 (AVC)
+                    </Button>
+                    <Button
+                      variant={outputCodec === "hevc" ? "primary" : "outline"}
+                      size="sm"
+                      disabled={!canUseHevc}
+                      onClick={() => setOutputCodec("hevc")}
+                    >
+                      H.265 (HEVC)
+                    </Button>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    {canUseHevc
+                      ? t("codecHint")
+                      : checkingHevcSupport
+                        ? t("codecChecking")
+                        : t("codecHevcNotSupported")}
+                  </p>
+                </div>
+
                 {/* CRF slider */}
                 <div className="space-y-2">
                   <label className="text-sm font-medium">
