@@ -59,6 +59,7 @@ export default function VideoRotate() {
       <VideoUploader
         file={file}
         onFileChange={(f) => { setFile(f); setResult(null); setError(""); setIsCodecError(false); }}
+        onCodecWarning={(warning) => setIsCodecError(warning?.isUnsupported ?? false)}
       />
 
       {file && (
@@ -70,11 +71,10 @@ export default function VideoRotate() {
                   key={a}
                   type="button"
                   onClick={() => setAngle(a)}
-                  className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-                    angle === a
+                  className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${angle === a
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted hover:bg-muted/80"
-                  }`}
+                    }`}
                 >
                   <RotateCw className="h-4 w-4" style={{ transform: `rotate(${a}deg)` }} />
                   {a}°
@@ -82,15 +82,15 @@ export default function VideoRotate() {
               ))}
             </div>
 
-            <Button onClick={handleRotate} disabled={processing}>
+            <Button onClick={handleRotate} disabled={processing || isCodecError}>
               {processing ? `${t("processing")} ${progress}%` : t("rotate")}
             </Button>
           </div>
 
           {error && (
             <div className={`rounded-lg border p-3 text-sm ${isCodecError
-                ? "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-400"
-                : "border-red-200 bg-red-50 text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400"
+              ? "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-400"
+              : "border-red-200 bg-red-50 text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400"
               }`}>
               {error}
               {isCodecError && shouldSuggestHevcExtension() && (

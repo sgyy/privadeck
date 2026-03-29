@@ -54,7 +54,7 @@ export default function VideoCompress() {
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   const [isCodecError, setIsCodecError] = useState(false);
-  const [sourceMetadata, setSourceMetadata] = useState<VideoMetadata | null>(null);
+  const sourceMetadata = useRef<VideoMetadata | null>(null);
   const [outputMetadata, setOutputMetadata] = useState<VideoMetadata | null>(null);
 
   const outputVideoRef = useRef<HTMLVideoElement>(null);
@@ -85,8 +85,8 @@ export default function VideoCompress() {
         file,
         options,
         setProgress,
-        sourceMetadata?.height,
-        sourceMetadata?.fps,
+        sourceMetadata.current?.height,
+        sourceMetadata.current?.fps,
       );
       setResult(blob);
     } catch (e) {
@@ -135,14 +135,14 @@ export default function VideoCompress() {
       v.pause();
       v.currentTime = savedTime;
       v.muted = wasMuted;
-      if (!wasPaused) v.play().catch(() => {});
+      if (!wasPaused) v.play().catch(() => { });
       if (delta > 0) {
         setOutputMetadata({ ...baseMeta, fps: Math.round(1 / delta) });
       }
     }
 
     v.requestVideoFrameCallback(onFrame);
-    v.play().catch(() => {});
+    v.play().catch(() => { });
   }
 
   function updateAdvanced<K extends keyof CompressOptions>(
@@ -161,11 +161,14 @@ export default function VideoCompress() {
           setFile(f);
           setResult(null);
           setOutputMetadata(null);
-          setSourceMetadata(null);
+          sourceMetadata.current = null;
           setError("");
           setIsCodecError(false);
         }}
-        onMetadataLoaded={setSourceMetadata}
+        onMetadataLoaded={(meta) => {
+          sourceMetadata.current = meta;
+        }}
+        onCodecWarning={(warning) => setIsCodecError(warning?.isUnsupported ?? false)}
       />
 
       {file && (
@@ -188,11 +191,10 @@ export default function VideoCompress() {
                     key={q}
                     type="button"
                     onClick={() => setQuality(q)}
-                    className={`w-full rounded-lg border p-4 text-left transition-all ${
-                      quality === q
-                        ? "border-primary ring-2 ring-primary/20 bg-primary/5"
-                        : "border-border/50 hover:border-primary/30 hover:bg-muted/30"
-                    }`}
+                    className={`w-full rounded-lg border p-4 text-left transition-all ${quality === q
+                      ? "border-primary ring-2 ring-primary/20 bg-primary/5"
+                      : "border-border/50 hover:border-primary/30 hover:bg-muted/30"
+                      }`}
                   >
                     <div className="flex items-center justify-between">
                       <span className="font-semibold">{t(q)}</span>
@@ -266,8 +268,8 @@ export default function VideoCompress() {
                     {RESOLUTIONS.map((r) => {
                       const exceedsSource =
                         r !== "original" &&
-                        sourceMetadata &&
-                        RESOLUTION_HEIGHT[r] > sourceMetadata.height;
+                        sourceMetadata.current &&
+                        RESOLUTION_HEIGHT[r] > sourceMetadata.current.height;
                       return (
                         <Button
                           key={r}
@@ -294,8 +296,8 @@ export default function VideoCompress() {
                     {FPS_OPTIONS.map((f) => {
                       const exceedsSource =
                         f !== "original" &&
-                        sourceMetadata?.fps &&
-                        Number(f) > sourceMetadata.fps;
+                        sourceMetadata.current?.fps &&
+                        Number(f) > sourceMetadata.current.fps;
                       return (
                         <Button
                           key={f}
@@ -376,8 +378,8 @@ export default function VideoCompress() {
           {/* Error */}
           {error && (
             <div className={`rounded-lg border p-3 text-sm ${isCodecError
-                ? "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-400"
-                : "border-red-200 bg-red-50 text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400"
+              ? "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-400"
+              : "border-red-200 bg-red-50 text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400"
               }`}>
               {error}
               {isCodecError && shouldSuggestHevcExtension() && (
@@ -398,7 +400,7 @@ export default function VideoCompress() {
 
           {/* Compress button */}
           <div className="flex items-center gap-4">
-            <Button onClick={handleCompress} disabled={processing || !sourceMetadata}>
+            <Button onClick={handleCompress} disabled={processing || !sourceMetadata.current || isCodecError}>
               {processing
                 ? `${t("processing")} ${progress}%`
                 : t("compress")}
@@ -453,14 +455,14 @@ export default function VideoCompress() {
                         {formatSize(result.size)}
                       </td>
                     </tr>
-                    {sourceMetadata && outputMetadata && (
+                    {sourceMetadata.current && outputMetadata && (
                       <>
                         <tr className="border-b border-border/20">
                           <td className="px-4 py-2 text-muted-foreground">
                             {t("resolutionLabel")}
                           </td>
                           <td className="px-4 py-2 text-right font-mono">
-                            {sourceMetadata.width} × {sourceMetadata.height}
+                            {sourceMetadata.current.width} × {sourceMetadata.current.height}
                           </td>
                           <td className="px-4 py-2 text-right font-mono">
                             {outputMetadata.width} × {outputMetadata.height}
@@ -471,7 +473,7 @@ export default function VideoCompress() {
                             {t("duration")}
                           </td>
                           <td className="px-4 py-2 text-right font-mono">
-                            {formatDuration(sourceMetadata.duration)}
+                            {formatDuration(sourceMetadata.current.duration)}
                           </td>
                           <td className="px-4 py-2 text-right font-mono">
                             {formatDuration(outputMetadata.duration)}
@@ -482,19 +484,19 @@ export default function VideoCompress() {
                             {t("bitrate")}
                           </td>
                           <td className="px-4 py-2 text-right font-mono">
-                            {formatBitrate(sourceMetadata.estimatedBitrate)}
+                            {formatBitrate(sourceMetadata.current.estimatedBitrate)}
                           </td>
                           <td className="px-4 py-2 text-right font-mono">
                             {formatBitrate(outputMetadata.estimatedBitrate)}
                           </td>
                         </tr>
-                        {(sourceMetadata.fps || outputMetadata.fps) && (
+                        {(sourceMetadata.current?.fps || outputMetadata.fps) && (
                           <tr className="border-b border-border/20">
                             <td className="px-4 py-2 text-muted-foreground">
                               {t("fpsLabel")}
                             </td>
                             <td className="px-4 py-2 text-right font-mono">
-                              {sourceMetadata.fps ? `${sourceMetadata.fps} fps` : "-"}
+                              {sourceMetadata.current?.fps ? `${sourceMetadata.current.fps} fps` : "-"}
                             </td>
                             <td className="px-4 py-2 text-right font-mono">
                               {outputMetadata.fps ? `${outputMetadata.fps} fps` : "-"}

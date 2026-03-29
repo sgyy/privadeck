@@ -67,6 +67,7 @@ export default function VideoFormatConvert() {
           setError("");
           setIsCodecError(false);
         }}
+        onCodecWarning={(warning) => setIsCodecError(warning?.isUnsupported ?? false)}
       />
 
       {file && (
@@ -89,8 +90,8 @@ export default function VideoFormatConvert() {
 
           {error && (
             <div className={`rounded-lg border p-3 text-sm ${isCodecError
-                ? "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-400"
-                : "border-red-200 bg-red-50 text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400"
+              ? "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-400"
+              : "border-red-200 bg-red-50 text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400"
               }`}>
               {error}
               {isCodecError && shouldSuggestHevcExtension() && (
@@ -101,7 +102,7 @@ export default function VideoFormatConvert() {
 
           {processing && <ProcessingProgress progress={progress} />}
 
-          <Button onClick={handleConvert} disabled={processing}>
+          <Button onClick={handleConvert} disabled={processing || isCodecError}>
             {processing
               ? `${t("converting")} ${progress}%`
               : t("convert")}

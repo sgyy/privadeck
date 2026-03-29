@@ -80,6 +80,7 @@ export default function VideoResize() {
           setError("");
           setIsCodecError(false);
         }}
+        onCodecWarning={(warning) => setIsCodecError(warning?.isUnsupported ?? false)}
       />
 
       {file && (
@@ -120,8 +121,8 @@ export default function VideoResize() {
 
           {error && (
             <div className={`rounded-lg border p-3 text-sm ${isCodecError
-                ? "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-400"
-                : "border-red-200 bg-red-50 text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400"
+              ? "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-400"
+              : "border-red-200 bg-red-50 text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400"
               }`}>
               {error}
               {isCodecError && shouldSuggestHevcExtension() && (
@@ -132,7 +133,7 @@ export default function VideoResize() {
 
           {processing && <ProcessingProgress progress={progress} />}
 
-          <Button onClick={handleResize} disabled={processing}>
+          <Button onClick={handleResize} disabled={processing || isCodecError}>
             {processing
               ? `${t("processing")} ${progress}%`
               : t("resize")}

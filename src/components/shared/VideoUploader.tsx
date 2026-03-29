@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
-import { RefreshCw, Film, Clock, Maximize2, Gauge, MonitorPlay } from "lucide-react";
+import { useState, useRef, useCallback, useEffect } from "react";
+import { RefreshCw, Film, Clock, Maximize2, Gauge, MonitorPlay, AlertTriangle } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { Button } from "@/components/ui/Button";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { isWebCodecsSupported, shouldSuggestHevcExtension } from "@/lib/media-pipeline";
 
 export interface VideoMetadata {
   width: number;
@@ -16,11 +17,19 @@ export interface VideoMetadata {
   fps?: number;
 }
 
+export interface CodecWarning {
+  isUnsupported: boolean;
+  suggestHevcExtension: boolean;
+}
+
 interface VideoUploaderProps {
   file: File | null;
   onFileChange: (file: File | null) => void;
   onMetadataLoaded?: (metadata: VideoMetadata) => void;
   onVideoRef?: (ref: HTMLVideoElement | null) => void;
+  onCodecWarning?: (warning: CodecWarning | null) => void;
+  /** If true, check WebCodecs compatibility when video loads */
+  checkCodecSupport?: boolean;
   maxSize?: number;
   className?: string;
   analyticsSlug?: string;
@@ -59,6 +68,8 @@ export function VideoUploader({
   onFileChange,
   onMetadataLoaded,
   onVideoRef,
+  onCodecWarning,
+  checkCodecSupport = true,
   maxSize,
   className,
   analyticsSlug,
@@ -69,7 +80,10 @@ export function VideoUploader({
   const videoRef = useRef<HTMLVideoElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [metadata, setMetadata] = useState<VideoMetadata | null>(null);
+  const [codecWarning, setCodecWarning] = useState<CodecWarning | null>(null);
   const fpsDetectId = useRef(0);
+  const codecCheckId = useRef(0);
+  const prevFileRef = useRef<File | null>(null);
 
   const handleVideoRef = useCallback(
     (el: HTMLVideoElement | null) => {
@@ -92,6 +106,98 @@ export function VideoUploader({
     setMetadata(meta);
     onMetadataLoaded?.(meta);
     detectFps(v, meta);
+
+    // Check codec support for WebCodecs
+    if (checkCodecSupport && isWebCodecsSupported()) {
+      checkVideoCodecSupport(file);
+    }
+  }
+
+  /**
+   * Check if the video codec is supported by WebCodecs.
+   * This uses mediabunny to probe the file and detect unsupported codecs.
+   */
+  async function checkVideoCodecSupport(videoFile: File) {
+    const checkId = ++codecCheckId.current;
+
+    try {
+      const {
+        Input,
+        Output,
+        Conversion,
+        BlobSource,
+        BufferTarget,
+        Mp4OutputFormat,
+        ALL_FORMATS,
+      } = await import("mediabunny");
+
+      // If a new file is selected, abort this check
+      if (checkId !== codecCheckId.current) return;
+
+      const input = new Input({
+        source: new BlobSource(videoFile),
+        formats: ALL_FORMATS,
+      });
+
+      const target = new BufferTarget();
+      const output = new Output({
+        format: new Mp4OutputFormat(),
+        target,
+      });
+
+      // Try to initialize a conversion to check if the codec is supported
+      const conversion = await Conversion.init({
+        input,
+        output,
+        video: {
+          codec: "avc",
+          bitrate: 1_000_000, // Low bitrate, we won't actually encode
+        },
+        audio: {
+          codec: "aac",
+          bitrate: 128_000,
+        },
+        showWarnings: false,
+      });
+
+      // If a new file is selected, abort this check
+      if (checkId !== codecCheckId.current) return;
+
+      // Check if any tracks were discarded due to codec issues
+      const codecReasons = new Set([
+        "undecodable_source_codec",
+        "unknown_source_codec",
+        "no_encodable_target_codec",
+      ]);
+
+      const discardedCodecTracks = conversion.discardedTracks.filter((d) =>
+        codecReasons.has(d.reason),
+      );
+
+      if (discardedCodecTracks.length > 0) {
+        const hasVideoCodecIssue = discardedCodecTracks.some(
+          (d) => d.track.type === "video" && d.reason === "undecodable_source_codec",
+        );
+
+        if (hasVideoCodecIssue) {
+          const warning: CodecWarning = {
+            isUnsupported: true,
+            suggestHevcExtension: shouldSuggestHevcExtension(),
+          };
+          setCodecWarning(warning);
+          onCodecWarning?.(warning);
+          return;
+        }
+      }
+
+      // No codec issues detected
+      setCodecWarning(null);
+      onCodecWarning?.(null);
+    } catch (e) {
+      // If the check fails for any reason, don't show a warning
+      // The actual processing will handle the error
+      console.warn("Codec check failed:", e);
+    }
   }
 
   function detectFps(v: HTMLVideoElement, baseMeta: VideoMetadata) {
@@ -109,7 +215,7 @@ export function VideoUploader({
         v.pause();
         v.muted = wasMuted;
         v.currentTime = savedTime;
-        if (!wasPaused) v.play().catch(() => {});
+        if (!wasPaused) v.play().catch(() => { });
         return;
       }
       if (firstTime === null) {
@@ -121,7 +227,7 @@ export function VideoUploader({
       v.pause();
       v.currentTime = savedTime;
       v.muted = wasMuted;
-      if (!wasPaused) v.play().catch(() => {});
+      if (!wasPaused) v.play().catch(() => { });
       if (delta > 0) {
         const fps = Math.round(1 / delta);
         const updated = { ...baseMeta, fps };
@@ -142,11 +248,30 @@ export function VideoUploader({
     const f = e.target.files?.[0];
     if (f) {
       setMetadata(null);
+      setCodecWarning(null);
+      onCodecWarning?.(null);
       onFileChange(f);
     }
     // reset so same file can be re-selected
     e.target.value = "";
   }
+
+  // Clear codec warning when file is cleared externally or changed to a different file
+  useEffect(() => {
+    if (!file) {
+      // File was cleared
+      if (codecWarning) {
+        setCodecWarning(null);
+        onCodecWarning?.(null);
+      }
+    } else if (prevFileRef.current && file !== prevFileRef.current) {
+      // File changed to a different one - clear old warning before new detection
+      setCodecWarning(null);
+      onCodecWarning?.(null);
+    }
+    prevFileRef.current = file;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [file]);
 
   if (!file) {
     return (
@@ -163,6 +288,21 @@ export function VideoUploader({
 
   return (
     <div className={className}>
+      {/* Codec warning banner */}
+      {codecWarning && codecWarning.isUnsupported && (
+        <div className="mb-3 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-700 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-400">
+          <div className="flex items-start gap-2">
+            <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
+            <div className="space-y-1">
+              <p>{t("unsupportedVideoCodec")}</p>
+              {codecWarning.suggestHevcExtension && (
+                <p className="text-xs opacity-80">{t("hevcInstallHint")}</p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="overflow-hidden rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm">
         {/* Video preview */}
         {fileUrl && (
@@ -172,7 +312,7 @@ export function VideoUploader({
               src={fileUrl}
               controls
               onLoadedMetadata={handleLoadedMetadata}
-              className="mx-auto max-h-[400px] w-full"
+              className="mx-auto max-h-100 w-full"
             />
           </div>
         )}
