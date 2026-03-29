@@ -15,33 +15,66 @@
           "a1": "Alat ini menghapus trek audio dari video sambil mempertahankan kualitas video. Tidak perlu encoding ulang.",
           "q2": "Format video apa yang didukung?",
           "a2": "Sebagian besar format umum termasuk MP4, WebM, MOV, dan AVI didukung.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Mute Video?",
-            "content": "<p><strong>Mute Video</strong> removes the audio track from video files while keeping the video quality intact. Create silent versions of videos for background loops, presentations, or social media posts where audio isn't needed.</p><p>Powered by FFmpeg.wasm — full video processing running locally in your browser.</p>"
+            "content": "<p><strong>Mute Video</strong> menghapus trek audio dari file video sambil menjaga kualitas video tetap utuh. Buat versi senyap dari video untuk loop latar belakang, presentasi, atau postingan media sosial yang tidak memerlukan audio.</p><p>Ditenagai oleh FFmpeg.wasm — pemrosesan video lengkap berjalan secara lokal di browser Anda.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Mute Video",
-            "content": "<ol><li>Upload a video file (MP4, WebM, MKV, AVI supported)</li><li>Click <strong>Mute</strong> to remove the audio track</li><li>Download the silent video</li></ol><p>The video stream is copied without re-encoding, so processing is fast and quality is preserved.</p>"
+            "content": "<ol><li>Unggah file video (MP4, WebM, MKV, AVI didukung)</li><li>Klik <strong>Bisukan</strong> untuk menghapus trek audio</li><li>Unduh video tanpa suara</li></ol><p>Stream video disalin tanpa encoding ulang, sehingga pemrosesan cepat dan kualitas terjaga.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Audio Track Removal</strong>: Completely strips audio while keeping video untouched</li><li><strong>No Re-encoding</strong>: Video stream is copied directly — no quality loss</li><li><strong>Fast Processing</strong>: Stream copy is much faster than re-encoding</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI input</li><li><strong>Powered by FFmpeg.wasm</strong>: Industry-standard video processing in your browser</li><li><strong>Preview</strong>: Play the video before and after muting</li></ul>"
+            "content": "<ul><li><strong>Penghapusan Trek Audio</strong>: Menghapus audio sepenuhnya sambil menjaga video tetap utuh</li><li><strong>Tanpa Encoding Ulang</strong>: Stream video disalin langsung — tidak ada kehilangan kualitas</li><li><strong>Pemrosesan Cepat</strong>: Salin stream jauh lebih cepat daripada encoding ulang</li><li><strong>Berbagai Format</strong>: Mendukung input MP4, WebM, MKV, dan AVI</li><li><strong>Ditenagai FFmpeg.wasm</strong>: Pemrosesan video standar industri di browser Anda</li><li><strong>Pratinjau</strong>: Putar video sebelum dan sesudah dibisukan</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Presentations</strong>: Remove distracting audio from background videos in slides</li><li><strong>Social Media</strong>: Create silent looping videos for Instagram or TikTok backgrounds</li><li><strong>Web Design</strong>: Prepare silent hero videos for website backgrounds</li><li><strong>Privacy</strong>: Remove conversations or identifiable audio from recordings</li><li><strong>Video Editing</strong>: Strip audio before replacing with a different soundtrack</li></ul>"
+            "content": "<ul><li><strong>Presentasi</strong>: Hapus audio yang mengganggu dari video latar di slide</li><li><strong>Media Sosial</strong>: Buat video loop senyap untuk latar Instagram atau TikTok</li><li><strong>Desain Web</strong>: Siapkan video hero senyap untuk latar belakang situs</li><li><strong>Privasi</strong>: Hapus percakapan atau audio yang dapat diidentifikasi dari rekaman</li><li><strong>Editing Video</strong>: Hapus audio sebelum mengganti dengan trek suara yang berbeda</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Video Processing",
-            "content": "<p>Video processing runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly).</p><ul><li>File Anda videos <strong>never leave your device</strong> — no server uploads</li><li>No cloud processing or third-party access to your media</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "Mengutamakan Privasi - Pemrosesan Video",
+            "content": "<p>Pemrosesan video berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>FFmpeg.wasm</strong> (WebAssembly).</p><ul><li>File video Anda <strong>tidak pernah meninggalkan perangkat</strong> — tidak ada unggahan server</li><li>Tidak ada pemrosesan cloud atau akses pihak ketiga ke media Anda</li><li>Berfungsi <strong>offline</strong> setelah inti FFmpeg dimuat</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Zap",
+            "title": "Hapus Audio dari Video Gratis",
+            "description": "Hapus trek audio secara instan dengan satu klik. Tanpa unduh software, tanpa pendaftaran, tanpa watermark."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "Tanpa Kehilangan Kualitas",
+            "description": "Teknologi stream copy mempertahankan kualitas video asli. Resolusi sama, kejernihan sama, hanya diam."
+          },
+          "f3": {
+            "icon": "FileVideo",
+            "title": "MP4, MOV, AVI, WebM Didukung",
+            "description": "Berfungsi dengan semua format populer. Unggah video apa pun, dapatkan versi diam dalam format yang sama secara instan."
+          },
+          "f4": {
+            "icon": "Gauge",
+            "title": "Proses dalam Detik, Bukan Menit",
+            "description": "Mode stream copy 10x lebih cepat dari encoding ulang. Sempurna untuk edit media sosial cepat."
+          },
+          "f5": {
+            "icon": "BarChart3",
+            "title": "Pratinjau Sebelum Mengunduh",
+            "description": "Tonton video yang dibisukan di browser dulu. Pastikan sempurna, lalu simpan ke perangkat Anda."
+          },
+          "f6": {
+            "icon": "MonitorDown",
+            "title": "Privat & Aman - Tanpa Unggah",
+            "description": "Semua pemrosesan terjadi di perangkat Anda. Video Anda tidak pernah menyentuh server kami. Privasi 100% terjamin."
           }
         }
       },
@@ -62,33 +95,66 @@
           "a1": "Ya, gunakan slider rentang untuk mengatur titik awal dan akhir yang tepat dengan presisi 0,1 detik.",
           "q2": "Apakah video di-encode ulang?",
           "a2": "Alat ini menggunakan mode stream copy untuk pemrosesan cepat tanpa kehilangan kualitas.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Trim Video?",
-            "content": "<p><strong>Trim Video</strong> cuts video clips to your desired length with precise start and end time controls. Set times down to 0.1-second precision, preview the selection, and download the trimmed clip.</p><p>Uses FFmpeg.wasm for professional-grade video trimming directly in your browser.</p>"
+            "content": "<p><strong>Trim Video</strong> memotong klip video ke panjang yang diinginkan dengan kontrol waktu awal dan akhir yang presisi. Atur waktu hingga presisi 0,1 detik, pratinjau pilihan, dan unduh klip yang sudah dipotong.</p><p>Menggunakan FFmpeg.wasm untuk pemotongan video tingkat profesional langsung di browser Anda.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Trim Video",
-            "content": "<ol><li>Upload a video file</li><li>Set the <strong>start time</strong> and <strong>end time</strong> for the clip you want to keep</li><li>Preview the selected range in the video player</li><li>Click <strong>Trim</strong> to extract the clip</li><li>Download the trimmed video</li></ol><p>Supports precise time selection with 0.1-second increments.</p>"
+            "content": "<ol><li>Unggah file video</li><li>Atur <strong>waktu awal</strong> dan <strong>waktu akhir</strong> untuk klip yang ingin disimpan</li><li>Pratinjau rentang yang dipilih di pemutar video</li><li>Klik <strong>Potong</strong> untuk mengekstrak klip</li><li>Unduh video yang sudah dipotong</li></ol><p>Mendukung pemilihan waktu yang presisi dengan penambahan 0,1 detik.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Precise Timing</strong>: Set start and end times with 0.1-second accuracy</li><li><strong>Video Preview</strong>: Play the selected range before trimming</li><li><strong>Fast Processing</strong>: Stream copy mode for instant trimming without re-encoding</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional video processing in the browser</li><li><strong>Quality Preservation</strong>: No quality loss when stream copying</li></ul>"
+            "content": "<ul><li><strong>Pengaturan Waktu Presisi</strong>: Atur waktu awal dan akhir dengan akurasi 0,1 detik</li><li><strong>Pratinjau Video</strong>: Putar rentang yang dipilih sebelum dipotong</li><li><strong>Pemrosesan Cepat</strong>: Mode salin stream untuk pemotongan instan tanpa encoding ulang</li><li><strong>Berbagai Format</strong>: Mendukung MP4, WebM, MKV, dan AVI</li><li><strong>Ditenagai FFmpeg.wasm</strong>: Pemrosesan video profesional di browser</li><li><strong>Penjagaan Kualitas</strong>: Tidak ada kehilangan kualitas saat menyalin stream</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Social Media Clips</strong>: Cut highlights from longer videos for social platforms</li><li><strong>Meeting Recordings</strong>: Extract key moments from recorded meetings</li><li><strong>Content Creation</strong>: Trim raw footage to create polished clips</li><li><strong>Presentations</strong>: Cut video clips to exact lengths for presentations</li><li><strong>Personal Videos</strong>: Trim home videos to keep the best moments</li></ul>"
+            "content": "<ul><li><strong>Klip Media Sosial</strong>: Potong sorotan dari video yang lebih panjang untuk platform sosial</li><li><strong>Rekaman Rapat</strong>: Ekstrak momen kunci dari rekaman rapat</li><li><strong>Pembuatan Konten</strong>: Potong rekaman mentah untuk membuat klip yang dipoles</li><li><strong>Presentasi</strong>: Potong klip video ke panjang yang tepat untuk presentasi</li><li><strong>Video Pribadi</strong>: Potong video rumahan untuk menyimpan momen terbaik</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Video Trimming",
-            "content": "<p>Video trimming runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>File Anda videos <strong>never leave your device</strong></li><li>Tidak ada unggahan server — your personal and business videos stay private</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "Mengutamakan Privasi - Pemotongan Video",
+            "content": "<p>Pemotongan video berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>FFmpeg.wasm</strong>.</p><ul><li>File video Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak ada unggahan server — video pribadi dan bisnis Anda tetap rahasia</li><li>Berfungsi <strong>offline</strong> setelah inti FFmpeg dimuat</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Potong Video Online Gratis - Tanpa Software",
+            "description": "Potong video secara instan di browser Anda. Tanpa unduh, tanpa instalasi, berfungsi di semua perangkat."
+          },
+          "f2": {
+            "icon": "Zap",
+            "title": "Presisi Potong 0.1 Detik",
+            "description": "Atur waktu mulai dan akhir yang tepat dengan akurasi level frame. Sempurna untuk menangkap momen presisi."
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "Potong Tanpa Kehilangan Kualitas",
+            "description": "Teknologi stream copy menjaga resolusi dan kejernihan asli. Tanpa encoding ulang, tanpa penurunan kualitas."
+          },
+          "f4": {
+            "icon": "FileVideo",
+            "title": "Pemotong MP4, MOV, WebM, AVI",
+            "description": "Mendukung semua format video populer. Unggah file apa pun, potong sesuai kebutuhan, unduh secara instan."
+          },
+          "f5": {
+            "icon": "BarChart3",
+            "title": "Lihat Panjang Klip secara Real-Time",
+            "description": "Timeline visual menunjukkan durasi tepat saat Anda menyesuaikan. Ketahui ukuran output sebelum memproses."
+          },
+          "f6": {
+            "icon": "MonitorDown",
+            "title": "Video Anda Tetap di Perangkat Anda",
+            "description": "Pemrosesan 100% di sisi klien. Tanpa unggahan cloud, tanpa risiko privasi, tanpa menunggu server."
           }
         }
       },
@@ -106,33 +172,66 @@
           "a1": "Anda dapat memutar video sebesar 90° (searah jarum jam), 180° (terbalik), atau 270° (berlawanan jarum jam).",
           "q2": "Apakah memutar memengaruhi kualitas video?",
           "a2": "Video di-encode ulang selama rotasi, tetapi kualitas dipertahankan pada level tinggi.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Rotate Video?",
-            "content": "<p><strong>Rotate Video</strong> rotates video files by 90°, 180°, or 270° to fix orientation issues. Correct sideways phone videos, fix upside-down recordings, or adjust orientation for specific display needs.</p>"
+            "content": "<p><strong>Rotate Video</strong> memutar file video sebesar 90°, 180°, atau 270° untuk memperbaiki masalah orientasi. Perbaiki video ponsel yang terjungkirbalik, rekaman yang terbalik, atau sesuaikan orientasi untuk kebutuhan tampilan tertentu.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Rotate Video",
-            "content": "<ol><li>Upload a video file</li><li>Select the rotation angle: <strong>90°</strong>, <strong>180°</strong>, or <strong>270°</strong></li><li>Click <strong>Rotate</strong> to process</li><li>Download the rotated video</li></ol>"
+            "content": "<ol><li>Unggah file video</li><li>Pilih sudut rotasi: <strong>90°</strong>, <strong>180°</strong>, atau <strong>270°</strong></li><li>Klik <strong>Putar</strong> untuk memproses</li><li>Unduh video yang sudah diputar</li></ol>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Three Angles</strong>: Rotate by 90° (clockwise), 180°, or 270° (counter-clockwise)</li><li><strong>Video Preview</strong>: See the video before and after rotation</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional video processing in the browser</li><li><strong>Quality Output</strong>: High-quality rotation with FFmpeg encoding</li><li><strong>Audio Preserved</strong>: Audio track remains synchronized after rotation</li></ul>"
+            "content": "<ul><li><strong>Tiga Sudut</strong>: Putar 90° (searah jarum jam), 180°, atau 270° (berlawanan jarum jam)</li><li><strong>Pratinjau Video</strong>: Lihat video sebelum dan sesudah rotasi</li><li><strong>Berbagai Format</strong>: Mendukung MP4, WebM, MKV, dan AVI</li><li><strong>Ditenagai FFmpeg.wasm</strong>: Pemrosesan video profesional di browser</li><li><strong>Output Berkualitas</strong>: Rotasi berkualitas tinggi dengan encoding FFmpeg</li><li><strong>Audio Terjaga</strong>: Trek audio tetap tersinkronisasi setelah rotasi</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Phone Videos</strong>: Fix sideways videos recorded on mobile phones</li><li><strong>Camera Footage</strong>: Correct orientation from cameras mounted at angles</li><li><strong>Screen Recordings</strong>: Rotate screen recordings for vertical display</li><li><strong>Social Media</strong>: Adjust orientation for platform requirements (portrait/landscape)</li><li><strong>Presentations</strong>: Fix video orientation for use in slides</li></ul>"
+            "content": "<ul><li><strong>Video Ponsel</strong>: Perbaiki video menyamping yang direkam di ponsel</li><li><strong>Rekaman Kamera</strong>: Koreksi orientasi dari kamera yang dipasang dengan sudut tertentu</li><li><strong>Rekaman Layar</strong>: Putar rekaman layar untuk tampilan vertikal</li><li><strong>Media Sosial</strong>: Sesuaikan orientasi untuk persyaratan platform (potret/lansekap)</li><li><strong>Presentasi</strong>: Perbaiki orientasi video untuk digunakan dalam slide</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Video Processing",
-            "content": "<p>Video rotation runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>File Anda videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "Mengutamakan Privasi - Pemrosesan Video",
+            "content": "<p>Rotasi video berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>FFmpeg.wasm</strong>.</p><ul><li>File video Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak ada pemrosesan server atau unggahan</li><li>Berfungsi <strong>offline</strong> setelah inti FFmpeg dimuat</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Putar Video Online 90°, 180°, 270°",
+            "description": "Perbaiki video iPhone menyamping atau rekaman terbalik secara instan. Tiga opsi rotasi dengan satu klik."
+          },
+          "f2": {
+            "icon": "Zap",
+            "title": "Perbaiki Orientasi Video Gratis",
+            "description": "Tanpa software. Unggah video Anda, pilih sudut, unduh versi yang diperbaiki dalam hitungan detik."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Pratinjau Rotasi Sebelum Menyimpan",
+            "description": "Tonton video yang diputar di browser dulu. Pastikan benar, lalu unduh. Tanpa tebakan."
+          },
+          "f4": {
+            "icon": "FileVideo",
+            "title": "Berfungsi dengan Semua Format Video",
+            "description": "Putar file MP4, MOV, AVI, WebM, MKV. Output mempertahankan format dan kualitas sama seperti input."
+          },
+          "f5": {
+            "icon": "Shield",
+            "title": "Audio Tetap Tersinkronisasi Sempurna",
+            "description": "Rotasi mempertahankan waktu audio. Tanpa jeda, tanpa geser, tanpa masalah sinkronisasi di video akhir Anda."
+          },
+          "f6": {
+            "icon": "MonitorDown",
+            "title": "Rotasi Privat - Tanpa Unggah",
+            "description": "Pemrosesan hanya terjadi di perangkat Anda. Video Anda tidak pernah meninggalkan komputer Anda. Privasi maksimal."
           }
         }
       },
@@ -153,40 +252,73 @@
           "a1": "Turunkan FPS, kurangi lebar, atau persingkat durasi. Alat ini menggunakan palet teroptimasi untuk rasio kualitas-ukuran terbaik.",
           "q2": "Berapa panjang maksimum GIF?",
           "a2": "Tidak ada batas ketat, tetapi GIF yang lebih panjang menghasilkan file yang sangat besar. Kami sarankan GIF di bawah 10 detik.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Video to GIF?",
-            "content": "<p><strong>Video to GIF</strong> converts video clips into animated GIF images with control over frame rate, resolution, and quality. Create shareable GIFs from any video for social media, chat, or documentation.</p><p>Powered by FFmpeg.wasm for high-quality GIF generation directly in your browser.</p>"
+            "content": "<p><strong>Video to GIF</strong> mengonversi klip video menjadi gambar GIF animasi dengan kontrol atas frame rate, resolusi, dan kualitas. Buat GIF yang dapat dibagikan dari video apa pun untuk media sosial, obrolan, atau dokumentasi.</p><p>Ditenagai oleh FFmpeg.wasm untuk pembuatan GIF berkualitas tinggi langsung di browser Anda.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Video to GIF",
-            "content": "<ol><li>Upload a video file</li><li>Set the start and end time for the GIF clip</li><li>Adjust <strong>frame rate</strong> (fps) and output <strong>width</strong></li><li>Click <strong>Convert</strong> to generate the GIF</li><li>Preview and download the animated GIF</li></ol><p>Lower frame rates and smaller widths produce smaller GIF files.</p>"
+            "content": "<ol><li>Unggah file video</li><li>Atur waktu awal dan akhir untuk klip GIF</li><li>Sesuaikan <strong>frame rate</strong> (fps) dan <strong>lebar</strong> output</li><li>Klik <strong>Konversi</strong> untuk menghasilkan GIF</li><li>Pratinjau dan unduh GIF animasi</li></ol><p>Frame rate lebih rendah dan lebar lebih kecil menghasilkan file GIF yang lebih kecil.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Frame Rate Control</strong>: Set GIF frame rate (e.g., 10, 15, 24 fps)</li><li><strong>Size Control</strong>: Adjust output width for file size optimization</li><li><strong>Time Selection</strong>: Choose which part of the video to convert</li><li><strong>Preview</strong>: See the GIF before downloading</li><li><strong>Powered by FFmpeg.wasm</strong>: High-quality palette generation for optimal GIF colors</li><li><strong>Multiple Input Formats</strong>: Convert from MP4, WebM, MKV, AVI</li></ul>"
+            "content": "<ul><li><strong>Kontrol Frame Rate</strong>: Atur frame rate GIF (misalnya 10, 15, 24 fps)</li><li><strong>Kontrol Ukuran</strong>: Sesuaikan lebar output untuk optimalisasi ukuran file</li><li><strong>Pemilihan Waktu</strong>: Pilih bagian video yang akan dikonversi</li><li><strong>Pratinjau</strong>: Lihat GIF sebelum mengunduh</li><li><strong>Ditenagai FFmpeg.wasm</strong>: Pembuatan palet berkualitas tinggi untuk warna GIF optimal</li><li><strong>Berbagai Format Input</strong>: Konversi dari MP4, WebM, MKV, AVI</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Social Media</strong>: Create reaction GIFs or highlights from videos</li><li><strong>Documentation</strong>: Create animated demonstrations for tutorials or docs</li><li><strong>Chat & Messaging</strong>: Make custom GIFs for group chats and Slack</li><li><strong>Bug Reports</strong>: Record and share animated bug reproductions</li><li><strong>Marketing</strong>: Create eye-catching animated content for campaigns</li></ul>"
+            "content": "<ul><li><strong>Media Sosial</strong>: Buat GIF reaksi atau sorotan dari video</li><li><strong>Dokumentasi</strong>: Buat demonstrasi animasi untuk tutorial atau dokumentasi</li><li><strong>Obrolan & Pesan</strong>: Buat GIF khusus untuk obrolan grup dan Slack</li><li><strong>Laporan Bug</strong>: Rekam dan bagikan reproduksi bug animasi</li><li><strong>Pemasaran</strong>: Buat konten animasi yang menarik untuk kampanye</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - GIF Creation",
-            "content": "<p>GIF conversion runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>File Anda videos <strong>never leave your device</strong></li><li>No server processing — your content stays private</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "Mengutamakan Privasi - Pembuatan GIF",
+            "content": "<p>Konversi GIF berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>FFmpeg.wasm</strong>.</p><ul><li>File video Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak ada pemrosesan server — konten Anda tetap pribadi</li><li>Berfungsi <strong>offline</strong> setelah inti FFmpeg dimuat</li></ul>"
           }
         },
         "quality": "Kualitas",
         "quality_small": "File Kecil",
         "quality_balanced": "Seimbang",
         "quality_high": "Kualitas Terbaik",
-        "scale": "Skala"
+        "scale": "Skala",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Konverter Video ke GIF Gratis",
+            "description": "Ubah video apa pun menjadi GIF animasi secara online. Tanpa perangkat lunak, tanpa pendaftaran, tanpa watermark pada hasil karya Anda."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Kontrol Ukuran & Kualitas GIF",
+            "description": "Atur FPS, lebar, dan kualitas. Buat GIF kecil untuk Discord atau GIF berkualitas tinggi untuk presentasi."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Potong Klip Sempurna untuk GIF",
+            "description": "Pilih waktu mulai dan akhir yang tepat. Ekstrak momen sempurna dari video apa pun untuk GIF Anda."
+          },
+          "f4": {
+            "icon": "Shield",
+            "title": "Warna Optimal, File Kecil",
+            "description": "Pembuatan palet cerdas menghasilkan GIF yang cerah, dimuat cepat, dan terlihat bagus di mana saja."
+          },
+          "f5": {
+            "icon": "FileVideo",
+            "title": "Konversi MP4, MOV ke GIF",
+            "description": "Mendukung semua format video. Unggah file, sesuaikan pengaturan, unduh GIF Anda secara instan."
+          },
+          "f6": {
+            "icon": "MonitorDown",
+            "title": "Buat GIF Secara Privat & Aman",
+            "description": "Semua konversi terjadi di browser Anda. Video Anda tidak pernah diunggah ke server mana pun."
+          }
+        }
       },
       "to-webp": {
         "name": "Video ke WebP",
@@ -205,42 +337,75 @@
           "a1": "File WebP animasi biasanya 25-35% lebih kecil dari GIF setara sambil mendukung kedalaman warna dan transparansi yang lebih baik.",
           "q2": "Apakah WebP animasi didukung secara luas?",
           "a2": "Ya, semua browser modern mendukung WebP animasi. Hanya browser yang sangat lama yang tidak mendukung.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Video to WebP?",
-            "content": "<p><strong>Video to WebP</strong> converts video clips into animated WebP images. WebP animations are <strong>25-35% smaller</strong> than equivalent GIFs with better color reproduction and transparency support.</p><p>The modern alternative to GIFs for web use.</p>"
+            "content": "<p><strong>Video to WebP</strong> mengonversi klip video menjadi gambar WebP animasi. Animasi WebP <strong>25-35% lebih kecil</strong> dari GIF setara dengan reproduksi warna yang lebih baik dan dukungan transparansi.</p><p>Alternatif modern untuk GIF untuk penggunaan web.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Video to WebP",
-            "content": "<ol><li>Upload a video file</li><li>Set the start and end time for the animation clip</li><li>Adjust frame rate and output dimensions</li><li>Click <strong>Convert</strong> to generate the animated WebP</li><li>Download the WebP animation</li></ol>"
+            "content": "<ol><li>Unggah file video</li><li>Atur waktu awal dan akhir untuk klip animasi</li><li>Sesuaikan frame rate dan dimensi output</li><li>Klik <strong>Konversi</strong> untuk menghasilkan WebP animasi</li><li>Unduh animasi WebP</li></ol>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Smaller Than GIF</strong>: WebP animations are 25-35% smaller than equivalent GIFs</li><li><strong>Better Colors</strong>: Full 24-bit color depth (vs. GIF's 256 color limit)</li><li><strong>Transparency</strong>: Alpha channel support for transparent animations</li><li><strong>Frame Rate Control</strong>: Adjustable fps for size optimization</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional encoding in the browser</li><li><strong>Wide Browser Support</strong>: Supported by all modern browsers</li></ul>"
+            "content": "<ul><li><strong>Lebih Kecil dari GIF</strong>: Animasi WebP 25-35% lebih kecil dari GIF setara</li><li><strong>Warna Lebih Baik</strong>: Kedalaman warna 24-bit penuh (vs. batas 256 warna GIF)</li><li><strong>Transparansi</strong>: Dukungan saluran alfa untuk animasi transparan</li><li><strong>Kontrol Frame Rate</strong>: fps yang dapat disesuaikan untuk optimalisasi ukuran</li><li><strong>Ditenagai FFmpeg.wasm</strong>: Encoding profesional di browser</li><li><strong>Dukungan Browser Luas</strong>: Didukung oleh semua browser modern</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Web Performance</strong>: Replace GIFs with smaller WebP animations on websites</li><li><strong>Chat Apps</strong>: Create animated stickers and reactions</li><li><strong>Documentation</strong>: Smaller animated demos for technical documentation</li><li><strong>Social Media</strong>: Create animated content where WebP is supported</li><li><strong>App Design</strong>: Create loading animations and micro-interactions</li></ul>"
+            "content": "<ul><li><strong>Performa Web</strong>: Ganti GIF dengan animasi WebP yang lebih kecil di situs web</li><li><strong>Aplikasi Obrolan</strong>: Buat stiker animasi dan reaksi</li><li><strong>Dokumentasi</strong>: Demo animasi yang lebih kecil untuk dokumentasi teknis</li><li><strong>Media Sosial</strong>: Buat konten animasi di mana WebP didukung</li><li><strong>Desain Aplikasi</strong>: Buat animasi pemuatan dan interaksi mikro</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Video Conversion",
-            "content": "<p>WebP conversion runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>File Anda videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "Mengutamakan Privasi - Konversi Video",
+            "content": "<p>Konversi WebP berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>FFmpeg.wasm</strong>.</p><ul><li>File video Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak ada pemrosesan server atau unggahan</li><li>Berfungsi <strong>offline</strong> setelah inti FFmpeg dimuat</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "BarChart3",
+            "title": "Video ke WebP - Lebih Kecil dari GIF",
+            "description": "Buat file WebP animasi 25-35% lebih kecil dari GIF. Sempurna untuk website dan aplikasi yang dimuat cepat."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "Warna Lebih Baik + Transparansi",
+            "description": "Warna true 24-bit vs 256 warna GIF. Dukungan transparansi penuh untuk animasi profesional."
+          },
+          "f3": {
+            "icon": "Gauge",
+            "title": "Kontrol Kualitas & Ukuran File",
+            "description": "Atur kompresi, frame rate, dan dimensi. Seimbangkan kualitas visual dengan kecepatan memuat."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Konversi Klip Video Apa Pun",
+            "description": "Pilih rentang waktu yang tepat dari video Anda. Ubah momen apa pun menjadi animasi WebP yang halus."
+          },
+          "f5": {
+            "icon": "FileVideo",
+            "title": "Alternatif Modern untuk GIF",
+            "description": "Semua browser mendukung WebP animasi. Gantikan GIF lama dengan animasi yang lebih kecil dan lebih bagus."
+          },
+          "f6": {
+            "icon": "MonitorDown",
+            "title": "Konversi Secara Privat di Browser",
+            "description": "Video Anda tetap di perangkat. Tanpa pemrosesan cloud, tanpa kekhawatiran privasi, hasil instan."
           }
         }
       },
       "compress": {
         "name": "Kompres Video",
-        "description": "Reduce video file size with quality presets or advanced controls for CRF, resolution, frame rate, and bitrate.",
-        "metaTitle": "Compress Video Online Free - Advanced Video Compressor | No Upload",
-        "metaDescription": "Compress videos in your browser with no upload. Choose simple presets or advanced mode with CRF, resolution, FPS, and bitrate controls. H.264 MP4 output. 100% private.",
-        "keywords": "compress video, video compressor, reduce video size, shrink video, CRF compression, video bitrate reducer, browser video compressor, no upload video compress",
+        "description": "Kurangi ukuran file video dengan preset kualitas atau kontrol lanjutan untuk CRF, resolusi, frame rate, dan bitrate.",
+        "metaTitle": "Kompres Video Online Gratis - Kompresor Video Lanjutan | Tanpa Unggah",
+        "metaDescription": "Kompres video di browser Anda tanpa unggah. Pilih preset sederhana atau mode lanjutan dengan kontrol CRF, resolusi, FPS, dan bitrate. Output MP4 H.264. 100% pribadi.",
+        "keywords": "kompres video, kompresor video, kurangi ukuran video, perkecil video, kompresi CRF, pengurang bitrate video, kompresor video browser, kompres video tanpa unggah",
         "quality": "Kualitas",
         "high": "Tinggi",
         "medium": "Sedang",
@@ -251,59 +416,59 @@
         "compressedSize": "Ukuran terkompres",
         "saved": "Pengurangan ukuran",
         "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Silakan gunakan browser modern dengan HTTPS.",
-        "simpleMode": "Simple",
-        "advancedMode": "Advanced",
-        "sourceVideo": "Source",
-        "compressedVideo": "Compressed",
-        "fileSize": "File Size",
-        "resolutionLabel": "Resolution",
-        "duration": "Duration",
+        "simpleMode": "Sederhana",
+        "advancedMode": "Lanjutan",
+        "sourceVideo": "Sumber",
+        "compressedVideo": "Terkompres",
+        "fileSize": "Ukuran File",
+        "resolutionLabel": "Resolusi",
+        "duration": "Durasi",
         "bitrate": "Bitrate",
-        "highDesc": "Minimal compression with near-original visual quality. Moderate file size reduction.",
-        "highUseCase": "Best for: Social media, presentations, archiving",
-        "highSettings": "CRF 23 · Original resolution · 192k audio",
-        "mediumDesc": "Balanced compression. Good visual quality with significant size reduction.",
-        "mediumUseCase": "Best for: Email attachments, general sharing",
-        "mediumSettings": "CRF 28 · Original resolution · 128k audio",
-        "lowDesc": "Maximum compression. Noticeably reduced quality, smallest file size.",
-        "lowUseCase": "Best for: Messaging apps, quick previews, low bandwidth",
-        "lowSettings": "CRF 35 · 720p · 96k audio",
-        "crfLabel": "CRF (Quality)",
-        "crfHint": "0 = lossless, 23 = high quality, 28 = medium, 51 = worst. Lower values produce larger files.",
-        "encodingPreset": "Encoding Speed",
-        "encodingPresetHint": "Slower encoding produces smaller files at the same quality level.",
-        "resolutionOriginal": "Original",
+        "highDesc": "Kompresi minimal dengan kualitas visual mendekati asli. Pengurangan ukuran file moderat.",
+        "highUseCase": "Terbaik untuk: Media sosial, presentasi, arsip",
+        "highSettings": "CRF 23 · Resolusi asli · audio 192k",
+        "mediumDesc": "Kompresi seimbang. Kualitas visual baik dengan pengurangan ukuran signifikan.",
+        "mediumUseCase": "Terbaik untuk: Lampiran email, berbagi umum",
+        "mediumSettings": "CRF 28 · Resolusi asli · audio 128k",
+        "lowDesc": "Kompresi maksimal. Kualitas berkurang terlihat, ukuran file terkecil.",
+        "lowUseCase": "Terbaik untuk: Aplikasi pesan, pratinjau cepat, bandwidth rendah",
+        "lowSettings": "CRF 35 · 720p · audio 96k",
+        "crfLabel": "CRF (Kualitas)",
+        "crfHint": "0 = tanpa kehilangan, 23 = kualitas tinggi, 28 = sedang, 51 = terburuk. Nilai lebih rendah menghasilkan file lebih besar.",
+        "encodingPreset": "Kecepatan Encoding",
+        "encodingPresetHint": "Encoding lebih lambat menghasilkan file lebih kecil pada level kualitas yang sama.",
+        "resolutionOriginal": "Asli",
         "fpsLabel": "Frame Rate",
-        "fpsOriginal": "Original",
-        "audioBitrateLabel": "Audio Bitrate",
-        "maxBitrateLabel": "Max Bitrate (optional)",
-        "maxBitrateHint": "Cap the video bitrate. Leave empty for no limit.",
-        "maxBitratePlaceholder": "e.g. 2",
+        "fpsOriginal": "Asli",
+        "audioBitrateLabel": "Bitrate Audio",
+        "maxBitrateLabel": "Bitrate Maks (opsional)",
+        "maxBitrateHint": "Batasi bitrate video. Kosongkan untuk tanpa batas.",
+        "maxBitratePlaceholder": "misal 2",
         "maxBitrateUnit": "Mbps",
-        "preset_ultrafast": "Ultra Fast",
-        "preset_superfast": "Super Fast",
-        "preset_veryfast": "Very Fast",
-        "preset_faster": "Faster",
-        "preset_fast": "Fast",
-        "preset_medium": "Medium",
-        "preset_slow": "Slow",
-        "preset_slower": "Slower",
-        "preset_veryslow": "Very Slow",
+        "preset_ultrafast": "Sangat Cepat",
+        "preset_superfast": "Super Cepat",
+        "preset_veryfast": "Sangat Cepat",
+        "preset_faster": "Lebih Cepat",
+        "preset_fast": "Cepat",
+        "preset_medium": "Sedang",
+        "preset_slow": "Lambat",
+        "preset_slower": "Lebih Lambat",
+        "preset_veryslow": "Sangat Lambat",
         "codecLabel": "Kodek Video",
         "codecHint": "H.264: Kompatibilitas terbaik. H.265: Ukuran file lebih kecil (hingga 50% lebih kecil) namun mungkin tidak diputar di perangkat lama.",
         "codecChecking": "Memeriksa dukungan H.265...",
         "codecHevcNotSupported": "H.265 (HEVC) tidak didukung oleh browser Anda. H.264 akan digunakan.",
         "faq": {
-          "q1": "How does video compression work?",
-          "a1": "The tool re-encodes the video using H.264 with a CRF (Constant Rate Factor) value. In Simple Mode, choose High (CRF 23), Medium (CRF 28), or Low (CRF 35). In Advanced Mode, set CRF manually from 0 to 51, plus encoding speed, resolution, frame rate, audio bitrate, and an optional max bitrate cap.",
-          "q2": "What is the difference between Simple and Advanced Mode?",
-          "a2": "Simple Mode offers three one-click presets (High, Medium, Low) optimized for common scenarios. Advanced Mode gives full control over CRF quality, encoding speed (ultrafast to veryslow), output resolution, frame rate, audio bitrate, and maximum video bitrate — ideal for users who need precise control.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser using FFmpeg.wasm. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I upscale my video to a higher resolution?",
-          "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q1": "Bagaimana cara kerja kompresi video?",
+          "a1": "Alat ini meng-encode ulang video menggunakan H.264 dengan nilai CRF (Constant Rate Factor). Di Mode Sederhana, pilih Tinggi (CRF 23), Sedang (CRF 28), atau Rendah (CRF 35). Di Mode Lanjutan, atur CRF manual dari 0 hingga 51, plus kecepatan encoding, resolusi, frame rate, bitrate audio, dan batas bitrate maks opsional.",
+          "q2": "Apa perbedaan antara Mode Sederhana dan Lanjutan?",
+          "a2": "Mode Sederhana menawarkan tiga preset sekali klik (Tinggi, Sedang, Rendah) yang dioptimalkan untuk skenario umum. Mode Lanjutan memberikan kontrol penuh atas kualitas CRF, kecepatan encoding (sangat cepat hingga sangat lambat), resolusi output, frame rate, bitrate audio, dan bitrate video maksimum — ideal untuk pengguna yang membutuhkan kontrol presisi.",
+          "q3": "Apakah file saya akan diunggah ke server?",
+          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda menggunakan FFmpeg.wasm. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
+          "q4": "Dapatkah saya menaikkan skala video ke resolusi lebih tinggi?",
+          "a4": "Tidak, dan itu sengaja. Opsi resolusi dan frame rate yang melebihi video sumber secara otomatis dinonaktifkan. Menambah skala akan memperbesar ukuran file tanpa meningkatkan kualitas sebenarnya. Alat ini hanya menurunkan skala untuk mengurangi ukuran file.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah.",
           "q6": "Format video apa saja yang bisa dikompres?",
           "a6": "Anda dapat mengunggah format apa pun yang didukung browser, termasuk MP4, WebM, MOV, MKV, dan AVI. Output selalu MP4 (H.264 video + AAC audio) untuk kompatibilitas maksimum.",
           "q7": "Berapa banyak ukuran file yang bisa dikurangi?",
@@ -313,57 +478,57 @@
         },
         "seoContent": {
           "intro": {
-            "title": "What is Compress Video?",
-            "content": "<p><strong>Compress Video</strong> is a powerful browser-based video compressor that reduces file size without uploading to any server. Choose from three quality presets for quick compression, or switch to <strong>Advanced Mode</strong> for full control over CRF, encoding speed, resolution, frame rate, audio bitrate, and max bitrate cap.</p><p>Powered by FFmpeg.wasm with H.264/AAC encoding — the output plays everywhere. The tool displays detailed video metadata (resolution, duration, bitrate, FPS) and shows a side-by-side comparison after compression.</p>"
+            "title": "Apa itu Kompres Video?",
+            "content": "<p><strong>Kompres Video</strong> adalah kompresor video berbasis browser yang kuat yang mengurangi ukuran file tanpa mengunggah ke server mana pun. Pilih dari tiga preset kualitas untuk kompresi cepat, atau beralih ke <strong>Mode Lanjutan</strong> untuk kontrol penuh atas CRF, kecepatan encoding, resolusi, frame rate, bitrate audio, dan batas bitrate maks.</p><p>Ditenagai oleh FFmpeg.wasm dengan encoding H.264/AAC — output diputar di mana saja. Alat ini menampilkan metadata video terperinci (resolusi, durasi, bitrate, FPS) dan menunjukkan perbandingan berdampingan setelah kompresi.</p>"
           },
           "howToUse": {
-            "title": "How to Use Compress Video",
-            "content": "<ol><li>Upload a video file — the tool instantly shows resolution, duration, bitrate, and frame rate</li><li>Choose <strong>Simple Mode</strong> (High / Medium / Low presets) or switch to <strong>Advanced Mode</strong> to fine-tune CRF, encoding speed, resolution, FPS, and audio bitrate</li><li>Click <strong>Compress</strong> — a progress bar tracks the encoding</li><li>Compare source vs. compressed video: file size, resolution, bitrate, and reduction percentage</li><li>Preview the compressed video and download it</li></ol><p>Resolution and frame rate options that exceed the source are automatically disabled to prevent unnecessary upscaling.</p>"
+            "title": "Cara Menggunakan Kompres Video",
+            "content": "<ol><li>Unggah file video — alat langsung menampilkan resolusi, durasi, bitrate, dan frame rate</li><li>Pilih <strong>Mode Sederhana</strong> (preset Tinggi / Sedang / Rendah) atau beralih ke <strong>Mode Lanjutan</strong> untuk menyempurnakan CRF, kecepatan encoding, resolusi, FPS, dan bitrate audio</li><li>Klik <strong>Kompres</strong> — bilah kemajuan melacak encoding</li><li>Bandingkan video sumber vs terkompres: ukuran file, resolusi, bitrate, dan persentase pengurangan</li><li>Pratinjau video terkompres dan unduh</li></ol><p>Opsi resolusi dan frame rate yang melebihi sumber secara otomatis dinonaktifkan untuk mencegah peningkatan skala yang tidak perlu.</p>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Simple &amp; Advanced Modes</strong>: Quick presets for beginners; full parameter control for power users</li><li><strong>Video Metadata Display</strong>: See resolution, duration, bitrate, and FPS for both source and compressed video</li><li><strong>Smart Upscale Prevention</strong>: Options exceeding the source resolution or frame rate are disabled</li><li><strong>Adjustable CRF</strong>: Fine-tune quality factor from 0 (lossless) to 51</li><li><strong>9 Encoding Speeds</strong>: From Ultra Fast to Very Slow — slower = smaller file at same quality</li><li><strong>Resolution &amp; FPS Control</strong>: Downscale to 1080p, 720p, 480p, or 360p; reduce frame rate to 30, 24, or 15 fps</li><li><strong>Audio Bitrate Selection</strong>: Choose from 64k to 256k AAC audio</li><li><strong>Max Bitrate Cap</strong>: Optionally limit peak video bitrate for streaming compatibility</li><li><strong>Side-by-Side Comparison</strong>: Full before/after stats table with compression percentage</li><li><strong>H.264 + AAC Output</strong>: MP4 format for universal device compatibility</li></ul>"
+            "title": "Fitur Utama",
+            "content": "<ul><li><strong>Mode Sederhana & Lanjutan</strong>: Preset cepat untuk pemula; kontrol parameter penuh untuk pengguna lanjutan</li><li><strong>Tampilan Metadata Video</strong>: Lihat resolusi, durasi, bitrate, dan FPS untuk video sumber dan terkompres</li><li><strong>Pencegahan Upscale Cerdas</strong>: Opsi yang melebihi resolusi atau frame rate sumber dinonaktifkan</li><li><strong>CRF yang Dapat Disesuaikan</strong>: Sempurnakan faktor kualitas dari 0 (tanpa kehilangan) hingga 51</li><li><strong>9 Kecepatan Encoding</strong>: Dari Sangat Cepat hingga Sangat Lambat — lebih lambat = file lebih kecil pada kualitas sama</li><li><strong>Kontrol Resolusi & FPS</strong>: Turunkan ke 1080p, 720p, 480p, atau 360p; kurangi frame rate ke 30, 24, atau 15 fps</li><li><strong>Pemilihan Bitrate Audio</strong>: Pilih dari audio AAC 64k hingga 256k</li><li><strong>Batas Bitrate Maks</strong>: Secara opsional batasi bitrate video puncak untuk kompatibilitas streaming</li><li><strong>Perbandingan Berdampingan</strong>: Tabel statistik sebelum/sesudah lengkap dengan persentase kompresi</li><li><strong>Output H.264 + AAC</strong>: Format MP4 untuk kompatibilitas perangkat universal</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>Email Attachments</strong>: Compress videos under 25 MB for Gmail, Outlook, or corporate mail</li><li><strong>Messaging Apps</strong>: Shrink videos for WhatsApp (16 MB limit), Telegram, Signal, or iMessage</li><li><strong>Social Media</strong>: Optimize file size for faster uploads to Instagram, TikTok, X, or YouTube</li><li><strong>Cloud Storage</strong>: Reduce file size to save Google Drive, Dropbox, or iCloud space</li><li><strong>Web &amp; CMS Upload</strong>: Meet upload size limits for WordPress, Shopify, or custom portals</li><li><strong>Video Archiving</strong>: Compress large recordings with High Quality preset for long-term storage</li><li><strong>Low-Bandwidth Sharing</strong>: Use Low Quality preset for quick transfer over slow connections</li></ul>"
+            "title": "Kasus Penggunaan Umum",
+            "content": "<ul><li><strong>Lampiran Email</strong>: Kompres video di bawah 25 MB untuk Gmail, Outlook, atau email perusahaan</li><li><strong>Aplikasi Pesan</strong>: Perkecil video untuk WhatsApp (batas 16 MB), Telegram, Signal, atau iMessage</li><li><strong>Media Sosial</strong>: Optimalkan ukuran file untuk unggahan lebih cepat ke Instagram, TikTok, X, atau YouTube</li><li><strong>Penyimpanan Cloud</strong>: Kurangi ukuran file untuk menghemat ruang Google Drive, Dropbox, atau iCloud</li><li><strong>Unggah Web & CMS</strong>: Penuhi batas ukuran unggah untuk WordPress, Shopify, atau portal kustom</li><li><strong>Arsip Video</strong>: Kompres rekaman besar dengan preset Kualitas Tinggi untuk penyimpanan jangka panjang</li><li><strong>Berbagi Bandwidth Rendah</strong>: Gunakan preset Kualitas Rendah untuk transfer cepat melalui koneksi lambat</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Compression",
-            "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
+            "title": "Kompresi Video Mengutamakan Privasi",
+            "content": "<p>Setiap video dikompres <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>FFmpeg.wasm</strong> (WebAssembly). Tidak ada file yang pernah diunggah ke server mana pun.</p><ul><li><strong>Tanpa kontak server</strong> — data video Anda tetap di perangkat dari awal hingga akhir</li><li><strong>Tidak ada akun atau pendaftaran</strong> — cukup buka halaman dan kompres</li><li><strong>Berfungsi offline</strong> setelah unduhan inti FFmpeg satu kali (~31 MB, di-cache oleh browser Anda)</li><li>Sempurna untuk <strong>rekaman rahasia</strong>: kamera keamanan, rekaman medis, bukti hukum</li></ul>"
           }
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Mode Sederhana & Lanjutan",
-            "description": "Preset sekali klik atau kontrol penuh atas CRF, kecepatan encoding, resolusi, dan bitrate."
+            "title": "Kompres Video Online Gratis - Tanpa Unggah",
+            "description": "Kurangi ukuran file video di browser Anda. Tanpa perangkat lunak, tanpa pendaftaran, tanpa watermark. Sepenuhnya gratis."
           },
           "f2": {
             "icon": "Shield",
-            "title": "100% Berbasis Browser",
-            "description": "Video tidak pernah meninggalkan perangkat Anda. Didukung FFmpeg.wasm tanpa kontak server."
+            "title": "Mode Sederhana + Kontrol Lanjutan",
+            "description": "Preset sekali klik untuk kompresi cepat, atau sesuaikan CRF, resolusi, bitrate untuk hasil sempurna."
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "Perbandingan Sebelum/Sesudah",
-            "description": "Lihat ukuran file, resolusi, bitrate, dan rasio kompresi sebelum dan sesudah."
+            "title": "Lihat Pengurangan Ukuran Sebelum & Sesudah",
+            "description": "Bandingkan ukuran file, resolusi, bitrate secara berdampingan. Ketahui pasti berapa banyak ruang yang akan dihemat."
           },
           "f4": {
             "icon": "MonitorDown",
-            "title": "Kontrol Resolusi Cerdas",
-            "description": "Turunkan ke 1080p, 720p, 480p, atau 360p. Upscaling diblokir secara desain."
+            "title": "Turunkan ke 1080p, 720p, 480p",
+            "description": "Kurangi resolusi untuk memperkecil ukuran file. Sempurna untuk email, media sosial, dan berbagi ke ponsel."
           },
           "f5": {
             "icon": "Zap",
-            "title": "9 Kecepatan Encoding",
-            "description": "Dari Ultra Cepat ke Sangat Lambat — tukar waktu encoding dengan file lebih kecil pada kualitas sama."
+            "title": "Dukungan Encoding H.264 & H.265",
+            "description": "Pilih H.264 untuk kompatibilitas universal atau H.265 untuk file 30-50% lebih kecil. Pilihan Anda."
           },
           "f6": {
             "icon": "FileVideo",
-            "title": "Output MP4 Universal",
-            "description": "Encoding H.264 + AAC menjamin pemutaran di semua perangkat, browser, dan platform."
+            "title": "Kecilkan File MP4, MOV, AVI, WebM",
+            "description": "Mendukung semua format populer. Unggah video apa pun, kompres, unduh file yang lebih kecil secara instan."
           }
         },
         "whySection": {
@@ -400,33 +565,66 @@
           "a1": "Anda dapat mengonversi antara format MP4, WebM, MKV, dan AVI. MP4 dan AVI menggunakan encoding H.264, WebM menggunakan VP9, dan MKV menggunakan stream copy untuk konversi cepat.",
           "q2": "Apakah kualitas video berubah?",
           "a2": "Konversi ke MKV menggunakan stream copy sehingga kualitas dipertahankan persis. Konversi lain meng-encode ulang dengan pengaturan kualitas tinggi.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Convert Video Format?",
-            "content": "<p><strong>Convert Video Format</strong> transforms videos between popular formats: MP4, WebM, MKV, and AVI. Need to convert a WebM recording to MP4 for wider compatibility? Or an AVI to WebM for web use? This tool handles it.</p><p>Powered by FFmpeg.wasm for reliable format conversion in your browser.</p>"
+            "content": "<p><strong>Convert Video Format</strong> mengubah video antara format populer: MP4, WebM, MKV, dan AVI. Perlu mengonversi rekaman WebM ke MP4 untuk kompatibilitas yang lebih luas? Atau AVI ke WebM untuk penggunaan web? Alat ini menanganinya.</p><p>Ditenagai oleh FFmpeg.wasm untuk konversi format yang andal di browser Anda.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Convert Video Format",
-            "content": "<ol><li>Upload a video file in any supported format</li><li>Select the target format: <strong>MP4</strong>, <strong>WebM</strong>, <strong>MKV</strong>, or <strong>AVI</strong></li><li>Click <strong>Convert</strong> to start processing</li><li>Download the converted video</li></ol><p>MP4 (H.264) is recommended for maximum compatibility across devices and platforms.</p>"
+            "content": "<ol><li>Unggah file video dalam format apa pun yang didukung</li><li>Pilih format target: <strong>MP4</strong>, <strong>WebM</strong>, <strong>MKV</strong>, atau <strong>AVI</strong></li><li>Klik <strong>Konversi</strong> untuk mulai memproses</li><li>Unduh video yang sudah dikonversi</li></ol><p>MP4 (H.264) direkomendasikan untuk kompatibilitas maksimum di berbagai perangkat dan platform.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Four Formats</strong>: Convert between MP4, WebM, MKV, and AVI</li><li><strong>H.264 Encoding</strong>: MP4 output uses H.264 for universal compatibility</li><li><strong>VP8/VP9 for WebM</strong>: Proper codec selection for each format</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional encoding in the browser</li><li><strong>Preview</strong>: Play the converted video before downloading</li><li><strong>Audio Preservation</strong>: Audio track is properly transcoded</li></ul>"
+            "content": "<ul><li><strong>Empat Format</strong>: Konversi antara MP4, WebM, MKV, dan AVI</li><li><strong>Encoding H.264</strong>: Output MP4 menggunakan H.264 untuk kompatibilitas universal</li><li><strong>VP8/VP9 untuk WebM</strong>: Pemilihan codec yang tepat untuk setiap format</li><li><strong>Ditenagai FFmpeg.wasm</strong>: Encoding profesional di browser</li><li><strong>Pratinjau</strong>: Putar video yang sudah dikonversi sebelum mengunduh</li><li><strong>Audio Terjaga</strong>: Trek audio ditranskode dengan benar</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Compatibility</strong>: Convert WebM screen recordings to universally playable MP4</li><li><strong>Web Optimization</strong>: Convert videos to WebM for smaller file sizes on the web</li><li><strong>Legacy Support</strong>: Convert modern formats to AVI for older media players</li><li><strong>Editing</strong>: Convert to a format your video editor supports</li><li><strong>Cross-Platform</strong>: Ensure videos play on any device or platform</li></ul>"
+            "content": "<ul><li><strong>Kompatibilitas</strong>: Konversi rekaman layar WebM ke MP4 yang dapat diputar secara universal</li><li><strong>Optimalisasi Web</strong>: Konversi video ke WebM untuk ukuran file lebih kecil di web</li><li><strong>Dukungan Lawas</strong>: Konversi format modern ke AVI untuk pemutar media lama</li><li><strong>Editing</strong>: Konversi ke format yang didukung editor video Anda</li><li><strong>Lintas Platform</strong>: Pastikan video diputar di perangkat atau platform apa pun</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Video Conversion",
-            "content": "<p>Format conversion runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>File Anda videos <strong>never leave your device</strong></li><li>No server processing or cloud encoding</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "Mengutamakan Privasi - Konversi Video",
+            "content": "<p>Konversi format berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>FFmpeg.wasm</strong>.</p><ul><li>File video Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak ada pemrosesan server atau encoding cloud</li><li>Berfungsi <strong>offline</strong> setelah inti FFmpeg dimuat</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "FileVideo",
+            "title": "Konverter Video Gratis Online",
+            "description": "Konversi antara format MP4, WebM, MKV, AVI. Tanpa unduh perangkat lunak, tanpa pendaftaran."
+          },
+          "f2": {
+            "icon": "Gauge",
+            "title": "Codec H.264, H.265, VP9",
+            "description": "Pilih codec untuk kompatibilitas atau ukuran file. H.264 untuk semua tempat, H.265 untuk file lebih kecil, VP9 untuk WebM."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Konversi Stream Copy Cepat",
+            "description": "MKV menggunakan stream copy untuk konversi instan bila memungkinkan. Kualitas sama, container baru, tanpa tunggu."
+          },
+          "f4": {
+            "icon": "Shield",
+            "title": "Audio & Video Tetap Selaras",
+            "description": "Transkoding profesional menjaga audio tetap selaras. Tidak ada masalah lip-sync pada file yang dikonversi."
+          },
+          "f5": {
+            "icon": "BarChart3",
+            "title": "Pratinjau Video Terkonversi Dulu",
+            "description": "Tonton hasil di browser sebelum mengunduh. Konfirmasi kualitas, lalu simpan ke perangkat Anda."
+          },
+          "f6": {
+            "icon": "MonitorDown",
+            "title": "Konversi Tanpa Unggah",
+            "description": "Konversi 100% di browser. File Anda tidak pernah meninggalkan komputer. Pribadi dan aman."
           }
         }
       },
@@ -446,33 +644,66 @@
           "a1": "720p (lebar 1280px), 480p (lebar 854px), dan 360p (lebar 640px). Anda juga dapat memasukkan lebar kustom.",
           "q2": "Apakah rasio aspek dipertahankan?",
           "a2": "Ya, tinggi dihitung secara otomatis untuk mempertahankan rasio aspek asli.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Resize Video?",
-            "content": "<p><strong>Resize Video</strong> changes video resolution with preset options (720p, 480p, 360p) or custom dimensions. Downscale large videos for web, mobile, or social media, or adjust resolution for specific platform requirements.</p>"
+            "content": "<p><strong>Resize Video</strong> mengubah resolusi video dengan opsi preset (720p, 480p, 360p) atau dimensi kustom. Turunkan skala video besar untuk web, seluler, atau media sosial, atau sesuaikan resolusi untuk persyaratan platform tertentu.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Resize Video",
-            "content": "<ol><li>Upload a video file</li><li>Select a preset resolution (<strong>720p</strong>, <strong>480p</strong>, <strong>360p</strong>) or enter custom dimensions</li><li>Click <strong>Resize</strong> to process</li><li>Download the resized video</li></ol><p>Aspect ratio is maintained automatically to prevent distortion.</p>"
+            "content": "<ol><li>Unggah file video</li><li>Pilih resolusi preset (<strong>720p</strong>, <strong>480p</strong>, <strong>360p</strong>) atau masukkan dimensi kustom</li><li>Klik <strong>Ubah Ukuran</strong> untuk memproses</li><li>Unduh video yang sudah diubah ukurannya</li></ol><p>Rasio aspek dipertahankan secara otomatis untuk mencegah distorsi.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Preset Resolutions</strong>: Quick-select 720p, 480p, or 360p</li><li><strong>Custom Dimensions</strong>: Enter specific width and height</li><li><strong>Aspect Ratio Lock</strong>: Automatically maintains video proportions</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional-grade video scaling</li><li><strong>Multiple Formats</strong>: Resize MP4, WebM, MKV, and AVI</li><li><strong>Preview</strong>: Play the resized video before downloading</li></ul>"
+            "content": "<ul><li><strong>Resolusi Preset</strong>: Pilih cepat 720p, 480p, atau 360p</li><li><strong>Dimensi Kustom</strong>: Masukkan lebar dan tinggi tertentu</li><li><strong>Kunci Rasio Aspek</strong>: Secara otomatis mempertahankan proporsi video</li><li><strong>Ditenagai FFmpeg.wasm</strong>: Skala video tingkat profesional</li><li><strong>Berbagai Format</strong>: Ubah ukuran MP4, WebM, MKV, dan AVI</li><li><strong>Pratinjau</strong>: Putar video yang sudah diubah ukurannya sebelum mengunduh</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Social Media</strong>: Resize for Instagram, TikTok, or YouTube requirements</li><li><strong>Mobile Optimization</strong>: Downscale 4K/1080p videos for mobile viewing</li><li><strong>Web Embedding</strong>: Resize for optimal web player dimensions</li><li><strong>Storage Savings</strong>: Reduce resolution to save storage space</li><li><strong>Email</strong>: Downscale videos for email-friendly file sizes</li></ul>"
+            "content": "<ul><li><strong>Media Sosial</strong>: Ubah ukuran untuk persyaratan Instagram, TikTok, atau YouTube</li><li><strong>Optimalisasi Seluler</strong>: Turunkan skala video 4K/1080p untuk tampilan seluler</li><li><strong>Embed Web</strong>: Ubah ukuran untuk dimensi pemutar web optimal</li><li><strong>Penghematan Penyimpanan</strong>: Kurangi resolusi untuk menghemat ruang penyimpanan</li><li><strong>Email</strong>: Turunkan skala video untuk ukuran file yang ramah email</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Video Resizing",
-            "content": "<p>Video resizing runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>File Anda videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "Mengutamakan Privasi - Pengubahan Ukuran Video",
+            "content": "<p>Pengubahan ukuran video berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>FFmpeg.wasm</strong>.</p><ul><li>File video Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak ada pemrosesan server atau unggahan</li><li>Berfungsi <strong>offline</strong> setelah inti FFmpeg dimuat</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "Ubah Ukuran Video Online Gratis",
+            "description": "Ubah resolusi video secara instan. Tanpa software, berfungsi di semua browser, sepenuhnya gratis."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Preset 720p, 480p, 360p",
+            "description": "Preset sekali klik untuk media sosial, email, atau seluler. Atau masukkan dimensi kustom untuk kontrol tepat."
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "Tanpa Peregangan - Rasio Sempurna",
+            "description": "Rasio aspek dikunci otomatis. Video Anda tetap proporsional pada ukuran apa pun, tanpa distorsi."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Kecilkan Ukuran File 50-80%",
+            "description": "Turunkan video 4K/1080p untuk file lebih kecil. Sempurna untuk lampiran email dan berbagi sosial."
+          },
+          "f5": {
+            "icon": "FileVideo",
+            "title": "Berfungsi dengan Semua Tipe Video",
+            "description": "Ubah ukuran file MP4, MOV, AVI, WebM, MKV. Output mempertahankan format sama, siap digunakan di mana saja."
+          },
+          "f6": {
+            "icon": "MonitorDown",
+            "title": "Pemrosesan Browser Privat",
+            "description": "Video Anda tidak pernah diunggah. Semua pengubahan ukuran terjadi secara lokal di perangkat Anda. Aman dan terlindungi."
           }
         }
       },
@@ -504,37 +735,37 @@
         "sampleRate": "Laju Sampel",
         "channels": "Kanal",
         "faq": {
-          "q1": "What information can this tool detect?",
-          "a1": "It detects video codec (H.264, VP9, AV1, etc.), audio codec (AAC, Opus, MP3, etc.), resolution, frame rate, bitrate, pixel format, sample rate, channel layout, and container format.",
-          "q2": "Which video formats are supported?",
-          "a2": "Most common formats including MP4, WebM, MKV, AVI, MOV, and more are supported through FFmpeg.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "How is this different from just checking file properties?",
-          "a4": "Operating system file properties usually show only basic information like file size and type. This tool uses FFmpeg to extract detailed stream-level metadata including exact codec, profile, pixel format, and per-stream bitrates.",
-          "q5": "Can I use this tool offline?",
-          "a5": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser."
+          "q1": "Informasi apa yang dapat dideteksi alat ini?",
+          "a1": "Alat ini mendeteksi codec video (H.264, VP9, AV1, dll.), codec audio (AAC, Opus, MP3, dll.), resolusi, frame rate, bitrate, format piksel, laju sampel, tata letak kanal, dan format kontainer.",
+          "q2": "Format video apa saja yang didukung?",
+          "a2": "Sebagian besar format umum termasuk MP4, WebM, MKV, AVI, MOV, dan lainnya didukung melalui FFmpeg.",
+          "q3": "Apakah file saya akan diunggah ke server?",
+          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
+          "q4": "Bagaimana ini berbeda dari hanya memeriksa properti file?",
+          "a4": "Properti file sistem operasi biasanya hanya menampilkan informasi dasar seperti ukuran file dan tipe. Alat ini menggunakan FFmpeg untuk mengekstrak metadata level stream terperinci termasuk codec yang tepat, profil, format piksel, dan bitrate per stream.",
+          "q5": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a5": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda."
         },
         "seoContent": {
           "intro": {
-            "title": "What is Video Info?",
-            "content": "<p><strong>Video Info</strong> is a free online tool that inspects and displays detailed metadata from your video files.</p>"
+            "title": "Apa itu Info Video?",
+            "content": "<p><strong>Info Video</strong> adalah alat online gratis yang memeriksa dan menampilkan metadata terperinci dari file video Anda.</p>"
           },
           "howToUse": {
-            "title": "How to Use Video Info",
-            "content": "<ol><li>Upload your video file.</li><li>View basic metadata instantly.</li><li>Click <strong>Analyze Video</strong> for deep inspection.</li><li>Copy all metadata as text.</li></ol>"
+            "title": "Cara Menggunakan Info Video",
+            "content": "<ol><li>Unggah file video Anda.</li><li>Lihat metadata dasar secara instan.</li><li>Klik <strong>Analisis Video</strong> untuk inspeksi mendalam.</li><li>Salin semua metadata sebagai teks.</li></ol>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li>Two-layer analysis</li><li>Stream-level detail</li><li>Codec detection</li><li>One-click copy</li></ul>"
+            "title": "Fitur Utama",
+            "content": "<ul><li>Analisis dua lapis</li><li>Detail level stream</li><li>Deteksi codec</li><li>Salin sekali klik</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li>Pre-processing check</li><li>Compatibility check</li><li>Debugging playback issues</li><li>Quality assessment</li></ul>"
+            "title": "Kasus Penggunaan Umum",
+            "content": "<ul><li>Pemeriksaan pra-pemrosesan</li><li>Pemeriksaan kompatibilitas</li><li>Debug masalah pemutaran</li><li>Penilaian kualitas</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Inspection",
-            "content": "<p>Video analysis runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p>"
+            "title": "Inspeksi Video Mengutamakan Privasi",
+            "content": "<p>Analisis video berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>FFmpeg.wasm</strong>.</p>"
           }
         },
         "startTime": "Waktu Mulai",
@@ -542,7 +773,40 @@
         "scanType": "Tipe Pemindaian",
         "rawLog": "Log FFmpeg Mentah",
         "thumbnails": "Pratinjau Frame",
-        "autoAnalyzing": "Menganalisis video…"
+        "autoAnalyzing": "Menganalisis video…",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "BarChart3",
+            "title": "Periksa Metadata Video Gratis Online",
+            "description": "Periksa codec, resolusi, bitrate, durasi secara instan. Tanpa perangkat lunak, tanpa unggah, dapatkan info detail dalam hitungan detik."
+          },
+          "f2": {
+            "icon": "FileVideo",
+            "title": "Analisis Video & Audio Mendalam",
+            "description": "Lihat detail stream terpisah. Codec video, codec audio, format piksel, sample rate — semua data teknisi terpapar."
+          },
+          "f3": {
+            "icon": "Gauge",
+            "title": "Deteksi H.264, H.265, VP9, AV1",
+            "description": "Mengidentifikasi semua codec utama. Ketahui pasti format video Anda sebelum mengedit atau mengonversi."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Salin Semua Data dengan Satu Klik",
+            "description": "Ekspor metadata lengkap sebagai teks terformat. Sempurna untuk pemecahan masalah, dokumentasi, atau berbagi spesifikasi."
+          },
+          "f5": {
+            "icon": "Shield",
+            "title": "Pratinjau Thumbnail Frame",
+            "description": "Pratinjau visual memastikan Anda memeriksa file yang benar. Lihat video sambil melihat detail teknisnya."
+          },
+          "f6": {
+            "icon": "MonitorDown",
+            "title": "100% Pribadi - Tanpa Unggah File",
+            "description": "Analisis berjalan sepenuhnya di browser Anda. Video Anda tidak pernah meninggalkan perangkat, bahkan untuk inspeksi."
+          }
+        }
       }
     }
   }

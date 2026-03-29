@@ -19,33 +19,33 @@
           "a1": "Alat ini memformat (pretty-print) data JSON dengan indentasi yang tepat, memvalidasi sintaks JSON, dan dapat meminifikasi JSON dengan menghapus spasi kosong.",
           "q2": "Apakah data saya aman?",
           "a2": "Ya, semua pemrosesan terjadi di browser Anda. Data Anda tidak pernah meninggalkan perangkat.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu JSON Formatter?",
-            "content": "<p><strong>JSON Formatter</strong> is a free browser-based tool for formatting, validating, and minifying JSON data. Paste messy or minified JSON and instantly get clean, human-readable output with proper indentation and syntax highlighting.</p><p>Whether you're debugging API responses, reviewing configuration files, or preparing data for documentation, this tool makes JSON easy to read and verify — all without leaving your browser.</p>"
+            "content": "<p><strong>JSON Formatter</strong> adalah alat berbasis browser gratis untuk memformat, memvalidasi, dan meminifikasi data JSON. Tempel JSON yang berantakan atau diminifikasi dan dapatkan output yang bersih dan mudah dibaca dengan indentasi serta penyorotan sintaks yang tepat.</p><p>Baik Anda melakukan debug respons API, meninjau file konfigurasi, atau menyiapkan data untuk dokumentasi, alat ini membuat JSON mudah dibaca dan diverifikasi — semuanya tanpa meninggalkan browser Anda.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan JSON Formatter",
-            "content": "<ol><li>Paste or type your JSON data into the input area</li><li>Choose your preferred indentation level (2 or 4 spaces)</li><li>Click <strong>Format</strong> to pretty-print, <strong>Minify</strong> to compress, or <strong>Validate</strong> to check syntax</li><li>Copy the formatted result or download it as a file</li></ol><p>Invalid JSON is highlighted with a clear error message showing exactly where the syntax issue is.</p>"
+            "content": "<ol><li>Tempel atau ketik data JSON Anda ke area input</li><li>Pilih tingkat indentasi yang Anda inginkan (2 atau 4 spasi)</li><li>Klik <strong>Format</strong> untuk pretty-print, <strong>Minifikasi</strong> untuk mengompresi, atau <strong>Validasi</strong> untuk memeriksa sintaks</li><li>Salin hasil yang diformat atau unduh sebagai file</li></ol><p>JSON yang tidak valid disorot dengan pesan kesalahan yang jelas menunjukkan tepat di mana masalah sintaks berada.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Pretty Print</strong>: Format JSON with customizable indentation (2 or 4 spaces)</li><li><strong>Minify</strong>: Compress JSON by removing all whitespace for compact storage or transmission</li><li><strong>Validate</strong>: Instantly check whether your JSON is syntactically correct with detailed error reporting</li><li><strong>Syntax Highlighting</strong>: Color-coded keys, strings, numbers, booleans, and nulls for easy reading</li><li><strong>Large Data Support</strong>: Handles large JSON files without performance issues</li><li><strong>100% Berbasis Browser</strong>: Tidak ada unggahan server — your data stays on your device</li></ul>"
+            "content": "<ul><li><strong>Pretty Print</strong>: Format JSON dengan indentasi yang dapat disesuaikan (2 atau 4 spasi)</li><li><strong>Minifikasi</strong>: Kompres JSON dengan menghapus semua spasi untuk penyimpanan atau transmisi yang ringkas</li><li><strong>Validasi</strong>: Periksa secara instan apakah JSON Anda benar secara sintaksis dengan pelaporan kesalahan terperinci</li><li><strong>Penyorotan Sintaks</strong>: Kunci, string, angka, boolean, dan null yang diberi kode warna untuk memudahkan pembacaan</li><li><strong>Dukungan Data Besar</strong>: Menangani file JSON besar tanpa masalah performa</li><li><strong>100% Berbasis Browser</strong>: Tidak ada unggahan server — data Anda tetap di perangkat Anda</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>API Development</strong>: Format raw API responses for debugging and inspection</li><li><strong>Configuration Files</strong>: Clean up package.json, tsconfig.json, or other config files</li><li><strong>Data Validation</strong>: Quickly verify JSON payloads before sending to APIs</li><li><strong>Documentation</strong>: Prepare well-formatted JSON examples for technical docs</li><li><strong>Database Records</strong>: Inspect and format JSON stored in NoSQL databases</li></ul>"
+            "content": "<ul><li><strong>Pengembangan API</strong>: Format respons API mentah untuk debugging dan inspeksi</li><li><strong>File Konfigurasi</strong>: Membersihkan package.json, tsconfig.json, atau file konfigurasi lainnya</li><li><strong>Validasi Data</strong>: Verifikasi payload JSON dengan cepat sebelum mengirim ke API</li><li><strong>Dokumentasi</strong>: Menyiapkan contoh JSON yang terformat dengan baik untuk dokumentasi teknis</li><li><strong>Rekam Database</strong>: Memeriksa dan memformat JSON yang tersimpan di database NoSQL</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - JSON Processing",
-            "content": "<p>File Anda JSON data is processed <strong>entirely in your browser</strong> using native JavaScript parsing. No data is transmitted to any server.</p><ul><li>File Anda data <strong>tidak pernah meninggalkan perangkat Anda</strong> — zero network requests during processing</li><li>Safe for sensitive API keys, tokens, and configuration data</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Mengutamakan Privasi - Pemrosesan JSON",
+            "content": "<p>Data JSON Anda diproses <strong>sepenuhnya di browser Anda</strong> menggunakan parsing JavaScript native. Tidak ada data yang ditransmisikan ke server mana pun.</p><ul><li>Data Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — tidak ada permintaan jaringan selama pemrosesan</li><li>Aman untuk kunci API, token, dan data konfigurasi sensitif</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -64,33 +64,33 @@
           "a1": "Base64 adalah skema enkoding biner-ke-teks yang mengubah data biner menjadi karakter ASCII. Ini umum digunakan dalam URL data, lampiran email, dan muatan API.",
           "q2": "Bisakah saya mengenkode file?",
           "a2": "Saat ini alat ini mengenkode dan mendekode teks. Enkoding file Base64 akan tersedia dalam pembaruan mendatang.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Base64 Encoder/Decoder?",
-            "content": "<p><strong>Base64 Encoder/Decoder</strong> converts text to Base64 encoding and back. Base64 is a binary-to-text encoding scheme commonly used to embed data in URLs, emails, HTML, and JSON where binary data isn't supported.</p><p>Instantly encode any text string to Base64 or decode Base64 strings back to readable text — no software required.</p>"
+            "content": "<p><strong>Base64 Encoder/Decoder</strong> mengubah teks menjadi enkoding Base64 dan sebaliknya. Base64 adalah skema enkoding biner-ke-teks yang umum digunakan untuk menyematkan data dalam URL, email, HTML, dan JSON di mana data biner tidak didukung.</p><p>Enkode string teks apa pun menjadi Base64 atau dekode string Base64 kembali menjadi teks yang dapat dibaca secara instan — tanpa perlu perangkat lunak.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Base64 Encoder/Decoder",
-            "content": "<ol><li>Enter your text in the input field</li><li>Select <strong>Encode</strong> to convert text to Base64, or <strong>Decode</strong> to convert Base64 back to text</li><li>The result appears instantly in the output area</li><li>Click <strong>Copy</strong> to copy the result to your clipboard</li></ol><p>Supports UTF-8 text including special characters, emojis, and non-Latin scripts.</p>"
+            "content": "<ol><li>Masukkan teks Anda di bidang input</li><li>Pilih <strong>Enkode</strong> untuk mengubah teks menjadi Base64, atau <strong>Dekode</strong> untuk mengubah Base64 kembali menjadi teks</li><li>Hasil muncul secara instan di area output</li><li>Klik <strong>Salin</strong> untuk menyalin hasil ke clipboard Anda</li></ol><p>Mendukung teks UTF-8 termasuk karakter khusus, emoji, dan skrip non-Latin.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Instant Encoding</strong>: Convert text to Base64 in real-time as you type</li><li><strong>Instant Decoding</strong>: Decode Base64 strings back to readable text</li><li><strong>UTF-8 Support</strong>: Correctly handles Unicode characters, emojis, and multi-byte text</li><li><strong>Error Detection</strong>: Alerts when input is not valid Base64 during decoding</li><li><strong>One-Click Copy</strong>: Copy results to clipboard instantly</li><li><strong>No Size Limits</strong>: Process text of any length</li></ul>"
+            "content": "<ul><li><strong>Enkoding Instan</strong>: Ubah teks menjadi Base64 secara real-time saat Anda mengetik</li><li><strong>Dekoding Instan</strong>: Dekode string Base64 kembali menjadi teks yang dapat dibaca</li><li><strong>Dukungan UTF-8</strong>: Menangani karakter Unicode, emoji, dan teks multi-byte dengan benar</li><li><strong>Deteksi Kesalahan</strong>: Memberi peringatan saat input bukan Base64 yang valid saat mendekode</li><li><strong>Salin Sekali Klik</strong>: Salin hasil ke clipboard secara instan</li><li><strong>Tanpa Batasan Ukuran</strong>: Proses teks dengan panjang berapa pun</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Data URIs</strong>: Encode images or fonts as Base64 data URIs for embedding in HTML/CSS</li><li><strong>API Authentication</strong>: Encode credentials for HTTP Basic Authentication headers</li><li><strong>Email Attachments</strong>: Encode/decode MIME attachments in email protocols</li><li><strong>JWT Tokens</strong>: Decode JWT token payloads for inspection</li><li><strong>Configuration</strong>: Encode binary data for inclusion in JSON or YAML config files</li></ul>"
+            "content": "<ul><li><strong>Data URI</strong>: Enkode gambar atau font sebagai data URI Base64 untuk disematkan dalam HTML/CSS</li><li><strong>Autentikasi API</strong>: Enkode kredensial untuk header HTTP Basic Authentication</li><li><strong>Lampiran Email</strong>: Enkode/dekode lampiran MIME dalam protokol email</li><li><strong>Token JWT</strong>: Dekode muatan token JWT untuk inspeksi</li><li><strong>Konfigurasi</strong>: Enkode data biner untuk dimasukkan dalam file konfigurasi JSON atau YAML</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Base64 Processing",
-            "content": "<p>All encoding and decoding happens <strong>directly in your browser</strong> using the built-in <code>btoa()</code> and <code>atob()</code> APIs.</p><ul><li>File Anda text <strong>tidak pernah meninggalkan perangkat Anda</strong> — ideal for encoding sensitive credentials or tokens</li><li>No server-side processing or logging</li><li>Works completely <strong>offline</strong> after initial page load</li></ul>"
+            "title": "Mengutamakan Privasi - Pemrosesan Base64",
+            "content": "<p>Semua enkoding dan dekodeing terjadi <strong>langsung di browser Anda</strong> menggunakan API <code>btoa()</code> dan <code>atob()</code> bawaan.</p><ul><li>Teks Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — ideal untuk mengenkode kredensial atau token sensitif</li><li>Tidak ada pemrosesan atau pencatatan sisi server</li><li>Berfungsi sepenuhnya <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -111,33 +111,33 @@
           "a1": "Enkoding URL mengubah karakter khusus menjadi format percent-encoded (misalnya, spasi menjadi %20) sehingga dapat digunakan dengan aman dalam alamat web.",
           "q2": "Apa perbedaan antara Enkode dan Enkode Komponen?",
           "a2": "Enkode mengubah seluruh URL dengan mempertahankan karakter struktur seperti / dan ?. Enkode Komponen mengenkode semuanya termasuk karakter tersebut, berguna untuk nilai parameter kueri.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu URL Encoder/Decoder?",
-            "content": "<p><strong>URL Encoder/Decoder</strong> converts special characters in URLs to their percent-encoded equivalents and back. This is essential for creating valid URLs that contain spaces, ampersands, non-ASCII characters, or other reserved characters.</p><p>Use it to safely pass query parameters, encode file paths, or debug malformed URLs.</p>"
+            "content": "<p><strong>URL Encoder/Decoder</strong> mengubah karakter khusus dalam URL menjadi bentuk percent-encoded dan sebaliknya. Ini penting untuk membuat URL yang valid yang berisi spasi, ampersand, karakter non-ASCII, atau karakter khusus lainnya.</p><p>Gunakan untuk meneruskan parameter kueri dengan aman, mengenkode jalur file, atau men-debug URL yang rusak.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan URL Encoder/Decoder",
-            "content": "<ol><li>Enter your text or URL component in the input field</li><li>Select <strong>Encode</strong> to percent-encode special characters, or <strong>Decode</strong> to convert encoded URLs back to readable text</li><li>The result updates instantly</li><li>Click <strong>Copy</strong> to copy the encoded/decoded result</li></ol><p>Encodes all characters that are unsafe in URLs per RFC 3986, including spaces, &amp;, =, ?, #, and non-ASCII characters.</p>"
+            "content": "<ol><li>Masukkan teks atau komponen URL Anda di bidang input</li><li>Pilih <strong>Enkode</strong> untuk percent-encode karakter khusus, atau <strong>Dekode</strong> untuk mengubah URL yang dienkode kembali menjadi teks yang dapat dibaca</li><li>Hasil diperbarui secara instan</li><li>Klik <strong>Salin</strong> untuk menyalin hasil yang dienkode/didekode</li></ol><p>Mengenkode semua karakter yang tidak aman dalam URL sesuai RFC 3986, termasuk spasi, &amp;, =, ?, #, dan karakter non-ASCII.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>RFC 3986 Compliant</strong>: Encodes all reserved and unsafe URL characters correctly</li><li><strong>Real-Time Processing</strong>: Results update as you type</li><li><strong>Unicode Support</strong>: Correctly handles international characters and emojis in URLs</li><li><strong>Component Encoding</strong>: Encodes individual URL components (query params, path segments)</li><li><strong>One-Click Copy</strong>: Instantly copy encoded results</li><li><strong>100% Berbasis Browser</strong>: Tidak ada unggahan server — your data stays on your device</li></ul>"
+            "content": "<ul><li><strong>Sesuai RFC 3986</strong>: Mengenkode semua karakter URL yang dipesan dan tidak aman dengan benar</li><li><strong>Pemrosesan Real-Time</strong>: Hasil diperbarui saat Anda mengetik</li><li><strong>Dukungan Unicode</strong>: Menangani karakter internasional dan emoji dalam URL dengan benar</li><li><strong>Enkoding Komponen</strong>: Mengenkode komponen URL individual (parameter kueri, segmen jalur)</li><li><strong>Salin Sekali Klik</strong>: Salin hasil yang dienkode secara instan</li><li><strong>100% Berbasis Browser</strong>: Tidak ada unggahan server — data Anda tetap di perangkat Anda</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Query Parameters</strong>: Encode values for safe inclusion in URL query strings</li><li><strong>API Requests</strong>: Properly encode request parameters for REST APIs</li><li><strong>Redirect URLs</strong>: Encode callback URLs for OAuth flows and redirects</li><li><strong>File Paths</strong>: Encode file names with spaces or special characters for web servers</li><li><strong>Debugging</strong>: Decode mangled URLs to see the original text</li></ul>"
+            "content": "<ul><li><strong>Parameter Kueri</strong>: Enkode nilai untuk dimasukkan dengan aman dalam string kueri URL</li><li><strong>Permintaan API</strong>: Enkode parameter permintaan dengan benar untuk REST API</li><li><strong>URL Redirect</strong>: Enkode URL callback untuk aliran OAuth dan redirect</li><li><strong>Jalur File</strong>: Enkode nama file dengan spasi atau karakter khusus untuk server web</li><li><strong>Debugging</strong>: Dekode URL yang kacau untuk melihat teks aslinya</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - URL Processing",
-            "content": "<p>All encoding and decoding runs <strong>entirely in your browser</strong> using native <code>encodeURIComponent()</code> and <code>decodeURIComponent()</code> functions.</p><ul><li>File Anda URLs and parameters <strong>never leave your device</strong></li><li>Safe for encoding URLs containing API keys, tokens, or session IDs</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Mengutamakan Privasi - Pemrosesan URL",
+            "content": "<p>Semua enkoding dan dekodeing berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan fungsi <code>encodeURIComponent()</code> dan <code>decodeURIComponent()</code> native.</p><ul><li>URL dan parameter Anda <strong>tidak pernah meninggalkan perangkat Anda</strong></li><li>Aman untuk mengenkode URL yang berisi kunci API, token, atau ID sesi</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -156,33 +156,33 @@
           "a1": "Lebih dari 12 bahasa termasuk Inggris, Tionghoa (Sederhana/Tradisional), Jepang, Korea, Spanyol, Prancis, Jerman, dan lainnya.",
           "q2": "Seberapa akurat OCR-nya?",
           "a2": "Akurasi bergantung pada kualitas gambar dan kejelasan teks. Gambar yang jelas, beresolusi tinggi dengan kontras yang baik menghasilkan hasil terbaik.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu OCR Text Recognition?",
-            "content": "<p><strong>OCR Text Recognition</strong> extracts readable text from images using optical character recognition powered by Tesseract.js. Upload a photo of a document, screenshot, receipt, or handwritten note, and get the text content you can copy, edit, and use.</p><p>Supports <strong>12+ languages</strong> including English, Chinese, Japanese, Korean, Spanish, French, German, and more — all processed locally in your browser.</p>"
+            "content": "<p><strong>OCR Text Recognition</strong> mengekstrak teks yang dapat dibaca dari gambar menggunakan pengenalan karakter optik yang didukung oleh Tesseract.js. Unggah foto dokumen, tangkapan layar, kuitansi, atau catatan tulisan tangan, dan dapatkan konten teks yang dapat Anda salin, edit, dan gunakan.</p><p>Mendukung <strong>12+ bahasa</strong> termasuk Inggris, Tionghoa, Jepang, Korea, Spanyol, Prancis, Jerman, dan lainnya — semuanya diproses secara lokal di browser Anda.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan OCR Text Recognition",
-            "content": "<ol><li>Upload an image by clicking the dropzone or dragging it onto the page (supports JPG, PNG, WebP, BMP)</li><li>Select the language of the text in the image for best accuracy</li><li>Click <strong>Extract Text</strong> to start recognition</li><li>Review the extracted text and copy it to your clipboard</li></ol><p>For best results, use clear, high-contrast images with good lighting. Printed text yields higher accuracy than handwriting.</p>"
+            "content": "<ol><li>Unggah gambar dengan mengklik area dropzone atau menyeretnya ke halaman (mendukung JPG, PNG, WebP, BMP)</li><li>Pilih bahasa teks dalam gambar untuk akurasi terbaik</li><li>Klik <strong>Ekstrak Teks</strong> untuk memulai pengenalan</li><li>Tinjau teks yang diekstrak dan salin ke clipboard Anda</li></ol><p>Untuk hasil terbaik, gunakan gambar yang jelas dengan kontras tinggi dan pencahayaan yang baik. Teks cetak menghasilkan akurasi lebih tinggi daripada tulisan tangan.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>12+ Languages</strong>: Recognize text in English, Chinese (Simplified & Traditional), Japanese, Korean, Spanish, French, German, Italian, Portuguese, Russian, and more</li><li><strong>Multiple Image Formats</strong>: Accepts JPG, PNG, WebP, BMP, and TIFF</li><li><strong>Powered by Tesseract.js</strong>: Industry-standard OCR engine running entirely in your browser via WebAssembly</li><li><strong>High Accuracy</strong>: Best results on printed text, receipts, screenshots, and scanned documents</li><li><strong>Copy & Edit</strong>: Extracted text is fully editable and copyable</li><li><strong>100% Local Processing</strong>: Tidak ada unggahan server — your documents stay private</li></ul>"
+            "content": "<ul><li><strong>12+ Bahasa</strong>: Kenali teks dalam bahasa Inggris, Tionghoa (Sederhana & Tradisional), Jepang, Korea, Spanyol, Prancis, Jerman, Italia, Portugis, Rusia, dan lainnya</li><li><strong>Berbagai Format Gambar</strong>: Menerima JPG, PNG, WebP, BMP, dan TIFF</li><li><strong>Digerakkan oleh Tesseract.js</strong>: Mesin OCR standar industri yang berjalan sepenuhnya di browser Anda melalui WebAssembly</li><li><strong>Akurasi Tinggi</strong>: Hasil terbaik pada teks cetak, kuitansi, tangkapan layar, dan dokumen pindai</li><li><strong>Salin & Edit</strong>: Teks yang diekstrak sepenuhnya dapat diedit dan disalin</li><li><strong>100% Pemrosesan Lokal</strong>: Tidak ada unggahan server — dokumen Anda tetap pribadi</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Document Digitization</strong>: Convert printed documents, receipts, or letters into editable text</li><li><strong>Screenshot Text Extraction</strong>: Pull text from screenshots of web pages, error messages, or chat logs</li><li><strong>Translation Prep</strong>: Extract foreign-language text from images for translation</li><li><strong>Data Entry</strong>: Quickly digitize text from forms, invoices, or business cards</li><li><strong>Accessibility</strong>: Make image-based text accessible to screen readers</li></ul>"
+            "content": "<ul><li><strong>Digitalisasi Dokumen</strong>: Ubah dokumen cetak, kuitansi, atau surat menjadi teks yang dapat diedit</li><li><strong>Ekstraksi Teks Tangkapan Layar</strong>: Ambil teks dari tangkapan layar halaman web, pesan kesalahan, atau log chat</li><li><strong>Persiapan Terjemahan</strong>: Ekstrak teks bahasa asing dari gambar untuk diterjemahkan</li><li><strong>Entri Data</strong>: Digitalkan teks dengan cepat dari formulir, faktur, atau kartu nama</li><li><strong>Aksesibilitas</strong>: Jadikan teks berbasis gambar dapat diakses oleh pembaca layar</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - OCR Processing",
-            "content": "<p>OCR runs <strong>entirely in your browser</strong> using <strong>Tesseract.js</strong> (WebAssembly). Language models are downloaded once and cached locally.</p><ul><li>File Anda images and documents <strong>never leave your device</strong> — critical for sensitive documents</li><li>No cloud API calls — zero data transmitted during recognition</li><li>Works <strong>offline</strong> after language models are cached</li><li>Ideal for confidential documents: medical records, financial statements, legal papers</li></ul>"
+            "title": "Mengutamakan Privasi - Pemrosesan OCR",
+            "content": "<p>OCR berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>Tesseract.js</strong> (WebAssembly). Model bahasa diunduh sekali dan disimpan secara lokal.</p><ul><li>Gambar dan dokumen Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — penting untuk dokumen sensitif</li><li>Tidak ada panggilan API cloud — nol data ditransmisikan selama pengenalan</li><li>Berfungsi <strong>secara offline</strong> setelah model bahasa di-cache</li><li>Ideal untuk dokumen rahasia: catatan medis, laporan keuangan, dokumen hukum</li></ul>"
           }
         }
       },
@@ -200,33 +200,33 @@
           "a1": "Saat ini file ZIP didukung sepenuhnya. File diekstrak seluruhnya di browser Anda.",
           "q2": "Bisakah saya mengunduh file individual dari arsip?",
           "a2": "Ya, Anda dapat menjelajahi isi arsip dan mengunduh file apa pun dengan mengklik tombol unduhnya.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu ZIP Extractor?",
-            "content": "<p><strong>ZIP Extractor</strong> lets you open and extract ZIP archive contents directly in your browser. Preview file names, sizes, and folder structure before downloading individual files or the entire contents.</p><p>No software installation needed — just drop your ZIP file and browse its contents instantly.</p>"
+            "content": "<p><strong>ZIP Extractor</strong> memungkinkan Anda membuka dan mengekstrak konten arsip ZIP langsung di browser Anda. Pratinjau nama file, ukuran, dan struktur folder sebelum mengunduh file individual atau seluruh isinya.</p><p>Tidak perlu menginstal perangkat lunak — cukup jatuhkan file ZIP Anda dan jelajahi isinya secara instan.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan ZIP Extractor",
-            "content": "<ol><li>Drop a ZIP file onto the page or click to browse and select one</li><li>View the archive contents: file names, sizes, and folder hierarchy</li><li>Click individual files to download them, or extract everything at once</li></ol><p>Supports standard ZIP archives. Large archives may take a moment to parse depending on your device.</p>"
+            "content": "<ol><li>Jatuhkan file ZIP ke halaman atau klik untuk menjelajah dan memilih satu</li><li>Lihat konten arsip: nama file, ukuran, dan hierarki folder</li><li>Klik file individual untuk mengunduhnya, atau ekstrak semuanya sekaligus</li></ol><p>Mendukung arsip ZIP standar. Arsip besar mungkin memerlukan beberapa saat untuk diurai tergantung pada perangkat Anda.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Instant Preview</strong>: See all files and folders inside the ZIP without extracting</li><li><strong>Selective Extraction</strong>: Download individual files without extracting the entire archive</li><li><strong>File Size Display</strong>: See compressed and uncompressed sizes for each file</li><li><strong>Folder Structure</strong>: Browse nested directory hierarchies within the archive</li><li><strong>Powered by fflate</strong>: High-performance decompression using the fflate library</li><li><strong>No File Size Limits</strong>: Limited only by your device's available memory</li></ul>"
+            "content": "<ul><li><strong>Pratinjau Instan</strong>: Lihat semua file dan folder di dalam ZIP tanpa mengekstrak</li><li><strong>Ekstraksi Selektif</strong>: Unduh file individual tanpa mengekstrak seluruh arsip</li><li><strong>Tampilan Ukuran File</strong>: Lihat ukuran terkompresi dan tidak terkompresi untuk setiap file</li><li><strong>Struktur Folder</strong>: Jelajahi hierarki direktori bersarang di dalam arsip</li><li><strong>Digerakkan oleh fflate</strong>: Dekompresi berkinerja tinggi menggunakan pustaka fflate</li><li><strong>Tanpa Batasan Ukuran File</strong>: Hanya dibatasi oleh memori yang tersedia di perangkat Anda</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Quick File Inspection</strong>: Check what's inside a ZIP before extracting everything</li><li><strong>Single File Download</strong>: Extract just the file you need from a large archive</li><li><strong>Mobile Use</strong>: Open ZIP files on phones and tablets without a file manager</li><li><strong>Chromebook Users</strong>: Extract archives when native tools aren't available</li><li><strong>Email Attachments</strong>: Quickly peek inside ZIP attachments</li></ul>"
+            "content": "<ul><li><strong>Inspeksi File Cepat</strong>: Periksa apa yang ada di dalam ZIP sebelum mengekstrak semuanya</li><li><strong>Unduh File Tunggal</strong>: Ekstrak hanya file yang Anda butuhkan dari arsip besar</li><li><strong>Penggunaan Seluler</strong>: Buka file ZIP di ponsel dan tablet tanpa pengelola file</li><li><strong>Pengguna Chromebook</strong>: Ekstrak arsip saat alat native tidak tersedia</li><li><strong>Lampiran Email</strong>: Intip dengan cepat di dalam lampiran ZIP</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Archive Extraction",
-            "content": "<p>ZIP extraction runs <strong>entirely in your browser</strong> using the <strong>fflate</strong> decompression library. No files are uploaded anywhere.</p><ul><li>File Anda archives <strong>never leave your device</strong> — safe for confidential documents</li><li>No server-side processing or temporary storage</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Mengutamakan Privasi - Ekstraksi Arsip",
+            "content": "<p>Ekstraksi ZIP berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan pustaka dekompresi <strong>fflate</strong>. Tidak ada file yang diunggah ke mana pun.</p><ul><li>Arsip Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — aman untuk dokumen rahasia</li><li>Tidak ada pemrosesan sisi server atau penyimpanan sementara</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -247,33 +247,33 @@
           "a1": "Comma-separated values standar dengan eskaping kutip ganda opsional. Field yang mengandung koma, kutip, atau baris baru ditangani dengan benar.",
           "q2": "Apakah mendukung JSON bersarang?",
           "a2": "JSON ke CSV bekerja paling baik dengan array objek datar. Objek bersarang dikonversi ke representasi string-nya.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu CSV/JSON Converter?",
-            "content": "<p><strong>CSV/JSON Converter</strong> transforms data between CSV (comma-separated values) and JSON formats instantly. Convert spreadsheet data to JSON arrays for APIs, or transform JSON datasets into CSV for Excel or Google Sheets.</p><p>Handles headers, quoted fields, and custom delimiters — all in your browser with no data uploaded.</p>"
+            "content": "<p><strong>CSV/JSON Converter</strong> mengubah data antara format CSV (comma-separated values) dan JSON secara instan. Konversi data spreadsheet ke array JSON untuk API, atau ubah dataset JSON menjadi CSV untuk Excel atau Google Sheets.</p><p>Menangani header, field berkutip, dan pembatas khusus — semuanya di browser Anda tanpa data yang diunggah.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan CSV/JSON Converter",
-            "content": "<ol><li>Paste your CSV or JSON data into the input area</li><li>Select the conversion direction: <strong>CSV → JSON</strong> or <strong>JSON → CSV</strong></li><li>The converted result appears instantly in the output area</li><li>Copy the result or download it as a file</li></ol><p>CSV input should use the first row as column headers. JSON input should be an array of objects with consistent keys.</p>"
+            "content": "<ol><li>Tempel data CSV atau JSON Anda ke area input</li><li>Pilih arah konversi: <strong>CSV → JSON</strong> atau <strong>JSON → CSV</strong></li><li>Hasil konversi muncul secara instan di area output</li><li>Salin hasil atau unduh sebagai file</li></ol><p>Input CSV harus menggunakan baris pertama sebagai header kolom. Input JSON harus berupa array objek dengan kunci yang konsisten.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Bidirectional Conversion</strong>: Convert CSV to JSON and JSON to CSV</li><li><strong>Auto Header Detection</strong>: Uses the first CSV row as JSON object keys</li><li><strong>Handles Special Characters</strong>: Correctly processes quoted fields, commas within fields, and line breaks</li><li><strong>Instant Conversion</strong>: Results appear immediately as you paste data</li><li><strong>Download Output</strong>: Save converted data as .json or .csv files</li><li><strong>Large Dataset Support</strong>: Handles thousands of rows efficiently</li></ul>"
+            "content": "<ul><li><strong>Konversi Dua Arah</strong>: Konversi CSV ke JSON dan JSON ke CSV</li><li><strong>Deteksi Header Otomatis</strong>: Menggunakan baris CSV pertama sebagai kunci objek JSON</li><li><strong>Menangani Karakter Khusus</strong>: Memproses field berkutip, koma dalam field, dan jeda baris dengan benar</li><li><strong>Konversi Instan</strong>: Hasil muncul segera saat Anda menempelkan data</li><li><strong>Unduh Output</strong>: Simpan data yang dikonversi sebagai file .json atau .csv</li><li><strong>Dukungan Dataset Besar</strong>: Menangani ribuan baris secara efisien</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>API Integration</strong>: Convert spreadsheet exports to JSON for API payloads</li><li><strong>Data Analysis</strong>: Transform JSON API responses into CSV for Excel or Google Sheets</li><li><strong>Database Migration</strong>: Convert between data formats during database import/export</li><li><strong>Reporting</strong>: Convert JSON logs or records to CSV for reporting tools</li><li><strong>Prototyping</strong>: Quickly create sample JSON data from spreadsheet mockups</li></ul>"
+            "content": "<ul><li><strong>Integrasi API</strong>: Konversi ekspor spreadsheet ke JSON untuk payload API</li><li><strong>Analisis Data</strong>: Ubah respons API JSON menjadi CSV untuk Excel atau Google Sheets</li><li><strong>Migrasi Database</strong>: Konversi antara format data selama impor/ekspor database</li><li><strong>Pelaporan</strong>: Konversi log atau rekaman JSON ke CSV untuk alat pelaporan</li><li><strong>Prototipe</strong>: Buat data JSON sampel dengan cepat dari mockup spreadsheet</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Data Conversion",
-            "content": "<p>All conversion happens <strong>locally in your browser</strong> using JavaScript parsing — no server round-trips.</p><ul><li>File Anda data <strong>tidak pernah meninggalkan perangkat Anda</strong> — safe for converting sensitive business data or financial reports</li><li>No server processing, no logging, no third-party access</li><li>Works <strong>offline</strong> after initial page load</li></ul>"
+            "title": "Mengutamakan Privasi - Konversi Data",
+            "content": "<p>Semua konversi terjadi <strong>secara lokal di browser Anda</strong> menggunakan parsing JavaScript — tidak ada perjalanan bolak-balik ke server.</p><ul><li>Data Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — aman untuk mengonversi data bisnis sensitif atau laporan keuangan</li><li>Tidak ada pemrosesan server, tidak ada pencatatan, tidak ada akses pihak ketiga</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -293,33 +293,33 @@
           "a1": "SHA-1, SHA-256, SHA-384, dan SHA-512 semuanya dihitung secara bersamaan menggunakan Web Crypto API browser.",
           "q2": "Bisakah saya meng-hash file?",
           "a2": "Ya, beralih ke mode File dan jatuhkan file apa pun. Hash dihitung secara lokal di browser Anda — file tidak pernah diunggah.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Hash Generator?",
-            "content": "<p><strong>Hash Generator</strong> computes cryptographic hash values for text or files using SHA-1, SHA-256, SHA-384, and SHA-512 algorithms. Hashes are one-way fingerprints used to verify data integrity, compare files, and validate downloads.</p><p>Generate hashes instantly in your browser — ideal for verifying file integrity or creating content digests.</p>"
+            "content": "<p><strong>Hash Generator</strong> menghitung nilai hash kriptografi untuk teks atau file menggunakan algoritma SHA-1, SHA-256, SHA-384, dan SHA-512. Hash adalah sidik jari satu arah yang digunakan untuk memverifikasi integritas data, membandingkan file, dan memvalidasi unduhan.</p><p>Hasilkan hash secara instan di browser Anda — ideal untuk memverifikasi integritas file atau membuat intisari konten.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Hash Generator",
-            "content": "<ol><li>Enter text directly or upload a file to hash</li><li>Select the hash algorithm(s): SHA-1, SHA-256, SHA-384, or SHA-512</li><li>The hash value is computed instantly and displayed</li><li>Copy the hash to compare with known checksums or use in your project</li></ol><p>For file integrity verification, compare the generated hash with the checksum provided by the file's source.</p>"
+            "content": "<ol><li>Masukkan teks langsung atau unggah file untuk di-hash</li><li>Pilih algoritma hash: SHA-1, SHA-256, SHA-384, atau SHA-512</li><li>Nilai hash dihitung secara instan dan ditampilkan</li><li>Salin hash untuk membandingkan dengan checksum yang diketahui atau gunakan dalam proyek Anda</li></ol><p>Untuk verifikasi integritas file, bandingkan hash yang dihasilkan dengan checksum yang disediakan oleh sumber file.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Multiple Algorithms</strong>: SHA-1, SHA-256, SHA-384, and SHA-512 computed simultaneously</li><li><strong>Text & File Hashing</strong>: Hash typed text or uploaded files of any type</li><li><strong>Instant Computation</strong>: Hash values appear in real-time</li><li><strong>Web Crypto API</strong>: Uses the browser's native cryptographic engine for maximum performance</li><li><strong>Copy to Clipboard</strong>: One-click copy for each hash value</li><li><strong>Large File Support</strong>: Efficiently hash files of any size</li></ul>"
+            "content": "<ul><li><strong>Beberapa Algoritma</strong>: SHA-1, SHA-256, SHA-384, dan SHA-512 dihitung secara bersamaan</li><li><strong>Hashing Teks & File</strong>: Hash teks yang diketik atau file yang diunggah dengan tipe apa pun</li><li><strong>Komputasi Instan</strong>: Nilai hash muncul secara real-time</li><li><strong>Web Crypto API</strong>: Menggunakan mesin kriptografi native browser untuk performa maksimum</li><li><strong>Salin ke Clipboard</strong>: Salin nilai hash dengan satu klik</li><li><strong>Dukungan File Besar</strong>: Hash file dengan ukuran berapa pun secara efisien</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>File Integrity</strong>: Verify downloaded files haven't been tampered with by comparing checksums</li><li><strong>Content Deduplication</strong>: Compare hashes to find duplicate files</li><li><strong>Digital Signatures</strong>: Create content digests for signing workflows</li><li><strong>Software Distribution</strong>: Generate checksums for your own file releases</li><li><strong>Security Auditing</strong>: Hash files to detect unauthorized modifications</li></ul>"
+            "content": "<ul><li><strong>Integritas File</strong>: Verifikasi file yang diunduh tidak diubah dengan membandingkan checksum</li><li><strong>Deduplikasi Konten</strong>: Bandingkan hash untuk menemukan file duplikat</li><li><strong>Tanda Tangan Digital</strong>: Buat intisari konten untuk alur kerja penandatanganan</li><li><strong>Distribusi Perangkat Lunak</strong>: Hasilkan checksum untuk rilis file Anda sendiri</li><li><strong>Audit Keamanan</strong>: Hash file untuk mendeteksi modifikasi yang tidak sah</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Hash Generation",
-            "content": "<p>Hashes are computed <strong>entirely in your browser</strong> using the native <strong>Web Crypto API</strong> (<code>crypto.subtle.digest</code>).</p><ul><li>File Anda text and files <strong>never leave your device</strong> — critical when hashing sensitive content</li><li>Uses hardware-accelerated cryptographic implementations when available</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Mengutamakan Privasi - Pembuatan Hash",
+            "content": "<p>Hash dihitung <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>Web Crypto API</strong> native (<code>crypto.subtle.digest</code>).</p><ul><li>Teks dan file Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — penting saat meng-hash konten sensitif</li><li>Menggunakan implementasi kriptografi yang dipercepat perangkat keras jika tersedia</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -339,33 +339,33 @@
           "a1": "Anda dapat memasukkan warna sebagai HEX (#ff6600 atau #f60), RGB (rgb(255, 102, 0)), atau HSL (hsl(24, 100%, 50%)). Semua format lain ditampilkan secara otomatis.",
           "q2": "Apakah mendukung alpha/transparansi?",
           "a2": "Saat ini alat ini hanya mendukung warna opak. Dukungan RGBA dan HSLA akan ditambahkan di pembaruan mendatang.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Color Converter?",
-            "content": "<p><strong>Color Converter</strong> transforms colors between HEX, RGB, and HSL formats with a live visual preview. Enter a color in any format and instantly see its equivalent in all other formats, along with a color swatch.</p><p>Perfect for designers and developers who need to convert between color notations for CSS, design tools, or brand guidelines.</p>"
+            "content": "<p><strong>Color Converter</strong> mengubah warna antara format HEX, RGB, dan HSL dengan pratinjau visual langsung. Masukkan warna dalam format apa pun dan langsung lihat ekuivalennya dalam semua format lain, beserta contoh warna.</p><p>Sempurna untuk desainer dan pengembang yang perlu mengonversi antara notasi warna untuk CSS, alat desain, atau pedoman merek.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Color Converter",
-            "content": "<ol><li>Enter a color value in any supported format: HEX (e.g., #3B82F6), RGB (e.g., rgb(59, 130, 246)), or HSL (e.g., hsl(217, 91%, 60%))</li><li>See instant conversion to all other formats with a live color preview</li><li>Click any value to copy it to your clipboard</li></ol><p>The color picker also lets you visually select colors and get all format values at once.</p>"
+            "content": "<ol><li>Masukkan nilai warna dalam format yang didukung: HEX (misalnya, #3B82F6), RGB (misalnya, rgb(59, 130, 246)), atau HSL (misalnya, hsl(217, 91%, 60%))</li><li>Lihat konversi instan ke semua format lain dengan pratinjau warna langsung</li><li>Klik nilai apa pun untuk menyalinnya ke clipboard Anda</li></ol><p>Pemilih warna juga memungkinkan Anda memilih warna secara visual dan mendapatkan semua nilai format sekaligus.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Three Format Support</strong>: Convert between HEX, RGB, and HSL color notations</li><li><strong>Live Preview</strong>: See the actual color displayed as you type or adjust values</li><li><strong>Visual Color Picker</strong>: Select colors visually and get all format values</li><li><strong>Instant Conversion</strong>: Results update in real-time as you type</li><li><strong>One-Click Copy</strong>: Copy any color format value to clipboard</li><li><strong>CSS-Ready Output</strong>: Values formatted for direct use in CSS stylesheets</li></ul>"
+            "content": "<ul><li><strong>Dukungan Tiga Format</strong>: Konversi antara notasi warna HEX, RGB, dan HSL</li><li><strong>Pratinjau Langsung</strong>: Lihat warna aktual ditampilkan saat Anda mengetik atau menyesuaikan nilai</li><li><strong>Pemilih Warna Visual</strong>: Pilih warna secara visual dan dapatkan semua nilai format</li><li><strong>Konversi Instan</strong>: Hasil diperbarui secara real-time saat Anda mengetik</li><li><strong>Salin Sekali Klik</strong>: Salin nilai format warna apa pun ke clipboard</li><li><strong>Output Siap CSS</strong>: Nilai yang diformat untuk penggunaan langsung di stylesheet CSS</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>CSS Development</strong>: Convert between color formats for stylesheets</li><li><strong>Design Handoff</strong>: Translate design spec colors to code-ready values</li><li><strong>Brand Guidelines</strong>: Convert brand colors between formats for documentation</li><li><strong>Accessibility</strong>: Adjust HSL lightness to meet contrast ratio requirements</li><li><strong>Theme Development</strong>: Generate color values for light/dark theme variables</li></ul>"
+            "content": "<ul><li><strong>Pengembangan CSS</strong>: Konversi antara format warna untuk stylesheet</li><li><strong>Serah Terima Desain</strong>: Terjemahkan warna spesifikasi desain ke nilai siap kode</li><li><strong>Pedoman Merek</strong>: Konversi warna merek antara format untuk dokumentasi</li><li><strong>Aksesibilitas</strong>: Sesuaikan kecerahan HSL untuk memenuhi persyaratan rasio kontras</li><li><strong>Pengembangan Tema</strong>: Hasilkan nilai warna untuk variabel tema terang/gelap</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Color Processing",
-            "content": "<p>Color conversion uses <strong>pure JavaScript math</strong> in your browser — no server calls, no tracking.</p><ul><li>No data is transmitted — color values stay entirely on your device</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Mengutamakan Privasi - Pemrosesan Warna",
+            "content": "<p>Konversi warna menggunakan <strong>matematika JavaScript murni</strong> di browser Anda — tidak ada panggilan server, tidak ada pelacakan.</p><ul><li>Tidak ada data yang ditransmisikan — nilai warna tetap sepenuhnya di perangkat Anda</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -386,33 +386,33 @@
           "a1": "Kunci objek menjadi nama elemen XML. Array menghasilkan elemen berulang dengan nama yang sama. Nilai primitif menjadi konten teks.",
           "q2": "Apakah atribut XML dipertahankan?",
           "a2": "Atribut XML tidak dipertahankan dalam output JSON. Hanya nama elemen dan konten teks yang dikonversi.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu JSON ↔ XML Converter?",
-            "content": "<p><strong>JSON ↔ XML Converter</strong> transforms data between JSON and XML formats. Convert JSON objects to well-formed XML documents, or parse XML back into JSON — useful for integrating systems that use different data formats.</p><p>Handles nested structures, arrays, and attributes correctly in both directions.</p>"
+            "content": "<p><strong>JSON ↔ XML Converter</strong> mengubah data antara format JSON dan XML. Konversi objek JSON menjadi dokumen XML yang terbentuk dengan baik, atau parse XML kembali menjadi JSON — berguna untuk mengintegrasikan sistem yang menggunakan format data berbeda.</p><p>Menangani struktur bersarang, array, dan atribut dengan benar di kedua arah.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan JSON ↔ XML Converter",
-            "content": "<ol><li>Paste your JSON or XML data into the input area</li><li>Select the conversion direction: <strong>JSON → XML</strong> or <strong>XML → JSON</strong></li><li>The converted output appears instantly</li><li>Copy the result or download it as a file</li></ol><p>JSON arrays are converted to repeated XML elements. XML attributes are preserved during conversion.</p>"
+            "content": "<ol><li>Tempel data JSON atau XML Anda ke area input</li><li>Pilih arah konversi: <strong>JSON → XML</strong> atau <strong>XML → JSON</strong></li><li>Output yang dikonversi muncul secara instan</li><li>Salin hasil atau unduh sebagai file</li></ol><p>Array JSON dikonversi menjadi elemen XML berulang. Atribut XML dipertahankan selama konversi.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Bidirectional Conversion</strong>: Convert JSON to XML and XML to JSON</li><li><strong>Nested Structure Support</strong>: Correctly handles deeply nested objects and arrays</li><li><strong>Pretty-Printed Output</strong>: XML output is properly indented for readability</li><li><strong>Array Handling</strong>: JSON arrays become repeated XML elements with proper structure</li><li><strong>Instant Processing</strong>: Results appear immediately</li><li><strong>Download Output</strong>: Save results as .json or .xml files</li></ul>"
+            "content": "<ul><li><strong>Konversi Dua Arah</strong>: Konversi JSON ke XML dan XML ke JSON</li><li><strong>Dukungan Struktur Bersarang</strong>: Menangani objek dan array yang sangat bersarang dengan benar</li><li><strong>Output Pretty-Printed</strong>: Output XML diindentasi dengan benar untuk keterbacaan</li><li><strong>Penanganan Array</strong>: Array JSON menjadi elemen XML berulang dengan struktur yang tepat</li><li><strong>Pemrosesan Instan</strong>: Hasil muncul segera</li><li><strong>Unduh Output</strong>: Simpan hasil sebagai file .json atau .xml</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>API Integration</strong>: Convert between JSON REST APIs and XML SOAP services</li><li><strong>Legacy Systems</strong>: Transform XML data from older systems to JSON for modern apps</li><li><strong>Configuration</strong>: Convert between JSON and XML configuration file formats</li><li><strong>Data Migration</strong>: Transform data formats during system migrations</li><li><strong>Testing</strong>: Generate XML test data from JSON or vice versa</li></ul>"
+            "content": "<ul><li><strong>Integrasi API</strong>: Konversi antara JSON REST API dan layanan XML SOAP</li><li><strong>Sistem Lama</strong>: Ubah data XML dari sistem lama menjadi JSON untuk aplikasi modern</li><li><strong>Konfigurasi</strong>: Konversi antara format file konfigurasi JSON dan XML</li><li><strong>Migrasi Data</strong>: Ubah format data selama migrasi sistem</li><li><strong>Pengujian</strong>: Hasilkan data pengujian XML dari JSON atau sebaliknya</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Data Conversion",
-            "content": "<p>All conversion runs <strong>locally in your browser</strong> using JavaScript XML parsing — no server communication.</p><ul><li>File Anda data <strong>tidak pernah meninggalkan perangkat Anda</strong></li><li>Safe for converting sensitive business data or configuration files</li><li>Works <strong>offline</strong> after initial page load</li></ul>"
+            "title": "Mengutamakan Privasi - Konversi Data",
+            "content": "<p>Semua konversi berjalan <strong>secara lokal di browser Anda</strong> menggunakan parsing XML JavaScript — tidak ada komunikasi server.</p><ul><li>Data Anda <strong>tidak pernah meninggalkan perangkat Anda</strong></li><li>Aman untuk mengonversi data bisnis sensitif atau file konfigurasi</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -431,33 +431,33 @@
           "a1": "Judul, tebal, miring, tautan, gambar, blok kode, kode inline, daftar tidak berurutan, blockquote, dan garis horizontal.",
           "q2": "Bisakah saya menyalin output HTML?",
           "a2": "Ya, gunakan tombol Salin HTML untuk menyalin HTML yang dihasilkan ke clipboard Anda.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Markdown Preview?",
-            "content": "<p><strong>Markdown Preview</strong> lets you write Markdown and see a live HTML preview side by side. Write formatted text using simple Markdown syntax and instantly see how it renders — perfect for README files, blog posts, and documentation.</p><p>Supports standard Markdown including headers, lists, code blocks, links, images, tables, and more.</p>"
+            "content": "<p><strong>Markdown Preview</strong> memungkinkan Anda menulis Markdown dan melihat pratinjau HTML langsung secara berdampingan. Tulis teks terformat menggunakan sintaks Markdown sederhana dan langsung lihat bagaimana ia ditampilkan — sempurna untuk file README, posting blog, dan dokumentasi.</p><p>Mendukung Markdown standar termasuk judul, daftar, blok kode, tautan, gambar, tabel, dan lainnya.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Markdown Preview",
-            "content": "<ol><li>Type or paste Markdown text in the editor pane on the left</li><li>The rendered HTML preview updates in real-time on the right</li><li>Use standard Markdown syntax: # headers, **bold**, *italic*, - lists, ```code blocks```</li><li>Copy the rendered HTML or the Markdown source</li></ol><p>The split-pane view lets you write and preview simultaneously without switching tabs.</p>"
+            "content": "<ol><li>Ketik atau tempel teks Markdown di panel editor di sebelah kiri</li><li>Pratinjau HTML yang dirender diperbarui secara real-time di sebelah kanan</li><li>Gunakan sintaks Markdown standar: # judul, **tebal**, *miring*, - daftar, ```blok kode```</li><li>Salin HTML yang dirender atau sumber Markdown</li></ol><p>Tampilan panel terpisah memungkinkan Anda menulis dan melihat pratinjau secara bersamaan tanpa beralih tab.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Live Preview</strong>: See rendered HTML update in real-time as you type</li><li><strong>Side-by-Side View</strong>: Editor and preview displayed simultaneously</li><li><strong>Full Markdown Support</strong>: Headers, bold, italic, lists, code blocks, links, images, tables, blockquotes</li><li><strong>Syntax Highlighting</strong>: Code blocks with language-specific highlighting</li><li><strong>Copy HTML Output</strong>: Copy the rendered HTML for use in web pages</li><li><strong>Responsive Layout</strong>: Works on desktop and mobile devices</li></ul>"
+            "content": "<ul><li><strong>Pratinjau Langsung</strong>: Lihat HTML yang dirender diperbarui secara real-time saat Anda mengetik</li><li><strong>Tampilan Berdampingan</strong>: Editor dan pratinjau ditampilkan secara bersamaan</li><li><strong>Dukungan Markdown Lengkap</strong>: Judul, tebal, miring, daftar, blok kode, tautan, gambar, tabel, blockquote</li><li><strong>Penyorotan Sintaks</strong>: Blok kode dengan penyorotan khusus bahasa</li><li><strong>Salin Output HTML</strong>: Salin HTML yang dirender untuk digunakan di halaman web</li><li><strong>Tata Letak Responsif</strong>: Berfungsi di perangkat desktop dan seluler</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>README Files</strong>: Preview GitHub README.md files before committing</li><li><strong>Blog Posts</strong>: Draft and preview blog content written in Markdown</li><li><strong>Documentation</strong>: Write technical documentation with live formatting preview</li><li><strong>Note Taking</strong>: Quick formatted note-taking with instant preview</li><li><strong>Email Drafts</strong>: Format content using Markdown for rich-text emails</li></ul>"
+            "content": "<ul><li><strong>File README</strong>: Pratinjau file README.md GitHub sebelum commit</li><li><strong>Posting Blog</strong>: Draf dan pratinjau konten blog yang ditulis dalam Markdown</li><li><strong>Dokumentasi</strong>: Tulis dokumentasi teknis dengan pratinjau pemformatan langsung</li><li><strong>Catatan</strong>: Pembuatan catatan terformat cepat dengan pratinjau instan</li><li><strong>Draf Email</strong>: Format konten menggunakan Markdown untuk email rich-text</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Markdown Rendering",
-            "content": "<p>Markdown is parsed and rendered <strong>entirely in your browser</strong> — your content never touches a server.</p><ul><li>File Anda writing <strong>tidak pernah meninggalkan perangkat Anda</strong> — safe for drafting confidential documentation</li><li>No cloud storage or sync</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Mengutamakan Privasi - Rendering Markdown",
+            "content": "<p>Markdown di-parse dan dirender <strong>sepenuhnya di browser Anda</strong> — konten Anda tidak pernah menyentuh server.</p><ul><li>Tulisan Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — aman untuk menyusun dokumentasi rahasia</li><li>Tidak ada penyimpanan atau sinkronisasi cloud</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -480,33 +480,33 @@
           "a1": "Flag global (g), tidak peka huruf besar-kecil (i), multiline (m), dan dotAll (s) tersedia.",
           "q2": "Apakah mendukung named capture group?",
           "a2": "Ya, grup bernama yang didefinisikan dengan (?<name>...) ditampilkan dalam detail kecocokan.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Regex Tester?",
-            "content": "<p><strong>Regex Tester</strong> lets you write and test regular expressions against sample text with real-time highlighting of matches. See matching groups, test different flags, and debug your patterns instantly.</p><p>An essential tool for developers working with string patterns, data validation, or text parsing.</p>"
+            "content": "<p><strong>Regex Tester</strong> memungkinkan Anda menulis dan menguji ekspresi reguler terhadap teks sampel dengan penyorotan kecocokan secara real-time. Lihat grup yang cocok, uji flag berbeda, dan debug pola Anda secara instan.</p><p>Alat penting untuk pengembang yang bekerja dengan pola string, validasi data, atau parsing teks.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Regex Tester",
-            "content": "<ol><li>Enter your regular expression pattern in the pattern field</li><li>Set flags as needed: <strong>g</strong> (global), <strong>i</strong> (case-insensitive), <strong>m</strong> (multiline)</li><li>Type or paste test text in the text area below</li><li>Matches are highlighted in real-time as you type</li></ol><p>Capture groups are shown with distinct colors, and match details display the full match plus any captured groups.</p>"
+            "content": "<ol><li>Masukkan pola ekspresi reguler Anda di bidang pola</li><li>Atur flag sesuai kebutuhan: <strong>g</strong> (global), <strong>i</strong> (tidak peka huruf besar-kecil), <strong>m</strong> (multiline)</li><li>Ketik atau tempel teks uji di area teks di bawah</li><li>Kecocokan disorot secara real-time saat Anda mengetik</li></ol><p>Grup capture ditampilkan dengan warna yang berbeda, dan detail kecocokan menampilkan kecocokan penuh plus grup yang ditangkap.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Real-Time Matching</strong>: Matches highlight instantly as you type pattern or text</li><li><strong>Flag Support</strong>: Toggle global (g), case-insensitive (i), and multiline (m) flags</li><li><strong>Group Highlighting</strong>: Capture groups shown with distinct visual markers</li><li><strong>Match Details</strong>: See full match text, groups, and positions</li><li><strong>Error Feedback</strong>: Invalid regex syntax is caught and reported immediately</li><li><strong>Native Engine</strong>: Uses your browser's built-in JavaScript regex engine</li></ul>"
+            "content": "<ul><li><strong>Pencocokan Real-Time</strong>: Kecocokan disorot secara instan saat Anda mengetik pola atau teks</li><li><strong>Dukungan Flag</strong>: Toggle flag global (g), tidak peka huruf besar-kecil (i), dan multiline (m)</li><li><strong>Penyorotan Grup</strong>: Grup capture ditampilkan dengan penanda visual yang berbeda</li><li><strong>Detail Kecocokan</strong>: Lihat teks kecocokan penuh, grup, dan posisi</li><li><strong>Umpan Balik Kesalahan</strong>: Sintaks regex yang tidak valid ditangkap dan dilaporkan segera</li><li><strong>Mesin Native</strong>: Menggunakan mesin regex JavaScript bawaan browser Anda</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Pattern Development</strong>: Build and debug regex patterns before using in code</li><li><strong>Data Validation</strong>: Test email, phone number, or custom validation patterns</li><li><strong>Text Parsing</strong>: Develop patterns for extracting data from log files or text</li><li><strong>Search & Replace</strong>: Preview what a regex replacement will match before applying</li><li><strong>Learning</strong>: Understand regex syntax through interactive experimentation</li></ul>"
+            "content": "<ul><li><strong>Pengembangan Pola</strong>: Bangun dan debug pola regex sebelum digunakan dalam kode</li><li><strong>Validasi Data</strong>: Uji pola validasi email, nomor telepon, atau kustom</li><li><strong>Parsing Teks</strong>: Kembangkan pola untuk mengekstrak data dari file log atau teks</li><li><strong>Cari & Ganti</strong>: Pratinjau apa yang akan cocok dengan pengganti regex sebelum menerapkan</li><li><strong>Pembelajaran</strong>: Pahami sintaks regex melalui eksperimen interaktif</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Regex Processing",
-            "content": "<p>All pattern matching runs <strong>locally in your browser</strong> using the native JavaScript <code>RegExp</code> engine.</p><ul><li>File Anda patterns and test data <strong>never leave your device</strong></li><li>Safe for testing patterns against sensitive data like log files or user records</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Mengutamakan Privasi - Pemrosesan Regex",
+            "content": "<p>Semua pencocokan pola berjalan <strong>secara lokal di browser Anda</strong> menggunakan mesin <code>RegExp</code> JavaScript native.</p><ul><li>Pola dan data uji Anda <strong>tidak pernah meninggalkan perangkat Anda</strong></li><li>Aman untuk menguji pola terhadap data sensitif seperti file log atau rekaman pengguna</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -531,33 +531,33 @@
           "a1": "Unix timestamp adalah jumlah detik yang telah berlalu sejak 1 Januari 1970 00:00:00 UTC (epoch Unix).",
           "q2": "Apakah mendukung timestamp milidetik?",
           "a2": "Ya. Jika Anda memasukkan angka lebih besar dari 10^12, secara otomatis dianggap sebagai milidetik, bukan detik.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Unix Timestamp Converter?",
-            "content": "<p><strong>Unix Timestamp Converter</strong> converts between Unix timestamps (seconds since January 1, 1970) and human-readable date/time formats. Enter a timestamp to see the date, or pick a date to get the timestamp.</p><p>Shows the current Unix timestamp live and supports both seconds and milliseconds formats.</p>"
+            "content": "<p><strong>Unix Timestamp Converter</strong> mengonversi antara Unix timestamp (detik sejak 1 Januari 1970) dan format tanggal/waktu yang dapat dibaca manusia. Masukkan timestamp untuk melihat tanggal, atau pilih tanggal untuk mendapatkan timestamp.</p><p>Menampilkan Unix timestamp saat ini secara langsung dan mendukung format detik serta milidetik.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Unix Timestamp Converter",
-            "content": "<ol><li>Enter a Unix timestamp (seconds or milliseconds) to see the human-readable date and time</li><li>Or select a date and time to get the corresponding Unix timestamp</li><li>The current Unix timestamp is displayed live and updates in real-time</li><li>Copy any value with one click</li></ol><p>Automatically detects whether the input is in seconds or milliseconds based on the value length.</p>"
+            "content": "<ol><li>Masukkan Unix timestamp (detik atau milidetik) untuk melihat tanggal dan waktu yang dapat dibaca manusia</li><li>Atau pilih tanggal dan waktu untuk mendapatkan Unix timestamp yang sesuai</li><li>Unix timestamp saat ini ditampilkan secara langsung dan diperbarui secara real-time</li><li>Salin nilai apa pun dengan satu klik</li></ol><p>Mendeteksi secara otomatis apakah input dalam detik atau milidetik berdasarkan panjang nilai.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Bidirectional Conversion</strong>: Timestamp → date and date → timestamp</li><li><strong>Live Clock</strong>: Current Unix timestamp displayed and updating in real-time</li><li><strong>Seconds & Milliseconds</strong>: Supports both Unix seconds and JavaScript milliseconds</li><li><strong>Local & UTC</strong>: Shows times in both local timezone and UTC</li><li><strong>Instant Results</strong>: Conversion happens in real-time as you type</li><li><strong>One-Click Copy</strong>: Copy any value to clipboard</li></ul>"
+            "content": "<ul><li><strong>Konversi Dua Arah</strong>: Timestamp → tanggal dan tanggal → timestamp</li><li><strong>Jam Langsung</strong>: Unix timestamp saat ini ditampilkan dan diperbarui secara real-time</li><li><strong>Detik & Milidetik</strong>: Mendukung detik Unix dan milidetik JavaScript</li><li><strong>Lokal & UTC</strong>: Menampilkan waktu dalam zona waktu lokal dan UTC</li><li><strong>Hasil Instan</strong>: Konversi terjadi secara real-time saat Anda mengetik</li><li><strong>Salin Sekali Klik</strong>: Salin nilai apa pun ke clipboard</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Debugging</strong>: Convert API response timestamps to readable dates for debugging</li><li><strong>Database Queries</strong>: Convert between timestamp formats for SQL queries</li><li><strong>Log Analysis</strong>: Translate Unix timestamps in log files to human-readable times</li><li><strong>Scheduling</strong>: Calculate future/past timestamps for cron jobs or scheduled tasks</li><li><strong>Cross-Timezone Work</strong>: Compare timestamps across different timezones</li></ul>"
+            "content": "<ul><li><strong>Debugging</strong>: Konversi timestamp respons API ke tanggal yang dapat dibaca untuk debugging</li><li><strong>Kueri Database</strong>: Konversi antara format timestamp untuk kueri SQL</li><li><strong>Analisis Log</strong>: Terjemahkan Unix timestamp dalam file log ke waktu yang dapat dibaca manusia</li><li><strong>Penjadwalan</strong>: Hitung timestamp masa lalu/mendatang untuk cron job atau tugas terjadwal</li><li><strong>Kerja Lintas Zona Waktu</strong>: Bandingkan timestamp di berbagai zona waktu</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Timestamp Processing",
-            "content": "<p>All conversions use <strong>browser-native Date API</strong> — no server calls, no data transmitted.</p><ul><li>File Anda timestamps <strong>never leave your device</strong></li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Mengutamakan Privasi - Pemrosesan Timestamp",
+            "content": "<p>Semua konversi menggunakan <strong>Date API native browser</strong> — tidak ada panggilan server, tidak ada data yang ditransmisikan.</p><ul><li>Timestamp Anda <strong>tidak pernah meninggalkan perangkat Anda</strong></li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -578,33 +578,33 @@
           "a1": "Semua fitur YAML standar termasuk objek bersarang, array, string multi-baris, dan anchor/alias melalui pustaka js-yaml.",
           "q2": "Apakah konversi mempertahankan komentar?",
           "a2": "Tidak. Komentar YAML dihapus selama parsing. Saat mengonversi JSON ke YAML, outputnya adalah YAML bersih tanpa komentar.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu YAML ↔ JSON Converter?",
-            "content": "<p><strong>YAML ↔ JSON Converter</strong> transforms data between YAML and JSON formats. YAML's human-friendly syntax makes it popular for configuration files, while JSON is the standard for APIs and data exchange.</p><p>Convert Kubernetes configs, CI/CD pipelines, or any YAML file to JSON and back — instantly in your browser.</p>"
+            "content": "<p><strong>YAML ↔ JSON Converter</strong> mengubah data antara format YAML dan JSON. Sintaks YAML yang ramah manusia membuatnya populer untuk file konfigurasi, sementara JSON adalah standar untuk API dan pertukaran data.</p><p>Konversi konfigurasi Kubernetes, pipeline CI/CD, atau file YAML apa pun ke JSON dan sebaliknya — secara instan di browser Anda.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan YAML ↔ JSON Converter",
-            "content": "<ol><li>Paste your YAML or JSON data into the input area</li><li>Select the conversion direction: <strong>YAML → JSON</strong> or <strong>JSON → YAML</strong></li><li>The converted output appears instantly</li><li>Copy the result or download it as a file</li></ol><p>Supports the full YAML specification including multi-line strings, anchors, and complex nested structures.</p>"
+            "content": "<ol><li>Tempel data YAML atau JSON Anda ke area input</li><li>Pilih arah konversi: <strong>YAML → JSON</strong> atau <strong>JSON → YAML</strong></li><li>Output yang dikonversi muncul secara instan</li><li>Salin hasil atau unduh sebagai file</li></ol><p>Mendukung spesifikasi YAML lengkap termasuk string multi-baris, anchor, dan struktur bersarang kompleks.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Bidirectional Conversion</strong>: Convert YAML to JSON and JSON to YAML</li><li><strong>Full YAML Support</strong>: Handles multi-line strings, anchors, aliases, and all YAML features</li><li><strong>Pretty-Printed Output</strong>: Both JSON and YAML output are properly formatted</li><li><strong>Error Reporting</strong>: Clear error messages for invalid YAML or JSON syntax</li><li><strong>Instant Processing</strong>: Results appear immediately</li><li><strong>Powered by js-yaml</strong>: Reliable conversion using the industry-standard js-yaml library</li></ul>"
+            "content": "<ul><li><strong>Konversi Dua Arah</strong>: Konversi YAML ke JSON dan JSON ke YAML</li><li><strong>Dukungan YAML Lengkap</strong>: Menangani string multi-baris, anchor, alias, dan semua fitur YAML</li><li><strong>Output Pretty-Printed</strong>: Baik output JSON maupun YAML diformat dengan benar</li><li><strong>Pelaporan Kesalahan</strong>: Pesan kesalahan yang jelas untuk sintaks YAML atau JSON yang tidak valid</li><li><strong>Pemrosesan Instan</strong>: Hasil muncul segera</li><li><strong>Digerakkan oleh js-yaml</strong>: Konversi andal menggunakan pustaka js-yaml standar industri</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>DevOps</strong>: Convert Kubernetes, Docker Compose, or Ansible YAML to JSON for API calls</li><li><strong>CI/CD</strong>: Transform GitHub Actions or GitLab CI YAML configs to JSON</li><li><strong>Configuration</strong>: Convert between YAML and JSON configuration file formats</li><li><strong>API Development</strong>: Transform YAML API specs (OpenAPI) to JSON format</li><li><strong>Data Migration</strong>: Convert data between YAML and JSON for different systems</li></ul>"
+            "content": "<ul><li><strong>DevOps</strong>: Konversi YAML Kubernetes, Docker Compose, atau Ansible ke JSON untuk panggilan API</li><li><strong>CI/CD</strong>: Ubah konfigurasi YAML GitHub Actions atau GitLab CI ke JSON</li><li><strong>Konfigurasi</strong>: Konversi antara format file konfigurasi YAML dan JSON</li><li><strong>Pengembangan API</strong>: Ubah spesifikasi API YAML (OpenAPI) ke format JSON</li><li><strong>Migrasi Data</strong>: Konversi data antara YAML dan JSON untuk sistem yang berbeda</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Data Conversion",
-            "content": "<p>Conversion runs <strong>locally in your browser</strong> using the <strong>js-yaml</strong> library — no server communication.</p><ul><li>File Anda configuration files and data <strong>never leave your device</strong></li><li>Safe for converting secrets, environment variables, and sensitive configs</li><li>Works <strong>offline</strong> after initial page load</li></ul>"
+            "title": "Mengutamakan Privasi - Konversi Data",
+            "content": "<p>Konversi berjalan <strong>secara lokal di browser Anda</strong> menggunakan pustaka <strong>js-yaml</strong> — tidak ada komunikasi server.</p><ul><li>File konfigurasi dan data Anda <strong>tidak pernah meninggalkan perangkat Anda</strong></li><li>Aman untuk mengonversi rahasia, variabel lingkungan, dan konfigurasi sensitif</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -626,33 +626,33 @@
           "a1": "Algoritma Longest Common Subsequence (LCS) berbasis baris yang mengidentifikasi penambahan, penghapusan, dan baris yang tidak berubah.",
           "q2": "Bisakah saya menyalin output diff?",
           "a2": "Ya, gunakan tombol salin untuk menyalin format diff unified dengan awalan + dan - untuk penambahan dan penghapusan.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Text Diff?",
-            "content": "<p><strong>Text Diff</strong> compares two pieces of text and highlights the differences line by line. See exactly what was added, removed, or changed — like a simplified version of <code>git diff</code> in your browser.</p><p>Ideal for comparing code versions, configuration files, document drafts, or any text content.</p>"
+            "content": "<p><strong>Text Diff</strong> membandingkan dua bagian teks dan menyoroti perbedaan baris per baris. Lihat dengan tepat apa yang ditambahkan, dihapus, atau diubah — seperti versi sederhana dari <code>git diff</code> di browser Anda.</p><p>Ideal untuk membandingkan versi kode, file konfigurasi, draf dokumen, atau konten teks apa pun.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Text Diff",
-            "content": "<ol><li>Paste the original text in the left panel</li><li>Paste the modified text in the right panel</li><li>Differences are highlighted immediately: green for additions, red for deletions</li><li>Scroll through the diff to review all changes</li></ol><p>Works best with structured text like code, configs, or documents with clear line breaks.</p>"
+            "content": "<ol><li>Tempel teks asli di panel kiri</li><li>Tempel teks yang dimodifikasi di panel kanan</li><li>Perbedaan disorot segera: hijau untuk penambahan, merah untuk penghapusan</li><li>Gulir melalui diff untuk meninjau semua perubahan</li></ol><p>Bekerja paling baik dengan teks terstruktur seperti kode, konfigurasi, atau dokumen dengan jeda baris yang jelas.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Line-by-Line Comparison</strong>: See exactly which lines differ between two texts</li><li><strong>Color-Coded Diff</strong>: Additions in green, deletions in red — clear at a glance</li><li><strong>Instant Comparison</strong>: Results appear immediately as you paste text</li><li><strong>Side-by-Side View</strong>: Both texts displayed together with aligned differences</li><li><strong>Large Text Support</strong>: Compare lengthy documents efficiently</li><li><strong>No Line Limit</strong>: Handle any text length without restrictions</li></ul>"
+            "content": "<ul><li><strong>Perbandingan Baris per Baris</strong>: Lihat dengan tepat baris mana yang berbeda antara dua teks</li><li><strong>Diff Berkode Warna</strong>: Penambahan dalam hijau, penghapusan dalam merah — jelas dengan sekali lihat</li><li><strong>Perbandingan Instan</strong>: Hasil muncul segera saat Anda menempelkan teks</li><li><strong>Tampilan Berdampingan</strong>: Kedua teks ditampilkan bersama dengan perbedaan yang selaras</li><li><strong>Dukungan Teks Panjang</strong>: Bandingkan dokumen panjang secara efisien</li><li><strong>Tanpa Batas Baris</strong>: Tangani panjang teks berapa pun tanpa batasan</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Code Review</strong>: Compare two versions of a code file to see what changed</li><li><strong>Config Changes</strong>: Spot differences between development and production config files</li><li><strong>Document Revision</strong>: Compare draft versions of documents or contracts</li><li><strong>Database Records</strong>: Compare exported records to find data discrepancies</li><li><strong>Debugging</strong>: Compare expected vs. actual output in test scenarios</li></ul>"
+            "content": "<ul><li><strong>Review Kode</strong>: Bandingkan dua versi file kode untuk melihat apa yang berubah</li><li><strong>Perubahan Konfigurasi</strong>: Temukan perbedaan antara file konfigurasi pengembangan dan produksi</li><li><strong>Revisi Dokumen</strong>: Bandingkan versi draf dokumen atau kontrak</li><li><strong>Rekam Database</strong>: Bandingkan rekaman yang diekspor untuk menemukan perbedaan data</li><li><strong>Debugging</strong>: Bandingkan output yang diharapkan vs aktual dalam skenario pengujian</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Text Comparison",
-            "content": "<p>Text comparison runs <strong>entirely in your browser</strong> using a JavaScript diff algorithm — no server processing.</p><ul><li>File Anda text <strong>tidak pernah meninggalkan perangkat Anda</strong> — safe for comparing sensitive code, contracts, or confidential documents</li><li>No server storage or third-party access</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Mengutamakan Privasi - Perbandingan Teks",
+            "content": "<p>Perbandingan teks berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan algoritma diff JavaScript — tidak ada pemrosesan server.</p><ul><li>Teks Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — aman untuk membandingkan kode sensitif, kontrak, atau dokumen rahasia</li><li>Tidak ada penyimpanan server atau akses pihak ketiga</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -676,31 +676,31 @@
           "a2": "Tidak, alat ini memproses teks dengan panjang berapa pun langsung di browser Anda tanpa batasan.",
           "q3": "Bagaimana waktu baca dihitung?",
           "a3": "Waktu baca diperkirakan pada 200 kata per menit, yang merupakan kecepatan baca rata-rata orang dewasa.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Word Counter?",
-            "content": "<p><strong>Word Counter</strong> analyzes your text and instantly displays word count, character count, sentence count, paragraph count, and estimated reading time. Essential for writers, students, and content creators who need to meet length requirements.</p><p>Simply paste your text and get all statistics in real-time.</p>"
+            "content": "<p><strong>Word Counter</strong> menganalisis teks Anda dan secara instan menampilkan jumlah kata, jumlah karakter, jumlah kalimat, jumlah paragraf, dan perkiraan waktu baca. Penting bagi penulis, pelajar, dan pembuat konten yang perlu memenuhi persyaratan panjang.</p><p>Cukup tempel teks Anda dan dapatkan semua statistik secara real-time.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Word Counter",
-            "content": "<ol><li>Type or paste your text into the input area</li><li>Statistics update in real-time as you type: words, characters, sentences, paragraphs, and reading time</li><li>Use the results to check length requirements or estimate reading duration</li></ol><p>Reading time is estimated at an average reading speed of 200 words per minute.</p>"
+            "content": "<ol><li>Ketik atau tempel teks Anda ke area input</li><li>Statistik diperbarui secara real-time saat Anda mengetik: kata, karakter, kalimat, paragraf, dan waktu baca</li><li>Gunakan hasil untuk memeriksa persyaratan panjang atau memperkirakan durasi baca</li></ol><p>Waktu baca diperkirakan pada kecepatan baca rata-rata 200 kata per menit.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Word Count</strong>: Accurate word counting with proper handling of punctuation and whitespace</li><li><strong>Character Count</strong>: Total characters with and without spaces</li><li><strong>Sentence Count</strong>: Counts sentences based on punctuation markers</li><li><strong>Paragraph Count</strong>: Counts paragraphs separated by line breaks</li><li><strong>Reading Time</strong>: Estimated reading duration at average speed</li><li><strong>Real-Time Updates</strong>: All statistics update instantly as you type</li></ul>"
+            "content": "<ul><li><strong>Jumlah Kata</strong>: Penghitungan kata yang akurat dengan penanganan tanda baca dan spasi yang tepat</li><li><strong>Jumlah Karakter</strong>: Total karakter dengan dan tanpa spasi</li><li><strong>Jumlah Kalimat</strong>: Menghitung kalimat berdasarkan penanda tanda baca</li><li><strong>Jumlah Paragraf</strong>: Menghitung paragraf yang dipisahkan oleh jeda baris</li><li><strong>Waktu Baca</strong>: Perkiraan durasi baca pada kecepatan rata-rata</li><li><strong>Pembaruan Real-Time</strong>: Semua statistik diperbarui secara instan saat Anda mengetik</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Academic Writing</strong>: Check essay or thesis word counts against requirements</li><li><strong>SEO Content</strong>: Ensure blog posts and articles meet target word counts</li><li><strong>Social Media</strong>: Check character limits for tweets, LinkedIn posts, or bios</li><li><strong>Translation</strong>: Estimate translation costs based on word count</li><li><strong>Content Planning</strong>: Calculate reading times for articles and presentations</li></ul>"
+            "content": "<ul><li><strong>Penulisan Akademik</strong>: Periksa jumlah kata esai atau tesis terhadap persyaratan</li><li><strong>Konten SEO</strong>: Pastikan posting blog dan artikel memenuhi jumlah kata target</li><li><strong>Media Sosial</strong>: Periksa batas karakter untuk tweet, posting LinkedIn, atau bio</li><li><strong>Terjemahan</strong>: Perkirakan biaya terjemahan berdasarkan jumlah kata</li><li><strong>Perencanaan Konten</strong>: Hitung waktu baca untuk artikel dan presentasi</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Text Analysis",
-            "content": "<p>All counting is done <strong>locally in your browser</strong> using simple JavaScript string operations.</p><ul><li>File Anda text <strong>tidak pernah meninggalkan perangkat Anda</strong> — safe for analyzing confidential documents</li><li>No server processing or cloud storage</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Mengutamakan Privasi - Analisis Teks",
+            "content": "<p>Semua penghitungan dilakukan <strong>secara lokal di browser Anda</strong> menggunakan operasi string JavaScript sederhana.</p><ul><li>Teks Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — aman untuk menganalisis dokumen rahasia</li><li>Tidak ada pemrosesan server atau penyimpanan cloud</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -725,33 +725,33 @@
           "a1": "Kami mendukung UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, dan CONSTANT_CASE.",
           "q2": "Bisakah saya mengubah nama variabel kode?",
           "a2": "Ya! Gunakan konversi camelCase, PascalCase, snake_case, atau kebab-case untuk nama variabel pemrograman.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Case Converter?",
-            "content": "<p><strong>Case Converter</strong> transforms text between multiple case formats including UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, and CONSTANT_CASE.</p><p>Essential for developers renaming variables, writers formatting titles, or anyone who needs to quickly change text casing.</p>"
+            "content": "<p><strong>Case Converter</strong> mengubah teks antara beberapa format huruf termasuk UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, dan CONSTANT_CASE.</p><p>Penting untuk pengembang yang mengganti nama variabel, penulis yang memformat judul, atau siapa saja yang perlu mengubah kapitalisasi teks dengan cepat.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Case Converter",
-            "content": "<ol><li>Type or paste your text into the input area</li><li>Click the desired case format button: UPPER, lower, Title, Sentence, camelCase, PascalCase, snake_case, kebab-case, or CONSTANT_CASE</li><li>The converted text appears instantly</li><li>Copy the result with one click</li></ol><p>You can chain conversions — convert to lowercase first, then to camelCase for clean results.</p>"
+            "content": "<ol><li>Ketik atau tempel teks Anda ke area input</li><li>Klik tombol format huruf yang diinginkan: UPPER, lower, Title, Sentence, camelCase, PascalCase, snake_case, kebab-case, atau CONSTANT_CASE</li><li>Teks yang dikonversi muncul secara instan</li><li>Salin hasil dengan satu klik</li></ol><p>Anda dapat merangkai konversi — konversi ke lowercase terlebih dahulu, lalu ke camelCase untuk hasil yang bersih.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>9+ Case Formats</strong>: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE</li><li><strong>Instant Conversion</strong>: Results appear immediately when you click a format</li><li><strong>Multi-Line Support</strong>: Convert multiple lines of text at once</li><li><strong>Smart Parsing</strong>: Correctly splits words from camelCase, snake_case, or other formats</li><li><strong>One-Click Copy</strong>: Copy converted text to clipboard</li><li><strong>Batch Processing</strong>: Process multiple lines simultaneously</li></ul>"
+            "content": "<ul><li><strong>9+ Format Huruf</strong>: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE</li><li><strong>Konversi Instan</strong>: Hasil muncul segera saat Anda mengklik format</li><li><strong>Dukungan Multi-Baris</strong>: Konversi beberapa baris teks sekaligus</li><li><strong>Parsing Cerdas</strong>: Memisahkan kata dengan benar dari camelCase, snake_case, atau format lain</li><li><strong>Salin Sekali Klik</strong>: Salin teks yang dikonversi ke clipboard</li><li><strong>Pemrosesan Batch</strong>: Proses beberapa baris secara bersamaan</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Variable Naming</strong>: Convert between JavaScript camelCase, Python snake_case, and CSS kebab-case</li><li><strong>Database Fields</strong>: Transform column names between different naming conventions</li><li><strong>Content Formatting</strong>: Convert titles to Title Case for headlines and headings</li><li><strong>API Design</strong>: Standardize field names in JSON request/response schemas</li><li><strong>Code Refactoring</strong>: Rename identifiers when switching between naming conventions</li></ul>"
+            "content": "<ul><li><strong>Penamaan Variabel</strong>: Konversi antara JavaScript camelCase, Python snake_case, dan CSS kebab-case</li><li><strong>Field Database</strong>: Ubah nama kolom antara konvensi penamaan yang berbeda</li><li><strong>Pemformatan Konten</strong>: Konversi judul ke Title Case untuk headline dan heading</li><li><strong>Desain API</strong>: Standarisasi nama field dalam skema permintaan/respons JSON</li><li><strong>Refactoring Kode</strong>: Ganti nama identifier saat beralih antara konvensi penamaan</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Text Processing",
-            "content": "<p>Case conversion runs <strong>entirely in your browser</strong> using JavaScript string operations — no server calls.</p><ul><li>File Anda text <strong>tidak pernah meninggalkan perangkat Anda</strong></li><li>No server processing or logging</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Mengutamakan Privasi - Pemrosesan Teks",
+            "content": "<p>Konversi huruf berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan operasi string JavaScript — tidak ada panggilan server.</p><ul><li>Teks Anda <strong>tidak pernah meninggalkan perangkat Anda</strong></li><li>Tidak ada pemrosesan server atau pencatatan</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },
@@ -773,33 +773,33 @@
           "a1": "Lorem Ipsum adalah teks placeholder yang umum digunakan dalam desain dan penerbitan untuk mengisi ruang di mana konten asli akan ditempatkan nantinya.",
           "q2": "Bisakah saya menyesuaikan hasilnya?",
           "a2": "Ya, Anda dapat memilih untuk membuat berdasarkan paragraf, kalimat, atau kata, mengatur jumlah, dan opsional memulai dengan pembuka Lorem Ipsum klasik.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batasan ukuran file?",
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
         "seoContent": {
           "intro": {
             "title": "Apa itu Lorem Ipsum Generator?",
-            "content": "<p><strong>Lorem Ipsum Generator</strong> creates placeholder text for design mockups, wireframes, and prototypes. Generate classic Lorem Ipsum text by paragraphs, sentences, or words with precise control over the amount.</p><p>The industry-standard way to fill layouts with realistic-looking text before final content is ready.</p>"
+            "content": "<p><strong>Lorem Ipsum Generator</strong> membuat teks placeholder untuk mockup desain, wireframe, dan prototipe. Hasilkan teks Lorem Ipsum klasik berdasarkan paragraf, kalimat, atau kata dengan kontrol presisi atas jumlahnya.</p><p>Cara standar industri untuk mengisi tata letak dengan teks yang terlihat realistis sebelum konten final siap.</p>"
           },
           "howToUse": {
             "title": "Cara Menggunakan Lorem Ipsum Generator",
-            "content": "<ol><li>Choose the unit: <strong>paragraphs</strong>, <strong>sentences</strong>, or <strong>words</strong></li><li>Set the amount you need (e.g., 3 paragraphs, 10 sentences, or 50 words)</li><li>Click <strong>Generate</strong> to create the placeholder text</li><li>Copy the result to use in your design or document</li></ol><p>Generated text follows the classic Lorem Ipsum pattern starting with \"Lorem ipsum dolor sit amet...\"</p>"
+            "content": "<ol><li>Pilih unit: <strong>paragraf</strong>, <strong>kalimat</strong>, atau <strong>kata</strong></li><li>Atur jumlah yang Anda butuhkan (misalnya, 3 paragraf, 10 kalimat, atau 50 kata)</li><li>Klik <strong>Buat</strong> untuk membuat teks placeholder</li><li>Salin hasil untuk digunakan dalam desain atau dokumen Anda</li></ol><p>Teks yang dihasilkan mengikuti pola Lorem Ipsum klasik yang dimulai dengan \"Lorem ipsum dolor sit amet...\"</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Three Output Modes</strong>: Generate by paragraphs, sentences, or word count</li><li><strong>Customizable Amount</strong>: Control exactly how much text is generated</li><li><strong>Classic Lorem Ipsum</strong>: Uses the standard Lorem Ipsum word pool</li><li><strong>Instant Generation</strong>: Text appears immediately with no delay</li><li><strong>One-Click Copy</strong>: Copy all generated text to clipboard</li><li><strong>Consistent Output</strong>: Natural-looking text distribution and paragraph lengths</li></ul>"
+            "content": "<ul><li><strong>Tiga Mode Output</strong>: Buat berdasarkan paragraf, kalimat, atau jumlah kata</li><li><strong>Jumlah yang Dapat Disesuaikan</strong>: Kontrol tepat berapa banyak teks yang dihasilkan</li><li><strong>Lorem Ipsum Klasik</strong>: Menggunakan kumpulan kata Lorem Ipsum standar</li><li><strong>Pembuatan Instan</strong>: Teks muncul segera tanpa penundaan</li><li><strong>Salin Sekali Klik</strong>: Salin semua teks yang dihasilkan ke clipboard</li><li><strong>Output Konsisten</strong>: Distribusi teks dan panjang paragraf yang terlihat alami</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Web Design</strong>: Fill page layouts with realistic text to test typography and spacing</li><li><strong>UI Prototyping</strong>: Add placeholder content to wireframes and mockups</li><li><strong>Print Design</strong>: Fill brochures, flyers, and book layouts before final copy</li><li><strong>Presentations</strong>: Add placeholder text to slide templates</li><li><strong>Testing</strong>: Generate sample text data for testing text rendering or truncation</li></ul>"
+            "content": "<ul><li><strong>Desain Web</strong>: Isi tata letak halaman dengan teks realistis untuk menguji tipografi dan spasi</li><li><strong>Prototipe UI</strong>: Tambahkan konten placeholder ke wireframe dan mockup</li><li><strong>Desain Cetak</strong>: Isi brosur, flyer, dan tata letak buku sebelum copy final</li><li><strong>Presentasi</strong>: Tambahkan teks placeholder ke template slide</li><li><strong>Pengujian</strong>: Hasilkan data teks sampel untuk menguji rendering teks atau pemotongan</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Text Generation",
-            "content": "<p>Lorem Ipsum is generated <strong>entirely in your browser</strong> using a local word dictionary — no server calls.</p><ul><li>No data is transmitted — the tool is purely generative</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Mengutamakan Privasi - Pembuatan Teks",
+            "content": "<p>Lorem Ipsum dihasilkan <strong>sepenuhnya di browser Anda</strong> menggunakan kamus kata lokal — tidak ada panggilan server.</p><ul><li>Tidak ada data yang ditransmisikan — alat ini murni generatif</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       }

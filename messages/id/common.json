@@ -2,10 +2,10 @@
   "common": {
     "siteName": "PrivaDeck",
     "siteDescription": "Alat browser all-in-one yang mengutamakan privasi. Tanpa unggah, tanpa pendaftaran, 100% pemrosesan lokal.",
-    "localOnlyIndicator": "Browser Processing Only (Offline Ready)",
-    "compareBefore": "Before",
-    "compareAfter": "After",
-    "compareSaved": "Saved {percent}%",
+    "localOnlyIndicator": "Hanya Diproses di Browser (Siap Offline)",
+    "compareBefore": "Sebelum",
+    "compareAfter": "Sesudah",
+    "compareSaved": "Hemat {percent}%",
     "search": "Cari alat...",
     "searchShortcut": "Ctrl+K",
     "allTools": "Semua Alat",
@@ -43,14 +43,14 @@
       "step3FileDesc": "Dapatkan file yang diproses secara instan. Tanpa menunggu.",
       "step3TextTitle": "Salin atau simpan",
       "step3TextDesc": "Salin output ke clipboard atau simpan.",
-      "howToTitle": "How to use {toolName}"
+      "howToTitle": "Cara menggunakan {toolName}"
     },
     "toggleMenu": "Alihkan menu",
     "switchLanguage": "Ganti bahasa",
     "localeBanner": {
-      "message": "This site is available in {language}",
-      "switchTo": "Switch to {language}",
-      "dismiss": "Dismiss"
+      "message": "Situs ini tersedia dalam bahasa {language}",
+      "switchTo": "Beralih ke bahasa {language}",
+      "dismiss": "Tutup"
     },
     "switchTheme": "Beralih ke tema {theme}",
     "searchPlaceholder": "Cari alat...",
@@ -64,33 +64,33 @@
     "searchOpen": "Buka",
     "searchClose": "Tutup",
     "privacyHint": "Diproses secara lokal — data Anda tidak pernah meninggalkan perangkat.",
-    "ffmpegLoading": "Initializing secure processing engine...",
-    "ffmpegLoadingHint": "One-time WebAssembly download (~30MB)",
-    "installPrompt": "Add PrivaDeck to Home Screen — works offline, opens instantly",
-    "install": "Add",
-    "dismiss": "Dismiss",
+    "ffmpegLoading": "Menginisialisasi mesin pemrosesan aman...",
+    "ffmpegLoadingHint": "Unduhan WebAssembly sekali (~30MB)",
+    "installPrompt": "Tambahkan PrivaDeck ke Layar Beranda — berfungsi offline, terbuka instan",
+    "install": "Tambah",
+    "dismiss": "Tutup",
     "categoryIntro": {
-      "developer": "A comprehensive suite of developer utilities that run entirely in your browser. Format, convert, encode, decode, and analyze data without sending anything to a server. Perfect for handling sensitive configuration files, API keys, and proprietary code.",
-      "image": "Professional image editing tools powered by client-side processing. Resize, compress, convert, crop, and enhance your images with zero upload latency and complete privacy. Supports all major formats including HEIC, WebP, SVG, and more.",
-      "pdf": "Complete PDF toolkit for merging, splitting, compressing, and editing PDF documents. All processing happens locally in your browser — ideal for confidential contracts, financial documents, and sensitive business files.",
-      "video": "Browser-based video editing powered by FFmpeg WebAssembly. Trim, compress, convert, and transform videos without uploading to any server. Supports MP4, WebM, MOV, and more.",
-      "audio": "Edit and convert audio files directly in your browser using FFmpeg WebAssembly. Trim, convert formats, and extract audio from video — all processed locally on your device."
+      "developer": "Rangkaian lengkap alat pengembang yang berjalan sepenuhnya di browser Anda. Format, konversi, enkode, dekode, dan analisis data tanpa mengirim apa pun ke server. Sempurna untuk menangani file konfigurasi sensitif, kunci API, dan kode proprietary.",
+      "image": "Alat penyunting gambar profesional yang didukung pemrosesan sisi klien. Ubah ukuran, kompres, konversi, potong, dan tingkatkan gambar Anda tanpa latensi unggah dan privasi lengkap. Mendukung semua format utama termasuk HEIC, WebP, SVG, dan lainnya.",
+      "pdf": "Perangkat lengkap PDF untuk menggabungkan, memisahkan, mengompres, dan menyunting dokumen PDF. Semua pemrosesan terjadi secara lokal di browser Anda — ideal untuk kontrak rahasia, dokumen keuangan, dan file bisnis sensitif.",
+      "video": "Penyuntingan video berbasis browser yang didukung FFmpeg WebAssembly. Potong, kompres, konversi, dan transformasi video tanpa mengunggah ke server mana pun. Mendukung MP4, WebM, MOV, dan lainnya.",
+      "audio": "Sunting dan konversi file audio langsung di browser Anda menggunakan FFmpeg WebAssembly. Potong, konversi format, dan ekstrak audio dari video — semua diproses secara lokal di perangkat Anda."
     },
-    "ffmpegLoadError": "Failed to load processing engine. Please refresh and try again.",
+    "ffmpegLoadError": "Gagal memuat mesin pemrosesan. Silakan muat ulang dan coba lagi.",
     "unsupportedVideoCodec": "Video ini menggunakan kodek yang tidak didukung oleh browser Anda. Silakan coba browser lain atau konversi video ke format yang didukung (misalnya H.264).",
-    "hevcInstallHint": "Windows users: Install HEVC Video Extensions from Microsoft Store to enable H.265 support.",
+    "hevcInstallHint": "Pengguna Windows: Instal HEVC Video Extensions dari Microsoft Store untuk mengaktifkan dukungan H.265.",
     "aboutThisTool": "Tentang Alat Ini",
-    "featureHighlights": "Key Features",
-    "addMore": "Click or Drop",
-    "addMoreHint": "Add more images",
-    "clearAll": "Clear All",
-    "close": "Close",
+    "featureHighlights": "Fitur Utama",
+    "addMore": "Klik atau Jatuhkan",
+    "addMoreHint": "Tambahkan gambar lainnya",
+    "clearAll": "Hapus Semua",
+    "close": "Tutup",
     "replaceFile": "Ganti"
   },
   "nav": {
     "home": "Beranda",
     "tools": "Alat",
-    "developer": "Developer",
+    "developer": "Pengembang",
     "image": "Gambar",
     "featured": "Alat Unggulan",
     "otherTools": "Alat Lainnya",
@@ -112,8 +112,8 @@
     "featureInstant": "Pemrosesan instan",
     "featureNoUpload": "Tanpa unggah",
     "toolCount": "{count} alat →",
-    "metaTitle": "PrivaDeck — Free Online Privacy-First Tools",
-    "metaDescription": "Free browser-based tools for media, PDF, and developer tasks. 100% local processing, zero uploads, complete privacy."
+    "metaTitle": "PrivaDeck — Alat Online Gratis Berbasis Privasi",
+    "metaDescription": "Alat berbasis browser gratis untuk tugas media, PDF, dan pengembang. Pemrosesan 100% lokal, tanpa unggahan, privasi lengkap."
   },
   "categories": {
     "developer": {
@@ -497,12 +497,12 @@
     }
   },
   "allTools": {
-    "metaTitle": "All Tools",
-    "metaDescription": "Browse all 58+ free online tools for image, video, audio, PDF, and developer tasks. No uploads, 100% private."
+    "metaTitle": "Semua Alat",
+    "metaDescription": "Jelajahi semua 58+ alat online gratis untuk tugas gambar, video, audio, PDF, dan pengembang. Tanpa unggahan, 100% privat."
   },
   "notFound": {
-    "title": "Page Not Found",
-    "searchHint": "Try searching for the tool you need:"
+    "title": "Halaman Tidak Ditemukan",
+    "searchHint": "Coba cari alat yang Anda butuhkan:"
   },
   "featureHighlights": "Fitur Utama"
 }
