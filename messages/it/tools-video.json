@@ -15,33 +15,33 @@
           "a1": "Lo strumento rimuove la traccia audio dal video mantenendo intatta la qualità video. Non è necessaria la ricodifica.",
           "q2": "Quali formati video sono supportati?",
           "a2": "I formati più comuni, tra cui MP4, WebM, MOV e AVI, sono supportati.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "I miei file verranno caricati su un server?",
           "a3": "No. Tutto il trattamento avviene interamente nel browser. I tuoi dati non lasciano mai il dispositivo — nulla viene caricato su alcun server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Posso usare questo strumento offline?",
+          "a4": "Sì. Una volta caricata la pagina, lo strumento funziona completamente offline. Per la migliore esperienza, installa PrivaDeck come PWA dal tuo browser.",
+          "q5": "Ci sono limiti di dimensione file?",
+          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi."
         },
         "seoContent": {
           "intro": {
-            "title": "Che cos'è Mute Video?",
-            "content": "<p><strong>Mute Video</strong> removes the audio track from video files while keeping the video quality intact. Create silent versions of videos for background loops, presentations, or social media posts where audio isn't needed.</p><p>Powered by FFmpeg.wasm — full video processing running locally in your browser.</p>"
+            "title": "Che cos'è Silenzia Video?",
+            "content": "<p><strong>Silenzia Video</strong> rimuove la traccia audio dai file video mantenendo intatta la qualità video. Crea versioni silenziose di video per loop di sfondo, presentazioni o post sui social media dove l'audio non è necessario.</p><p>Alimentato da FFmpeg.wasm — elaborazione video completa in locale nel tuo browser.</p>"
           },
           "howToUse": {
-            "title": "Come utilizzare Mute Video",
-            "content": "<ol><li>Upload a video file (MP4, WebM, MKV, AVI supported)</li><li>Click <strong>Mute</strong> to remove the audio track</li><li>Download the silent video</li></ol><p>The video stream is copied without re-encoding, so processing is fast and quality is preserved.</p>"
+            "title": "Come utilizzare Silenzia Video",
+            "content": "<ol><li>Carica un file video (supportati MP4, WebM, MKV, AVI)</li><li>Clicca <strong>Silenzia</strong> per rimuovere la traccia audio</li><li>Scarica il video silenziato</li></ol><p>Il flusso video viene copiato senza ricodifica, quindi l'elaborazione è veloce e la qualità è preservata.</p>"
           },
           "features": {
             "title": "Caratteristiche principali",
-            "content": "<ul><li><strong>Audio Track Removal</strong>: Completely strips audio while keeping video untouched</li><li><strong>No Re-encoding</strong>: Video stream is copied directly — no quality loss</li><li><strong>Fast Processing</strong>: Stream copy is much faster than re-encoding</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI input</li><li><strong>Powered by FFmpeg.wasm</strong>: Industry-standard video processing in your browser</li><li><strong>Preview</strong>: Play the video before and after muting</li></ul>"
+            "content": "<ul><li><strong>Rimozione traccia audio</strong>: Rimuove completamente l'audio mantenendo il video intatto</li><li><strong>Nessuna ricodifica</strong>: Il flusso video viene copiato direttamente — nessuna perdita di qualità</li><li><strong>Elaborazione veloce</strong>: La copia del flusso è molto più veloce della ricodifica</li><li><strong>Formati multipli</strong>: Supporta input MP4, WebM, MKV e AVI</li><li><strong>Alimentato da FFmpeg.wasm</strong>: Elaborazione video standard del settore nel tuo browser</li><li><strong>Anteprima</strong>: Riproduci il video prima e dopo il silenziamento</li></ul>"
           },
           "useCases": {
             "title": "Casi d'uso comuni",
-            "content": "<ul><li><strong>Presentations</strong>: Remove distracting audio from background videos in slides</li><li><strong>Social Media</strong>: Create silent looping videos for Instagram or TikTok backgrounds</li><li><strong>Web Design</strong>: Prepare silent hero videos for website backgrounds</li><li><strong>Privacy</strong>: Remove conversations or identifiable audio from recordings</li><li><strong>Video Editing</strong>: Strip audio before replacing with a different soundtrack</li></ul>"
+            "content": "<ul><li><strong>Presentazioni</strong>: Rimuovi l'audio di distrazione dai video di sfondo nelle slide</li><li><strong>Social media</strong>: Crea video in loop silenziati per sfondi Instagram o TikTok</li><li><strong>Web design</strong>: Prepara video hero silenziati per sfondi di siti web</li><li><strong>Privacy</strong>: Rimuovi conversazioni o audio identificabile dalle registrazioni</li><li><strong>Editing video</strong>: Elimina l'audio prima di sostituirlo con una colonna sonora diversa</li></ul>"
           },
           "privacy": {
             "title": "Elaborazione video con privacy come priorità",
-            "content": "<p>Video processing runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly).</p><ul><li>Your videos <strong>never leave your device</strong> — no server uploads</li><li>No cloud processing or third-party access to your media</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "content": "<p>L'elaborazione video avviene <strong>interamente nel tuo browser</strong> utilizzando <strong>FFmpeg.wasm</strong> (WebAssembly).</p><ul><li>I tuoi video <strong>non lasciano mai il tuo dispositivo</strong> — nessun caricamento su server</li><li>Nessuna elaborazione cloud o accesso di terze parti ai tuoi media</li><li>Funziona <strong>offline</strong> dopo il caricamento del core FFmpeg</li></ul>"
           }
         },
         "featureCards": {
@@ -95,33 +95,33 @@
           "a1": "Sì, usa i cursori di intervallo per impostare punti di inizio e fine esatti con precisione di 0,1 secondi.",
           "q2": "Il video viene ricodificato?",
           "a2": "Lo strumento usa la modalità di copia del flusso per un'elaborazione veloce senza perdita di qualità.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "I miei file verranno caricati su un server?",
           "a3": "No. Tutto il trattamento avviene interamente nel browser. I tuoi dati non lasciano mai il dispositivo — nulla viene caricato su alcun server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Posso usare questo strumento offline?",
+          "a4": "Sì. Una volta caricata la pagina, lo strumento funziona completamente offline. Per la migliore esperienza, installa PrivaDeck come PWA dal tuo browser.",
+          "q5": "Ci sono limiti di dimensione file?",
+          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi."
         },
         "seoContent": {
           "intro": {
-            "title": "Che cos'è Trim Video?",
-            "content": "<p><strong>Trim Video</strong> cuts video clips to your desired length with precise start and end time controls. Set times down to 0.1-second precision, preview the selection, and download the trimmed clip.</p><p>Uses FFmpeg.wasm for professional-grade video trimming directly in your browser.</p>"
+            "title": "Che cos'è Taglia Video?",
+            "content": "<p><strong>Taglia Video</strong> taglia le clip video alla lunghezza desiderata con controlli precisi di inizio e fine. Imposta i tempi con precisione di 0,1 secondi, visualizza l'anteprima della selezione e scarica la clip tagliata.</p><p>Utilizza FFmpeg.wasm per il ritaglio video professionale direttamente nel tuo browser.</p>"
           },
           "howToUse": {
-            "title": "Come utilizzare Trim Video",
-            "content": "<ol><li>Upload a video file</li><li>Set the <strong>start time</strong> and <strong>end time</strong> for the clip you want to keep</li><li>Preview the selected range in the video player</li><li>Click <strong>Trim</strong> to extract the clip</li><li>Download the trimmed video</li></ol><p>Supports precise time selection with 0.1-second increments.</p>"
+            "title": "Come utilizzare Taglia Video",
+            "content": "<ol><li>Carica un file video</li><li>Imposta l'<strong>ora di inizio</strong> e l'<strong>ora di fine</strong> per la clip che vuoi mantenere</li><li>Visualizza l'anteprima dell'intervallo selezionato nel lettore video</li><li>Clicca <strong>Taglia</strong> per estrarre la clip</li><li>Scarica il video tagliato</li></ol><p>Supporta la selezione precisa del tempo con incrementi di 0,1 secondi.</p>"
           },
           "features": {
             "title": "Caratteristiche principali",
-            "content": "<ul><li><strong>Precise Timing</strong>: Set start and end times with 0.1-second accuracy</li><li><strong>Video Preview</strong>: Play the selected range before trimming</li><li><strong>Fast Processing</strong>: Stream copy mode for instant trimming without re-encoding</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional video processing in the browser</li><li><strong>Quality Preservation</strong>: No quality loss when stream copying</li></ul>"
+            "content": "<ul><li><strong>Tempistica precisa</strong>: Imposta orari di inizio e fine con precisione di 0,1 secondi</li><li><strong>Anteprima video</strong>: Riproduci l'intervallo selezionato prima del taglio</li><li><strong>Elaborazione veloce</strong>: Modalità copia flusso per taglio istantaneo senza ricodifica</li><li><strong>Formati multipli</strong>: Supporta MP4, WebM, MKV e AVI</li><li><strong>Alimentato da FFmpeg.wasm</strong>: Elaborazione video professionale nel browser</li><li><strong>Conservazione qualità</strong>: Nessuna perdita di qualità durante la copia del flusso</li></ul>"
           },
           "useCases": {
             "title": "Casi d'uso comuni",
-            "content": "<ul><li><strong>Social Media Clips</strong>: Cut highlights from longer videos for social platforms</li><li><strong>Meeting Recordings</strong>: Extract key moments from recorded meetings</li><li><strong>Content Creation</strong>: Trim raw footage to create polished clips</li><li><strong>Presentations</strong>: Cut video clips to exact lengths for presentations</li><li><strong>Personal Videos</strong>: Trim home videos to keep the best moments</li></ul>"
+            "content": "<ul><li><strong>Clip social media</strong>: Taglia i momenti salienti da video più lunghi per le piattaforme social</li><li><strong>Registrazioni riunioni</strong>: Estrai i momenti chiave dalle riunioni registrate</li><li><strong>Creazione contenuti</strong>: Taglia il materiale grezzo per creare clip curate</li><li><strong>Presentazioni</strong>: Taglia le clip video a lunghezze esatte per le presentazioni</li><li><strong>Video personali</strong>: Taglia i video domestici per mantenere i momenti migliori</li></ul>"
           },
           "privacy": {
             "title": "Ritaglio video con privacy come priorità",
-            "content": "<p>Video trimming runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server uploads — your personal and business videos stay private</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "content": "<p>Il ritaglio video avviene <strong>interamente nel tuo browser</strong> utilizzando <strong>FFmpeg.wasm</strong>.</p><ul><li>I tuoi video <strong>non lasciano mai il tuo dispositivo</strong></li><li>Nessun caricamento su server — i tuoi video personali e aziendali rimangono privati</li><li>Funziona <strong>offline</strong> dopo il caricamento del core FFmpeg</li></ul>"
           }
         },
         "featureCards": {
@@ -172,33 +172,33 @@
           "a1": "Puoi ruotare i video di 90° (senso orario), 180° (capovolto) o 270° (senso antiorario).",
           "q2": "La rotazione influisce sulla qualità video?",
           "a2": "Il video viene ricodificato durante la rotazione, ma la qualità viene mantenuta a un livello elevato.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "I miei file verranno caricati su un server?",
           "a3": "No. Tutto il trattamento avviene interamente nel browser. I tuoi dati non lasciano mai il dispositivo — nulla viene caricato su alcun server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Posso usare questo strumento offline?",
+          "a4": "Sì. Una volta caricata la pagina, lo strumento funziona completamente offline. Per la migliore esperienza, installa PrivaDeck come PWA dal tuo browser.",
+          "q5": "Ci sono limiti di dimensione file?",
+          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi."
         },
         "seoContent": {
           "intro": {
-            "title": "Che cos'è Rotate Video?",
-            "content": "<p><strong>Rotate Video</strong> rotates video files by 90°, 180°, or 270° to fix orientation issues. Correct sideways phone videos, fix upside-down recordings, or adjust orientation for specific display needs.</p>"
+            "title": "Che cos'è Ruota Video?",
+            "content": "<p><strong>Ruota Video</strong> ruota i file video di 90°, 180° o 270° per correggere problemi di orientamento. Correggi video del telefono in orizzontale, sistema registrazioni capovolte o regola l'orientamento per esigenze di visualizzazione specifiche.</p>"
           },
           "howToUse": {
-            "title": "Come utilizzare Rotate Video",
-            "content": "<ol><li>Upload a video file</li><li>Select the rotation angle: <strong>90°</strong>, <strong>180°</strong>, or <strong>270°</strong></li><li>Click <strong>Rotate</strong> to process</li><li>Download the rotated video</li></ol>"
+            "title": "Come utilizzare Ruota Video",
+            "content": "<ol><li>Carica un file video</li><li>Seleziona l'angolo di rotazione: <strong>90°</strong>, <strong>180°</strong> o <strong>270°</strong></li><li>Clicca <strong>Ruota</strong> per elaborare</li><li>Scarica il video ruotato</li></ol>"
           },
           "features": {
             "title": "Caratteristiche principali",
-            "content": "<ul><li><strong>Three Angles</strong>: Rotate by 90° (clockwise), 180°, or 270° (counter-clockwise)</li><li><strong>Video Preview</strong>: See the video before and after rotation</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional video processing in the browser</li><li><strong>Quality Output</strong>: High-quality rotation with FFmpeg encoding</li><li><strong>Audio Preserved</strong>: Audio track remains synchronized after rotation</li></ul>"
+            "content": "<ul><li><strong>Tre angoli</strong>: Ruota di 90° (orario), 180° o 270° (antiorario)</li><li><strong>Anteprima video</strong>: Visualizza il video prima e dopo la rotazione</li><li><strong>Formati multipli</strong>: Supporta MP4, WebM, MKV e AVI</li><li><strong>Alimentato da FFmpeg.wasm</strong>: Elaborazione video professionale nel browser</li><li><strong>Output di qualità</strong>: Rotazione di alta qualità con codifica FFmpeg</li><li><strong>Audio preservato</strong>: La traccia audio rimane sincronizzata dopo la rotazione</li></ul>"
           },
           "useCases": {
             "title": "Casi d'uso comuni",
-            "content": "<ul><li><strong>Phone Videos</strong>: Fix sideways videos recorded on mobile phones</li><li><strong>Camera Footage</strong>: Correct orientation from cameras mounted at angles</li><li><strong>Screen Recordings</strong>: Rotate screen recordings for vertical display</li><li><strong>Social Media</strong>: Adjust orientation for platform requirements (portrait/landscape)</li><li><strong>Presentations</strong>: Fix video orientation for use in slides</li></ul>"
+            "content": "<ul><li><strong>Video del telefono</strong>: Correggi video in orizzontale registrati sui telefoni cellulari</li><li><strong>Riprese telecamera</strong>: Correggi l'orientamento delle telecamere montate ad angolo</li><li><strong>Registrazioni schermo</strong>: Ruota le registrazioni dello schermo per visualizzazione verticale</li><li><strong>Social media</strong>: Regola l'orientamento per i requisiti delle piattaforme (verticale/orizzontale)</li><li><strong>Presentazioni</strong>: Correggi l'orientamento del video per l'uso nelle slide</li></ul>"
           },
           "privacy": {
             "title": "Elaborazione video con privacy come priorità",
-            "content": "<p>Video rotation runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "content": "<p>La rotazione video avviene <strong>interamente nel tuo browser</strong> utilizzando <strong>FFmpeg.wasm</strong>.</p><ul><li>I tuoi video <strong>non lasciano mai il tuo dispositivo</strong></li><li>Nessuna elaborazione su server o caricamenti</li><li>Funziona <strong>offline</strong> dopo il caricamento del core FFmpeg</li></ul>"
           }
         },
         "featureCards": {
@@ -252,33 +252,33 @@
           "a1": "Riduci gli FPS, la larghezza o la durata. Lo strumento usa una palette ottimizzata per il miglior rapporto qualità/dimensione.",
           "q2": "Qual è la durata massima per un GIF?",
           "a2": "Non c'è un limite fisso, ma GIF più lunghi producono file molto grandi. Consigliamo di mantenere i GIF sotto i 10 secondi.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "I miei file verranno caricati su un server?",
           "a3": "No. Tutto il trattamento avviene interamente nel browser. I tuoi dati non lasciano mai il dispositivo — nulla viene caricato su alcun server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Posso usare questo strumento offline?",
+          "a4": "Sì. Una volta caricata la pagina, lo strumento funziona completamente offline. Per la migliore esperienza, installa PrivaDeck come PWA dal tuo browser.",
+          "q5": "Ci sono limiti di dimensione file?",
+          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi."
         },
         "seoContent": {
           "intro": {
-            "title": "Che cos'è Video to GIF?",
-            "content": "<p><strong>Video to GIF</strong> converts video clips into animated GIF images with control over frame rate, resolution, and quality. Create shareable GIFs from any video for social media, chat, or documentation.</p><p>Powered by FFmpeg.wasm for high-quality GIF generation directly in your browser.</p>"
+            "title": "Che cos'è Video a GIF?",
+            "content": "<p><strong>Video a GIF</strong> converte le clip video in immagini GIF animate con controllo sulla frequenza fotogrammi, risoluzione e qualità. Crea GIF condivisibili da qualsiasi video per social media, chat o documentazione.</p><p>Alimentato da FFmpeg.wasm per la generazione di GIF di alta qualità direttamente nel tuo browser.</p>"
           },
           "howToUse": {
-            "title": "Come utilizzare Video to GIF",
-            "content": "<ol><li>Upload a video file</li><li>Set the start and end time for the GIF clip</li><li>Adjust <strong>frame rate</strong> (fps) and output <strong>width</strong></li><li>Click <strong>Convert</strong> to generate the GIF</li><li>Preview and download the animated GIF</li></ol><p>Lower frame rates and smaller widths produce smaller GIF files.</p>"
+            "title": "Come utilizzare Video a GIF",
+            "content": "<ol><li>Carica un file video</li><li>Imposta l'ora di inizio e fine per la clip GIF</li><li>Regola la <strong>frequenza fotogrammi</strong> (fps) e la <strong>larghezza</strong> di output</li><li>Clicca <strong>Converti</strong> per generare la GIF</li><li>Visualizza l'anteprima e scarica la GIF animata</li></ol><p>Frequenze fotogrammi più basse e larghezze minori producono file GIF più piccoli.</p>"
           },
           "features": {
             "title": "Caratteristiche principali",
-            "content": "<ul><li><strong>Frame Rate Control</strong>: Set GIF frame rate (e.g., 10, 15, 24 fps)</li><li><strong>Size Control</strong>: Adjust output width for file size optimization</li><li><strong>Time Selection</strong>: Choose which part of the video to convert</li><li><strong>Preview</strong>: See the GIF before downloading</li><li><strong>Powered by FFmpeg.wasm</strong>: High-quality palette generation for optimal GIF colors</li><li><strong>Multiple Input Formats</strong>: Convert from MP4, WebM, MKV, AVI</li></ul>"
+            "content": "<ul><li><strong>Controllo frequenza fotogrammi</strong>: Imposta la frequenza fotogrammi GIF (es. 10, 15, 24 fps)</li><li><strong>Controllo dimensione</strong>: Regola la larghezza di output per l'ottimizzazione della dimensione file</li><li><strong>Selezione tempo</strong>: Scegli quale parte del video convertire</li><li><strong>Anteprima</strong>: Visualizza la GIF prima del download</li><li><strong>Alimentato da FFmpeg.wasm</strong>: Generazione palette di alta qualità per colori GIF ottimali</li><li><strong>Formati input multipli</strong>: Converti da MP4, WebM, MKV, AVI</li></ul>"
           },
           "useCases": {
             "title": "Casi d'uso comuni",
-            "content": "<ul><li><strong>Social Media</strong>: Create reaction GIFs or highlights from videos</li><li><strong>Documentation</strong>: Create animated demonstrations for tutorials or docs</li><li><strong>Chat & Messaging</strong>: Make custom GIFs for group chats and Slack</li><li><strong>Bug Reports</strong>: Record and share animated bug reproductions</li><li><strong>Marketing</strong>: Create eye-catching animated content for campaigns</li></ul>"
+            "content": "<ul><li><strong>Social media</strong>: Crea GIF di reazione o momenti salienti dai video</li><li><strong>Documentazione</strong>: Crea dimostrazioni animate per tutorial o documenti</li><li><strong>Chat e messaggistica</strong>: Crea GIF personalizzate per chat di gruppo e Slack</li><li><strong>Segnalazione bug</strong>: Registra e condividi riproduzioni animate di bug</li><li><strong>Marketing</strong>: Crea contenuti animati accattivanti per campagne</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First GIF Creation",
-            "content": "<p>GIF conversion runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing — your content stays private</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "Creazione GIF con privacy come priorità",
+            "content": "<p>La conversione GIF avviene <strong>interamente nel tuo browser</strong> utilizzando <strong>FFmpeg.wasm</strong>.</p><ul><li>I tuoi video <strong>non lasciano mai il tuo dispositivo</strong></li><li>Nessuna elaborazione su server — i tuoi contenuti rimangono privati</li><li>Funziona <strong>offline</strong> dopo il caricamento del core FFmpeg</li></ul>"
           }
         },
         "quality": "Qualità",
@@ -337,33 +337,33 @@
           "a1": "I file WebP animati sono tipicamente 25-35% più piccoli dei GIF equivalenti, supportando una migliore profondità colore e trasparenza.",
           "q2": "Il WebP animato è ampiamente supportato?",
           "a2": "Sì, tutti i browser moderni supportano il WebP animato. Solo browser molto vecchi non lo supportano.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "I miei file verranno caricati su un server?",
           "a3": "No. Tutto il trattamento avviene interamente nel browser. I tuoi dati non lasciano mai il dispositivo — nulla viene caricato su alcun server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Posso usare questo strumento offline?",
+          "a4": "Sì. Una volta caricata la pagina, lo strumento funziona completamente offline. Per la migliore esperienza, installa PrivaDeck come PWA dal tuo browser.",
+          "q5": "Ci sono limiti di dimensione file?",
+          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi."
         },
         "seoContent": {
           "intro": {
-            "title": "Che cos'è Video to WebP?",
-            "content": "<p><strong>Video to WebP</strong> converts video clips into animated WebP images. WebP animations are <strong>25-35% smaller</strong> than equivalent GIFs with better color reproduction and transparency support.</p><p>The modern alternative to GIFs for web use.</p>"
+            "title": "Che cos'è Video a WebP?",
+            "content": "<p><strong>Video a WebP</strong> converte le clip video in immagini WebP animate. Le animazioni WebP sono <strong>25-35% più piccole</strong> delle GIF equivalenti con migliore riproduzione dei colori e supporto trasparenza.</p><p>L'alternativa moderna alle GIF per uso web.</p>"
           },
           "howToUse": {
-            "title": "Come utilizzare Video to WebP",
-            "content": "<ol><li>Upload a video file</li><li>Set the start and end time for the animation clip</li><li>Adjust frame rate and output dimensions</li><li>Click <strong>Convert</strong> to generate the animated WebP</li><li>Download the WebP animation</li></ol>"
+            "title": "Come utilizzare Video a WebP",
+            "content": "<ol><li>Carica un file video</li><li>Imposta l'ora di inizio e fine per la clip di animazione</li><li>Regola la frequenza fotogrammi e le dimensioni di output</li><li>Clicca <strong>Converti</strong> per generare il WebP animato</li><li>Scarica l'animazione WebP</li></ol>"
           },
           "features": {
             "title": "Caratteristiche principali",
-            "content": "<ul><li><strong>Smaller Than GIF</strong>: WebP animations are 25-35% smaller than equivalent GIFs</li><li><strong>Better Colors</strong>: Full 24-bit color depth (vs. GIF's 256 color limit)</li><li><strong>Transparency</strong>: Alpha channel support for transparent animations</li><li><strong>Frame Rate Control</strong>: Adjustable fps for size optimization</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional encoding in the browser</li><li><strong>Wide Browser Support</strong>: Supported by all modern browsers</li></ul>"
+            "content": "<ul><li><strong>Più piccolo delle GIF</strong>: Le animazioni WebP sono 25-35% più piccole delle GIF equivalenti</li><li><strong>Colori migliori</strong>: Profondità colore 24-bit completa (vs. limite 256 colori delle GIF)</li><li><strong>Trasparenza</strong>: Supporto canale alfa per animazioni trasparenti</li><li><strong>Controllo frequenza fotogrammi</strong>: Fps regolabile per ottimizzazione dimensione</li><li><strong>Alimentato da FFmpeg.wasm</strong>: Codifica professionale nel browser</li><li><strong>Supporto browser ampio</strong>: Supportato da tutti i browser moderni</li></ul>"
           },
           "useCases": {
             "title": "Casi d'uso comuni",
-            "content": "<ul><li><strong>Web Performance</strong>: Replace GIFs with smaller WebP animations on websites</li><li><strong>Chat Apps</strong>: Create animated stickers and reactions</li><li><strong>Documentation</strong>: Smaller animated demos for technical documentation</li><li><strong>Social Media</strong>: Create animated content where WebP is supported</li><li><strong>App Design</strong>: Create loading animations and micro-interactions</li></ul>"
+            "content": "<ul><li><strong>Prestazioni web</strong>: Sostituisci le GIF con animazioni WebP più piccole sui siti web</li><li><strong>App di chat</strong>: Crea adesivi animati e reazioni</li><li><strong>Documentazione</strong>: Demo animate più piccole per documentazione tecnica</li><li><strong>Social media</strong>: Crea contenuti animati dove WebP è supportato</li><li><strong>Design app</strong>: Crea animazioni di caricamento e micro-interazioni</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Conversion",
-            "content": "<p>WebP conversion runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "Conversione video con privacy come priorità",
+            "content": "<p>La conversione WebP avviene <strong>interamente nel tuo browser</strong> utilizzando <strong>FFmpeg.wasm</strong>.</p><ul><li>I tuoi video <strong>non lasciano mai il tuo dispositivo</strong></li><li>Nessuna elaborazione su server o caricamenti</li><li>Funziona <strong>offline</strong> dopo il caricamento del core FFmpeg</li></ul>"
           }
         },
         "featureCards": {
@@ -459,16 +459,16 @@
         "codecChecking": "Verifica supporto H.265...",
         "codecHevcNotSupported": "H.265 (HEVC) non è supportato dal tuo browser. Verrà utilizzato H.264.",
         "faq": {
-          "q1": "How does video compression work?",
-          "a1": "The tool re-encodes the video using H.264 with a CRF (Constant Rate Factor) value. In Simple Mode, choose High (CRF 23), Medium (CRF 28), or Low (CRF 35). In Advanced Mode, set CRF manually from 0 to 51, plus encoding speed, resolution, frame rate, audio bitrate, and an optional max bitrate cap.",
-          "q2": "What is the difference between Simple and Advanced Mode?",
-          "a2": "Simple Mode offers three one-click presets (High, Medium, Low) optimized for common scenarios. Advanced Mode gives full control over CRF quality, encoding speed (ultrafast to veryslow), output resolution, frame rate, audio bitrate, and maximum video bitrate — ideal for users who need precise control.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser using FFmpeg.wasm. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I upscale my video to a higher resolution?",
-          "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q1": "Come funziona la compressione video?",
+          "a1": "Lo strumento ricodifica il video utilizzando H.264 con un valore CRF (Constant Rate Factor). In modalità Semplice, scegli Alta (CRF 23), Media (CRF 28) o Bassa (CRF 35). In modalità Avanzata, imposta manualmente il CRF da 0 a 51, più velocità di codifica, risoluzione, frequenza fotogrammi, bitrate audio e un limite massimo di bitrate opzionale.",
+          "q2": "Qual è la differenza tra Modalità Semplice e Avanzata?",
+          "a2": "La modalità Semplice offre tre preset con un clic (Alta, Media, Bassa) ottimizzati per scenari comuni. La modalità Avanzata offre il controllo completo sulla qualità CRF, velocità di codifica (ultrafast a veryslow), risoluzione di output, frequenza fotogrammi, bitrate audio e bitrate video massimo — ideale per utenti che necessitano di controllo preciso.",
+          "q3": "I miei file verranno caricati su un server?",
+          "a3": "No. Tutto il trattamento avviene interamente nel tuo browser utilizzando FFmpeg.wasm. I tuoi dati non lasciano mai il tuo dispositivo — nulla viene caricato su alcun server.",
+          "q4": "Posso aumentare la risoluzione del mio video?",
+          "a4": "No, e per progettazione. Le opzioni di risoluzione e frequenza fotogrammi che superano il video sorgente sono automaticamente disabilitate. L'upscaling aumenterebbe la dimensione del file senza migliorare la qualità reale. Lo strumento esegue solo il downscaling per ridurre la dimensione del file.",
+          "q5": "Ci sono limiti di dimensione file?",
+          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi.",
           "q6": "Quali formati video posso comprimere?",
           "a6": "Puoi caricare qualsiasi formato decodificabile dal browser: MP4, WebM, MOV, MKV, AVI. L'output è sempre MP4 (H.264 + AAC) per massima compatibilità.",
           "q7": "Di quanto posso ridurre la dimensione?",
@@ -478,24 +478,24 @@
         },
         "seoContent": {
           "intro": {
-            "title": "What is Compress Video?",
-            "content": "<p><strong>Compress Video</strong> is a powerful browser-based video compressor that reduces file size without uploading to any server. Choose from three quality presets for quick compression, or switch to <strong>Advanced Mode</strong> for full control over CRF, encoding speed, resolution, frame rate, audio bitrate, and max bitrate cap.</p><p>Powered by FFmpeg.wasm with H.264/AAC encoding — the output plays everywhere. The tool displays detailed video metadata (resolution, duration, bitrate, FPS) and shows a side-by-side comparison after compression.</p>"
+            "title": "Che cos'è Comprimi Video?",
+            "content": "<p><strong>Comprimi Video</strong> è un potente compressore video basato su browser che riduce la dimensione del file senza caricare su alcun server. Scegli tra tre preset di qualità per una compressione rapida, o passa alla <strong>Modalità Avanzata</strong> per il controllo completo su CRF, velocità di codifica, risoluzione, frequenza fotogrammi, bitrate audio e limite massimo bitrate.</p><p>Alimentato da FFmpeg.wasm con codifica H.264/AAC — l'output funziona ovunque. Lo strumento mostra metadati video dettagliati (risoluzione, durata, bitrate, FPS) e una comparazione fianco a fianco dopo la compressione.</p>"
           },
           "howToUse": {
-            "title": "How to Use Compress Video",
-            "content": "<ol><li>Upload a video file — the tool instantly shows resolution, duration, bitrate, and frame rate</li><li>Choose <strong>Simple Mode</strong> (High / Medium / Low presets) or switch to <strong>Advanced Mode</strong> to fine-tune CRF, encoding speed, resolution, FPS, and audio bitrate</li><li>Click <strong>Compress</strong> — a progress bar tracks the encoding</li><li>Compare source vs. compressed video: file size, resolution, bitrate, and reduction percentage</li><li>Preview the compressed video and download it</li></ol><p>Resolution and frame rate options that exceed the source are automatically disabled to prevent unnecessary upscaling.</p>"
+            "title": "Come utilizzare Comprimi Video",
+            "content": "<ol><li>Carica un file video — lo strumento mostra istantaneamente risoluzione, durata, bitrate e frequenza fotogrammi</li><li>Scegli la <strong>Modalità Semplice</strong> (preset Alta / Media / Bassa) o passa alla <strong>Modalità Avanzata</strong> per regolare CRF, velocità di codifica, risoluzione, FPS e bitrate audio</li><li>Clicca <strong>Comprimi</strong> — una barra di avanzamento traccia la codifica</li><li>Confronta video sorgente vs. compresso: dimensione file, risoluzione, bitrate e percentuale di riduzione</li><li>Visualizza l'anteprima del video compresso e scaricalo</li></ol><p>Le opzioni di risoluzione e frequenza fotogrammi che superano la sorgente sono automaticamente disabilitate per prevenire upscaling non necessario.</p>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Simple &amp; Advanced Modes</strong>: Quick presets for beginners; full parameter control for power users</li><li><strong>Video Metadata Display</strong>: See resolution, duration, bitrate, and FPS for both source and compressed video</li><li><strong>Smart Upscale Prevention</strong>: Options exceeding the source resolution or frame rate are disabled</li><li><strong>Adjustable CRF</strong>: Fine-tune quality factor from 0 (lossless) to 51</li><li><strong>9 Encoding Speeds</strong>: From Ultra Fast to Very Slow — slower = smaller file at same quality</li><li><strong>Resolution &amp; FPS Control</strong>: Downscale to 1080p, 720p, 480p, or 360p; reduce frame rate to 30, 24, or 15 fps</li><li><strong>Audio Bitrate Selection</strong>: Choose from 64k to 256k AAC audio</li><li><strong>Max Bitrate Cap</strong>: Optionally limit peak video bitrate for streaming compatibility</li><li><strong>Side-by-Side Comparison</strong>: Full before/after stats table with compression percentage</li><li><strong>H.264 + AAC Output</strong>: MP4 format for universal device compatibility</li></ul>"
+            "title": "Caratteristiche principali",
+            "content": "<ul><li><strong>Modalità Semplice e Avanzata</strong>: Preset rapidi per principianti; controllo completo parametri per utenti esperti</li><li><strong>Visualizzazione metadati video</strong>: Visualizza risoluzione, durata, bitrate e FPS per video sorgente e compresso</li><li><strong>Prevenzione upscaling intelligente</strong>: Le opzioni che superano la risoluzione o frequenza fotogrammi sorgente sono disabilitate</li><li><strong>CRF regolabile</strong>: Regola il fattore qualità da 0 (lossless) a 51</li><li><strong>9 velocità di codifica</strong>: Da Ultra Veloce a Molto Lenta — più lenta = file più piccolo alla stessa qualità</li><li><strong>Controllo risoluzione e FPS</strong>: Riduci a 1080p, 720p, 480p o 360p; riduci frequenza fotogrammi a 30, 24 o 15 fps</li><li><strong>Selezione bitrate audio</strong>: Scegli da 64k a 256k AAC audio</li><li><strong>Limite massimo bitrate</strong>: Limita opzionalmente il bitrate video di picco per compatibilità streaming</li><li><strong>Comparazione fianco a fianco</strong>: Tabella completa statistiche prima/dopo con percentuale compressione</li><li><strong>Output H.264 + AAC</strong>: Formato MP4 per compatibilità universale dispositivi</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>Email Attachments</strong>: Compress videos under 25 MB for Gmail, Outlook, or corporate mail</li><li><strong>Messaging Apps</strong>: Shrink videos for WhatsApp (16 MB limit), Telegram, Signal, or iMessage</li><li><strong>Social Media</strong>: Optimize file size for faster uploads to Instagram, TikTok, X, or YouTube</li><li><strong>Cloud Storage</strong>: Reduce file size to save Google Drive, Dropbox, or iCloud space</li><li><strong>Web &amp; CMS Upload</strong>: Meet upload size limits for WordPress, Shopify, or custom portals</li><li><strong>Video Archiving</strong>: Compress large recordings with High Quality preset for long-term storage</li><li><strong>Low-Bandwidth Sharing</strong>: Use Low Quality preset for quick transfer over slow connections</li></ul>"
+            "title": "Casi d'uso comuni",
+            "content": "<ul><li><strong>Allegati email</strong>: Comprimi video sotto 25 MB per Gmail, Outlook o posta aziendale</li><li><strong>App di messaggistica</strong>: Riduci video per WhatsApp (limite 16 MB), Telegram, Signal o iMessage</li><li><strong>Social media</strong>: Ottimizza dimensione file per upload più veloci su Instagram, TikTok, X o YouTube</li><li><strong>Archiviazione cloud</strong>: Riduci dimensione file per risparmiare spazio Google Drive, Dropbox o iCloud</li><li><strong>Upload web e CMS</strong>: Rispetta i limiti di dimensione upload per WordPress, Shopify o portali personalizzati</li><li><strong>Archiviazione video</strong>: Comprimi registrazioni grandi con preset Alta Qualità per archiviazione a lungo termine</li><li><strong>Condivisione banda bassa</strong>: Usa il preset Bassa Qualità per trasferimento rapido su connessioni lente</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Compression",
-            "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
+            "title": "Compressione video con privacy come priorità",
+            "content": "<p>Ogni video viene compresso <strong>interamente nel tuo browser</strong> utilizzando <strong>FFmpeg.wasm</strong> (WebAssembly). Nessun file viene mai caricato su alcun server.</p><ul><li><strong>Zero contatto server</strong> — i tuoi dati video restano sul tuo dispositivo dall'inizio alla fine</li><li><strong>Nessun account o registrazione</strong> — apri semplicemente la pagina e comprimi</li><li><strong>Funziona offline</strong> dopo il download una tantum del core FFmpeg (~31 MB, in cache dal tuo browser)</li><li>Perfetto per <strong>filmati riservati</strong>: telecamere di sicurezza, registrazioni mediche, prove legali</li></ul>"
           }
         },
         "featureCards": {
@@ -565,33 +565,33 @@
           "a1": "Puoi convertire tra MP4, WebM, MKV e AVI. MP4 e AVI usano la codifica H.264, WebM usa VP9, e MKV usa la copia del flusso per una conversione veloce.",
           "q2": "La qualità video cambierà?",
           "a2": "La conversione in MKV usa la copia del flusso, preservando la qualità esattamente. Le altre conversioni ricodificano con impostazioni di alta qualità.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "I miei file verranno caricati su un server?",
           "a3": "No. Tutto il trattamento avviene interamente nel browser. I tuoi dati non lasciano mai il dispositivo — nulla viene caricato su alcun server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Posso usare questo strumento offline?",
+          "a4": "Sì. Una volta caricata la pagina, lo strumento funziona completamente offline. Per la migliore esperienza, installa PrivaDeck come PWA dal tuo browser.",
+          "q5": "Ci sono limiti di dimensione file?",
+          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi."
         },
         "seoContent": {
           "intro": {
-            "title": "Che cos'è Convert Video Format?",
-            "content": "<p><strong>Convert Video Format</strong> transforms videos between popular formats: MP4, WebM, MKV, and AVI. Need to convert a WebM recording to MP4 for wider compatibility? Or an AVI to WebM for web use? This tool handles it.</p><p>Powered by FFmpeg.wasm for reliable format conversion in your browser.</p>"
+            "title": "Che cos'è Converti Formato Video?",
+            "content": "<p><strong>Converti Formato Video</strong> trasforma i video tra i formati più popolari: MP4, WebM, MKV e AVI. Devi convertire una registrazione WebM in MP4 per maggiore compatibilità? O un AVI in WebM per uso web? Questo strumento lo gestisce.</p><p>Alimentato da FFmpeg.wasm per conversione formato affidabile nel tuo browser.</p>"
           },
           "howToUse": {
-            "title": "Come utilizzare Convert Video Format",
-            "content": "<ol><li>Upload a video file in any supported format</li><li>Select the target format: <strong>MP4</strong>, <strong>WebM</strong>, <strong>MKV</strong>, or <strong>AVI</strong></li><li>Click <strong>Convert</strong> to start processing</li><li>Download the converted video</li></ol><p>MP4 (H.264) is recommended for maximum compatibility across devices and platforms.</p>"
+            "title": "Come utilizzare Converti Formato Video",
+            "content": "<ol><li>Carica un file video in qualsiasi formato supportato</li><li>Seleziona il formato di destinazione: <strong>MP4</strong>, <strong>WebM</strong>, <strong>MKV</strong> o <strong>AVI</strong></li><li>Clicca <strong>Converti</strong> per avviare l'elaborazione</li><li>Scarica il video convertito</li></ol><p>MP4 (H.264) è consigliato per massima compatibilità tra dispositivi e piattaforme.</p>"
           },
           "features": {
             "title": "Caratteristiche principali",
-            "content": "<ul><li><strong>Four Formats</strong>: Convert between MP4, WebM, MKV, and AVI</li><li><strong>H.264 Encoding</strong>: MP4 output uses H.264 for universal compatibility</li><li><strong>VP8/VP9 for WebM</strong>: Proper codec selection for each format</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional encoding in the browser</li><li><strong>Preview</strong>: Play the converted video before downloading</li><li><strong>Audio Preservation</strong>: Audio track is properly transcoded</li></ul>"
+            "content": "<ul><li><strong>Quattro formati</strong>: Converti tra MP4, WebM, MKV e AVI</li><li><strong>Codifica H.264</strong>: L'output MP4 usa H.264 per compatibilità universale</li><li><strong>VP8/VP9 per WebM</strong>: Selezione codec appropriata per ogni formato</li><li><strong>Alimentato da FFmpeg.wasm</strong>: Codifica professionale nel browser</li><li><strong>Anteprima</strong>: Riproduci il video convertito prima del download</li><li><strong>Preservazione audio</strong>: La traccia audio viene trascodificata correttamente</li></ul>"
           },
           "useCases": {
             "title": "Casi d'uso comuni",
-            "content": "<ul><li><strong>Compatibility</strong>: Convert WebM screen recordings to universally playable MP4</li><li><strong>Web Optimization</strong>: Convert videos to WebM for smaller file sizes on the web</li><li><strong>Legacy Support</strong>: Convert modern formats to AVI for older media players</li><li><strong>Editing</strong>: Convert to a format your video editor supports</li><li><strong>Cross-Platform</strong>: Ensure videos play on any device or platform</li></ul>"
+            "content": "<ul><li><strong>Compatibilità</strong>: Converti registrazioni schermo WebM in MP4 universalmente riproducibili</li><li><strong>Ottimizzazione web</strong>: Converti video in WebM per dimensioni file minori sul web</li><li><strong>Supporto legacy</strong>: Converti formati moderni in AVI per lettori multimediali più vecchi</li><li><strong>Editing</strong>: Converti in un formato supportato dal tuo editor video</li><li><strong>Cross-platform</strong>: Assicurati che i video funzionino su qualsiasi dispositivo o piattaforma</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Conversion",
-            "content": "<p>Format conversion runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or cloud encoding</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "Conversione video con privacy come priorità",
+            "content": "<p>La conversione formato avviene <strong>interamente nel tuo browser</strong> utilizzando <strong>FFmpeg.wasm</strong>.</p><ul><li>I tuoi video <strong>non lasciano mai il tuo dispositivo</strong></li><li>Nessuna elaborazione su server o codifica cloud</li><li>Funziona <strong>offline</strong> dopo il caricamento del core FFmpeg</li></ul>"
           }
         },
         "featureCards": {
@@ -644,33 +644,33 @@
           "a1": "720p (1280px di larghezza), 480p (854px di larghezza) e 360p (640px di larghezza). Puoi anche inserire una larghezza personalizzata.",
           "q2": "Le proporzioni vengono preservate?",
           "a2": "Sì, l'altezza viene calcolata automaticamente per mantenere le proporzioni originali.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "I miei file verranno caricati su un server?",
           "a3": "No. Tutto il trattamento avviene interamente nel browser. I tuoi dati non lasciano mai il dispositivo — nulla viene caricato su alcun server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Posso usare questo strumento offline?",
+          "a4": "Sì. Una volta caricata la pagina, lo strumento funziona completamente offline. Per la migliore esperienza, installa PrivaDeck come PWA dal tuo browser.",
+          "q5": "Ci sono limiti di dimensione file?",
+          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi."
         },
         "seoContent": {
           "intro": {
-            "title": "Che cos'è Resize Video?",
-            "content": "<p><strong>Resize Video</strong> changes video resolution with preset options (720p, 480p, 360p) or custom dimensions. Downscale large videos for web, mobile, or social media, or adjust resolution for specific platform requirements.</p>"
+            "title": "Che cos'è Ridimensiona Video?",
+            "content": "<p><strong>Ridimensiona Video</strong> cambia la risoluzione video con opzioni preset (720p, 480p, 360p) o dimensioni personalizzate. Riduci video grandi per web, mobile o social media, o regola la risoluzione per requisiti specifici della piattaforma.</p>"
           },
           "howToUse": {
-            "title": "Come utilizzare Resize Video",
-            "content": "<ol><li>Upload a video file</li><li>Select a preset resolution (<strong>720p</strong>, <strong>480p</strong>, <strong>360p</strong>) or enter custom dimensions</li><li>Click <strong>Resize</strong> to process</li><li>Download the resized video</li></ol><p>Aspect ratio is maintained automatically to prevent distortion.</p>"
+            "title": "Come utilizzare Ridimensiona Video",
+            "content": "<ol><li>Carica un file video</li><li>Seleziona una risoluzione preset (<strong>720p</strong>, <strong>480p</strong>, <strong>360p</strong>) o inserisci dimensioni personalizzate</li><li>Clicca <strong>Ridimensiona</strong> per elaborare</li><li>Scarica il video ridimensionato</li></ol><p>Il rapporto d'aspetto viene mantenuto automaticamente per prevenire distorsioni.</p>"
           },
           "features": {
             "title": "Caratteristiche principali",
-            "content": "<ul><li><strong>Preset Resolutions</strong>: Quick-select 720p, 480p, or 360p</li><li><strong>Custom Dimensions</strong>: Enter specific width and height</li><li><strong>Aspect Ratio Lock</strong>: Automatically maintains video proportions</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional-grade video scaling</li><li><strong>Multiple Formats</strong>: Resize MP4, WebM, MKV, and AVI</li><li><strong>Preview</strong>: Play the resized video before downloading</li></ul>"
+            "content": "<ul><li><strong>Risoluzioni preset</strong>: Selezione rapida 720p, 480p o 360p</li><li><strong>Dimensioni personalizzate</strong>: Inserisci larghezza e altezza specifiche</li><li><strong>Blocco rapporto d'aspetto</strong>: Mantiene automaticamente le proporzioni video</li><li><strong>Alimentato da FFmpeg.wasm</strong>: Scaling video professionale</li><li><strong>Formati multipli</strong>: Ridimensiona MP4, WebM, MKV e AVI</li><li><strong>Anteprima</strong>: Riproduci il video ridimensionato prima del download</li></ul>"
           },
           "useCases": {
             "title": "Casi d'uso comuni",
-            "content": "<ul><li><strong>Social Media</strong>: Resize for Instagram, TikTok, or YouTube requirements</li><li><strong>Mobile Optimization</strong>: Downscale 4K/1080p videos for mobile viewing</li><li><strong>Web Embedding</strong>: Resize for optimal web player dimensions</li><li><strong>Storage Savings</strong>: Reduce resolution to save storage space</li><li><strong>Email</strong>: Downscale videos for email-friendly file sizes</li></ul>"
+            "content": "<ul><li><strong>Social media</strong>: Ridimensiona per i requisiti di Instagram, TikTok o YouTube</li><li><strong>Ottimizzazione mobile</strong>: Riduci video 4K/1080p per visualizzazione mobile</li><li><strong>Embedding web</strong>: Ridimensiona per dimensioni ottimali lettore web</li><li><strong>Risparmio archiviazione</strong>: Riduci la risoluzione per risparmiare spazio di archiviazione</li><li><strong>Email</strong>: Riduci video per dimensioni file compatibili con email</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Resizing",
-            "content": "<p>Video resizing runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "title": "Ridimensionamento video con privacy come priorità",
+            "content": "<p>Il ridimensionamento video avviene <strong>interamente nel tuo browser</strong> utilizzando <strong>FFmpeg.wasm</strong>.</p><ul><li>I tuoi video <strong>non lasciano mai il tuo dispositivo</strong></li><li>Nessuna elaborazione su server o caricamenti</li><li>Funziona <strong>offline</strong> dopo il caricamento del core FFmpeg</li></ul>"
           }
         },
         "featureCards": {
@@ -735,37 +735,37 @@
         "sampleRate": "Frequenza di Campionamento",
         "channels": "Canali",
         "faq": {
-          "q1": "What information can this tool detect?",
-          "a1": "It detects video codec (H.264, VP9, AV1, etc.), audio codec (AAC, Opus, MP3, etc.), resolution, frame rate, bitrate, pixel format, sample rate, channel layout, and container format.",
-          "q2": "Which video formats are supported?",
-          "a2": "Most common formats including MP4, WebM, MKV, AVI, MOV, and more are supported through FFmpeg.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "How is this different from just checking file properties?",
-          "a4": "Operating system file properties usually show only basic information like file size and type. This tool uses FFmpeg to extract detailed stream-level metadata including exact codec, profile, pixel format, and per-stream bitrates.",
-          "q5": "Can I use this tool offline?",
-          "a5": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser."
+          "q1": "Quali informazioni può rilevare questo strumento?",
+          "a1": "Rileva codec video (H.264, VP9, AV1, ecc.), codec audio (AAC, Opus, MP3, ecc.), risoluzione, frequenza fotogrammi, bitrate, formato pixel, frequenza di campionamento, layout canali e formato contenitore.",
+          "q2": "Quali formati video sono supportati?",
+          "a2": "La maggior parte dei formati comuni inclusi MP4, WebM, MKV, AVI, MOV e altri sono supportati tramite FFmpeg.",
+          "q3": "I miei file verranno caricati su un server?",
+          "a3": "No. Tutto il trattamento avviene interamente nel tuo browser. I tuoi dati non lasciano mai il tuo dispositivo — nulla viene caricato su alcun server.",
+          "q4": "In cosa differisce dal semplice controllo delle proprietà file?",
+          "a4": "Le proprietà file del sistema operativo mostrano solitamente solo informazioni di base come dimensione file e tipo. Questo strumento usa FFmpeg per estrarre metadati dettagliati a livello di flusso inclusi codec esatto, profilo, formato pixel e bitrate per flusso.",
+          "q5": "Posso usare questo strumento offline?",
+          "a5": "Sì. Una volta caricata la pagina, lo strumento funziona completamente offline. Per la migliore esperienza, installa PrivaDeck come PWA dal tuo browser."
         },
         "seoContent": {
           "intro": {
-            "title": "What is Video Info?",
-            "content": "<p><strong>Video Info</strong> is a free online tool that inspects and displays detailed metadata from your video files.</p>"
+            "title": "Che cos'è Info Video?",
+            "content": "<p><strong>Info Video</strong> è uno strumento online gratuito che ispeziona e visualizza metadati dettagliati dai tuoi file video.</p>"
           },
           "howToUse": {
-            "title": "How to Use Video Info",
-            "content": "<ol><li>Upload your video file.</li><li>View basic metadata instantly.</li><li>Click <strong>Analyze Video</strong> for deep inspection.</li><li>Copy all metadata as text.</li></ol>"
+            "title": "Come utilizzare Info Video",
+            "content": "<ol><li>Carica il tuo file video.</li><li>Visualizza i metadati di base istantaneamente.</li><li>Clicca <strong>Analizza Video</strong> per ispezione approfondita.</li><li>Copia tutti i metadati come testo.</li></ol>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li>Two-layer analysis</li><li>Stream-level detail</li><li>Codec detection</li><li>One-click copy</li></ul>"
+            "title": "Caratteristiche principali",
+            "content": "<ul><li>Analisi a due livelli</li><li>Dettaglio a livello di flusso</li><li>Rilevazione codec</li><li>Copia con un clic</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li>Pre-processing check</li><li>Compatibility check</li><li>Debugging playback issues</li><li>Quality assessment</li></ul>"
+            "title": "Casi d'uso comuni",
+            "content": "<ul><li>Controllo pre-elaborazione</li><li>Controllo compatibilità</li><li>Debug problemi riproduzione</li><li>Valutazione qualità</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Inspection",
-            "content": "<p>Video analysis runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p>"
+            "title": "Ispezione video con privacy come priorità",
+            "content": "<p>L'analisi video avviene <strong>interamente nel tuo browser</strong> utilizzando <strong>FFmpeg.wasm</strong>.</p>"
           }
         },
         "startTime": "Tempo di Inizio",
@@ -778,33 +778,33 @@
           "count": "6",
           "f1": {
             "icon": "BarChart3",
-            "title": "Check Video Metadata Free Online",
-            "description": "Inspect codec, resolution, bitrate, duration instantly. No software, no upload, get detailed info in seconds."
+            "title": "Controlla Metadati Video Gratis Online",
+            "description": "Ispeziona codec, risoluzione, bitrate, durata istantaneamente. Nessun software, nessun upload, ottieni informazioni dettagliate in secondi."
           },
           "f2": {
             "icon": "FileVideo",
-            "title": "Deep Video & Audio Analysis",
-            "description": "See separate stream details. Video codec, audio codec, pixel format, sample rate — all technical data exposed."
+            "title": "Analisi Approfondita Video e Audio",
+            "description": "Visualizza dettagli flusso separati. Codec video, codec audio, formato pixel, frequenza campionamento — tutti i dati tecnici esposti."
           },
           "f3": {
             "icon": "Gauge",
-            "title": "Detect H.264, H.265, VP9, AV1",
-            "description": "Identifies all major codecs. Know exactly what format your video is before editing or converting."
+            "title": "Rileva H.264, H.265, VP9, AV1",
+            "description": "Identifica tutti i codec principali. Sappi esattamente in che formato è il tuo video prima di editarlo o convertirlo."
           },
           "f4": {
             "icon": "Zap",
-            "title": "Copy All Data with One Click",
-            "description": "Export complete metadata as formatted text. Perfect for troubleshooting, documentation, or sharing specs."
+            "title": "Copia Tutti i Dati con un Clic",
+            "description": "Esporta metadati completi come testo formattato. Perfetto per troubleshooting, documentazione o condivisione specifiche."
           },
           "f5": {
             "icon": "Shield",
-            "title": "Frame Thumbnail Preview",
-            "description": "Visual preview confirms you're checking the right file. See the video while viewing its technical details."
+            "title": "Anteprima Miniatura Fotogramma",
+            "description": "L'anteprima visiva conferma che stai controllando il file giusto. Visualizza il video mentre ne esamini i dettagli tecnici."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "100% Private - No File Upload",
-            "description": "Analysis runs entirely in your browser. Your video never leaves your device, not even for inspection."
+            "title": "100% Privato - Nessun Upload File",
+            "description": "L'analisi avviene interamente nel tuo browser. Il tuo video non lascia mai il tuo dispositivo, nemmeno per l'ispezione."
           }
         }
       }
