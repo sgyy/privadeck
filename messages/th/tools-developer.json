@@ -19,33 +19,33 @@
           "a1": "จัดรูปแบบ (pretty-print) ข้อมูล JSON ด้วยการย่อหน้าที่ถูกต้อง ตรวจสอบไวยากรณ์ JSON และสามารถย่อ JSON โดยลบช่องว่าง",
           "q2": "ข้อมูลของฉันปลอดภัยไหม?",
           "a2": "ปลอดภัย การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่เคยออกจากอุปกรณ์",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร JSON Formatter?",
-            "content": "<p><strong>JSON Formatter</strong> is a free browser-based tool for formatting, validating, and minifying JSON data. Paste messy or minified JSON and instantly get clean, human-readable output with proper indentation and syntax highlighting.</p><p>Whether you're debugging API responses, reviewing configuration files, or preparing data for documentation, this tool makes JSON easy to read and verify — all without leaving your browser.</p>"
+            "title": "JSON Formatter คืออะไร?",
+            "content": "<p><strong>JSON Formatter</strong> เป็นเครื่องมือฟรีที่ทำงานบนเบราว์เซอร์สำหรับจัดรูปแบบ ตรวจสอบ และย่อข้อมูล JSON วาง JSON ที่ยุ่งเหยิงหรือถูกย่อแล้วรับผลลัพธ์ที่สะอาด อ่านง่าย พร้อมการย่อหน้าที่เหมาะสมและการเน้นสีไวยากรณ์ทันที</p><p>ไม่ว่าคุณจะกำลังดีบั๊ก API responses ตรวจสอบไฟล์การตั้งค่า หรือเตรียมข้อมูลสำหรับเอกสาร เครื่องมือนี้ทำให้ JSON อ่านและตรวจสอบได้ง่าย — ทั้งหมดโดยไม่ต้องออกจากเบราว์เซอร์ของคุณ</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ JSON Formatter",
-            "content": "<ol><li>Paste or type your JSON data into the input area</li><li>Choose your preferred indentation level (2 or 4 spaces)</li><li>Click <strong>Format</strong> to pretty-print, <strong>Minify</strong> to compress, or <strong>Validate</strong> to check syntax</li><li>Copy the formatted result or download it as a file</li></ol><p>Invalid JSON is highlighted with a clear error message showing exactly where the syntax issue is.</p>"
+            "title": "วิธีใช้ตัวจัดรูปแบบ JSON",
+            "content": "<ol><li>วางหรือพิมพ์ข้อมูล JSON ของคุณลงในพื้นที่ป้อนข้อมูล</li><li>เลือกระดับการย่อหน้าที่ต้องการ (2 หรือ 4 ช่องว่าง)</li><li>คลิก <strong>จัดรูปแบบ</strong> เพื่อพิมพ์สวยงาม <strong>ย่อ</strong> เพื่อบีบอัด หรือ <strong>ตรวจสอบ</strong> เพื่อตรวจสอบไวยากรณ์</li><li>คัดลอกผลลัพธ์ที่จัดรูปแบบแล้วหรือดาวน์โหลดเป็นไฟล์</li></ol><p>JSON ที่ไม่ถูกต้องจะถูกเน้นด้วยข้อความแสดงข้อผิดพลาดที่ชัดเจนแสดงตำแหน่งที่มีปัญหาไวยากรณ์</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Pretty Print</strong>: Format JSON with customizable indentation (2 or 4 spaces)</li><li><strong>Minify</strong>: Compress JSON by removing all whitespace for compact storage or transmission</li><li><strong>Validate</strong>: Instantly check whether your JSON is syntactically correct with detailed error reporting</li><li><strong>Syntax Highlighting</strong>: Color-coded keys, strings, numbers, booleans, and nulls for easy reading</li><li><strong>Large Data Support</strong>: Handles large JSON files without performance issues</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
+            "content": "<ul><li><strong>พิมพ์สวยงาม</strong>: จัดรูปแบบ JSON ด้วยการย่อหน้าที่ปรับแต่งได้ (2 หรือ 4 ช่องว่าง)</li><li><strong>ย่อ</strong>: บีบอัด JSON โดยลบช่องว่างทั้งหมดเพื่อการจัดเก็บหรือส่งข้อมูลที่กระทัดรัด</li><li><strong>ตรวจสอบ</strong>: ตรวจสอบทันทีว่า JSON ของคุณถูกต้องตามไวยากรณ์หรือไม่ พร้อมรายงานข้อผิดพลาดโดยละเอียด</li><li><strong>เน้นสีไวยากรณ์</strong>: คีย์ สตริง ตัวเลข บูลีน และ null มีสีแตกต่างกันเพื่อการอ่านที่ง่าย</li><li><strong>รองรับข้อมูลขนาดใหญ่</strong>: จัดการไฟล์ JSON ขนาดใหญ่ได้โดยไม่มีปัญหาด้านประสิทธิภาพ</li><li><strong>ทำงานบนเบราว์เซอร์ 100%</strong>: ไม่มีการอัปโหลดไปเซิร์ฟเวอร์ — ข้อมูลของคุณอยู่บนอุปกรณ์</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>API Development</strong>: Format raw API responses for debugging and inspection</li><li><strong>Configuration Files</strong>: Clean up package.json, tsconfig.json, or other config files</li><li><strong>Data Validation</strong>: Quickly verify JSON payloads before sending to APIs</li><li><strong>Documentation</strong>: Prepare well-formatted JSON examples for technical docs</li><li><strong>Database Records</strong>: Inspect and format JSON stored in NoSQL databases</li></ul>"
+            "content": "<ul><li><strong>การพัฒนา API</strong>: จัดรูปแบบ API responses ดิบสำหรับการดีบั๊กและตรวจสอบ</li><li><strong>ไฟล์การตั้งค่า</strong>: จัดระเบียบ package.json, tsconfig.json หรือไฟล์การตั้งค่าอื่นๆ</li><li><strong>การตรวจสอบข้อมูล</strong>: ตรวจสอบ JSON payloads อย่างรวดเร็วก่อนส่งไปยัง API</li><li><strong>เอกสาร</strong>: เตรียมตัวอย่าง JSON ที่จัดรูปแบบดีสำหรับเอกสารเทคนิค</li><li><strong>บันทึกฐานข้อมูล</strong>: ตรวจสอบและจัดรูปแบบ JSON ที่จัดเก็บในฐานข้อมูล NoSQL</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว JSON Processing",
-            "content": "<p>Your JSON data is processed <strong>entirely in your browser</strong> using native JavaScript parsing. No data is transmitted to any server.</p><ul><li>Your data <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — zero network requests during processing</li><li>ปลอดภัยสำหรับ sensitive API keys, tokens, and configuration data</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก the page loads</li></ul>"
+            "title": "การประมวลผล JSON ที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>ข้อมูล JSON ของคุณได้รับการประมวลผล <strong>ทั้งหมดในเบราว์เซอร์ของคุณ</strong> โดยใช้การแยกวิเคราะห์ JavaScript แบบดั้งเดิม ไม่มีข้อมูลถูกส่งไปยังเซิร์ฟเวอร์ใดๆ</p><ul><li>ข้อมูลของคุณ <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — ไม่มีคำขอเครือข่ายระหว่างการประมวลผล</li><li>ปลอดภัยสำหรับ API keys, tokens และข้อมูลการตั้งค่าที่ละเอียดอ่อน</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บแล้ว</li></ul>"
           }
         }
       },
@@ -64,33 +64,33 @@
           "a1": "Base64 เป็นรูปแบบการเข้ารหัสไบนารีเป็นข้อความที่แปลงข้อมูลไบนารีเป็นอักขระ ASCII ใช้กันทั่วไปในข้อมูล URL, ไฟล์แนบอีเมล และเนื้อหา API",
           "q2": "สามารถเข้ารหัสไฟล์ได้ไหม?",
           "a2": "ปัจจุบันเครื่องมือนี้เข้ารหัสและถอดรหัสข้อความ การเข้ารหัสไฟล์ Base64 จะพร้อมใช้งานในการอัปเดตในอนาคต",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร Base64 Encoder/Decoder?",
-            "content": "<p><strong>Base64 Encoder/Decoder</strong> แปลงข้อความเป็นการเข้ารหัส Base64 และกลับ. Base64 เป็นโครงการเข้ารหัสไบนารีเป็นข้อความ มักใช้เพื่อฝังข้อมูลในURL, emails, HTML, and JSON where binary data isn't supported.</p><p>เข้ารหัสข้อความใดๆทันที string to Base64 or ถอดรหัสสตริง Base64 กลับเป็นข้อความที่อ่านได้ — no software required.</p>"
+            "title": "Base64 Encoder/Decoder คืออะไร?",
+            "content": "<p><strong>Base64 Encoder/Decoder</strong> แปลงข้อความเป็นการเข้ารหัส Base64 และกลับ Base64 เป็นรูปแบบการเข้ารหัสไบนารีเป็นข้อความ มักใช้เพื่อฝังข้อมูลใน URL, อีเมล, HTML และ JSON ที่ไม่รองรับข้อมูลไบนารี</p><p>เข้ารหัสข้อความใดๆ เป็น Base64 ทันที หรือถอดรหัสสตริง Base64 กลับเป็นข้อความที่อ่านได้ — ไม่ต้องใช้ซอฟต์แวร์</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ Base64 Encoder/Decoder",
-            "content": "<ol><li>ป้อนข้อความของคุณในช่องป้อนข้อมูล</li><li>Select <strong>Encode</strong> to convert text to Base64, or <strong>Decode</strong> to convert Base64 back to text</li><li>ผลลัพธ์ปรากฏขึ้นทันที in the output area</li><li>Click <strong>Copy</strong> to copy the result to your clipboard</li></ol><p>สนับสนุนข้อความ UTF-8 including special characters, emojis, and non-Latin scripts.</p>"
+            "title": "วิธีใช้เครื่องมือเข้ารหัส/ถอดรหัส Base64",
+            "content": "<ol><li>ป้อนข้อความของคุณในช่องป้อนข้อมูล</li><li>เลือก <strong>เข้ารหัส</strong> เพื่อแปลงข้อความเป็น Base64 หรือ <strong>ถอดรหัส</strong> เพื่อแปลง Base64 กลับเป็นข้อความ</li><li>ผลลัพธ์ปรากฏขึ้นทันทีในพื้นที่เอาต์พุต</li><li>คลิก <strong>คัดลอก</strong> เพื่อคัดลอกผลลัพธ์ไปยังคลิปบอร์ด</li></ol><p>รองรับข้อความ UTF-8 รวมถึงอักขระพิเศษ อีโมจิ และสคริปต์ที่ไม่ใช่ละติน</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>การเข้ารหัสทันที</strong>: Convert text to Base64 in real-time as you type</li><li><strong>การถอดรหัสทันที</strong>: Decode Base64 strings back to readable text</li><li><strong>การสนับสนุน UTF-8</strong>: Correctly handles Unicode characters, emojis, and multi-byte text</li><li><strong>การตรวจจับข้อผิดพลาด</strong>: Alerts when input is not valid Base64 during decoding</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: Copy results to clipboard instantly</li><li><strong>ไม่มีข้อจำกัดขนาด</strong>: Process text of any length</li></ul>"
+            "content": "<ul><li><strong>การเข้ารหัสทันที</strong>: แปลงข้อความเป็น Base64 แบบเรียลไทม์ขณะที่คุณพิมพ์</li><li><strong>การถอดรหัสทันที</strong>: ถอดรหัสสตริง Base64 กลับเป็นข้อความที่อ่านได้</li><li><strong>การรองรับ UTF-8</strong>: จัดการอักขระ Unicode อีโมจิ และข้อความหลายไบต์ได้อย่างถูกต้อง</li><li><strong>การตรวจจับข้อผิดพลาด</strong>: แจ้งเตือนเมื่อข้อมูลป้อนไม่ใช่ Base64 ที่ถูกต้องระหว่างการถอดรหัส</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: คัดลอกผลลัพธ์ไปยังคลิปบอร์ดทันที</li><li><strong>ไม่มีข้อจำกัดขนาด</strong>: ประมวลผลข้อความได้ทุกความยาว</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>Data URIs</strong>: Encode images or fonts as Base64 data URIs for embedding in HTML/CSS</li><li><strong>API Authentication</strong>: Encode credentials for HTTP Basic Authentication headers</li><li><strong>Email Attachments</strong>: Encode/decode MIME attachments in email protocols</li><li><strong>JWT Tokens</strong>: Decode JWT token payloads for inspection</li><li><strong>Configuration</strong>: Encode binary data for inclusion in JSON or YAML config files</li></ul>"
+            "content": "<ul><li><strong>Data URIs</strong>: เข้ารหัสรูปภาพหรือฟอนต์เป็น Base64 data URIs สำหรับฝังใน HTML/CSS</li><li><strong>API Authentication</strong>: เข้ารหัสข้อมูลประจำตัวสำหรับ HTTP Basic Authentication headers</li><li><strong>Email Attachments</strong>: เข้ารหัส/ถอดรหัส MIME attachments ในโปรโตคอลอีเมล</li><li><strong>JWT Tokens</strong>: ถอดรหัส JWT token payloads สำหรับการตรวจสอบ</li><li><strong>Configuration</strong>: เข้ารหัสข้อมูลไบนารีเพื่อรวมในไฟล์การตั้งค่า JSON หรือ YAML</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Base64 Processing",
-            "content": "<p>All encoding and decoding happens <strong>โดยตรงในเบราว์เซอร์ของคุณ</strong> using the built-in <code>btoa()</code> and <code>atob()</code> APIs.</p><ul><li>Your text <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — เหมาะสำหรับการเข้ารหัสข้อมูลประจำตัวที่ละเอียดอ่อน or tokens</li><li>ไม่มีการประมวลผลหรือบันทึกด้านเซิร์ฟเวอร์</li><li>Works completely <strong>offline</strong> after initial page load</li></ul>"
+            "title": "การประมวลผล Base64 ที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>การเข้ารหัสและถอดรหัสทั้งหมดเกิดขึ้น <strong>โดยตรงในเบราว์เซอร์ของคุณ</strong> โดยใช้ API ในตัว <code>btoa()</code> และ <code>atob()</code></p><ul><li>ข้อความของคุณ <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — เหมาะสำหรับการเข้ารหัสข้อมูลประจำตัวที่ละเอียดอ่อนหรือ tokens</li><li>ไม่มีการประมวลผลหรือบันทึกด้านเซิร์ฟเวอร์</li><li>ทำงานแบบ <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บครั้งแรก</li></ul>"
           }
         }
       },
@@ -111,33 +111,33 @@
           "a1": "การเข้ารหัส URL แปลงอักขระพิเศษเป็นรูปแบบ percent-encoded (เช่น ช่องว่างกลายเป็น %20) เพื่อให้สามารถใช้งานได้อย่างปลอดภัยในที่อยู่เว็บ",
           "q2": "ความแตกต่างระหว่างเข้ารหัสและเข้ารหัสส่วนประกอบคืออะไร?",
           "a2": "เข้ารหัสจะแปลง URL ทั้งหมดโดยรักษาอักขระโครงสร้างเช่น / และ ? ไว้ เข้ารหัสส่วนประกอบจะเข้ารหัสทุกอย่างรวมถึงอักขระเหล่านั้น เหมาะสำหรับค่าพารามิเตอร์ของคิวรี",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร URL Encoder/Decoder?",
-            "content": "<p><strong>URL Encoder/Decoder</strong> converts special characters in URLs to their percent-encoded equivalents and back. This is essential for creating valid URLs that contain spaces, ampersands, non-ASCII characters, or other reserved characters.</p><p>Use it to safely pass query parameters, encode file paths, or debug malformed URLs.</p>"
+            "title": "URL Encoder/Decoder คืออะไร?",
+            "content": "<p><strong>URL Encoder/Decoder</strong> แปลงอักขระพิเศษใน URL เป็นรูปแบบ percent-encoded และกลับ สิ่งนี้จำเป็นสำหรับการสร้าง URL ที่ถูกต้องซึ่งมีช่องว่าง เครื่องหมายแอมเพอร์แซนด์ อักขระที่ไม่ใช่ ASCII หรืออักขระสงวนอื่นๆ</p><p>ใช้เพื่อส่งพารามิเตอร์คิวรีอย่างปลอดภัย เข้ารหัสเส้นทางไฟล์ หรือดีบั๊ก URL ที่ผิดรูปแบบ</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ URL Encoder/Decoder",
-            "content": "<ol><li>Enter your text or URL component in the input field</li><li>Select <strong>Encode</strong> to percent-encode special characters, or <strong>Decode</strong> to convert encoded URLs back to readable text</li><li>The result updates instantly</li><li>Click <strong>Copy</strong> to copy the encoded/decoded result</li></ol><p>Encodes all characters that are unsafe in URLs per RFC 3986, including spaces, &amp;, =, ?, #, and non-ASCII characters.</p>"
+            "title": "วิธีใช้เครื่องมือเข้ารหัส/ถอดรหัส URL",
+            "content": "<ol><li>ป้อนข้อความหรือส่วนประกอบ URL ในช่องป้อนข้อมูล</li><li>เลือก <strong>เข้ารหัส</strong> เพื่อเข้ารหัสอักขระพิเศษแบบ percent-encode หรือ <strong>ถอดรหัส</strong> เพื่อแปลง URL ที่เข้ารหัสกลับเป็นข้อความที่อ่านได้</li><li>ผลลัพธ์อัปเดตทันที</li><li>คลิก <strong>คัดลอก</strong> เพื่อคัดลอกผลลัพธ์ที่เข้ารหัส/ถอดรหัส</li></ol><p>เข้ารหัสอักขระทั้งหมดที่ไม่ปลอดภัยใน URL ตาม RFC 3986 รวมถึงช่องว่าง &amp;, =, ?, # และอักขระที่ไม่ใช่ ASCII</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>RFC 3986 Compliant</strong>: Encodes all reserved and unsafe URL characters correctly</li><li><strong>Real-Time Processing</strong>: Results update as you type</li><li><strong>Unicode Support</strong>: Correctly handles international characters and emojis in URLs</li><li><strong>Component Encoding</strong>: Encodes individual URL components (query params, path segments)</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: Instantly copy encoded results</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
+            "content": "<ul><li><strong>สอดคล้องกับ RFC 3986</strong>: เข้ารหัสอักขระสงวนและอักขระที่ไม่ปลอดภัยใน URL ได้อย่างถูกต้อง</li><li><strong>การประมวลผลแบบเรียลไทม์</strong>: ผลลัพธ์อัปเดตขณะที่คุณพิมพ์</li><li><strong>รองรับ Unicode</strong>: จัดการอักขระนานาชาติและอีโมจิใน URL ได้อย่างถูกต้อง</li><li><strong>การเข้ารหัสส่วนประกอบ</strong>: เข้ารหัสส่วนประกอบ URL แต่ละส่วน (พารามิเตอร์คิวรี เส้นทาง)</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: คัดลอกผลลัพธ์ที่เข้ารหัสทันที</li><li><strong>ทำงานบนเบราว์เซอร์ 100%</strong>: ไม่มีการอัปโหลดไปเซิร์ฟเวอร์ — ข้อมูลของคุณอยู่บนอุปกรณ์</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>Query Parameters</strong>: Encode values for safe inclusion in URL query strings</li><li><strong>API Requests</strong>: Properly encode request parameters for REST APIs</li><li><strong>Redirect URLs</strong>: Encode callback URLs for OAuth flows and redirects</li><li><strong>File Paths</strong>: Encode file names with spaces or special characters for web servers</li><li><strong>Debugging</strong>: Decode mangled URLs to see the original text</li></ul>"
+            "content": "<ul><li><strong>พารามิเตอร์คิวรี</strong>: เข้ารหัสค่าเพื่อรวมอย่างปลอดภัยใน URL query strings</li><li><strong>คำขอ API</strong>: เข้ารหัสพารามิเตอร์คำขอสำหรับ REST APIs ได้อย่างถูกต้อง</li><li><strong>URL เปลี่ยนเส้นทาง</strong>: เข้ารหัส callback URLs สำหรับ OAuth flows และการเปลี่ยนเส้นทาง</li><li><strong>เส้นทางไฟล์</strong>: เข้ารหัสชื่อไฟล์ที่มีช่องว่างหรืออักขระพิเศษสำหรับเว็บเซิร์ฟเวอร์</li><li><strong>การดีบั๊ก</strong>: ถอดรหัส URL ที่ผิดรูปแบบเพื่อดูข้อความต้นฉบับ</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว URL Processing",
-            "content": "<p>All encoding and decoding runs <strong>entirely in your browser</strong> using native <code>encodeURIComponent()</code> and <code>decodeURIComponent()</code> functions.</p><ul><li>Your URLs and parameters <strong>never leave your device</strong></li><li>ปลอดภัยสำหรับ encoding URLs containing API keys, tokens, or session IDs</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก the page loads</li></ul>"
+            "title": "การประมวลผล URL ที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>การเข้ารหัสและถอดรหัสทั้งหมดทำงาน <strong>ทั้งหมดในเบราว์เซอร์ของคุณ</strong> โดยใช้ฟังก์ชัน <code>encodeURIComponent()</code> และ <code>decodeURIComponent()</code> แบบดั้งเดิม</p><ul><li>URL และพารามิเตอร์ของคุณ <strong>ไม่ออกจากอุปกรณ์ของคุณ</strong></li><li>ปลอดภัยสำหรับการเข้ารหัส URL ที่มี API keys, tokens หรือ session IDs</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บแล้ว</li></ul>"
           }
         }
       },
@@ -156,33 +156,33 @@
           "a1": "รองรับมากกว่า 12 ภาษา รวมถึงอังกฤษ, จีน (ตัวย่อ/ตัวเต็ม), ญี่ปุ่น, เกาหลี, สเปน, ฝรั่งเศส, เยอรมัน และอื่นๆ",
           "q2": "OCR แม่นยำแค่ไหน?",
           "a2": "ความแม่นยำขึ้นอยู่กับคุณภาพของรูปภาพและความชัดเจนของข้อความ รูปภาพที่ชัดเจน ความละเอียดสูง มีคอนทราสต์ดีจะให้ผลลัพธ์ที่ดีที่สุด",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร OCR Text Recognition?",
-            "content": "<p><strong>OCR Text Recognition</strong> extracts readable text from images using optical character recognition powered by Tesseract.js. Upload a photo of a document, screenshot, receipt, or handwritten note, and get the text content you can copy, edit, and use.</p><p>Supports <strong>12+ languages</strong> including English, Chinese, Japanese, Korean, Spanish, French, German, and more — all processed locally in your browser.</p>"
+            "title": "OCR Text Recognition คืออะไร?",
+            "content": "<p><strong>OCR Text Recognition</strong> ดึงข้อความที่อ่านได้จากรูปภาพโดยใช้การรู้จำอักขระด้วยแสงที่ขับเคลื่อนโดย Tesseract.js อัปโหลดรูปถ่ายเอกสาร ภาพหน้าจอ ใบเสร็จ หรือบันทึกลายมือ และรับเนื้อหาข้อความที่คุณสามารถคัดลอก แก้ไข และใช้ได้</p><p>รองรับ <strong>12+ ภาษา</strong> รวมถึงอังกฤษ จีน ญี่ปุ่น เกาหลี สเปน ฝรั่งเศส เยอรมัน และอื่นๆ — ทั้งหมดประมวลผลในเครื่องในเบราว์เซอร์ของคุณ</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ OCR Text Recognition",
-            "content": "<ol><li>Upload an image by clicking the dropzone or dragging it onto the page (supports JPG, PNG, WebP, BMP)</li><li>Select the language of the text in the image for best accuracy</li><li>Click <strong>Extract Text</strong> to start recognition</li><li>Review the extracted text and copy it to your clipboard</li></ol><p>For best results, use clear, high-contrast images with good lighting. Printed text yields higher accuracy than handwriting.</p>"
+            "title": "วิธีใช้เครื่องมือ OCR รู้จำข้อความ",
+            "content": "<ol><li>อัปโหลดรูปภาพโดยคลิกที่ dropzone หรือลากลงบนหน้าเว็บ (รองรับ JPG, PNG, WebP, BMP)</li><li>เลือกภาษาของข้อความในรูปภาพเพื่อความแม่นยำสูงสุด</li><li>คลิก <strong>ดึงข้อความ</strong> เพื่อเริ่มการรู้จำ</li><li>ตรวจสอบข้อความที่ดึงออกมาและคัดลอกไปยังคลิปบอร์ด</li></ol><p>สำหรับผลลัพธ์ที่ดีที่สุด ใช้รูปภาพที่ชัดเจน มีคอนทราสต์สูง แสงสว่างดี ข้อความพิมพ์จะให้ความแม่นยำสูงกว่าลายมือ</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>12+ Languages</strong>: Recognize text in English, Chinese (Simplified & Traditional), Japanese, Korean, Spanish, French, German, Italian, Portuguese, Russian, and more</li><li><strong>Multiple Image Formats</strong>: Accepts JPG, PNG, WebP, BMP, and TIFF</li><li><strong>Powered by Tesseract.js</strong>: Industry-standard OCR engine running entirely in your browser via WebAssembly</li><li><strong>High Accuracy</strong>: Best results on printed text, receipts, screenshots, and scanned documents</li><li><strong>Copy & Edit</strong>: Extracted text is fully editable and copyable</li><li><strong>100% Local Processing</strong>: No server uploads — your documents stay private</li></ul>"
+            "content": "<ul><li><strong>12+ ภาษา</strong>: รู้จำข้อความในอังกฤษ จีน (ตัวย่อและตัวเต็ม) ญี่ปุ่น เกาหลี สเปน ฝรั่งเศส เยอรมัน อิตาลี โปรตุเกส รัสเซีย และอื่นๆ</li><li><strong>หลายรูปแบบรูปภาพ</strong>: รองรับ JPG, PNG, WebP, BMP และ TIFF</li><li><strong>ขับเคลื่อนโดย Tesseract.js</strong>: เครื่องยนต์ OCR มาตรฐานอุตสาหกรรมทำงานทั้งหมดในเบราว์เซอร์ของคุณผ่าน WebAssembly</li><li><strong>ความแม่นยำสูง</strong>: ผลลัพธ์ดีที่สุดบนข้อความพิมพ์ ใบเสร็จ ภาพหน้าจอ และเอกสารที่สแกน</li><li><strong>คัดลอกและแก้ไข</strong>: ข้อความที่ดึงออกมาสามารถแก้ไขและคัดลอกได้เต็มรูปแบบ</li><li><strong>การประมวลผลในเครื่อง 100%</strong>: ไม่มีการอัปโหลดไปเซิร์ฟเวอร์ — เอกสารของคุณเป็นส่วนตัว</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>Document Digitization</strong>: Convert printed documents, receipts, or letters into editable text</li><li><strong>Screenshot Text Extraction</strong>: Pull text from screenshots of web pages, error messages, or chat logs</li><li><strong>Translation Prep</strong>: Extract foreign-language text from images for translation</li><li><strong>Data Entry</strong>: Quickly digitize text from forms, invoices, or business cards</li><li><strong>Accessibility</strong>: Make image-based text accessible to screen readers</li></ul>"
+            "content": "<ul><li><strong>การดิจิทัลเอกสาร</strong>: แปลงเอกสารพิมพ์ ใบเสร็จ หรือจดหมายเป็นข้อความที่แก้ไขได้</li><li><strong>การดึงข้อความจากภาพหน้าจอ</strong>: ดึงข้อความจากภาพหน้าจอของเว็บเพจ ข้อความแสดงข้อผิดพลาด หรือบันทึกการแชท</li><li><strong>เตรียมการแปล</strong>: ดึงข้อความภาษาต่างประเทศจากรูปภาพเพื่อการแปล</li><li><strong>การป้อนข้อมูล</strong>: ดิจิทัลข้อความจากแบบฟอร์ม ใบแจ้งหนี้ หรือนามบัตรอย่างรวดเร็ว</li><li><strong>การช่วยการเข้าถึง</strong>: ทำให้ข้อความบนภาพเข้าถึงได้สำหรับโปรแกรมอ่านหน้าจอ</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว OCR Processing",
-            "content": "<p>OCR runs <strong>entirely in your browser</strong> using <strong>Tesseract.js</strong> (WebAssembly). Language models are downloaded once and cached locally.</p><ul><li>Your images and documents <strong>never leave your device</strong> — critical for sensitive documents</li><li>No cloud API calls — ไม่มีข้อมูลที่ส่งออก during recognition</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก language models are cached</li><li>Ideal for confidential documents: medical records, financial statements, legal papers</li></ul>"
+            "title": "การประมวลผล OCR ที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>OCR ทำงาน <strong>ทั้งหมดในเบราว์เซอร์ของคุณ</strong> โดยใช้ <strong>Tesseract.js</strong> (WebAssembly) โมเดลภาษาถูกดาวน์โหลดครั้งเดียวและแคชในเครื่อง</p><ul><li>รูปภาพและเอกสารของคุณ <strong>ไม่ออกจากอุปกรณ์ของคุณ</strong> — สำคัญสำหรับเอกสารที่ละเอียดอ่อน</li><li>ไม่มีการเรียก API คลาวด์ — ไม่มีข้อมูลที่ส่งออกระหว่างการรู้จำ</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโมเดลภาษาถูกแคชแล้ว</li><li>เหมาะสำหรับเอกสารลับ: ประวัติทางการแพทย์ งบการเงิน เอกสารทางกฎหมาย</li></ul>"
           }
         }
       },
@@ -200,33 +200,33 @@
           "a1": "ขณะนี้รองรับไฟล์ ZIP อย่างเต็มรูปแบบ ไฟล์ถูกแตกทั้งหมดในเบราว์เซอร์ของคุณ",
           "q2": "ดาวน์โหลดไฟล์แต่ละไฟล์จากไฟล์เก็บถาวรได้หรือไม่?",
           "a2": "ได้ คุณสามารถเรียกดูเนื้อหาของไฟล์เก็บถาวรและดาวน์โหลดไฟล์ใดก็ได้โดยคลิกปุ่มดาวน์โหลด",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร ZIP Extractor?",
-            "content": "<p><strong>ZIP Extractor</strong> lets you open and extract ZIP archive contents โดยตรงในเบราว์เซอร์ของคุณ. Preview file names, sizes, and folder structure before downloading individual files or the entire contents.</p><p>No software installation needed — just drop your ZIP file and browse its contents instantly.</p>"
+            "title": "ZIP Extractor คืออะไร?",
+            "content": "<p><strong>ZIP Extractor</strong> ให้คุณเปิดและแตกไฟล์เนื้อหา ZIP archive โดยตรงในเบราว์เซอร์ของคุณ ดูตัวอย่างชื่อไฟล์ ขนาด และโครงสร้างโฟลเดอร์ก่อนดาวน์โหลดไฟล์แต่ละไฟล์หรือเนื้อหาทั้งหมด</p><p>ไม่ต้องติดตั้งซอฟต์แวร์ — เพียงลากไฟล์ ZIP ของคุณและเรียกดูเนื้อหาทันที</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ ZIP Extractor",
-            "content": "<ol><li>Drop a ZIP file onto the page or click to browse and select one</li><li>View the archive contents: file names, sizes, and folder hierarchy</li><li>Click individual files to download them, or extract everything at once</li></ol><p>Supports standard ZIP archives. Large archives may take a moment to parse depending on your device.</p>"
+            "title": "วิธีใช้เครื่องมือแตกไฟล์ ZIP",
+            "content": "<ol><li>ลากไฟล์ ZIP ลงบนหน้าเว็บหรือคลิกเพื่อเรียกดูและเลือกไฟล์</li><li>ดูเนื้อหา archive: ชื่อไฟล์ ขนาด และลำดับชั้นโฟลเดอร์</li><li>คลิกไฟล์แต่ละไฟล์เพื่อดาวน์โหลด หรือแตกไฟล์ทั้งหมดในครั้งเดียว</li></ol><p>รองรับ ZIP archives มาตรฐาน Archives ขนาดใหญ่อาจใช้เวลาสักครู่ในการแยกวิเคราะห์ขึ้นอยู่กับอุปกรณ์ของคุณ</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Instant Preview</strong>: See all files and folders inside the ZIP without extracting</li><li><strong>Selective Extraction</strong>: Download individual files without extracting the entire archive</li><li><strong>File Size Display</strong>: See compressed and uncompressed sizes for each file</li><li><strong>Folder Structure</strong>: Browse nested directory hierarchies within the archive</li><li><strong>Powered by fflate</strong>: High-performance decompression using the fflate library</li><li><strong>No File Size Limits</strong>: Limited only by your device's available memory</li></ul>"
+            "content": "<ul><li><strong>ดูตัวอย่างทันที</strong>: ดูไฟล์และโฟลเดอร์ทั้งหมดภายใน ZIP โดยไม่ต้องแตกไฟล์</li><li><strong>การแตกไฟล์แบบเลือก</strong>: ดาวน์โหลดไฟล์แต่ละไฟล์โดยไม่ต้องแตกไฟล์ archive ทั้งหมด</li><li><strong>แสดงขนาดไฟล์</strong>: ดูขนาดบีบอัดและไม่บีบอัดสำหรับแต่ละไฟล์</li><li><strong>โครงสร้างโฟลเดอร์</strong>: เรียกดูลำดับชั้นไดเรกทอรีที่ซ้อนกันใน archive</li><li><strong>ขับเคลื่อนโดย fflate</strong>: การคลายการบีบอัดประสิทธิภาพสูงโดยใช้ไลบรารี fflate</li><li><strong>ไม่จำกัดขนาดไฟล์</strong>: จำกัดเฉพาะหน่วยความจำที่มีอยู่ของอุปกรณ์</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>Quick File Inspection</strong>: Check what's inside a ZIP before extracting everything</li><li><strong>Single File Download</strong>: Extract just the file you need from a large archive</li><li><strong>Mobile Use</strong>: Open ZIP files on phones and tablets without a file manager</li><li><strong>Chromebook Users</strong>: Extract archives when native tools aren't available</li><li><strong>Email Attachments</strong>: Quickly peek inside ZIP attachments</li></ul>"
+            "content": "<ul><li><strong>การตรวจสอบไฟล์อย่างรวดเร็ว</strong>: ตรวจสอบสิ่งที่อยู่ภายใน ZIP ก่อนแตกไฟล์ทั้งหมด</li><li><strong>การดาวน์โหลดไฟล์เดี่ยว</strong>: แตกไฟล์เฉพาะไฟล์ที่คุณต้องการจาก archive ขนาดใหญ่</li><li><strong>การใช้งานบนมือถือ</strong>: เปิดไฟล์ ZIP บนโทรศัพท์และแท็บเล็ตโดยไม่ต้องใช้ตัวจัดการไฟล์</li><li><strong>ผู้ใช้ Chromebook</strong>: แตกไฟล์ archive เมื่อเครื่องมือดั้งเดิมไม่พร้อมใช้งาน</li><li><strong>ไฟล์แนบอีเมล</strong>: ดูไฟล์แนบ ZIP อย่างรวดเร็ว</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Archive Extraction",
-            "content": "<p>ZIP extraction runs <strong>entirely in your browser</strong> using the <strong>fflate</strong> decompression library. No files are uploaded anywhere.</p><ul><li>Your archives <strong>never leave your device</strong> — safe for confidential documents</li><li>No server-side processing or temporary storage</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก the page loads</li></ul>"
+            "title": "การแตกไฟล์ Archive ที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>การแตกไฟล์ ZIP ทำงาน <strong>ทั้งหมดในเบราว์เซอร์ของคุณ</strong> โดยใช้ไลบรารีคลายการบีบอัด <strong>fflate</strong> ไม่มีไฟล์ถูกอัปโหลดไปที่ใด</p><ul><li>ไฟล์เก็บถาวรของคุณ <strong>ไม่ออกจากอุปกรณ์ของคุณ</strong> — ปลอดภัยสำหรับเอกสารลับ</li><li>ไม่มีการประมวลผลฝั่งเซิร์ฟเวอร์หรือการจัดเก็บชั่วคราว</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บแล้ว</li></ul>"
           }
         }
       },
@@ -247,33 +247,33 @@
           "a1": "ค่าที่คั่นด้วยจุลภาคมาตรฐานพร้อมการ escape เครื่องหมายคำพูดคู่ ฟิลด์ที่มีจุลภาค เครื่องหมายคำพูด หรือบรรทัดใหม่จะถูกจัดการอย่างถูกต้อง",
           "q2": "รองรับ JSON ซ้อนหรือไม่?",
           "a2": "JSON เป็น CSV ทำงานได้ดีที่สุดกับอาร์เรย์ของอ็อบเจ็กต์แบบแบน อ็อบเจ็กต์ซ้อนจะถูกแปลงเป็นสตริง",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร CSV/JSON Converter?",
-            "content": "<p><strong>CSV/JSON Converter</strong> แปลงข้อมูลระหว่าง CSV (comma-separated values) and JSON formats instantly. Convert spreadsheet data to JSON arrays for APIs, or transform JSON datasets into CSV for Excel or Google Sheets.</p><p>Handles headers, quoted fields, and custom delimiters — all in your browser with no data uploaded.</p>"
+            "title": "CSV/JSON Converter คืออะไร?",
+            "content": "<p><strong>CSV/JSON Converter</strong> แปลงข้อมูลระหว่าง CSV (comma-separated values) และรูปแบบ JSON ทันที แปลงข้อมูลสเปรดชีตเป็นอาร์เรย์ JSON สำหรับ APIs หรือแปลงชุดข้อมูล JSON เป็น CSV สำหรับ Excel หรือ Google Sheets</p><p>จัดการ headers, quoted fields และตัวคั่นที่กำหนดเอง — ทั้งหมดในเบราว์เซอร์ของคุณโดยไม่มีการอัปโหลดข้อมูล</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ CSV/JSON Converter",
-            "content": "<ol><li>Paste your CSV or JSON data into the input area</li><li>Select the conversion direction: <strong>CSV → JSON</strong> or <strong>JSON → CSV</strong></li><li>The converted result appears instantly in the output area</li><li>Copy the result or download it as a file</li></ol><p>CSV input should use the first row as column headers. JSON input should be an array of objects with consistent keys.</p>"
+            "title": "วิธีใช้เครื่องมือแปลง CSV/JSON",
+            "content": "<ol><li>วางข้อมูล CSV หรือ JSON ของคุณลงในพื้นที่ป้อนข้อมูล</li><li>เลือกทิศทางการแปลง: <strong>CSV → JSON</strong> หรือ <strong>JSON → CSV</strong></li><li>ผลลัพธ์ที่แปลงแล้วปรากฏทันทีในพื้นที่เอาต์พุต</li><li>คัดลอกผลลัพธ์หรือดาวน์โหลดเป็นไฟล์</li></ol><p>ข้อมูลป้อน CSV ควรใช้แถวแรกเป็น column headers ข้อมูลป้อน JSON ควรเป็นอาร์เรย์ของอ็อบเจ็กต์ที่มีคีย์สม่ำเสมอ</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Bidirectional Conversion</strong>: Convert CSV to JSON and JSON to CSV</li><li><strong>Auto Header Detection</strong>: Uses the first CSV row as JSON object keys</li><li><strong>Handles Special Characters</strong>: Correctly processes quoted fields, commas within fields, and line breaks</li><li><strong>Instant Conversion</strong>: Results appear immediately as you paste data</li><li><strong>Download Output</strong>: Save converted data as .json or .csv files</li><li><strong>Large Dataset Support</strong>: Handles thousands of rows efficiently</li></ul>"
+            "content": "<ul><li><strong>การแปลงสองทิศทาง</strong>: แปลง CSV เป็น JSON และ JSON เป็น CSV</li><li><strong>การตรวจจับ Header อัตโนมัติ</strong>: ใช้แถว CSV แรกเป็น JSON object keys</li><li><strong>จัดการอักขระพิเศษ</strong>: ประมวลผล quoted fields, จุลภาคภายในฟิลด์ และการขึ้นบรรทัดใหม่ได้อย่างถูกต้อง</li><li><strong>การแปลงทันที</strong>: ผลลัพธ์ปรากฏทันทีเมื่อคุณวางข้อมูล</li><li><strong>ดาวน์โหลดเอาต์พุต</strong>: บันทึกข้อมูลที่แปลงแล้วเป็นไฟล์ .json หรือ .csv</li><li><strong>รองรับชุดข้อมูลขนาดใหญ่</strong>: จัดการหลายพันแถวได้อย่างมีประสิทธิภาพ</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>API Integration</strong>: Convert spreadsheet exports to JSON for API payloads</li><li><strong>Data Analysis</strong>: Transform JSON API responses into CSV for Excel or Google Sheets</li><li><strong>Database Migration</strong>: Convert between data formats during database import/export</li><li><strong>Reporting</strong>: Convert JSON logs or records to CSV for reporting tools</li><li><strong>Prototyping</strong>: Quickly create sample JSON data from spreadsheet mockups</li></ul>"
+            "content": "<ul><li><strong>การเชื่อมต่อ API</strong>: แปลงการส่งออกสเปรดชีตเป็น JSON สำหรับ API payloads</li><li><strong>การวิเคราะห์ข้อมูล</strong>: แปลง JSON API responses เป็น CSV สำหรับ Excel หรือ Google Sheets</li><li><strong>การย้ายฐานข้อมูล</strong>: แปลงระหว่างรูปแบบข้อมูลระหว่างการนำเข้า/ส่งออกฐานข้อมูล</li><li><strong>การรายงาน</strong>: แปลง JSON logs หรือ records เป็น CSV สำหรับเครื่องมือรายงาน</li><li><strong>การสร้างต้นแบบ</strong>: สร้างข้อมูล JSON ตัวอย่างจากสเปรดชีต mockups อย่างรวดเร็ว</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Data Conversion",
-            "content": "<p>All conversion happens <strong>locally in your browser</strong> using JavaScript parsing — no server round-trips.</p><ul><li>Your data <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — safe for converting sensitive business data or financial reports</li><li>No server processing, no logging, no third-party access</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก initial page load</li></ul>"
+            "title": "การแปลงข้อมูลที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>การแปลงทั้งหมดเกิดขึ้น <strong>ในเครื่องในเบราว์เซอร์ของคุณ</strong> โดยใช้การแยกวิเคราะห์ JavaScript — ไม่มีการส่งข้อมูลไปยังเซิร์ฟเวอร์</p><ul><li>ข้อมูลของคุณ <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — ปลอดภัยสำหรับการแปลงข้อมูลธุรกิจที่ละเอียดอ่อนหรือรายงานทางการเงิน</li><li>ไม่มีการประมวลผลเซิร์ฟเวอร์ ไม่มีการบันทึก ไม่มีการเข้าถึงจากบุคคลที่สาม</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บครั้งแรก</li></ul>"
           }
         }
       },
@@ -293,33 +293,33 @@
           "a1": "SHA-1, SHA-256, SHA-384 และ SHA-512 ทั้งหมดถูกคำนวณพร้อมกันโดยใช้ Web Crypto API ของเบราว์เซอร์",
           "q2": "สามารถแฮชไฟล์ได้หรือไม่?",
           "a2": "ได้ สลับไปที่โหมดไฟล์และวางไฟล์ใดก็ได้ แฮชถูกคำนวณในเบราว์เซอร์ — ไฟล์ไม่เคยถูกอัปโหลด",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร Hash Generator?",
-            "content": "<p><strong>Hash Generator</strong> computes cryptographic hash values for text or files using SHA-1, SHA-256, SHA-384, and SHA-512 algorithms. Hashes are one-way fingerprints used to verify data integrity, compare files, and validate downloads.</p><p>Generate hashes instantly in your browser — ideal for verifying file integrity or creating content digests.</p>"
+            "title": "Hash Generator คืออะไร?",
+            "content": "<p><strong>Hash Generator</strong> คำนวณค่าแฮชเข้ารหัสสำหรับข้อความหรือไฟล์โดยใช้อัลกอริทึม SHA-1, SHA-256, SHA-384 และ SHA-512 แฮชเป็นลายนิ้วมือแบบทางเดียวที่ใช้เพื่อตรวจสอบความสมบูรณ์ของข้อมูล เปรียบเทียบไฟล์ และตรวจสอบการดาวน์โหลด</p><p>สร้างแฮชทันทีในเบราว์เซอร์ของคุณ — เหมาะสำหรับตรวจสอบความสมบูรณ์ของไฟล์หรือสร้าง content digests</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ Hash Generator",
-            "content": "<ol><li>Enter text directly or upload a file to hash</li><li>Select the hash algorithm(s): SHA-1, SHA-256, SHA-384, or SHA-512</li><li>The hash value is computed instantly and displayed</li><li>Copy the hash to compare with known checksums or use in your project</li></ol><p>For file integrity verification, compare the generated hash with the checksum provided by the file's source.</p>"
+            "title": "วิธีใช้เครื่องมือสร้างแฮช",
+            "content": "<ol><li>ป้อนข้อความโดยตรงหรืออัปโหลดไฟล์เพื่อแฮช</li><li>เลือกอัลกอริทึมแฮช: SHA-1, SHA-256, SHA-384 หรือ SHA-512</li><li>ค่าแฮชถูกคำนวณทันทีและแสดงผล</li><li>คัดลอกแฮชเพื่อเปรียบเทียบกับ checksums ที่รู้จักหรือใช้ในโปรเจกต์ของคุณ</li></ol><p>สำหรับการตรวจสอบความสมบูรณ์ของไฟล์ เปรียบเทียบแฮชที่สร้างขึ้นกับ checksum ที่ให้มาโดยแหล่งที่มาของไฟล์</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Multiple Algorithms</strong>: SHA-1, SHA-256, SHA-384, and SHA-512 computed simultaneously</li><li><strong>Text & File Hashing</strong>: Hash typed text or uploaded files of any type</li><li><strong>Instant Computation</strong>: Hash values appear in real-time</li><li><strong>Web Crypto API</strong>: Uses the browser's native cryptographic engine for maximum performance</li><li><strong>Copy to Clipboard</strong>: One-click copy for each hash value</li><li><strong>Large File Support</strong>: Efficiently hash files of any size</li></ul>"
+            "content": "<ul><li><strong>หลายอัลกอริทึม</strong>: SHA-1, SHA-256, SHA-384 และ SHA-512 คำนวณพร้อมกัน</li><li><strong>แฮชข้อความและไฟล์</strong>: แฮชข้อความที่พิมพ์หรือไฟล์ที่อัปโหลดทุกประเภท</li><li><strong>การคำนวณทันที</strong>: ค่าแฮชปรากฏแบบเรียลไทม์</li><li><strong>Web Crypto API</strong>: ใช้เครื่องยนต์เข้ารหัสดั้งเดิมของเบราว์เซอร์เพื่อประสิทธิภาพสูงสุด</li><li><strong>คัดลอกไปคลิปบอร์ด</strong>: คัดลอกคลิกเดียวสำหรับแต่ละค่าแฮช</li><li><strong>รองรับไฟล์ขนาดใหญ่</strong>: แฮชไฟล์ได้ทุกขนาดอย่างมีประสิทธิภาพ</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>File Integrity</strong>: Verify downloaded files haven't been tampered with by comparing checksums</li><li><strong>Content Deduplication</strong>: Compare hashes to find duplicate files</li><li><strong>Digital Signatures</strong>: Create content digests for signing workflows</li><li><strong>Software Distribution</strong>: Generate checksums for your own file releases</li><li><strong>Security Auditing</strong>: Hash files to detect unauthorized modifications</li></ul>"
+            "content": "<ul><li><strong>ความสมบูรณ์ของไฟล์</strong>: ตรวจสอบว่าไฟล์ที่ดาวน์โหลดไม่ถูกแก้ไขโดยเปรียบเทียบ checksums</li><li><strong>การลบข้อมูลซ้ำ</strong>: เปรียบเทียบแฮชเพื่อหาไฟล์ที่ซ้ำกัน</li><li><strong>ลายเซ็นดิจิทัล</strong>: สร้าง content digests สำหรับเวิร์กโฟลว์การลงนาม</li><li><strong>การจัดจำหน่ายซอฟต์แวร์</strong>: สร้าง checksums สำหรับการเผยแพร่ไฟล์ของคุณเอง</li><li><strong>การตรวจสอบความปลอดภัย</strong>: แฮชไฟล์เพื่อตรวจจับการแก้ไขที่ไม่ได้รับอนุญาต</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Hash Generation",
-            "content": "<p>Hashes are computed <strong>entirely in your browser</strong> using the native <strong>Web Crypto API</strong> (<code>crypto.subtle.digest</code>).</p><ul><li>Your text and files <strong>never leave your device</strong> — critical when hashing sensitive content</li><li>Uses hardware-accelerated cryptographic implementations when available</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก the page loads</li></ul>"
+            "title": "การสร้างแฮชที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>แฮชถูกคำนวณ <strong>ทั้งหมดในเบราว์เซอร์ของคุณ</strong> โดยใช้ <strong>Web Crypto API</strong> แบบดั้งเดิม (<code>crypto.subtle.digest</code>)</p><ul><li>ข้อความและไฟล์ของคุณ <strong>ไม่ออกจากอุปกรณ์ของคุณ</strong> — สำคัญเมื่อแฮชเนื้อหาที่ละเอียดอ่อน</li><li>ใช้การใช้งานเข้ารหัสที่เร่งด้วยฮาร์ดแวร์เมื่อมีให้ใช้งาน</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บแล้ว</li></ul>"
           }
         }
       },
@@ -339,33 +339,33 @@
           "a1": "คุณสามารถป้อนสีเป็น HEX (#ff6600 หรือ #f60), RGB (rgb(255, 102, 0)) หรือ HSL (hsl(24, 100%, 50%)) รูปแบบอื่นๆ ทั้งหมดจะแสดงโดยอัตโนมัติ",
           "q2": "รองรับอัลฟา/ความโปร่งใสหรือไม่?",
           "a2": "ขณะนี้เครื่องมือรองรับเฉพาะสีทึบเท่านั้น การรองรับ RGBA และ HSLA จะเพิ่มในการอัปเดตในอนาคต",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร Color Converter?",
-            "content": "<p><strong>Color Converter</strong> transforms colors between HEX, RGB, and HSL formats with a live visual preview. Enter a color in any format and instantly see its equivalent in all other formats, along with a color swatch.</p><p>Perfect for designers and developers who need to convert between color notations for CSS, design tools, or brand guidelines.</p>"
+            "title": "Color Converter คืออะไร?",
+            "content": "<p><strong>Color Converter</strong> แปลงสีระหว่างรูปแบบ HEX, RGB และ HSL พร้อมตัวอย่างภาพสด ป้อนสีในรูปแบบใดก็ได้และดูค่าเทียบเท่าในรูปแบบอื่นๆ ทั้งหมดทันที พร้อมกับตัวอย่างสี</p><p>สมบูรณ์แบบสำหรับนักออกแบบและนักพัฒนาที่ต้องการแปลงระหว่างสัญลักษณ์สีสำหรับ CSS, เครื่องมือออกแบบ หรือแนวทางแบรนด์</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ Color Converter",
-            "content": "<ol><li>Enter a color value in any supported format: HEX (e.g., #3B82F6), RGB (e.g., rgb(59, 130, 246)), or HSL (e.g., hsl(217, 91%, 60%))</li><li>See instant conversion to all other formats with a live color preview</li><li>Click any value to copy it to your clipboard</li></ol><p>The color picker also lets you visually select colors and get all format values at once.</p>"
+            "title": "วิธีใช้เครื่องมือแปลงสี",
+            "content": "<ol><li>ป้อนค่าสีในรูปแบบที่รองรับ: HEX (เช่น #3B82F6), RGB (เช่น rgb(59, 130, 246)) หรือ HSL (เช่น hsl(217, 91%, 60%))</li><li>ดูการแปลงทันทีเป็นรูปแบบอื่นๆ ทั้งหมดพร้อมตัวอย่างสีสด</li><li>คลิกค่าใดก็ได้เพื่อคัดลอกไปยังคลิปบอร์ด</li></ol><p>ตัวเลือกสียังให้คุณเลือกสีด้วยภาพและรับค่ารูปแบบทั้งหมดในครั้งเดียว</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Three Format Support</strong>: Convert between HEX, RGB, and HSL color notations</li><li><strong>Live Preview</strong>: See the actual color displayed as you type or adjust values</li><li><strong>Visual Color Picker</strong>: Select colors visually and get all format values</li><li><strong>Instant Conversion</strong>: Results update in real-time as you type</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: Copy any color format value to clipboard</li><li><strong>CSS-Ready Output</strong>: Values formatted for direct use in CSS stylesheets</li></ul>"
+            "content": "<ul><li><strong>รองรับสามรูปแบบ</strong>: แปลงระหว่างสัญลักษณ์สี HEX, RGB และ HSL</li><li><strong>ตัวอย่างสด</strong>: ดูสีจริงที่แสดงขณะที่คุณพิมพ์หรือปรับค่า</li><li><strong>ตัวเลือกสีภาพ</strong>: เลือกสีด้วยภาพและรับค่ารูปแบบทั้งหมด</li><li><strong>การแปลงทันที</strong>: ผลลัพธ์อัปเดตแบบเรียลไทม์ขณะที่คุณพิมพ์</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: คัดลอกค่าสีในรูปแบบใดก็ได้ไปยังคลิปบอร์ด</li><li><strong>เอาต์พุตพร้อมใช้ CSS</strong>: ค่าที่จัดรูปแบบสำหรับใช้โดยตรงใน CSS stylesheets</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>CSS Development</strong>: Convert between color formats for stylesheets</li><li><strong>Design Handoff</strong>: Translate design spec colors to code-ready values</li><li><strong>Brand Guidelines</strong>: Convert brand colors between formats for documentation</li><li><strong>Accessibility</strong>: Adjust HSL lightness to meet contrast ratio requirements</li><li><strong>Theme Development</strong>: Generate color values for light/dark theme variables</li></ul>"
+            "content": "<ul><li><strong>การพัฒนา CSS</strong>: แปลงระหว่างรูปแบบสีสำหรับ stylesheets</li><li><strong>การส่งมอบการออกแบบ</strong>: แปลงสีจากสเปคการออกแบบเป็นค่าพร้อมใช้ในโค้ด</li><li><strong>แนวทางแบรนด์</strong>: แปลงสีแบรนด์ระหว่างรูปแบบสำหรับเอกสาร</li><li><strong>การช่วยการเข้าถึง</strong>: ปรับความสว่าง HSL เพื่อให้เป็นไปตามข้อกำหนดอัตราส่วนคอนทราสต์</li><li><strong>การพัฒนาธีม</strong>: สร้างค่าสีสำหรับตัวแปรธีมสว่าง/มืด</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Color Processing",
-            "content": "<p>Color conversion uses <strong>pure JavaScript math</strong> in your browser — no server calls, no tracking.</p><ul><li>No data is transmitted — color values stay entirely on your device</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก the page loads</li></ul>"
+            "title": "การประมวลผลสีที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>การแปลงสีใช้ <strong>คณิตศาสตร์ JavaScript ล้วน</strong> ในเบราว์เซอร์ของคุณ — ไม่มีการเรียกเซิร์ฟเวอร์ ไม่มีการติดตาม</p><ul><li>ไม่มีข้อมูลถูกส่ง — ค่าสีอยู่บนอุปกรณ์ของคุณโดยสมบูรณ์</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บแล้ว</li></ul>"
           }
         }
       },
@@ -386,33 +386,33 @@
           "a1": "คีย์ของอ็อบเจ็กต์กลายเป็นชื่อองค์ประกอบ XML อาร์เรย์สร้างองค์ประกอบซ้ำที่มีชื่อเดียวกัน ค่าพื้นฐานกลายเป็นเนื้อหาข้อความ",
           "q2": "แอตทริบิวต์ XML ถูกรักษาไว้หรือไม่?",
           "a2": "แอตทริบิวต์ XML ไม่ถูกรักษาในเอาต์พุต JSON เฉพาะชื่อองค์ประกอบและเนื้อหาข้อความเท่านั้นที่ถูกแปลง",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร JSON ↔ XML Converter?",
-            "content": "<p><strong>JSON ↔ XML Converter</strong> แปลงข้อมูลระหว่าง JSON and XML formats. Convert JSON objects to well-formed XML documents, or parse XML back into JSON — useful for integrating systems that use different data formats.</p><p>Handles nested structures, arrays, and attributes correctly in both directions.</p>"
+            "title": "JSON ↔ XML Converter คืออะไร?",
+            "content": "<p><strong>JSON ↔ XML Converter</strong> แปลงข้อมูลระหว่างรูปแบบ JSON และ XML แปลงอ็อบเจ็กต์ JSON เป็นเอกสาร XML ที่มีรูปแบบถูกต้อง หรือแยกวิเคราะห์ XML กลับเป็น JSON — มีประโยชน์สำหรับการเชื่อมต่อระบบที่ใช้รูปแบบข้อมูลต่างกัน</p><p>จัดการโครงสร้างที่ซ้อนกัน อาร์เรย์ และแอตทริบิวต์ได้อย่างถูกต้องในทั้งสองทิศทาง</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ JSON ↔ XML Converter",
-            "content": "<ol><li>Paste your JSON or XML data into the input area</li><li>Select the conversion direction: <strong>JSON → XML</strong> or <strong>XML → JSON</strong></li><li>The converted output appears instantly</li><li>Copy the result or download it as a file</li></ol><p>JSON arrays are converted to repeated XML elements. XML attributes are preserved during conversion.</p>"
+            "title": "วิธีใช้เครื่องมือแปลง JSON ↔ XML",
+            "content": "<ol><li>วางข้อมูล JSON หรือ XML ของคุณลงในพื้นที่ป้อนข้อมูล</li><li>เลือกทิศทางการแปลง: <strong>JSON → XML</strong> หรือ <strong>XML → JSON</strong></li><li>เอาต์พุตที่แปลงแล้วปรากฏทันที</li><li>คัดลอกผลลัพธ์หรือดาวน์โหลดเป็นไฟล์</li></ol><p>อาร์เรย์ JSON จะถูกแปลงเป็นองค์ประกอบ XML ที่ซ้ำกัน แอตทริบิวต์ XML จะถูกรักษาไว้ระหว่างการแปลง</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Bidirectional Conversion</strong>: Convert JSON to XML and XML to JSON</li><li><strong>Nested Structure Support</strong>: Correctly handles deeply nested objects and arrays</li><li><strong>Pretty-Printed Output</strong>: XML output is properly indented for readability</li><li><strong>Array Handling</strong>: JSON arrays become repeated XML elements with proper structure</li><li><strong>Instant Processing</strong>: Results appear immediately</li><li><strong>Download Output</strong>: Save results as .json or .xml files</li></ul>"
+            "content": "<ul><li><strong>การแปลงสองทิศทาง</strong>: แปลง JSON เป็น XML และ XML เป็น JSON</li><li><strong>รองรับโครงสร้างที่ซ้อนกัน</strong>: จัดการอ็อบเจ็กต์และอาร์เรย์ที่ซ้อนกันลึกได้อย่างถูกต้อง</li><li><strong>เอาต์พุตพิมพ์สวยงาม</strong>: เอาต์พุต XML มีการย่อหน้าที่เหมาะสมเพื่อการอ่าน</li><li><strong>การจัดการอาร์เรย์</strong>: อาร์เรย์ JSON กลายเป็นองค์ประกอบ XML ที่ซ้ำกันด้วยโครงสร้างที่ถูกต้อง</li><li><strong>การประมวลผลทันที</strong>: ผลลัพธ์ปรากฏทันที</li><li><strong>ดาวน์โหลดเอาต์พุต</strong>: บันทึกผลลัพธ์เป็นไฟล์ .json หรือ .xml</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>API Integration</strong>: Convert between JSON REST APIs and XML SOAP services</li><li><strong>Legacy Systems</strong>: Transform XML data from older systems to JSON for modern apps</li><li><strong>Configuration</strong>: Convert between JSON and XML configuration file formats</li><li><strong>Data Migration</strong>: Transform data formats during system migrations</li><li><strong>Testing</strong>: Generate XML test data from JSON or vice versa</li></ul>"
+            "content": "<ul><li><strong>การเชื่อมต่อ API</strong>: แปลงระหว่าง JSON REST APIs และ XML SOAP services</li><li><strong>ระบบเก่า</strong>: แปลงข้อมูล XML จากระบบเก่าเป็น JSON สำหรับแอปสมัยใหม่</li><li><strong>การตั้งค่า</strong>: แปลงระหว่างรูปแบบไฟล์การตั้งค่า JSON และ XML</li><li><strong>การย้ายข้อมูล</strong>: แปลงรูปแบบข้อมูลระหว่างการย้ายระบบ</li><li><strong>การทดสอบ</strong>: สร้างข้อมูลทดสอบ XML จาก JSON หรือกลับกัน</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Data Conversion",
-            "content": "<p>All conversion runs <strong>locally in your browser</strong> using JavaScript XML parsing — no server communication.</p><ul><li>Your data <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong></li><li>ปลอดภัยสำหรับ converting sensitive business data or configuration files</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก initial page load</li></ul>"
+            "title": "การแปลงข้อมูลที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>การแปลงทั้งหมดทำงาน <strong>ในเครื่องในเบราว์เซอร์ของคุณ</strong> โดยใช้การแยกวิเคราะห์ XML แบบ JavaScript — ไม่มีการสื่อสารกับเซิร์ฟเวอร์</p><ul><li>ข้อมูลของคุณ <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong></li><li>ปลอดภัยสำหรับการแปลงข้อมูลธุรกิจที่ละเอียดอ่อนหรือไฟล์การตั้งค่า</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บครั้งแรก</li></ul>"
           }
         }
       },
@@ -431,33 +431,33 @@
           "a1": "หัวข้อ, ตัวหนา, ตัวเอียง, ลิงก์, รูปภาพ, บล็อกโค้ด, โค้ดอินไลน์, รายการไม่เรียงลำดับ, บล็อกอ้างอิง และเส้นแนวนอน",
           "q2": "สามารถคัดลอกเอาต์พุต HTML ได้หรือไม่?",
           "a2": "ได้ ใช้ปุ่มคัดลอก HTML เพื่อคัดลอก HTML ที่สร้างขึ้นไปยังคลิปบอร์ด",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร Markdown Preview?",
-            "content": "<p><strong>Markdown Preview</strong> lets you write Markdown and see a live HTML preview side by side. Write formatted text using simple Markdown syntax and instantly see how it renders — perfect for README files, blog posts, and documentation.</p><p>Supports standard Markdown including headers, lists, code blocks, links, images, tables, and more.</p>"
+            "title": "Markdown Preview คืออะไร?",
+            "content": "<p><strong>Markdown Preview</strong> ให้คุณเขียน Markdown และดูตัวอย่าง HTML สดคู่กัน เขียนข้อความที่จัดรูปแบบโดยใช้ไวยากรณ์ Markdown อย่างง่ายและดูวิธีการเรนเดอร์ทันที — เหมาะสำหรับไฟล์ README, โพสต์บล็อก และเอกสาร</p><p>รองรับ Markdown มาตรฐานรวมถึงหัวข้อ รายการ บล็อกโค้ด ลิงก์ รูปภาพ ตาราง และอื่นๆ</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ Markdown Preview",
-            "content": "<ol><li>Type or paste Markdown text in the editor pane on the left</li><li>The rendered HTML preview updates in real-time on the right</li><li>Use standard Markdown syntax: # headers, **bold**, *italic*, - lists, ```code blocks```</li><li>Copy the rendered HTML or the Markdown source</li></ol><p>The split-pane view lets you write and preview simultaneously without switching tabs.</p>"
+            "title": "วิธีใช้เครื่องมือดูตัวอย่าง Markdown",
+            "content": "<ol><li>พิมพ์หรือวางข้อความ Markdown ในบานหน้าต่างตัวแก้ไขทางซ้าย</li><li>ตัวอย่าง HTML ที่เรนเดอร์อัปเดตแบบเรียลไทม์ทางขวา</li><li>ใช้ไวยากรณ์ Markdown มาตรฐาน: # หัวข้อ, **ตัวหนา**, *ตัวเอียง*, - รายการ, ```บล็อกโค้ด```</li><li>คัดลอก HTML ที่เรนเดอร์หรือต้นฉบับ Markdown</li></ol><p>มุมมองแบ่งบานหน้าต่างให้คุณเขียนและดูตัวอย่างพร้อมกันโดยไม่ต้องสลับแท็บ</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Live Preview</strong>: See rendered HTML update in real-time as you type</li><li><strong>Side-by-Side View</strong>: Editor and preview displayed simultaneously</li><li><strong>Full Markdown Support</strong>: Headers, bold, italic, lists, code blocks, links, images, tables, blockquotes</li><li><strong>Syntax Highlighting</strong>: Code blocks with language-specific highlighting</li><li><strong>Copy HTML Output</strong>: Copy the rendered HTML for use in web pages</li><li><strong>Responsive Layout</strong>: Works on desktop and mobile devices</li></ul>"
+            "content": "<ul><li><strong>ตัวอย่างสด</strong>: ดู HTML ที่เรนเดอร์อัปเดตแบบเรียลไทม์ขณะที่คุณพิมพ์</li><li><strong>มุมมองคู่ขนาน</strong>: ตัวแก้ไขและตัวอย่างแสดงพร้อมกัน</li><li><strong>รองรับ Markdown เต็มรูปแบบ</strong>: หัวข้อ ตัวหนา ตัวเอียง รายการ บล็อกโค้ด ลิงก์ รูปภาพ ตาราง บล็อกอ้างอิง</li><li><strong>เน้นสีไวยากรณ์</strong>: บล็อกโค้ดพร้อมการเน้นสีเฉพาะภาษา</li><li><strong>คัดลอกเอาต์พุต HTML</strong>: คัดลอก HTML ที่เรนเดอร์เพื่อใช้ในเว็บเพจ</li><li><strong>เลย์เอาต์ตอบสนอง</strong>: ทำงานบนอุปกรณ์เดสก์ท็อปและมือถือ</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>README Files</strong>: Preview GitHub README.md files before committing</li><li><strong>Blog Posts</strong>: Draft and preview blog content written in Markdown</li><li><strong>Documentation</strong>: Write technical documentation with live formatting preview</li><li><strong>Note Taking</strong>: Quick formatted note-taking with instant preview</li><li><strong>Email Drafts</strong>: Format content using Markdown for rich-text emails</li></ul>"
+            "content": "<ul><li><strong>ไฟล์ README</strong>: ดูตัวอย่างไฟล์ GitHub README.md ก่อนคอมมิต</li><li><strong>โพสต์บล็อก</strong>: ร่างและดูตัวอย่างเนื้อหาบล็อกที่เขียนด้วย Markdown</li><li><strong>เอกสาร</strong>: เขียนเอกสารเทคนิคพร้อมตัวอย่างการจัดรูปแบบสด</li><li><strong>การจดบันทึก</strong>: จดบันทึกที่จัดรูปแบบอย่างรวดเร็วพร้อมตัวอย่างทันที</li><li><strong>ร่างอีเมล</strong>: จัดรูปแบบเนื้อหาโดยใช้ Markdown สำหรับอีเมล rich-text</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Markdown Rendering",
-            "content": "<p>Markdown is parsed and rendered <strong>entirely in your browser</strong> — your content never touches a server.</p><ul><li>Your writing <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — safe for drafting confidential documentation</li><li>No cloud storage or sync</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก the page loads</li></ul>"
+            "title": "การเรนเดอร์ Markdown ที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>Markdown ถูกแยกวิเคราะห์และเรนเดอร์ <strong>ทั้งหมดในเบราว์เซอร์ของคุณ</strong> — เนื้อหาของคุณไม่เคยสัมผัสเซิร์ฟเวอร์</p><ul><li>การเขียนของคุณ <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — ปลอดภัยสำหรับการร่างเอกสารลับ</li><li>ไม่มีการจัดเก็บหรือซิงค์คลาวด์</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บแล้ว</li></ul>"
           }
         }
       },
@@ -480,33 +480,33 @@
           "a1": "แฟล็ก global (g), ไม่คำนึงตัวพิมพ์ (i), multiline (m) และ dotAll (s) พร้อมใช้งาน",
           "q2": "รองรับ named capture group หรือไม่?",
           "a2": "ได้ กลุ่มที่ตั้งชื่อด้วย (?<name>...) จะแสดงในรายละเอียดการจับคู่",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร Regex Tester?",
-            "content": "<p><strong>Regex Tester</strong> lets you write and test regular expressions against sample text with real-time highlighting of matches. See matching groups, test different flags, and debug your patterns instantly.</p><p>An essential tool for developers working with string patterns, data validation, or text parsing.</p>"
+            "title": "Regex Tester คืออะไร?",
+            "content": "<p><strong>Regex Tester</strong> ให้คุณเขียนและทดสอบนิพจน์ทั่วไปกับข้อความตัวอย่างพร้อมการเน้นผลจับคู่แบบเรียลไทม์ ดูกลุ่มที่จับคู่ ทดสอบแฟล็กต่างๆ และดีบั๊กรูปแบบของคุณทันที</p><p>เครื่องมือที่จำเป็นสำหรับนักพัฒนาที่ทำงานกับรูปแบบสตริง การตรวจสอบข้อมูล หรือการแยกวิเคราะห์ข้อความ</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ Regex Tester",
-            "content": "<ol><li>Enter your regular expression pattern in the pattern field</li><li>Set flags as needed: <strong>g</strong> (global), <strong>i</strong> (case-insensitive), <strong>m</strong> (multiline)</li><li>Type or paste test text in the text area below</li><li>Matches are highlighted in real-time as you type</li></ol><p>Capture groups are shown with distinct colors, and match details display the full match plus any captured groups.</p>"
+            "title": "วิธีใช้เครื่องมือทดสอบ Regex",
+            "content": "<ol><li>ป้อนรูปแบบนิพจน์ทั่วไปในช่องรูปแบบ</li><li>ตั้งค่าแฟล็กตามต้องการ: <strong>g</strong> (global), <strong>i</strong> (ไม่คำนึงตัวพิมพ์), <strong>m</strong> (multiline)</li><li>พิมพ์หรือวางข้อความทดสอบในพื้นที่ข้อความด้านล่าง</li><li>ผลจับคู่ถูกเน้นแบบเรียลไทม์ขณะที่คุณพิมพ์</li></ol><p>กลุ่มที่จับแสดงด้วยสีที่แตกต่างกัน และรายละเอียดการจับคู่แสดงการจับคู่ทั้งหมดบวกกับกลุ่มที่จับใดๆ</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Real-Time Matching</strong>: Matches highlight instantly as you type pattern or text</li><li><strong>Flag Support</strong>: Toggle global (g), case-insensitive (i), and multiline (m) flags</li><li><strong>Group Highlighting</strong>: Capture groups shown with distinct visual markers</li><li><strong>Match Details</strong>: See full match text, groups, and positions</li><li><strong>Error Feedback</strong>: Invalid regex syntax is caught and reported immediately</li><li><strong>Native Engine</strong>: Uses your browser's built-in JavaScript regex engine</li></ul>"
+            "content": "<ul><li><strong>การจับคู่แบบเรียลไทม์</strong>: ผลจับคู่เน้นทันทีขณะที่คุณพิมพ์รูปแบบหรือข้อความ</li><li><strong>การรองรับแฟล็ก</strong>: สลับแฟล็ก global (g), ไม่คำนึงตัวพิมพ์ (i) และ multiline (m)</li><li><strong>การเน้นกลุ่ม</strong>: กลุ่มที่จับแสดงด้วยเครื่องหมายภาพที่แตกต่างกัน</li><li><strong>รายละเอียดการจับคู่</strong>: ดูข้อความที่จับคู่ทั้งหมด กลุ่ม และตำแหน่ง</li><li><strong>ข้อเสนอแนะข้อผิดพลาด</strong>: ไวยากรณ์ regex ที่ไม่ถูกต้องถูกจับและรายงานทันที</li><li><strong>เครื่องยนต์ดั้งเดิม</strong>: ใช้เครื่องยนต์ regex JavaScript ในตัวของเบราว์เซอร์</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>Pattern Development</strong>: Build and debug regex patterns before using in code</li><li><strong>Data Validation</strong>: Test email, phone number, or custom validation patterns</li><li><strong>Text Parsing</strong>: Develop patterns for extracting data from log files or text</li><li><strong>Search & Replace</strong>: Preview what a regex replacement will match before applying</li><li><strong>Learning</strong>: Understand regex syntax through interactive experimentation</li></ul>"
+            "content": "<ul><li><strong>การพัฒนารูปแบบ</strong>: สร้างและดีบั๊กรูปแบบ regex ก่อนใช้ในโค้ด</li><li><strong>การตรวจสอบข้อมูล</strong>: ทดสอบรูปแบบการตรวจสอบอีเมล หมายเลขโทรศัพท์ หรือแบบกำหนดเอง</li><li><strong>การแยกวิเคราะห์ข้อความ</strong>: พัฒนารูปแบบสำหรับการดึงข้อมูลจากไฟล์บันทึกหรือข้อความ</li><li><strong>ค้นหาและแทนที่</strong>: ดูตัวอย่างสิ่งที่การแทนที่ regex จะจับคู่ก่อนนำไปใช้</li><li><strong>การเรียนรู้</strong>: เข้าใจไวยากรณ์ regex ผ่านการทดลองแบบโต้ตอบ</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Regex Processing",
-            "content": "<p>All pattern matching runs <strong>locally in your browser</strong> using the native JavaScript <code>RegExp</code> engine.</p><ul><li>Your patterns and test data <strong>never leave your device</strong></li><li>ปลอดภัยสำหรับ testing patterns against sensitive data like log files or user records</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก the page loads</li></ul>"
+            "title": "การประมวลผล Regex ที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>การจับคู่รูปแบบทั้งหมดทำงาน <strong>ในเครื่องในเบราว์เซอร์ของคุณ</strong> โดยใช้เครื่องยนต์ <code>RegExp</code> แบบดั้งเดิมของ JavaScript</p><ul><li>รูปแบบและข้อมูลทดสอบของคุณ <strong>ไม่ออกจากอุปกรณ์ของคุณ</strong></li><li>ปลอดภัยสำหรับการทดสอบรูปแบบกับข้อมูลที่ละเอียดอ่อนเช่นไฟล์บันทึกหรือบันทึกผู้ใช้</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บแล้ว</li></ul>"
           }
         }
       },
@@ -531,33 +531,33 @@
           "a1": "Unix timestamp คือจำนวนวินาทีที่ผ่านไปตั้งแต่วันที่ 1 มกราคม 1970 00:00:00 UTC (Unix epoch)",
           "q2": "รองรับ timestamp แบบมิลลิวินาทีหรือไม่?",
           "a2": "ได้ หากคุณป้อนตัวเลขที่มากกว่า 10^12 จะถูกถือเป็นมิลลิวินาทีโดยอัตโนมัติแทนวินาที",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร Unix Timestamp Converter?",
-            "content": "<p><strong>Unix Timestamp Converter</strong> converts between Unix timestamps (seconds since January 1, 1970) and human-readable date/time formats. Enter a timestamp to see the date, or pick a date to get the timestamp.</p><p>Shows the current Unix timestamp live and supports both seconds and milliseconds formats.</p>"
+            "title": "Unix Timestamp Converter คืออะไร?",
+            "content": "<p><strong>Unix Timestamp Converter</strong> แปลงระหว่าง Unix timestamps (วินาทีตั้งแต่วันที่ 1 มกราคม 1970) และรูปแบบวันที่/เวลาที่อ่านได้ ป้อน timestamp เพื่อดูวันที่ หรือเลือกวันที่เพื่อรับ timestamp</p><p>แสดง Unix timestamp ปัจจุบันแบบสดและรองรับทั้งรูปแบบวินาทีและมิลลิวินาที</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ Unix Timestamp Converter",
-            "content": "<ol><li>Enter a Unix timestamp (seconds or milliseconds) to see the human-readable date and time</li><li>Or select a date and time to get the corresponding Unix timestamp</li><li>The current Unix timestamp is displayed live and updates in real-time</li><li>Copy any value with one click</li></ol><p>Automatically detects whether the input is in seconds or milliseconds based on the value length.</p>"
+            "title": "วิธีใช้เครื่องมือแปลง Unix Timestamp",
+            "content": "<ol><li>ป้อน Unix timestamp (วินาทีหรือมิลลิวินาที) เพื่อดูวันที่และเวลาที่อ่านได้</li><li>หรือเลือกวันที่และเวลาเพื่อรับ Unix timestamp ที่สอดคล้อง</li><li>Unix timestamp ปัจจุบันแสดงแบบสดและอัปเดตแบบเรียลไทม์</li><li>คัดลอกค่าใดก็ได้ด้วยคลิกเดียว</li></ol><p>ตรวจจับโดยอัตโนมัติว่าข้อมูลป้อนอยู่ในวินาทีหรือมิลลิวินาทีตามความยาวของค่า</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Bidirectional Conversion</strong>: Timestamp → date and date → timestamp</li><li><strong>Live Clock</strong>: Current Unix timestamp displayed and updating in real-time</li><li><strong>Seconds & Milliseconds</strong>: Supports both Unix seconds and JavaScript milliseconds</li><li><strong>Local & UTC</strong>: Shows times in both local timezone and UTC</li><li><strong>Instant Results</strong>: Conversion happens in real-time as you type</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: Copy any value to clipboard</li></ul>"
+            "content": "<ul><li><strong>การแปลงสองทิศทาง</strong>: Timestamp → วันที่ และ วันที่ → timestamp</li><li><strong>นาฬิกาสด</strong>: Unix timestamp ปัจจุบันแสดงและอัปเดตแบบเรียลไทม์</li><li><strong>วินาทีและมิลลิวินาที</strong>: รองรับทั้ง Unix วินาทีและ JavaScript มิลลิวินาที</li><li><strong>ท้องถิ่นและ UTC</strong>: แสดงเวลาในทั้งโซนเวลาท้องถิ่นและ UTC</li><li><strong>ผลลัพธ์ทันที</strong>: การแปลงเกิดขึ้นแบบเรียลไทม์ขณะที่คุณพิมพ์</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: คัดลอกค่าใดก็ได้ไปยังคลิปบอร์ด</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>Debugging</strong>: Convert API response timestamps to readable dates for debugging</li><li><strong>Database Queries</strong>: Convert between timestamp formats for SQL queries</li><li><strong>Log Analysis</strong>: Translate Unix timestamps in log files to human-readable times</li><li><strong>Scheduling</strong>: Calculate future/past timestamps for cron jobs or scheduled tasks</li><li><strong>Cross-Timezone Work</strong>: Compare timestamps across different timezones</li></ul>"
+            "content": "<ul><li><strong>การดีบั๊ก</strong>: แปลง API response timestamps เป็นวันที่ที่อ่านได้สำหรับการดีบั๊ก</li><li><strong>คำสั่ง SQL</strong>: แปลงระหว่างรูปแบบ timestamp สำหรับคำสั่ง SQL</li><li><strong>การวิเคราะห์บันทึก</strong>: แปลง Unix timestamps ในไฟล์บันทึกเป็นเวลาที่อ่านได้</li><li><strong>การกำหนดเวลา</strong>: คำนวณ timestamps ในอนาคต/อดีตสำหรับ cron jobs หรืองานที่กำหนดเวลา</li><li><strong>การทำงานข้ามโซนเวลา</strong>: เปรียบเทียบ timestamps ในโซนเวลาต่างๆ</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Timestamp Processing",
-            "content": "<p>All conversions use <strong>browser-native Date API</strong> — no server calls, no data transmitted.</p><ul><li>Your timestamps <strong>never leave your device</strong></li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก the page loads</li></ul>"
+            "title": "การประมวลผล Timestamp ที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>การแปลงทั้งหมดใช้ <strong>Date API ดั้งเดิมของเบราว์เซอร์</strong> — ไม่มีการเรียกเซิร์ฟเวอร์ ไม่มีการส่งข้อมูล</p><ul><li>timestamps ของคุณ <strong>ไม่ออกจากอุปกรณ์ของคุณ</strong></li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บแล้ว</li></ul>"
           }
         }
       },
@@ -578,33 +578,33 @@
           "a1": "ฟีเจอร์ YAML มาตรฐานทั้งหมด รวมถึงอ็อบเจ็กต์ซ้อน อาร์เรย์ สตริงหลายบรรทัด และ anchor/alias ผ่านไลบรารี js-yaml",
           "q2": "การแปลงรักษาความคิดเห็นหรือไม่?",
           "a2": "ไม่ ความคิดเห็น YAML จะถูกลบระหว่างการแยกวิเคราะห์ เมื่อแปลง JSON เป็น YAML เอาต์พุตจะเป็น YAML สะอาดไม่มีความคิดเห็น",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร YAML ↔ JSON Converter?",
-            "content": "<p><strong>YAML ↔ JSON Converter</strong> แปลงข้อมูลระหว่าง YAML and JSON formats. YAML's human-friendly syntax makes it popular for configuration files, while JSON is the standard for APIs and data exchange.</p><p>Convert Kubernetes configs, CI/CD pipelines, or any YAML file to JSON and back — instantly in your browser.</p>"
+            "title": "YAML ↔ JSON Converter คืออะไร?",
+            "content": "<p><strong>YAML ↔ JSON Converter</strong> แปลงข้อมูลระหว่างรูปแบบ YAML และ JSON ไวยากรณ์ที่เป็นมิตรกับมนุษย์ของ YAML ทำให้เป็นที่นิยมสำหรับไฟล์การตั้งค่า ในขณะที่ JSON เป็นมาตรฐานสำหรับ API และการแลกเปลี่ยนข้อมูล</p><p>แปลงการตั้งค่า Kubernetes, CI/CD pipelines หรือไฟล์ YAML ใดๆ เป็น JSON และกลับ — ทันทีในเบราว์เซอร์ของคุณ</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ YAML ↔ JSON Converter",
-            "content": "<ol><li>Paste your YAML or JSON data into the input area</li><li>Select the conversion direction: <strong>YAML → JSON</strong> or <strong>JSON → YAML</strong></li><li>The converted output appears instantly</li><li>Copy the result or download it as a file</li></ol><p>Supports the full YAML specification including multi-line strings, anchors, and complex nested structures.</p>"
+            "title": "วิธีใช้เครื่องมือแปลง YAML ↔ JSON",
+            "content": "<ol><li>วางข้อมูล YAML หรือ JSON ของคุณลงในพื้นที่ป้อนข้อมูล</li><li>เลือกทิศทางการแปลง: <strong>YAML → JSON</strong> หรือ <strong>JSON → YAML</strong></li><li>เอาต์พุตที่แปลงแล้วปรากฏทันที</li><li>คัดลอกผลลัพธ์หรือดาวน์โหลดเป็นไฟล์</li></ol><p>รองรับข้อกำหนด YAML ทั้งหมดรวมถึงสตริงหลายบรรทัด anchors และโครงสร้างที่ซ้อนกันที่ซับซ้อน</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Bidirectional Conversion</strong>: Convert YAML to JSON and JSON to YAML</li><li><strong>Full YAML Support</strong>: Handles multi-line strings, anchors, aliases, and all YAML features</li><li><strong>Pretty-Printed Output</strong>: Both JSON and YAML output are properly formatted</li><li><strong>Error Reporting</strong>: Clear error messages for invalid YAML or JSON syntax</li><li><strong>Instant Processing</strong>: Results appear immediately</li><li><strong>Powered by js-yaml</strong>: Reliable conversion using the industry-standard js-yaml library</li></ul>"
+            "content": "<ul><li><strong>การแปลงสองทิศทาง</strong>: แปลง YAML เป็น JSON และ JSON เป็น YAML</li><li><strong>รองรับ YAML เต็มรูปแบบ</strong>: จัดการสตริงหลายบรรทัด anchors aliases และฟีเจอร์ YAML ทั้งหมด</li><li><strong>เอาต์พุตพิมพ์สวยงาม</strong>: เอาต์พุตทั้ง JSON และ YAML จัดรูปแบบอย่างถูกต้อง</li><li><strong>การรายงานข้อผิดพลาด</strong>: ข้อความแสดงข้อผิดพลาดที่ชัดเจนสำหรับไวยากรณ์ YAML หรือ JSON ที่ไม่ถูกต้อง</li><li><strong>การประมวลผลทันที</strong>: ผลลัพธ์ปรากฏทันที</li><li><strong>ขับเคลื่อนโดย js-yaml</strong>: การแปลงที่เชื่อถือได้โดยใช้ไลบรารี js-yaml มาตรฐานอุตสาหกรรม</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>DevOps</strong>: Convert Kubernetes, Docker Compose, or Ansible YAML to JSON for API calls</li><li><strong>CI/CD</strong>: Transform GitHub Actions or GitLab CI YAML configs to JSON</li><li><strong>Configuration</strong>: Convert between YAML and JSON configuration file formats</li><li><strong>API Development</strong>: Transform YAML API specs (OpenAPI) to JSON format</li><li><strong>Data Migration</strong>: Convert data between YAML and JSON for different systems</li></ul>"
+            "content": "<ul><li><strong>DevOps</strong>: แปลง Kubernetes, Docker Compose หรือ Ansible YAML เป็น JSON สำหรับการเรียก API</li><li><strong>CI/CD</strong>: แปลงการตั้งค่า GitHub Actions หรือ GitLab CI YAML เป็น JSON</li><li><strong>การตั้งค่า</strong>: แปลงระหว่างรูปแบบไฟล์การตั้งค่า YAML และ JSON</li><li><strong>การพัฒนา API</strong>: แปลงสเปค API YAML (OpenAPI) เป็นรูปแบบ JSON</li><li><strong>การย้ายข้อมูล</strong>: แปลงข้อมูลระหว่าง YAML และ JSON สำหรับระบบต่างๆ</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Data Conversion",
-            "content": "<p>Conversion runs <strong>locally in your browser</strong> using the <strong>js-yaml</strong> library — no server communication.</p><ul><li>Your configuration files and data <strong>never leave your device</strong></li><li>ปลอดภัยสำหรับ converting secrets, environment variables, and sensitive configs</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก initial page load</li></ul>"
+            "title": "การแปลงข้อมูลที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>การแปลงทำงาน <strong>ในเครื่องในเบราว์เซอร์ของคุณ</strong> โดยใช้ไลบรารี <strong>js-yaml</strong> — ไม่มีการสื่อสารกับเซิร์ฟเวอร์</p><ul><li>ไฟล์การตั้งค่าและข้อมูลของคุณ <strong>ไม่ออกจากอุปกรณ์ของคุณ</strong></li><li>ปลอดภัยสำหรับการแปลง secrets, environment variables และการตั้งค่าที่ละเอียดอ่อน</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บครั้งแรก</li></ul>"
           }
         }
       },
@@ -626,33 +626,33 @@
           "a1": "อัลกอริทึม Longest Common Subsequence (LCS) แบบบรรทัดที่ระบุการเพิ่ม การลบ และบรรทัดที่ไม่เปลี่ยนแปลง",
           "q2": "สามารถคัดลอกเอาต์พุต diff ได้หรือไม่?",
           "a2": "ได้ ใช้ปุ่มคัดลอกเพื่อคัดลอกรูปแบบ diff แบบ unified พร้อมคำนำหน้า + และ - สำหรับการเพิ่มและการลบ",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร Text Diff?",
-            "content": "<p><strong>Text Diff</strong> compares two pieces of text and highlights the differences line by line. See exactly what was added, removed, or changed — like a simplified version of <code>git diff</code> in your browser.</p><p>Ideal for comparing code versions, configuration files, document drafts, or any text content.</p>"
+            "title": "Text Diff คืออะไร?",
+            "content": "<p><strong>Text Diff</strong> เปรียบเทียบข้อความสองชิ้นและเน้นความแตกต่างทีละบรรทัด ดูอย่างแม่นยำว่ามีการเพิ่ม ลบ หรือเปลี่ยนแปลงอะไร — เหมือนกับเวอร์ชันง่ายของ <code>git diff</code> ในเบราว์เซอร์ของคุณ</p><p>เหมาะสำหรับการเปรียบเทียบเวอร์ชันโค้ด ไฟล์การตั้งค่า ร่างเอกสาร หรือเนื้อหาข้อความใดๆ</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ Text Diff",
-            "content": "<ol><li>Paste the original text in the left panel</li><li>Paste the modified text in the right panel</li><li>Differences are highlighted immediately: green for additions, red for deletions</li><li>Scroll through the diff to review all changes</li></ol><p>Works best with structured text like code, configs, or documents with clear line breaks.</p>"
+            "title": "วิธีใช้เครื่องมือเปรียบเทียบข้อความ",
+            "content": "<ol><li>วางข้อความต้นฉบับในบานหน้าต่างซ้าย</li><li>วางข้อความที่แก้ไขในบานหน้าต่างขวา</li><li>ความแตกต่างถูกเน้นทันที: สีเขียวสำหรับการเพิ่ม สีแดงสำหรับการลบ</li><li>เลื่อนผ่าน diff เพื่อตรวจสอบการเปลี่ยนแปลงทั้งหมด</li></ol><p>ทำงานได้ดีที่สุดกับข้อความที่มีโครงสร้างเช่นโค้ด การตั้งค่า หรือเอกสารที่มีการขึ้นบรรทัดใหม่ที่ชัดเจน</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Line-by-Line Comparison</strong>: See exactly which lines differ between two texts</li><li><strong>Color-Coded Diff</strong>: Additions in green, deletions in red — clear at a glance</li><li><strong>Instant Comparison</strong>: Results appear immediately as you paste text</li><li><strong>Side-by-Side View</strong>: Both texts displayed together with aligned differences</li><li><strong>Large Text Support</strong>: Compare lengthy documents efficiently</li><li><strong>No Line Limit</strong>: Handle any text length without restrictions</li></ul>"
+            "content": "<ul><li><strong>การเปรียบเทียบทีละบรรทัด</strong>: ดูอย่างแม่นยำว่าบรรทัดใดแตกต่างกันระหว่างสองข้อความ</li><li><strong>Diff รหัสสี</strong>: การเพิ่มเป็นสีเขียว การลบเป็นสีแดง — เห็นได้ชัดในครั้งเดียว</li><li><strong>การเปรียบเทียบทันที</strong>: ผลลัพธ์ปรากฏทันทีเมื่อคุณวางข้อความ</li><li><strong>มุมมองคู่ขนาน</strong>: ทั้งสองข้อความแสดงพร้อมกันพร้อมความแตกต่างที่จัดแนว</li><li><strong>รองรับข้อความขนาดใหญ่</strong>: เปรียบเทียบเอกสารยาวๆ ได้อย่างมีประสิทธิภาพ</li><li><strong>ไม่จำกัดบรรทัด</strong>: จัดการข้อความทุกความยาวโดยไม่มีข้อจำกัด</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>Code Review</strong>: Compare two versions of a code file to see what changed</li><li><strong>Config Changes</strong>: Spot differences between development and production config files</li><li><strong>Document Revision</strong>: Compare draft versions of documents or contracts</li><li><strong>Database Records</strong>: Compare exported records to find data discrepancies</li><li><strong>Debugging</strong>: Compare expected vs. actual output in test scenarios</li></ul>"
+            "content": "<ul><li><strong>การตรวจสอบโค้ด</strong>: เปรียบเทียบสองเวอร์ชันของไฟล์โค้ดเพื่อดูสิ่งที่เปลี่ยนแปลง</li><li><strong>การเปลี่ยนแปลงการตั้งค่า</strong>: หาความแตกต่างระหว่างไฟล์การตั้งค่าการพัฒนาและการผลิต</li><li><strong>การแก้ไขเอกสาร</strong>: เปรียบเทียบร่างเวอร์ชันของเอกสารหรือสัญญา</li><li><strong>บันทึกฐานข้อมูล</strong>: เปรียบเทียบบันทึกที่ส่งออกเพื่อหาความไม่สอดคล้องของข้อมูล</li><li><strong>การดีบั๊ก</strong>: เปรียบเทียบเอาต์พุตที่คาดหวังกับเอาต์พุตจริงในสถานการณ์ทดสอบ</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Text Comparison",
-            "content": "<p>Text comparison runs <strong>entirely in your browser</strong> using a JavaScript diff algorithm — no server processing.</p><ul><li>Your text <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — safe for comparing sensitive code, contracts, or confidential documents</li><li>No server storage or third-party access</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก the page loads</li></ul>"
+            "title": "การเปรียบเทียบข้อความที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>การเปรียบเทียบข้อความทำงาน <strong>ทั้งหมดในเบราว์เซอร์ของคุณ</strong> โดยใช้อัลกอริทึม diff แบบ JavaScript — ไม่มีการประมวลผลเซิร์ฟเวอร์</p><ul><li>ข้อความของคุณ <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — ปลอดภัยสำหรับการเปรียบเทียบโค้ดที่ละเอียดอ่อน สัญญา หรือเอกสารลับ</li><li>ไม่มีการจัดเก็บเซิร์ฟเวอร์หรือการเข้าถึงจากบุคคลที่สาม</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บแล้ว</li></ul>"
           }
         }
       },
@@ -676,31 +676,31 @@
           "a2": "ไม่ เครื่องมือนี้ประมวลผลข้อความทุกความยาวโดยตรงในเบราว์เซอร์ของคุณโดยไม่มีข้อจำกัด",
           "q3": "เวลาในการอ่านคำนวณอย่างไร?",
           "a3": "เวลาในการอ่านประมาณที่ 200 คำต่อนาที ซึ่งเป็นความเร็วเฉลี่ยในการอ่านของผู้ใหญ่",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร Word Counter?",
-            "content": "<p><strong>Word Counter</strong> analyzes your text and instantly displays word count, character count, sentence count, paragraph count, and estimated reading time. Essential for writers, students, and content creators who need to meet length requirements.</p><p>Simply paste your text and get all statistics in real-time.</p>"
+            "title": "Word Counter คืออะไร?",
+            "content": "<p><strong>Word Counter</strong> วิเคราะห์ข้อความของคุณและแสดงจำนวนคำ จำนวนตัวอักษร จำนวนประโยค จำนวนย่อหน้า และเวลาอ่านโดยประมาณทันที จำเป็นสำหรับนักเขียน นักเรียน และผู้สร้างเนื้อหาที่ต้องการให้เป็นไปตามข้อกำหนดความยาว</p><p>เพียงวางข้อความของคุณและรับสถิติทั้งหมดแบบเรียลไทม์</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ Word Counter",
-            "content": "<ol><li>Type or paste your text into the input area</li><li>Statistics update in real-time as you type: words, characters, sentences, paragraphs, and reading time</li><li>Use the results to check length requirements or estimate reading duration</li></ol><p>Reading time is estimated at an average reading speed of 200 words per minute.</p>"
+            "title": "วิธีใช้เครื่องมือนับคำ",
+            "content": "<ol><li>พิมพ์หรือวางข้อความของคุณลงในพื้นที่ป้อนข้อมูล</li><li>สถิติอัปเดตแบบเรียลไทม์ขณะที่คุณพิมพ์: คำ ตัวอักษร ประโยค ย่อหน้า และเวลาอ่าน</li><li>ใช้ผลลัพธ์เพื่อตรวจสอบข้อกำหนดความยาวหรือประมาณเวลาการอ่าน</li></ol><p>เวลาอ่านประมาณที่ความเร็วการอ่านเฉลี่ย 200 คำต่อนาที</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Word Count</strong>: Accurate word counting with proper handling of punctuation and whitespace</li><li><strong>Character Count</strong>: Total characters with and without spaces</li><li><strong>Sentence Count</strong>: Counts sentences based on punctuation markers</li><li><strong>Paragraph Count</strong>: Counts paragraphs separated by line breaks</li><li><strong>Reading Time</strong>: Estimated reading duration at average speed</li><li><strong>Real-Time Updates</strong>: All statistics update instantly as you type</li></ul>"
+            "content": "<ul><li><strong>การนับคำ</strong>: การนับคำที่แม่นยำด้วยการจัดการเครื่องหมายวรรคตอนและช่องว่างที่เหมาะสม</li><li><strong>การนับตัวอักษร</strong>: ตัวอักษรทั้งหมดทั้งมีและไม่มีช่องว่าง</li><li><strong>การนับประโยค</strong>: นับประโยคตามเครื่องหมายวรรคตอน</li><li><strong>การนับย่อหน้า</strong>: นับย่อหน้าที่คั่นด้วยการขึ้นบรรทัดใหม่</li><li><strong>เวลาอ่าน</strong>: ระยะเวลาการอ่านโดยประมาณที่ความเร็วเฉลี่ย</li><li><strong>การอัปเดตแบบเรียลไทม์</strong>: สถิติทั้งหมดอัปเดตทันทีขณะที่คุณพิมพ์</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>Academic Writing</strong>: Check essay or thesis word counts against requirements</li><li><strong>SEO Content</strong>: Ensure blog posts and articles meet target word counts</li><li><strong>Social Media</strong>: Check character limits for tweets, LinkedIn posts, or bios</li><li><strong>Translation</strong>: Estimate translation costs based on word count</li><li><strong>Content Planning</strong>: Calculate reading times for articles and presentations</li></ul>"
+            "content": "<ul><li><strong>การเขียนทางวิชาการ</strong>: ตรวจสอบจำนวนคำของเรียงความหรือวิทยานิพนธ์ตามข้อกำหนด</li><li><strong>เนื้อหา SEO</strong>: ตรวจสอบให้แน่ใจว่าโพสต์บล็อกและบทความเป็นไปตามจำนวนคำเป้าหมาย</li><li><strong>โซเชียลมีเดีย</strong>: ตรวจสอบข้อจำกัดตัวอักษรสำหรับทวีต โพสต์ LinkedIn หรือประวัติ</li><li><strong>การแปล</strong>: ประมาณค่าใช้จ่ายการแปลตามจำนวนคำ</li><li><strong>การวางแผนเนื้อหา</strong>: คำนวณเวลาอ่านสำหรับบทความและการนำเสนอ</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Text Analysis",
-            "content": "<p>All counting is done <strong>locally in your browser</strong> using simple JavaScript string operations.</p><ul><li>Your text <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — safe for analyzing confidential documents</li><li>No server processing or cloud storage</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก the page loads</li></ul>"
+            "title": "การวิเคราะห์ข้อความที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>การนับทั้งหมดทำ <strong>ในเครื่องในเบราว์เซอร์ของคุณ</strong> โดยใช้การดำเนินการสตริง JavaScript อย่างง่าย</p><ul><li>ข้อความของคุณ <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — ปลอดภัยสำหรับการวิเคราะห์เอกสารลับ</li><li>ไม่มีการประมวลผลเซิร์ฟเวอร์หรือการจัดเก็บคลาวด์</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บแล้ว</li></ul>"
           }
         }
       },
@@ -725,33 +725,33 @@
           "a1": "เรารองรับ UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case และ CONSTANT_CASE",
           "q2": "สามารถแปลงชื่อตัวแปรในโค้ดได้ไหม?",
           "a2": "ได้! ใช้การแปลง camelCase, PascalCase, snake_case หรือ kebab-case สำหรับชื่อตัวแปรในการเขียนโปรแกรม",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร Case Converter?",
-            "content": "<p><strong>Case Converter</strong> transforms text between multiple case formats including UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, and CONSTANT_CASE.</p><p>Essential for developers renaming variables, writers formatting titles, or anyone who needs to quickly change text casing.</p>"
+            "title": "Case Converter คืออะไร?",
+            "content": "<p><strong>Case Converter</strong> แปลงข้อความระหว่างรูปแบบตัวพิมพ์หลายแบบรวมถึง UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case และ CONSTANT_CASE</p><p>จำเป็นสำหรับนักพัฒนาที่เปลี่ยนชื่อตัวแปร นักเขียนที่จัดรูปแบบชื่อเรื่อง หรือใครก็ตามที่ต้องการเปลี่ยนตัวพิมพ์ข้อความอย่างรวดเร็ว</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ Case Converter",
-            "content": "<ol><li>Type or paste your text into the input area</li><li>Click the desired case format button: UPPER, lower, Title, Sentence, camelCase, PascalCase, snake_case, kebab-case, or CONSTANT_CASE</li><li>The converted text appears instantly</li><li>Copy the result with one click</li></ol><p>You can chain conversions — convert to lowercase first, then to camelCase for clean results.</p>"
+            "title": "วิธีใช้เครื่องมือแปลงตัวพิมพ์",
+            "content": "<ol><li>พิมพ์หรือวางข้อความของคุณลงในพื้นที่ป้อนข้อมูล</li><li>คลิกปุ่มรูปแบบตัวพิมพ์ที่ต้องการ: UPPER, lower, Title, Sentence, camelCase, PascalCase, snake_case, kebab-case หรือ CONSTANT_CASE</li><li>ข้อความที่แปลงแล้วปรากฏทันที</li><li>คัดลอกผลลัพธ์ด้วยคลิกเดียว</li></ol><p>คุณสามารถเชื่อมโยงการแปลง — แปลงเป็น lowercase ก่อน แล้วเป็น camelCase สำหรับผลลัพธ์ที่สะอาด</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>9+ Case Formats</strong>: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE</li><li><strong>Instant Conversion</strong>: Results appear immediately when you click a format</li><li><strong>Multi-Line Support</strong>: Convert multiple lines of text at once</li><li><strong>Smart Parsing</strong>: Correctly splits words from camelCase, snake_case, or other formats</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: Copy converted text to clipboard</li><li><strong>Batch Processing</strong>: Process multiple lines simultaneously</li></ul>"
+            "content": "<ul><li><strong>9+ รูปแบบตัวพิมพ์</strong>: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE</li><li><strong>การแปลงทันที</strong>: ผลลัพธ์ปรากฏทันทีเมื่อคุณคลิกรูปแบบ</li><li><strong>รองรับหลายบรรทัด</strong>: แปลงข้อความหลายบรรทัดพร้อมกัน</li><li><strong>การแยกวิเคราะห์อัจฉริยะ</strong>: แยกคำจาก camelCase, snake_case หรือรูปแบบอื่นๆ ได้อย่างถูกต้อง</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: คัดลอกข้อความที่แปลงแล้วไปยังคลิปบอร์ด</li><li><strong>การประมวลผลแบบแบตช์</strong>: ประมวลผลหลายบรรทัดพร้อมกัน</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>Variable Naming</strong>: Convert between JavaScript camelCase, Python snake_case, and CSS kebab-case</li><li><strong>Database Fields</strong>: Transform column names between different naming conventions</li><li><strong>Content Formatting</strong>: Convert titles to Title Case for headlines and headings</li><li><strong>API Design</strong>: Standardize field names in JSON request/response schemas</li><li><strong>Code Refactoring</strong>: Rename identifiers when switching between naming conventions</li></ul>"
+            "content": "<ul><li><strong>การตั้งชื่อตัวแปร</strong>: แปลงระหว่าง JavaScript camelCase, Python snake_case และ CSS kebab-case</li><li><strong>ฟิลด์ฐานข้อมูล</strong>: แปลงชื่อคอลัมน์ระหว่างข้อกำหนดการตั้งชื่อต่างๆ</li><li><strong>การจัดรูปแบบเนื้อหา</strong>: แปลงชื่อเรื่องเป็น Title Case สำหรับพาดหัวและหัวข้อ</li><li><strong>การออกแบบ API</strong>: มาตรฐานชื่อฟิลด์ใน schemas คำขอ/ตอบกลับ JSON</li><li><strong>การรีแฟคเตอร์โค้ด</strong>: เปลี่ยนชื่อ identifiers เมื่อสลับระหว่างข้อกำหนดการตั้งชื่อ</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Text Processing",
-            "content": "<p>Case conversion runs <strong>entirely in your browser</strong> using JavaScript string operations — no server calls.</p><ul><li>Your text <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong></li><li>No server processing or logging</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก the page loads</li></ul>"
+            "title": "การประมวลผลข้อความที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>การแปลงตัวพิมพ์ทำงาน <strong>ทั้งหมดในเบราว์เซอร์ของคุณ</strong> โดยใช้การดำเนินการสตริง JavaScript — ไม่มีการเรียกเซิร์ฟเวอร์</p><ul><li>ข้อความของคุณ <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong></li><li>ไม่มีการประมวลผลหรือการบันทึกเซิร์ฟเวอร์</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บแล้ว</li></ul>"
           }
         }
       },
@@ -773,33 +773,33 @@
           "a1": "Lorem Ipsum คือข้อความตัวอย่างที่ใช้กันทั่วไปในงานออกแบบและสิ่งพิมพ์เพื่อเติมพื้นที่ที่จะมีเนื้อหาจริงในภายหลัง",
           "q2": "สามารถปรับแต่งผลลัพธ์ได้ไหม?",
           "a2": "ได้ คุณสามารถเลือกสร้างตามย่อหน้า ประโยค หรือคำ กำหนดจำนวน และเลือกเริ่มต้นด้วยข้อความ Lorem Ipsum แบบดั้งเดิมได้",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
+          "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
+          "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
         },
         "seoContent": {
           "intro": {
-            "title": "คืออะไร Lorem Ipsum Generator?",
-            "content": "<p><strong>Lorem Ipsum Generator</strong> creates placeholder text for design mockups, wireframes, and prototypes. Generate classic Lorem Ipsum text by paragraphs, sentences, or words with precise control over the amount.</p><p>The industry-standard way to fill layouts with realistic-looking text before final content is ready.</p>"
+            "title": "Lorem Ipsum Generator คืออะไร?",
+            "content": "<p><strong>Lorem Ipsum Generator</strong> สร้างข้อความตัวอย่างสำหรับ mockups การออกแบบ wireframes และต้นแบบ สร้างข้อความ Lorem Ipsum คลาสสิกตามย่อหน้า ประโยค หรือคำด้วยการควบคุมปริมาณอย่างแม่นยำ</p><p>วิธีมาตรฐานของอุตสาหกรรมในการเติมเลย์เอาต์ด้วยข้อความที่ดูสมจริงก่อนที่เนื้อหาสุดท้ายจะพร้อม</p>"
           },
           "howToUse": {
-            "title": "วิธีการใช้ Lorem Ipsum Generator",
-            "content": "<ol><li>Choose the unit: <strong>paragraphs</strong>, <strong>sentences</strong>, or <strong>words</strong></li><li>Set the amount you need (e.g., 3 paragraphs, 10 sentences, or 50 words)</li><li>Click <strong>Generate</strong> to create the placeholder text</li><li>Copy the result to use in your design or document</li></ol><p>Generated text follows the classic Lorem Ipsum pattern starting with \"Lorem ipsum dolor sit amet...\"</p>"
+            "title": "วิธีใช้เครื่องมือสร้าง Lorem Ipsum",
+            "content": "<ol><li>เลือกหน่วย: <strong>ย่อหน้า</strong>, <strong>ประโยค</strong> หรือ <strong>คำ</strong></li><li>ตั้งค่าปริมาณที่คุณต้องการ (เช่น 3 ย่อหน้า 10 ประโยค หรือ 50 คำ)</li><li>คลิก <strong>สร้าง</strong> เพื่อสร้างข้อความตัวอย่าง</li><li>คัดลอกผลลัพธ์เพื่อใช้ในการออกแบบหรือเอกสารของคุณ</li></ol><p>ข้อความที่สร้างขึ้นเป็นไปตามรูปแบบ Lorem Ipsum คลาสสิก เริ่มต้นด้วย \"Lorem ipsum dolor sit amet...\"</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Three Output Modes</strong>: Generate by paragraphs, sentences, or word count</li><li><strong>Customizable Amount</strong>: Control exactly how much text is generated</li><li><strong>Classic Lorem Ipsum</strong>: Uses the standard Lorem Ipsum word pool</li><li><strong>Instant Generation</strong>: Text appears immediately with no delay</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: Copy all generated text to clipboard</li><li><strong>Consistent Output</strong>: Natural-looking text distribution and paragraph lengths</li></ul>"
+            "content": "<ul><li><strong>สามโหมดเอาต์พุต</strong>: สร้างตามย่อหน้า ประโยค หรือจำนวนคำ</li><li><strong>ปริมาณที่ปรับแต่งได้</strong>: ควบคุมอย่างแม่นยำว่าจะสร้างข้อความมากแค่ไหน</li><li><strong>Lorem Ipsum คลาสสิก</strong>: ใช้คลังคำ Lorem Ipsum มาตรฐาน</li><li><strong>การสร้างทันที</strong>: ข้อความปรากฏทันทีโดยไม่มีความล่าช้า</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: คัดลอกข้อความที่สร้างทั้งหมดไปยังคลิปบอร์ด</li><li><strong>เอาต์พุตสม่ำเสมอ</strong>: การกระจายข้อความและความยาวย่อหน้าที่ดูเป็นธรรมชาติ</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
-            "content": "<ul><li><strong>Web Design</strong>: Fill page layouts with realistic text to test typography and spacing</li><li><strong>UI Prototyping</strong>: Add placeholder content to wireframes and mockups</li><li><strong>Print Design</strong>: Fill brochures, flyers, and book layouts before final copy</li><li><strong>Presentations</strong>: Add placeholder text to slide templates</li><li><strong>Testing</strong>: Generate sample text data for testing text rendering or truncation</li></ul>"
+            "content": "<ul><li><strong>การออกแบบเว็บ</strong>: เติมเลย์เอาต์เพจด้วยข้อความสมจริงเพื่อทดสอบการจัดพิมพ์และระยะห่าง</li><li><strong>การสร้างต้นแบบ UI</strong>: เพิ่มเนื้อหาตัวอย่างลงใน wireframes และ mockups</li><li><strong>การออกแบบสิ่งพิมพ์</strong>: เติมเลย์เอาต์โบรชัวร์ ใบปลิว และหนังสือก่อนเนื้อหาสุดท้าย</li><li><strong>การนำเสนอ</strong>: เพิ่มข้อความตัวอย่างลงในเทมเพลตสไลด์</li><li><strong>การทดสอบ</strong>: สร้างข้อมูลข้อความตัวอย่างสำหรับการทดสอบการเรนเดอร์ข้อความหรือการตัดข้อความ</li></ul>"
           },
           "privacy": {
-            "title": "การประมวลผลที่ปกป้องความเป็นส่วนตัว Text Generation",
-            "content": "<p>Lorem Ipsum is generated <strong>entirely in your browser</strong> using a local word dictionary — no server calls.</p><ul><li>No data is transmitted — the tool is purely generative</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจาก the page loads</li></ul>"
+            "title": "การสร้างข้อความที่ปกป้องความเป็นส่วนตัว",
+            "content": "<p>Lorem Ipsum ถูกสร้าง <strong>ทั้งหมดในเบราว์เซอร์ของคุณ</strong> โดยใช้พจนานุกรมคำท้องถิ่น — ไม่มีการเรียกเซิร์ฟเวอร์</p><ul><li>ไม่มีข้อมูลถูกส่ง — เครื่องมือนี้เป็นเชิงสร้างสรรค์ล้วนๆ</li><li>ทำงาน <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บแล้ว</li></ul>"
           }
         }
       }
