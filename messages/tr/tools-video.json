@@ -15,66 +15,66 @@
           "a1": "Araç, video kalitesini koruyarak ses parçasını videodan kaldırır. Yeniden kodlama gerekmez.",
           "q2": "Hangi video formatları destekleniyor?",
           "a2": "MP4, WebM, MOV ve AVI dahil yaygın formatların çoğu desteklenir.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
           "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
+          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
+          "q5": "Dosya boyutu sınırları var mı?",
+          "a5": "Sunucu tarafından dayatılan sınır yoktur. Maksimum dosya boyutu cihazınızın kullanılabilir belleğine ve tarayıcı yeteneklerine bağlıdır. Çoğu modern cihaz birkaç yüz MB'a kadar olan dosyaları sorunsuz şekilde işler."
         },
         "seoContent": {
           "intro": {
-            "title": "Nedir Mute Video?",
-            "content": "<p><strong>Mute Video</strong> removes the audio track from video files while keeping the video quality intact. Create silent versions of videos for background loops, presentations, or social media posts where audio isn't needed.</p><p>Powered by FFmpeg.wasm — full video processing running locally in your browser.</p>"
+            "title": "Video Sesi Kapatma Nedir?",
+            "content": "<p><strong>Video Sesi Kapatma</strong>, video kalitesini koruyarak video dosyalarından ses parçasını kaldırır. Arka plan döngüleri, sunumlar veya sesin gerekmediği sosyal medya gönderileri için sessiz versiyonlar oluşturun.</p><p>FFmpeg.wasm ile güçlendirilmiştir — tam video işleme yerel olarak tarayıcınızda çalışır.</p>"
           },
           "howToUse": {
-            "title": "Nasıl Kullanılır Mute Video",
-            "content": "<ol><li>Upload a video file (MP4, WebM, MKV, AVI supported)</li><li>Click <strong>Mute</strong> to remove the audio track</li><li>Download the silent video</li></ol><p>The video stream is copied without re-encoding, so processing is fast and quality is preserved.</p>"
+            "title": "Video Sesi Kapatma Nasıl Kullanılır",
+            "content": "<ol><li>Bir video dosyası yükleyin (MP4, WebM, MKV, AVI desteklenir)</li><li>Ses parçasını kaldırmak için <strong>Sesi Kapat</strong> düğmesine tıklayın</li><li>Sessiz videoyu indirin</li></ol><p>Video akışı yeniden kodlama olmadan kopyalanır, bu nedenle işleme hızlıdır ve kalite korunur.</p>"
           },
           "features": {
             "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Audio Track Removal</strong>: Completely strips audio while keeping video untouched</li><li><strong>No Re-encoding</strong>: Video stream is copied directly — no quality loss</li><li><strong>Fast Processing</strong>: Stream copy is much faster than re-encoding</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI input</li><li><strong>Powered by FFmpeg.wasm</strong>: Industry-standard video processing in your browser</li><li><strong>Preview</strong>: Play the video before and after muting</li></ul>"
+            "content": "<ul><li><strong>Ses Parçası Kaldırma</strong>: Videoyu bozmadan sesi tamamen kaldırır</li><li><strong>Yeniden Kodlama Yok</strong>: Video akışı doğrudan kopyalanır — kalite kaybı yok</li><li><strong>Hızlı İşleme</strong>: Akış kopyalama yeniden kodlamadan çok daha hızlıdır</li><li><strong>Çoklu Formatlar</strong>: MP4, WebM, MKV ve AVI girişi destekler</li><li><strong>FFmpeg.wasm ile Güçlendirilmiştir</strong>: Tarayıcınızda endüstri standardı video işleme</li><li><strong>Önizleme</strong>: Sesi kapatmadan önce ve sonra videoyu oynatın</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Presentations</strong>: Remove distracting audio from background videos in slides</li><li><strong>Social Media</strong>: Create silent looping videos for Instagram or TikTok backgrounds</li><li><strong>Web Design</strong>: Prepare silent hero videos for website backgrounds</li><li><strong>Privacy</strong>: Remove conversations or identifiable audio from recordings</li><li><strong>Video Editing</strong>: Strip audio before replacing with a different soundtrack</li></ul>"
+            "content": "<ul><li><strong>Sunumlar</strong>: Slaytlardaki arka plan videolarından dikkat dağıtıcı sesi kaldırın</li><li><strong>Sosyal Medya</strong>: Instagram veya TikTok arka planları için sessiz döngü videoları oluşturun</li><li><strong>Web Tasarımı</strong>: Web sitesi arka planları için sessiz hero videoları hazırlayın</li><li><strong>Gizlilik</strong>: Kayıtlardan konuşmaları veya tanımlanabilir sesi kaldırın</li><li><strong>Video Düzenleme</strong>: Farklı bir film müziği ile değiştirmeden önce sesi kaldırın</li></ul>"
           },
           "privacy": {
-            "title": "Gizlilik Odaklı Video Processing",
-            "content": "<p>Video processing runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly).</p><ul><li>Your videos <strong>never leave your device</strong> — no server uploads</li><li>No cloud processing or third-party access to your media</li><li>sonra <strong>çevrimdışı</strong> çalışır FFmpeg core is loaded</li></ul>"
+            "title": "Gizlilik Odaklı Video İşleme",
+            "content": "<p>Video işleme <strong>FFmpeg.wasm</strong> (WebAssembly) kullanılarak <strong>tamamen tarayıcınızda</strong> çalışır.</p><ul><li>Videolarınız <strong>cihazınızı asla terk etmez</strong> — sunucuya yükleme yok</li><li>Bulut işleme veya medyaya üçüncü taraf erişimi yok</li><li>FFmpeg core yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
           }
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Zap",
-            "title": "Remove Audio from Video Free",
-            "description": "Strip audio tracks instantly with one click. No software download, no registration, no watermarks."
+            "title": "Videodan Sesi Ücretsiz Kaldırın",
+            "description": "Tek tıkla ses parçalarını anında kaldırın. İndirme yok, kayıt yok, filigran yok."
           },
           "f2": {
             "icon": "Shield",
-            "title": "No Quality Loss Guaranteed",
-            "description": "Stream copy technology preserves original video quality. Same resolution, same clarity, just silent."
+            "title": "Kalite Kaybı Yok Garanti Edilir",
+            "description": "Akış kopyalama teknolojisi orijinal video kalitesini korur. Aynı çözünürlük, aynı netlik, sadece sessiz."
           },
           "f3": {
             "icon": "FileVideo",
-            "title": "MP4, MOV, AVI, WebM Supported",
-            "description": "Works with all popular formats. Upload any video, get silent version in the same format instantly."
+            "title": "MP4, MOV, AVI, WebM Desteklenir",
+            "description": "Tüm popüler formatlarla çalışır. Herhangi bir video yükleyin, sessiz versiyonu anında alın."
           },
           "f4": {
             "icon": "Gauge",
-            "title": "Process in Seconds, Not Minutes",
-            "description": "Stream copy mode is 10x faster than re-encoding. Perfect for quick social media edits."
+            "title": "Dakikalar Değil Saniyeler İçinde İşleyin",
+            "description": "Akış kopyalama modu yeniden kodlamadan 10 kat daha hızlıdır. Hızlı sosyal medya düzenlemeleri için mükemmel."
           },
           "f5": {
             "icon": "BarChart3",
-            "title": "Preview Before Downloading",
-            "description": "Watch your muted video in the browser first. Confirm it's perfect, then save to your device."
+            "title": "İndirmeden Önce Önizleyin",
+            "description": "Sesi kapatılmış videoyu tarayıcıda önce izleyin. Mükemmel olduğundan emin olun, sonra cihazınıza kaydedin."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Private & Secure - No Upload",
-            "description": "All processing happens on your device. Your videos never touch our servers. 100% privacy guaranteed."
+            "title": "Gizli ve Güvenli - Yükleme Yok",
+            "description": "Tüm işleme cihazınızda gerçekleşir. Videolarınız sunucularımıza asla değmez. %100 gizlilik garantisi."
           }
         }
       },
@@ -95,66 +95,66 @@
           "a1": "Evet, 0,1 saniye hassasiyetle tam başlangıç ve bitiş noktalarını ayarlamak için aralık kaydırıcılarını kullanın.",
           "q2": "Video yeniden kodlanıyor mu?",
           "a2": "Araç, kalite kaybı olmadan hızlı işleme için akış kopyalama modunu kullanır.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
           "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
+          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
+          "q5": "Dosya boyutu sınırları var mı?",
+          "a5": "Sunucu tarafından dayatılan sınır yoktur. Maksimum dosya boyutu cihazınızın kullanılabilir belleğine ve tarayıcı yeteneklerine bağlıdır. Çoğu modern cihaz birkaç yüz MB'a kadar olan dosyaları sorunsuz şekilde işler."
         },
         "seoContent": {
           "intro": {
-            "title": "Nedir Trim Video?",
-            "content": "<p><strong>Trim Video</strong> cuts video clips to your desired length with precise start and end time controls. Set times down to 0.1-second precision, preview the selection, and download the trimmed clip.</p><p>Uses FFmpeg.wasm for professional-grade video trimming doğrudan tarayıcınızda.</p>"
+            "title": "Video Kırpma Nedir?",
+            "content": "<p><strong>Video Kırpma</strong>, video kliplerini istenen uzunluğa hassas başlangıç ve bitiş zamanı kontrolleriyle keser. 0,1 saniye hassasiyetle zaman ayarlayın, seçimi önizleyin ve kırpılmış klibi indirin.</p><p>FFmpeg.wasm kullanarak profesyonel seviyede video kırpma doğrudan tarayıcınızda.</p>"
           },
           "howToUse": {
-            "title": "Nasıl Kullanılır Trim Video",
-            "content": "<ol><li>Upload a video file</li><li>Set the <strong>start time</strong> and <strong>end time</strong> for the clip you want to keep</li><li>Preview the selected range in the video player</li><li>Click <strong>Trim</strong> to extract the clip</li><li>Download the trimmed video</li></ol><p>Supports precise time selection with 0.1-second increments.</p>"
+            "title": "Video Kırpma Nasıl Kullanılır",
+            "content": "<ol><li>Bir video dosyası yükleyin</li><li>Saklamak istediğiniz klip için <strong>başlangıç zamanını</strong> ve <strong>bitiş zamanını</strong> ayarlayın</li><li>Seçilen aralığı video oynatıcıda önizleyin</li><li>Klibi çıkarmak için <strong>Kırp</strong> düğmesine tıklayın</li><li>Kırpılmış videoyu indirin</li></ol><p>0,1 saniyelik artışlarla hassas zaman seçimi destekler.</p>"
           },
           "features": {
             "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Precise Timing</strong>: Set start and end times with 0.1-second accuracy</li><li><strong>Video Preview</strong>: Play the selected range before trimming</li><li><strong>Fast Processing</strong>: Stream copy mode for instant trimming without re-encoding</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional video processing in the browser</li><li><strong>Quality Preservation</strong>: No quality loss when stream copying</li></ul>"
+            "content": "<ul><li><strong>Hassas Zamanlama</strong>: 0,1 saniye doğrulukla başlangıç ve bitiş zamanlarını ayarlayın</li><li><strong>Video Önizleme</strong>: Kırpmeden önce seçilen aralığı oynatın</li><li><strong>Hızlı İşleme</strong>: Yeniden kodlama olmadan anında kırpma için akış kopyalama modu</li><li><strong>Çoklu Formatlar</strong>: MP4, WebM, MKV ve AVI destekler</li><li><strong>FFmpeg.wasm ile Güçlendirilmiştir</strong>: Tarayıcıda profesyonel video işleme</li><li><strong>Kalite Koruması</strong>: Akış kopyalamada kalite kaybı yok</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Social Media Clips</strong>: Cut highlights from longer videos for social platforms</li><li><strong>Meeting Recordings</strong>: Extract key moments from recorded meetings</li><li><strong>Content Creation</strong>: Trim raw footage to create polished clips</li><li><strong>Presentations</strong>: Cut video clips to exact lengths for presentations</li><li><strong>Personal Videos</strong>: Trim home videos to keep the best moments</li></ul>"
+            "content": "<ul><li><strong>Sosyal Medya Klipleri</strong>: Sosyal platformlar için daha uzun videolardan öne çıkanları kesin</li><li><strong>Toplantı Kayıtları</strong>: Kaydedilmiş toplantılardan önemli anları çıkarın</li><li><strong>İçerik Oluşturma</strong>: Cilalı klipler oluşturmak için ham görüntüleri kırpın</li><li><strong>Sunumlar</strong>: Video kliplerini sunumlar için tam uzunluklara kesin</li><li><strong>Kişisel Videolar</strong>: En iyi anları saklamak için ev videolarını kırpın</li></ul>"
           },
           "privacy": {
-            "title": "Gizlilik Odaklı Video Trimming",
-            "content": "<p>Video trimming runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server uploads — your personal and business videos stay private</li><li>sonra <strong>çevrimdışı</strong> çalışır FFmpeg core is loaded</li></ul>"
+            "title": "Gizlilik Odaklı Video Kırpma",
+            "content": "<p>Video kırpma <strong>FFmpeg.wasm</strong> kullanılarak <strong>tamamen tarayıcınızda</strong> çalışır.</p><ul><li>Videolarınız <strong>cihazınızı asla terk etmez</strong></li><li>Sunucu yüklemesi yok — kişisel ve iş videolarınız gizli kalır</li><li>FFmpeg core yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
           }
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Cut Video Online Free - No Software",
-            "description": "Trim videos instantly in your browser. No download, no installation, works on any device."
+            "title": "Videoyu Çevrimiçi Ücretsiz Kesin - Yazılım Yok",
+            "description": "Tarayıcınızda anında video kırpın. İndirme yok, kurulum yok, herhangi bir cihazda çalışır."
           },
           "f2": {
             "icon": "Zap",
-            "title": "0.1 Second Precision Cutting",
-            "description": "Set exact start and end times with frame-level accuracy. Perfect for capturing precise moments."
+            "title": "0,1 Saniye Hassasiyetle Kesme",
+            "description": "Kare seviyesinde doğrulukla tam başlangıç ve bitiş zamanlarını ayarlayın. Mükemmel anları yakalamak için ideal."
           },
           "f3": {
             "icon": "Shield",
-            "title": "Trim Without Losing Quality",
-            "description": "Stream copy technology keeps original resolution and clarity. No re-encoding, no quality drop."
+            "title": "Kalite Kaybı Olmadan Kırpın",
+            "description": "Akış kopyalama teknolojisi orijinal çözünürlüğü ve netliği korur. Yeniden kodlama yok, kalite düşüşü yok."
           },
           "f4": {
             "icon": "FileVideo",
-            "title": "MP4, MOV, WebM, AVI Cutter",
-            "description": "Supports all popular video formats. Upload any file, trim exactly what you need, download instantly."
+            "title": "MP4, MOV, WebM, AVI Kesici",
+            "description": "Tüm popüler video formatlarını destekler. Herhangi bir dosya yükleyin, ihtiyacınız olanı kesin, anında indirin."
           },
           "f5": {
             "icon": "BarChart3",
-            "title": "See Clip Length in Real-Time",
-            "description": "Visual timeline shows exact duration as you adjust. Know your output size before processing."
+            "title": "Klip Uzunluğunu Gerçek Zamanlı Görün",
+            "description": "Ayarladıkça görsel zaman çizelgesi tam süreyi gösterir. İşlemden önce çıktı boyutunu bilin."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Your Video Stays on Your Device",
-            "description": "100% client-side processing. No cloud uploads, no privacy risks, no waiting for servers."
+            "title": "Videonuz Cihazınızda Kalır",
+            "description": "%100 istemci tarafı işleme. Bulut yüklemesi yok, gizlilik riski yok, sunucu beklemesi yok."
           }
         }
       },
@@ -172,66 +172,66 @@
           "a1": "Videoları 90° (saat yönünde), 180° (baş aşağı) veya 270° (saat yönünün tersine) döndürebilirsiniz.",
           "q2": "Döndürme video kalitesini etkiler mi?",
           "a2": "Video döndürme sırasında yeniden kodlanır, ancak kalite yüksek seviyede korunur.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
           "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
+          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
+          "q5": "Dosya boyutu sınırları var mı?",
+          "a5": "Sunucu tarafından dayatılan sınır yoktur. Maksimum dosya boyutu cihazınızın kullanılabilir belleğine ve tarayıcı yeteneklerine bağlıdır. Çoğu modern cihaz birkaç yüz MB'a kadar olan dosyaları sorunsuz şekilde işler."
         },
         "seoContent": {
           "intro": {
-            "title": "Nedir Rotate Video?",
-            "content": "<p><strong>Rotate Video</strong> rotates video files by 90°, 180°, or 270° to fix orientation issues. Correct sideways phone videos, fix upside-down recordings, or adjust orientation for specific display needs.</p>"
+            "title": "Video Döndürme Nedir?",
+            "content": "<p><strong>Video Döndürme</strong>, yön sorunlarını düzeltmek için video dosyalarını 90°, 180° veya 270° döndürür. Yan çekilmiş telefon videolarını düzeltin, ters kayıtları düzeltin veya belirli ekran ihtiyaçları için yönü ayarlayın.</p>"
           },
           "howToUse": {
-            "title": "Nasıl Kullanılır Rotate Video",
-            "content": "<ol><li>Upload a video file</li><li>Select the rotation angle: <strong>90°</strong>, <strong>180°</strong>, or <strong>270°</strong></li><li>Click <strong>Rotate</strong> to process</li><li>Download the rotated video</li></ol>"
+            "title": "Video Döndürme Nasıl Kullanılır",
+            "content": "<ol><li>Bir video dosyası yükleyin</li><li>Dönüş açısını seçin: <strong>90°</strong>, <strong>180°</strong> veya <strong>270°</strong></li><li>İşlemek için <strong>Döndür</strong> düğmesine tıklayın</li><li>Döndürülmüş videoyu indirin</li></ol>"
           },
           "features": {
             "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Three Angles</strong>: Rotate by 90° (clockwise), 180°, or 270° (counter-clockwise)</li><li><strong>Video Preview</strong>: See the video before and after rotation</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional video processing in the browser</li><li><strong>Quality Output</strong>: High-quality rotation with FFmpeg encoding</li><li><strong>Audio Preserved</strong>: Audio track remains synchronized after rotation</li></ul>"
+            "content": "<ul><li><strong>Üç Açı</strong>: 90° (saat yönünde), 180° veya 270° (saat yönünün tersine) döndürün</li><li><strong>Video Önizleme</strong>: Videoyu döndürmeden önce ve sonra görün</li><li><strong>Çoklu Formatlar</strong>: MP4, WebM, MKV ve AVI destekler</li><li><strong>FFmpeg.wasm ile Güçlendirilmiştir</strong>: Tarayıcıda profesyonel video işleme</li><li><strong>Kaliteli Çıktı</strong>: FFmpeg kodlamasıyla yüksek kaliteli döndürme</li><li><strong>Ses Korunur</strong>: Döndürmeden sonra ses parçası senkronize kalır</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Phone Videos</strong>: Fix sideways videos recorded on mobile phones</li><li><strong>Camera Footage</strong>: Correct orientation from cameras mounted at angles</li><li><strong>Screen Recordings</strong>: Rotate screen recordings for vertical display</li><li><strong>Social Media</strong>: Adjust orientation for platform requirements (portrait/landscape)</li><li><strong>Presentations</strong>: Fix video orientation for use in slides</li></ul>"
+            "content": "<ul><li><strong>Telefon Videoları</strong>: Mobil telefonlarda çekilen yan videoları düzeltin</li><li><strong>Kamera Görüntüleri</strong>: Açılı monte edilmiş kameralardan gelen yönü düzeltin</li><li><strong>Ekran Kayıtları</strong>: Dikey ekran için ekran kayıtlarını döndürün</li><li><strong>Sosyal Medya</strong>: Platform gereksinimleri için yönü ayarlayın (dikey/yatay)</li><li><strong>Sunumlar</strong>: Slaytlarda kullanım için video yönünü düzeltin</li></ul>"
           },
           "privacy": {
-            "title": "Gizlilik Odaklı Video Processing",
-            "content": "<p>Video rotation runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>sonra <strong>çevrimdışı</strong> çalışır FFmpeg core is loaded</li></ul>"
+            "title": "Gizlilik Odaklı Video İşleme",
+            "content": "<p>Video döndürme <strong>FFmpeg.wasm</strong> kullanılarak <strong>tamamen tarayıcınızda</strong> çalışır.</p><ul><li>Videolarınız <strong>cihazınızı asla terk etmez</strong></li><li>Sunucu işleme veya yükleme yok</li><li>FFmpeg core yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
           }
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Rotate Video Online 90°, 180°, 270°",
-            "description": "Fix sideways iPhone videos or upside-down recordings instantly. Three rotation options with one click."
+            "title": "Videoyu Çevrimiçi Döndürün 90°, 180°, 270°",
+            "description": "Yan iPhone videolarını veya ters kayıtları anında düzeltin. Tek tıkla üç döndürme seçeneği."
           },
           "f2": {
             "icon": "Zap",
-            "title": "Fix Video Orientation Free",
-            "description": "No software needed. Upload your video, pick an angle, download fixed version in seconds."
+            "title": "Video Yönünü Ücretsiz Düzeltin",
+            "description": "Yazılım gerekmez. Videonuzu yükleyin, bir açı seçin, düzeltilmiş versiyonu saniyeler içinde indirin."
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "Preview Rotation Before Saving",
-            "description": "Watch the rotated video in browser first. Confirm it's right, then download. No guesswork."
+            "title": "Kaydetmeden Önce Döndürmeyi Önizleyin",
+            "description": "Döndürülmüş videoyu tarayıcıda önce izleyin. Doğru olduğundan emin olun, sonra indirin. Tahmin yürütmeyin."
           },
           "f4": {
             "icon": "FileVideo",
-            "title": "Works with All Video Formats",
-            "description": "Rotate MP4, MOV, AVI, WebM, MKV files. Output keeps same format, same quality as input."
+            "title": "Tüm Video Formatlarıyla Çalışır",
+            "description": "MP4, MOV, AVI, WebM, MKV dosyalarını döndürün. Çıktı aynı formatı, aynı kaliteyi korur."
           },
           "f5": {
             "icon": "Shield",
-            "title": "Audio Stays Perfectly Synced",
-            "description": "Rotation preserves audio timing. No lag, no drift, no sync issues in your final video."
+            "title": "Ses Mükemmel Senkronize Kalır",
+            "description": "Döndürme ses zamanlamasını korur. Son videonuzda gecikme, kayma, senkron sorunları yok."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Private Rotation - No Upload",
-            "description": "Processing happens on your device only. Your videos never leave your computer. Maximum privacy."
+            "title": "Gizli Döndürme - Yükleme Yok",
+            "description": "İşleme yalnızca cihazınızda gerçekleşir. Videolarınız bilgisayarınızı asla terk etmez. Maksimum gizlilik."
           }
         }
       },
@@ -252,33 +252,33 @@
           "a1": "FPS'yi düşürün, genişliği azaltın veya süreyi kısaltın. Araç, en iyi kalite/boyut oranı için optimize edilmiş bir palet kullanır.",
           "q2": "GIF için maksimum uzunluk nedir?",
           "a2": "Kesin bir sınır yoktur, ancak uzun GIF'ler çok büyük dosyalar oluşturur. GIF'leri 10 saniyenin altında tutmanızı öneririz.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
           "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
+          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
+          "q5": "Dosya boyutu sınırları var mı?",
+          "a5": "Sunucu tarafından dayatılan sınır yoktur. Maksimum dosya boyutu cihazınızın kullanılabilir belleğine ve tarayıcı yeteneklerine bağlıdır. Çoğu modern cihaz birkaç yüz MB'a kadar olan dosyaları sorunsuz şekilde işler."
         },
         "seoContent": {
           "intro": {
-            "title": "Nedir Video to GIF?",
-            "content": "<p><strong>Video to GIF</strong> converts video clips into animated GIF images with control over frame rate, resolution, and quality. Create shareable GIFs from any video for social media, chat, or documentation.</p><p>Powered by FFmpeg.wasm for high-quality GIF generation doğrudan tarayıcınızda.</p>"
+            "title": "Video'dan GIF'e Dönüştürme Nedir?",
+            "content": "<p><strong>Video'dan GIF'e</strong>, video kliplerini kare hızı, çözünürlük ve kalite kontrolüyle animasyonlu GIF görsellerine dönüştürür. Sosyal medya, sohbet veya belgeler için paylaşılabilir GIF'ler oluşturun.</p><p>FFmpeg.wasm ile güçlendirilmiştir — yüksek kaliteli GIF oluşturma doğrudan tarayıcınızda.</p>"
           },
           "howToUse": {
-            "title": "Nasıl Kullanılır Video to GIF",
-            "content": "<ol><li>Upload a video file</li><li>Set the start and end time for the GIF clip</li><li>Adjust <strong>frame rate</strong> (fps) and output <strong>width</strong></li><li>Click <strong>Convert</strong> to generate the GIF</li><li>Preview and download the animated GIF</li></ol><p>Lower frame rates and smaller widths produce smaller GIF files.</p>"
+            "title": "Video'dan GIF'e Dönüştürme Nasıl Kullanılır",
+            "content": "<ol><li>Bir video dosyası yükleyin</li><li>GIF klibi için başlangıç ve bitiş zamanını ayarlayın</li><li><strong>Kare hızını</strong> (fps) ve çıktı <strong>genişliğini</strong> ayarlayın</li><li>GIF'i oluşturmak için <strong>Dönüştür</strong> düğmesine tıklayın</li><li>Animasyonlu GIF'i önizleyin ve indirin</li></ol><p>Daha düşük kare hızları ve daha küçük genişlikler daha küçük GIF dosyaları oluşturur.</p>"
           },
           "features": {
             "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Frame Rate Control</strong>: Set GIF frame rate (e.g., 10, 15, 24 fps)</li><li><strong>Size Control</strong>: Adjust output width for file size optimization</li><li><strong>Time Selection</strong>: Choose which part of the video to convert</li><li><strong>Preview</strong>: See the GIF before downloading</li><li><strong>Powered by FFmpeg.wasm</strong>: High-quality palette generation for optimal GIF colors</li><li><strong>Multiple Input Formats</strong>: Convert from MP4, WebM, MKV, AVI</li></ul>"
+            "content": "<ul><li><strong>Kare Hızı Kontrolü</strong>: GIF kare hızını ayarlayın (örn. 10, 15, 24 fps)</li><li><strong>Boyut Kontrolü</strong>: Dosya boyutu optimizasyonu için çıktı genişliğini ayarlayın</li><li><strong>Zaman Seçimi</strong>: Videonun hangi bölümünü dönüştüreceğinizi seçin</li><li><strong>Önizleme</strong>: İndirmeden önce GIF'i görün</li><li><strong>FFmpeg.wasm ile Güçlendirilmiştir</strong>: Optimal GIF renkleri için yüksek kaliteli palet oluşturma</li><li><strong>Çoklu Giriş Formatları</strong>: MP4, WebM, MKV, AVI'den dönüştürün</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Social Media</strong>: Create reaction GIFs or highlights from videos</li><li><strong>Documentation</strong>: Create animated demonstrations for tutorials or docs</li><li><strong>Chat & Messaging</strong>: Make custom GIFs for group chats and Slack</li><li><strong>Bug Reports</strong>: Record and share animated bug reproductions</li><li><strong>Marketing</strong>: Create eye-catching animated content for campaigns</li></ul>"
+            "content": "<ul><li><strong>Sosyal Medya</strong>: Videolardan tepki GIF'leri veya öne çıkanlar oluşturun</li><li><strong>Dokümantasyon</strong>: Eğitimler veya belgeler için animasyonlu gösterimler oluşturun</li><li><strong>Sohbet ve Mesajlaşma</strong>: Grup sohbetleri ve Slack için özel GIF'ler yapın</li><li><strong>Hata Raporları</strong>: Animasyonlu hata çoğaltmalarını kaydedin ve paylaşın</li><li><strong>Pazarlama</strong>: Kampanyalar için dikkat çekici animasyonlu içerikler oluşturun</li></ul>"
           },
           "privacy": {
-            "title": "Gizlilik Odaklı GIF Creation",
-            "content": "<p>GIF conversion runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing — your content stays private</li><li>sonra <strong>çevrimdışı</strong> çalışır FFmpeg core is loaded</li></ul>"
+            "title": "Gizlilik Odaklı GIF Oluşturma",
+            "content": "<p>GIF dönüştürme <strong>FFmpeg.wasm</strong> kullanılarak <strong>tamamen tarayıcınızda</strong> çalışır.</p><ul><li>Videolarınız <strong>cihazınızı asla terk etmez</strong></li><li>Sunucu işleme yok — içeriğiniz gizli kalır</li><li>FFmpeg core yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
           }
         },
         "quality": "Kalite",
@@ -290,33 +290,33 @@
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Video to GIF Converter Free",
-            "description": "Turn any video into animated GIF online. No software, no signup, no watermarks on your creations."
+            "title": "Ücretsiz Video'dan GIF'e Dönüştürücü",
+            "description": "Herhangi bir videoyu animasyonlu GIF'e çevirin. Yazılım yok, kayıt yok, oluşturduğunuz üzerinde filigran yok."
           },
           "f2": {
             "icon": "BarChart3",
-            "title": "Control GIF Size & Quality",
-            "description": "Adjust FPS, width, and quality. Make small GIFs for Discord or high-quality ones for presentations."
+            "title": "GIF Boyutu ve Kalitesini Kontrol Edin",
+            "description": "FPS, genişlik ve kaliteyi ayarlayın. Discord için küçük GIF'ler veya sunumlar için yüksek kaliteli olanlar yapın."
           },
           "f3": {
             "icon": "Zap",
-            "title": "Cut Perfect Clips for GIFs",
-            "description": "Select exact start and end times. Extract the perfect moment from any video for your GIF."
+            "title": "GIF'ler İçin Mükemmel Klipleri Kesin",
+            "description": "Tam başlangıç ve bitiş zamanlarını seçin. GIF'iniz için herhangi bir videodan mükemmel anı çıkarın."
           },
           "f4": {
             "icon": "Shield",
-            "title": "Optimized Colors, Small Files",
-            "description": "Smart palette generation creates vibrant GIFs that load fast and look great everywhere."
+            "title": "Optimize Edilmiş Renkler, Küçük Dosyalar",
+            "description": "Akıllı palet oluşturma, her yerde harika görünen ve hızlı yüklenen canlı GIF'ler oluşturur."
           },
           "f5": {
             "icon": "FileVideo",
-            "title": "Convert MP4, MOV to GIF",
-            "description": "Works with any video format. Upload your file, customize settings, download your GIF instantly."
+            "title": "MP4, MOV'dan GIF'e Dönüştürün",
+            "description": "Herhangi bir video formatıyla çalışır. Dosyanızı yükleyin, ayarları özelleştirin, GIF'inizi anında indirin."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Make GIFs Privately & Securely",
-            "description": "All conversion happens in your browser. Your videos never upload to any server."
+            "title": "GIF'leri Gizli ve Güvenli Oluşturun",
+            "description": "Tüm dönüştürme tarayıcınızda gerçekleşir. Videolarınız hiçbir sunucuya yüklenmez."
           }
         }
       },
@@ -337,75 +337,75 @@
           "a1": "Animasyonlu WebP dosyaları, daha iyi renk derinliği ve saydamlık destekleyerek eşdeğer GIF'lerden genellikle %25-35 daha küçüktür.",
           "q2": "Animasyonlu WebP yaygın olarak destekleniyor mu?",
           "a2": "Evet, tüm modern tarayıcılar animasyonlu WebP'yi destekler. Yalnızca çok eski tarayıcılarda destek yoktur.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
           "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
+          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
+          "q5": "Dosya boyutu sınırları var mı?",
+          "a5": "Sunucu tarafından dayatılan sınır yoktur. Maksimum dosya boyutu cihazınızın kullanılabilir belleğine ve tarayıcı yeteneklerine bağlıdır. Çoğu modern cihaz birkaç yüz MB'a kadar olan dosyaları sorunsuz şekilde işler."
         },
         "seoContent": {
           "intro": {
-            "title": "Nedir Video to WebP?",
-            "content": "<p><strong>Video to WebP</strong> converts video clips into animated WebP images. WebP animations are <strong>25-35% smaller</strong> than equivalent GIFs with better color reproduction and transparency support.</p><p>The modern alternative to GIFs for web use.</p>"
+            "title": "Video'dan WebP'ye Dönüştürme Nedir?",
+            "content": "<p><strong>Video'dan WebP'ye</strong>, video kliplerini animasyonlu WebP görsellerine dönüştürür. WebP animasyonları, daha iyi renk üretimi ve saydamlık desteğiyle eşdeğer GIF'lerden <strong>%25-35 daha küçüktür</strong>.</p><p>Web kullanımı için GIF'lere modern alternatif.</p>"
           },
           "howToUse": {
-            "title": "Nasıl Kullanılır Video to WebP",
-            "content": "<ol><li>Upload a video file</li><li>Set the start and end time for the animation clip</li><li>Adjust frame rate and output dimensions</li><li>Click <strong>Convert</strong> to generate the animated WebP</li><li>Download the WebP animation</li></ol>"
+            "title": "Video'dan WebP'ye Dönüştürme Nasıl Kullanılır",
+            "content": "<ol><li>Bir video dosyası yükleyin</li><li>Animasyon klibi için başlangıç ve bitiş zamanını ayarlayın</li><li>Kare hızını ve çıktı boyutlarını ayarlayın</li><li>Animasyonlu WebP oluşturmak için <strong>Dönüştür</strong> düğmesine tıklayın</li><li>WebP animasyonunu indirin</li></ol>"
           },
           "features": {
             "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Smaller Than GIF</strong>: WebP animations are 25-35% smaller than equivalent GIFs</li><li><strong>Better Colors</strong>: Full 24-bit color depth (vs. GIF's 256 color limit)</li><li><strong>Transparency</strong>: Alpha channel support for transparent animations</li><li><strong>Frame Rate Control</strong>: Adjustable fps for size optimization</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional encoding in the browser</li><li><strong>Wide Browser Support</strong>: Supported by all modern browsers</li></ul>"
+            "content": "<ul><li><strong>GIF'ten Daha Küçük</strong>: WebP animasyonları eşdeğer GIF'lerden %25-35 daha küçüktür</li><li><strong>Daha İyi Renkler</strong>: Tam 24-bit renk derinliği (GIF'in 256 renk sınırına karşı)</li><li><strong>Saydamlık</strong>: Şeffaf animasyonlar için alfa kanalı desteği</li><li><strong>Kare Hızı Kontrolü</strong>: Boyut optimizasyonu için ayarlanabilir fps</li><li><strong>FFmpeg.wasm ile Güçlendirilmiştir</strong>: Tarayıcıda profesyonel kodlama</li><li><strong>Geniş Tarayıcı Desteği</strong>: Tüm modern tarayıcılar tarafından desteklenir</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Web Performance</strong>: Replace GIFs with smaller WebP animations on websites</li><li><strong>Chat Apps</strong>: Create animated stickers and reactions</li><li><strong>Documentation</strong>: Smaller animated demos for technical documentation</li><li><strong>Social Media</strong>: Create animated content where WebP is supported</li><li><strong>App Design</strong>: Create loading animations and micro-interactions</li></ul>"
+            "content": "<ul><li><strong>Web Performansı</strong>: Web sitelerinde GIF'leri daha küçük WebP animasyonlarıyla değiştirin</li><li><strong>Sohbet Uygulamaları</strong>: Animasyonlu çıkartmalar ve tepkiler oluşturun</li><li><strong>Dokümantasyon</strong>: Teknik dokümantasyon için daha küçük animasyonlu demoslar</li><li><strong>Sosyal Medya</strong>: WebP'nin desteklendiği yerlerde animasyonlu içerikler oluşturun</li><li><strong>Uygulama Tasarımı</strong>: Yükleme animasyonları ve mikro etkileşimler oluşturun</li></ul>"
           },
           "privacy": {
-            "title": "Gizlilik Odaklı Video Conversion",
-            "content": "<p>WebP conversion runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>sonra <strong>çevrimdışı</strong> çalışır FFmpeg core is loaded</li></ul>"
+            "title": "Gizlilik Odaklı Video Dönüştürme",
+            "content": "<p>WebP dönüştürme <strong>FFmpeg.wasm</strong> kullanılarak <strong>tamamen tarayıcınızda</strong> çalışır.</p><ul><li>Videolarınız <strong>cihazınızı asla terk etmez</strong></li><li>Sunucu işleme veya yükleme yok</li><li>FFmpeg core yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
           }
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "BarChart3",
-            "title": "Video to WebP - Smaller Than GIF",
-            "description": "Create animated WebP files 25-35% smaller than GIFs. Perfect for fast-loading websites and apps."
+            "title": "Video'dan WebP'ye - GIF'ten Daha Küçük",
+            "description": "GIF'lerden %25-35 daha küçük animasyonlu WebP dosyaları oluşturun. Hızlı yüklenen web siteleri ve uygulamalar için mükemmel."
           },
           "f2": {
             "icon": "Shield",
-            "title": "Better Colors + Transparency",
-            "description": "24-bit true color vs GIF's 256 colors. Full transparency support for professional animations."
+            "title": "Daha İyi Renkler + Saydamlık",
+            "description": "GIF'in 256 rengine karşı 24-bit gerçek renk. Profesyonel animasyonlar için tam saydamlık desteği."
           },
           "f3": {
             "icon": "Gauge",
-            "title": "Control Quality & File Size",
-            "description": "Adjust compression, frame rate, and dimensions. Balance visual quality with loading speed."
+            "title": "Kalite ve Dosya Boyutunu Kontrol Edin",
+            "description": "Sıkıştırmayı, kare hızını ve boyutları ayarlayın. Görsel kaliteyi yükleme hızıyla dengeleyin."
           },
           "f4": {
             "icon": "Zap",
-            "title": "Convert Any Video Clip",
-            "description": "Select exact time range from your video. Turn any moment into a smooth WebP animation."
+            "title": "Herhangi Bir Video Klibini Dönüştürün",
+            "description": "Videonuzdan tam zaman aralığını seçin. Herhangi bir anı düzgün bir WebP animasyonuna dönüştürün."
           },
           "f5": {
             "icon": "FileVideo",
-            "title": "Modern Alternative to GIF",
-            "description": "All browsers support animated WebP. Replace outdated GIFs with smaller, better-looking animations."
+            "title": "GIF'e Modern Alternatif",
+            "description": "Tüm tarayıcılar animasyonlu WebP'yi destekler. Eskimiş GIF'leri daha küçük, daha iyi görünen animasyonlarla değiştirin."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Convert Privately in Browser",
-            "description": "Your video stays on your device. No cloud processing, no privacy concerns, instant results."
+            "title": "Tarayıcıda Gizli Dönüştürün",
+            "description": "Videonuz cihazınızda kalır. Bulut işleme yok, gizlilik endişesi yok, anında sonuç."
           }
         }
       },
       "compress": {
         "name": "Video Sıkıştır",
-        "description": "Reduce video file size with quality presets or advanced controls for CRF, resolution, frame rate, and bitrate.",
-        "metaTitle": "Compress Video Online Free - Advanced Video Compressor | No Upload",
-        "metaDescription": "Compress videos in your browser with no upload. Choose simple presets or advanced mode with CRF, resolution, FPS, and bitrate controls. H.264 MP4 output. 100% private.",
-        "keywords": "compress video, video compressor, reduce video size, shrink video, CRF compression, video bitrate reducer, browser video compressor, no upload video compress",
+        "description": "Kalite ön ayarları veya CRF, çözünürlük, kare hızı ve bit hızı için gelişmiş kontrollerle video dosya boyutunu küçültün.",
+        "metaTitle": "Çevrimiçi Video Sıkıştırma Ücretsiz - Gelişmiş Video Sıkıştırıcı | Yükleme Yok",
+        "metaDescription": "Videolarınızı tarayıcınızda yükleme yapmadan sıkıştırın. Basit ön ayarları seçin veya CRF, çözünürlük, FPS ve bit hızı kontrolleriyle gelişmiş modu kullanın. H.264 MP4 çıktısı. %100 gizli.",
+        "keywords": "video sıkıştır, video sıkıştırıcı, video boyutu küçült, video küçült, CRF sıkıştırma, video bit hızı azaltma, tarayıcı video sıkıştırıcı, yükleme olmadan video sıkıştır",
         "quality": "Kalite",
         "high": "Yüksek",
         "medium": "Orta",
@@ -416,59 +416,59 @@
         "compressedSize": "Sıkıştırılmış boyut",
         "saved": "Boyut azaltma",
         "unsupported": "Bu araç SharedArrayBuffer desteği gerektirir. Lütfen HTTPS ile modern bir tarayıcı kullanın.",
-        "simpleMode": "Simple",
-        "advancedMode": "Advanced",
-        "sourceVideo": "Source",
-        "compressedVideo": "Compressed",
-        "fileSize": "File Size",
-        "resolutionLabel": "Resolution",
-        "duration": "Duration",
-        "bitrate": "Bitrate",
-        "highDesc": "Minimal compression with near-original visual quality. Moderate file size reduction.",
-        "highUseCase": "Best for: Social media, presentations, archiving",
-        "highSettings": "CRF 23 · Original resolution · 192k audio",
-        "mediumDesc": "Balanced compression. Good visual quality with significant size reduction.",
-        "mediumUseCase": "Best for: Email attachments, general sharing",
-        "mediumSettings": "CRF 28 · Original resolution · 128k audio",
-        "lowDesc": "Maximum compression. Noticeably reduced quality, smallest file size.",
-        "lowUseCase": "Best for: Messaging apps, quick previews, low bandwidth",
-        "lowSettings": "CRF 35 · 720p · 96k audio",
-        "crfLabel": "CRF (Quality)",
-        "crfHint": "0 = lossless, 23 = high quality, 28 = medium, 51 = worst. Lower values produce larger files.",
-        "encodingPreset": "Encoding Speed",
-        "encodingPresetHint": "Slower encoding produces smaller files at the same quality level.",
-        "resolutionOriginal": "Original",
-        "fpsLabel": "Frame Rate",
-        "fpsOriginal": "Original",
-        "audioBitrateLabel": "Audio Bitrate",
-        "maxBitrateLabel": "Max Bitrate (optional)",
-        "maxBitrateHint": "Cap the video bitrate. Leave empty for no limit.",
-        "maxBitratePlaceholder": "e.g. 2",
+        "simpleMode": "Basit",
+        "advancedMode": "Gelişmiş",
+        "sourceVideo": "Kaynak",
+        "compressedVideo": "Sıkıştırılmış",
+        "fileSize": "Dosya Boyutu",
+        "resolutionLabel": "Çözünürlük",
+        "duration": "Süre",
+        "bitrate": "Bit Hızı",
+        "highDesc": "Neredeyse orijinal görsel kalitesiyle minimal sıkıştırma. Orta düzey dosya boyutu azaltma.",
+        "highUseCase": "En uygun: Sosyal medya, sunumlar, arşivleme",
+        "highSettings": "CRF 23 · Orijinal çözünürlük · 192k ses",
+        "mediumDesc": "Dengeli sıkıştırma. Önemli boyut azaltmayla iyi görsel kalite.",
+        "mediumUseCase": "En uygun: E-posta ekleri, genel paylaşım",
+        "mediumSettings": "CRF 28 · Orijinal çözünürlük · 128k ses",
+        "lowDesc": "Maksimum sıkıştırma. Belirgin şekilde azalmış kalite, en küçük dosya boyutu.",
+        "lowUseCase": "En uygun: Mesajlaşma uygulamaları, hızlı önizlemeler, düşük bant genişliği",
+        "lowSettings": "CRF 35 · 720p · 96k ses",
+        "crfLabel": "CRF (Kalite)",
+        "crfHint": "0 = kayıpsız, 23 = yüksek kalite, 28 = orta, 51 = en düşük. Düşük değerler daha büyük dosyalar oluşturur.",
+        "encodingPreset": "Kodlama Hızı",
+        "encodingPresetHint": "Daha yavaş kodlama aynı kalite düzeyinde daha küçük dosyalar üretir.",
+        "resolutionOriginal": "Orijinal",
+        "fpsLabel": "Kare Hızı",
+        "fpsOriginal": "Orijinal",
+        "audioBitrateLabel": "Ses Bit Hızı",
+        "maxBitrateLabel": "Maksimum Bit Hızı (isteğe bağlı)",
+        "maxBitrateHint": "Video bit hızını sınırlayın. Sınır yoksa boş bırakın.",
+        "maxBitratePlaceholder": "örn. 2",
         "maxBitrateUnit": "Mbps",
-        "preset_ultrafast": "Ultra Fast",
-        "preset_superfast": "Super Fast",
-        "preset_veryfast": "Very Fast",
-        "preset_faster": "Faster",
-        "preset_fast": "Fast",
-        "preset_medium": "Medium",
-        "preset_slow": "Slow",
-        "preset_slower": "Slower",
-        "preset_veryslow": "Very Slow",
-        "codecLabel": "Video codec",
+        "preset_ultrafast": "Ultra Hızlı",
+        "preset_superfast": "Süper Hızlı",
+        "preset_veryfast": "Çok Hızlı",
+        "preset_faster": "Daha Hızlı",
+        "preset_fast": "Hızlı",
+        "preset_medium": "Orta",
+        "preset_slow": "Yavaş",
+        "preset_slower": "Daha Yavaş",
+        "preset_veryslow": "Çok Yavaş",
+        "codecLabel": "Video kodek",
         "codecHint": "H.264: En iyi uyumluluk. H.265: Daha küçük dosya boyutu (%50'ye kadar daha küçük) ancak eski cihazlarda oynamayabilir.",
         "codecChecking": "H.265 desteği kontrol ediliyor...",
         "codecHevcNotSupported": "H.265 (HEVC) tarayıcınız tarafından desteklenmiyor. H.264 kullanılacak.",
         "faq": {
-          "q1": "How does video compression work?",
-          "a1": "The tool re-encodes the video using H.264 with a CRF (Constant Rate Factor) value. In Simple Mode, choose High (CRF 23), Medium (CRF 28), or Low (CRF 35). In Advanced Mode, set CRF manually from 0 to 51, plus encoding speed, resolution, frame rate, audio bitrate, and an optional max bitrate cap.",
-          "q2": "What is the difference between Simple and Advanced Mode?",
-          "a2": "Simple Mode offers three one-click presets (High, Medium, Low) optimized for common scenarios. Advanced Mode gives full control over CRF quality, encoding speed (ultrafast to veryslow), output resolution, frame rate, audio bitrate, and maximum video bitrate — ideal for users who need precise control.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser using FFmpeg.wasm. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I upscale my video to a higher resolution?",
-          "a4": "No, and by design. Resolution and frame rate options that exceed the source video are automatically disabled. Upscaling would increase file size without improving actual quality. The tool only downscales to reduce file size.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q1": "Video sıkıştırma nasıl çalışır?",
+          "a1": "Araç, videoyu CRF (Sabit Oran Faktörü) değeriyle H.264 kullanarak yeniden kodlar. Basit Mod'da Yüksek (CRF 23), Orta (CRF 28) veya Düşük (CRF 35) seçin. Gelişmiş Mod'da CRF kalitesini 0 ile 51 arasında manuel olarak ayarlayın, ayrıca kodlama hızı, çözünürlük, kare hızı, ses bit hızı ve isteğe bağlı maksimum bit hızı sınırı.",
+          "q2": "Basit ve Gelişmiş Mod arasındaki fark nedir?",
+          "a2": "Basit Mod, yaygın senaryolar için optimize edilmiş üç tek tıklama ön ayarı (Yüksek, Orta, Düşük) sunar. Gelişmiş Mod, CRF kalitesi, kodlama hızı (ultrafast'ten veryslow'a), çıktı çözünürlüğü, kare hızı, ses bit hızı ve maksimum video bit hızı üzerinde tam kontrol sağlar — hassas kontrole ihtiyaç duyan kullanıcılar için idealdir.",
+          "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
+          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda FFmpeg.wasm kullanılarak gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
+          "q4": "Videomu daha yüksek çözünürlüğe yükseltebilir miyim?",
+          "a4": "Hayır, ve bu kasıtlıdır. Kaynak videoyu aşan çözünürlük ve kare hızı seçenekleri otomatik olarak devre dışı bırakılır. Yükseltme, dosya boyutunu artırmak dışında gerçek kaliteyi artırmaz. Araç yalnızca dosya boyutunu küçültmek için çözünürlüğü düşürür.",
+          "q5": "Dosya boyutu sınırları var mı?",
+          "a5": "Sunucu tarafından dayatılan sınır yoktur. Maksimum dosya boyutu cihazınızın kullanılabilir belleğine ve tarayıcı yeteneklerine bağlıdır. Çoğu modern cihaz birkaç yüz MB'a kadar olan dosyaları sorunsuz şekilde işler.",
           "q6": "Hangi video formatlarını sıkıştırabilirim?",
           "a6": "Tarayıcınızın çözebileceği her formatı yükleyebilirsiniz: MP4, WebM, MOV, MKV, AVI. Çıktı her zaman MP4 (H.264 + AAC) olur.",
           "q7": "Dosya boyutunu ne kadar küçültebilirim?",
@@ -478,57 +478,57 @@
         },
         "seoContent": {
           "intro": {
-            "title": "What is Compress Video?",
-            "content": "<p><strong>Compress Video</strong> is a powerful browser-based video compressor that reduces file size without uploading to any server. Choose from three quality presets for quick compression, or switch to <strong>Advanced Mode</strong> for full control over CRF, encoding speed, resolution, frame rate, audio bitrate, and max bitrate cap.</p><p>Powered by FFmpeg.wasm with H.264/AAC encoding — the output plays everywhere. The tool displays detailed video metadata (resolution, duration, bitrate, FPS) and shows a side-by-side comparison after compression.</p>"
+            "title": "Video Sıkıştırma Nedir?",
+            "content": "<p><strong>Video Sıkıştırma</strong>, herhangi bir sunucuya yükleme yapmadan dosya boyutunu küçülten güçlü tarayıcı tabanlı video sıkıştırıcıdır. Hızlı sıkıştırma için üç kalite ön ayarından seçin veya CRF, kodlama hızı, çözünürlük, kare hızı, ses bit hızı ve maksimum bit hızı üzerinde tam kontrol için <strong>Gelişmiş Mod</strong>'a geçin.</p><p>H.264/AAC kodlamasıyla FFmpeg.wasm ile güçlendirilmiştir — çıktı her cihazda oynatılır. Araç, ayrıntılı video meta verilerini (çözünürlük, süre, bit hızı, FPS) gösterir ve sıkıştırmadan sonra yan yana karşılaştırma sunar.</p>"
           },
           "howToUse": {
-            "title": "How to Use Compress Video",
-            "content": "<ol><li>Upload a video file — the tool instantly shows resolution, duration, bitrate, and frame rate</li><li>Choose <strong>Simple Mode</strong> (High / Medium / Low presets) or switch to <strong>Advanced Mode</strong> to fine-tune CRF, encoding speed, resolution, FPS, and audio bitrate</li><li>Click <strong>Compress</strong> — a progress bar tracks the encoding</li><li>Compare source vs. compressed video: file size, resolution, bitrate, and reduction percentage</li><li>Preview the compressed video and download it</li></ol><p>Resolution and frame rate options that exceed the source are automatically disabled to prevent unnecessary upscaling.</p>"
+            "title": "Video Sıkıştırma Nasıl Kullanılır",
+            "content": "<ol><li>Bir video dosyası yükleyin — araç anında çözünürlük, süre, bit hızı ve kare hızını gösterir</li><li><strong>Basit Mod</strong>'u seçin (Yüksek / Orta / Düşük ön ayarları) veya CRF kalitesini, kodlama hızını, çözünürlüğü, FPS'i ve ses bit hızını ince ayar yapmak için <strong>Gelişmiş Mod</strong>'a geçin</li><li>Sıkıştırmak için <strong>Sıkıştır</strong> düğmesine tıklayın — bir ilerleme çubuğu kodlamayı takip eder</li><li>Kaynak ve sıkıştırılmış videoyu karşılaştırın: dosya boyutu, çözünürlük, bit hızı ve yüzde azaltma</li><li>Sıkıştırılmış videoyu önizleyin ve indirin</li></ol><p>Kaynağı aşan çözünürlük ve kare hızı seçenekleri, gereksiz yükseltmeyi önlemek için otomatik olarak devre dışı bırakılır.</p>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Simple &amp; Advanced Modes</strong>: Quick presets for beginners; full parameter control for power users</li><li><strong>Video Metadata Display</strong>: See resolution, duration, bitrate, and FPS for both source and compressed video</li><li><strong>Smart Upscale Prevention</strong>: Options exceeding the source resolution or frame rate are disabled</li><li><strong>Adjustable CRF</strong>: Fine-tune quality factor from 0 (lossless) to 51</li><li><strong>9 Encoding Speeds</strong>: From Ultra Fast to Very Slow — slower = smaller file at same quality</li><li><strong>Resolution &amp; FPS Control</strong>: Downscale to 1080p, 720p, 480p, or 360p; reduce frame rate to 30, 24, or 15 fps</li><li><strong>Audio Bitrate Selection</strong>: Choose from 64k to 256k AAC audio</li><li><strong>Max Bitrate Cap</strong>: Optionally limit peak video bitrate for streaming compatibility</li><li><strong>Side-by-Side Comparison</strong>: Full before/after stats table with compression percentage</li><li><strong>H.264 + AAC Output</strong>: MP4 format for universal device compatibility</li></ul>"
+            "title": "Temel Özellikler",
+            "content": "<ul><li><strong>Basit ve Gelişmiş Modlar</strong>: Yeni başlayanlar için hızlı ön ayarlar; ileri düzey kullanıcılar için tam parametre kontrolü</li><li><strong>Video Meta Verileri Gösterimi</strong>: Hem kaynak hem de sıkıştırılmış video için çözünürlük, süre, bit hızı ve FPS görün</li><li><strong>Akıllı Yükseltme Önleme</strong>: Kaynak çözünürlüğünü veya kare hızını aşan seçenekler devre dışı bırakılır</li><li><strong>Ayarlanabilir CRF</strong>: Kalite faktörünü 0 (kayıpsız) ile 51 arasında ince ayarlayın</li><li><strong>9 Kodlama Hızı</strong>: Ultra Fast'ten Very Slow'a — daha yavaş = aynı kalitede daha küçük dosya</li><li><strong>Çözünürlük ve FPS Kontrolü</strong>: 1080p, 720p, 480p veya 360p'ye düşürün; kare hızını 30, 24 veya 15 fps'ye düşürün</li><li><strong>Ses Bit Hızı Seçimi</strong>: 64k ile 256k arasında AAC sesi seçin</li><li><strong>Maksimum Bit Hızı Sınırı</strong>: Akış uyumluluğu için isteğe bağlı olarak pik video bit hızını sınırlayın</li><li><strong>Yan Yana Karşılaştırma</strong>: Sıkıştırma yüzdesiyle tam önce/sonra istatistik tablosu</li><li><strong>H.264 + AAC Çıktısı</strong>: Evrensel cihaz uyumluluğu için MP4 formatı</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li><strong>Email Attachments</strong>: Compress videos under 25 MB for Gmail, Outlook, or corporate mail</li><li><strong>Messaging Apps</strong>: Shrink videos for WhatsApp (16 MB limit), Telegram, Signal, or iMessage</li><li><strong>Social Media</strong>: Optimize file size for faster uploads to Instagram, TikTok, X, or YouTube</li><li><strong>Cloud Storage</strong>: Reduce file size to save Google Drive, Dropbox, or iCloud space</li><li><strong>Web &amp; CMS Upload</strong>: Meet upload size limits for WordPress, Shopify, or custom portals</li><li><strong>Video Archiving</strong>: Compress large recordings with High Quality preset for long-term storage</li><li><strong>Low-Bandwidth Sharing</strong>: Use Low Quality preset for quick transfer over slow connections</li></ul>"
+            "title": "Yaygın Kullanım Örnekleri",
+            "content": "<ul><li><strong>E-posta Ekleri</strong>: Gmail, Outlook veya kurumsal posta için videoları 25 MB altına sıkıştırın</li><li><strong>Mesajlaşma Uygulamaları</strong>: WhatsApp (16 MB sınır), Telegram, Signal veya iMessage için videoları küçültün</li><li><strong>Sosyal Medya</strong>: Instagram, TikTok, X veya YouTube'a daha hızlı yüklemeler için dosya boyutunu optimize edin</li><li><strong>Bulut Depolama</strong>: Google Drive, Dropbox veya iCloud alanından tasarruf etmek için dosya boyutunu azaltın</li><li><strong>Web ve CMS Yükleme</strong>: WordPress, Shopify veya özel portallar için yükleme boyutu sınırlarını karşılayın</li><li><strong>Video Arşivleme</strong>: Uzun vadeli saklama için Yüksek Kalite ön ayarıyla büyük kayıtları sıkıştırın</li><li><strong>Düşük Bant Genişliği Paylaşımı</strong>: Yavaş bağlantılarda hızlı aktarım için Düşük Kalite ön ayarını kullanın</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Compression",
-            "content": "<p>Every video is compressed <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong> (WebAssembly). No file is ever uploaded to any server.</p><ul><li><strong>Zero server contact</strong> — your video data stays on your device from start to finish</li><li><strong>No accounts or sign-ups</strong> — just open the page and compress</li><li><strong>Works offline</strong> after the one-time FFmpeg core download (~31 MB, cached by your browser)</li><li>Perfect for <strong>confidential footage</strong>: security cameras, medical recordings, legal evidence</li></ul>"
+            "title": "Gizlilik Öncelikli Video Sıkıştırma",
+            "content": "<p>Her video, <strong>FFmpeg.wasm</strong> (WebAssembly) kullanılarak <strong>tamamen tarayıcınızda</strong> sıkıştırılır. Hiçbir dosya hiçbir sunucuya yüklenmez.</p><ul><li><strong>Sıfır sunucu teması</strong> — video verileriniz baştan sona cihazınızda kalır</li><li><strong>Hesap veya kayıt yok</strong> — sayfayı açın ve sıkıştırın</li><li>FFmpeg core tek seferlik indirmeden sonra <strong>çevrimdışı çalışır</strong> (~31 MB, tarayıcınız tarafından önbelleğe alınır)</li><li><strong>Gizli görüntüler</strong> için mükemmel: güvenlik kameraları, tıbbi kayıtlar, yasal kanıtlar</li></ul>"
           }
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Compress Video Online Free - No Upload",
-            "description": "Reduce video file size in your browser. No software, no registration, no watermarks. Completely free."
+            "title": "Videoyu Çevrimiçi Ücretsiz Sıkıştırın - Yükleme Yok",
+            "description": "Tarayıcınızda video boyutunu küçültün. Yazılım yok, kayıt yok, filigran yok. Tamamen ücretsiz."
           },
           "f2": {
             "icon": "Shield",
-            "title": "Simple Mode + Advanced Controls",
-            "description": "One-click presets for quick compression, or fine-tune CRF, resolution, bitrate for perfect results."
+            "title": "Basit Mod + Gelişmiş Kontroller",
+            "description": "Hızlı sıkıştırma için tek tıklama ön ayarları veya mükemmel sonuçlar için CRF, çözünürlük, bit hızını ince ayarlayın."
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "See Size Reduction Before & After",
-            "description": "Compare file size, resolution, bitrate side-by-side. Know exactly how much space you'll save."
+            "title": "Önce ve Sonra Boyut Azaltmasını Görün",
+            "description": "Dosya boyutu, çözünürlük, bit hızını yan yana karşılaştırın. Ne kadar alan tasarruf edeceğinizi tam olarak bilin."
           },
           "f4": {
             "icon": "MonitorDown",
-            "title": "Downscale to 1080p, 720p, 480p",
-            "description": "Reduce resolution to shrink file size. Perfect for email, social media, and mobile sharing."
+            "title": "1080p, 720p, 480p'ye Düşürün",
+            "description": "Dosya boyutunu küçültmek için çözünürlüğü azaltın. E-posta, sosyal medya ve mobil paylaşım için mükemmel."
           },
           "f5": {
             "icon": "Zap",
-            "title": "H.264 & H.265 Encoding Support",
-            "description": "Choose H.264 for universal compatibility or H.265 for 30-50% smaller files. Your choice."
+            "title": "H.264 ve H.265 Kodlama Desteği",
+            "description": "Evrensel uyumluluk için H.264 veya %30-50 daha küçük dosyalar için H.265 seçin. Sizin seçiminiz."
           },
           "f6": {
             "icon": "FileVideo",
-            "title": "Shrink MP4, MOV, AVI, WebM Files",
-            "description": "Works with all popular formats. Upload any video, compress it, download smaller file instantly."
+            "title": "MP4, MOV, AVI, WebM Dosyalarını Küçültün",
+            "description": "Tüm popüler formatlarla çalışır. Herhangi bir video yükleyin, sıkıştırın, daha küçük dosyayı anında indirin."
           }
         },
         "whySection": {
@@ -565,66 +565,66 @@
           "a1": "MP4, WebM, MKV ve AVI formatları arasında dönüştürme yapabilirsiniz. MP4 ve AVI H.264, WebM VP9 kodlaması kullanır, MKV hızlı dönüştürme için akış kopyalama kullanır.",
           "q2": "Video kalitesi değişecek mi?",
           "a2": "MKV'ye dönüştürme akış kopyalama kullandığı için kalite tam olarak korunur. Diğer dönüştürmeler yüksek kalite ayarlarıyla yeniden kodlar.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
           "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
+          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
+          "q5": "Dosya boyutu sınırları var mı?",
+          "a5": "Sunucu tarafından dayatılan sınır yoktur. Maksimum dosya boyutu cihazınızın kullanılabilir belleğine ve tarayıcı yeteneklerine bağlıdır. Çoğu modern cihaz birkaç yüz MB'a kadar olan dosyaları sorunsuz şekilde işler."
         },
         "seoContent": {
           "intro": {
-            "title": "Nedir Convert Video Format?",
-            "content": "<p><strong>Convert Video Format</strong> transforms videos between popular formats: MP4, WebM, MKV, and AVI. Need to convert a WebM recording to MP4 for wider compatibility? Or an AVI to WebM for web use? This tool handles it.</p><p>Powered by FFmpeg.wasm for reliable format conversion in your browser.</p>"
+            "title": "Video Format Dönüştürme Nedir?",
+            "content": "<p><strong>Video Format Dönüştürme</strong>, videoları popüler formatlar arasında dönüştürür: MP4, WebM, MKV ve AVI. Daha geniş uyumluluk için WebM kaydını MP4'e dönüştürmeniz mi gerekiyor? Yoksa web kullanımı için AVI'den WebM'ye mi? Bu araç bunu halleder.</p><p>Tarayıcınızda güvenilir format dönüştürme için FFmpeg.wasm ile güçlendirilmiştir.</p>"
           },
           "howToUse": {
-            "title": "Nasıl Kullanılır Convert Video Format",
-            "content": "<ol><li>Upload a video file in any supported format</li><li>Select the target format: <strong>MP4</strong>, <strong>WebM</strong>, <strong>MKV</strong>, or <strong>AVI</strong></li><li>Click <strong>Convert</strong> to start processing</li><li>Download the converted video</li></ol><p>MP4 (H.264) is recommended for maximum compatibility across devices and platforms.</p>"
+            "title": "Video Format Dönüştürme Nasıl Kullanılır",
+            "content": "<ol><li>Desteklenen herhangi bir formatta video dosyası yükleyin</li><li>Hedef formatı seçin: <strong>MP4</strong>, <strong>WebM</strong>, <strong>MKV</strong> veya <strong>AVI</strong></li><li>Dönüştürmeyi başlatmak için <strong>Dönüştür</strong> düğmesine tıklayın</li><li>Dönüştürülmüş videoyu indirin</li></ol><p>Cihazlar ve platformlar arasında maksimum uyumluluk için MP4 (H.264) önerilir.</p>"
           },
           "features": {
             "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Four Formats</strong>: Convert between MP4, WebM, MKV, and AVI</li><li><strong>H.264 Encoding</strong>: MP4 output uses H.264 for universal compatibility</li><li><strong>VP8/VP9 for WebM</strong>: Proper codec selection for each format</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional encoding in the browser</li><li><strong>Preview</strong>: Play the converted video before downloading</li><li><strong>Audio Preservation</strong>: Audio track is properly transcoded</li></ul>"
+            "content": "<ul><li><strong>Dört Format</strong>: MP4, WebM, MKV ve AVI arasında dönüştürün</li><li><strong>H.264 Kodlama</strong>: MP4 çıktısı evrensel uyumluluk için H.264 kullanır</li><li><strong>WebM için VP8/VP9</strong>: Her format için uygun kodek seçimi</li><li><strong>FFmpeg.wasm ile Güçlendirilmiştir</strong>: Tarayıcıda profesyonel kodlama</li><li><strong>Önizleme</strong>: İndirmeden önce dönüştürülmüş videoyu oynatın</li><li><strong>Ses Koruması</strong>: Ses parçası doğru şekilde yeniden kodlanır</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Compatibility</strong>: Convert WebM screen recordings to universally playable MP4</li><li><strong>Web Optimization</strong>: Convert videos to WebM for smaller file sizes on the web</li><li><strong>Legacy Support</strong>: Convert modern formats to AVI for older media players</li><li><strong>Editing</strong>: Convert to a format your video editor supports</li><li><strong>Cross-Platform</strong>: Ensure videos play on any device or platform</li></ul>"
+            "content": "<ul><li><strong>Uyumluluk</strong>: WebM ekran kayıtlarını evrensel olarak oynatılabilir MP4'e dönüştürün</li><li><strong>Web Optimizasyonu</strong>: Web'de daha küçük dosya boyutları için videoları WebM'ye dönüştürün</li><li><strong>Eski Destek</strong>: Eski medya oynatıcılar için modern formatları AVI'ye dönüştürün</li><li><strong>Düzenleme</strong>: Video düzenleyicinizin desteklediği bir formata dönüştürün</li><li><strong>Platformlar Arası</strong>: Videoların herhangi bir cihazda veya platformda oynatılmasını sağlayın</li></ul>"
           },
           "privacy": {
-            "title": "Gizlilik Odaklı Video Conversion",
-            "content": "<p>Format conversion runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or cloud encoding</li><li>sonra <strong>çevrimdışı</strong> çalışır FFmpeg core is loaded</li></ul>"
+            "title": "Gizlilik Odaklı Video Dönüştürme",
+            "content": "<p>Format dönüştürme <strong>FFmpeg.wasm</strong> kullanılarak <strong>tamamen tarayıcınızda</strong> çalışır.</p><ul><li>Videolarınız <strong>cihazınızı asla terk etmez</strong></li><li>Sunucu işleme veya bulut kodlama yok</li><li>FFmpeg core yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
           }
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "FileVideo",
-            "title": "Free Video Converter Online",
-            "description": "Convert between MP4, WebM, MKV, AVI formats. No software download, no registration required."
+            "title": "Ücretsiz Video Dönüştürücü Çevrimiçi",
+            "description": "MP4, WebM, MKV, AVI formatları arasında dönüştürün. Yazılım indirme yok, kayıt gerekmez."
           },
           "f2": {
             "icon": "Gauge",
-            "title": "H.264, H.265, VP9 Codecs",
-            "description": "Choose codecs for compatibility or file size. H.264 for everywhere, H.265 for smaller files, VP9 for WebM."
+            "title": "H.264, H.265, VP9 Kodekleri",
+            "description": "Uyumluluk veya dosya boyutu için kodek seçin. Her yer için H.264, daha küçük dosyalar için H.265, WebM için VP9."
           },
           "f3": {
             "icon": "Zap",
-            "title": "Fast Stream Copy Conversion",
-            "description": "MKV uses stream copy for instant conversion when possible. Same quality, new container, zero wait."
+            "title": "Hızlı Akış Kopyalama Dönüştürme",
+            "description": "MKV, mümkün olduğunda anında dönüştürme için akış kopyalama kullanır. Aynı kalite, yeni kapsayıcı, sıfır bekleme."
           },
           "f4": {
             "icon": "Shield",
-            "title": "Audio & Video Stay Synced",
-            "description": "Professional transcoding keeps audio perfectly aligned. No lip-sync issues in converted files."
+            "title": "Ses ve Video Mükemmel Senkronize Kalır",
+            "description": "Profesyonel yeniden kodlama sesi mükemmel şekilde hizalı tutar. Dönüştürülmüş dosyalarda dudak senkronu sorunları yok."
           },
           "f5": {
             "icon": "BarChart3",
-            "title": "Preview Converted Video First",
-            "description": "Watch the result in browser before downloading. Confirm quality, then save to your device."
+            "title": "Dönüştürülmüş Videoyu Önce Önizleyin",
+            "description": "İndirmeden önce sonucu tarayıcıda izleyin. Kaliteyi onaylayın, sonra cihazınıza kaydedin."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Convert Without Uploading",
-            "description": "100% browser-based conversion. Your files never leave your computer. Private and secure."
+            "title": "Yüklemeden Dönüştürün",
+            "description": "%100 tarayıcı tabanlı dönüştürme. Dosyalarınız bilgisayarınızı asla terk etmez. Gizli ve güvenli."
           }
         }
       },
@@ -644,66 +644,66 @@
           "a1": "720p (1280px genişlik), 480p (854px genişlik) ve 360p (640px genişlik). Ayrıca özel bir genişlik girebilirsiniz.",
           "q2": "En boy oranı korunuyor mu?",
           "a2": "Evet, orijinal en boy oranını korumak için yükseklik otomatik olarak hesaplanır.",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
           "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
+          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
+          "q5": "Dosya boyutu sınırları var mı?",
+          "a5": "Sunucu tarafından dayatılan sınır yoktur. Maksimum dosya boyutu cihazınızın kullanılabilir belleğine ve tarayıcı yeteneklerine bağlıdır. Çoğu modern cihaz birkaç yüz MB'a kadar olan dosyaları sorunsuz şekilde işler."
         },
         "seoContent": {
           "intro": {
-            "title": "Nedir Resize Video?",
-            "content": "<p><strong>Resize Video</strong> changes video resolution with preset options (720p, 480p, 360p) or custom dimensions. Downscale large videos for web, mobile, or social media, or adjust resolution for specific platform requirements.</p>"
+            "title": "Video Boyutlandırma Nedir?",
+            "content": "<p><strong>Video Boyutlandırma</strong>, hazır seçenekler (720p, 480p, 360p) veya özel boyutlarla video çözünürlüğünü değiştirir. Web, mobil veya sosyal medya için büyük videoları küçültün veya belirli platform gereksinimleri için çözünürlüğü ayarlayın.</p>"
           },
           "howToUse": {
-            "title": "Nasıl Kullanılır Resize Video",
-            "content": "<ol><li>Upload a video file</li><li>Select a preset resolution (<strong>720p</strong>, <strong>480p</strong>, <strong>360p</strong>) or enter custom dimensions</li><li>Click <strong>Resize</strong> to process</li><li>Download the resized video</li></ol><p>Aspect ratio is maintained automatically to prevent distortion.</p>"
+            "title": "Video Boyutlandırma Nasıl Kullanılır",
+            "content": "<ol><li>Bir video dosyası yükleyin</li><li>Hazır çözünürlük seçin (<strong>720p</strong>, <strong>480p</strong>, <strong>360p</strong>) veya özel boyutlar girin</li><li>Boyutlandırmak için <strong>Boyutlandır</strong> düğmesine tıklayın</li><li>Boyutlandırılmış videoyu indirin</li></ol><p>Bozulmayı önlemek için en boy oranı otomatik olarak korunur.</p>"
           },
           "features": {
             "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Preset Resolutions</strong>: Quick-select 720p, 480p, or 360p</li><li><strong>Custom Dimensions</strong>: Enter specific width and height</li><li><strong>Aspect Ratio Lock</strong>: Automatically maintains video proportions</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional-grade video scaling</li><li><strong>Multiple Formats</strong>: Resize MP4, WebM, MKV, and AVI</li><li><strong>Preview</strong>: Play the resized video before downloading</li></ul>"
+            "content": "<ul><li><strong>Hazır Çözünürlükler</strong>: Hızlı seçim 720p, 480p veya 360p</li><li><strong>Özel Boyutlar</strong>: Belirli genişlik ve yükseklik girin</li><li><strong>En Boy Oranı Kilidi</strong>: Video oranlarını korumak için otomatik olarak sürdürür</li><li><strong>FFmpeg.wasm ile Güçlendirilmiştir</strong>: Profesyonel seviyede video ölçekleme</li><li><strong>Çoklu Formatlar</strong>: MP4, WebM, MKV ve AVI boyutlandırın</li><li><strong>Önizleme</strong>: Boyutlandırılmış videoyu indirmeden önce oynatın</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Social Media</strong>: Resize for Instagram, TikTok, or YouTube requirements</li><li><strong>Mobile Optimization</strong>: Downscale 4K/1080p videos for mobile viewing</li><li><strong>Web Embedding</strong>: Resize for optimal web player dimensions</li><li><strong>Storage Savings</strong>: Reduce resolution to save storage space</li><li><strong>Email</strong>: Downscale videos for email-friendly file sizes</li></ul>"
+            "content": "<ul><li><strong>Sosyal Medya</strong>: Instagram, TikTok veya YouTube gereksinimleri için boyutlandırın</li><li><strong>Mobil Optimizasyon</strong>: Mobil görüntüleme için 4K/1080p videoları küçültün</li><li><strong>Web Yerleştirme</strong>: Optimal web oynatıcı boyutları için boyutlandırın</li><li><strong>Depolama Tasarrufu</strong>: Depolama alanından tasarruf etmek için çözünürlüğü düşürün</li><li><strong>E-posta</strong>: E-posta dostu dosya boyutları için videoları küçültün</li></ul>"
           },
           "privacy": {
-            "title": "Gizlilik Odaklı Video Resizing",
-            "content": "<p>Video resizing runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>sonra <strong>çevrimdışı</strong> çalışır FFmpeg core is loaded</li></ul>"
+            "title": "Gizlilik Odaklı Video Boyutlandırma",
+            "content": "<p>Video boyutlandırma <strong>FFmpeg.wasm</strong> kullanılarak <strong>tamamen tarayıcınızda</strong> çalışır.</p><ul><li>Videolarınız <strong>cihazınızı asla terk etmez</strong></li><li>Sunucu işleme veya yükleme yok</li><li>FFmpeg core yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
           }
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Resize Video Online Free",
-            "description": "Change video resolution instantly. No software needed, works in any browser, completely free."
+            "title": "Videoyu Çevrimiçi Ücretsiz Boyutlandırın",
+            "description": "Video çözünürlüğünü anında değiştirin. Yazılım gerekmez, herhangi bir tarayıcıda çalışır, tamamen ücretsiz."
           },
           "f2": {
             "icon": "BarChart3",
-            "title": "720p, 480p, 360p Presets",
-            "description": "One-click presets for social media, email, or mobile. Or enter custom dimensions for exact control."
+            "title": "720p, 480p, 360p Ön Ayarları",
+            "description": "Sosyal medya, e-posta veya mobil için tek tıklama ön ayarları. Veya tam kontrol için özel boyutlar girin."
           },
           "f3": {
             "icon": "Shield",
-            "title": "No Stretching - Perfect Ratio",
-            "description": "Aspect ratio locked automatically. Your video stays proportional at any size, no distortion."
+            "title": "Esnetme Yok - Mükemmel Oran",
+            "description": "En boy oranı otomatik olarak kilitlenir. Videonuz herhangi bir boyutta orantılı kalır, bozulma yok."
           },
           "f4": {
             "icon": "Zap",
-            "title": "Shrink File Size 50-80%",
-            "description": "Downscale 4K/1080p videos for smaller files. Perfect for email attachments and social sharing."
+            "title": "Dosya Boyutunu %50-80 Küçültün",
+            "description": "Daha küçük dosyalar için 4K/1080p videoları küçültün. E-posta ekleri ve sosyal paylaşım için mükemmel."
           },
           "f5": {
             "icon": "FileVideo",
-            "title": "Works with All Video Types",
-            "description": "Resize MP4, MOV, AVI, WebM, MKV files. Output keeps same format, ready to use anywhere."
+            "title": "Tüm Video Türleriyle Çalışır",
+            "description": "MP4, MOV, AVI, WebM, MKV dosyalarını boyutlandırın. Çıktı aynı formatı korur, kullanıma hazırdır."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Private Browser Processing",
-            "description": "Your video never uploads. All resizing happens locally on your device. Safe and secure."
+            "title": "Gizli Tarayıcı İşlemesi",
+            "description": "Videonuz asla yüklenmez. Tüm boyutlandırma cihazınızda yerel olarak gerçekleşir. Güvenli ve emniyetli."
           }
         }
       },
@@ -735,37 +735,37 @@
         "sampleRate": "Örnekleme Hızı",
         "channels": "Kanallar",
         "faq": {
-          "q1": "What information can this tool detect?",
-          "a1": "It detects video codec (H.264, VP9, AV1, etc.), audio codec (AAC, Opus, MP3, etc.), resolution, frame rate, bitrate, pixel format, sample rate, channel layout, and container format.",
-          "q2": "Which video formats are supported?",
-          "a2": "Most common formats including MP4, WebM, MKV, AVI, MOV, and more are supported through FFmpeg.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "How is this different from just checking file properties?",
-          "a4": "Operating system file properties usually show only basic information like file size and type. This tool uses FFmpeg to extract detailed stream-level metadata including exact codec, profile, pixel format, and per-stream bitrates.",
-          "q5": "Can I use this tool offline?",
-          "a5": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser."
+          "q1": "Bu araç hangi bilgileri tespit edebilir?",
+          "a1": "Video kodek (H.264, VP9, AV1 vb.), ses kodek (AAC, Opus, MP3 vb.), çözünürlük, kare hızı, bit hızı, piksel formatı, örnekleme hızı, kanal düzeni ve kapsayıcı formatını tespit eder.",
+          "q2": "Hangi video formatları desteklenir?",
+          "a2": "FFmpeg aracılığıyla MP4, WebM, MKV, AVI, MOV ve daha fazlası dahil çoğu yaygın format desteklenir.",
+          "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
+          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
+          "q4": "Bu sadece dosya özelliklerini kontrol etmekten nasıl farklıdır?",
+          "a4": "İşletim sistemi dosya özellikleri genellikle yalnızca dosya boyutu ve türü gibi temel bilgileri gösterir. Bu araç, FFmpeg kullanarak tam kodek, profil, piksel formatı ve akış başına bit hızları dahil detaylı akış düzeyinde meta verileri çıkarır.",
+          "q5": "Bu aracı çevrimdışı kullanabilir miyim?",
+          "a5": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin."
         },
         "seoContent": {
           "intro": {
-            "title": "What is Video Info?",
-            "content": "<p><strong>Video Info</strong> is a free online tool that inspects and displays detailed metadata from your video files.</p>"
+            "title": "Video Bilgisi Nedir?",
+            "content": "<p><strong>Video Bilgisi</strong>, video dosyalarınızdan detaylı meta verileri inceleyen ve görüntüleyen ücretsiz çevrimiçi bir araçtır.</p>"
           },
           "howToUse": {
-            "title": "How to Use Video Info",
-            "content": "<ol><li>Upload your video file.</li><li>View basic metadata instantly.</li><li>Click <strong>Analyze Video</strong> for deep inspection.</li><li>Copy all metadata as text.</li></ol>"
+            "title": "Video Bilgisi Nasıl Kullanılır",
+            "content": "<ol><li>Video dosyanızı yükleyin.</li><li>Anında temel meta verileri görüntüleyin.</li><li>Derinlemesine inceleme için <strong>Videoyu Analiz Et</strong> düğmesine tıklayın.</li><li>Tüm meta verileri metin olarak kopyalayın.</li></ol>"
           },
           "features": {
-            "title": "Key Features",
-            "content": "<ul><li>Two-layer analysis</li><li>Stream-level detail</li><li>Codec detection</li><li>One-click copy</li></ul>"
+            "title": "Temel Özellikler",
+            "content": "<ul><li>İki katmanlı inceleme</li><li>Akış düzeyinde detay</li><li>Kodek tespiti</li><li>Tek tıklamayla kopyalama</li></ul>"
           },
           "useCases": {
-            "title": "Common Use Cases",
-            "content": "<ul><li>Pre-processing check</li><li>Compatibility check</li><li>Debugging playback issues</li><li>Quality assessment</li></ul>"
+            "title": "Yaygın Kullanım Örnekleri",
+            "content": "<ul><li>Ön işleme kontrolü</li><li>Uyumluluk kontrolü</li><li>Oynatma sorunlarını giderme</li><li>Kalite değerlendirmesi</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Video Inspection",
-            "content": "<p>Video analysis runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p>"
+            "title": "Gizlilik Öncelikli Video İncelemesi",
+            "content": "<p>Video analizi <strong>FFmpeg.wasm</strong> kullanılarak <strong>tamamen tarayıcınızda</strong> çalışır.</p>"
           }
         },
         "startTime": "Başlangıç Zamanı",
@@ -778,33 +778,33 @@
           "count": "6",
           "f1": {
             "icon": "BarChart3",
-            "title": "Check Video Metadata Free Online",
-            "description": "Inspect codec, resolution, bitrate, duration instantly. No software, no upload, get detailed info in seconds."
+            "title": "Video Meta Verilerini Çevrimiçi Ücretsiz Kontrol Edin",
+            "description": "Kodek, çözünürlük, bit hızı, süreyi anında inceleyin. Yazılım yok, yükleme yok, saniyeler içinde detaylı bilgi alın."
           },
           "f2": {
             "icon": "FileVideo",
-            "title": "Deep Video & Audio Analysis",
-            "description": "See separate stream details. Video codec, audio codec, pixel format, sample rate — all technical data exposed."
+            "title": "Derin Video ve Ses Analizi",
+            "description": "Ayrı akış detaylarını görün. Video kodek, ses kodek, piksel formatı, örnekleme hızı — tüm teknik veriler açıkta."
           },
           "f3": {
             "icon": "Gauge",
-            "title": "Detect H.264, H.265, VP9, AV1",
-            "description": "Identifies all major codecs. Know exactly what format your video is before editing or converting."
+            "title": "H.264, H.265, VP9, AV1 Tespit Edin",
+            "description": "Tüm büyük kodekleri tanımlar. Düzenlemeden veya dönüştürmeden önce videonuzun tam olarak hangi formatta olduğunu bilin."
           },
           "f4": {
             "icon": "Zap",
-            "title": "Copy All Data with One Click",
-            "description": "Export complete metadata as formatted text. Perfect for troubleshooting, documentation, or sharing specs."
+            "title": "Tek Tıkla Tüm Verileri Kopyalayın",
+            "description": "Tam meta verileri biçimlendirilmiş metin olarak dışa aktarın. Sorun giderme, dokümantasyon veya özellik paylaşımı için mükemmel."
           },
           "f5": {
             "icon": "Shield",
-            "title": "Frame Thumbnail Preview",
-            "description": "Visual preview confirms you're checking the right file. See the video while viewing its technical details."
+            "title": "Kare Önizleme Görselleri",
+            "description": "Görsel önizleme doğru dosyayı kontrol ettiğinizi onaylar. Teknik detayları görüntülerken videoyu görün."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "100% Private - No File Upload",
-            "description": "Analysis runs entirely in your browser. Your video never leaves your device, not even for inspection."
+            "title": "%100 Gizli - Dosya Yükleme Yok",
+            "description": "Analiz tamamen tarayıcınızda gerçekleşir. Videonuz incelemek için bile cihazınızı asla terk etmez."
           }
         }
       }

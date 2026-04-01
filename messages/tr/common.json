@@ -2,10 +2,10 @@
   "common": {
     "siteName": "PrivaDeck",
     "siteDescription": "Gizlilik öncelikli hepsi bir arada tarayıcı araçları. Yükleme yok, kayıt yok, %100 yerel işlem.",
-    "localOnlyIndicator": "Browser Processing Only (Offline Ready)",
-    "compareBefore": "Before",
-    "compareAfter": "After",
-    "compareSaved": "Saved {percent}%",
+    "localOnlyIndicator": "Yalnızca Tarayıcıda İşleme (Çevrimdışı Hazır)",
+    "compareBefore": "Önce",
+    "compareAfter": "Sonra",
+    "compareSaved": "%{percent} tasarruf edildi",
     "search": "Araç ara...",
     "searchShortcut": "Ctrl+K",
     "allTools": "Tüm Araçlar",
@@ -41,14 +41,14 @@
       "step3FileDesc": "İşlenmiş dosyanızı anında alın. Bekleme yok.",
       "step3TextTitle": "Kopyala veya kaydet",
       "step3TextDesc": "Çıktıyı panoya kopyalayın veya kaydedin.",
-      "howToTitle": "How to use {toolName}"
+      "howToTitle": "{toolName} nasıl kullanılır"
     },
     "toggleMenu": "Menüyü aç/kapat",
     "switchLanguage": "Dil değiştir",
     "localeBanner": {
-      "message": "This site is available in {language}",
-      "switchTo": "Switch to {language}",
-      "dismiss": "Dismiss"
+      "message": "Bu site {language} dilinde de mevcut",
+      "switchTo": "{language} diline geç",
+      "dismiss": "Kapat"
     },
     "switchTheme": "{theme} temasına geç",
     "searchPlaceholder": "Araç ara...",
@@ -64,27 +64,27 @@
     "dropTextFile": "Dosyayı buraya bırakın",
     "dropTextFileHint": "Dosya sürükle bırak destekler",
     "privacyHint": "Yerel olarak işlenir — verileriniz cihazınızdan asla ayrılmaz.",
-    "ffmpegLoading": "Initializing secure processing engine...",
-    "ffmpegLoadingHint": "One-time WebAssembly download (~30MB)",
-    "installPrompt": "Add PrivaDeck to Home Screen — works offline, opens instantly",
+    "ffmpegLoading": "Güvenli işleme motoru başlatılıyor...",
+    "ffmpegLoadingHint": "Tek seferlik WebAssembly indirmesi (~30 MB)",
+    "installPrompt": "PrivaDeck'i Ana Ekrana ekle — çevrimdışı çalışır, anında açılır",
     "install": "Add",
     "dismiss": "Dismiss",
     "categoryIntro": {
-      "developer": "A comprehensive suite of developer utilities that run entirely in your browser. Format, convert, encode, decode, and analyze data without sending anything to a server. Perfect for handling sensitive configuration files, API keys, and proprietary code.",
-      "image": "Professional image editing tools powered by client-side processing. Resize, compress, convert, crop, and enhance your images with zero upload latency and complete privacy. Supports all major formats including HEIC, WebP, SVG, and more.",
-      "pdf": "Complete PDF toolkit for merging, splitting, compressing, and editing PDF documents. All processing happens locally in your browser — ideal for confidential contracts, financial documents, and sensitive business files.",
-      "video": "Browser-based video editing powered by FFmpeg WebAssembly. Trim, compress, convert, and transform videos without uploading to any server. Supports MP4, WebM, MOV, and more.",
-      "audio": "Edit and convert audio files directly in your browser using FFmpeg WebAssembly. Trim, convert formats, and extract audio from video — all processed locally on your device."
+      "developer": "Tamamen tarayıcınızda çalışan kapsamlı bir geliştirici araçları paketi. Herhangi bir şeyi sunucuya göndermeden veri biçimlendirin, dönüştürün, kodlayın, çözün ve analiz edin. Hassas yapılandırma dosyaları, API anahtarları ve tescilli kodların işlenmesi için idealdir.",
+      "image": "İstemci tarafı işlemeyle güçlendirilmiş profesyonel görsel düzenleme araçları. Sıfır yükleme gecikmesi ve tam gizlilikle görsellerinizi yeniden boyutlandırın, sıkıştırın, dönüştürün, kırpın ve iyileştirin. HEIC, WebP, SVG ve daha fazlası dahil tüm büyük formatları destekler.",
+      "pdf": "PDF belgelerini birleştirme, bölme, sıkıştırma ve düzenleme için eksiksiz bir PDF araç seti. Tüm işlemler tarayıcınızda yerel olarak gerçekleşir; gizli sözleşmeler, finansal belgeler ve hassas iş dosyaları için idealdir.",
+      "video": "FFmpeg WebAssembly ile güçlendirilmiş tarayıcı tabanlı video düzenleme. Herhangi bir sunucuya yüklemeden videoları kırpın, sıkıştırın, dönüştürün ve dönüştürün. MP4, WebM, MOV ve daha fazlasını destekler.",
+      "audio": "FFmpeg WebAssembly kullanarak ses dosyalarını doğrudan tarayıcınızda düzenleyin ve dönüştürün. Sesi kırpın, format dönüştürün ve videodan ses çıkarın; tüm işlemler cihazınızda yerel olarak yapılır."
     },
-    "ffmpegLoadError": "Failed to load processing engine. Please refresh and try again.",
+    "ffmpegLoadError": "İşleme motoru yüklenemedi. Lütfen sayfayı yenileyip tekrar deneyin.",
     "unsupportedVideoCodec": "Bu video, tarayıcınız tarafından desteklenmeyen bir codec kullanıyor. Lütfen başka bir tarayıcı deneyin veya videoyu desteklenen bir formata (örneğin H.264) dönüştürün.",
-    "hevcInstallHint": "Windows users: Install HEVC Video Extensions from Microsoft Store to enable H.265 support.",
+    "hevcInstallHint": "Windows kullanıcıları: H.265 desteğini etkinleştirmek için Microsoft Store'dan HEVC Video Uzantıları'nı yükleyin.",
     "aboutThisTool": "Bu Araç Hakkında",
-    "featureHighlights": "Key Features",
-    "addMore": "Click or Drop",
-    "addMoreHint": "Add more images",
-    "clearAll": "Clear All",
-    "close": "Close",
+    "featureHighlights": "Temel Özellikler",
+    "addMore": "Tıkla veya Bırak",
+    "addMoreHint": "Daha fazla görsel ekle",
+    "clearAll": "Tümünü Temizle",
+    "close": "Kapat",
     "replaceFile": "Değiştir"
   },
   "nav": {
@@ -112,8 +112,8 @@
     "featureInstant": "Anında işleme",
     "featureNoUpload": "Yükleme gerektirmez",
     "toolCount": "{count} araç →",
-    "metaTitle": "PrivaDeck — Free Online Privacy-First Tools",
-    "metaDescription": "Free browser-based tools for media, PDF, and developer tasks. 100% local processing, zero uploads, complete privacy."
+    "metaTitle": "PrivaDeck — Ücretsiz Gizlilik Öncelikli Çevrimiçi Araçlar",
+    "metaDescription": "Medya, PDF ve geliştirici görevleri için ücretsiz tarayıcı tabanlı araçlar. %100 yerel işlem, sıfır yükleme, tam gizlilik."
   },
   "categories": {
     "developer": {
@@ -497,12 +497,12 @@
     }
   },
   "allTools": {
-    "metaTitle": "All Tools",
-    "metaDescription": "Browse all 58+ free online tools for image, video, audio, PDF, and developer tasks. No uploads, 100% private."
+    "metaTitle": "Tüm Araçlar",
+    "metaDescription": "Görsel, video, ses, PDF ve geliştirici görevleri için 58'den fazla ücretsiz çevrimiçi araca göz atın. Yükleme yok, %100 gizli."
   },
   "notFound": {
-    "title": "Page Not Found",
-    "searchHint": "Try searching for the tool you need:"
+    "title": "Sayfa Bulunamadı",
+    "searchHint": "İhtiyacınız olan aracı arayın:"
   },
   "featureHighlights": "Temel Özellikler"
 }
