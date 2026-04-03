@@ -2,10 +2,10 @@
   "common": {
     "siteName": "PrivaDeck",
     "siteDescription": "Công cụ tất-cả-trong-một trên trình duyệt. Không tải lên, không đăng ký, xử lý nội bộ 100%.",
-    "localOnlyIndicator": "Browser Processing Only (Offline Ready)",
-    "compareBefore": "Before",
-    "compareAfter": "After",
-    "compareSaved": "Saved {percent}%",
+    "localOnlyIndicator": "Chỉ xử lý trên trình duyệt (Hỗ trợ ngoại tuyến)",
+    "compareBefore": "Trước",
+    "compareAfter": "Sau",
+    "compareSaved": "Đã giảm {percent}%",
     "search": "Tìm công cụ...",
     "searchShortcut": "Ctrl+K",
     "allTools": "Tất cả công cụ",
@@ -41,14 +41,14 @@
       "step3FileDesc": "Nhận tệp đã xử lý ngay lập tức. Không cần chờ đợi.",
       "step3TextTitle": "Sao chép hoặc lưu",
       "step3TextDesc": "Sao chép đầu ra vào clipboard hoặc lưu.",
-      "howToTitle": "How to use {toolName}"
+      "howToTitle": "Cách sử dụng {toolName}"
     },
     "toggleMenu": "Chuyển đổi menu",
     "switchLanguage": "Đổi ngôn ngữ",
     "localeBanner": {
-      "message": "This site is available in {language}",
-      "switchTo": "Switch to {language}",
-      "dismiss": "Dismiss"
+      "message": "Trang web này cũng có sẵn bằng {language}",
+      "switchTo": "Chuyển sang {language}",
+      "dismiss": "Bỏ qua"
     },
     "switchTheme": "Chuyển sang giao diện {theme}",
     "searchPlaceholder": "Tìm kiếm công cụ...",
@@ -64,27 +64,27 @@
     "dropTextFile": "Thả tệp vào đây",
     "dropTextFileHint": "Hỗ trợ kéo và thả tệp",
     "privacyHint": "Xử lý cục bộ — dữ liệu của bạn không bao giờ rời khỏi thiết bị.",
-    "ffmpegLoading": "Initializing secure processing engine...",
-    "ffmpegLoadingHint": "One-time WebAssembly download (~30MB)",
-    "installPrompt": "Add PrivaDeck to Home Screen — works offline, opens instantly",
-    "install": "Add",
-    "dismiss": "Dismiss",
+    "ffmpegLoading": "Đang khởi tạo công cụ xử lý bảo mật...",
+    "ffmpegLoadingHint": "Tải WebAssembly lần đầu (~30MB)",
+    "installPrompt": "Thêm PrivaDeck vào Màn hình chính — hoạt động ngoại tuyến, mở tức thì",
+    "install": "Thêm",
+    "dismiss": "Bỏ qua",
     "categoryIntro": {
-      "developer": "A comprehensive suite of developer utilities that run entirely in your browser. Format, convert, encode, decode, and analyze data without sending anything to a server. Perfect for handling sensitive configuration files, API keys, and proprietary code.",
-      "image": "Professional image editing tools powered by client-side processing. Resize, compress, convert, crop, and enhance your images with zero upload latency and complete privacy. Supports all major formats including HEIC, WebP, SVG, and more.",
-      "pdf": "Complete PDF toolkit for merging, splitting, compressing, and editing PDF documents. All processing happens locally in your browser — ideal for confidential contracts, financial documents, and sensitive business files.",
-      "video": "Browser-based video editing powered by FFmpeg WebAssembly. Trim, compress, convert, and transform videos without uploading to any server. Supports MP4, WebM, MOV, and more.",
-      "audio": "Edit and convert audio files directly in your browser using FFmpeg WebAssembly. Trim, convert formats, and extract audio from video — all processed locally on your device."
+      "developer": "Bộ công cụ dành cho nhà phát triển chạy hoàn toàn trên trình duyệt. Định dạng, chuyển đổi, mã hóa, giải mã và phân tích dữ liệu mà không cần gửi bất cứ thứ gì lên máy chủ. Lý tưởng để xử lý tệp cấu hình nhạy cảm, khóa API và mã nguồn riêng.",
+      "image": "Công cụ chỉnh sửa ảnh chuyên nghiệp chạy trên trình duyệt. Thay đổi kích thước, nén, chuyển đổi, cắt và nâng cao chất lượng ảnh với độ trễ bằng không và bảo mật tuyệt đối. Hỗ trợ mọi định dạng phổ biến bao gồm HEIC, WebP, SVG và nhiều hơn nữa.",
+      "pdf": "Bộ công cụ PDF hoàn chỉnh để gộp, tách, nén và chỉnh sửa tài liệu PDF. Mọi xử lý đều diễn ra cục bộ trên trình duyệt — lý tưởng cho hợp đồng mật, tài liệu tài chính và tệp kinh doanh nhạy cảm.",
+      "video": "Chỉnh sửa video trên trình duyệt được hỗ trợ bởi FFmpeg WebAssembly. Cắt, nén, chuyển đổi và xử lý video mà không cần tải lên máy chủ. Hỗ trợ MP4, WebM, MOV và nhiều định dạng khác.",
+      "audio": "Chỉnh sửa và chuyển đổi tệp âm thanh trực tiếp trên trình duyệt bằng FFmpeg WebAssembly. Cắt, chuyển đổi định dạng và trích xuất âm thanh từ video — tất cả xử lý cục bộ trên thiết bị của bạn."
     },
-    "ffmpegLoadError": "Failed to load processing engine. Please refresh and try again.",
+    "ffmpegLoadError": "Không thể tải công cụ xử lý. Vui lòng tải lại trang và thử lại.",
     "unsupportedVideoCodec": "Video này sử dụng codec không được trình duyệt của bạn hỗ trợ. Vui lòng thử trình duyệt khác hoặc chuyển đổi video sang định dạng được hỗ trợ (ví dụ: H.264).",
-    "hevcInstallHint": "Windows users: Install HEVC Video Extensions from Microsoft Store to enable H.265 support.",
-    "aboutThisTool": "Về công cụ này",
-    "featureHighlights": "Key Features",
-    "addMore": "Click or Drop",
-    "addMoreHint": "Add more images",
-    "clearAll": "Clear All",
-    "close": "Close",
+    "hevcInstallHint": "Người dùng Windows: Cài đặt HEVC Video Extensions từ Microsoft Store để hỗ trợ H.265.",
+    "aboutThisTool": "Giới thiệu công cụ này",
+    "featureHighlights": "Tính năng nổi bật",
+    "addMore": "Nhấp hoặc kéo thả",
+    "addMoreHint": "Thêm ảnh khác",
+    "clearAll": "Xóa tất cả",
+    "close": "Đóng",
     "replaceFile": "Thay thế"
   },
   "nav": {
@@ -112,8 +112,8 @@
     "featureInstant": "Xử lý tức thì",
     "featureNoUpload": "Không cần tải lên",
     "toolCount": "{count} công cụ →",
-    "metaTitle": "PrivaDeck — Free Online Privacy-First Tools",
-    "metaDescription": "Free browser-based tools for media, PDF, and developer tasks. 100% local processing, zero uploads, complete privacy."
+    "metaTitle": "PrivaDeck — Công cụ trực tuyến miễn phí ưu tiên quyền riêng tư",
+    "metaDescription": "Công cụ trình duyệt miễn phí cho đa phương tiện, PDF và lập trình. Xử lý 100% cục bộ, không tải lên, bảo mật hoàn toàn."
   },
   "categories": {
     "developer": {
@@ -497,12 +497,11 @@
     }
   },
   "allTools": {
-    "metaTitle": "All Tools",
-    "metaDescription": "Browse all 58+ free online tools for image, video, audio, PDF, and developer tasks. No uploads, 100% private."
+    "metaTitle": "Tất cả công cụ",
+    "metaDescription": "Khám phá hơn 58+ công cụ trực tuyến miễn phí cho hình ảnh, video, âm thanh, PDF và lập trình. Không tải lên, bảo mật 100%."
   },
   "notFound": {
-    "title": "Page Not Found",
-    "searchHint": "Try searching for the tool you need:"
-  },
-  "featureHighlights": "Tính năng chính"
+    "title": "Không tìm thấy trang",
+    "searchHint": "Thử tìm công cụ bạn cần:"
+  }
 }
