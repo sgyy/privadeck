@@ -28,11 +28,8 @@ function formatAccept(accept: string): string {
     .split(",")
     .map((s) => s.trim())
     .map((s) => {
-      // ".pdf" -> "PDF"
       if (s.startsWith(".")) return s.slice(1).toUpperCase();
-      // "image/*" -> "Image"
       if (s.endsWith("/*")) return s.split("/")[0].charAt(0).toUpperCase() + s.split("/")[0].slice(1);
-      // "image/png" -> "PNG"
       const ext = s.split("/").pop();
       return ext ? ext.toUpperCase() : s;
     })
@@ -49,7 +46,7 @@ export function FileDropzone({
   analyticsCategory,
 }: FileDropzoneProps) {
   const t = useTranslations("common");
-  const [dragging, setDragging] = useState(false);
+  const [dragCounter, setDragCounter] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleFiles = useCallback(
@@ -75,22 +72,38 @@ export function FileDropzone({
     [onFiles, maxSize, analyticsSlug, analyticsCategory],
   );
 
+  const activateInput = useCallback(() => {
+    inputRef.current?.click();
+  }, []);
+
   return (
     <div
+      tabIndex={0}
+      aria-label={t("uploadFiles")}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          activateInput();
+        }
+      }}
       onDragOver={(e) => {
         e.preventDefault();
-        setDragging(true);
+        setDragCounter((c) => c + 1);
       }}
-      onDragLeave={() => setDragging(false)}
+      onDragEnter={(e) => {
+        e.preventDefault();
+        setDragCounter((c) => c + 1);
+      }}
+      onDragLeave={() => setDragCounter((c) => Math.max(0, c - 1))}
       onDrop={(e) => {
         e.preventDefault();
-        setDragging(false);
+        setDragCounter(0);
         handleFiles(e.dataTransfer.files);
       }}
-      onClick={() => inputRef.current?.click()}
+      onClick={activateInput}
       className={cn(
         "flex cursor-pointer flex-col items-center justify-center gap-4 rounded-xl border-2 border-dashed border-border p-8 transition-all duration-300 hover:border-primary/50 hover:bg-muted/50 hover:shadow-[var(--glow-primary)]",
-        dragging && "border-primary bg-primary/5 shadow-[var(--glow-primary-strong)]",
+        dragCounter > 0 && "border-primary bg-primary/5 shadow-[var(--glow-primary-strong)]",
         className,
       )}
     >

@@ -20,6 +20,7 @@ export function CompareSlider({
 }: CompareSliderProps) {
   const [position, setPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
+  const handleRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("common");
 
   const handleMove = useCallback((clientX: number) => {
@@ -47,6 +48,16 @@ export function CompareSlider({
     [handleMove],
   );
 
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      setPosition((p) => Math.max(0, p - 2));
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      setPosition((p) => Math.min(100, p + 2));
+    }
+  }, []);
+
   return (
     <div className="space-y-2">
       <div
@@ -55,6 +66,8 @@ export function CompareSlider({
         style={{ cursor: "col-resize" }}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
+        role="group"
+        aria-label={t("compareSlider")}
       >
         {/* After image (full width, behind) */}
         <img
@@ -72,7 +85,7 @@ export function CompareSlider({
           <img
             src={beforeSrc}
             alt={beforeLabel || t("compareBefore")}
-            className="block w-full h-full object-cover"
+            className="block w-full"
             draggable={false}
           />
         </div>
@@ -90,7 +103,18 @@ export function CompareSlider({
           className="absolute top-0 bottom-0 w-0.5 bg-white shadow-md"
           style={{ left: `${position}%`, transform: "translateX(-50%)" }}
         >
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-md">
+          <div
+            ref={handleRef}
+            role="slider"
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={Math.round(position)}
+            aria-valuetext={`${Math.round(position)}%`}
+            aria-label={t("compareSlider")}
+            tabIndex={0}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-8 w-8 cursor-col-resize items-center justify-center rounded-full bg-white shadow-md"
+            onKeyDown={handleKeyDown}
+          >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M5 3L2 8L5 13" stroke="#334155" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               <path d="M11 3L14 8L11 13" stroke="#334155" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -100,7 +124,7 @@ export function CompareSlider({
       </div>
 
       {savedPercent !== undefined && savedPercent > 0 && (
-        <p className="text-center text-sm font-medium text-emerald-600 dark:text-emerald-400">
+        <p className="text-center text-sm font-medium text-accent-foreground">
           {t("compareSaved", { percent: savedPercent })}
         </p>
       )}

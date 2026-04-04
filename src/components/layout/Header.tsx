@@ -11,6 +11,7 @@ import type { ToolCategory } from "@/lib/registry/types";
 import { cn } from "@/lib/utils/cn";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 import { trackEvent } from "@/lib/analytics";
+import { getToolsByCategory } from "@/lib/utils/tools-by-category";
 
 interface HeaderProps {
   onMenuClick: () => void;
@@ -24,15 +25,7 @@ export function Header({ onMenuClick, onSearchClick, toolNavData }: HeaderProps)
   const closeTimer = useRef<ReturnType<typeof setTimeout>>(null);
   const pathname = usePathname();
 
-  const toolsByCategory = useMemo(() => {
-    const map = new Map<string, ToolNavItem[]>();
-    for (const item of toolNavData) {
-      const arr = map.get(item.category) || [];
-      arr.push(item);
-      map.set(item.category, arr);
-    }
-    return map;
-  }, [toolNavData]);
+  const toolsByCategory = useMemo(() => getToolsByCategory(toolNavData), [toolNavData]);
 
   // Close menu on route change
   // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -136,18 +129,30 @@ function CategoryDropdown({
   const featured = tools.filter((item) => item.featured);
   const others = tools.filter((item) => !item.featured);
 
+  const handleTriggerKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      onOpen();
+    }
+  };
+
   return (
     <div
       className="relative"
       onMouseEnter={onOpen}
       onMouseLeave={onClose}
     >
-      <Link
-        href={`/tools/${category}`}
+      <button
+        type="button"
         className={cn(
           "inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground",
           isOpen ? "bg-muted text-foreground" : "text-muted-foreground",
         )}
+        aria-haspopup="menu"
+        aria-expanded={isOpen}
+        onKeyDown={handleTriggerKeyDown}
+        onFocus={onOpen}
+        onBlur={onClose}
       >
         {tNav(category)}
         <ChevronDown
@@ -156,13 +161,14 @@ function CategoryDropdown({
             isOpen && "rotate-180",
           )}
         />
-      </Link>
+      </button>
 
       {isOpen && (
         <div
           className="absolute left-0 top-full pt-1 z-50 max-w-[calc(100vw-2rem)]"
           onMouseEnter={onCancelClose}
           onMouseLeave={onClose}
+          role="menu"
         >
           <div className="rounded-xl border border-border/50 bg-card/95 backdrop-blur-xl shadow-2xl shadow-primary/5 animate-fade-in-scale w-max max-w-[90vw] p-5">
             <div className="flex gap-8">
@@ -177,6 +183,8 @@ function CategoryDropdown({
                       <Link
                         key={tool.slug}
                         href={`/tools/${category}/${tool.slug}`}
+                        role="menuitem"
+                        tabIndex={-1}
                         className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors hover:bg-muted"
                       >
                         <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent">
@@ -207,6 +215,8 @@ function CategoryDropdown({
                       <Link
                         key={tool.slug}
                         href={`/tools/${category}/${tool.slug}`}
+                        role="menuitem"
+                        tabIndex={-1}
                         className="whitespace-nowrap rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-muted hover:text-foreground text-card-foreground"
                       >
                         {tool.name}
@@ -228,6 +238,8 @@ function CategoryDropdown({
             <div className="mt-4 border-t border-border pt-3">
               <Link
                 href={`/tools/${category}`}
+                role="menuitem"
+                tabIndex={-1}
                 className="text-sm font-medium text-primary hover:underline"
               >
                 {tNav("allCategoryTools")} →

@@ -53,7 +53,7 @@ export function ToolBreadcrumb({ category, slug }: ToolBreadcrumbProps) {
 
   return (
     <>
-      <nav className="mb-4 flex items-center gap-1 text-sm text-muted-foreground">
+      <nav aria-label="Breadcrumb" className="mb-4 flex items-center gap-1 text-sm text-muted-foreground">
         <Link href="/" className="hover:text-foreground">
           {tn("home")}
         </Link>

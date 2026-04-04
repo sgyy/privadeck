@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils/cn";
 import { ChevronDown } from "lucide-react";
-import { useState, ReactNode } from "react";
+import { useState, ReactNode, useId } from "react";
 
 export function Accordion({
   children,
@@ -26,12 +26,17 @@ export function AccordionItem({
   onValueChange?: (open: boolean) => void;
 }) {
   const [open, setOpen] = useState(defaultOpen);
+  const id = useId();
+  const headerId = `${id}-header`;
+  const panelId = `${id}-panel`;
 
   return (
     <div>
       <button
         type="button"
+        id={headerId}
         aria-expanded={open}
+        aria-controls={panelId}
         onClick={() => {
           const next = !open;
           setOpen(next);
@@ -48,12 +53,15 @@ export function AccordionItem({
         />
       </button>
       <div
+        id={panelId}
+        role="region"
+        aria-labelledby={headerId}
         className={cn(
           "overflow-hidden transition-all duration-300 ease-in-out",
           open ? "max-h-[5000px] pb-4 opacity-100" : "max-h-0 opacity-0",
         )}
       >
-        <div className="text-sm text-muted-foreground animate-fade-in">
+        <div className="text-sm text-muted-foreground">
           {children}
         </div>
       </div>

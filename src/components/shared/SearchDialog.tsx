@@ -1,11 +1,13 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
-import { Search, X } from "lucide-react";
+import { Search } from "lucide-react";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 import { trackEvent } from "@/lib/analytics";
+import { Dialog, DialogOverlay, DialogContent, DialogTitle, DialogClose } from "@/components/ui/Dialog";
+import { cn } from "@/lib/utils/cn";
 
 const categoryColors: Record<string, string> = {
   developer: "bg-purple-500",
@@ -30,17 +32,18 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
 
   const tNav = useTranslations("nav");
 
-  const filtered = query.trim()
-    ? toolNavData.filter((tool) => {
-        const q = query.toLowerCase();
-        return (
-          tool.name.toLowerCase().includes(q) ||
-          tool.description.toLowerCase().includes(q) ||
-          (tool.nameEn && tool.nameEn.toLowerCase().includes(q)) ||
-          (tool.descriptionEn && tool.descriptionEn.toLowerCase().includes(q))
-        );
-      })
-    : [];
+  const filtered = useMemo(() => {
+    if (!query.trim()) return [];
+    const q = query.toLowerCase();
+    return toolNavData.filter((tool) => {
+      return (
+        tool.name.toLowerCase().includes(q) ||
+        tool.description.toLowerCase().includes(q) ||
+        (tool.nameEn && tool.nameEn.toLowerCase().includes(q)) ||
+        (tool.descriptionEn && tool.descriptionEn.toLowerCase().includes(q))
+      );
+    });
+  }, [query, toolNavData]);
 
   const navigate = useCallback(
     (index: number) => {
@@ -57,7 +60,7 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
         setQuery("");
       }
     },
-    [filtered, router, onClose, query],
+    [filtered, router, onClose],
   );
 
   /* eslint-disable react-hooks/set-state-in-effect */
@@ -95,8 +98,6 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [open, onClose]);
 
-  if (!open) return null;
-
   function handleKeyDown(e: React.KeyboardEvent) {
     switch (e.key) {
       case "ArrowDown":
@@ -109,7 +110,9 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
         break;
       case "Enter":
         e.preventDefault();
-        navigate(selectedIndex);
+        if (selectedIndex < filtered.length) {
+          navigate(selectedIndex);
+        }
         break;
       case "Escape":
         onClose();
@@ -118,71 +121,69 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
   }
 
   return (
-    <>
-      <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm" onClick={onClose} />
-      <div className="fixed left-1/2 top-[20%] z-50 w-full max-w-lg -translate-x-1/2 rounded-xl border border-border/50 bg-card/95 backdrop-blur-xl shadow-2xl shadow-primary/5 animate-fade-in-scale">
-        <div className="flex items-center gap-3 border-b border-border px-4 py-3">
-          <Search className="h-5 w-5 text-muted-foreground shrink-0" />
-          <input
-            ref={inputRef}
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder={t("searchPlaceholder")}
-            className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
-          />
-          <button
-            type="button"
-            onClick={onClose}
-            className="text-muted-foreground hover:text-foreground"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        </div>
+    <Dialog open={open} onOpenChange={(val) => { if (!val) onClose(); }}>
+      <DialogOverlay />
+      <DialogContent className="items-start justify-start pt-[20vh]">
+        <div className="w-full max-w-lg rounded-xl border border-border/50 bg-card/95 backdrop-blur-xl shadow-2xl shadow-primary/5">
+          <div className="flex items-center gap-3 border-b border-border px-4 py-3">
+            <Search className="h-5 w-5 text-muted-foreground shrink-0" />
+            <DialogTitle className="sr-only">{t("search")}</DialogTitle>
+            <input
+              ref={inputRef}
+              type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder={t("searchPlaceholder")}
+              className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
+            />
+            <DialogClose />
+          </div>
 
-        <div className="max-h-96 overflow-y-auto p-2">
-          {!query.trim() ? (
-            <p className="px-3 py-6 text-center text-sm text-muted-foreground">
-              {t("searchPlaceholder")}
-            </p>
-          ) : filtered.length === 0 ? (
-            <p className="px-3 py-6 text-center text-sm text-muted-foreground">
-              {t("noToolsFound")}
-            </p>
-          ) : (
-            filtered.map((tool, i) => (
-              <button
-                key={tool.slug}
-                type="button"
-                onClick={() => navigate(i)}
-                className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm transition-colors ${
-                  i === selectedIndex ? "bg-primary/10 ring-1 ring-primary/20" : "hover:bg-muted"
-                }`}
-              >
-                <span className={`h-2 w-2 shrink-0 rounded-full ${categoryColors[tool.category] || "bg-gray-500"}`} />
-                <div className="min-w-0 flex-1">
-                  <p className="font-medium">
-                    {tool.name}
-                  </p>
-                  <p className="text-xs text-muted-foreground line-clamp-1">
-                    {tool.description}
-                  </p>
-                </div>
-                <span className="shrink-0 rounded-md bg-muted px-1.5 py-0.5 text-xs text-muted-foreground">
-                  {tNav(tool.category)}
-                </span>
-              </button>
-            ))
-          )}
-        </div>
+          <div className="max-h-96 overflow-y-auto p-2">
+            {!query.trim() ? (
+              <p className="px-3 py-6 text-center text-sm text-muted-foreground">
+                {t("searchPlaceholder")}
+              </p>
+            ) : filtered.length === 0 ? (
+              <p className="px-3 py-6 text-center text-sm text-muted-foreground">
+                {t("noToolsFound")}
+              </p>
+            ) : (
+              filtered.map((tool, i) => (
+                <button
+                  key={`${tool.category}-${tool.slug}`}
+                  type="button"
+                  onClick={() => navigate(i)}
+                  className={cn(
+                    "flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left text-sm transition-colors",
+                    i === selectedIndex ? "bg-primary/10 ring-1 ring-primary/20" : "hover:bg-muted",
+                  )}
+                >
+                  <span className={cn("h-2 w-2 shrink-0 rounded-full", categoryColors[tool.category] || "bg-gray-500")} />
+                  <div className="min-w-0 flex-1">
+                    <p className="font-medium">
+                      {tool.name}
+                    </p>
+                    <p className="text-xs text-muted-foreground line-clamp-1">
+                      {tool.description}
+                    </p>
+                  </div>
+                  <span className="shrink-0 rounded-md bg-muted px-1.5 py-0.5 text-xs text-muted-foreground">
+                    {tNav(tool.category)}
+                  </span>
+                </button>
+              ))
+            )}
+          </div>
 
-        <div className="border-t border-border px-4 py-2 text-xs text-muted-foreground flex gap-4">
-          <span>↑↓ {t("searchNavigate")}</span>
-          <span>↵ {t("searchOpen")}</span>
-          <span>Esc {t("searchClose")}</span>
+          <div className="border-t border-border px-4 py-2 text-xs text-muted-foreground flex gap-4">
+            <span>↑↓ {t("searchNavigate")}</span>
+            <span>↵ {t("searchOpen")}</span>
+            <span>Esc {t("searchClose")}</span>
+          </div>
         </div>
-      </div>
-    </>
+      </DialogContent>
+    </Dialog>
   );
 }

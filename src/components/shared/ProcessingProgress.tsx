@@ -18,6 +18,9 @@ export function ProcessingProgress({
 }: ProcessingProgressProps) {
   const t = useTranslations("common");
   const isDeterminate = progress !== undefined;
+  const normalizedProgress = isDeterminate
+    ? Math.min(100, Math.max(0, progress))
+    : 0;
 
   return (
     <div className={cn("w-full space-y-2", className)}>
@@ -27,18 +30,27 @@ export function ProcessingProgress({
         </span>
         {isDeterminate && (
           <span className="font-medium tabular-nums">
-            {Math.round(progress)}%
+            {Math.round(normalizedProgress)}%
           </span>
         )}
       </div>
       <div className="h-2 w-full overflow-hidden rounded-full bg-muted">
         {isDeterminate ? (
           <div
+            role="progressbar"
+            aria-valuenow={Math.round(normalizedProgress)}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-label={label || t("processing")}
             className="h-full rounded-full bg-primary transition-[width] duration-300 ease-out"
-            style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
+            style={{ width: `${normalizedProgress}%` }}
           />
         ) : (
-          <div className="h-full w-1/3 animate-[indeterminate_1.5s_ease-in-out_infinite] rounded-full bg-primary" />
+          <div
+            role="progressbar"
+            aria-label={label || t("processing")}
+            className="h-full w-1/3 animate-[indeterminate_1.5s_ease-in-out_infinite] rounded-full bg-primary"
+          />
         )}
       </div>
     </div>

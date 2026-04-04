@@ -24,10 +24,11 @@ export function RelatedTools({ slugs, currentSlug, category }: RelatedToolsProps
     .map((s) => {
       const def = getToolBySlug(s, category);
       if (!def) return null;
-      const nav = toolNavData.find((t) => t.slug === s && t.category === category);
-      return nav ? { ...def, navName: nav.name, navDescription: nav.description } : null;
+      const nav = toolNavData.find((item) => item.slug === s && item.category === category);
+      if (!nav) return null;
+      return { ...def, navName: nav.name, navDescription: nav.description };
     })
-    .filter(Boolean);
+    .filter((item): item is NonNullable<typeof item> => item !== null);
 
   if (tools.length === 0) return null;
 
@@ -37,14 +38,14 @@ export function RelatedTools({ slugs, currentSlug, category }: RelatedToolsProps
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {tools.map((tool) => (
           <Link
-            key={tool!.slug}
-            href={`/tools/${tool!.category}/${tool!.slug}`}
-            onClick={() => trackEvent("related_tool_click", { from_slug: currentSlug, to_slug: tool!.slug, to_category: tool!.category })}
+            key={tool.slug}
+            href={`/tools/${tool.category}/${tool.slug}`}
+            onClick={() => trackEvent("related_tool_click", { from_slug: currentSlug, to_slug: tool.slug, to_category: tool.category })}
           >
             <Card className="p-4 gradient-border">
-              <h3 className="font-medium text-sm">{tool!.navName}</h3>
+              <h3 className="font-medium text-sm">{tool.navName}</h3>
               <p className="mt-1 text-xs text-muted-foreground line-clamp-2">
-                {tool!.navDescription}
+                {tool.navDescription}
               </p>
             </Card>
           </Link>

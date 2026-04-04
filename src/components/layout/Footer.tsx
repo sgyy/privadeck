@@ -7,6 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { categories } from "@/lib/registry/categories";
 import type { ToolCategory } from "@/lib/registry/types";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
+import { getToolsByCategory } from "@/lib/utils/tools-by-category";
 
 const MAX_TOOLS = 3;
 
@@ -45,15 +46,7 @@ export function Footer({ toolNavData }: FooterProps) {
   const t = useTranslations("common");
   const tf = useTranslations("footer");
 
-  const toolsByCategory = useMemo(() => {
-    const map = new Map<string, ToolNavItem[]>();
-    for (const item of toolNavData) {
-      const arr = map.get(item.category) || [];
-      arr.push(item);
-      map.set(item.category, arr);
-    }
-    return map;
-  }, [toolNavData]);
+  const toolsByCategory = useMemo(() => getToolsByCategory(toolNavData), [toolNavData]);
 
   return (
     <footer className="border-t border-border bg-muted/30">

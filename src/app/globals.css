@@ -14,7 +14,7 @@
   --color-card-foreground: var(--card-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-locale-sans, var(--font-geist-sans), system-ui, sans-serif);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -86,7 +86,6 @@ body {
 .animate-fade-in-scale { animation: fade-in-scale 0.3s ease-out both; }
 
 .text-gradient {
-  color: var(--primary);
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -123,5 +122,11 @@ body {
   .animate-fade-in,
   .animate-fade-in-scale {
     animation: none;
+  }
+  .animate-\[indeterminate_1\.5s_ease-in-out_infinite\] {
+    animation: none;
+  }
+  .gradient-border::before {
+    transition: none;
   }
 }
