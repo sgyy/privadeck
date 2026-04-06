@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { videoToGif, type GifQuality } from "./logic";
 
 const PRESET_DEFAULTS: Record<GifQuality, { fps: number; scale: number }> = {
@@ -17,6 +18,7 @@ const PRESET_DEFAULTS: Record<GifQuality, { fps: number; scale: number }> = {
 };
 
 export default function VideoToGif() {
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [duration, setDuration] = useState(0);
   const [videoWidth, setVideoWidth] = useState(0);
@@ -38,6 +40,10 @@ export default function VideoToGif() {
     setFps(Math.min(d.fps, srcFps));
     setScale(d.scale);
   }, []);
+
+  if (!isClient) {
+    return null;
+  }
 
   if (!isSharedArrayBufferSupported()) {
     return (

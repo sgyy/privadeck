@@ -1,10 +1,13 @@
-import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { ThemeProvider, themeInitScript } from "@/lib/theme/ThemeProvider";
 import { locales, rtlLocales, type Locale } from "@/i18n/routing";
 import { loadCommonMessages } from "@/lib/i18n/loadMessages";
 import { buildToolNavData } from "@/lib/i18n/toolNavData";
 import { BaseLayout } from "@/components/layout/BaseLayout";
+import { GoogleAnalyticsScripts } from "@/components/shared/GoogleAnalyticsScripts";
+import { geistSans, geistMono, getLocaleFontVariables } from "@/lib/fonts";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -29,14 +32,30 @@ export default async function LocaleLayout({
     buildToolNavData(locale),
   ]);
 
+  const { fontClasses, fontFallback } = getLocaleFontVariables(locale as Locale);
+  const dir = rtlLocales.includes(locale as Locale) ? "rtl" : "ltr";
+
   return (
-    <BaseLayout
-      locale={locale}
-      dir={rtlLocales.includes(locale as Locale) ? "rtl" : "ltr"}
-      messages={messages}
-      toolNavData={toolNavData}
+    <html
+      lang={locale}
+      dir={dir}
+      suppressHydrationWarning
+      className={fontClasses}
+      style={fontFallback ? { ["--font-locale-sans" as string]: fontFallback } : undefined}
     >
-      {children}
-    </BaseLayout>
+      <head><script dangerouslySetInnerHTML={{ __html: themeInitScript }} /></head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ThemeProvider>
+          <BaseLayout
+            locale={locale}
+            messages={messages}
+            toolNavData={toolNavData}
+          >
+            {children}
+          </BaseLayout>
+        </ThemeProvider>
+        <GoogleAnalyticsScripts />
+      </body>
+    </html>
   );
 }

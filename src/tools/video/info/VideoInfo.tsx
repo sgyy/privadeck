@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { FileVideo, Video, Music, Loader2, Terminal, Images } from "lucide-react";
+import { FileVideo, Video, Music, Loader2, Images } from "lucide-react";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { CopyButton } from "@/components/shared/CopyButton";
 import {
@@ -13,6 +13,7 @@ import {
   type VideoMetadata,
 } from "@/components/shared/VideoUploader";
 import { Accordion, AccordionItem } from "@/components/ui/Accordion";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { probeVideo, generateThumbnails, type ProbeResult } from "./logic";
 
 interface Thumbnail {
@@ -21,6 +22,7 @@ interface Thumbnail {
 }
 
 export default function VideoInfo() {
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [browserMeta, setBrowserMeta] = useState<VideoMetadata | null>(null);
   const [probeResult, setProbeResult] = useState<ProbeResult | null>(null);
@@ -72,6 +74,10 @@ export default function VideoInfo() {
       });
     return () => { cancelled = true; };
   }, [browserMeta, file]);
+
+  if (!isClient) {
+    return null;
+  }
 
   if (!isSharedArrayBufferSupported()) {
     return (

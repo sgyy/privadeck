@@ -9,6 +9,7 @@ import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { resizeVideo, type ResizePreset } from "./logic";
 
 const PRESETS: { value: ResizePreset; label: string }[] = [
@@ -19,6 +20,7 @@ const PRESETS: { value: ResizePreset; label: string }[] = [
 ];
 
 export default function VideoResize() {
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [preset, setPreset] = useState<ResizePreset>("720p");
   const [customWidth, setCustomWidth] = useState(1920);
@@ -30,6 +32,10 @@ export default function VideoResize() {
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.video.resize");
   const tc = useTranslations("common");
+
+  if (!isClient) {
+    return null;
+  }
 
   if (!isSharedArrayBufferSupported() && !isWebCodecsSupported()) {
     return (

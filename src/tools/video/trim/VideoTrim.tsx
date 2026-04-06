@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { VideoUploader, formatSize } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
@@ -8,10 +8,11 @@ import { Button } from "@/components/ui/Button";
 import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { trimVideo, formatTimeDisplay } from "./logic";
 
 export default function VideoTrim() {
-  const [mounted, setMounted] = useState(false);
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [duration, setDuration] = useState(0);
   const [start, setStart] = useState(0);
@@ -23,9 +24,7 @@ export default function VideoTrim() {
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.video.trim");
 
-  useEffect(() => { setMounted(true); }, []);
-
-  if (!mounted) {
+  if (!isClient) {
     return null;
   }
 

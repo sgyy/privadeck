@@ -10,9 +10,11 @@ import { RotateCw } from "lucide-react";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { rotateVideo, type RotateAngle } from "./logic";
 
 export default function VideoRotate() {
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [angle, setAngle] = useState<RotateAngle>(90);
   const [result, setResult] = useState<Blob | null>(null);
@@ -23,6 +25,10 @@ export default function VideoRotate() {
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.video.rotate");
   const tc = useTranslations("common");
+
+  if (!isClient) {
+    return null;
+  }
 
   if (!isSharedArrayBufferSupported() && !isWebCodecsSupported()) {
     return (

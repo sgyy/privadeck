@@ -6,7 +6,7 @@ import type { ToolCategory } from "@/lib/registry/types";
  * Note: toolNames is excluded — use buildToolNavData() instead.
  */
 export async function loadCommonMessages(locale: string) {
-  const { toolNames: _toolNames, ...rest } = (
+  const { toolNames: _, ...rest } = (
     await import(`../../../messages/${locale}/common.json`)
   ).default;
   return rest;

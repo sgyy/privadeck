@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/static-components */
 "use client";
 
-import { Suspense, lazy, useMemo, type ComponentType, type LazyExoticComponent } from "react";
+import { Suspense, lazy, type ComponentType, type LazyExoticComponent } from "react";
 import { getToolBySlug } from "@/lib/registry";
 import type { ToolCategory } from "@/lib/registry/types";
 import { ToolBreadcrumb } from "@/components/tool/ToolBreadcrumb";
@@ -26,22 +27,24 @@ function ToolSkeleton() {
 // Stable cache: once a lazy component is created for a slug, it persists
 const lazyCache = new Map<string, LazyExoticComponent<ComponentType>>();
 
+function getLazyComponent(cacheKey: string, factory: () => Promise<{ default: ComponentType }>): LazyExoticComponent<ComponentType> | null {
+  let cached = lazyCache.get(cacheKey);
+  if (!cached) {
+    cached = lazy(factory);
+    lazyCache.set(cacheKey, cached);
+  }
+  return cached;
+}
+
 export function ToolPageClient({ category, slug }: ToolPageClientProps) {
   const tool = getToolBySlug(slug, category);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps -- lazyCache keyed by category/slug, stable per SSG route
-  const Component = useMemo(() => {
-    if (!tool) return null;
-    const cacheKey = `${category}/${slug}`;
-    let cached = lazyCache.get(cacheKey);
-    if (!cached) {
-      cached = lazy(tool.component);
-      lazyCache.set(cacheKey, cached);
-    }
-    return cached;
-  }, [slug, category, tool]);
+  if (!tool) return null;
 
-  if (!tool || !Component) return null;
+  const cacheKey = `${category}/${slug}`;
+  const Component = getLazyComponent(cacheKey, tool.component);
+
+  if (!Component) return null;
 
   return (
     <>

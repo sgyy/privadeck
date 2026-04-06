@@ -8,9 +8,11 @@ import { Button } from "@/components/ui/Button";
 import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { muteVideo } from "./logic";
 
 export default function VideoMute() {
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [result, setResult] = useState<Blob | null>(null);
   const [progress, setProgress] = useState(0);
@@ -18,6 +20,10 @@ export default function VideoMute() {
   const [error, setError] = useState("");
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.video.mute");
+
+  if (!isClient) {
+    return null;
+  }
 
   if (!isSharedArrayBufferSupported()) {
     return (

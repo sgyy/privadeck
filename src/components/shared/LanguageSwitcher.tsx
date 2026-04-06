@@ -1,12 +1,11 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { usePathname, useRouter } from "@/i18n/navigation";
 import { locales, type Locale } from "@/i18n/routing";
 import { Languages } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { languageNames } from "@/lib/i18n/languageNames";
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect } from "react";
 
 interface LanguageSwitcherProps {
   dropdownDirection?: "up" | "down";
@@ -15,14 +14,11 @@ interface LanguageSwitcherProps {
 export function LanguageSwitcher({ dropdownDirection = "down" }: LanguageSwitcherProps = {}) {
   const locale = useLocale();
   const t = useTranslations("common");
-  const router = useRouter();
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const ref = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
-
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
@@ -48,12 +44,19 @@ export function LanguageSwitcher({ dropdownDirection = "down" }: LanguageSwitche
   function switchLocale(newLocale: Locale) {
     trackEvent("language_change", { from_locale: locale, to_locale: newLocale });
     localStorage.setItem("locale", newLocale);
-    router.replace(pathname, { locale: newLocale });
-    setOpen(false);
-    triggerRef.current?.focus();
+    const pathParts = window.location.pathname.split("/").filter(Boolean);
+    const localeRegex = new RegExp(`^(${locales.join("|")})$`);
+    if (pathParts.length > 0 && localeRegex.test(pathParts[0])) {
+      pathParts.shift();
+    }
+    const cleanPath = pathParts.length > 0 ? "/" + pathParts.join("/") + "/" : "/";
+    const search = window.location.search;
+    const hash = window.location.hash;
+    // eslint-disable-next-line react-hooks/immutability
+    window.location.href = `/${newLocale}${cleanPath}${search}${hash}`;
   }
 
-  const handleTriggerKeyDown = useCallback((e: React.KeyboardEvent) => {
+  function handleTriggerKeyDown(e: React.KeyboardEvent) {
     switch (e.key) {
       case "ArrowDown":
         e.preventDefault();
@@ -68,9 +71,9 @@ export function LanguageSwitcher({ dropdownDirection = "down" }: LanguageSwitche
         setOpen(false);
         break;
     }
-  }, [open]);
+  }
 
-  const handleListKeyDown = useCallback((e: React.KeyboardEvent) => {
+  function handleListKeyDown(e: React.KeyboardEvent) {
     switch (e.key) {
       case "ArrowDown":
         e.preventDefault();
@@ -93,7 +96,7 @@ export function LanguageSwitcher({ dropdownDirection = "down" }: LanguageSwitche
         triggerRef.current?.focus();
         break;
     }
-  }, [focusedIndex]);
+  }
 
   return (
     <div ref={ref} className="relative">

@@ -8,11 +8,13 @@ import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { extractAudio, type OutputFormat } from "./logic";
 
 const FORMATS: OutputFormat[] = ["mp3", "wav", "aac"];
 
 export default function AudioExtract() {
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [format, setFormat] = useState<OutputFormat>("mp3");
   const [result, setResult] = useState<Blob | null>(null);
@@ -22,6 +24,10 @@ export default function AudioExtract() {
   const fileUrl = useObjectUrl(file);
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.audio.extract");
+
+  if (!isClient) {
+    return null;
+  }
 
   if (!isSharedArrayBufferSupported()) {
     return (

@@ -29,10 +29,14 @@ export function MobileNav({ open, onClose, toolNavData }: MobileNavProps) {
 
   const toolsByCategory = useMemo(() => getToolsByCategory(toolNavData), [toolNavData]);
 
-  // Close on route change
+  // Close on route change (skip initial mount)
+  const prevPathname = useRef(pathname);
   useEffect(() => {
-    if (open) onClose();
-  }, [pathname]);
+    if (prevPathname.current !== pathname) {
+      prevPathname.current = pathname;
+      onClose();
+    }
+  }, [pathname, onClose]);
 
   return (
     <Dialog open={open} onOpenChange={(val) => { if (!val) onClose(); }}>

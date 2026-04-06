@@ -1,20 +1,17 @@
 "use client";
 
-import { useTheme } from "next-themes";
+import { useTheme } from "@/lib/theme/ThemeProvider";
 import { useTranslations } from "next-intl";
 import { Sun, Moon, Monitor } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { trackEvent } from "@/lib/analytics";
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const t = useTranslations("common");
-  const [mounted, setMounted] = useState(false);
+  const isClient = useIsClient();
 
-  // eslint-disable-next-line react-hooks/set-state-in-effect
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted) {
+  if (!isClient) {
     return <div className="h-10 w-10" />;
   }
 

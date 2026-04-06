@@ -7,9 +7,11 @@ import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { trimAudio, formatTimeDisplay } from "./logic";
 
 export default function AudioTrim() {
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [duration, setDuration] = useState(0);
   const [start, setStart] = useState(0);
@@ -21,6 +23,10 @@ export default function AudioTrim() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const fileUrl = useObjectUrl(file);
   const t = useTranslations("tools.audio.trim");
+
+  if (!isClient) {
+    return null;
+  }
 
   if (!isSharedArrayBufferSupported()) {
     return (

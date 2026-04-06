@@ -8,6 +8,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/Tabs";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError, canEncodeHevc, type VideoCodec } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import {
   VideoUploader,
   formatSize,
@@ -43,6 +44,7 @@ const FPS_OPTIONS: FpsOption[] = ["original", "30", "24", "15"];
 const AUDIO_BITRATES = ["64k", "96k", "128k", "192k", "256k"];
 
 export default function VideoCompress() {
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [quality, setQuality] = useState<Quality>("medium");
   const [mode, setMode] = useState<"simple" | "advanced">("simple");
@@ -82,13 +84,16 @@ export default function VideoCompress() {
   useEffect(() => {
     if (!sourceMetadata.current?.codec) return;
     const sourceCodec = sourceMetadata.current.codec;
-    // Default to same codec as source if available
     if (sourceCodec === "hevc" && canUseHevc) {
       setOutputCodec("hevc");
     } else {
       setOutputCodec("avc");
     }
   }, [sourceMetadata.current?.codec, canUseHevc]);
+
+  if (!isClient) {
+    return null;
+  }
 
   if (!isSharedArrayBufferSupported() && !isWebCodecsSupported()) {
     return (

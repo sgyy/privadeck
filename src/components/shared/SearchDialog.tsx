@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
 import { Search } from "lucide-react";
@@ -29,7 +29,6 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
   const t = useTranslations("common");
-
   const tNav = useTranslations("nav");
 
   const filtered = useMemo(() => {
@@ -45,23 +44,20 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
     });
   }, [query, toolNavData]);
 
-  const navigate = useCallback(
-    (index: number) => {
-      const tool = filtered[index];
-      if (tool) {
-        trackEvent("search_select", {
-          tool_slug: tool.slug,
-          tool_category: tool.category,
-          query: query.trim(),
-          position: index,
-        });
-        router.push(`/tools/${tool.category}/${tool.slug}`);
-        onClose();
-        setQuery("");
-      }
-    },
-    [filtered, router, onClose],
-  );
+  function navigate(index: number) {
+    const tool = filtered[index];
+    if (tool) {
+      trackEvent("search_select", {
+        tool_slug: tool.slug,
+        tool_category: tool.category,
+        query: query.trim(),
+        position: index,
+      });
+      router.push(`/tools/${tool.category}/${tool.slug}`);
+      onClose();
+      setQuery("");
+    }
+  }
 
   /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
@@ -72,8 +68,6 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
       trackEvent("search_open");
     }
   }, [open]);
-
-  useEffect(() => { setSelectedIndex(0); }, [query]);
   /* eslint-enable react-hooks/set-state-in-effect */
 
   // Debounced search query tracking
@@ -132,7 +126,7 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
               ref={inputRef}
               type="text"
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={(e) => { setQuery(e.target.value); setSelectedIndex(0); }}
               onKeyDown={handleKeyDown}
               placeholder={t("searchPlaceholder")}
               className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"

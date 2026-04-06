@@ -1,18 +1,17 @@
 "use client";
 
-import { useState, useRef, useCallback, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
-import { createToolTracker } from "@/lib/analytics";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { adjustVolume } from "./logic";
 
-const tracker = createToolTracker("volume", "audio");
-
 export default function AudioVolume() {
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [volume, setVolume] = useState(100);
   const [result, setResult] = useState<Blob | null>(null);
@@ -29,109 +28,87 @@ export default function AudioVolume() {
 
   const t = useTranslations("tools.audio.volume");
 
-  const stopPreview = useCallback((skipStateUpdate = false) => {
-    if (sourceRef.current) {
-      try {
-        sourceRef.current.stop();
-      } catch {
-        /* already stopped */
-      }
-      sourceRef.current = null;
-    }
-    if (audioCtxRef.current) {
-      audioCtxRef.current.close();
-      audioCtxRef.current = null;
-    }
-    gainRef.current = null;
-    if (!skipStateUpdate) setPreviewing(false);
-  }, []);
+  const unsupported = !isSharedArrayBufferSupported();
 
+  // Clean up AudioContext on unmount
   useEffect(() => {
     return () => {
-      stopPreview(true);
+      sourceRef.current?.stop();
+      audioCtxRef.current?.close();
     };
-  }, [stopPreview]);
+  }, []);
 
-  const handleFile = (files: File[]) => {
-    stopPreview();
+  function handleFile(files: File[]) {
     setFile(files[0] || null);
     setResult(null);
-    setVolume(100);
     setError("");
-  };
+  }
 
-  const handlePreview = async () => {
-    if (!file || processing) return;
+  function handleVolumeChange(value: number) {
+    setVolume(value);
+    if (gainRef.current) {
+      gainRef.current.gain.value = value / 100;
+    }
+  }
+
+  async function handlePreview() {
+    if (!file) return;
     if (previewing) {
-      stopPreview();
+      setPreviewing(false);
+      sourceRef.current?.stop();
+      audioCtxRef.current?.close();
+      audioCtxRef.current = null;
+      sourceRef.current = null;
+      gainRef.current = null;
       return;
     }
     setPreviewing(true);
-
     try {
-      if (audioCtxRef.current) {
-        audioCtxRef.current.close();
-        audioCtxRef.current = null;
-      }
-
-      const arrayBuffer = await file.arrayBuffer();
       const audioCtx = new AudioContext();
       audioCtxRef.current = audioCtx;
-
+      const arrayBuffer = await file.arrayBuffer();
       const audioBuffer = await audioCtx.decodeAudioData(arrayBuffer);
       const source = audioCtx.createBufferSource();
-      source.buffer = audioBuffer;
-
-      const gain = audioCtx.createGain();
-      gain.gain.value = volume / 100;
-
-      source.connect(gain);
-      gain.connect(audioCtx.destination);
-
-      gainRef.current = gain;
       sourceRef.current = source;
-
-      source.onended = () => {
-        stopPreview();
-      };
-
+      source.buffer = audioBuffer;
+      const gainNode = audioCtx.createGain();
+      gainRef.current = gainNode;
+      gainNode.gain.value = volume / 100;
+      source.connect(gainNode);
+      gainNode.connect(audioCtx.destination);
       source.start();
+      source.onended = () => {
+        setPreviewing(false);
+        audioCtx.close();
+        audioCtxRef.current = null;
+        sourceRef.current = null;
+        gainRef.current = null;
+      };
     } catch (e) {
       console.error("Preview failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
-      stopPreview();
+      setPreviewing(false);
     }
-  };
+  }
 
-  const handleVolumeChange = (newVolume: number) => {
-    setVolume(newVolume);
-    if (gainRef.current) {
-      gainRef.current.gain.value = newVolume / 100;
-    }
-  };
-
-  const handleApply = async () => {
+  async function handleApply() {
     if (!file) return;
-    stopPreview();
     setProcessing(true);
     setResult(null);
     setError("");
-    const startTime = performance.now();
     try {
       const blob = await adjustVolume(file, volume, setProgress);
       setResult(blob);
-      tracker.trackProcessComplete(Math.round(performance.now() - startTime));
     } catch (e) {
-      console.error("Volume adjust failed:", e);
-      const msg = String(e instanceof Error ? e.message : e);
-      setError(msg);
-      tracker.trackProcessError(msg);
+      console.error("Apply volume failed:", e);
+      setError(String(e instanceof Error ? e.message : e));
     } finally {
       setProcessing(false);
     }
-  };
+  }
 
-  const unsupported = !isSharedArrayBufferSupported();
+  if (!isClient) {
+    return null;
+  }
 
   return (
     <div className="space-y-4">

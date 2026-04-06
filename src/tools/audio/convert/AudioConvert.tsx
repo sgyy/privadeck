@@ -8,11 +8,13 @@ import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { convertAudio, type AudioFormat } from "./logic";
 
 const FORMATS: AudioFormat[] = ["mp3", "wav", "ogg", "aac", "flac"];
 
 export default function AudioConvert() {
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [format, setFormat] = useState<AudioFormat>("mp3");
   const [result, setResult] = useState<Blob | null>(null);
@@ -22,6 +24,10 @@ export default function AudioConvert() {
   const fileUrl = useObjectUrl(file);
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.audio.convert");
+
+  if (!isClient) {
+    return null;
+  }
 
   if (!isSharedArrayBufferSupported()) {
     return (

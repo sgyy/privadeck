@@ -8,9 +8,11 @@ import { Button } from "@/components/ui/Button";
 import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { videoToWebp } from "./logic";
 
 export default function VideoToWebp() {
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [duration, setDuration] = useState(0);
   const [fps, setFps] = useState(15);
@@ -24,6 +26,10 @@ export default function VideoToWebp() {
   const [error, setError] = useState("");
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.video.to-webp");
+
+  if (!isClient) {
+    return null;
+  }
 
   if (!isSharedArrayBufferSupported()) {
     return (

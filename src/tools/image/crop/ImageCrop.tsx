@@ -3,7 +3,7 @@
 import { useState, useCallback, useRef } from "react";
 import { useTranslations } from "next-intl";
 import ReactCrop from "react-image-crop";
-import type { Crop, PixelCrop, PercentCrop } from "react-image-crop";
+import type { Crop, PixelCrop } from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import {
@@ -63,7 +63,7 @@ export default function ImageCrop() {
     setCrop(initialCrop);
   }
 
-  const onComplete = useCallback((pixelCrop: PixelCrop, _: PercentCrop) => {
+  const onComplete = useCallback((pixelCrop: PixelCrop) => {
     setCroppedArea(pixelCrop);
   }, []);
 

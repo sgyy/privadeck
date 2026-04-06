@@ -9,9 +9,11 @@ import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError, canEncodeHevc, type VideoCodec } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { useIsClient } from "@/lib/hooks/useIsClient";
 import { convertVideoFormat, FORMATS, type VideoFormat } from "./logic";
 
 export default function VideoFormatConvert() {
+  const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [format, setFormat] = useState<VideoFormat>("mp4");
   const [result, setResult] = useState<{
@@ -47,13 +49,16 @@ export default function VideoFormatConvert() {
   // Set default output codec based on source video codec
   useEffect(() => {
     if (!sourceCodec) return;
-    // Default to same codec as source if available
     if (sourceCodec === "hevc" && canUseHevc) {
       setOutputCodec("hevc");
     } else {
       setOutputCodec("avc");
     }
   }, [sourceCodec, canUseHevc]);
+
+  if (!isClient) {
+    return null;
+  }
 
   if (!isSharedArrayBufferSupported() && !isWebCodecsSupported()) {
     return (

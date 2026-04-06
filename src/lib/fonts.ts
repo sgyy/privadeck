@@ -1,4 +1,6 @@
 import {
+  Geist,
+  Geist_Mono,
   Noto_Sans_SC,
   Noto_Sans_TC,
   Noto_Sans_JP,
@@ -8,6 +10,16 @@ import {
   Noto_Sans_Thai,
 } from "next/font/google";
 import type { Locale } from "@/i18n/routing";
+
+export const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+export const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 const notoSansSC = Noto_Sans_SC({
   variable: "--font-noto-sans-sc",
