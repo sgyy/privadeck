@@ -1,7 +1,9 @@
 import { hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { ThemeProvider, themeInitScript } from "@/lib/theme/ThemeProvider";
+import Script from "next/script";
+import { ThemeProvider } from "@/lib/theme/ThemeProvider";
+import { themeInitScript } from "@/lib/theme/theme-init-script";
 import { locales, rtlLocales, type Locale } from "@/i18n/routing";
 import { loadCommonMessages } from "@/lib/i18n/loadMessages";
 import { buildToolNavData } from "@/lib/i18n/toolNavData";
@@ -43,8 +45,8 @@ export default async function LocaleLayout({
       className={fontClasses}
       style={fontFallback ? { ["--font-locale-sans" as string]: fontFallback } : undefined}
     >
-      <head><script dangerouslySetInnerHTML={{ __html: themeInitScript }} /></head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Script id="theme-init" strategy="beforeInteractive">{themeInitScript}</Script>
         <ThemeProvider>
           <BaseLayout
             locale={locale}

@@ -1,5 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
-import { ThemeProvider, themeInitScript } from "@/lib/theme/ThemeProvider";
+import Script from "next/script";
+import { ThemeProvider } from "@/lib/theme/ThemeProvider";
+import { themeInitScript } from "@/lib/theme/theme-init-script";
 import { loadCommonMessages } from "@/lib/i18n/loadMessages";
 import { buildToolNavData } from "@/lib/i18n/toolNavData";
 import { BaseLayout } from "@/components/layout/BaseLayout";
@@ -19,8 +21,8 @@ export default async function HomeLayout({
 
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
-      <head><script dangerouslySetInnerHTML={{ __html: themeInitScript }} /></head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Script id="theme-init" strategy="beforeInteractive">{themeInitScript}</Script>
         <ThemeProvider>
           <BaseLayout
             locale="en"

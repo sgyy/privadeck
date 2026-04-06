@@ -37,9 +37,6 @@ function applyTheme(theme: Theme) {
   root.style.colorScheme = resolved;
 }
 
-/** Blocking inline script to prevent FOUC. Runs before first paint. */
-export const themeInitScript = `try{var t=localStorage.getItem('${STORAGE_KEY}')||'system';var d=t==='system'?(window.matchMedia('${MEDIA_QUERY}').matches?'dark':'light'):t;document.documentElement.classList.add(d);document.documentElement.style.colorScheme=d;}catch(e){}`;
-
 interface ThemeProviderProps {
   children: ReactNode;
   defaultTheme?: Theme;

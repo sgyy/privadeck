@@ -16,7 +16,7 @@ interface BaseLayoutProps {
 
 export function BaseLayout({ children, locale, messages, toolNavData }: BaseLayoutProps) {
   return (
-    <NextIntlClientProvider locale={locale} messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={messages} timeZone="UTC">
       <LocaleSuggestionBanner currentLocale={locale} />
       <MainLayout toolNavData={toolNavData}>{children}</MainLayout>
       <InstallPrompt />
