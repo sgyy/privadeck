@@ -3,10 +3,10 @@
     "developer": {
       "json-formatter": {
         "name": "Trình định dạng JSON",
-        "description": "Định dạng, xác thực và rút gọn dữ liệu JSON với tô sáng cú pháp.",
-        "metaTitle": "Trình định dạng và xác thực JSON - Công cụ JSON trực tuyến miễn phí",
-        "metaDescription": "Định dạng, xác thực và rút gọn dữ liệu JSON với tô sáng cú pháp. Công cụ trực tuyến miễn phí hoạt động hoàn toàn trên trình duyệt.",
-        "keywords": "định dạng json, xác thực json, json beautifier, json minifier, json pretty print",
+        "description": "Định dạng, xác thực và khám phá JSON với Monaco Editor, chế độ xem dạng cây tương tác và lọc JSON Path — tất cả trong trình duyệt của bạn.",
+        "metaTitle": "Trình định dạng & Xác thực JSON trực tuyến - Pretty Print, Dạng cây, Rút gọn",
+        "metaDescription": "Trình định dạng JSON trực tuyến miễn phí với Monaco Editor, chế độ xem dạng cây tương tác, lọc JSON Path và xác thực thời gian thực. Định dạng, rút gọn và khám phá dữ liệu JSON — 100% chạy trên trình duyệt, không tải dữ liệu lên máy chủ.",
+        "keywords": "trình định dạng json, trình xác thực json, làm đẹp json, rút gọn json, json pretty print, trình xem json, chế độ xem dạng cây json, trình soạn thảo json trực tuyến, json path, trình phân tích json",
         "inputPlaceholder": "Dán JSON của bạn vào đây...",
         "format": "Định dạng",
         "minify": "Rút gọn",
@@ -31,37 +31,70 @@
         "layoutEditor": "Editor only",
         "layoutViewer": "Viewer only",
         "faq": {
-          "q1": "Công cụ này làm gì?",
-          "a1": "Nó định dạng (pretty-print) dữ liệu JSON với thụt lề đúng cách, xác thực cú pháp JSON và có thể rút gọn JSON bằng cách xóa khoảng trắng.",
-          "q2": "Dữ liệu của tôi có an toàn không?",
-          "a2": "Có, toàn bộ quá trình xử lý diễn ra trên trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
+          "q1": "Trình định dạng JSON này làm gì?",
+          "a1": "Công cụ cung cấp môi trường chỉnh sửa JSON đầy đủ tính năng với Monaco Editor (động cơ đằng sau VS Code), chế độ xem dạng cây tương tác, xác thực thời gian thực, in đẹp với thụt lề tùy chỉnh, rút gọn và lọc JSON Path — tất cả chạy 100% trong trình duyệt của bạn.",
+          "q2": "Dữ liệu JSON của tôi có an toàn và riêng tư không?",
+          "a2": "Hoàn toàn. Mọi xử lý đều diễn ra trong trình duyệt của bạn bằng JavaScript thuần. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không tải lên máy chủ, không ghi nhật ký, không có truy cập bên thứ ba. An toàn cho API key, token và dữ liệu cấu hình nhạy cảm.",
+          "q3": "Công cụ này khác gì so với các trình định dạng JSON trực tuyến khác?",
+          "a3": "Không giống các trình định dạng vùng văn bản cơ bản, công cụ này tích hợp Monaco Editor chuyên nghiệp với tính năng gấp mã và khớp dấu ngoặc, chế độ xem dạng cây tương tác để khám phá trực quan, lọc JSON Path để truy vấn dữ liệu lồng nhau và bảng chia đôi có thể thay đổi kích thước — tương đương công cụ JSON cấp máy tính để bàn, nhưng hoàn toàn trong trình duyệt.",
           "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
-          "q5": "Có giới hạn kích thước tệp không?",
-          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
+          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến bao gồm Monaco Editor, chế độ xem dạng cây và tất cả tính năng định dạng. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
+          "q5": "Những biểu thức JSON Path nào được hỗ trợ?",
+          "a5": "Công cụ hỗ trợ ký pháp chấm ($.address.city), ký pháp ngoặc vuông cho mảng ($.items[0]) và đường dẫn lồng nhau ($.data.users[2].name). Nhập đường dẫn vào ô lọc phía trên chế độ xem dạng cây để truy cập dữ liệu cụ thể ngay lập tức."
         },
         "seoContent": {
           "intro": {
-            "title": "Trình định dạng JSON là gì?",
-            "content": "<p><strong>Trình định dạng JSON</strong> là công cụ trực tuyến miễn phí chạy hoàn toàn trên trình duyệt, giúp định dạng, xác thực và rút gọn dữ liệu JSON. Chỉ cần dán đoạn JSON lộn xộn hoặc đã được nén, bạn sẽ ngay lập tức nhận được kết quả sạch sẽ, dễ đọc với thụt lề chuẩn và tô sáng cú pháp.</p><p>Dù bạn đang gỡ lỗi phản hồi API, kiểm tra tệp cấu hình hay chuẩn bị dữ liệu cho tài liệu kỹ thuật, công cụ này giúp JSON trở nên dễ đọc và dễ xác minh — tất cả mà không cần rời khỏi trình duyệt.</p>"
+            "title": "Trình định dạng và Xem JSON chuyên nghiệp",
+            "content": "<p><strong>JSON Formatter</strong> là công cụ JSON chuyên nghiệp miễn phí, kết hợp trình soạn thảo Monaco, chế độ xem dạng cây tương tác và xác thực thời gian thực trong một giao diện. Dán JSON lộn xộn hoặc đã rút gọn và ngay lập tức nhận được kết quả sạch, dễ đọc với tô sáng cú pháp, gấp mã và khám phá cây trực quan.</p><p>Dù bạn đang gỡ lỗi phản hồi API, kiểm tra cấu trúc dữ liệu lồng nhau sâu, xem xét tệp cấu hình hay chuẩn bị dữ liệu cho tài liệu — công cụ này cung cấp mọi thứ bạn cần mà không cần rời trình duyệt hay tải lên dù chỉ một byte.</p>"
           },
           "howToUse": {
-            "title": "Cách sử dụng Trình định dạng JSON",
-            "content": "<ol><li>Dán hoặc nhập dữ liệu JSON vào khu vực nhập liệu</li><li>Chọn mức thụt lề mong muốn (2 hoặc 4 khoảng trắng)</li><li>Nhấp <strong>Định dạng</strong> để trình bày đẹp mắt, <strong>Rút gọn</strong> để nén hoặc <strong>Xác thực</strong> để kiểm tra cú pháp</li><li>Sao chép kết quả đã định dạng hoặc tải xuống dưới dạng tệp</li></ol><p>JSON không hợp lệ sẽ được đánh dấu bằng thông báo lỗi rõ ràng, cho biết chính xác vị trí và loại lỗi cú pháp.</p>"
+            "title": "Cách sử dụng JSON Formatter",
+            "content": "<ol><li>Dán hoặc nhập JSON vào Monaco Editor bên trái — hoặc kéo và thả tệp <code>.json</code></li><li>Công cụ xác thực theo thời gian thực và hiển thị trạng thái <strong>Hợp lệ</strong> hoặc <strong>Không hợp lệ</strong> ngay lập tức</li><li>Nhấp <strong>Định dạng</strong> để in đẹp với thụt lề đã chọn, hoặc <strong>Rút gọn</strong> để nén</li><li>Chuyển sang chế độ xem <strong>Cây</strong> để khám phá cấu trúc trực quan, hoặc chế độ xem <strong>Mã</strong> để có kết quả tô sáng cú pháp</li><li>Sử dụng bộ lọc JSON Path (ví dụ: <code>$.data.users[0]</code>) để truy cập các giá trị cụ thể</li><li>Sao chép hoặc tải xuống kết quả chỉ bằng một lần nhấp</li></ol>"
           },
           "features": {
             "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Trình bày đẹp mắt</strong>: Định dạng JSON với thụt lề tùy chỉnh (2 hoặc 4 khoảng trắng)</li><li><strong>Rút gọn</strong>: Nén JSON bằng cách loại bỏ mọi khoảng trắng thừa, phù hợp để lưu trữ hoặc truyền tải</li><li><strong>Xác thực</strong>: Kiểm tra ngay cú pháp JSON với báo cáo lỗi chi tiết</li><li><strong>Tô sáng cú pháp</strong>: Các khóa, chuỗi, số, boolean và null được tô màu riêng biệt để dễ đọc</li><li><strong>Hỗ trợ dữ liệu lớn</strong>: Xử lý tệp JSON dung lượng lớn mà không giảm hiệu suất</li><li><strong>100% chạy trên trình duyệt</strong>: Không tải lên máy chủ — dữ liệu luôn nằm trên thiết bị của bạn</li></ul>"
+            "content": "<ul><li><strong>Monaco Editor</strong>: Trình soạn thảo mã giống hệt trong VS Code — với tô sáng cú pháp, khớp dấu ngoặc, gấp mã và xuống dòng tự động</li><li><strong>Chế độ xem dạng cây tương tác</strong>: Mở rộng và thu gọn các nút JSON trực quan, với số lượng mục ở mỗi cấp và điều hướng bàn phím đầy đủ</li><li><strong>Lọc JSON Path</strong>: Truy vấn các giá trị cụ thể bằng biểu thức đường dẫn như <code>$.address.city</code> hoặc <code>$.items[0].name</code></li><li><strong>Xác thực thời gian thực</strong>: Kiểm tra cú pháp ngay lập tức khi bạn gõ — không cần nhấn nút</li><li><strong>Pretty Print &amp; Rút gọn</strong>: Định dạng với thụt lề tùy chỉnh (2, 4 hoặc 8 khoảng trắng) hoặc nén thành một dòng</li><li><strong>Hỗ trợ kéo thả tệp</strong>: Thả tệp <code>.json</code> hoặc <code>.txt</code> trực tiếp vào trình soạn thảo</li><li><strong>Bảng chia đôi có thể thay đổi kích thước</strong>: Kéo thanh chia để cân bằng không gian soạn thảo và xem; nhấp đúp để đặt lại</li><li><strong>Chế độ xem mã tô sáng cú pháp</strong>: Kết quả phân màu với số dòng để dễ sao chép</li><li><strong>100% chạy trên trình duyệt</strong>: Không tải lên máy chủ — dữ liệu của bạn luôn nằm trên thiết bị</li></ul>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
-            "content": "<ul><li><strong>Phát triển API</strong>: Định dạng phản hồi API thô để gỡ lỗi và kiểm tra</li><li><strong>Tệp cấu hình</strong>: Dọn dẹp package.json, tsconfig.json và các tệp cấu hình khác</li><li><strong>Xác thực dữ liệu</strong>: Nhanh chóng xác minh JSON payload trước khi gửi đến API</li><li><strong>Tài liệu kỹ thuật</strong>: Chuẩn bị ví dụ JSON được định dạng đẹp cho tài liệu</li><li><strong>Bản ghi cơ sở dữ liệu</strong>: Kiểm tra và định dạng JSON lưu trữ trong cơ sở dữ liệu NoSQL</li></ul>"
+            "content": "<ul><li><strong>Phát triển &amp; Gỡ lỗi API</strong>: Dán phản hồi API thô, định dạng ngay lập tức và dùng chế độ xem dạng cây để điều hướng các đối tượng lồng nhau sâu</li><li><strong>Tệp cấu hình</strong>: Làm sạch <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code> hoặc Kubernetes manifests</li><li><strong>Khám phá dữ liệu</strong>: Dùng JSON Path để lọc tập dữ liệu lớn và tìm giá trị cụ thể mà không cần cuộn qua hàng nghìn dòng</li><li><strong>Xem xét mã</strong>: So sánh cấu trúc JSON trực quan qua chế độ xem dạng cây để phát hiện sự khác biệt nhanh chóng</li><li><strong>Tài liệu</strong>: Định dạng và xuất các ví dụ JSON có cấu trúc tốt cho tài liệu kỹ thuật và hướng dẫn</li><li><strong>Bản ghi cơ sở dữ liệu</strong>: Kiểm tra và định dạng JSON lưu trữ trong MongoDB, CouchDB hoặc các cột PostgreSQL JSONB</li></ul>"
           },
           "privacy": {
             "title": "Xử lý JSON ưu tiên quyền riêng tư",
-            "content": "<p>Dữ liệu JSON được xử lý <strong>hoàn toàn trong trình duyệt</strong> bằng bộ phân tích JavaScript tích hợp sẵn. Không có dữ liệu nào được gửi đến máy chủ.</p><ul><li>Dữ liệu của bạn <strong>không bao giờ rời khỏi thiết bị</strong> — không có kết nối mạng trong quá trình xử lý</li><li>An toàn cho khóa API, token và dữ liệu cấu hình nhạy cảm</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi trang đã tải</li></ul>"
+            "content": "<p>Dữ liệu JSON của bạn được xử lý <strong>hoàn toàn trong trình duyệt</strong> bằng cách phân tích JavaScript thuần và động cơ Monaco Editor. Không có dữ liệu nào được truyền đến bất kỳ máy chủ nào — tuyệt đối không.</p><ul><li>Dữ liệu của bạn <strong>không bao giờ rời khỏi thiết bị</strong> — không có yêu cầu mạng trong quá trình xử lý</li><li>An toàn cho API key nhạy cảm, token xác thực và bí mật cấu hình</li><li>Hoạt động <strong>hoàn toàn ngoại tuyến</strong> sau khi trang tải xong — không cần internet</li><li>Không phân tích nội dung JSON của bạn — chúng tôi theo dõi việc sử dụng công cụ, không bao giờ theo dõi dữ liệu của bạn</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Monaco Editor — Viết mã như trong VS Code",
+            "description": "Trình soạn thảo mã đầy đủ tính năng với tô sáng cú pháp, khớp dấu ngoặc, gấp mã và tự động hoàn thành. Đúng trình soạn thảo đang vận hành VS Code."
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "Trình khám phá chế độ xem dạng cây tương tác",
+            "description": "Điều hướng cấu trúc JSON phức tạp bằng hình ảnh. Mở rộng, thu gọn và kiểm tra các đối tượng và mảng lồng nhau với số lượng mục ở mỗi cấp."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Xác thực thời gian thực khi gõ",
+            "description": "Kiểm tra cú pháp tức thì với chỉ báo trạng thái Hợp lệ/Không hợp lệ trực tiếp. Phát hiện lỗi trước khi đến môi trường production."
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "Lọc JSON Path",
+            "description": "Truy vấn các giá trị cụ thể bằng biểu thức JSON Path như $.address.city hoặc $.items[0]. Truy cập dữ liệu lồng nhau sâu ngay lập tức."
+          },
+          "f5": {
+            "icon": "GripVertical",
+            "title": "Bố cục bảng chia đôi có thể thay đổi kích thước",
+            "description": "Kéo thanh chia để tùy chỉnh tỷ lệ soạn thảo và xem. Nhấp đúp để đặt lại về 50/50. Tự động chuyển sang bố cục xếp chồng trên di động."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% Riêng tư — Không tải lên máy chủ",
+            "description": "Mọi xử lý đều diễn ra trong trình duyệt của bạn. Dữ liệu JSON của bạn không bao giờ rời khỏi thiết bị — an toàn cho API key, token và cấu hình nhạy cảm."
           }
         }
       },

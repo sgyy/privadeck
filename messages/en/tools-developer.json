@@ -3,10 +3,10 @@
     "developer": {
       "json-formatter": {
         "name": "JSON Formatter",
-        "description": "Format, validate, and minify JSON data with syntax highlighting.",
-        "metaTitle": "JSON Formatter & Validator - Free Online JSON Tool",
-        "metaDescription": "Format, validate and minify JSON data with syntax highlighting. Free online tool that works entirely in your browser.",
-        "keywords": "json formatter, json validator, json beautifier, json minifier, json pretty print",
+        "description": "Format, validate, and explore JSON with Monaco Editor, interactive tree view, and JSON Path filtering — all in your browser.",
+        "metaTitle": "JSON Formatter & Validator Online - Pretty Print, Tree View, Minify",
+        "metaDescription": "Free online JSON formatter with Monaco Editor, interactive tree view, JSON Path filtering, and real-time validation. Format, minify, and explore JSON data — 100% browser-based, no data uploaded.",
+        "keywords": "json formatter, json validator, json beautifier, json minifier, json pretty print, json viewer, json tree view, json editor online, json path, json parser",
         "inputPlaceholder": "Paste your JSON here...",
         "format": "Format",
         "minify": "Minify",
@@ -30,38 +30,71 @@
         "layoutBoth": "Split view",
         "layoutEditor": "Editor only",
         "layoutViewer": "Viewer only",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Monaco Editor — Code Like in VS Code",
+            "description": "Full-featured code editor with syntax highlighting, bracket matching, code folding, and auto-completion. The same editor that powers VS Code."
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "Interactive Tree View Explorer",
+            "description": "Navigate complex JSON structures visually. Expand, collapse, and inspect nested objects and arrays with item counts at every level."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Real-Time Validation as You Type",
+            "description": "Instant syntax checking with live Valid/Invalid status indicator. Catch errors before they reach production."
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "JSON Path Filtering",
+            "description": "Query specific values using JSON Path expressions like $.address.city or $.items[0]. Drill into deeply nested data instantly."
+          },
+          "f5": {
+            "icon": "GripVertical",
+            "title": "Resizable Split Pane Layout",
+            "description": "Drag the divider to customize editor and viewer proportions. Double-click to reset to 50/50. Adapts to mobile with stacked layout."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% Private — Zero Server Uploads",
+            "description": "All processing happens in your browser. Your JSON data never leaves your device — safe for API keys, tokens, and sensitive configs."
+          }
+        },
         "faq": {
-          "q1": "What does this tool do?",
-          "a1": "It formats (pretty-prints) JSON data with proper indentation, validates JSON syntax, and can minify JSON by removing whitespace.",
-          "q2": "Is my data safe?",
-          "a2": "Yes, all processing happens in your browser. Your data never leaves your device.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
+          "q1": "What does this JSON formatter do?",
+          "a1": "It provides a full-featured JSON editing environment with Monaco Editor (the engine behind VS Code), interactive tree view, real-time validation, pretty-printing with customizable indentation, minification, and JSON Path filtering — all running 100% in your browser.",
+          "q2": "Is my JSON data safe and private?",
+          "a2": "Absolutely. All processing happens entirely in your browser using native JavaScript. Your data never leaves your device — no server uploads, no logging, no third-party access. Safe for API keys, tokens, and sensitive configuration data.",
+          "q3": "How is this different from other online JSON formatters?",
+          "a3": "Unlike basic text-area formatters, this tool features a professional Monaco Editor with code folding and bracket matching, an interactive tree view for visual exploration, JSON Path filtering to query nested data, and a resizable split pane — comparable to desktop-grade JSON tools, but entirely in your browser.",
           "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a4": "Yes. Once the page has loaded, the tool works completely offline including the Monaco Editor, tree view, and all formatting features. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "q5": "What JSON Path expressions are supported?",
+          "a5": "The tool supports dot notation ($.address.city), bracket notation for arrays ($.items[0]), and nested paths ($.data.users[2].name). Enter your path in the filter box above the tree view to instantly drill into specific data."
         },
         "seoContent": {
           "intro": {
-            "title": "What is JSON Formatter?",
-            "content": "<p><strong>JSON Formatter</strong> is a free browser-based tool for formatting, validating, and minifying JSON data. Paste messy or minified JSON and instantly get clean, human-readable output with proper indentation and syntax highlighting.</p><p>Whether you're debugging API responses, reviewing configuration files, or preparing data for documentation, this tool makes JSON easy to read and verify — all without leaving your browser.</p>"
+            "title": "Professional JSON Formatter & Viewer",
+            "content": "<p><strong>JSON Formatter</strong> is a free, professional-grade JSON tool that combines a Monaco code editor, interactive tree view, and real-time validation in one interface. Paste messy or minified JSON and instantly get clean, human-readable output with syntax highlighting, code folding, and visual tree exploration.</p><p>Whether you're debugging API responses, inspecting deeply nested data structures, reviewing configuration files, or preparing data for documentation — this tool gives you everything you need without leaving your browser or uploading a single byte.</p>"
           },
           "howToUse": {
             "title": "How to Use JSON Formatter",
-            "content": "<ol><li>Paste or type your JSON data into the input area</li><li>Choose your preferred indentation level (2 or 4 spaces)</li><li>Click <strong>Format</strong> to pretty-print, <strong>Minify</strong> to compress, or <strong>Validate</strong> to check syntax</li><li>Copy the formatted result or download it as a file</li></ol><p>Invalid JSON is highlighted with a clear error message showing exactly where the syntax issue is.</p>"
+            "content": "<ol><li>Paste or type JSON into the Monaco Editor on the left — or drag and drop a <code>.json</code> file</li><li>The tool validates in real-time and shows <strong>Valid</strong> or <strong>Invalid</strong> status instantly</li><li>Click <strong>Format</strong> to pretty-print with your chosen indentation, or <strong>Minify</strong> to compress</li><li>Switch to <strong>Tree</strong> view to visually explore the structure, or <strong>Code</strong> view for syntax-highlighted output</li><li>Use the JSON Path filter (e.g., <code>$.data.users[0]</code>) to drill into specific values</li><li>Copy or download the result with one click</li></ol>"
           },
           "features": {
             "title": "Key Features",
-            "content": "<ul><li><strong>Pretty Print</strong>: Format JSON with customizable indentation (2 or 4 spaces)</li><li><strong>Minify</strong>: Compress JSON by removing all whitespace for compact storage or transmission</li><li><strong>Validate</strong>: Instantly check whether your JSON is syntactically correct with detailed error reporting</li><li><strong>Syntax Highlighting</strong>: Color-coded keys, strings, numbers, booleans, and nulls for easy reading</li><li><strong>Large Data Support</strong>: Handles large JSON files without performance issues</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
+            "content": "<ul><li><strong>Monaco Editor</strong>: The same code editor that powers VS Code — with syntax highlighting, bracket matching, code folding, and word wrap</li><li><strong>Interactive Tree View</strong>: Expand and collapse JSON nodes visually, with item counts at every level and full keyboard navigation</li><li><strong>JSON Path Filtering</strong>: Query specific values using path expressions like <code>$.address.city</code> or <code>$.items[0].name</code></li><li><strong>Real-Time Validation</strong>: Instant syntax checking as you type — no need to click a button</li><li><strong>Pretty Print &amp; Minify</strong>: Format with customizable indentation (2, 4, or 8 spaces) or compress to a single line</li><li><strong>Drag-and-Drop File Support</strong>: Drop <code>.json</code> or <code>.txt</code> files directly into the editor</li><li><strong>Resizable Split Pane</strong>: Drag the divider to balance editor and viewer space; double-click to reset</li><li><strong>Syntax-Highlighted Code View</strong>: Color-coded output with line numbers for easy copy-paste</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device, always</li></ul>"
           },
           "useCases": {
             "title": "Common Use Cases",
-            "content": "<ul><li><strong>API Development</strong>: Format raw API responses for debugging and inspection</li><li><strong>Configuration Files</strong>: Clean up package.json, tsconfig.json, or other config files</li><li><strong>Data Validation</strong>: Quickly verify JSON payloads before sending to APIs</li><li><strong>Documentation</strong>: Prepare well-formatted JSON examples for technical docs</li><li><strong>Database Records</strong>: Inspect and format JSON stored in NoSQL databases</li></ul>"
+            "content": "<ul><li><strong>API Development &amp; Debugging</strong>: Paste raw API responses, format them instantly, and use the tree view to navigate deeply nested objects</li><li><strong>Configuration Files</strong>: Clean up <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code>, or Kubernetes manifests</li><li><strong>Data Exploration</strong>: Use JSON Path to filter large datasets and find specific values without scrolling through thousands of lines</li><li><strong>Code Reviews</strong>: Compare JSON structures visually with the tree view to spot differences quickly</li><li><strong>Documentation</strong>: Format and export well-structured JSON examples for technical docs and tutorials</li><li><strong>Database Records</strong>: Inspect and format JSON stored in MongoDB, CouchDB, or PostgreSQL JSONB columns</li></ul>"
           },
           "privacy": {
             "title": "Privacy-First JSON Processing",
-            "content": "<p>Your JSON data is processed <strong>entirely in your browser</strong> using native JavaScript parsing. No data is transmitted to any server.</p><ul><li>Your data <strong>never leaves your device</strong> — zero network requests during processing</li><li>Safe for sensitive API keys, tokens, and configuration data</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "content": "<p>Your JSON data is processed <strong>entirely in your browser</strong> using native JavaScript parsing and the Monaco Editor engine. No data is transmitted to any server — ever.</p><ul><li>Your data <strong>never leaves your device</strong> — zero network requests during processing</li><li>Safe for sensitive API keys, authentication tokens, and configuration secrets</li><li>Works <strong>completely offline</strong> after the page loads — no internet required</li><li>No analytics on your JSON content — we track tool usage, never your data</li></ul>"
           }
         }
       },

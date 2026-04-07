@@ -3,10 +3,10 @@
     "developer": {
       "json-formatter": {
         "name": "JSON 格式化",
-        "description": "格式化、验证和压缩 JSON 数据，支持语法高亮。",
-        "metaTitle": "JSON 格式化和验证器 - 免费在线 JSON 工具",
-        "metaDescription": "格式化、验证和压缩 JSON 数据，支持语法高亮。完全在浏览器中运行的免费在线工具。",
-        "keywords": "json 格式化, json 验证, json 美化, json 压缩, json 格式化工具",
+        "description": "使用 Monaco 编辑器格式化、验证和浏览 JSON，支持交互式树形视图和 JSON Path 过滤——完全在浏览器中运行。",
+        "metaTitle": "JSON 格式化与验证 - 在线美化、树形视图、压缩工具",
+        "metaDescription": "免费在线 JSON 格式化工具，内置 Monaco 编辑器、交互式树形视图、JSON Path 过滤和实时验证。格式化、压缩、浏览 JSON 数据——100%浏览器端处理，无需上传。",
+        "keywords": "json 格式化, json 验证, json 美化, json 压缩, json 格式化工具, json 查看器, json 树形视图, json 在线编辑器, json path, json 解析器",
         "inputPlaceholder": "在此粘贴 JSON...",
         "format": "格式化",
         "minify": "压缩",
@@ -30,38 +30,71 @@
         "layoutBoth": "双栏视图",
         "layoutEditor": "仅编辑器",
         "layoutViewer": "仅视图",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Monaco 编辑器——VS Code 同款体验",
+            "description": "专业级代码编辑器，支持语法高亮、括号匹配、代码折叠和自动补全。与 VS Code 使用同一编辑引擎。"
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "交互式树形视图浏览器",
+            "description": "以可视化方式浏览复杂 JSON 结构。支持展开、折叠和逐层检查嵌套对象与数组，每层显示元素数量。"
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "输入即验证，实时语法检查",
+            "description": "编辑过程中即时显示 Valid/Invalid 状态指示器，在错误进入生产环境前及时发现问题。"
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "JSON Path 路径过滤",
+            "description": "使用 JSON Path 表达式（如 $.address.city 或 $.items[0]）精准查询特定值，快速定位深层嵌套数据。"
+          },
+          "f5": {
+            "icon": "GripVertical",
+            "title": "可拖拽分割面板布局",
+            "description": "拖动分割线自由调整编辑器与查看器的宽度比例。双击重置为 50/50。移动端自动切换为堆叠布局。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100%隐私保护——零服务器上传",
+            "description": "所有处理完全在浏览器中完成。您的 JSON 数据绝不离开设备——可安全处理 API 密钥、令牌和敏感配置。"
+          }
+        },
         "faq": {
-          "q1": "这个工具有什么功能？",
-          "a1": "它可以格式化（美化打印）JSON 数据并添加适当的缩进，验证 JSON 语法，还可以通过移除空白来压缩 JSON。",
-          "q2": "我的数据安全吗？",
-          "a2": "是的，所有处理都在浏览器中完成。您的数据不会离开您的设备。",
-          "q3": "我的文件会上传到服务器吗？",
-          "a3": "不会。所有处理完全在您的浏览器中完成，您的数据绝不离开设备，不会上传到任何服务器。",
-          "q4": "这个工具能离线使用吗？",
-          "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
-          "q5": "文件大小有限制吗？",
-          "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+          "q1": "这个 JSON 格式化工具有哪些功能？",
+          "a1": "本工具提供完整的 JSON 编辑环境，内置 Monaco 编辑器（VS Code 的核心引擎）、交互式树形视图、实时语法验证、可自定义缩进的美化打印、一键压缩和 JSON Path 过滤功能——全部在浏览器中运行。",
+          "q2": "我的 JSON 数据安全吗？",
+          "a2": "完全安全。所有处理通过原生 JavaScript 在浏览器中完成，数据绝不离开您的设备——无服务器上传、无日志记录、无第三方访问。可安心处理 API 密钥、令牌和敏感配置数据。",
+          "q3": "与其他在线 JSON 格式化工具相比有什么优势？",
+          "a3": "与普通的文本框格式化工具不同，本工具配备了专业的 Monaco 编辑器（支持代码折叠和括号匹配）、可视化的交互式树形视图、JSON Path 过滤查询和可拖拽的分割面板——媲美桌面级 JSON 工具的体验，却完全在浏览器中运行。",
+          "q4": "可以离线使用吗？",
+          "a4": "可以。页面加载后，包括 Monaco 编辑器、树形视图和所有格式化功能在内均可离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
+          "q5": "支持哪些 JSON Path 表达式？",
+          "a5": "支持点号语法（$.address.city）、数组下标（$.items[0]）和嵌套路径（$.data.users[2].name）。在树形视图上方的过滤框中输入路径，即可快速定位特定数据。"
         },
         "seoContent": {
           "intro": {
-            "title": "什么是 JSON 格式化工具？",
-            "content": "<p><strong>JSON 格式化工具</strong>是一款免费的浏览器端 JSON 处理工具，支持格式化、语法验证和压缩功能。将杂乱或压缩的 JSON 数据粘贴进来，即可获得排版清晰、缩进规范、语法高亮的可读输出。</p><p>无论是调试 API 响应、审查配置文件，还是为文档准备数据示例，本工具都能让 JSON 数据一目了然——所有处理100%在浏览器中完成。</p>"
+            "title": "专业级 JSON 格式化与查看器",
+            "content": "<p><strong>JSON 格式化工具</strong>是一款免费的专业级 JSON 处理工具，将 Monaco 代码编辑器、交互式树形视图和实时验证整合于一体。粘贴杂乱或压缩的 JSON，即刻获得排版清晰、语法高亮、支持代码折叠和可视化树形浏览的输出。</p><p>无论是调试 API 响应、检查深层嵌套的数据结构、审查配置文件，还是为文档准备数据示例——本工具提供一站式解决方案，无需离开浏览器，不会上传任何数据。</p>"
           },
           "howToUse": {
             "title": "如何使用 JSON 格式化工具",
-            "content": "<ol><li>将 JSON 数据粘贴或输入到编辑区</li><li>选择偏好的缩进级别（2 或 4 个空格）</li><li>点击<strong>格式化</strong>美化输出、<strong>压缩</strong>去除空白、或<strong>验证</strong>检查语法</li><li>复制格式化结果或下载为文件</li></ol><p>无效的 JSON 会显示清晰的错误提示，精确指出语法问题的位置。</p>"
+            "content": "<ol><li>在左侧 Monaco 编辑器中粘贴或输入 JSON，也可直接拖放 <code>.json</code> 文件</li><li>工具实时验证并即时显示 <strong>Valid</strong> 或 <strong>Invalid</strong> 状态</li><li>点击<strong>格式化</strong>按所选缩进美化输出，或点击<strong>压缩</strong>去除空白</li><li>切换到<strong>树形</strong>视图可视化浏览结构，或使用<strong>代码</strong>视图查看语法高亮输出</li><li>使用 JSON Path 过滤（如 <code>$.data.users[0]</code>）精准定位特定值</li><li>一键复制或下载结果</li></ol>"
           },
           "features": {
             "title": "核心功能",
-            "content": "<ul><li><strong>美化打印</strong>：支持自定义缩进（2 或 4 个空格）的 JSON 格式化</li><li><strong>一键压缩</strong>：移除所有空白字符，生成紧凑格式便于存储和传输</li><li><strong>语法验证</strong>：即时检查 JSON 语法正确性，并提供详细的错误报告</li><li><strong>语法高亮</strong>：键名、字符串、数字、布尔值和 null 以不同颜色显示，阅读更轻松</li><li><strong>大数据支持</strong>：流畅处理大型 JSON 文件</li><li><strong>100%浏览器端</strong>：无需上传服务器——数据始终留在您的设备上</li></ul>"
+            "content": "<ul><li><strong>Monaco 编辑器</strong>：与 VS Code 同款的代码编辑器——支持语法高亮、括号匹配、代码折叠和自动换行</li><li><strong>交互式树形视图</strong>：可视化展开和折叠 JSON 节点，每层显示元素数量，支持键盘导航</li><li><strong>JSON Path 过滤</strong>：使用路径表达式（如 <code>$.address.city</code> 或 <code>$.items[0].name</code>）查询特定值</li><li><strong>实时验证</strong>：输入时即时语法检查——无需点击按钮</li><li><strong>美化打印与压缩</strong>：支持自定义缩进（2、4 或 8 个空格）的格式化，或一键压缩为单行</li><li><strong>文件拖放支持</strong>：直接将 <code>.json</code> 或 <code>.txt</code> 文件拖入编辑器</li><li><strong>可拖拽分割面板</strong>：拖动分割线调整编辑器和查看器的空间比例，双击重置</li><li><strong>语法高亮代码视图</strong>：带行号的彩色代码输出，方便复制粘贴</li><li><strong>100%浏览器端处理</strong>：无需上传服务器——数据始终留在您的设备上</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
-            "content": "<ul><li><strong>API 开发</strong>：格式化原始 API 响应数据，便于调试和检查</li><li><strong>配置文件</strong>：整理 package.json、tsconfig.json 等配置文件</li><li><strong>数据验证</strong>：在发送 API 请求前快速验证 JSON 数据格式</li><li><strong>技术文档</strong>：为文档准备排版规范的 JSON 示例</li><li><strong>数据库记录</strong>：查看和格式化 NoSQL 数据库中存储的 JSON 数据</li></ul>"
+            "content": "<ul><li><strong>API 开发与调试</strong>：粘贴原始 API 响应，即时格式化，使用树形视图浏览深层嵌套对象</li><li><strong>配置文件</strong>：整理 <code>package.json</code>、<code>tsconfig.json</code>、<code>.eslintrc</code> 或 Kubernetes 配置清单</li><li><strong>数据探索</strong>：使用 JSON Path 过滤大数据集，无需滚动数千行即可找到特定值</li><li><strong>代码审查</strong>：通过树形视图直观对比 JSON 结构，快速发现差异</li><li><strong>技术文档</strong>：格式化并导出结构规范的 JSON 示例，用于文档和教程</li><li><strong>数据库记录</strong>：查看和格式化 MongoDB、CouchDB 或 PostgreSQL JSONB 字段中的 JSON 数据</li></ul>"
           },
           "privacy": {
             "title": "隐私优先的 JSON 处理",
-            "content": "<p>您的 JSON 数据<strong>完全在浏览器中</strong>通过原生 JavaScript 解析处理，不会向任何服务器传输数据。</p><ul><li>数据<strong>永远不会离开您的设备</strong>——处理过程中零网络请求</li><li>可安全处理敏感的 API 密钥、令牌和配置数据</li><li>页面加载后可完全<strong>离线</strong>使用</li></ul>"
+            "content": "<p>您的 JSON 数据通过原生 JavaScript 解析和 Monaco 编辑器引擎<strong>完全在浏览器中</strong>处理，绝不向任何服务器传输数据。</p><ul><li>数据<strong>永远不会离开您的设备</strong>——处理过程中零网络请求</li><li>可安全处理敏感的 API 密钥、认证令牌和配置机密</li><li>页面加载后可<strong>完全离线</strong>运行——无需网络连接</li><li>不对您的 JSON 内容进行任何分析——我们追踪工具使用情况，但绝不追踪您的数据</li></ul>"
           }
         }
       },

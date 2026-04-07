@@ -3,10 +3,10 @@
     "developer": {
       "json-formatter": {
         "name": "JSON 포맷터",
-        "description": "구문 강조를 지원하며 JSON 데이터를 포맷, 검증, 압축합니다.",
-        "metaTitle": "JSON 포맷터 & 검증기 - 무료 온라인 JSON 도구",
-        "metaDescription": "구문 강조를 지원하며 JSON 데이터를 포맷, 검증, 압축. 브라우저에서 완전히 작동하는 무료 온라인 도구.",
-        "keywords": "json 포맷터, json 검증기, json 정리, json 압축, json 보기 좋게",
+        "description": "Monaco Editor, 인터랙티브 트리 뷰, JSON Path 필터링으로 JSON을 포맷·검증·탐색 — 모두 브라우저에서.",
+        "metaTitle": "JSON 포맷터 & 유효성 검사기 온라인 - 정렬·트리 뷰·압축",
+        "metaDescription": "Monaco Editor, 인터랙티브 트리 뷰, JSON Path 필터링, 실시간 유효성 검사를 갖춘 무료 온라인 JSON 포맷터. JSON 데이터를 포맷·압축·탐색 — 100% 브라우저 기반, 데이터 업로드 없음.",
+        "keywords": "json 포맷터, json 유효성 검사, json 뷰어, json 정렬, json 압축, json 트리 뷰, json 편집기 온라인, json path, json 파서, json 변환",
         "inputPlaceholder": "여기에 JSON을 붙여넣으세요...",
         "format": "포맷",
         "minify": "압축",
@@ -31,37 +31,70 @@
         "layoutEditor": "에디터만",
         "layoutViewer": "뷰어만",
         "faq": {
-          "q1": "이 도구는 어떤 기능을 하나요?",
-          "a1": "JSON 데이터를 적절한 들여쓰기로 포맷(정리)하고, JSON 구문을 검증하며, 공백을 제거하여 JSON을 압축할 수 있습니다.",
-          "q2": "제 데이터는 안전한가요?",
-          "a2": "네, 모든 처리는 브라우저에서 이루어집니다. 데이터가 기기를 떠나지 않습니다.",
-          "q3": "파일이 서버에 업로드되나요?",
-          "a3": "아니요. 모든 처리는 브라우저 내에서 완전히 이루어집니다. 데이터가 기기를 떠나지 않으며 어떤 서버에도 업로드되지 않습니다.",
-          "q4": "오프라인에서도 사용할 수 있나요?",
-          "a4": "네. 페이지가 로드되면 도구는 완전히 오프라인에서 작동합니다. 최상의 경험을 위해 브라우저에서 PrivaDeck을 PWA로 설치하세요.",
-          "q5": "파일 크기 제한이 있나요?",
-          "a5": "서버에서 부과하는 제한은 없습니다. 최대 파일 크기는 기기의 사용 가능한 메모리와 브라우저 기능에 따라 다릅니다. 대부분의 현대 기기는 문제없이 수백 MB까지의 파일을 처리합니다."
+          "q1": "이 JSON 포맷터는 무엇을 할 수 있나요?",
+          "a1": "Monaco Editor(VS Code의 엔진), 인터랙티브 트리 뷰, 실시간 유효성 검사, 사용자 지정 들여쓰기를 통한 정렬, 압축, JSON Path 필터링을 갖춘 완전한 JSON 편집 환경을 제공합니다. 모두 100% 브라우저에서 실행됩니다.",
+          "q2": "제 JSON 데이터는 안전하고 프라이빗한가요?",
+          "a2": "물론입니다. 모든 처리는 네이티브 JavaScript를 사용하여 완전히 브라우저 내에서 이루어집니다. 데이터는 기기를 절대 벗어나지 않으며 서버 업로드, 로깅, 제3자 접근이 없습니다. API 키, 토큰, 민감한 설정 데이터에도 안전하게 사용할 수 있습니다.",
+          "q3": "다른 온라인 JSON 포맷터와 무엇이 다른가요?",
+          "a3": "기본 텍스트 영역 포맷터와 달리, 이 도구는 코드 접기와 괄호 매칭을 갖춘 전문적인 Monaco Editor, 시각적 탐색을 위한 인터랙티브 트리 뷰, 중첩 데이터를 쿼리하는 JSON Path 필터링, 크기 조정 가능한 분할 창을 제공합니다. 데스크톱급 JSON 도구에 필적하지만 완전히 브라우저에서 작동합니다.",
+          "q4": "이 도구를 오프라인으로 사용할 수 있나요?",
+          "a4": "네. 페이지가 한 번 로드되면 Monaco Editor, 트리 뷰, 모든 포맷 기능을 포함하여 완전히 오프라인으로 작동합니다. 최상의 경험을 위해 브라우저에서 PrivaDeck을 PWA로 설치해 보세요.",
+          "q5": "어떤 JSON Path 표현식이 지원되나요?",
+          "a5": "이 도구는 점 표기법($.address.city), 배열의 괄호 표기법($.items[0]), 중첩 경로($.data.users[2].name)를 지원합니다. 트리 뷰 위의 필터 박스에 경로를 입력하면 특정 데이터에 즉시 접근할 수 있습니다."
         },
         "seoContent": {
           "intro": {
-            "title": "JSON 포맷터란?",
-            "content": "<p><strong>JSON 포맷터</strong>는 JSON 데이터를 포맷, 검증, 압축하는 물 브라우저 기반 도구입니다. 지저분하거나 압축된 JSON을 붙여넣으면 적절한 들여쓰기와 구문 강조가 적용된 깔끗하고 읽기 쉬운 결과를 즉시 얻을 수 있습니다.</p><p>API 응답 디버깅, 설정 파일 검토, 문서용 데이터 준비 등 어떤 작업이든 이 도구를 사용하면 브라우저를 떠나지 않고 JSON을 쉽게 읽고 검증할 수 있습니다.</p>"
+            "title": "전문 JSON 포맷터 & 뷰어",
+            "content": "<p><strong>JSON 포맷터</strong>는 Monaco 코드 편집기, 인터랙티브 트리 뷰, 실시간 유효성 검사를 하나의 인터페이스에 결합한 무료 전문가급 JSON 도구입니다. 지저분하거나 압축된 JSON을 붙여넣으면 구문 강조, 코드 접기, 시각적 트리 탐색이 포함된 깔끔하고 읽기 쉬운 출력을 즉시 얻을 수 있습니다.</p><p>API 응답 디버깅, 깊게 중첩된 데이터 구조 확인, 설정 파일 검토, 문서용 데이터 준비 등 브라우저를 벗어나거나 단 1바이트도 업로드하지 않고 필요한 모든 것을 사용할 수 있습니다.</p>"
           },
           "howToUse": {
             "title": "JSON 포맷터 사용 방법",
-            "content": "<ol><li>입력 영역에 JSON 데이터를 붙여넣거나 직접 입력하세요</li><li>원하는 들여쓰기 수준을 선택하세요 (2칸 또는 4칸)</li><li><strong>포맷</strong>을 클릭하여 보기 좋게 출력하거나, <strong>압축</strong>으로 공백을 제거하거나, <strong>검증</strong>으로 구문을 확인하세요</li><li>포맷된 결과를 복사하거나 파일로 다운로드하세요</li></ol><p>잘못된 JSON은 구문 오류 위치를 정확히 보여주는 명확한 오류 메시지와 함께 강조 표시됩니다.</p>"
+            "content": "<ol><li>왼쪽 Monaco Editor에 JSON을 붙여넣거나 입력 — 또는 <code>.json</code> 파일을 드래그 앤 드롭</li><li>도구가 실시간으로 유효성을 검사하고 즉시 <strong>유효</strong> 또는 <strong>무효</strong> 상태를 표시</li><li><strong>포맷</strong>을 클릭하여 선택한 들여쓰기로 정렬하거나, <strong>압축</strong>으로 한 줄로 압축</li><li><strong>트리</strong> 뷰로 구조를 시각적으로 탐색하거나, <strong>코드</strong> 뷰로 구문 강조된 출력 확인</li><li>JSON Path 필터(예: <code>$.data.users[0]</code>)를 사용하여 특정 값으로 드릴다운</li><li>한 번의 클릭으로 결과를 복사 또는 다운로드</li></ol>"
           },
           "features": {
             "title": "주요 기능",
-            "content": "<ul><li><strong>보기 좋게 출력</strong>: 들여쓰기(2칸 또는 4칸)를 지정하여 JSON 포맷</li><li><strong>압축</strong>: 모든 공백을 제거하여 저장 또는 전송에 적합한 형태로 JSON 압축</li><li><strong>검증</strong>: 상세한 오류 보고와 함께 JSON 구문 정확성 즉시 확인</li><li><strong>구문 강조</strong>: 키, 문자열, 숫자, 불리언, null 값을 색상으로 구분하여 읽기 쉽게 표시</li><li><strong>대용량 데이터 지원</strong>: 성능 문제 없이 대용량 JSON 파일 처리</li><li><strong>100% 브라우저 기반</strong>: 서버 업로드 없음 — 데이터가 기기에 머뭅니다</li></ul>"
+            "content": "<ul><li><strong>Monaco Editor</strong>: VS Code를 구동하는 코드 편집기 — 구문 강조, 괄호 매칭, 코드 접기, 줄 바꿈 포함</li><li><strong>인터랙티브 트리 뷰</strong>: 모든 레벨의 항목 수와 완전한 키보드 탐색으로 JSON 노드를 시각적으로 펼치고 접기</li><li><strong>JSON Path 필터링</strong>: <code>$.address.city</code> 또는 <code>$.items[0].name</code>과 같은 경로 표현식으로 특정 값 쿼리</li><li><strong>실시간 유효성 검사</strong>: 입력하는 즉시 구문 검사 — 버튼 클릭 불필요</li><li><strong>정렬 &amp; 압축</strong>: 사용자 지정 들여쓰기(2, 4, 8칸)로 포맷하거나 한 줄로 압축</li><li><strong>드래그 앤 드롭 파일 지원</strong>: <code>.json</code> 또는 <code>.txt</code> 파일을 편집기에 직접 드롭</li><li><strong>크기 조정 가능한 분할 창</strong>: 구분선을 드래그하여 편집기와 뷰어 공간 조절, 더블클릭으로 초기화</li><li><strong>구문 강조 코드 뷰</strong>: 쉬운 복사·붙여넣기를 위한 줄 번호가 있는 컬러 코드 출력</li><li><strong>100% 브라우저 기반</strong>: 서버 업로드 없음 — 데이터는 항상 기기에 보관</li></ul>"
           },
           "useCases": {
-            "title": "주요 활용 사례",
-            "content": "<ul><li><strong>API 개발</strong>: 디버깅 및 검사를 위해 원시 API 응답 포맷</li><li><strong>설정 파일</strong>: package.json, tsconfig.json 등 설정 파일 정리</li><li><strong>데이터 검증</strong>: API로 전송하기 전 JSON 페이로드 신속 확인</li><li><strong>문서화</strong>: 기술 문서용 잘 포맷된 JSON 예시 준비</li><li><strong>데이터베이스 레코드</strong>: NoSQL 데이터베이스에 저장된 JSON 검사 및 포맷</li></ul>"
+            "title": "주요 사용 사례",
+            "content": "<ul><li><strong>API 개발 &amp; 디버깅</strong>: 원시 API 응답을 붙여넣어 즉시 포맷하고, 트리 뷰로 깊게 중첩된 객체 탐색</li><li><strong>설정 파일</strong>: <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code>, Kubernetes 매니페스트 정리</li><li><strong>데이터 탐색</strong>: JSON Path로 대용량 데이터셋을 필터링하고 수천 줄을 스크롤하지 않고 특정 값 검색</li><li><strong>코드 리뷰</strong>: 트리 뷰로 JSON 구조를 시각적으로 비교하여 차이점 신속 파악</li><li><strong>문서화</strong>: 기술 문서와 튜토리얼을 위한 잘 구조화된 JSON 예시 포맷 및 내보내기</li><li><strong>데이터베이스 레코드</strong>: MongoDB, CouchDB, PostgreSQL JSONB 컬럼에 저장된 JSON 확인 및 포맷</li></ul>"
           },
           "privacy": {
-            "title": "개인정보 우선 JSON 처리",
-            "content": "<p>JSON 데이터는 기본 JavaScript 파싱을 사용하여 <strong>브라우저 내에서 완전히</strong> 처리됩니다. 어떠한 데이터도 서버로 전송되지 않습니다.</p><ul><li>데이터가 <strong>기기를 절대 떠나지 않습니다</strong> — 처리 중 네트워크 요청 없음</li><li>민감한 API 키, 토큰, 설정 데이터에 안전</li><li>페이지 로드 후 <strong>오프라인</strong>에서도 작동</li></ul>"
+            "title": "프라이버시 우선 JSON 처리",
+            "content": "<p>JSON 데이터는 네이티브 JavaScript 파싱과 Monaco Editor 엔진을 사용하여 <strong>완전히 브라우저 내에서</strong> 처리됩니다. 어떠한 데이터도 서버로 전송되지 않습니다.</p><ul><li>데이터는 <strong>기기를 절대 벗어나지 않음</strong> — 처리 중 네트워크 요청 제로</li><li>민감한 API 키, 인증 토큰, 설정 시크릿에 안전</li><li>페이지 로드 후 <strong>완전 오프라인 작동</strong> — 인터넷 불필요</li><li>JSON 콘텐츠에 대한 분석 없음 — 도구 사용 현황만 추적, 데이터는 추적하지 않음</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Monaco Editor — VS Code처럼 코딩하기",
+            "description": "구문 강조, 괄호 매칭, 코드 접기, 자동 완성을 갖춘 완전한 코드 편집기. VS Code를 구동하는 바로 그 편집기입니다."
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "인터랙티브 트리 뷰 탐색기",
+            "description": "복잡한 JSON 구조를 시각적으로 탐색. 모든 레벨의 항목 수를 확인하며 중첩된 객체와 배열을 펼치고 접고 검사할 수 있습니다."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "입력하는 즉시 실시간 유효성 검사",
+            "description": "실시간 유효/무효 상태 표시기로 즉각적인 구문 검사. 프로덕션에 도달하기 전에 오류를 잡아냅니다."
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "JSON Path 필터링",
+            "description": "$.address.city 또는 $.items[0]과 같은 JSON Path 표현식으로 특정 값 쿼리. 깊게 중첩된 데이터에 즉시 접근합니다."
+          },
+          "f5": {
+            "icon": "GripVertical",
+            "title": "크기 조정 가능한 분할 창 레이아웃",
+            "description": "구분선을 드래그하여 편집기와 뷰어 비율을 사용자 지정. 더블클릭으로 50/50으로 초기화. 모바일에서는 세로 스택 레이아웃으로 자동 전환."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 프라이빗 — 서버 업로드 제로",
+            "description": "모든 처리는 브라우저에서 이루어집니다. JSON 데이터는 기기를 절대 벗어나지 않습니다 — API 키, 토큰, 민감한 설정에도 안전."
           }
         }
       },

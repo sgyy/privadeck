@@ -3,10 +3,10 @@
     "developer": {
       "json-formatter": {
         "name": "JSON फ़ॉर्मेटर",
-        "description": "सिंटैक्स हाइलाइटिंग के साथ JSON डेटा को फ़ॉर्मेट, वैलिडेट और मिनिफ़ाई करें।",
-        "metaTitle": "JSON फ़ॉर्मेटर और वैलिडेटर - मुफ़्त ऑनलाइन JSON टूल",
-        "metaDescription": "सिंटैक्स हाइलाइटिंग के साथ JSON डेटा को फ़ॉर्मेट, वैलिडेट और मिनिफ़ाई करें। मुफ़्त ऑनलाइन टूल जो पूरी तरह आपके ब्राउज़र में काम करता है।",
-        "keywords": "json फ़ॉर्मेटर, json वैलिडेटर, json beautifier, json minifier, json pretty print",
+        "description": "Monaco Editor, इंटरेक्टिव ट्री व्यू और JSON Path फ़िल्टरिंग के साथ JSON को फ़ॉर्मेट करें, वैलिडेट करें और एक्सप्लोर करें — सब कुछ आपके ब्राउज़र में।",
+        "metaTitle": "JSON Formatter & Validator Online - Pretty Print, Tree View, Minify",
+        "metaDescription": "Monaco Editor, इंटरेक्टिव ट्री व्यू, JSON Path फ़िल्टरिंग और रियल-टाइम वैलिडेशन के साथ मुफ़्त ऑनलाइन JSON formatter। JSON डेटा फ़ॉर्मेट, मिनिफ़ाई और एक्सप्लोर करें — 100% ब्राउज़र-आधारित, कोई डेटा अपलोड नहीं।",
+        "keywords": "json formatter, json validator, json beautifier, json minifier, json pretty print, json viewer, json tree view, json editor online, json path, json parser, जेसन फॉर्मेटर, जेसन वैलिडेटर",
         "inputPlaceholder": "अपना JSON यहाँ पेस्ट करें...",
         "format": "फ़ॉर्मेट",
         "minify": "मिनिफ़ाई",
@@ -31,37 +31,70 @@
         "layoutEditor": "Editor only",
         "layoutViewer": "Viewer only",
         "faq": {
-          "q1": "यह टूल क्या करता है?",
-          "a1": "यह JSON डेटा को उचित इंडेंटेशन के साथ फ़ॉर्मेट (pretty-print) करता है, JSON सिंटैक्स की जाँच करता है, और व्हाइटस्पेस हटाकर JSON को मिनिफ़ाई कर सकता है।",
-          "q2": "क्या मेरा डेटा सुरक्षित है?",
-          "a2": "हाँ, सारी प्रोसेसिंग आपके ब्राउज़र में होती है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।",
-          "q3": "क्या मेरी फ़ाइलें सर्वर पर अपलोड होंगी?",
-          "a3": "नहीं। सारी प्रोसेसिंग पूरी तरह आपके ब्राउज़र में होती है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता — किसी सर्वर पर कुछ भी अपलोड नहीं होता।",
+          "q1": "यह JSON formatter क्या करता है?",
+          "a1": "यह Monaco Editor (VS Code के पीछे का इंजन) के साथ एक पूर्ण-विशेषताओं वाला JSON editing वातावरण प्रदान करता है, जिसमें इंटरेक्टिव ट्री व्यू, रियल-टाइम वैलिडेशन, कस्टमाइज़ेबल इंडेंटेशन के साथ pretty-printing, minification और JSON Path फ़िल्टरिंग शामिल है — सब कुछ 100% आपके ब्राउज़र में चलता है।",
+          "q2": "क्या मेरा JSON डेटा सुरक्षित और निजी है?",
+          "a2": "बिल्कुल। सभी प्रोसेसिंग पूरी तरह आपके ब्राउज़र में native JavaScript का उपयोग करके होती है। आपका डेटा कभी भी आपके डिवाइस से बाहर नहीं जाता — कोई सर्वर अपलोड नहीं, कोई लॉगिंग नहीं, कोई थर्ड-पार्टी एक्सेस नहीं। API keys, tokens और संवेदनशील configuration डेटा के लिए सुरक्षित।",
+          "q3": "यह अन्य ऑनलाइन JSON formatters से कैसे अलग है?",
+          "a3": "बुनियादी text-area formatters के विपरीत, इस टूल में code folding और bracket matching के साथ professional Monaco Editor, visual exploration के लिए इंटरेक्टिव ट्री व्यू, nested डेटा क्वेरी करने के लिए JSON Path फ़िल्टरिंग, और resizable split pane है — desktop-grade JSON टूल्स के समकक्ष, लेकिन पूरी तरह आपके ब्राउज़र में।",
           "q4": "क्या मैं इस टूल को ऑफ़लाइन उपयोग कर सकता हूँ?",
-          "a4": "हाँ। पेज लोड होने के बाद, यह टूल पूरी तरह ऑफ़लाइन काम करता है। सर्वोत्तम अनुभव के लिए, अपने ब्राउज़र से PrivaDeck को PWA के रूप में इंस्टॉल करें।",
-          "q5": "क्या फ़ाइल आकार की कोई सीमा है?",
-          "a5": "कोई सर्वर-लगाई गई सीमाएँ नहीं हैं। अधिकतम फ़ाइल आकार आपके डिवाइस की उपलब्ध मेमोरी और ब्राउज़र क्षमताओं पर निर्भर करता है। अधिकांश आधुनिक डिवाइस कई सौ MB तक की फ़ाइलों को बिना किसी समस्या के संभालते हैं।"
+          "a4": "हाँ। एक बार पेज लोड हो जाने के बाद, टूल Monaco Editor, ट्री व्यू और सभी formatting सुविधाओं सहित पूरी तरह ऑफ़लाइन काम करता है। सर्वोत्तम अनुभव के लिए, अपने ब्राउज़र से PrivaDeck को PWA के रूप में इंस्टॉल करें।",
+          "q5": "कौन से JSON Path एक्सप्रेशन समर्थित हैं?",
+          "a5": "टूल dot notation ($.address.city), arrays के लिए bracket notation ($.items[0]), और nested paths ($.data.users[2].name) को सपोर्ट करता है। ट्री व्यू के ऊपर filter box में अपना path दर्ज करें और तुरंत विशिष्ट डेटा तक पहुँचें।"
         },
         "seoContent": {
           "intro": {
-            "title": "JSON Formatter क्या है?",
-            "content": "<p><strong>JSON Formatter</strong> JSON डेटा को फॉर्मेट, सत्यापित और minify करने के लिए एक मुफ्त ब्राउज़र टूल है।</p><p>API प्रतिक्रियाओं को debug करते समय यह टूल JSON को आसान बनाता है।</p>"
+            "title": "प्रोफ़ेशनल JSON Formatter और Viewer",
+            "content": "<p><strong>JSON Formatter</strong> एक मुफ़्त, professional-grade JSON टूल है जो Monaco code editor, इंटरेक्टिव ट्री व्यू और रियल-टाइम वैलिडेशन को एक ही इंटरफ़ेस में जोड़ता है। अव्यवस्थित या minified JSON पेस्ट करें और तुरंत syntax highlighting, code folding और visual tree exploration के साथ स्वच्छ, मानव-पठनीय आउटपुट प्राप्त करें।</p><p>चाहे आप API responses डिबग कर रहे हों, गहराई से nested data structures की जाँच कर रहे हों, configuration files की समीक्षा कर रहे हों, या दस्तावेज़ीकरण के लिए डेटा तैयार कर रहे हों — यह टूल आपको वह सब देता है जो आपको चाहिए, बिना ब्राउज़र छोड़े या एक भी byte अपलोड किए।</p>"
           },
           "howToUse": {
             "title": "JSON Formatter का उपयोग कैसे करें",
-            "content": "<ol><li>Input area में JSON पेस्ट करें</li><li>Indentation स्तर चुनें</li><li>Format, Minify, या Validate क्लिक करें</li><li>परिणाम को कॉपी करें</li></ol>"
+            "content": "<ol><li>बाईं ओर Monaco Editor में JSON पेस्ट या टाइप करें — या <code>.json</code> फ़ाइल drag और drop करें</li><li>टूल रियल-टाइम में वैलिडेट करता है और तुरंत <strong>Valid</strong> या <strong>Invalid</strong> स्टेटस दिखाता है</li><li>अपने चुने हुए indentation के साथ pretty-print के लिए <strong>Format</strong> पर क्लिक करें, या compress करने के लिए <strong>Minify</strong> पर</li><li>संरचना को visually explore करने के लिए <strong>Tree</strong> व्यू पर स्विच करें, या syntax-highlighted आउटपुट के लिए <strong>Code</strong> व्यू पर</li><li>विशिष्ट मानों तक पहुँचने के लिए JSON Path filter (जैसे <code>$.data.users[0]</code>) का उपयोग करें</li><li>एक क्लिक से परिणाम कॉपी या डाउनलोड करें</li></ol>"
           },
           "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Pretty Print</strong>: JSON को फॉर्मेट करें</li><li><strong>Minify</strong>: JSON को compress करें</li><li><strong>Validate</strong>: Syntax जांचें</li><li><strong>Syntax Highlighting</strong>: Color-coded output</li><li><strong>Large Data Support</strong>: बड़ी files handle करें</li><li><strong>100% Browser-Based</strong>: कोई uploads नहीं</li></ul>"
+            "title": "मुख्य विशेषताएँ",
+            "content": "<ul><li><strong>Monaco Editor</strong>: वही code editor जो VS Code को शक्ति देता है — syntax highlighting, bracket matching, code folding और word wrap के साथ</li><li><strong>इंटरेक्टिव ट्री व्यू</strong>: JSON nodes को visually expand और collapse करें, हर स्तर पर item counts और पूर्ण keyboard navigation के साथ</li><li><strong>JSON Path Filtering</strong>: <code>$.address.city</code> या <code>$.items[0].name</code> जैसे path expressions का उपयोग करके विशिष्ट मानों की क्वेरी करें</li><li><strong>रियल-टाइम वैलिडेशन</strong>: टाइप करते समय तत्काल syntax checking — बटन क्लिक करने की ज़रूरत नहीं</li><li><strong>Pretty Print &amp; Minify</strong>: कस्टमाइज़ेबल indentation (2, 4, या 8 spaces) के साथ फ़ॉर्मेट करें या एकल पंक्ति में compress करें</li><li><strong>Drag-and-Drop फ़ाइल सपोर्ट</strong>: <code>.json</code> या <code>.txt</code> फ़ाइलें सीधे editor में drop करें</li><li><strong>Resizable Split Pane</strong>: editor और viewer स्पेस को संतुलित करने के लिए divider खींचें; reset के लिए double-click करें</li><li><strong>Syntax-Highlighted Code View</strong>: आसान copy-paste के लिए line numbers के साथ color-coded आउटपुट</li><li><strong>100% Browser-Based</strong>: कोई सर्वर अपलोड नहीं — आपका डेटा हमेशा आपके डिवाइस पर रहता है</li></ul>"
           },
           "useCases": {
             "title": "सामान्य उपयोग के मामले",
-            "content": "<ul><li><strong>API Development</strong>: Responses को फॉर्मेट करें</li><li><strong>Configuration Files</strong>: Config files को साफ़ करें</li><li><strong>Data Validation</strong>: JSON verify करें</li><li><strong>Documentation</strong>: Examples तैयार करें</li><li><strong>Database Records</strong>: NoSQL data को format करें</li></ul>"
+            "content": "<ul><li><strong>API Development &amp; Debugging</strong>: raw API responses पेस्ट करें, उन्हें तुरंत फ़ॉर्मेट करें, और गहराई से nested objects में navigate करने के लिए ट्री व्यू का उपयोग करें</li><li><strong>Configuration Files</strong>: <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code>, या Kubernetes manifests को साफ़ करें</li><li><strong>Data Exploration</strong>: बड़े datasets फ़िल्टर करने और हज़ारों lines scroll किए बिना विशिष्ट मान खोजने के लिए JSON Path का उपयोग करें</li><li><strong>Code Reviews</strong>: JSON structures को ट्री व्यू से visually compare करें और जल्दी अंतर पहचानें</li><li><strong>Documentation</strong>: technical docs और tutorials के लिए अच्छी तरह structured JSON examples फ़ॉर्मेट और export करें</li><li><strong>Database Records</strong>: MongoDB, CouchDB, या PostgreSQL JSONB columns में stored JSON को inspect और format करें</li></ul>"
           },
           "privacy": {
-            "title": "गोपनीयता-प्रथम JSON Processing",
-            "content": "<p>डेटा <strong>पूरी तरह ब्राउज़र में</strong> processed होता है।</p><ul><li>डेटा <strong>कभी device को नहीं छोड़ता</strong></li><li>API keys के लिए safe</li><li><strong>Offline काम करता है</strong></li><li>Zero upload requests</li></ul>"
+            "title": "Privacy-First JSON Processing",
+            "content": "<p>आपका JSON डेटा native JavaScript parsing और Monaco Editor इंजन का उपयोग करके <strong>पूरी तरह आपके ब्राउज़र में</strong> प्रोसेस होता है। कोई भी डेटा किसी भी सर्वर पर कभी भी प्रेषित नहीं होता।</p><ul><li>आपका डेटा <strong>कभी आपके डिवाइस से बाहर नहीं जाता</strong> — प्रोसेसिंग के दौरान शून्य network requests</li><li>संवेदनशील API keys, authentication tokens और configuration secrets के लिए सुरक्षित</li><li>पेज लोड होने के बाद <strong>पूरी तरह ऑफ़लाइन काम करता है</strong> — इंटरनेट की आवश्यकता नहीं</li><li>आपके JSON content पर कोई analytics नहीं — हम टूल usage ट्रैक करते हैं, आपका डेटा कभी नहीं</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Monaco Editor — VS Code की तरह कोड लिखें",
+            "description": "Syntax highlighting, bracket matching, code folding और auto-completion के साथ पूर्ण-विशेषताओं वाला code editor। वही editor जो VS Code को शक्ति देता है।"
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "इंटरेक्टिव ट्री व्यू Explorer",
+            "description": "JSON structures को visually navigate करें। हर स्तर पर item counts के साथ nested objects और arrays को expand, collapse और inspect करें।"
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "टाइप करते समय रियल-टाइम वैलिडेशन",
+            "description": "Live Valid/Invalid status indicator के साथ तत्काल syntax checking। Production तक पहुँचने से पहले errors पकड़ें।"
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "JSON Path Filtering",
+            "description": "$.address.city या $.items[0] जैसे JSON Path expressions का उपयोग करके विशिष्ट मानों की क्वेरी करें। गहराई से nested डेटा में तुरंत पहुँचें।"
+          },
+          "f5": {
+            "icon": "GripVertical",
+            "title": "Resizable Split Pane Layout",
+            "description": "Editor और viewer proportions को कस्टमाइज़ करने के लिए divider खींचें। 50/50 पर reset के लिए Double-click करें। Mobile पर stacked layout के साथ अनुकूलित होता है।"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% Private — कोई Server Upload नहीं",
+            "description": "सभी प्रोसेसिंग आपके ब्राउज़र में होती है। आपका JSON डेटा कभी आपके डिवाइस से बाहर नहीं जाता — API keys, tokens और संवेदनशील configs के लिए सुरक्षित।"
           }
         }
       },

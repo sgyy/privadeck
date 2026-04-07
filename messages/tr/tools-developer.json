@@ -3,10 +3,10 @@
     "developer": {
       "json-formatter": {
         "name": "JSON Biçimlendirici",
-        "description": "JSON verilerini söz dizimi vurgulamasıyla biçimlendirin, doğrulayın ve küçültün.",
-        "metaTitle": "JSON Biçimlendirici ve Doğrulayıcı - Ücretsiz Çevrimiçi JSON Aracı",
-        "metaDescription": "JSON verilerini söz dizimi vurgulamasıyla biçimlendirin, doğrulayın ve küçültün. Tamamen tarayıcınızda çalışan ücretsiz çevrimiçi araç.",
-        "keywords": "json biçimlendirici, json doğrulayıcı, json beautifier, json minifier, json pretty print",
+        "description": "Monaco Editor, etkileşimli ağaç görünümü ve JSON Path filtreleme ile JSON'u biçimlendirin, doğrulayın ve keşfedin — tümü tarayıcınızda.",
+        "metaTitle": "Çevrimiçi JSON Biçimlendirici & Doğrulayıcı - Pretty Print, Ağaç Görünümü, Küçültme",
+        "metaDescription": "Monaco Editor, etkileşimli ağaç görünümü, JSON Path filtreleme ve gerçek zamanlı doğrulama ile ücretsiz çevrimiçi JSON biçimlendirici. JSON verilerini biçimlendirin, küçültün ve keşfedin — %100 tarayıcı tabanlı, veri yüklenmez.",
+        "keywords": "json biçimlendirici, json doğrulayıcı, json güzelleştirici, json küçültücü, json pretty print, json görüntüleyici, json ağaç görünümü, json editör çevrimiçi, json path, json ayrıştırıcı",
         "inputPlaceholder": "JSON verinizi buraya yapıştırın...",
         "format": "Biçimlendir",
         "minify": "Küçült",
@@ -31,37 +31,70 @@
         "layoutEditor": "Editor only",
         "layoutViewer": "Viewer only",
         "faq": {
-          "q1": "Bu araç ne yapar?",
-          "a1": "JSON verilerini doğru girintilemeyle biçimlendirir (pretty-print), JSON söz dizimini doğrular ve boşlukları kaldırarak JSON'u küçültebilir.",
-          "q2": "Verilerim güvende mi?",
-          "a2": "Evet, tüm işlemler tarayıcınızda gerçekleşir. Verileriniz asla cihazınızdan çıkmaz.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
+          "q1": "Bu JSON biçimlendirici ne yapar?",
+          "a1": "Monaco Editor (VS Code'un arkasındaki motor), etkileşimli ağaç görünümü, gerçek zamanlı doğrulama, özelleştirilebilir girintili güzel yazdırma, küçültme ve JSON Path filtreleme ile tam özellikli bir JSON düzenleme ortamı sunar — tümü tarayıcınızda %100 çalışır.",
+          "q2": "JSON verilerim güvenli ve gizli mi?",
+          "a2": "Kesinlikle. Tüm işlemler yerel JavaScript kullanılarak tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — sunucu yüklemesi yok, günlük kaydı yok, üçüncü taraf erişimi yok. API anahtarları, token'lar ve hassas yapılandırma verileri için güvenlidir.",
+          "q3": "Bu, diğer çevrimiçi JSON biçimlendiricilerden nasıl farklı?",
+          "a3": "Temel metin alanı biçimlendiricilerinden farklı olarak bu araç; kod katlama ve köşeli ayraç eşleştirme özellikli profesyonel bir Monaco Editor, görsel keşif için etkileşimli ağaç görünümü, iç içe veri sorgulamak için JSON Path filtreleme ve yeniden boyutlandırılabilir bölünmüş bölme sunar — masaüstü kalitesinde JSON araçlarıyla karşılaştırılabilir, ancak tamamen tarayıcınızda.",
           "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
-          "q5": "Dosya boyutu sınırı var mı?",
-          "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
+          "a4": "Evet. Sayfa yüklendikten sonra araç, Monaco Editor, ağaç görünümü ve tüm biçimlendirme özellikleri dahil tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
+          "q5": "Hangi JSON Path ifadeleri destekleniyor?",
+          "a5": "Araç nokta notasyonunu ($.address.city), diziler için köşeli ayraç notasyonunu ($.items[0]) ve iç içe yolları ($.data.users[2].name) destekler. Belirli verilere anında ulaşmak için yolunuzu ağaç görünümünün üzerindeki filtre kutusuna girin."
         },
         "seoContent": {
           "intro": {
-            "title": "JSON Biçimlendirici Nedir?",
-            "content": "<p><strong>JSON Biçimlendirici</strong>, JSON verilerini biçimlendirmek, doğrulamak ve küçültmek için ücretsiz, tarayıcı tabanlı bir araçtır. Dağınık veya küçültülmüş JSON yapıştırın; anında düzgün girintili ve söz dizimi vurgulamalı, okunması kolay çıktı elde edin.</p><p>API yanıtlarını hata ayıklarken, yapılandırma dosyalarını incelerken veya belgeleme için veri hazırlarken bu araç, tarayıcınızı terk etmeden JSON'u okumayı ve doğrulamayı kolaylaştırır.</p>"
+            "title": "Profesyonel JSON Biçimlendirici ve Görüntüleyici",
+            "content": "<p><strong>JSON Formatter</strong>, Monaco kod editörü, etkileşimli ağaç görünümü ve gerçek zamanlı doğrulamayı tek bir arayüzde birleştiren ücretsiz, profesyonel düzeyde bir JSON aracıdır. Dağınık veya küçültülmüş JSON yapıştırın ve anında sözdizimi vurgulama, kod katlama ve görsel ağaç keşfi ile temiz, insan tarafından okunabilir çıktı elde edin.</p><p>API yanıtlarında hata ayıklama, derin iç içe veri yapılarını inceleme, yapılandırma dosyalarını gözden geçirme veya belgeleme için veri hazırlama — bu araç, tarayıcınızı terk etmeden veya tek bir bayt yüklemeden ihtiyacınız olan her şeyi sunar.</p>"
           },
           "howToUse": {
-            "title": "JSON Biçimlendirici Nasıl Kullanılır?",
-            "content": "<ol><li>JSON verilerinizi giriş alanına yapıştırın veya yazın</li><li>Tercih ettiğiniz girinti düzeyini seçin (2 veya 4 boşluk)</li><li>Biçimlendirmek için <strong>Biçimlendir</strong>, sıkıştırmak için <strong>Küçült</strong>, söz dizimini kontrol etmek için <strong>Doğrula</strong> düğmesine tıklayın</li><li>Biçimlendirilmiş sonucu kopyalayın veya dosya olarak indirin</li></ol><p>Geçersiz JSON, söz dizimi hatasının tam olarak nerede olduğunu gösteren açık bir hata mesajıyla vurgulanır.</p>"
+            "title": "JSON Biçimlendirici Nasıl Kullanılır",
+            "content": "<ol><li>JSON'u soldaki Monaco Editor'e yapıştırın veya yazın — ya da bir <code>.json</code> dosyasını sürükleyip bırakın</li><li>Araç gerçek zamanlı olarak doğrular ve anında <strong>Geçerli</strong> veya <strong>Geçersiz</strong> durumunu gösterir</li><li>Seçtiğiniz girintiyle güzel yazdırmak için <strong>Biçimlendir</strong>'e, sıkıştırmak için <strong>Küçült</strong>'e tıklayın</li><li>Yapıyı görsel olarak keşfetmek için <strong>Ağaç</strong> görünümüne, sözdizimi vurgulu çıktı için <strong>Kod</strong> görünümüne geçin</li><li>Belirli değerlere ulaşmak için JSON Path filtresini (ör. <code>$.data.users[0]</code>) kullanın</li><li>Sonucu tek tıklamayla kopyalayın veya indirin</li></ol>"
           },
           "features": {
             "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Pretty Print</strong>: JSON'u özelleştirilebilir girintilemeyle (2 veya 4 boşluk) biçimlendirin</li><li><strong>Küçültme</strong>: Kompakt depolama veya iletim için tüm boşlukları kaldırarak JSON'u sıkıştırın</li><li><strong>Doğrulama</strong>: JSON'unuzun söz diziminin doğru olup olmadığını ayrıntılı hata raporlamasıyla anında kontrol edin</li><li><strong>Söz Dizimi Vurgulama</strong>: Kolay okuma için renk kodlu anahtarlar, dizeler, sayılar, boolean'lar ve null değerler</li><li><strong>Büyük Veri Desteği</strong>: Büyük JSON dosyalarını performans sorunları olmadan işler</li><li><strong>%100 Tarayıcı Tabanlı</strong>: Sunucuya yükleme yok — verileriniz cihazınızda kalır</li></ul>"
+            "content": "<ul><li><strong>Monaco Editor</strong>: VS Code'u destekleyen kod editörünün aynısı — sözdizimi vurgulama, köşeli ayraç eşleştirme, kod katlama ve sözcük sarmalama ile</li><li><strong>Etkileşimli Ağaç Görünümü</strong>: JSON düğümlerini görsel olarak genişletin ve daraltın; her seviyede öğe sayısı ve tam klavye navigasyonu ile</li><li><strong>JSON Path Filtreleme</strong>: <code>$.address.city</code> veya <code>$.items[0].name</code> gibi yol ifadeleri kullanarak belirli değerleri sorgulayın</li><li><strong>Gerçek Zamanlı Doğrulama</strong>: Yazarken anında sözdizimi denetimi — düğmeye tıklamaya gerek yok</li><li><strong>Pretty Print &amp; Küçültme</strong>: Özelleştirilebilir girintileme (2, 4 veya 8 boşluk) ile biçimlendirin veya tek satıra sıkıştırın</li><li><strong>Sürükle-Bırak Dosya Desteği</strong>: <code>.json</code> veya <code>.txt</code> dosyalarını doğrudan editöre bırakın</li><li><strong>Yeniden Boyutlandırılabilir Bölünmüş Bölme</strong>: Editör ve görüntüleyici alanını dengelemek için bölücüyü sürükleyin; sıfırlamak için çift tıklayın</li><li><strong>Sözdizimi Vurgulu Kod Görünümü</strong>: Kolay kopyala-yapıştır için satır numaralı renkli çıktı</li><li><strong>%100 Tarayıcı Tabanlı</strong>: Sunucu yüklemesi yok — verileriniz her zaman cihazınızda kalır</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>API Geliştirme</strong>: Ham API yanıtlarını hata ayıklama ve inceleme için biçimlendirin</li><li><strong>Yapılandırma Dosyaları</strong>: package.json, tsconfig.json veya diğer yapılandırma dosyalarını düzenleyin</li><li><strong>Veri Doğrulama</strong>: API'lere göndermeden önce JSON yüklerini hızlıca doğrulayın</li><li><strong>Belgeleme</strong>: Teknik belgeler için iyi biçimlendirilmiş JSON örnekleri hazırlayın</li><li><strong>Veritabanı Kayıtları</strong>: NoSQL veritabanlarında depolanan JSON'u inceleyin ve biçimlendirin</li></ul>"
+            "content": "<ul><li><strong>API Geliştirme &amp; Hata Ayıklama</strong>: Ham API yanıtlarını yapıştırın, anında biçimlendirin ve derin iç içe nesnelerde gezinmek için ağaç görünümünü kullanın</li><li><strong>Yapılandırma Dosyaları</strong>: <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code> veya Kubernetes manifestolarını temizleyin</li><li><strong>Veri Keşfi</strong>: Binlerce satırda kaydırmadan büyük veri kümelerini filtrelemek ve belirli değerleri bulmak için JSON Path kullanın</li><li><strong>Kod İncelemeleri</strong>: Farklılıkları hızlıca tespit etmek için ağaç görünümüyle JSON yapılarını görsel olarak karşılaştırın</li><li><strong>Dokümantasyon</strong>: Teknik belgeler ve eğitimler için iyi yapılandırılmış JSON örneklerini biçimlendirin ve dışa aktarın</li><li><strong>Veritabanı Kayıtları</strong>: MongoDB, CouchDB veya PostgreSQL JSONB sütunlarında depolanan JSON'u inceleyin ve biçimlendirin</li></ul>"
           },
           "privacy": {
             "title": "Gizlilik Öncelikli JSON İşleme",
-            "content": "<p>JSON verileriniz, yerel JavaScript ayrıştırma kullanılarak <strong>tamamen tarayıcınızda</strong> işlenir. Hiçbir veri sunucuya iletilmez.</p><ul><li>Verileriniz <strong>cihazınızdan asla ayrılmaz</strong> — işleme sırasında sıfır ağ isteği</li><li>Hassas API anahtarları, token'lar ve yapılandırma verileri için güvenlidir</li><li>Sayfa yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
+            "content": "<p>JSON verileriniz, yerel JavaScript ayrıştırma ve Monaco Editor motoru kullanılarak <strong>tamamen tarayıcınızda</strong> işlenir. Hiçbir veriye hiçbir sunucuya iletilmez — asla.</p><ul><li>Verileriniz <strong>cihazınızdan asla ayrılmaz</strong> — işleme sırasında sıfır ağ isteği</li><li>Hassas API anahtarları, kimlik doğrulama token'ları ve yapılandırma sırları için güvenlidir</li><li>Sayfa yüklendikten sonra <strong>tamamen çevrimdışı</strong> çalışır — internet gerekmez</li><li>JSON içeriğinizde analitik yok — araç kullanımını takip ederiz, verilerinizi asla</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Monaco Editor — VS Code Gibi Kod Yazın",
+            "description": "Sözdizimi vurgulama, köşeli ayraç eşleştirme, kod katlama ve otomatik tamamlama ile tam özellikli kod editörü. VS Code'u destekleyen editörün aynısı."
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "Etkileşimli Ağaç Görünümü Gezgini",
+            "description": "Karmaşık JSON yapılarında görsel olarak gezinin. İç içe nesneleri ve dizileri her seviyedeki öğe sayısıyla genişletin, daraltın ve inceleyin."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Yazarken Gerçek Zamanlı Doğrulama",
+            "description": "Canlı Geçerli/Geçersiz durum göstergesiyle anında sözdizimi denetimi. Hataları üretime geçmeden yakalayın."
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "JSON Path Filtreleme",
+            "description": "$.address.city veya $.items[0] gibi JSON Path ifadeleri kullanarak belirli değerleri sorgulayın. Derin iç içe verilere anında ulaşın."
+          },
+          "f5": {
+            "icon": "GripVertical",
+            "title": "Yeniden Boyutlandırılabilir Bölünmüş Bölme Düzeni",
+            "description": "Editör ve görüntüleyici oranlarını özelleştirmek için bölücüyü sürükleyin. 50/50'ye sıfırlamak için çift tıklayın. Mobilde yığılmış düzenle uyum sağlar."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "%100 Gizli — Sıfır Sunucu Yüklemesi",
+            "description": "Tüm işlemler tarayıcınızda gerçekleşir. JSON verileriniz cihazınızdan asla ayrılmaz — API anahtarları, token'lar ve hassas yapılandırmalar için güvenlidir."
           }
         }
       },

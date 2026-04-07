@@ -9,6 +9,11 @@ import {
   MonitorDown,
   Zap,
   FileVideo,
+  Braces,
+  TreePine,
+  Search,
+  GripVertical,
+  Eye,
 } from "lucide-react";
 import type { ComponentType } from "react";
 
@@ -20,6 +25,11 @@ const ICON_MAP: Record<string, ComponentType<{ className?: string }>> = {
   MonitorDown,
   Zap,
   FileVideo,
+  Braces,
+  TreePine,
+  Search,
+  GripVertical,
+  Eye,
 };
 
 interface ToolFeatureCardsProps {

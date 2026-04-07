@@ -3,10 +3,10 @@
     "developer": {
       "json-formatter": {
         "name": "JSON Formatter",
-        "description": "Formatteer, valideer en minificeer JSON-data met syntaxiskleuring.",
-        "metaTitle": "JSON Formatter & Validator - Gratis online JSON-tool",
-        "metaDescription": "Formatteer, valideer en minificeer JSON-data met syntaxiskleuring. Gratis online tool die volledig in je browser werkt.",
-        "keywords": "json formatter, json validator, json beautifier, json minifier, json pretty print",
+        "description": "Formatteer, valideer en verken JSON met Monaco Editor, interactieve boomstructuurweergave en JSON Path-filtering — allemaal in uw browser.",
+        "metaTitle": "JSON Formatter & Validator Online - Pretty Print, Boomweergave, Minificeren",
+        "metaDescription": "Gratis online JSON formatter met Monaco Editor, interactieve boomstructuurweergave, JSON Path-filtering en realtime validatie. Formatteer, minificeer en verken JSON-gegevens — 100% browsergebaseerd, geen gegevens geüpload.",
+        "keywords": "json formatter, json validator, json beautifier, json minifier, json pretty print, json viewer, json boomweergave, json editor online, json path, json parser",
         "inputPlaceholder": "Plak je JSON hier...",
         "format": "Formatteren",
         "minify": "Minificeren",
@@ -31,37 +31,70 @@
         "layoutEditor": "Editor only",
         "layoutViewer": "Viewer only",
         "faq": {
-          "q1": "Wat doet deze tool?",
-          "a1": "Het formatteert (pretty-print) JSON-data met juiste inspringing, valideert JSON-syntaxis en kan JSON minificeren door witruimte te verwijderen.",
-          "q2": "Zijn mijn gegevens veilig?",
-          "a2": "Ja, alle verwerking gebeurt in je browser. Je gegevens verlaten nooit je apparaat.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
-          "q5": "Zijn er bestandsgroottebeperkingen?",
-          "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
+          "q1": "Wat doet deze JSON formatter?",
+          "a1": "Het biedt een volledige JSON-bewerkingsomgeving met Monaco Editor (de motor achter VS Code), interactieve boomstructuurweergave, realtime validatie, opmaak met aanpasbare inspringing, minificatie en JSON Path-filtering — alles volledig in uw browser.",
+          "q2": "Zijn mijn JSON-gegevens veilig en privé?",
+          "a2": "Absoluut. Alle verwerking vindt volledig in uw browser plaats met behulp van native JavaScript. Uw gegevens verlaten uw apparaat nooit — geen serveruploads, geen logboeken, geen toegang door derden. Veilig voor API-sleutels, tokens en gevoelige configuratiegegevens.",
+          "q3": "Hoe verschilt dit van andere online JSON formatters?",
+          "a3": "In tegenstelling tot eenvoudige tekstgebied-formatters beschikt dit hulpmiddel over een professionele Monaco Editor met code folding en haakjesherkenning, een interactieve boomstructuurweergave voor visuele verkenning, JSON Path-filtering om geneste gegevens te bevragen en een aanpasbaar gesplitst deelvenster — vergelijkbaar met desktop JSON-hulpmiddelen, maar volledig in uw browser.",
+          "q4": "Kan ik dit hulpmiddel offline gebruiken?",
+          "a4": "Ja. Zodra de pagina is geladen, werkt het hulpmiddel volledig offline, inclusief de Monaco Editor, boomstructuurweergave en alle opmaakfuncties. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
+          "q5": "Welke JSON Path-expressies worden ondersteund?",
+          "a5": "Het hulpmiddel ondersteunt puntnotatie ($.address.city), haakjesnotatie voor arrays ($.items[0]) en geneste paden ($.data.users[2].name). Voer uw pad in het filtervak boven de boomstructuurweergave in om direct naar specifieke gegevens te navigeren."
         },
         "seoContent": {
           "intro": {
-            "title": "Wat is JSON Formatter?",
-            "content": "<p><strong>JSON Formatter</strong> is een gratis browsergebaseerde tool voor het formatteren, valideren en minificeren van JSON-gegevens. Plak rommelige of geminificeerde JSON en krijg direct schone, menselijk leesbare uitvoer met juiste inspringing en syntaxiskleuring.</p><p>Of je nu API-responses debugt, configuratiebestanden bekijkt of gegevens voorbereidt voor documentatie, deze tool maakt JSON gemakkelijk te lezen en te verifiëren — allemaal zonder je browser te verlaten.</p>"
+            "title": "Professionele JSON Formatter & Viewer",
+            "content": "<p><strong>JSON Formatter</strong> is een gratis, professioneel JSON-hulpmiddel dat een Monaco code-editor, interactieve boomstructuurweergave en realtime validatie combineert in één interface. Plak rommelige of geminificeerde JSON en krijg direct schone, leesbare uitvoer met syntaxismarkering, code folding en visuele boomverkenning.</p><p>Of u nu API-antwoorden debugt, diep geneste gegevensstructuren inspecteert, configuratiebestanden bekijkt of gegevens voor documentatie voorbereidt — dit hulpmiddel geeft u alles wat u nodig heeft zonder uw browser te verlaten of ook maar één byte te uploaden.</p>"
           },
           "howToUse": {
-            "title": "Hoe te gebruiken JSON Formatter",
-            "content": "<ol><li>Plak of typ je JSON-gegevens in het invoerveld</li><li>Kies je voorkeursinspringingsniveau (2 of 4 spaties)</li><li>Klik op <strong>Formatteren</strong> voor pretty-print, <strong>Minificeren</strong> om te comprimeren, of <strong>Valideren</strong> om syntaxis te controleren</li><li>Kopieer het geformatteerde resultaat of download het als bestand</li></ol><p>Ongeldige JSON wordt gemarkeerd met een duidelijke foutmelding die precies aangeeft waar het syntaxisprobleem zit.</p>"
+            "title": "Hoe JSON Formatter te Gebruiken",
+            "content": "<ol><li>Plak of typ JSON in de Monaco Editor links — of sleep een <code>.json</code>-bestand erheen</li><li>Het hulpmiddel valideert realtime en toont direct de status <strong>Geldig</strong> of <strong>Ongeldig</strong></li><li>Klik op <strong>Formatteren</strong> voor opmaak met uw gekozen inspringing, of <strong>Minificeren</strong> om te comprimeren</li><li>Schakel over naar <strong>Boom</strong>weergave om de structuur visueel te verkennen, of <strong>Code</strong>weergave voor syntaxisgemarkeerde uitvoer</li><li>Gebruik het JSON Path-filter (bijv. <code>$.data.users[0]</code>) om naar specifieke waarden te navigeren</li><li>Kopieer of download het resultaat met één klik</li></ol>"
           },
           "features": {
-            "title": "Belangrijkste functies",
-            "content": "<ul><li><strong>Pretty Print</strong>: Formatteer JSON met aanpasbare inspringing (2 of 4 spaties)</li><li><strong>Minificeren</strong>: Comprimeer JSON door alle witruimte te verwijderen voor compacte opslag of verzending</li><li><strong>Valideren</strong>: Controleer direct of je JSON syntaxisch correct is met gedetailleerde foutrapportage</li><li><strong>Syntaxiskleuring</strong>: Gekleurde sleutels, strings, getallen, booleans en nulls voor eenvoudig lezen</li><li><strong>Ondersteuning voor grote gegevens</strong>: Verwerkt grote JSON-bestanden zonder prestatieproblemen</li><li><strong>100% browsergebaseerd</strong>: Geen server uploads — je gegevens blijven op je apparaat</li></ul>"
+            "title": "Belangrijkste Functies",
+            "content": "<ul><li><strong>Monaco Editor</strong>: Dezelfde code-editor die VS Code aandrijft — met syntaxismarkering, haakjesherkenning, code folding en automatisch terugloop</li><li><strong>Interactieve Boomstructuurweergave</strong>: Vouw JSON-knooppunten visueel uit en samen, met itemtellingen op elk niveau en volledige toetsenbordnavigatie</li><li><strong>JSON Path-filtering</strong>: Bevraag specifieke waarden met padexpressies zoals <code>$.address.city</code> of <code>$.items[0].name</code></li><li><strong>Realtime Validatie</strong>: Directe syntaxiscontrole tijdens het typen — geen knop hoeven klikken</li><li><strong>Pretty Print &amp; Minificeren</strong>: Formatteer met aanpasbare inspringing (2, 4 of 8 spaties) of comprimeer naar één regel</li><li><strong>Slepen en Neerzetten van Bestanden</strong>: Zet <code>.json</code>- of <code>.txt</code>-bestanden direct in de editor</li><li><strong>Aanpasbaar Gesplitst Deelvenster</strong>: Sleep de verdeler om editor- en viewerruimte te balanceren; dubbelklik om terug te zetten</li><li><strong>Syntaxisgemarkeerde Codeweergave</strong>: Gekleurde uitvoer met regelnummers voor gemakkelijk kopiëren en plakken</li><li><strong>100% Browsergebaseerd</strong>: Geen serveruploads — uw gegevens blijven altijd op uw apparaat</li></ul>"
           },
           "useCases": {
-            "title": "Veelvoorkomende gebruiksmogelijkheden",
-            "content": "<ul><li><strong>API-ontwikkeling</strong>: Formatteer ruwe API-responses voor debugging en inspectie</li><li><strong>Configuratiebestanden</strong>: Ruim package.json, tsconfig.json of andere config-bestanden op</li><li><strong>Gegevensvalidatie</strong>: Verifieer snel JSON-payloads voordat je ze naar API's verzendt</li><li><strong>Documentatie</strong>: Bereid goed geformatteerde JSON-voorbeelden voor technische documentatie voor</li><li><strong>Databaserecords</strong>: Inspecteer en formatteer JSON opgeslagen in NoSQL-databases</li></ul>"
+            "title": "Veelvoorkomende Gebruiksscenario's",
+            "content": "<ul><li><strong>API-ontwikkeling &amp; Foutopsporing</strong>: Plak ruwe API-antwoorden, formatteer ze direct en gebruik de boomstructuurweergave om door diep geneste objecten te navigeren</li><li><strong>Configuratiebestanden</strong>: Maak <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code> of Kubernetes-manifesten netjes</li><li><strong>Gegevensverkenning</strong>: Gebruik JSON Path om grote datasets te filteren en specifieke waarden te vinden zonder door duizenden regels te scrollen</li><li><strong>Codebeoordelingen</strong>: Vergelijk JSON-structuren visueel met de boomstructuurweergave om snel verschillen te ontdekken</li><li><strong>Documentatie</strong>: Formatteer en exporteer goed gestructureerde JSON-voorbeelden voor technische documentatie en tutorials</li><li><strong>Databaserecords</strong>: Inspecteer en formatteer JSON opgeslagen in MongoDB-, CouchDB- of PostgreSQL JSONB-kolommen</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First JSON-verwerking",
-            "content": "<p>Je JSON-gegevens worden <strong>volledig in je browser verwerkt</strong> met native JavaScript-parsing. Geen gegevens worden verzonden naar een server.</p><ul><li>Je gegevens <strong>verlaten nooit je apparaat</strong> — nul netwerkverzoeken tijdens verwerking</li><li>Veilig voor gevoelige API-sleutels, tokens en configuratiegegevens</li><li>Werkt <strong>offline</strong> nadat de pagina is geladen</li></ul>"
+            "title": "Privacy-eerst JSON-verwerking",
+            "content": "<p>Uw JSON-gegevens worden <strong>volledig in uw browser</strong> verwerkt met behulp van native JavaScript-parsing en de Monaco Editor-engine. Er worden nooit gegevens naar een server verzonden.</p><ul><li>Uw gegevens <strong>verlaten uw apparaat nooit</strong> — nul netwerkverzoeken tijdens verwerking</li><li>Veilig voor gevoelige API-sleutels, authenticatietokens en configuratiegeheimen</li><li>Werkt <strong>volledig offline</strong> nadat de pagina is geladen — geen internet vereist</li><li>Geen analyse van uw JSON-inhoud — we volgen het gebruik van het hulpmiddel, nooit uw gegevens</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Monaco Editor — Codeer zoals in VS Code",
+            "description": "Volwaardige code-editor met syntaxismarkering, haakjesherkenning, code folding en automatisch aanvullen. Dezelfde editor die VS Code aandrijft."
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "Interactieve Boomstructuurverkenner",
+            "description": "Navigeer visueel door complexe JSON-structuren. Vouw geneste objecten en arrays uit of samen en bekijk ze, met itemtellingen op elk niveau."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Realtime Validatie tijdens het Typen",
+            "description": "Directe syntaxiscontrole met live Geldig/Ongeldig-statusindicator. Onderschep fouten voordat ze de productie bereiken."
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "JSON Path-filtering",
+            "description": "Bevraag specifieke waarden met JSON Path-expressies zoals $.address.city of $.items[0]. Navigeer direct naar diep geneste gegevens."
+          },
+          "f5": {
+            "icon": "GripVertical",
+            "title": "Aanpasbaar Gesplitst Deelvenster",
+            "description": "Sleep de verdeler om de verhoudingen van editor en viewer aan te passen. Dubbelklik om terug te zetten naar 50/50. Past zich aan mobiel aan met gestapelde indeling."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% Privé — Geen Serveruploads",
+            "description": "Alle verwerking vindt plaats in uw browser. Uw JSON-gegevens verlaten uw apparaat nooit — veilig voor API-sleutels, tokens en gevoelige configuraties."
           }
         }
       },

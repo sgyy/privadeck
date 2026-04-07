@@ -3,10 +3,10 @@
     "developer": {
       "json-formatter": {
         "name": "JSON-Formatierer",
-        "description": "Formatieren, validieren und minifizieren Sie JSON-Daten mit Syntaxhervorhebung.",
-        "metaTitle": "JSON-Formatierer & Validator - Kostenloses Online-JSON-Tool",
-        "metaDescription": "Formatieren, validieren und minifizieren Sie JSON-Daten mit Syntaxhervorhebung. Kostenloses Online-Tool, das vollständig in Ihrem Browser funktioniert.",
-        "keywords": "JSON-Formatierer, JSON-Validator, JSON-Verschönerer, JSON-Minifizierer, JSON Pretty Print",
+        "description": "JSON mit Monaco Editor, interaktiver Baumansicht und JSON-Path-Filterung formatieren, validieren und erkunden — alles in Ihrem Browser.",
+        "metaTitle": "JSON Formatter & Validator Online - Schön formatieren, Baumansicht, Minifizieren",
+        "metaDescription": "Kostenloser Online-JSON-Formatierer mit Monaco Editor, interaktiver Baumansicht, JSON-Path-Filterung und Echtzeit-Validierung. JSON-Daten formatieren, minifizieren und erkunden — 100 % browserbasiert, keine Daten-Upload.",
+        "keywords": "json formatter, json validator, json beautifier, json minifier, json pretty print, json viewer, json baumansicht, json editor online, json path, json parser, json formatierer, json prüfer",
         "inputPlaceholder": "Fügen Sie hier Ihr JSON ein...",
         "format": "Formatieren",
         "minify": "Minifizieren",
@@ -31,37 +31,70 @@
         "layoutEditor": "Editor only",
         "layoutViewer": "Viewer only",
         "faq": {
-          "q1": "Was macht dieses Tool?",
-          "a1": "Es formatiert (verschönert) JSON-Daten mit korrekter Einrückung, validiert die JSON-Syntax und kann JSON durch Entfernen von Leerzeichen minifizieren.",
-          "q2": "Sind meine Daten sicher?",
-          "a2": "Ja, die gesamte Verarbeitung erfolgt in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät.",
-          "q3": "Werden meine Dateien auf einen Server hochgeladen?",
-          "a3": "Nein. Die gesamte Verarbeitung erfolgt vollständig in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät — nichts wird auf einen Server hochgeladen.",
-          "q4": "Kann ich dieses Tool offline verwenden?",
-          "a4": "Ja. Sobald die Seite geladen ist, funktioniert das Tool vollständig offline. Installieren Sie PrivaDeck als PWA aus Ihrem Browser für das beste Erlebnis.",
-          "q5": "Gibt es Dateigrößenbeschränkungen?",
-          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Speicher Ihres Geräts und den Browser-Funktionen ab. Die meisten modernen Geräte verarbeiten Dateien bis zu mehreren hundert MB problemlos."
+          "q1": "Was macht dieser JSON-Formatierer?",
+          "a1": "Er bietet eine vollständige JSON-Bearbeitungsumgebung mit Monaco Editor (dem Motor hinter VS Code), interaktiver Baumansicht, Echtzeit-Validierung, hübschem Druck mit anpassbarer Einrückung, Minifizierung und JSON-Path-Filterung — alles zu 100 % in Ihrem Browser.",
+          "q2": "Sind meine JSON-Daten sicher und privat?",
+          "a2": "Absolut. Die gesamte Verarbeitung findet ausschließlich in Ihrem Browser mit nativem JavaScript statt. Ihre Daten verlassen Ihr Gerät nie — kein Server-Upload, keine Protokollierung, kein Zugriff durch Dritte. Geeignet für API-Schlüssel, Tokens und sensible Konfigurationsdaten.",
+          "q3": "Was unterscheidet dieses Tool von anderen Online-JSON-Formatierern?",
+          "a3": "Im Gegensatz zu einfachen Textfeld-Formatierern bietet dieses Tool einen professionellen Monaco Editor mit Code-Faltung und Klammer-Abgleich, eine interaktive Baumansicht zur visuellen Erkundung, JSON-Path-Filterung für verschachtelte Daten und einen veränderbaren Split-Pane — vergleichbar mit Desktop-JSON-Tools, aber komplett im Browser.",
+          "q4": "Kann ich dieses Tool offline nutzen?",
+          "a4": "Ja. Sobald die Seite geladen ist, funktioniert das Tool vollständig offline — einschließlich Monaco Editor, Baumansicht und allen Formatierungsfunktionen. Für das beste Erlebnis installieren Sie PrivaDeck als PWA in Ihrem Browser.",
+          "q5": "Welche JSON-Path-Ausdrücke werden unterstützt?",
+          "a5": "Das Tool unterstützt Punktnotation ($.address.city), Klammernotation für Arrays ($.items[0]) und verschachtelte Pfade ($.data.users[2].name). Geben Sie Ihren Pfad in das Filterfeld über der Baumansicht ein, um sofort zu bestimmten Daten zu navigieren."
         },
         "seoContent": {
           "intro": {
-            "title": "Was ist der JSON-Formatierer?",
-            "content": "<p><strong>JSON-Formatierer</strong> ist ein kostenloses, browserbasiertes Tool zum Formatieren, Validieren und Minifizieren von JSON-Daten. Fügen Sie unübersichtliches oder minifiziertes JSON ein und erhalten Sie sofort eine saubere, lesbare Ausgabe mit korrekter Einrückung und Syntaxhervorhebung.</p><p>Egal ob Sie API-Antworten debuggen, Konfigurationsdateien prüfen oder Daten für die Dokumentation vorbereiten — dieses Tool macht JSON einfach lesbar und überprüfbar, ohne den Browser zu verlassen.</p>"
+            "title": "Professioneller JSON-Formatierer & Viewer",
+            "content": "<p><strong>JSON Formatter</strong> ist ein kostenloses, professionelles JSON-Tool, das einen Monaco Code-Editor, eine interaktive Baumansicht und Echtzeit-Validierung in einer Oberfläche vereint. Fügen Sie unstrukturiertes oder minifiziertes JSON ein und erhalten Sie sofort eine saubere, menschenlesbare Ausgabe mit Syntaxhervorhebung, Code-Faltung und visueller Baumauswertung.</p><p>Ob Sie API-Antworten debuggen, tief verschachtelte Datenstrukturen inspizieren, Konfigurationsdateien prüfen oder Daten für Dokumentationen vorbereiten — dieses Tool gibt Ihnen alles, was Sie brauchen, ohne den Browser zu verlassen oder auch nur ein einziges Byte hochzuladen.</p>"
           },
           "howToUse": {
             "title": "So verwenden Sie den JSON-Formatierer",
-            "content": "<ol><li>Fügen Sie Ihre JSON-Daten in den Eingabebereich ein oder tippen Sie sie ein</li><li>Wählen Sie Ihre bevorzugte Einrückungstiefe (2 oder 4 Leerzeichen)</li><li>Klicken Sie auf <strong>Formatieren</strong> zum Verschönern, <strong>Minifizieren</strong> zum Komprimieren oder <strong>Validieren</strong> zur Syntaxprüfung</li><li>Kopieren Sie das formatierte Ergebnis oder laden Sie es als Datei herunter</li></ol><p>Ungültiges JSON wird mit einer klaren Fehlermeldung hervorgehoben, die genau zeigt, wo das Syntaxproblem liegt.</p>"
+            "content": "<ol><li>Fügen Sie JSON in den Monaco Editor auf der linken Seite ein oder geben Sie es ein — oder ziehen Sie eine <code>.json</code>-Datei hinein</li><li>Das Tool validiert in Echtzeit und zeigt sofort den Status <strong>Gültig</strong> oder <strong>Ungültig</strong> an</li><li>Klicken Sie auf <strong>Formatieren</strong> für hübschen Druck mit Ihrer gewählten Einrückung oder auf <strong>Minifizieren</strong> zum Komprimieren</li><li>Wechseln Sie zur <strong>Baum</strong>-Ansicht, um die Struktur visuell zu erkunden, oder zur <strong>Code</strong>-Ansicht für syntaxhervorgehobene Ausgabe</li><li>Verwenden Sie den JSON-Path-Filter (z. B. <code>$.data.users[0]</code>), um zu bestimmten Werten zu navigieren</li><li>Kopieren oder laden Sie das Ergebnis mit einem Klick herunter</li></ol>"
           },
           "features": {
             "title": "Hauptfunktionen",
-            "content": "<ul><li><strong>Pretty Print</strong>: JSON mit anpassbarer Einrückung formatieren (2 oder 4 Leerzeichen)</li><li><strong>Minifizieren</strong>: JSON komprimieren, indem alle Leerzeichen für kompakte Speicherung oder Übertragung entfernt werden</li><li><strong>Validieren</strong>: Sofort prüfen, ob Ihr JSON syntaktisch korrekt ist, mit detaillierter Fehlerausgabe</li><li><strong>Syntaxhervorhebung</strong>: Farblich kodierte Schlüssel, Zeichenketten, Zahlen, Boolesche Werte und Nullen für einfaches Lesen</li><li><strong>Unterstützung großer Daten</strong>: Verarbeitet große JSON-Dateien ohne Leistungseinbußen</li><li><strong>100% browserbasiert</strong>: Keine Server-Uploads — Ihre Daten bleiben auf Ihrem Gerät</li></ul>"
+            "content": "<ul><li><strong>Monaco Editor</strong>: Derselbe Code-Editor, der VS Code antreibt — mit Syntaxhervorhebung, Klammer-Abgleich, Code-Faltung und Zeilenumbruch</li><li><strong>Interaktive Baumansicht</strong>: JSON-Knoten visuell auf- und zuklappen mit Elementzählern auf jeder Ebene und vollständiger Tastaturnavigation</li><li><strong>JSON-Path-Filterung</strong>: Bestimmte Werte mit Pfadausdrücken wie <code>$.address.city</code> oder <code>$.items[0].name</code> abfragen</li><li><strong>Echtzeit-Validierung</strong>: Sofortige Syntaxprüfung beim Tippen — kein Klick auf eine Schaltfläche nötig</li><li><strong>Schön formatieren &amp; Minifizieren</strong>: Mit anpassbarer Einrückung (2, 4 oder 8 Leerzeichen) formatieren oder auf eine einzige Zeile komprimieren</li><li><strong>Drag-and-Drop-Dateiunterstützung</strong>: <code>.json</code>- oder <code>.txt</code>-Dateien direkt in den Editor ziehen</li><li><strong>Veränderbarer Split-Pane</strong>: Teiler ziehen, um Editor- und Viewer-Bereich anzupassen; Doppelklick zum Zurücksetzen</li><li><strong>Syntaxhervorgehobene Code-Ansicht</strong>: Farbcodierte Ausgabe mit Zeilennummern für einfaches Kopieren</li><li><strong>100 % browserbasiert</strong>: Kein Server-Upload — Ihre Daten bleiben immer auf Ihrem Gerät</li></ul>"
           },
           "useCases": {
             "title": "Häufige Anwendungsfälle",
-            "content": "<ul><li><strong>API-Entwicklung</strong>: Rohe API-Antworten für Debugging und Inspektion formatieren</li><li><strong>Konfigurationsdateien</strong>: package.json, tsconfig.json oder andere Konfigurationsdateien bereinigen</li><li><strong>Datenvalidierung</strong>: JSON-Nutzdaten schnell überprüfen, bevor sie an APIs gesendet werden</li><li><strong>Dokumentation</strong>: Gut formatierte JSON-Beispiele für technische Dokumente vorbereiten</li><li><strong>Datenbankeinträge</strong>: In NoSQL-Datenbanken gespeichertes JSON prüfen und formatieren</li></ul>"
+            "content": "<ul><li><strong>API-Entwicklung &amp; Debugging</strong>: Rohe API-Antworten einfügen, sofort formatieren und die Baumansicht nutzen, um tief verschachtelte Objekte zu navigieren</li><li><strong>Konfigurationsdateien</strong>: <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code> oder Kubernetes-Manifests bereinigen</li><li><strong>Datenexploration</strong>: JSON-Path nutzen, um große Datensätze zu filtern und bestimmte Werte zu finden, ohne durch tausende Zeilen zu scrollen</li><li><strong>Code-Reviews</strong>: JSON-Strukturen visuell mit der Baumansicht vergleichen, um Unterschiede schnell zu erkennen</li><li><strong>Dokumentation</strong>: Gut strukturierte JSON-Beispiele für technische Dokumente und Tutorials formatieren und exportieren</li><li><strong>Datenbankeinträge</strong>: In MongoDB, CouchDB oder PostgreSQL JSONB-Spalten gespeichertes JSON inspizieren und formatieren</li></ul>"
           },
           "privacy": {
-            "title": "Datenschutzorientierte JSON-Verarbeitung",
-            "content": "<p>Ihre JSON-Daten werden <strong>vollständig in Ihrem Browser</strong> mit nativem JavaScript-Parsing verarbeitet. Es werden keine Daten an einen Server übertragen.</p><ul><li>Ihre Daten <strong>verlassen niemals Ihr Gerät</strong> — null Netzwerkanfragen während der Verarbeitung</li><li>Sicher für sensible API-Schlüssel, Tokens und Konfigurationsdaten</li><li>Funktioniert <strong>offline</strong> nach dem Laden der Seite</li></ul>"
+            "title": "Datenschutz-orientierte JSON-Verarbeitung",
+            "content": "<p>Ihre JSON-Daten werden <strong>vollständig in Ihrem Browser</strong> mit nativem JavaScript-Parsing und dem Monaco Editor verarbeitet. Es werden keine Daten an einen Server übertragen — niemals.</p><ul><li>Ihre Daten <strong>verlassen Ihr Gerät nie</strong> — keine Netzwerkanfragen während der Verarbeitung</li><li>Geeignet für sensible API-Schlüssel, Authentifizierungs-Tokens und Konfigurationsgeheimnisse</li><li>Funktioniert <strong>vollständig offline</strong> nach dem Laden der Seite — kein Internet erforderlich</li><li>Keine Analyse Ihrer JSON-Inhalte — wir verfolgen Tool-Nutzung, niemals Ihre Daten</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Monaco Editor — Programmieren wie in VS Code",
+            "description": "Vollständiger Code-Editor mit Syntaxhervorhebung, Klammer-Abgleich, Code-Faltung und Auto-Vervollständigung. Derselbe Editor, der VS Code antreibt."
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "Interaktiver Baumansicht-Explorer",
+            "description": "Komplexe JSON-Strukturen visuell navigieren. Verschachtelte Objekte und Arrays mit Elementzählern auf jeder Ebene auf- und zuklappen."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Echtzeit-Validierung beim Tippen",
+            "description": "Sofortige Syntaxprüfung mit Live-Statusanzeige Gültig/Ungültig. Fehler erkennen, bevor sie in die Produktion gelangen."
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "JSON-Path-Filterung",
+            "description": "Bestimmte Werte mit JSON-Path-Ausdrücken wie $.address.city oder $.items[0] abfragen. Sofort in tief verschachtelte Daten eintauchen."
+          },
+          "f5": {
+            "icon": "GripVertical",
+            "title": "Veränderbares Split-Pane-Layout",
+            "description": "Teiler ziehen, um Editor- und Viewer-Proportionen anzupassen. Doppelklick zum Zurücksetzen auf 50/50. Passt sich mobil mit gestapeltem Layout an."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % Privat — Kein Server-Upload",
+            "description": "Die gesamte Verarbeitung findet in Ihrem Browser statt. Ihre JSON-Daten verlassen Ihr Gerät nie — sicher für API-Schlüssel, Tokens und sensible Konfigurationen."
           }
         }
       },

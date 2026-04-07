@@ -3,10 +3,10 @@
     "developer": {
       "json-formatter": {
         "name": "Pemformat JSON",
-        "description": "Format, validasi, dan minifikasi data JSON dengan penyorotan sintaks.",
-        "metaTitle": "Pemformat & Validator JSON - Alat JSON Online Gratis",
-        "metaDescription": "Format, validasi, dan minifikasi data JSON dengan penyorotan sintaks. Alat online gratis yang berjalan sepenuhnya di browser Anda.",
-        "keywords": "pemformat json, validator json, json beautifier, json minifier, json pretty print",
+        "description": "Format, validasi, dan jelajahi JSON dengan Monaco Editor, tampilan pohon interaktif, dan pemfilteran JSON Path — semua di browser Anda.",
+        "metaTitle": "Pemformat & Validator JSON Online - Pretty Print, Tampilan Pohon, Minifikasi",
+        "metaDescription": "Pemformat JSON online gratis dengan Monaco Editor, tampilan pohon interaktif, pemfilteran JSON Path, dan validasi real-time. Format, minifikasi, dan jelajahi data JSON — 100% berbasis browser, tidak ada data yang diunggah.",
+        "keywords": "pemformat json, validator json, json formatter, json validator, json beautifier, json minifier, json pretty print, penampil json, tampilan pohon json, editor json online, json path, parser json",
         "inputPlaceholder": "Tempel JSON Anda di sini...",
         "format": "Format",
         "minify": "Minifikasi",
@@ -31,37 +31,70 @@
         "layoutEditor": "Editor only",
         "layoutViewer": "Viewer only",
         "faq": {
-          "q1": "Apa yang dilakukan alat ini?",
-          "a1": "Alat ini memformat (pretty-print) data JSON dengan indentasi yang tepat, memvalidasi sintaks JSON, dan dapat meminifikasi JSON dengan menghapus spasi kosong.",
-          "q2": "Apakah data saya aman?",
-          "a2": "Ya, semua pemrosesan terjadi di browser Anda. Data Anda tidak pernah meninggalkan perangkat.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
-          "q5": "Apakah ada batasan ukuran file?",
-          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
+          "q1": "Apa yang dilakukan pemformat JSON ini?",
+          "a1": "Alat ini menyediakan lingkungan pengeditan JSON lengkap dengan Monaco Editor (mesin di balik VS Code), tampilan pohon interaktif, validasi real-time, pretty-printing dengan indentasi yang dapat dikustomisasi, minifikasi, dan pemfilteran JSON Path — semua berjalan 100% di browser Anda.",
+          "q2": "Apakah data JSON saya aman dan privat?",
+          "a2": "Tentu saja. Semua pemrosesan terjadi sepenuhnya di browser Anda menggunakan JavaScript native. Data Anda tidak pernah meninggalkan perangkat — tidak ada unggahan server, tidak ada logging, tidak ada akses pihak ketiga. Aman untuk API keys, token, dan data konfigurasi sensitif.",
+          "q3": "Apa bedanya dengan pemformat JSON online lainnya?",
+          "a3": "Berbeda dari pemformat text-area biasa, alat ini dilengkapi Monaco Editor profesional dengan code folding dan bracket matching, tampilan pohon interaktif untuk eksplorasi visual, pemfilteran JSON Path untuk query data bersarang, dan split pane yang dapat diubah ukurannya — sebanding dengan alat JSON tingkat desktop, tetapi sepenuhnya di browser Anda.",
+          "q4": "Bisakah saya menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat berfungsi sepenuhnya secara offline termasuk Monaco Editor, tampilan pohon, dan semua fitur pemformatan. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Ekspresi JSON Path apa yang didukung?",
+          "a5": "Alat ini mendukung notasi titik ($.address.city), notasi kurung untuk array ($.items[0]), dan path bersarang ($.data.users[2].name). Masukkan path Anda di kotak filter di atas tampilan pohon untuk langsung mengakses data tertentu."
         },
         "seoContent": {
           "intro": {
-            "title": "Apa itu JSON Formatter?",
-            "content": "<p><strong>JSON Formatter</strong> adalah alat berbasis browser gratis untuk memformat, memvalidasi, dan meminifikasi data JSON. Tempel JSON yang berantakan atau diminifikasi dan dapatkan output yang bersih dan mudah dibaca dengan indentasi serta penyorotan sintaks yang tepat.</p><p>Baik Anda melakukan debug respons API, meninjau file konfigurasi, atau menyiapkan data untuk dokumentasi, alat ini membuat JSON mudah dibaca dan diverifikasi — semuanya tanpa meninggalkan browser Anda.</p>"
+            "title": "Pemformat &amp; Penampil JSON Profesional",
+            "content": "<p><strong>JSON Formatter</strong> adalah alat JSON gratis berkualitas profesional yang menggabungkan Monaco code editor, tampilan pohon interaktif, dan validasi real-time dalam satu antarmuka. Tempel JSON berantakan atau terminifikasi dan langsung dapatkan output bersih yang mudah dibaca manusia dengan penyorotan sintaksis, code folding, dan eksplorasi pohon visual.</p><p>Baik Anda men-debug respons API, memeriksa struktur data yang sangat bersarang, meninjau file konfigurasi, atau menyiapkan data untuk dokumentasi — alat ini memberi Anda semua yang dibutuhkan tanpa meninggalkan browser atau mengunggah satu byte pun.</p>"
           },
           "howToUse": {
-            "title": "Cara Menggunakan JSON Formatter",
-            "content": "<ol><li>Tempel atau ketik data JSON Anda ke area input</li><li>Pilih tingkat indentasi yang Anda inginkan (2 atau 4 spasi)</li><li>Klik <strong>Format</strong> untuk pretty-print, <strong>Minifikasi</strong> untuk mengompresi, atau <strong>Validasi</strong> untuk memeriksa sintaks</li><li>Salin hasil yang diformat atau unduh sebagai file</li></ol><p>JSON yang tidak valid disorot dengan pesan kesalahan yang jelas menunjukkan tepat di mana masalah sintaks berada.</p>"
+            "title": "Cara Menggunakan Pemformat JSON",
+            "content": "<ol><li>Tempel atau ketik JSON ke Monaco Editor di sebelah kiri — atau drag dan drop file <code>.json</code></li><li>Alat ini memvalidasi secara real-time dan langsung menampilkan status <strong>Valid</strong> atau <strong>Tidak Valid</strong></li><li>Klik <strong>Format</strong> untuk pretty-print dengan indentasi pilihan Anda, atau <strong>Minifikasi</strong> untuk mengompresi</li><li>Beralih ke tampilan <strong>Pohon</strong> untuk menjelajahi struktur secara visual, atau tampilan <strong>Kode</strong> untuk output dengan penyorotan sintaksis</li><li>Gunakan filter JSON Path (misalnya <code>$.data.users[0]</code>) untuk mengakses nilai tertentu</li><li>Salin atau unduh hasilnya dengan satu klik</li></ol>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Pretty Print</strong>: Format JSON dengan indentasi yang dapat disesuaikan (2 atau 4 spasi)</li><li><strong>Minifikasi</strong>: Kompres JSON dengan menghapus semua spasi untuk penyimpanan atau transmisi yang ringkas</li><li><strong>Validasi</strong>: Periksa secara instan apakah JSON Anda benar secara sintaksis dengan pelaporan kesalahan terperinci</li><li><strong>Penyorotan Sintaks</strong>: Kunci, string, angka, boolean, dan null yang diberi kode warna untuk memudahkan pembacaan</li><li><strong>Dukungan Data Besar</strong>: Menangani file JSON besar tanpa masalah performa</li><li><strong>100% Berbasis Browser</strong>: Tidak ada unggahan server — data Anda tetap di perangkat Anda</li></ul>"
+            "content": "<ul><li><strong>Monaco Editor</strong>: Code editor yang sama yang menggerakkan VS Code — dengan penyorotan sintaksis, bracket matching, code folding, dan word wrap</li><li><strong>Tampilan Pohon Interaktif</strong>: Perluas dan lipat node JSON secara visual, dengan jumlah item di setiap level dan navigasi keyboard penuh</li><li><strong>Pemfilteran JSON Path</strong>: Query nilai tertentu menggunakan ekspresi path seperti <code>$.address.city</code> atau <code>$.items[0].name</code></li><li><strong>Validasi Real-Time</strong>: Pemeriksaan sintaksis instan saat mengetik — tidak perlu klik tombol</li><li><strong>Pretty Print &amp; Minifikasi</strong>: Format dengan indentasi yang dapat dikustomisasi (2, 4, atau 8 spasi) atau kompresi ke satu baris</li><li><strong>Dukungan File Drag-and-Drop</strong>: Lepas file <code>.json</code> atau <code>.txt</code> langsung ke dalam editor</li><li><strong>Split Pane yang Dapat Diubah Ukuran</strong>: Seret pembatas untuk menyeimbangkan ruang editor dan penampil; double-click untuk reset</li><li><strong>Tampilan Kode dengan Penyorotan Sintaksis</strong>: Output berkode warna dengan nomor baris untuk copy-paste yang mudah</li><li><strong>100% Berbasis Browser</strong>: Tidak ada unggahan server — data Anda selalu ada di perangkat Anda</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Pengembangan API</strong>: Format respons API mentah untuk debugging dan inspeksi</li><li><strong>File Konfigurasi</strong>: Membersihkan package.json, tsconfig.json, atau file konfigurasi lainnya</li><li><strong>Validasi Data</strong>: Verifikasi payload JSON dengan cepat sebelum mengirim ke API</li><li><strong>Dokumentasi</strong>: Menyiapkan contoh JSON yang terformat dengan baik untuk dokumentasi teknis</li><li><strong>Rekam Database</strong>: Memeriksa dan memformat JSON yang tersimpan di database NoSQL</li></ul>"
+            "content": "<ul><li><strong>Pengembangan &amp; Debugging API</strong>: Tempel respons API mentah, format seketika, dan gunakan tampilan pohon untuk menavigasi objek yang sangat bersarang</li><li><strong>File Konfigurasi</strong>: Bersihkan <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code>, atau manifes Kubernetes</li><li><strong>Eksplorasi Data</strong>: Gunakan JSON Path untuk memfilter dataset besar dan menemukan nilai tertentu tanpa menggulir ribuan baris</li><li><strong>Tinjauan Kode</strong>: Bandingkan struktur JSON secara visual dengan tampilan pohon untuk menemukan perbedaan dengan cepat</li><li><strong>Dokumentasi</strong>: Format dan ekspor contoh JSON terstruktur dengan baik untuk dokumentasi teknis dan tutorial</li><li><strong>Catatan Database</strong>: Periksa dan format JSON yang tersimpan di kolom MongoDB, CouchDB, atau PostgreSQL JSONB</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Pemrosesan JSON",
-            "content": "<p>Data JSON Anda diproses <strong>sepenuhnya di browser Anda</strong> menggunakan parsing JavaScript native. Tidak ada data yang ditransmisikan ke server mana pun.</p><ul><li>Data Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — tidak ada permintaan jaringan selama pemrosesan</li><li>Aman untuk kunci API, token, dan data konfigurasi sensitif</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
+            "title": "Pemrosesan JSON dengan Privasi Utama",
+            "content": "<p>Data JSON Anda diproses <strong>sepenuhnya di browser Anda</strong> menggunakan parsing JavaScript native dan mesin Monaco Editor. Tidak ada data yang dikirimkan ke server mana pun — selamanya.</p><ul><li>Data Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — nol permintaan jaringan selama pemrosesan</li><li>Aman untuk API keys sensitif, token autentikasi, dan rahasia konfigurasi</li><li>Berfungsi <strong>sepenuhnya offline</strong> setelah halaman dimuat — tidak perlu internet</li><li>Tidak ada analitik pada konten JSON Anda — kami melacak penggunaan alat, bukan data Anda</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Monaco Editor — Kode Seperti di VS Code",
+            "description": "Code editor lengkap dengan penyorotan sintaksis, bracket matching, code folding, dan auto-completion. Editor yang sama yang menggerakkan VS Code."
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "Explorer Tampilan Pohon Interaktif",
+            "description": "Navigasi struktur JSON kompleks secara visual. Perluas, lipat, dan periksa objek dan array bersarang dengan jumlah item di setiap level."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Validasi Real-Time Saat Mengetik",
+            "description": "Pemeriksaan sintaksis instan dengan indikator status Valid/Tidak Valid langsung. Tangkap error sebelum mencapai produksi."
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "Pemfilteran JSON Path",
+            "description": "Query nilai tertentu menggunakan ekspresi JSON Path seperti $.address.city atau $.items[0]. Akses data yang sangat bersarang secara instan."
+          },
+          "f5": {
+            "icon": "GripVertical",
+            "title": "Tata Letak Split Pane yang Dapat Diubah",
+            "description": "Seret pembatas untuk mengustomisasi proporsi editor dan penampil. Double-click untuk reset ke 50/50. Beradaptasi ke mobile dengan tata letak bertumpuk."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% Privat — Nol Unggahan Server",
+            "description": "Semua pemrosesan terjadi di browser Anda. Data JSON Anda tidak pernah meninggalkan perangkat — aman untuk API keys, token, dan konfigurasi sensitif."
           }
         }
       },
