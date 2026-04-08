@@ -41,7 +41,7 @@ pnpm lint         # ESLint 代码检查
 
 翻译文件位于 `messages/{locale}/`。工具翻译遵循命名空间模式 `tools.{category}.{slug}.{key}`，键包括：name、description、metaTitle、metaDescription、keywords、faq.q1/a1 等。
 
-**任何涉及 i18n 的内容变更（添加工具、分类、UI 文案等）必须一次性更新全部 21 个 locale 文件。** 每个 locale 有拆分的消息文件：`messages/{locale}/common.json`（导航用 toolNames）+ `messages/{locale}/tools-{category}.json`（工具专用文案）。两者都必须更新。以 `en` 为源语言；`zh-Hans` 应有完整中文翻译；其他 locale 可用英文占位，但键必须存在以避免运行时错误。
+**任何涉及 i18n 的内容变更（添加工具、分类、UI 文案等）必须一次性更新全部 21 个 locale 文件。** 每个 locale 有拆分的消息文件：`messages/{locale}/common.json`（导航用 toolNames）+ `messages/{locale}/tools-{category}.json`（工具专用文案）。两者都必须更新。以 `en` 为源语言。**所有 21 个 locale 必须提供对应语言的完整翻译，不得仅用英文占位。** 添加、修改翻译键时，须一次性完成全部语言的翻译并提交。
 
 ### 样式
 
