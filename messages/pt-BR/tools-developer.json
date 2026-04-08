@@ -100,10 +100,10 @@
       },
       "base64": {
         "name": "Codificar/Decodificar Base64",
-        "description": "Codifique texto em Base64 ou decodifique Base64 de volta para texto.",
-        "metaTitle": "Codificador/Decodificador Base64 - Ferramenta Base64 online gratuita",
-        "metaDescription": "Codifique texto em Base64 ou decodifique strings Base64 de volta para texto. Ferramenta online gratuita que funciona inteiramente no seu navegador.",
-        "keywords": "codificar base64, decodificar base64, conversor base64, base64 online",
+        "description": "Encode text or files to Base64, decode Base64 back. Supports URL-safe variant and Data URI.",
+        "metaTitle": "Base64 Encoder/Decoder - Text & File, URL-Safe | Free Online Tool",
+        "metaDescription": "Encode text or files to Base64, decode Base64 to text or files. URL-safe Base64, Data URI output, image preview. Free, in-browser.",
+        "keywords": "base64 encode, base64 decode, base64 converter, file to base64, base64 to file, data uri, url safe base64, base64 image, base64 online",
         "inputPlaceholder": "Digite texto ou string Base64...",
         "encode": "Codificar",
         "decode": "Decodificar",
@@ -112,13 +112,15 @@
           "q1": "O que é codificação Base64?",
           "a1": "Base64 é um esquema de codificação de binário para texto que converte dados binários em caracteres ASCII. É comumente usado em URLs de dados, anexos de e-mail e payloads de API.",
           "q2": "Posso codificar arquivos?",
-          "a2": "Atualmente esta ferramenta codifica e decodifica texto. A codificação Base64 de arquivos estará disponível em uma atualização futura.",
+          "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
           "q3": "Meus arquivos serão enviados para um servidor?",
           "a3": "Não. Todo o processamento acontece inteiramente no seu navegador. Seus dados nunca saem do seu dispositivo — nada é enviado a nenhum servidor.",
           "q4": "Posso usar esta ferramenta offline?",
           "a4": "Sim. Depois que a página carregar, a ferramenta funciona completamente offline. Para a melhor experiência, instale o PrivaDeck como PWA pelo seu navegador.",
           "q5": "Existem limites de tamanho de arquivo?",
-          "a5": "Não há limites impostos pelo servidor. O tamanho máximo do arquivo depende da memória disponível do seu dispositivo e dos recursos do navegador. A maioria dos dispositivos modernos lida com arquivos de várias centenas de MB sem problemas."
+          "a5": "Não há limites impostos pelo servidor. O tamanho máximo do arquivo depende da memória disponível do seu dispositivo e dos recursos do navegador. A maioria dos dispositivos modernos lida com arquivos de várias centenas de MB sem problemas.",
+          "q6": "What is URL-safe Base64?",
+          "a6": "URL-safe Base64 (RFC 4648 section 5) replaces + with - and / with _, and omits padding =. It's commonly used in JWT tokens, URL parameters, and filenames."
         },
         "seoContent": {
           "intro": {
@@ -141,7 +143,31 @@
             "title": "Processamento Base64 Focado em Privacidade",
             "content": "<p>Toda codificação e decodificação acontece <strong>diretamente no seu navegador</strong> usando APIs integradas <code>btoa()</code> e <code>atob()</code>.</p><ul><li>Seu texto <strong>nunca deixa seu dispositivo</strong> — ideal para codificar credenciais sensíveis ou tokens</li><li>Sem processamento no servidor ou logging</li><li>Funciona completamente <strong>offline</strong> após carregamento inicial da página</li></ul>"
           }
-        }
+        },
+        "textMode": "Text",
+        "fileMode": "File",
+        "direction": "Direction",
+        "directionEncode": "Encode",
+        "directionDecode": "Decode",
+        "variant": "Variant",
+        "variantStandard": "Standard",
+        "variantUrlSafe": "URL-safe",
+        "dataUri": "Data URI output",
+        "dataUriHint": "Prepend data:{mime};base64, prefix",
+        "swap": "Swap",
+        "swapHint": "Move output to input",
+        "inputSize": "Input",
+        "outputSize": "Output",
+        "ratio": "Ratio",
+        "imagePreview": "Image Preview",
+        "pasteBase64ToDecodeFile": "Paste a Base64 string to decode as a file...",
+        "errorInvalidBase64": "Invalid Base64 string",
+        "errorEncodeFailed": "Unable to encode input",
+        "detectedAsBase64": "Input looks like Base64 — switched to Decode",
+        "downloadDecoded": "Download Decoded File",
+        "fileName": "File",
+        "fileSize": "Size",
+        "clear": "Clear"
       },
       "url-encoder": {
         "name": "Codificar/Decodificar URL",

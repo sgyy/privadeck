@@ -100,10 +100,10 @@
       },
       "base64": {
         "name": "Base64 एन्कोड/डिकोड",
-        "description": "टेक्स्ट को Base64 में एन्कोड करें या Base64 को वापस टेक्स्ट में डिकोड करें।",
-        "metaTitle": "Base64 एन्कोडर/डिकोडर - मुफ़्त ऑनलाइन Base64 टूल",
-        "metaDescription": "टेक्स्ट को Base64 में एन्कोड करें या Base64 स्ट्रिंग को वापस टेक्स्ट में डिकोड करें। मुफ़्त ऑनलाइन टूल, पूरी तरह आपके ब्राउज़र में काम करता है।",
-        "keywords": "base64 एन्कोड, base64 डिकोड, base64 कन्वर्टर, base64 ऑनलाइन",
+        "description": "Encode text or files to Base64, decode Base64 back. Supports URL-safe variant and Data URI.",
+        "metaTitle": "Base64 Encoder/Decoder - Text & File, URL-Safe | Free Online Tool",
+        "metaDescription": "Encode text or files to Base64, decode Base64 to text or files. URL-safe Base64, Data URI output, image preview. Free, in-browser.",
+        "keywords": "base64 encode, base64 decode, base64 converter, file to base64, base64 to file, data uri, url safe base64, base64 image, base64 online",
         "inputPlaceholder": "टेक्स्ट या Base64 स्ट्रिंग दर्ज करें...",
         "encode": "एन्कोड",
         "decode": "डिकोड",
@@ -112,13 +112,15 @@
           "q1": "Base64 एन्कोडिंग क्या है?",
           "a1": "Base64 एक बाइनरी-टू-टेक्स्ट एन्कोडिंग स्कीम है जो बाइनरी डेटा को ASCII अक्षरों में बदलती है। यह आमतौर पर डेटा URL, ईमेल अटैचमेंट और API पेलोड में उपयोग होती है।",
           "q2": "क्या मैं फ़ाइलें एन्कोड कर सकता हूँ?",
-          "a2": "वर्तमान में यह टूल टेक्स्ट को एन्कोड और डिकोड करता है। फ़ाइल Base64 एन्कोडिंग भविष्य के अपडेट में उपलब्ध होगी।",
+          "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
           "q3": "क्या मेरी फ़ाइलें सर्वर पर अपलोड होंगी?",
           "a3": "नहीं। सारी प्रोसेसिंग पूरी तरह आपके ब्राउज़र में होती है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता — किसी सर्वर पर कुछ भी अपलोड नहीं होता।",
           "q4": "क्या मैं इस टूल को ऑफ़लाइन उपयोग कर सकता हूँ?",
           "a4": "हाँ। पेज लोड होने के बाद, यह टूल पूरी तरह ऑफ़लाइन काम करता है। सर्वोत्तम अनुभव के लिए, अपने ब्राउज़र से PrivaDeck को PWA के रूप में इंस्टॉल करें।",
           "q5": "क्या फ़ाइल आकार की कोई सीमा है?",
-          "a5": "कोई सर्वर-लगाई गई सीमाएँ नहीं हैं। अधिकतम फ़ाइल आकार आपके डिवाइस की उपलब्ध मेमोरी और ब्राउज़र क्षमताओं पर निर्भर करता है। अधिकांश आधुनिक डिवाइस कई सौ MB तक की फ़ाइलों को बिना किसी समस्या के संभालते हैं।"
+          "a5": "कोई सर्वर-लगाई गई सीमाएँ नहीं हैं। अधिकतम फ़ाइल आकार आपके डिवाइस की उपलब्ध मेमोरी और ब्राउज़र क्षमताओं पर निर्भर करता है। अधिकांश आधुनिक डिवाइस कई सौ MB तक की फ़ाइलों को बिना किसी समस्या के संभालते हैं।",
+          "q6": "What is URL-safe Base64?",
+          "a6": "URL-safe Base64 (RFC 4648 section 5) replaces + with - and / with _, and omits padding =. It's commonly used in JWT tokens, URL parameters, and filenames."
         },
         "seoContent": {
           "intro": {
@@ -141,7 +143,31 @@
             "title": "गोपनीयता-प्रथम Base64 Processing",
             "content": "<p>Encoding <strong>सीधे ब्राउज़र में</strong> होता है।</p><ul><li>Data <strong>कभी device नहीं छोड़ता</strong></li><li>कोई server processing नहीं</li><li><strong>Offline काम करता है</strong></li></ul>"
           }
-        }
+        },
+        "textMode": "Text",
+        "fileMode": "File",
+        "direction": "Direction",
+        "directionEncode": "Encode",
+        "directionDecode": "Decode",
+        "variant": "Variant",
+        "variantStandard": "Standard",
+        "variantUrlSafe": "URL-safe",
+        "dataUri": "Data URI output",
+        "dataUriHint": "Prepend data:{mime};base64, prefix",
+        "swap": "Swap",
+        "swapHint": "Move output to input",
+        "inputSize": "Input",
+        "outputSize": "Output",
+        "ratio": "Ratio",
+        "imagePreview": "Image Preview",
+        "pasteBase64ToDecodeFile": "Paste a Base64 string to decode as a file...",
+        "errorInvalidBase64": "Invalid Base64 string",
+        "errorEncodeFailed": "Unable to encode input",
+        "detectedAsBase64": "Input looks like Base64 — switched to Decode",
+        "downloadDecoded": "Download Decoded File",
+        "fileName": "File",
+        "fileSize": "Size",
+        "clear": "Clear"
       },
       "url-encoder": {
         "name": "URL एन्कोड/डिकोड",

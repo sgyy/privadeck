@@ -100,10 +100,10 @@
       },
       "base64": {
         "name": "Enkode/Dekode Base64",
-        "description": "Enkode teks ke Base64 atau dekode Base64 kembali ke teks.",
-        "metaTitle": "Enkoder/Dekoder Base64 - Alat Base64 Online Gratis",
-        "metaDescription": "Enkode teks ke Base64 atau dekode string Base64 kembali ke teks. Alat online gratis, berjalan sepenuhnya di browser Anda.",
-        "keywords": "enkode base64, dekode base64, konverter base64, base64 online",
+        "description": "Encode text or files to Base64, decode Base64 back. Supports URL-safe variant and Data URI.",
+        "metaTitle": "Base64 Encoder/Decoder - Text & File, URL-Safe | Free Online Tool",
+        "metaDescription": "Encode text or files to Base64, decode Base64 to text or files. URL-safe Base64, Data URI output, image preview. Free, in-browser.",
+        "keywords": "base64 encode, base64 decode, base64 converter, file to base64, base64 to file, data uri, url safe base64, base64 image, base64 online",
         "inputPlaceholder": "Masukkan teks atau string Base64...",
         "encode": "Enkode",
         "decode": "Dekode",
@@ -112,13 +112,15 @@
           "q1": "Apa itu enkoding Base64?",
           "a1": "Base64 adalah skema enkoding biner-ke-teks yang mengubah data biner menjadi karakter ASCII. Ini umum digunakan dalam URL data, lampiran email, dan muatan API.",
           "q2": "Bisakah saya mengenkode file?",
-          "a2": "Saat ini alat ini mengenkode dan mendekode teks. Enkoding file Base64 akan tersedia dalam pembaruan mendatang.",
+          "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
           "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
           "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
           "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
-          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah.",
+          "q6": "What is URL-safe Base64?",
+          "a6": "URL-safe Base64 (RFC 4648 section 5) replaces + with - and / with _, and omits padding =. It's commonly used in JWT tokens, URL parameters, and filenames."
         },
         "seoContent": {
           "intro": {
@@ -141,7 +143,31 @@
             "title": "Mengutamakan Privasi - Pemrosesan Base64",
             "content": "<p>Semua enkoding dan dekodeing terjadi <strong>langsung di browser Anda</strong> menggunakan API <code>btoa()</code> dan <code>atob()</code> bawaan.</p><ul><li>Teks Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — ideal untuk mengenkode kredensial atau token sensitif</li><li>Tidak ada pemrosesan atau pencatatan sisi server</li><li>Berfungsi sepenuhnya <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
-        }
+        },
+        "textMode": "Text",
+        "fileMode": "File",
+        "direction": "Direction",
+        "directionEncode": "Encode",
+        "directionDecode": "Decode",
+        "variant": "Variant",
+        "variantStandard": "Standard",
+        "variantUrlSafe": "URL-safe",
+        "dataUri": "Data URI output",
+        "dataUriHint": "Prepend data:{mime};base64, prefix",
+        "swap": "Swap",
+        "swapHint": "Move output to input",
+        "inputSize": "Input",
+        "outputSize": "Output",
+        "ratio": "Ratio",
+        "imagePreview": "Image Preview",
+        "pasteBase64ToDecodeFile": "Paste a Base64 string to decode as a file...",
+        "errorInvalidBase64": "Invalid Base64 string",
+        "errorEncodeFailed": "Unable to encode input",
+        "detectedAsBase64": "Input looks like Base64 — switched to Decode",
+        "downloadDecoded": "Download Decoded File",
+        "fileName": "File",
+        "fileSize": "Size",
+        "clear": "Clear"
       },
       "url-encoder": {
         "name": "Enkode/Dekode URL",

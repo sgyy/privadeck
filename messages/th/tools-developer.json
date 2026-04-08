@@ -100,10 +100,10 @@
       },
       "base64": {
         "name": "เข้ารหัส/ถอดรหัส Base64",
-        "description": "เข้ารหัสข้อความเป็น Base64 หรือถอดรหัส Base64 กลับเป็นข้อความ",
-        "metaTitle": "ตัวเข้ารหัส/ถอดรหัส Base64 - เครื่องมือ Base64 ออนไลน์ฟรี",
-        "metaDescription": "เข้ารหัสข้อความเป็น Base64 หรือถอดรหัสสตริง Base64 กลับเป็นข้อความ เครื่องมือออนไลน์ฟรี ทำงานในเบราว์เซอร์ทั้งหมด",
-        "keywords": "เข้ารหัส base64, ถอดรหัส base64, ตัวแปลง base64, base64 ออนไลน์",
+        "description": "Encode text or files to Base64, decode Base64 back. Supports URL-safe variant and Data URI.",
+        "metaTitle": "Base64 Encoder/Decoder - Text & File, URL-Safe | Free Online Tool",
+        "metaDescription": "Encode text or files to Base64, decode Base64 to text or files. URL-safe Base64, Data URI output, image preview. Free, in-browser.",
+        "keywords": "base64 encode, base64 decode, base64 converter, file to base64, base64 to file, data uri, url safe base64, base64 image, base64 online",
         "inputPlaceholder": "ป้อนข้อความหรือสตริง Base64...",
         "encode": "เข้ารหัส",
         "decode": "ถอดรหัส",
@@ -112,13 +112,15 @@
           "q1": "การเข้ารหัส Base64 คืออะไร?",
           "a1": "Base64 เป็นรูปแบบการเข้ารหัสไบนารีเป็นข้อความที่แปลงข้อมูลไบนารีเป็นอักขระ ASCII ใช้กันทั่วไปในข้อมูล URL, ไฟล์แนบอีเมล และเนื้อหา API",
           "q2": "สามารถเข้ารหัสไฟล์ได้ไหม?",
-          "a2": "ปัจจุบันเครื่องมือนี้เข้ารหัสและถอดรหัสข้อความ การเข้ารหัสไฟล์ Base64 จะพร้อมใช้งานในการอัปเดตในอนาคต",
+          "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
           "q3": "ไฟล์ของฉันจะถูกอัปโหลดไปยังเซิร์ฟเวอร์หรือไม่?",
           "a3": "ไม่ การประมวลผลทั้งหมดเกิดขึ้นในเบราว์เซอร์ของคุณ ข้อมูลของคุณไม่ออกจากอุปกรณ์ — ไม่มีอะไรถูกอัปโหลดไปยังเซิร์ฟเวอร์",
           "q4": "ฉันสามารถใช้เครื่องมือนี้แบบออฟไลน์ได้หรือไม่?",
           "a4": "ได้ เมื่อโหลดหน้าเว็บแล้ว เครื่องมือนี้ทำงานแบบออฟไลน์ได้สมบูรณ์ สำหรับประสบการณ์ที่ดีที่สุด ติดตั้ง PrivaDeck เป็น PWA จากเบราว์เซอร์ของคุณ",
           "q5": "มีข้อจำกัดขนาดไฟล์หรือไม่?",
-          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา"
+          "a5": "ไม่มีข้อจำกัดจากฝั่งเซิร์ฟเวอร์ ขนาดไฟล์สูงสุดขึ้นอยู่กับหน่วยความจำที่มีอยู่ของอุปกรณ์และความสามารถของเบราว์เซอร์ อุปกรณ์สมัยใหม่ส่วนใหญ่รองรับไฟล์ได้หลายร้อย MB โดยไม่มีปัญหา",
+          "q6": "What is URL-safe Base64?",
+          "a6": "URL-safe Base64 (RFC 4648 section 5) replaces + with - and / with _, and omits padding =. It's commonly used in JWT tokens, URL parameters, and filenames."
         },
         "seoContent": {
           "intro": {
@@ -141,7 +143,31 @@
             "title": "การประมวลผล Base64 ที่ปกป้องความเป็นส่วนตัว",
             "content": "<p>การเข้ารหัสและถอดรหัสทั้งหมดเกิดขึ้น <strong>โดยตรงในเบราว์เซอร์ของคุณ</strong> โดยใช้ API ในตัว <code>btoa()</code> และ <code>atob()</code></p><ul><li>ข้อความของคุณ <strong>ไม่มีวันออกจากอุปกรณ์ของคุณ</strong> — เหมาะสำหรับการเข้ารหัสข้อมูลประจำตัวที่ละเอียดอ่อนหรือ tokens</li><li>ไม่มีการประมวลผลหรือบันทึกด้านเซิร์ฟเวอร์</li><li>ทำงานแบบ <strong>ออฟไลน์</strong> หลังจากโหลดหน้าเว็บครั้งแรก</li></ul>"
           }
-        }
+        },
+        "textMode": "Text",
+        "fileMode": "File",
+        "direction": "Direction",
+        "directionEncode": "Encode",
+        "directionDecode": "Decode",
+        "variant": "Variant",
+        "variantStandard": "Standard",
+        "variantUrlSafe": "URL-safe",
+        "dataUri": "Data URI output",
+        "dataUriHint": "Prepend data:{mime};base64, prefix",
+        "swap": "Swap",
+        "swapHint": "Move output to input",
+        "inputSize": "Input",
+        "outputSize": "Output",
+        "ratio": "Ratio",
+        "imagePreview": "Image Preview",
+        "pasteBase64ToDecodeFile": "Paste a Base64 string to decode as a file...",
+        "errorInvalidBase64": "Invalid Base64 string",
+        "errorEncodeFailed": "Unable to encode input",
+        "detectedAsBase64": "Input looks like Base64 — switched to Decode",
+        "downloadDecoded": "Download Decoded File",
+        "fileName": "File",
+        "fileSize": "Size",
+        "clear": "Clear"
       },
       "url-encoder": {
         "name": "เข้ารหัส/ถอดรหัส URL",

@@ -16,7 +16,6 @@ const definition: ToolDefinition = {
       questionKey: "tools.developer.base64.faq.q2",
       answerKey: "tools.developer.base64.faq.a2",
     },
-  
     {
       questionKey: "tools.developer.base64.faq.q3",
       answerKey: "tools.developer.base64.faq.a3",
@@ -29,8 +28,12 @@ const definition: ToolDefinition = {
       questionKey: "tools.developer.base64.faq.q5",
       answerKey: "tools.developer.base64.faq.a5",
     },
+    {
+      questionKey: "tools.developer.base64.faq.q6",
+      answerKey: "tools.developer.base64.faq.a6",
+    },
   ],
-  relatedSlugs: ["json-formatter", "url-encoder"],
+  relatedSlugs: ["json-formatter", "url-encoder", "hash-generator"],
 };
 
 export default definition;

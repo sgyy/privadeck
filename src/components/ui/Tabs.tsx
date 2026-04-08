@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils/cn";
-import { createContext, useContext, useState, ReactNode, useId, useCallback } from "react";
+import { createContext, useContext, useState, ReactNode, useId, useCallback, useEffect } from "react";
 
 interface TabsContextValue {
   value: string;
@@ -86,6 +86,10 @@ export function TabsTrigger({
   const tabId = `${baseId}-tab-${value}`;
   const panelId = `${baseId}-panel-${value}`;
 
+  useEffect(() => {
+    registerValue(value);
+  }, [registerValue, value]);
+
   const currentIndex = values.indexOf(value);
 
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
@@ -116,8 +120,6 @@ export function TabsTrigger({
         break;
     }
   }, [values, currentIndex, onChange]);
-
-  registerValue(value);
 
   return (
     <button

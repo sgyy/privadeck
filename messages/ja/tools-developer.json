@@ -100,10 +100,10 @@
       },
       "base64": {
         "name": "Base64 エンコード/デコード",
-        "description": "テキストを Base64 にエンコード、または Base64 をテキストにデコードします。",
-        "metaTitle": "Base64 エンコーダー/デコーダー - 無料オンライン Base64 ツール",
-        "metaDescription": "テキストを Base64 にエンコード、または Base64 文字列をテキストにデコード。すべてブラウザ内で動作する無料オンラインツール。",
-        "keywords": "base64 エンコード, base64 デコード, base64 変換, base64 オンライン",
+        "description": "Encode text or files to Base64, decode Base64 back. Supports URL-safe variant and Data URI.",
+        "metaTitle": "Base64 Encoder/Decoder - Text & File, URL-Safe | Free Online Tool",
+        "metaDescription": "Encode text or files to Base64, decode Base64 to text or files. URL-safe Base64, Data URI output, image preview. Free, in-browser.",
+        "keywords": "base64 encode, base64 decode, base64 converter, file to base64, base64 to file, data uri, url safe base64, base64 image, base64 online",
         "inputPlaceholder": "テキストまたは Base64 文字列を入力...",
         "encode": "エンコード",
         "decode": "デコード",
@@ -112,13 +112,15 @@
           "q1": "Base64 エンコーディングとは何ですか？",
           "a1": "Base64 はバイナリデータを ASCII 文字に変換するエンコード方式です。データ URL、メール添付ファイル、API ペイロードなどで広く使用されています。",
           "q2": "ファイルをエンコードできますか？",
-          "a2": "現在このツールはテキストのエンコードとデコードに対応しています。ファイルの Base64 エンコード機能は将来のアップデートで提供予定です。",
+          "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
           "q3": "ファイルはサーバーにアップロードされますか？",
           "a3": "いいえ。すべての処理はブラウザ内で完結します。データがデバイスから出ることは一切ありません。サーバーへのアップロードは行われません。",
           "q4": "オフラインで使用できますか？",
           "a4": "はい。ページを一度読み込めば、完全にオフラインで動作します。より快適にご利用いただくには、ブラウザから PrivaDeck を PWA としてインストールしてください。",
           "q5": "ファイルサイズに制限はありますか？",
-          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能なメモリとブラウザの性能によって異なります。最近のデバイスであれば数百 MB までのファイルを問題なく処理できます。"
+          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能なメモリとブラウザの性能によって異なります。最近のデバイスであれば数百 MB までのファイルを問題なく処理できます。",
+          "q6": "What is URL-safe Base64?",
+          "a6": "URL-safe Base64 (RFC 4648 section 5) replaces + with - and / with _, and omits padding =. It's commonly used in JWT tokens, URL parameters, and filenames."
         },
         "seoContent": {
           "intro": {
@@ -141,7 +143,31 @@
             "title": "プライバシー優先の Base64 処理",
             "content": "<p>すべてのエンコードとデコードは、組み込みの <code>btoa()</code> および <code>atob()</code> API を使って<strong>ブラウザ内で直接</strong>行われます。</p><ul><li>テキストは<strong>デバイスの外に出ません</strong> — 機密の認証情報やトークンのエンコードに最適</li><li>サーバーサイドの処理やログ記録なし</li><li>初回ページ読み込み後は完全に<strong>オフライン</strong>で動作</li></ul>"
           }
-        }
+        },
+        "textMode": "Text",
+        "fileMode": "File",
+        "direction": "Direction",
+        "directionEncode": "Encode",
+        "directionDecode": "Decode",
+        "variant": "Variant",
+        "variantStandard": "Standard",
+        "variantUrlSafe": "URL-safe",
+        "dataUri": "Data URI output",
+        "dataUriHint": "Prepend data:{mime};base64, prefix",
+        "swap": "Swap",
+        "swapHint": "Move output to input",
+        "inputSize": "Input",
+        "outputSize": "Output",
+        "ratio": "Ratio",
+        "imagePreview": "Image Preview",
+        "pasteBase64ToDecodeFile": "Paste a Base64 string to decode as a file...",
+        "errorInvalidBase64": "Invalid Base64 string",
+        "errorEncodeFailed": "Unable to encode input",
+        "detectedAsBase64": "Input looks like Base64 — switched to Decode",
+        "downloadDecoded": "Download Decoded File",
+        "fileName": "File",
+        "fileSize": "Size",
+        "clear": "Clear"
       },
       "url-encoder": {
         "name": "URL エンコード/デコード",

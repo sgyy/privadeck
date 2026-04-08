@@ -100,10 +100,10 @@
       },
       "base64": {
         "name": "Base64 인코딩/디코딩",
-        "description": "텍스트를 Base64로 인코딩하거나 Base64를 텍스트로 디코딩합니다.",
-        "metaTitle": "Base64 인코더/디코더 - 무료 온라인 Base64 도구",
-        "metaDescription": "텍스트를 Base64로 인코딩하거나 Base64 문자열을 텍스트로 디코딩. 브라우저에서 완전히 작동하는 무료 온라인 도구.",
-        "keywords": "base64 인코딩, base64 디코딩, base64 변환, base64 온라인",
+        "description": "Encode text or files to Base64, decode Base64 back. Supports URL-safe variant and Data URI.",
+        "metaTitle": "Base64 Encoder/Decoder - Text & File, URL-Safe | Free Online Tool",
+        "metaDescription": "Encode text or files to Base64, decode Base64 to text or files. URL-safe Base64, Data URI output, image preview. Free, in-browser.",
+        "keywords": "base64 encode, base64 decode, base64 converter, file to base64, base64 to file, data uri, url safe base64, base64 image, base64 online",
         "inputPlaceholder": "텍스트 또는 Base64 문자열을 입력...",
         "encode": "인코딩",
         "decode": "디코딩",
@@ -112,13 +112,15 @@
           "q1": "Base64 인코딩이란 무엇인가요?",
           "a1": "Base64는 바이너리 데이터를 ASCII 문자로 변환하는 인코딩 방식입니다. 데이터 URL, 이메일 첨부 파일, API 페이로드 등에 널리 사용됩니다.",
           "q2": "파일을 인코딩할 수 있나요?",
-          "a2": "현재 이 도구는 텍스트의 인코딩과 디코딩을 지원합니다. 파일 Base64 인코딩 기능은 향후 업데이트에서 제공될 예정입니다.",
+          "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
           "q3": "파일이 서버에 업로드되나요?",
           "a3": "아니요. 모든 처리는 브라우저 내에서 완전히 이루어집니다. 데이터가 기기를 떠나지 않으며 어떤 서버에도 업로드되지 않습니다.",
           "q4": "오프라인에서도 사용할 수 있나요?",
           "a4": "네. 페이지가 로드되면 도구는 완전히 오프라인에서 작동합니다. 최상의 경험을 위해 브라우저에서 PrivaDeck을 PWA로 설치하세요.",
           "q5": "파일 크기 제한이 있나요?",
-          "a5": "서버에서 부과하는 제한은 없습니다. 최대 파일 크기는 기기의 사용 가능한 메모리와 브라우저 기능에 따라 다릅니다. 대부분의 현대 기기는 문제없이 수백 MB까지의 파일을 처리합니다."
+          "a5": "서버에서 부과하는 제한은 없습니다. 최대 파일 크기는 기기의 사용 가능한 메모리와 브라우저 기능에 따라 다릅니다. 대부분의 현대 기기는 문제없이 수백 MB까지의 파일을 처리합니다.",
+          "q6": "What is URL-safe Base64?",
+          "a6": "URL-safe Base64 (RFC 4648 section 5) replaces + with - and / with _, and omits padding =. It's commonly used in JWT tokens, URL parameters, and filenames."
         },
         "seoContent": {
           "intro": {
@@ -141,7 +143,31 @@
             "title": "개인정보 우선 Base64 처리",
             "content": "<p>모든 인코딩과 디코딩은 내장 <code>btoa()</code> 및 <code>atob()</code> API를 사용하여 <strong>브라우저에서 직접</strong> 이루어집니다.</p><ul><li>텍스트가 <strong>기기를 절대 떠나지 않습니다</strong> — 민감한 자격 증명이나 토큰 인코딩에 이상적</li><li>서버 측 처리 또는 로깅 없음</li><li>초기 페이지 로드 후 완전히 <strong>오프라인</strong>에서 작동</li></ul>"
           }
-        }
+        },
+        "textMode": "Text",
+        "fileMode": "File",
+        "direction": "Direction",
+        "directionEncode": "Encode",
+        "directionDecode": "Decode",
+        "variant": "Variant",
+        "variantStandard": "Standard",
+        "variantUrlSafe": "URL-safe",
+        "dataUri": "Data URI output",
+        "dataUriHint": "Prepend data:{mime};base64, prefix",
+        "swap": "Swap",
+        "swapHint": "Move output to input",
+        "inputSize": "Input",
+        "outputSize": "Output",
+        "ratio": "Ratio",
+        "imagePreview": "Image Preview",
+        "pasteBase64ToDecodeFile": "Paste a Base64 string to decode as a file...",
+        "errorInvalidBase64": "Invalid Base64 string",
+        "errorEncodeFailed": "Unable to encode input",
+        "detectedAsBase64": "Input looks like Base64 — switched to Decode",
+        "downloadDecoded": "Download Decoded File",
+        "fileName": "File",
+        "fileSize": "Size",
+        "clear": "Clear"
       },
       "url-encoder": {
         "name": "URL 인코딩/디코딩",

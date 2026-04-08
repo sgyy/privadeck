@@ -100,10 +100,10 @@
       },
       "base64": {
         "name": "Base64 Kodlama/Çözme",
-        "description": "Metni Base64 olarak kodlayın veya Base64 verilerini metne çözün.",
-        "metaTitle": "Base64 Kodlayıcı/Çözücü - Ücretsiz Çevrimiçi Base64 Aracı",
-        "metaDescription": "Metni Base64 olarak kodlayın veya Base64 dizelerini metne çözün. Ücretsiz çevrimiçi araç, tamamen tarayıcınızda çalışır.",
-        "keywords": "base64 kodlama, base64 çözme, base64 dönüştürücü, base64 çevrimiçi",
+        "description": "Encode text or files to Base64, decode Base64 back. Supports URL-safe variant and Data URI.",
+        "metaTitle": "Base64 Encoder/Decoder - Text & File, URL-Safe | Free Online Tool",
+        "metaDescription": "Encode text or files to Base64, decode Base64 to text or files. URL-safe Base64, Data URI output, image preview. Free, in-browser.",
+        "keywords": "base64 encode, base64 decode, base64 converter, file to base64, base64 to file, data uri, url safe base64, base64 image, base64 online",
         "inputPlaceholder": "Metin veya Base64 dizesi girin...",
         "encode": "Kodla",
         "decode": "Çöz",
@@ -112,13 +112,15 @@
           "q1": "Base64 kodlama nedir?",
           "a1": "Base64, ikili verileri ASCII karakterlerine dönüştüren bir ikili-metin kodlama şemasıdır. Veri URL'lerinde, e-posta eklerinde ve API yüklerinde yaygın olarak kullanılır.",
           "q2": "Dosyaları kodlayabilir miyim?",
-          "a2": "Şu anda bu araç metin kodlar ve çözer. Dosya Base64 kodlaması gelecek bir güncellemede kullanılabilir olacaktır.",
+          "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
           "q3": "Will my files be uploaded to a server?",
           "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
           "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
           "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
-          "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
+          "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler.",
+          "q6": "What is URL-safe Base64?",
+          "a6": "URL-safe Base64 (RFC 4648 section 5) replaces + with - and / with _, and omits padding =. It's commonly used in JWT tokens, URL parameters, and filenames."
         },
         "seoContent": {
           "intro": {
@@ -141,7 +143,31 @@
             "title": "Gizlilik Öncelikli Base64 İşleme",
             "content": "<p>Tüm kodlama ve kod çözme, yerleşik <code>btoa()</code> ve <code>atob()</code> API'leri kullanılarak <strong>doğrudan tarayıcınızda</strong> gerçekleşir.</p><ul><li>Metniniz <strong>cihazınızdan asla ayrılmaz</strong> — hassas kimlik bilgilerini veya token'ları kodlamak için idealdir</li><li>Sunucu tarafında işleme veya günlüğe kayıt yoktur</li><li>İlk sayfa yüklemesinden sonra tamamen <strong>çevrimdışı</strong> çalışır</li></ul>"
           }
-        }
+        },
+        "textMode": "Text",
+        "fileMode": "File",
+        "direction": "Direction",
+        "directionEncode": "Encode",
+        "directionDecode": "Decode",
+        "variant": "Variant",
+        "variantStandard": "Standard",
+        "variantUrlSafe": "URL-safe",
+        "dataUri": "Data URI output",
+        "dataUriHint": "Prepend data:{mime};base64, prefix",
+        "swap": "Swap",
+        "swapHint": "Move output to input",
+        "inputSize": "Input",
+        "outputSize": "Output",
+        "ratio": "Ratio",
+        "imagePreview": "Image Preview",
+        "pasteBase64ToDecodeFile": "Paste a Base64 string to decode as a file...",
+        "errorInvalidBase64": "Invalid Base64 string",
+        "errorEncodeFailed": "Unable to encode input",
+        "detectedAsBase64": "Input looks like Base64 — switched to Decode",
+        "downloadDecoded": "Download Decoded File",
+        "fileName": "File",
+        "fileSize": "Size",
+        "clear": "Clear"
       },
       "url-encoder": {
         "name": "URL Kodlama/Çözme",

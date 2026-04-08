@@ -100,10 +100,10 @@
       },
       "base64": {
         "name": "Mã hóa/Giải mã Base64",
-        "description": "Mã hóa văn bản thành Base64 hoặc giải mã Base64 trở lại văn bản.",
-        "metaTitle": "Trình mã hóa/giải mã Base64 - Công cụ Base64 trực tuyến miễn phí",
-        "metaDescription": "Mã hóa văn bản thành Base64 hoặc giải mã chuỗi Base64 trở lại văn bản. Công cụ trực tuyến miễn phí, hoạt động hoàn toàn trên trình duyệt.",
-        "keywords": "mã hóa base64, giải mã base64, chuyển đổi base64, base64 trực tuyến",
+        "description": "Encode text or files to Base64, decode Base64 back. Supports URL-safe variant and Data URI.",
+        "metaTitle": "Base64 Encoder/Decoder - Text & File, URL-Safe | Free Online Tool",
+        "metaDescription": "Encode text or files to Base64, decode Base64 to text or files. URL-safe Base64, Data URI output, image preview. Free, in-browser.",
+        "keywords": "base64 encode, base64 decode, base64 converter, file to base64, base64 to file, data uri, url safe base64, base64 image, base64 online",
         "inputPlaceholder": "Nhập văn bản hoặc chuỗi Base64...",
         "encode": "Mã hóa",
         "decode": "Giải mã",
@@ -112,13 +112,15 @@
           "q1": "Mã hóa Base64 là gì?",
           "a1": "Base64 là một lược đồ mã hóa nhị phân sang văn bản, chuyển đổi dữ liệu nhị phân thành ký tự ASCII. Nó thường được sử dụng trong URL dữ liệu, tệp đính kèm email và tải trọng API.",
           "q2": "Tôi có thể mã hóa tệp không?",
-          "a2": "Hiện tại công cụ này mã hóa và giải mã văn bản. Mã hóa tệp Base64 sẽ có trong bản cập nhật tương lai.",
+          "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
           "q3": "Tệp của tôi có bị tải lên máy chủ không?",
           "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
           "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
           "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
-          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
+          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề.",
+          "q6": "What is URL-safe Base64?",
+          "a6": "URL-safe Base64 (RFC 4648 section 5) replaces + with - and / with _, and omits padding =. It's commonly used in JWT tokens, URL parameters, and filenames."
         },
         "seoContent": {
           "intro": {
@@ -141,7 +143,31 @@
             "title": "Xử lý Base64 ưu tiên quyền riêng tư",
             "content": "<p>Toàn bộ quá trình mã hóa và giải mã diễn ra <strong>trực tiếp trong trình duyệt</strong> bằng API tích hợp sẵn <code>btoa()</code> và <code>atob()</code>.</p><ul><li>Văn bản của bạn <strong>không bao giờ rời khỏi thiết bị</strong> — lý tưởng để mã hóa thông tin đăng nhập hoặc token nhạy cảm</li><li>Không xử lý hay ghi nhật ký trên máy chủ</li><li>Hoạt động hoàn toàn <strong>ngoại tuyến</strong> sau khi tải trang lần đầu</li></ul>"
           }
-        }
+        },
+        "textMode": "Text",
+        "fileMode": "File",
+        "direction": "Direction",
+        "directionEncode": "Encode",
+        "directionDecode": "Decode",
+        "variant": "Variant",
+        "variantStandard": "Standard",
+        "variantUrlSafe": "URL-safe",
+        "dataUri": "Data URI output",
+        "dataUriHint": "Prepend data:{mime};base64, prefix",
+        "swap": "Swap",
+        "swapHint": "Move output to input",
+        "inputSize": "Input",
+        "outputSize": "Output",
+        "ratio": "Ratio",
+        "imagePreview": "Image Preview",
+        "pasteBase64ToDecodeFile": "Paste a Base64 string to decode as a file...",
+        "errorInvalidBase64": "Invalid Base64 string",
+        "errorEncodeFailed": "Unable to encode input",
+        "detectedAsBase64": "Input looks like Base64 — switched to Decode",
+        "downloadDecoded": "Download Decoded File",
+        "fileName": "File",
+        "fileSize": "Size",
+        "clear": "Clear"
       },
       "url-encoder": {
         "name": "Mã hóa/Giải mã URL",

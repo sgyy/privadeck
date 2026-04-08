@@ -100,10 +100,10 @@
       },
       "base64": {
         "name": "ترميز/فك ترميز Base64",
-        "description": "ترميز النص إلى Base64 أو فك ترميز Base64 إلى نص.",
-        "metaTitle": "مرمّز/فاك ترميز Base64 - أداة Base64 مجانية عبر الإنترنت",
-        "metaDescription": "رمّز النص إلى Base64 أو فك ترميز سلاسل Base64 إلى نص. أداة مجانية عبر الإنترنت، تعمل بالكامل في متصفحك.",
-        "keywords": "ترميز base64, فك ترميز base64, محول base64, base64 أونلاين",
+        "description": "Encode text or files to Base64, decode Base64 back. Supports URL-safe variant and Data URI.",
+        "metaTitle": "Base64 Encoder/Decoder - Text & File, URL-Safe | Free Online Tool",
+        "metaDescription": "Encode text or files to Base64, decode Base64 to text or files. URL-safe Base64, Data URI output, image preview. Free, in-browser.",
+        "keywords": "base64 encode, base64 decode, base64 converter, file to base64, base64 to file, data uri, url safe base64, base64 image, base64 online",
         "inputPlaceholder": "أدخل نصاً أو سلسلة Base64...",
         "encode": "ترميز",
         "decode": "فك الترميز",
@@ -112,13 +112,15 @@
           "q1": "ما هو ترميز Base64؟",
           "a1": "Base64 هو نظام ترميز ثنائي إلى نصي يحوّل البيانات الثنائية إلى أحرف ASCII. يُستخدم بشكل شائع في عناوين URL للبيانات ومرفقات البريد الإلكتروني وحمولات API.",
           "q2": "هل يمكنني ترميز الملفات؟",
-          "a2": "حالياً تقوم هذه الأداة بترميز وفك ترميز النصوص. سيتوفر ترميز الملفات بـ Base64 في تحديث مستقبلي.",
+          "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
           "q3": "هل سيتم رفع ملفاتي إلى خادم؟",
           "a3": "لا. تتم جميع المعالجة بالكامل في متصفحك. بياناتك لا تغادر جهازك أبدًا — لا يتم رفع أي شيء إلى أي خادم.",
           "q4": "هل يمكنني استخدام هذه الأداة بدون اتصال؟",
           "a4": "نعم. بمجرد تحميل الصفحة، تعمل الأداة بالكامل بدون اتصال. للحصول على أفضل تجربة، ثبّت PrivaDeck كتطبيق PWA من متصفحك.",
           "q5": "هل هناك حدود لحجم الملف؟",
-          "a5": "لا توجد حدود مفروضة من الخادم. الحد الأقصى لحجم الملف يعتمد على ذاكرة جهازك المتاحة وقدرات المتصفح. معظم الأجهزة الحديثة تتعامل مع ملفات تصل إلى عدة مئات من الميجابايت دون مشاكل."
+          "a5": "لا توجد حدود مفروضة من الخادم. الحد الأقصى لحجم الملف يعتمد على ذاكرة جهازك المتاحة وقدرات المتصفح. معظم الأجهزة الحديثة تتعامل مع ملفات تصل إلى عدة مئات من الميجابايت دون مشاكل.",
+          "q6": "What is URL-safe Base64?",
+          "a6": "URL-safe Base64 (RFC 4648 section 5) replaces + with - and / with _, and omits padding =. It's commonly used in JWT tokens, URL parameters, and filenames."
         },
         "seoContent": {
           "intro": {
@@ -141,7 +143,31 @@
             "title": "معالجة Base64 الموجهة نحو الخصوصية",
             "content": "<p>جميع العمليات تحدث <strong>مباشرة في متصفحك</strong> باستخدام APIs الأصلية.</p><ul><li>نصك <strong>لا يغادر جهازك أبداً</strong></li><li>آمن للبيانات الحساسة</li><li>يعمل <strong>بدون اتصال</strong></li></ul>"
           }
-        }
+        },
+        "textMode": "Text",
+        "fileMode": "File",
+        "direction": "Direction",
+        "directionEncode": "Encode",
+        "directionDecode": "Decode",
+        "variant": "Variant",
+        "variantStandard": "Standard",
+        "variantUrlSafe": "URL-safe",
+        "dataUri": "Data URI output",
+        "dataUriHint": "Prepend data:{mime};base64, prefix",
+        "swap": "Swap",
+        "swapHint": "Move output to input",
+        "inputSize": "Input",
+        "outputSize": "Output",
+        "ratio": "Ratio",
+        "imagePreview": "Image Preview",
+        "pasteBase64ToDecodeFile": "Paste a Base64 string to decode as a file...",
+        "errorInvalidBase64": "Invalid Base64 string",
+        "errorEncodeFailed": "Unable to encode input",
+        "detectedAsBase64": "Input looks like Base64 — switched to Decode",
+        "downloadDecoded": "Download Decoded File",
+        "fileName": "File",
+        "fileSize": "Size",
+        "clear": "Clear"
       },
       "url-encoder": {
         "name": "ترميز/فك ترميز URL",

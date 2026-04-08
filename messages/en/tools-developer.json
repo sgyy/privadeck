@@ -100,25 +100,50 @@
       },
       "base64": {
         "name": "Base64 Encode/Decode",
-        "description": "Encode text to Base64 or decode Base64 back to text.",
-        "metaTitle": "Base64 Encoder/Decoder - Free Online Base64 Tool",
-        "metaDescription": "Encode text to Base64 or decode Base64 strings back to text. Free online tool, works entirely in your browser.",
-        "keywords": "base64 encode, base64 decode, base64 converter, base64 online",
+        "description": "Encode text or files to Base64, decode Base64 back. Supports URL-safe variant and Data URI.",
+        "metaTitle": "Base64 Encoder/Decoder - Text & File, URL-Safe | Free Online Tool",
+        "metaDescription": "Encode text or files to Base64, decode Base64 to text or files. URL-safe Base64, Data URI output, image preview. Free, in-browser.",
+        "keywords": "base64 encode, base64 decode, base64 converter, file to base64, base64 to file, data uri, url safe base64, base64 image, base64 online",
         "inputPlaceholder": "Enter text or Base64 string...",
         "encode": "Encode",
         "decode": "Decode",
         "output": "Output",
+        "textMode": "Text",
+        "fileMode": "File",
+        "direction": "Direction",
+        "directionEncode": "Encode",
+        "directionDecode": "Decode",
+        "variant": "Variant",
+        "variantStandard": "Standard",
+        "variantUrlSafe": "URL-safe",
+        "dataUri": "Data URI output",
+        "dataUriHint": "Prepend data:{mime};base64, prefix",
+        "swap": "Swap",
+        "swapHint": "Move output to input",
+        "inputSize": "Input",
+        "outputSize": "Output",
+        "ratio": "Ratio",
+        "imagePreview": "Image Preview",
+        "pasteBase64ToDecodeFile": "Paste a Base64 string to decode as a file...",
+        "errorInvalidBase64": "Invalid Base64 string",
+        "errorEncodeFailed": "Unable to encode input",
+        "detectedAsBase64": "Input looks like Base64 — switched to Decode",
+        "downloadDecoded": "Download Decoded File",
+        "fileName": "File",
+        "fileSize": "Size",
         "faq": {
           "q1": "What is Base64 encoding?",
           "a1": "Base64 is a binary-to-text encoding scheme that converts binary data into ASCII characters. It's commonly used in data URLs, email attachments, and API payloads.",
           "q2": "Can I encode files?",
-          "a2": "Currently this tool encodes and decodes text. File Base64 encoding will be available in a future update.",
+          "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
           "q3": "Will my files be uploaded to a server?",
           "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "What is URL-safe Base64?",
+          "a6": "URL-safe Base64 (RFC 4648 section 5) replaces + with - and / with _, and omits padding =. It's commonly used in JWT tokens, URL parameters, and filenames."
         },
         "seoContent": {
           "intro": {
@@ -141,7 +166,8 @@
             "title": "Privacy-First Base64 Processing",
             "content": "<p>All encoding and decoding happens <strong>directly in your browser</strong> using the built-in <code>btoa()</code> and <code>atob()</code> APIs.</p><ul><li>Your text <strong>never leaves your device</strong> — ideal for encoding sensitive credentials or tokens</li><li>No server-side processing or logging</li><li>Works completely <strong>offline</strong> after initial page load</li></ul>"
           }
-        }
+        },
+        "clear": "Clear"
       },
       "url-encoder": {
         "name": "URL Encode/Decode",

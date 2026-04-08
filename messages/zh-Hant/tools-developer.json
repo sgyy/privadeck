@@ -100,10 +100,10 @@
       },
       "base64": {
         "name": "Base64 編解碼",
-        "description": "將文字編碼為 Base64 或將 Base64 解碼回文字。",
-        "metaTitle": "Base64 編碼器/解碼器 - 免費線上 Base64 工具",
-        "metaDescription": "將文字編碼為 Base64 或將 Base64 字串解碼回文字。完全在瀏覽器中執行的免費線上工具。",
-        "keywords": "base64 編碼, base64 解碼, base64 轉換, base64 線上工具",
+        "description": "Encode text or files to Base64, decode Base64 back. Supports URL-safe variant and Data URI.",
+        "metaTitle": "Base64 Encoder/Decoder - Text & File, URL-Safe | Free Online Tool",
+        "metaDescription": "Encode text or files to Base64, decode Base64 to text or files. URL-safe Base64, Data URI output, image preview. Free, in-browser.",
+        "keywords": "base64 encode, base64 decode, base64 converter, file to base64, base64 to file, data uri, url safe base64, base64 image, base64 online",
         "inputPlaceholder": "輸入文字或 Base64 字串...",
         "encode": "編碼",
         "decode": "解碼",
@@ -112,13 +112,15 @@
           "q1": "什麼是 Base64 編碼？",
           "a1": "Base64 是一種將二進位資料轉換為 ASCII 字元的編碼方案。常用於資料 URL、電子郵件附件和 API 傳輸。",
           "q2": "可以編碼檔案嗎？",
-          "a2": "目前此工具支援文字的編碼和解碼。檔案 Base64 編碼功能將在未來更新中提供。",
+          "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
           "q3": "我的檔案會上傳到伺服器嗎？",
           "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "這個工具能離線使用嗎？",
           "a4": "可以。頁面載入完成後，工具完全可以離線執行。為獲得最佳體驗，建議從瀏覽器將 PrivaDeck 安裝為 PWA 應用程式。",
           "q5": "檔案大小有限制嗎？",
-          "a5": "沒有伺服器端限制。最大檔案大小取決於您裝置的可用記憶體和瀏覽器能力。大多數現代裝置可以處理數百 MB 的檔案。"
+          "a5": "沒有伺服器端限制。最大檔案大小取決於您裝置的可用記憶體和瀏覽器能力。大多數現代裝置可以處理數百 MB 的檔案。",
+          "q6": "What is URL-safe Base64?",
+          "a6": "URL-safe Base64 (RFC 4648 section 5) replaces + with - and / with _, and omits padding =. It's commonly used in JWT tokens, URL parameters, and filenames."
         },
         "seoContent": {
           "intro": {
@@ -141,7 +143,31 @@
             "title": "隱私優先的 Base64 處理",
             "content": "<p>所有編碼和解碼操作<strong>直接在瀏覽器中</strong>使用內建的 <code>btoa()</code> 和 <code>atob()</code> API 完成。</p><ul><li>文字<strong>永遠不會離開您的裝置</strong>——非常適合編碼敏感的憑證和令牌</li><li>無伺服器端處理，無記錄日誌</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
           }
-        }
+        },
+        "textMode": "Text",
+        "fileMode": "File",
+        "direction": "Direction",
+        "directionEncode": "Encode",
+        "directionDecode": "Decode",
+        "variant": "Variant",
+        "variantStandard": "Standard",
+        "variantUrlSafe": "URL-safe",
+        "dataUri": "Data URI output",
+        "dataUriHint": "Prepend data:{mime};base64, prefix",
+        "swap": "Swap",
+        "swapHint": "Move output to input",
+        "inputSize": "Input",
+        "outputSize": "Output",
+        "ratio": "Ratio",
+        "imagePreview": "Image Preview",
+        "pasteBase64ToDecodeFile": "Paste a Base64 string to decode as a file...",
+        "errorInvalidBase64": "Invalid Base64 string",
+        "errorEncodeFailed": "Unable to encode input",
+        "detectedAsBase64": "Input looks like Base64 — switched to Decode",
+        "downloadDecoded": "Download Decoded File",
+        "fileName": "File",
+        "fileSize": "Size",
+        "clear": "清除"
       },
       "url-encoder": {
         "name": "URL 編解碼",
