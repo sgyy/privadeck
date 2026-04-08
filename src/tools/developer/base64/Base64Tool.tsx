@@ -52,25 +52,30 @@ export default function Base64Tool() {
 
   // --- Text mode: synchronous computation ---
   const textResult = useMemo(() => {
-    if (inputMode !== "text" || !textInput) return { output: "", error: "" };
+    if (inputMode !== "text" || !textInput) return { output: "", error: "", imageMime: null as string | null };
     if (direction === "encode") {
       const r = encodeBase64(textInput, variant);
-      return r.ok ? { output: r.output, error: "" } : { output: "", error: t("errorEncodeFailed") };
+      return r.ok ? { output: r.output, error: "", imageMime: null as string | null } : { output: "", error: t("errorEncodeFailed"), imageMime: null as string | null };
     }
     const r = decodeBase64(textInput, variant);
-    return r.ok ? { output: r.output, error: "" } : { output: "", error: t("errorInvalidBase64") };
+    if (!r.ok) return { output: "", error: t("errorInvalidBase64"), imageMime: null as string | null };
+    // Detect image in decoded bytes for preview (avoids a separate decodeBase64ToBytes call)
+    const bytes = decodeBase64ToBytes(textInput, variant);
+    const imageMime = bytes.ok ? detectImageMime(bytes.output) : null;
+    return { output: r.output, error: "", imageMime };
   }, [inputMode, textInput, direction, variant, t]);
 
   // --- File mode decode: synchronous computation ---
   const fileDecodeResult = useMemo(() => {
     if (inputMode !== "file" || direction !== "decode" || !fileBase64Input) {
-      return { blob: null, sizeText: "", error: "" };
+      return { blob: null, imageMime: null as string | null, sizeText: "", error: "" };
     }
     const result = decodeBase64ToBytes(fileBase64Input, variant);
-    if (!result.ok) return { blob: null, sizeText: "", error: t("errorInvalidBase64") };
-    const mime = detectImageMime(result.output) ?? "application/octet-stream";
-    const blob = new Blob([result.output as BlobPart], { type: mime });
-    return { blob, sizeText: formatByteSize(result.output.length), error: "" };
+    if (!result.ok) return { blob: null, imageMime: null as string | null, sizeText: "", error: t("errorInvalidBase64") };
+    const imageMime = detectImageMime(result.output);
+    const blobMime = imageMime ?? "application/octet-stream";
+    const blob = new Blob([result.output as BlobPart], { type: blobMime });
+    return { blob, imageMime, sizeText: formatByteSize(result.output.length), error: "" };
   }, [inputMode, direction, fileBase64Input, variant, t]);
 
   // --- File mode encode: event-driven (no useEffect) ---
@@ -86,32 +91,20 @@ export default function Base64Tool() {
     }
   }, []);
 
-  // --- Image preview: data URL via useMemo (no blob URL lifecycle) ---
+  // --- Image preview: reuse imageMime from upstream memos (no redundant decode) ---
   const imagePreviewDataUrl = useMemo(() => {
     // Text mode decode
-    if (inputMode === "text" && direction === "decode" && textInput && !textResult.error) {
-      const r = decodeBase64ToBytes(textInput, variant);
-      if (r.ok) {
-        const mime = detectImageMime(r.output);
-        if (mime) {
-          const stdBase64 = normalizeToStandard(textInput, variant);
-          return `data:${mime};base64,${stdBase64}`;
-        }
-      }
+    if (inputMode === "text" && direction === "decode" && textInput && textResult.imageMime) {
+      const stdBase64 = normalizeToStandard(textInput, variant);
+      return `data:${textResult.imageMime};base64,${stdBase64}`;
     }
     // File mode decode
-    if (inputMode === "file" && direction === "decode" && fileBase64Input && !fileDecodeResult.error) {
-      const r = decodeBase64ToBytes(fileBase64Input, variant);
-      if (r.ok) {
-        const mime = detectImageMime(r.output);
-        if (mime) {
-          const stdBase64 = normalizeToStandard(fileBase64Input, variant);
-          return `data:${mime};base64,${stdBase64}`;
-        }
-      }
+    if (inputMode === "file" && direction === "decode" && fileBase64Input && fileDecodeResult.imageMime) {
+      const stdBase64 = normalizeToStandard(fileBase64Input, variant);
+      return `data:${fileDecodeResult.imageMime};base64,${stdBase64}`;
     }
     return null;
-  }, [inputMode, direction, textInput, textResult.error, variant, fileBase64Input, fileDecodeResult.error]);
+  }, [inputMode, direction, textInput, textResult.imageMime, variant, fileBase64Input, fileDecodeResult.imageMime]);
 
   // --- Auto-detect in input handler ---
   const handleTextInputChange = useCallback(
