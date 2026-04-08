@@ -124,24 +124,24 @@
         },
         "seoContent": {
           "intro": {
-            "title": "Co to jest Koder/Dekoder Base64?",
-            "content": "<p><strong>Koder/Dekoder Base64</strong> konwertuje tekst do kodowania Base64 i z powrotem. Base64 to schemat kodowania binarnego na tekst powszechnie używany do osadzania danych w adresach URL, e-mailach, HTML i JSON, gdzie dane binarne nie są obsługiwane.</p><p>Natychmiast koduj dowolny ciąg tekstowy do Base64 lub dekoduj ciągi Base64 z powrotem do czytelnego tekstu — bez potrzeby instalowania oprogramowania.</p>"
+            "title": "Czym jest Koder/Dekoder Base64?",
+            "content": "<p><strong>Koder/Dekoder Base64</strong> konwertuje tekst i pliki na kodowanie Base64 i z powrotem. Base64 to schemat kodowania binarnego na tekst, powszechnie używany do osadzania danych w adresach URL, e-mailach, HTML i JSON.</p><p>Koduj tekst lub dowolny plik (obrazy, PDF, ZIP) do Base64 lub dekoduj ciągi Base64 z powrotem do tekstu lub plików do pobrania — wszystko w przeglądarce, z wariantem bezpiecznym dla URL i obsługą Data URI.</p>"
           },
           "howToUse": {
             "title": "Jak używać Kodera/Dekodera Base64",
-            "content": "<ol><li>Wprowadź tekst w polu wejściowym</li><li>Wybierz <strong>Koduj</strong>, aby przekonwertować tekst na Base64, lub <strong>Dekoduj</strong>, aby przekonwertować Base64 z powrotem na tekst</li><li>Wynik pojawia się natychmiast w polu wyjściowym</li><li>Kliknij <strong>Kopiuj</strong>, aby skopiować wynik do schowka</li></ol><p>Obsługuje tekst UTF-8, w tym znaki specjalne, emoji i skrypty inne niż łacińskie.</p>"
+            "content": "<ol><li>Wybierz tryb <strong>Tekst</strong> lub <strong>Plik</strong> w zależności od danych wejściowych</li><li>Wybierz kierunek <strong>Koduj</strong> lub <strong>Dekoduj</strong> — narzędzie automatycznie wykrywa dane wejściowe Base64</li><li>Wybierz wariant <strong>Standardowy</strong> lub <strong>Bezpieczny dla URL</strong> według potrzeb</li><li>Wyniki pojawiają się natychmiast podczas pisania — nie trzeba klikać żadnych przycisków</li><li>Użyj <strong>Kopiuj</strong>, <strong>Pobierz</strong> lub <strong>Zamień</strong> do pracy z wynikami</li></ol><p>Podczas kodowania plików włącz <strong>Wyjście Data URI</strong>, aby uzyskać gotowy do użycia adres data URL do osadzania w HTML/CSS.</p>"
           },
           "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Natknięte kodowanie</strong>: Konwertuj tekst na Base64 w czasie rzeczywistym podczas pisania</li><li><strong>Natknięte dekodowanie</strong>: Dekoduj ciągi Base64 z powrotem do czytelnego tekstu</li><li><strong>Obsługa UTF-8</strong>: Poprawnie obsługuje znaki Unicode, emoji i tekst wielobajtowy</li><li><strong>Wykrywanie błędów</strong>: Alerty, gdy dane wejściowe nie są prawidłowym Base64 podczas dekodowania</li><li><strong>Kopiowanie jednym kliknięciem</strong>: Kopiuj wyniki do schowka natychmiast</li><li><strong>Brak limitów rozmiaru</strong>: Przetwarzaj tekst dowolnej długości</li></ul>"
+            "title": "Kluczowe funkcje",
+            "content": "<ul><li><strong>Konwersja w czasie rzeczywistym</strong>: Natychmiastowe kodowanie lub dekodowanie podczas pisania — nie trzeba klikać przycisków</li><li><strong>Obsługa tekstu i plików</strong>: Koduj dowolny plik (obrazy, PDF, ZIP) do Base64 lub dekoduj Base64 do pliku do pobrania</li><li><strong>Base64 bezpieczny dla URL</strong>: Wariant RFC 4648 zastępujący +/ przez -_ i pomijający dopełnienie — idealny dla tokenów JWT i parametrów URL</li><li><strong>Wyjście Data URI</strong>: Generuje gotowe do użycia ciągi <code>data:{mime};base64,...</code> do osadzania w HTML, CSS lub JavaScript</li><li><strong>Podgląd obrazów</strong>: Automatycznie wykrywa i wyświetla podgląd podczas dekodowania danych obrazów Base64 (PNG, JPEG, GIF, WebP)</li><li><strong>Automatyczne wykrywanie</strong>: Inteligentnie wykrywa, czy dane wejściowe to Base64 i automatycznie przełącza na tryb dekodowania</li><li><strong>Zamiana i statystyki</strong>: Zamień wyjście na wejście jednym kliknięciem, z wyświetlaniem rozmiaru w bajtach i liczby znaków w czasie rzeczywistym</li><li><strong>Obsługa UTF-8</strong>: Poprawnie obsługuje znaki Unicode, emoji i tekst wielobajtowy</li><li><strong>Bez limitów rozmiaru</strong>: Przetwarzaj tekst lub pliki dowolnego rozmiaru — ograniczone tylko pamięcią urządzenia</li></ul>"
           },
           "useCases": {
             "title": "Typowe przypadki użycia",
-            "content": "<ul><li><strong>URI danych</strong>: Koduj obrazy lub czcionki jako URI danych Base64 do osadzania w HTML/CSS</li><li><strong>Uwierzytelnianie API</strong>: Koduj poświadczenia dla nagłówków HTTP Basic Authentication</li><li><strong>Załączniki e-mail</strong>: Koduj/dekoduj załączniki MIME w protokołach e-mail</li><li><strong>Tokeny JWT</strong>: Dekoduj ładunki tokenów JWT do inspekcji</li><li><strong>Konfiguracja</strong>: Koduj dane binarne do włączenia w plikach konfiguracyjnych JSON lub YAML</li></ul>"
+            "content": "<ul><li><strong>Data URI</strong>: Koduj obrazy lub czcionki jako Base64 Data URI do osadzania w HTML/CSS bez zewnętrznych żądań plików</li><li><strong>Tokeny JWT</strong>: Dekoduj ładunki JWT używając Base64 bezpiecznego dla URL do debugowania i inspekcji</li><li><strong>Uwierzytelnianie API</strong>: Koduj dane uwierzytelniające dla nagłówków HTTP Basic Authentication</li><li><strong>Transfer plików</strong>: Konwertuj pliki binarne na tekst Base64 do włączenia w JSON API, e-maile lub pliki konfiguracyjne</li><li><strong>Załączniki e-mail</strong>: Koduj/dekoduj załączniki MIME w protokołach e-mail</li><li><strong>Debugowanie dla deweloperów</strong>: Szybko sprawdzaj dane zakodowane w Base64 w logach, tokenach lub odpowiedziach API</li></ul>"
           },
           "privacy": {
             "title": "Przetwarzanie Base64 z priorytetem prywatności",
-            "content": "<p>Wszystkie kodowanie i dekodowanie odbywa się <strong>bezpośrednio w przeglądarce</strong> używając wbudowanych API <code>btoa()</code> i <code>atob()</code>.</p><ul><li>Twój tekst <strong>nigdy nie opuszcza urządzenia</strong> — idealne do kodowania wrażliwych poświadczeń lub tokenów</li><li>Brak przetwarzania po stronie serwera lub logowania</li><li>Działa całkowicie <strong>offline</strong> po początkowym załadowaniu strony</li></ul>"
+            "content": "<p>Całe kodowanie i dekodowanie odbywa się <strong>bezpośrednio w przeglądarce</strong>. Pliki i tekst są przetwarzane lokalnie i <strong>nigdy nie są przesyłane na żaden serwer</strong>.</p><ul><li>Idealne do kodowania wrażliwych danych uwierzytelniających, tokenów i prywatnych plików</li><li>Brak przetwarzania po stronie serwera, brak logowania, brak zbierania danych</li><li>Działa całkowicie <strong>offline</strong> po początkowym załadowaniu strony</li><li>Zainstaluj jako PWA dla natychmiastowego dostępu bez internetu</li></ul>"
           }
         },
         "textMode": "Text",
@@ -167,7 +167,40 @@
         "downloadDecoded": "Download Decoded File",
         "fileName": "File",
         "fileSize": "Size",
-        "clear": "Clear"
+        "clear": "Clear",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Zap",
+            "title": "Konwersja w czasie rzeczywistym",
+            "description": "Natychmiastowe kodowanie lub dekodowanie podczas pisania. Nie trzeba klikać przycisków — wyniki aktualizują się na żywo przy każdym naciśnięciu klawisza."
+          },
+          "f2": {
+            "icon": "MonitorDown",
+            "title": "Obsługa tekstu i plików",
+            "description": "Koduj dowolny plik (obrazy, PDF, ZIP) do Base64 lub wklej Base64, aby zdekodować i pobrać oryginalny plik."
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "Base64 bezpieczny dla URL (RFC 4648)",
+            "description": "Przełączanie jednym kliknięciem na wariant bezpieczny dla URL, który zastępuje +/ przez -_ i pomija dopełnienie. Idealny dla tokenów JWT i parametrów URL."
+          },
+          "f4": {
+            "icon": "Braces",
+            "title": "Wyjście Data URI",
+            "description": "Generuje gotowe do użycia ciągi data:'{mime}';base64,... do osadzania obrazów, czcionek lub plików bezpośrednio w HTML, CSS lub JS."
+          },
+          "f5": {
+            "icon": "Eye",
+            "title": "Podgląd obrazów i automatyczne wykrywanie",
+            "description": "Automatycznie wykrywa zdekodowane obrazy (PNG, JPEG, GIF, WebP) i wyświetla podgląd inline. Inteligentne wykrywanie przełącza na tryb dekodowania po wykryciu danych Base64."
+          },
+          "f6": {
+            "icon": "BarChart3",
+            "title": "Zamiana, statystyki i prywatność",
+            "description": "Zamiana wyjścia na wejście jednym kliknięciem, wyświetlanie rozmiaru w bajtach w czasie rzeczywistym i przetwarzanie 100% w przeglądarce — dane nigdy nie opuszczają Twojego urządzenia."
+          }
+        }
       },
       "url-encoder": {
         "name": "Kodowanie/Dekodowanie URL",

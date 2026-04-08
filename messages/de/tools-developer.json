@@ -124,24 +124,24 @@
         },
         "seoContent": {
           "intro": {
-            "title": "Was ist der Base64-Kodierer/Dekodierer?",
-            "content": "<p><strong>Base64-Kodierer/Dekodierer</strong> wandelt Text in Base64-Kodierung um und zurück. Base64 ist ein Binär-zu-Text-Kodierungsverfahren, das häufig verwendet wird, um Daten in URLs, E-Mails, HTML und JSON einzubetten, wo Binärdaten nicht unterstützt werden.</p><p>Kodieren Sie jede Textzeichenkette sofort in Base64 oder dekodieren Sie Base64-Zeichenketten zurück in lesbaren Text — ohne Software-Installation.</p>"
+            "title": "Was ist der Base64 Encoder/Decoder?",
+            "content": "<p><strong>Base64 Encoder/Decoder</strong> konvertiert Text und Dateien in Base64-Kodierung und zurück. Base64 ist ein Binär-zu-Text-Kodierungsschema, das häufig verwendet wird, um Daten in URLs, E-Mails, HTML und JSON einzubetten.</p><p>Kodieren Sie Text oder beliebige Dateien (Bilder, PDFs, ZIPs) zu Base64 oder dekodieren Sie Base64 zurück zu Text oder herunterladbaren Dateien — alles in Ihrem Browser, mit URL-sicherer Variante und Data-URI-Unterstützung.</p>"
           },
           "howToUse": {
-            "title": "So verwenden Sie den Base64-Kodierer/Dekodierer",
-            "content": "<ol><li>Geben Sie Ihren Text in das Eingabefeld ein</li><li>Wählen Sie <strong>Kodieren</strong> zum Umwandeln von Text in Base64 oder <strong>Dekodieren</strong> zum Umwandeln von Base64 zurück in Text</li><li>Das Ergebnis erscheint sofort im Ausgabebereich</li><li>Klicken Sie auf <strong>Kopieren</strong>, um das Ergebnis in die Zwischenablage zu kopieren</li></ol><p>Unterstützt UTF-8-Text einschließlich Sonderzeichen, Emojis und nicht-lateinische Schriften.</p>"
+            "title": "So verwenden Sie den Base64 Encoder/Decoder",
+            "content": "<ol><li>Wählen Sie je nach Eingabe den <strong>Text</strong>- oder <strong>Datei</strong>-Modus</li><li>Wählen Sie die Richtung <strong>Kodieren</strong> oder <strong>Dekodieren</strong> — das Tool erkennt Base64-Eingaben automatisch</li><li>Wählen Sie bei Bedarf die <strong>Standard</strong>- oder <strong>URL-sichere</strong> Variante</li><li>Ergebnisse erscheinen sofort beim Tippen — kein Klicken nötig</li><li>Verwenden Sie <strong>Kopieren</strong>, <strong>Herunterladen</strong> oder <strong>Tauschen</strong>, um mit der Ausgabe zu arbeiten</li></ol><p>Aktivieren Sie beim Dateikodieren <strong>Data-URI-Ausgabe</strong>, um eine direkt verwendbare Data-URL für HTML/CSS-Einbettung zu erhalten.</p>"
           },
           "features": {
             "title": "Hauptfunktionen",
-            "content": "<ul><li><strong>Sofortige Kodierung</strong>: Text in Echtzeit beim Tippen in Base64 umwandeln</li><li><strong>Sofortige Dekodierung</strong>: Base64-Zeichenketten zurück in lesbaren Text dekodieren</li><li><strong>UTF-8-Unterstützung</strong>: Korrekte Verarbeitung von Unicode-Zeichen, Emojis und Mehrbyte-Text</li><li><strong>Fehlererkennung</strong>: Warnung, wenn die Eingabe beim Dekodieren kein gültiges Base64 ist</li><li><strong>Ein-Klick-Kopieren</strong>: Ergebnisse sofort in die Zwischenablage kopieren</li><li><strong>Keine Größenbeschränkungen</strong>: Text beliebiger Länge verarbeiten</li></ul>"
+            "content": "<ul><li><strong>Echtzeit-Konvertierung</strong>: Sofortiges Kodieren oder Dekodieren beim Tippen — kein Klicken erforderlich</li><li><strong>Text- &amp; Datei-Unterstützung</strong>: Kodieren Sie beliebige Dateien (Bilder, PDFs, ZIPs) zu Base64 oder dekodieren Sie Base64 zurück zu einer herunterladbaren Datei</li><li><strong>URL-sicheres Base64</strong>: RFC 4648-Variante, die +/ durch -_ ersetzt und Padding weglässt — ideal für JWT-Tokens und URL-Parameter</li><li><strong>Data-URI-Ausgabe</strong>: Erzeugt sofort verwendbare <code>data:{mime};base64,...</code>-Zeichenketten zum Einbetten in HTML, CSS oder JavaScript</li><li><strong>Bildvorschau</strong>: Erkennt und zeigt automatisch eine Vorschau beim Dekodieren von Base64-Bilddaten (PNG, JPEG, GIF, WebP)</li><li><strong>Auto-Erkennung</strong>: Erkennt intelligent, ob Ihre Eingabe Base64 ist, und wechselt automatisch in den Dekodier-Modus</li><li><strong>Tauschen &amp; Statistiken</strong>: Ausgabe mit einem Klick zurück zur Eingabe tauschen, mit Echtzeit-Anzeige von Bytegröße und Zeichenanzahl</li><li><strong>UTF-8-Unterstützung</strong>: Korrekte Verarbeitung von Unicode-Zeichen, Emojis und Multibyte-Text</li><li><strong>Keine Größenlimits</strong>: Verarbeiten Sie Text oder Dateien beliebiger Größe — nur durch Gerätespeicher begrenzt</li></ul>"
           },
           "useCases": {
             "title": "Häufige Anwendungsfälle",
-            "content": "<ul><li><strong>Daten-URIs</strong>: Bilder oder Schriftarten als Base64-Daten-URIs für die Einbettung in HTML/CSS kodieren</li><li><strong>API-Authentifizierung</strong>: Anmeldedaten für HTTP-Basic-Authentication-Header kodieren</li><li><strong>E-Mail-Anhänge</strong>: MIME-Anhänge in E-Mail-Protokollen kodieren/dekodieren</li><li><strong>JWT-Tokens</strong>: JWT-Token-Nutzdaten zur Inspektion dekodieren</li><li><strong>Konfiguration</strong>: Binärdaten für die Aufnahme in JSON- oder YAML-Konfigurationsdateien kodieren</li></ul>"
+            "content": "<ul><li><strong>Data-URIs</strong>: Bilder oder Schriften als Base64-Data-URIs kodieren, um sie ohne externe Dateianfragen in HTML/CSS einzubetten</li><li><strong>JWT-Tokens</strong>: JWT-Payloads mit URL-sicherem Base64 zum Debuggen und Überprüfen dekodieren</li><li><strong>API-Authentifizierung</strong>: Anmeldedaten für HTTP-Basic-Authentication-Header kodieren</li><li><strong>Dateiübertragung</strong>: Binärdateien in Base64-Text für JSON-APIs, E-Mails oder Konfigurationsdateien konvertieren</li><li><strong>E-Mail-Anhänge</strong>: MIME-Anhänge in E-Mail-Protokollen kodieren/dekodieren</li><li><strong>Entwickler-Debugging</strong>: Base64-kodierte Daten in Logs, Tokens oder API-Antworten schnell überprüfen</li></ul>"
           },
           "privacy": {
             "title": "Datenschutzorientierte Base64-Verarbeitung",
-            "content": "<p>Alle Kodierungen und Dekodierungen erfolgen <strong>direkt in Ihrem Browser</strong> über die integrierten <code>btoa()</code>- und <code>atob()</code>-APIs.</p><ul><li>Ihr Text <strong>verlässt niemals Ihr Gerät</strong> — ideal für die Kodierung sensibler Anmeldedaten oder Tokens</li><li>Keine serverseitige Verarbeitung oder Protokollierung</li><li>Funktioniert vollständig <strong>offline</strong> nach dem ersten Laden der Seite</li></ul>"
+            "content": "<p>Alle Kodierungs- und Dekodierungsvorgänge erfolgen <strong>direkt in Ihrem Browser</strong>. Ihre Dateien und Texte werden lokal verarbeitet und <strong>niemals auf einen Server hochgeladen</strong>.</p><ul><li>Ideal zum Kodieren sensibler Anmeldedaten, Tokens und privater Dateien</li><li>Keine serverseitige Verarbeitung, keine Protokollierung, keine Datenerfassung</li><li>Funktioniert nach dem ersten Laden vollständig <strong>offline</strong></li><li>Als PWA installieren für sofortigen Zugriff ohne Internet</li></ul>"
           }
         },
         "textMode": "Text",
@@ -167,7 +167,40 @@
         "downloadDecoded": "Download Decoded File",
         "fileName": "File",
         "fileSize": "Size",
-        "clear": "Clear"
+        "clear": "Clear",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Zap",
+            "title": "Echtzeit-Konvertierung",
+            "description": "Sofortiges Kodieren oder Dekodieren beim Tippen. Kein Klicken auf Schaltflächen nötig — Ergebnisse aktualisieren sich live bei jedem Tastendruck."
+          },
+          "f2": {
+            "icon": "MonitorDown",
+            "title": "Text- & Datei-Unterstützung",
+            "description": "Kodieren Sie beliebige Dateien (Bilder, PDFs, ZIPs) zu Base64 oder fügen Sie Base64 ein, um die Originaldatei zu dekodieren und herunterzuladen."
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "URL-sicheres Base64 (RFC 4648)",
+            "description": "Ein-Klick-Wechsel zur URL-sicheren Variante, die +/ durch -_ ersetzt und Padding weglässt. Perfekt für JWT-Tokens und URL-Parameter."
+          },
+          "f4": {
+            "icon": "Braces",
+            "title": "Data-URI-Ausgabe",
+            "description": "Erzeugt sofort verwendbare data:'{mime}';base64,...-Zeichenketten zum direkten Einbetten von Bildern, Schriften oder Dateien in HTML, CSS oder JS."
+          },
+          "f5": {
+            "icon": "Eye",
+            "title": "Bildvorschau & Auto-Erkennung",
+            "description": "Erkennt automatisch dekodierte Bilder (PNG, JPEG, GIF, WebP) und zeigt eine Inline-Vorschau. Intelligente Erkennung wechselt automatisch in den Dekodier-Modus."
+          },
+          "f6": {
+            "icon": "BarChart3",
+            "title": "Tauschen, Statistiken & Datenschutz",
+            "description": "Ein-Klick-Tausch von Ausgabe zu Eingabe, Echtzeit-Bytegröße und 100% browserbasierte Verarbeitung — Ihre Daten verlassen nie Ihr Gerät."
+          }
+        }
       },
       "url-encoder": {
         "name": "URL-Kodierung/-Dekodierung",

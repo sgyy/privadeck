@@ -148,26 +148,59 @@
         "seoContent": {
           "intro": {
             "title": "What is Base64 Encoder/Decoder?",
-            "content": "<p><strong>Base64 Encoder/Decoder</strong> converts text to Base64 encoding and back. Base64 is a binary-to-text encoding scheme commonly used to embed data in URLs, emails, HTML, and JSON where binary data isn't supported.</p><p>Instantly encode any text string to Base64 or decode Base64 strings back to readable text — no software required.</p>"
+            "content": "<p><strong>Base64 Encoder/Decoder</strong> converts text and files to Base64 encoding and back. Base64 is a binary-to-text encoding scheme commonly used to embed data in URLs, emails, HTML, and JSON where binary data isn't supported.</p><p>Encode text or any file (images, PDFs, ZIPs) to Base64, or decode Base64 strings back to text or downloadable files — all in your browser, with URL-safe variant and Data URI support.</p>"
           },
           "howToUse": {
             "title": "How to Use Base64 Encoder/Decoder",
-            "content": "<ol><li>Enter your text in the input field</li><li>Select <strong>Encode</strong> to convert text to Base64, or <strong>Decode</strong> to convert Base64 back to text</li><li>The result appears instantly in the output area</li><li>Click <strong>Copy</strong> to copy the result to your clipboard</li></ol><p>Supports UTF-8 text including special characters, emojis, and non-Latin scripts.</p>"
+            "content": "<ol><li>Choose <strong>Text</strong> or <strong>File</strong> mode depending on your input</li><li>Select <strong>Encode</strong> or <strong>Decode</strong> direction — the tool auto-detects Base64 input</li><li>Pick <strong>Standard</strong> or <strong>URL-safe</strong> variant as needed</li><li>Results appear instantly as you type — no button clicks needed</li><li>Use <strong>Copy</strong>, <strong>Download</strong>, or <strong>Swap</strong> to work with the output</li></ol><p>For file encoding, enable <strong>Data URI output</strong> to get a ready-to-use data URL for HTML/CSS embedding.</p>"
           },
           "features": {
             "title": "Key Features",
-            "content": "<ul><li><strong>Instant Encoding</strong>: Convert text to Base64 in real-time as you type</li><li><strong>Instant Decoding</strong>: Decode Base64 strings back to readable text</li><li><strong>UTF-8 Support</strong>: Correctly handles Unicode characters, emojis, and multi-byte text</li><li><strong>Error Detection</strong>: Alerts when input is not valid Base64 during decoding</li><li><strong>One-Click Copy</strong>: Copy results to clipboard instantly</li><li><strong>No Size Limits</strong>: Process text of any length</li></ul>"
+            "content": "<ul><li><strong>Real-Time Conversion</strong>: Encode or decode instantly as you type — no button clicks required</li><li><strong>Text &amp; File Support</strong>: Encode any file (images, PDFs, ZIPs) to Base64, or decode Base64 back to a downloadable file</li><li><strong>URL-Safe Base64</strong>: RFC 4648 variant that replaces +/ with -_ and omits padding — ideal for JWT tokens and URL parameters</li><li><strong>Data URI Output</strong>: Generate ready-to-use <code>data:{mime};base64,...</code> strings for embedding in HTML, CSS, or JavaScript</li><li><strong>Image Preview</strong>: Automatically detects and displays a preview when decoding Base64 image data (PNG, JPEG, GIF, WebP)</li><li><strong>Auto-Detection</strong>: Intelligently detects if your input is Base64 and switches to decode mode automatically</li><li><strong>Swap &amp; Stats</strong>: One-click swap output back to input, with real-time byte size and character count display</li><li><strong>UTF-8 Support</strong>: Correctly handles Unicode characters, emojis, and multi-byte text</li><li><strong>No Size Limits</strong>: Process text or files of any size — limited only by your device memory</li></ul>"
           },
           "useCases": {
             "title": "Common Use Cases",
-            "content": "<ul><li><strong>Data URIs</strong>: Encode images or fonts as Base64 data URIs for embedding in HTML/CSS</li><li><strong>API Authentication</strong>: Encode credentials for HTTP Basic Authentication headers</li><li><strong>Email Attachments</strong>: Encode/decode MIME attachments in email protocols</li><li><strong>JWT Tokens</strong>: Decode JWT token payloads for inspection</li><li><strong>Configuration</strong>: Encode binary data for inclusion in JSON or YAML config files</li></ul>"
+            "content": "<ul><li><strong>Data URIs</strong>: Encode images or fonts as Base64 data URIs for embedding in HTML/CSS without external file requests</li><li><strong>JWT Tokens</strong>: Decode JWT payloads using URL-safe Base64 for debugging and inspection</li><li><strong>API Authentication</strong>: Encode credentials for HTTP Basic Authentication headers</li><li><strong>File Transfer</strong>: Convert binary files to Base64 text for inclusion in JSON APIs, emails, or configuration files</li><li><strong>Email Attachments</strong>: Encode/decode MIME attachments in email protocols</li><li><strong>Developer Debugging</strong>: Quickly inspect Base64-encoded data in logs, tokens, or API responses</li></ul>"
           },
           "privacy": {
             "title": "Privacy-First Base64 Processing",
-            "content": "<p>All encoding and decoding happens <strong>directly in your browser</strong> using the built-in <code>btoa()</code> and <code>atob()</code> APIs.</p><ul><li>Your text <strong>never leaves your device</strong> — ideal for encoding sensitive credentials or tokens</li><li>No server-side processing or logging</li><li>Works completely <strong>offline</strong> after initial page load</li></ul>"
+            "content": "<p>All encoding and decoding happens <strong>directly in your browser</strong>. Your files and text are processed locally and <strong>never uploaded to any server</strong>.</p><ul><li>Ideal for encoding sensitive credentials, tokens, and private files</li><li>No server-side processing, no logging, no data collection</li><li>Works completely <strong>offline</strong> after initial page load</li><li>Install as a PWA for instant access without internet</li></ul>"
           }
         },
-        "clear": "Clear"
+        "clear": "Clear",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Zap",
+            "title": "Real-Time Conversion",
+            "description": "Encode or decode instantly as you type. No button clicks needed — results update live with every keystroke."
+          },
+          "f2": {
+            "icon": "MonitorDown",
+            "title": "Text & File Support",
+            "description": "Encode any file (images, PDFs, ZIPs) to Base64, or paste Base64 to decode and download the original file."
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "URL-Safe Base64 (RFC 4648)",
+            "description": "One-click switch to URL-safe variant that replaces +/ with -_ and omits padding. Perfect for JWT tokens and URL parameters."
+          },
+          "f4": {
+            "icon": "Braces",
+            "title": "Data URI Output",
+            "description": "Generate ready-to-use data:'{mime}';base64,... strings for embedding images, fonts, or files directly in HTML, CSS, or JS."
+          },
+          "f5": {
+            "icon": "Eye",
+            "title": "Image Preview & Auto-Detect",
+            "description": "Automatically detects decoded images (PNG, JPEG, GIF, WebP) and shows an inline preview. Smart detection switches to decode mode when Base64 input is detected."
+          },
+          "f6": {
+            "icon": "BarChart3",
+            "title": "Swap, Stats & Privacy",
+            "description": "One-click output-to-input swap, real-time byte size display, and 100% browser-side processing — your data never leaves your device."
+          }
+        }
       },
       "url-encoder": {
         "name": "URL Encode/Decode",

@@ -124,24 +124,24 @@
         },
         "seoContent": {
           "intro": {
-            "title": "Apa itu Base64 Encoder/Decoder?",
-            "content": "<p><strong>Base64 Encoder/Decoder</strong> mengubah teks menjadi enkoding Base64 dan sebaliknya. Base64 adalah skema enkoding biner-ke-teks yang umum digunakan untuk menyematkan data dalam URL, email, HTML, dan JSON di mana data biner tidak didukung.</p><p>Enkode string teks apa pun menjadi Base64 atau dekode string Base64 kembali menjadi teks yang dapat dibaca secara instan — tanpa perlu perangkat lunak.</p>"
+            "title": "Apa itu Encoder/Decoder Base64?",
+            "content": "<p><strong>Encoder/Decoder Base64</strong> mengonversi teks dan file ke encoding Base64 dan sebaliknya. Base64 adalah skema encoding biner-ke-teks yang umum digunakan untuk menyematkan data di URL, email, HTML, dan JSON.</p><p>Encode teks atau file apa pun (gambar, PDF, ZIP) ke Base64, atau decode string Base64 kembali ke teks atau file yang dapat diunduh — semua di browser Anda, dengan dukungan varian URL-safe dan Data URI.</p>"
           },
           "howToUse": {
-            "title": "Cara Menggunakan Base64 Encoder/Decoder",
-            "content": "<ol><li>Masukkan teks Anda di bidang input</li><li>Pilih <strong>Enkode</strong> untuk mengubah teks menjadi Base64, atau <strong>Dekode</strong> untuk mengubah Base64 kembali menjadi teks</li><li>Hasil muncul secara instan di area output</li><li>Klik <strong>Salin</strong> untuk menyalin hasil ke clipboard Anda</li></ol><p>Mendukung teks UTF-8 termasuk karakter khusus, emoji, dan skrip non-Latin.</p>"
+            "title": "Cara Menggunakan Encoder/Decoder Base64",
+            "content": "<ol><li>Pilih mode <strong>Teks</strong> atau <strong>File</strong> sesuai input Anda</li><li>Pilih arah <strong>Encode</strong> atau <strong>Decode</strong> — alat ini mendeteksi input Base64 secara otomatis</li><li>Pilih varian <strong>Standar</strong> atau <strong>URL-safe</strong> sesuai kebutuhan</li><li>Hasil muncul langsung saat Anda mengetik — tidak perlu klik tombol</li><li>Gunakan <strong>Salin</strong>, <strong>Unduh</strong>, atau <strong>Tukar</strong> untuk mengelola output</li></ol><p>Saat encoding file, aktifkan <strong>Output Data URI</strong> untuk mendapatkan data URL siap pakai untuk embedding HTML/CSS.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Enkoding Instan</strong>: Ubah teks menjadi Base64 secara real-time saat Anda mengetik</li><li><strong>Dekoding Instan</strong>: Dekode string Base64 kembali menjadi teks yang dapat dibaca</li><li><strong>Dukungan UTF-8</strong>: Menangani karakter Unicode, emoji, dan teks multi-byte dengan benar</li><li><strong>Deteksi Kesalahan</strong>: Memberi peringatan saat input bukan Base64 yang valid saat mendekode</li><li><strong>Salin Sekali Klik</strong>: Salin hasil ke clipboard secara instan</li><li><strong>Tanpa Batasan Ukuran</strong>: Proses teks dengan panjang berapa pun</li></ul>"
+            "content": "<ul><li><strong>Konversi Real-Time</strong>: Encode atau decode secara instan saat mengetik — tidak perlu klik tombol</li><li><strong>Dukungan Teks &amp; File</strong>: Encode file apa pun (gambar, PDF, ZIP) ke Base64, atau decode Base64 ke file yang dapat diunduh</li><li><strong>Base64 URL-safe</strong>: Varian RFC 4648 yang mengganti +/ dengan -_ dan menghilangkan padding — ideal untuk token JWT dan parameter URL</li><li><strong>Output Data URI</strong>: Menghasilkan string <code>data:{mime};base64,...</code> siap pakai untuk embedding di HTML, CSS, atau JavaScript</li><li><strong>Preview Gambar</strong>: Mendeteksi dan menampilkan preview secara otomatis saat mendecode data gambar Base64 (PNG, JPEG, GIF, WebP)</li><li><strong>Deteksi Otomatis</strong>: Mendeteksi secara cerdas apakah input Anda adalah Base64 dan beralih ke mode decode secara otomatis</li><li><strong>Tukar &amp; Statistik</strong>: Tukar output ke input dengan satu klik, dengan tampilan ukuran byte dan jumlah karakter real-time</li><li><strong>Dukungan UTF-8</strong>: Menangani karakter Unicode, emoji, dan teks multibyte dengan benar</li><li><strong>Tanpa Batas Ukuran</strong>: Proses teks atau file berukuran apa pun — hanya dibatasi oleh memori perangkat Anda</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Data URI</strong>: Enkode gambar atau font sebagai data URI Base64 untuk disematkan dalam HTML/CSS</li><li><strong>Autentikasi API</strong>: Enkode kredensial untuk header HTTP Basic Authentication</li><li><strong>Lampiran Email</strong>: Enkode/dekode lampiran MIME dalam protokol email</li><li><strong>Token JWT</strong>: Dekode muatan token JWT untuk inspeksi</li><li><strong>Konfigurasi</strong>: Enkode data biner untuk dimasukkan dalam file konfigurasi JSON atau YAML</li></ul>"
+            "content": "<ul><li><strong>Data URI</strong>: Encode gambar atau font sebagai Base64 Data URI untuk embedding di HTML/CSS tanpa request file eksternal</li><li><strong>Token JWT</strong>: Decode payload JWT menggunakan Base64 URL-safe untuk debugging dan inspeksi</li><li><strong>Autentikasi API</strong>: Encode kredensial untuk header HTTP Basic Authentication</li><li><strong>Transfer File</strong>: Konversi file biner ke teks Base64 untuk dimasukkan dalam JSON API, email, atau file konfigurasi</li><li><strong>Lampiran Email</strong>: Encode/decode lampiran MIME dalam protokol email</li><li><strong>Debugging Developer</strong>: Inspeksi cepat data terenkode Base64 di log, token, atau respons API</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Pemrosesan Base64",
-            "content": "<p>Semua enkoding dan dekodeing terjadi <strong>langsung di browser Anda</strong> menggunakan API <code>btoa()</code> dan <code>atob()</code> bawaan.</p><ul><li>Teks Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — ideal untuk mengenkode kredensial atau token sensitif</li><li>Tidak ada pemrosesan atau pencatatan sisi server</li><li>Berfungsi sepenuhnya <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
+            "title": "Pemrosesan Base64 Mengutamakan Privasi",
+            "content": "<p>Semua encoding dan decoding dilakukan <strong>langsung di browser Anda</strong>. File dan teks Anda diproses secara lokal dan <strong>tidak pernah diunggah ke server mana pun</strong>.</p><ul><li>Ideal untuk encoding kredensial sensitif, token, dan file pribadi</li><li>Tanpa pemrosesan server, tanpa logging, tanpa pengumpulan data</li><li>Bekerja sepenuhnya <strong>offline</strong> setelah halaman dimuat pertama kali</li><li>Instal sebagai PWA untuk akses instan tanpa internet</li></ul>"
           }
         },
         "textMode": "Text",
@@ -167,7 +167,40 @@
         "downloadDecoded": "Download Decoded File",
         "fileName": "File",
         "fileSize": "Size",
-        "clear": "Clear"
+        "clear": "Clear",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Zap",
+            "title": "Konversi Real-Time",
+            "description": "Encode atau decode secara instan saat mengetik. Tidak perlu klik tombol — hasil diperbarui langsung setiap penekanan tombol."
+          },
+          "f2": {
+            "icon": "MonitorDown",
+            "title": "Dukungan Teks & File",
+            "description": "Encode file apa pun (gambar, PDF, ZIP) ke Base64, atau tempel Base64 untuk decode dan unduh file asli."
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "Base64 URL-safe (RFC 4648)",
+            "description": "Beralih dengan satu klik ke varian URL-safe yang mengganti +/ dengan -_ dan menghilangkan padding. Sempurna untuk token JWT dan parameter URL."
+          },
+          "f4": {
+            "icon": "Braces",
+            "title": "Output Data URI",
+            "description": "Menghasilkan string data:'{mime}';base64,... siap pakai untuk menyematkan gambar, font, atau file langsung di HTML, CSS, atau JS."
+          },
+          "f5": {
+            "icon": "Eye",
+            "title": "Preview Gambar & Deteksi Otomatis",
+            "description": "Mendeteksi gambar yang didecode (PNG, JPEG, GIF, WebP) secara otomatis dan menampilkan preview inline. Deteksi cerdas beralih ke mode decode saat input Base64 terdeteksi."
+          },
+          "f6": {
+            "icon": "BarChart3",
+            "title": "Tukar, Statistik & Privasi",
+            "description": "Tukar output ke input dengan satu klik, tampilan ukuran byte real-time, dan pemrosesan 100% di browser — data Anda tidak pernah meninggalkan perangkat Anda."
+          }
+        }
       },
       "url-encoder": {
         "name": "Enkode/Dekode URL",

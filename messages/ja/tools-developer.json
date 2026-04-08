@@ -124,24 +124,24 @@
         },
         "seoContent": {
           "intro": {
-            "title": "Base64 エンコーダー/デコーダーとは？",
-            "content": "<p><strong>Base64 エンコーダー/デコーダー</strong>は、テキストを Base64 エンコードに変換したり、逆変換したりするツールです。Base64 はバイナリデータを URL、メール、HTML、JSON などに埋め込むために広く使われるエンコード方式です。</p><p>任意のテキスト文字列を即座に Base64 にエンコード、または Base64 文字列を読み取れるテキストにデコード — ソフトウェアのインストールは不要です。</p>"
+            "title": "Base64エンコーダー/デコーダーとは？",
+            "content": "<p><strong>Base64エンコーダー/デコーダー</strong>は、テキストやファイルをBase64エンコーディングに変換したり、その逆を行います。Base64は、URL、メール、HTML、JSONにデータを埋め込むために広く使われるバイナリからテキストへのエンコーディングスキームです。</p><p>テキストや任意のファイル（画像、PDF、ZIP）をBase64にエンコード、またはBase64をテキストやダウンロード可能なファイルにデコード — すべてブラウザ内で、URLセーフ変換とData URIをサポート。</p>"
           },
           "howToUse": {
-            "title": "Base64 エンコーダー/デコーダーの使い方",
-            "content": "<ol><li>入力フィールドにテキストを入力する</li><li>テキストを Base64 に変換するには<strong>エンコード</strong>、Base64 をテキストに戻すには<strong>デコード</strong>を選択する</li><li>結果が即座に出力エリアに表示される</li><li><strong>コピー</strong>をクリックして結果をクリップボードにコピーする</li></ol><p>特殊文字、絵文字、非ラテン文字を含む UTF-8 テキストに対応しています。</p>"
+            "title": "Base64エンコーダー/デコーダーの使い方",
+            "content": "<ol><li>入力に応じて<strong>テキスト</strong>または<strong>ファイル</strong>モードを選択</li><li><strong>エンコード</strong>または<strong>デコード</strong>の方向を選択 — ツールがBase64入力を自動検出します</li><li>必要に応じて<strong>標準</strong>または<strong>URLセーフ</strong>バリアントを選択</li><li>入力するとすぐに結果が表示されます — ボタンのクリックは不要</li><li><strong>コピー</strong>、<strong>ダウンロード</strong>、<strong>入れ替え</strong>で出力を活用</li></ol><p>ファイルエンコード時に<strong>Data URI出力</strong>を有効にすると、HTML/CSSに直接埋め込めるdata URLが生成されます。</p>"
           },
           "features": {
             "title": "主な機能",
-            "content": "<ul><li><strong>即時エンコード</strong>：タイプしながらリアルタイムでテキストを Base64 に変換</li><li><strong>即時デコード</strong>：Base64 文字列を読み取れるテキストにデコード</li><li><strong>UTF-8 サポート</strong>：Unicode 文字、絵文字、マルチバイトテキストを正しく処理</li><li><strong>エラー検出</strong>：デコード時に無効な Base64 入力を警告</li><li><strong>ワンクリックコピー</strong>：結果を即座にクリップボードにコピー</li><li><strong>サイズ制限なし</strong>：任意の長さのテキストを処理可能</li></ul>"
+            "content": "<ul><li><strong>リアルタイム変換</strong>：入力しながら即座にエンコードまたはデコード — ボタンクリック不要</li><li><strong>テキスト＆ファイル対応</strong>：任意のファイル（画像、PDF、ZIP）をBase64にエンコード、またはBase64をダウンロード可能なファイルにデコード</li><li><strong>URLセーフBase64</strong>：+/を-_に置換しパディングを省略するRFC 4648バリアント — JWTトークンやURLパラメータに最適</li><li><strong>Data URI出力</strong>：HTML、CSS、JavaScriptに埋め込むためのすぐに使える<code>data:{mime};base64,...</code>文字列を生成</li><li><strong>画像プレビュー</strong>：Base64画像データ（PNG、JPEG、GIF、WebP）のデコード時に自動検出してプレビューを表示</li><li><strong>自動検出</strong>：入力がBase64かどうかをインテリジェントに検出し、自動的にデコードモードに切り替え</li><li><strong>入れ替え＆統計</strong>：ワンクリックで出力を入力に戻し、バイトサイズと文字数をリアルタイム表示</li><li><strong>UTF-8サポート</strong>：Unicode文字、絵文字、マルチバイトテキストを正しく処理</li><li><strong>サイズ制限なし</strong>：任意のサイズのテキストやファイルを処理 — デバイスメモリのみが制限</li></ul>"
           },
           "useCases": {
-            "title": "主な活用例",
-            "content": "<ul><li><strong>データ URI</strong>：HTML/CSS に埋め込むために画像やフォントを Base64 データ URI にエンコード</li><li><strong>API 認証</strong>：HTTP Basic 認証ヘッダー用に認証情報をエンコード</li><li><strong>メール添付</strong>：メールプロトコルで MIME 添付ファイルをエンコード/デコード</li><li><strong>JWT トークン</strong>：確認のために JWT トークンのペイロードをデコード</li><li><strong>設定ファイル</strong>：JSON や YAML 設定ファイルにバイナリデータを含めるためにエンコード</li></ul>"
+            "title": "一般的な使用例",
+            "content": "<ul><li><strong>Data URI</strong>：画像やフォントをBase64 Data URIとしてエンコードし、外部ファイルリクエストなしでHTML/CSSに埋め込み</li><li><strong>JWTトークン</strong>：URLセーフBase64を使用してJWTペイロードをデコードし、デバッグと検証</li><li><strong>API認証</strong>：HTTP Basic Authentication ヘッダー用にクレデンシャルをエンコード</li><li><strong>ファイル転送</strong>：バイナリファイルをBase64テキストに変換し、JSON API、メール、設定ファイルに含める</li><li><strong>メール添付</strong>：メールプロトコルでMIME添付ファイルをエンコード/デコード</li><li><strong>開発者デバッグ</strong>：ログ、トークン、APIレスポンスのBase64エンコードデータを素早く検査</li></ul>"
           },
           "privacy": {
-            "title": "プライバシー優先の Base64 処理",
-            "content": "<p>すべてのエンコードとデコードは、組み込みの <code>btoa()</code> および <code>atob()</code> API を使って<strong>ブラウザ内で直接</strong>行われます。</p><ul><li>テキストは<strong>デバイスの外に出ません</strong> — 機密の認証情報やトークンのエンコードに最適</li><li>サーバーサイドの処理やログ記録なし</li><li>初回ページ読み込み後は完全に<strong>オフライン</strong>で動作</li></ul>"
+            "title": "プライバシー重視のBase64処理",
+            "content": "<p>すべてのエンコードとデコードは<strong>ブラウザ内で直接</strong>行われます。ファイルやテキストはローカルで処理され、<strong>サーバーにアップロードされることはありません</strong>。</p><ul><li>機密性の高いクレデンシャル、トークン、プライベートファイルのエンコードに最適</li><li>サーバー側の処理なし、ログ記録なし、データ収集なし</li><li>初回ページ読み込み後は完全に<strong>オフライン</strong>で動作</li><li>PWAとしてインストールすれば、インターネットなしで即座にアクセス</li></ul>"
           }
         },
         "textMode": "Text",
@@ -167,7 +167,40 @@
         "downloadDecoded": "Download Decoded File",
         "fileName": "File",
         "fileSize": "Size",
-        "clear": "Clear"
+        "clear": "Clear",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Zap",
+            "title": "リアルタイム変換",
+            "description": "入力しながら即座にエンコードまたはデコード。ボタンクリック不要 — キー入力ごとに結果がライブ更新されます。"
+          },
+          "f2": {
+            "icon": "MonitorDown",
+            "title": "テキスト＆ファイル対応",
+            "description": "任意のファイル（画像、PDF、ZIP）をBase64にエンコード、またはBase64を貼り付けてデコード・元のファイルをダウンロード。"
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "URLセーフBase64 (RFC 4648)",
+            "description": "ワンクリックで+/を-_に置換しパディングを省略するURLセーフバリアントに切り替え。JWTトークンやURLパラメータに最適。"
+          },
+          "f4": {
+            "icon": "Braces",
+            "title": "Data URI出力",
+            "description": "HTML、CSS、JSに画像、フォント、ファイルを直接埋め込むためのdata:'{mime}';base64,...文字列を生成。"
+          },
+          "f5": {
+            "icon": "Eye",
+            "title": "画像プレビュー＆自動検出",
+            "description": "デコードされた画像（PNG、JPEG、GIF、WebP）を自動検出してインラインプレビューを表示。Base64入力を検出すると自動でデコードモードに切り替え。"
+          },
+          "f6": {
+            "icon": "BarChart3",
+            "title": "入れ替え・統計・プライバシー",
+            "description": "ワンクリックの出力→入力入れ替え、リアルタイムバイトサイズ表示、100%ブラウザ内処理 — データがデバイスから出ることはありません。"
+          }
+        }
       },
       "url-encoder": {
         "name": "URL エンコード/デコード",

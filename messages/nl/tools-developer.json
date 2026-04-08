@@ -124,24 +124,24 @@
         },
         "seoContent": {
           "intro": {
-            "title": "Wat is Base64 Encoder/Decoder?",
-            "content": "<p><strong>Base64 Coderen/Decoderen</strong> converteert tekst naar Base64-codering en terug. Base64 is een binair-naar-tekst coderingsschema dat vaak wordt gebruikt om gegevens in te sluiten in URL's, e-mails, HTML en JSON waar binaire gegevens niet worden ondersteund.</p><p>Codeer direct elke tekststring naar Base64 of decodeer Base64-strings terug naar leesbare tekst — geen software vereist.</p>"
+            "title": "Wat is de Base64 Encoder/Decoder?",
+            "content": "<p><strong>Base64 Encoder/Decoder</strong> converteert tekst en bestanden naar Base64-codering en terug. Base64 is een binair-naar-tekst coderingsschema dat veel wordt gebruikt om gegevens in te sluiten in URL's, e-mails, HTML en JSON.</p><p>Codeer tekst of elk bestand (afbeeldingen, PDF's, ZIP's) naar Base64, of decodeer Base64-strings terug naar tekst of downloadbare bestanden — alles in uw browser, met URL-veilige variant en Data URI-ondersteuning.</p>"
           },
           "howToUse": {
-            "title": "Hoe te gebruiken Base64 Encoder/Decoder",
-            "content": "<ol><li>Voer je tekst in het invoerveld in</li><li>Selecteer <strong>Coderen</strong> om tekst naar Base64 te converteren, of <strong>Decoderen</strong> om Base64 terug naar tekst te converteren</li><li>Het resultaat verschijnt direct in het uitvoerveld</li><li>Klik op <strong>Kopiëren</strong> om het resultaat naar je klembord te kopiëren</li></ol><p>Ondersteunt UTF-8-tekst inclusief speciale tekens, emoji's en niet-Latijnse scripts.</p>"
+            "title": "Hoe de Base64 Encoder/Decoder te gebruiken",
+            "content": "<ol><li>Kies de <strong>Tekst</strong>- of <strong>Bestand</strong>-modus afhankelijk van uw invoer</li><li>Selecteer de richting <strong>Coderen</strong> of <strong>Decoderen</strong> — het hulpmiddel detecteert automatisch Base64-invoer</li><li>Kies de <strong>Standaard</strong>- of <strong>URL-veilige</strong> variant naar behoefte</li><li>Resultaten verschijnen direct terwijl u typt — geen klikken nodig</li><li>Gebruik <strong>Kopiëren</strong>, <strong>Downloaden</strong> of <strong>Wisselen</strong> om met de uitvoer te werken</li></ol><p>Schakel bij het coderen van bestanden <strong>Data URI-uitvoer</strong> in voor een kant-en-klare data-URL voor HTML/CSS-insluiting.</p>"
           },
           "features": {
             "title": "Belangrijkste functies",
-            "content": "<ul><li><strong>Direct coderen</strong>: Converteer tekst naar Base64 in realtime terwijl je typt</li><li><strong>Direct decoderen</strong>: Decodeer Base64-strings terug naar leesbare tekst</li><li><strong>UTF-8-ondersteuning</strong>: Verwerkt correct Unicode-tekens, emoji's en multi-byte tekst</li><li><strong>Foutdetectie</strong>: Waarschuwt wanneer invoer geen geldige Base64 is tijdens decoderen</li><li><strong>Kopiëren met één klik</strong>: Kopieer resultaten direct naar klembord</li><li><strong>Geen groottelimieten</strong>: Verwerk tekst van elke lengte</li></ul>"
+            "content": "<ul><li><strong>Realtime conversie</strong>: Direct coderen of decoderen tijdens het typen — geen klikken op knoppen vereist</li><li><strong>Tekst- &amp; bestandsondersteuning</strong>: Codeer elk bestand (afbeeldingen, PDF's, ZIP's) naar Base64, of decodeer Base64 terug naar een downloadbaar bestand</li><li><strong>URL-veilig Base64</strong>: RFC 4648-variant die +/ vervangt door -_ en opvulling weglaat — ideaal voor JWT-tokens en URL-parameters</li><li><strong>Data URI-uitvoer</strong>: Genereert kant-en-klare <code>data:{mime};base64,...</code>-strings voor insluiting in HTML, CSS of JavaScript</li><li><strong>Afbeeldingsvoorvertoning</strong>: Detecteert en toont automatisch een voorvertoning bij het decoderen van Base64-afbeeldingsgegevens (PNG, JPEG, GIF, WebP)</li><li><strong>Automatische detectie</strong>: Detecteert intelligent of uw invoer Base64 is en schakelt automatisch over naar de decoderingsmodus</li><li><strong>Wisselen &amp; statistieken</strong>: Wissel uitvoer naar invoer met één klik, met realtime weergave van bytegrootte en tekentelling</li><li><strong>UTF-8-ondersteuning</strong>: Verwerkt Unicode-tekens, emoji's en multibyte-tekst correct</li><li><strong>Geen groottelimieten</strong>: Verwerk tekst of bestanden van elke grootte — alleen beperkt door het geheugen van uw apparaat</li></ul>"
           },
           "useCases": {
-            "title": "Veelvoorkomende gebruiksmogelijkheden",
-            "content": "<ul><li><strong>Data-URI's</strong>: Codeer afbeeldingen of lettertypen als Base64 data-URI's voor insluiten in HTML/CSS</li><li><strong>API-authenticatie</strong>: Codeer inloggegevens voor HTTP Basic Authentication-headers</li><li><strong>E-mailbijlagen</strong>: Codeer/decodeer MIME-bijlagen in e-mailprotocollen</li><li><strong>JWT-tokens</strong>: Decodeer JWT-token-payloads voor inspectie</li><li><strong>Configuratie</strong>: Codeer binaire gegevens voor opname in JSON- of YAML-configuratiebestanden</li></ul>"
+            "title": "Veelvoorkomende gebruiksscenario's",
+            "content": "<ul><li><strong>Data URI's</strong>: Codeer afbeeldingen of lettertypen als Base64 Data URI's voor insluiting in HTML/CSS zonder externe bestandsverzoeken</li><li><strong>JWT-tokens</strong>: Decodeer JWT-payloads met URL-veilig Base64 voor debugging en inspectie</li><li><strong>API-authenticatie</strong>: Codeer inloggegevens voor HTTP Basic Authentication-headers</li><li><strong>Bestandsoverdracht</strong>: Converteer binaire bestanden naar Base64-tekst voor opname in JSON-API's, e-mails of configuratiebestanden</li><li><strong>E-mailbijlagen</strong>: Codeer/decodeer MIME-bijlagen in e-mailprotocollen</li><li><strong>Developer debugging</strong>: Inspecteer snel Base64-gecodeerde gegevens in logs, tokens of API-responses</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Base64-verwerking",
-            "content": "<p>Alle codering en decoding gebeurt <strong>direct in je browser</strong> met de ingebouwde <code>btoa()</code> en <code>atob()</code> API's.</p><ul><li>Je tekst <strong>verlaat nooit je apparaat</strong> — ideaal voor het coderen van gevoelige inloggegevens of tokens</li><li>Geen server-side verwerking of logging</li><li>Werkt volledig <strong>offline</strong> na initiële paginalading</li></ul>"
+            "title": "Privacy-first Base64-verwerking",
+            "content": "<p>Alle codering en decodering vindt <strong>direct in uw browser</strong> plaats. Uw bestanden en tekst worden lokaal verwerkt en worden <strong>nooit naar een server geüpload</strong>.</p><ul><li>Ideaal voor het coderen van gevoelige inloggegevens, tokens en privébestanden</li><li>Geen server-side verwerking, geen logging, geen gegevensverzameling</li><li>Werkt volledig <strong>offline</strong> na de eerste paginalading</li><li>Installeer als PWA voor directe toegang zonder internet</li></ul>"
           }
         },
         "textMode": "Text",
@@ -167,7 +167,40 @@
         "downloadDecoded": "Download Decoded File",
         "fileName": "File",
         "fileSize": "Size",
-        "clear": "Clear"
+        "clear": "Clear",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Zap",
+            "title": "Realtime conversie",
+            "description": "Direct coderen of decoderen terwijl u typt. Geen klikken nodig — resultaten worden live bijgewerkt bij elke toetsaanslag."
+          },
+          "f2": {
+            "icon": "MonitorDown",
+            "title": "Tekst- & bestandsondersteuning",
+            "description": "Codeer elk bestand (afbeeldingen, PDF's, ZIP's) naar Base64, of plak Base64 om te decoderen en het originele bestand te downloaden."
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "URL-veilig Base64 (RFC 4648)",
+            "description": "Eén-klik overschakelen naar de URL-veilige variant die +/ vervangt door -_ en opvulling weglaat. Perfect voor JWT-tokens en URL-parameters."
+          },
+          "f4": {
+            "icon": "Braces",
+            "title": "Data-URI-uitvoer",
+            "description": "Genereert kant-en-klare data:'{mime}';base64,...-strings om afbeeldingen, lettertypen of bestanden direct in HTML, CSS of JS in te sluiten."
+          },
+          "f5": {
+            "icon": "Eye",
+            "title": "Afbeeldingsvoorvertoning & auto-detectie",
+            "description": "Detecteert automatisch gedecodeerde afbeeldingen (PNG, JPEG, GIF, WebP) en toont een inline voorvertoning. Slimme detectie schakelt over naar decoderingsmodus wanneer Base64-invoer wordt gedetecteerd."
+          },
+          "f6": {
+            "icon": "BarChart3",
+            "title": "Wisselen, statistieken & privacy",
+            "description": "Eén-klik uitvoer-naar-invoer wissel, realtime bytegrootteweergave en 100% browserverwerking — uw gegevens verlaten nooit uw apparaat."
+          }
+        }
       },
       "url-encoder": {
         "name": "URL Coderen/Decoderen",

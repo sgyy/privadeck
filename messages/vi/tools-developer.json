@@ -124,24 +124,24 @@
         },
         "seoContent": {
           "intro": {
-            "title": "Mã hóa/Giải mã Base64 là gì?",
-            "content": "<p><strong>Base64 Encoder/Decoder</strong> chuyển đổi văn bản sang mã hóa Base64 và ngược lại. Base64 là phương pháp mã hóa nhị phân sang văn bản, thường dùng để nhúng dữ liệu vào URL, email, HTML và JSON — những nơi không hỗ trợ dữ liệu nhị phân trực tiếp.</p><p>Mã hóa nhanh chóng bất kỳ chuỗi văn bản nào thành Base64 hoặc giải mã chuỗi Base64 về văn bản gốc dễ đọc — không cần cài đặt phần mềm.</p>"
+            "title": "Bộ mã hóa/giải mã Base64 là gì?",
+            "content": "<p><strong>Bộ mã hóa/giải mã Base64</strong> chuyển đổi văn bản và tệp sang mã hóa Base64 và ngược lại. Base64 là sơ đồ mã hóa nhị phân sang văn bản được sử dụng rộng rãi để nhúng dữ liệu trong URL, email, HTML và JSON.</p><p>Mã hóa văn bản hoặc bất kỳ tệp nào (hình ảnh, PDF, ZIP) sang Base64, hoặc giải mã chuỗi Base64 thành văn bản hoặc tệp có thể tải xuống — tất cả trong trình duyệt của bạn, với hỗ trợ biến thể URL-safe và Data URI.</p>"
           },
           "howToUse": {
-            "title": "Cách sử dụng Base64 Encoder/Decoder",
-            "content": "<ol><li>Nhập văn bản vào trường nhập liệu</li><li>Chọn <strong>Mã hóa</strong> để chuyển văn bản sang Base64 hoặc <strong>Giải mã</strong> để chuyển Base64 về văn bản</li><li>Kết quả xuất hiện ngay lập tức trong khu vực đầu ra</li><li>Nhấp <strong>Sao chép</strong> để chép kết quả vào clipboard</li></ol><p>Hỗ trợ đầy đủ văn bản UTF-8, bao gồm ký tự đặc biệt, emoji và các bảng chữ cái không phải Latin.</p>"
+            "title": "Cách sử dụng Bộ mã hóa/giải mã Base64",
+            "content": "<ol><li>Chọn chế độ <strong>Văn bản</strong> hoặc <strong>Tệp</strong> tùy theo đầu vào của bạn</li><li>Chọn hướng <strong>Mã hóa</strong> hoặc <strong>Giải mã</strong> — công cụ tự động phát hiện đầu vào Base64</li><li>Chọn biến thể <strong>Tiêu chuẩn</strong> hoặc <strong>URL-safe</strong> theo nhu cầu</li><li>Kết quả xuất hiện ngay lập tức khi bạn nhập — không cần nhấn nút nào</li><li>Sử dụng <strong>Sao chép</strong>, <strong>Tải xuống</strong> hoặc <strong>Hoán đổi</strong> để làm việc với đầu ra</li></ol><p>Khi mã hóa tệp, bật <strong>Đầu ra Data URI</strong> để nhận data URL sẵn sàng sử dụng để nhúng vào HTML/CSS.</p>"
           },
           "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Mã hóa tức thì</strong>: Chuyển đổi văn bản sang Base64 theo thời gian thực khi bạn gõ</li><li><strong>Giải mã tức thì</strong>: Giải mã chuỗi Base64 về văn bản dễ đọc ngay lập tức</li><li><strong>Hỗ trợ UTF-8</strong>: Xử lý chính xác ký tự Unicode, emoji và văn bản đa byte</li><li><strong>Phát hiện lỗi</strong>: Cảnh báo khi dữ liệu nhập không phải Base64 hợp lệ trong quá trình giải mã</li><li><strong>Sao chép một lần nhấp</strong>: Chép kết quả vào clipboard ngay lập tức</li><li><strong>Không giới hạn kích thước</strong>: Xử lý văn bản ở bất kỳ độ dài nào</li></ul>"
+            "title": "Tính năng chính",
+            "content": "<ul><li><strong>Chuyển đổi thời gian thực</strong>: Mã hóa hoặc giải mã ngay lập tức khi nhập — không cần nhấn nút</li><li><strong>Hỗ trợ văn bản &amp; tệp</strong>: Mã hóa bất kỳ tệp nào (hình ảnh, PDF, ZIP) sang Base64, hoặc giải mã Base64 thành tệp có thể tải xuống</li><li><strong>Base64 URL-safe</strong>: Biến thể RFC 4648 thay thế +/ bằng -_ và bỏ qua padding — lý tưởng cho JWT token và tham số URL</li><li><strong>Đầu ra Data URI</strong>: Tạo chuỗi <code>data:{mime};base64,...</code> sẵn sàng sử dụng để nhúng trong HTML, CSS hoặc JavaScript</li><li><strong>Xem trước hình ảnh</strong>: Tự động phát hiện và hiển thị xem trước khi giải mã dữ liệu hình ảnh Base64 (PNG, JPEG, GIF, WebP)</li><li><strong>Tự động phát hiện</strong>: Phát hiện thông minh liệu đầu vào của bạn có phải Base64 không và tự động chuyển sang chế độ giải mã</li><li><strong>Hoán đổi &amp; thống kê</strong>: Hoán đổi đầu ra thành đầu vào chỉ với một cú nhấp, với hiển thị kích thước byte và số ký tự theo thời gian thực</li><li><strong>Hỗ trợ UTF-8</strong>: Xử lý chính xác ký tự Unicode, emoji và văn bản đa byte</li><li><strong>Không giới hạn kích thước</strong>: Xử lý văn bản hoặc tệp có kích thước bất kỳ — chỉ bị giới hạn bởi bộ nhớ thiết bị của bạn</li></ul>"
           },
           "useCases": {
-            "title": "Trường hợp sử dụng phổ biến",
-            "content": "<ul><li><strong>URI dữ liệu</strong>: Mã hóa hình ảnh hoặc phông chữ thành URI dữ liệu Base64 để nhúng vào HTML/CSS</li><li><strong>Xác thực API</strong>: Mã hóa thông tin đăng nhập cho tiêu đề HTTP Basic Authentication</li><li><strong>Tệp đính kèm email</strong>: Mã hóa/giải mã tệp đính kèm MIME trong giao thức email</li><li><strong>JWT Token</strong>: Giải mã payload của JWT token để kiểm tra</li><li><strong>Cấu hình</strong>: Mã hóa dữ liệu nhị phân để đưa vào tệp cấu hình JSON hoặc YAML</li></ul>"
+            "title": "Các trường hợp sử dụng phổ biến",
+            "content": "<ul><li><strong>Data URI</strong>: Mã hóa hình ảnh hoặc phông chữ dưới dạng Base64 Data URI để nhúng trong HTML/CSS mà không cần yêu cầu tệp bên ngoài</li><li><strong>JWT Token</strong>: Giải mã JWT payload sử dụng Base64 URL-safe để gỡ lỗi và kiểm tra</li><li><strong>Xác thực API</strong>: Mã hóa thông tin đăng nhập cho header HTTP Basic Authentication</li><li><strong>Truyền tệp</strong>: Chuyển đổi tệp nhị phân thành văn bản Base64 để đưa vào JSON API, email hoặc tệp cấu hình</li><li><strong>Đính kèm email</strong>: Mã hóa/giải mã đính kèm MIME trong giao thức email</li><li><strong>Gỡ lỗi cho nhà phát triển</strong>: Kiểm tra nhanh dữ liệu mã hóa Base64 trong log, token hoặc phản hồi API</li></ul>"
           },
           "privacy": {
             "title": "Xử lý Base64 ưu tiên quyền riêng tư",
-            "content": "<p>Toàn bộ quá trình mã hóa và giải mã diễn ra <strong>trực tiếp trong trình duyệt</strong> bằng API tích hợp sẵn <code>btoa()</code> và <code>atob()</code>.</p><ul><li>Văn bản của bạn <strong>không bao giờ rời khỏi thiết bị</strong> — lý tưởng để mã hóa thông tin đăng nhập hoặc token nhạy cảm</li><li>Không xử lý hay ghi nhật ký trên máy chủ</li><li>Hoạt động hoàn toàn <strong>ngoại tuyến</strong> sau khi tải trang lần đầu</li></ul>"
+            "content": "<p>Tất cả mã hóa và giải mã diễn ra <strong>trực tiếp trong trình duyệt của bạn</strong>. Tệp và văn bản của bạn được xử lý cục bộ và <strong>không bao giờ được tải lên bất kỳ máy chủ nào</strong>.</p><ul><li>Lý tưởng để mã hóa thông tin đăng nhập nhạy cảm, token và tệp riêng tư</li><li>Không xử lý phía máy chủ, không ghi log, không thu thập dữ liệu</li><li>Hoạt động hoàn toàn <strong>ngoại tuyến</strong> sau khi tải trang lần đầu</li><li>Cài đặt dưới dạng PWA để truy cập ngay lập tức mà không cần internet</li></ul>"
           }
         },
         "textMode": "Text",
@@ -167,7 +167,40 @@
         "downloadDecoded": "Download Decoded File",
         "fileName": "File",
         "fileSize": "Size",
-        "clear": "Clear"
+        "clear": "Clear",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Zap",
+            "title": "Chuyển đổi thời gian thực",
+            "description": "Mã hóa hoặc giải mã ngay lập tức khi nhập. Không cần nhấn nút — kết quả cập nhật trực tiếp với mỗi phím bấm."
+          },
+          "f2": {
+            "icon": "MonitorDown",
+            "title": "Hỗ trợ văn bản & tệp",
+            "description": "Mã hóa bất kỳ tệp nào (hình ảnh, PDF, ZIP) sang Base64, hoặc dán Base64 để giải mã và tải xuống tệp gốc."
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "Base64 URL-safe (RFC 4648)",
+            "description": "Chuyển đổi một cú nhấp sang biến thể URL-safe thay thế +/ bằng -_ và bỏ qua padding. Hoàn hảo cho JWT token và tham số URL."
+          },
+          "f4": {
+            "icon": "Braces",
+            "title": "Đầu ra Data URI",
+            "description": "Tạo chuỗi data:'{mime}';base64,... sẵn sàng sử dụng để nhúng hình ảnh, phông chữ hoặc tệp trực tiếp vào HTML, CSS hoặc JS."
+          },
+          "f5": {
+            "icon": "Eye",
+            "title": "Xem trước hình ảnh & tự động phát hiện",
+            "description": "Tự động phát hiện hình ảnh đã giải mã (PNG, JPEG, GIF, WebP) và hiển thị xem trước inline. Phát hiện thông minh chuyển sang chế độ giải mã khi phát hiện đầu vào Base64."
+          },
+          "f6": {
+            "icon": "BarChart3",
+            "title": "Hoán đổi, thống kê & quyền riêng tư",
+            "description": "Hoán đổi đầu ra sang đầu vào với một cú nhấp, hiển thị kích thước byte thời gian thực và xử lý 100% phía trình duyệt — dữ liệu của bạn không bao giờ rời khỏi thiết bị."
+          }
+        }
       },
       "url-encoder": {
         "name": "Mã hóa/Giải mã URL",

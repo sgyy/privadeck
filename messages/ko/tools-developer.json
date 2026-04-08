@@ -125,23 +125,23 @@
         "seoContent": {
           "intro": {
             "title": "Base64 인코더/디코더란?",
-            "content": "<p><strong>Base64 Encoder/Decoder</strong>는 텍스트를 Base64 인코딩으로 변환하거나 그 반대로 변환합니다. Base64는 바이너리 데이터가 지원되지 않는 URL, 이메일, HTML, JSON에 데이터를 임베드하는 데 널리 사용되는 이진-텍스트 인코딩 방식입니다.</p><p>어떤 텍스트 문자열이든 Base64로 즉시 인코딩하거나 Base64 문자열을 읽기 쉬운 텍스트로 디코딩하세요 — 별도 소프트웨어가 필요 없습니다.</p>"
+            "content": "<p><strong>Base64 인코더/디코더</strong>는 텍스트와 파일을 Base64 인코딩으로 변환하거나 그 반대를 수행합니다. Base64는 URL, 이메일, HTML, JSON에 데이터를 포함하는 데 널리 사용되는 바이너리-텍스트 인코딩 방식입니다.</p><p>텍스트 또는 모든 파일(이미지, PDF, ZIP)을 Base64로 인코딩하거나, Base64를 텍스트 또는 다운로드 가능한 파일로 디코딩하세요 — 모두 브라우저에서, URL-safe 변형 및 Data URI를 지원합니다.</p>"
           },
           "howToUse": {
-            "title": "Base64 인코더/디코더 사용 방법",
-            "content": "<ol><li>입력 필드에 텍스트를 입력하세요</li><li><strong>인코딩</strong>을 선택하여 텍스트를 Base64로 변환하거나, <strong>디코딩</strong>을 선택하여 Base64를 텍스트로 변환하세요</li><li>결과가 출력 영역에 즉시 표시됩니다</li><li><strong>복사</strong>를 클릭하여 결과를 클립보드에 복사하세요</li></ol><p>특수 문자, 이모지, 비라틴 문자를 포함한 UTF-8 텍스트를 지원합니다.</p>"
+            "title": "Base64 인코더/디코더 사용법",
+            "content": "<ol><li>입력에 따라 <strong>텍스트</strong> 또는 <strong>파일</strong> 모드를 선택하세요</li><li><strong>인코딩</strong> 또는 <strong>디코딩</strong> 방향을 선택하세요 — 도구가 Base64 입력을 자동 감지합니다</li><li>필요에 따라 <strong>표준</strong> 또는 <strong>URL-safe</strong> 변형을 선택하세요</li><li>입력하는 즉시 결과가 표시됩니다 — 버튼 클릭이 필요 없습니다</li><li><strong>복사</strong>, <strong>다운로드</strong> 또는 <strong>교환</strong>으로 출력을 활용하세요</li></ol><p>파일 인코딩 시 <strong>Data URI 출력</strong>을 활성화하면 HTML/CSS에 바로 사용할 수 있는 data URL을 얻을 수 있습니다.</p>"
           },
           "features": {
             "title": "주요 기능",
-            "content": "<ul><li><strong>즉시 인코딩</strong>: 입력하는 즉시 실시간으로 텍스트를 Base64로 변환</li><li><strong>즉시 디코딩</strong>: Base64 문자열을 읽기 쉬운 텍스트로 디코딩</li><li><strong>UTF-8 지원</strong>: Unicode 문자, 이모지, 멀티바이트 텍스트 정확히 처리</li><li><strong>오류 감지</strong>: 디코딩 중 입력이 유효한 Base64가 아닐 때 알림</li><li><strong>원클릭 복사</strong>: 결과를 클립보드에 즉시 복사</li><li><strong>크기 제한 없음</strong>: 어떤 길이의 텍스트도 처리</li></ul>"
+            "content": "<ul><li><strong>실시간 변환</strong>: 입력하면서 즉시 인코딩 또는 디코딩 — 버튼 클릭 불필요</li><li><strong>텍스트 &amp; 파일 지원</strong>: 모든 파일(이미지, PDF, ZIP)을 Base64로 인코딩하거나 Base64를 다운로드 가능한 파일로 디코딩</li><li><strong>URL-safe Base64</strong>: +/를 -_로 대체하고 패딩을 생략하는 RFC 4648 변형 — JWT 토큰과 URL 매개변수에 이상적</li><li><strong>Data URI 출력</strong>: HTML, CSS 또는 JavaScript에 포함할 수 있는 <code>data:{mime};base64,...</code> 문자열 생성</li><li><strong>이미지 미리보기</strong>: Base64 이미지 데이터(PNG, JPEG, GIF, WebP) 디코딩 시 자동 감지 및 미리보기 표시</li><li><strong>자동 감지</strong>: 입력이 Base64인지 지능적으로 감지하여 자동으로 디코딩 모드로 전환</li><li><strong>교환 &amp; 통계</strong>: 한 번의 클릭으로 출력을 입력으로 교환, 실시간 바이트 크기 및 문자 수 표시</li><li><strong>UTF-8 지원</strong>: 유니코드 문자, 이모지 및 멀티바이트 텍스트를 올바르게 처리</li><li><strong>크기 제한 없음</strong>: 모든 크기의 텍스트 또는 파일 처리 — 장치 메모리에 의해서만 제한</li></ul>"
           },
           "useCases": {
-            "title": "주요 활용 사례",
-            "content": "<ul><li><strong>데이터 URI</strong>: HTML/CSS에 임베드하기 위해 이미지나 폰트를 Base64 데이터 URI로 인코딩</li><li><strong>API 인증</strong>: HTTP 기본 인증 헤더용 자격 증명 인코딩</li><li><strong>이메일 첨부 파일</strong>: 이메일 프로토콜에서 MIME 첨부 파일 인코딩/디코딩</li><li><strong>JWT 토큰</strong>: 검사를 위해 JWT 토큰 페이로드 디코딩</li><li><strong>설정</strong>: JSON 또는 YAML 설정 파일에 포함하기 위해 바이너리 데이터 인코딩</li></ul>"
+            "title": "일반적인 사용 사례",
+            "content": "<ul><li><strong>Data URI</strong>: 이미지나 폰트를 Base64 Data URI로 인코딩하여 외부 파일 요청 없이 HTML/CSS에 포함</li><li><strong>JWT 토큰</strong>: URL-safe Base64를 사용하여 JWT 페이로드를 디코딩하여 디버깅 및 검사</li><li><strong>API 인증</strong>: HTTP Basic Authentication 헤더용 자격 증명 인코딩</li><li><strong>파일 전송</strong>: 바이너리 파일을 Base64 텍스트로 변환하여 JSON API, 이메일 또는 설정 파일에 포함</li><li><strong>이메일 첨부</strong>: 이메일 프로토콜에서 MIME 첨부 파일 인코딩/디코딩</li><li><strong>개발자 디버깅</strong>: 로그, 토큰 또는 API 응답에서 Base64 인코딩 데이터 빠르게 검사</li></ul>"
           },
           "privacy": {
-            "title": "개인정보 우선 Base64 처리",
-            "content": "<p>모든 인코딩과 디코딩은 내장 <code>btoa()</code> 및 <code>atob()</code> API를 사용하여 <strong>브라우저에서 직접</strong> 이루어집니다.</p><ul><li>텍스트가 <strong>기기를 절대 떠나지 않습니다</strong> — 민감한 자격 증명이나 토큰 인코딩에 이상적</li><li>서버 측 처리 또는 로깅 없음</li><li>초기 페이지 로드 후 완전히 <strong>오프라인</strong>에서 작동</li></ul>"
+            "title": "개인정보 보호 우선 Base64 처리",
+            "content": "<p>모든 인코딩 및 디코딩은 <strong>브라우저에서 직접</strong> 수행됩니다. 파일과 텍스트는 로컬에서 처리되며 <strong>어떤 서버에도 업로드되지 않습니다</strong>.</p><ul><li>민감한 자격 증명, 토큰 및 개인 파일 인코딩에 이상적</li><li>서버 측 처리 없음, 로그 기록 없음, 데이터 수집 없음</li><li>초기 페이지 로드 후 완전히 <strong>오프라인</strong>으로 작동</li><li>PWA로 설치하여 인터넷 없이 즉시 접근</li></ul>"
           }
         },
         "textMode": "Text",
@@ -167,7 +167,40 @@
         "downloadDecoded": "Download Decoded File",
         "fileName": "File",
         "fileSize": "Size",
-        "clear": "Clear"
+        "clear": "Clear",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Zap",
+            "title": "실시간 변환",
+            "description": "입력하면서 즉시 인코딩 또는 디코딩. 버튼 클릭 불필요 — 매 키 입력마다 결과가 실시간 업데이트됩니다."
+          },
+          "f2": {
+            "icon": "MonitorDown",
+            "title": "텍스트 & 파일 지원",
+            "description": "모든 파일(이미지, PDF, ZIP)을 Base64로 인코딩하거나, Base64를 붙여넣어 원본 파일을 디코딩 및 다운로드합니다."
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "URL-safe Base64 (RFC 4648)",
+            "description": "+/를 -_로 대체하고 패딩을 생략하는 URL-safe 변형으로 원클릭 전환. JWT 토큰과 URL 매개변수에 완벽합니다."
+          },
+          "f4": {
+            "icon": "Braces",
+            "title": "Data URI 출력",
+            "description": "HTML, CSS 또는 JS에 이미지, 폰트 또는 파일을 직접 임베드하기 위한 data:'{mime}';base64,... 문자열을 생성합니다."
+          },
+          "f5": {
+            "icon": "Eye",
+            "title": "이미지 미리보기 & 자동 감지",
+            "description": "디코딩된 이미지(PNG, JPEG, GIF, WebP)를 자동으로 감지하고 인라인 미리보기를 표시합니다. 스마트 감지가 Base64 입력을 발견하면 자동으로 디코딩 모드로 전환합니다."
+          },
+          "f6": {
+            "icon": "BarChart3",
+            "title": "교환, 통계 & 개인정보",
+            "description": "원클릭 출력-입력 교환, 실시간 바이트 크기 표시, 100% 브라우저 측 처리 — 데이터가 절대 장치를 떠나지 않습니다."
+          }
+        }
       },
       "url-encoder": {
         "name": "URL 인코딩/디코딩",

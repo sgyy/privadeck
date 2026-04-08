@@ -125,23 +125,23 @@
         "seoContent": {
           "intro": {
             "title": "Base64 Kodlayıcı/Çözücü Nedir?",
-            "content": "<p><strong>Base64 Kodlayıcı/Çözücü</strong>, metni Base64 kodlamasına ve geriye dönüştürür. Base64, ikili verilerin desteklenmediği URL'lere, e-postalara, HTML ve JSON içeriklerine veri gömmek için yaygın olarak kullanılan bir ikili-metin kodlama şemasıdır.</p><p>Herhangi bir metin dizesini anında Base64'e kodlayın veya Base64 dizelerini okunabilir metne geri çözün — yazılım gerekmez.</p>"
+            "content": "<p><strong>Base64 Kodlayıcı/Çözücü</strong> metin ve dosyaları Base64 kodlamasına dönüştürür ve tersini yapar. Base64, URL'lerde, e-postalarda, HTML ve JSON'da veri gömmek için yaygın olarak kullanılan ikili-metin kodlama şemasıdır.</p><p>Metin veya herhangi bir dosyayı (resimler, PDF'ler, ZIP'ler) Base64'e kodlayın veya Base64 dizelerini metne veya indirilebilir dosyalara çözün — tümü tarayıcınızda, URL-güvenli varyant ve Data URI desteğiyle.</p>"
           },
           "howToUse": {
-            "title": "Base64 Kodlayıcı/Çözücü Nasıl Kullanılır?",
-            "content": "<ol><li>Metninizi giriş alanına girin</li><li>Metni Base64'e dönüştürmek için <strong>Kodla</strong>, Base64'ü metne geri dönüştürmek için <strong>Çöz</strong> seçeneğini belirleyin</li><li>Sonuç çıktı alanında anında görünür</li><li>Sonucu panonuza kopyalamak için <strong>Kopyala</strong>'ya tıklayın</li></ol><p>Özel karakterler, emojiler ve Latin dışı betikler dahil UTF-8 metni destekler.</p>"
+            "title": "Base64 Kodlayıcı/Çözücü Nasıl Kullanılır",
+            "content": "<ol><li>Girdinize göre <strong>Metin</strong> veya <strong>Dosya</strong> modunu seçin</li><li><strong>Kodla</strong> veya <strong>Çöz</strong> yönünü seçin — araç Base64 girdisini otomatik algılar</li><li>İhtiyaca göre <strong>Standart</strong> veya <strong>URL-güvenli</strong> varyantı seçin</li><li>Yazarken sonuçlar anında görünür — düğme tıklamaya gerek yok</li><li>Çıktıyla çalışmak için <strong>Kopyala</strong>, <strong>İndir</strong> veya <strong>Değiştir</strong> kullanın</li></ol><p>Dosya kodlarken, HTML/CSS gömme için hazır bir data URL almak üzere <strong>Data URI çıktısı</strong>nı etkinleştirin.</p>"
           },
           "features": {
             "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Anında Kodlama</strong>: Yazarken metni gerçek zamanlı olarak Base64'e dönüştürün</li><li><strong>Anında Kod Çözme</strong>: Base64 dizelerini okunabilir metne geri çözün</li><li><strong>UTF-8 Desteği</strong>: Unicode karakterleri, emojileri ve çok baytlı metni doğru şekilde işler</li><li><strong>Hata Algılama</strong>: Kod çözme sırasında girdi geçerli Base64 değilse uyarı verir</li><li><strong>Tek Tıklamayla Kopyala</strong>: Sonuçları anında panoya kopyalayın</li><li><strong>Boyut Sınırı Yok</strong>: İstediğiniz uzunlukta metni işleyin</li></ul>"
+            "content": "<ul><li><strong>Gerçek zamanlı dönüşüm</strong>: Yazarken anında kodlayın veya çözün — düğme tıklamaya gerek yok</li><li><strong>Metin ve dosya desteği</strong>: Herhangi bir dosyayı (resimler, PDF'ler, ZIP'ler) Base64'e kodlayın veya Base64'ü indirilebilir bir dosyaya çözün</li><li><strong>URL-güvenli Base64</strong>: +/'yı -_ ile değiştiren ve dolguyu atlayan RFC 4648 varyantı — JWT tokenları ve URL parametreleri için ideal</li><li><strong>Data URI çıktısı</strong>: HTML, CSS veya JavaScript'e gömmek için kullanıma hazır <code>data:{mime};base64,...</code> dizeleri oluşturur</li><li><strong>Resim önizleme</strong>: Base64 resim verilerini (PNG, JPEG, GIF, WebP) çözerken otomatik olarak algılar ve önizleme gösterir</li><li><strong>Otomatik algılama</strong>: Girdinizin Base64 olup olmadığını akıllıca algılar ve otomatik olarak çözme moduna geçer</li><li><strong>Değiştir ve istatistikler</strong>: Çıktıyı tek tıkla girdiye değiştirin, gerçek zamanlı bayt boyutu ve karakter sayısı gösterimiyle</li><li><strong>UTF-8 desteği</strong>: Unicode karakterleri, emojileri ve çok baytlı metni doğru şekilde işler</li><li><strong>Boyut sınırı yok</strong>: Herhangi bir boyutta metin veya dosya işleyin — yalnızca cihaz belleğinizle sınırlı</li></ul>"
           },
           "useCases": {
-            "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Veri URI'leri</strong>: Görselleri veya yazı tiplerini HTML/CSS'e gömmek için Base64 veri URI'si olarak kodlayın</li><li><strong>API Kimlik Doğrulama</strong>: HTTP Temel Kimlik Doğrulama başlıkları için kimlik bilgilerini kodlayın</li><li><strong>E-posta Ekleri</strong>: E-posta protokollerinde MIME eklerini kodlayın/çözün</li><li><strong>JWT Token'ları</strong>: JWT token yüklerini inceleme amacıyla çözün</li><li><strong>Yapılandırma</strong>: JSON veya YAML yapılandırma dosyalarına eklemek için ikili verileri kodlayın</li></ul>"
+            "title": "Yaygın Kullanım Senaryoları",
+            "content": "<ul><li><strong>Data URI'lar</strong>: Resimleri veya yazı tiplerini Base64 Data URI olarak kodlayın, harici dosya istekleri olmadan HTML/CSS'e gömün</li><li><strong>JWT Tokenları</strong>: Hata ayıklama ve inceleme için URL-güvenli Base64 kullanarak JWT payload'larını çözün</li><li><strong>API Kimlik Doğrulama</strong>: HTTP Basic Authentication başlıkları için kimlik bilgilerini kodlayın</li><li><strong>Dosya Aktarımı</strong>: İkili dosyaları JSON API'ler, e-postalar veya yapılandırma dosyalarına dahil etmek için Base64 metne dönüştürün</li><li><strong>E-posta Ekleri</strong>: E-posta protokollerinde MIME eklerini kodlayın/çözün</li><li><strong>Geliştirici Hata Ayıklama</strong>: Günlüklerde, tokenlarda veya API yanıtlarında Base64 kodlu verileri hızlıca inceleyin</li></ul>"
           },
           "privacy": {
             "title": "Gizlilik Öncelikli Base64 İşleme",
-            "content": "<p>Tüm kodlama ve kod çözme, yerleşik <code>btoa()</code> ve <code>atob()</code> API'leri kullanılarak <strong>doğrudan tarayıcınızda</strong> gerçekleşir.</p><ul><li>Metniniz <strong>cihazınızdan asla ayrılmaz</strong> — hassas kimlik bilgilerini veya token'ları kodlamak için idealdir</li><li>Sunucu tarafında işleme veya günlüğe kayıt yoktur</li><li>İlk sayfa yüklemesinden sonra tamamen <strong>çevrimdışı</strong> çalışır</li></ul>"
+            "content": "<p>Tüm kodlama ve çözme <strong>doğrudan tarayıcınızda</strong> gerçekleşir. Dosyalarınız ve metinleriniz yerel olarak işlenir ve <strong>hiçbir sunucuya yüklenmez</strong>.</p><ul><li>Hassas kimlik bilgilerini, tokenları ve özel dosyaları kodlamak için ideal</li><li>Sunucu tarafı işleme yok, günlük kaydı yok, veri toplama yok</li><li>İlk sayfa yüklemesinden sonra tamamen <strong>çevrimdışı</strong> çalışır</li><li>İnternet olmadan anında erişim için PWA olarak yükleyin</li></ul>"
           }
         },
         "textMode": "Text",
@@ -167,7 +167,40 @@
         "downloadDecoded": "Download Decoded File",
         "fileName": "File",
         "fileSize": "Size",
-        "clear": "Clear"
+        "clear": "Clear",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Zap",
+            "title": "Gerçek zamanlı dönüşüm",
+            "description": "Yazarken anında kodlayın veya çözün. Düğme tıklamaya gerek yok — sonuçlar her tuş vuruşunda canlı güncellenir."
+          },
+          "f2": {
+            "icon": "MonitorDown",
+            "title": "Metin ve dosya desteği",
+            "description": "Herhangi bir dosyayı (resimler, PDF'ler, ZIP'ler) Base64'e kodlayın veya Base64 yapıştırarak orijinal dosyayı çözüp indirin."
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "URL-güvenli Base64 (RFC 4648)",
+            "description": "+/'yı -_ ile değiştiren ve dolguyu atlayan URL-güvenli varyanta tek tıkla geçin. JWT tokenları ve URL parametreleri için mükemmel."
+          },
+          "f4": {
+            "icon": "Braces",
+            "title": "Data URI çıktısı",
+            "description": "Resimleri, yazı tiplerini veya dosyaları doğrudan HTML, CSS veya JS'ye gömmek için kullanıma hazır data:'{mime}';base64,... dizeleri oluşturur."
+          },
+          "f5": {
+            "icon": "Eye",
+            "title": "Resim önizleme ve otomatik algılama",
+            "description": "Çözülen resimleri (PNG, JPEG, GIF, WebP) otomatik algılar ve satır içi önizleme gösterir. Akıllı algılama, Base64 girişi algılandığında çözme moduna otomatik geçer."
+          },
+          "f6": {
+            "icon": "BarChart3",
+            "title": "Değiştir, istatistikler ve gizlilik",
+            "description": "Tek tıkla çıktıyı girdiye değiştirin, gerçek zamanlı bayt boyutu gösterimi ve %100 tarayıcı tarafı işleme — verileriniz cihazınızdan asla ayrılmaz."
+          }
+        }
       },
       "url-encoder": {
         "name": "URL Kodlama/Çözme",

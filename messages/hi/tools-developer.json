@@ -124,24 +124,24 @@
         },
         "seoContent": {
           "intro": {
-            "title": "Base64 Encoder/Decoder क्या है?",
-            "content": "<p><strong>Base64 Encoder/Decoder</strong> text को Base64 में encode और decode करता है।</p><p>URLs, emails, HTML, JSON में data embed करने के लिए तुरंत conversions करें।</p>"
+            "title": "Base64 एनकोडर/डिकोडर क्या है?",
+            "content": "<p><strong>Base64 एनकोडर/डिकोडर</strong> टेक्स्ट और फाइलों को Base64 एनकोडिंग में बदलता है और इसके विपरीत भी। Base64 एक बाइनरी-से-टेक्स्ट एनकोडिंग स्कीम है जो URLs, ईमेल, HTML और JSON में डेटा एम्बेड करने के लिए व्यापक रूप से उपयोग की जाती है।</p><p>टेक्स्ट या किसी भी फाइल (इमेज, PDF, ZIP) को Base64 में एनकोड करें, या Base64 को टेक्स्ट या डाउनलोड योग्य फाइलों में डिकोड करें — सब कुछ आपके ब्राउज़र में, URL-safe वेरिएंट और Data URI सपोर्ट के साथ।</p>"
           },
           "howToUse": {
-            "title": "Base64 का उपयोग कैसे करें",
-            "content": "<ol><li>Text दर्ज करें</li><li>Encode या Decode चुनें</li><li>तुरंत result दिखता है</li><li>Copy करें</li></ol>"
+            "title": "Base64 एनकोडर/डिकोडर का उपयोग कैसे करें",
+            "content": "<ol><li>अपने इनपुट के अनुसार <strong>टेक्स्ट</strong> या <strong>फाइल</strong> मोड चुनें</li><li><strong>एनकोड</strong> या <strong>डिकोड</strong> दिशा चुनें — टूल स्वचालित रूप से Base64 इनपुट पहचानता है</li><li>आवश्यकतानुसार <strong>स्टैंडर्ड</strong> या <strong>URL-safe</strong> वेरिएंट चुनें</li><li>टाइप करते ही परिणाम तुरंत दिखाई देते हैं — किसी बटन पर क्लिक करने की जरूरत नहीं</li><li>आउटपुट के साथ काम करने के लिए <strong>कॉपी</strong>, <strong>डाउनलोड</strong> या <strong>स्वैप</strong> का उपयोग करें</li></ol><p>फाइल एनकोडिंग के लिए, HTML/CSS एम्बेडिंग के लिए तैयार data URL पाने के लिए <strong>Data URI आउटपुट</strong> सक्षम करें।</p>"
           },
           "features": {
             "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Instant Conversion</strong>: Real-time encoding/decoding</li><li><strong>UTF-8 Support</strong>: Unicode और emojis support</li><li><strong>Error Detection</strong>: Invalid input alert</li><li><strong>No Size Limits</strong>: किसी भी length का text</li></ul>"
+            "content": "<ul><li><strong>रियल-टाइम रूपांतरण</strong>: टाइप करते ही तुरंत एनकोड या डिकोड — बटन क्लिक की जरूरत नहीं</li><li><strong>टेक्स्ट और फाइल सपोर्ट</strong>: किसी भी फाइल (इमेज, PDF, ZIP) को Base64 में एनकोड करें, या Base64 को डाउनलोड योग्य फाइल में डिकोड करें</li><li><strong>URL-safe Base64</strong>: RFC 4648 वेरिएंट जो +/ को -_ से बदलता है और पैडिंग हटाता है — JWT टोकन और URL पैरामीटर के लिए आदर्श</li><li><strong>Data URI आउटपुट</strong>: HTML, CSS या JavaScript में एम्बेड करने के लिए तैयार <code>data:{mime};base64,...</code> स्ट्रिंग जनरेट करें</li><li><strong>इमेज प्रीव्यू</strong>: Base64 इमेज डेटा (PNG, JPEG, GIF, WebP) डिकोड करते समय स्वचालित रूप से पहचान और प्रीव्यू दिखाएं</li><li><strong>ऑटो-डिटेक्शन</strong>: बुद्धिमानी से पहचानता है कि आपका इनपुट Base64 है और स्वचालित रूप से डिकोड मोड में स्विच करता है</li><li><strong>स्वैप और आंकड़े</strong>: एक क्लिक में आउटपुट को इनपुट में स्वैप करें, रियल-टाइम बाइट साइज और कैरेक्टर काउंट डिस्प्ले के साथ</li><li><strong>UTF-8 सपोर्ट</strong>: Unicode कैरेक्टर, इमोजी और मल्टीबाइट टेक्स्ट को सही ढंग से हैंडल करता है</li><li><strong>कोई साइज लिमिट नहीं</strong>: किसी भी साइज का टेक्स्ट या फाइल प्रोसेस करें — केवल आपके डिवाइस मेमोरी द्वारा सीमित</li></ul>"
           },
           "useCases": {
-            "title": "सामान्य उपयोग",
-            "content": "<ul><li><strong>Data URIs</strong>: Images को embed करें</li><li><strong>API Auth</strong>: Credentials encode करें</li><li><strong>JWT Tokens</strong>: Payloads decode करें</li><li><strong>Configuration</strong>: Config में binary data add करें</li></ul>"
+            "title": "सामान्य उपयोग के मामले",
+            "content": "<ul><li><strong>Data URI</strong>: इमेज या फॉन्ट को Base64 Data URI के रूप में एनकोड करें HTML/CSS में बिना बाहरी फाइल रिक्वेस्ट के एम्बेड करने के लिए</li><li><strong>JWT टोकन</strong>: डीबगिंग और निरीक्षण के लिए URL-safe Base64 का उपयोग करके JWT पेलोड डिकोड करें</li><li><strong>API प्रमाणीकरण</strong>: HTTP Basic Authentication हेडर के लिए क्रेडेंशियल एनकोड करें</li><li><strong>फाइल ट्रांसफर</strong>: बाइनरी फाइलों को Base64 टेक्स्ट में बदलें JSON API, ईमेल या कॉन्फिग फाइलों में शामिल करने के लिए</li><li><strong>ईमेल अटैचमेंट</strong>: ईमेल प्रोटोकॉल में MIME अटैचमेंट एनकोड/डिकोड करें</li><li><strong>डेवलपर डीबगिंग</strong>: लॉग, टोकन या API रिस्पॉन्स में Base64 एनकोडेड डेटा को तुरंत इंस्पेक्ट करें</li></ul>"
           },
           "privacy": {
-            "title": "गोपनीयता-प्रथम Base64 Processing",
-            "content": "<p>Encoding <strong>सीधे ब्राउज़र में</strong> होता है।</p><ul><li>Data <strong>कभी device नहीं छोड़ता</strong></li><li>कोई server processing नहीं</li><li><strong>Offline काम करता है</strong></li></ul>"
+            "title": "गोपनीयता-प्रथम Base64 प्रोसेसिंग",
+            "content": "<p>सभी एनकोडिंग और डिकोडिंग <strong>सीधे आपके ब्राउज़र में</strong> होती है। आपकी फाइलें और टेक्स्ट स्थानीय रूप से प्रोसेस होते हैं और <strong>कभी किसी सर्वर पर अपलोड नहीं होते</strong>।</p><ul><li>संवेदनशील क्रेडेंशियल, टोकन और निजी फाइलों को एनकोड करने के लिए आदर्श</li><li>कोई सर्वर-साइड प्रोसेसिंग नहीं, कोई लॉगिंग नहीं, कोई डेटा संग्रह नहीं</li><li>पहली पेज लोडिंग के बाद पूरी तरह <strong>ऑफलाइन</strong> काम करता है</li><li>इंटरनेट के बिना तुरंत एक्सेस के लिए PWA के रूप में इंस्टॉल करें</li></ul>"
           }
         },
         "textMode": "Text",
@@ -167,7 +167,40 @@
         "downloadDecoded": "Download Decoded File",
         "fileName": "File",
         "fileSize": "Size",
-        "clear": "Clear"
+        "clear": "Clear",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Zap",
+            "title": "रियल-टाइम रूपांतरण",
+            "description": "टाइप करते ही तुरंत एनकोड या डिकोड करें। बटन क्लिक की जरूरत नहीं — हर कीस्ट्रोक के साथ परिणाम लाइव अपडेट होते हैं।"
+          },
+          "f2": {
+            "icon": "MonitorDown",
+            "title": "टेक्स्ट और फाइल सपोर्ट",
+            "description": "किसी भी फाइल (इमेज, PDF, ZIP) को Base64 में एनकोड करें, या Base64 पेस्ट करके मूल फाइल डिकोड और डाउनलोड करें।"
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "URL-safe Base64 (RFC 4648)",
+            "description": "एक क्लिक में URL-safe वेरिएंट पर स्विच करें जो +/ को -_ से बदलता है और पैडिंग हटाता है। JWT टोकन और URL पैरामीटर के लिए परफेक्ट।"
+          },
+          "f4": {
+            "icon": "Braces",
+            "title": "Data URI आउटपुट",
+            "description": "HTML, CSS या JS में सीधे इमेज, फॉन्ट या फाइलें एम्बेड करने के लिए तैयार data:'{mime}';base64,... स्ट्रिंग जनरेट करें।"
+          },
+          "f5": {
+            "icon": "Eye",
+            "title": "इमेज प्रीव्यू और ऑटो-डिटेक्शन",
+            "description": "डिकोड की गई इमेज (PNG, JPEG, GIF, WebP) को स्वचालित रूप से पहचानता है और इनलाइन प्रीव्यू दिखाता है। स्मार्ट डिटेक्शन Base64 इनपुट मिलने पर डिकोड मोड में स्विच करता है।"
+          },
+          "f6": {
+            "icon": "BarChart3",
+            "title": "स्वैप, आंकड़े और गोपनीयता",
+            "description": "एक क्लिक में आउटपुट-टू-इनपुट स्वैप, रियल-टाइम बाइट साइज डिस्प्ले, और 100% ब्राउज़र-साइड प्रोसेसिंग — आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता।"
+          }
+        }
       },
       "url-encoder": {
         "name": "URL एन्कोड/डिकोड",

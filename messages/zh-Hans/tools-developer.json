@@ -148,26 +148,59 @@
         "seoContent": {
           "intro": {
             "title": "什么是 Base64 编解码工具？",
-            "content": "<p><strong>Base64 编解码工具</strong>可将文本转换为 Base64 编码，或将 Base64 字符串解码为可读文本。Base64 是一种二进制到文本的编码方案，广泛用于在 URL、电子邮件、HTML 和 JSON 中嵌入数据。</p><p>即时编码任意文本为 Base64，或将 Base64 字符串还原为原始文本——无需安装任何软件。</p>"
+            "content": "<p><strong>Base64 编解码工具</strong>可将文本和文件转换为 Base64 编码，或将 Base64 解码还原。Base64 是一种二进制到文本的编码方案，广泛用于在 URL、电子邮件、HTML 和 JSON 中嵌入数据。</p><p>将文本或任意文件（图片、PDF、ZIP）编码为 Base64，或将 Base64 解码为文本或可下载文件——全部在浏览器中完成，支持 URL 安全变体和 Data URI 输出。</p>"
           },
           "howToUse": {
             "title": "如何使用 Base64 编解码工具",
-            "content": "<ol><li>在输入框中输入文本内容</li><li>选择<strong>编码</strong>将文本转为 Base64，或选择<strong>解码</strong>将 Base64 还原为文本</li><li>结果即时显示在输出区域</li><li>点击<strong>复制</strong>将结果复制到剪贴板</li></ol><p>完整支持 UTF-8 文本，包括特殊字符、表情符号和非拉丁文字。</p>"
+            "content": "<ol><li>根据输入类型选择<strong>文本</strong>或<strong>文件</strong>模式</li><li>选择<strong>编码</strong>或<strong>解码</strong>方向——工具会自动检测 Base64 输入</li><li>按需选择<strong>标准</strong>或 <strong>URL 安全</strong>变体</li><li>输入时结果即时显示——无需点击任何按钮</li><li>使用<strong>复制</strong>、<strong>下载</strong>或<strong>交换</strong>处理输出结果</li></ol><p>文件编码时，启用 <strong>Data URI 输出</strong>可获取可直接用于 HTML/CSS 嵌入的 data URL。</p>"
           },
           "features": {
             "title": "核心功能",
-            "content": "<ul><li><strong>即时编码</strong>：输入文本实时转换为 Base64</li><li><strong>即时解码</strong>：将 Base64 字符串还原为可读文本</li><li><strong>UTF-8 支持</strong>：正确处理 Unicode 字符、表情符号和多字节文本</li><li><strong>错误检测</strong>：解码时自动提示无效的 Base64 输入</li><li><strong>一键复制</strong>：瞬间将结果复制到剪贴板</li><li><strong>无长度限制</strong>：可处理任意长度的文本</li></ul>"
+            "content": "<ul><li><strong>实时转换</strong>：输入即编码或解码，无需点击按钮</li><li><strong>文本与文件支持</strong>：将任意文件（图片、PDF、ZIP）编码为 Base64，或将 Base64 解码为可下载文件</li><li><strong>URL 安全 Base64</strong>：RFC 4648 变体，用 -_ 替换 +/，省略填充符——适合 JWT 令牌和 URL 参数</li><li><strong>Data URI 输出</strong>：生成可直接使用的 <code>data:{mime};base64,...</code> 字符串，嵌入 HTML、CSS 或 JavaScript</li><li><strong>图片预览</strong>：解码 Base64 图片数据时自动检测并显示预览（PNG、JPEG、GIF、WebP）</li><li><strong>自动检测</strong>：智能识别输入是否为 Base64，自动切换到解码模式</li><li><strong>交换与统计</strong>：一键将输出交换到输入，实时显示字节大小和字符数</li><li><strong>UTF-8 支持</strong>：正确处理 Unicode 字符、表情符号和多字节文本</li><li><strong>无大小限制</strong>：处理任意大小的文本或文件，仅受设备内存限制</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
-            "content": "<ul><li><strong>Data URI</strong>：将图片或字体编码为 Base64 Data URI，嵌入 HTML/CSS</li><li><strong>API 认证</strong>：为 HTTP Basic Authentication 请求头编码凭证</li><li><strong>邮件附件</strong>：编解码电子邮件协议中的 MIME 附件</li><li><strong>JWT 令牌</strong>：解码 JWT Token 的 Payload 进行检查</li><li><strong>配置文件</strong>：将二进制数据编码后存入 JSON 或 YAML 配置文件</li></ul>"
+            "content": "<ul><li><strong>Data URI</strong>：将图片或字体编码为 Base64 Data URI，嵌入 HTML/CSS，无需额外文件请求</li><li><strong>JWT 令牌</strong>：使用 URL 安全 Base64 解码 JWT Payload 进行调试和检查</li><li><strong>API 认证</strong>：为 HTTP Basic Authentication 请求头编码凭证</li><li><strong>文件传输</strong>：将二进制文件转为 Base64 文本，用于 JSON API、邮件或配置文件</li><li><strong>邮件附件</strong>：编解码电子邮件协议中的 MIME 附件</li><li><strong>开发者调试</strong>：快速检查日志、令牌或 API 响应中的 Base64 编码数据</li></ul>"
           },
           "privacy": {
             "title": "隐私优先的 Base64 处理",
-            "content": "<p>所有编码和解码操作<strong>直接在浏览器中</strong>使用内置的 <code>btoa()</code> 和 <code>atob()</code> API 完成。</p><ul><li>文本<strong>永远不会离开您的设备</strong>——非常适合编码敏感的凭证和令牌</li><li>无服务器端处理，无日志记录</li><li>页面加载后可完全<strong>离线</strong>使用</li></ul>"
+            "content": "<p>所有编码和解码操作<strong>直接在浏览器中</strong>完成。文件和文本在本地处理，<strong>绝不上传到任何服务器</strong>。</p><ul><li>非常适合编码敏感的凭证、令牌和私密文件</li><li>无服务器端处理，无日志记录，无数据收集</li><li>页面加载后可完全<strong>离线</strong>使用</li><li>安装为 PWA 应用，无需网络即可即时访问</li></ul>"
           }
         },
-        "clear": "清空"
+        "clear": "清空",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Zap",
+            "title": "实时转换",
+            "description": "输入即编码或解码，无需点击按钮——每次按键都会实时更新结果。"
+          },
+          "f2": {
+            "icon": "MonitorDown",
+            "title": "文本与文件支持",
+            "description": "将任意文件（图片、PDF、ZIP）编码为 Base64，或粘贴 Base64 解码并下载原始文件。"
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "URL 安全 Base64 (RFC 4648)",
+            "description": "一键切换到 URL 安全变体，用 -_ 替换 +/，省略填充符。适合 JWT 令牌和 URL 参数。"
+          },
+          "f4": {
+            "icon": "Braces",
+            "title": "Data URI 输出",
+            "description": "生成可直接使用的 data:'{mime}';base64,... 字符串，将图片、字体或文件直接嵌入 HTML、CSS 或 JS。"
+          },
+          "f5": {
+            "icon": "Eye",
+            "title": "图片预览与自动检测",
+            "description": "自动检测解码后的图片（PNG、JPEG、GIF、WebP）并显示内联预览。智能检测到 Base64 输入时自动切换到解码模式。"
+          },
+          "f6": {
+            "icon": "BarChart3",
+            "title": "交换、统计与隐私",
+            "description": "一键将输出交换到输入，实时显示字节大小，100% 浏览器端处理——数据永远不会离开您的设备。"
+          }
+        }
       },
       "url-encoder": {
         "name": "URL 编解码",
