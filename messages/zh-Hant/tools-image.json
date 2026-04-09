@@ -190,9 +190,9 @@
       "crop": {
         "name": "圖片裁剪",
         "description": "使用互動式裁剪工具精確裁剪圖片。",
-        "metaTitle": "圖片裁剪 - 免費線上圖片裁剪工具",
-        "metaDescription": "精確裁剪圖片。選擇長寬比或自由裁剪。免費線上工具。",
-        "keywords": "圖片裁剪, 線上裁剪圖片, 圖片裁剪器, 照片裁剪",
+        "metaTitle": "圖片裁剪工具 - 免費線上照片裁剪，支援旋轉、翻轉和預設尺寸",
+        "metaDescription": "免費線上裁剪、旋轉、翻轉和矯正圖片。提供預設長寬比和社群媒體預設（Instagram、YouTube、Facebook）。支援匯出為 JPEG、PNG 或 WebP。無需上傳，100% 瀏覽器端處理。",
+        "keywords": "圖片裁剪, 線上裁剪圖片, 圖片裁剪工具, 照片裁剪, 旋轉圖片, 翻轉圖片, 矯正照片, 長寬比裁剪, 社群媒體圖片尺寸, Instagram裁剪, YouTube縮圖裁剪, 免費照片裁剪, 線上圖片編輯",
         "aspectRatio": "長寬比",
         "free": "自由",
         "zoom": "縮放",
@@ -200,37 +200,37 @@
         "cropping": "裁剪中...",
         "reset": "重設",
         "faq": {
-          "q1": "可以設定特定的長寬比嗎？",
-          "a1": "可以，從預設比例（1:1、4:3、16:9、3:2）中選擇或使用自由裁剪。",
-          "q2": "原始圖片會被修改嗎？",
-          "a2": "不會，原始圖片不會被修改。會建立新的裁剪圖片供下載。",
-          "q3": "我的檔案會上傳到伺服器嗎？",
-          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
-          "q4": "這個工具能離線使用嗎？",
-          "a4": "可以。頁面載入完成後，工具完全可以離線執行。為獲得最佳體驗，建議從瀏覽器將 PrivaDeck 安裝為 PWA 應用程式。",
-          "q5": "檔案大小有限制嗎？",
-          "a5": "沒有伺服器端限制。最大檔案大小取決於您裝置的可用記憶體和瀏覽器能力。大多數現代裝置可以處理數百 MB 的檔案。"
+          "q1": "支援哪些裁剪模式和長寬比？",
+          "a1": "您可以自由拖曳裁剪框，也可以從 8 種預設長寬比中選擇：1:1、4:3、3:4、16:9、9:16、3:2 和 2:3。還提供 6 種社群媒體預設，包括 Instagram 貼文/限時動態、Facebook 封面、YouTube 縮圖、X/Twitter 頭圖和 LinkedIn 貼文。",
+          "q2": "可以旋轉、翻轉和矯正圖片嗎？",
+          "a2": "可以。使用 90° 旋轉按鈕快速旋轉，或使用矯正滑桿 (±45°) 進行微調。還可以水平或垂直翻轉圖片。所有變換均為無損操作。",
+          "q3": "支援哪些輸出格式？",
+          "a3": "可以匯出為 JPEG、PNG 或 WebP，也可以保持原始格式。對於 JPEG 和 WebP，品質滑桿可讓您在檔案大小和視覺品質之間取得平衡。",
+          "q4": "檔案會上傳到伺服器嗎？",
+          "a4": "不會。所有處理均在瀏覽器中透過 Canvas API 完成。您的圖片永遠不會離開裝置，適用於個人和機密照片。",
+          "q5": "有快捷鍵嗎？",
+          "a5": "有。按 +/− 縮放，Enter 裁剪，Escape 重置。這些快捷鍵在裁剪器啟用且未在文字框中輸入時可用。"
         },
         "seoContent": {
           "intro": {
             "title": "什麼是圖片裁剪工具？",
-            "content": "<p><strong>圖片裁剪工具</strong>基於 react-easy-crop 實現精確的圖片裁剪功能。支援自由裁剪和固定比例裁剪（如 1:1、16:9、4:3），提供縮放和旋轉操作，所見即所得地調整圖片構圖。</p><p>所有裁剪處理100%在瀏覽器中完成，圖片不會上傳到任何伺服器。</p>"
+            "content": "<p><strong>圖片裁剪工具</strong>是一款功能全面的線上圖片裁剪器，遠超簡單裁剪。在瀏覽器中即可旋轉、翻轉、矯正、縮放和裁剪圖片，無需安裝任何軟體。</p><p>提供自由裁剪、8 種標準長寬比和 6 種社群媒體預設，滿足任何平台的尺寸需求。</p>"
           },
           "howToUse": {
-            "title": "如何使用圖片裁剪工具",
-            "content": "<ol><li>上傳需要裁剪的圖片</li><li>選擇裁剪比例（自由、1:1、16:9、4:3 等）</li><li>拖曳調整裁剪區域位置，滾輪縮放大小</li><li>點擊<strong>裁剪</strong>並下載結果</li></ol><p>支援觸控手勢操作，在手機和平板上同樣流暢。</p>"
+            "title": "如何線上裁剪圖片",
+            "content": "<ol><li>點擊上傳區域或拖曳圖片到頁面</li><li>拖曳裁剪框選擇所需區域，或選擇預設長寬比</li><li>使用工具列縮放、旋轉、翻轉或矯正圖片</li><li>選擇輸出格式（JPEG、PNG、WebP）和品質</li><li>點擊<strong>裁剪</strong>處理，即時下載結果</li></ol><p>提示：使用快捷鍵（+/− 縮放，Enter 裁剪）可加快工作流程。</p>"
           },
           "features": {
             "title": "核心功能",
-            "content": "<ul><li><strong>自由裁剪</strong>：不限比例自由選擇裁剪區域</li><li><strong>固定比例</strong>：支援 1:1、16:9、4:3 等常用比例</li><li><strong>縮放旋轉</strong>：縮放和旋轉圖片以獲得最佳構圖</li><li><strong>即時預覽</strong>：裁剪框內即時顯示最終效果</li><li><strong>觸控支援</strong>：完美相容手機和平板的觸控操作</li><li><strong>100%本地處理</strong>：裁剪在瀏覽器中完成，無需上傳</li></ul>"
+            "content": "<ul><li><strong>自由裁剪與預設</strong>：自由拖曳裁剪框或使用 1:1、4:3、16:9、3:2 等預設</li><li><strong>旋轉與矯正</strong>：90° 快速旋轉加 ±45° 矯正滑桿</li><li><strong>翻轉</strong>：水平或垂直鏡像翻轉</li><li><strong>縮放與平移</strong>：縮放查看細節，平移找到完美構圖</li><li><strong>社群媒體預設</strong>：Instagram、Facebook、YouTube、Twitter/X、LinkedIn 尺寸</li><li><strong>輸出控制</strong>：匯出為 JPEG、PNG 或 WebP，可調節品質</li><li><strong>網格輔助線</strong>：三分法網格幫助構圖</li><li><strong>快捷鍵</strong>：+/− 縮放，Enter 裁剪，Escape 重置</li></ul>"
           },
           "useCases": {
-            "title": "常見用途",
-            "content": "<ul><li><strong>社群媒體</strong>：裁剪為各平台所需的大頭貼和封面尺寸</li><li><strong>證件照</strong>：裁剪為標準證件照比例</li><li><strong>產品圖片</strong>：統一電商產品圖的裁剪比例</li><li><strong>部落格配圖</strong>：為文章裁剪合適尺寸的配圖</li><li><strong>設計素材</strong>：裁剪照片用於設計專案</li></ul>"
+            "title": "常見使用情境",
+            "content": "<ul><li><strong>社群媒體內容</strong>：裁剪為 Instagram、Facebook、YouTube 等平台的精確尺寸</li><li><strong>頭像照片</strong>：建立方形裁剪用於頭像和個人資料照片</li><li><strong>照片矯正</strong>：矯正傾斜的照片並去除多餘邊緣</li><li><strong>網頁與郵件</strong>：裁剪圖片以適配網站橫幅、郵件標頭和部落格文章</li><li><strong>電商產品</strong>：準備統一長寬比的產品圖片</li></ul>"
           },
           "privacy": {
             "title": "隱私優先的圖片裁剪",
-            "content": "<p>圖片裁剪<strong>完全在瀏覽器中</strong>透過 Canvas API 本地完成。</p><ul><li>圖片<strong>永遠不會離開您的裝置</strong>——安全處理私密照片</li><li>無伺服器上傳或第三方處理</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
+            "content": "<p>圖片裁剪完全在<strong>瀏覽器中</strong>透過 HTML5 Canvas API 完成。</p><ul><li>您的照片<strong>永遠不會離開裝置</strong>，適用於個人和敏感圖片</li><li>無伺服器上傳或雲端處理</li><li>頁面載入後可<strong>離線使用</strong></li></ul>"
           }
         },
         "originalSize": "原始尺寸",
@@ -257,12 +257,45 @@
         "format": "格式",
         "formatOriginal": "原始格式",
         "quality": "品質",
-        "shortcuts": "快捷鍵：方向鍵移動 · +/- 縮放 · Enter 裁切 · Esc 重置",
+        "shortcuts": "快捷鍵：+/- 縮放 · Enter 裁剪 · Esc 重置",
         "tabAspect": "長寬比",
         "tabPresets": "社群預設",
         "tabOutput": "輸出設定",
         "replaceImage": "換一張",
-        "cropError": "裁切失敗，請重試。"
+        "cropError": "裁切失敗，請重試。",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "靈活的裁剪模式",
+            "description": "自由拖曳裁剪框或從 8 種預設長寬比中選擇，包括 1:1、4:3、16:9、3:2 及其反向比例。隨時在自由裁剪和固定比例之間切換。"
+          },
+          "f2": {
+            "icon": "Star",
+            "title": "旋轉、翻轉和矯正",
+            "description": "按 90° 增量旋轉圖片，或使用 ±45° 矯正滑桿微調角度。支援水平和垂直翻轉。所有變換均以無損方式套用到裁剪輸出。"
+          },
+          "f3": {
+            "icon": "MonitorDown",
+            "title": "社群媒體預設",
+            "description": "一鍵預設：Instagram 貼文 (1080×1080)、Instagram 限時動態 (1080×1920)、Facebook 封面 (820×312)、YouTube 縮圖 (1280×720)、X/Twitter 頭圖和 LinkedIn 貼文。"
+          },
+          "f4": {
+            "icon": "Gauge",
+            "title": "輸出格式與畫質",
+            "description": "匯出為 JPEG、PNG 或 WebP，也可保持原始格式。透過滑桿微調 JPEG 和 WebP 的壓縮品質，在檔案大小和視覺清晰度之間取得平衡。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "快捷鍵和網格",
+            "description": "進階使用者快捷鍵：+/− 縮放，Enter 裁剪，Escape 重置。可切換三分法網格輔助線，實現精準構圖。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私保護 — 無需上傳",
+            "description": "所有裁剪處理均在瀏覽器本機透過 Canvas API 完成。您的圖片永遠不會離開裝置，適用於個人照片和機密檔案。"
+          }
+        }
       },
       "resize": {
         "name": "圖片調整大小",
