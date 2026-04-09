@@ -387,47 +387,80 @@
       },
       "hash-generator": {
         "name": "Hash-Generator",
-        "description": "SHA-1-, SHA-256-, SHA-384- und SHA-512-Hashes für Text oder Dateien berechnen.",
-        "metaTitle": "Hash-Generator - Kostenloser Online-SHA-Hash-Rechner",
-        "metaDescription": "SHA-1-, SHA-256-, SHA-384- und SHA-512-Hashes für Text und Dateien generieren. Nutzt die Web Crypto API. Kostenloses Online-Tool.",
-        "keywords": "Hash-Generator, SHA256, SHA512, SHA1, Datei-Hash, Prüfsummenrechner",
+        "description": "MD5-, SHA-1-, SHA-256-, SHA-512-, SHA-3-, CRC32-Hashes und HMAC für Text oder Dateien berechnen.",
+        "metaTitle": "Hash-Generator - Kostenloser Online-MD5-, SHA-, HMAC-Rechner",
+        "metaDescription": "MD5-, SHA-1-, SHA-256-, SHA-512-, SHA-3-, CRC32-Hashes und HMAC für Text und Dateien generieren. Echtzeit-Berechnung, Hash-Verifizierung, Stapelverarbeitung. Kostenloses Online-Tool.",
+        "keywords": "Hash-Generator, MD5, SHA256, SHA512, SHA3, CRC32, HMAC, Datei-Hash, Prüfsummenrechner, Hash-Verifizierung",
         "textMode": "Text",
         "fileMode": "Datei",
         "inputPlaceholder": "Text zum Hashen eingeben...",
         "compute": "Hashes berechnen",
         "computing": "Berechne...",
+        "hashMode": "Hash",
+        "hmacMode": "HMAC",
+        "secretKey": "Geheimer Schlüssel",
+        "secretKeyPlaceholder": "HMAC-Geheimschlüssel eingeben...",
+        "keyFormatText": "UTF-8",
+        "keyFormatHex": "Hex",
+        "keyFormat": "Schlüsselformat",
+        "secretKeyDescription": "Geheimer Schlüssel für die HMAC-Authentifizierung. Unterstützt SHA-1, SHA-256, SHA-384 und SHA-512.",
+        "copyAll": "Alle kopieren",
+        "copiedAll": "Kopiert!",
+        "verifyHash": "Hash verifizieren",
+        "expectedHashPlaceholder": "Erwarteten Hash zum Vergleich einfügen...",
+        "verifyMatchAlgo": "Übereinstimmung ({algorithm})",
+        "verifyNoMatch": "Keine Übereinstimmung",
+        "outputFormatLabel": "Format",
+        "hashResults": "Hash-Ergebnisse",
+        "selectedFiles": "Ausgewählte Dateien",
+        "readingFile": "Datei wird gelesen...",
         "faq": {
           "q1": "Welche Hash-Algorithmen werden unterstützt?",
-          "a1": "SHA-1, SHA-256, SHA-384 und SHA-512 werden gleichzeitig mit der Web Crypto API des Browsers berechnet.",
+          "a1": "MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 und SHA3-512 werden alle gleichzeitig berechnet. SHA-Algorithmen nutzen die Web Crypto API des Browsers, während MD5, CRC32 und SHA-3 optimierte JavaScript-Implementierungen verwenden.",
           "q2": "Kann ich Dateien hashen?",
-          "a2": "Ja, wechseln Sie in den Datei-Modus und ziehen Sie eine Datei hinein. Der Hash wird lokal in Ihrem Browser berechnet — die Datei wird niemals hochgeladen.",
+          "a2": "Ja, wechseln Sie in den Datei-Modus und ziehen Sie eine beliebige Datei hinein. Sie können auch mehrere Dateien gleichzeitig per Stapelverarbeitung hashen. Der Hash wird lokal in Ihrem Browser berechnet — die Datei wird niemals hochgeladen.",
           "q3": "Werden meine Dateien auf einen Server hochgeladen?",
           "a3": "Nein. Die gesamte Verarbeitung erfolgt vollständig in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät — nichts wird auf einen Server hochgeladen.",
           "q4": "Kann ich dieses Tool offline verwenden?",
           "a4": "Ja. Sobald die Seite geladen ist, funktioniert das Tool vollständig offline. Installieren Sie PrivaDeck als PWA aus Ihrem Browser für das beste Erlebnis.",
           "q5": "Gibt es Dateigrößenbeschränkungen?",
-          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Speicher Ihres Geräts und den Browser-Funktionen ab. Die meisten modernen Geräte verarbeiten Dateien bis zu mehreren hundert MB problemlos."
+          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Speicher Ihres Geräts und den Browser-Funktionen ab. Die meisten modernen Geräte verarbeiten Dateien bis zu mehreren hundert MB problemlos.",
+          "q6": "Ist MD5 noch sicher?",
+          "a6": "MD5 ist kryptografisch gebrochen und sollte nicht für Sicherheitszwecke verwendet werden. Es wird jedoch weiterhin häufig für Prüfsummen und Dateiintegritätsprüfungen verwendet, bei denen Kollisionsresistenz nicht kritisch ist.",
+          "q7": "Was ist HMAC?",
+          "a7": "HMAC (Hash-based Message Authentication Code) kombiniert eine Hash-Funktion mit einem geheimen Schlüssel, um einen Nachrichtenauthentifizierungscode zu erzeugen. Es wird verwendet, um sowohl Datenintegrität als auch Authentizität zu überprüfen. Wechseln Sie in den HMAC-Modus und geben Sie Ihren geheimen Schlüssel ein, um HMAC-Werte zu berechnen.",
+          "q8": "Wie funktioniert die Hash-Verifizierung?",
+          "a8": "Nach der Berechnung der Hashes fügen Sie einen erwarteten Hash-Wert in das Verifizierungsfeld ein. Das Tool vergleicht ihn automatisch mit allen berechneten Hashes und zeigt an, welcher Algorithmus übereinstimmt, falls zutreffend. Der Vergleich ist unabhängig von Groß-/Kleinschreibung."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": { "icon": "Hash", "title": "8 Hash-Algorithmen mit einem Klick", "description": "Berechnen Sie MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 und SHA3-512 gleichzeitig. Alle Ergebnisse erscheinen sofort." },
+          "f2": { "icon": "Zap", "title": "Echtzeit-Hashing beim Tippen", "description": "Ergebnisse aktualisieren sich sofort beim Tippen — kein Button-Klick nötig. 8 Algorithmen werden in Echtzeit berechnet." },
+          "f3": { "icon": "KeyRound", "title": "HMAC-Authentifizierung", "description": "Generieren Sie HMAC (Message Authentication Code) mit einem geheimen Schlüssel für SHA-1, SHA-256, SHA-384 und SHA-512. Unterstützt UTF-8-Text und Hex-Schlüssel." },
+          "f4": { "icon": "CircleCheck", "title": "Hash-Verifizierung und Vergleich", "description": "Fügen Sie einen erwarteten Hash-Wert ein, um ihn sofort mit allen berechneten Ergebnissen zu vergleichen. Das Tool identifiziert den passenden Algorithmus automatisch." },
+          "f5": { "icon": "Files", "title": "Batch-Datei-Hashing mit Fortschritt", "description": "Hashen Sie mehrere Dateien gleichzeitig mit Fortschrittsanzeige. Drag & Drop unterstützt — Ergebnisse pro Datei mit Ein-Klick-Kopieren." },
+          "f6": { "icon": "Shield", "title": "100% Privat — Kein Server-Upload", "description": "Alle Hash-Berechnungen erfolgen vollständig in Ihrem Browser mit der Web Crypto API und optimiertem JavaScript. Ihre Texte und Dateien verlassen Ihr Gerät nie." }
         },
         "seoContent": {
           "intro": {
             "title": "Was ist der Hash-Generator?",
-            "content": "<p><strong>Hash-Generator</strong> berechnet kryptografische Hash-Werte für Text oder Dateien mit SHA-1-, SHA-256-, SHA-384- und SHA-512-Algorithmen. Hashes sind Einweg-Fingerabdrücke zur Überprüfung der Datenintegrität, zum Vergleichen von Dateien und zur Validierung von Downloads.</p><p>Generieren Sie Hashes sofort in Ihrem Browser — ideal zur Überprüfung der Dateiintegrität oder zum Erstellen von Inhalts-Digests.</p>"
+            "content": "<p><strong>Hash-Generator</strong> berechnet kryptografische Hash-Werte für Text oder Dateien mit MD5-, SHA-1-, SHA-256-, SHA-384-, SHA-512-, SHA3-256-, SHA3-512- und CRC32-Algorithmen. Er unterstützt auch HMAC (Hash-based Message Authentication Code) mit einem geheimen Schlüssel. Hashes sind Einweg-Fingerabdrücke zur Überprüfung der Datenintegrität, zum Vergleichen von Dateien und zur Validierung von Downloads.</p><p>Generieren Sie Hashes sofort in Ihrem Browser mit Echtzeit-Berechnung — ideal zur Überprüfung der Dateiintegrität oder zum Erstellen von Inhalts-Digests.</p>"
           },
           "howToUse": {
             "title": "So verwenden Sie den Hash-Generator",
-            "content": "<ol><li>Text direkt eingeben oder eine Datei zum Hashen hochladen</li><li>Wählen Sie den Hash-Algorithmus: SHA-1, SHA-256, SHA-384 oder SHA-512</li><li>Der Hash-Wert wird sofort berechnet und angezeigt</li><li>Kopieren Sie den Hash zum Vergleich mit bekannten Prüfsummen oder zur Verwendung in Ihrem Projekt</li></ol><p>Vergleichen Sie zur Dateiintegritätsprüfung den generierten Hash mit der vom Datei-Herausgeber bereitgestellten Prüfsumme.</p>"
+            "content": "<ol><li>Text direkt eingeben — Hashes werden in Echtzeit während der Eingabe berechnet</li><li>Oder laden Sie Dateien hoch (einzeln oder im Stapel) für Datei-Hashing</li><li>Wechseln Sie zwischen Hex- (Klein-/Großbuchstaben) und Base64-Ausgabeformaten</li><li>Verwenden Sie das Verifizierungsfeld zum Vergleich mit einem bekannten Hash</li><li>Aktivieren Sie den HMAC-Modus für schlüsselbasiertes Hashing</li></ol><p>Vergleichen Sie zur Dateiintegritätsprüfung den generierten Hash mit der vom Datei-Herausgeber bereitgestellten Prüfsumme.</p>"
           },
           "features": {
             "title": "Hauptfunktionen",
-            "content": "<ul><li><strong>Mehrere Algorithmen</strong>: SHA-1, SHA-256, SHA-384 und SHA-512 gleichzeitig berechnen</li><li><strong>Text- & Datei-Hashing</strong>: Eingegebenen Text oder hochgeladene Dateien jedes Typs hashen</li><li><strong>Sofortige Berechnung</strong>: Hash-Werte erscheinen in Echtzeit</li><li><strong>Web Crypto API</strong>: Nutzt die native kryptografische Engine des Browsers für maximale Leistung</li><li><strong>In Zwischenablage kopieren</strong>: Ein-Klick-Kopieren für jeden Hash-Wert</li><li><strong>Unterstützung großer Dateien</strong>: Dateien beliebiger Größe effizient hashen</li></ul>"
+            "content": "<ul><li><strong>8 Algorithmen</strong>: MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>HMAC-Unterstützung</strong>: Schlüsselbasiertes Hashing mit SHA-Algorithmen zur Nachrichtenauthentifizierung</li><li><strong>Echtzeit-Hashing</strong>: Ergebnisse erscheinen sofort während der Eingabe</li><li><strong>Hash-Verifizierung</strong>: Vergleich mit erwarteten Hashes mit visueller Übereinstimmungsanzeige</li><li><strong>Stapel-Datei-Hashing</strong>: Mehrere Dateien gleichzeitig hashen</li><li><strong>Mehrere Ausgabeformate</strong>: Hex (Klein-/Großbuchstaben) und Base64</li><li><strong>Kopieren & Exportieren</strong>: Einzelne oder alle Hashes kopieren, als Textdatei herunterladen</li><li><strong>Dateifortschritt</strong>: Fortschrittsanzeige für große Dateien</li></ul>"
           },
           "useCases": {
             "title": "Häufige Anwendungsfälle",
-            "content": "<ul><li><strong>Dateiintegrität</strong>: Überprüfen, dass heruntergeladene Dateien nicht manipuliert wurden, durch Vergleich von Prüfsummen</li><li><strong>Inhaltsdeduplizierung</strong>: Hashes vergleichen, um doppelte Dateien zu finden</li><li><strong>Digitale Signaturen</strong>: Inhalts-Digests für Signierungsworkflows erstellen</li><li><strong>Software-Distribution</strong>: Prüfsummen für eigene Datei-Releases generieren</li><li><strong>Sicherheitsaudit</strong>: Dateien hashen, um unbefugte Änderungen zu erkennen</li></ul>"
+            "content": "<ul><li><strong>Dateiintegrität</strong>: Überprüfen, dass heruntergeladene Dateien nicht manipuliert wurden, durch Vergleich von Prüfsummen</li><li><strong>Inhaltsdeduplizierung</strong>: Hashes vergleichen, um doppelte Dateien zu finden</li><li><strong>API-Authentifizierung</strong>: HMAC-Signaturen für API-Anfragen generieren</li><li><strong>Software-Distribution</strong>: Prüfsummen für eigene Datei-Releases generieren</li><li><strong>Sicherheitsaudit</strong>: Dateien hashen, um unbefugte Änderungen zu erkennen</li></ul>"
           },
           "privacy": {
             "title": "Datenschutzorientierte Hash-Generierung",
-            "content": "<p>Hashes werden <strong>vollständig in Ihrem Browser</strong> mit der nativen <strong>Web Crypto API</strong> (<code>crypto.subtle.digest</code>) berechnet.</p><ul><li>Ihr Text und Ihre Dateien <strong>verlassen niemals Ihr Gerät</strong> — kritisch beim Hashen sensibler Inhalte</li><li>Nutzt hardwarebeschleunigte kryptografische Implementierungen, wenn verfügbar</li><li>Funktioniert <strong>offline</strong> nach dem Laden der Seite</li></ul>"
+            "content": "<p>Hashes werden <strong>vollständig in Ihrem Browser</strong> mit der nativen <strong>Web Crypto API</strong> und optimierten JavaScript-Implementierungen berechnet.</p><ul><li>Ihr Text und Ihre Dateien <strong>verlassen niemals Ihr Gerät</strong> — kritisch beim Hashen sensibler Inhalte</li><li>Nutzt hardwarebeschleunigte kryptografische Implementierungen, wenn verfügbar</li><li>Funktioniert <strong>offline</strong> nach dem Laden der Seite</li></ul>"
           }
         }
       },

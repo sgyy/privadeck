@@ -387,47 +387,80 @@
       },
       "hash-generator": {
         "name": "Generator hashy",
-        "description": "Oblicz hashe SHA-1, SHA-256, SHA-384 i SHA-512 dla tekstu lub plików.",
-        "metaTitle": "Generator hashy - Darmowy kalkulator SHA online",
-        "metaDescription": "Generuj hashe SHA-1, SHA-256, SHA-384 i SHA-512 dla tekstu i plików. Wykorzystuje Web Crypto API. Darmowe narzędzie online.",
-        "keywords": "generator hashy, sha256, sha512, sha1, hash pliku, kalkulator sumy kontrolnej",
+        "description": "Oblicz skróty MD5, SHA-1, SHA-256, SHA-512, SHA-3, CRC32 i HMAC dla tekstu lub plików.",
+        "metaTitle": "Generator hashy - Darmowy kalkulator MD5, SHA, HMAC online",
+        "metaDescription": "Generuj skróty MD5, SHA-1, SHA-256, SHA-512, SHA-3, CRC32 i HMAC dla tekstu i plików. Obliczanie w czasie rzeczywistym, weryfikacja hashy, hashowanie wsadowe. Darmowe narzędzie online.",
+        "keywords": "generator hashy, md5, sha256, sha512, sha3, crc32, hmac, hash pliku, kalkulator sumy kontrolnej, weryfikacja hashy",
         "textMode": "Tekst",
         "fileMode": "Plik",
         "inputPlaceholder": "Wprowadź tekst do hashowania...",
         "compute": "Oblicz hashe",
         "computing": "Obliczanie...",
+        "hashMode": "Hash",
+        "hmacMode": "HMAC",
+        "secretKey": "Klucz tajny",
+        "secretKeyPlaceholder": "Wprowadź tajny klucz HMAC...",
+        "keyFormatText": "UTF-8",
+        "keyFormatHex": "Hex",
+        "keyFormat": "Format klucza",
+        "secretKeyDescription": "Klucz tajny do uwierzytelniania HMAC. Obsługuje SHA-1, SHA-256, SHA-384 i SHA-512.",
+        "copyAll": "Kopiuj wszystko",
+        "copiedAll": "Skopiowano!",
+        "verifyHash": "Weryfikuj hash",
+        "expectedHashPlaceholder": "Wklej oczekiwany hash do porównania...",
+        "verifyMatchAlgo": "Zgodność ({algorithm})",
+        "verifyNoMatch": "Brak zgodności",
+        "outputFormatLabel": "Format",
+        "hashResults": "Wyniki skrótów",
+        "selectedFiles": "Wybrane pliki",
+        "readingFile": "Odczytywanie pliku...",
         "faq": {
           "q1": "Jakie algorytmy hashowania są obsługiwane?",
-          "a1": "SHA-1, SHA-256, SHA-384 i SHA-512 są obliczane jednocześnie za pomocą Web Crypto API przeglądarki.",
+          "a1": "MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 i SHA3-512 są obliczane jednocześnie. Algorytmy SHA używają Web Crypto API przeglądarki, natomiast MD5, CRC32 i SHA-3 korzystają ze zoptymalizowanych implementacji JavaScript.",
           "q2": "Czy mogę hashować pliki?",
-          "a2": "Tak, przełącz na tryb pliku i upuść dowolny plik. Hash jest obliczany lokalnie w przeglądarce — plik nigdy nie jest przesyłany.",
+          "a2": "Tak, przełącz na tryb pliku i upuść dowolny plik. Możesz także hashować wiele plików jednocześnie dzięki przetwarzaniu wsadowemu. Hash jest obliczany lokalnie w przeglądarce — plik nigdy nie jest przesyłany.",
           "q3": "Czy moje pliki zostaną przesłane na serwer?",
           "a3": "Nie. Całe przetwarzanie odbywa się w przeglądarce. Twoje dane nigdy nie opuszczają urządzenia — nic nie jest przesyłane na serwer.",
           "q4": "Czy mogę używać tego narzędzia offline?",
           "a4": "Tak. Po załadowaniu strony narzędzie działa całkowicie offline. Dla najlepszego doświadczenia zainstaluj PrivaDeck jako PWA z poziomu przeglądarki.",
           "q5": "Czy są limity rozmiaru pliku?",
-          "a5": "Nie ma limitów narzucanych przez serwer. Maksymalny rozmiar pliku zależy od dostępnej pamięci urządzenia i możliwości przeglądarki. Większość nowoczesnych urządzeń bez problemu obsługuje pliki do kilkuset MB."
+          "a5": "Nie ma limitów narzucanych przez serwer. Maksymalny rozmiar pliku zależy od dostępnej pamięci urządzenia i możliwości przeglądarki. Większość nowoczesnych urządzeń bez problemu obsługuje pliki do kilkuset MB.",
+          "q6": "Czy MD5 jest nadal bezpieczny?",
+          "a6": "MD5 jest kryptograficznie złamany i nie powinien być używany do celów bezpieczeństwa. Jednak nadal jest szeroko stosowany do sum kontrolnych i weryfikacji integralności plików, gdzie odporność na kolizje nie jest krytyczna.",
+          "q7": "Co to jest HMAC?",
+          "a7": "HMAC (kod uwierzytelniania wiadomości oparty na hashu) łączy funkcję skrótu z tajnym kluczem w celu wygenerowania kodu uwierzytelniania wiadomości. Służy do weryfikacji zarówno integralności, jak i autentyczności danych. Przełącz na tryb HMAC i wprowadź swój tajny klucz, aby obliczyć wartości HMAC.",
+          "q8": "Jak działa weryfikacja hashy?",
+          "a8": "Po obliczeniu hashy wklej oczekiwaną wartość hash w polu weryfikacji. Narzędzie automatycznie porównuje ją ze wszystkimi obliczonymi hashami i pokazuje, który algorytm jest zgodny, jeśli taki istnieje. Porównanie nie rozróżnia wielkości liter."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": { "icon": "Hash", "title": "8 algorytmów hash jednym kliknięciem", "description": "Oblicz MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 i SHA3-512 jednocześnie. Wszystkie wyniki pojawiają się natychmiast." },
+          "f2": { "icon": "Zap", "title": "Hashowanie w czasie rzeczywistym", "description": "Wyniki aktualizują się natychmiast podczas pisania — bez klikania przycisku. 8 algorytmów obliczanych w czasie rzeczywistym." },
+          "f3": { "icon": "KeyRound", "title": "Obsługa uwierzytelniania HMAC", "description": "Generuj HMAC (kod uwierzytelniania wiadomości) z kluczem tajnym dla SHA-1, SHA-256, SHA-384 i SHA-512. Obsługuje klucze UTF-8 i szesnastkowe." },
+          "f4": { "icon": "CircleCheck", "title": "Weryfikacja i porównanie hashy", "description": "Wklej oczekiwaną wartość hash, aby natychmiast porównać ją ze wszystkimi obliczonymi wynikami. Narzędzie automatycznie identyfikuje pasujący algorytm." },
+          "f5": { "icon": "Files", "title": "Batch hashowanie plików z postępem", "description": "Hashuj wiele plików jednocześnie ze wskaźnikiem postępu. Przeciągnij i upuść pliki — wyniki per plik z kopiowaniem jednym kliknięciem." },
+          "f6": { "icon": "Shield", "title": "100% prywatności — bez uploadu na serwer", "description": "Wszystkie obliczenia hash są wykonywane całkowicie w przeglądarce przy użyciu Web Crypto API i zoptymalizowanego JavaScript. Twoje teksty i pliki nigdy nie opuszczają urządzenia." }
         },
         "seoContent": {
           "intro": {
             "title": "Co to jest Generator hashy?",
-            "content": "<p><strong>Generator hashy</strong> oblicza wartości skrótów kryptograficznych dla tekstu lub plików używając algorytmów SHA-1, SHA-256, SHA-384 i SHA-512. Skróty są jednokierunkowymi odciskami palców używanymi do weryfikacji integralności danych, porównywania plików i walidacji pobierania.</p><p>Generuj skróty natychmiast w przeglądarce — idealne do weryfikacji integralności plików lub tworzenia streszczeń treści.</p>"
+            "content": "<p><strong>Generator hashy</strong> oblicza wartości skrótów kryptograficznych dla tekstu lub plików używając algorytmów MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 i CRC32. Obsługuje także HMAC (kod uwierzytelniania wiadomości oparty na hashu) z tajnym kluczem. Skróty są jednokierunkowymi odciskami palców używanymi do weryfikacji integralności danych, porównywania plików i walidacji pobierania.</p><p>Generuj skróty natychmiast w przeglądarce z obliczaniem w czasie rzeczywistym — idealne do weryfikacji integralności plików lub tworzenia streszczeń treści.</p>"
           },
           "howToUse": {
             "title": "Jak używać Generatora hashy",
-            "content": "<ol><li>Wprowadź tekst bezpośrednio lub prześlij plik do hashowania</li><li>Wybierz algorytm(y) skrótu: SHA-1, SHA-256, SHA-384 lub SHA-512</li><li>Wartość skrótu jest obliczana natychmiast i wyświetlana</li><li>Skopiuj skrót, aby porównać ze znanymi sumami kontrolnymi lub użyć w projekcie</li></ol><p>Dla weryfikacji integralności pliku porównaj wygenerowany skrót z sumą kontrolną dostarczoną przez źródło pliku.</p>"
+            "content": "<ol><li>Wprowadź tekst bezpośrednio — hashe są obliczane w czasie rzeczywistym podczas pisania</li><li>Lub prześlij pliki (pojedyncze lub wsadowo) do hashowania</li><li>Przełączaj między formatami wyjściowymi hex (małe/wielkie litery) i Base64</li><li>Użyj pola weryfikacji, aby porównać ze znanym hashem</li><li>Włącz tryb HMAC do hashowania z kluczem</li></ol><p>Dla weryfikacji integralności pliku porównaj wygenerowany skrót z sumą kontrolną dostarczoną przez źródło pliku.</p>"
           },
           "features": {
             "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Wiele algorytmów</strong>: SHA-1, SHA-256, SHA-384 i SHA-512 obliczane jednocześnie</li><li><strong>Hashowanie tekstu i plików</strong>: Hashuj wpisany tekst lub przesłane pliki dowolnego typu</li><li><strong>Obliczenia natychmiastowe</strong>: Wartości skrótów pojawiają się w czasie rzeczywistym</li><li><strong>Web Crypto API</strong>: Używa natywnego silnika kryptograficznego przeglądarki dla maksymalnej wydajności</li><li><strong>Kopiowanie do schowka</strong>: Kopiowanie jednym kliknięciem dla każdej wartości skrótu</li><li><strong>Obsługa dużych plików</strong>: Efektywnie hashuj pliki dowolnego rozmiaru</li></ul>"
+            "content": "<ul><li><strong>8 algorytmów</strong>: MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>Obsługa HMAC</strong>: Hashowanie z kluczem przy użyciu algorytmów SHA do uwierzytelniania wiadomości</li><li><strong>Hashowanie w czasie rzeczywistym</strong>: Wyniki pojawiają się natychmiast podczas pisania</li><li><strong>Weryfikacja hashy</strong>: Porównaj z oczekiwanymi hashami z wizualnym wskaźnikiem zgodności</li><li><strong>Wsadowe hashowanie plików</strong>: Hashuj wiele plików jednocześnie</li><li><strong>Wiele formatów wyjściowych</strong>: Hex (małe/wielkie litery) i Base64</li><li><strong>Kopiowanie i eksport</strong>: Kopiuj pojedyncze lub wszystkie hashe, pobierz jako plik tekstowy</li><li><strong>Postęp pliku</strong>: Wskaźnik postępu dla przetwarzania dużych plików</li></ul>"
           },
           "useCases": {
             "title": "Typowe przypadki użycia",
-            "content": "<ul><li><strong>Integralność plików</strong>: Weryfikuj, czy pobrane pliki nie zostały zmienione, porównując sumy kontrolne</li><li><strong>Deduplikacja treści</strong>: Porównuj skróty, aby znaleźć zduplikowane pliki</li><li><strong>Podpisy cyfrowe</strong>: Twórz streszczenia treści dla przepływów pracy podpisywania</li><li><strong>Dystrybucja oprogramowania</strong>: Generuj sumy kontrolne dla własnych wydań plików</li><li><strong>Audyt bezpieczeństwa</strong>: Hashuj pliki, aby wykryć nieautoryzowane modyfikacje</li></ul>"
+            "content": "<ul><li><strong>Integralność plików</strong>: Weryfikuj, czy pobrane pliki nie zostały zmienione, porównując sumy kontrolne</li><li><strong>Deduplikacja treści</strong>: Porównuj skróty, aby znaleźć zduplikowane pliki</li><li><strong>Uwierzytelnianie API</strong>: Generuj sygnatury HMAC dla żądań API</li><li><strong>Dystrybucja oprogramowania</strong>: Generuj sumy kontrolne dla własnych wydań plików</li><li><strong>Audyt bezpieczeństwa</strong>: Hashuj pliki, aby wykryć nieautoryzowane modyfikacje</li></ul>"
           },
           "privacy": {
             "title": "Generowanie skrótów z priorytetem prywatności",
-            "content": "<p>Skróty są obliczane <strong>w całości w przeglądarce</strong> używając natywnego <strong>Web Crypto API</strong> (<code>crypto.subtle.digest</code>).</p><ul><li>Twój tekst i pliki <strong>nigdy nie opuszczają urządzenia</strong> — kluczowe przy hashowaniu wrażliwej zawartości</li><li>Używa akcelerowanych sprzętowo implementacji kryptograficznych, gdy dostępne</li><li>Działa <strong>offline</strong> po załadowaniu strony</li></ul>"
+            "content": "<p>Skróty są obliczane <strong>w całości w przeglądarce</strong> używając natywnego <strong>Web Crypto API</strong> i zoptymalizowanych implementacji JavaScript.</p><ul><li>Twój tekst i pliki <strong>nigdy nie opuszczają urządzenia</strong> — kluczowe przy hashowaniu wrażliwej zawartości</li><li>Używa akcelerowanych sprzętowo implementacji kryptograficznych, gdy dostępne</li><li>Działa <strong>offline</strong> po załadowaniu strony</li></ul>"
           }
         }
       },

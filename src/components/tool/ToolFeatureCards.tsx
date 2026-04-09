@@ -14,6 +14,11 @@ import {
   Search,
   GripVertical,
   Eye,
+  Hash,
+  KeyRound,
+  CircleCheck,
+  Files,
+  ArrowLeftRight,
 } from "lucide-react";
 import type { ComponentType } from "react";
 
@@ -30,6 +35,11 @@ const ICON_MAP: Record<string, ComponentType<{ className?: string }>> = {
   Search,
   GripVertical,
   Eye,
+  Hash,
+  KeyRound,
+  CircleCheck,
+  Files,
+  ArrowLeftRight,
 };
 
 interface ToolFeatureCardsProps {

@@ -387,47 +387,80 @@
       },
       "hash-generator": {
         "name": "Hash Oluşturucu",
-        "description": "Metin veya dosyalar için SHA-1, SHA-256, SHA-384 ve SHA-512 hash'leri hesaplayın.",
-        "metaTitle": "Hash Oluşturucu — Ücretsiz Çevrimiçi SHA Hash Hesaplayıcı",
-        "metaDescription": "Metin ve dosyalar için SHA-1, SHA-256, SHA-384 ve SHA-512 hash'leri oluşturun. Web Crypto API kullanır. Ücretsiz çevrimiçi araç.",
-        "keywords": "hash oluşturucu, sha256, sha512, sha1, dosya hash, sağlama toplamı hesaplayıcı",
+        "description": "Metin veya dosyalar için MD5, SHA-1, SHA-256, SHA-512, SHA-3, CRC32 hash'leri ve HMAC hesaplayın.",
+        "metaTitle": "Hash Oluşturucu — Ücretsiz Çevrimiçi MD5, SHA, HMAC Hesaplayıcı",
+        "metaDescription": "Metin ve dosyalar için MD5, SHA-1, SHA-256, SHA-512, SHA-3, CRC32 hash'leri ve HMAC oluşturun. Gerçek zamanlı hesaplama, hash doğrulama, toplu dosya hash'leme. Ücretsiz çevrimiçi araç.",
+        "keywords": "hash oluşturucu, md5, sha256, sha512, sha3, crc32, hmac, dosya hash, sağlama toplamı hesaplayıcı, hash doğrulama",
         "textMode": "Metin",
         "fileMode": "Dosya",
         "inputPlaceholder": "Hash'lemek için metin girin...",
         "compute": "Hash'leri Hesapla",
         "computing": "Hesaplanıyor...",
+        "hashMode": "Hash",
+        "hmacMode": "HMAC",
+        "secretKey": "Gizli Anahtar",
+        "secretKeyPlaceholder": "HMAC gizli anahtarını girin...",
+        "keyFormatText": "UTF-8",
+        "keyFormatHex": "Hex",
+        "keyFormat": "Anahtar Formatı",
+        "secretKeyDescription": "HMAC kimlik doğrulaması için gizli anahtar. SHA-1, SHA-256, SHA-384 ve SHA-512'yi destekler.",
+        "copyAll": "Tümünü Kopyala",
+        "copiedAll": "Kopyalandı!",
+        "verifyHash": "Hash Doğrula",
+        "expectedHashPlaceholder": "Karşılaştırmak için beklenen hash'i yapıştırın...",
+        "verifyMatchAlgo": "Eşleşme ({algorithm})",
+        "verifyNoMatch": "Eşleşme Yok",
+        "outputFormatLabel": "Format",
+        "hashResults": "Hash Sonuçları",
+        "selectedFiles": "Seçilen Dosyalar",
+        "readingFile": "Dosya okunuyor...",
         "faq": {
           "q1": "Hangi hash algoritmaları destekleniyor?",
-          "a1": "SHA-1, SHA-256, SHA-384 ve SHA-512, tarayıcının Web Crypto API'si kullanılarak eş zamanlı olarak hesaplanır.",
+          "a1": "MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 ve SHA3-512 eş zamanlı olarak hesaplanır. SHA algoritmaları tarayıcının Web Crypto API'sini kullanırken, MD5, CRC32 ve SHA-3 optimize edilmiş JavaScript implementasyonları kullanır.",
           "q2": "Dosyaları hash'leyebilir miyim?",
-          "a2": "Evet, Dosya moduna geçin ve herhangi bir dosyayı sürükleyin. Hash, tarayıcınızda yerel olarak hesaplanır — dosya hiçbir yere yüklenmez.",
-          "q3": "Will my files be uploaded to a server?",
+          "a2": "Evet, Dosya moduna geçin ve herhangi bir dosyayı sürükleyin. Toplu işleme ile birden fazla dosyayı aynı anda hash'leyebilirsiniz. Hash, tarayıcınızda yerel olarak hesaplanır — dosya hiçbir yere yüklenmez.",
+          "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
           "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
           "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
           "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
-          "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
+          "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler.",
+          "q6": "MD5 hâlâ güvenli mi?",
+          "a6": "MD5 kriptografik olarak kırılmıştır ve güvenlik amaçlı kullanılmamalıdır. Ancak, çakışma dayanıklılığının kritik olmadığı sağlama toplamları ve dosya bütünlüğü doğrulaması için hâlâ yaygın olarak kullanılmaktadır.",
+          "q7": "HMAC nedir?",
+          "a7": "HMAC (Hash-based Message Authentication Code), bir hash fonksiyonunu gizli bir anahtarla birleştirerek mesaj doğrulama kodu üretir. Hem veri bütünlüğünü hem de kimlik doğrulamasını sağlamak için kullanılır. HMAC moduna geçin ve HMAC değerlerini hesaplamak için gizli anahtarınızı girin.",
+          "q8": "Hash doğrulama nasıl çalışır?",
+          "a8": "Hash'leri hesapladıktan sonra, doğrulama alanına beklenen bir hash değeri yapıştırın. Araç, otomatik olarak tüm hesaplanan hash'lerle karşılaştırır ve varsa hangi algoritmanın eşleştiğini gösterir. Karşılaştırma büyük/küçük harfe duyarsızdır."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": { "icon": "Hash", "title": "Tek tıkla 8 hash algoritması", "description": "MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 ve SHA3-512'yi aynı anda hesaplayın. Tüm sonuçlar anında görünür." },
+          "f2": { "icon": "Zap", "title": "Yazarken gerçek zamanlı hashing", "description": "Sonuçlar yazarken anında güncellenir — düğme tıklamasına gerek yok. 8 algoritma gerçek zamanlı hesaplanır." },
+          "f3": { "icon": "KeyRound", "title": "HMAC kimlik doğrulama desteği", "description": "SHA-1, SHA-256, SHA-384 ve SHA-512 için gizli anahtarla HMAC (mesaj doğrulama kodu) oluşturun. UTF-8 metin ve onaltılık anahtarları destekler." },
+          "f4": { "icon": "CircleCheck", "title": "Hash doğrulama ve karşılaştırma", "description": "Beklenen hash değerini yapıştırarak tüm hesaplanan sonuçlarla anında doğrulayın. Araç eşleşen algoritmayı otomatik olarak belirler." },
+          "f5": { "icon": "Files", "title": "Toplu dosya hashleme ve ilerleme", "description": "Görsel ilerleme göstergesiyle birden fazla dosyayı aynı anda hashleyin. Sürükle bırak — dosya başına tek tıkla kopyalama ile sonuçlar." },
+          "f6": { "icon": "Shield", "title": "100% gizlilik — sunucu yüklemesi yok", "description": "Tüm hashleme, Web Crypto API ve optimize edilmiş JavaScript kullanılarak tamamen tarayıcınızda gerçekleştirilir. Metinleriniz ve dosyalarınız cihazınızdan asla ayrılmaz." }
         },
         "seoContent": {
           "intro": {
             "title": "Hash Oluşturucu Nedir?",
-            "content": "<p><strong>Hash Oluşturucu</strong>, SHA-1, SHA-256, SHA-384 ve SHA-512 algoritmalarını kullanarak metin veya dosyalar için şifreleme hash değerleri hesaplar. Hash'ler, veri bütünlüğünü doğrulamak, dosyaları karşılaştırmak ve indirmeleri onaylamak için kullanılan tek yönlü parmak izleridir.</p><p>Hash'leri tarayıcınızda anında oluşturun — dosya bütünlüğünü doğrulamak veya içerik özeti oluşturmak için idealdir.</p>"
+            "content": "<p><strong>Hash Oluşturucu</strong>, MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 ve CRC32 algoritmalarını kullanarak metin veya dosyalar için kriptografik hash değerleri hesaplar. Ayrıca gizli anahtarla HMAC (Hash-based Message Authentication Code) desteği sunar. Hash'ler, veri bütünlüğünü doğrulamak, dosyaları karşılaştırmak ve indirmeleri onaylamak için kullanılan tek yönlü parmak izleridir.</p><p>Gerçek zamanlı hesaplama ile hash'leri tarayıcınızda anında oluşturun — dosya bütünlüğünü doğrulamak veya içerik özetleri oluşturmak için idealdir.</p>"
           },
           "howToUse": {
             "title": "Hash Oluşturucu Nasıl Kullanılır?",
-            "content": "<ol><li>Hash'lemek için doğrudan metin girin veya dosya yükleyin</li><li>Hash algoritmasını seçin: SHA-1, SHA-256, SHA-384 veya SHA-512</li><li>Hash değeri anında hesaplanır ve gösterilir</li><li>Bilinen sağlama toplamlarıyla karşılaştırmak veya projenizde kullanmak için hash'i kopyalayın</li></ol><p>Dosya bütünlüğü doğrulaması için oluşturulan hash'i dosyanın kaynağı tarafından sağlanan sağlama toplamıyla karşılaştırın.</p>"
+            "content": "<ol><li>Doğrudan metin girin — siz yazarken hash'ler gerçek zamanlı olarak hesaplanır</li><li>Veya dosya hash'leme için dosya yükleyin (tekli veya toplu)</li><li>Hex (küçük/büyük harf) ve Base64 çıktı formatları arasında geçiş yapın</li><li>Bilinen bir hash ile karşılaştırmak için doğrulama alanını kullanın</li><li>Anahtarlı hash'leme için HMAC modunu etkinleştirin</li></ol><p>Dosya bütünlüğü doğrulaması için oluşturulan hash'i dosyanın kaynağı tarafından sağlanan sağlama toplamıyla karşılaştırın.</p>"
           },
           "features": {
             "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Çoklu Algoritma</strong>: SHA-1, SHA-256, SHA-384 ve SHA-512 eş zamanlı olarak hesaplanır</li><li><strong>Metin ve Dosya Hash'leme</strong>: Yazılan metni veya herhangi bir türdeki yüklenmiş dosyaları hash'leyin</li><li><strong>Anında Hesaplama</strong>: Hash değerleri gerçek zamanlı olarak görünür</li><li><strong>Web Crypto API</strong>: Maksimum performans için tarayıcının yerel şifreleme motorunu kullanır</li><li><strong>Panoya Kopyala</strong>: Her hash değeri için tek tıkla kopyalama</li><li><strong>Büyük Dosya Desteği</strong>: Her boyuttaki dosyaları verimli şekilde hash'ler</li></ul>"
+            "content": "<ul><li><strong>8 Algoritma</strong>: MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>HMAC Desteği</strong>: Mesaj doğrulama için SHA algoritmaları ile anahtarlı hash'leme</li><li><strong>Gerçek Zamanlı Hash'leme</strong>: Siz yazarken sonuçlar anında görünür</li><li><strong>Hash Doğrulama</strong>: Görsel eşleşme göstergesiyle beklenen hash'lerle karşılaştırma</li><li><strong>Toplu Dosya Hash'leme</strong>: Birden fazla dosyayı aynı anda hash'leyin</li><li><strong>Çoklu Çıktı Formatı</strong>: Hex (küçük/büyük harf) ve Base64</li><li><strong>Kopyala ve Dışa Aktar</strong>: Tek tek veya tüm hash'leri kopyalayın, metin dosyası olarak indirin</li><li><strong>Dosya İlerlemesi</strong>: Büyük dosya işleme için ilerleme göstergesi</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Dosya Bütünlüğü</strong>: Sağlama toplamlarını karşılaştırarak indirilen dosyaların değiştirilmediğini doğrulayın</li><li><strong>İçerik Tekilleştirme</strong>: Yinelenen dosyaları bulmak için hash'leri karşılaştırın</li><li><strong>Dijital İmzalar</strong>: İmzalama iş akışları için içerik özetleri oluşturun</li><li><strong>Yazılım Dağıtımı</strong>: Kendi dosya sürümleriniz için sağlama toplamları oluşturun</li><li><strong>Güvenlik Denetimi</strong>: Yetkisiz değişiklikleri tespit etmek için dosyaları hash'leyin</li></ul>"
+            "content": "<ul><li><strong>Dosya Bütünlüğü</strong>: Sağlama toplamlarını karşılaştırarak indirilen dosyaların değiştirilmediğini doğrulayın</li><li><strong>İçerik Tekilleştirme</strong>: Yinelenen dosyaları bulmak için hash'leri karşılaştırın</li><li><strong>API Kimlik Doğrulama</strong>: API istekleri için HMAC imzaları oluşturun</li><li><strong>Yazılım Dağıtımı</strong>: Kendi dosya sürümleriniz için sağlama toplamları oluşturun</li><li><strong>Güvenlik Denetimi</strong>: Yetkisiz değişiklikleri tespit etmek için dosyaları hash'leyin</li></ul>"
           },
           "privacy": {
             "title": "Gizlilik Öncelikli Hash Oluşturma",
-            "content": "<p>Hash'ler, yerel <strong>Web Crypto API</strong> (<code>crypto.subtle.digest</code>) kullanılarak <strong>tamamen tarayıcınızda</strong> hesaplanır.</p><ul><li>Metin ve dosyalarınız <strong>cihazınızdan asla ayrılmaz</strong> — hassas içerikleri hash'lerken kritik öneme sahiptir</li><li>Mevcut olduğunda donanım hızlandırmalı şifreleme uygulamaları kullanır</li><li>Sayfa yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
+            "content": "<p>Hash'ler, yerel <strong>Web Crypto API</strong> ve optimize edilmiş JavaScript implementasyonları kullanılarak <strong>tamamen tarayıcınızda</strong> hesaplanır.</p><ul><li>Metin ve dosyalarınız <strong>cihazınızdan asla ayrılmaz</strong> — hassas içerikleri hash'lerken kritik öneme sahiptir</li><li>Mevcut olduğunda donanım hızlandırmalı şifreleme uygulamaları kullanır</li><li>Sayfa yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
           }
         }
       },

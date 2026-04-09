@@ -387,47 +387,80 @@
       },
       "hash-generator": {
         "name": "哈希生成器",
-        "description": "从文本或文件生成 SHA-1、SHA-256、SHA-384 和 SHA-512 哈希值。",
-        "metaTitle": "哈希生成器 - 免费在线 SHA 哈希计算工具",
-        "metaDescription": "为文本和文件生成 SHA-1、SHA-256、SHA-384、SHA-512 哈希值。使用 Web Crypto API。免费在线工具。",
-        "keywords": "哈希生成器, sha256, sha512, sha1, 文件哈希, 校验和计算",
+        "description": "计算文本或文件的 MD5、SHA-1、SHA-256、SHA-512、SHA-3、CRC32 哈希值和 HMAC。",
+        "metaTitle": "哈希生成器 - 免费在线 MD5/SHA/HMAC 计算工具",
+        "metaDescription": "生成 MD5、SHA-1、SHA-256、SHA-512、SHA-3、CRC32 哈希值和 HMAC。实时计算、哈希验证、批量文件哈希。免费在线工具。",
+        "keywords": "哈希生成器, md5, sha256, sha512, sha3, crc32, hmac, 文件哈希, 校验和计算, 哈希验证",
         "textMode": "文本",
         "fileMode": "文件",
         "inputPlaceholder": "输入要计算哈希的文本...",
         "compute": "计算哈希",
         "computing": "计算中...",
+        "hashMode": "Hash",
+        "hmacMode": "HMAC",
+        "secretKey": "密钥",
+        "secretKeyPlaceholder": "输入 HMAC 密钥...",
+        "keyFormatText": "UTF-8",
+        "keyFormatHex": "Hex",
+        "keyFormat": "密钥格式",
+        "secretKeyDescription": "用于 HMAC 认证的密钥。支持 SHA-1、SHA-256、SHA-384 和 SHA-512。",
+        "copyAll": "全部复制",
+        "copiedAll": "已复制！",
+        "verifyHash": "验证哈希",
+        "expectedHashPlaceholder": "粘贴预期的哈希值进行比较...",
+        "verifyMatchAlgo": "匹配（{algorithm}）",
+        "verifyNoMatch": "不匹配",
+        "outputFormatLabel": "格式",
+        "hashResults": "哈希结果",
+        "selectedFiles": "已选文件",
+        "readingFile": "正在读取文件...",
         "faq": {
           "q1": "支持哪些哈希算法？",
-          "a1": "使用浏览器内置 Web Crypto API 同时计算 SHA-1、SHA-256、SHA-384 和 SHA-512。",
+          "a1": "MD5、CRC32、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256 和 SHA3-512 会同时计算。SHA 算法使用浏览器的 Web Crypto API，而 MD5、CRC32 和 SHA-3 使用优化的 JavaScript 实现。",
           "q2": "可以对文件计算哈希吗？",
-          "a2": "可以，切换到文件模式并上传任意文件。哈希在浏览器本地计算，文件不会上传。",
+          "a2": "可以，切换到文件模式并拖放任意文件。您还可以通过批量处理同时对多个文件计算哈希。哈希在浏览器本地计算，文件不会上传。",
           "q3": "我的文件会上传到服务器吗？",
           "a3": "不会。所有处理完全在您的浏览器中完成，您的数据绝不离开设备，不会上传到任何服务器。",
           "q4": "这个工具能离线使用吗？",
           "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
           "q5": "文件大小有限制吗？",
-          "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+          "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。",
+          "q6": "MD5 还安全吗？",
+          "a6": "MD5 在密码学上已被破解，不应用于安全用途。但它在校验和与文件完整性验证方面仍被广泛使用，前提是不需要抗碰撞性。",
+          "q7": "什么是 HMAC？",
+          "a7": "HMAC（基于哈希的消息认证码）将哈希函数与密钥结合，生成消息认证码，用于验证数据完整性和真实性。切换到 HMAC 模式并输入密钥即可计算 HMAC 值。",
+          "q8": "哈希验证是如何工作的？",
+          "a8": "计算哈希后，在验证字段中粘贴预期的哈希值。工具会自动将其与所有已计算的哈希值进行比较，并显示匹配的算法（如有）。比较不区分大小写。"
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": { "icon": "Hash", "title": "一键生成 8 种哈希值", "description": "同时计算 MD5、CRC32、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256 和 SHA3-512。所有结果即时呈现，无需逐个运行。" },
+          "f2": { "icon": "Zap", "title": "输入即算，实时反馈", "description": "输入文本时哈希值实时更新，无需点击按钮。零延迟体验，8 种算法同步计算。" },
+          "f3": { "icon": "KeyRound", "title": "HMAC 消息认证支持", "description": "使用密钥为 SHA-1、SHA-256、SHA-384 和 SHA-512 生成 HMAC 消息认证码。支持 UTF-8 文本和十六进制密钥。" },
+          "f4": { "icon": "CircleCheck", "title": "哈希验证与比对", "description": "粘贴预期哈希值，即时与所有计算结果比对。自动识别匹配的算法并显示通过/失败指示。" },
+          "f5": { "icon": "Files", "title": "批量文件哈希与进度", "description": "一次哈希多个文件，实时显示处理进度。支持拖拽上传，每个文件的每种算法结果均可一键复制。" },
+          "f6": { "icon": "Shield", "title": "100% 隐私保护 — 零上传", "description": "所有哈希运算完全在浏览器中完成，使用 Web Crypto API 和优化的 JavaScript 实现。您的文本和文件永远不会离开设备。" }
         },
         "seoContent": {
           "intro": {
             "title": "什么是哈希生成工具？",
-            "content": "<p><strong>哈希生成工具</strong>使用 Web Crypto API 为文本和文件生成安全的哈希值。支持 SHA-1、SHA-256、SHA-384、SHA-512 等多种哈希算法，可用于数据完整性校验和文件验证。</p><p>所有哈希计算100%在浏览器中本地完成，敏感数据无需上传到任何服务器。</p>"
+            "content": "<p><strong>哈希生成工具</strong>使用 MD5、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256、SHA3-512 和 CRC32 算法为文本或文件计算加密哈希值，同时支持 HMAC（基于哈希的消息认证码）密钥哈希。哈希是用于验证数据完整性、比较文件和验证下载的单向指纹。</p><p>在浏览器中实时计算哈希——非常适合验证文件完整性或生成内容摘要。</p>"
           },
           "howToUse": {
             "title": "如何使用哈希生成工具",
-            "content": "<ol><li>输入需要计算哈希的文本，或上传文件</li><li>选择哈希算法（SHA-1、SHA-256、SHA-384 或 SHA-512）</li><li>哈希值即时生成并显示</li><li>点击复制将哈希值复制到剪贴板</li></ol><p>基于浏览器原生的 Web Crypto API，确保计算结果的准确性和安全性。</p>"
+            "content": "<ol><li>直接输入文本——哈希值在输入时实时计算</li><li>或上传文件（单个或批量）进行文件哈希</li><li>在十六进制（大写/小写）和 Base64 输出格式之间切换</li><li>使用验证字段与已知哈希值进行比较</li><li>启用 HMAC 模式进行密钥哈希</li></ol><p>要验证文件完整性，请将生成的哈希值与文件来源提供的校验和进行比较。</p>"
           },
           "features": {
             "title": "核心功能",
-            "content": "<ul><li><strong>多种算法</strong>：支持 SHA-1、SHA-256、SHA-384、SHA-512 哈希算法</li><li><strong>Web Crypto API</strong>：使用浏览器原生加密 API，安全可靠</li><li><strong>文本和文件</strong>：同时支持文本输入和文件上传的哈希计算</li><li><strong>即时计算</strong>：输入即刻显示哈希结果</li><li><strong>一键复制</strong>：快速复制生成的哈希值</li><li><strong>100%本地处理</strong>：哈希计算在浏览器中完成，零数据外传</li></ul>"
+            "content": "<ul><li><strong>8 种算法</strong>：MD5、CRC32、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256、SHA3-512</li><li><strong>HMAC 支持</strong>：使用 SHA 算法进行密钥哈希的消息认证</li><li><strong>实时哈希</strong>：输入时即时显示结果</li><li><strong>哈希验证</strong>：与预期哈希值比较并可视化显示匹配结果</li><li><strong>批量文件哈希</strong>：一次性对多个文件计算哈希</li><li><strong>多种输出格式</strong>：十六进制（大写/小写）和 Base64</li><li><strong>复制和导出</strong>：复制单个或全部哈希值，下载为文本文件</li><li><strong>文件进度</strong>：大文件处理时显示进度指示器</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
-            "content": "<ul><li><strong>文件校验</strong>：验证下载文件的 SHA 哈希值确保完整性</li><li><strong>密码学应用</strong>：生成数据摘要用于签名和验证</li><li><strong>数据去重</strong>：通过哈希比对识别重复文件</li><li><strong>区块链开发</strong>：计算交易数据的哈希值</li><li><strong>安全审计</strong>：校验配置文件和代码文件是否被篡改</li></ul>"
+            "content": "<ul><li><strong>文件完整性</strong>：通过比较校验和验证下载文件未被篡改</li><li><strong>内容去重</strong>：通过比较哈希值查找重复文件</li><li><strong>API 认证</strong>：为 API 请求生成 HMAC 签名</li><li><strong>软件分发</strong>：为自己发布的文件生成校验和</li><li><strong>安全审计</strong>：通过哈希文件检测未授权的修改</li></ul>"
           },
           "privacy": {
             "title": "隐私优先的哈希计算",
-            "content": "<p>哈希值通过浏览器原生 <strong>Web Crypto API</strong> 在本地计算，不依赖任何外部服务。</p><ul><li>输入数据<strong>永远不会离开您的设备</strong>——安全处理密码、密钥等敏感信息</li><li>无服务器端计算或存储</li><li>页面加载后可完全<strong>离线</strong>使用</li></ul>"
+            "content": "<p>哈希值<strong>完全在浏览器中</strong>使用原生 <strong>Web Crypto API</strong> 和优化的 JavaScript 实现计算。</p><ul><li>您的文本和文件<strong>永远不会离开您的设备</strong>——处理敏感内容时至关重要</li><li>在可用时使用硬件加速的加密实现</li><li>页面加载后可<strong>离线</strong>使用</li></ul>"
           }
         }
       },

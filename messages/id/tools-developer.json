@@ -387,47 +387,80 @@
       },
       "hash-generator": {
         "name": "Generator Hash",
-        "description": "Hitung hash SHA-1, SHA-256, SHA-384, dan SHA-512 untuk teks atau file.",
-        "metaTitle": "Generator Hash - Kalkulator Hash SHA Online Gratis",
-        "metaDescription": "Hasilkan hash SHA-1, SHA-256, SHA-384, dan SHA-512 untuk teks dan file. Menggunakan Web Crypto API. Alat online gratis.",
-        "keywords": "generator hash, sha256, sha512, sha1, hash file, kalkulator checksum",
+        "description": "Hitung hash MD5, SHA-1, SHA-256, SHA-512, SHA-3, CRC32 dan HMAC untuk teks atau file.",
+        "metaTitle": "Generator Hash - Kalkulator MD5, SHA, HMAC Online Gratis",
+        "metaDescription": "Hasilkan hash MD5, SHA-1, SHA-256, SHA-512, SHA-3, CRC32 dan HMAC untuk teks dan file. Komputasi real-time, verifikasi hash, hashing file massal. Alat online gratis.",
+        "keywords": "generator hash, md5, sha256, sha512, sha3, crc32, hmac, hash file, kalkulator checksum, verifikasi hash",
         "textMode": "Teks",
         "fileMode": "File",
         "inputPlaceholder": "Masukkan teks untuk di-hash...",
         "compute": "Hitung Hash",
         "computing": "Menghitung...",
+        "hashMode": "Hash",
+        "hmacMode": "HMAC",
+        "secretKey": "Kunci Rahasia",
+        "secretKeyPlaceholder": "Masukkan kunci rahasia HMAC...",
+        "keyFormatText": "UTF-8",
+        "keyFormatHex": "Hex",
+        "keyFormat": "Format Kunci",
+        "secretKeyDescription": "Kunci rahasia untuk autentikasi HMAC. Mendukung SHA-1, SHA-256, SHA-384, dan SHA-512.",
+        "copyAll": "Salin Semua",
+        "copiedAll": "Tersalin!",
+        "verifyHash": "Verifikasi Hash",
+        "expectedHashPlaceholder": "Tempel hash yang diharapkan untuk dibandingkan...",
+        "verifyMatchAlgo": "Cocok ({algorithm})",
+        "verifyNoMatch": "Tidak Cocok",
+        "outputFormatLabel": "Format",
+        "hashResults": "Hasil Hash",
+        "selectedFiles": "File Terpilih",
+        "readingFile": "Membaca file...",
         "faq": {
           "q1": "Algoritma hash apa yang didukung?",
-          "a1": "SHA-1, SHA-256, SHA-384, dan SHA-512 semuanya dihitung secara bersamaan menggunakan Web Crypto API browser.",
+          "a1": "MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, dan SHA3-512 semuanya dihitung secara bersamaan. Algoritma SHA menggunakan Web Crypto API browser, sementara MD5, CRC32, dan SHA-3 menggunakan implementasi JavaScript yang dioptimalkan.",
           "q2": "Bisakah saya meng-hash file?",
-          "a2": "Ya, beralih ke mode File dan jatuhkan file apa pun. Hash dihitung secara lokal di browser Anda — file tidak pernah diunggah.",
+          "a2": "Ya, beralih ke mode File dan jatuhkan file apa pun. Anda juga bisa meng-hash beberapa file sekaligus dengan pemrosesan massal. Hash dihitung secara lokal di browser Anda — file tidak pernah diunggah.",
           "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
           "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
           "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
-          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah.",
+          "q6": "Apakah MD5 masih aman?",
+          "a6": "MD5 secara kriptografi sudah rusak dan tidak boleh digunakan untuk tujuan keamanan. Namun, MD5 masih banyak digunakan untuk checksum dan verifikasi integritas file di mana ketahanan terhadap tabrakan tidak kritis.",
+          "q7": "Apa itu HMAC?",
+          "a7": "HMAC (Hash-based Message Authentication Code) menggabungkan fungsi hash dengan kunci rahasia untuk menghasilkan kode otentikasi pesan. Ini digunakan untuk memverifikasi integritas dan keaslian data. Beralih ke mode HMAC dan masukkan kunci rahasia Anda untuk menghitung nilai HMAC.",
+          "q8": "Bagaimana cara kerja verifikasi hash?",
+          "a8": "Setelah menghitung hash, tempel nilai hash yang diharapkan di kolom verifikasi. Alat ini secara otomatis membandingkannya dengan semua hash yang dihitung dan menunjukkan algoritma mana yang cocok, jika ada. Perbandingan tidak membedakan huruf besar dan kecil."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": { "icon": "Hash", "title": "8 Algoritma Hash dalam Satu Klik", "description": "Hitung MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, dan SHA3-512 secara bersamaan. Semua hasil muncul seketika." },
+          "f2": { "icon": "Zap", "title": "Hashing Real-Time Saat Mengetik", "description": "Hasil diperbarui secara instan saat Anda mengetik — tidak perlu menekan tombol. 8 algoritma dihitung secara real-time." },
+          "f3": { "icon": "KeyRound", "title": "Dukungan Autentikasi HMAC", "description": "Buat HMAC (Kode Autentikasi Pesan) dengan kunci rahasia untuk SHA-1, SHA-256, SHA-384, dan SHA-512. Mendukung kunci UTF-8 dan heksadesimal." },
+          "f4": { "icon": "CircleCheck", "title": "Verifikasi dan Perbandingan Hash", "description": "Tempelkan nilai hash yang diharapkan untuk langsung memverifikasinya dengan semua hasil yang dihitung. Alat ini mengidentifikasi algoritma yang cocok secara otomatis." },
+          "f5": { "icon": "Files", "title": "Hash File Batch dengan Progres", "description": "Hash beberapa file sekaligus dengan indikator progres visual. Seret dan lepas file — hasil per file dengan salin satu klik." },
+          "f6": { "icon": "Shield", "title": "100% Privat — Tanpa Unggahan Server", "description": "Semua hashing dilakukan sepenuhnya di browser Anda menggunakan Web Crypto API dan JavaScript yang dioptimalkan. Teks dan file Anda tidak pernah meninggalkan perangkat." }
         },
         "seoContent": {
           "intro": {
-            "title": "Apa itu Hash Generator?",
-            "content": "<p><strong>Hash Generator</strong> menghitung nilai hash kriptografi untuk teks atau file menggunakan algoritma SHA-1, SHA-256, SHA-384, dan SHA-512. Hash adalah sidik jari satu arah yang digunakan untuk memverifikasi integritas data, membandingkan file, dan memvalidasi unduhan.</p><p>Hasilkan hash secara instan di browser Anda — ideal untuk memverifikasi integritas file atau membuat intisari konten.</p>"
+            "title": "Apa itu Generator Hash?",
+            "content": "<p><strong>Generator Hash</strong> menghitung nilai hash kriptografi untuk teks atau file menggunakan algoritma MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512, dan CRC32. Alat ini juga mendukung HMAC (Hash-based Message Authentication Code) dengan kunci rahasia. Hash adalah sidik jari satu arah yang digunakan untuk memverifikasi integritas data, membandingkan file, dan memvalidasi unduhan.</p><p>Hasilkan hash secara instan di browser Anda dengan komputasi real-time — ideal untuk memverifikasi integritas file atau membuat intisari konten.</p>"
           },
           "howToUse": {
-            "title": "Cara Menggunakan Hash Generator",
-            "content": "<ol><li>Masukkan teks langsung atau unggah file untuk di-hash</li><li>Pilih algoritma hash: SHA-1, SHA-256, SHA-384, atau SHA-512</li><li>Nilai hash dihitung secara instan dan ditampilkan</li><li>Salin hash untuk membandingkan dengan checksum yang diketahui atau gunakan dalam proyek Anda</li></ol><p>Untuk verifikasi integritas file, bandingkan hash yang dihasilkan dengan checksum yang disediakan oleh sumber file.</p>"
+            "title": "Cara Menggunakan Generator Hash",
+            "content": "<ol><li>Masukkan teks langsung — hash dihitung secara real-time saat Anda mengetik</li><li>Atau unggah file (tunggal atau massal) untuk hashing file</li><li>Beralih antara format output hex (huruf kecil/besar) dan Base64</li><li>Gunakan kolom verifikasi untuk membandingkan dengan hash yang diketahui</li><li>Aktifkan mode HMAC untuk hashing dengan kunci</li></ol><p>Untuk verifikasi integritas file, bandingkan hash yang dihasilkan dengan checksum yang disediakan oleh sumber file.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Beberapa Algoritma</strong>: SHA-1, SHA-256, SHA-384, dan SHA-512 dihitung secara bersamaan</li><li><strong>Hashing Teks & File</strong>: Hash teks yang diketik atau file yang diunggah dengan tipe apa pun</li><li><strong>Komputasi Instan</strong>: Nilai hash muncul secara real-time</li><li><strong>Web Crypto API</strong>: Menggunakan mesin kriptografi native browser untuk performa maksimum</li><li><strong>Salin ke Clipboard</strong>: Salin nilai hash dengan satu klik</li><li><strong>Dukungan File Besar</strong>: Hash file dengan ukuran berapa pun secara efisien</li></ul>"
+            "content": "<ul><li><strong>8 Algoritma</strong>: MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>Dukungan HMAC</strong>: Hashing dengan kunci menggunakan algoritma SHA untuk otentikasi pesan</li><li><strong>Hashing Real-Time</strong>: Hasil muncul secara instan saat Anda mengetik</li><li><strong>Verifikasi Hash</strong>: Bandingkan dengan hash yang diharapkan dengan indikator kecocokan visual</li><li><strong>Hashing File Massal</strong>: Hash beberapa file sekaligus</li><li><strong>Beberapa Format Output</strong>: Hex (huruf kecil/besar) dan Base64</li><li><strong>Salin & Ekspor</strong>: Salin hash individual atau semua, unduh sebagai file teks</li><li><strong>Progres File</strong>: Indikator progres untuk pemrosesan file besar</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Integritas File</strong>: Verifikasi file yang diunduh tidak diubah dengan membandingkan checksum</li><li><strong>Deduplikasi Konten</strong>: Bandingkan hash untuk menemukan file duplikat</li><li><strong>Tanda Tangan Digital</strong>: Buat intisari konten untuk alur kerja penandatanganan</li><li><strong>Distribusi Perangkat Lunak</strong>: Hasilkan checksum untuk rilis file Anda sendiri</li><li><strong>Audit Keamanan</strong>: Hash file untuk mendeteksi modifikasi yang tidak sah</li></ul>"
+            "content": "<ul><li><strong>Integritas File</strong>: Verifikasi file yang diunduh tidak diubah dengan membandingkan checksum</li><li><strong>Deduplikasi Konten</strong>: Bandingkan hash untuk menemukan file duplikat</li><li><strong>Otentikasi API</strong>: Hasilkan tanda tangan HMAC untuk permintaan API</li><li><strong>Distribusi Perangkat Lunak</strong>: Hasilkan checksum untuk rilis file Anda sendiri</li><li><strong>Audit Keamanan</strong>: Hash file untuk mendeteksi modifikasi yang tidak sah</li></ul>"
           },
           "privacy": {
             "title": "Mengutamakan Privasi - Pembuatan Hash",
-            "content": "<p>Hash dihitung <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>Web Crypto API</strong> native (<code>crypto.subtle.digest</code>).</p><ul><li>Teks dan file Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — penting saat meng-hash konten sensitif</li><li>Menggunakan implementasi kriptografi yang dipercepat perangkat keras jika tersedia</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
+            "content": "<p>Hash dihitung <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>Web Crypto API</strong> native dan implementasi JavaScript yang dioptimalkan.</p><ul><li>Teks dan file Anda <strong>tidak pernah meninggalkan perangkat Anda</strong> — penting saat meng-hash konten sensitif</li><li>Menggunakan implementasi kriptografi yang dipercepat perangkat keras jika tersedia</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },

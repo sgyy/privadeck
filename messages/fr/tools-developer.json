@@ -387,47 +387,80 @@
       },
       "hash-generator": {
         "name": "Générateur de hash",
-        "description": "Calculer les hashes SHA-1, SHA-256, SHA-384 et SHA-512 pour du texte ou des fichiers.",
-        "metaTitle": "Générateur de hash - Calculateur SHA gratuit en ligne",
-        "metaDescription": "Générer des hashes SHA-1, SHA-256, SHA-384 et SHA-512 pour du texte et des fichiers. Utilise la Web Crypto API. Outil gratuit en ligne.",
-        "keywords": "générateur de hash, SHA256, SHA512, SHA1, hash de fichier, calculateur de checksum",
+        "description": "Calculer les hashes MD5, SHA-1, SHA-256, SHA-512, SHA-3, CRC32 et HMAC pour du texte ou des fichiers.",
+        "metaTitle": "Générateur de hash - Calculateur MD5, SHA, HMAC gratuit en ligne",
+        "metaDescription": "Générer des hashes MD5, SHA-1, SHA-256, SHA-512, SHA-3, CRC32 et HMAC pour du texte et des fichiers. Calcul en temps réel, vérification de hash, hachage par lots. Outil gratuit en ligne.",
+        "keywords": "générateur de hash, md5, sha256, sha512, sha3, crc32, hmac, hash de fichier, calculateur de checksum, vérification de hash",
         "textMode": "Texte",
         "fileMode": "Fichier",
         "inputPlaceholder": "Saisir le texte à hacher...",
         "compute": "Calculer les hashes",
         "computing": "Calcul en cours...",
+        "hashMode": "Hash",
+        "hmacMode": "HMAC",
+        "secretKey": "Clé secrète",
+        "secretKeyPlaceholder": "Saisir la clé secrète HMAC...",
+        "keyFormatText": "UTF-8",
+        "keyFormatHex": "Hex",
+        "keyFormat": "Format de clé",
+        "secretKeyDescription": "Clé secrète pour l'authentification HMAC. Prend en charge SHA-1, SHA-256, SHA-384 et SHA-512.",
+        "copyAll": "Tout copier",
+        "copiedAll": "Copié !",
+        "verifyHash": "Vérifier le hash",
+        "expectedHashPlaceholder": "Collez le hash attendu pour comparer...",
+        "verifyMatchAlgo": "Correspondance ({algorithm})",
+        "verifyNoMatch": "Aucune correspondance",
+        "outputFormatLabel": "Format",
+        "hashResults": "Résultats de hachage",
+        "selectedFiles": "Fichiers sélectionnés",
+        "readingFile": "Lecture du fichier...",
         "faq": {
           "q1": "Quels algorithmes de hash sont pris en charge ?",
-          "a1": "SHA-1, SHA-256, SHA-384 et SHA-512 sont tous calculés simultanément à l'aide de la Web Crypto API du navigateur.",
+          "a1": "MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 et SHA3-512 sont tous calculés simultanément. Les algorithmes SHA utilisent la Web Crypto API du navigateur, tandis que MD5, CRC32 et SHA-3 utilisent des implémentations JavaScript optimisées.",
           "q2": "Puis-je hacher des fichiers ?",
-          "a2": "Oui, passez en mode Fichier et déposez n'importe quel fichier. Le hash est calculé localement dans votre navigateur — le fichier n'est jamais envoyé.",
+          "a2": "Oui, passez en mode Fichier et déposez n'importe quel fichier. Vous pouvez également hacher plusieurs fichiers à la fois grâce au traitement par lots. Le hash est calculé localement dans votre navigateur — le fichier n'est jamais envoyé.",
           "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
           "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
           "q4": "Puis-je utiliser cet outil hors connexion ?",
           "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
-          "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
+          "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème.",
+          "q6": "MD5 est-il encore sûr ?",
+          "a6": "MD5 est cryptographiquement cassé et ne devrait pas être utilisé à des fins de sécurité. Cependant, il reste largement utilisé pour les sommes de contrôle et la vérification de l'intégrité des fichiers lorsque la résistance aux collisions n'est pas critique.",
+          "q7": "Qu'est-ce que HMAC ?",
+          "a7": "HMAC (code d'authentification de message basé sur le hachage) combine une fonction de hachage avec une clé secrète pour produire un code d'authentification de message. Il est utilisé pour vérifier à la fois l'intégrité et l'authenticité des données. Passez en mode HMAC et saisissez votre clé secrète pour calculer les valeurs HMAC.",
+          "q8": "Comment fonctionne la vérification de hash ?",
+          "a8": "Après avoir calculé les hashes, collez une valeur de hash attendue dans le champ de vérification. L'outil la compare automatiquement avec tous les hashes calculés et indique quel algorithme correspond, le cas échéant. La comparaison est insensible à la casse."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": { "icon": "Hash", "title": "8 algorithmes de hachage en un clic", "description": "Calculez MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 et SHA3-512 simultanément. Tous les résultats apparaissent instantanément." },
+          "f2": { "icon": "Zap", "title": "Hachage en temps réel à la saisie", "description": "Les résultats se mettent à jour instantanément pendant la saisie, sans cliquer sur un bouton. 8 algorithmes calculés en temps réel." },
+          "f3": { "icon": "KeyRound", "title": "Support d'authentification HMAC", "description": "Générez un HMAC (code d'authentification de message) avec une clé secrète pour SHA-1, SHA-256, SHA-384 et SHA-512. Compatible avec les clés UTF-8 et hexadécimales." },
+          "f4": { "icon": "CircleCheck", "title": "Vérification et comparaison de hachage", "description": "Collez une valeur de hachage attendue pour la vérifier instantanément avec tous les résultats calculés. L'outil identifie automatiquement l'algorithme correspondant." },
+          "f5": { "icon": "Files", "title": "Hachage par lots avec progression", "description": "Hachez plusieurs fichiers à la fois avec un indicateur de progression visuel. Glissez-déposez les fichiers — résultats par fichier avec copie en un clic." },
+          "f6": { "icon": "Shield", "title": "100% privé — aucun envoi serveur", "description": "Tous les hachages sont effectués entièrement dans votre navigateur via la Web Crypto API et du JavaScript optimisé. Vos textes et fichiers ne quittent jamais votre appareil." }
         },
         "seoContent": {
           "intro": {
             "title": "Qu'est-ce que le Générateur de hash ?",
-            "content": "<p><strong>Le Générateur de hash</strong> calcule des valeurs de hachage cryptographique pour du texte ou des fichiers à l'aide des algorithmes SHA-1, SHA-256, SHA-384 et SHA-512. Les hachages sont des empreintes unidirectionnelles utilisées pour vérifier l'intégrité des données, comparer des fichiers et valider les téléchargements.</p><p>Générez des hachages instantanément dans votre navigateur — idéal pour vérifier l'intégrité des fichiers ou créer des résumés de contenu.</p>"
+            "content": "<p><strong>Le Générateur de hash</strong> calcule des valeurs de hachage cryptographique pour du texte ou des fichiers à l'aide des algorithmes MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 et CRC32. Il prend également en charge HMAC (code d'authentification de message basé sur le hachage) avec une clé secrète. Les hachages sont des empreintes unidirectionnelles utilisées pour vérifier l'intégrité des données, comparer des fichiers et valider les téléchargements.</p><p>Générez des hachages instantanément dans votre navigateur avec un calcul en temps réel — idéal pour vérifier l'intégrité des fichiers ou créer des résumés de contenu.</p>"
           },
           "howToUse": {
             "title": "Comment utiliser le Générateur de hash",
-            "content": "<ol><li>Saisissez du texte directement ou téléchargez un fichier à hacher</li><li>Sélectionnez le(s) algorithme(s) de hachage : SHA-1, SHA-256, SHA-384 ou SHA-512</li><li>La valeur de hachage est calculée instantanément et affichée</li><li>Copiez le hachage pour le comparer avec des sommes de contrôle connues ou l'utiliser dans votre projet</li></ol><p>Pour la vérification de l'intégrité des fichiers, comparez le hachage généré avec la somme de contrôle fournie par la source du fichier.</p>"
+            "content": "<ol><li>Saisissez du texte directement — les hachages sont calculés en temps réel pendant la saisie</li><li>Ou téléchargez des fichiers (un seul ou par lots) pour le hachage de fichiers</li><li>Alternez entre les formats de sortie hex (minuscules/majuscules) et Base64</li><li>Utilisez le champ de vérification pour comparer avec un hash connu</li><li>Activez le mode HMAC pour le hachage avec clé</li></ol><p>Pour la vérification de l'intégrité des fichiers, comparez le hachage généré avec la somme de contrôle fournie par la source du fichier.</p>"
           },
           "features": {
             "title": "Fonctionnalités clés",
-            "content": "<ul><li><strong>Algorithmes multiples</strong> : SHA-1, SHA-256, SHA-384 et SHA-512 calculés simultanément</li><li><strong>Hachage de texte et de fichiers</strong> : Hachez du texte saisi ou des fichiers téléchargés de n'importe quel type</li><li><strong>Calcul instantané</strong> : Les valeurs de hachage apparaissent en temps réel</li><li><strong>Web Crypto API</strong> : Utilise le moteur cryptographique natif du navigateur pour des performances maximales</li><li><strong>Copier dans le presse-papiers</strong> : Copie en un clic pour chaque valeur de hachage</li><li><strong>Prise en charge des grands fichiers</strong> : Hachez efficacement des fichiers de n'importe quelle taille</li></ul>"
+            "content": "<ul><li><strong>8 algorithmes</strong> : MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>Support HMAC</strong> : Hachage avec clé utilisant les algorithmes SHA pour l'authentification de messages</li><li><strong>Hachage en temps réel</strong> : Les résultats apparaissent instantanément pendant la saisie</li><li><strong>Vérification de hash</strong> : Comparez avec les hashes attendus avec un indicateur visuel de correspondance</li><li><strong>Hachage de fichiers par lots</strong> : Hachez plusieurs fichiers à la fois</li><li><strong>Formats de sortie multiples</strong> : Hex (minuscules/majuscules) et Base64</li><li><strong>Copier et exporter</strong> : Copiez des hashes individuels ou tous, téléchargez en fichier texte</li><li><strong>Progression du fichier</strong> : Indicateur de progression pour le traitement de fichiers volumineux</li></ul>"
           },
           "useCases": {
             "title": "Cas d'utilisation courants",
-            "content": "<ul><li><strong>Intégrité des fichiers</strong> : Vérifiez que les fichiers téléchargés n'ont pas été altérés en comparant les sommes de contrôle</li><li><strong>Déduplication de contenu</strong> : Comparez les hachages pour trouver les fichiers en double</li><li><strong>Signatures numériques</strong> : Créez des résumés de contenu pour les flux de signature</li><li><strong>Distribution de logiciels</strong> : Générez des sommes de contrôle pour vos propres versions de fichiers</li><li><strong>Audit de sécurité</strong> : Hachez des fichiers pour détecter les modifications non autorisées</li></ul>"
+            "content": "<ul><li><strong>Intégrité des fichiers</strong> : Vérifiez que les fichiers téléchargés n'ont pas été altérés en comparant les sommes de contrôle</li><li><strong>Déduplication de contenu</strong> : Comparez les hachages pour trouver les fichiers en double</li><li><strong>Authentification API</strong> : Générez des signatures HMAC pour les requêtes API</li><li><strong>Distribution de logiciels</strong> : Générez des sommes de contrôle pour vos propres versions de fichiers</li><li><strong>Audit de sécurité</strong> : Hachez des fichiers pour détecter les modifications non autorisées</li></ul>"
           },
           "privacy": {
             "title": "Génération de hash axée sur la confidentialité",
-            "content": "<p>Les hachages sont calculés <strong>entièrement dans votre navigateur</strong> à l'aide de la <strong>Web Crypto API</strong> native (<code>crypto.subtle.digest</code>).</p><ul><li>Votre texte et vos fichiers <strong>ne quittent jamais votre appareil</strong> — essentiel lors du hachage de contenu sensible</li><li>Utilise des implémentations cryptographiques accélérées par le matériel lorsque disponibles</li><li>Fonctionne <strong>hors connexion</strong> après le chargement de la page</li></ul>"
+            "content": "<p>Les hachages sont calculés <strong>entièrement dans votre navigateur</strong> à l'aide de la <strong>Web Crypto API</strong> native et d'implémentations JavaScript optimisées.</p><ul><li>Votre texte et vos fichiers <strong>ne quittent jamais votre appareil</strong> — essentiel lors du hachage de contenu sensible</li><li>Utilise des implémentations cryptographiques accélérées par le matériel lorsque disponibles</li><li>Fonctionne <strong>hors connexion</strong> après le chargement de la page</li></ul>"
           }
         }
       },

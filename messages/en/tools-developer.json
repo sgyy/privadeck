@@ -387,47 +387,104 @@
       },
       "hash-generator": {
         "name": "Hash Generator",
-        "description": "Compute SHA-1, SHA-256, SHA-384, and SHA-512 hashes for text or files.",
-        "metaTitle": "Hash Generator - Free Online SHA Hash Calculator",
-        "metaDescription": "Generate SHA-1, SHA-256, SHA-384, and SHA-512 hashes for text and files. Uses Web Crypto API. Free online tool.",
-        "keywords": "hash generator, sha256, sha512, sha1, file hash, checksum calculator",
+        "description": "Compute MD5, SHA-1, SHA-256, SHA-512, SHA-3, CRC32 hashes and HMAC for text or files.",
+        "metaTitle": "Hash Generator - Free Online MD5, SHA, HMAC Calculator",
+        "metaDescription": "Generate MD5, SHA-1, SHA-256, SHA-512, SHA-3, CRC32 hashes and HMAC for text and files. Real-time computation, hash verification, batch file hashing. Free online tool.",
+        "keywords": "hash generator, md5, sha256, sha512, sha3, crc32, hmac, file hash, checksum calculator, hash verification",
         "textMode": "Text",
         "fileMode": "File",
         "inputPlaceholder": "Enter text to hash...",
         "compute": "Compute Hashes",
         "computing": "Computing...",
+        "hashMode": "Hash",
+        "hmacMode": "HMAC",
+        "secretKey": "Secret Key",
+        "secretKeyPlaceholder": "Enter HMAC secret key...",
+        "keyFormatText": "UTF-8",
+        "keyFormatHex": "Hex",
+        "keyFormat": "Key Format",
+        "secretKeyDescription": "Secret key for HMAC authentication. Supports SHA-1, SHA-256, SHA-384, and SHA-512.",
+        "copyAll": "Copy All",
+        "copiedAll": "Copied!",
+        "verifyHash": "Verify Hash",
+        "expectedHashPlaceholder": "Paste expected hash to compare...",
+        "verifyMatchAlgo": "Match ({algorithm})",
+        "verifyNoMatch": "No Match",
+        "outputFormatLabel": "Format",
+        "hashResults": "Hash Results",
+        "selectedFiles": "Selected Files",
+        "readingFile": "Reading file...",
         "faq": {
           "q1": "Which hash algorithms are supported?",
-          "a1": "SHA-1, SHA-256, SHA-384, and SHA-512 are all computed simultaneously using the browser's Web Crypto API.",
+          "a1": "MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, and SHA3-512 are all computed simultaneously. SHA algorithms use the browser's Web Crypto API, while MD5, CRC32, and SHA-3 use optimized JavaScript implementations.",
           "q2": "Can I hash files?",
-          "a2": "Yes, switch to File mode and drop any file. The hash is computed locally in your browser — the file is never uploaded.",
+          "a2": "Yes, switch to File mode and drop any file. You can also hash multiple files at once with batch processing. The hash is computed locally in your browser — the file is never uploaded.",
           "q3": "Will my files be uploaded to a server?",
           "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "Is MD5 still safe to use?",
+          "a6": "MD5 is cryptographically broken and should not be used for security purposes. However, it remains widely used for checksums and file integrity verification where collision resistance is not critical.",
+          "q7": "What is HMAC?",
+          "a7": "HMAC (Hash-based Message Authentication Code) combines a hash function with a secret key to produce a message authentication code. It's used to verify both data integrity and authenticity. Switch to HMAC mode and enter your secret key to compute HMAC values.",
+          "q8": "How does hash verification work?",
+          "a8": "After computing hashes, paste an expected hash value in the verification field. The tool automatically compares it against all computed hashes and shows which algorithm matches, if any. The comparison is case-insensitive."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Hash",
+            "title": "8 Hash Algorithms in One Click",
+            "description": "Compute MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, and SHA3-512 simultaneously. All results appear instantly — no need to run each algorithm separately."
+          },
+          "f2": {
+            "icon": "Zap",
+            "title": "Real-Time Hashing as You Type",
+            "description": "Results update instantly as you type with zero-delay feedback. No need to click a button — just type and see all 8 hash values computed in real time."
+          },
+          "f3": {
+            "icon": "KeyRound",
+            "title": "HMAC Authentication Support",
+            "description": "Generate HMAC (Hash-based Message Authentication Code) with a secret key for SHA-1, SHA-256, SHA-384, and SHA-512. Supports both UTF-8 text and hex-encoded keys."
+          },
+          "f4": {
+            "icon": "CircleCheck",
+            "title": "Hash Verification & Comparison",
+            "description": "Paste an expected hash value to instantly verify it against all computed results. The tool identifies which algorithm matches and shows a clear pass/fail indicator."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "Batch File Hashing with Progress",
+            "description": "Hash multiple files at once with a visual progress indicator. Drag and drop files directly — results are displayed per file with one-click copy for each algorithm."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% Private — Zero Server Uploads",
+            "description": "All hashing is performed entirely in your browser using the Web Crypto API and optimized JavaScript. Your text and files never leave your device."
+          }
         },
         "seoContent": {
           "intro": {
             "title": "What is Hash Generator?",
-            "content": "<p><strong>Hash Generator</strong> computes cryptographic hash values for text or files using SHA-1, SHA-256, SHA-384, and SHA-512 algorithms. Hashes are one-way fingerprints used to verify data integrity, compare files, and validate downloads.</p><p>Generate hashes instantly in your browser — ideal for verifying file integrity or creating content digests.</p>"
+            "content": "<p><strong>Hash Generator</strong> computes cryptographic hash values for text or files using MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512, and CRC32 algorithms. It also supports HMAC (Hash-based Message Authentication Code) with a secret key. Hashes are one-way fingerprints used to verify data integrity, compare files, and validate downloads.</p><p>Generate hashes instantly in your browser with real-time computation — ideal for verifying file integrity or creating content digests.</p>"
           },
           "howToUse": {
             "title": "How to Use Hash Generator",
-            "content": "<ol><li>Enter text directly or upload a file to hash</li><li>Select the hash algorithm(s): SHA-1, SHA-256, SHA-384, or SHA-512</li><li>The hash value is computed instantly and displayed</li><li>Copy the hash to compare with known checksums or use in your project</li></ol><p>For file integrity verification, compare the generated hash with the checksum provided by the file's source.</p>"
+            "content": "<ol><li>Enter text directly — hashes are computed in real-time as you type</li><li>Or upload files (single or batch) for file hashing</li><li>Switch between hex (lowercase/uppercase) and Base64 output formats</li><li>Use the verification field to compare against a known hash</li><li>Enable HMAC mode for keyed hashing</li></ol><p>For file integrity verification, compare the generated hash with the checksum provided by the file's source.</p>"
           },
           "features": {
             "title": "Key Features",
-            "content": "<ul><li><strong>Multiple Algorithms</strong>: SHA-1, SHA-256, SHA-384, and SHA-512 computed simultaneously</li><li><strong>Text & File Hashing</strong>: Hash typed text or uploaded files of any type</li><li><strong>Instant Computation</strong>: Hash values appear in real-time</li><li><strong>Web Crypto API</strong>: Uses the browser's native cryptographic engine for maximum performance</li><li><strong>Copy to Clipboard</strong>: One-click copy for each hash value</li><li><strong>Large File Support</strong>: Efficiently hash files of any size</li></ul>"
+            "content": "<ul><li><strong>8 Algorithms</strong>: MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>HMAC Support</strong>: Keyed hashing with SHA algorithms for message authentication</li><li><strong>Real-Time Hashing</strong>: Results appear instantly as you type</li><li><strong>Hash Verification</strong>: Compare against expected hashes with visual match indicator</li><li><strong>Batch File Hashing</strong>: Hash multiple files at once</li><li><strong>Multiple Output Formats</strong>: Hex (lowercase/uppercase) and Base64</li><li><strong>Copy & Export</strong>: Copy individual or all hashes, download as text file</li><li><strong>File Progress</strong>: Progress indicator for large file processing</li></ul>"
           },
           "useCases": {
             "title": "Common Use Cases",
-            "content": "<ul><li><strong>File Integrity</strong>: Verify downloaded files haven't been tampered with by comparing checksums</li><li><strong>Content Deduplication</strong>: Compare hashes to find duplicate files</li><li><strong>Digital Signatures</strong>: Create content digests for signing workflows</li><li><strong>Software Distribution</strong>: Generate checksums for your own file releases</li><li><strong>Security Auditing</strong>: Hash files to detect unauthorized modifications</li></ul>"
+            "content": "<ul><li><strong>File Integrity</strong>: Verify downloaded files haven't been tampered with by comparing checksums</li><li><strong>Content Deduplication</strong>: Compare hashes to find duplicate files</li><li><strong>API Authentication</strong>: Generate HMAC signatures for API requests</li><li><strong>Software Distribution</strong>: Generate checksums for your own file releases</li><li><strong>Security Auditing</strong>: Hash files to detect unauthorized modifications</li></ul>"
           },
           "privacy": {
             "title": "Privacy-First Hash Generation",
-            "content": "<p>Hashes are computed <strong>entirely in your browser</strong> using the native <strong>Web Crypto API</strong> (<code>crypto.subtle.digest</code>).</p><ul><li>Your text and files <strong>never leave your device</strong> — critical when hashing sensitive content</li><li>Uses hardware-accelerated cryptographic implementations when available</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "content": "<p>Hashes are computed <strong>entirely in your browser</strong> using the native <strong>Web Crypto API</strong> and optimized JavaScript implementations.</p><ul><li>Your text and files <strong>never leave your device</strong> — critical when hashing sensitive content</li><li>Uses hardware-accelerated cryptographic implementations when available</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
           }
         }
       },

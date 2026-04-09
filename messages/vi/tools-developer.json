@@ -387,47 +387,80 @@
       },
       "hash-generator": {
         "name": "Tạo mã băm",
-        "description": "Tính toán mã băm SHA-1, SHA-256, SHA-384 và SHA-512 cho văn bản hoặc tệp.",
-        "metaTitle": "Tạo mã băm - Máy tính băm SHA trực tuyến miễn phí",
-        "metaDescription": "Tạo mã băm SHA-1, SHA-256, SHA-384 và SHA-512 cho văn bản và tệp. Sử dụng Web Crypto API. Công cụ trực tuyến miễn phí.",
-        "keywords": "tạo mã băm, sha256, sha512, sha1, băm tệp, máy tính checksum",
+        "description": "Tính toán mã băm MD5, SHA-1, SHA-256, SHA-512, SHA-3, CRC32 và HMAC cho văn bản hoặc tệp.",
+        "metaTitle": "Tạo mã băm - Máy tính MD5, SHA, HMAC trực tuyến miễn phí",
+        "metaDescription": "Tạo mã băm MD5, SHA-1, SHA-256, SHA-512, SHA-3, CRC32 và HMAC cho văn bản và tệp. Tính toán thời gian thực, xác minh mã băm, băm hàng loạt. Công cụ trực tuyến miễn phí.",
+        "keywords": "tạo mã băm, md5, sha256, sha512, sha3, crc32, hmac, băm tệp, máy tính checksum, xác minh mã băm",
         "textMode": "Văn bản",
         "fileMode": "Tệp",
         "inputPlaceholder": "Nhập văn bản cần băm...",
         "compute": "Tính mã băm",
         "computing": "Đang tính...",
+        "hashMode": "Hash",
+        "hmacMode": "HMAC",
+        "secretKey": "Khóa bí mật",
+        "secretKeyPlaceholder": "Nhập khóa bí mật HMAC...",
+        "keyFormatText": "UTF-8",
+        "keyFormatHex": "Hex",
+        "keyFormat": "Định dạng khóa",
+        "secretKeyDescription": "Khóa bí mật cho xác thực HMAC. Hỗ trợ SHA-1, SHA-256, SHA-384 và SHA-512.",
+        "copyAll": "Sao chép tất cả",
+        "copiedAll": "Đã sao chép!",
+        "verifyHash": "Xác minh mã băm",
+        "expectedHashPlaceholder": "Dán mã băm mong đợi để so sánh...",
+        "verifyMatchAlgo": "Khớp ({algorithm})",
+        "verifyNoMatch": "Không khớp",
+        "outputFormatLabel": "Định dạng",
+        "hashResults": "Kết quả băm",
+        "selectedFiles": "Tệp đã chọn",
+        "readingFile": "Đang đọc tệp...",
         "faq": {
           "q1": "Hỗ trợ những thuật toán băm nào?",
-          "a1": "SHA-1, SHA-256, SHA-384 và SHA-512 đều được tính đồng thời bằng Web Crypto API của trình duyệt.",
+          "a1": "MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 và SHA3-512 đều được tính đồng thời. Các thuật toán SHA sử dụng Web Crypto API của trình duyệt, trong khi MD5, CRC32 và SHA-3 sử dụng triển khai JavaScript tối ưu.",
           "q2": "Tôi có thể băm tệp không?",
-          "a2": "Có, chuyển sang chế độ Tệp và thả tệp bất kỳ. Mã băm được tính cục bộ trong trình duyệt — tệp không bao giờ được tải lên.",
+          "a2": "Có, chuyển sang chế độ Tệp và thả tệp bất kỳ. Bạn cũng có thể băm nhiều tệp cùng lúc với xử lý hàng loạt. Mã băm được tính cục bộ trong trình duyệt — tệp không bao giờ được tải lên.",
           "q3": "Tệp của tôi có bị tải lên máy chủ không?",
           "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
           "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
           "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
-          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
+          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề.",
+          "q6": "MD5 có còn an toàn không?",
+          "a6": "MD5 đã bị phá vỡ về mặt mật mã và không nên sử dụng cho mục đích bảo mật. Tuy nhiên, nó vẫn được sử dụng rộng rãi cho checksum và xác minh tính toàn vẹn tệp khi khả năng chống va chạm không quan trọng.",
+          "q7": "HMAC là gì?",
+          "a7": "HMAC (Hash-based Message Authentication Code) kết hợp hàm băm với khóa bí mật để tạo mã xác thực thông điệp. Nó được dùng để xác minh cả tính toàn vẹn và tính xác thực của dữ liệu. Chuyển sang chế độ HMAC và nhập khóa bí mật để tính giá trị HMAC.",
+          "q8": "Xác minh mã băm hoạt động như thế nào?",
+          "a8": "Sau khi tính mã băm, dán giá trị băm mong đợi vào trường xác minh. Công cụ tự động so sánh với tất cả các mã băm đã tính và hiển thị thuật toán nào khớp, nếu có. Phép so sánh không phân biệt chữ hoa chữ thường."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": { "icon": "Hash", "title": "8 thuật toán băm chỉ với một cú nhấp", "description": "Tính MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 và SHA3-512 đồng thời. Tất cả kết quả hiển thị ngay lập tức." },
+          "f2": { "icon": "Zap", "title": "Băm thời gian thực khi gõ", "description": "Kết quả cập nhật ngay khi bạn gõ — không cần nhấn nút. 8 thuật toán được tính toán theo thời gian thực." },
+          "f3": { "icon": "KeyRound", "title": "Hỗ trợ xác thực HMAC", "description": "Tạo HMAC (mã xác thực tin nhắn) với khóa bí mật cho SHA-1, SHA-256, SHA-384 và SHA-512. Hỗ trợ khóa UTF-8 và thập lục phân." },
+          "f4": { "icon": "CircleCheck", "title": "Xác minh và so sánh băm", "description": "Dán giá trị băm mong đợi để xác minh ngay lập tức với tất cả kết quả đã tính. Công cụ tự động xác định thuật toán khớp." },
+          "f5": { "icon": "Files", "title": "Băm tệp hàng loạt với tiến trình", "description": "Băm nhiều tệp cùng lúc với chỉ báo tiến trình trực quan. Kéo và thả tệp — kết quả theo tệp với sao chép một cú nhấp." },
+          "f6": { "icon": "Shield", "title": "100% riêng tư — không tải lên máy chủ", "description": "Tất cả băm được thực hiện hoàn toàn trong trình duyệt của bạn sử dụng Web Crypto API và JavaScript tối ưu. Văn bản và tệp của bạn không bao giờ rời khỏi thiết bị." }
         },
         "seoContent": {
           "intro": {
             "title": "Tạo mã băm là gì?",
-            "content": "<p><strong>Tạo mã băm</strong> tính toán giá trị băm mật mã cho văn bản hoặc tệp bằng các thuật toán SHA-1, SHA-256, SHA-384 và SHA-512. Mã băm là dấu vân tay một chiều, dùng để xác minh tính toàn vẹn dữ liệu, so sánh tệp và xác thực tải xuống.</p><p>Tạo mã băm ngay lập tức trong trình duyệt — lý tưởng để kiểm tra tính toàn vẹn tệp hoặc tạo tóm tắt nội dung.</p>"
+            "content": "<p><strong>Tạo mã băm</strong> tính toán giá trị băm mật mã cho văn bản hoặc tệp bằng các thuật toán MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 và CRC32. Công cụ cũng hỗ trợ HMAC (Hash-based Message Authentication Code) với khóa bí mật. Mã băm là dấu vân tay một chiều, dùng để xác minh tính toàn vẹn dữ liệu, so sánh tệp và xác thực tải xuống.</p><p>Tạo mã băm ngay lập tức trong trình duyệt với tính toán thời gian thực — lý tưởng để kiểm tra tính toàn vẹn tệp hoặc tạo tóm tắt nội dung.</p>"
           },
           "howToUse": {
             "title": "Cách sử dụng Tạo mã băm",
-            "content": "<ol><li>Nhập văn bản trực tiếp hoặc tải lên tệp cần băm</li><li>Chọn thuật toán băm: SHA-1, SHA-256, SHA-384 hoặc SHA-512</li><li>Giá trị băm được tính toán ngay lập tức và hiển thị</li><li>Sao chép mã băm để so sánh với checksum đã biết hoặc sử dụng trong dự án</li></ol><p>Để xác minh tính toàn vẹn tệp, hãy so sánh mã băm đã tạo với checksum do nguồn cung cấp tệp.</p>"
+            "content": "<ol><li>Nhập văn bản trực tiếp — mã băm được tính theo thời gian thực khi bạn gõ</li><li>Hoặc tải lên tệp (đơn lẻ hoặc hàng loạt) để băm tệp</li><li>Chuyển đổi giữa các định dạng đầu ra hex (chữ thường/chữ hoa) và Base64</li><li>Sử dụng trường xác minh để so sánh với mã băm đã biết</li><li>Bật chế độ HMAC để băm có khóa</li></ol><p>Để xác minh tính toàn vẹn tệp, hãy so sánh mã băm đã tạo với checksum do nguồn cung cấp tệp.</p>"
           },
           "features": {
             "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Nhiều thuật toán</strong>: SHA-1, SHA-256, SHA-384 và SHA-512 được tính toán đồng thời</li><li><strong>Băm văn bản & tệp</strong>: Băm văn bản đã nhập hoặc tệp đã tải lên ở bất kỳ định dạng nào</li><li><strong>Tính toán tức thì</strong>: Giá trị băm xuất hiện theo thời gian thực</li><li><strong>Web Crypto API</strong>: Sử dụng công cụ mật mã tích hợp sẵn của trình duyệt để đạt hiệu suất tối đa</li><li><strong>Sao chép vào clipboard</strong>: Sao chép mỗi giá trị băm chỉ bằng một lần nhấp</li><li><strong>Hỗ trợ tệp lớn</strong>: Băm hiệu quả tệp ở bất kỳ kích thước nào</li></ul>"
+            "content": "<ul><li><strong>8 thuật toán</strong>: MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>Hỗ trợ HMAC</strong>: Băm có khóa với thuật toán SHA để xác thực thông điệp</li><li><strong>Băm thời gian thực</strong>: Kết quả xuất hiện ngay lập tức khi bạn gõ</li><li><strong>Xác minh mã băm</strong>: So sánh với mã băm mong đợi với chỉ báo khớp trực quan</li><li><strong>Băm tệp hàng loạt</strong>: Băm nhiều tệp cùng lúc</li><li><strong>Nhiều định dạng đầu ra</strong>: Hex (chữ thường/chữ hoa) và Base64</li><li><strong>Sao chép & xuất</strong>: Sao chép từng hoặc tất cả mã băm, tải xuống dạng tệp văn bản</li><li><strong>Tiến trình tệp</strong>: Chỉ báo tiến trình cho xử lý tệp lớn</li></ul>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
-            "content": "<ul><li><strong>Toàn vẹn tệp</strong>: Xác minh tệp tải xuống không bị giả mạo bằng cách so sánh checksum</li><li><strong>Khử trùng lặp nội dung</strong>: So sánh mã băm để tìm tệp trùng lặp</li><li><strong>Chữ ký số</strong>: Tạo tóm tắt nội dung cho quy trình ký số</li><li><strong>Phân phối phần mềm</strong>: Tạo checksum cho bản phát hành tệp của bạn</li><li><strong>Kiểm toán bảo mật</strong>: Băm tệp để phát hiện sửa đổi trái phép</li></ul>"
+            "content": "<ul><li><strong>Toàn vẹn tệp</strong>: Xác minh tệp tải xuống không bị giả mạo bằng cách so sánh checksum</li><li><strong>Khử trùng lặp nội dung</strong>: So sánh mã băm để tìm tệp trùng lặp</li><li><strong>Xác thực API</strong>: Tạo chữ ký HMAC cho các yêu cầu API</li><li><strong>Phân phối phần mềm</strong>: Tạo checksum cho bản phát hành tệp của bạn</li><li><strong>Kiểm toán bảo mật</strong>: Băm tệp để phát hiện sửa đổi trái phép</li></ul>"
           },
           "privacy": {
             "title": "Tạo mã băm ưu tiên quyền riêng tư",
-            "content": "<p>Mã băm được tính toán <strong>hoàn toàn trong trình duyệt</strong> bằng <strong>Web Crypto API</strong> tích hợp sẵn (<code>crypto.subtle.digest</code>).</p><ul><li>Văn bản và tệp của bạn <strong>không bao giờ rời khỏi thiết bị</strong> — rất quan trọng khi băm nội dung nhạy cảm</li><li>Sử dụng triển khai mật mã tăng tốc phần cứng khi khả dụng</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi trang đã tải</li></ul>"
+            "content": "<p>Mã băm được tính toán <strong>hoàn toàn trong trình duyệt</strong> bằng <strong>Web Crypto API</strong> tích hợp sẵn và triển khai JavaScript tối ưu.</p><ul><li>Văn bản và tệp của bạn <strong>không bao giờ rời khỏi thiết bị</strong> — rất quan trọng khi băm nội dung nhạy cảm</li><li>Sử dụng triển khai mật mã tăng tốc phần cứng khi khả dụng</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi trang đã tải</li></ul>"
           }
         }
       },

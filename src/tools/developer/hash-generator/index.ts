@@ -16,7 +16,6 @@ const definition: ToolDefinition = {
       questionKey: "tools.developer.hash-generator.faq.q2",
       answerKey: "tools.developer.hash-generator.faq.a2",
     },
-  
     {
       questionKey: "tools.developer.hash-generator.faq.q3",
       answerKey: "tools.developer.hash-generator.faq.a3",
@@ -28,6 +27,18 @@ const definition: ToolDefinition = {
     {
       questionKey: "tools.developer.hash-generator.faq.q5",
       answerKey: "tools.developer.hash-generator.faq.a5",
+    },
+    {
+      questionKey: "tools.developer.hash-generator.faq.q6",
+      answerKey: "tools.developer.hash-generator.faq.a6",
+    },
+    {
+      questionKey: "tools.developer.hash-generator.faq.q7",
+      answerKey: "tools.developer.hash-generator.faq.a7",
+    },
+    {
+      questionKey: "tools.developer.hash-generator.faq.q8",
+      answerKey: "tools.developer.hash-generator.faq.a8",
     },
   ],
   relatedSlugs: ["base64", "url-encoder", "json-formatter"],
