@@ -23,6 +23,7 @@
 - [src/components/ui/Dialog.tsx](file://src/components/ui/Dialog.tsx)
 - [src/components/ui/Toast.tsx](file://src/components/ui/Toast.tsx)
 - [src/components/ui/Tooltip.tsx](file://src/components/ui/Tooltip.tsx)
+- [src/components/ui/Tabs.tsx](file://src/components/ui/Tabs.tsx)
 - [src/lib/utils/focusTrap.ts](file://src/lib/utils/focusTrap.ts)
 - [src/lib/theme/ThemeProvider.tsx](file://src/lib/theme/ThemeProvider.tsx)
 - [src/lib/theme/theme-init-script.ts](file://src/lib/theme/theme-init-script.ts)
@@ -45,6 +46,7 @@
 - 增强工具页面客户端组件的懒加载机制说明
 - 更新多个组件的可访问性增强实现
 - 完善组件系统的架构图和依赖关系分析
+- **更新** Tabs组件集成useEffect钩子改善标签注册系统生命周期管理
 
 ## 目录
 1. [简介](#简介)
@@ -66,7 +68,7 @@
 17. [附录](#附录)
 
 ## 简介
-本文件系统化梳理媒体工具箱的UI组件体系，覆盖布局组件（Header、Sidebar、Footer）、共享组件（文件上传、下载、进度、搜索、切换语言与主题等）以及基础UI原子（Button、Card、Badge、Accordion）。**最新更新**引入了完整的主题提供者系统、客户端检测钩子、Google Analytics脚本组件等增强功能，显著提升了主题管理、客户端兼容性和数据分析能力。文档从架构设计、层次职责、数据与事件流、样式系统（Tailwind CSS与主题）、可访问性与响应式布局、使用示例与最佳实践、测试策略与维护方法等方面进行深入解析，帮助UI开发者与工具开发者高效理解与扩展组件库。
+本文件系统化梳理媒体工具箱的UI组件体系，覆盖布局组件（Header、Sidebar、Footer）、共享组件（文件上传、下载、进度、搜索、切换语言与主题等）以及基础UI原子（Button、Card、Badge、Accordion）。**最新更新**引入了完整的主题提供者系统、客户端检测钩子、Google Analytics脚本组件等增强功能，显著提升了主题管理、客户端兼容性和数据分析能力。**特别更新** Tabs组件集成了useEffect钩子到标签注册系统中，改善了组件生命周期管理，使标签注册更加可靠和高效。文档从架构设计、层次职责、数据与事件流、样式系统（Tailwind CSS与主题）、可访问性与响应式布局、使用示例与最佳实践、测试策略与维护方法等方面进行深入解析，帮助UI开发者与工具开发者高效理解与扩展组件库。
 
 ## 项目结构
 组件按功能域分层组织：
@@ -77,6 +79,7 @@
 - **新增** 主题系统层：提供主题提供者、客户端检测和主题初始化
 - **新增** 数据分析层：集成Google Analytics和埋点追踪
 - **新增** 工具页面客户端层：优化工具页面的懒加载和性能
+- **更新** Tabs组件层：集成useEffect钩子改善标签注册生命周期
 
 ```mermaid
 graph TB
@@ -106,6 +109,7 @@ BTN["Button.tsx"]
 ACC["Accordion.tsx"]
 BAD["Badge.tsx"]
 CAR["Card.tsx"]
+TAB["Tabs.tsx"]
 end
 subgraph "主题系统层"
 TPR["ThemeProvider.tsx"]
@@ -146,6 +150,8 @@ TPC --> BL
 DLG --> FT
 TST --> DLG
 TTP --> BTN
+TAB --> ACC
+TAB --> CAR
 ```
 
 **图表来源**
@@ -163,6 +169,7 @@ TTP --> BTN
 - [src/components/ui/Toast.tsx:1-111](file://src/components/ui/Toast.tsx#L1-L111)
 - [src/components/ui/Tooltip.tsx:1-64](file://src/components/ui/Tooltip.tsx#L1-L64)
 - [src/lib/utils/focusTrap.ts:1-78](file://src/lib/utils/focusTrap.ts#L1-L78)
+- [src/components/ui/Tabs.tsx:1-172](file://src/components/ui/Tabs.tsx#L1-L172)
 
 **章节来源**
 - [src/components/layout/MainLayout.tsx:16-56](file://src/components/layout/MainLayout.tsx#L16-L56)
@@ -179,6 +186,7 @@ TTP --> BTN
 - [src/components/ui/Toast.tsx:1-111](file://src/components/ui/Toast.tsx#L1-L111)
 - [src/components/ui/Tooltip.tsx:1-64](file://src/components/ui/Tooltip.tsx#L1-L64)
 - [src/lib/utils/focusTrap.ts:1-78](file://src/lib/utils/focusTrap.ts#L1-L78)
+- [src/components/ui/Tabs.tsx:1-172](file://src/components/ui/Tabs.tsx#L1-L172)
 
 ## 核心组件
 - 布局组件
@@ -205,6 +213,7 @@ TTP --> BTN
   - Accordion：手风琴项、展开/收起动画、图标旋转、ARIA支持
   - Badge：默认/次级/描边变体
   - Card：卡片容器、悬停阴影、过渡动画
+  - **更新** Tabs：标签页组件，集成useEffect钩子改善标签注册生命周期管理
 - **新增** 主题系统
   - ThemeProvider：主题提供者，管理主题状态和持久化
   - themeInitScript：主题初始化脚本，防止FOUC
@@ -227,9 +236,10 @@ TTP --> BTN
 - [src/components/ui/Dialog.tsx:25-60](file://src/components/ui/Dialog.tsx#L25-L60)
 - [src/components/ui/Toast.tsx:7-61](file://src/components/ui/Toast.tsx#L7-L61)
 - [src/components/ui/Tooltip.tsx:6-26](file://src/components/ui/Tooltip.tsx#L6-L26)
+- [src/components/ui/Tabs.tsx:22-50](file://src/components/ui/Tabs.tsx#L22-L50)
 
 ## 架构总览
-组件系统采用"布局-壳层-共享-原子-主题系统-数据分析-工具页面客户端"的分层设计，通过上下文与路由驱动状态，统一使用Tailwind CSS与可配置主题，结合国际化与埋点增强用户体验与可观测性。**新增的主题提供者系统**确保主题状态的一致性和持久化，**客户端检测钩子**保证SSR环境下的兼容性，**Google Analytics集成**提供完整的用户行为追踪。
+组件系统采用"布局-壳层-共享-原子-主题系统-数据分析-工具页面客户端"的分层设计，通过上下文与路由驱动状态，统一使用Tailwind CSS与可配置主题，结合国际化与埋点增强用户体验与可观测性。**新增的主题提供者系统**确保主题状态的一致性和持久化，**客户端检测钩子**保证SSR环境下的兼容性，**Google Analytics集成**提供完整的用户行为追踪。**特别更新** Tabs组件通过useEffect钩子集成到标签注册系统中，改善了组件生命周期管理，使标签注册更加可靠和高效。
 
 ```mermaid
 graph TB
@@ -246,6 +256,7 @@ PPG["ProcessingProgress"] --> CMP["CompareSlider"]
 CPB["CopyButton"] --> BTN["Button"]
 ACC["Accordion"] --> CAR["Card"]
 BAD["Badge"] --> CAR
+TAB["Tabs<br/>useEffect标签注册"] --> TAB
 GAS["GoogleAnalyticsScripts<br/>GA集成/隐私保护"] --> ANL["analytics.ts<br/>事件追踪/参数验证"]
 TPR["ThemeProvider<br/>主题状态/持久化"] --> TMT
 TIS["themeInitScript<br/>FOUC防护"] --> TPR
@@ -270,6 +281,7 @@ TTP["Tooltip<br/>悬浮提示/无障碍"] --> BTN
 - [src/components/ui/Toast.tsx:70-110](file://src/components/ui/Toast.tsx#L70-L110)
 - [src/components/ui/Tooltip.tsx:27-63](file://src/components/ui/Tooltip.tsx#L27-L63)
 - [src/lib/utils/focusTrap.ts:3-77](file://src/lib/utils/focusTrap.ts#L3-L77)
+- [src/components/ui/Tabs.tsx:89-91](file://src/components/ui/Tabs.tsx#L89-L91)
 
 ## 详细组件分析
 
@@ -431,6 +443,34 @@ TTP["Tooltip<br/>悬浮提示/无障碍"] --> BTN
 
 **章节来源**
 - [src/components/ui/Card.tsx:4-33](file://src/components/ui/Card.tsx#L4-L33)
+
+#### Tabs 组件系统
+**更新** Tabs组件集成了useEffect钩子到标签注册系统中，显著改善了组件生命周期管理。
+
+- **组件结构**：Tabs（容器）、TabsList（标签列表）、TabsTrigger（标签触发器）、TabsContent（标签内容）
+- **核心功能**：标签页切换、键盘导航、无障碍支持、生命周期管理
+- **标签注册系统**：通过useEffect钩子确保标签在组件挂载时正确注册到上下文中
+
+**标签注册生命周期改进**：
+- **旧实现**：使用registerValue回调函数在组件渲染时注册标签
+- **新实现**：在TabsTrigger组件中使用useEffect钩子，在组件挂载时自动注册标签
+- **优势**：更可靠的生命周期管理，避免标签注册时机问题
+
+**键盘导航支持**：
+- ArrowLeft/ArrowUp：向前导航
+- ArrowRight/ArrowDown：向后导航  
+- Home：跳转到第一个标签
+- End：跳转到最后一个标签
+
+**无障碍支持**：
+- role="tablist"、role="tab"、role="tabpanel"
+- aria-selected、aria-controls、aria-labelledby
+- 自动焦点管理和键盘导航
+
+**章节来源**
+- [src/components/ui/Tabs.tsx:22-50](file://src/components/ui/Tabs.tsx#L22-L50)
+- [src/components/ui/Tabs.tsx:75-144](file://src/components/ui/Tabs.tsx#L75-L144)
+- [src/components/ui/Tabs.tsx:89-91](file://src/components/ui/Tabs.tsx#L89-L91)
 
 ## 新增主题提供者系统
 
@@ -786,6 +826,7 @@ Exit["退出对话框"] --> Restore["恢复之前焦点"]
 - **Tooltip组件**：role="tooltip"、aria-describedby关联
 - **Dialog组件**：完整的ARIA支持（role="dialog"、aria-modal、aria-labelledby）
 - **ThemeToggle组件**：使用useIsClient确保SSR兼容性，避免hydration不匹配
+- **Tabs组件**：**更新** 集成useEffect钩子改善标签注册生命周期管理，提供更好的可访问性
 
 ### 新增可访问性特性
 - **焦点管理**：通过focusTrap确保焦点循环
@@ -793,6 +834,7 @@ Exit["退出对话框"] --> Restore["恢复之前焦点"]
 - **屏幕阅读器**：语义化标签和描述
 - **颜色对比**：符合WCAG对比度要求
 - **客户端检测**：useIsClient确保SSR环境下的可访问性
+- **标签注册可靠性**：**更新** useEffect钩子确保标签在正确时机注册
 
 **章节来源**
 - [src/components/ui/Button.tsx:29-38](file://src/components/ui/Button.tsx#L29-L38)
@@ -800,6 +842,7 @@ Exit["退出对话框"] --> Restore["恢复之前焦点"]
 - [src/components/ui/Tooltip.tsx:39-61](file://src/components/ui/Tooltip.tsx#L39-L61)
 - [src/components/ui/Dialog.tsx:110-112](file://src/components/ui/Dialog.tsx#L110-L112)
 - [src/components/shared/ThemeToggle.tsx:14-16](file://src/components/shared/ThemeToggle.tsx#L14-L16)
+- [src/components/ui/Tabs.tsx:89-91](file://src/components/ui/Tabs.tsx#L89-L91)
 
 ## 依赖关系分析
 - 组件间耦合
@@ -810,6 +853,7 @@ Exit["退出对话框"] --> Restore["恢复之前焦点"]
   - **新增** ThemeProvider为ThemeToggle提供主题上下文
   - **新增** useIsClient确保客户端检测的统一性
   - **新增** GoogleAnalyticsScripts与analytics.ts协同工作
+  - **更新** Tabs组件通过useEffect钩子改善标签注册生命周期管理
 - 外部依赖
   - 主题：next-themes
   - 图标：lucide-react
@@ -817,6 +861,7 @@ Exit["退出对话框"] --> Restore["恢复之前焦点"]
   - 埋点：自定义analytics工具
   - **新增** 焦点管理：React内置的useRef和useEffect
   - **新增** 脚本加载：next/script
+  - **更新** 生命周期管理：React的useEffect钩子
 - 样式系统
   - Tailwind CSS：原子类、变量与暗色主题
   - 全局样式：src/app/globals.css
@@ -837,12 +882,14 @@ LCR --> BTN["Button.tsx"]
 LCR --> ACC["Accordion.tsx"]
 LCR --> CAR["Card.tsx"]
 LCR --> BAD["Badge.tsx"]
+LCR --> TAB["Tabs.tsx"]
 FT["focusTrap.ts"] --> DLG
 TST["Toast.tsx"] --> DLG
 TPR["ThemeProvider.tsx"] --> TMT
 TIS["themeInitScript.ts"] --> TPR
 UIC["useIsClient.ts"] --> TMT
 GAS["GoogleAnalyticsScripts.tsx"] --> ANL["analytics.ts"]
+UE["useEffect"] --> TAB
 ```
 
 **图表来源**
@@ -861,6 +908,8 @@ GAS["GoogleAnalyticsScripts.tsx"] --> ANL["analytics.ts"]
 - [src/lib/hooks/useIsClient.ts:1](file://src/lib/hooks/useIsClient.ts#L1)
 - [src/components/shared/GoogleAnalyticsScripts.tsx:1](file://src/components/shared/GoogleAnalyticsScripts.tsx#L1)
 - [src/lib/analytics.ts:1](file://src/lib/analytics.ts#L1)
+- [src/components/ui/Tabs.tsx:4](file://src/components/ui/Tabs.tsx#L4)
+- [src/components/ui/Tabs.tsx:89-91](file://src/components/ui/Tabs.tsx#L89-L91)
 
 **章节来源**
 - [package.json](file://package.json)
@@ -874,6 +923,7 @@ GAS["GoogleAnalyticsScripts.tsx"] --> ANL["analytics.ts"]
   - Header与Footer中的分类/工具列表按需展开
   - **新增** Dialog使用Portal减少DOM层级深度
   - **新增** ToolPageClient使用懒加载缓存提升性能
+  - **更新** Tabs组件通过useEffect钩子改善标签注册生命周期管理，减少不必要的重新渲染
 - 动画与阴影
   - 合理使用CSS变量与过渡，避免过度阴影导致的重排
   - **新增** Toast使用transform动画提升性能
@@ -890,6 +940,10 @@ GAS["GoogleAnalyticsScripts.tsx"] --> ANL["analytics.ts"]
 - **新增** 客户端检测性能
   - useIsClient零成本检测
   - 仅在客户端执行的组件避免SSR开销
+- **更新** Tabs组件性能优化
+  - useEffect钩子确保标签在正确时机注册，避免重复注册
+  - 减少组件挂载时的副作用调用
+  - 更好的生命周期管理提升整体性能
 
 ## 故障排查指南
 - 搜索对话框无法打开
@@ -926,6 +980,11 @@ GAS["GoogleAnalyticsScripts.tsx"] --> ANL["analytics.ts"]
 - **新增** Google Analytics问题
   - GA脚本不加载：确认NEXT_PUBLIC_GA_ID环境变量设置
   - 事件追踪失败：检查analytics.ts中的事件参数类型
+- **更新** Tabs组件问题
+  - 标签不显示：检查useEffect钩子是否正确执行
+  - 键盘导航失效：确认values数组正确更新
+  - 切换不生效：检查registerValue函数调用时机
+  - 性能问题：验证useEffect依赖数组配置
 
 **章节来源**
 - [src/components/shared/SearchDialog.tsx:64-96](file://src/components/shared/SearchDialog.tsx#L64-L96)
@@ -940,9 +999,10 @@ GAS["GoogleAnalyticsScripts.tsx"] --> ANL["analytics.ts"]
 - [src/lib/theme/theme-init-script.ts:1-7](file://src/lib/theme/theme-init-script.ts#L1-L7)
 - [src/lib/hooks/useIsClient.ts:1-9](file://src/lib/hooks/useIsClient.ts#L1-L9)
 - [src/components/shared/GoogleAnalyticsScripts.tsx:3-4](file://src/components/shared/GoogleAnalyticsScripts.tsx#L3-L4)
+- [src/components/ui/Tabs.tsx:89-91](file://src/components/ui/Tabs.tsx#L89-L91)
 
 ## 结论
-该UI组件系统以清晰的分层设计与强复用的共享组件为核心，结合国际化、主题与埋点，形成一致且可扩展的前端体验。**最新更新**引入的主题提供者系统、客户端检测钩子、Google Analytics脚本组件等增强功能，显著提升了主题管理、客户端兼容性和数据分析能力。主题提供者系统通过ThemeProvider实现了完整的主题状态管理，包括持久化存储、系统主题同步和跨标签页同步；客户端检测钩子useIsClient确保了SSR环境下的兼容性；Google Analytics集成提供了完整的用户行为追踪和隐私保护。通过合理的事件与状态管理、Tailwind CSS样式体系与响应式布局，组件在可用性、可访问性与性能方面均具备良好表现。建议在新增组件时遵循现有模式：明确职责边界、使用上下文与国际化、统一样式与可访问性规范，并配套埋点与测试。
+该UI组件系统以清晰的分层设计与强复用的共享组件为核心，结合国际化、主题与埋点，形成一致且可扩展的前端体验。**最新更新**引入的主题提供者系统、客户端检测钩子、Google Analytics脚本组件等增强功能，显著提升了主题管理、客户端兼容性和数据分析能力。**特别更新** Tabs组件通过useEffect钩子集成到标签注册系统中，改善了组件生命周期管理，使标签注册更加可靠和高效，显著提升了组件的稳定性和性能表现。主题提供者系统通过ThemeProvider实现了完整的主题状态管理，包括持久化存储、系统主题同步和跨标签页同步；客户端检测钩子useIsClient确保了SSR环境下的兼容性；Google Analytics集成提供了完整的用户行为追踪和隐私保护。通过合理的事件与状态管理、Tailwind CSS样式体系与响应式布局，组件在可用性、可访问性与性能方面均具备良好表现。建议在新增组件时遵循现有模式：明确职责边界、使用上下文与国际化、统一样式与可访问性规范，并配套埋点与测试。
 
 ## 附录
 
@@ -962,12 +1022,14 @@ GAS["GoogleAnalyticsScripts.tsx"] --> ANL["analytics.ts"]
 - 响应式布局：移动端优先、断点适配、网格与弹性布局
 - **新增** 焦点管理：完整的键盘导航支持
 - **新增** SSR兼容：useIsClient确保服务器端渲染兼容性
+- **更新** Tabs组件：**更新** useEffect钩子确保标签注册的可访问性
 
 **章节来源**
 - [src/components/layout/Header.tsx:58-65](file://src/components/layout/Header.tsx#L58-L65)
 - [src/components/layout/Footer.tsx:79-83](file://src/components/layout/Footer.tsx#L79-L83)
 - [src/components/ui/Accordion.tsx:35-67](file://src/components/ui/Accordion.tsx#L35-L67)
 - [src/lib/hooks/useIsClient.ts:1-9](file://src/lib/hooks/useIsClient.ts#L1-L9)
+- [src/components/ui/Tabs.tsx:89-91](file://src/components/ui/Tabs.tsx#L89-L91)
 
 ### 使用示例与最佳实践
 - 组合使用
@@ -980,12 +1042,14 @@ GAS["GoogleAnalyticsScripts.tsx"] --> ANL["analytics.ts"]
   - **新增** 使用Dialog创建模态表单或确认对话框
   - **新增** 使用Toast提供操作反馈
   - **新增** 使用Tooltip增强图标和按钮的可理解性
+  - **更新** 使用Tabs组件时，利用useEffect钩子改善标签注册生命周期管理
 - 扩展建议
   - 新增共享组件时保持属性简洁、事件可控、样式可定制
   - 为关键交互添加埋点，便于后续优化
   - **新增** 优先考虑可访问性设计
   - **新增** 使用焦点陷阱确保模态对话框的可访问性
   - **新增** 考虑SSR兼容性的客户端检测需求
+  - **更新** 在实现类似Tabs组件时，考虑使用useEffect钩子改善生命周期管理
 
 ### 测试策略与维护方法
 - 单元测试：针对纯函数与Hook（如格式化、过滤、焦点陷阱、主题切换）编写测试
@@ -998,3 +1062,5 @@ GAS["GoogleAnalyticsScripts.tsx"] --> ANL["analytics.ts"]
 - **新增** Google Analytics测试：验证事件追踪、隐私保护、条件加载
 - **新增** 焦点陷阱测试：验证焦点循环、键盘导航、ESC键处理
 - **新增** 多层对话框测试：验证滚动锁定和计数器正确性
+- **更新** Tabs组件测试：验证useEffect钩子的标签注册生命周期管理，确保标签在正确时机注册
+- **更新** 生命周期管理测试：验证组件挂载、更新、卸载过程中的状态一致性
