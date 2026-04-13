@@ -332,6 +332,7 @@
         "width": "العرض",
         "quality": "الجودة",
         "start": "البداية",
+        "end": "النهاية",
         "convert": "تحويل إلى WebP",
         "converting": "جارٍ التحويل",
         "unsupported": "تتطلب هذه الأداة دعم SharedArrayBuffer. يرجى استخدام متصفح حديث مع HTTPS.",
@@ -350,56 +351,56 @@
         "seoContent": {
           "intro": {
             "title": "ما هو فيديو إلى WebP؟",
-            "content": "<p><strong>فيديو إلى WebP</strong> هو أداة مجانية قائمة على المتصفح لمعالجة البيانات والملفات. معالجة سريعة وآمنة 100% في متصفحك دون أي تحميلات خادمية.</p><p>استخدم هذه الأداة لتحقيق مهامك بكفاءة وأمان.</p>"
+            "content": "<p><strong>فيديو إلى WebP</strong> يحوّل مقاطع الفيديو إلى صور WebP متحركة. ملفات WebP المتحركة <strong>أصغر بنسبة 25-35%</strong> من ملفات GIF المكافئة مع استنساخ ألوان أفضل ودعم الشفافية.</p><p>البديل الحديث لملفات GIF للاستخدام على الويب.</p>"
           },
           "howToUse": {
             "title": "كيفية استخدام فيديو إلى WebP",
-            "content": "<ol><li>احمِ ملفاتك أو بياناتك</li><li>اختر الخيارات المطلوبة</li><li>انقر على الزر للمعالجة</li><li>حمّل النتائج</li></ol><p>معالجة سريعة وسهلة مع نتائج فورية.</p>"
+            "content": "<ol><li>ارفع ملف فيديو</li><li>حدد وقت البداية والنهاية لمقطع الرسوم المتحركة</li><li>اضبط معدل الإطارات وأبعاد الإخراج</li><li>انقر على <strong>تحويل</strong> لإنشاء WebP المتحرك</li><li>حمّل رسوم WebP المتحركة</li></ol>"
           },
           "features": {
             "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>معالجة سريعة</strong>: نتائج فورية في الوقت الفعلي</li><li><strong>قائم على المتصفح 100٪</strong>: بدون تحميلات خادمية</li><li><strong>دعم متعدد الصيغ</strong>: يتعامل مع صيغ متعددة</li><li><strong>معاينة</strong>: شاهد النتائج قبل التحميل</li><li><strong>دعم دفعي</strong>: معالجة ملفات متعددة</li></ul>"
+            "content": "<ul><li><strong>أصغر من GIF</strong>: ملفات WebP المتحركة أصغر بنسبة 25-35% من ملفات GIF المكافئة</li><li><strong>ألوان أفضل</strong>: عمق ألوان كامل 24 بت (مقابل حد 256 لونًا لـ GIF)</li><li><strong>الشفافية</strong>: دعم قناة ألفا للرسوم المتحركة الشفافة</li><li><strong>التحكم في معدل الإطارات</strong>: إطارات في الثانية قابلة للتعديل لتحسين الحجم</li><li><strong>مدعوم من FFmpeg.wasm</strong>: ترميز احترافي في المتصفح</li><li><strong>دعم واسع من المتصفح</strong>: مدعوم من جميع المتصفحات الحديثة</li></ul>"
           },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
-            "content": "<ul><li><strong>معالجة يومية</strong>: استخدم الأداة للمهام اليومية</li><li><strong>تحسين الكفاءة</strong>: سرّع مسارات عملك</li><li><strong>إدارة الملفات</strong>: نظّم وحوّل ملفاتك</li><li><strong>مشاركة البيانات</strong>: حضّر البيانات للمشاركة</li></ul>"
+            "content": "<ul><li><strong>أداء الويب</strong>: استبدل ملفات GIF برسوم WebP متحركة أصغر على المواقع الإلكترونية</li><li><strong>تطبيقات الدردشة</strong>: أنشئ ملصقات وردود أفعال متحركة</li><li><strong>التوثيق</strong>: عروض توضيحية متحركة أصغر للتوثيق التقني</li><li><strong>وسائل التواصل الاجتماعي</strong>: أنشئ محتوى متحرك حيث يتم دعم WebP</li><li><strong>تصميم التطبيقات</strong>: أنشئ رسوم التحميل والتفاعلات الدقيقة</li></ul>"
           },
           "privacy": {
-            "title": "معالجة موجهة نحو الخصوصية",
-            "content": "<p>جميع المعالجة تحدث <strong>بالكامل في متصفحك</strong>. لا يتم نقل أي بيانات إلى أي خادم.</p><ul><li>بياناتك <strong>لا تغادر جهازك أبداً</strong></li><li>آمنة للبيانات الحساسة والملفات الشخصية</li><li>تعمل <strong>بدون اتصال</strong> بالكامل</li></ul>"
+            "title": "تحويل فيديو يراعي الخصوصية",
+            "content": "<p>تحويل WebP يعمل <strong>بالكامل في متصفحك</strong> باستخدام <strong>FFmpeg.wasm</strong>.</p><ul><li>مقاطع الفيديو الخاصة بك <strong>لا تغادر جهازك أبدًا</strong></li><li>لا توجد معالجة خادم أو تحميلات</li><li>يعمل <strong>بدون اتصال</strong> بعد تحميل نواة FFmpeg</li></ul>"
           }
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "BarChart3",
-            "title": "Video to WebP - Smaller Than GIF",
-            "description": "Create animated WebP files 25-35% smaller than GIFs. Perfect for fast-loading websites and apps."
+            "title": "فيديو إلى WebP - أصغر من GIF",
+            "description": "أنشئ ملفات WebP متحركة أصغر بنسبة 25-35% من GIFs. مثالي للمواقع والتطبيقات سريعة التحميل."
           },
           "f2": {
             "icon": "Shield",
-            "title": "Better Colors + Transparency",
-            "description": "24-bit true color vs GIF's 256 colors. Full transparency support for professional animations."
+            "title": "ألوان أفضل + شفافية",
+            "description": "ألوان حقيقية 24 بت مقابل 256 لونًا لـ GIF. دعم كامل للشفافية للرسوم المتحركة الاحترافية."
           },
           "f3": {
             "icon": "Gauge",
-            "title": "Control Quality & File Size",
-            "description": "Adjust compression, frame rate, and dimensions. Balance visual quality with loading speed."
+            "title": "التحكم في الجودة وحجم الملف",
+            "description": "اضبط الضغط ومعدل الإطارات والأبعاد.وازن بين الجودة البصرية وسرعة التحميل."
           },
           "f4": {
             "icon": "Zap",
-            "title": "Convert Any Video Clip",
-            "description": "Select exact time range from your video. Turn any moment into a smooth WebP animation."
+            "title": "تحويل أي مقطع فيديو",
+            "description": "حدد نطاق الوقت الدقيق من الفيديو الخاص بك. حوّل أي لحظة إلى رسوم WebP متحركة سلسة."
           },
           "f5": {
             "icon": "FileVideo",
-            "title": "Modern Alternative to GIF",
-            "description": "All browsers support animated WebP. Replace outdated GIFs with smaller, better-looking animations."
+            "title": "بديل حديث لـ GIF",
+            "description": "جميع المتصفحات تدعم WebP المتحرك. استبدل ملفات GIF القديمة برسوم متحركة أصغر وأجمل."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Convert Privately in Browser",
-            "description": "Your video stays on your device. No cloud processing, no privacy concerns, instant results."
+            "title": "تحويل بخصوصية في المتصفح",
+            "description": "يظل الفيديو على جهازك. لا معالجة سحابية، لا مخاوف خصوصية، نتائج فورية."
           }
         }
       },

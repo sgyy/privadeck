@@ -332,6 +332,7 @@
         "width": "चौड़ाई",
         "quality": "गुणवत्ता",
         "start": "शुरू",
+        "end": "अंत",
         "convert": "WebP में कनवर्ट करें",
         "converting": "कनवर्ट हो रहा है",
         "unsupported": "इस टूल को SharedArrayBuffer सपोर्ट की आवश्यकता है। कृपया HTTPS के साथ एक आधुनिक ब्राउज़र का उपयोग करें।",
@@ -340,66 +341,66 @@
           "a1": "एनिमेटेड WebP फ़ाइलें आमतौर पर समतुल्य GIF से 25-35% छोटी होती हैं और बेहतर रंग गहराई और पारदर्शिता का समर्थन करती हैं।",
           "q2": "क्या एनिमेटेड WebP व्यापक रूप से समर्थित है?",
           "a2": "हाँ, सभी आधुनिक ब्राउज़र एनिमेटेड WebP का समर्थन करते हैं। केवल बहुत पुराने ब्राउज़र में सपोर्ट नहीं है।",
-          "q3": "Will my files be uploaded to a server?",
+          "q3": "क्या मेरी फ़ाइलें सर्वर पर अपलोड होंगी?",
           "a3": "नहीं। सारी प्रोसेसिंग पूरी तरह आपके ब्राउज़र में होती है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता — किसी सर्वर पर कुछ भी अपलोड नहीं होता।",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "q4": "क्या मैं इस टूल का उपयोग ऑफ़लाइन कर सकता हूँ?",
+          "a4": "हाँ। पेज लोड होने के बाद, यह टूल पूरी तरह ऑफ़लाइन काम करता है। सर्वोत्तम अनुभव के लिए, अपने ब्राउज़र से PrivaDeck को PWA के रूप में इंस्टॉल करें।",
+          "q5": "क्या फ़ाइल आकार की कोई सीमाएँ हैं?",
+          "a5": "सर्वर द्वारा कोई सीमा नहीं है। अधिकतम फ़ाइल आकार आपके डिवाइस की उपलब्ध मेमोरी और ब्राउज़र क्षमताओं पर निर्भर करता है। अधिकांश आधुनिक डिवाइस बिना किसी समस्या के कई सौ MB तक की फ़ाइलों को संभाल लेते हैं।"
         },
         "seoContent": {
           "intro": {
             "title": "Video to WebP क्या है?",
-            "content": "<p><strong>Video to WebP</strong> videos को WebP में convert करता है।</p><p>तुरंत compressed WebP बनाएं।</p>"
+            "content": "<p><strong>Video to WebP</strong> वीडियो क्लिप को एनिमेटेड WebP छवियों में परिवर्तित करता है। WebP एनिमेशन समतुल्य GIF से <strong>25-35% छोटे</strong> होते हैं, बेहतर रंग प्रजनन और पारदर्शिता समर्थन के साथ।</p><p>वेब उपयोग के लिए GIF का आधुनिक विकल्प।</p>"
           },
           "howToUse": {
             "title": "Video to WebP का उपयोग करें",
-            "content": "<ol><li>Video upload करें</li><li>Convert करें</li><li>Download करें</li></ol>"
+            "content": "<ol><li>एक वीडियो फ़ाइल अपलोड करें</li><li>एनिमेशन क्लिप के लिए शुरू और अंत का समय सेट करें</li><li>फ़्रेम रेट और आउटपुट आयाम समायोजित करें</li><li>एनिमेटेड WebP बनाने के लिए <strong>कनवर्ट</strong> पर क्लिक करें</li><li>WebP एनिमेशन डाउनलोड करें</li></ol>"
           },
           "features": {
             "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Convert</strong>: Video को WebP में बदलें</li><li><strong>Quality</strong>: Quality सेट करें</li></ul>"
+            "content": "<ul><li><strong>GIF से छोटा</strong>: WebP एनिमेशन समतुल्य GIF से 25-35% छोटे होते हैं</li><li><strong>बेहतर रंग</strong>: पूर्ण 24-बिट रंग गहराई (GIF की 256 रंग सीमा बनाम)</li><li><strong>पारदर्शिता</strong>: पारदर्शी एनिमेशन के लिए अल्फा चैनल समर्थन</li><li><strong>फ़्रेम रेट नियंत्रण</strong>: आकार अनुकूलन के लिए समायोज्य fps</li><li><strong>FFmpeg.wasm द्वारा संचालित</strong>: ब्राउज़र में पेशेवर एन्कोडिंग</li><li><strong>व्यापक ब्राउज़र समर्थन</strong>: सभी आधुनिक ब्राउज़रों द्वारा समर्थित</li></ul>"
           },
           "useCases": {
             "title": "सामान्य उपयोग",
-            "content": "<ul><li><strong>Web</strong>: Web के लिए optimize करें</li></ul>"
+            "content": "<ul><li><strong>वेब प्रदर्शन</strong>: वेबसाइटों पर GIF को छोटे WebP एनिमेशन से बदलें</li><li><strong>चैट ऐप्स</strong>: एनिमेटेड स्टिकर और रिएक्शन बनाएं</li><li><strong>दस्तावेज़ीकरण</strong>: तकनीकी दस्तावेज़ीकरण के लिए छोटे एनिमेटेड डेमो</li><li><strong>सोशल मीडिया</strong>: जहाँ WebP समर्थित हो वहाँ एनिमेटेड कंटेंट बनाएं</li><li><strong>ऐप डिज़ाइन</strong>: लोडिंग एनिमेशन और माइक्रो-इंटरैक्शन बनाएं</li></ul>"
           },
           "privacy": {
-            "title": "गोपनीयता-प्रथम",
-            "content": "<p><strong>Offline काम करता है</strong></p>"
+            "title": "गोपनीयता-प्रथम वीडियो रूपांतरण",
+            "content": "<p>WebP रूपांतरण <strong>FFmpeg.wasm</strong> का उपयोग करके <strong>पूरी तरह आपके ब्राउज़र में</strong> चलता है।</p><ul><li>आपके वीडियो <strong>कभी आपके डिवाइस से बाहर नहीं जाते</strong></li><li>कोई सर्वर प्रोसेसिंग या अपलोड नहीं</li><li>FFmpeg कोर लोड होने के बाद <strong>ऑफ़लाइन</strong> काम करता है</li></ul>"
           }
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "BarChart3",
-            "title": "Video to WebP - Smaller Than GIF",
-            "description": "Create animated WebP files 25-35% smaller than GIFs. Perfect for fast-loading websites and apps."
+            "title": "वीडियो से WebP - GIF से छोटा",
+            "description": "GIF से 25-35% छोटे एनिमेटेड WebP फ़ाइलें बनाएं। तेज़ी से लोड होने वाली वेबसाइटों और ऐप्स के लिए उत्तम।"
           },
           "f2": {
             "icon": "Shield",
-            "title": "Better Colors + Transparency",
-            "description": "24-bit true color vs GIF's 256 colors. Full transparency support for professional animations."
+            "title": "बेहतर रंग + पारदर्शिता",
+            "description": "GIF के 256 रंगों बनाम 24-बिट सच्चा रंग। पेशेवर एनिमेशन के लिए पूर्ण पारदर्शिता समर्थन।"
           },
           "f3": {
             "icon": "Gauge",
-            "title": "Control Quality & File Size",
-            "description": "Adjust compression, frame rate, and dimensions. Balance visual quality with loading speed."
+            "title": "गुणवत्ता और फ़ाइल आकार नियंत्रित करें",
+            "description": "संपीड़न, फ़्रेम रेट और आयाम समायोजित करें। दृश्य गुणवत्ता और लोडिंग गति के बीच संतुलन बनाएं।"
           },
           "f4": {
             "icon": "Zap",
-            "title": "Convert Any Video Clip",
-            "description": "Select exact time range from your video. Turn any moment into a smooth WebP animation."
+            "title": "कोई भी वीडियो क्लिप कनवर्ट करें",
+            "description": "अपने वीडियो से सटीक समय सीमा चुनें। किसी भी क्षण को सहज WebP एनिमेशन में बदलें।"
           },
           "f5": {
             "icon": "FileVideo",
-            "title": "Modern Alternative to GIF",
-            "description": "All browsers support animated WebP. Replace outdated GIFs with smaller, better-looking animations."
+            "title": "GIF का आधुनिक विकल्प",
+            "description": "सभी ब्राउज़र एनिमेटेड WebP का समर्थन करते हैं। पुराने GIF को छोटे, बेहतर दिखने वाले एनिमेशन से बदलें।"
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Convert Privately in Browser",
-            "description": "Your video stays on your device. No cloud processing, no privacy concerns, instant results."
+            "title": "ब्राउज़र में गोपनीय रूप से कनवर्ट करें",
+            "description": "आपका वीडियो आपके डिवाइस पर रहता है। कोई क्लाउड प्रोसेसिंग नहीं, कोई गोपनीयता चिंता नहीं, तत्काल परिणाम।"
           }
         }
       },
