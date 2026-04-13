@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { VideoUploader, formatSize } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
@@ -10,9 +10,14 @@ import { TimeRangeSlider } from "@/components/shared/TimeRangeSlider";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { useIsClient } from "@/lib/hooks/useIsClient";
-import { videoToWebp } from "./logic";
+import { videoToWebp, type WebpQuality } from "./logic";
 
 const MIN_DURATION = 0.5;
+const PRESET_DEFAULTS: Record<WebpQuality, { fps: number; quality: number }> = {
+  small:    { fps: 8,  quality: 50 },
+  balanced: { fps: 12, quality: 75 },
+  high:     { fps: 15, quality: 90 },
+};
 
 /** Calculate output height maintaining aspect ratio */
 function calcOutputHeight(width: number, srcWidth: number, srcHeight: number): number {
@@ -32,9 +37,10 @@ export default function VideoToWebp() {
   const [videoWidth, setVideoWidth] = useState(0);
   const [videoHeight, setVideoHeight] = useState(0);
   const [videoFps, setVideoFps] = useState(0);
-  const [fps, setFps] = useState(15);
+  const [fps, setFps] = useState(12);
   const [width, setWidth] = useState(480);
   const [quality, setQuality] = useState(75);
+  const [qualityPreset, setQualityPreset] = useState<WebpQuality>("balanced");
   const [startTime, setStartTime] = useState(0);
   const [endTime, setEndTime] = useState(0);
   const [result, setResult] = useState<Blob | null>(null);
@@ -43,6 +49,12 @@ export default function VideoToWebp() {
   const [error, setError] = useState("");
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.video.to-webp");
+
+  const applyPreset = useCallback((q: WebpQuality, srcFps: number) => {
+    const d = PRESET_DEFAULTS[q];
+    setFps(Math.min(d.fps, srcFps));
+    setQuality(d.quality);
+  }, []);
 
   // Derived values
   const maxWidth = videoWidth > 0 ? even(videoWidth) : 1280;
@@ -99,10 +111,11 @@ export default function VideoToWebp() {
           setError("");
         }}
         onMetadataLoaded={(meta) => {
+          const srcFps = meta.fps ?? 25;
           setDuration(meta.duration);
           setVideoWidth(meta.width);
           setVideoHeight(meta.height);
-          setVideoFps(meta.fps ?? 0);
+          setVideoFps(srcFps);
           // Smart default time range based on video duration
           const defaultEnd = meta.duration < 5
             ? meta.duration
@@ -112,11 +125,36 @@ export default function VideoToWebp() {
           setEndTime(defaultEnd);
           // Set width to original or capped at 1280
           setWidth(Math.min(even(meta.width), 1280));
+          applyPreset("balanced", srcFps);
         }}
       />
 
       {file && duration > 0 && (
         <div className="space-y-3">
+          {/* Preset quality buttons */}
+          <div>
+            <label className="mb-1 block text-sm font-medium">{t("quality")}</label>
+            <div className="flex gap-2">
+              {(["small", "balanced", "high"] as const).map((q) => (
+                <button
+                  key={q}
+                  type="button"
+                  onClick={() => {
+                    setQualityPreset(q);
+                    applyPreset(q, videoFps);
+                  }}
+                  className={`flex-1 rounded-lg border px-3 py-2 text-sm transition-all ${
+                    qualityPreset === q
+                      ? "border-primary ring-2 ring-primary/20 bg-primary/5 font-semibold"
+                      : "border-border/50 hover:border-primary/30 hover:bg-muted/30"
+                  }`}
+                >
+                  {t(`quality_${q}`)}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Time range selector */}
           <div className="rounded-lg border border-border/50 bg-muted/30 p-4">
             <label className="mb-2 block text-sm font-medium">{t("timeRange")}</label>
@@ -164,6 +202,9 @@ export default function VideoToWebp() {
             <div>
               <label className="mb-1 block text-sm font-medium">
                 {t("quality")}: {quality}
+                <span className="ml-1 text-muted-foreground">
+                  ({t(`quality_${qualityPreset}`)})
+                </span>
               </label>
               <input
                 type="range"

@@ -1,5 +1,7 @@
 import { execWithMount } from "@/lib/ffmpeg";
 
+export type WebpQuality = "small" | "balanced" | "high";
+
 export interface WebpOptions {
   fps: number;
   width: number;
