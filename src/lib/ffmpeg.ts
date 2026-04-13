@@ -16,9 +16,13 @@ export async function getFFmpeg(): Promise<FFmpeg> {
     const { toBlobURL } = await import("@ffmpeg/util");
     const ffmpeg = new FFmpeg();
 
-    // Use UMD core to avoid ESM dynamic import issues in worker context
-    // toBlobURL converts to blob URLs which work reliably across all browsers
-    const baseURL = "https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/umd";
+    // Must use ESM core: @ffmpeg/ffmpeg creates the worker with `type: "module"`
+    // (see @ffmpeg/ffmpeg/dist/esm/classes.js), so inside the worker `importScripts`
+    // is unavailable and the library falls back to `await import(coreURL)`. A UMD
+    // bundle (IIFE, no `export default`) cannot be parsed by dynamic ESM import
+    // and fails with "Failed to fetch dynamically imported module".
+    // Requires `blob:` in CSP `script-src` so the worker can import the blob URL.
+    const baseURL = "https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm";
     try {
       await ffmpeg.load({
         coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, "text/javascript"),
