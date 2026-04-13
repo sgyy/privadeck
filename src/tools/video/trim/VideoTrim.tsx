@@ -6,10 +6,13 @@ import { VideoUploader, formatSize } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
+import { TimeRangeSlider } from "@/components/shared/TimeRangeSlider";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { useIsClient } from "@/lib/hooks/useIsClient";
-import { trimVideo, formatTimeDisplay } from "./logic";
+import { trimVideo } from "./logic";
+
+const MIN_DURATION = 0.5;
 
 export default function VideoTrim() {
   const isClient = useIsClient();
@@ -37,7 +40,7 @@ export default function VideoTrim() {
   }
 
   async function handleTrim() {
-    if (!file) return;
+    if (!file || start >= end - MIN_DURATION) return;
     setProcessing(true);
     setResult(null);
     setError("");
@@ -65,43 +68,29 @@ export default function VideoTrim() {
         }}
         onMetadataLoaded={(meta) => {
           setDuration(meta.duration);
-          setEnd(meta.duration);
+          // Smart default time range based on video duration
+          const defaultEnd = meta.duration < 5
+            ? meta.duration
+            : meta.duration < 30
+              ? 5
+              : 10;
+          setEnd(defaultEnd);
         }}
       />
 
-      {file && (
+      {file && duration > 0 && (
         <div className="space-y-3">
-          <div className="space-y-2">
-            <div className="flex items-center gap-4 text-sm">
-              <span>{t("start")}: {formatTimeDisplay(start)}</span>
-              <span>{t("end")}: {formatTimeDisplay(end)}</span>
-              <span className="text-muted-foreground">
-                {t("duration")}: {formatTimeDisplay(end - start)}
-              </span>
-            </div>
-
-            <div className="flex gap-4">
-              <div className="flex-1">
-                <label className="mb-1 block text-xs text-muted-foreground">
-                  {t("start")}
-                </label>
-                <input
-                  type="range" min={0} max={duration} step={0.1} value={start}
-                  onChange={(e) => setStart(Math.min(Number(e.target.value), end - 0.1))}
-                  className="w-full"
-                />
-              </div>
-              <div className="flex-1">
-                <label className="mb-1 block text-xs text-muted-foreground">
-                  {t("end")}
-                </label>
-                <input
-                  type="range" min={0} max={duration} step={0.1} value={end}
-                  onChange={(e) => setEnd(Math.max(Number(e.target.value), start + 0.1))}
-                  className="w-full"
-                />
-              </div>
-            </div>
+          {/* Time range selector */}
+          <div className="rounded-lg border border-border/50 bg-muted/30 p-4">
+            <label className="mb-2 block text-sm font-medium">{t("timeRange")}</label>
+            <TimeRangeSlider
+              duration={duration}
+              startTime={start}
+              endTime={end}
+              minDuration={MIN_DURATION}
+              onStartChange={(v) => setStart(Math.round(v * 10) / 10)}
+              onEndChange={(v) => setEnd(Math.round(v * 10) / 10)}
+            />
           </div>
 
           {error && (
@@ -112,7 +101,7 @@ export default function VideoTrim() {
 
           {processing && <ProcessingProgress progress={progress} />}
 
-          <Button onClick={handleTrim} disabled={processing}>
+          <Button onClick={handleTrim} disabled={processing || start >= end - MIN_DURATION}>
             {processing ? `${t("processing")} ${progress}%` : t("trim")}
           </Button>
 

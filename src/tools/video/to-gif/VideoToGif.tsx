@@ -6,23 +6,31 @@ import { VideoUploader, formatSize } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
+import { TimeRangeSlider } from "@/components/shared/TimeRangeSlider";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { useIsClient } from "@/lib/hooks/useIsClient";
 import { videoToGif, type GifQuality } from "./logic";
 
+const MIN_DURATION = 0.5;
 const PRESET_DEFAULTS: Record<GifQuality, { fps: number; scale: number }> = {
   small:    { fps: 8,  scale: 50 },
   balanced: { fps: 10, scale: 75 },
   high:     { fps: 15, scale: 100 },
 };
 
+/** Ensure even number for GIF encoding compatibility */
+function even(n: number): number {
+  return Math.round(n / 2) * 2;
+}
+
 export default function VideoToGif() {
   const isClient = useIsClient();
   const [file, setFile] = useState<File | null>(null);
   const [duration, setDuration] = useState(0);
   const [videoWidth, setVideoWidth] = useState(0);
-  const [videoFps, setVideoFps] = useState(25);
+  const [videoHeight, setVideoHeight] = useState(0);
+  const [videoFps, setVideoFps] = useState(0);
   const [fps, setFps] = useState(10);
   const [scale, setScale] = useState(75);
   const [startTime, setStartTime] = useState(0);
@@ -41,6 +49,11 @@ export default function VideoToGif() {
     setScale(d.scale);
   }, []);
 
+  const outputWidth = videoWidth > 0 ? even(Math.round(videoWidth * scale / 100)) : 0;
+  const outputHeight = videoWidth > 0 && videoHeight > 0
+    ? even(Math.round(videoHeight * scale / 100))
+    : 0;
+
   if (!isClient) {
     return null;
   }
@@ -54,14 +67,14 @@ export default function VideoToGif() {
   }
 
   async function handleConvert() {
-    if (!file || startTime >= endTime) return;
+    if (!file || startTime >= endTime - MIN_DURATION) return;
     setProcessing(true);
     setResult(null);
     setError("");
     try {
       const blob = await videoToGif(
         file,
-        { fps, width: Math.round(videoWidth * scale / 100), startTime, endTime, quality },
+        { fps, width: outputWidth, startTime, endTime, quality },
         setProgress,
       );
       setResult(blob);
@@ -72,8 +85,6 @@ export default function VideoToGif() {
       setProcessing(false);
     }
   }
-
-  const outputWidth = videoWidth ? Math.round(videoWidth * scale / 100) : 0;
 
   return (
     <div className="space-y-4">
@@ -89,13 +100,20 @@ export default function VideoToGif() {
           const srcFps = meta.fps ?? 25;
           setDuration(meta.duration);
           setVideoWidth(meta.width);
+          setVideoHeight(meta.height);
           setVideoFps(srcFps);
-          setEndTime(Math.min(meta.duration, 10));
+          // Smart default time range based on video duration
+          const defaultEnd = meta.duration < 5
+            ? meta.duration
+            : meta.duration < 30
+              ? 5
+              : 10;
+          setEndTime(defaultEnd);
           applyPreset("balanced", srcFps);
         }}
       />
 
-      {file && (
+      {file && duration > 0 && (
         <div className="space-y-3">
           <div>
             <label className="mb-1 block text-sm font-medium">{t("quality")}</label>
@@ -120,28 +138,48 @@ export default function VideoToGif() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          {/* Time range selector */}
+          <div className="rounded-lg border border-border/50 bg-muted/30 p-4">
+            <label className="mb-2 block text-sm font-medium">{t("timeRange")}</label>
+            <TimeRangeSlider
+              duration={duration}
+              startTime={startTime}
+              endTime={endTime}
+              minDuration={MIN_DURATION}
+              onStartChange={(v) => setStartTime(Math.round(v * 10) / 10)}
+              onEndChange={(v) => setEndTime(Math.round(v * 10) / 10)}
+            />
+          </div>
+
+          {/* Settings grid */}
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <label className="mb-1 block text-sm font-medium">FPS: {fps}</label>
-              <input type="range" min={3} max={Math.max(3, videoFps)} value={fps} onChange={(e) => setFps(Number(e.target.value))} className="w-full" />
-            </div>
-            <div>
-              <label className="mb-1 block text-sm font-medium">{t("scale")}: {scale}%{outputWidth > 0 && ` (${outputWidth}px)`}</label>
-              <input type="range" min={10} max={100} step={5} value={scale} onChange={(e) => setScale(Number(e.target.value))} className="w-full" />
-            </div>
-            <div>
-              <label className="mb-1 block text-sm font-medium">{t("start")}: {startTime.toFixed(1)}s</label>
               <input
-                type="range" min={0} max={duration} step={0.1} value={startTime}
-                onChange={(e) => setStartTime(Math.min(Number(e.target.value), endTime - 0.1))}
+                type="range"
+                min={3}
+                max={Math.max(3, videoFps)}
+                value={fps}
+                onChange={(e) => setFps(Number(e.target.value))}
                 className="w-full"
               />
             </div>
             <div>
-              <label className="mb-1 block text-sm font-medium">{t("end")}: {endTime.toFixed(1)}s</label>
+              <label className="mb-1 block text-sm font-medium">
+                {t("scale")}: {scale}%
+                {outputWidth > 0 && (
+                  <span className="ml-1 text-muted-foreground">
+                    ({t("outputSize")}: {outputWidth}×{outputHeight})
+                  </span>
+                )}
+              </label>
               <input
-                type="range" min={0} max={duration} step={0.1} value={endTime}
-                onChange={(e) => setEndTime(Math.max(Number(e.target.value), startTime + 0.1))}
+                type="range"
+                min={10}
+                max={100}
+                step={5}
+                value={scale}
+                onChange={(e) => setScale(Number(e.target.value))}
                 className="w-full"
               />
             </div>
@@ -153,7 +191,7 @@ export default function VideoToGif() {
 
           {processing && <ProcessingProgress progress={progress} />}
 
-          <Button onClick={handleConvert} disabled={processing || startTime >= endTime}>
+          <Button onClick={handleConvert} disabled={processing || startTime >= endTime - MIN_DURATION}>
             {processing ? `${t("converting")} ${progress}%` : t("convert")}
           </Button>
 
