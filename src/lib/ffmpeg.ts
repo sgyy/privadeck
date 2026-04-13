@@ -16,7 +16,9 @@ export async function getFFmpeg(): Promise<FFmpeg> {
     const { toBlobURL } = await import("@ffmpeg/util");
     const ffmpeg = new FFmpeg();
 
-    const baseURL = "https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/esm";
+    // Use UMD core to avoid ESM dynamic import issues in worker context
+    // toBlobURL converts to blob URLs which work reliably across all browsers
+    const baseURL = "https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/umd";
     try {
       await ffmpeg.load({
         coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, "text/javascript"),
