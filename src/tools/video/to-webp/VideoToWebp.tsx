@@ -40,7 +40,7 @@ export default function VideoToWebp() {
   const [fps, setFps] = useState(12);
   const [width, setWidth] = useState(480);
   const [quality, setQuality] = useState(75);
-  const [qualityPreset, setQualityPreset] = useState<WebpQuality>("balanced");
+  const [qualityPreset, setQualityPreset] = useState<WebpQuality | "custom">("balanced");
   const [startTime, setStartTime] = useState(0);
   const [endTime, setEndTime] = useState(0);
   const [result, setResult] = useState<Blob | null>(null);
@@ -54,6 +54,7 @@ export default function VideoToWebp() {
     const d = PRESET_DEFAULTS[q];
     setFps(Math.min(d.fps, srcFps));
     setQuality(d.quality);
+    setQualityPreset(q);
   }, []);
 
   // Derived values
@@ -108,6 +109,7 @@ export default function VideoToWebp() {
           setFile(f);
           setResult(null);
           setStartTime(0);
+          setEndTime(0);
           setError("");
         }}
         onMetadataLoaded={(meta) => {
@@ -162,6 +164,7 @@ export default function VideoToWebp() {
               duration={duration}
               startTime={startTime}
               endTime={endTime}
+              minDuration={MIN_DURATION}
               onStartChange={(v) => setStartTime(Math.round(v * 10) / 10)}
               onEndChange={(v) => setEndTime(Math.round(v * 10) / 10)}
             />
@@ -176,7 +179,10 @@ export default function VideoToWebp() {
                 min={5}
                 max={Math.max(5, maxFps)}
                 value={fps}
-                onChange={(e) => setFps(Number(e.target.value))}
+                onChange={(e) => {
+                  setFps(Number(e.target.value));
+                  setQualityPreset("custom");
+                }}
                 className="w-full"
               />
             </div>
@@ -202,16 +208,21 @@ export default function VideoToWebp() {
             <div>
               <label className="mb-1 block text-sm font-medium">
                 {t("quality")}: {quality}
-                <span className="ml-1 text-muted-foreground">
-                  ({t(`quality_${qualityPreset}`)})
-                </span>
+                {qualityPreset !== "custom" && (
+                  <span className="ml-1 text-muted-foreground">
+                    ({t(`quality_${qualityPreset}`)})
+                  </span>
+                )}
               </label>
               <input
                 type="range"
                 min={10}
                 max={100}
                 value={quality}
-                onChange={(e) => setQuality(Number(e.target.value))}
+                onChange={(e) => {
+                  setQuality(Number(e.target.value));
+                  setQualityPreset("custom");
+                }}
                 className="w-full"
               />
             </div>
