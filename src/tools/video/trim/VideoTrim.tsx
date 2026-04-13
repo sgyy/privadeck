@@ -68,13 +68,7 @@ export default function VideoTrim() {
         }}
         onMetadataLoaded={(meta) => {
           setDuration(meta.duration);
-          // Smart default time range based on video duration
-          const defaultEnd = meta.duration < 5
-            ? meta.duration
-            : meta.duration < 30
-              ? 5
-              : 10;
-          setEnd(defaultEnd);
+          setEnd(meta.duration);
         }}
       />
 
