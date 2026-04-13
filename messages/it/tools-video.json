@@ -159,79 +159,82 @@
         }
       },
       "rotate": {
-        "name": "Ruota video",
-        "description": "Ruotare i video di 90, 180 o 270 gradi.",
-        "metaTitle": "Ruota video - Strumento gratuito online",
-        "metaDescription": "Ruotare i video di 90, 180 o 270 gradi. Correggere l'orientamento del video facilmente. Strumento gratuito online.",
-        "keywords": "ruota video, capovolgi video, rotazione video, correggi orientamento video",
-        "rotate": "Ruota",
-        "processing": "Elaborazione in corso",
-        "unsupported": "Questo strumento richiede il supporto di SharedArrayBuffer. Usa un browser moderno con HTTPS.",
+        "name": "Ruota Video",
+        "description": "Ruota i video a sinistra o a destra con anteprima dal vivo. Un clic per elaborare e scaricare.",
+        "metaTitle": "Ruota Video Online Gratis - Correggi Orientamento Video",
+        "metaDescription": "Ruota i video a sinistra o a destra con anteprima istantanea. Elabora e scarica in un clic. Nessun caricamento, 100% privato nel browser.",
+        "keywords": "ruota video, ruota video online, correggi orientamento video, ruota mp4, orientamento video",
+        "rotateLeft": "Ruota a sinistra",
+        "rotateRight": "Ruota a destra",
+        "reset": "Reimposta",
+        "processAndDownload": "Ruota e Scarica",
+        "processing": "Elaborazione",
+        "unsupported": "Questo strumento richiede il supporto SharedArrayBuffer. Usa un browser moderno con HTTPS.",
         "faq": {
           "q1": "Quali angoli di rotazione sono disponibili?",
-          "a1": "Puoi ruotare i video di 90° (senso orario), 180° (capovolto) o 270° (senso antiorario).",
-          "q2": "La rotazione influisce sulla qualità video?",
-          "a2": "Il video viene ricodificato durante la rotazione, ma la qualità viene mantenuta a un livello elevato.",
+          "a1": "Ogni clic ruota il video di 90° (sinistra o destra). Puoi fare clic più volte per rotazioni di 180° o 270°.",
+          "q2": "La rotazione influisce sulla qualità del video?",
+          "a2": "Il video viene ricodificato con WebCodecs durante la rotazione. La qualità rimane alta, ma qualsiasi ricodifica comporta una leggera perdita di qualità.",
           "q3": "I miei file verranno caricati su un server?",
-          "a3": "No. Tutto il trattamento avviene interamente nel browser. I tuoi dati non lasciano mai il dispositivo — nulla viene caricato su alcun server.",
+          "a3": "No. Tutta l'elaborazione avviene interamente nel tuo browser. I tuoi dati non lasciano mai il tuo dispositivo, nulla viene caricato su alcun server.",
           "q4": "Posso usare questo strumento offline?",
           "a4": "Sì. Una volta caricata la pagina, lo strumento funziona completamente offline. Per la migliore esperienza, installa PrivaDeck come PWA dal tuo browser.",
-          "q5": "Ci sono limiti di dimensione file?",
-          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi."
-        },
-        "seoContent": {
-          "intro": {
-            "title": "Che cos'è Ruota Video?",
-            "content": "<p><strong>Ruota Video</strong> ruota i file video di 90°, 180° o 270° per correggere problemi di orientamento. Correggi video del telefono in orizzontale, sistema registrazioni capovolte o regola l'orientamento per esigenze di visualizzazione specifiche.</p>"
-          },
-          "howToUse": {
-            "title": "Come utilizzare Ruota Video",
-            "content": "<ol><li>Carica un file video</li><li>Seleziona l'angolo di rotazione: <strong>90°</strong>, <strong>180°</strong> o <strong>270°</strong></li><li>Clicca <strong>Ruota</strong> per elaborare</li><li>Scarica il video ruotato</li></ol>"
-          },
-          "features": {
-            "title": "Caratteristiche principali",
-            "content": "<ul><li><strong>Tre angoli</strong>: Ruota di 90° (orario), 180° o 270° (antiorario)</li><li><strong>Anteprima video</strong>: Visualizza il video prima e dopo la rotazione</li><li><strong>Formati multipli</strong>: Supporta MP4, WebM, MKV e AVI</li><li><strong>Alimentato da FFmpeg.wasm</strong>: Elaborazione video professionale nel browser</li><li><strong>Output di qualità</strong>: Rotazione di alta qualità con codifica FFmpeg</li><li><strong>Audio preservato</strong>: La traccia audio rimane sincronizzata dopo la rotazione</li></ul>"
-          },
-          "useCases": {
-            "title": "Casi d'uso comuni",
-            "content": "<ul><li><strong>Video del telefono</strong>: Correggi video in orizzontale registrati sui telefoni cellulari</li><li><strong>Riprese telecamera</strong>: Correggi l'orientamento delle telecamere montate ad angolo</li><li><strong>Registrazioni schermo</strong>: Ruota le registrazioni dello schermo per visualizzazione verticale</li><li><strong>Social media</strong>: Regola l'orientamento per i requisiti delle piattaforme (verticale/orizzontale)</li><li><strong>Presentazioni</strong>: Correggi l'orientamento del video per l'uso nelle slide</li></ul>"
-          },
-          "privacy": {
-            "title": "Elaborazione video con privacy come priorità",
-            "content": "<p>La rotazione video avviene <strong>interamente nel tuo browser</strong> utilizzando <strong>FFmpeg.wasm</strong>.</p><ul><li>I tuoi video <strong>non lasciano mai il tuo dispositivo</strong></li><li>Nessuna elaborazione su server o caricamenti</li><li>Funziona <strong>offline</strong> dopo il caricamento del core FFmpeg</li></ul>"
-          }
+          "q5": "Ci sono limiti alle dimensioni dei file?",
+          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile del dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Ruota video online 90°, 180°, 270°",
-            "description": "Correggi immediatamente i video iPhone in orizzontale o le registrazioni capovolte. Tre angoli di rotazione con un clic."
+            "title": "Sinistra o destra, semplice e intuitivo",
+            "description": "Clicca a sinistra o a destra per rotazioni di 90°. Clic multipli per 180° o 270°."
           },
           "f2": {
             "icon": "Zap",
-            "title": "Correggi orientamento video gratis",
-            "description": "Nessuna installazione di software richiesta. Carica il video, scegli l'angolo, scarica la versione corretta in pochi secondi."
+            "title": "Elabora e Scarica in Un Clic",
+            "description": "Un solo pulsante fa tutto. Clicca su Ruota e Scarica e il video elaborato viene salvato direttamente sul dispositivo."
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "Anteprima rotazione prima del salvataggio",
-            "description": "Guarda prima il video ruotato nel browser. Conferma che sia perfetto, poi scarica."
+            "title": "Anteprima Rotazione dal Vivo",
+            "description": "Guarda il video ruotare in tempo reale con animazione CSS. Conferma l'orientamento prima dell'elaborazione."
           },
           "f4": {
             "icon": "FileVideo",
-            "title": "Compatibile con tutti i formati video",
-            "description": "Ruota file MP4, MOV, AVI, WebM, MKV. L'output mantiene formato e qualità originali."
+            "title": "Funziona con Tutti i Formati Video",
+            "description": "Supporta MP4, MOV, AVI, WebM, MKV e altro. L'output mantiene lo stesso formato e qualità."
           },
           "f5": {
             "icon": "Shield",
-            "title": "Audio e video perfettamente sincronizzati",
-            "description": "La rotazione preserva la timeline audio. Nessun ritardo, nessun drift, il video finale rimane sincronizzato."
+            "title": "Audio Perfettamente Sincronizzato",
+            "description": "La rotazione preserva il timing audio. Nessun ritardo, nessuna deriva, nessun problema di sincronizzazione."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Rotazione privata - Nessun upload",
-            "description": "Elaborazione solo sul tuo dispositivo. I video non lasciano mai il tuo computer. Privacy massima."
+            "title": "Rotazione Privata - Nessun Caricamento",
+            "description": "Elaborazione solo locale con WebCodecs. I tuoi video non lasciano mai il computer. Massima privacy."
+          }
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Cos'è Ruota Video?",
+            "content": "<p><strong>Ruota Video</strong> ruota i file video in incrementi di 90° a sinistra o a destra per correggere problemi di orientamento. Correggi video del telefono di traverso, registrazioni capovolte o regola l'orientamento per esigenze di visualizzazione specifiche — tutto nel browser con anteprima dal vivo.</p>"
+          },
+          "howToUse": {
+            "title": "Come Usare Ruota Video",
+            "content": "<ol><li>Carica un file video</li><li>Clicca su <strong>Ruota a sinistra</strong> o <strong>Ruota a destra</strong> per vedere la rotazione in tempo reale</li><li>Clicca su <strong>Ruota e Scarica</strong> per elaborare e scaricare in un unico passaggio</li></ol>"
+          },
+          "features": {
+            "title": "Funzionalità Principali",
+            "content": "<ul><li><strong>Rotazione Incrementale</strong>: Clic a sinistra o destra di 90°, accumula clic per 180° o 270°</li><li><strong>Anteprima dal Vivo</strong>: Guarda il video ruotare in tempo reale con animazione CSS fluida</li><li><strong>Formati Multipli</strong>: Supporta MP4, WebM, MKV, AVI e altro</li><li><strong>Basato su WebCodecs</strong>: Elaborazione video veloce e accelerata via hardware nel browser</li><li><strong>Download in Un Clic</strong>: Elabora e salva in un solo passaggio, senza passaggi intermedi</li><li><strong>Audio Preservato</strong>: La traccia audio rimane sincronizzata dopo la rotazione</li></ul>"
+          },
+          "useCases": {
+            "title": "Casi d'Uso Comuni",
+            "content": "<ul><li><strong>Video del Telefono</strong>: Correggi video registrati di traverso sul telefono</li><li><strong>Riprese della Fotocamera</strong>: Correggi l'orientamento da fotocamere montate ad angolo</li><li><strong>Registrazioni dello Schermo</strong>: Ruota registrazioni dello schermo per visualizzazione verticale</li><li><strong>Social Media</strong>: Regola l'orientamento per i requisiti della piattaforma (verticale/orizzontale)</li><li><strong>Presentazioni</strong>: Correggi l'orientamento dei video nelle diapositive</li></ul>"
+          },
+          "privacy": {
+            "title": "Elaborazione Video con Privacy al Primo Posto",
+            "content": "<p>La rotazione video viene eseguita <strong>interamente nel tuo browser</strong> usando l'API nativa <strong>WebCodecs</strong>.</p><ul><li>I tuoi video <strong>non lasciano mai il dispositivo</strong></li><li>Nessuna elaborazione server o caricamenti</li><li>Funziona <strong>offline</strong> dopo il caricamento della pagina</li></ul>"
           }
         }
       },

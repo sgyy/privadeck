@@ -160,18 +160,21 @@
       },
       "rotate": {
         "name": "影片旋轉",
-        "description": "將影片旋轉 90、180 或 270 度。",
-        "metaTitle": "影片旋轉 - 線上免費旋轉影片",
-        "metaDescription": "將影片旋轉 90、180 或 270 度。輕鬆修正方向。免費線上工具。",
-        "keywords": "影片旋轉, 影片翻轉, 影片旋轉修正",
-        "rotate": "旋轉",
+        "description": "左右旋轉影片，即時預覽。一鍵處理並下載。",
+        "metaTitle": "免費線上旋轉影片 - 修正影片方向",
+        "metaDescription": "左右旋轉影片，即時預覽效果。一鍵處理並下載。無需上傳，100% 在瀏覽器中完成。",
+        "keywords": "影片旋轉, 旋轉影片線上, 修正影片方向, 旋轉mp4, 影片方向修正",
+        "rotateLeft": "左旋",
+        "rotateRight": "右旋",
+        "reset": "重置",
+        "processAndDownload": "旋轉並下載",
         "processing": "處理中",
         "unsupported": "此工具需要 SharedArrayBuffer 支援。請使用支援 HTTPS 的新版瀏覽器。",
         "faq": {
           "q1": "可用的旋轉角度有哪些？",
-          "a1": "可以旋轉 90°（順時針）、180°（上下顛倒）或 270°（逆時針）。",
+          "a1": "每次點擊將影片旋轉 90°（左旋或右旋）。可多次點擊實現 180° 或 270° 旋轉。",
           "q2": "旋轉會影響品質嗎？",
-          "a2": "旋轉時會重新編碼，但品質維持在高水準。",
+          "a2": "旋轉時會使用 WebCodecs 重新編碼，品質維持在高水準，但任何重新編碼都會有輕微的品質損失。",
           "q3": "我的檔案會上傳到伺服器嗎？",
           "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "這個工具能離線使用嗎？",
@@ -179,49 +182,27 @@
           "q5": "檔案大小有限制嗎？",
           "a5": "沒有伺服器端限制。最大檔案大小取決於您裝置的可用記憶體和瀏覽器能力。大多數現代裝置可以處理數百 MB 的檔案。"
         },
-        "seoContent": {
-          "intro": {
-            "title": "什麼是旋轉影片工具？",
-            "content": "<p><strong>旋轉影片</strong>將影片檔案旋轉 90°、180° 或 270°，修正方向問題。修正側向的手機影片、倒立錄影或特定顯示需求的方向。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用旋轉影片",
-            "content": "<ol><li>上傳影片檔案</li><li>選擇旋轉角度：<strong>90°</strong>、<strong>180°</strong> 或 <strong>270°</strong></li><li>點擊<strong>旋轉</strong>處理</li><li>下載旋轉後的影片</li></ol>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>三個角度</strong>：順時針 90°、倒立 180° 或逆時針 270°</li><li><strong>影片預覽</strong>：旋轉前後查看影片</li><li><strong>多種格式</strong>：支援 MP4、WebM、MKV 和 AVI</li><li><strong>採用 FFmpeg.wasm</strong>：專業影片處理在瀏覽器中</li><li><strong>品質輸出</strong>：使用 FFmpeg 編碼的高品質旋轉</li><li><strong>音訊同步</strong>：旋轉後音訊軌保持同步</li></ul>"
-          },
-          "useCases": {
-            "title": "常見用途",
-            "content": "<ul><li><strong>手機影片</strong>：修正在手機上側向錄製的影片</li><li><strong>攝影機素材</strong>：修正從角度安裝的攝影機的方向</li><li><strong>螢幕錄影</strong>：旋轉螢幕錄影用於直式顯示</li><li><strong>社群媒體</strong>：調整方向滿足平台要求（直向/橫向）</li><li><strong>簡報</strong>：修正簡報投影片中的影片方向</li></ul>"
-          },
-          "privacy": {
-            "title": "隱私優先的影片處理",
-            "content": "<p>影片旋轉全部在瀏覽器本地使用 <strong>FFmpeg.wasm</strong> 進行。</p><ul><li>您的影片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理或上傳</li><li>載入 FFmpeg 核心後可<strong>離線</strong>運作</li></ul>"
-          }
-        },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "線上旋轉影片 90°、180°、270°",
-            "description": "即刻修正 sideways iPhone 影片或倒置錄影。三種旋轉角度一鍵選擇。"
+            "title": "左右旋轉，簡單直觀",
+            "description": "點擊左旋或右旋按鈕即可旋轉 90°。多次點擊可實現 180° 或 270° 旋轉。"
           },
           "f2": {
             "icon": "Zap",
-            "title": "免費修正影片方向",
-            "description": "無需安裝軟體。上傳影片，選擇角度，幾秒即可下載修正後的版本。"
+            "title": "一鍵處理並下載",
+            "description": "一個按鈕完成所有操作。點擊「旋轉並下載」，處理後的影片直接儲存到裝置。"
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "儲存前預覽旋轉效果",
-            "description": "先在瀏覽器中查看旋轉後的影片。確認無誤再下載。無需猜測。"
+            "title": "即時旋轉預覽",
+            "description": "透過 CSS 動畫即時查看影片旋轉效果。確認方向正確後再處理。"
           },
           "f4": {
             "icon": "FileVideo",
             "title": "相容所有影片格式",
-            "description": "旋轉 MP4、MOV、AVI、WebM、MKV 檔案。輸出保持原格式、原畫質。"
+            "description": "支援 MP4、MOV、AVI、WebM、MKV 等多種格式。輸出保持原格式和畫質。"
           },
           "f5": {
             "icon": "Shield",
@@ -231,7 +212,29 @@
           "f6": {
             "icon": "MonitorDown",
             "title": "私密旋轉 - 無需上傳",
-            "description": "僅在您的裝置上處理。影片絕不會離開您的電腦。最大程度保護隱私。"
+            "description": "僅使用 WebCodecs 在本地處理影片。影片絕不會離開您的電腦，最大程度保護隱私。"
+          }
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什麼是旋轉影片工具？",
+            "content": "<p><strong>旋轉影片</strong>將影片檔案按 90° 遞增旋轉，修正方向問題。可矯正手機側向拍攝的影片、倒立錄製畫面，或調整方向以適應特定顯示需求——全部在瀏覽器中完成，支援即時預覽。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用旋轉影片",
+            "content": "<ol><li>上傳影片檔案</li><li>點擊<strong>左旋</strong>或<strong>右旋</strong>即時預覽旋轉效果</li><li>點擊<strong>旋轉並下載</strong>一鍵處理並下載</li></ol>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>遞增旋轉</strong>：點擊左旋或右旋 90°，多次點擊實現 180° 或 270°</li><li><strong>即時預覽</strong>：透過流暢的 CSS 動畫即時查看影片旋轉效果</li><li><strong>多種格式</strong>：支援 MP4、WebM、MKV、AVI 等格式</li><li><strong>WebCodecs 驅動</strong>：瀏覽器內快速、硬體加速的影片處理</li><li><strong>一鍵下載</strong>：一步完成處理和儲存，無需中間步驟</li><li><strong>音訊同步</strong>：旋轉後音訊軌道保持同步</li></ul>"
+          },
+          "useCases": {
+            "title": "常見用途",
+            "content": "<ul><li><strong>手機影片</strong>：修復手機側向拍攝的影片</li><li><strong>攝影機素材</strong>：矯正傾斜安裝的攝影機拍攝的畫面</li><li><strong>螢幕錄影</strong>：旋轉螢幕錄影以適應直向顯示</li><li><strong>社群媒體</strong>：調整方向以適應平台要求（直向/橫向）</li><li><strong>簡報</strong>：修復簡報投影片中影片的方向問題</li></ul>"
+          },
+          "privacy": {
+            "title": "隱私優先的影片處理",
+            "content": "<p>影片旋轉完全在您的瀏覽器中使用原生 <strong>WebCodecs API</strong> 運行。</p><ul><li>您的影片<strong>絕不離開裝置</strong></li><li>無伺服器處理或上傳</li><li>頁面載入後可<strong>離線</strong>工作</li></ul>"
           }
         }
       },

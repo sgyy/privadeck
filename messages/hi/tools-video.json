@@ -159,79 +159,82 @@
         }
       },
       "rotate": {
-        "name": "वीडियो रोटेट",
-        "description": "वीडियो को 90, 180, या 270 डिग्री घुमाएँ।",
-        "metaTitle": "वीडियो रोटेट - मुफ़्त ऑनलाइन वीडियो घुमाएँ",
-        "metaDescription": "वीडियो को 90, 180, या 270 डिग्री घुमाएँ। वीडियो ओरिएंटेशन आसानी से ठीक करें। मुफ़्त ऑनलाइन टूल।",
-        "keywords": "वीडियो रोटेट, वीडियो फ़्लिप, वीडियो रोटेशन, वीडियो ओरिएंटेशन ठीक करें",
-        "rotate": "घुमाएँ",
+        "name": "वीडियो घुमाएँ",
+        "description": "वीडियो को बाएं या दाएं घुमाएं, लाइव पूर्वावलोकन के साथ। प्रोसेस और डाउनलोड के लिए एक क्लिक।",
+        "metaTitle": "वीडियो घुमाना ऑनलाइन मुफ्त - वीडियो ओरिएंटेशन ठीक करें",
+        "metaDescription": "वीडियो को बाएं या दाएं घुमाएं, तत्काल पूर्वावलोकन के साथ। एक क्लिक में प्रोसेस और डाउनलोड करें। कोई अपलोड नहीं, ब्राउज़र में 100% निजी।",
+        "keywords": "वीडियो घुमाएँ, वीडियो घुमाना ऑनलाइन, वीडियो ओरिएंटेशन ठीक करें, mp4 घुमाएँ, वीडियो ओरिएंटेशन",
+        "rotateLeft": "बाएं घुमाएँ",
+        "rotateRight": "दाएं घुमाएँ",
+        "reset": "रीसेट करें",
+        "processAndDownload": "घुमाएँ और डाउनलोड करें",
         "processing": "प्रोसेस हो रहा है",
-        "unsupported": "इस टूल को SharedArrayBuffer सपोर्ट की आवश्यकता है। कृपया HTTPS के साथ एक आधुनिक ब्राउज़र का उपयोग करें।",
+        "unsupported": "इस टूल को SharedArrayBuffer समर्थन की आवश्यकता है। HTTPS के साथ आधुनिक ब्राउज़र का उपयोग करें।",
         "faq": {
-          "q1": "कौन से रोटेशन कोण उपलब्ध हैं?",
-          "a1": "आप वीडियो को 90° (दक्षिणावर्त), 180° (उल्टा), या 270° (वामावर्त) घुमा सकते हैं।",
+          "q1": "कौन से घुमाव कोण उपलब्ध हैं?",
+          "a1": "प्रत्येक क्लिक वीडियो को 90° घुमाता है (बाएं या दाएं)। आप 180° या 270° घुमाव के लिए कई बार क्लिक कर सकते हैं।",
           "q2": "क्या घुमाने से वीडियो गुणवत्ता प्रभावित होती है?",
-          "a2": "रोटेशन के दौरान वीडियो पुनः एन्कोड होता है, लेकिन गुणवत्ता उच्च स्तर पर बनी रहती है।",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "नहीं। सारी प्रोसेसिंग पूरी तरह आपके ब्राउज़र में होती है। आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता — किसी सर्वर पर कुछ भी अपलोड नहीं होता।",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
-          "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
-        },
-        "seoContent": {
-          "intro": {
-            "title": "Video Rotator क्या है?",
-            "content": "<p><strong>Video Rotator</strong> videos को rotate करता है।</p><p>तुरंत video orientation fix करें।</p>"
-          },
-          "howToUse": {
-            "title": "Video Rotator का उपयोग करें",
-            "content": "<ol><li>Video upload करें</li><li>Rotation angle चुनें</li><li>Download करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Rotate</strong>: Video को rotate करें</li><li><strong>Angles</strong>: 90°, 180°, 270° options</li></ul>"
-          },
-          "useCases": {
-            "title": "सामान्य उपयोग",
-            "content": "<ul><li><strong>Fix</strong>: Wrong orientation fix करें</li></ul>"
-          },
-          "privacy": {
-            "title": "गोपनीयता-प्रथम",
-            "content": "<p><strong>Offline काम करता है</strong></p>"
-          }
+          "a2": "घुमाते समय वीडियो WebCodecs से पुनः एन्कोड होता है। गुणवत्ता उच्च बनी रहती है, लेकिन किसी भी पुनः एन्कोडिंग में हल्की गुणवत्ता हानि शामिल होती है।",
+          "q3": "क्या मेरी फ़ाइलें सर्वर पर अपलोड होंगी?",
+          "a3": "नहीं। संपूर्ण प्रोसेसिंग आपके ब्राउज़र में होती है। आपका डेटा आपके डिवाइस को कभी नहीं छोड़ता — किसी भी सर्वर पर कुछ भी अपलोड नहीं होता।",
+          "q4": "क्या मैं इस टूल का उपयोग ऑफ़लाइन कर सकता हूँ?",
+          "a4": "हाँ। पेज लोड होने के बाद, टूल पूरी तरह से ऑफ़लाइन काम करता है। सर्वोत्तम अनुभव के लिए, अपने ब्राउज़र से PrivaDeck को PWA के रूप में इंस्टॉल करें।",
+          "q5": "क्या फ़ाइल आकार की कोई सीमाएँ हैं?",
+          "a5": "कोई सर्वर-साइड सीमा नहीं है। अधिकतम फ़ाइल आकार आपके डिवाइस की उपलब्ध मेमोरी और ब्राउज़र क्षमताओं पर निर्भर करता है। अधिकांश आधुनिक डिवाइस सैकड़ों MB की फ़ाइलों को बिना किसी समस्या के हैंडल कर सकते हैं।"
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Rotate Video Online 90°, 180°, 270°",
-            "description": "Fix sideways iPhone videos or upside-down recordings instantly. Three rotation options with one click."
+            "title": "बाएं या दाएं, सरल और सहज",
+            "description": "90° घुमाव के लिए बाएं या दाएं क्लिक करें। 180° या 270° के लिए कई बार क्लिक करें।"
           },
           "f2": {
             "icon": "Zap",
-            "title": "Fix Video Orientation Free",
-            "description": "No software needed. Upload your video, pick an angle, download fixed version in seconds."
+            "title": "एक क्लिक में प्रोसेस और डाउनलोड",
+            "description": "एक बटन सब कुछ करता है। घुमाएँ और डाउनलोड करें पर क्लिक करें और प्रोसेस किया गया वीडियो सीधे आपके डिवाइस पर सहेजा जाता है।"
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "Preview Rotation Before Saving",
-            "description": "Watch the rotated video in browser first. Confirm it's right, then download. No guesswork."
+            "title": "लाइव घुमाव पूर्वावलोकन",
+            "description": "CSS एनिमेशन के साथ वीडियो को रियल-टाइम में घूमते देखें। प्रोसेस करने से पहले ओरिएंटेशन की पुष्टि करें।"
           },
           "f4": {
             "icon": "FileVideo",
-            "title": "Works with All Video Formats",
-            "description": "Rotate MP4, MOV, AVI, WebM, MKV files. Output keeps same format, same quality as input."
+            "title": "सभी वीडियो प्रारूपों के साथ काम करता है",
+            "description": "MP4, MOV, AVI, WebM, MKV और अधिक का समर्थन करता है। आउटपुट उसी प्रारूप और गुणवत्ता को बनाए रखता है।"
           },
           "f5": {
             "icon": "Shield",
-            "title": "Audio Stays Perfectly Synced",
-            "description": "Rotation preserves audio timing. No lag, no drift, no sync issues in your final video."
+            "title": "ऑडियो पूर्ण रूप से सिंक",
+            "description": "घुमाने से ऑडियो टाइमिंग बनी रहती है। कोई विलंब नहीं, कोई ड्रिफ्ट नहीं, कोई सिंक समस्या नहीं।"
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Private Rotation - No Upload",
-            "description": "Processing happens on your device only. Your videos never leave your computer. Maximum privacy."
+            "title": "निजी घुमाव - कोई अपलोड नहीं",
+            "description": "WebCodecs के साथ केवल स्थानीय प्रोसेसिंग। आपका वीडियो आपके कंप्यूटर को कभी नहीं छोड़ता। अधिकतम गोपनीयता।"
+          }
+        },
+        "seoContent": {
+          "intro": {
+            "title": "वीडियो घुमाना क्या है?",
+            "content": "<p><strong>वीडियो घुमाना</strong> वीडियो फ़ाइलों को 90° के बढ़ोतरी में बाएं या दाएं घुमाता है ताकि ओरिएंटेशन समस्याओं को ठीक किया जा सके। तिरछे फोन वीडियो, उल्टी रिकॉर्डिंग को ठीक करें या विशिष्ट प्रदर्शन आवश्यकताओं के लिए ओरिएंटेशन समायोजित करें — सब कुछ ब्राउज़र में लाइव पूर्वावलोकन के साथ।</p>"
+          },
+          "howToUse": {
+            "title": "वीडियो घुमाना कैसे उपयोग करें",
+            "content": "<ol><li>एक वीडियो फ़ाइल अपलोड करें</li><li>रियल-टाइम में घुमाव देखने के लिए <strong>बाएं घुमाएँ</strong> या <strong>दाएं घुमाएँ</strong> पर क्लिक करें</li><li>एक ही चरण में प्रोसेस और डाउनलोड करने के लिए <strong>घुमाएँ और डाउनलोड करें</strong> पर क्लिक करें</li></ol>"
+          },
+          "features": {
+            "title": "मुख्य विशेषताएँ",
+            "content": "<ul><li><strong>वृद्धिशील घुमाव</strong>: बाएं या दाएं 90° क्लिक करें, 180° या 270° के लिए क्लिक जमा करें</li><li><strong>लाइव पूर्वावलोकन</strong>: सुगम CSS एनिमेशन के साथ वीडियो को रियल-टाइम में घूमते देखें</li><li><strong>एकाधिक प्रारूप</strong>: MP4, WebM, MKV, AVI और अधिक का समर्थन करता है</li><li><strong>WebCodecs संचालित</strong>: ब्राउज़र में तेज़, हार्डवेयर-त्वरित वीडियो प्रोसेसिंग</li><li><strong>एक-क्लिक डाउनलोड</strong>: एक ही चरण में प्रोसेस और सहेजें, कोई मध्यवर्ती चरण नहीं</li><li><strong>ऑडियो संरक्षित</strong>: घुमाने के बाद ऑडियो ट्रैक सिंक रहता है</li></ul>"
+          },
+          "useCases": {
+            "title": "सामान्य उपयोग के मामले",
+            "content": "<ul><li><strong>फोन वीडियो</strong>: फोन पर तिरछी रिकॉर्ड की गई वीडियो को ठीक करें</li><li><strong>कैमरा फुटेज</strong>: कोण पर माउंट किए गए कैमरे से ओरिएंटेशन ठीक करें</li><li><strong>स्क्रीन रिकॉर्डिंग</strong>: पोर्ट्रेट डिस्प्ले के लिए स्क्रीन रिकॉर्डिंग घुमाएं</li><li><strong>सोशल मीडिया</strong>: प्लेटफ़ॉर्म आवश्यकताओं के अनुसार ओरिएंटेशन समायोजित करें (पोर्ट्रेट/लैंडस्केप)</li><li><strong>प्रस्तुतियाँ</strong>: स्लाइड्स में वीडियो ओरिएंटेशन ठीक करें</li></ul>"
+          },
+          "privacy": {
+            "title": "गोपनीयता-प्रथम वीडियो प्रोसेसिंग",
+            "content": "<p>वीडियो घुमाना <strong>आपके ब्राउज़र में पूरी तरह से</strong> नेटिव <strong>WebCodecs API</strong> का उपयोग करके चलाया जाता है।</p><ul><li>आपका वीडियो <strong>आपके डिवाइस को कभी नहीं छोड़ता</strong></li><li>कोई सर्वर प्रोसेसिंग या अपलोड नहीं</li><li>पेज लोड होने के बाद <strong>ऑफ़लाइन</strong> काम करता है</li></ul>"
           }
         }
       },

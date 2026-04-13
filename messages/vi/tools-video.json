@@ -159,79 +159,82 @@
         }
       },
       "rotate": {
-        "name": "Xoay video",
-        "description": "Xoay video 90, 180 hoặc 270 độ.",
-        "metaTitle": "Xoay video - Xoay video trực tuyến miễn phí",
-        "metaDescription": "Xoay video 90, 180 hoặc 270 độ. Sửa hướng video dễ dàng. Công cụ trực tuyến miễn phí.",
-        "keywords": "xoay video, lật video, xoay chiều video, sửa hướng video",
-        "rotate": "Xoay",
+        "name": "Xoay Video",
+        "description": "Xoay video sang trái hoặc phải với xem trước trực tiếp. Một nhấp chuột để xử lý và tải xuống.",
+        "metaTitle": "Xoay Video Trực Tuyến Miễn Phí - Sửa Hướng Video",
+        "metaDescription": "Xoay video sang trái hoặc phải với xem trước ngay lập tức. Xử lý và tải xuống bằng một nhấp chuột. Không tải lên, 100% riêng tư trong trình duyệt.",
+        "keywords": "xoay video, xoay video trực tuyến, sửa hướng video, xoay mp4, hướng video",
+        "rotateLeft": "Xoay trái",
+        "rotateRight": "Xoay phải",
+        "reset": "Đặt lại",
+        "processAndDownload": "Xoay & Tải xuống",
         "processing": "Đang xử lý",
-        "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Vui lòng sử dụng trình duyệt hiện đại với HTTPS.",
+        "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Sử dụng trình duyệt hiện đại với HTTPS.",
         "faq": {
-          "q1": "Có những góc xoay nào?",
-          "a1": "Bạn có thể xoay video 90° (theo chiều kim đồng hồ), 180° (lật ngược) hoặc 270° (ngược chiều kim đồng hồ).",
+          "q1": "Những góc xoay nào có sẵn?",
+          "a1": "Mỗi lần nhấp xoay video 90° (trái hoặc phải). Bạn có thể nhấp nhiều lần để xoay 180° hoặc 270°.",
           "q2": "Xoay có ảnh hưởng đến chất lượng video không?",
-          "a2": "Video được mã hóa lại khi xoay, nhưng chất lượng được duy trì ở mức cao.",
-          "q3": "File của tôi có được tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này khi ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck dưới dạng PWA từ trình duyệt của bạn.",
+          "a2": "Video được mã hóa lại bằng WebCodecs trong khi xoay. Chất lượng vẫn cao, nhưng bất kỳ mã hóa lại nào cũng gây mất chất lượng nhẹ.",
+          "q3": "Tệp của tôi có được tải lên máy chủ không?",
+          "a3": "Không. Tất cả xử lý hoàn toàn trong trình duyệt của bạn. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên bất kỳ máy chủ nào.",
+          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
+          "a4": "Có. Sau khi trang được tải, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck làm PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
-          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng của thiết bị và khả năng của trình duyệt. Hầu hết các thiết bị hiện đại đều xử lý tệp lên đến vài trăm MB mà không gặp vấn đề."
-        },
-        "seoContent": {
-          "intro": {
-            "title": "Xoay video là gì?",
-            "content": "<p><strong>Xoay video</strong> xoay tệp video theo góc 90°, 180° hoặc 270° để khắc phục vấn đề hướng. Sửa video điện thoại bị nghiêng, sửa bản ghi bị ngược hoặc điều chỉnh hướng cho nhu cầu hiển thị cụ thể.</p>"
-          },
-          "howToUse": {
-            "title": "Cách sử dụng Xoay video",
-            "content": "<ol><li>Tải lên tệp video</li><li>Chọn góc xoay: <strong>90°</strong>, <strong>180°</strong> hoặc <strong>270°</strong></li><li>Nhấp <strong>Xoay</strong> để xử lý</li><li>Tải xuống video đã xoay</li></ol>"
-          },
-          "features": {
-            "title": "Các tính năng chính",
-            "content": "<ul><li><strong>Ba góc xoay</strong>: Xoay theo 90° (theo chiều kim đồng hồ), 180° hoặc 270° (ngược chiều kim đồng hồ)</li><li><strong>Xem trước video</strong>: Xem video trước và sau khi xoay</li><li><strong>Nhiều định dạng</strong>: Hỗ trợ MP4, WebM, MKV và AVI</li><li><strong>Được cung cấp bởi FFmpeg.wasm</strong>: Xử lý video chuyên nghiệp trong trình duyệt</li><li><strong>Đầu ra chất lượng</strong>: Xoay chất lượng cao với mã hóa FFmpeg</li><li><strong>Âm thanh được bảo toàn</strong>: Track âm thanh vẫn đồng bộ sau khi xoay</li></ul>"
-          },
-          "useCases": {
-            "title": "Trường hợp sử dụng phổ biến",
-            "content": "<ul><li><strong>Video điện thoại</strong>: Sửa video bị nghiêng quay trên điện thoại di động</li><li><strong>Phim máy quay</strong>: Sửa hướng từ máy quay gắn ở góc</li><li><strong>Bản ghi màn hình</strong>: Xoay bản ghi màn hình để hiển thị dọc</li><li><strong>Mạng xã hội</strong>: Điều chỉnh hướng cho yêu cầu nền tảng (dọc/ngang)</li><li><strong>Bài thuyết trình</strong>: Sửa hướng video để sử dụng trong slide</li></ul>"
-          },
-          "privacy": {
-            "title": "Xử lý video bảo mật",
-            "content": "<p>Xoay video chạy <strong>hoàn toàn trong trình duyệt</strong> của bạn bằng <strong>FFmpeg.wasm</strong>.</p><ul><li>Video của bạn <strong>không bao giờ rời khỏi thiết bị</strong></li><li>Không xử lý hoặc tải lên máy chủ</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi lõi FFmpeg được tải</li></ul>"
-          }
+          "a5": "Không có giới hạn từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng của thiết bị và khả năng của trình duyệt. Hầu hết các thiết bị hiện đại xử lý tệp vài trăm MB mà không có vấn đề."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Xoay video trực tuyến 90°, 180°, 270°",
-            "description": "Sửa video iPhone bị nghiêng hoặc bản ghi bị ngược ngay lập tức. Ba tùy chọn xoay chỉ với một cú nhấp."
+            "title": "Trái hoặc phải, đơn giản và trực quan",
+            "description": "Nhấp trái hoặc phải để xoay 90°. Nhiều lần nhấp cho 180° hoặc 270°."
           },
           "f2": {
             "icon": "Zap",
-            "title": "Sửa hướng video miễn phí",
-            "description": "Không cần phần mềm. Tải lên video, chọn góc, tải xuống phiên bản đã sửa trong vài giây."
+            "title": "Xử lý & Tải xuống Một Nhấp",
+            "description": "Một nút duy nhất làm tất cả. Nhấp Xoay & Tải xuống và video đã xử lý được lưu trực tiếp vào thiết bị."
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "Xem trước xoay trước khi lưu",
-            "description": "Xem video đã xoay trong trình duyệt trước. Xác nhận đúng rồi mới tải xuống. Không phỏng đoán."
+            "title": "Xem Trước Xoay Trực Tiếp",
+            "description": "Xem video xoay trong thời gian thực với hoạt ảnh CSS. Xác nhận hướng trước khi xử lý."
           },
           "f4": {
             "icon": "FileVideo",
-            "title": "Hoạt động với mọi định dạng video",
-            "description": "Xoay file MP4, MOV, AVI, WebM, MKV. Đầu ra giữ nguyên định dạng và chất lượng như đầu vào."
+            "title": "Hoạt động với Mọi Định dạng Video",
+            "description": "Hỗ trợ MP4, MOV, AVI, WebM, MKV và nhiều hơn nữa. Đầu ra giữ nguyên định dạng và chất lượng."
           },
           "f5": {
             "icon": "Shield",
-            "title": "Âm thanh luôn đồng bộ hoàn hảo",
-            "description": "Xoay bảo toàn thời gian âm thanh. Không trễ, không lệch, không vấn đề đồng bộ trong video cuối cùng."
+            "title": "Âm thanh Đồng bộ Hoàn hảo",
+            "description": "Xoay bảo toàn thời gian âm thanh. Không trễ, không lệch, không vấn đề đồng bộ."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Xoay riêng tư - Không tải lên",
-            "description": "Xử lý chỉ diễn ra trên thiết bị của bạn. Video không bao giờ rời khỏi máy tính. Quyền riêng tư tối đa."
+            "title": "Xoay Riêng tư - Không Tải lên",
+            "description": "Chỉ xử lý cục bộ với WebCodecs. Video của bạn không bao giờ rời khỏi máy tính. Quyền riêng tư tối đa."
+          }
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Xoay Video là gì?",
+            "content": "<p><strong>Xoay Video</strong> xoay tệp video theo bước 90° sang trái hoặc phải để sửa lỗi hướng. Sửa video điện thoại quay ngang, ghi hình ngược hoặc điều chỉnh hướng cho nhu cầu hiển thị cụ thể — tất cả trong trình duyệt với xem trước trực tiếp.</p>"
+          },
+          "howToUse": {
+            "title": "Cách Sử dụng Xoay Video",
+            "content": "<ol><li>Tải lên một tệp video</li><li>Nhấp vào <strong>Xoay trái</strong> hoặc <strong>Xoay phải</strong> để xem xoay trong thời gian thực</li><li>Nhấp vào <strong>Xoay & Tải xuống</strong> để xử lý và tải xuống trong một bước</li></ol>"
+          },
+          "features": {
+            "title": "Tính năng Chính",
+            "content": "<ul><li><strong>Xoay Tăng dần</strong>: Nhấp trái hoặc phải 90°, tích lũy nhấp cho 180° hoặc 270°</li><li><strong>Xem Trước Trực tiếp</strong>: Xem video xoay trong thời gian thực với hoạt ảnh CSS mượt mà</li><li><strong>Nhiều Định dạng</strong>: Hỗ trợ MP4, WebM, MKV, AVI và nhiều hơn nữa</li><li><strong>Chạy bằng WebCodecs</strong>: Xử lý video nhanh, tăng tốc phần cứng trong trình duyệt</li><li><strong>Tải xuống Một Nhấp</strong>: Xử lý và lưu trong một bước, không có bước trung gian</li><li><strong>Âm thanh Bảo toàn</strong>: Luồng âm thanh vẫn đồng bộ sau khi xoay</li></ul>"
+          },
+          "useCases": {
+            "title": "Trường hợp Sử dụng Phổ biến",
+            "content": "<ul><li><strong>Video Điện thoại</strong>: Sửa video quay ngang trên điện thoại</li><li><strong>Tư liệu Camera</strong>: Sửa hướng từ camera gắn góc</li><li><strong>Ghi hình Màn hình</strong>: Xoay ghi hình màn hình để hiển thị dọc</li><li><strong>Mạng Xã hội</strong>: Điều chỉnh hướng theo yêu cầu nền tảng (dọc/ngang)</li><li><strong>Trình chiếu</strong>: Sửa hướng video trong slide</li></ul>"
+          },
+          "privacy": {
+            "title": "Xử lý Video Ưu tiên Quyền riêng tư",
+            "content": "<p>Xoay video được thực hiện <strong>hoàn toàn trong trình duyệt của bạn</strong> bằng API gốc <strong>WebCodecs</strong>.</p><ul><li>Video của bạn <strong>không bao giờ rời khỏi thiết bị</strong></li><li>Không xử lý máy chủ hoặc tải lên</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi trang được tải</li></ul>"
           }
         }
       },

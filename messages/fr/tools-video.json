@@ -159,79 +159,82 @@
         }
       },
       "rotate": {
-        "name": "Pivoter la vidéo",
-        "description": "Pivoter les vidéos de 90, 180 ou 270 degrés.",
-        "metaTitle": "Pivoter la vidéo - Outil gratuit en ligne",
-        "metaDescription": "Pivoter les vidéos de 90, 180 ou 270 degrés. Corriger l'orientation facilement. Outil gratuit en ligne.",
-        "keywords": "pivoter vidéo, retourner vidéo, rotation vidéo, corriger orientation vidéo",
-        "rotate": "Pivoter",
+        "name": "Rotation Vidéo",
+        "description": "Tournez les vidéos à gauche ou à droite avec aperçu en direct. Un clic pour traiter et télécharger.",
+        "metaTitle": "Rotation Vidéo en Ligne Gratuite - Corriger l'Orientation Vidéo",
+        "metaDescription": "Tournez les vidéos à gauche ou à droite avec aperçu instantané. Traitez et téléchargez en un clic. Sans envoi, 100 % privé dans votre navigateur.",
+        "keywords": "rotation vidéo, tourner vidéo en ligne, corriger orientation vidéo, rotation mp4, orientation vidéo",
+        "rotateLeft": "Rotation à gauche",
+        "rotateRight": "Rotation à droite",
+        "reset": "Réinitialiser",
+        "processAndDownload": "Tourner et Télécharger",
         "processing": "Traitement en cours",
-        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
+        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Utilisez un navigateur moderne avec HTTPS.",
         "faq": {
           "q1": "Quels angles de rotation sont disponibles ?",
-          "a1": "Vous pouvez pivoter les vidéos de 90° (sens horaire), 180° (à l'envers) ou 270° (sens antihoraire).",
+          "a1": "Chaque clic tourne la vidéo de 90° (gauche ou droite). Vous pouvez cliquer plusieurs fois pour des rotations de 180° ou 270°.",
           "q2": "La rotation affecte-t-elle la qualité vidéo ?",
-          "a2": "La vidéo est réencodée lors de la rotation, mais la qualité est maintenue à un niveau élevé.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
+          "a2": "La vidéo est ré-encodée avec WebCodecs lors de la rotation. La qualité reste élevée, mais tout ré-encodage entraîne une légère perte de qualité.",
+          "q3": "Mes fichiers seront-ils téléchargés sur un serveur ?",
+          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé sur un serveur.",
+          "q4": "Puis-je utiliser cet outil hors ligne ?",
+          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors ligne. Pour une meilleure expérience, installez PrivaDeck en tant que PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
-          "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
-        },
-        "seoContent": {
-          "intro": {
-            "title": "Qu'est-ce que Pivoter la vidéo ?",
-            "content": "<p><strong>Pivoter la vidéo</strong> fait pivoter les fichiers vidéo de 90°, 180° ou 270° pour corriger les problèmes d'orientation. Corrigez les vidéos téléphoniques prises de côté, rectifiez les enregistrements à l'envers ou ajustez l'orientation pour des besoins d'affichage spécifiques.</p>"
-          },
-          "howToUse": {
-            "title": "Comment utiliser Pivoter la vidéo",
-            "content": "<ol><li>Téléchargez un fichier vidéo</li><li>Sélectionnez l'angle de rotation : <strong>90°</strong>, <strong>180°</strong> ou <strong>270°</strong></li><li>Cliquez sur <strong>Pivoter</strong> pour traiter</li><li>Téléchargez la vidéo pivotée</li></ol>"
-          },
-          "features": {
-            "title": "Fonctionnalités clés",
-            "content": "<ul><li><strong>Trois angles</strong> : Pivotez de 90° (sens horaire), 180° ou 270° (sens antihoraire)</li><li><strong>Aperçu vidéo</strong> : Visualisez la vidéo avant et après la rotation</li><li><strong>Formats multiples</strong> : Prend en charge MP4, WebM, MKV et AVI</li><li><strong>Propulsé par FFmpeg.wasm</strong> : Traitement vidéo professionnel dans le navigateur</li><li><strong>Qualité de sortie</strong> : Rotation de haute qualité avec l'encodage FFmpeg</li><li><strong>Audio préservé</strong> : La piste audio reste synchronisée après la rotation</li></ul>"
-          },
-          "useCases": {
-            "title": "Cas d'utilisation courants",
-            "content": "<ul><li><strong>Vidéos de téléphone</strong> : Corrigez les vidéos prises de côté avec un téléphone mobile</li><li><strong>Séquences de caméra</strong> : Rectifiez l'orientation des caméras montées en angle</li><li><strong>Captures d'écran</strong> : Pivotez les enregistrements d'écran pour l'affichage vertical</li><li><strong>Réseaux sociaux</strong> : Ajustez l'orientation selon les exigences de la plateforme (portrait/paysage)</li><li><strong>Présentations</strong> : Corrigez l'orientation vidéo pour l'utilisation dans les diapositives</li></ul>"
-          },
-          "privacy": {
-            "title": "Traitement vidéo axé sur la confidentialité",
-            "content": "<p>La rotation vidéo s'exécute <strong>entièrement dans votre navigateur</strong> à l'aide de <strong>FFmpeg.wasm</strong>.</p><ul><li>Vos vidéos <strong>ne quittent jamais votre appareil</strong></li><li>Pas de traitement serveur ni d'envoi</li><li>Fonctionne <strong>hors connexion</strong> après le chargement du noyau FFmpeg</li></ul>"
-          }
+          "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Faire pivoter une vidéo en ligne 90°, 180°, 270°",
-            "description": "Corrigez instantanément les vidéos iPhone en paysage ou les enregistrements à l'envers. Trois angles de rotation en un clic."
+            "title": "Gauche ou droite, simple et intuitif",
+            "description": "Cliquez à gauche ou à droite pour des rotations de 90°. Clics multiples pour 180° ou 270°."
           },
           "f2": {
             "icon": "Zap",
-            "title": "Corriger l'orientation vidéo gratuitement",
-            "description": "Aucune installation de logiciel requise. Téléchargez la vidéo, choisissez l'angle, téléchargez la version corrigée en quelques secondes."
+            "title": "Traiter et Télécharger en Un Clic",
+            "description": "Un seul bouton fait tout. Cliquez sur Tourner et Télécharger et la vidéo traitée est enregistrée directement sur votre appareil."
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "Aperçu de la rotation avant sauvegarde",
-            "description": "Regardez d'abord la vidéo pivotée dans le navigateur. Confirmez qu'elle est parfaite, puis téléchargez."
+            "title": "Aperçu de Rotation en Direct",
+            "description": "Regardez votre vidéo tourner en temps réel avec l'animation CSS. Confirmez l'orientation avant le traitement."
           },
           "f4": {
             "icon": "FileVideo",
-            "title": "Compatible avec tous les formats vidéo",
-            "description": "Faites pivoter les fichiers MP4, MOV, AVI, WebM, MKV. La sortie conserve le format et la qualité d'origine."
+            "title": "Compatible avec Tous les Formats Vidéo",
+            "description": "Prend en charge MP4, MOV, AVI, WebM, MKV et plus. La sortie conserve le même format et la même qualité."
           },
           "f5": {
             "icon": "Shield",
-            "title": "Audio-vidéo parfaitement synchronisé",
-            "description": "La rotation préserve la timeline audio. Pas de délai, pas de dérive, la vidéo finale reste synchronisée."
+            "title": "Audio Parfaitement Synchronisé",
+            "description": "La rotation préserve le timing audio. Pas de décalage, pas de dérive, pas de problème de synchronisation."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Rotation privée - Pas d'upload",
-            "description": "Traitement uniquement sur votre appareil. Les vidéos ne quittent jamais votre ordinateur. Confidentialité maximale."
+            "title": "Rotation Privée - Pas d'Envoi",
+            "description": "Traitement uniquement local avec WebCodecs. Vos vidéos ne quittent jamais votre ordinateur. Confidentialité maximale."
+          }
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Qu'est-ce que la Rotation Vidéo ?",
+            "content": "<p><strong>Rotation Vidéo</strong> fait tourner les fichiers vidéo par incréments de 90° à gauche ou à droite pour corriger les problèmes d'orientation. Corrigez les vidéos de téléphone de travers, les enregistrements à l'envers ou ajustez l'orientation pour des besoins d'affichage spécifiques — le tout dans votre navigateur avec aperçu en direct.</p>"
+          },
+          "howToUse": {
+            "title": "Comment Utiliser la Rotation Vidéo",
+            "content": "<ol><li>Téléchargez un fichier vidéo</li><li>Cliquez sur <strong>Rotation à gauche</strong> ou <strong>Rotation à droite</strong> pour voir la rotation en temps réel</li><li>Cliquez sur <strong>Tourner et Télécharger</strong> pour traiter et télécharger en une seule étape</li></ol>"
+          },
+          "features": {
+            "title": "Fonctionnalités Principales",
+            "content": "<ul><li><strong>Rotation Incrémentale</strong> : Clics gauche ou droite de 90°, cumulez les clics pour 180° ou 270°</li><li><strong>Aperçu en Direct</strong> : Regardez la vidéo tourner en temps réel avec une animation CSS fluide</li><li><strong>Formats Multiples</strong> : Prend en charge MP4, WebM, MKV, AVI et plus</li><li><strong>Propulsé par WebCodecs</strong> : Traitement vidéo rapide et accéléré par matériel dans le navigateur</li><li><strong>Téléchargement en Un Clic</strong> : Traitez et enregistrez en une seule étape, sans étapes intermédiaires</li><li><strong>Audio Préservé</strong> : La piste audio reste synchronisée après la rotation</li></ul>"
+          },
+          "useCases": {
+            "title": "Cas d'Utilisation Courants",
+            "content": "<ul><li><strong>Vidéos de Téléphone</strong> : Corrigez les vidéos enregistrées de travers sur téléphone</li><li><strong>Images de Caméra</strong> : Corrigez l'orientation des caméras montées en angle</li><li><strong>Enregistrements d'Écran</strong> : Tournez les enregistrements d'écran pour l'affichage vertical</li><li><strong>Réseaux Sociaux</strong> : Ajustez l'orientation selon les exigences de la plateforme (portrait/paysage)</li><li><strong>Présentations</strong> : Corrigez l'orientation des vidéos dans les diapositives</li></ul>"
+          },
+          "privacy": {
+            "title": "Traitement Vidéo Axé sur la Confidentialité",
+            "content": "<p>La rotation vidéo s'exécute <strong>entièrement dans votre navigateur</strong> avec l'API native <strong>WebCodecs</strong>.</p><ul><li>Vos vidéos <strong>ne quittent jamais votre appareil</strong></li><li>Pas de traitement serveur ni d'envois</li><li>Fonctionne <strong>hors ligne</strong> après le chargement de la page</li></ul>"
           }
         }
       },

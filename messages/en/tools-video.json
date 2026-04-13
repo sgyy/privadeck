@@ -160,18 +160,21 @@
       },
       "rotate": {
         "name": "Rotate Video",
-        "description": "Rotate videos by 90, 180, or 270 degrees.",
-        "metaTitle": "Rotate Video - Rotate Video Online Free",
-        "metaDescription": "Rotate videos by 90, 180, or 270 degrees. Fix video orientation easily. Free online tool.",
-        "keywords": "rotate video, flip video, video rotation, fix video orientation",
-        "rotate": "Rotate",
+        "description": "Rotate videos left or right with live preview. One click to process and download.",
+        "metaTitle": "Rotate Video Online Free - Fix Video Orientation",
+        "metaDescription": "Rotate videos left or right with instant preview. Process and download in one click. No upload, 100% private in your browser.",
+        "keywords": "rotate video, video rotation, fix video orientation, rotate video online, rotate mp4",
+        "rotateLeft": "Rotate Left",
+        "rotateRight": "Rotate Right",
+        "reset": "Reset",
+        "processAndDownload": "Rotate & Download",
         "processing": "Processing",
         "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
         "faq": {
           "q1": "What rotation angles are available?",
-          "a1": "You can rotate videos by 90° (clockwise), 180° (upside down), or 270° (counter-clockwise).",
+          "a1": "Each click rotates the video 90° counter-clockwise (left) or clockwise (right). You can click multiple times for 180° or 270° rotations.",
           "q2": "Does rotating affect video quality?",
-          "a2": "The video is re-encoded during rotation, but quality is maintained at a high level.",
+          "a2": "The video is re-encoded during rotation using WebCodecs. Quality is maintained at a high level, but some generation loss is normal with any re-encoding.",
           "q3": "Will my files be uploaded to a server?",
           "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
           "q4": "Can I use this tool offline?",
@@ -183,23 +186,23 @@
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Rotate Video Online 90°, 180°, 270°",
-            "description": "Fix sideways iPhone videos or upside-down recordings instantly. Three rotation options with one click."
+            "title": "Instant Left or Right Rotation",
+            "description": "Click rotate left or right for 90° turns. Click multiple times for 180° or 270°. Simple and intuitive."
           },
           "f2": {
             "icon": "Zap",
-            "title": "Fix Video Orientation Free",
-            "description": "No software needed. Upload your video, pick an angle, download fixed version in seconds."
+            "title": "Process & Download in One Click",
+            "description": "One button handles everything. Click Rotate & Download and the processed video saves directly to your device."
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "Preview Rotation Before Saving",
-            "description": "Watch the rotated video in browser first. Confirm it's right, then download. No guesswork."
+            "title": "Live Rotation Preview",
+            "description": "Watch your video rotate in real time with CSS animation. Confirm the orientation is right before processing."
           },
           "f4": {
             "icon": "FileVideo",
             "title": "Works with All Video Formats",
-            "description": "Rotate MP4, MOV, AVI, WebM, MKV files. Output keeps same format, same quality as input."
+            "description": "Supports MP4, MOV, AVI, WebM, MKV and more. Output keeps the same format and quality."
           },
           "f5": {
             "icon": "Shield",
@@ -209,21 +212,21 @@
           "f6": {
             "icon": "MonitorDown",
             "title": "Private Rotation - No Upload",
-            "description": "Processing happens on your device only. Your videos never leave your computer. Maximum privacy."
+            "description": "Processing happens on your device only using WebCodecs. Your videos never leave your computer. Maximum privacy."
           }
         },
         "seoContent": {
           "intro": {
             "title": "What is Rotate Video?",
-            "content": "<p><strong>Rotate Video</strong> rotates video files by 90°, 180°, or 270° to fix orientation issues. Correct sideways phone videos, fix upside-down recordings, or adjust orientation for specific display needs.</p>"
+            "content": "<p><strong>Rotate Video</strong> rotates video files left or right by 90° increments to fix orientation issues. Correct sideways phone videos, fix upside-down recordings, or adjust orientation for specific display needs — all in your browser with live preview.</p>"
           },
           "howToUse": {
             "title": "How to Use Rotate Video",
-            "content": "<ol><li>Upload a video file</li><li>Select the rotation angle: <strong>90°</strong>, <strong>180°</strong>, or <strong>270°</strong></li><li>Click <strong>Rotate</strong> to process</li><li>Download the rotated video</li></ol>"
+            "content": "<ol><li>Upload a video file</li><li>Click <strong>Rotate Left</strong> or <strong>Rotate Right</strong> to preview the rotation in real time</li><li>Click <strong>Rotate &amp; Download</strong> to process and download in one step</li></ol>"
           },
           "features": {
             "title": "Key Features",
-            "content": "<ul><li><strong>Three Angles</strong>: Rotate by 90° (clockwise), 180°, or 270° (counter-clockwise)</li><li><strong>Video Preview</strong>: See the video before and after rotation</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, and AVI</li><li><strong>Powered by FFmpeg.wasm</strong>: Professional video processing in the browser</li><li><strong>Quality Output</strong>: High-quality rotation with FFmpeg encoding</li><li><strong>Audio Preserved</strong>: Audio track remains synchronized after rotation</li></ul>"
+            "content": "<ul><li><strong>Incremental Rotation</strong>: Click left or right for 90° turns, stack clicks for 180° or 270°</li><li><strong>Live Preview</strong>: Watch the video rotate in real time with smooth CSS animation</li><li><strong>Multiple Formats</strong>: Supports MP4, WebM, MKV, AVI, and more</li><li><strong>Powered by WebCodecs</strong>: Fast, hardware-accelerated processing in the browser</li><li><strong>One-Click Download</strong>: Process and save in a single step — no intermediate steps</li><li><strong>Audio Preserved</strong>: Audio track remains synchronized after rotation</li></ul>"
           },
           "useCases": {
             "title": "Common Use Cases",
@@ -231,7 +234,7 @@
           },
           "privacy": {
             "title": "Privacy-First Video Processing",
-            "content": "<p>Video rotation runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+            "content": "<p>Video rotation runs <strong>entirely in your browser</strong> using the native <strong>WebCodecs API</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after the page is loaded</li></ul>"
           }
         }
       },

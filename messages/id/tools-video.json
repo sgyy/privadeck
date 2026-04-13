@@ -160,78 +160,81 @@
       },
       "rotate": {
         "name": "Putar Video",
-        "description": "Putar video sebesar 90, 180, atau 270 derajat.",
-        "metaTitle": "Putar Video - Putar Video Online Gratis",
-        "metaDescription": "Putar video sebesar 90, 180, atau 270 derajat. Perbaiki orientasi video dengan mudah. Alat online gratis.",
-        "keywords": "putar video, balik video, rotasi video, perbaiki orientasi video",
-        "rotate": "Putar",
+        "description": "Putar video ke kiri atau kanan dengan pratinjau langsung. Satu klik untuk memproses dan mengunduh.",
+        "metaTitle": "Putar Video Online Gratis - Perbaiki Orientasi Video",
+        "metaDescription": "Putar video ke kiri atau kanan dengan pratinjau instan. Proses dan unduh dalam satu klik. Tanpa unggahan, 100% pribadi di browser.",
+        "keywords": "putar video, putar video online, perbaiki orientasi video, putar mp4, orientasi video",
+        "rotateLeft": "Putar kiri",
+        "rotateRight": "Putar kanan",
+        "reset": "Reset",
+        "processAndDownload": "Putar & Unduh",
         "processing": "Memproses",
-        "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Silakan gunakan browser modern dengan HTTPS.",
+        "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Gunakan browser modern dengan HTTPS.",
         "faq": {
-          "q1": "Sudut rotasi apa yang tersedia?",
-          "a1": "Anda dapat memutar video sebesar 90° (searah jarum jam), 180° (terbalik), atau 270° (berlawanan jarum jam).",
-          "q2": "Apakah memutar memengaruhi kualitas video?",
-          "a2": "Video di-encode ulang selama rotasi, tetapi kualitas dipertahankan pada level tinggi.",
+          "q1": "Sudut putar apa saja yang tersedia?",
+          "a1": "Setiap klik memutar video 90° (kiri atau kanan). Anda dapat klik beberapa kali untuk rotasi 180° atau 270°.",
+          "q2": "Apakah rotasi memengaruhi kualitas video?",
+          "a2": "Video dienkode ulang dengan WebCodecs selama rotasi. Kualitas tetap tinggi, tetapi setiap enkoding ulang menyebabkan penurunan kualitas ringan.",
           "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
-          "q5": "Apakah ada batasan ukuran file?",
-          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
-        },
-        "seoContent": {
-          "intro": {
-            "title": "Apa itu Rotate Video?",
-            "content": "<p><strong>Rotate Video</strong> memutar file video sebesar 90°, 180°, atau 270° untuk memperbaiki masalah orientasi. Perbaiki video ponsel yang terjungkirbalik, rekaman yang terbalik, atau sesuaikan orientasi untuk kebutuhan tampilan tertentu.</p>"
-          },
-          "howToUse": {
-            "title": "Cara Menggunakan Rotate Video",
-            "content": "<ol><li>Unggah file video</li><li>Pilih sudut rotasi: <strong>90°</strong>, <strong>180°</strong>, atau <strong>270°</strong></li><li>Klik <strong>Putar</strong> untuk memproses</li><li>Unduh video yang sudah diputar</li></ol>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Tiga Sudut</strong>: Putar 90° (searah jarum jam), 180°, atau 270° (berlawanan jarum jam)</li><li><strong>Pratinjau Video</strong>: Lihat video sebelum dan sesudah rotasi</li><li><strong>Berbagai Format</strong>: Mendukung MP4, WebM, MKV, dan AVI</li><li><strong>Ditenagai FFmpeg.wasm</strong>: Pemrosesan video profesional di browser</li><li><strong>Output Berkualitas</strong>: Rotasi berkualitas tinggi dengan encoding FFmpeg</li><li><strong>Audio Terjaga</strong>: Trek audio tetap tersinkronisasi setelah rotasi</li></ul>"
-          },
-          "useCases": {
-            "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Video Ponsel</strong>: Perbaiki video menyamping yang direkam di ponsel</li><li><strong>Rekaman Kamera</strong>: Koreksi orientasi dari kamera yang dipasang dengan sudut tertentu</li><li><strong>Rekaman Layar</strong>: Putar rekaman layar untuk tampilan vertikal</li><li><strong>Media Sosial</strong>: Sesuaikan orientasi untuk persyaratan platform (potret/lansekap)</li><li><strong>Presentasi</strong>: Perbaiki orientasi video untuk digunakan dalam slide</li></ul>"
-          },
-          "privacy": {
-            "title": "Mengutamakan Privasi - Pemrosesan Video",
-            "content": "<p>Rotasi video berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>FFmpeg.wasm</strong>.</p><ul><li>File video Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak ada pemrosesan server atau unggahan</li><li>Berfungsi <strong>offline</strong> setelah inti FFmpeg dimuat</li></ul>"
-          }
+          "q4": "Bisakah saya menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q5": "Apakah ada batas ukuran file?",
+          "a5": "Tidak ada batasan dari server. Ukuran file maksimum tergantung pada memori perangkat yang tersedia dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file ratusan MB tanpa masalah."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Putar Video Online 90°, 180°, 270°",
-            "description": "Perbaiki video iPhone menyamping atau rekaman terbalik secara instan. Tiga opsi rotasi dengan satu klik."
+            "title": "Kiri atau kanan, sederhana dan intuitif",
+            "description": "Klik kiri atau kanan untuk rotasi 90°. Klik beberapa kali untuk 180° atau 270°."
           },
           "f2": {
             "icon": "Zap",
-            "title": "Perbaiki Orientasi Video Gratis",
-            "description": "Tanpa software. Unggah video Anda, pilih sudut, unduh versi yang diperbaiki dalam hitungan detik."
+            "title": "Proses & Unduh Satu Klik",
+            "description": "Satu tombol melakukan semuanya. Klik Putar & Unduh dan video yang diproses langsung disimpan ke perangkat Anda."
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "Pratinjau Rotasi Sebelum Menyimpan",
-            "description": "Tonton video yang diputar di browser dulu. Pastikan benar, lalu unduh. Tanpa tebakan."
+            "title": "Pratinjau Rotasi Langsung",
+            "description": "Lihat video berputar secara real-time dengan animasi CSS. Konfirmasi orientasi sebelum memproses."
           },
           "f4": {
             "icon": "FileVideo",
             "title": "Berfungsi dengan Semua Format Video",
-            "description": "Putar file MP4, MOV, AVI, WebM, MKV. Output mempertahankan format dan kualitas sama seperti input."
+            "description": "Mendukung MP4, MOV, AVI, WebM, MKV, dan lainnya. Output mempertahankan format dan kualitas yang sama."
           },
           "f5": {
             "icon": "Shield",
-            "title": "Audio Tetap Tersinkronisasi Sempurna",
-            "description": "Rotasi mempertahankan waktu audio. Tanpa jeda, tanpa geser, tanpa masalah sinkronisasi di video akhir Anda."
+            "title": "Audio Tersinkronisasi Sempurna",
+            "description": "Rotasi mempertahankan waktu audio. Tidak ada penundaan, tidak ada drift, tidak ada masalah sinkronisasi."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Rotasi Privat - Tanpa Unggah",
-            "description": "Pemrosesan hanya terjadi di perangkat Anda. Video Anda tidak pernah meninggalkan komputer Anda. Privasi maksimal."
+            "title": "Rotasi Pribadi - Tanpa Unggahan",
+            "description": "Hanya pemrosesan lokal dengan WebCodecs. Video Anda tidak pernah meninggalkan komputer. Privasi maksimum."
+          }
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Apa itu Putar Video?",
+            "content": "<p><strong>Putar Video</strong> memutar file video dalam langkah 90° ke kiri atau kanan untuk memperbaiki masalah orientasi. Perbaiki video ponsel yang direkam miring, rekaman terbalik, atau sesuaikan orientasi untuk kebutuhan tampilan tertentu — semuanya di browser dengan pratinjau langsung.</p>"
+          },
+          "howToUse": {
+            "title": "Cara Menggunakan Putar Video",
+            "content": "<ol><li>Unggah file video</li><li>Klik <strong>Putar kiri</strong> atau <strong>Putar kanan</strong> untuk melihat rotasi secara real-time</li><li>Klik <strong>Putar & Unduh</strong> untuk memproses dan mengunduh dalam satu langkah</li></ol>"
+          },
+          "features": {
+            "title": "Fitur Utama",
+            "content": "<ul><li><strong>Rotasi Bertahap</strong>: Klik kiri atau kanan 90°, kumulatif klik untuk 180° atau 270°</li><li><strong>Pratinjau Langsung</strong>: Lihat video berputar secara real-time dengan animasi CSS yang halus</li><li><strong>Multi Format</strong>: Mendukung MP4, WebM, MKV, AVI, dan lainnya</li><li><strong>Didukung WebCodecs</strong>: Pemrosesan video cepat dengan akselerasi perangkat keras di browser</li><li><strong>Unduhan Satu Klik</strong>: Proses dan simpan dalam satu langkah, tanpa langkah perantara</li><li><strong>Audio Terjaga</strong>: Trek audio tetap tersinkronisasi setelah rotasi</li></ul>"
+          },
+          "useCases": {
+            "title": "Kasus Penggunaan Umum",
+            "content": "<ul><li><strong>Video Ponsel</strong>: Perbaiki video yang direkam miring di ponsel</li><li><strong>Materi Kamera</strong>: Perbaiki orientasi dari kamera yang dipasang miring</li><li><strong>Rekaman Layar</strong>: Putar rekaman layar untuk tampilan potret</li><li><strong>Media Sosial</strong>: Sesuaikan orientasi dengan persyaratan platform (potret/lansekap)</li><li><strong>Presentasi</strong>: Perbaiki orientasi video di slide</li></ul>"
+          },
+          "privacy": {
+            "title": "Pemrosesan Video Mengutamakan Privasi",
+            "content": "<p>Rotasi video dijalankan <strong>sepenuhnya di browser Anda</strong> menggunakan API asli <strong>WebCodecs</strong>.</p><ul><li>Video Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak ada pemrosesan server atau unggahan</li><li>Berfungsi <strong>offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },

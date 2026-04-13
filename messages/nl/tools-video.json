@@ -159,79 +159,82 @@
         }
       },
       "rotate": {
-        "name": "Video roteren",
-        "description": "Roteer video's met 90, 180 of 270 graden.",
-        "metaTitle": "Video roteren - Roteer video online gratis",
-        "metaDescription": "Roteer video's met 90, 180 of 270 graden. Corrigeer eenvoudig de video-oriëntatie. Gratis online tool.",
-        "keywords": "video roteren, video draaien, videorotatie, video-oriëntatie corrigeren",
-        "rotate": "Roteren",
-        "processing": "Verwerken",
+        "name": "Video Draaien",
+        "description": "Draai video's naar links of rechts met live voorbeeld. Eén klik om te verwerken en downloaden.",
+        "metaTitle": "Video Online Draaien Gratis - Video-oriëntatie Corrigeren",
+        "metaDescription": "Draai video's naar links of rechts met direct voorbeeld. Verwerk en download in één klik. Geen upload, 100% privé in je browser.",
+        "keywords": "video draaien, video draaien online, video-oriëntatie corrigeren, mp4 draaien, video-oriëntatie",
+        "rotateLeft": "Naar links draaien",
+        "rotateRight": "Naar rechts draaien",
+        "reset": "Herstellen",
+        "processAndDownload": "Draaien & Downloaden",
+        "processing": "Bezig met verwerken",
         "unsupported": "Deze tool vereist SharedArrayBuffer-ondersteuning. Gebruik een moderne browser met HTTPS.",
         "faq": {
-          "q1": "Welke rotatiehoeken zijn beschikbaar?",
-          "a1": "Je kunt video's roteren met 90° (rechtsom), 180° (ondersteboven) of 270° (linksom).",
-          "q2": "Heeft roteren invloed op de videokwaliteit?",
-          "a2": "De video wordt opnieuw gecodeerd tijdens het roteren, maar de kwaliteit wordt op hoog niveau gehouden.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
+          "q1": "Welke draaihoeken zijn beschikbaar?",
+          "a1": "Elke klik draait de video 90° (links of rechts). Je kunt meerdere keren klikken voor 180°- of 270°-draaiingen.",
+          "q2": "Beïnvloedt draaien de videokwaliteit?",
+          "a2": "De video wordt met WebCodecs opnieuw gecodeerd tijdens het draaien. De kwaliteit blijft hoog, maar elke hercodering brengt een licht kwaliteitsverlies met zich mee.",
+          "q3": "Worden mijn bestanden geüpload naar een server?",
+          "a3": "Nee. Alle verwerking gebeurt volledig in je browser. Je gegevens verlaten nooit je apparaat — er wordt niets geüpload naar een server.",
           "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
-          "q5": "Zijn er bestandsgroottebeperkingen?",
-          "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
-        },
-        "seoContent": {
-          "intro": {
-            "title": "Wat is Video Roteren?",
-            "content": "<p><strong>Video Roteren</strong> roteert videobestanden met 90°, 180° of 270° om oriëntatieproblemen op te lossen. Corrigeer zijwaarts opgenomen telefoonvideo's, fix ondersteboven opnames of pas de oriëntatie aan voor specifieke weergavebehoeften.</p>"
-          },
-          "howToUse": {
-            "title": "Hoe gebruik je Video Roteren",
-            "content": "<ol><li>Upload een videobestand</li><li>Selecteer de rotatiehoek: <strong>90°</strong>, <strong>180°</strong> of <strong>270°</strong></li><li>Klik op <strong>Roteren</strong> om te verwerken</li><li>Download de geroteerde video</li></ol>"
-          },
-          "features": {
-            "title": "Belangrijkste functies",
-            "content": "<ul><li><strong>Drie hoeken</strong>: Roteer met 90° (rechtsom), 180° (ondersteboven) of 270° (linksom)</li><li><strong>Videovoorbeeld</strong>: Zie de video voor en na rotatie</li><li><strong>Meerdere formaten</strong>: Ondersteunt MP4, WebM, MKV en AVI</li><li><strong>Aangedreven door FFmpeg.wasm</strong>: Professionele videoverwerking in de browser</li><li><strong>Kwaliteitsuitvoer</strong>: Hoogwaardige rotatie met FFmpeg-codering</li><li><strong>Audio behouden</strong>: Audiotrack blijft gesynchroniseerd na rotatie</li></ul>"
-          },
-          "useCases": {
-            "title": "Veelvoorkomende gebruiksmogelijkheden",
-            "content": "<ul><li><strong>Telefoonvideo's</strong>: Corrigeer zijwaarts opgenomen video's van mobiele telefoons</li><li><strong>Camerabeelden</strong>: Corrigeer oriëntatie van camera's die onder een hoek zijn gemonteerd</li><li><strong>Schermopnames</strong>: Roteer schermopnames voor verticale weergave</li><li><strong>Sociale media</strong>: Pas oriëntatie aan voor platformvereisten (portret/landschap)</li><li><strong>Presentaties</strong>: Corrigeer video-oriëntatie voor gebruik in slides</li></ul>"
-          },
-          "privacy": {
-            "title": "Privacy-First videobewerking",
-            "content": "<p>Videorotatie draait <strong>volledig in je browser</strong> met <strong>FFmpeg.wasm</strong>.</p><ul><li>Je video's <strong>verlaten nooit je apparaat</strong></li><li>Geen serververwerking of uploads</li><li>Werkt <strong>offline</strong> nadat FFmpeg-core is geladen</li></ul>"
-          }
+          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeer je PrivaDeck als PWA via je browser.",
+          "q5": "Zijn er limieten voor bestandsgrootte?",
+          "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van je apparaat en de mogelijkheden van je browser. De meeste moderne apparaten kunnen bestanden van enkele honderden MB zonder problemen aan."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Roteer video online 90°, 180°, 270°",
-            "description": "Fix sideways iPhone videos or upside-down recordings instantly. Three rotation options with one click."
+            "title": "Links of rechts, simpel en intuïtief",
+            "description": "Klik links of rechts voor 90°-draaiingen. Meerdere klikken voor 180° of 270°."
           },
           "f2": {
             "icon": "Zap",
-            "title": "Gratis video-oriëntatie corrigeren",
-            "description": "No software needed. Upload your video, pick an angle, download fixed version in seconds."
+            "title": "Verwerken & Downloaden in Eén Klik",
+            "description": "Eén knop doet alles. Klik op Draaien & Downloaden en de verwerkte video wordt direct opgeslagen."
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "Bekijk rotatie voor opslaan",
-            "description": "Watch the rotated video in browser first. Confirm it's right, then download. No guesswork."
+            "title": "Live Draaivoorbeeld",
+            "description": "Bekijk je video draaien in realtime met CSS-animatie. Bevestig de oriëntatie vóór verwerking."
           },
           "f4": {
             "icon": "FileVideo",
-            "title": "Werkt met alle videotypes",
-            "description": "Rotate MP4, MOV, AVI, WebM, MKV files. Output keeps same format, same quality as input."
+            "title": "Werkt met Alle Videoformaten",
+            "description": "Ondersteunt MP4, MOV, AVI, WebM, MKV en meer. Uitvoer behoudt hetzelfde formaat en kwaliteit."
           },
           "f5": {
             "icon": "Shield",
-            "title": "Audio blijft perfect gesynchroniseerd",
-            "description": "Rotation preserves audio timing. No lag, no drift, no sync issues in your final video."
+            "title": "Audio Perfect Gesynchroniseerd",
+            "description": "Draaien behoudt de audio-timing. Geen vertraging, geen drift, geen synchronisatieproblemen."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Privé rotatie — geen upload",
-            "description": "Processing happens on your device only. Your videos never leave your computer. Maximum privacy."
+            "title": "Privé Draaien - Geen Upload",
+            "description": "Alleen lokale verwerking met WebCodecs. Je video's verlaten nooit je computer. Maximale privacy."
+          }
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Wat is Video Draaien?",
+            "content": "<p><strong>Video Draaien</strong> draait videobestanden in stappen van 90° naar links of rechts om oriëntatieproblemen te corrigeren. Corrigeer zijwaartse telefoonvideo's, ondersteboven opnames of pas de oriëntatie aan voor specifieke weergavebehoeften — alles in je browser met live voorbeeld.</p>"
+          },
+          "howToUse": {
+            "title": "Hoe Video Draaien te Gebruiken",
+            "content": "<ol><li>Upload een videobestand</li><li>Klik op <strong>Naar links draaien</strong> of <strong>Naar rechts draaien</strong> om de draaiing in realtime te bekijken</li><li>Klik op <strong>Draaien &amp; Downloaden</strong> om in één stap te verwerken en downloaden</li></ol>"
+          },
+          "features": {
+            "title": "Belangrijkste Functies",
+            "content": "<ul><li><strong>Incrementeel Draaien</strong>: Klik links of rechts 90°, stapel klikken voor 180° of 270°</li><li><strong>Live Voorbeeld</strong>: Bekijk de video draaien in realtime met soepele CSS-animatie</li><li><strong>Meerdere Formaten</strong>: Ondersteunt MP4, WebM, MKV, AVI en meer</li><li><strong>WebCodecs Aangedreven</strong>: Snelle, hardware-versnelde videoverwerking in de browser</li><li><strong>Eén-Klik Download</strong>: Verwerk en bewaar in één stap, geen tussenstappen</li><li><strong>Audio Behouden</strong>: Audiospoor blijft gesynchroniseerd na het draaien</li></ul>"
+          },
+          "useCases": {
+            "title": "Veelvoorkomende Toepassingen",
+            "content": "<ul><li><strong>Telefoonvideo's</strong>: Corrigeer video's die zijwaarts zijn opgenomen op telefoons</li><li><strong>Cameramateriaal</strong>: Corrigeer oriëntatie van camera's die onder een hoek zijn gemonteerd</li><li><strong>Schermopnames</strong>: Draai schermopnames voor verticale weergave</li><li><strong>Sociale Media</strong>: Pas oriëntatie aan aan platformvereisten (portret/landschap)</li><li><strong>Presentaties</strong>: Corrigeer video-oriëntatie in dia's</li></ul>"
+          },
+          "privacy": {
+            "title": "Privégerichte Videoverwerking",
+            "content": "<p>Video draaien wordt <strong>volledig in je browser</strong> uitgevoerd met de native <strong>WebCodecs API</strong>.</p><ul><li>Je video's <strong>verlaten nooit je apparaat</strong></li><li>Geen serververwerking of uploads</li><li>Werkt <strong>offline</strong> nadat de pagina is geladen</li></ul>"
           }
         }
       },

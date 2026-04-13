@@ -1,40 +1,29 @@
-import { execWithMount } from "@/lib/ffmpeg";
-import { isWebCodecsSupported, validateConversion, WebCodecsFallbackError, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
+import { isWebCodecsSupported, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
 
 export type RotateAngle = 90 | 180 | 270;
 
-const TRANSPOSE_MAP: Record<RotateAngle, string[]> = {
-  90: ["-vf", "transpose=1"],
-  180: ["-vf", "transpose=1,transpose=1"],
-  270: ["-vf", "transpose=2"],
-};
-
+/**
+ * Rotate video using mediabunny (WebCodecs-based).
+ * Only supports rotation (90/180/270), not flip.
+ * Requires WebCodecs API support in browser.
+ */
 export async function rotateVideo(
   file: File,
   angle: RotateAngle,
   onProgress?: (progress: number) => void,
 ): Promise<Blob> {
-  if (isWebCodecsSupported()) {
-    try {
-      return await rotateWithWebCodecs(file, angle, onProgress);
-    } catch (e) {
-      if (e instanceof WebCodecsFallbackError) {
-        // Unsupported video codec detected (e.g., H.265/HEVC, VP9, AV1)
-        // Do not fall back to FFmpeg due to poor performance
-        if (e.isVideoCodecIssue) {
-          throw new UnsupportedVideoCodecError();
-        }
-        // For other codec issues (e.g., audio), still fall back to FFmpeg
-        console.warn("WebCodecs unavailable for this video, falling back to FFmpeg:", e.message);
-      } else {
-        throw e;
-      }
-    }
+  if (!isWebCodecsSupported()) {
+    throw new Error("WebCodecs is not supported in this browser");
   }
-  return rotateWithFFmpeg(file, angle, onProgress);
+
+  return rotateWithMediabunny(file, angle, onProgress);
 }
 
-async function rotateWithWebCodecs(
+/**
+ * Transform video rotation using mediabunny's WebCodecs-based pipeline.
+ * Hardware-accelerated and runs entirely in the browser.
+ */
+async function rotateWithMediabunny(
   file: File,
   angle: RotateAngle,
   onProgress?: (progress: number) => void,
@@ -71,7 +60,26 @@ async function rotateWithWebCodecs(
     showWarnings: false,
   });
 
-  validateConversion(conversion);
+  // Validate conversion tracks
+  const codecReasons = new Set([
+    "undecodable_source_codec",
+    "unknown_source_codec",
+    "no_encodable_target_codec",
+  ]);
+
+  const discardedCodecTracks = conversion.discardedTracks?.filter((d: { reason: string }) =>
+    codecReasons.has(d.reason),
+  ) || [];
+
+  if (discardedCodecTracks.length > 0) {
+    const hasVideoCodecIssue = discardedCodecTracks.some(
+      (d: { track: { type: string }; reason: string }) => d.track.type === "video" && d.reason === "undecodable_source_codec",
+    );
+
+    if (hasVideoCodecIssue) {
+      throw new UnsupportedVideoCodecError();
+    }
+  }
 
   if (onProgress) {
     conversion.onProgress = (p: number) => {
@@ -82,20 +90,4 @@ async function rotateWithWebCodecs(
   await conversion.execute();
   if (!target.buffer) throw new Error("Mediabunny produced no output");
   return new Blob([target.buffer], { type: file.type || "video/mp4" });
-}
-
-async function rotateWithFFmpeg(
-  file: File,
-  angle: RotateAngle,
-  onProgress?: (progress: number) => void,
-): Promise<Blob> {
-  const outputName = "rotated_out.mp4";
-
-  const data = await execWithMount(file, (inputPath) => [
-    "-i", inputPath,
-    ...TRANSPOSE_MAP[angle],
-    "-c:a", "copy",
-    outputName,
-  ], outputName, onProgress);
-  return new Blob([data as BlobPart], { type: file.type || "video/mp4" });
 }

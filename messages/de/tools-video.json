@@ -160,78 +160,81 @@
       },
       "rotate": {
         "name": "Video drehen",
-        "description": "Videos um 90, 180 oder 270 Grad drehen.",
-        "metaTitle": "Video drehen - Video kostenlos online drehen",
-        "metaDescription": "Videos um 90, 180 oder 270 Grad drehen. Videoausrichtung einfach korrigieren. Kostenloses Online-Tool.",
-        "keywords": "Video drehen, Video spiegeln, Video-Rotation, Videoausrichtung korrigieren",
-        "rotate": "Drehen",
+        "description": "Videos nach links oder rechts drehen, mit Live-Vorschau. Ein Klick zum Verarbeiten und Herunterladen.",
+        "metaTitle": "Video online drehen kostenlos - Videoausrichtung korrigieren",
+        "metaDescription": "Videos nach links oder rechts drehen, mit Sofortvorschau. Ein Klick zum Verarbeiten und Herunterladen. Kein Upload, 100 % privat im Browser.",
+        "keywords": "video drehen, video drehen online, videoausrichtung korrigieren, mp4 drehen, video drehung",
+        "rotateLeft": "Nach links drehen",
+        "rotateRight": "Nach rechts drehen",
+        "reset": "Zurücksetzen",
+        "processAndDownload": "Drehen & Herunterladen",
         "processing": "Wird verarbeitet",
         "unsupported": "Dieses Tool erfordert SharedArrayBuffer-Unterstützung. Bitte verwenden Sie einen modernen Browser mit HTTPS.",
         "faq": {
           "q1": "Welche Drehwinkel sind verfügbar?",
-          "a1": "Sie können Videos um 90° (im Uhrzeigersinn), 180° (auf den Kopf) oder 270° (gegen den Uhrzeigersinn) drehen.",
-          "q2": "Beeinflusst das Drehen die Videoqualität?",
-          "a2": "Das Video wird bei der Drehung neu kodiert, aber die Qualität wird auf hohem Niveau beibehalten.",
+          "a1": "Jeder Klick dreht das Video um 90° (links oder rechts). Mehrfaches Klicken ermöglicht 180°- oder 270°-Drehungen.",
+          "q2": "Beeinträchtigt das Drehen die Videoqualität?",
+          "a2": "Das Video wird beim Drehen mit WebCodecs neu codiert. Die Qualität bleibt hoch, aber jede Neucodierung bringt leichte Qualitätsverluste mit sich.",
           "q3": "Werden meine Dateien auf einen Server hochgeladen?",
-          "a3": "Nein. Die gesamte Verarbeitung erfolgt vollständig in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät — nichts wird auf einen Server hochgeladen.",
-          "q4": "Kann ich dieses Tool offline nutzen?",
-          "a4": "Ja. Sobald die Seite geladen ist, funktioniert das Tool vollständig offline. Für das beste Erlebnis installieren Sie PrivaDeck als PWA in Ihrem Browser.",
-          "q5": "Gibt es Dateigrößenbeschränkungen?",
-          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Arbeitsspeicher Ihres Geräts und den Browser-Möglichkeiten ab. Die meisten modernen Geräte verarbeiten Dateien bis zu mehreren hundert MB problemlos."
-        },
-        "seoContent": {
-          "intro": {
-            "title": "Was ist Video drehen?",
-            "content": "<p><strong>Video drehen</strong> dreht Videodateien um 90°, 180° oder 270°, um Ausrichtungsprobleme zu beheben. Schief aufgenommene Handy-Videos korrigieren, kopfstehende Aufnahmen beheben oder Ausrichtung für spezifische Anzeigeanforderungen anpassen.</p>"
-          },
-          "howToUse": {
-            "title": "So nutzen Sie Video drehen",
-            "content": "<ol><li>Eine Videodatei hochladen</li><li>Den Drehwinkel auswählen: <strong>90°</strong>, <strong>180°</strong> oder <strong>270°</strong></li><li>Klicken Sie auf <strong>Drehen</strong>, um zu verarbeiten</li><li>Das gedrehte Video herunterladen</li></ol>"
-          },
-          "features": {
-            "title": "Wichtige Funktionen",
-            "content": "<ul><li><strong>Drei Winkel</strong>: Drehen um 90° (im Uhrzeigersinn), 180° oder 270° (gegen den Uhrzeigersinn)</li><li><strong>Videovorschau</strong>: Video vor und nach der Drehung ansehen</li><li><strong>Mehrere Formate</strong>: Unterstützt MP4, WebM, MKV und AVI</li><li><strong>Basiert auf FFmpeg.wasm</strong>: Professionelle Videoverarbeitung im Browser</li><li><strong>Hohe Ausgabequalität</strong>: Hochwertige Drehung mit FFmpeg-Kodierung</li><li><strong>Audio erhalten</strong>: Audiospur bleibt nach der Drehung synchronisiert</li></ul>"
-          },
-          "useCases": {
-            "title": "Typische Anwendungsfälle",
-            "content": "<ul><li><strong>Handy-Videos</strong>: Schief aufgenommene Videos von Mobiltelefonen korrigieren</li><li><strong>Kameraaufnahmen</strong>: Ausrichtung von schräg montierten Kameras korrigieren</li><li><strong>Bildschirmaufnahmen</strong>: Bildschirmaufnahmen für vertikale Anzeige drehen</li><li><strong>Social Media</strong>: Ausrichtung für Plattformanforderungen anpassen (Hoch-/Querformat)</li><li><strong>Präsentationen</strong>: Videoausrichtung für die Verwendung in Folien korrigieren</li></ul>"
-          },
-          "privacy": {
-            "title": "Datenschutz bei der Videoverarbeitung",
-            "content": "<p>Das Video-Drehen läuft <strong>vollständig in Ihrem Browser</strong> mit <strong>FFmpeg.wasm</strong>.</p><ul><li>Ihre Videos <strong>verlassen niemals Ihr Gerät</strong></li><li>Keine Server-Verarbeitung oder Uploads</li><li>Funktioniert <strong>offline</strong> nachdem der FFmpeg-Kern geladen ist</li></ul>"
-          }
+          "a3": "Nein. Die gesamte Verarbeitung erfolgt ausschließlich in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät — nichts wird auf einen Server hochgeladen.",
+          "q4": "Kann ich dieses Tool offline verwenden?",
+          "a4": "Ja. Sobald die Seite geladen ist, funktioniert das Tool vollständig offline. Für die beste Erfahrung installieren Sie PrivaDeck als PWA über Ihren Browser.",
+          "q5": "Gibt es Einschränkungen bei der Dateigröße?",
+          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Speicher Ihres Geräts und den Browserfähigkeiten ab. Die meisten modernen Geräte verarbeiten Dateien bis zu mehreren hundert MB problemlos."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Video online drehen 90°, 180°, 270°",
-            "description": "Korrigieren Sie sofort querformatige iPhone-Videos oder auf dem Kopf stehende Aufnahmen. Drei Drehwinkel mit einem Klick."
+            "title": "Links oder rechts drehen, einfach und intuitiv",
+            "description": "Klicken Sie nach links oder rechts für 90°-Drehungen. Mehrfaches Klicken für 180° oder 270°."
           },
           "f2": {
             "icon": "Zap",
-            "title": "Videoausrichtung kostenlos korrigieren",
-            "description": "Keine Software-Installation erforderlich. Video hochladen, Winkel wählen, in Sekunden korrigierte Version herunterladen."
+            "title": "Verarbeiten & Herunterladen in einem Klick",
+            "description": "Ein Button für alles. Klicken Sie auf 'Drehen & Herunterladen' und das verarbeitete Video wird direkt gespeichert."
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "Drehung vor dem Speichern in der Vorschau",
-            "description": "Sehen Sie sich das gedrehte Video zuerst im Browser an. Bestätigen Sie, dass es perfekt ist, dann herunterladen."
+            "title": "Live-Drehvorschau",
+            "description": "Sehen Sie die Video-Drehung in Echtzeit mit CSS-Animation. Bestätigen Sie die Ausrichtung vor der Verarbeitung."
           },
           "f4": {
             "icon": "FileVideo",
-            "title": "Alle Videoformate kompatibel",
-            "description": "Drehen Sie MP4, MOV, AVI, WebM, MKV Dateien. Ausgabe behält Originalformat und -qualität bei."
+            "title": "Funktioniert mit allen Videoformaten",
+            "description": "Unterstützt MP4, MOV, AVI, WebM, MKV und mehr. Ausgabe behält Format und Qualität."
           },
           "f5": {
             "icon": "Shield",
-            "title": "Audio-Video perfekt synchron",
-            "description": "Drehung bewahrt Audio-Zeitachse bei. Keine Verzögerung, kein Drift, endgültiges Video bleibt synchron."
+            "title": "Audio bleibt perfekt synchronisiert",
+            "description": "Drehung bewahrt Audio-Timing. Kein Lag, kein Drift, keine Synchronisationsprobleme."
           },
           "f6": {
             "icon": "MonitorDown",
-            "title": "Private Drehung - Kein Upload",
-            "description": "Verarbeitung nur auf Ihrem Gerät. Videos verlassen niemals Ihren Computer. Maximale Privatsphäre."
+            "title": "Privates Drehen - Kein Upload",
+            "description": "Verarbeitung nur lokal mit WebCodecs. Videos verlassen niemals Ihren Computer. Maximaler Datenschutz."
+          }
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Was ist Video drehen?",
+            "content": "<p><strong>Video drehen</strong> dreht Videodateien in 90°-Schritten nach links oder rechts, um Ausrichtungsprobleme zu beheben. Korrigieren Sie seitliche Handyvideos, kopfstehende Aufnahmen oder passen Sie die Ausrichtung für bestimmte Anzeigebedürfnisse an — alles im Browser mit Live-Vorschau.</p>"
+          },
+          "howToUse": {
+            "title": "So verwenden Sie Video drehen",
+            "content": "<ol><li>Laden Sie eine Videodatei hoch</li><li>Klicken Sie auf <strong>Nach links drehen</strong> oder <strong>Nach rechts drehen</strong>, um die Drehung in Echtzeit zu sehen</li><li>Klicken Sie auf <strong>Drehen &amp; Herunterladen</strong>, um in einem Schritt zu verarbeiten und herunterzuladen</li></ol>"
+          },
+          "features": {
+            "title": "Hauptfunktionen",
+            "content": "<ul><li><strong>Schrittweises Drehen</strong>: Links oder rechts 90° drehen, mehrfaches Klicken für 180° oder 270°</li><li><strong>Live-Vorschau</strong>: Video-Drehung in Echtzeit mit sanfter CSS-Animation ansehen</li><li><strong>Mehrere Formate</strong>: Unterstützt MP4, WebM, MKV, AVI und mehr</li><li><strong>WebCodecs-basiert</strong>: Schnelle, hardwarebeschleunigte Videoverarbeitung im Browser</li><li><strong>Ein-Klick-Download</strong>: Verarbeitung und Speichern in einem Schritt — keine Zwischenschritte</li><li><strong>Audio erhalten</strong>: Audiospur bleibt nach der Drehung synchronisiert</li></ul>"
+          },
+          "useCases": {
+            "title": "Häufige Anwendungsfälle",
+            "content": "<ul><li><strong>Handyvideos</strong>: Seitliche Handyvideos korrigieren</li><li><strong>Kameraaufnahmen</strong>: Ausrichtung von schräg montierten Kameras korrigieren</li><li><strong>Bildschirmaufnahmen</strong>: Bildschirmaufnahmen für Hochformat drehen</li><li><strong>Social Media</strong>: Ausrichtung an Plattformanforderungen anpassen (Hochformat/Querformat)</li><li><strong>Präsentationen</strong>: Videoausrichtung in Folien korrigieren</li></ul>"
+          },
+          "privacy": {
+            "title": "Datenschutzorientierte Videoverarbeitung",
+            "content": "<p>Die Videodrehung läuft <strong>vollständig in Ihrem Browser</strong> mit der nativen <strong>WebCodecs API</strong>.</p><ul><li>Ihre Videos <strong>verlassen niemals Ihr Gerät</strong></li><li>Keine Serververarbeitung oder Uploads</li><li>Funktioniert <strong>offline</strong>, nachdem die Seite geladen ist</li></ul>"
           }
         }
       },

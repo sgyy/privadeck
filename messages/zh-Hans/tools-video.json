@@ -160,18 +160,21 @@
       },
       "rotate": {
         "name": "视频旋转",
-        "description": "将视频旋转 90、180 或 270 度。",
-        "metaTitle": "视频旋转 - 免费在线旋转视频",
-        "metaDescription": "将视频旋转 90、180 或 270 度。轻松修复视频方向。免费在线工具。",
-        "keywords": "视频旋转, 翻转视频, 旋转视频, 修复视频方向",
-        "rotate": "旋转",
+        "description": "左右旋转视频，实时预览。一键处理并下载。",
+        "metaTitle": "免费在线旋转视频 - 修复视频方向",
+        "metaDescription": "左右旋转视频，即时预览效果。一键处理并下载。无需上传，100% 在浏览器中完成。",
+        "keywords": "视频旋转, 旋转视频在线, 修复视频方向, 旋转mp4, 视频方向矫正",
+        "rotateLeft": "左旋",
+        "rotateRight": "右旋",
+        "reset": "重置",
+        "processAndDownload": "旋转并下载",
         "processing": "处理中",
         "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
         "faq": {
           "q1": "有哪些旋转角度可选？",
-          "a1": "可以将视频旋转 90°（顺时针）、180°（上下翻转）或 270°（逆时针）。",
+          "a1": "每次点击将视频旋转 90°（左旋或右旋）。可多次点击实现 180° 或 270° 旋转。",
           "q2": "旋转会影响视频质量吗？",
-          "a2": "旋转时视频会重新编码，但质量保持在较高水平。",
+          "a2": "旋转时视频会使用 WebCodecs 重新编码，质量保持在较高水平，但任何重新编码都会有轻微的质量损失。",
           "q3": "我的文件会上传到服务器吗？",
           "a3": "不会。所有处理完全在您的浏览器中完成，您的数据绝不离开设备，不会上传到任何服务器。",
           "q4": "这个工具能离线使用吗？",
@@ -179,49 +182,27 @@
           "q5": "文件大小有限制吗？",
           "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
         },
-        "seoContent": {
-          "intro": {
-            "title": "什么是旋转视频工具？",
-            "content": "<p><strong>旋转视频</strong>将视频文件旋转 90°、180° 或 270°，修复方向问题。修正侧向的手机视频、倒立录制或特定显示需求的方向。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用旋转视频",
-            "content": "<ol><li>上传视频文件</li><li>选择旋转角度：<strong>90°</strong>、<strong>180°</strong> 或 <strong>270°</strong></li><li>点击<strong>旋转</strong>处理</li><li>下载旋转后的视频</li></ol>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>三个角度</strong>：顺时针 90°、倒立 180° 或逆时针 270°</li><li><strong>视频预览</strong>：旋转前后查看视频</li><li><strong>多种格式</strong>：支持 MP4、WebM、MKV 和 AVI</li><li><strong>采用 FFmpeg.wasm</strong>：专业视频处理在浏览器中</li><li><strong>质量输出</strong>：使用 FFmpeg 编码的高质量旋转</li><li><strong>音频同步</strong>：旋转后音频轨保持同步</li></ul>"
-          },
-          "useCases": {
-            "title": "常见用途",
-            "content": "<ul><li><strong>手机视频</strong>：修正在手机上侧向录制的视频</li><li><strong>摄像机素材</strong>：修正从角度安装的摄像机纠正方向</li><li><strong>屏幕录制</strong>：旋转屏幕录制用于竖屏显示</li><li><strong>社交媒体</strong>：调整方向满足平台要求（纵向/横向）</li><li><strong>演示</strong>：修正演示幻灯片中的视频方向</li></ul>"
-          },
-          "privacy": {
-            "title": "隐私优先的视频处理",
-            "content": "<p>视频旋转全部在浏览器本地使用 <strong>FFmpeg.wasm</strong> 进行。</p><ul><li>您的视频<strong>永远不会离开您的设备</strong></li><li>无服务器处理或上传</li><li>加载 FFmpeg 核心后可<strong>离线</strong>工作</li></ul>"
-          }
-        },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "在线旋转视频 90°、180°、270°",
-            "description": "即刻修正 sideways iPhone 视频或倒置录像。三种旋转角度一键选择。"
+            "title": "左右旋转，简单直观",
+            "description": "点击左旋或右旋按钮即可旋转 90°。多次点击可实现 180° 或 270° 旋转。"
           },
           "f2": {
             "icon": "Zap",
-            "title": "免费修正视频方向",
-            "description": "无需安装软件。上传视频，选择角度，几秒即可下载修正后的版本。"
+            "title": "一键处理并下载",
+            "description": "一个按钮完成所有操作。点击「旋转并下载」，处理后的视频直接保存到设备。"
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "保存前预览旋转效果",
-            "description": "先在浏览器中查看旋转后的视频。确认无误再下载。无需猜测。"
+            "title": "实时旋转预览",
+            "description": "通过 CSS 动画实时查看视频旋转效果。确认方向正确后再处理。"
           },
           "f4": {
             "icon": "FileVideo",
             "title": "兼容所有视频格式",
-            "description": "旋转 MP4、MOV、AVI、WebM、MKV 文件。输出保持原格式、原画质。"
+            "description": "支持 MP4、MOV、AVI、WebM、MKV 等多种格式。输出保持原格式和画质。"
           },
           "f5": {
             "icon": "Shield",
@@ -231,7 +212,29 @@
           "f6": {
             "icon": "MonitorDown",
             "title": "私密旋转 - 无需上传",
-            "description": "仅在您的设备上处理。视频绝不会离开您的电脑。最大程度保护隐私。"
+            "description": "仅使用 WebCodecs 在本地处理视频。视频绝不会离开您的电脑，最大程度保护隐私。"
+          }
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是视频旋转工具？",
+            "content": "<p><strong>视频旋转</strong>将视频文件按 90° 递增旋转，修复方向问题。可矫正手机侧向拍摄的视频、倒立录制画面，或调整方向以适应特定显示需求——全部在浏览器中完成，支持实时预览。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用视频旋转",
+            "content": "<ol><li>上传视频文件</li><li>点击<strong>左旋</strong>或<strong>右旋</strong>实时预览旋转效果</li><li>点击<strong>旋转并下载</strong>一键处理并下载</li></ol>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>递增旋转</strong>：点击左旋或右旋 90°，多次点击实现 180° 或 270°</li><li><strong>实时预览</strong>：通过流畅的 CSS 动画实时查看视频旋转效果</li><li><strong>多种格式</strong>：支持 MP4、WebM、MKV、AVI 等格式</li><li><strong>WebCodecs 驱动</strong>：浏览器内快速、硬件加速的视频处理</li><li><strong>一键下载</strong>：一步完成处理和保存，无需中间步骤</li><li><strong>音画同步</strong>：旋转后音频轨道保持同步</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>手机视频</strong>：修复手机侧向拍摄的视频</li><li><strong>摄像机素材</strong>：矫正倾斜安装的摄像机拍摄的画面</li><li><strong>屏幕录制</strong>：旋转屏幕录屏以适应竖向显示</li><li><strong>社交媒体</strong>：调整方向以适应平台要求（竖屏/横屏）</li><li><strong>演示文稿</strong>：修复幻灯片中视频的方向问题</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的视频处理",
+            "content": "<p>视频旋转完全在您的浏览器中使用原生 <strong>WebCodecs API</strong> 运行。</p><ul><li>您的视频<strong>绝不会离开设备</strong></li><li>无服务器处理或上传</li><li>页面加载后可<strong>离线</strong>工作</li></ul>"
           }
         }
       },

@@ -160,78 +160,81 @@
       },
       "rotate": {
         "name": "Video Döndür",
-        "description": "Videoları 90, 180 veya 270 derece döndürün.",
-        "metaTitle": "Video Döndür — Ücretsiz Çevrimiçi Video Döndürücü",
-        "metaDescription": "Videoları 90, 180 veya 270 derece döndürün. Video yönünü kolayca düzeltin. Ücretsiz çevrimiçi araç.",
-        "keywords": "video döndür, video çevir, video döndürme, video yönü düzelt",
-        "rotate": "Döndür",
+        "description": "Videoları sola veya sağa döndürün, canlı önizleme ile. İşlemek ve indirmek için tek tık.",
+        "metaTitle": "Video Döndürme Ücretsiz Çevrimiçi - Video Yönünü Düzelt",
+        "metaDescription": "Videoları sola veya sağa döndürün, anlık önizleme ile. Tek tıkla işleyin ve indirin. Yükleme yok, tarayıcıda %100 gizli.",
+        "keywords": "video döndür, video döndürme çevrimiçi, video yönünü düzelt, mp4 döndür, video yönelimi",
+        "rotateLeft": "Sola döndür",
+        "rotateRight": "Sağa döndür",
+        "reset": "Sıfırla",
+        "processAndDownload": "Döndür ve İndir",
         "processing": "İşleniyor",
-        "unsupported": "Bu araç SharedArrayBuffer desteği gerektirir. Lütfen HTTPS ile modern bir tarayıcı kullanın.",
+        "unsupported": "Bu araç SharedArrayBuffer desteği gerektirir. HTTPS ile modern bir tarayıcı kullanın.",
         "faq": {
-          "q1": "Hangi dönüş açıları mevcut?",
-          "a1": "Videoları 90° (saat yönünde), 180° (baş aşağı) veya 270° (saat yönünün tersine) döndürebilirsiniz.",
+          "q1": "Hangi döndürme açıları kullanılabilir?",
+          "a1": "Her tıklama videoyu 90° döndürür (sola veya sağa). 180° veya 270° döndürme için birden fazla kez tıklayabilirsiniz.",
           "q2": "Döndürme video kalitesini etkiler mi?",
-          "a2": "Video döndürme sırasında yeniden kodlanır, ancak kalite yüksek seviyede korunur.",
+          "a2": "Video, döndürme sırasında WebCodecs ile yeniden kodlanır. Kalite yüksek kalır, ancak her yeniden kodlama hafif bir kalite kaybı içerir.",
           "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
+          "a3": "Hayır. Tüm işleme yalnızca tarayıcınızda gerçekleşir. Verileriniz cihazınızı asla terk etmez — hiçbir sunucuya yüklenmez.",
           "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
+          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için tarayıcınızdan PrivaDeck'i PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırları var mı?",
-          "a5": "Sunucu tarafından dayatılan sınır yoktur. Maksimum dosya boyutu cihazınızın kullanılabilir belleğine ve tarayıcı yeteneklerine bağlıdır. Çoğu modern cihaz birkaç yüz MB'a kadar olan dosyaları sorunsuz şekilde işler."
-        },
-        "seoContent": {
-          "intro": {
-            "title": "Video Döndürme Nedir?",
-            "content": "<p><strong>Video Döndürme</strong>, yön sorunlarını düzeltmek için video dosyalarını 90°, 180° veya 270° döndürür. Yan çekilmiş telefon videolarını düzeltin, ters kayıtları düzeltin veya belirli ekran ihtiyaçları için yönü ayarlayın.</p>"
-          },
-          "howToUse": {
-            "title": "Video Döndürme Nasıl Kullanılır",
-            "content": "<ol><li>Bir video dosyası yükleyin</li><li>Dönüş açısını seçin: <strong>90°</strong>, <strong>180°</strong> veya <strong>270°</strong></li><li>İşlemek için <strong>Döndür</strong> düğmesine tıklayın</li><li>Döndürülmüş videoyu indirin</li></ol>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Üç Açı</strong>: 90° (saat yönünde), 180° veya 270° (saat yönünün tersine) döndürün</li><li><strong>Video Önizleme</strong>: Videoyu döndürmeden önce ve sonra görün</li><li><strong>Çoklu Formatlar</strong>: MP4, WebM, MKV ve AVI destekler</li><li><strong>FFmpeg.wasm ile Güçlendirilmiştir</strong>: Tarayıcıda profesyonel video işleme</li><li><strong>Kaliteli Çıktı</strong>: FFmpeg kodlamasıyla yüksek kaliteli döndürme</li><li><strong>Ses Korunur</strong>: Döndürmeden sonra ses parçası senkronize kalır</li></ul>"
-          },
-          "useCases": {
-            "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Telefon Videoları</strong>: Mobil telefonlarda çekilen yan videoları düzeltin</li><li><strong>Kamera Görüntüleri</strong>: Açılı monte edilmiş kameralardan gelen yönü düzeltin</li><li><strong>Ekran Kayıtları</strong>: Dikey ekran için ekran kayıtlarını döndürün</li><li><strong>Sosyal Medya</strong>: Platform gereksinimleri için yönü ayarlayın (dikey/yatay)</li><li><strong>Sunumlar</strong>: Slaytlarda kullanım için video yönünü düzeltin</li></ul>"
-          },
-          "privacy": {
-            "title": "Gizlilik Odaklı Video İşleme",
-            "content": "<p>Video döndürme <strong>FFmpeg.wasm</strong> kullanılarak <strong>tamamen tarayıcınızda</strong> çalışır.</p><ul><li>Videolarınız <strong>cihazınızı asla terk etmez</strong></li><li>Sunucu işleme veya yükleme yok</li><li>FFmpeg core yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
-          }
+          "a5": "Sunucu tarafı sınır yoktur. Maksimum dosya boyutu cihazınızın kullanılabilir belleğine ve tarayıcı yeteneklerine bağlıdır. Çoğu modern cihaz yüzlerce MB'lık dosyaları sorunsuz şekilde işler."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Gauge",
-            "title": "Videoyu Çevrimiçi Döndürün 90°, 180°, 270°",
-            "description": "Yan iPhone videolarını veya ters kayıtları anında düzeltin. Tek tıkla üç döndürme seçeneği."
+            "title": "Sola veya sağa, basit ve sezgisel",
+            "description": "90° döndürme için sola veya sağa tıklayın. 180° veya 270° için birden fazla kez tıklayın."
           },
           "f2": {
             "icon": "Zap",
-            "title": "Video Yönünü Ücretsiz Düzeltin",
-            "description": "Yazılım gerekmez. Videonuzu yükleyin, bir açı seçin, düzeltilmiş versiyonu saniyeler içinde indirin."
+            "title": "Tek Tıkla İşle ve İndir",
+            "description": "Tek bir düğme her şeyi yapar. Döndür ve İndir'e tıklayın, işlenen video doğrudan cihazınıza kaydedilir."
           },
           "f3": {
             "icon": "BarChart3",
-            "title": "Kaydetmeden Önce Döndürmeyi Önizleyin",
-            "description": "Döndürülmüş videoyu tarayıcıda önce izleyin. Doğru olduğundan emin olun, sonra indirin. Tahmin yürütmeyin."
+            "title": "Canlı Döndürme Önizlemesi",
+            "description": "CSS animasyonu ile videonuzun döndürülmesini gerçek zamanlı izleyin. İşlemeden önce yönü onaylayın."
           },
           "f4": {
             "icon": "FileVideo",
-            "title": "Tüm Video Formatlarıyla Çalışır",
-            "description": "MP4, MOV, AVI, WebM, MKV dosyalarını döndürün. Çıktı aynı formatı, aynı kaliteyi korur."
+            "title": "Tüm Video Biçimleriyle Çalışır",
+            "description": "MP4, MOV, AVI, WebM, MKV ve daha fazlasını destekler. Çıktı aynı biçimi ve kaliteyi korur."
           },
           "f5": {
             "icon": "Shield",
-            "title": "Ses Mükemmel Senkronize Kalır",
-            "description": "Döndürme ses zamanlamasını korur. Son videonuzda gecikme, kayma, senkron sorunları yok."
+            "title": "Ses Mükemmel Senkronize",
+            "description": "Döndürme ses zamanlamasını korur. Gecikme yok, kayma yok, senkronizasyon sorunu yok."
           },
           "f6": {
             "icon": "MonitorDown",
             "title": "Gizli Döndürme - Yükleme Yok",
-            "description": "İşleme yalnızca cihazınızda gerçekleşir. Videolarınız bilgisayarınızı asla terk etmez. Maksimum gizlilik."
+            "description": "Sadece yerel işleme WebCodecs ile. Videolarınız bilgisayarınızı asla terk etmez. Maksimum gizlilik."
+          }
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Video Döndürme Nedir?",
+            "content": "<p><strong>Video Döndürme</strong>, video dosyalarını 90° adımlarla sola veya sağa döndürerek yön sorunlarını düzeltir. Yan çekilmiş telefon videolarını, ters kayıtları düzeltin veya belirli görüntüleme ihtiyaçları için yönü ayarlayın — tümü tarayıcınızda canlı önizleme ile.</p>"
+          },
+          "howToUse": {
+            "title": "Video Döndürme Nasıl Kullanılır",
+            "content": "<ol><li>Bir video dosyası yükleyin</li><li>Döndürmeyi gerçek zamanlı görmek için <strong>Sola döndür</strong> veya <strong>Sağa döndür</strong>'e tıklayın</li><li>Tek adımda işlemek ve indirmek için <strong>Döndür ve İndir</strong>'e tıklayın</li></ol>"
+          },
+          "features": {
+            "title": "Temel Özellikler",
+            "content": "<ul><li><strong>Artımlı Döndürme</strong>: Sola veya sağa 90° tıklayın, 180° veya 270° için tıklamaları biriktirin</li><li><strong>Canlı Önizleme</strong>: Videoyun döndürülmesini akıcı CSS animasyonu ile gerçek zamanlı izleyin</li><li><strong>Çoklu Biçimler</strong>: MP4, WebM, MKV, AVI ve daha fazlasını destekler</li><li><strong>WebCodecs Destekli</strong>: Tarayıcıda hızlı, donanım hızlandırmalı video işleme</li><li><strong>Tek Tıklamayla İndirme</strong>: Tek adımda işleyin ve kaydedin, ara adım yok</li><li><strong>Ses Korundu</strong>: Döndürmeden sonra ses parçası senkronize kalır</li></ul>"
+          },
+          "useCases": {
+            "title": "Yaygın Kullanım Alanları",
+            "content": "<ul><li><strong>Telefon Videoları</strong>: Telefonda yan çekilmiş videoları düzeltin</li><li><strong>Kamera Malzemesi</strong>: Açıya monte edilmiş kameraların yönünü düzeltin</li><li><strong>Ekran Kayıtları</strong>: Dikey görüntüleme için ekran kayıtlarını döndürün</li><li><strong>Sosyal Medya</strong>: Platform gereksinimlerine göre yönü ayarlayın (dikey/yatay)</li><li><strong>Sunumlar</strong>: Slaytlardaki videoların yönünü düzeltin</li></ul>"
+          },
+          "privacy": {
+            "title": "Gizlilik Odaklı Video İşleme",
+            "content": "<p>Video döndürme, yerel <strong>WebCodecs API</strong> kullanılarak <strong>tamamen tarayıcınızda</strong> gerçekleştirilir.</p><ul><li>Videolarınız <strong>cihazınızı asla terk etmez</strong></li><li>Sunucu işleme veya yükleme yok</li><li>Sayfa yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
           }
         }
       },
