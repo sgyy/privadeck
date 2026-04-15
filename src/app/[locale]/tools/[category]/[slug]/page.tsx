@@ -8,7 +8,7 @@ import type { ToolCategory } from "@/lib/registry/types";
 import { loadCommonMessages, loadCategoryMessages } from "@/lib/i18n/loadMessages";
 import { ToolPageClient } from "./ToolPageClient";
 import { getTranslations } from "next-intl/server";
-import { generateToolJsonLd, generateBreadcrumbJsonLd, generateFaqJsonLd, SITE_URL } from "@/lib/seo/jsonld";
+import { generateToolJsonLd, generateFaqJsonLd } from "@/lib/seo/jsonld";
 
 export function generateStaticParams() {
   const slugs = getAllSlugs();
@@ -55,16 +55,9 @@ export default async function ToolPage({
 
   const needsFFmpeg = category === "video" || category === "audio";
 
-  const tn = await getTranslations({ locale, namespace: "nav" });
-  const tc = await getTranslations({ locale, namespace: "categories" });
   const tt = await getTranslations({ locale, namespace: `tools.${category}.${slug}` });
 
   const toolJsonLd = generateToolJsonLd(tool, locale, tt("name"), tt("description"));
-  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
-    { name: tn("home"), url: `${SITE_URL}/${locale}/` },
-    { name: tc(`${category}.name`), url: `${SITE_URL}/${locale}/tools/${category}/` },
-    { name: tt("name"), url: `${SITE_URL}/${locale}/tools/${category}/${slug}/` },
-  ]);
 
   const faqCount = tool.faq?.length ?? 0;
   const faqItems = [];
@@ -80,10 +73,6 @@ export default async function ToolPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(toolJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {faqJsonLd && (
         <script
