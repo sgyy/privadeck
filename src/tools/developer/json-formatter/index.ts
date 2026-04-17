@@ -30,7 +30,7 @@ const definition: ToolDefinition = {
       answerKey: "tools.developer.json-formatter.faq.a5",
     },
   ],
-  relatedSlugs: ["base64", "url-encoder"],
+  relatedSlugs: ["json-editor", "yaml-json", "base64"],
 };
 
 export default definition;

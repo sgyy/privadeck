@@ -98,6 +98,120 @@
           }
         }
       },
+      "json-editor": {
+        "name": "JSON 编辑器",
+        "description": "在浏览器中可视化编辑 JSON —— 通过交互式树进行增删、改名、类型切换，或用语法高亮的原始文本模式编辑。随时在文本、树形、预览三种模式间切换。",
+        "metaTitle": "在线 JSON 编辑器 - 文本/树形/预览三种视图，支持自动修复",
+        "metaDescription": "免费在线 JSON 编辑器，提供文本、交互式树、预览三种视图模式。支持增删节点、重命名键名、切换类型、撤销重做、自动修复无效 JSON —— 100% 浏览器本地处理，不上传任何数据。",
+        "keywords": "json编辑器, 在线json编辑器, 可视化json编辑器, json树编辑器, json节点编辑, json结构编辑, json修复, 免费 json 编辑器",
+        "format": "格式化",
+        "minify": "压缩",
+        "smartFormat": "智能",
+        "smartFormatHint": "短数组/对象单行显示，长的展开",
+        "clear": "清空",
+        "valid": "JSON 有效",
+        "invalid": "JSON 无效",
+        "autoRepair": "自动修复",
+        "undo": "撤销 (Ctrl+Z)",
+        "redo": "重做 (Ctrl+Y)",
+        "loadingEditor": "编辑器加载中...",
+        "treeHint": "双击键或值即可原地编辑；右键可打开更多选项（添加、删除、类型切换、复制等）。",
+        "treeDisabledBanner": "JSON 无效 —— 请在文本编辑器中修复，或点击右上角的自动修复按钮。",
+        "items": "{count} 项",
+        "type": {
+          "string": "字符串",
+          "number": "数字",
+          "boolean": "布尔",
+          "null": "空值",
+          "object": "对象",
+          "array": "数组"
+        },
+        "menu": {
+          "edit": "编辑",
+          "duplicate": "复制节点",
+          "delete": "删除",
+          "insertBefore": "在前面插入",
+          "insertAfter": "在后面插入",
+          "appendChild": "添加子节点",
+          "changeType": "切换类型",
+          "copyPath": "复制路径",
+          "addChild": "添加子节点"
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "FilePenLine",
+            "title": "可视化树形编辑",
+            "description": "双击键或值即可原地编辑。右键打开完整菜单：插入、复制、删除、切换类型、复制路径。"
+          },
+          "f2": {
+            "icon": "Undo2",
+            "title": "撤销 / 重做历史",
+            "description": "每次修改都被记录。Ctrl+Z 撤销、Ctrl+Y 重做，放心尝试而不怕弄坏数据。"
+          },
+          "f3": {
+            "icon": "Wand2",
+            "title": "自动修复无效 JSON",
+            "description": "粘贴的 JSON 带尾逗号、单引号或注释？一键修复常见错误，立刻开始编辑。"
+          },
+          "f4": {
+            "icon": "Layers",
+            "title": "三种视图自由切换",
+            "description": "文本、树形、预览三种模式任意切换 —— 原始文本编辑、可视化结构操作、语法高亮查看，一站搞定。"
+          },
+          "f5": {
+            "icon": "Shuffle",
+            "title": "类型切换",
+            "description": "一键将任意值在字符串、数字、布尔、空值、对象、数组之间转换，非常适合快速调整测试数据或配置。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隐私 —— 不上传",
+            "description": "所有编辑都在浏览器中进行。JSON 永远不会上传到服务器 —— API 密钥、令牌和敏感配置都能放心编辑。"
+          }
+        },
+        "faq": {
+          "q1": "这和 JSON 格式化工具有什么区别？",
+          "a1": "格式化工具只做文本缩进和校验。本编辑器让你直接修改 JSON 的结构本身 —— 可视化地增删、改名、切换节点类型，无需编写任何 JSON 语法。非常适合编辑配置文件、构造测试数据或修复 API 响应。",
+          "q2": "我的 JSON 数据安全且私密吗？",
+          "a2": "完全安全。所有编辑、解析、修复、差异计算都在你的浏览器中完成。数据绝不离开你的设备 —— 不上传服务器、不记录日志、不向第三方暴露。API 密钥、令牌和敏感配置数据都可安心使用。",
+          "q3": "自动修复能修什么？",
+          "a3": "自动修复基于 jsonrepair 库，可修复常见错误：尾逗号、将单引号替换为双引号、给键补充引号、去除 JavaScript 风格注释、智能引号/弯引号、拼接字符串等。它也是很多主流 JSON 工具使用的同款修复引擎。",
+          "q4": "可以在文本与树形编辑之间切换吗？",
+          "a4": "可以。通过顶部的视图切换器在文本（Monaco 编辑器）、树形（交互式结构编辑器）、预览（只读语法高亮）三种模式间切换。只要 JSON 有效，一种模式的改动会立刻反映在其他模式中。",
+          "q5": "支持离线使用吗？",
+          "a5": "支持。页面加载后，所有功能（编辑、自动修复、差异对比、导出）都能完全离线运行。建议将 PrivaDeck 作为 PWA 从浏览器安装，获得最快的访问速度。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "面向开发者的可视化 JSON 编辑器",
+            "content": "<p><strong>JSON 编辑器</strong>是一个在浏览器中运行的 JSON 编辑工具，提供三种视图模式：<strong>文本</strong>（基于 Monaco 的原始编辑）、<strong>树形</strong>（可视化结构编辑）和<strong>预览</strong>（只读语法高亮展示）。</p><p>在树形模式下，双击键或值即可原地编辑。右键任意节点即可打开完整菜单：在前/后插入、复制、切换类型、删除、复制路径。每一步都支持撤销和重做。粘贴无效 JSON 时，一键即可修复尾逗号、单引号、JavaScript 注释等常见错误。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用",
+            "content": "<ol><li>在编辑器中粘贴、输入或拖入 <code>.json</code> 文件</li><li>如果 JSON 无效，点击<strong>自动修复</strong>按钮来修正常见错误</li><li>用<strong>视图切换</strong>在文本、树形、预览三种模式间切换</li><li>在<strong>树形</strong>模式下：双击键或值即可原地编辑；右键打开菜单（插入/复制/删除/类型切换/复制路径）</li><li>使用 <strong>Ctrl+Z</strong> / <strong>Ctrl+Y</strong> 撤销与重做</li><li>点击<strong>格式化</strong>、<strong>压缩</strong>或<strong>智能</strong>重新排版，然后<strong>下载</strong>或<strong>复制</strong>导出</li></ol>"
+          },
+          "features": {
+            "title": "主要特性",
+            "content": "<ul><li><strong>三种视图模式</strong>：文本（Monaco）、树形（交互式）、预览（只读），随时切换</li><li><strong>可视化树形编辑</strong>：双击任意键或值，右键打开完整菜单</li><li><strong>类型切换</strong>：在字符串、数字、布尔、空值、对象、数组之间自由转换</li><li><strong>撤销 / 重做</strong>：支持 50 步历史，Ctrl+Z / Ctrl+Y 快捷键</li><li><strong>自动修复</strong>：修复尾逗号、单引号、缺失引号、JavaScript 注释等常见错误</li><li><strong>智能格式化</strong>：短数组/对象单行显示，长的展开 —— 紧凑且可读</li><li><strong>Monaco 编辑器</strong>：与 VS Code 同款的代码编辑器</li><li><strong>路径显示与复制</strong>：点击任意节点查看并复制其 JSON Path</li><li><strong>100% 浏览器运行</strong>：不上传服务器 —— 数据始终留在你的设备</li></ul>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>配置文件编辑</strong>：安全地修改 <code>package.json</code>、<code>tsconfig.json</code>、Kubernetes 清单等，避免语法错误</li><li><strong>测试数据构造</strong>：通过复制节点、切换类型、重命名键来快速构造 fixture</li><li><strong>API 响应调试</strong>：粘贴响应、重新组织结构、与期望形状做差异对比</li><li><strong>Schema 迁移</strong>：对比两版 JSON，一目了然看出变更</li><li><strong>修复损坏的 JSON</strong>：用自动修复挽救尾逗号、异常引号、混用分隔符等问题</li><li><strong>数据清理</strong>：用右键批量删除不需要的字段后导出干净数据</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的 JSON 编辑",
+            "content": "<p>所有编辑、修复、差异计算<strong>完全在你的浏览器中</strong>运行。JSON 永远不会上传或被记录。</p><ul><li>数据<strong>永不离开设备</strong> —— 编辑过程中零网络请求</li><li>适合敏感的 API 密钥、令牌和配置机密</li><li>页面加载后<strong>完全离线可用</strong></li><li>不对 JSON 内容做任何分析 —— 我们只统计工具使用频率，不碰数据</li></ul>"
+          }
+        },
+        "viewText": "文本",
+        "viewTree": "树形",
+        "viewPreview": "预览",
+        "switchBlockedInvalid": "请先修复或点击自动修复按钮，再切换视图。",
+        "textHint": "自由编辑；切换视图时会解析文本。",
+        "previewHint": "只读的语法高亮视图。",
+        "emptyPreview": "暂无内容可预览。"
+      },
       "base64": {
         "name": "Base64 编解码",
         "description": "将文本或文件编码为 Base64，或将 Base64 解码还原。支持 URL 安全变体和 Data URI。",
@@ -434,12 +548,36 @@
         },
         "featureCards": {
           "count": "6",
-          "f1": { "icon": "Hash", "title": "一键生成 8 种哈希值", "description": "同时计算 MD5、CRC32、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256 和 SHA3-512。所有结果即时呈现，无需逐个运行。" },
-          "f2": { "icon": "Zap", "title": "输入即算，实时反馈", "description": "输入文本时哈希值实时更新，无需点击按钮。零延迟体验，8 种算法同步计算。" },
-          "f3": { "icon": "KeyRound", "title": "HMAC 消息认证支持", "description": "使用密钥为 SHA-1、SHA-256、SHA-384 和 SHA-512 生成 HMAC 消息认证码。支持 UTF-8 文本和十六进制密钥。" },
-          "f4": { "icon": "CircleCheck", "title": "哈希验证与比对", "description": "粘贴预期哈希值，即时与所有计算结果比对。自动识别匹配的算法并显示通过/失败指示。" },
-          "f5": { "icon": "Files", "title": "批量文件哈希与进度", "description": "一次哈希多个文件，实时显示处理进度。支持拖拽上传，每个文件的每种算法结果均可一键复制。" },
-          "f6": { "icon": "Shield", "title": "100% 隐私保护 — 零上传", "description": "所有哈希运算完全在浏览器中完成，使用 Web Crypto API 和优化的 JavaScript 实现。您的文本和文件永远不会离开设备。" }
+          "f1": {
+            "icon": "Hash",
+            "title": "一键生成 8 种哈希值",
+            "description": "同时计算 MD5、CRC32、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256 和 SHA3-512。所有结果即时呈现，无需逐个运行。"
+          },
+          "f2": {
+            "icon": "Zap",
+            "title": "输入即算，实时反馈",
+            "description": "输入文本时哈希值实时更新，无需点击按钮。零延迟体验，8 种算法同步计算。"
+          },
+          "f3": {
+            "icon": "KeyRound",
+            "title": "HMAC 消息认证支持",
+            "description": "使用密钥为 SHA-1、SHA-256、SHA-384 和 SHA-512 生成 HMAC 消息认证码。支持 UTF-8 文本和十六进制密钥。"
+          },
+          "f4": {
+            "icon": "CircleCheck",
+            "title": "哈希验证与比对",
+            "description": "粘贴预期哈希值，即时与所有计算结果比对。自动识别匹配的算法并显示通过/失败指示。"
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "批量文件哈希与进度",
+            "description": "一次哈希多个文件，实时显示处理进度。支持拖拽上传，每个文件的每种算法结果均可一键复制。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隐私保护 — 零上传",
+            "description": "所有哈希运算完全在浏览器中完成，使用 Web Crypto API 和优化的 JavaScript 实现。您的文本和文件永远不会离开设备。"
+          }
         },
         "seoContent": {
           "intro": {

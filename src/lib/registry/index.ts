@@ -5,6 +5,7 @@ import wordCounter from "@/tools/developer/word-counter";
 import caseConverter from "@/tools/developer/case-converter";
 import loremIpsum from "@/tools/developer/lorem-ipsum";
 import jsonFormatter from "@/tools/developer/json-formatter";
+import jsonEditor from "@/tools/developer/json-editor";
 import base64 from "@/tools/developer/base64";
 import urlEncoder from "@/tools/developer/url-encoder";
 import formatConverter from "@/tools/image/format-converter";
@@ -114,6 +115,7 @@ const ALL_TOOLS: ToolDefinition[] = [
   pdfEsign,
   // Developer — featured first
   jsonFormatter,
+  jsonEditor,
   base64,
   hashGenerator,
   urlEncoder,

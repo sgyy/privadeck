@@ -98,6 +98,120 @@
           }
         }
       },
+      "json-editor": {
+        "name": "JSON Editor",
+        "description": "Edit JSON visually in your browser — add, delete, rename, and retype nodes in an interactive tree, or edit raw text with syntax highlighting. Switch between Text, Tree, and Preview modes anytime.",
+        "metaTitle": "JSON Editor Online - Text, Tree & Preview Modes with Auto Repair",
+        "metaDescription": "Free online JSON editor with three view modes — text, interactive tree, and preview. Add, delete, rename, retype nodes; undo/redo; auto-repair invalid JSON. 100% browser-based, no data uploaded.",
+        "keywords": "json editor, json editor online, edit json online, visual json editor, json tree editor, json node editor, json structure editor, json repair, online json editor free",
+        "format": "Format",
+        "minify": "Minify",
+        "smartFormat": "Smart",
+        "smartFormatHint": "Inline short arrays/objects, expand long ones",
+        "clear": "Clear",
+        "valid": "Valid JSON",
+        "invalid": "Invalid JSON",
+        "autoRepair": "Auto Repair",
+        "undo": "Undo (Ctrl+Z)",
+        "redo": "Redo (Ctrl+Y)",
+        "loadingEditor": "Loading editor...",
+        "treeHint": "Double-click a key or value to edit. Right-click for more options (add, delete, change type, duplicate).",
+        "treeDisabledBanner": "Invalid JSON — fix it in the editor or click Auto Repair.",
+        "items": "{count} items",
+        "type": {
+          "string": "String",
+          "number": "Number",
+          "boolean": "Boolean",
+          "null": "Null",
+          "object": "Object",
+          "array": "Array"
+        },
+        "menu": {
+          "edit": "Edit",
+          "duplicate": "Duplicate",
+          "delete": "Delete",
+          "insertBefore": "Insert Before",
+          "insertAfter": "Insert After",
+          "appendChild": "Append Child",
+          "changeType": "Change Type",
+          "copyPath": "Copy Path",
+          "addChild": "Add child"
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "FilePenLine",
+            "title": "Visual Tree Editing",
+            "description": "Double-click keys or values to edit in place. Right-click for a full context menu: insert, duplicate, delete, change type, copy path."
+          },
+          "f2": {
+            "icon": "Undo2",
+            "title": "Undo / Redo History",
+            "description": "Every change is recorded. Press Ctrl+Z to undo and Ctrl+Y to redo. Experiment freely without fear of breaking your data."
+          },
+          "f3": {
+            "icon": "Wand2",
+            "title": "Auto-Repair Invalid JSON",
+            "description": "Pasted JSON with trailing commas, single quotes, or comments? One click repairs common mistakes so you can start editing immediately."
+          },
+          "f4": {
+            "icon": "Layers",
+            "title": "Three View Modes",
+            "description": "Switch anytime between Text (Monaco), Tree (interactive editing), and Preview (read-only syntax-highlighted) — one editor, three ways to work."
+          },
+          "f5": {
+            "icon": "Shuffle",
+            "title": "Type Switching",
+            "description": "Convert any value between string, number, boolean, null, object, and array with one click. Perfect for quickly reshaping test data or configs."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% Private — No Uploads",
+            "description": "All editing happens in your browser. Your JSON never touches a server — safe for API keys, tokens, and sensitive configurations."
+          }
+        },
+        "faq": {
+          "q1": "How is this different from a JSON formatter?",
+          "a1": "A formatter only re-indents and validates text. This editor lets you modify the structure itself — add, delete, rename, and retype nodes visually without writing a single character of JSON syntax. It's ideal for editing config files, crafting test data, or fixing API responses.",
+          "q2": "Is my JSON data safe and private?",
+          "a2": "Absolutely. All editing, parsing, repair, and diff computation happens entirely in your browser. Your data never leaves your device — no server uploads, no logging, no third-party access. Safe for API keys, tokens, and sensitive configuration data.",
+          "q3": "What does Auto Repair fix?",
+          "a3": "Auto Repair uses the jsonrepair library to fix common mistakes: trailing commas, single quotes instead of double quotes, missing quotes around keys, JavaScript-style comments, smart/curly quotes, concatenated strings, and more. It's based on the same repair engine used by many popular JSON tools.",
+          "q4": "Can I switch between text and tree editing?",
+          "a4": "Yes. Use the view switcher at the top to change between Text (Monaco editor), Tree (interactive structure editor), and Preview (read-only syntax-highlighted) modes. Any change in one mode is immediately reflected when you switch to another — as long as your JSON is valid.",
+          "q5": "Does it work offline?",
+          "a5": "Yes. Once the page loads, everything works offline — editing, auto-repair, diff comparison, and export. Install PrivaDeck as a PWA from your browser for quickest access."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Visual JSON Editor for Developers",
+            "content": "<p><strong>JSON Editor</strong> is a browser-based JSON editor with three view modes: <strong>Text</strong> for raw editing with Monaco Editor, <strong>Tree</strong> for visual structure editing, and <strong>Preview</strong> for read-only syntax-highlighted display.</p><p>In Tree mode, double-click a key or value to edit it in place. Right-click any node for the full context menu: insert before or after, duplicate, change type, delete, copy path. Undo and redo are available at every step. When you paste invalid JSON, one click repairs common mistakes like trailing commas, single quotes, and JavaScript comments.</p>"
+          },
+          "howToUse": {
+            "title": "How to Use JSON Editor",
+            "content": "<ol><li>Paste, type, or drop a <code>.json</code> file into the editor</li><li>If the JSON is invalid, click <strong>Auto Repair</strong> to fix common mistakes</li><li>Use the <strong>view switcher</strong> to pick Text, Tree, or Preview mode</li><li>In <strong>Tree</strong> mode: double-click any key or value to edit in place; right-click for insert/duplicate/delete/change type/copy path</li><li>Use <strong>Ctrl+Z</strong> / <strong>Ctrl+Y</strong> to undo and redo</li><li>Click <strong>Format</strong>, <strong>Minify</strong>, or <strong>Smart</strong> to reformat, then <strong>Download</strong> or <strong>Copy</strong> to export</li></ol>"
+          },
+          "features": {
+            "title": "Key Features",
+            "content": "<ul><li><strong>Three View Modes</strong>: Text (Monaco), Tree (interactive), Preview (read-only) — switch anytime</li><li><strong>Visual Tree Editing</strong>: Double-click any key or value, right-click for the full context menu</li><li><strong>Full Type Switching</strong>: Convert any value between string, number, boolean, null, object, and array</li><li><strong>Undo / Redo</strong>: 50-step history with Ctrl+Z / Ctrl+Y shortcuts</li><li><strong>Auto Repair</strong>: Fixes trailing commas, single quotes, missing quotes, JavaScript comments, and more</li><li><strong>Smart Format</strong>: Inline short arrays/objects, expand long ones — compact yet readable</li><li><strong>Monaco Editor</strong>: The same code editor that powers VS Code, for raw text editing</li><li><strong>Path Display &amp; Copy</strong>: Click any node to see and copy its JSON Path</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
+          },
+          "useCases": {
+            "title": "Common Use Cases",
+            "content": "<ul><li><strong>Config File Editing</strong>: Safely modify <code>package.json</code>, <code>tsconfig.json</code>, or Kubernetes manifests without syntax errors</li><li><strong>Test Data Crafting</strong>: Quickly build fixtures by duplicating nodes, changing types, and renaming keys</li><li><strong>API Response Debugging</strong>: Paste a response, restructure it, and diff against the expected shape</li><li><strong>Schema Migration</strong>: Compare two versions of a JSON document to see exactly what changed</li><li><strong>Fixing Broken JSON</strong>: Use Auto Repair to recover from trailing commas, stray quotes, or mixed delimiters</li><li><strong>Data Cleanup</strong>: Delete unwanted fields in bulk with right-click + Delete, then export the cleaned data</li></ul>"
+          },
+          "privacy": {
+            "title": "Privacy-First JSON Editing",
+            "content": "<p>Every edit, repair, and diff runs <strong>entirely in your browser</strong>. Your JSON is never uploaded or logged anywhere.</p><ul><li>Data <strong>never leaves your device</strong> — zero network requests during editing</li><li>Safe for sensitive API keys, tokens, and configuration secrets</li><li>Works <strong>completely offline</strong> after the page loads</li><li>No analytics on your JSON content — we only track tool usage, never data</li></ul>"
+          }
+        },
+        "viewText": "Text",
+        "viewTree": "Tree",
+        "viewPreview": "Preview",
+        "switchBlockedInvalid": "Fix or Auto Repair the invalid JSON before switching view.",
+        "textHint": "Edit freely. Switching view will parse your text.",
+        "previewHint": "Read-only syntax-highlighted view.",
+        "emptyPreview": "Nothing to preview yet."
+      },
       "base64": {
         "name": "Кодирование/Декодирование Base64",
         "description": "Encode text or files to Base64, decode Base64 back. Supports URL-safe variant and Data URI.",
@@ -434,12 +548,36 @@
         },
         "featureCards": {
           "count": "6",
-          "f1": { "icon": "Hash", "title": "8 алгоритмов хеширования в один клик", "description": "Одновременный расчёт MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 и SHA3-512. Все результаты появляются мгновенно." },
-          "f2": { "icon": "Zap", "title": "Хеширование в реальном времени", "description": "Результаты обновляются мгновенно при вводе — без нажатия кнопок. 8 алгоритмов вычисляются в реальном времени." },
-          "f3": { "icon": "KeyRound", "title": "Поддержка HMAC-аутентификации", "description": "Генерация HMAC (кода аутентификации сообщений) с секретным ключом для SHA-1, SHA-256, SHA-384 и SHA-512. Поддержка ключей в UTF-8 и шестнадцатеричном формате." },
-          "f4": { "icon": "CircleCheck", "title": "Проверка и сравнение хешей", "description": "Вставьте ожидаемый хеш для мгновенного сравнения со всеми вычисленными результатами. Инструмент автоматически определяет совпадающий алгоритм." },
-          "f5": { "icon": "Files", "title": "Пакетное хеширование файлов", "description": "Хешируйте несколько файлов одновременно с индикатором прогресса. Перетащите файлы — результаты по каждому файлу с копированием в один клик." },
-          "f6": { "icon": "Shield", "title": "100% конфиденциальность — без загрузки на сервер", "description": "Все хеширование выполняется полностью в вашем браузере с использованием Web Crypto API и оптимизированного JavaScript. Ваши тексты и файлы никогда не покидают устройство." }
+          "f1": {
+            "icon": "Hash",
+            "title": "8 алгоритмов хеширования в один клик",
+            "description": "Одновременный расчёт MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 и SHA3-512. Все результаты появляются мгновенно."
+          },
+          "f2": {
+            "icon": "Zap",
+            "title": "Хеширование в реальном времени",
+            "description": "Результаты обновляются мгновенно при вводе — без нажатия кнопок. 8 алгоритмов вычисляются в реальном времени."
+          },
+          "f3": {
+            "icon": "KeyRound",
+            "title": "Поддержка HMAC-аутентификации",
+            "description": "Генерация HMAC (кода аутентификации сообщений) с секретным ключом для SHA-1, SHA-256, SHA-384 и SHA-512. Поддержка ключей в UTF-8 и шестнадцатеричном формате."
+          },
+          "f4": {
+            "icon": "CircleCheck",
+            "title": "Проверка и сравнение хешей",
+            "description": "Вставьте ожидаемый хеш для мгновенного сравнения со всеми вычисленными результатами. Инструмент автоматически определяет совпадающий алгоритм."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "Пакетное хеширование файлов",
+            "description": "Хешируйте несколько файлов одновременно с индикатором прогресса. Перетащите файлы — результаты по каждому файлу с копированием в один клик."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% конфиденциальность — без загрузки на сервер",
+            "description": "Все хеширование выполняется полностью в вашем браузере с использованием Web Crypto API и оптимизированного JavaScript. Ваши тексты и файлы никогда не покидают устройство."
+          }
         },
         "seoContent": {
           "intro": {
