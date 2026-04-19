@@ -174,7 +174,7 @@ function CategoryDropdown({
             <div className="flex gap-8">
               {/* Featured tools column */}
               {featured.length > 0 && (
-                <div className="shrink-0">
+                <div className="shrink-0 w-80">
                   <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                     {tNav("featured")}
                   </h3>
@@ -191,10 +191,10 @@ function CategoryDropdown({
                           <ToolIcon name={tool.icon} />
                         </div>
                         <div className="min-w-0">
-                          <div className="text-sm font-medium">
+                          <div className="text-sm font-medium truncate">
                             {tool.name}
                           </div>
-                          <div className="text-xs text-muted-foreground line-clamp-1 mt-0.5">
+                          <div className="text-xs text-muted-foreground line-clamp-2 mt-0.5">
                             {tool.description}
                           </div>
                         </div>
