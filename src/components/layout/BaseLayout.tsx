@@ -3,7 +3,6 @@
 import { NextIntlClientProvider } from "next-intl";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { ServiceWorkerRegistration } from "@/components/shared/ServiceWorkerRegistration";
-import { InstallPrompt } from "@/components/shared/InstallPrompt";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 import { LocaleSuggestionBanner } from "@/components/shared/LocaleSuggestionBanner";
 
@@ -19,7 +18,6 @@ export function BaseLayout({ children, locale, messages, toolNavData }: BaseLayo
     <NextIntlClientProvider locale={locale} messages={messages} timeZone="UTC">
       <LocaleSuggestionBanner currentLocale={locale} />
       <MainLayout toolNavData={toolNavData}>{children}</MainLayout>
-      <InstallPrompt />
       <ServiceWorkerRegistration />
     </NextIntlClientProvider>
   );
