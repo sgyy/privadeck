@@ -575,9 +575,58 @@
         "metaTitle": "EXIF-Daten entfernen - Kostenloser Online-EXIF-Entferner",
         "metaDescription": "EXIF-Metadaten aus Bildern entfernen zum Schutz der Privatsphäre. GPS-Standort, Kamerainfos und mehr entfernen. Kostenloses Online-Tool.",
         "keywords": "EXIF entfernen, EXIF-Entferner, Metadaten entfernen, Foto-Privatsphäre",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "Entscheide genau, was entfernt wird",
+            "description": "Acht Kategorien—GPS, Kamera & Objektiv, Aufnahmeeinstellungen, Datum & Uhrzeit, Autor, Beschreibung, Vorschaubild, XMP—jeweils mit eigener Checkbox. Behalte, was du willst, entferne den Rest."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "GPS-Standort mit einem Klick weg",
+            "description": "Lass nur GPS angehakt, der Rest bleibt: das Geotag deines Fotos verschwindet sofort—teile sicher, ohne den Aufnahmeort preiszugeben."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Byte-genau, ohne Neuberechnung",
+            "description": "Beim Komplett-Entfernen werden Segmente direkt auf Byte-Ebene gelöscht—keine JPEG-Neukomprimierung, kein PNG-Re-Export. Die Ausgabepixel sind identisch zum Original."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG, PNG, WebP, AVIF",
+            "description": "Funktioniert mit allen gängigen Fotoformaten. Selektive Entfernung bei JPEG / PNG / WebP, komplette Entfernung bei AVIF und HEIC."
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% im Browser",
+            "description": "Nichts wird hochgeladen. Jedes Byte bleibt auf deinem Gerät. Sobald die Seite geladen ist, läuft das Tool komplett offline."
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "ICC-Farbprofil bleibt erhalten",
+            "description": "Dein Farbprofil wird nicht angetastet—Wide-Gamut-JPEGs und druckfertige PNGs behalten ihr ICC_PROFILE-Segment unverändert."
+          }
+        },
         "removeExif": "EXIF-Daten entfernen",
         "processing": "Wird verarbeitet...",
         "cleaned": "EXIF-Daten erfolgreich entfernt",
+        "categoryTitle": "Datenkategorien zum Entfernen auswählen",
+        "categoryHint": "Standardmäßig werden alle Kategorien entfernt. Deaktiviere eine Kategorie, um diese Daten zu behalten.",
+        "selectAll": "Alle auswählen",
+        "selectNone": "Alle abwählen",
+        "avifNotice": "AVIF / HEIC unterstützen keine kategoriebasierte Entfernung; bei diesen Dateien werden alle Metadaten gelöscht.",
+        "noSelection": "Wähle mindestens eine Kategorie zum Entfernen aus.",
+        "categories": {
+          "gps": "GPS-Standort",
+          "cameraLens": "Kamera & Objektiv",
+          "shooting": "Aufnahmeeinstellungen",
+          "dateTime": "Datum & Uhrzeit",
+          "author": "Autor & Copyright",
+          "description": "Titel & Beschreibung",
+          "thumbnail": "Eingebettetes Vorschaubild",
+          "xmp": "XMP-Daten"
+        },
         "faq": {
           "q1": "Welche EXIF-Daten werden entfernt?",
           "a1": "Alle Metadaten werden entfernt, einschließlich GPS-Standort, Kameramodell, Aufnahmedatum und andere eingebettete Informationen. Das Bild wird auf einer sauberen Leinwand neu gezeichnet.",

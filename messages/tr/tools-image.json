@@ -575,9 +575,58 @@
         "metaTitle": "EXIF Verisi Kaldır — Ücretsiz Çevrimiçi EXIF Temizleyici",
         "metaDescription": "Gizliliği korumak için görsellerden EXIF meta verilerini kaldırın. GPS konumu, kamera bilgisi ve daha fazlasını temizleyin. Ücretsiz çevrimiçi araç.",
         "keywords": "exif kaldır, exif temizleyici, meta veri kaldır, fotoğraf gizliliği",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "Neyi sileceğini tam olarak seç",
+            "description": "Sekiz kategori—GPS, kamera ve lens, çekim ayarları, tarih ve saat, yazar, açıklama, küçük resim, XMP—her biri kendi onay kutusuyla gelir. Tutmak istediklerini bırak, gerisini sil."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "GPS konumu tek tıkla gitsin",
+            "description": "GPS dışındaki kutuları kapat—fotoğrafın jeo etiketi anında yok olur. Nerede çekildiğini sızdırmadan güvenle paylaş."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Byte düzeyinde silme, yeniden kodlama yok",
+            "description": "Her şeyi sildiğinde segmentleri doğrudan byte düzeyinde çıkarırız—JPEG yeniden sıkıştırma yok, PNG yeniden dışa aktarma yok. Çıktı pikselleri girişle birebir aynıdır."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG, PNG, WebP, AVIF",
+            "description": "Yaygın tüm fotoğraf formatlarıyla çalışır. JPEG / PNG / WebP için seçmeli silme, AVIF ve HEIC için toptan silme."
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% tarayıcında",
+            "description": "Hiçbir şey yüklenmez. Her byte cihazında kalır. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır."
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "ICC renk profili korunur",
+            "description": "Renk profiline dokunmuyoruz—geniş gamutlu JPEG'ler ve baskıya hazır PNG'ler ICC_PROFILE segmentlerini olduğu gibi korur."
+          }
+        },
         "removeExif": "EXIF Verisini Kaldır",
         "processing": "İşleniyor...",
         "cleaned": "EXIF verisi başarıyla kaldırıldı",
+        "categoryTitle": "Silinecek veri kategorilerini seç",
+        "categoryHint": "Varsayılan olarak hepsi silinir. Bir kategorinin verilerini tutmak için işaretini kaldır.",
+        "selectAll": "Tümünü seç",
+        "selectNone": "Tümünü temizle",
+        "avifNotice": "AVIF / HEIC kategori bazlı silmeyi desteklemez; bu dosyalardaki tüm metadata silinir.",
+        "noSelection": "Silmek için en az bir kategori seç.",
+        "categories": {
+          "gps": "GPS konumu",
+          "cameraLens": "Kamera ve lens",
+          "shooting": "Çekim ayarları",
+          "dateTime": "Tarih ve saat",
+          "author": "Yazar ve telif",
+          "description": "Başlık ve açıklama",
+          "thumbnail": "Gömülü küçük resim",
+          "xmp": "XMP verisi"
+        },
         "faq": {
           "q1": "Hangi EXIF verileri kaldırılıyor?",
           "a1": "GPS konumu, kamera modeli, çekim tarihi ve diğer gömülü bilgiler dahil tüm meta veriler kaldırılır. Görsel temiz bir tuval üzerinde yeniden çizilir.",

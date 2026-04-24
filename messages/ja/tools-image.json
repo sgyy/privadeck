@@ -575,9 +575,58 @@
         "metaTitle": "EXIF データ削除 - 無料オンライン EXIF 除去ツール",
         "metaDescription": "画像から EXIF メタデータを削除してプライバシーを保護。GPS 位置情報やカメラ情報などを除去。無料オンラインツール。",
         "keywords": "exif 削除, exif 除去, メタデータ除去, 写真プライバシー",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "削除する項目を細かく選べる",
+            "description": "GPS、カメラとレンズ、撮影設定、日付と時刻、作者、説明、サムネイル、XMP の 8 カテゴリを個別にチェック。残したいものは残し、不要なものだけ削除できます。"
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "GPS 位置をワンクリックで削除",
+            "description": "GPS 以外のチェックを外せば、写真のジオタグだけが瞬時に消えます。撮影場所を漏らさずに安心して共有できます。"
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "バイナリ直接処理、再エンコードなし",
+            "description": "すべて削除する場合はバイト単位でセグメントを剥がすため、JPEG の再圧縮も PNG の再エクスポートも発生しません。出力ピクセルは入力と完全に同一です。"
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG / PNG / WebP / AVIF 対応",
+            "description": "主要な写真フォーマットをカバー。JPEG / PNG / WebP はカテゴリ別削除、AVIF / HEIC は一括削除で処理します。"
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% ブラウザ内処理",
+            "description": "何もアップロードしません。すべてのバイトはあなたのデバイスに残ります。ページ読み込み後は完全オフラインで動作します。"
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "ICC カラープロファイルを保持",
+            "description": "カラープロファイルには一切手を加えません。広色域 JPEG や印刷向け PNG の ICC_PROFILE セグメントはそのまま残ります。"
+          }
+        },
         "removeExif": "EXIF データを削除",
         "processing": "処理中...",
         "cleaned": "EXIF データを正常に削除しました",
+        "categoryTitle": "削除するデータカテゴリを選択",
+        "categoryHint": "デフォルトではすべて削除します。チェックを外すと、そのカテゴリを保持できます。",
+        "selectAll": "すべて選択",
+        "selectNone": "すべて解除",
+        "avifNotice": "AVIF / HEIC 形式はカテゴリ単位の削除に対応していません。これらのファイルはすべてのメタデータが削除されます。",
+        "noSelection": "削除するカテゴリを 1 つ以上選択してください。",
+        "categories": {
+          "gps": "GPS 位置情報",
+          "cameraLens": "カメラとレンズ",
+          "shooting": "撮影設定",
+          "dateTime": "日付と時刻",
+          "author": "作者と著作権",
+          "description": "タイトルと説明",
+          "thumbnail": "埋め込みサムネイル",
+          "xmp": "XMP データ"
+        },
         "faq": {
           "q1": "どの EXIF データが削除されますか？",
           "a1": "GPS 位置情報、カメラモデル、撮影日時、その他の埋め込み情報を含むすべてのメタデータが削除されます。画像はクリーンなキャンバスに再描画されます。",

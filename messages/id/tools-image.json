@@ -575,9 +575,58 @@
         "metaTitle": "Hapus Data EXIF - Penghapus EXIF Online Gratis",
         "metaDescription": "Hapus metadata EXIF dari gambar untuk melindungi privasi. Hapus lokasi GPS, info kamera, dan lainnya. Alat online gratis.",
         "keywords": "hapus exif, penghapus exif, hapus metadata, privasi foto",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "Pilih persis apa yang ingin dihapus",
+            "description": "Delapan kategori—GPS, kamera & lensa, pengaturan pemotretan, tanggal & waktu, penulis, deskripsi, thumbnail, XMP—masing-masing punya kotak centang sendiri. Pertahankan yang diinginkan, hapus sisanya."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "GPS hilang dengan satu klik",
+            "description": "Hapus centang selain GPS, dan geotag foto langsung lenyap—bagikan dengan aman tanpa membocorkan lokasi pemotretan."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Pembersihan biner tanpa encoding ulang",
+            "description": "Saat kamu menghapus semuanya, kami mengupas segmen langsung di level byte—tanpa kompresi ulang JPEG, tanpa ekspor ulang PNG. Piksel output sama persis dengan input."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG, PNG, WebP, AVIF",
+            "description": "Bekerja di semua format foto populer. Penghapusan selektif di JPEG / PNG / WebP, penghapusan penuh di AVIF dan HEIC."
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% di browser kamu",
+            "description": "Tidak ada yang diunggah. Setiap byte tetap di perangkatmu. Begitu halaman dimuat, alat ini bekerja sepenuhnya offline."
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "Profil warna ICC tetap utuh",
+            "description": "Kami tidak menyentuh profil warnamu—JPEG wide-gamut dan PNG siap cetak mempertahankan segmen ICC_PROFILE-nya utuh."
+          }
+        },
         "removeExif": "Hapus Data EXIF",
         "processing": "Memproses...",
         "cleaned": "Data EXIF berhasil dihapus",
+        "categoryTitle": "Pilih kategori data untuk dihapus",
+        "categoryHint": "Secara bawaan semua kategori dihapus. Hapus centang untuk mempertahankan data tersebut.",
+        "selectAll": "Pilih semua",
+        "selectNone": "Batalkan semua",
+        "avifNotice": "Format AVIF / HEIC tidak mendukung penghapusan per kategori; semua metadata di file ini akan dihapus.",
+        "noSelection": "Pilih setidaknya satu kategori untuk dihapus.",
+        "categories": {
+          "gps": "Lokasi GPS",
+          "cameraLens": "Kamera & lensa",
+          "shooting": "Pengaturan pemotretan",
+          "dateTime": "Tanggal & waktu",
+          "author": "Penulis & hak cipta",
+          "description": "Judul & deskripsi",
+          "thumbnail": "Thumbnail tertanam",
+          "xmp": "Data XMP"
+        },
         "faq": {
           "q1": "Data EXIF apa yang dihapus?",
           "a1": "Semua metadata dihapus termasuk lokasi GPS, model kamera, tanggal pengambilan, dan informasi tertanam lainnya. Gambar digambar ulang di kanvas bersih.",

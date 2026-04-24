@@ -575,9 +575,58 @@
         "metaTitle": "Xóa dữ liệu EXIF - Trình xóa EXIF trực tuyến miễn phí",
         "metaDescription": "Xóa siêu dữ liệu EXIF từ hình ảnh để bảo vệ quyền riêng tư. Xóa vị trí GPS, thông tin máy ảnh và hơn thế nữa. Công cụ trực tuyến miễn phí.",
         "keywords": "xóa exif, trình xóa exif, xóa siêu dữ liệu, bảo mật ảnh",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "Chọn chính xác thứ muốn xoá",
+            "description": "Tám nhóm—GPS, máy ảnh & ống kính, thông số chụp, ngày & giờ, tác giả, mô tả, thumbnail, XMP—mỗi nhóm một ô tick riêng. Giữ lại cái muốn, xoá phần còn lại."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "GPS biến mất chỉ với một cú click",
+            "description": "Bỏ tick mọi thứ trừ GPS, geotag của ảnh lập tức biến mất—chia sẻ an toàn mà không để lộ nơi chụp."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Xoá ở mức byte, không mã hoá lại",
+            "description": "Khi xoá tất cả, chúng tôi lột bỏ các segment trực tiếp ở mức byte—không nén lại JPEG, không xuất lại PNG. Pixel đầu ra giống hệt đầu vào."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG, PNG, WebP, AVIF",
+            "description": "Hoạt động trên mọi định dạng ảnh phổ biến. Xoá chọn lọc cho JPEG / PNG / WebP, xoá toàn bộ cho AVIF và HEIC."
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% trong trình duyệt",
+            "description": "Không có gì được upload. Mọi byte đều ở trên thiết bị của bạn. Sau khi tải trang, công cụ hoạt động hoàn toàn offline."
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "Giữ nguyên ICC color profile",
+            "description": "Chúng tôi không đụng đến color profile—JPEG wide-gamut và PNG chuẩn in giữ nguyên segment ICC_PROFILE."
+          }
+        },
         "removeExif": "Xóa dữ liệu EXIF",
         "processing": "Đang xử lý...",
         "cleaned": "Đã xóa dữ liệu EXIF thành công",
+        "categoryTitle": "Chọn loại dữ liệu muốn xoá",
+        "categoryHint": "Mặc định xoá tất cả. Bỏ chọn để giữ lại loại dữ liệu đó.",
+        "selectAll": "Chọn tất cả",
+        "selectNone": "Bỏ chọn hết",
+        "avifNotice": "AVIF / HEIC không hỗ trợ xoá theo loại; với các tệp này toàn bộ metadata sẽ bị xoá.",
+        "noSelection": "Hãy chọn ít nhất một loại để xoá.",
+        "categories": {
+          "gps": "Vị trí GPS",
+          "cameraLens": "Máy ảnh & ống kính",
+          "shooting": "Thông số chụp",
+          "dateTime": "Ngày & giờ",
+          "author": "Tác giả & bản quyền",
+          "description": "Tiêu đề & mô tả",
+          "thumbnail": "Ảnh thumbnail nhúng",
+          "xmp": "Dữ liệu XMP"
+        },
         "faq": {
           "q1": "Dữ liệu EXIF nào bị xóa?",
           "a1": "Tất cả siêu dữ liệu bị xóa bao gồm vị trí GPS, model máy ảnh, ngày chụp và thông tin nhúng khác. Hình ảnh được vẽ lại trên canvas sạch.",

@@ -575,9 +575,58 @@
         "metaTitle": "移除 EXIF 資料 - 免費線上 EXIF 移除工具",
         "metaDescription": "移除圖片中的 EXIF 中繼資料以保護隱私。移除 GPS 位置、相機資訊等。免費線上工具。",
         "keywords": "exif 移除, exif 刪除, 中繼資料移除, 照片隱私",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "想刪哪類就刪哪類",
+            "description": "8 大類可單獨勾選——GPS、相機與鏡頭、拍攝參數、日期時間、作者與版權、標題與描述、嵌入縮圖、XMP。想留的留下，想刪的刪掉。"
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "一鍵去掉 GPS 地理位置",
+            "description": "只勾 GPS 其餘全留，照片的地理座標瞬間消失——分享時不會洩漏拍攝地點。"
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "二進位級清除，不重編碼",
+            "description": "全選清除走原生位元組剝離，不會重壓縮 JPEG、不會重新匯出 PNG。輸出像素與原圖完全一致。"
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG/PNG/WebP/AVIF 全覆蓋",
+            "description": "涵蓋常見照片格式。JPEG/PNG/WebP 支援分類選擇性清除，AVIF/HEIC 自動走全量清除。"
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% 瀏覽器端處理",
+            "description": "一個位元組都不會上傳伺服器。檔案始終留在你的裝置上，頁面載入後可離線使用。"
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "ICC 色彩配置原樣保留",
+            "description": "不會動你的色彩配置——廣色域 JPEG、印刷級 PNG 的 ICC_PROFILE 段完整保留。"
+          }
+        },
         "removeExif": "移除 EXIF 資料",
         "processing": "處理中...",
         "cleaned": "EXIF 資料已成功移除",
+        "categoryTitle": "選擇要清除的資料類別",
+        "categoryHint": "預設清除全部；取消勾選即可保留該類資料。",
+        "selectAll": "全選",
+        "selectNone": "全不選",
+        "avifNotice": "AVIF / HEIC 格式不支援分類清除，這些檔案會依全部清除處理。",
+        "noSelection": "請至少選擇一個要清除的類別。",
+        "categories": {
+          "gps": "GPS 位置",
+          "cameraLens": "相機與鏡頭",
+          "shooting": "拍攝參數",
+          "dateTime": "日期時間",
+          "author": "作者與版權",
+          "description": "標題與描述",
+          "thumbnail": "嵌入縮圖",
+          "xmp": "XMP 資料"
+        },
         "faq": {
           "q1": "會移除哪些 EXIF 資料？",
           "a1": "移除所有中繼資料，包括 GPS 位置、相機型號、拍攝日期和其他嵌入資訊。圖片會在乾淨的畫布上重新繪製。",

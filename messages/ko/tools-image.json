@@ -585,9 +585,58 @@
         "metaTitle": "EXIF 데이터 제거 - 무료 온라인 EXIF 제거 도구",
         "metaDescription": "이미지에서 EXIF 메타데이터를 제거하여 프라이버시 보호. GPS 위치, 카메라 정보 등 제거. 무료 온라인 도구.",
         "keywords": "exif 제거, exif 삭제, 메타데이터 제거, 사진 프라이버시",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "삭제할 항목을 세밀하게 선택",
+            "description": "GPS, 카메라 및 렌즈, 촬영 설정, 날짜 및 시간, 작성자, 설명, 썸네일, XMP 등 8개 카테고리를 개별적으로 체크할 수 있습니다. 남길 것은 남기고, 지울 것만 지우세요."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "GPS 위치를 원클릭으로 제거",
+            "description": "GPS만 체크하고 나머지는 유지하면, 사진의 지오태그가 즉시 사라집니다. 촬영 장소를 노출하지 않고 안전하게 공유하세요."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "바이너리 직접 처리, 재인코딩 없음",
+            "description": "모두 삭제할 때는 바이트 단위로 세그먼트를 떼어냅니다. JPEG 재압축도, PNG 재내보내기도 없습니다. 출력 픽셀은 입력과 완전히 동일합니다."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG / PNG / WebP / AVIF 모두 지원",
+            "description": "흔한 사진 포맷을 전부 처리합니다. JPEG / PNG / WebP는 카테고리별 삭제, AVIF / HEIC는 전체 삭제로 처리됩니다."
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% 브라우저에서 처리",
+            "description": "아무것도 업로드되지 않습니다. 모든 바이트가 기기에 머무릅니다. 페이지가 로드된 후에는 오프라인에서도 완전히 동작합니다."
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "ICC 컬러 프로파일 유지",
+            "description": "컬러 프로파일은 건드리지 않습니다. 광색역 JPEG나 인쇄용 PNG의 ICC_PROFILE 세그먼트가 그대로 보존됩니다."
+          }
+        },
         "removeExif": "EXIF 데이터 제거",
         "processing": "처리 중...",
         "cleaned": "EXIF 데이터가 성공적으로 제거되었습니다",
+        "categoryTitle": "삭제할 데이터 카테고리 선택",
+        "categoryHint": "기본적으로 모두 삭제됩니다. 체크를 해제하면 해당 카테고리를 유지할 수 있습니다.",
+        "selectAll": "전체 선택",
+        "selectNone": "전체 해제",
+        "avifNotice": "AVIF / HEIC 형식은 카테고리별 삭제를 지원하지 않으며, 이 파일들은 모든 메타데이터가 제거됩니다.",
+        "noSelection": "삭제할 카테고리를 하나 이상 선택하세요.",
+        "categories": {
+          "gps": "GPS 위치",
+          "cameraLens": "카메라 및 렌즈",
+          "shooting": "촬영 설정",
+          "dateTime": "날짜 및 시간",
+          "author": "작성자 및 저작권",
+          "description": "제목 및 설명",
+          "thumbnail": "썸네일",
+          "xmp": "XMP 데이터"
+        },
         "faq": {
           "q1": "어떤 EXIF 데이터가 제거되나요?",
           "a1": "GPS 위치, 카메라 모델, 촬영 날짜 등 모든 메타데이터가 제거됩니다. 이미지는 깨끗한 캔버스에 다시 그려집니다.",

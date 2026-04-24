@@ -575,9 +575,58 @@
         "metaTitle": "清除 EXIF 数据 - 免费在线 EXIF 元数据删除工具 | PrivaDeck",
         "metaDescription": "立即清除图片中的 EXIF 元数据以保护隐私。删除 GPS 位置、相机信息、时间戳等。100% 免费，无需上传，支持离线使用。",
         "keywords": "清除 exif,exif 删除器，去除元数据，删除 gps 数据，照片隐私，图片元数据清理，heic exif 删除",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "想删哪类就删哪类",
+            "description": "8 大类可单独勾选——GPS、相机与镜头、拍摄参数、日期时间、作者与版权、标题与描述、嵌入缩略图、XMP。该留的留下，该删的删掉。"
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "一键去掉 GPS 地理位置",
+            "description": "只勾 GPS 其余全留，照片的地理坐标瞬间消失——发朋友圈时不会泄露拍摄地点。"
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "二进制级清除，不重编码",
+            "description": "全选清除走原生字节剥离，不会重压缩 JPEG、不会重新导出 PNG。输出像素与原图完全一致。"
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG/PNG/WebP/AVIF 全覆盖",
+            "description": "涵盖常见照片格式。JPEG/PNG/WebP 支持分类选择性清除，AVIF/HEIC 自动走全量清除。"
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% 浏览器端处理",
+            "description": "一个字节都不会上传服务器。文件始终留在你的设备上，页面加载后可离线使用。"
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "ICC 色彩配置原样保留",
+            "description": "不会动你的色彩配置——广色域 JPEG、印刷级 PNG 的 ICC_PROFILE 段完整保留。"
+          }
+        },
         "removeExif": "清除 EXIF 数据",
         "processing": "处理中...",
         "cleaned": "EXIF 数据已成功清除",
+        "categoryTitle": "选择要清除的数据类别",
+        "categoryHint": "默认清除全部；取消勾选即可保留该类数据。",
+        "selectAll": "全选",
+        "selectNone": "全不选",
+        "avifNotice": "AVIF / HEIC 格式不支持分类清除，这些文件会按全部清除处理。",
+        "noSelection": "请至少选择一个要清除的类别。",
+        "categories": {
+          "gps": "GPS 位置",
+          "cameraLens": "相机与镜头",
+          "shooting": "拍摄参数",
+          "dateTime": "日期时间",
+          "author": "作者与版权",
+          "description": "标题与描述",
+          "thumbnail": "嵌入缩略图",
+          "xmp": "XMP 数据"
+        },
         "faq": {
           "q1": "哪些 EXIF 数据会被清除？",
           "a1": "所有元数据都会被清除，包括 GPS 位置、相机型号、镜头信息、日期/时间戳、ISO 设置、光圈、快门速度、固件版本和使用的软件。图片会在干净的画布上重新绘制，这会自然剥离所有嵌入的元数据。",

@@ -575,9 +575,58 @@
         "metaTitle": "Supprimer les données EXIF - Outil gratuit en ligne",
         "metaDescription": "Supprimer les métadonnées EXIF des images pour protéger la vie privée. Supprimer la localisation GPS, les infos de l'appareil photo et plus. Outil gratuit en ligne.",
         "keywords": "supprimer EXIF, suppresseur EXIF, supprimer métadonnées, vie privée photo",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "Choisissez précisément ce à supprimer",
+            "description": "Huit catégories—GPS, appareil et objectif, paramètres de prise, date et heure, auteur, description, miniature, XMP—avec une case à cocher chacune. Gardez ce que vous voulez, supprimez le reste."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "GPS effacé en un clic",
+            "description": "Ne cochez que GPS, laissez tout le reste : la géolocalisation de votre photo disparaît aussitôt—partagez en toute sécurité sans révéler le lieu de prise."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Nettoyage binaire, sans réencodage",
+            "description": "Quand vous supprimez tout, nous retirons les segments directement au niveau des octets—aucune recompression JPEG, aucun réexport PNG. Les pixels de sortie sont identiques à l'entrée."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG, PNG, WebP, AVIF",
+            "description": "Fonctionne avec tous les formats photo courants. Suppression sélective sur JPEG / PNG / WebP, nettoyage complet sur AVIF et HEIC."
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% dans votre navigateur",
+            "description": "Rien n'est envoyé. Chaque octet reste sur votre appareil. Une fois la page chargée, l'outil fonctionne entièrement hors ligne."
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "Profil couleur ICC préservé",
+            "description": "Nous ne touchons jamais à votre profil couleur—les JPEG en gamut étendu et les PNG prêts pour l'impression conservent intact leur segment ICC_PROFILE."
+          }
+        },
         "removeExif": "Supprimer les données EXIF",
         "processing": "Traitement en cours...",
         "cleaned": "Données EXIF supprimées avec succès",
+        "categoryTitle": "Choisissez les catégories à supprimer",
+        "categoryHint": "Toutes les catégories sont sélectionnées par défaut. Décochez-en une pour conserver ces données.",
+        "selectAll": "Tout sélectionner",
+        "selectNone": "Tout désélectionner",
+        "avifNotice": "Les formats AVIF / HEIC ne prennent pas en charge la suppression par catégorie ; toutes les métadonnées de ces fichiers seront supprimées.",
+        "noSelection": "Sélectionnez au moins une catégorie à supprimer.",
+        "categories": {
+          "gps": "Position GPS",
+          "cameraLens": "Appareil et objectif",
+          "shooting": "Paramètres de prise",
+          "dateTime": "Date et heure",
+          "author": "Auteur et droits",
+          "description": "Titre et description",
+          "thumbnail": "Miniature intégrée",
+          "xmp": "Données XMP"
+        },
         "faq": {
           "q1": "Quelles données EXIF sont supprimées ?",
           "a1": "Toutes les métadonnées sont supprimées, y compris la localisation GPS, le modèle d'appareil photo, la date de prise de vue et autres informations intégrées. L'image est redessinée sur un canevas vierge.",

@@ -575,9 +575,58 @@
         "metaTitle": "Remover dados EXIF - Removedor de EXIF gratuito online",
         "metaDescription": "Remova metadados EXIF de imagens para proteger a privacidade. Remova localização GPS, informações da câmara e mais. Ferramenta online gratuita.",
         "keywords": "remover exif, removedor exif, remover metadados, privacidade de fotos",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "Escolha exactamente o que remover",
+            "description": "Oito categorias—GPS, câmara e objectiva, parâmetros de captura, data e hora, autor, descrição, miniatura, XMP—cada uma com a sua caixa. Mantenha o que quiser, remova o resto."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "GPS eliminado num clique",
+            "description": "Desmarque tudo excepto GPS e a geotag da foto desaparece de imediato—partilhe em segurança, sem revelar onde foi tirada."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Limpeza binária, sem recodificação",
+            "description": "Quando remove tudo, cortamos os segmentos directamente ao nível dos bytes—sem recompressão JPEG, sem reexportação PNG. Os píxeis de saída são idênticos aos da entrada."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG, PNG, WebP, AVIF",
+            "description": "Funciona em todos os formatos de foto comuns. Remoção selectiva em JPEG / PNG / WebP, remoção total em AVIF e HEIC."
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% no seu browser",
+            "description": "Nada é enviado. Cada byte permanece no seu dispositivo. Após o carregamento da página, a ferramenta trabalha totalmente offline."
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "Perfil de cor ICC preservado",
+            "description": "Nunca tocamos no seu perfil de cor—JPEGs de gama ampla e PNGs prontos para impressão mantêm o segmento ICC_PROFILE intacto."
+          }
+        },
         "removeExif": "Remover dados EXIF",
         "processing": "A processar...",
         "cleaned": "Dados EXIF removidos com sucesso",
+        "categoryTitle": "Escolha as categorias a remover",
+        "categoryHint": "Por predefinição são todas removidas. Desmarque para manter essa categoria.",
+        "selectAll": "Seleccionar tudo",
+        "selectNone": "Limpar selecção",
+        "avifNotice": "AVIF / HEIC não suportam remoção por categoria; nestes ficheiros serão apagados todos os metadados.",
+        "noSelection": "Seleccione pelo menos uma categoria a remover.",
+        "categories": {
+          "gps": "Localização GPS",
+          "cameraLens": "Câmara e objectiva",
+          "shooting": "Parâmetros de captura",
+          "dateTime": "Data e hora",
+          "author": "Autor e direitos",
+          "description": "Título e descrição",
+          "thumbnail": "Miniatura incorporada",
+          "xmp": "Dados XMP"
+        },
         "faq": {
           "q1": "Que dados EXIF são removidos?",
           "a1": "Todos os metadados são removidos, incluindo localização GPS, modelo da câmara, data de captura e outras informações incorporadas. A imagem é redesenhada num canvas limpo.",

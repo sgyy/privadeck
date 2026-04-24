@@ -575,9 +575,58 @@
         "metaTitle": "Remove EXIF Data - Free Online EXIF Metadata Remover | PrivaDeck",
         "metaDescription": "Remove EXIF metadata from images instantly to protect privacy. Strip GPS location, camera info, timestamps & more. 100% free, no upload, works offline.",
         "keywords": "remove exif, exif remover, strip metadata, remove gps data, photo privacy, image metadata cleaner, heic exif remover",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "Pick exactly what to remove",
+            "description": "Eight categories—GPS, camera & lens, shooting settings, date & time, author, description, thumbnail, XMP—each with its own checkbox. Keep what you want, strip the rest."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "GPS location gone in one click",
+            "description": "Uncheck everything else, keep only GPS, and your photo loses its geotag instantly—share safely without leaking where it was shot."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Binary stripping, no re-encoding",
+            "description": "When you remove everything, we strip segments directly at the byte level—no JPEG recompression, no PNG re-export. The output pixels are identical to the input."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG, PNG, WebP, AVIF",
+            "description": "Works on every common photo format. Selective removal on JPEG / PNG / WebP, full strip on AVIF and HEIC."
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% in your browser",
+            "description": "Nothing is uploaded. Every byte stays on your device. Once the page is loaded, the tool works completely offline."
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "ICC color profile preserved",
+            "description": "We never touch your color profile—wide-gamut JPEGs and print-ready PNGs keep their ICC_PROFILE segment intact."
+          }
+        },
         "removeExif": "Remove EXIF Data",
         "processing": "Processing...",
         "cleaned": "EXIF data removed successfully",
+        "categoryTitle": "Select data categories to remove",
+        "categoryHint": "All categories are selected by default. Uncheck any category to keep that data.",
+        "selectAll": "Select all",
+        "selectNone": "Clear all",
+        "avifNotice": "AVIF / HEIC don't support category-level removal; all metadata will be stripped for these files.",
+        "noSelection": "Select at least one category to remove.",
+        "categories": {
+          "gps": "GPS location",
+          "cameraLens": "Camera & lens",
+          "shooting": "Shooting settings",
+          "dateTime": "Date & time",
+          "author": "Author & copyright",
+          "description": "Title & description",
+          "thumbnail": "Embedded thumbnail",
+          "xmp": "XMP data"
+        },
         "faq": {
           "q1": "What EXIF data is removed?",
           "a1": "All metadata is removed including GPS location, camera model, lens information, date/time stamps, ISO settings, aperture, shutter speed, firmware version, and software used. The image is redrawn on a clean canvas which inherently strips all embedded metadata.",

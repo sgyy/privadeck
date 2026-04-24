@@ -575,9 +575,58 @@
         "metaTitle": "Usuń dane EXIF - Darmowe narzędzie do usuwania EXIF online",
         "metaDescription": "Usuń metadane EXIF z obrazów, aby chronić prywatność. Usuń lokalizację GPS, informacje o aparacie i więcej. Darmowe narzędzie online.",
         "keywords": "usuń exif, usuwanie exif, usuń metadane, prywatność zdjęć",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "Wybierz dokładnie, co usunąć",
+            "description": "Osiem kategorii—GPS, aparat i obiektyw, parametry zdjęcia, data i czas, autor, opis, miniatura, XMP—każda ma własne pole wyboru. Zachowaj to, co chcesz, usuń resztę."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "GPS znika jednym kliknięciem",
+            "description": "Odznacz wszystko oprócz GPS—geotag zdjęcia natychmiast przestaje istnieć. Udostępniaj bezpiecznie, bez zdradzania miejsca wykonania."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Usuwanie na poziomie bajtów, bez rekodowania",
+            "description": "Gdy usuwasz wszystko, wycinamy segmenty bezpośrednio na poziomie bajtów—żadnej rekompresji JPEG, żadnego powtórnego eksportu PNG. Piksele wyjściowe są identyczne z wejściowymi."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG, PNG, WebP, AVIF",
+            "description": "Działa na wszystkich popularnych formatach zdjęć. Selektywne usuwanie w JPEG / PNG / WebP, pełne usuwanie w AVIF i HEIC."
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% w twojej przeglądarce",
+            "description": "Nic nie jest wysyłane. Każdy bajt zostaje na twoim urządzeniu. Po wczytaniu strony narzędzie działa w pełni offline."
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "Profil kolorów ICC zachowany",
+            "description": "Nie dotykamy twojego profilu kolorów—JPEG-i o szerokim gamucie i PNG gotowe do druku zachowują segment ICC_PROFILE w całości."
+          }
+        },
         "removeExif": "Usuń dane EXIF",
         "processing": "Przetwarzanie...",
         "cleaned": "Dane EXIF zostały pomyślnie usunięte",
+        "categoryTitle": "Wybierz kategorie danych do usunięcia",
+        "categoryHint": "Domyślnie usuwane są wszystkie. Odznacz kategorię, aby zachować te dane.",
+        "selectAll": "Zaznacz wszystko",
+        "selectNone": "Odznacz wszystko",
+        "avifNotice": "Formaty AVIF / HEIC nie obsługują usuwania według kategorii; w tych plikach zostaną usunięte wszystkie metadane.",
+        "noSelection": "Wybierz co najmniej jedną kategorię do usunięcia.",
+        "categories": {
+          "gps": "Lokalizacja GPS",
+          "cameraLens": "Aparat i obiektyw",
+          "shooting": "Parametry zdjęcia",
+          "dateTime": "Data i czas",
+          "author": "Autor i prawa autorskie",
+          "description": "Tytuł i opis",
+          "thumbnail": "Osadzona miniatura",
+          "xmp": "Dane XMP"
+        },
         "faq": {
           "q1": "Jakie dane EXIF są usuwane?",
           "a1": "Wszystkie metadane są usuwane, w tym lokalizacja GPS, model aparatu, data wykonania i inne osadzone informacje. Obraz jest ponownie rysowany na czystym płótnie.",

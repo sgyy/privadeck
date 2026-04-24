@@ -575,9 +575,58 @@
         "metaTitle": "EXIF-gegevens verwijderen - Gratis online EXIF-verwijderaar",
         "metaDescription": "Verwijder EXIF-metadata uit afbeeldingen om je privacy te beschermen. Verwijder GPS-locatie, camera-info en meer. Gratis online tool.",
         "keywords": "exif verwijderen, exif remover, metadata verwijderen, foto privacy",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "KeyRound",
+            "title": "Kies precies wat je wilt wissen",
+            "description": "Acht categorieën—GPS, camera & lens, opname-instellingen, datum & tijd, auteur, beschrijving, miniatuur, XMP—elk met een eigen vinkje. Behoud wat je wilt, wis de rest."
+          },
+          "f2": {
+            "icon": "Shield",
+            "title": "GPS-locatie weg in één klik",
+            "description": "Vink alleen GPS aan, laat de rest staan: de geotag van je foto is direct weg—deel veilig zonder te onthullen waar de foto is gemaakt."
+          },
+          "f3": {
+            "icon": "Zap",
+            "title": "Binair wissen zonder hercompressie",
+            "description": "Als je alles wist, strippen we segmenten direct op byte-niveau—geen JPEG-hercompressie, geen PNG-herexport. De uitvoerpixels zijn identiek aan de invoer."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPEG, PNG, WebP, AVIF",
+            "description": "Werkt op elk veelvoorkomend fotoformaat. Selectieve verwijdering op JPEG / PNG / WebP, volledige verwijdering op AVIF en HEIC."
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "100% in je browser",
+            "description": "Er wordt niets geüpload. Elke byte blijft op je apparaat. Zodra de pagina is geladen, werkt de tool volledig offline."
+          },
+          "f6": {
+            "icon": "ArrowLeftRight",
+            "title": "ICC-kleurprofiel behouden",
+            "description": "We raken je kleurprofiel niet aan—wide-gamut JPEG's en drukklare PNG's houden hun ICC_PROFILE-segment intact."
+          }
+        },
         "removeExif": "EXIF-gegevens verwijderen",
         "processing": "Verwerken...",
         "cleaned": "EXIF-gegevens succesvol verwijderd",
+        "categoryTitle": "Kies welke datacategorieën te verwijderen",
+        "categoryHint": "Standaard worden alle categorieën verwijderd. Vink iets uit om die data te behouden.",
+        "selectAll": "Alles selecteren",
+        "selectNone": "Alles deselecteren",
+        "avifNotice": "AVIF / HEIC ondersteunen geen verwijdering per categorie; bij deze bestanden worden alle metadata gewist.",
+        "noSelection": "Selecteer minstens één categorie om te verwijderen.",
+        "categories": {
+          "gps": "GPS-locatie",
+          "cameraLens": "Camera & lens",
+          "shooting": "Opname-instellingen",
+          "dateTime": "Datum & tijd",
+          "author": "Auteur & copyright",
+          "description": "Titel & beschrijving",
+          "thumbnail": "Ingebedde miniatuur",
+          "xmp": "XMP-gegevens"
+        },
         "faq": {
           "q1": "Welke EXIF-gegevens worden verwijderd?",
           "a1": "Alle metadata wordt verwijderd, inclusief GPS-locatie, cameramodel, opnamedatum en andere ingesloten informatie. De afbeelding wordt opnieuw getekend op een schoon canvas.",
