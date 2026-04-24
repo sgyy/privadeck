@@ -448,6 +448,39 @@
         "metaTitle": "EXIF 편집기 - 온라인으로 사진 메타데이터 보기·편집 | PrivaDeck",
         "metaDescription": "무료 온라인 EXIF 편집기. 사진의 GPS, 카메라, 날짜, 저작권, IPTC 필드를 보고 편집합니다. 업로드 없이 브라우저에서 동작. JPEG, PNG, WebP 지원.",
         "keywords": "EXIF 편집기, EXIF 온라인 편집, EXIF 보기, 사진 메타데이터 편집기, GPS 좌표 편집, 카메라 정보 편집, GPS 제거, IPTC 편집기",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "메타데이터 전체 열람",
+            "description": "JPEG, PNG, WebP, HEIC, AVIF, TIFF에서 EXIF·IPTC·XMP의 모든 필드를 읽고 카메라·렌즈·날짜·GPS·저작권 등으로 그룹화해 보여줍니다. 사진의 전체 디지털 이력을 한눈에 확인할 수 있습니다."
+          },
+          "f2": {
+            "icon": "KeyRound",
+            "title": "핵심 필드 현장 편집",
+            "description": "촬영 일시, GPS 좌표, 카메라 본체와 렌즈, 작성자, 저작권, 제목, 설명을 하나의 폼에서 수정합니다. 포맷 변환도 픽셀 재인코딩도 하지 않아 원본이 그대로 보존됩니다."
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "원클릭 프라이버시 삭제",
+            "description": "전용 버튼으로 GPS 좌표나 촬영 날짜만 지우고 나머지 메타데이터는 그대로 유지합니다. SNS 업로드나 클라이언트 납품 전 위치 정보만 제거하고 싶을 때 이상적입니다."
+          },
+          "f4": {
+            "icon": "ArrowLeftRight",
+            "title": "원본 포맷 유지 저장",
+            "description": "JPEG·PNG·WebP는 원본 컨테이너 안에서 직접 덮어씁니다. 재인코딩도, 화질 저하도, 엉뚱한 포맷 변경도 없습니다. PNG는 PNG로, WebP는 WebP로 남습니다."
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "JSON / CSV 내보내기",
+            "description": "제조사 고유 태그와 희귀 필드까지 포함한 전체 메타데이터를 JSON 또는 스프레드시트 친화적인 CSV로 내보냅니다. 감사·포렌식·법적 문서화·다른 파이프라인 연동에 적합합니다."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 로컬 처리, 업로드 없음",
+            "description": "모든 읽기·쓰기가 브라우저 안에서 이뤄집니다. 사진은 기기를 떠나지 않으며, GPS 미리보기도 로컬에서 렌더링되고, 페이지가 한 번 로드되면 오프라인에서도 동작합니다."
+          }
+        },
         "viewer": {
           "noData": "EXIF 데이터 없음",
           "readOnlyTitle": "읽기 전용 형식",

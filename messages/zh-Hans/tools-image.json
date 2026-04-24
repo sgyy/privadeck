@@ -438,6 +438,39 @@
         "metaTitle": "EXIF 编辑器 - 在线查看和编辑照片元数据 | PrivaDeck",
         "metaDescription": "免费在线 EXIF 编辑器。查看和编辑照片中的 GPS、相机、日期、版权、IPTC 字段。纯浏览器处理，不上传。支持 JPEG、PNG、WebP。",
         "keywords": "exif 编辑器, 在线编辑 exif, 查看 exif, 照片元数据编辑器, gps 坐标编辑, 相机信息编辑, 清除 gps, iptc 编辑器",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "完整元数据查看",
+            "description": "读取 JPEG、PNG、WebP、HEIC、AVIF、TIFF 中的全部 EXIF、IPTC、XMP 字段，按相机、镜头、日期、GPS、版权等类别分组展示，一眼看清照片的完整数字履历。"
+          },
+          "f2": {
+            "icon": "KeyRound",
+            "title": "关键字段精细编辑",
+            "description": "在同一表单中修改拍摄日期、GPS 坐标、相机与镜头型号、作者、版权、标题、描述。不做格式转换，不重编码像素，原始照片完整保留。"
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "一键隐私清除",
+            "description": "专用按钮可单独清空 GPS 坐标或拍摄日期，其他元数据原样保留。特别适合发布到社交媒体或交付客户前去掉位置信息。"
+          },
+          "f4": {
+            "icon": "ArrowLeftRight",
+            "title": "保持原格式写回",
+            "description": "JPEG、PNG、WebP 均在原容器内写入修改——不重新编码、不损失画质、不改换格式。PNG 仍是 PNG，WebP 仍是 WebP。"
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "JSON / CSV 导出",
+            "description": "完整导出所有元数据（含厂商私有标签、罕见字段）为 JSON 或电子表格友好的 CSV。适合审计、取证、法律存证或接入其他处理流程。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 本地处理，零上传",
+            "description": "每一次读取和写入都在浏览器内完成。照片永不离开设备，GPS 预览本地绘制，页面加载后完全支持离线使用。"
+          }
+        },
         "viewer": {
           "noData": "无 EXIF 数据",
           "readOnlyTitle": "只读格式",

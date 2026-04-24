@@ -438,6 +438,39 @@
         "metaTitle": "EXIF 編輯器 - 線上檢視並編輯照片中繼資料 | PrivaDeck",
         "metaDescription": "免費線上 EXIF 編輯器。檢視並編輯照片中的 GPS、相機、日期、版權與 IPTC 欄位。在瀏覽器中執行 — 無需上傳。支援 JPEG、PNG、WebP。",
         "keywords": "EXIF 編輯器, 線上編輯 EXIF, 檢視 EXIF, 照片中繼資料編輯器, GPS 座標編輯, 編輯相機資訊, 移除 GPS, IPTC 編輯器",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "完整中繼資料檢視",
+            "description": "讀取 JPEG、PNG、WebP、HEIC、AVIF、TIFF 中的全部 EXIF、IPTC、XMP 欄位，依相機、鏡頭、日期、GPS、版權等類別分組呈現，一眼看清照片的完整數位履歷。"
+          },
+          "f2": {
+            "icon": "KeyRound",
+            "title": "關鍵欄位精細編輯",
+            "description": "在同一張表單內修改拍攝日期、GPS 座標、相機與鏡頭型號、作者、版權、標題、描述。不做格式轉換、不重編碼像素，原始照片完整保留。"
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "一鍵隱私清除",
+            "description": "專屬按鈕可單獨清空 GPS 座標或拍攝日期，其他中繼資料原樣保留。特別適合發到社群平台或交付客戶前先拿掉位置資訊。"
+          },
+          "f4": {
+            "icon": "ArrowLeftRight",
+            "title": "保留原始格式寫回",
+            "description": "JPEG、PNG、WebP 都在原容器內寫入修改——不重新編碼、不損失畫質、不偷偷換格式。PNG 就是 PNG，WebP 就是 WebP。"
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "JSON / CSV 匯出",
+            "description": "完整匯出所有中繼資料（含廠商私有標籤、罕見欄位）為 JSON 或試算表友善的 CSV。適合稽核、鑑識、法律存證或串接其他流程。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 本地處理，零上傳",
+            "description": "每一次讀取與寫入都在瀏覽器內完成。照片永不離開裝置，GPS 預覽於本地繪製，頁面載入後完全支援離線使用。"
+          }
+        },
         "viewer": {
           "noData": "無 EXIF 資料",
           "readOnlyTitle": "唯讀格式",

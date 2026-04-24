@@ -438,6 +438,39 @@
         "metaTitle": "EXIF エディター - 写真メタデータをオンラインで表示・編集 | PrivaDeck",
         "metaDescription": "無料オンライン EXIF エディター。写真内の GPS、カメラ、日時、著作権、IPTC フィールドを表示・編集。ブラウザ内で動作 — アップロード不要。JPEG、PNG、WebP に対応。",
         "keywords": "EXIF エディター, EXIF オンライン編集, EXIF 表示, 写真メタデータ エディター, GPS 座標 編集, カメラ情報 編集, GPS 削除, IPTC エディター",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "メタデータを完全表示",
+            "description": "JPEG、PNG、WebP、HEIC、AVIF、TIFF から EXIF / IPTC / XMP のすべてのフィールドを読み取り、カメラ・レンズ・日付・GPS・著作権などにグループ分けして表示します。写真の全履歴を一目で把握できます。"
+          },
+          "f2": {
+            "icon": "KeyRound",
+            "title": "主要フィールドをその場で編集",
+            "description": "撮影日時、GPS 座標、カメラ本体とレンズ、作者、著作権、タイトル、説明を同一フォームから編集。形式変換も再エンコードも行わないので、元画像はそのまま保たれます。"
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "ワンクリックでプライバシー削除",
+            "description": "専用ボタンで GPS 座標や撮影日を単体で消去し、他のメタデータには触れません。SNS 投稿やクライアント納品の前に位置情報だけを落としたい場面に最適です。"
+          },
+          "f4": {
+            "icon": "ArrowLeftRight",
+            "title": "元フォーマットを保持して書き戻し",
+            "description": "JPEG・PNG・WebP は元のコンテナ内で直接書き換え——再エンコードも画質劣化もなく、形式が勝手に変わることもありません。PNG は PNG のまま、WebP は WebP のままです。"
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "JSON / CSV エクスポート",
+            "description": "メーカーノートや稀少タグも含めた全メタデータを JSON またはスプレッドシートで扱える CSV として書き出せます。監査・フォレンジック・法的記録・他ツール連携に最適です。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% ローカル処理・アップロードなし",
+            "description": "読み取りも書き込みもすべてブラウザ内で完結。写真は端末外に出ず、GPS プレビューもローカル描画。ページを一度読み込めばオフラインでも動作します。"
+          }
+        },
         "viewer": {
           "noData": "EXIF データなし",
           "readOnlyTitle": "読み取り専用形式",
