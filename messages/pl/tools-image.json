@@ -432,6 +432,110 @@
           }
         }
       },
+      "exif-editor": {
+        "name": "Edytor EXIF",
+        "description": "Przeglądaj i edytuj metadane zdjęć — GPS, aparat, daty, prawa autorskie.",
+        "metaTitle": "Edytor EXIF — Przeglądaj i edytuj metadane zdjęć online | PrivaDeck",
+        "metaDescription": "Darmowy edytor EXIF online. Przeglądaj i edytuj GPS, aparat, daty, prawa autorskie oraz pola IPTC w swoich zdjęciach. Działa w przeglądarce — bez wgrywania. Obsługuje JPEG, PNG, WebP.",
+        "keywords": "edytor exif, edycja exif online, podgląd exif, edytor metadanych zdjęć, edytor współrzędnych GPS, edycja danych aparatu, usuń GPS, edytor IPTC",
+        "viewer": {
+          "noData": "Brak danych EXIF",
+          "readOnlyTitle": "Format tylko do odczytu",
+          "readOnlyNotice": "Pliki {format} można wyświetlać, ale nie można ich edytować. Narzędzie zachowuje oryginalny format — nie konwertuje między formatami."
+        },
+        "groups": {
+          "camera": "Aparat",
+          "lens": "Obiektyw",
+          "datetime": "Data i godzina",
+          "gps": "Lokalizacja GPS",
+          "copyright": "Autor i prawa autorskie",
+          "iptc": "Tytuł i opis",
+          "technical": "Szczegóły techniczne",
+          "other": "Inne"
+        },
+        "fields": {
+          "make": "Producent",
+          "model": "Model",
+          "software": "Oprogramowanie",
+          "lensMake": "Producent obiektywu",
+          "lensModel": "Model obiektywu",
+          "focalLength": "Ogniskowa",
+          "focalLengthIn35mm": "Odpowiednik 35 mm",
+          "dateTimeOriginal": "Data wykonania",
+          "dateTimeDigitized": "Data digitalizacji",
+          "dateTime": "Data modyfikacji",
+          "latitude": "Szerokość geograficzna",
+          "longitude": "Długość geograficzna",
+          "altitude": "Wysokość",
+          "artist": "Autor",
+          "copyright": "Prawa autorskie",
+          "title": "Tytuł",
+          "description": "Opis",
+          "keywords": "Słowa kluczowe",
+          "iso": "ISO",
+          "fNumber": "Przysłona",
+          "exposureTime": "Czas naświetlania",
+          "flash": "Lampa błyskowa",
+          "whiteBalance": "Balans bieli",
+          "orientation": "Orientacja",
+          "colorSpace": "Przestrzeń barw",
+          "imageWidth": "Szerokość",
+          "imageHeight": "Wysokość"
+        },
+        "actions": {
+          "applyEdits": "Zastosuj i pobierz",
+          "clearGps": "Wyczyść GPS",
+          "clearDateTime": "Wyczyść datę",
+          "exportJson": "Eksportuj JSON",
+          "exportCsv": "Eksportuj CSV",
+          "openInMapTooltip": "Otwiera zewnętrzny serwis mapowy. Współrzędne zostaną wysłane do tego dostawcy.",
+          "changeFile": "Zmień plik",
+          "removeFile": "Usuń",
+          "resetEdits": "Resetuj"
+        },
+        "messages": {
+          "noExifFound": "Nie znaleziono danych EXIF w tym pliku.",
+          "loadingExif": "Odczyt EXIF…",
+          "processing": "Przetwarzanie…",
+          "processed": "Gotowe",
+          "writeSuccess": "Metadane zaktualizowane",
+          "writeError": "Nie udało się zapisać metadanych"
+        },
+        "faq": {
+          "q1": "Które pola mogę edytować?",
+          "a1": "Możesz edytować najczęściej używane pola: datę wykonania, współrzędne GPS (szerokość/długość geograficzna), model aparatu, model obiektywu, autora, prawa autorskie, tytuł oraz opis. Rzadkie lub specyficzne dla urządzenia pola są wyświetlane tylko do odczytu, abyś ich przypadkiem nie uszkodził.",
+          "q2": "Czy moje zdjęcie jest gdziekolwiek wysyłane?",
+          "a2": "Nie. Cały odczyt i zapis odbywa się lokalnie w Twojej przeglądarce. Zdjęcia nigdy nie opuszczają Twojego urządzenia.",
+          "q3": "Dlaczego nie mogę edytować plików HEIC, AVIF ani TIFF?",
+          "a3": "To narzędzie zachowuje oryginalny format pliku, zamiast konwertować go na JPEG. Edycja „w miejscu” dla HEIC, AVIF i TIFF wymaga skomplikowanego przepisywania kontenerów i nie jest obsługiwana w tej wersji. Nadal możesz przeglądać wszystkie metadane w tych formatach.",
+          "q4": "Jak całkowicie usunąć lokalizację GPS?",
+          "a4": "Kliknij przycisk „Wyczyść GPS\" w sekcji GPS formularza edycji. Pozostałe metadane (aparat, data, prawa autorskie) pozostają zachowane w zapisanym pliku.",
+          "q5": "Co znajduje się w eksporcie JSON/CSV?",
+          "a5": "Pełny zrzut wszystkich pól EXIF, IPTC i XMP, które narzędzie zdołało odczytać z pliku. Zawiera szczegóły aparatu, GPS, znaczniki czasu, notatki producenta i więcej. Przydatne do audytu, kryminalistyki lub przekazywania do innych narzędzi."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Czym jest Edytor EXIF?",
+            "content": "<p><strong>Edytor EXIF</strong> pozwala podejrzeć i edytować ukryte metadane zapisane w zdjęciu — lokalizację GPS, model aparatu, obiektyw, datę wykonania, autora, prawa autorskie i inne. W przeciwieństwie do większości edytorów online zachowuje oryginalny format pliku i wykonuje całe przetwarzanie w Twojej przeglądarce.</p><p>Idealny, aby poprawić błędny znacznik czasu po podróży, usunąć GPS przed udostępnieniem lub ostemplować prawami autorskimi wyeksportowane zdjęcie.</p>"
+          },
+          "howToUse": {
+            "title": "Jak korzystać z Edytora EXIF",
+            "content": "<ol><li>Wgraj jedno zdjęcie, klikając strefę upuszczania lub przeciągając je na stronę</li><li>Narzędzie odczytuje wszystkie pola EXIF, IPTC i GPS i wyświetla je pogrupowane według kategorii</li><li>Edytuj najczęściej używane pola bezpośrednio na miejscu: data, GPS, aparat, obiektyw, autor, prawa autorskie, tytuł, opis</li><li>Użyj przycisków w tekście <strong>Wyczyść GPS</strong> lub <strong>Wyczyść datę</strong>, aby wyczyścić pojedyncze pole</li><li>Kliknij <strong>Zastosuj i pobierz</strong>, aby zapisać zmodyfikowany obraz — oryginalny format zostaje zachowany</li><li>Albo kliknij <strong>Eksportuj JSON / CSV</strong>, aby uzyskać pełny zrzut metadanych</li></ol>"
+          },
+          "features": {
+            "title": "Kluczowe funkcje",
+            "content": "<ul><li><strong>Pełny odczyt, format zachowany</strong>: odczytuj EXIF/IPTC/XMP w JPEG, PNG, WebP, HEIC, AVIF i TIFF; zapisuj zmiany z powrotem do JPEG, PNG i WebP w oryginalnym formacie</li><li><strong>Najczęściej zmieniane pola</strong>: edytuj tylko te pola, które ludzie naprawdę zmieniają — data, GPS, aparat, obiektyw, autor, prawa autorskie, tytuł, opis</li><li><strong>Jedno kliknięcie, czysto</strong>: dedykowane przyciski do czyszczenia GPS lub daty bez ruszania reszty metadanych</li><li><strong>Linki do map</strong>: trzy zewnętrzne linki do map (OpenStreetMap, Google Maps, Bing Maps) dla lokalizacji GPS — na tej stronie nie są ładowane żadne kafelki map</li><li><strong>Eksport JSON / CSV</strong>: pełny zrzut metadanych do audytu, informatyki śledczej lub zasilenia innych narzędzi</li><li><strong>100% prywatnie</strong>: bez wgrywania — każdy odczyt i zapis odbywa się w Twojej przeglądarce</li></ul>"
+          },
+          "useCases": {
+            "title": "Typowe zastosowania",
+            "content": "<ul><li><strong>Przed udostępnieniem</strong>: usuń współrzędne GPS ze zdjęcia, zanim opublikujesz je w mediach społecznościowych</li><li><strong>Po podróży</strong>: popraw błędną datę lub strefę czasową zdjęcia wykonanego ze źle ustawionym zegarem aparatu</li><li><strong>Stemplowanie praw autorskich</strong>: dodaj autora, prawa autorskie i podpis do wyeksportowanego zdjęcia</li><li><strong>Informatyka śledcza i audyt</strong>: wyeksportuj pełne EXIF/IPTC/XMP do JSON lub CSV w celach dokumentacyjnych</li><li><strong>Przegląd prywatności</strong>: sprawdź dokładnie, jakie metadane niesie zdjęcie, zanim zdecydujesz, co usunąć</li></ul>"
+          },
+          "privacy": {
+            "title": "Edycja EXIF z prywatnością na pierwszym miejscu",
+            "content": "<p>Wysyłanie zdjęcia na serwer, aby tam edytować ujawniające prywatność metadane, byłoby zaprzeczeniem celu. Wszystko dzieje się w Twojej przeglądarce.</p><ul><li>Twoje zdjęcia <strong>nigdy nie opuszczają urządzenia</strong></li><li>Podgląd GPS rysowany jest lokalnie — żadnych żądań kafelków map, które mogłyby ujawnić lokalizację</li><li>Otwarcie lokalizacji w OpenStreetMap odbywa się wyłącznie z Twojej inicjatywy za pomocą przycisku linku zewnętrznego</li><li>Działa <strong>offline</strong> po załadowaniu strony</li></ul>"
+          }
+        }
+      },
       "remove-exif": {
         "name": "Usuń dane EXIF",
         "description": "Usuń metadane EXIF ze zdjęć, aby chronić swoją prywatność.",

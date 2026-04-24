@@ -432,6 +432,110 @@
           }
         }
       },
+      "exif-editor": {
+        "name": "EXIF 编辑器",
+        "description": "查看和编辑照片元数据——GPS、相机、日期、版权。",
+        "metaTitle": "EXIF 编辑器 - 在线查看和编辑照片元数据 | PrivaDeck",
+        "metaDescription": "免费在线 EXIF 编辑器。查看和编辑照片中的 GPS、相机、日期、版权、IPTC 字段。纯浏览器处理，不上传。支持 JPEG、PNG、WebP。",
+        "keywords": "exif 编辑器, 在线编辑 exif, 查看 exif, 照片元数据编辑器, gps 坐标编辑, 相机信息编辑, 清除 gps, iptc 编辑器",
+        "viewer": {
+          "noData": "无 EXIF 数据",
+          "readOnlyTitle": "只读格式",
+          "readOnlyNotice": "{format} 文件可以查看但不能编辑。此工具保持原格式——不会做格式转换。"
+        },
+        "groups": {
+          "camera": "相机",
+          "lens": "镜头",
+          "datetime": "日期时间",
+          "gps": "GPS 位置",
+          "copyright": "作者与版权",
+          "iptc": "标题与描述",
+          "technical": "技术参数",
+          "other": "其他"
+        },
+        "fields": {
+          "make": "品牌",
+          "model": "型号",
+          "software": "软件",
+          "lensMake": "镜头品牌",
+          "lensModel": "镜头型号",
+          "focalLength": "焦距",
+          "focalLengthIn35mm": "35mm 等效焦距",
+          "dateTimeOriginal": "拍摄时间",
+          "dateTimeDigitized": "数字化时间",
+          "dateTime": "修改时间",
+          "latitude": "纬度",
+          "longitude": "经度",
+          "altitude": "海拔",
+          "artist": "作者",
+          "copyright": "版权",
+          "title": "标题",
+          "description": "描述",
+          "keywords": "关键词",
+          "iso": "ISO",
+          "fNumber": "光圈",
+          "exposureTime": "快门速度",
+          "flash": "闪光灯",
+          "whiteBalance": "白平衡",
+          "orientation": "方向",
+          "colorSpace": "色彩空间",
+          "imageWidth": "宽度",
+          "imageHeight": "高度"
+        },
+        "actions": {
+          "applyEdits": "应用并下载",
+          "clearGps": "清除 GPS",
+          "clearDateTime": "清除日期",
+          "exportJson": "导出 JSON",
+          "exportCsv": "导出 CSV",
+          "openInMapTooltip": "点击跳转到外部地图服务，坐标会发送给该服务商。",
+          "changeFile": "换一张",
+          "removeFile": "移除",
+          "resetEdits": "重置修改"
+        },
+        "messages": {
+          "noExifFound": "此文件中未找到 EXIF 数据。",
+          "loadingExif": "正在读取 EXIF…",
+          "processing": "处理中…",
+          "processed": "完成",
+          "writeSuccess": "元数据已更新",
+          "writeError": "写入元数据失败"
+        },
+        "faq": {
+          "q1": "可以编辑哪些字段？",
+          "a1": "可编辑常用字段：拍摄日期、GPS 坐标（经纬度）、相机型号、镜头型号、作者、版权、标题和描述。较为少见或设备特定的字段以只读方式展示，防止误操作破坏数据。",
+          "q2": "我的照片会被上传吗？",
+          "a2": "不会。所有读取和写入都在浏览器本地完成。照片不会离开你的设备。",
+          "q3": "为什么 HEIC、AVIF、TIFF 无法编辑？",
+          "a3": "本工具保留原始文件格式，不会转成 JPEG。HEIC、AVIF、TIFF 的原地编辑需要复杂的容器结构重写，当前版本未实现。不过这些格式仍然可以完整查看元数据。",
+          "q4": "如何彻底移除 GPS 位置？",
+          "a4": "在编辑表单的 GPS 区域点击「清除 GPS」按钮。其他元数据（相机、日期、版权）会在保存的文件中原样保留。",
+          "q5": "JSON / CSV 导出包含什么？",
+          "a5": "工具从文件中能解析出的全部 EXIF、IPTC、XMP 字段。包括相机详情、GPS、时间戳、厂商注释等。可用于审计、取证或接入其他工具。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是 EXIF 编辑器？",
+            "content": "<p><strong>EXIF 编辑器</strong>让你查看和编辑照片中隐藏的元数据——GPS 位置、相机型号、镜头、拍摄日期、作者、版权等。与多数在线工具不同，它保留原始文件格式，所有处理都在浏览器本地完成。</p><p>适合出行后修正错误时间戳、分享前抹除 GPS、或给导出照片打上版权。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用 EXIF 编辑器",
+            "content": "<ol><li>点击拖放区或拖入文件上传一张照片</li><li>工具会读取所有 EXIF、IPTC、GPS 字段并按分类展示</li><li>直接在表单里就地修改常用字段：日期、GPS、相机、镜头、作者、版权、标题、描述</li><li>在字段右侧用<strong>清除 GPS</strong>或<strong>清除日期</strong>按钮单项清空</li><li>点击<strong>应用并下载</strong>保存修改后的图片——原始格式保留</li><li>或点击<strong>导出 JSON / CSV</strong>获取完整元数据快照</li></ol>"
+          },
+          "features": {
+            "title": "核心功能",
+            "content": "<ul><li><strong>全格式读取，原格式保存</strong>：JPEG、PNG、WebP、HEIC、AVIF、TIFF 均可读取 EXIF/IPTC/XMP；JPEG、PNG、WebP 可原格式写回</li><li><strong>高频字段</strong>：只编辑真正有人改的字段——日期、GPS、相机、镜头、作者、版权、标题、描述</li><li><strong>一键清除</strong>：专门的按钮清 GPS 或清日期，不动其他元数据</li><li><strong>地图外链</strong>：GPS 位置提供 OpenStreetMap、Google Maps、Bing Maps 三个外链——页面本地不加载任何地图瓦片</li><li><strong>JSON / CSV 导出</strong>：完整元数据倾倒，适合审计、取证或接入其他工具</li><li><strong>100% 本地</strong>：不上传，所有读写都在浏览器里完成</li></ul>"
+          },
+          "useCases": {
+            "title": "常见使用场景",
+            "content": "<ul><li><strong>分享前处理</strong>：发到社交媒体前抹掉照片的 GPS 坐标</li><li><strong>旅行后校准</strong>：相机时间/时区错了，修正拍摄时间</li><li><strong>打版权水印</strong>：给导出的照片加上作者、版权、说明</li><li><strong>取证与审计</strong>：把完整 EXIF/IPTC/XMP 导出到 JSON 或 CSV</li><li><strong>隐私自检</strong>：查清楚照片带了哪些元数据再决定清哪些</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的 EXIF 编辑",
+            "content": "<p>把照片上传到服务器去编辑其「隐私暴露」元数据本身就自相矛盾。所有操作都在浏览器里完成。</p><ul><li>照片<strong>不会离开你的设备</strong></li><li>GPS 预览在本地绘制——没有泄露位置的地图瓦片请求</li><li>只有你主动点击外链按钮，才会跳转到 OpenStreetMap 查看位置</li><li>页面加载后支持<strong>离线使用</strong></li></ul>"
+          }
+        }
+      },
       "remove-exif": {
         "name": "清除 EXIF 数据",
         "description": "清除照片的 EXIF 元数据以保护隐私。",

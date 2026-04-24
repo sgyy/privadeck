@@ -432,6 +432,110 @@
           }
         }
       },
+      "exif-editor": {
+        "name": "EXIF Düzenleyici",
+        "description": "Fotoğraf meta verilerini görüntüleyin ve düzenleyin — GPS, kamera, tarihler, telif hakkı.",
+        "metaTitle": "EXIF Düzenleyici — Fotoğraf Meta Verilerini Çevrimiçi Görüntüle ve Düzenle | PrivaDeck",
+        "metaDescription": "Ücretsiz çevrimiçi EXIF düzenleyici. Fotoğraflarınızdaki GPS, kamera, tarih, telif hakkı ve IPTC alanlarını görüntüleyin ve düzenleyin. Tarayıcınızda çalışır — yükleme yok. JPEG, PNG, WebP desteği.",
+        "keywords": "exif düzenleyici, çevrimiçi exif düzenle, exif görüntüle, fotoğraf meta veri düzenleyici, GPS koordinat düzenleyici, kamera bilgisi düzenle, GPS kaldır, IPTC düzenleyici",
+        "viewer": {
+          "noData": "EXIF verisi yok",
+          "readOnlyTitle": "Salt okunur format",
+          "readOnlyNotice": "{format} dosyaları görüntülenebilir ancak düzenlenemez. Bu araç orijinal formatınızı korur — formatlar arasında dönüştürme yapmaz."
+        },
+        "groups": {
+          "camera": "Kamera",
+          "lens": "Lens",
+          "datetime": "Tarih ve Saat",
+          "gps": "GPS Konumu",
+          "copyright": "Yazar ve Telif Hakkı",
+          "iptc": "Başlık ve Açıklama",
+          "technical": "Teknik Ayrıntılar",
+          "other": "Diğer"
+        },
+        "fields": {
+          "make": "Üretici",
+          "model": "Model",
+          "software": "Yazılım",
+          "lensMake": "Lens Üreticisi",
+          "lensModel": "Lens Modeli",
+          "focalLength": "Odak Uzaklığı",
+          "focalLengthIn35mm": "35 mm Eşdeğeri",
+          "dateTimeOriginal": "Çekim Tarihi",
+          "dateTimeDigitized": "Dijitalleştirme Tarihi",
+          "dateTime": "Değiştirilme Tarihi",
+          "latitude": "Enlem",
+          "longitude": "Boylam",
+          "altitude": "Rakım",
+          "artist": "Yazar",
+          "copyright": "Telif Hakkı",
+          "title": "Başlık",
+          "description": "Açıklama",
+          "keywords": "Anahtar Kelimeler",
+          "iso": "ISO",
+          "fNumber": "Diyafram",
+          "exposureTime": "Deklanşör Hızı",
+          "flash": "Flaş",
+          "whiteBalance": "Beyaz Dengesi",
+          "orientation": "Yön",
+          "colorSpace": "Renk Uzayı",
+          "imageWidth": "Genişlik",
+          "imageHeight": "Yükseklik"
+        },
+        "actions": {
+          "applyEdits": "Uygula ve İndir",
+          "clearGps": "GPS’i Temizle",
+          "clearDateTime": "Tarihi Temizle",
+          "exportJson": "JSON Dışa Aktar",
+          "exportCsv": "CSV Dışa Aktar",
+          "openInMapTooltip": "Harici bir harita hizmetini açar. Koordinatlar o sağlayıcıya gönderilir.",
+          "changeFile": "Dosyayı değiştir",
+          "removeFile": "Kaldır",
+          "resetEdits": "Sıfırla"
+        },
+        "messages": {
+          "noExifFound": "Bu dosyada EXIF verisi bulunamadı.",
+          "loadingExif": "EXIF okunuyor…",
+          "processing": "İşleniyor…",
+          "processed": "Tamamlandı",
+          "writeSuccess": "Meta veri güncellendi",
+          "writeError": "Meta veri yazılamadı"
+        },
+        "faq": {
+          "q1": "Hangi alanları düzenleyebilirim?",
+          "a1": "En yaygın alanları düzenleyebilirsiniz: çekim tarihi, GPS koordinatları (enlem/boylam), kamera modeli, lens modeli, yazar, telif hakkı, başlık ve açıklama. Nadir veya cihaza özgü alanlar, yanlışlıkla bozmamanız için salt okunur olarak gösterilir.",
+          "q2": "Fotoğrafım herhangi bir yere yükleniyor mu?",
+          "a2": "Hayır. Tüm okuma ve yazma işlemleri tarayıcınızda yerel olarak gerçekleşir. Fotoğraflar cihazınızdan hiçbir zaman ayrılmaz.",
+          "q3": "HEIC, AVIF veya TIFF dosyalarını neden düzenleyemiyorum?",
+          "a3": "Bu araç JPEG’e dönüştürmek yerine orijinal dosya formatınızı korur. HEIC, AVIF ve TIFF için yerinde düzenleme karmaşık konteyner yeniden yazımı gerektirir ve bu sürümde desteklenmez. Bu formatlardaki tüm meta verileri görüntülemeye yine de devam edebilirsiniz.",
+          "q4": "GPS konumunu tamamen nasıl kaldırırım?",
+          "a4": "Düzenleme formundaki GPS bölümünde «GPS temizle» düğmesine tıklayın. Diğer tüm meta veriler (kamera, tarih, telif hakkı) kaydedilen dosyada korunur.",
+          "q5": "JSON/CSV dışa aktarımında neler var?",
+          "a5": "Aracın dosyadan ayrıştırabildiği tüm EXIF, IPTC ve XMP alanlarının tam dökümü. Kamera ayrıntıları, GPS, zaman damgaları, üretici notları ve daha fazlasını içerir. Denetim, adli inceleme veya başka araçlara aktarma için kullanışlıdır."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "EXIF Düzenleyici nedir?",
+            "content": "<p><strong>EXIF Düzenleyici</strong>, bir fotoğrafın içinde saklı meta verileri — GPS konumu, kamera modeli, lens, çekim tarihi, yazar, telif hakkı ve daha fazlası — görüntüleyip düzenlemenizi sağlar. Çoğu çevrimiçi düzenleyicinin aksine, orijinal dosya biçimini olduğu gibi korur ve tüm işlemleri tarayıcınızda yürütür.</p><p>Bir geziden sonra yanlış zaman damgasını düzeltmek, paylaşmadan önce GPS'i silmek veya dışa aktarılan bir fotoğrafa telif hakkı damgası basmak için birebirdir.</p>"
+          },
+          "howToUse": {
+            "title": "EXIF Düzenleyici nasıl kullanılır",
+            "content": "<ol><li>Bırakma alanına tıklayarak veya dosyayı sayfaya sürükleyerek bir fotoğraf yükleyin</li><li>Araç, tüm EXIF, IPTC ve GPS alanlarını okur ve bunları kategoriye göre gruplayarak gösterir</li><li>Sık kullanılan alanları doğrudan yerinde düzenleyin: tarih, GPS, kamera, lens, yazar, telif hakkı, başlık, açıklama</li><li>Yalnızca tek bir alanı silmek için satır içi <strong>GPS'i temizle</strong> veya <strong>Tarihi temizle</strong> düğmelerini kullanın</li><li>Düzenlenen görüntüyü kaydetmek için <strong>Uygula ve indir</strong>'e tıklayın — orijinal biçim korunur</li><li>Ya da eksiksiz meta veri dökümü için <strong>JSON / CSV olarak dışa aktar</strong>'a tıklayın</li></ol>"
+          },
+          "features": {
+            "title": "Temel özellikler",
+            "content": "<ul><li><strong>Tam okuma, biçimi koruma</strong>: JPEG, PNG, WebP, HEIC, AVIF ve TIFF üzerinden EXIF/IPTC/XMP okuyun; değişiklikleri JPEG, PNG ve WebP'ye orijinal biçimleriyle geri yazın</li><li><strong>Sık kullanılan alanlar</strong>: yalnızca gerçekten değiştirilen alanları düzenleyin — tarih, GPS, kamera, lens, yazar, telif hakkı, başlık, açıklama</li><li><strong>Tek tıkla temizleme</strong>: diğer meta verilere dokunmadan GPS veya tarihi temizlemek için özel düğmeler</li><li><strong>Harita bağlantıları</strong>: GPS konumu için üç harici harita bağlantısı (OpenStreetMap, Google Haritalar, Bing Haritalar) — bu sayfada hiçbir harita döşemesi yüklenmez</li><li><strong>JSON / CSV dışa aktarımı</strong>: denetim, adli analiz veya başka araçlara veri beslemek için eksiksiz meta veri dökümü</li><li><strong>%100 gizli</strong>: yükleme yok — her okuma ve yazma tarayıcınızda gerçekleşir</li></ul>"
+          },
+          "useCases": {
+            "title": "Yaygın kullanım senaryoları",
+            "content": "<ul><li><strong>Paylaşmadan önce</strong>: bir fotoğrafı sosyal medyada yayımlamadan önce GPS koordinatlarını kaldırın</li><li><strong>Seyahat sonrası</strong>: kameranın saati yanlışken çekilen bir fotoğraftaki hatalı tarih veya saat dilimini düzeltin</li><li><strong>Telif hakkı damgası</strong>: dışa aktarılmış bir fotoğrafa yazar, telif hakkı ve altyazı ekleyin</li><li><strong>Adli analiz &amp; denetim</strong>: belgeleme amacıyla EXIF/IPTC/XMP'nin tamamını JSON veya CSV olarak dışa aktarın</li><li><strong>Gizlilik denetimi</strong>: neyi kaldıracağınıza karar vermeden önce bir fotoğrafın taşıdığı meta verileri tam olarak inceleyin</li></ul>"
+          },
+          "privacy": {
+            "title": "Önce gizlilik diyen EXIF düzenleme",
+            "content": "<p>Gizliliği ifşa eden meta verileri düzenlemek için bir fotoğrafı sunucuya yüklemek, amacı baştan boşa çıkarır. Her şey tarayıcınızda olur.</p><ul><li>Fotoğraflarınız <strong>cihazınızdan asla ayrılmaz</strong></li><li>GPS önizlemesi yerel olarak çizilir — konumu sızdırabilecek harita döşemesi istekleri yoktur</li><li>OpenStreetMap'te bir konumun açılması yalnızca harici bağlantı düğmesi aracılığıyla sizin tarafınızdan başlatıldığında gerçekleşir</li><li>Sayfa yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
+          }
+        }
+      },
       "remove-exif": {
         "name": "EXIF Verisi Kaldır",
         "description": "Gizliliğinizi korumak için fotoğraflardan EXIF meta verilerini kaldırın.",

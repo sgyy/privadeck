@@ -432,6 +432,110 @@
           }
         }
       },
+      "exif-editor": {
+        "name": "EXIF 編輯器",
+        "description": "檢視並編輯照片中繼資料 — GPS、相機、日期、版權。",
+        "metaTitle": "EXIF 編輯器 - 線上檢視並編輯照片中繼資料 | PrivaDeck",
+        "metaDescription": "免費線上 EXIF 編輯器。檢視並編輯照片中的 GPS、相機、日期、版權與 IPTC 欄位。在瀏覽器中執行 — 無需上傳。支援 JPEG、PNG、WebP。",
+        "keywords": "EXIF 編輯器, 線上編輯 EXIF, 檢視 EXIF, 照片中繼資料編輯器, GPS 座標編輯, 編輯相機資訊, 移除 GPS, IPTC 編輯器",
+        "viewer": {
+          "noData": "無 EXIF 資料",
+          "readOnlyTitle": "唯讀格式",
+          "readOnlyNotice": "{format} 檔案僅能檢視，無法編輯。此工具保留您的原始格式 — 不會在格式之間進行轉換。"
+        },
+        "groups": {
+          "camera": "相機",
+          "lens": "鏡頭",
+          "datetime": "日期與時間",
+          "gps": "GPS 位置",
+          "copyright": "作者與版權",
+          "iptc": "標題與說明",
+          "technical": "技術細節",
+          "other": "其他"
+        },
+        "fields": {
+          "make": "製造商",
+          "model": "型號",
+          "software": "軟體",
+          "lensMake": "鏡頭製造商",
+          "lensModel": "鏡頭型號",
+          "focalLength": "焦距",
+          "focalLengthIn35mm": "35mm 等效焦距",
+          "dateTimeOriginal": "拍攝日期",
+          "dateTimeDigitized": "數位化時間",
+          "dateTime": "修改時間",
+          "latitude": "緯度",
+          "longitude": "經度",
+          "altitude": "海拔",
+          "artist": "作者",
+          "copyright": "版權",
+          "title": "標題",
+          "description": "說明",
+          "keywords": "關鍵字",
+          "iso": "ISO",
+          "fNumber": "光圈",
+          "exposureTime": "快門速度",
+          "flash": "閃光燈",
+          "whiteBalance": "白平衡",
+          "orientation": "方向",
+          "colorSpace": "色彩空間",
+          "imageWidth": "寬度",
+          "imageHeight": "高度"
+        },
+        "actions": {
+          "applyEdits": "套用並下載",
+          "clearGps": "清除 GPS",
+          "clearDateTime": "清除日期",
+          "exportJson": "匯出 JSON",
+          "exportCsv": "匯出 CSV",
+          "openInMapTooltip": "點選後會開啟外部地圖服務，座標會傳送給該服務商。",
+          "changeFile": "換一張",
+          "removeFile": "移除",
+          "resetEdits": "重置修改"
+        },
+        "messages": {
+          "noExifFound": "此檔案未找到 EXIF 資料。",
+          "loadingExif": "正在讀取 EXIF…",
+          "processing": "處理中…",
+          "processed": "完成",
+          "writeSuccess": "中繼資料已更新",
+          "writeError": "中繼資料寫入失敗"
+        },
+        "faq": {
+          "q1": "可以編輯哪些欄位？",
+          "a1": "您可以編輯最常見的欄位：拍攝日期、GPS 座標（緯度／經度）、相機型號、鏡頭型號、作者、版權、標題與說明。罕見或裝置特定欄位會以唯讀方式顯示，以免不慎損毀。",
+          "q2": "我的照片會被上傳到任何地方嗎？",
+          "a2": "不會。所有讀取與寫入都在您的瀏覽器中本機完成。照片絕不會離開您的裝置。",
+          "q3": "為什麼無法編輯 HEIC、AVIF 或 TIFF 檔案？",
+          "a3": "此工具會保留您的原始檔案格式，不會轉換成 JPEG。在 HEIC、AVIF 與 TIFF 中直接原地編輯需要複雜的容器重寫，目前版本尚未支援。不過您仍可檢視這些格式中的所有中繼資料。",
+          "q4": "如何完全移除 GPS 位置？",
+          "a4": "在編輯表單的 GPS 區段點選「清除 GPS」按鈕。其餘中繼資料（相機、日期、版權）會在儲存的檔案中原樣保留。",
+          "q5": "JSON/CSV 匯出內容包含什麼？",
+          "a5": "工具能從檔案解析出的每一個 EXIF、IPTC 與 XMP 欄位的完整傾印。包含相機細節、GPS、時間戳記、製造商備註等。適用於稽核、鑑識工作或作為其他工具的輸入。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什麼是 EXIF 編輯器？",
+            "content": "<p><strong>EXIF 編輯器</strong>讓您檢視並編輯照片中隱藏的中繼資料 — GPS 位置、相機型號、鏡頭、拍攝日期、作者、版權等。與多數線上編輯器不同，它會保留原始檔案格式，所有處理都在您的瀏覽器中完成。</p><p>非常適合修正旅遊後錯誤的時間戳、分享前移除 GPS，或在匯出的照片上加註版權。</p>"
+          },
+          "howToUse": {
+            "title": "如何使用 EXIF 編輯器",
+            "content": "<ol><li>點選拖放區或將檔案拖曳至頁面，上傳一張照片</li><li>工具會讀取所有 EXIF、IPTC 與 GPS 欄位，並依類別分組顯示</li><li>直接就地修改高頻欄位：日期、GPS、相機、鏡頭、作者、版權、標題、說明</li><li>使用欄位旁的<strong>清除 GPS</strong>或<strong>清除日期</strong>按鈕，僅清除單一欄位</li><li>點選<strong>套用並下載</strong>儲存編輯後的圖片 — 原始格式保留不變</li><li>或點選<strong>匯出 JSON / CSV</strong>取得完整中繼資料</li></ol>"
+          },
+          "features": {
+            "title": "主要功能",
+            "content": "<ul><li><strong>全格式讀取、原格式寫回</strong>：可從 JPEG、PNG、WebP、HEIC、AVIF、TIFF 讀取 EXIF/IPTC/XMP；JPEG、PNG、WebP 可在原始格式下寫回編輯</li><li><strong>高頻欄位</strong>：只編輯大家真正會改動的欄位 — 日期、GPS、相機、鏡頭、作者、版權、標題、說明</li><li><strong>一鍵清除</strong>：專屬按鈕可清除 GPS 或日期，不會影響其他中繼資料</li><li><strong>地圖連結</strong>：GPS 位置提供 OpenStreetMap、Google Maps、Bing Maps 三個外部連結 — 本頁不載入任何地圖圖磚</li><li><strong>JSON / CSV 匯出</strong>：完整中繼資料匯出，適合稽核、鑑識或匯入其他工具</li><li><strong>100% 隱私</strong>：不上傳 — 所有讀寫都在您的瀏覽器中完成</li></ul>"
+          },
+          "useCases": {
+            "title": "常見使用情境",
+            "content": "<ul><li><strong>分享前</strong>：在貼到社群媒體前，從照片中移除 GPS 座標</li><li><strong>旅遊後</strong>：修正相機時鐘不準時拍攝的照片錯誤日期或時區</li><li><strong>版權加註</strong>：在匯出的照片上加入作者、版權與說明</li><li><strong>鑑識與稽核</strong>：將完整的 EXIF/IPTC/XMP 匯出為 JSON 或 CSV 作為文件紀錄</li><li><strong>隱私檢查</strong>：在決定要移除什麼之前，準確查看照片帶有哪些中繼資料</li></ul>"
+          },
+          "privacy": {
+            "title": "隱私優先的 EXIF 編輯",
+            "content": "<p>若要編輯會洩漏隱私的中繼資料，卻把照片上傳到伺服器，將完全違背初衷。所有操作都在您的瀏覽器中進行。</p><ul><li>您的照片<strong>絕不會離開您的裝置</strong></li><li>GPS 預覽在本機繪製 — 不會發出可能洩漏位置的地圖圖磚請求</li><li>在 OpenStreetMap 開啟位置的動作，一定要由使用者透過外部連結按鈕主動觸發</li><li>頁面載入後即可<strong>離線</strong>使用</li></ul>"
+          }
+        }
+      },
       "remove-exif": {
         "name": "移除 EXIF 資料",
         "description": "移除照片中的 EXIF 中繼資料以保護隱私。",

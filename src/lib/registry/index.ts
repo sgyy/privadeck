@@ -18,6 +18,7 @@ import imageCrop from "@/tools/image/crop";
 import imageResize from "@/tools/image/resize";
 import imageWatermark from "@/tools/image/watermark";
 import imageRemoveExif from "@/tools/image/remove-exif";
+import imageExifEditor from "@/tools/image/exif-editor";
 import videoMute from "@/tools/video/mute";
 import videoInfo from "@/tools/video/info";
 import videoTrim from "@/tools/video/trim";
@@ -72,6 +73,7 @@ const ALL_TOOLS: ToolDefinition[] = [
   imageCrop,
   imageWatermark,
   imageRemoveExif,
+  imageExifEditor,
   imageGrayscale,
   imageFlip,
   imageAddText,

@@ -432,6 +432,110 @@
           }
         }
       },
+      "exif-editor": {
+        "name": "Trình chỉnh sửa EXIF",
+        "description": "Xem và chỉnh sửa siêu dữ liệu ảnh — GPS, máy ảnh, ngày giờ, bản quyền.",
+        "metaTitle": "Trình chỉnh sửa EXIF - Xem và chỉnh sửa siêu dữ liệu ảnh trực tuyến | PrivaDeck",
+        "metaDescription": "Trình chỉnh sửa EXIF trực tuyến miễn phí. Xem và chỉnh sửa GPS, thông tin máy ảnh, ngày giờ, bản quyền và các trường IPTC trong ảnh. Chạy trong trình duyệt — không tải lên. Hỗ trợ JPEG, PNG, WebP.",
+        "keywords": "trình chỉnh sửa EXIF, chỉnh sửa EXIF trực tuyến, xem EXIF, trình chỉnh sửa siêu dữ liệu ảnh, chỉnh sửa tọa độ GPS, chỉnh sửa thông tin máy ảnh, xóa GPS, trình chỉnh sửa IPTC",
+        "viewer": {
+          "noData": "Không có dữ liệu EXIF",
+          "readOnlyTitle": "Định dạng chỉ đọc",
+          "readOnlyNotice": "Tệp {format} có thể xem nhưng không thể chỉnh sửa. Công cụ này giữ nguyên định dạng gốc — không chuyển đổi giữa các định dạng."
+        },
+        "groups": {
+          "camera": "Máy ảnh",
+          "lens": "Ống kính",
+          "datetime": "Ngày và giờ",
+          "gps": "Vị trí GPS",
+          "copyright": "Tác giả và bản quyền",
+          "iptc": "Tiêu đề và mô tả",
+          "technical": "Chi tiết kỹ thuật",
+          "other": "Khác"
+        },
+        "fields": {
+          "make": "Hãng",
+          "model": "Dòng máy",
+          "software": "Phần mềm",
+          "lensMake": "Hãng ống kính",
+          "lensModel": "Dòng ống kính",
+          "focalLength": "Tiêu cự",
+          "focalLengthIn35mm": "Tương đương 35mm",
+          "dateTimeOriginal": "Ngày chụp",
+          "dateTimeDigitized": "Ngày số hóa",
+          "dateTime": "Ngày chỉnh sửa",
+          "latitude": "Vĩ độ",
+          "longitude": "Kinh độ",
+          "altitude": "Độ cao",
+          "artist": "Tác giả",
+          "copyright": "Bản quyền",
+          "title": "Tiêu đề",
+          "description": "Mô tả",
+          "keywords": "Từ khóa",
+          "iso": "ISO",
+          "fNumber": "Khẩu độ",
+          "exposureTime": "Tốc độ màn trập",
+          "flash": "Đèn flash",
+          "whiteBalance": "Cân bằng trắng",
+          "orientation": "Hướng",
+          "colorSpace": "Không gian màu",
+          "imageWidth": "Chiều rộng",
+          "imageHeight": "Chiều cao"
+        },
+        "actions": {
+          "applyEdits": "Áp dụng và tải xuống",
+          "clearGps": "Xóa GPS",
+          "clearDateTime": "Xóa ngày",
+          "exportJson": "Xuất JSON",
+          "exportCsv": "Xuất CSV",
+          "openInMapTooltip": "Mở dịch vụ bản đồ bên ngoài. Tọa độ sẽ được gửi đến nhà cung cấp đó.",
+          "changeFile": "Đổi tệp",
+          "removeFile": "Xóa",
+          "resetEdits": "Đặt lại"
+        },
+        "messages": {
+          "noExifFound": "Không tìm thấy dữ liệu EXIF trong tệp này.",
+          "loadingExif": "Đang đọc EXIF…",
+          "processing": "Đang xử lý…",
+          "processed": "Hoàn tất",
+          "writeSuccess": "Đã cập nhật siêu dữ liệu",
+          "writeError": "Không thể ghi siêu dữ liệu"
+        },
+        "faq": {
+          "q1": "Tôi có thể chỉnh sửa những trường nào?",
+          "a1": "Bạn có thể chỉnh sửa các trường phổ biến nhất: ngày chụp, tọa độ GPS (vĩ độ/kinh độ), dòng máy ảnh, dòng ống kính, tác giả, bản quyền, tiêu đề và mô tả. Các trường hiếm gặp hoặc riêng cho từng thiết bị được hiển thị ở chế độ chỉ đọc để bạn không vô tình làm hỏng.",
+          "q2": "Ảnh của tôi có được tải lên đâu đó không?",
+          "a2": "Không. Mọi thao tác đọc và ghi đều diễn ra cục bộ trong trình duyệt của bạn. Ảnh không bao giờ rời khỏi thiết bị.",
+          "q3": "Tại sao tôi không thể chỉnh sửa tệp HEIC, AVIF hoặc TIFF?",
+          "a3": "Công cụ này giữ nguyên định dạng tệp gốc thay vì chuyển sang JPEG. Việc chỉnh sửa trực tiếp trong HEIC, AVIF và TIFF đòi hỏi viết lại container phức tạp và hiện chưa được hỗ trợ trong phiên bản này. Bạn vẫn có thể xem mọi siêu dữ liệu ở các định dạng này.",
+          "q4": "Làm thế nào để xóa hoàn toàn vị trí GPS?",
+          "a4": "Nhấn nút «Xóa GPS» trong mục GPS của biểu mẫu chỉnh sửa. Các siêu dữ liệu khác (máy ảnh, ngày tháng, bản quyền) vẫn được giữ trong tệp đã lưu.",
+          "q5": "Nội dung xuất JSON/CSV gồm những gì?",
+          "a5": "Toàn bộ các trường EXIF, IPTC và XMP mà công cụ có thể phân tích được từ tệp. Bao gồm chi tiết máy ảnh, GPS, dấu thời gian, ghi chú nhà sản xuất và nhiều thông tin khác. Hữu ích cho kiểm toán, công việc pháp y hoặc đưa vào các công cụ khác."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Trình chỉnh sửa EXIF là gì?",
+            "content": "<p><strong>Trình chỉnh sửa EXIF</strong> cho phép bạn kiểm tra và chỉnh sửa siêu dữ liệu ẩn bên trong một bức ảnh — vị trí GPS, kiểu máy ảnh, ống kính, ngày chụp, tác giả, bản quyền và hơn thế nữa. Khác với hầu hết các trình chỉnh sửa trực tuyến, nó giữ nguyên định dạng tệp gốc và thực hiện toàn bộ xử lý ngay trong trình duyệt của bạn.</p><p>Hoàn hảo để chỉnh lại dấu thời gian sai sau chuyến du lịch, gỡ bỏ GPS trước khi chia sẻ, hoặc đóng dấu bản quyền lên ảnh đã xuất.</p>"
+          },
+          "howToUse": {
+            "title": "Cách dùng Trình chỉnh sửa EXIF",
+            "content": "<ol><li>Tải lên một bức ảnh bằng cách bấm vào vùng thả hoặc kéo thả tệp vào trang</li><li>Công cụ đọc toàn bộ các trường EXIF, IPTC và GPS rồi hiển thị chúng theo nhóm danh mục</li><li>Chỉnh sửa ngay tại chỗ các trường hay dùng: ngày, GPS, máy ảnh, ống kính, tác giả, bản quyền, tiêu đề, mô tả</li><li>Dùng các nút nội dòng <strong>Xóa GPS</strong> hoặc <strong>Xóa ngày</strong> để chỉ xóa đúng một trường</li><li>Bấm <strong>Áp dụng &amp; Tải xuống</strong> để lưu ảnh đã chỉnh — định dạng gốc được giữ nguyên</li><li>Hoặc bấm <strong>Xuất JSON / CSV</strong> để lấy toàn bộ siêu dữ liệu</li></ol>"
+          },
+          "features": {
+            "title": "Tính năng chính",
+            "content": "<ul><li><strong>Đọc đầy đủ, giữ nguyên định dạng</strong>: đọc EXIF/IPTC/XMP trong JPEG, PNG, WebP, HEIC, AVIF và TIFF; ghi lại thay đổi vào JPEG, PNG và WebP ở định dạng gốc</li><li><strong>Trường hay dùng</strong>: chỉ chỉnh những trường người dùng thực sự thay đổi — ngày, GPS, máy ảnh, ống kính, tác giả, bản quyền, tiêu đề, mô tả</li><li><strong>Xóa một chạm</strong>: các nút chuyên biệt để xóa GPS hoặc ngày mà không đụng đến phần siêu dữ liệu còn lại</li><li><strong>Liên kết bản đồ</strong>: ba liên kết bản đồ bên ngoài (OpenStreetMap, Google Maps, Bing Maps) cho vị trí GPS — trang này không tải bất kỳ mảnh bản đồ nào</li><li><strong>Xuất JSON / CSV</strong>: xuất toàn bộ siêu dữ liệu cho kiểm toán, pháp y hoặc nạp vào công cụ khác</li><li><strong>100% riêng tư</strong>: không tải lên — mọi đọc và ghi đều diễn ra trong trình duyệt của bạn</li></ul>"
+          },
+          "useCases": {
+            "title": "Tình huống sử dụng phổ biến",
+            "content": "<ul><li><strong>Trước khi chia sẻ</strong>: gỡ tọa độ GPS khỏi ảnh trước khi đăng lên mạng xã hội</li><li><strong>Sau chuyến đi</strong>: sửa ngày hoặc múi giờ sai trên ảnh được chụp khi đồng hồ máy ảnh bị lệch</li><li><strong>Đóng dấu bản quyền</strong>: thêm tác giả, bản quyền và chú thích vào ảnh đã xuất</li><li><strong>Pháp y &amp; kiểm toán</strong>: xuất toàn bộ EXIF/IPTC/XMP ra JSON hoặc CSV để lưu trữ</li><li><strong>Rà soát quyền riêng tư</strong>: xem chính xác ảnh đang mang những siêu dữ liệu nào trước khi quyết định gỡ bỏ</li></ul>"
+          },
+          "privacy": {
+            "title": "Chỉnh sửa EXIF đặt quyền riêng tư lên hàng đầu",
+            "content": "<p>Tải ảnh lên máy chủ để chỉnh siêu dữ liệu làm lộ quyền riêng tư sẽ đi ngược lại mục đích. Mọi thứ đều diễn ra trong trình duyệt của bạn.</p><ul><li>Ảnh của bạn <strong>không bao giờ rời khỏi thiết bị</strong></li><li>Bản xem trước GPS được vẽ cục bộ — không có yêu cầu mảnh bản đồ nào có thể làm lộ vị trí</li><li>Việc mở vị trí trên OpenStreetMap chỉ xảy ra khi bạn chủ động bấm nút liên kết ngoài</li><li>Sau khi trang tải xong, có thể chạy <strong>ngoại tuyến</strong></li></ul>"
+          }
+        }
+      },
       "remove-exif": {
         "name": "Xóa dữ liệu EXIF",
         "description": "Xóa siêu dữ liệu EXIF từ ảnh để bảo vệ quyền riêng tư.",

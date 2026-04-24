@@ -432,6 +432,110 @@
           }
         }
       },
+      "exif-editor": {
+        "name": "EXIF-editor",
+        "description": "Foto-metadata bekijken en bewerken — GPS, camera, datums en auteursrecht.",
+        "metaTitle": "EXIF-editor – Foto-metadata online bekijken en bewerken | PrivaDeck",
+        "metaDescription": "Gratis online EXIF-editor. Bekijk en bewerk GPS, camera, datums, auteursrecht en IPTC-velden in je foto's. Werkt in je browser — zonder uploaden. Ondersteunt JPEG, PNG en WebP.",
+        "keywords": "exif editor, exif online bewerken, exif bekijken, foto-metadata bewerker, gps-coordinaten bewerken, camera-info bewerken, gps verwijderen, iptc editor",
+        "viewer": {
+          "noData": "Geen EXIF-gegevens",
+          "readOnlyTitle": "Alleen-lezen-formaat",
+          "readOnlyNotice": "{format}-bestanden kunnen wel worden bekeken, maar niet bewerkt. Deze tool behoudt je oorspronkelijke formaat — er wordt niet geconverteerd tussen formaten."
+        },
+        "groups": {
+          "camera": "Camera",
+          "lens": "Lens",
+          "datetime": "Datum en tijd",
+          "gps": "GPS-locatie",
+          "copyright": "Auteur en auteursrecht",
+          "iptc": "Titel en beschrijving",
+          "technical": "Technische gegevens",
+          "other": "Overig"
+        },
+        "fields": {
+          "make": "Merk",
+          "model": "Model",
+          "software": "Software",
+          "lensMake": "Lensmerk",
+          "lensModel": "Lensmodel",
+          "focalLength": "Brandpuntsafstand",
+          "focalLengthIn35mm": "35mm-equivalent",
+          "dateTimeOriginal": "Opnamedatum",
+          "dateTimeDigitized": "Gedigitaliseerd op",
+          "dateTime": "Gewijzigd op",
+          "latitude": "Breedtegraad",
+          "longitude": "Lengtegraad",
+          "altitude": "Hoogte",
+          "artist": "Auteur",
+          "copyright": "Auteursrecht",
+          "title": "Titel",
+          "description": "Beschrijving",
+          "keywords": "Trefwoorden",
+          "iso": "ISO",
+          "fNumber": "Diafragma",
+          "exposureTime": "Sluitertijd",
+          "flash": "Flitser",
+          "whiteBalance": "Witbalans",
+          "orientation": "Oriëntatie",
+          "colorSpace": "Kleurruimte",
+          "imageWidth": "Breedte",
+          "imageHeight": "Hoogte"
+        },
+        "actions": {
+          "applyEdits": "Toepassen en downloaden",
+          "clearGps": "GPS wissen",
+          "clearDateTime": "Datum wissen",
+          "exportJson": "JSON exporteren",
+          "exportCsv": "CSV exporteren",
+          "openInMapTooltip": "Opent een externe kaartdienst. Coördinaten worden naar die provider verzonden.",
+          "changeFile": "Bestand wijzigen",
+          "removeFile": "Verwijderen",
+          "resetEdits": "Herstellen"
+        },
+        "messages": {
+          "noExifFound": "Geen EXIF-gegevens gevonden in dit bestand.",
+          "loadingExif": "EXIF inlezen…",
+          "processing": "Bezig met verwerken…",
+          "processed": "Klaar",
+          "writeSuccess": "Metadata bijgewerkt",
+          "writeError": "Metadata schrijven mislukt"
+        },
+        "faq": {
+          "q1": "Welke velden kan ik bewerken?",
+          "a1": "Je kunt de meest gangbare velden bewerken: opnamedatum, GPS-coördinaten (breedte- en lengtegraad), cameramodel, lensmodel, auteur, auteursrecht, titel en beschrijving. Zeldzame of apparaatspecifieke velden worden als alleen-lezen getoond, zodat je ze niet per ongeluk beschadigt.",
+          "q2": "Wordt mijn foto ergens geüpload?",
+          "a2": "Nee. Al het lezen en schrijven gebeurt lokaal in je browser. Foto's verlaten nooit je apparaat.",
+          "q3": "Waarom kan ik HEIC-, AVIF- of TIFF-bestanden niet bewerken?",
+          "a3": "Deze tool behoudt je oorspronkelijke bestandsformaat in plaats van te converteren naar JPEG. Het ter plekke bewerken van HEIC, AVIF en TIFF vereist complexe container-herschrijving en wordt in deze versie niet ondersteund. Je kunt alle metadata van deze formaten wel nog bekijken.",
+          "q4": "Hoe verwijder ik de GPS-locatie volledig?",
+          "a4": "Klik op de knop „GPS wissen\" in het GPS-gedeelte van het bewerkingsformulier. Alle andere metadata (camera, datum, auteursrecht) blijven behouden in het opgeslagen bestand.",
+          "q5": "Wat staat er in de JSON/CSV-export?",
+          "a5": "Een volledige dump van alle EXIF-, IPTC- en XMP-velden die de tool uit het bestand kon lezen. Bevat cameragegevens, GPS, tijdstempels, fabrikantnotities en meer. Handig voor audits, forensisch werk of om in andere tools te gebruiken."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Wat is de EXIF-editor?",
+            "content": "<p>Met de <strong>EXIF-editor</strong> kun je de verborgen metadata in een foto bekijken en bewerken — GPS-locatie, cameramodel, lens, opnamedatum, auteur, copyright en meer. Anders dan de meeste online editors blijft het oorspronkelijke bestandsformaat intact en vindt alle verwerking plaats in je browser.</p><p>Perfect om na een reis een verkeerde tijdstempel te corrigeren, GPS te wissen vóór je deelt of copyright op een geëxporteerde foto te stempelen.</p>"
+          },
+          "howToUse": {
+            "title": "De EXIF-editor gebruiken",
+            "content": "<ol><li>Upload één foto door op het drop-gebied te klikken of deze naar de pagina te slepen</li><li>De tool leest alle EXIF-, IPTC- en GPS-velden en toont ze gegroepeerd per categorie</li><li>Bewerk de veelgebruikte velden direct ter plaatse: datum, GPS, camera, lens, auteur, copyright, titel, beschrijving</li><li>Gebruik de inline-knoppen <strong>GPS wissen</strong> of <strong>Datum wissen</strong> om één specifiek veld leeg te maken</li><li>Klik op <strong>Toepassen &amp; downloaden</strong> om de bewerkte afbeelding op te slaan — het oorspronkelijke formaat blijft behouden</li><li>Of klik op <strong>JSON / CSV exporteren</strong> voor een volledige metadata-dump</li></ol>"
+          },
+          "features": {
+            "title": "Belangrijkste functies",
+            "content": "<ul><li><strong>Volledig lezen, formaat behouden</strong>: lees EXIF/IPTC/XMP in JPEG, PNG, WebP, HEIC, AVIF en TIFF; schrijf wijzigingen terug naar JPEG, PNG en WebP in het oorspronkelijke formaat</li><li><strong>Veelgebruikte velden</strong>: bewerk alleen de velden die mensen echt wijzigen — datum, GPS, camera, lens, auteur, copyright, titel, beschrijving</li><li><strong>Wissen met één klik</strong>: aparte knoppen om GPS of datum te wissen zonder de overige metadata aan te raken</li><li><strong>Kaartlinks</strong>: drie externe kaartlinks (OpenStreetMap, Google Maps, Bing Maps) voor de GPS-locatie — op deze pagina worden geen kaarttegels geladen</li><li><strong>JSON-/CSV-export</strong>: volledige metadata-dump voor audits, forensisch onderzoek of invoer in andere tools</li><li><strong>100% privé</strong>: geen uploads — elk lezen en schrijven gebeurt in je browser</li></ul>"
+          },
+          "useCases": {
+            "title": "Veelvoorkomende gebruiksscenario's",
+            "content": "<ul><li><strong>Vóór het delen</strong>: verwijder GPS-coördinaten uit een foto voordat je deze op sociale media plaatst</li><li><strong>Na een reis</strong>: corrigeer een verkeerde datum of tijdzone op een foto die is gemaakt terwijl de cameraklok niet klopte</li><li><strong>Copyright stempelen</strong>: voeg auteur, copyright en onderschrift toe aan een geëxporteerde foto</li><li><strong>Forensisch onderzoek &amp; audit</strong>: exporteer volledige EXIF/IPTC/XMP naar JSON of CSV voor documentatie</li><li><strong>Privacycheck</strong>: kijk precies welke metadata een foto bevat voordat je bepaalt wat je wilt verwijderen</li></ul>"
+          },
+          "privacy": {
+            "title": "EXIF-bewerken met privacy voorop",
+            "content": "<p>Een foto naar een server uploaden om privacygevoelige metadata te bewerken zou het doel tenietdoen. Alles gebeurt in je browser.</p><ul><li>Je foto's <strong>verlaten nooit je apparaat</strong></li><li>De GPS-voorvertoning wordt lokaal getekend — geen aanvragen voor kaarttegels die de locatie zouden kunnen lekken</li><li>Een locatie openen op OpenStreetMap gebeurt uitsluitend door jou via de externe linkknop</li><li>Werkt <strong>offline</strong> zodra de pagina geladen is</li></ul>"
+          }
+        }
+      },
       "remove-exif": {
         "name": "EXIF-gegevens verwijderen",
         "description": "Verwijder EXIF-metadata uit foto's om je privacy te beschermen.",

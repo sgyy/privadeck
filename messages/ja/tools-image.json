@@ -432,6 +432,110 @@
           }
         }
       },
+      "exif-editor": {
+        "name": "EXIF エディター",
+        "description": "写真のメタデータを表示・編集 — GPS、カメラ、日時、著作権。",
+        "metaTitle": "EXIF エディター - 写真メタデータをオンラインで表示・編集 | PrivaDeck",
+        "metaDescription": "無料オンライン EXIF エディター。写真内の GPS、カメラ、日時、著作権、IPTC フィールドを表示・編集。ブラウザ内で動作 — アップロード不要。JPEG、PNG、WebP に対応。",
+        "keywords": "EXIF エディター, EXIF オンライン編集, EXIF 表示, 写真メタデータ エディター, GPS 座標 編集, カメラ情報 編集, GPS 削除, IPTC エディター",
+        "viewer": {
+          "noData": "EXIF データなし",
+          "readOnlyTitle": "読み取り専用形式",
+          "readOnlyNotice": "{format} ファイルは表示のみ可能で、編集はできません。このツールは元の形式を保持します — 形式間の変換は行いません。"
+        },
+        "groups": {
+          "camera": "カメラ",
+          "lens": "レンズ",
+          "datetime": "日時",
+          "gps": "GPS 位置情報",
+          "copyright": "作者・著作権",
+          "iptc": "タイトル・説明",
+          "technical": "技術的な詳細",
+          "other": "その他"
+        },
+        "fields": {
+          "make": "メーカー",
+          "model": "機種",
+          "software": "ソフトウェア",
+          "lensMake": "レンズメーカー",
+          "lensModel": "レンズ機種",
+          "focalLength": "焦点距離",
+          "focalLengthIn35mm": "35mm 換算",
+          "dateTimeOriginal": "撮影日時",
+          "dateTimeDigitized": "デジタル化日時",
+          "dateTime": "更新日時",
+          "latitude": "緯度",
+          "longitude": "経度",
+          "altitude": "高度",
+          "artist": "作者",
+          "copyright": "著作権",
+          "title": "タイトル",
+          "description": "説明",
+          "keywords": "キーワード",
+          "iso": "ISO",
+          "fNumber": "絞り",
+          "exposureTime": "シャッタースピード",
+          "flash": "フラッシュ",
+          "whiteBalance": "ホワイトバランス",
+          "orientation": "向き",
+          "colorSpace": "色空間",
+          "imageWidth": "幅",
+          "imageHeight": "高さ"
+        },
+        "actions": {
+          "applyEdits": "適用してダウンロード",
+          "clearGps": "GPS を消去",
+          "clearDateTime": "日時を消去",
+          "exportJson": "JSON エクスポート",
+          "exportCsv": "CSV エクスポート",
+          "openInMapTooltip": "外部の地図サービスを開きます。座標はそのプロバイダーに送信されます。",
+          "changeFile": "ファイルを変更",
+          "removeFile": "削除",
+          "resetEdits": "リセット"
+        },
+        "messages": {
+          "noExifFound": "このファイルに EXIF データが見つかりませんでした。",
+          "loadingExif": "EXIF を読み込み中…",
+          "processing": "処理中…",
+          "processed": "完了",
+          "writeSuccess": "メタデータを更新しました",
+          "writeError": "メタデータの書き込みに失敗しました"
+        },
+        "faq": {
+          "q1": "編集できるフィールドは？",
+          "a1": "よく使われる項目を編集できます：撮影日時、GPS 座標（緯度・経度）、カメラ機種、レンズ機種、作者、著作権、タイトル、説明です。まれな項目や機種固有のフィールドは、誤って壊さないよう読み取り専用で表示されます。",
+          "q2": "写真はどこかにアップロードされますか？",
+          "a2": "いいえ。読み取りも書き込みもすべてブラウザ内でローカルに行われます。写真がデバイスから外に出ることはありません。",
+          "q3": "なぜ HEIC、AVIF、TIFF ファイルは編集できないのですか？",
+          "a3": "このツールは元のファイル形式を保持し、JPEG への変換は行いません。HEIC、AVIF、TIFF のインプレース編集には複雑なコンテナの書き換えが必要なため、現バージョンでは対応していません。ただし、これらの形式でもメタデータの表示は可能です。",
+          "q4": "GPS 位置情報を完全に削除するには？",
+          "a4": "編集フォームの GPS セクションにある「GPS を消去」ボタンをクリックします。保存されるファイルには、カメラ、日時、著作権などのメタデータがそのまま残ります。",
+          "q5": "JSON/CSV エクスポートには何が含まれますか？",
+          "a5": "ファイルから解析できたすべての EXIF、IPTC、XMP フィールドの完全なダンプです。カメラの詳細、GPS、タイムスタンプ、メーカーノートなどが含まれます。監査や法科学的な作業、他のツールへの取り込みに役立ちます。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "EXIF エディターとは？",
+            "content": "<p><strong>EXIF エディター</strong>は、写真に埋め込まれた隠しメタデータ（GPS 位置、カメラ機種、レンズ、撮影日、作者、著作権など）を確認・編集できるツールです。多くのオンラインエディターとは異なり、元のファイル形式をそのまま維持し、すべての処理をブラウザ内で行います。</p><p>旅行後の日時補正、共有前の GPS 除去、書き出した写真への著作権付与に最適です。</p>"
+          },
+          "howToUse": {
+            "title": "EXIF エディターの使い方",
+            "content": "<ol><li>ドロップゾーンをクリックするか、ページにドラッグ＆ドロップして写真を 1 枚アップロード</li><li>ツールが EXIF、IPTC、GPS のすべての項目を読み取り、カテゴリ別に整理して表示します</li><li>よく使う項目をその場で直接編集：日時、GPS、カメラ、レンズ、作者、著作権、タイトル、説明</li><li>個別の項目だけを消すには、インラインの<strong>GPS を消去</strong>または<strong>日時を消去</strong>ボタンを使用</li><li><strong>適用してダウンロード</strong>をクリックして編集画像を保存 — 元の形式は保持されます</li><li>または<strong>JSON / CSV をエクスポート</strong>でメタデータ全体をダンプ</li></ol>"
+          },
+          "features": {
+            "title": "主な機能",
+            "content": "<ul><li><strong>全項目の読み取り、元の形式を維持</strong>：JPEG、PNG、WebP、HEIC、AVIF、TIFF から EXIF/IPTC/XMP を読み取り、JPEG、PNG、WebP は元の形式のまま編集内容を書き込み</li><li><strong>よく使うフィールド</strong>：実際に変更される項目だけを編集 — 日時、GPS、カメラ、レンズ、作者、著作権、タイトル、説明</li><li><strong>ワンクリック消去</strong>：他のメタデータには触れずに GPS または日時だけを消せる専用ボタン</li><li><strong>地図リンク</strong>：GPS 位置に対して OpenStreetMap、Google Maps、Bing Maps の 3 つの外部リンクを提供 — このページでは地図タイルは一切読み込まれません</li><li><strong>JSON / CSV エクスポート</strong>：監査、法科学、他ツールへの取り込みのための完全なメタデータダンプ</li><li><strong>100% プライベート</strong>：アップロードなし — すべての読み書きがブラウザ内で完結</li></ul>"
+          },
+          "useCases": {
+            "title": "よくある利用シーン",
+            "content": "<ul><li><strong>共有前に</strong>：SNS に投稿する前に写真から GPS 座標を削除</li><li><strong>旅行後に</strong>：カメラの時計がずれていた時に撮った写真の日時やタイムゾーンを修正</li><li><strong>著作権スタンプ</strong>：書き出した写真に作者、著作権、キャプションを付与</li><li><strong>法科学・監査</strong>：完全な EXIF/IPTC/XMP を JSON や CSV にエクスポートして記録</li><li><strong>プライバシーチェック</strong>：何を削除するかを決める前に、写真が持つメタデータの全容を正確に確認</li></ul>"
+          },
+          "privacy": {
+            "title": "プライバシー優先の EXIF 編集",
+            "content": "<p>プライバシーに関わるメタデータを編集するために写真をサーバーへアップロードしては、そもそも意味がありません。すべての処理はブラウザ内で行われます。</p><ul><li>写真が<strong>デバイスの外に出ることは絶対にありません</strong></li><li>GPS プレビューはローカルで描画 — 位置が漏れる地図タイルのリクエストは一切発生しません</li><li>OpenStreetMap で位置を開く操作は、外部リンクボタンから明示的にユーザーが行う場合のみ</li><li>ページ読み込み後は<strong>オフライン</strong>でも動作します</li></ul>"
+          }
+        }
+      },
       "remove-exif": {
         "name": "EXIF データ削除",
         "description": "写真から EXIF メタデータを除去してプライバシーを保護します。",

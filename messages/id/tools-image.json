@@ -432,6 +432,110 @@
           }
         }
       },
+      "exif-editor": {
+        "name": "Editor EXIF",
+        "description": "Lihat dan edit metadata foto — GPS, kamera, tanggal, hak cipta.",
+        "metaTitle": "Editor EXIF - Lihat & Edit Metadata Foto Online | PrivaDeck",
+        "metaDescription": "Editor EXIF online gratis. Lihat dan edit GPS, kamera, tanggal, hak cipta, serta bidang IPTC pada foto Anda. Berjalan di peramban — tanpa unggah. Mendukung JPEG, PNG, WebP.",
+        "keywords": "editor exif, edit exif online, lihat exif, editor metadata foto, editor koordinat gps, edit info kamera, hapus gps, editor iptc",
+        "viewer": {
+          "noData": "Tidak ada data EXIF",
+          "readOnlyTitle": "Format hanya-baca",
+          "readOnlyNotice": "Berkas {format} dapat dilihat, tetapi tidak dapat diedit. Alat ini mempertahankan format asli Anda — tidak melakukan konversi antar format."
+        },
+        "groups": {
+          "camera": "Kamera",
+          "lens": "Lensa",
+          "datetime": "Tanggal & Waktu",
+          "gps": "Lokasi GPS",
+          "copyright": "Penulis & Hak Cipta",
+          "iptc": "Judul & Deskripsi",
+          "technical": "Detail Teknis",
+          "other": "Lainnya"
+        },
+        "fields": {
+          "make": "Produsen",
+          "model": "Model",
+          "software": "Perangkat Lunak",
+          "lensMake": "Produsen Lensa",
+          "lensModel": "Model Lensa",
+          "focalLength": "Panjang Fokus",
+          "focalLengthIn35mm": "Setara 35mm",
+          "dateTimeOriginal": "Tanggal Pengambilan",
+          "dateTimeDigitized": "Didigitalisasi Pada",
+          "dateTime": "Diubah Pada",
+          "latitude": "Lintang",
+          "longitude": "Bujur",
+          "altitude": "Ketinggian",
+          "artist": "Penulis",
+          "copyright": "Hak Cipta",
+          "title": "Judul",
+          "description": "Deskripsi",
+          "keywords": "Kata Kunci",
+          "iso": "ISO",
+          "fNumber": "Bukaan",
+          "exposureTime": "Kecepatan Rana",
+          "flash": "Lampu Kilat",
+          "whiteBalance": "Keseimbangan Putih",
+          "orientation": "Orientasi",
+          "colorSpace": "Ruang Warna",
+          "imageWidth": "Lebar",
+          "imageHeight": "Tinggi"
+        },
+        "actions": {
+          "applyEdits": "Terapkan & Unduh",
+          "clearGps": "Hapus GPS",
+          "clearDateTime": "Hapus tanggal",
+          "exportJson": "Ekspor JSON",
+          "exportCsv": "Ekspor CSV",
+          "openInMapTooltip": "Membuka layanan peta eksternal. Koordinat akan dikirim ke penyedia tersebut.",
+          "changeFile": "Ganti berkas",
+          "removeFile": "Hapus",
+          "resetEdits": "Atur ulang"
+        },
+        "messages": {
+          "noExifFound": "Tidak ada data EXIF yang ditemukan dalam berkas ini.",
+          "loadingExif": "Membaca EXIF…",
+          "processing": "Memproses…",
+          "processed": "Selesai",
+          "writeSuccess": "Metadata diperbarui",
+          "writeError": "Gagal menulis metadata"
+        },
+        "faq": {
+          "q1": "Bidang apa saja yang dapat saya edit?",
+          "a1": "Anda dapat mengedit bidang yang paling umum: tanggal pengambilan, koordinat GPS (lintang/bujur), model kamera, model lensa, penulis, hak cipta, judul, dan deskripsi. Bidang yang jarang atau spesifik perangkat ditampilkan sebagai hanya-baca agar Anda tidak merusaknya secara tidak sengaja.",
+          "q2": "Apakah foto saya diunggah ke mana pun?",
+          "a2": "Tidak. Semua pembacaan dan penulisan terjadi secara lokal di peramban Anda. Foto tidak pernah meninggalkan perangkat Anda.",
+          "q3": "Mengapa saya tidak bisa mengedit berkas HEIC, AVIF, atau TIFF?",
+          "a3": "Alat ini mempertahankan format berkas asli alih-alih mengonversinya ke JPEG. Penyuntingan di tempat untuk HEIC, AVIF, dan TIFF memerlukan penulisan ulang kontainer yang kompleks dan tidak didukung pada versi ini. Anda tetap dapat melihat seluruh metadata pada format tersebut.",
+          "q4": "Bagaimana cara menghapus lokasi GPS sepenuhnya?",
+          "a4": "Klik tombol «Hapus GPS» di bagian GPS pada formulir pengeditan. Metadata lain (kamera, tanggal, hak cipta) tetap dipertahankan dalam berkas yang disimpan.",
+          "q5": "Apa isi ekspor JSON/CSV?",
+          "a5": "Cuplikan lengkap setiap bidang EXIF, IPTC, dan XMP yang berhasil diurai oleh alat dari berkas. Termasuk detail kamera, GPS, stempel waktu, catatan pabrikan, dan lainnya. Berguna untuk audit, pekerjaan forensik, atau diumpankan ke alat lain."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Apa itu EXIF Editor?",
+            "content": "<p><strong>EXIF Editor</strong> memungkinkan Anda memeriksa dan mengedit metadata tersembunyi di dalam foto — lokasi GPS, model kamera, lensa, tanggal pengambilan, pembuat, hak cipta, dan lainnya. Berbeda dari kebanyakan editor daring, alat ini mempertahankan format file asli Anda dan melakukan seluruh pemrosesan di peramban Anda.</p><p>Cocok untuk mengoreksi stempel waktu yang salah setelah bepergian, menghapus GPS sebelum berbagi, atau membubuhkan hak cipta pada foto yang diekspor.</p>"
+          },
+          "howToUse": {
+            "title": "Cara menggunakan EXIF Editor",
+            "content": "<ol><li>Unggah satu foto dengan mengeklik area unggah atau menyeretnya ke halaman</li><li>Alat ini membaca seluruh field EXIF, IPTC, dan GPS lalu menampilkannya berdasarkan kategori</li><li>Edit langsung field yang sering digunakan: tanggal, GPS, kamera, lensa, pembuat, hak cipta, judul, deskripsi</li><li>Gunakan tombol inline <strong>Hapus GPS</strong> atau <strong>Hapus tanggal</strong> untuk mengosongkan satu field saja</li><li>Klik <strong>Terapkan &amp; Unduh</strong> untuk menyimpan gambar yang telah diedit — format asli tetap dipertahankan</li><li>Atau klik <strong>Ekspor JSON / CSV</strong> untuk mendapatkan salinan metadata lengkap</li></ol>"
+          },
+          "features": {
+            "title": "Fitur Utama",
+            "content": "<ul><li><strong>Baca Lengkap, Format Dipertahankan</strong>: baca EXIF/IPTC/XMP di JPEG, PNG, WebP, HEIC, AVIF, TIFF; tulis perubahan kembali ke JPEG, PNG, dan WebP dengan format aslinya</li><li><strong>Field Sering Digunakan</strong>: edit field yang benar-benar sering diubah — tanggal, GPS, kamera, lensa, pembuat, hak cipta, judul, deskripsi</li><li><strong>Hapus Sekali Klik</strong>: tombol khusus untuk menghapus GPS atau tanggal tanpa menyentuh metadata lainnya</li><li><strong>Tautan Peta</strong>: tiga tautan peta eksternal (OpenStreetMap, Google Maps, Bing Maps) untuk lokasi GPS — tidak ada ubin peta yang dimuat di halaman ini</li><li><strong>Ekspor JSON / CSV</strong>: salinan metadata lengkap untuk audit, forensik, atau masukan ke alat lain</li><li><strong>100% Privat</strong>: tanpa unggahan — setiap pembacaan dan penulisan terjadi di peramban Anda</li></ul>"
+          },
+          "useCases": {
+            "title": "Kasus penggunaan umum",
+            "content": "<ul><li><strong>Sebelum Berbagi</strong>: hapus koordinat GPS dari foto sebelum diunggah ke media sosial</li><li><strong>Setelah Bepergian</strong>: perbaiki tanggal atau zona waktu yang salah pada foto yang diambil saat jam kamera tidak tepat</li><li><strong>Membubuhkan Hak Cipta</strong>: tambahkan pembuat, hak cipta, dan keterangan ke foto yang diekspor</li><li><strong>Forensik &amp; Audit</strong>: ekspor EXIF/IPTC/XMP lengkap ke JSON atau CSV untuk dokumentasi</li><li><strong>Pemeriksaan Privasi</strong>: periksa tepat metadata apa yang dibawa foto sebelum memutuskan apa yang harus dihapus</li></ul>"
+          },
+          "privacy": {
+            "title": "Pengeditan EXIF Mengutamakan Privasi",
+            "content": "<p>Mengunggah foto ke server untuk mengedit metadata yang mengungkap privasi justru meniadakan tujuannya. Semua dilakukan di peramban Anda.</p><ul><li>Foto Anda <strong>tidak pernah meninggalkan perangkat Anda</strong></li><li>Pratinjau GPS digambar secara lokal — tanpa permintaan ubin peta yang bisa membocorkan lokasi</li><li>Membuka lokasi di OpenStreetMap hanya terjadi setelah Anda menekan tombol tautan eksternal</li><li>Berfungsi <strong>luring</strong> setelah halaman dimuat</li></ul>"
+          }
+        }
+      },
       "remove-exif": {
         "name": "Hapus Data EXIF",
         "description": "Hapus metadata EXIF dari foto untuk melindungi privasi Anda.",

@@ -442,6 +442,110 @@
           }
         }
       },
+      "exif-editor": {
+        "name": "EXIF 편집기",
+        "description": "사진 메타데이터 보기 및 편집 — GPS, 카메라, 날짜, 저작권.",
+        "metaTitle": "EXIF 편집기 - 온라인으로 사진 메타데이터 보기·편집 | PrivaDeck",
+        "metaDescription": "무료 온라인 EXIF 편집기. 사진의 GPS, 카메라, 날짜, 저작권, IPTC 필드를 보고 편집합니다. 업로드 없이 브라우저에서 동작. JPEG, PNG, WebP 지원.",
+        "keywords": "EXIF 편집기, EXIF 온라인 편집, EXIF 보기, 사진 메타데이터 편집기, GPS 좌표 편집, 카메라 정보 편집, GPS 제거, IPTC 편집기",
+        "viewer": {
+          "noData": "EXIF 데이터 없음",
+          "readOnlyTitle": "읽기 전용 형식",
+          "readOnlyNotice": "{format} 파일은 보기만 가능하며 편집할 수 없습니다. 이 도구는 원본 형식을 그대로 유지하며, 형식 간 변환은 하지 않습니다."
+        },
+        "groups": {
+          "camera": "카메라",
+          "lens": "렌즈",
+          "datetime": "날짜 및 시간",
+          "gps": "GPS 위치",
+          "copyright": "작성자 및 저작권",
+          "iptc": "제목 및 설명",
+          "technical": "기술적 세부 정보",
+          "other": "기타"
+        },
+        "fields": {
+          "make": "제조사",
+          "model": "모델",
+          "software": "소프트웨어",
+          "lensMake": "렌즈 제조사",
+          "lensModel": "렌즈 모델",
+          "focalLength": "초점 거리",
+          "focalLengthIn35mm": "35mm 환산",
+          "dateTimeOriginal": "촬영 일시",
+          "dateTimeDigitized": "디지털화 일시",
+          "dateTime": "수정 일시",
+          "latitude": "위도",
+          "longitude": "경도",
+          "altitude": "고도",
+          "artist": "작성자",
+          "copyright": "저작권",
+          "title": "제목",
+          "description": "설명",
+          "keywords": "키워드",
+          "iso": "ISO",
+          "fNumber": "조리개",
+          "exposureTime": "셔터 속도",
+          "flash": "플래시",
+          "whiteBalance": "화이트 밸런스",
+          "orientation": "방향",
+          "colorSpace": "색 공간",
+          "imageWidth": "가로",
+          "imageHeight": "세로"
+        },
+        "actions": {
+          "applyEdits": "적용 및 다운로드",
+          "clearGps": "GPS 지우기",
+          "clearDateTime": "날짜 지우기",
+          "exportJson": "JSON 내보내기",
+          "exportCsv": "CSV 내보내기",
+          "openInMapTooltip": "외부 지도 서비스를 엽니다. 좌표가 해당 서비스로 전송됩니다.",
+          "changeFile": "파일 변경",
+          "removeFile": "제거",
+          "resetEdits": "초기화"
+        },
+        "messages": {
+          "noExifFound": "이 파일에서 EXIF 데이터를 찾을 수 없습니다.",
+          "loadingExif": "EXIF 읽는 중…",
+          "processing": "처리 중…",
+          "processed": "완료",
+          "writeSuccess": "메타데이터가 업데이트되었습니다",
+          "writeError": "메타데이터 쓰기에 실패했습니다"
+        },
+        "faq": {
+          "q1": "어떤 필드를 편집할 수 있나요?",
+          "a1": "가장 자주 쓰이는 필드를 편집할 수 있습니다: 촬영 일시, GPS 좌표(위도/경도), 카메라 모델, 렌즈 모델, 작성자, 저작권, 제목, 설명. 드물거나 기기별 필드는 실수로 손상되지 않도록 읽기 전용으로 표시됩니다.",
+          "q2": "사진이 어딘가로 업로드되나요?",
+          "a2": "아니요. 모든 읽기와 쓰기는 브라우저에서 로컬로 처리됩니다. 사진은 기기를 벗어나지 않습니다.",
+          "q3": "왜 HEIC, AVIF, TIFF 파일은 편집할 수 없나요?",
+          "a3": "이 도구는 JPEG로 변환하지 않고 원본 파일 형식을 보존합니다. HEIC, AVIF, TIFF의 인플레이스 편집에는 복잡한 컨테이너 재작성이 필요하며 현재 버전에서는 지원하지 않습니다. 해당 형식의 메타데이터는 모두 볼 수 있습니다.",
+          "q4": "GPS 위치를 완전히 제거하려면 어떻게 하나요?",
+          "a4": "편집 양식의 GPS 섹션에서 \"GPS 지우기\" 버튼을 클릭하세요. 카메라, 날짜, 저작권 등 다른 메타데이터는 저장되는 파일에 그대로 유지됩니다.",
+          "q5": "JSON/CSV 내보내기에는 무엇이 포함되나요?",
+          "a5": "도구가 파일에서 파싱할 수 있는 모든 EXIF, IPTC, XMP 필드의 완전한 덤프입니다. 카메라 세부 정보, GPS, 타임스탬프, 메이커 노트 등이 포함됩니다. 감사, 포렌식 작업 또는 다른 도구로의 입력 데이터로 유용합니다."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "EXIF 편집기란?",
+            "content": "<p><strong>EXIF 편집기</strong>는 사진 안에 숨겨진 메타데이터 — GPS 위치, 카메라 모델, 렌즈, 촬영 날짜, 작성자, 저작권 등 — 를 확인하고 편집할 수 있게 해줍니다. 대부분의 온라인 편집기와 달리 원본 파일 형식을 그대로 유지하며, 모든 처리는 브라우저에서 이루어집니다.</p><p>여행 후 잘못된 타임스탬프 수정, 공유 전 GPS 제거, 내보낸 사진에 저작권 표기를 하는 데에 최적입니다.</p>"
+          },
+          "howToUse": {
+            "title": "EXIF 편집기 사용 방법",
+            "content": "<ol><li>드롭 영역을 클릭하거나 페이지로 드래그하여 사진 한 장을 업로드</li><li>도구가 EXIF, IPTC, GPS의 모든 필드를 읽어 카테고리별로 묶어 표시</li><li>자주 쓰는 필드를 그 자리에서 바로 편집: 날짜, GPS, 카메라, 렌즈, 작성자, 저작권, 제목, 설명</li><li>하나의 필드만 지우려면 인라인 <strong>GPS 지우기</strong> 또는 <strong>날짜 지우기</strong> 버튼 사용</li><li><strong>적용 및 다운로드</strong>를 클릭해 편집된 이미지 저장 — 원본 형식은 유지됩니다</li><li>혹은 <strong>JSON / CSV 내보내기</strong>로 메타데이터 전체 덤프 획득</li></ol>"
+          },
+          "features": {
+            "title": "주요 기능",
+            "content": "<ul><li><strong>전체 읽기, 원본 형식 유지</strong>: JPEG, PNG, WebP, HEIC, AVIF, TIFF에서 EXIF/IPTC/XMP 읽기; JPEG, PNG, WebP에는 원본 형식 그대로 편집 내용을 다시 기록</li><li><strong>자주 쓰는 필드</strong>: 사람들이 실제로 변경하는 필드만 편집 — 날짜, GPS, 카메라, 렌즈, 작성자, 저작권, 제목, 설명</li><li><strong>원클릭 지우기</strong>: 나머지 메타데이터는 건드리지 않고 GPS 또는 날짜만 지우는 전용 버튼</li><li><strong>지도 링크</strong>: GPS 위치에 대해 OpenStreetMap, Google Maps, Bing Maps 세 가지 외부 링크 제공 — 이 페이지에서는 지도 타일을 일절 불러오지 않습니다</li><li><strong>JSON / CSV 내보내기</strong>: 감사, 포렌식, 다른 도구에 투입하기 위한 메타데이터 전체 덤프</li><li><strong>100% 프라이빗</strong>: 업로드 없음 — 모든 읽기와 쓰기가 브라우저에서 이루어집니다</li></ul>"
+          },
+          "useCases": {
+            "title": "일반적인 사용 사례",
+            "content": "<ul><li><strong>공유 전</strong>: SNS에 올리기 전에 사진에서 GPS 좌표 제거</li><li><strong>여행 후</strong>: 카메라 시계가 맞지 않아 찍은 사진의 잘못된 날짜 또는 시간대 수정</li><li><strong>저작권 스탬핑</strong>: 내보낸 사진에 작성자, 저작권, 캡션 추가</li><li><strong>포렌식 및 감사</strong>: 문서화를 위해 전체 EXIF/IPTC/XMP를 JSON 또는 CSV로 내보내기</li><li><strong>프라이버시 점검</strong>: 무엇을 제거할지 결정하기 전에 사진이 담고 있는 메타데이터를 정확히 확인</li></ul>"
+          },
+          "privacy": {
+            "title": "프라이버시 우선의 EXIF 편집",
+            "content": "<p>프라이버시를 드러내는 메타데이터를 편집한다고 사진을 서버에 업로드한다면 그 자체로 본래 목적에 어긋납니다. 모든 것은 브라우저에서 이루어집니다.</p><ul><li>사진은 <strong>절대로 기기를 떠나지 않습니다</strong></li><li>GPS 미리보기는 로컬에서 그려집니다 — 위치를 유출할 수 있는 지도 타일 요청이 없습니다</li><li>OpenStreetMap에서 위치를 여는 동작은 오직 외부 링크 버튼을 통한 사용자 직접 조작으로만 발생합니다</li><li>페이지 로드 이후에는 <strong>오프라인</strong>에서도 작동합니다</li></ul>"
+          }
+        }
+      },
       "remove-exif": {
         "name": "EXIF 데이터 제거",
         "description": "사진에서 EXIF 메타데이터를 제거하여 개인정보를 보호합니다.",
