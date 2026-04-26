@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "Chuyển đổi HEIC",
-        "description": "Chuyển đổi hình ảnh HEIC/HEIF sang định dạng JPG hoặc PNG.",
-        "metaTitle": "Chuyển đổi HEIC sang JPG/PNG - Trình chuyển đổi HEIC trực tuyến miễn phí",
-        "metaDescription": "Chuyển đổi hình ảnh HEIC và HEIF sang định dạng JPG hoặc PNG. Công cụ trực tuyến miễn phí, không cần tải lên. Hoạt động trong trình duyệt.",
-        "keywords": "heic sang jpg, heic sang png, chuyển đổi heif, chuyển đổi ảnh iphone, chuyển đổi heic trực tuyến",
+        "description": "Chuyển đổi ảnh HEIC/HEIF sang JPG, PNG hoặc GIF động (cho ảnh chụp liên tiếp iPhone).",
+        "metaTitle": "Chuyển đổi HEIC sang JPG/PNG/GIF - Công cụ HEIC trực tuyến miễn phí",
+        "metaDescription": "Chuyển đổi ảnh HEIC và HEIF sang JPG, PNG hoặc GIF động. Tệp HEIC chụp liên tiếp tự động thành GIF động. Công cụ trực tuyến miễn phí, không cần tải lên.",
+        "keywords": "heic sang jpg, heic sang png, heic sang gif, chụp liên tiếp iphone sang gif, chuyển đổi heif, chuyển đổi ảnh iphone, chuyển đổi heic trực tuyến",
         "selectedFile": "Tệp đã chọn",
         "outputFormat": "Định dạng đầu ra",
         "quality": "Chất lượng",
         "convert": "Chuyển đổi",
         "processing": "Đang chuyển đổi...",
+        "analyzing": "Đang phân tích tệp HEIC...",
+        "burstDetected": "Phát hiện ảnh chụp liên tiếp ({count} khung hình) — có sẵn GIF động",
+        "jpgOnly": "Chỉ JPG",
+        "converting": "Đang chuyển đổi...",
+        "clickToConvert": "Nhấp vào một định dạng để chuyển đổi và tải xuống",
         "faq": {
           "q1": "Tệp HEIC là gì?",
           "a1": "HEIC (High Efficiency Image Container) là định dạng hình ảnh mặc định được sử dụng bởi thiết bị Apple. Nó cung cấp nén tốt hơn JPEG trong khi duy trì chất lượng.",
@@ -1102,11 +1107,11 @@
           },
           "howToUse": {
             "title": "Cách sử dụng công cụ Chuyển đổi HEIC",
-            "content": "<ol><li>Tải lên một hoặc nhiều tệp HEIC/HEIF từ iPhone, iPad hoặc Mac của bạn</li><li>Chọn định dạng đầu ra: <strong>JPG</strong> hoặc <strong>PNG</strong></li><li>Nhấp <strong>Chuyển đổi</strong> để xử lý tất cả tệp</li><li>Tải xuống hình ảnh đã chuyển đổi riêng lẻ hoặc dưới dạng ZIP</li></ol><p>Để tương thích tốt nhất, JPG được khuyến nghị. Chọn PNG nếu bạn cần hỗ trợ độ trong suốt.</p>"
+            "content": "<ol><li>Tải lên một tệp HEIC/HEIF từ iPhone, iPad hoặc Mac của bạn</li><li>Đợi một lát trong khi tệp được phân tích (phát hiện chụp liên tiếp tự động)</li><li>Nhấp <strong>JPG</strong>, <strong>PNG</strong> hoặc <strong>GIF</strong> để chuyển đổi và tải xuống ngay lập tức</li><li>Điều chỉnh thanh trượt chất lượng trước khi nhấp JPG để tinh chỉnh kích thước tệp</li></ol><p>Nút <strong>GIF</strong> chỉ xuất hiện khi phát hiện HEIC chụp liên tiếp (nhiều khung hình) — ảnh HEIC khung hình đơn dùng JPG hoặc PNG.</p>"
           },
           "features": {
             "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Hỗ trợ HEIC/HEIF</strong>: Chuyển đổi định dạng ảnh mặc định của Apple</li><li><strong>Đầu ra JPG và PNG</strong>: Chọn định dạng đầu ra ưa thích</li><li><strong>Chuyển đổi hàng loạt</strong>: Chuyển đổi nhiều tệp HEIC cùng lúc</li><li><strong>Bảo toàn chất lượng</strong>: Chuyển đổi chất lượng cao giữ nguyên màu gốc</li><li><strong>Sử dụng heic2any</strong>: Chuyển đổi đáng tin cậy bằng thư viện heic2any</li><li><strong>Kéo và thả</strong>: Chỉ cần kéo tệp HEIC vào trang</li></ul>"
+            "content": "<ul><li><strong>Hỗ trợ HEIC/HEIF</strong>: Chuyển đổi định dạng ảnh mặc định của Apple</li><li><strong>Chuyển đổi một cú nhấp</strong>: Nhấn nút định dạng để chuyển đổi và tải xuống ngay lập tức</li><li><strong>Chụp liên tiếp → GIF động</strong>: Tệp HEIC chụp liên tiếp đa khung hình tự động trở thành GIF động</li><li><strong>Kiểm soát chất lượng JPG</strong>: Thanh trượt chất lượng có thể điều chỉnh cho đầu ra JPG</li><li><strong>Sử dụng heic2any</strong>: Giải mã HEIC đáng tin cậy trong trình duyệt của bạn</li><li><strong>100% nội bộ</strong>: Không tải lên, không máy chủ — ảnh của bạn không bao giờ rời khỏi thiết bị</li></ul>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",

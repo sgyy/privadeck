@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "HEIC 转换器",
-        "description": "将 HEIC/HEIF 图片转换为 JPG 或 PNG 格式。",
-        "metaTitle": "HEIC 转 JPG/PNG 转换器 - 免费在线 HEIC 转换器",
-        "metaDescription": "将 HEIC 和 HEIF 图像转换为 JPG 或 PNG 格式。免费在线工具，无需上传。在浏览器中工作。",
-        "keywords": "heic 转 jpg, heic 转 png, heif 转换器，iphone 照片转换，heic 转换器在线",
+        "description": "将 HEIC/HEIF 照片转换为 JPG、PNG 或动态 GIF（适用于 iPhone 连拍照片）。",
+        "metaTitle": "HEIC 转 JPG/PNG/GIF 转换器 - 免费在线 HEIC 工具",
+        "metaDescription": "将 HEIC/HEIF 照片转换为 JPG、PNG 或动态 GIF。iPhone 连拍 HEIC 自动转为动态 GIF。免费在线工具，无需上传。",
+        "keywords": "heic 转 jpg, heic 转 png, heic 转 gif, iphone 连拍转 gif, heif 转换器, iphone 照片转换, heic 在线转换",
         "selectedFile": "选定文件",
         "outputFormat": "输出格式",
         "quality": "质量",
         "convert": "转换",
         "processing": "转换中...",
+        "analyzing": "正在分析 HEIC 文件...",
+        "burstDetected": "检测到连拍照片（{count} 帧）— 可输出动态 GIF",
+        "jpgOnly": "仅影响 JPG",
+        "converting": "转换中...",
+        "clickToConvert": "点击格式按钮即可转换并下载",
         "faq": {
           "q1": "什么是 HEIC 文件？",
           "a1": "HEIC（高效图像容器）是 Apple 设备使用的默认图像格式。它提供比 JPEG 更好的压缩同时保持质量。",
@@ -1098,19 +1103,19 @@
         "seoContent": {
           "intro": {
             "title": "什么是 HEIC 转换工具？",
-            "content": "<p><strong>HEIC 转换工具</strong>可将 iPhone 和 iPad 拍摄的 HEIC/HEIF 格式照片转换为通用的 JPG 或 PNG 格式。基于 heic2any 库实现高质量转换，解决 HEIC 照片在 Windows 和其他平台上无法打开的问题。</p><p>所有转换100%在浏览器中本地完成，照片不会上传到任何服务器。</p>"
+            "content": "<p><strong>HEIC 转换工具</strong>可将 iPhone 和 iPad 拍摄的 HEIC/HEIF 照片转换为 JPG、PNG 或动态 GIF 格式，解决 HEIC 在 Windows 等平台无法打开的问题。</p><p>iPhone 连拍模式拍摄的 HEIC 文件会被自动识别，可一键转换为动态 GIF。所有处理 100% 在浏览器本地完成，照片不会上传到任何服务器。</p>"
           },
           "howToUse": {
             "title": "如何使用 HEIC 转换工具",
-            "content": "<ol><li>上传 HEIC 或 HEIF 格式的照片</li><li>选择输出格式：<strong>JPG</strong> 或 <strong>PNG</strong></li><li>调整输出质量（JPG 格式）</li><li>点击转换并下载结果</li></ol><p>支持批量转换多张 HEIC 照片。</p>"
+            "content": "<ol><li>上传一张 HEIC 或 HEIF 照片</li><li>等待几秒，工具会自动分析文件并检测是否为连拍</li><li>点击 <strong>JPG</strong>、<strong>PNG</strong> 或 <strong>GIF</strong> 按钮即可立即转换并下载</li><li>需要时拖动质量滑块调整 JPG 输出质量后再点击 JPG</li></ol><p><strong>GIF</strong> 按钮仅在检测到连拍 HEIC（多帧）时出现，普通单帧 HEIC 使用 JPG 或 PNG。</p>"
           },
           "features": {
             "title": "核心功能",
-            "content": "<ul><li><strong>HEIC 转 JPG</strong>：将 HEIC 照片转为通用的 JPG 格式</li><li><strong>HEIC 转 PNG</strong>：转为无损的 PNG 格式</li><li><strong>质量控制</strong>：可调节 JPG 输出质量</li><li><strong>批量转换</strong>：同时转换多张 HEIC 照片</li><li><strong>高质量输出</strong>：基于 heic2any 库的高保真转换</li><li><strong>100%本地处理</strong>：转换在浏览器中完成，照片不会上传</li></ul>"
+            "content": "<ul><li><strong>HEIC 转 JPG</strong>：将 HEIC 转为通用的 JPG 格式</li><li><strong>HEIC 转 PNG</strong>：转为无损的 PNG 格式</li><li><strong>连拍转动态 GIF</strong>：iPhone 连拍多帧 HEIC 自动合成动画 GIF</li><li><strong>一键转换</strong>：点击格式按钮即可转换并下载</li><li><strong>JPG 质量控制</strong>：可调节 JPG 输出质量</li><li><strong>100% 本地处理</strong>：转换在浏览器中完成，照片不会上传</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
-            "content": "<ul><li><strong>跨平台分享</strong>：将 iPhone 照片转为 JPG 以便在 Windows、Android 上查看</li><li><strong>社交上传</strong>：转换为社交平台支持的格式后上传</li><li><strong>邮件发送</strong>：将 HEIC 转为 JPG 作为邮件附件发送</li><li><strong>网站使用</strong>：将 HEIC 照片转为网页可用的 JPG/PNG 格式</li><li><strong>批量处理</strong>：一次性转换相册中的多张 HEIC 照片</li></ul>"
+            "content": "<ul><li><strong>跨平台分享</strong>：将 iPhone 照片转为 JPG 以便在 Windows、Android 上查看</li><li><strong>动态分享</strong>：将 iPhone 连拍照片转为动态 GIF 发到社交平台或聊天工具</li><li><strong>社交上传</strong>：转换为社交平台支持的格式后上传</li><li><strong>邮件发送</strong>：将 HEIC 转为 JPG 作为邮件附件发送</li><li><strong>网站使用</strong>：将 HEIC 转为网页可用的 JPG/PNG 格式</li></ul>"
           },
           "privacy": {
             "title": "隐私优先的 HEIC 转换",

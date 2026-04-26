@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "ตัวแปลง HEIC",
-        "description": "แปลงรูปภาพ HEIC/HEIF เป็นรูปแบบ JPG หรือ PNG",
-        "metaTitle": "ตัวแปลง HEIC เป็น JPG/PNG - ตัวแปลง HEIC ออนไลน์ฟรี",
-        "metaDescription": "แปลงรูปภาพ HEIC และ HEIF เป็นรูปแบบ JPG หรือ PNG เครื่องมือออนไลน์ฟรี ไม่ต้องอัปโหลด ทำงานในเบราว์เซอร์",
-        "keywords": "heic เป็น jpg, heic เป็น png, ตัวแปลง heif, ตัวแปลงรูปถ่าย iphone, ตัวแปลง heic ออนไลน์",
+        "description": "แปลงรูปภาพ HEIC/HEIF เป็น JPG, PNG หรือ GIF แอนิเมชัน (สำหรับรูปเบิร์สต์จาก iPhone)",
+        "metaTitle": "ตัวแปลง HEIC เป็น JPG/PNG/GIF - เครื่องมือ HEIC ออนไลน์ฟรี",
+        "metaDescription": "แปลงรูปภาพ HEIC และ HEIF เป็น JPG, PNG หรือ GIF แอนิเมชัน ไฟล์ HEIC เบิร์สต์จะกลายเป็น GIF แอนิเมชันโดยอัตโนมัติ เครื่องมือออนไลน์ฟรี ไม่ต้องอัปโหลด",
+        "keywords": "heic เป็น jpg, heic เป็น png, heic เป็น gif, เบิร์สต์ iphone เป็น gif, ตัวแปลง heif, ตัวแปลงรูปถ่าย iphone, ตัวแปลง heic ออนไลน์",
         "selectedFile": "ไฟล์ที่เลือก",
         "outputFormat": "รูปแบบเอาต์พุต",
         "quality": "คุณภาพ",
         "convert": "แปลง",
         "processing": "กำลังแปลง...",
+        "analyzing": "กำลังวิเคราะห์ไฟล์ HEIC...",
+        "burstDetected": "ตรวจพบรูปเบิร์สต์ ({count} เฟรม) — มี GIF แอนิเมชันพร้อมใช้งาน",
+        "jpgOnly": "เฉพาะ JPG",
+        "converting": "กำลังแปลง...",
+        "clickToConvert": "คลิกที่รูปแบบเพื่อแปลงและดาวน์โหลด",
         "faq": {
           "q1": "ไฟล์ HEIC คืออะไร?",
           "a1": "HEIC (High Efficiency Image Container) คือรูปแบบรูปภาพเริ่มต้นที่ใช้โดยอุปกรณ์ Apple ให้การบีบอัดที่ดีกว่า JPEG โดยรักษาคุณภาพ",
@@ -1102,11 +1107,11 @@
           },
           "howToUse": {
             "title": "วิธีใช้เครื่องมือแปลง HEIC",
-            "content": "<ol><li>อัปโหลดไฟล์ HEIC/HEIF หนึ่งไฟล์ขึ้นไปจาก iPhone, iPad หรือ Mac ของคุณ</li><li>เลือกรูปแบบเอาต์พุต: <strong>JPG</strong> หรือ <strong>PNG</strong></li><li>คลิก <strong>แปลง</strong> เพื่อประมวลผลไฟล์ทั้งหมด</li><li>ดาวน์โหลดรูปภาพที่แปลงแล้วแยกกันหรือเป็น ZIP</li></ol><p>สำหรับความเข้ากันได้ที่ดีที่สุด แนะนำ JPG เลือก PNG หากคุณต้องการรองรับความโปร่งใส</p>"
+            "content": "<ol><li>อัปโหลดไฟล์ HEIC/HEIF จาก iPhone, iPad หรือ Mac ของคุณ</li><li>รอสักครู่ขณะวิเคราะห์ไฟล์ (ตรวจจับเบิร์สต์โดยอัตโนมัติ)</li><li>คลิก <strong>JPG</strong>, <strong>PNG</strong> หรือ <strong>GIF</strong> เพื่อแปลงและดาวน์โหลดทันที</li><li>ปรับแถบเลื่อนคุณภาพก่อนคลิก JPG เพื่อปรับขนาดไฟล์ให้เหมาะสม</li></ol><p>ปุ่ม <strong>GIF</strong> จะปรากฏเฉพาะเมื่อตรวจพบ HEIC เบิร์สต์ (หลายเฟรม) เท่านั้น — รูป HEIC เฟรมเดียวใช้ JPG หรือ PNG</p>"
           },
           "features": {
             "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>รองรับ HEIC/HEIF</strong>: แปลงรูปแบบรูปถ่ายเริ่มต้นของ Apple</li><li><strong>เอาต์พุต JPG และ PNG</strong>: เลือกรูปแบบเอาต์พุตที่คุณต้องการ</li><li><strong>การแปลงแบบแบตช์</strong>: แปลงไฟล์ HEIC หลายไฟล์พร้อมกัน</li><li><strong>การรักษาคุณภาพ</strong>: การแปลงคุณภาพสูงรักษาสีต้นฉบับ</li><li><strong>ขับเคลื่อนโดย heic2any</strong>: การแปลงที่เชื่อถือได้โดยใช้ไลบรารี heic2any</li><li><strong>ลากและวาง</strong>: เพียงลากไฟล์ HEIC ลงบนหน้าเว็บ</li></ul>"
+            "content": "<ul><li><strong>รองรับ HEIC/HEIF</strong>: แปลงรูปแบบรูปถ่ายเริ่มต้นของ Apple</li><li><strong>แปลงคลิกเดียว</strong>: แตะปุ่มรูปแบบเพื่อแปลงและดาวน์โหลดทันที</li><li><strong>เบิร์สต์ → GIF แอนิเมชัน</strong>: ไฟล์ HEIC เบิร์สต์หลายเฟรมจะกลายเป็น GIF แอนิเมชันโดยอัตโนมัติ</li><li><strong>การควบคุมคุณภาพ JPG</strong>: แถบเลื่อนคุณภาพที่ปรับได้สำหรับเอาต์พุต JPG</li><li><strong>ขับเคลื่อนโดย heic2any</strong>: การถอดรหัส HEIC ที่เชื่อถือได้ในเบราว์เซอร์ของคุณ</li><li><strong>100% ในเครื่อง</strong>: ไม่มีการอัปโหลด ไม่มีเซิร์ฟเวอร์ — รูปของคุณไม่ออกจากอุปกรณ์</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",

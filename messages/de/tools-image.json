@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "HEIC-Konverter",
-        "description": "HEIC/HEIF-Bilder in JPG- oder PNG-Format konvertieren.",
-        "metaTitle": "HEIC zu JPG/PNG Konverter - Kostenloser Online-HEIC-Konverter",
-        "metaDescription": "HEIC- und HEIF-Bilder in JPG- oder PNG-Format konvertieren. Kostenloses Online-Tool, kein Upload nötig. Funktioniert in Ihrem Browser.",
-        "keywords": "HEIC zu JPG, HEIC zu PNG, HEIF-Konverter, iPhone-Foto-Konverter, HEIC-Konverter online",
+        "description": "HEIC/HEIF-Fotos in JPG, PNG oder animiertes GIF konvertieren (für iPhone-Burst-Fotos).",
+        "metaTitle": "HEIC zu JPG/PNG/GIF Konverter - Kostenloses Online-HEIC-Tool",
+        "metaDescription": "HEIC- und HEIF-Fotos in JPG, PNG oder animiertes GIF konvertieren. Burst-HEIC-Dateien werden automatisch zu animierten GIFs. Kostenloses Online-Tool, kein Upload nötig.",
+        "keywords": "HEIC zu JPG, HEIC zu PNG, HEIC zu GIF, iPhone Burst zu GIF, HEIF-Konverter, iPhone-Foto-Konverter, HEIC-Konverter online",
         "selectedFile": "Ausgewählte Datei",
         "outputFormat": "Ausgabeformat",
         "quality": "Qualität",
         "convert": "Konvertieren",
         "processing": "Wird konvertiert...",
+        "analyzing": "HEIC-Datei wird analysiert...",
+        "burstDetected": "Burst-Foto erkannt ({count} Bilder) — animiertes GIF verfügbar",
+        "jpgOnly": "Nur JPG",
+        "converting": "Wird konvertiert...",
+        "clickToConvert": "Klicken Sie auf ein Format, um zu konvertieren und herunterzuladen",
         "faq": {
           "q1": "Was ist eine HEIC-Datei?",
           "a1": "HEIC (High Efficiency Image Container) ist das Standard-Bildformat von Apple-Geräten. Es bietet bessere Komprimierung als JPEG bei gleichbleibender Qualität.",
@@ -1102,11 +1107,11 @@
           },
           "howToUse": {
             "title": "So verwenden Sie den HEIC-Konverter",
-            "content": "<ol><li>Laden Sie eine oder mehrere HEIC/HEIF-Dateien von Ihrem iPhone, iPad oder Mac hoch</li><li>Wählen Sie das Ausgabeformat: <strong>JPG</strong> oder <strong>PNG</strong></li><li>Klicken Sie auf <strong>Konvertieren</strong>, um alle Dateien zu verarbeiten</li><li>Laden Sie konvertierte Bilder einzeln oder als ZIP herunter</li></ol><p>Für beste Kompatibilität wird JPG empfohlen. Wählen Sie PNG, wenn Sie Transparenzunterstützung benötigen.</p>"
+            "content": "<ol><li>Laden Sie eine HEIC/HEIF-Datei von Ihrem iPhone, iPad oder Mac hoch</li><li>Warten Sie einen Moment, während die Datei analysiert wird (Burst-Erkennung läuft automatisch)</li><li>Klicken Sie auf <strong>JPG</strong>, <strong>PNG</strong> oder <strong>GIF</strong>, um sofort zu konvertieren und herunterzuladen</li><li>Stellen Sie den Qualitätsregler vor dem Klick auf JPG ein, um die Dateigröße zu optimieren</li></ol><p>Die <strong>GIF</strong>-Schaltfläche erscheint nur bei erkannter Burst-HEIC-Datei (mehrere Bilder) — einzelne HEIC-Fotos verwenden JPG oder PNG.</p>"
           },
           "features": {
             "title": "Hauptfunktionen",
-            "content": "<ul><li><strong>HEIC/HEIF-Unterstützung</strong>: Apples Standard-Fotoformat konvertieren</li><li><strong>JPG & PNG-Ausgabe</strong>: Ihr bevorzugtes Ausgabeformat wählen</li><li><strong>Stapelkonvertierung</strong>: Mehrere HEIC-Dateien gleichzeitig konvertieren</li><li><strong>Qualitätserhaltung</strong>: Hochwertige Konvertierung mit Beibehaltung der Originalfarben</li><li><strong>Angetrieben von heic2any</strong>: Zuverlässige Konvertierung mit der heic2any-Bibliothek</li><li><strong>Drag & Drop</strong>: HEIC-Dateien einfach auf die Seite ziehen</li></ul>"
+            "content": "<ul><li><strong>HEIC/HEIF-Unterstützung</strong>: Apples Standard-Fotoformat konvertieren</li><li><strong>Ein-Klick-Konvertierung</strong>: Format-Schaltfläche antippen, um sofort zu konvertieren und herunterzuladen</li><li><strong>Burst → animiertes GIF</strong>: Mehrbild-Burst-HEIC-Dateien werden automatisch zu animierten GIFs</li><li><strong>JPG-Qualitätskontrolle</strong>: Einstellbarer Qualitätsregler für JPG-Ausgabe</li><li><strong>Angetrieben von heic2any</strong>: Zuverlässige HEIC-Dekodierung in Ihrem Browser</li><li><strong>100% lokal</strong>: Kein Upload, kein Server — Ihre Fotos verlassen niemals Ihr Gerät</li></ul>"
           },
           "useCases": {
             "title": "Häufige Anwendungsfälle",

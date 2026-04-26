@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "HEIC Dönüştürücü",
-        "description": "HEIC/HEIF görsellerini JPG veya PNG formatına dönüştürün.",
-        "metaTitle": "HEIC - JPG/PNG Dönüştürücü — Ücretsiz Çevrimiçi HEIC Dönüştürücü",
-        "metaDescription": "HEIC ve HEIF görsellerini JPG veya PNG formatına dönüştürün. Ücretsiz çevrimiçi araç, yükleme gerekmez. Tarayıcınızda çalışır.",
-        "keywords": "heic jpg, heic png, heif dönüştürücü, iphone fotoğraf dönüştürücü, heic dönüştürücü çevrimiçi",
+        "description": "HEIC/HEIF fotoğrafları JPG, PNG veya hareketli GIF'e dönüştürün (iPhone burst fotoğrafları için).",
+        "metaTitle": "HEIC - JPG/PNG/GIF Dönüştürücü — Ücretsiz Çevrimiçi HEIC Aracı",
+        "metaDescription": "HEIC ve HEIF fotoğrafları JPG, PNG veya hareketli GIF'e dönüştürün. Burst HEIC dosyaları otomatik olarak hareketli GIF'e dönüşür. Ücretsiz çevrimiçi araç, yükleme gerekmez.",
+        "keywords": "heic jpg, heic png, heic gif, iphone burst gif, heif dönüştürücü, iphone fotoğraf dönüştürücü, heic dönüştürücü çevrimiçi",
         "selectedFile": "Seçili dosya",
         "outputFormat": "Çıktı formatı",
         "quality": "Kalite",
         "convert": "Dönüştür",
         "processing": "Dönüştürülüyor...",
+        "analyzing": "HEIC dosyası analiz ediliyor...",
+        "burstDetected": "Burst fotoğraf algılandı ({count} kare) — hareketli GIF kullanılabilir",
+        "jpgOnly": "Yalnızca JPG",
+        "converting": "Dönüştürülüyor...",
+        "clickToConvert": "Dönüştürmek ve indirmek için bir formata tıklayın",
         "faq": {
           "q1": "HEIC dosyası nedir?",
           "a1": "HEIC (High Efficiency Image Container), Apple cihazlarının varsayılan görsel formatıdır. Kaliteyi korurken JPEG'den daha iyi sıkıştırma sunar.",
@@ -1102,11 +1107,11 @@
           },
           "howToUse": {
             "title": "HEIC Dönüştürücü Nasıl Kullanılır?",
-            "content": "<ol><li>iPhone, iPad veya Mac'inizden bir ya da birden fazla HEIC/HEIF dosyası yükleyin</li><li>Çıktı formatını seçin: <strong>JPG</strong> veya <strong>PNG</strong></li><li>Tüm dosyaları işlemek için <strong>Dönüştür</strong>'e tıklayın</li><li>Dönüştürülen görselleri tek tek veya ZIP olarak indirin</li></ol><p>En iyi uyumluluk için JPG önerilir. Şeffaflık desteğine ihtiyaç duyuyorsanız PNG seçin.</p>"
+            "content": "<ol><li>iPhone, iPad veya Mac'inizden bir HEIC/HEIF dosyası yükleyin</li><li>Dosya analiz edilirken bir an bekleyin (burst algılama otomatik olarak çalışır)</li><li>Anında dönüştürmek ve indirmek için <strong>JPG</strong>, <strong>PNG</strong> veya <strong>GIF</strong>'e tıklayın</li><li>Dosya boyutunu ince ayarlamak için JPG'ye tıklamadan önce kalite kaydırıcısını ayarlayın</li></ol><p><strong>GIF</strong> düğmesi yalnızca burst HEIC (birden fazla kare) algılandığında görünür — tek kare HEIC fotoğrafları JPG veya PNG kullanır.</p>"
           },
           "features": {
             "title": "Temel Özellikler",
-            "content": "<ul><li><strong>HEIC/HEIF Desteği</strong>: Apple'ın varsayılan fotoğraf formatını dönüştürme</li><li><strong>JPG ve PNG Çıktısı</strong>: Tercih ettiğiniz çıktı formatını seçme</li><li><strong>Toplu Dönüştürme</strong>: Birden fazla HEIC dosyasını aynı anda dönüştürme</li><li><strong>Kalite Koruma</strong>: Orijinal renkleri koruyan yüksek kaliteli dönüştürme</li><li><strong>heic2any ile Güçlendirilmiş</strong>: heic2any kütüphanesi kullanılarak güvenilir dönüştürme</li><li><strong>Sürükle ve Bırak</strong>: HEIC dosyalarını sayfaya sürüklemeniz yeterli</li></ul>"
+            "content": "<ul><li><strong>HEIC/HEIF Desteği</strong>: Apple'ın varsayılan fotoğraf formatını dönüştürme</li><li><strong>Tek Tıkla Dönüştürme</strong>: Format düğmesine dokunarak anında dönüştürün ve indirin</li><li><strong>Burst → Hareketli GIF</strong>: Çok kareli burst HEIC dosyaları otomatik olarak hareketli GIF'lere dönüşür</li><li><strong>JPG Kalite Kontrolü</strong>: JPG çıktısı için ayarlanabilir kalite kaydırıcısı</li><li><strong>heic2any ile Güçlendirilmiş</strong>: Tarayıcınızda güvenilir HEIC çözme</li><li><strong>%100 Yerel</strong>: Yükleme yok, sunucu yok — fotoğraflarınız cihazınızdan asla ayrılmaz</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",

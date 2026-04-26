@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "HEIC-converter",
-        "description": "Converteer HEIC/HEIF-afbeeldingen naar JPG- of PNG-formaat.",
-        "metaTitle": "HEIC naar JPG/PNG converter - Gratis online HEIC-converter",
-        "metaDescription": "Converteer HEIC- en HEIF-afbeeldingen naar JPG- of PNG-formaat. Gratis online tool, geen upload nodig. Werkt in je browser.",
-        "keywords": "heic naar jpg, heic naar png, heif converter, iphone foto converter, heic converter online",
+        "description": "Converteer HEIC/HEIF-foto's naar JPG, PNG of geanimeerde GIF (voor iPhone burst-foto's).",
+        "metaTitle": "HEIC naar JPG/PNG/GIF converter - Gratis online HEIC-tool",
+        "metaDescription": "Converteer HEIC- en HEIF-foto's naar JPG, PNG of geanimeerde GIF. Burst-HEIC-bestanden worden automatisch geanimeerde GIFs. Gratis online tool, geen upload nodig.",
+        "keywords": "heic naar jpg, heic naar png, heic naar gif, iphone burst naar gif, heif converter, iphone foto converter, heic converter online",
         "selectedFile": "Geselecteerd bestand",
         "outputFormat": "Uitvoerformaat",
         "quality": "Kwaliteit",
         "convert": "Converteren",
         "processing": "Converteren...",
+        "analyzing": "HEIC-bestand analyseren...",
+        "burstDetected": "Burst-foto gedetecteerd ({count} frames) — geanimeerde GIF beschikbaar",
+        "jpgOnly": "Alleen JPG",
+        "converting": "Converteren...",
+        "clickToConvert": "Klik op een formaat om te converteren en te downloaden",
         "faq": {
           "q1": "Wat is een HEIC-bestand?",
           "a1": "HEIC (High Efficiency Image Container) is het standaard afbeeldingsformaat van Apple-apparaten. Het biedt betere compressie dan JPEG met behoud van kwaliteit.",
@@ -1101,12 +1106,12 @@
             "content": "<p><strong>HEIC Converter</strong> converts Apple HEIC/HEIF photos to widely compatible JPG or PNG formats. iPhones and iPads save photos in HEIC format by default — this tool lets you convert them for use anywhere without installing software.</p><p>Batch convert multiple HEIC files at once, all processed locally in your browser.</p>"
           },
           "howToUse": {
-            "title": "Hoe te gebruiken HEIC Converter",
-            "content": "<ol><li>Upload one or more HEIC/HEIF files from your iPhone, iPad, or Mac</li><li>Select the output format: <strong>JPG</strong> or <strong>PNG</strong></li><li>Click <strong>Convert</strong> to process all files</li><li>Download converted images individually or as a ZIP</li></ol><p>For best compatibility, JPG is recommended. Choose PNG if you need transparency support.</p>"
+            "title": "Hoe de HEIC-converter te gebruiken",
+            "content": "<ol><li>Upload een HEIC/HEIF-bestand vanaf je iPhone, iPad of Mac</li><li>Wacht even terwijl het bestand wordt geanalyseerd (burst-detectie verloopt automatisch)</li><li>Klik op <strong>JPG</strong>, <strong>PNG</strong> of <strong>GIF</strong> om direct te converteren en te downloaden</li><li>Pas de kwaliteitsschuifregelaar aan voordat je op JPG klikt om de bestandsgrootte te verfijnen</li></ol><p>De <strong>GIF</strong>-knop verschijnt alleen wanneer een burst-HEIC (meerdere frames) wordt gedetecteerd — single-frame HEIC-foto's gebruiken JPG of PNG.</p>"
           },
           "features": {
             "title": "Belangrijkste functies",
-            "content": "<ul><li><strong>HEIC/HEIF Support</strong>: Convert Apple's default photo format</li><li><strong>JPG & PNG Output</strong>: Choose your preferred output format</li><li><strong>Batch Conversion</strong>: Convert multiple HEIC files simultaneously</li><li><strong>Quality Preservation</strong>: High-quality conversion maintaining original colors</li><li><strong>Powered by heic2any</strong>: Reliable conversion using the heic2any library</li><li><strong>Drag & Drop</strong>: Simply drag HEIC files onto the page</li></ul>"
+            "content": "<ul><li><strong>HEIC/HEIF-ondersteuning</strong>: Converteer Apple's standaard fotoformaat</li><li><strong>Conversie met één klik</strong>: Tik op een formaatknop om direct te converteren en te downloaden</li><li><strong>Burst → geanimeerde GIF</strong>: Multi-frame burst-HEIC-bestanden worden automatisch geanimeerde GIFs</li><li><strong>JPG-kwaliteitscontrole</strong>: Aanpasbare kwaliteitsschuifregelaar voor JPG-uitvoer</li><li><strong>Aangedreven door heic2any</strong>: Betrouwbare HEIC-decodering in je browser</li><li><strong>100% lokaal</strong>: Geen upload, geen server — je foto's verlaten nooit je apparaat</li></ul>"
           },
           "useCases": {
             "title": "Veelvoorkomende gebruiksmogelijkheden",

@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "محوّل HEIC",
-        "description": "حوّل صور HEIC/HEIF إلى صيغة JPG أو PNG.",
-        "metaTitle": "محوّل HEIC إلى JPG/PNG — محوّل HEIC مجاني عبر الإنترنت",
-        "metaDescription": "حوّل صور HEIC و HEIF إلى صيغة JPG أو PNG. أداة مجانية عبر الإنترنت، بدون رفع. تعمل في متصفحك.",
-        "keywords": "heic إلى jpg, heic إلى png, محوّل heif, محوّل صور آيفون, محوّل heic أونلاين",
+        "description": "حوّل صور HEIC/HEIF إلى JPG أو PNG أو GIF متحرك (لصور Burst من iPhone).",
+        "metaTitle": "محوّل HEIC إلى JPG/PNG/GIF — أداة HEIC مجانية عبر الإنترنت",
+        "metaDescription": "حوّل صور HEIC و HEIF إلى JPG أو PNG أو GIF متحرك. ملفات HEIC من Burst تتحوّل تلقائياً إلى GIF متحرك. أداة مجانية عبر الإنترنت، بدون رفع.",
+        "keywords": "heic إلى jpg, heic إلى png, heic إلى gif, burst آيفون إلى gif, محوّل heif, محوّل صور آيفون, محوّل heic أونلاين",
         "selectedFile": "الملف المحدد",
         "outputFormat": "صيغة المخرجات",
         "quality": "الجودة",
         "convert": "تحويل",
         "processing": "جارٍ التحويل...",
+        "analyzing": "جارٍ تحليل ملف HEIC...",
+        "burstDetected": "تم اكتشاف صورة Burst ({count} إطارات) — GIF متحرك متاح",
+        "jpgOnly": "JPG فقط",
+        "converting": "جارٍ التحويل...",
+        "clickToConvert": "انقر على صيغة للتحويل والتنزيل",
         "faq": {
           "q1": "ما هو ملف HEIC؟",
           "a1": "HEIC (High Efficiency Image Container) هو صيغة الصور الافتراضية على أجهزة Apple. يوفر ضغطاً أفضل من JPEG مع الحفاظ على الجودة.",
@@ -1102,11 +1107,11 @@
           },
           "howToUse": {
             "title": "كيفية استخدام محوّل HEIC",
-            "content": "<ol><li>احمِ ملفاتك أو بياناتك</li><li>اختر الخيارات المطلوبة</li><li>انقر على الزر للمعالجة</li><li>حمّل النتائج</li></ol><p>معالجة سريعة وسهلة مع نتائج فورية.</p>"
+            "content": "<ol><li>ارفع ملف HEIC/HEIF من iPhone أو iPad أو Mac</li><li>انتظر لحظة بينما يتم تحليل الملف (يتم اكتشاف Burst تلقائياً)</li><li>انقر على <strong>JPG</strong> أو <strong>PNG</strong> أو <strong>GIF</strong> للتحويل والتنزيل فوراً</li><li>اضبط شريط الجودة قبل النقر على JPG لضبط حجم الملف</li></ol><p>يظهر زر <strong>GIF</strong> فقط عند اكتشاف HEIC من نوع Burst (متعدد الإطارات) — صور HEIC أحادية الإطار تستخدم JPG أو PNG.</p>"
           },
           "features": {
             "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>معالجة سريعة</strong>: نتائج فورية في الوقت الفعلي</li><li><strong>قائم على المتصفح 100٪</strong>: بدون تحميلات خادمية</li><li><strong>دعم متعدد الصيغ</strong>: يتعامل مع صيغ متعددة</li><li><strong>معاينة</strong>: شاهد النتائج قبل التحميل</li><li><strong>دعم دفعي</strong>: معالجة ملفات متعددة</li></ul>"
+            "content": "<ul><li><strong>دعم HEIC/HEIF</strong>: تحويل صيغة الصور الافتراضية لشركة Apple</li><li><strong>تحويل بنقرة واحدة</strong>: اضغط على زر الصيغة للتحويل والتنزيل فوراً</li><li><strong>Burst → GIF متحرك</strong>: ملفات HEIC من Burst متعددة الإطارات تتحوّل تلقائياً إلى GIF متحرك</li><li><strong>التحكم في جودة JPG</strong>: شريط جودة قابل للتعديل لمخرجات JPG</li><li><strong>مدعوم بـ heic2any</strong>: فك ترميز HEIC موثوق في متصفحك</li><li><strong>محلي 100٪</strong>: بدون رفع، بدون خادم — صورك لا تغادر جهازك أبداً</li></ul>"
           },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",

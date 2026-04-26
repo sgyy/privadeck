@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "Konwerter HEIC",
-        "description": "Konwertuj obrazy HEIC/HEIF na format JPG lub PNG.",
-        "metaTitle": "Konwerter HEIC na JPG/PNG - Darmowy konwerter HEIC online",
-        "metaDescription": "Konwertuj obrazy HEIC i HEIF na format JPG lub PNG. Darmowe narzędzie online, bez przesyłania. Działa w przeglądarce.",
-        "keywords": "heic na jpg, heic na png, konwerter heif, konwerter zdjęć iphone, konwerter heic online",
+        "description": "Konwertuj zdjęcia HEIC/HEIF na JPG, PNG lub animowany GIF (dla zdjęć seryjnych iPhone'a).",
+        "metaTitle": "Konwerter HEIC na JPG/PNG/GIF - Darmowe narzędzie HEIC online",
+        "metaDescription": "Konwertuj zdjęcia HEIC i HEIF na JPG, PNG lub animowany GIF. Pliki HEIC z trybu seryjnego automatycznie stają się animowanymi GIF-ami. Darmowe narzędzie online, bez przesyłania.",
+        "keywords": "heic na jpg, heic na png, heic na gif, iphone tryb seryjny na gif, konwerter heif, konwerter zdjęć iphone, konwerter heic online",
         "selectedFile": "Wybrany plik",
         "outputFormat": "Format wyjściowy",
         "quality": "Jakość",
         "convert": "Konwertuj",
         "processing": "Konwertowanie...",
+        "analyzing": "Analizowanie pliku HEIC...",
+        "burstDetected": "Wykryto zdjęcie seryjne ({count} klatek) — dostępny animowany GIF",
+        "jpgOnly": "Tylko JPG",
+        "converting": "Konwertowanie...",
+        "clickToConvert": "Kliknij format, aby przekonwertować i pobrać",
         "faq": {
           "q1": "Czym jest plik HEIC?",
           "a1": "HEIC (High Efficiency Image Container) to domyślny format obrazu używany przez urządzenia Apple. Oferuje lepszą kompresję niż JPEG przy zachowaniu jakości.",
@@ -1102,11 +1107,11 @@
           },
           "howToUse": {
             "title": "Jak używać Konwertera HEIC",
-            "content": "<ol><li>Prześlij jeden lub więcej plików HEIC/HEIF z iPhone'a, iPada lub Maca</li><li>Wybierz format wyjściowy: <strong>JPG</strong> lub <strong>PNG</strong></li><li>Kliknij <strong>Konwertuj</strong>, aby przetworzyć wszystkie pliki</li><li>Pobierz przekonwertowane obrazy pojedynczo lub jako ZIP</li></ol><p>Dla najlepszej kompatybilności zalecany jest JPG. Wybierz PNG, jeśli potrzebujesz obsługi przezroczystości.</p>"
+            "content": "<ol><li>Prześlij plik HEIC/HEIF z iPhone'a, iPada lub Maca</li><li>Poczekaj chwilę, aż plik zostanie przeanalizowany (wykrywanie trybu seryjnego działa automatycznie)</li><li>Kliknij <strong>JPG</strong>, <strong>PNG</strong> lub <strong>GIF</strong>, aby natychmiast przekonwertować i pobrać</li><li>Dostosuj suwak jakości przed kliknięciem JPG, aby dostroić rozmiar pliku</li></ol><p>Przycisk <strong>GIF</strong> pojawia się tylko po wykryciu pliku HEIC w trybie seryjnym (wiele klatek) — pojedyncze zdjęcia HEIC używają JPG lub PNG.</p>"
           },
           "features": {
             "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Obsługa HEIC/HEIF</strong>: Konwertuj domyślny format zdjęć Apple</li><li><strong>Wyjście JPG i PNG</strong>: Wybierz preferowany format wyjściowy</li><li><strong>Konwersja wsadowa</strong>: Konwertuj wiele plików HEIC jednocześnie</li><li><strong>Zachowanie jakości</strong>: Konwersja wysokiej jakości zachowująca oryginalne kolory</li><li><strong>Oparte na heic2any</strong>: Niezawodna konwersja używając biblioteki heic2any</li><li><strong>Przeciągnij i upuść</strong>: Po prostu przeciągnij pliki HEIC na stronę</li></ul>"
+            "content": "<ul><li><strong>Obsługa HEIC/HEIF</strong>: Konwertuj domyślny format zdjęć Apple</li><li><strong>Konwersja jednym kliknięciem</strong>: Dotknij przycisku formatu, aby natychmiast przekonwertować i pobrać</li><li><strong>Tryb seryjny → animowany GIF</strong>: Wieloklatkowe pliki HEIC z trybu seryjnego automatycznie stają się animowanymi GIF-ami</li><li><strong>Kontrola jakości JPG</strong>: Regulowany suwak jakości dla wyjścia JPG</li><li><strong>Oparte na heic2any</strong>: Niezawodne dekodowanie HEIC w Twojej przeglądarce</li><li><strong>100% lokalnie</strong>: Bez przesyłania, bez serwera — Twoje zdjęcia nigdy nie opuszczają urządzenia</li></ul>"
           },
           "useCases": {
             "title": "Typowe przypadki użycia",

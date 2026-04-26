@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "Conversor HEIC",
-        "description": "Converta imagens HEIC/HEIF para formato JPG ou PNG.",
-        "metaTitle": "Conversor HEIC para JPG/PNG - Conversor HEIC gratuito online",
-        "metaDescription": "Converta imagens HEIC e HEIF para formato JPG ou PNG. Ferramenta online gratuita, sem envio necessário. Funciona no seu navegador.",
-        "keywords": "heic para jpg, heic para png, conversor heif, conversor de fotos iphone, conversor heic online",
+        "description": "Converta fotos HEIC/HEIF para JPG, PNG ou GIF animado (para fotos em rajada do iPhone).",
+        "metaTitle": "Conversor HEIC para JPG/PNG/GIF - Ferramenta HEIC gratuita online",
+        "metaDescription": "Converta fotos HEIC e HEIF para JPG, PNG ou GIF animado. Ficheiros HEIC em rajada tornam-se GIFs animados automaticamente. Ferramenta online gratuita, sem envio necessário.",
+        "keywords": "heic para jpg, heic para png, heic para gif, rajada iphone para gif, conversor heif, conversor de fotos iphone, conversor heic online",
         "selectedFile": "Ficheiro selecionado",
         "outputFormat": "Formato de saída",
         "quality": "Qualidade",
         "convert": "Converter",
         "processing": "A converter...",
+        "analyzing": "A analisar ficheiro HEIC...",
+        "burstDetected": "Foto em rajada detetada ({count} fotogramas) — GIF animado disponível",
+        "jpgOnly": "Apenas JPG",
+        "converting": "A converter...",
+        "clickToConvert": "Clique num formato para converter e descarregar",
         "faq": {
           "q1": "O que é um ficheiro HEIC?",
           "a1": "HEIC (High Efficiency Image Container) é o formato de imagem predefinido dos dispositivos Apple. Oferece melhor compressão que JPEG mantendo a qualidade.",
@@ -1101,12 +1106,12 @@
             "content": "<p><strong>HEIC Converter</strong> converts Apple HEIC/HEIF photos to widely compatible JPG or PNG formats. iPhones and iPads save photos in HEIC format by default — this tool lets you convert them for use anywhere without installing software.</p><p>Batch convert multiple HEIC files at once, all processed locally in your navegador.</p>"
           },
           "howToUse": {
-            "title": "Como Utilizar HEIC Converter",
-            "content": "<ol><li>Upload one or more HEIC/HEIF files from your iPhone, iPad, or Mac</li><li>Select the output format: <strong>JPG</strong> or <strong>PNG</strong></li><li>Click <strong>Convert</strong> to process all files</li><li>Download converted images individually or as a ZIP</li></ol><p>For best compatibility, JPG is recommended. Choose PNG if you need transparency support.</p>"
+            "title": "Como utilizar o Conversor HEIC",
+            "content": "<ol><li>Carregue um ficheiro HEIC/HEIF do seu iPhone, iPad ou Mac</li><li>Aguarde um momento enquanto o ficheiro é analisado (a deteção de rajada é automática)</li><li>Clique em <strong>JPG</strong>, <strong>PNG</strong> ou <strong>GIF</strong> para converter e descarregar instantaneamente</li><li>Ajuste o controlo deslizante de qualidade antes de clicar em JPG para afinar o tamanho do ficheiro</li></ol><p>O botão <strong>GIF</strong> só aparece quando é detetado um HEIC em rajada (vários fotogramas) — fotos HEIC de fotograma único utilizam JPG ou PNG.</p>"
           },
           "features": {
             "title": "Principais Características",
-            "content": "<ul><li><strong>HEIC/HEIF Support</strong>: Convert Apple's default photo format</li><li><strong>JPG & PNG Output</strong>: Choose your preferred output format</li><li><strong>Batch Conversion</strong>: Convert multiple HEIC files simultaneously</li><li><strong>Quality Preservation</strong>: High-quality conversion maintaining original colors</li><li><strong>Powered by heic2any</strong>: Reliable conversion using the heic2any library</li><li><strong>Drag & Drop</strong>: Simply drag HEIC files onto the page</li></ul>"
+            "content": "<ul><li><strong>Suporte HEIC/HEIF</strong>: Converta o formato de foto predefinido da Apple</li><li><strong>Conversão num clique</strong>: Toque num botão de formato para converter e descarregar instantaneamente</li><li><strong>Rajada → GIF animado</strong>: Ficheiros HEIC em rajada multi-fotograma tornam-se GIFs animados automaticamente</li><li><strong>Controlo de qualidade JPG</strong>: Controlo deslizante de qualidade ajustável para a saída JPG</li><li><strong>Powered by heic2any</strong>: Descodificação HEIC fiável no seu navegador</li><li><strong>100% local</strong>: Sem envio, sem servidor — as suas fotos nunca saem do dispositivo</li></ul>"
           },
           "useCases": {
             "title": "Casos de Uso Comuns",

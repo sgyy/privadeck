@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "Convertisseur HEIC",
-        "description": "Convertir les images HEIC/HEIF au format JPG ou PNG.",
-        "metaTitle": "Convertisseur HEIC vers JPG/PNG - Outil gratuit en ligne",
-        "metaDescription": "Convertir les images HEIC et HEIF au format JPG ou PNG. Outil gratuit en ligne, pas d'envoi nécessaire. Fonctionne dans votre navigateur.",
-        "keywords": "HEIC vers JPG, HEIC vers PNG, convertisseur HEIF, convertisseur photos iPhone, convertisseur HEIC en ligne",
+        "description": "Convertir les photos HEIC/HEIF en JPG, PNG ou GIF animé (pour les photos en rafale d'iPhone).",
+        "metaTitle": "Convertisseur HEIC vers JPG/PNG/GIF - Outil HEIC gratuit en ligne",
+        "metaDescription": "Convertir les photos HEIC et HEIF en JPG, PNG ou GIF animé. Les fichiers HEIC en rafale deviennent automatiquement des GIFs animés. Outil gratuit en ligne, pas d'envoi nécessaire.",
+        "keywords": "HEIC vers JPG, HEIC vers PNG, HEIC vers GIF, rafale iPhone vers GIF, convertisseur HEIF, convertisseur photos iPhone, convertisseur HEIC en ligne",
         "selectedFile": "Fichier sélectionné",
         "outputFormat": "Format de sortie",
         "quality": "Qualité",
         "convert": "Convertir",
         "processing": "Conversion en cours...",
+        "analyzing": "Analyse du fichier HEIC...",
+        "burstDetected": "Photo en rafale détectée ({count} images) — GIF animé disponible",
+        "jpgOnly": "JPG uniquement",
+        "converting": "Conversion en cours...",
+        "clickToConvert": "Cliquez sur un format pour convertir et télécharger",
         "faq": {
           "q1": "Qu'est-ce qu'un fichier HEIC ?",
           "a1": "HEIC (High Efficiency Image Container) est le format d'image par défaut des appareils Apple. Il offre une meilleure compression que le JPEG tout en maintenant la qualité.",
@@ -1102,11 +1107,11 @@
           },
           "howToUse": {
             "title": "Comment utiliser le Convertisseur HEIC",
-            "content": "<ol><li>Téléchargez un ou plusieurs fichiers HEIC/HEIF depuis votre iPhone, iPad ou Mac</li><li>Sélectionnez le format de sortie : <strong>JPG</strong> ou <strong>PNG</strong></li><li>Cliquez sur <strong>Convertir</strong> pour traiter tous les fichiers</li><li>Téléchargez les images converties individuellement ou en ZIP</li></ol><p>Pour la meilleure compatibilité, JPG est recommandé. Choisissez PNG si vous avez besoin de la prise en charge de la transparence.</p>"
+            "content": "<ol><li>Téléchargez un fichier HEIC/HEIF depuis votre iPhone, iPad ou Mac</li><li>Patientez un instant pendant l'analyse du fichier (la détection des rafales est automatique)</li><li>Cliquez sur <strong>JPG</strong>, <strong>PNG</strong> ou <strong>GIF</strong> pour convertir et télécharger instantanément</li><li>Ajustez le curseur de qualité avant de cliquer sur JPG pour affiner la taille du fichier</li></ol><p>Le bouton <strong>GIF</strong> n'apparaît que lorsqu'un HEIC en rafale (plusieurs images) est détecté — les photos HEIC à image unique utilisent JPG ou PNG.</p>"
           },
           "features": {
             "title": "Fonctionnalités clés",
-            "content": "<ul><li><strong>Prise en charge HEIC/HEIF</strong> : Convertissez le format photo par défaut d'Apple</li><li><strong>Sortie JPG et PNG</strong> : Choisissez votre format de sortie préféré</li><li><strong>Conversion par lots</strong> : Convertissez plusieurs fichiers HEIC simultanément</li><li><strong>Préservation de la qualité</strong> : Conversion haute qualité conservant les couleurs originales</li><li><strong>Propulsé par heic2any</strong> : Conversion fiable utilisant la bibliothèque heic2any</li><li><strong>Glisser-déposer</strong> : Faites simplement glisser les fichiers HEIC sur la page</li></ul>"
+            "content": "<ul><li><strong>Prise en charge HEIC/HEIF</strong> : Convertissez le format photo par défaut d'Apple</li><li><strong>Conversion en un clic</strong> : Appuyez sur un bouton de format pour convertir et télécharger instantanément</li><li><strong>Rafale → GIF animé</strong> : Les fichiers HEIC en rafale multi-images deviennent automatiquement des GIFs animés</li><li><strong>Contrôle qualité JPG</strong> : Curseur de qualité ajustable pour la sortie JPG</li><li><strong>Propulsé par heic2any</strong> : Décodage HEIC fiable dans votre navigateur</li><li><strong>100% local</strong> : Pas d'envoi, pas de serveur — vos photos ne quittent jamais votre appareil</li></ul>"
           },
           "useCases": {
             "title": "Cas d'utilisation courants",

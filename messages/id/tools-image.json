@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "Konverter HEIC",
-        "description": "Konversi gambar HEIC/HEIF ke format JPG atau PNG.",
-        "metaTitle": "Konverter HEIC ke JPG/PNG - Konverter HEIC Online Gratis",
-        "metaDescription": "Konversi gambar HEIC dan HEIF ke format JPG atau PNG. Alat online gratis, tanpa unggahan. Bekerja di browser Anda.",
-        "keywords": "heic ke jpg, heic ke png, konverter heif, konverter foto iphone, konverter heic online",
+        "description": "Konversi foto HEIC/HEIF ke JPG, PNG atau GIF animasi (untuk foto burst iPhone).",
+        "metaTitle": "Konverter HEIC ke JPG/PNG/GIF - Alat HEIC Online Gratis",
+        "metaDescription": "Konversi foto HEIC dan HEIF ke JPG, PNG atau GIF animasi. File HEIC burst otomatis menjadi GIF animasi. Alat online gratis, tanpa unggahan.",
+        "keywords": "heic ke jpg, heic ke png, heic ke gif, burst iphone ke gif, konverter heif, konverter foto iphone, konverter heic online",
         "selectedFile": "File terpilih",
         "outputFormat": "Format output",
         "quality": "Kualitas",
         "convert": "Konversi",
         "processing": "Mengonversi...",
+        "analyzing": "Menganalisis file HEIC...",
+        "burstDetected": "Foto burst terdeteksi ({count} bingkai) — GIF animasi tersedia",
+        "jpgOnly": "Hanya JPG",
+        "converting": "Mengonversi...",
+        "clickToConvert": "Klik format untuk konversi dan unduh",
         "faq": {
           "q1": "Apa itu file HEIC?",
           "a1": "HEIC (High Efficiency Image Container) adalah format gambar default yang digunakan perangkat Apple. Menawarkan kompresi lebih baik daripada JPEG sambil mempertahankan kualitas.",
@@ -1101,12 +1106,12 @@
             "content": "<p><strong>HEIC Converter</strong> mengonversi foto HEIC/HEIF Apple ke format JPG atau PNG yang kompatibel luas. iPhone dan iPad menyimpan foto dalam format HEIC secara default — alat ini memungkinkan Anda mengonversinya untuk digunakan di mana saja tanpa menginstal perangkat lunak.</p><p>Konversi batch beberapa file HEIC sekaligus, semuanya diproses secara lokal di browser Anda.</p>"
           },
           "howToUse": {
-            "title": "Cara Menggunakan HEIC Converter",
-            "content": "<ol><li>Unggah satu atau lebih file HEIC/HEIF dari iPhone, iPad, atau Mac Anda</li><li>Pilih format output: <strong>JPG</strong> atau <strong>PNG</strong></li><li>Klik <strong>Konversi</strong> untuk memproses semua file</li><li>Unduh gambar yang dikonversi secara individual atau sebagai ZIP</li></ol><p>Untuk kompatibilitas terbaik, JPG direkomendasikan. Pilih PNG jika Anda memerlukan dukungan transparansi.</p>"
+            "title": "Cara Menggunakan Konverter HEIC",
+            "content": "<ol><li>Unggah satu file HEIC/HEIF dari iPhone, iPad, atau Mac Anda</li><li>Tunggu sebentar sementara file dianalisis (deteksi burst berjalan otomatis)</li><li>Klik <strong>JPG</strong>, <strong>PNG</strong>, atau <strong>GIF</strong> untuk konversi dan unduh seketika</li><li>Sesuaikan slider kualitas sebelum mengklik JPG untuk menyetel ukuran file</li></ol><p>Tombol <strong>GIF</strong> hanya muncul ketika HEIC burst (beberapa bingkai) terdeteksi — foto HEIC bingkai tunggal menggunakan JPG atau PNG.</p>"
           },
           "features": {
             "title": "Fitur Utama",
-            "content": "<ul><li><strong>Dukungan HEIC/HEIF</strong>: Konversi format foto default Apple</li><li><strong>Output JPG & PNG</strong>: Pilih format output pilihan Anda</li><li><strong>Konversi Batch</strong>: Konversi beberapa file HEIC secara bersamaan</li><li><strong>Preservasi Kualitas</strong>: Konversi berkualitas tinggi mempertahankan warna asli</li><li><strong>Ditenagai heic2any</strong>: Konversi andal menggunakan library heic2any</li><li><strong>Seret & Jatuhkan</strong>: Cukup seret file HEIC ke halaman</li></ul>"
+            "content": "<ul><li><strong>Dukungan HEIC/HEIF</strong>: Konversi format foto default Apple</li><li><strong>Konversi Satu Klik</strong>: Ketuk tombol format untuk konversi dan unduh seketika</li><li><strong>Burst → GIF Animasi</strong>: File HEIC burst multi-bingkai menjadi GIF animasi otomatis</li><li><strong>Kontrol Kualitas JPG</strong>: Slider kualitas yang dapat disesuaikan untuk output JPG</li><li><strong>Ditenagai heic2any</strong>: Decoding HEIC andal di browser Anda</li><li><strong>100% Lokal</strong>: Tanpa unggahan, tanpa server — foto Anda tidak pernah meninggalkan perangkat</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",

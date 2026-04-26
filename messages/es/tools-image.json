@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "Convertidor HEIC",
-        "description": "Convertir imágenes HEIC/HEIF a formato JPG o PNG.",
-        "metaTitle": "Convertidor HEIC a JPG/PNG - Herramienta gratuita en línea",
-        "metaDescription": "Convertir imágenes HEIC y HEIF a formato JPG o PNG. Herramienta gratuita en línea, sin necesidad de subir archivos. Funciona en tu navegador.",
-        "keywords": "HEIC a JPG, HEIC a PNG, convertidor HEIF, convertidor de fotos iPhone, convertidor HEIC en línea",
+        "description": "Convertir fotos HEIC/HEIF a JPG, PNG o GIF animado (para fotos de ráfaga de iPhone).",
+        "metaTitle": "Convertidor HEIC a JPG/PNG/GIF - Herramienta gratuita en línea",
+        "metaDescription": "Convertir fotos HEIC y HEIF a JPG, PNG o GIF animado. Los archivos HEIC en ráfaga se convierten automáticamente en GIFs animados. Herramienta gratuita en línea, sin necesidad de subir archivos.",
+        "keywords": "HEIC a JPG, HEIC a PNG, HEIC a GIF, ráfaga iPhone a GIF, convertidor HEIF, convertidor de fotos iPhone, convertidor HEIC en línea",
         "selectedFile": "Archivo seleccionado",
         "outputFormat": "Formato de salida",
         "quality": "Calidad",
         "convert": "Convertir",
         "processing": "Convirtiendo...",
+        "analyzing": "Analizando archivo HEIC...",
+        "burstDetected": "Foto en ráfaga detectada ({count} fotogramas) — GIF animado disponible",
+        "jpgOnly": "Solo JPG",
+        "converting": "Convirtiendo...",
+        "clickToConvert": "Haz clic en un formato para convertir y descargar",
         "faq": {
           "q1": "¿Qué es un archivo HEIC?",
           "a1": "HEIC (High Efficiency Image Container) es el formato de imagen predeterminado de los dispositivos Apple. Ofrece mejor compresión que JPEG manteniendo la calidad.",
@@ -1102,11 +1107,11 @@
           },
           "howToUse": {
             "title": "Cómo usar el Convertidor HEIC",
-            "content": "<ol><li>Sube uno o más archivos HEIC/HEIF desde tu iPhone, iPad o Mac</li><li>Selecciona el formato de salida: <strong>JPG</strong> o <strong>PNG</strong></li><li>Haz clic en <strong>Convertir</strong> para procesar todos los archivos</li><li>Descarga las imágenes convertidas individualmente o como ZIP</li></ol><p>Para mayor compatibilidad, se recomienda JPG. Elige PNG si necesitas soporte de transparencia.</p>"
+            "content": "<ol><li>Sube un archivo HEIC/HEIF desde tu iPhone, iPad o Mac</li><li>Espera un momento mientras se analiza el archivo (la detección de ráfaga es automática)</li><li>Haz clic en <strong>JPG</strong>, <strong>PNG</strong> o <strong>GIF</strong> para convertir y descargar al instante</li><li>Ajusta el control deslizante de calidad antes de hacer clic en JPG para optimizar el tamaño del archivo</li></ol><p>El botón <strong>GIF</strong> solo aparece cuando se detecta un HEIC en ráfaga (varios fotogramas) — las fotos HEIC de un solo fotograma usan JPG o PNG.</p>"
           },
           "features": {
             "title": "Características principales",
-            "content": "<ul><li><strong>Soporte HEIC/HEIF</strong>: Convierte el formato de foto predeterminado de Apple</li><li><strong>Salida JPG y PNG</strong>: Elige tu formato de salida preferido</li><li><strong>Conversión por lotes</strong>: Convierte varios archivos HEIC simultáneamente</li><li><strong>Conservación de calidad</strong>: Conversión de alta calidad que mantiene los colores originales</li><li><strong>Impulsado por heic2any</strong>: Conversión confiable usando la biblioteca heic2any</li><li><strong>Arrastrar y soltar</strong>: Simplemente arrastra archivos HEIC a la página</li></ul>"
+            "content": "<ul><li><strong>Soporte HEIC/HEIF</strong>: Convierte el formato de foto predeterminado de Apple</li><li><strong>Conversión con un clic</strong>: Pulsa un botón de formato para convertir y descargar al instante</li><li><strong>Ráfaga → GIF animado</strong>: Los archivos HEIC en ráfaga de varios fotogramas se convierten automáticamente en GIFs animados</li><li><strong>Control de calidad JPG</strong>: Control deslizante de calidad ajustable para la salida JPG</li><li><strong>Impulsado por heic2any</strong>: Decodificación HEIC confiable en tu navegador</li><li><strong>100% local</strong>: Sin subidas, sin servidor — tus fotos nunca salen de tu dispositivo</li></ul>"
           },
           "useCases": {
             "title": "Casos de uso frecuentes",

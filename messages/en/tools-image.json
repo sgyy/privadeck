@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "HEIC Converter",
-        "description": "Convert HEIC/HEIF images to JPG or PNG format.",
-        "metaTitle": "HEIC to JPG/PNG Converter - Free Online HEIC Converter",
-        "metaDescription": "Convert HEIC and HEIF images to JPG or PNG format. Free online tool, no upload needed. Works in your browser.",
-        "keywords": "heic to jpg, heic to png, heif converter, iphone photo converter, heic converter online",
+        "description": "Convert HEIC/HEIF photos to JPG, PNG, or animated GIF (for iPhone burst photos).",
+        "metaTitle": "HEIC to JPG/PNG/GIF Converter - Free Online HEIC Tool",
+        "metaDescription": "Convert HEIC and HEIF photos to JPG, PNG, or animated GIF. Burst HEIC files become animated GIFs automatically. Free online tool, no upload needed.",
+        "keywords": "heic to jpg, heic to png, heic to gif, iphone burst to gif, heif converter, iphone photo converter, heic converter online",
         "selectedFile": "Selected file",
         "outputFormat": "Output format",
         "quality": "Quality",
         "convert": "Convert",
         "processing": "Converting...",
+        "analyzing": "Analyzing HEIC file...",
+        "burstDetected": "Burst photo detected ({count} frames) — animated GIF available",
+        "jpgOnly": "JPG only",
+        "converting": "Converting...",
+        "clickToConvert": "Click a format to convert and download",
         "faq": {
           "q1": "What is a HEIC file?",
           "a1": "HEIC (High Efficiency Image Container) is the default image format used by Apple devices. It offers better compression than JPEG while maintaining quality.",
@@ -1098,19 +1103,19 @@
         "seoContent": {
           "intro": {
             "title": "What is HEIC Converter?",
-            "content": "<p><strong>HEIC Converter</strong> converts Apple HEIC/HEIF photos to widely compatible JPG or PNG formats. iPhones and iPads save photos in HEIC format by default — this tool lets you convert them for use anywhere without installing software.</p><p>Batch convert multiple HEIC files at once, all processed locally in your browser.</p>"
+            "content": "<p><strong>HEIC Converter</strong> converts Apple HEIC/HEIF photos to JPG, PNG, or animated GIF formats. iPhones and iPads save photos in HEIC format by default — this tool lets you convert them for use anywhere without installing software.</p><p>Burst HEIC files (taken in iPhone burst mode) are automatically detected and can be converted into animated GIFs. All processing happens locally in your browser.</p>"
           },
           "howToUse": {
             "title": "How to Use HEIC Converter",
-            "content": "<ol><li>Upload one or more HEIC/HEIF files from your iPhone, iPad, or Mac</li><li>Select the output format: <strong>JPG</strong> or <strong>PNG</strong></li><li>Click <strong>Convert</strong> to process all files</li><li>Download converted images individually or as a ZIP</li></ol><p>For best compatibility, JPG is recommended. Choose PNG if you need transparency support.</p>"
+            "content": "<ol><li>Upload a HEIC/HEIF file from your iPhone, iPad, or Mac</li><li>Wait a moment while the file is analyzed (burst detection runs automatically)</li><li>Click <strong>JPG</strong>, <strong>PNG</strong>, or <strong>GIF</strong> to convert and download instantly</li><li>Adjust the quality slider before clicking JPG to fine-tune file size</li></ol><p>The <strong>GIF</strong> button only appears when a burst HEIC (multiple frames) is detected — single-frame HEIC photos use JPG or PNG.</p>"
           },
           "features": {
             "title": "Key Features",
-            "content": "<ul><li><strong>HEIC/HEIF Support</strong>: Convert Apple's default photo format</li><li><strong>JPG & PNG Output</strong>: Choose your preferred output format</li><li><strong>Batch Conversion</strong>: Convert multiple HEIC files simultaneously</li><li><strong>Quality Preservation</strong>: High-quality conversion maintaining original colors</li><li><strong>Powered by heic2any</strong>: Reliable conversion using the heic2any library</li><li><strong>Drag & Drop</strong>: Simply drag HEIC files onto the page</li></ul>"
+            "content": "<ul><li><strong>HEIC/HEIF Support</strong>: Convert Apple's default photo format</li><li><strong>One-Click Convert</strong>: Tap a format button to convert and download instantly</li><li><strong>Burst → Animated GIF</strong>: Multi-frame burst HEIC files become animated GIFs automatically</li><li><strong>JPG Quality Control</strong>: Adjustable quality slider for JPG output</li><li><strong>Powered by heic2any</strong>: Reliable HEIC decoding in your browser</li><li><strong>100% Local</strong>: No upload, no server — your photos never leave your device</li></ul>"
           },
           "useCases": {
             "title": "Common Use Cases",
-            "content": "<ul><li><strong>Photo Sharing</strong>: Convert iPhone photos to JPG for sharing with Android or Windows users</li><li><strong>Web Upload</strong>: Convert HEIC to JPG/PNG for websites that don't accept HEIC</li><li><strong>Social Media</strong>: Prepare iPhone photos for platforms requiring JPG/PNG</li><li><strong>Email</strong>: Convert to JPG for better email compatibility</li><li><strong>Print</strong>: Convert to formats accepted by print services</li></ul>"
+            "content": "<ul><li><strong>Photo Sharing</strong>: Convert iPhone photos to JPG for sharing with Android or Windows users</li><li><strong>Animated Sharing</strong>: Turn iPhone burst photos into animated GIFs for social media or messaging</li><li><strong>Web Upload</strong>: Convert HEIC to JPG/PNG for websites that don't accept HEIC</li><li><strong>Email</strong>: Convert to JPG for better email compatibility</li><li><strong>Print</strong>: Convert to formats accepted by print services</li></ul>"
           },
           "privacy": {
             "title": "Privacy-First HEIC Conversion",

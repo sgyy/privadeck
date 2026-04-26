@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "Conversor HEIC",
-        "description": "Converta imagens HEIC/HEIF para formato JPG ou PNG.",
-        "metaTitle": "Conversor HEIC para JPG/PNG - Conversor HEIC gratuito online",
-        "metaDescription": "Converta imagens HEIC e HEIF para formato JPG ou PNG. Ferramenta online gratuita, sem upload necessário. Funciona no seu navegador.",
-        "keywords": "heic para jpg, heic para png, conversor heif, conversor de fotos iphone, conversor heic online",
+        "description": "Converta fotos HEIC/HEIF para JPG, PNG ou GIF animado (para fotos em rajada do iPhone).",
+        "metaTitle": "Conversor HEIC para JPG/PNG/GIF - Ferramenta HEIC gratuita online",
+        "metaDescription": "Converta fotos HEIC e HEIF para JPG, PNG ou GIF animado. Arquivos HEIC em rajada se tornam GIFs animados automaticamente. Ferramenta online gratuita, sem upload necessário.",
+        "keywords": "heic para jpg, heic para png, heic para gif, rajada iphone para gif, conversor heif, conversor de fotos iphone, conversor heic online",
         "selectedFile": "Arquivo selecionado",
         "outputFormat": "Formato de saída",
         "quality": "Qualidade",
         "convert": "Converter",
         "processing": "Convertendo...",
+        "analyzing": "Analisando arquivo HEIC...",
+        "burstDetected": "Foto em rajada detectada ({count} quadros) — GIF animado disponível",
+        "jpgOnly": "Somente JPG",
+        "converting": "Convertendo...",
+        "clickToConvert": "Clique em um formato para converter e baixar",
         "faq": {
           "q1": "O que é um arquivo HEIC?",
           "a1": "HEIC (High Efficiency Image Container) é o formato de imagem padrão dos dispositivos Apple. Oferece melhor compressão que JPEG mantendo a qualidade.",
@@ -1101,12 +1106,12 @@
             "content": "<p>Ferramenta de processamento de imagem rápida e segura executada inteiramente no seu navegador.</p>"
           },
           "howToUse": {
-            "title": "Como usar Heic Convert",
-            "content": "<ol><li>Carregue a imagem</li><li>Ajuste as configurações conforme necessário</li><li>Clique Aplicar para processar</li><li>Baixe o resultado</li></ol>"
+            "title": "Como usar o Conversor HEIC",
+            "content": "<ol><li>Faça upload de um arquivo HEIC/HEIF do seu iPhone, iPad ou Mac</li><li>Aguarde um momento enquanto o arquivo é analisado (a detecção de rajada é automática)</li><li>Clique em <strong>JPG</strong>, <strong>PNG</strong> ou <strong>GIF</strong> para converter e baixar instantaneamente</li><li>Ajuste o controle deslizante de qualidade antes de clicar em JPG para ajustar o tamanho do arquivo</li></ol><p>O botão <strong>GIF</strong> só aparece quando um HEIC em rajada (vários quadros) é detectado — fotos HEIC de quadro único usam JPG ou PNG.</p>"
           },
           "features": {
             "title": "Principais Recursos",
-            "content": "<ul><li>Processamento local no navegador</li><li>Sem upload de servidor</li><li>Suporte a múltiplos formatos</li><li>Visualização ao vivo</li></ul>"
+            "content": "<ul><li><strong>Suporte HEIC/HEIF</strong>: Converta o formato de foto padrão da Apple</li><li><strong>Conversão com um clique</strong>: Toque em um botão de formato para converter e baixar instantaneamente</li><li><strong>Rajada → GIF animado</strong>: Arquivos HEIC em rajada de múltiplos quadros se tornam GIFs animados automaticamente</li><li><strong>Controle de qualidade JPG</strong>: Controle deslizante de qualidade ajustável para saída JPG</li><li><strong>Powered by heic2any</strong>: Decodificação HEIC confiável no seu navegador</li><li><strong>100% Local</strong>: Sem upload, sem servidor — suas fotos nunca saem do dispositivo</li></ul>"
           },
           "useCases": {
             "title": "Casos de Uso Comuns",

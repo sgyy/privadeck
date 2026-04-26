@@ -1084,15 +1084,20 @@
       },
       "heic-convert": {
         "name": "HEIC 변환기",
-        "description": "HEIC/HEIF 이미지를 JPG 또는 PNG 형식으로 변환합니다.",
-        "metaTitle": "HEIC를 JPG/PNG로 변환 - 무료 온라인 HEIC 변환기",
-        "metaDescription": "HEIC 및 HEIF 이미지를 JPG 또는 PNG 형식으로 변환. 업로드 불필요 무료 온라인 도구. 브라우저에서 작동.",
-        "keywords": "heic를 jpg로, heic를 png로, heif 변환기, 아이폰 사진 변환기, heic 변환기 온라인",
+        "description": "HEIC/HEIF 사진을 JPG, PNG 또는 애니메이션 GIF (iPhone 버스트 사진용)로 변환합니다.",
+        "metaTitle": "HEIC를 JPG/PNG/GIF로 변환 - 무료 온라인 HEIC 도구",
+        "metaDescription": "HEIC 및 HEIF 사진을 JPG, PNG 또는 애니메이션 GIF로 변환. 버스트 HEIC 파일은 자동으로 애니메이션 GIF가 됩니다. 업로드 불필요 무료 온라인 도구.",
+        "keywords": "heic를 jpg로, heic를 png로, heic를 gif로, 아이폰 버스트를 gif로, heif 변환기, 아이폰 사진 변환기, heic 변환기 온라인",
         "selectedFile": "선택된 파일",
         "outputFormat": "출력 형식",
         "quality": "품질",
         "convert": "변환",
         "processing": "변환 중...",
+        "analyzing": "HEIC 파일 분석 중...",
+        "burstDetected": "버스트 사진 감지됨 ({count} 프레임) — 애니메이션 GIF 사용 가능",
+        "jpgOnly": "JPG 전용",
+        "converting": "변환 중...",
+        "clickToConvert": "형식을 클릭하여 변환 및 다운로드",
         "faq": {
           "q1": "HEIC 파일이란?",
           "a1": "HEIC(High Efficiency Image Container)는 Apple 기기에서 사용하는 기본 이미지 형식입니다. 품질을 유지하면서 JPEG보다 우수한 압축률을 제공합니다.",
@@ -1112,11 +1117,11 @@
           },
           "howToUse": {
             "title": "HEIC 변환기 사용 방법",
-            "content": "<ol><li>iPhone, iPad, 또는 Mac에서 하나 이상의 HEIC/HEIF 파일을 업로드하세요</li><li>출력 형식을 선택하세요: <strong>JPG</strong> 또는 <strong>PNG</strong></li><li><strong>변환</strong>을 클릭하여 모든 파일을 처리하세요</li><li>변환된 이미지를 개별적으로 또는 ZIP으로 다운로드하세요</li></ol><p>최상의 호환성을 위해 JPG를 권장합니다. 투명도 지원이 필요한 경우 PNG를 선택하세요.</p>"
+            "content": "<ol><li>iPhone, iPad, 또는 Mac에서 HEIC/HEIF 파일을 업로드하세요</li><li>파일이 분석되는 동안 잠시 기다리세요 (버스트 감지가 자동으로 실행됩니다)</li><li><strong>JPG</strong>, <strong>PNG</strong>, 또는 <strong>GIF</strong>를 클릭하면 즉시 변환되어 다운로드됩니다</li><li>JPG를 클릭하기 전에 품질 슬라이더를 조정하여 파일 크기를 미세 조정하세요</li></ol><p><strong>GIF</strong> 버튼은 버스트 HEIC (다중 프레임)이 감지될 때만 나타납니다 — 단일 프레임 HEIC 사진은 JPG 또는 PNG를 사용합니다.</p>"
           },
           "features": {
             "title": "주요 기능",
-            "content": "<ul><li><strong>HEIC/HEIF 지원</strong>: Apple의 기본 사진 형식 변환</li><li><strong>JPG 및 PNG 출력</strong>: 선호하는 출력 형식 선택</li><li><strong>일괄 변환</strong>: 여러 HEIC 파일을 동시에 변환</li><li><strong>품질 보존</strong>: 원본 색상을 유지하는 고품질 변환</li><li><strong>heic2any 기반</strong>: heic2any 라이브러리를 사용한 신뢰할 수 있는 변환</li><li><strong>드래그 앤 드롭</strong>: HEIC 파일을 페이지에 드래그하기만 하면 됨</li></ul>"
+            "content": "<ul><li><strong>HEIC/HEIF 지원</strong>: Apple의 기본 사진 형식 변환</li><li><strong>원클릭 변환</strong>: 형식 버튼을 탭하면 즉시 변환되어 다운로드됩니다</li><li><strong>버스트 → 애니메이션 GIF</strong>: 다중 프레임 버스트 HEIC 파일이 자동으로 애니메이션 GIF로 변환됨</li><li><strong>JPG 품질 제어</strong>: JPG 출력용 조정 가능한 품질 슬라이더</li><li><strong>heic2any 기반</strong>: 브라우저에서 신뢰할 수 있는 HEIC 디코딩</li><li><strong>100% 로컬</strong>: 업로드 없음, 서버 없음 — 사진이 기기를 떠나지 않습니다</li></ul>"
           },
           "useCases": {
             "title": "주요 활용 사례",

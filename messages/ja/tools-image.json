@@ -1074,15 +1074,20 @@
       },
       "heic-convert": {
         "name": "HEIC 変換",
-        "description": "HEIC/HEIF 画像を JPG または PNG 形式に変換します。",
-        "metaTitle": "HEIC から JPG/PNG 変換 - 無料オンライン HEIC 変換ツール",
-        "metaDescription": "HEIC・HEIF 画像を JPG または PNG 形式に変換。アップロード不要の無料オンラインツール。ブラウザで動作。",
-        "keywords": "heic から jpg, heic から png, heif 変換, iphone 写真変換, heic 変換 オンライン",
+        "description": "HEIC/HEIF 写真を JPG、PNG、またはアニメーション GIF（iPhone バースト写真用）に変換します。",
+        "metaTitle": "HEIC から JPG/PNG/GIF 変換 - 無料オンライン HEIC ツール",
+        "metaDescription": "HEIC・HEIF 写真を JPG、PNG、またはアニメーション GIF に変換。バースト HEIC ファイルは自動的にアニメーション GIF になります。アップロード不要の無料オンラインツール。",
+        "keywords": "heic から jpg, heic から png, heic から gif, iphone バースト から gif, heif 変換, iphone 写真変換, heic 変換 オンライン",
         "selectedFile": "選択ファイル",
         "outputFormat": "出力形式",
         "quality": "品質",
         "convert": "変換",
         "processing": "変換中...",
+        "analyzing": "HEIC ファイルを分析中...",
+        "burstDetected": "バースト写真を検出（{count} フレーム）— アニメーション GIF 利用可能",
+        "jpgOnly": "JPG のみ",
+        "converting": "変換中...",
+        "clickToConvert": "形式をクリックして変換・ダウンロード",
         "faq": {
           "q1": "HEIC ファイルとは？",
           "a1": "HEIC（High Efficiency Image Container）は Apple デバイスで使用されるデフォルトの画像形式です。品質を維持しながら JPEG より優れた圧縮率を提供します。",
@@ -1102,11 +1107,11 @@
           },
           "howToUse": {
             "title": "HEIC 変換の使い方",
-            "content": "<ol><li>iPhone、iPad、Mac から1つまたは複数の HEIC/HEIF ファイルをアップロード</li><li>出力フォーマットを選択：<strong>JPG</strong> または <strong>PNG</strong></li><li><strong>変換</strong>をクリックしてすべてのファイルを処理</li><li>変換済みの画像を個別または ZIP でダウンロード</li></ol><p>互換性を優先する場合は JPG を推奨します。透明度が必要な場合は PNG を選択してください。</p>"
+            "content": "<ol><li>iPhone、iPad、Mac から HEIC/HEIF ファイルをアップロード</li><li>ファイルの分析が完了するまで少しお待ちください（バースト検出は自動）</li><li><strong>JPG</strong>、<strong>PNG</strong>、または <strong>GIF</strong> をクリックして即座に変換・ダウンロード</li><li>JPG をクリックする前に品質スライダーを調整してファイルサイズを最適化</li></ol><p><strong>GIF</strong> ボタンはバースト HEIC（複数フレーム）が検出された場合のみ表示されます — 単一フレームの HEIC 写真は JPG または PNG を使用します。</p>"
           },
           "features": {
             "title": "主な機能",
-            "content": "<ul><li><strong>HEIC/HEIF 対応</strong>：Apple のデフォルト写真フォーマットを変換</li><li><strong>JPG・PNG 出力</strong>：好みの出力フォーマットを選択</li><li><strong>バッチ変換</strong>：複数の HEIC ファイルを同時に変換</li><li><strong>品質保持</strong>：元の色を維持した高品質変換</li><li><strong>heic2any 採用</strong>：heic2any ライブラリによる信頼性の高い変換</li><li><strong>ドラッグ＆ドロップ</strong>：HEIC ファイルをページにドラッグするだけ</li></ul>"
+            "content": "<ul><li><strong>HEIC/HEIF 対応</strong>：Apple のデフォルト写真フォーマットを変換</li><li><strong>ワンクリック変換</strong>：フォーマットボタンをタップして即座に変換・ダウンロード</li><li><strong>バースト → アニメーション GIF</strong>：複数フレームのバースト HEIC が自動でアニメーション GIF に</li><li><strong>JPG 品質コントロール</strong>：JPG 出力用の調整可能な品質スライダー</li><li><strong>heic2any 採用</strong>：ブラウザでの信頼性の高い HEIC デコード</li><li><strong>100% ローカル</strong>：アップロードもサーバーもなし — 写真はデバイスから出ません</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
