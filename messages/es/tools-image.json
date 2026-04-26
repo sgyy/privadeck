@@ -663,47 +663,60 @@
         }
       },
       "flip": {
-        "name": "Voltear imagen",
-        "description": "Voltear imágenes horizontal o verticalmente con un clic.",
-        "metaTitle": "Voltear imagen - Herramienta gratuita en línea",
-        "metaDescription": "Voltear imágenes horizontal o verticalmente en línea gratis. Sin necesidad de subir archivos, todo el procesamiento ocurre en tu navegador.",
-        "keywords": "voltear imagen, imagen espejo, volteo horizontal, volteo vertical",
+        "name": "Voltear y rotar",
+        "description": "Voltea y rota imágenes en tu navegador con vista previa en tiempo real.",
+        "metaTitle": "Voltear y rotar imagen - Transformador de imágenes gratuito en línea",
+        "metaDescription": "Voltea y rota imágenes en tu navegador. Aplica volteos horizontales/verticales y rotaciones de 90 grados con vista previa en tiempo real. Sin subida, todo el procesamiento es local.",
+        "keywords": "voltear imagen, rotar imagen, imagen espejo, rotar 90 grados, transformador de imágenes, volteo horizontal, volteo vertical, rotador de imágenes en línea",
         "horizontal": "Horizontal",
         "vertical": "Vertical",
-        "flipImage": "Voltear imagen",
+        "flip": "Voltear",
+        "flipHorizontal": "Voltear horizontalmente",
+        "flipVertical": "Voltear verticalmente",
+        "rotate": "Rotar",
+        "rotateCW": "Rotar 90 grados a la derecha",
+        "rotateCCW": "Rotar 90 grados a la izquierda",
+        "reset": "Restablecer",
+        "download": "Descargar",
+        "downloading": "Preparando descarga...",
         "processing": "Procesando...",
+        "previewLabel": "Vista previa",
+        "fullscreen": "Ver pantalla completa",
+        "downloadFailed": "No se pudo preparar la descarga.",
         "faq": {
-          "q1": "¿Cuál es la diferencia entre volteo horizontal y vertical?",
-          "a1": "El volteo horizontal refleja la imagen de izquierda a derecha, como un espejo. El volteo vertical refleja la imagen de arriba a abajo.",
-          "q2": "¿Voltear reduce la calidad de la imagen?",
+          "q1": "¿Cuál es la diferencia entre voltear y rotar?",
+          "a1": "Voltear refleja la imagen (izquierda/derecha o arriba/abajo). Rotar la gira 90 grados a la derecha o a la izquierda. Puedes combinar las cuatro operaciones — por ejemplo, voltear horizontalmente y luego rotar 90 grados a la derecha.",
+          "q2": "¿La transformación reduce la calidad de la imagen?",
           "a2": "No. La imagen se redibuja en su resolución original. Las imágenes JPEG se recodifican al 92% de calidad.",
           "q3": "¿Se subirán mis archivos a un servidor?",
           "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
           "q4": "¿Puedo usar esta herramienta sin conexión?",
           "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
-          "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
+          "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas.",
+          "q6": "¿Las transformaciones se pueden acumular o deshacer?",
+          "a6": "Sí. Las operaciones se acumulan — al hacer clic en rotar y luego en voltear se aplican ambas. Haz clic en Restablecer para volver a la imagen original. Las transformaciones solo se aplican al archivo final cuando haces clic en Descargar."
         },
         "seoContent": {
           "intro": {
-            "title": "¿Qué es Voltear imagen?",
-            "content": "<p><strong>Voltear imagen</strong> refleja imágenes horizontalmente (de izquierda a derecha) o verticalmente (de arriba a abajo) con un solo clic. Rápido y sencillo — sube, voltea y descarga.</p><p>Útil para corregir selfies reflejados, crear diseños simétricos o corregir la orientación de imágenes.</p>"
+            "title": "¿Qué es Voltear y rotar?",
+            "content": "<p><strong>Voltear y rotar</strong> transforma imágenes en tu navegador con cuatro operaciones: volteo horizontal, volteo vertical, rotación de 90 grados a la derecha y rotación de 90 grados a la izquierda. Las operaciones se acumulan y la vista previa se actualiza al instante mientras haces clic.</p><p>Útil para corregir selfies reflejados, rotar fotos de móvil tomadas de lado, corregir la orientación de escaneos o preparar imágenes para diseño.</p>"
           },
           "howToUse": {
-            "title": "Cómo usar Voltear imagen",
-            "content": "<ol><li>Sube una imagen haciendo clic en la zona de carga o arrastrándola a la página</li><li>Haz clic en <strong>Voltear horizontal</strong> para reflejar izquierda/derecha, o en <strong>Voltear vertical</strong> para reflejar arriba/abajo</li><li>Previsualiza el resultado y descarga la imagen volteada</li></ol><p>Puedes aplicar ambos volteos para crear un efecto de rotación de 180°.</p>"
+            "title": "Cómo usar Voltear y rotar",
+            "content": "<ol><li>Sube una imagen haciendo clic en la zona de carga o arrastrándola a la página</li><li>Haz clic en cualquier combinación de los botones <strong>Rotar</strong> y <strong>Voltear</strong> — la vista previa se actualiza inmediatamente</li><li>Usa <strong>Restablecer</strong> en cualquier momento para volver al original</li><li>Haz clic en <strong>Descargar</strong> para guardar la imagen transformada</li></ol>"
           },
           "features": {
             "title": "Características principales",
-            "content": "<ul><li><strong>Volteo horizontal</strong>: Refleja la imagen de izquierda a derecha</li><li><strong>Volteo vertical</strong>: Refleja la imagen de arriba a abajo</li><li><strong>Procesamiento instantáneo</strong>: El volteo ocurre inmediatamente con Canvas API</li><li><strong>Conservación de calidad</strong>: Sin pérdida de calidad durante el volteo</li><li><strong>Procesamiento por lotes</strong>: Voltea varias imágenes a la vez</li><li><strong>Vista previa</strong>: Ve el resultado volteado antes de descargar</li></ul>"
+            "content": "<ul><li><strong>Cuatro transformaciones</strong>: Volteo horizontal, volteo vertical, rotación de 90 grados a la derecha, rotación de 90 grados a la izquierda</li><li><strong>Vista previa en vivo</strong>: Ve el resultado al instante</li><li><strong>Operaciones acumulables</strong>: Combina varias transformaciones libremente</li><li><strong>Restablecer con un clic</strong>: Vuelve a la imagen original cuando quieras</li><li><strong>Conservación de calidad</strong>: Salida en resolución original, JPEG recodificado al 92% de calidad</li><li><strong>100% local</strong>: Canvas API se ejecuta totalmente en tu navegador — sin subida</li></ul>"
           },
           "useCases": {
             "title": "Casos de uso frecuentes",
-            "content": "<ul><li><strong>Corrección de selfies</strong>: Des-refleja las selfies tomadas con la cámara frontal</li><li><strong>Diseño gráfico</strong>: Crea versiones reflejadas para diseños simétricos</li><li><strong>Preparación para impresión</strong>: Voltea imágenes para transferencias con plancha</li><li><strong>Corrección de fotos</strong>: Corrige imágenes escaneadas o fotografiadas al revés</li><li><strong>Arte y diseño</strong>: Comprueba la composición viendo una versión reflejada</li></ul>"
+            "content": "<ul><li><strong>Corrección de selfies</strong>: Des-refleja las selfies tomadas con la cámara frontal</li><li><strong>Fotos de móvil</strong>: Rota rápidamente las fotos tomadas de lado a la orientación correcta</li><li><strong>Documentos escaneados</strong>: Corrige imágenes escaneadas o fotografiadas al revés</li><li><strong>Diseño gráfico</strong>: Crea variantes reflejadas o rotadas para diseños simétricos</li><li><strong>Preparación para impresión</strong>: Voltea imágenes para transferencias con plancha</li></ul>"
           },
           "privacy": {
-            "title": "Volteo de imágenes con privacidad garantizada",
-            "content": "<p>Las imágenes se voltean <strong>localmente en tu navegador</strong> usando Canvas API.</p><ul><li>Tus imágenes <strong>nunca salen de tu dispositivo</strong></li><li>No se requiere procesamiento en servidor</li><li>Funciona <strong>sin conexión</strong> después de cargar la página</li></ul>"
+            "title": "Transformación de imágenes con privacidad garantizada",
+            "content": "<p>Las imágenes se transforman <strong>localmente en tu navegador</strong> usando Canvas API.</p><ul><li>Tus imágenes <strong>nunca salen de tu dispositivo</strong></li><li>No se requiere procesamiento en servidor</li><li>Funciona <strong>sin conexión</strong> después de cargar la página</li></ul>"
           }
         }
       },

@@ -663,47 +663,60 @@
         }
       },
       "flip": {
-        "name": "Balik Gambar",
-        "description": "Balik gambar secara horizontal atau vertikal dengan satu klik.",
-        "metaTitle": "Balik Gambar - Pembalik Gambar Online Gratis",
-        "metaDescription": "Balik gambar secara horizontal atau vertikal secara online gratis. Tanpa unggahan, semua pemrosesan terjadi di browser Anda.",
-        "keywords": "balik gambar, cermin gambar, balik horizontal, balik vertikal",
+        "name": "Balik & Putar",
+        "description": "Balik dan putar gambar di browser dengan pratinjau langsung.",
+        "metaTitle": "Balik dan putar gambar - Transformator gambar online gratis",
+        "metaDescription": "Balik dan putar gambar di browser Anda. Terapkan pembalikan horizontal/vertikal dan rotasi 90 derajat dengan pratinjau langsung. Tanpa unggah, semua pemrosesan lokal.",
+        "keywords": "balik gambar, putar gambar, gambar cermin, putar 90 derajat, transformator gambar, balik horizontal, balik vertikal, pemutar gambar online",
         "horizontal": "Horizontal",
         "vertical": "Vertikal",
-        "flipImage": "Balik Gambar",
+        "flip": "Balik",
+        "flipHorizontal": "Balik horizontal",
+        "flipVertical": "Balik vertikal",
+        "rotate": "Putar",
+        "rotateCW": "Putar 90 derajat searah jarum jam",
+        "rotateCCW": "Putar 90 derajat berlawanan arah jarum jam",
+        "reset": "Reset",
+        "download": "Unduh",
+        "downloading": "Menyiapkan unduhan...",
         "processing": "Memproses...",
+        "previewLabel": "Pratinjau",
+        "fullscreen": "Lihat layar penuh",
+        "downloadFailed": "Tidak dapat menyiapkan unduhan.",
         "faq": {
-          "q1": "Apa perbedaan antara balik horizontal dan vertikal?",
-          "a1": "Balik horizontal mencerminkan gambar dari kiri ke kanan, seperti melihat di cermin. Balik vertikal mencerminkan gambar dari atas ke bawah.",
-          "q2": "Apakah membalik mengurangi kualitas gambar?",
-          "a2": "Tidak. Gambar digambar ulang pada resolusi aslinya. Gambar JPEG dikodekan ulang pada kualitas 92%.",
-          "q3": "Apakah file saya diunggah ke server?",
+          "q1": "Apa perbedaan antara membalik dan memutar?",
+          "a1": "Membalik mencerminkan gambar (kiri/kanan atau atas/bawah). Memutar memutarnya 90 derajat searah atau berlawanan arah jarum jam. Anda bisa menggabungkan keempat operasi — misalnya, balik secara horizontal lalu putar 90 derajat searah jarum jam.",
+          "q2": "Apakah transformasi mengurangi kualitas gambar?",
+          "a2": "Tidak. Gambar digambar ulang dalam resolusi aslinya. Gambar JPEG dikodekan ulang pada kualitas 92%.",
+          "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
+          "q4": "Bisakah saya menggunakan alat ini secara offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat berfungsi sepenuhnya offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
-          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
+          "a5": "Tidak ada batas yang diberlakukan server. Ukuran file maksimum bergantung pada memori yang tersedia di perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern menangani file hingga beberapa ratus MB tanpa masalah.",
+          "q6": "Apakah transformasi bisa ditumpuk atau dibatalkan?",
+          "a6": "Ya. Operasi menumpuk — klik putar lalu balik akan menerapkan keduanya. Klik Reset untuk kembali ke gambar asli. Transformasi hanya disimpan ke file akhir saat Anda klik Unduh."
         },
         "seoContent": {
           "intro": {
-            "title": "Apa itu Flip Image?",
-            "content": "<p><strong>Flip Image</strong> mencerminkan gambar secara horizontal (kiri ke kanan) atau vertikal (atas ke bawah) dengan satu klik. Cepat dan sederhana — unggah, balik, dan unduh.</p><p>Berguna untuk memperbaiki selfie cermin, membuat desain simetris, atau memperbaiki orientasi gambar.</p>"
+            "title": "Apa itu Balik & Putar?",
+            "content": "<p><strong>Balik & Putar</strong> mentransformasi gambar di browser Anda dengan empat operasi: balik horizontal, balik vertikal, putar 90 derajat searah jarum jam, dan putar 90 derajat berlawanan arah jarum jam. Operasi menumpuk dan pratinjau diperbarui seketika setiap klik.</p><p>Berguna untuk memperbaiki selfie cermin, memutar foto telepon yang diambil menyamping, memperbaiki orientasi pemindaian, atau menyiapkan gambar untuk pekerjaan desain.</p>"
           },
           "howToUse": {
-            "title": "Cara Menggunakan Flip Image",
-            "content": "<ol><li>Unggah gambar dengan mengklik dropzone atau menyeret ke halaman</li><li>Klik <strong>Balik Horizontal</strong> untuk mencerminkan kiri/kanan, atau <strong>Balik Vertikal</strong> untuk mencerminkan atas/bawah</li><li>Pratinjau hasil dan unduh gambar yang dibalik</li></ol><p>Anda dapat menerapkan kedua balikan untuk membuat efek rotasi 180°.</p>"
+            "title": "Cara menggunakan Balik & Putar",
+            "content": "<ol><li>Unggah gambar dengan mengklik zona drop atau menariknya ke halaman</li><li>Klik kombinasi apa pun dari tombol <strong>Putar</strong> dan <strong>Balik</strong> — pratinjau diperbarui segera</li><li>Gunakan <strong>Reset</strong> kapan saja untuk kembali ke aslinya</li><li>Klik <strong>Unduh</strong> untuk menyimpan gambar yang ditransformasi</li></ol>"
           },
           "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Balik Horizontal</strong>: Cermin gambar kiri ke kanan</li><li><strong>Balik Vertikal</strong>: Cermin gambar atas ke bawah</li><li><strong>Pemrosesan Instan</strong>: Balikan terjadi segera dengan Canvas API</li><li><strong>Preservasi Kualitas</strong>: Tidak ada kehilangan kualitas saat membalik</li><li><strong>Dukungan Batch</strong>: Balik beberapa gambar sekaligus</li><li><strong>Pratinjau</strong>: Lihat hasil balikan sebelum mengunduh</li></ul>"
+            "title": "Fitur utama",
+            "content": "<ul><li><strong>Empat transformasi</strong>: Balik horizontal, balik vertikal, putar 90 derajat searah jarum jam, putar 90 derajat berlawanan arah jarum jam</li><li><strong>Pratinjau langsung</strong>: Lihat hasil seketika saat Anda klik</li><li><strong>Operasi yang bisa ditumpuk</strong>: Gabungkan beberapa transformasi dengan bebas</li><li><strong>Reset satu klik</strong>: Kembali ke gambar asli kapan saja</li><li><strong>Pelestarian kualitas</strong>: Output menggunakan resolusi asli, JPEG dikodekan ulang pada kualitas 92%</li><li><strong>100% lokal</strong>: Canvas API berjalan sepenuhnya di browser Anda — tanpa unggah</li></ul>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Koreksi Selfie</strong>: Hapus cermin foto selfie dari kamera depan</li><li><strong>Pekerjaan Desain</strong>: Buat versi cermin untuk tata letak simetris</li><li><strong>Persiapan Cetak</strong>: Balik gambar untuk cetak transfer setrika</li><li><strong>Koreksi Foto</strong>: Perbaiki gambar yang dipindai atau difoto terbalik</li><li><strong>Seni & Desain</strong>: Periksa komposisi dengan melihat versi cermin</li></ul>"
+            "title": "Kasus penggunaan umum",
+            "content": "<ul><li><strong>Koreksi selfie</strong>: Membalik selfie dari kamera depan agar tidak cermin</li><li><strong>Foto telepon</strong>: Putar dengan cepat foto miring ke orientasi yang benar</li><li><strong>Dokumen pindai</strong>: Perbaiki gambar yang dipindai atau difoto terbalik</li><li><strong>Pekerjaan desain</strong>: Buat varian cermin atau diputar untuk tata letak simetris</li><li><strong>Persiapan cetak</strong>: Balik gambar untuk pencetakan transfer panas</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Pembalikan Gambar",
-            "content": "<p>Gambar dibalik <strong>secara lokal di browser Anda</strong> menggunakan Canvas API.</p><ul><li>Gambar Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak diperlukan pemrosesan server</li><li>Berfungsi <strong>offline</strong> setelah halaman dimuat</li></ul>"
+            "title": "Transformasi gambar yang mengutamakan privasi",
+            "content": "<p>Gambar ditransformasi <strong>secara lokal di browser Anda</strong> menggunakan Canvas API.</p><ul><li>Gambar Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak diperlukan pemrosesan server</li><li>Berfungsi <strong>offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
       },

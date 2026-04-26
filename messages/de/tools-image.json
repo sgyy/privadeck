@@ -663,47 +663,60 @@
         }
       },
       "flip": {
-        "name": "Bild spiegeln",
-        "description": "Bilder mit einem Klick horizontal oder vertikal spiegeln.",
-        "metaTitle": "Bild spiegeln - Kostenloser Online-Bildspiegel",
-        "metaDescription": "Bilder kostenlos online horizontal oder vertikal spiegeln. Kein Upload nötig, die gesamte Verarbeitung erfolgt in Ihrem Browser.",
-        "keywords": "Bild spiegeln, Spiegelbild, horizontal spiegeln, vertikal spiegeln",
+        "name": "Spiegeln & Drehen",
+        "description": "Spiegeln und drehen Sie Bilder in Ihrem Browser mit Live-Vorschau.",
+        "metaTitle": "Bild spiegeln und drehen - Kostenloser Online-Bildtransformer",
+        "metaDescription": "Spiegeln und drehen Sie Bilder in Ihrem Browser. Wenden Sie horizontale/vertikale Spiegelungen und 90-Grad-Drehungen mit Live-Vorschau an. Kein Upload, gesamte Verarbeitung lokal.",
+        "keywords": "Bild spiegeln, Bild drehen, Spiegelbild, 90 Grad drehen, Bildtransformer, horizontal spiegeln, vertikal spiegeln, Online-Bildrotator",
         "horizontal": "Horizontal",
         "vertical": "Vertikal",
-        "flipImage": "Bild spiegeln",
+        "flip": "Spiegeln",
+        "flipHorizontal": "Horizontal spiegeln",
+        "flipVertical": "Vertikal spiegeln",
+        "rotate": "Drehen",
+        "rotateCW": "Um 90 Grad im Uhrzeigersinn drehen",
+        "rotateCCW": "Um 90 Grad gegen den Uhrzeigersinn drehen",
+        "reset": "Zurücksetzen",
+        "download": "Herunterladen",
+        "downloading": "Download wird vorbereitet...",
         "processing": "Wird verarbeitet...",
+        "previewLabel": "Vorschau",
+        "fullscreen": "Vollbild anzeigen",
+        "downloadFailed": "Download konnte nicht vorbereitet werden.",
         "faq": {
-          "q1": "Was ist der Unterschied zwischen horizontalem und vertikalem Spiegeln?",
-          "a1": "Horizontales Spiegeln spiegelt das Bild von links nach rechts, wie ein Spiegel. Vertikales Spiegeln spiegelt das Bild von oben nach unten.",
-          "q2": "Verringert das Spiegeln die Bildqualität?",
+          "q1": "Was ist der Unterschied zwischen Spiegeln und Drehen?",
+          "a1": "Spiegeln reflektiert das Bild (links/rechts oder oben/unten). Drehen dreht es um 90 Grad im oder gegen den Uhrzeigersinn. Sie können alle vier Operationen kombinieren — zum Beispiel horizontal spiegeln und dann um 90 Grad im Uhrzeigersinn drehen.",
+          "q2": "Verringert das Transformieren die Bildqualität?",
           "a2": "Nein. Das Bild wird in seiner Originalauflösung neu gezeichnet. JPEG-Bilder werden mit 92% Qualität neu kodiert.",
           "q3": "Werden meine Dateien auf einen Server hochgeladen?",
           "a3": "Nein. Die gesamte Verarbeitung erfolgt vollständig in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät — nichts wird auf einen Server hochgeladen.",
           "q4": "Kann ich dieses Tool offline verwenden?",
           "a4": "Ja. Sobald die Seite geladen ist, funktioniert das Tool vollständig offline. Installieren Sie PrivaDeck als PWA aus Ihrem Browser für das beste Erlebnis.",
           "q5": "Gibt es Dateigrößenbeschränkungen?",
-          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Speicher Ihres Geräts und den Browser-Funktionen ab. Die meisten modernen Geräte verarbeiten Dateien bis zu mehreren hundert MB problemlos."
+          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Speicher Ihres Geräts und den Browser-Funktionen ab. Die meisten modernen Geräte verarbeiten Dateien bis zu mehreren hundert MB problemlos.",
+          "q6": "Können Transformationen gestapelt oder rückgängig gemacht werden?",
+          "a6": "Ja. Operationen stapeln sich — Klicken auf Drehen und dann auf Spiegeln wendet beide an. Klicken Sie auf Zurücksetzen, um zum Originalbild zurückzukehren. Transformationen werden erst beim Klick auf Herunterladen in die endgültige Datei eingebrannt."
         },
         "seoContent": {
           "intro": {
-            "title": "Was ist das Bild-Spiegeln?",
-            "content": "<p><strong>Bild spiegeln</strong> spiegelt Bilder mit einem Klick horizontal (von links nach rechts) oder vertikal (von oben nach unten). Schnell und einfach — hochladen, spiegeln und herunterladen.</p><p>Nützlich zum Korrigieren gespiegelter Selfies, Erstellen symmetrischer Designs oder Beheben der Bildausrichtung.</p>"
+            "title": "Was ist Spiegeln & Drehen?",
+            "content": "<p><strong>Spiegeln & Drehen</strong> transformiert Bilder in Ihrem Browser mit vier Operationen: Horizontal spiegeln, vertikal spiegeln, um 90 Grad im Uhrzeigersinn drehen und um 90 Grad gegen den Uhrzeigersinn drehen. Operationen stapeln sich, und die Vorschau wird mit jedem Klick sofort aktualisiert.</p><p>Nützlich zum Korrigieren gespiegelter Selfies, Drehen seitwärts aufgenommener Handyfotos, Korrigieren der Scan-Ausrichtung oder Vorbereiten von Bildern für die Designarbeit.</p>"
           },
           "howToUse": {
-            "title": "So verwenden Sie das Bild-Spiegeln",
-            "content": "<ol><li>Laden Sie ein Bild hoch, indem Sie auf die Ablagefläche klicken oder es auf die Seite ziehen</li><li>Klicken Sie auf <strong>Horizontal spiegeln</strong>, um links/rechts zu spiegeln, oder <strong>Vertikal spiegeln</strong>, um oben/unten zu spiegeln</li><li>Sehen Sie das Ergebnis in der Vorschau und laden Sie das gespiegelte Bild herunter</li></ol><p>Sie können beide Spiegelungen anwenden, um einen 180°-Rotationseffekt zu erzielen.</p>"
+            "title": "So verwenden Sie Spiegeln & Drehen",
+            "content": "<ol><li>Laden Sie ein Bild hoch, indem Sie auf die Ablagefläche klicken oder es auf die Seite ziehen</li><li>Klicken Sie auf eine beliebige Kombination der Schaltflächen <strong>Drehen</strong> und <strong>Spiegeln</strong> — die Vorschau wird sofort aktualisiert</li><li>Verwenden Sie <strong>Zurücksetzen</strong> jederzeit, um zum Original zurückzukehren</li><li>Klicken Sie auf <strong>Herunterladen</strong>, um das transformierte Bild zu speichern</li></ol>"
           },
           "features": {
             "title": "Hauptfunktionen",
-            "content": "<ul><li><strong>Horizontales Spiegeln</strong>: Bild von links nach rechts spiegeln</li><li><strong>Vertikales Spiegeln</strong>: Bild von oben nach unten spiegeln</li><li><strong>Sofortige Verarbeitung</strong>: Spiegelung erfolgt sofort mit Canvas API</li><li><strong>Qualitätserhaltung</strong>: Kein Qualitätsverlust beim Spiegeln</li><li><strong>Stapel-Unterstützung</strong>: Mehrere Bilder auf einmal spiegeln</li><li><strong>Vorschau</strong>: Das gespiegelte Ergebnis vor dem Herunterladen anzeigen</li></ul>"
+            "content": "<ul><li><strong>Vier Transformationen</strong>: Horizontal spiegeln, vertikal spiegeln, um 90 Grad im Uhrzeigersinn drehen, um 90 Grad gegen den Uhrzeigersinn drehen</li><li><strong>Live-Vorschau</strong>: Sehen Sie das Ergebnis sofort beim Klicken</li><li><strong>Stapelbare Operationen</strong>: Kombinieren Sie mehrere Transformationen frei</li><li><strong>Ein-Klick-Zurücksetzen</strong>: Kehren Sie jederzeit zum Originalbild zurück</li><li><strong>Qualitätserhaltung</strong>: Ausgabe in Originalauflösung, JPEG mit 92% Qualität neu kodiert</li><li><strong>100% lokal</strong>: Canvas API läuft vollständig in Ihrem Browser — kein Upload</li></ul>"
           },
           "useCases": {
             "title": "Häufige Anwendungsfälle",
-            "content": "<ul><li><strong>Selfie-Korrektur</strong>: Selfie-Fotos von Frontkameras entspiegeln</li><li><strong>Design-Arbeit</strong>: Gespiegelte Versionen für symmetrische Layouts erstellen</li><li><strong>Druckvorbereitung</strong>: Bilder für Bügelbild-Druck spiegeln</li><li><strong>Fotokorrektur</strong>: Bilder reparieren, die rückwärts gescannt oder fotografiert wurden</li><li><strong>Kunst & Design</strong>: Komposition durch Anzeigen einer gespiegelten Version prüfen</li></ul>"
+            "content": "<ul><li><strong>Selfie-Korrektur</strong>: Selfie-Fotos von Frontkameras entspiegeln</li><li><strong>Handyfotos</strong>: Seitwärts aufgenommene Fotos schnell in die richtige Ausrichtung drehen</li><li><strong>Gescannte Dokumente</strong>: Bilder reparieren, die rückwärts gescannt oder fotografiert wurden</li><li><strong>Design-Arbeit</strong>: Gespiegelte oder gedrehte Varianten für symmetrische Layouts erstellen</li><li><strong>Druckvorbereitung</strong>: Bilder für Bügelbild-Druck spiegeln</li></ul>"
           },
           "privacy": {
-            "title": "Datenschutzorientiertes Bild-Spiegeln",
-            "content": "<p>Bilder werden <strong>lokal in Ihrem Browser</strong> mit der Canvas API gespiegelt.</p><ul><li>Ihre Bilder <strong>verlassen niemals Ihr Gerät</strong></li><li>Keine Serververarbeitung erforderlich</li><li>Funktioniert <strong>offline</strong> nach dem Laden der Seite</li></ul>"
+            "title": "Datenschutzorientierte Bildtransformation",
+            "content": "<p>Bilder werden <strong>lokal in Ihrem Browser</strong> mit der Canvas API transformiert.</p><ul><li>Ihre Bilder <strong>verlassen niemals Ihr Gerät</strong></li><li>Keine Serververarbeitung erforderlich</li><li>Funktioniert <strong>offline</strong> nach dem Laden der Seite</li></ul>"
           }
         }
       },

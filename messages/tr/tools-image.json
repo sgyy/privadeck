@@ -663,47 +663,60 @@
         }
       },
       "flip": {
-        "name": "Görsel Çevir",
-        "description": "Görselleri tek tıklamayla yatay veya dikey çevirin.",
-        "metaTitle": "Görsel Çevir — Ücretsiz Çevrimiçi Görsel Çevirici",
-        "metaDescription": "Görselleri çevrimiçi ücretsiz olarak yatay veya dikey çevirin. Yükleme gerekmez, tüm işlemler tarayıcınızda gerçekleşir.",
-        "keywords": "görsel çevir, ayna görsel, yatay çevir, dikey çevir",
+        "name": "Çevir ve Döndür",
+        "description": "Görselleri tarayıcıda anlık önizlemeyle çevirin ve döndürün.",
+        "metaTitle": "Görsel çevirme ve döndürme - Ücretsiz çevrimiçi görsel dönüştürücü",
+        "metaDescription": "Görselleri tarayıcınızda çevirin ve döndürün. Yatay/dikey çevirme ve 90 derece döndürme işlemlerini anlık önizlemeyle uygulayın. Yükleme yok, tüm işlemler yerel.",
+        "keywords": "görsel çevirme, görsel döndürme, ayna görsel, 90 derece döndürme, görsel dönüştürücü, yatay çevirme, dikey çevirme, çevrimiçi görsel döndürücü",
         "horizontal": "Yatay",
         "vertical": "Dikey",
-        "flipImage": "Görseli Çevir",
+        "flip": "Çevir",
+        "flipHorizontal": "Yatay çevir",
+        "flipVertical": "Dikey çevir",
+        "rotate": "Döndür",
+        "rotateCW": "Saat yönünde 90 derece döndür",
+        "rotateCCW": "Saat yönünün tersine 90 derece döndür",
+        "reset": "Sıfırla",
+        "download": "İndir",
+        "downloading": "İndirme hazırlanıyor...",
         "processing": "İşleniyor...",
+        "previewLabel": "Önizleme",
+        "fullscreen": "Tam ekran görüntüle",
+        "downloadFailed": "İndirme hazırlanamadı.",
         "faq": {
-          "q1": "Yatay ve dikey çevirme arasındaki fark nedir?",
-          "a1": "Yatay çevirme, görseli aynaya bakar gibi soldan sağa aynalar. Dikey çevirme ise görseli yukarıdan aşağıya aynalar.",
-          "q2": "Çevirme görsel kalitesini düşürür mü?",
-          "a2": "Hayır. Görsel orijinal çözünürlüğünde yeniden çizilir. JPEG görselleri %92 kaliteyle yeniden kodlanır.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
+          "q1": "Çevirme ve döndürme arasındaki fark nedir?",
+          "a1": "Çevirme görseli aynalar (sol/sağ veya üst/alt). Döndürme ise saat yönünde veya saat yönünün tersinde 90 derece çevirir. Dört işlemi birlikte kullanabilirsiniz — örneğin önce yatay çevirin sonra saat yönünde 90 derece döndürün.",
+          "q2": "Dönüştürme görsel kalitesini düşürür mü?",
+          "a2": "Hayır. Görsel orijinal çözünürlüğünde yeniden çizilir. JPEG görseller %92 kalitede yeniden kodlanır.",
+          "q3": "Dosyalarım sunucuya yüklenecek mi?",
+          "a3": "Hayır. Tüm işlemler tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
           "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
           "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
-          "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
+          "a5": "Sunucu tarafından getirilen sınır yoktur. Maksimum dosya boyutu cihazınızın mevcut belleğine ve tarayıcı yeteneklerine bağlıdır. Çoğu modern cihaz birkaç yüz MB'a kadar dosyaları sorunsuz işler.",
+          "q6": "Dönüştürmeler üst üste eklenebilir veya geri alınabilir mi?",
+          "a6": "Evet. İşlemler birikir — döndür sonra çevir tıklandığında ikisi de uygulanır. Orijinal görsele dönmek için Sıfırla düğmesine tıklayın. Dönüştürmeler yalnızca İndir tıklandığında nihai dosyaya işlenir."
         },
         "seoContent": {
           "intro": {
-            "title": "Görsel Çevir Nedir?",
-            "content": "<p><strong>Görsel Çevir</strong>, görselleri tek tıklamayla yatay (soldan sağa) veya dikey (yukarıdan aşağıya) olarak aynalar. Hızlı ve basit — yükleyin, çevirin ve indirin.</p><p>Aynalı selfie'leri düzeltmek, simetrik tasarımlar oluşturmak veya görsel yönünü düzeltmek için kullanışlıdır.</p>"
+            "title": "Çevir ve Döndür nedir?",
+            "content": "<p><strong>Çevir ve Döndür</strong> görselleri tarayıcınızda dört işlemle dönüştürür: yatay çevirme, dikey çevirme, saat yönünde 90 derece döndürme ve saat yönünün tersine 90 derece döndürme. İşlemler birikir ve her tıklamada önizleme anında güncellenir.</p><p>Aynalanmış selfie'leri düzeltmek, yan çekilmiş telefon fotoğraflarını döndürmek, tarayıcı yönünü düzeltmek veya tasarım çalışmaları için görselleri hazırlamak için kullanışlıdır.</p>"
           },
           "howToUse": {
-            "title": "Görsel Çevir Nasıl Kullanılır?",
-            "content": "<ol><li>Bırakma alanına tıklayarak veya sayfaya sürükleyerek bir görsel yükleyin</li><li>Sol/sağ aynalama için <strong>Yatay Çevir</strong>'e, üst/alt aynalama için <strong>Dikey Çevir</strong>'e tıklayın</li><li>Sonucu önizleyin ve çevrilen görseli indirin</li></ol><p>180° döndürme efekti oluşturmak için her iki çevirmeyi de uygulayabilirsiniz.</p>"
+            "title": "Çevir ve Döndür nasıl kullanılır",
+            "content": "<ol><li>Bırakma alanına tıklayarak veya görseli sayfaya sürükleyerek bir görsel yükleyin</li><li><strong>Döndür</strong> ve <strong>Çevir</strong> düğmelerinin herhangi bir kombinasyonuna tıklayın — önizleme anında güncellenir</li><li>Orijinale dönmek için istediğiniz zaman <strong>Sıfırla</strong>'yı kullanın</li><li>Dönüştürülmüş görseli kaydetmek için <strong>İndir</strong>'e tıklayın</li></ol>"
           },
           "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Yatay Çevirme</strong>: Görseli soldan sağa aynalama</li><li><strong>Dikey Çevirme</strong>: Görseli yukarıdan aşağıya aynalama</li><li><strong>Anında İşleme</strong>: Canvas API ile çevirme hemen gerçekleşir</li><li><strong>Kalite Koruma</strong>: Çevirme sırasında kalite kaybı yok</li><li><strong>Toplu Destek</strong>: Birden fazla görseli aynı anda çevirme</li><li><strong>Önizleme</strong>: İndirmeden önce çevrilen sonucu görme</li></ul>"
+            "title": "Temel özellikler",
+            "content": "<ul><li><strong>Dört dönüştürme</strong>: Yatay çevirme, dikey çevirme, saat yönünde 90 derece döndürme, saat yönünün tersine 90 derece döndürme</li><li><strong>Anlık önizleme</strong>: Tıkladıkça sonucu hemen görün</li><li><strong>Birikebilen işlemler</strong>: Birden çok dönüştürmeyi serbestçe birleştirin</li><li><strong>Tek tıkla sıfırlama</strong>: İstediğiniz zaman orijinal görsele dönün</li><li><strong>Kalite koruması</strong>: Çıktı orijinal çözünürlükte, JPEG %92 kalitede yeniden kodlanır</li><li><strong>%100 yerel</strong>: Canvas API tamamen tarayıcınızda çalışır — yükleme yok</li></ul>"
           },
           "useCases": {
-            "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Selfie Düzeltme</strong>: Ön kameradan çekilen selfie fotoğraflarının aynasını kaldırma</li><li><strong>Tasarım Çalışması</strong>: Simetrik düzenler için aynalı versiyonlar oluşturma</li><li><strong>Baskı Hazırlığı</strong>: Ütü baskısı için görselleri çevirme</li><li><strong>Fotoğraf Düzeltme</strong>: Ters taranmış veya fotoğraflanmış görselleri düzeltme</li><li><strong>Sanat ve Tasarım</strong>: Aynalı versiyonu görüntüleyerek kompozisyonu kontrol etme</li></ul>"
+            "title": "Yaygın kullanım alanları",
+            "content": "<ul><li><strong>Selfie düzeltmesi</strong>: Ön kameralardan alınan selfie'leri ters aynalama</li><li><strong>Telefon fotoğrafları</strong>: Yan çekilen fotoğrafları doğru yönlendirmeye hızla döndürme</li><li><strong>Taranan belgeler</strong>: Ters taranmış veya çekilmiş görselleri düzeltme</li><li><strong>Tasarım çalışması</strong>: Simetrik düzenler için aynalanmış veya döndürülmüş varyasyonlar oluşturma</li><li><strong>Baskı hazırlığı</strong>: Ütülü transfer baskı için görselleri çevirme</li></ul>"
           },
           "privacy": {
-            "title": "Gizlilik Odaklı Görsel Çevirme",
-            "content": "<p>Görseller, Canvas API kullanılarak <strong>tarayıcınızda yerel olarak</strong> çevrilir.</p><ul><li>Görselleriniz <strong>asla cihazınızdan çıkmaz</strong></li><li>Sunucu işleme gerekmez</li><li>Sayfa yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
+            "title": "Gizlilik öncelikli görsel dönüşümü",
+            "content": "<p>Görseller Canvas API kullanılarak <strong>yerel olarak tarayıcınızda</strong> dönüştürülür.</p><ul><li>Görselleriniz <strong>cihazınızdan asla ayrılmaz</strong></li><li>Sunucu işlemesi gerekmez</li><li>Sayfa yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
           }
         }
       },

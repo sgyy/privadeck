@@ -29,6 +29,10 @@ const definition: ToolDefinition = {
       questionKey: "tools.image.flip.faq.q5",
       answerKey: "tools.image.flip.faq.a5",
     },
+    {
+      questionKey: "tools.image.flip.faq.q6",
+      answerKey: "tools.image.flip.faq.a6",
+    },
   ],
   relatedSlugs: ["crop", "resize", "watermark"],
 };

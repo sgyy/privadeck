@@ -663,47 +663,60 @@
         }
       },
       "flip": {
-        "name": "Flip Image",
-        "description": "Flip images horizontally or vertically with one click.",
-        "metaTitle": "Flip Image - Free Online Image Flipper",
-        "metaDescription": "Flip images horizontally or vertically online for free. No upload needed, all processing happens in your browser.",
-        "keywords": "flip image, mirror image, horizontal flip, vertical flip",
+        "name": "Flip & Rotate",
+        "description": "Flip and rotate images in your browser with live preview.",
+        "metaTitle": "Flip & Rotate Image - Free Online Image Transformer",
+        "metaDescription": "Flip and rotate images in your browser. Apply horizontal/vertical flips and 90 degree rotations with live preview. No upload, all processing local.",
+        "keywords": "flip image, rotate image, mirror image, rotate 90 degrees, image transformer, horizontal flip, vertical flip, online image rotator",
         "horizontal": "Horizontal",
         "vertical": "Vertical",
-        "flipImage": "Flip Image",
+        "flip": "Flip",
+        "flipHorizontal": "Flip horizontally",
+        "flipVertical": "Flip vertically",
+        "rotate": "Rotate",
+        "rotateCW": "Rotate 90 degrees clockwise",
+        "rotateCCW": "Rotate 90 degrees counter-clockwise",
+        "reset": "Reset",
+        "download": "Download",
+        "downloading": "Preparing download...",
         "processing": "Processing...",
+        "previewLabel": "Preview",
+        "fullscreen": "View fullscreen",
+        "downloadFailed": "Could not prepare the download.",
         "faq": {
-          "q1": "What is the difference between horizontal and vertical flip?",
-          "a1": "Horizontal flip mirrors the image left to right, like looking in a mirror. Vertical flip mirrors the image top to bottom.",
-          "q2": "Does flipping reduce image quality?",
+          "q1": "What's the difference between flipping and rotating?",
+          "a1": "Flipping mirrors the image (left/right or top/bottom). Rotating turns it 90 degrees clockwise or counter-clockwise. You can combine all four — for example, flip horizontally and then rotate 90 degrees clockwise.",
+          "q2": "Does transforming reduce image quality?",
           "a2": "No. The image is redrawn at its original resolution. JPEG images are re-encoded at 92% quality.",
           "q3": "Will my files be uploaded to a server?",
           "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "Can transforms be stacked or undone?",
+          "a6": "Yes. Operations stack — clicking rotate then flip applies both. Click Reset to return to the original image. Transforms are only baked into the final file when you click Download."
         },
         "seoContent": {
           "intro": {
-            "title": "What is Flip Image?",
-            "content": "<p><strong>Flip Image</strong> mirrors images horizontally (left to right) or vertically (top to bottom) in one click. Quick and simple — upload, flip, and download.</p><p>Useful for correcting mirrored selfies, creating symmetrical designs, or fixing image orientation.</p>"
+            "title": "What is Flip & Rotate?",
+            "content": "<p><strong>Flip & Rotate</strong> transforms images in your browser with four operations: horizontal flip, vertical flip, 90 degree clockwise rotation, and 90 degree counter-clockwise rotation. Operations stack and the preview updates instantly as you click.</p><p>Useful for correcting mirrored selfies, rotating sideways phone photos, fixing scan orientation, or preparing images for design work.</p>"
           },
           "howToUse": {
-            "title": "How to Use Flip Image",
-            "content": "<ol><li>Upload an image by clicking the dropzone or dragging it onto the page</li><li>Click <strong>Flip Horizontal</strong> to mirror left/right, or <strong>Flip Vertical</strong> to mirror top/bottom</li><li>Preview the result and download the flipped image</li></ol><p>You can apply both flips to create a 180° rotation effect.</p>"
+            "title": "How to Use Flip & Rotate",
+            "content": "<ol><li>Upload an image by clicking the dropzone or dragging it onto the page</li><li>Click any combination of <strong>Rotate</strong> and <strong>Flip</strong> buttons — the preview updates immediately</li><li>Use <strong>Reset</strong> at any time to return to the original</li><li>Click <strong>Download</strong> to save the transformed image</li></ol>"
           },
           "features": {
             "title": "Key Features",
-            "content": "<ul><li><strong>Horizontal Flip</strong>: Mirror image left to right</li><li><strong>Vertical Flip</strong>: Mirror image top to bottom</li><li><strong>Instant Processing</strong>: Flip happens immediately with Canvas API</li><li><strong>Quality Preservation</strong>: No quality loss during flipping</li><li><strong>Batch Support</strong>: Flip multiple images at once</li><li><strong>Preview</strong>: See the flipped result before downloading</li></ul>"
+            "content": "<ul><li><strong>Four Transforms</strong>: Horizontal flip, vertical flip, rotate 90 degrees clockwise, rotate 90 degrees counter-clockwise</li><li><strong>Live Preview</strong>: See the result instantly as you click</li><li><strong>Stackable Operations</strong>: Combine multiple transforms freely</li><li><strong>One-Click Reset</strong>: Return to the original image any time</li><li><strong>Quality Preservation</strong>: Output uses the original resolution, JPEG re-encoded at 92% quality</li><li><strong>100% Local</strong>: Canvas API runs entirely in your browser — no upload</li></ul>"
           },
           "useCases": {
             "title": "Common Use Cases",
-            "content": "<ul><li><strong>Selfie Correction</strong>: Un-mirror selfie photos from front-facing cameras</li><li><strong>Design Work</strong>: Create mirrored versions for symmetrical layouts</li><li><strong>Print Preparation</strong>: Flip images for iron-on transfer printing</li><li><strong>Photo Correction</strong>: Fix images that were scanned or photographed backwards</li><li><strong>Art & Design</strong>: Check composition by viewing a mirrored version</li></ul>"
+            "content": "<ul><li><strong>Selfie Correction</strong>: Un-mirror selfie photos from front-facing cameras</li><li><strong>Phone Photos</strong>: Quickly rotate sideways photos to the right orientation</li><li><strong>Scanned Documents</strong>: Fix images that were scanned or photographed backwards</li><li><strong>Design Work</strong>: Create mirrored or rotated variants for symmetrical layouts</li><li><strong>Print Preparation</strong>: Flip images for iron-on transfer printing</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First Image Flipping",
-            "content": "<p>Images are flipped <strong>locally in your browser</strong> using the Canvas API.</p><ul><li>Your images <strong>never leave your device</strong></li><li>No server processing required</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Privacy-First Image Transformation",
+            "content": "<p>Images are transformed <strong>locally in your browser</strong> using the Canvas API.</p><ul><li>Your images <strong>never leave your device</strong></li><li>No server processing required</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
           }
         }
       },

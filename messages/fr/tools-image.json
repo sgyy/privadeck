@@ -663,47 +663,60 @@
         }
       },
       "flip": {
-        "name": "Retourner l'image",
-        "description": "Retourner les images horizontalement ou verticalement en un clic.",
-        "metaTitle": "Retourner l'image - Outil gratuit en ligne",
-        "metaDescription": "Retourner les images horizontalement ou verticalement en ligne gratuitement. Pas d'envoi nécessaire, tout le traitement se fait dans votre navigateur.",
-        "keywords": "retourner image, image miroir, retournement horizontal, retournement vertical",
+        "name": "Retourner et pivoter",
+        "description": "Retournez et faites pivoter des images dans votre navigateur avec un aperçu en direct.",
+        "metaTitle": "Retourner et pivoter une image - Transformateur d'images gratuit en ligne",
+        "metaDescription": "Retournez et faites pivoter vos images dans votre navigateur. Appliquez des retournements horizontaux/verticaux et des rotations de 90 degrés avec aperçu en direct. Aucun envoi, tout le traitement est local.",
+        "keywords": "retourner image, pivoter image, image miroir, rotation 90 degrés, transformateur d'images, retournement horizontal, retournement vertical, pivoteur d'images en ligne",
         "horizontal": "Horizontal",
         "vertical": "Vertical",
-        "flipImage": "Retourner l'image",
+        "flip": "Retourner",
+        "flipHorizontal": "Retourner horizontalement",
+        "flipVertical": "Retourner verticalement",
+        "rotate": "Pivoter",
+        "rotateCW": "Pivoter de 90 degrés dans le sens horaire",
+        "rotateCCW": "Pivoter de 90 degrés dans le sens anti-horaire",
+        "reset": "Réinitialiser",
+        "download": "Télécharger",
+        "downloading": "Préparation du téléchargement...",
         "processing": "Traitement en cours...",
+        "previewLabel": "Aperçu",
+        "fullscreen": "Afficher en plein écran",
+        "downloadFailed": "Impossible de préparer le téléchargement.",
         "faq": {
-          "q1": "Quelle est la différence entre retournement horizontal et vertical ?",
-          "a1": "Le retournement horizontal reflète l'image de gauche à droite, comme un miroir. Le retournement vertical reflète l'image de haut en bas.",
-          "q2": "Le retournement réduit-il la qualité de l'image ?",
+          "q1": "Quelle est la différence entre retourner et pivoter ?",
+          "a1": "Retourner reflète l'image (gauche/droite ou haut/bas). Pivoter la fait tourner de 90 degrés dans le sens horaire ou anti-horaire. Vous pouvez combiner les quatre opérations — par exemple, retourner horizontalement puis pivoter de 90 degrés dans le sens horaire.",
+          "q2": "La transformation réduit-elle la qualité de l'image ?",
           "a2": "Non. L'image est redessinée à sa résolution originale. Les images JPEG sont réencodées à 92% de qualité.",
           "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
           "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
           "q4": "Puis-je utiliser cet outil hors connexion ?",
           "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
-          "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
+          "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème.",
+          "q6": "Les transformations peuvent-elles être empilées ou annulées ?",
+          "a6": "Oui. Les opérations s'empilent — cliquer sur pivoter puis sur retourner applique les deux. Cliquez sur Réinitialiser pour revenir à l'image originale. Les transformations ne sont appliquées au fichier final que lorsque vous cliquez sur Télécharger."
         },
         "seoContent": {
           "intro": {
-            "title": "Qu'est-ce que le Retournement d'image ?",
-            "content": "<p><strong>Le Retournement d'image</strong> reflète les images horizontalement (de gauche à droite) ou verticalement (de haut en bas) en un clic. Rapide et simple — téléchargez, retournez et téléchargez.</p><p>Utile pour corriger les selfies miroir, créer des designs symétriques ou corriger l'orientation des images.</p>"
+            "title": "Qu'est-ce que Retourner et pivoter ?",
+            "content": "<p><strong>Retourner et pivoter</strong> transforme les images dans votre navigateur avec quatre opérations : retournement horizontal, retournement vertical, rotation de 90 degrés dans le sens horaire et rotation de 90 degrés dans le sens anti-horaire. Les opérations s'empilent et l'aperçu se met à jour instantanément à chaque clic.</p><p>Utile pour corriger les selfies miroir, faire pivoter les photos de téléphone prises de côté, corriger l'orientation des numérisations ou préparer des images pour le design.</p>"
           },
           "howToUse": {
-            "title": "Comment utiliser le Retournement d'image",
-            "content": "<ol><li>Téléchargez une image en cliquant sur la zone de dépôt ou en la faisant glisser sur la page</li><li>Cliquez sur <strong>Retourner horizontalement</strong> pour refléter gauche/droite, ou <strong>Retourner verticalement</strong> pour refléter haut/bas</li><li>Prévisualisez le résultat et téléchargez l'image retournée</li></ol><p>Vous pouvez appliquer les deux retournements pour créer un effet de rotation à 180°.</p>"
+            "title": "Comment utiliser Retourner et pivoter",
+            "content": "<ol><li>Téléchargez une image en cliquant sur la zone de dépôt ou en la faisant glisser sur la page</li><li>Cliquez sur n'importe quelle combinaison des boutons <strong>Pivoter</strong> et <strong>Retourner</strong> — l'aperçu se met à jour immédiatement</li><li>Utilisez <strong>Réinitialiser</strong> à tout moment pour revenir à l'original</li><li>Cliquez sur <strong>Télécharger</strong> pour enregistrer l'image transformée</li></ol>"
           },
           "features": {
             "title": "Fonctionnalités clés",
-            "content": "<ul><li><strong>Retournement horizontal</strong> : Reflète l'image de gauche à droite</li><li><strong>Retournement vertical</strong> : Reflète l'image de haut en bas</li><li><strong>Traitement instantané</strong> : Le retournement se fait immédiatement avec la Canvas API</li><li><strong>Préservation de la qualité</strong> : Aucune perte de qualité lors du retournement</li><li><strong>Prise en charge des lots</strong> : Retournez plusieurs images à la fois</li><li><strong>Aperçu</strong> : Voyez le résultat retourné avant de télécharger</li></ul>"
+            "content": "<ul><li><strong>Quatre transformations</strong> : Retournement horizontal, retournement vertical, rotation de 90 degrés dans le sens horaire, rotation de 90 degrés dans le sens anti-horaire</li><li><strong>Aperçu en direct</strong> : Voyez le résultat instantanément à chaque clic</li><li><strong>Opérations empilables</strong> : Combinez plusieurs transformations librement</li><li><strong>Réinitialisation en un clic</strong> : Revenez à l'image originale à tout moment</li><li><strong>Préservation de la qualité</strong> : Sortie à la résolution originale, JPEG réencodé à 92% de qualité</li><li><strong>100% local</strong> : Canvas API s'exécute entièrement dans votre navigateur — sans envoi</li></ul>"
           },
           "useCases": {
             "title": "Cas d'utilisation courants",
-            "content": "<ul><li><strong>Correction de selfies</strong> : Dé-miroir les selfies pris avec les caméras frontales</li><li><strong>Travail de design</strong> : Créez des versions en miroir pour des mises en page symétriques</li><li><strong>Préparation à l'impression</strong> : Retournez les images pour l'impression de transfert thermocollant</li><li><strong>Correction de photos</strong> : Corrigez les images qui ont été numérisées ou photographiées à l'envers</li><li><strong>Art et design</strong> : Vérifiez la composition en visualisant une version en miroir</li></ul>"
+            "content": "<ul><li><strong>Correction de selfies</strong> : Dé-miroir les selfies pris avec les caméras frontales</li><li><strong>Photos de téléphone</strong> : Pivotez rapidement les photos prises de côté dans le bon sens</li><li><strong>Documents numérisés</strong> : Corrigez les images numérisées ou photographiées à l'envers</li><li><strong>Travail de design</strong> : Créez des variantes en miroir ou pivotées pour des mises en page symétriques</li><li><strong>Préparation à l'impression</strong> : Retournez les images pour l'impression de transfert thermocollant</li></ul>"
           },
           "privacy": {
-            "title": "Retournement d'images axé sur la confidentialité",
-            "content": "<p>Les images sont retournées <strong>localement dans votre navigateur</strong> à l'aide de la Canvas API.</p><ul><li>Vos images <strong>ne quittent jamais votre appareil</strong></li><li>Aucun traitement serveur requis</li><li>Fonctionne <strong>hors connexion</strong> après le chargement de la page</li></ul>"
+            "title": "Transformation d'images axée sur la confidentialité",
+            "content": "<p>Les images sont transformées <strong>localement dans votre navigateur</strong> à l'aide de la Canvas API.</p><ul><li>Vos images <strong>ne quittent jamais votre appareil</strong></li><li>Aucun traitement serveur requis</li><li>Fonctionne <strong>hors connexion</strong> après le chargement de la page</li></ul>"
           }
         }
       },

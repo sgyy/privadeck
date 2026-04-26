@@ -663,47 +663,60 @@
         }
       },
       "flip": {
-        "name": "Odbij obraz",
-        "description": "Odbij obrazy poziomo lub pionowo jednym kliknięciem.",
-        "metaTitle": "Odbij obraz - Darmowe narzędzie do odbijania online",
-        "metaDescription": "Odbij obrazy poziomo lub pionowo online za darmo. Bez przesyłania, całe przetwarzanie odbywa się w przeglądarce.",
-        "keywords": "odbij obraz, lustrzane odbicie, odbicie poziome, odbicie pionowe",
+        "name": "Odbij i obróć",
+        "description": "Odbijaj i obracaj obrazy w przeglądarce z podglądem na żywo.",
+        "metaTitle": "Odbicie i obrót obrazu - Bezpłatny transformator obrazów online",
+        "metaDescription": "Odbijaj i obracaj obrazy w przeglądarce. Stosuj odbicia poziome/pionowe i obroty o 90 stopni z podglądem na żywo. Bez przesyłania, całe przetwarzanie lokalnie.",
+        "keywords": "odbij obraz, obróć obraz, lustrzane odbicie, obrót 90 stopni, transformator obrazów, odbicie poziome, odbicie pionowe, obrót obrazów online",
         "horizontal": "Poziomo",
         "vertical": "Pionowo",
-        "flipImage": "Odbij obraz",
+        "flip": "Odbij",
+        "flipHorizontal": "Odbij w poziomie",
+        "flipVertical": "Odbij w pionie",
+        "rotate": "Obróć",
+        "rotateCW": "Obróć o 90 stopni zgodnie z ruchem wskazówek zegara",
+        "rotateCCW": "Obróć o 90 stopni przeciwnie do ruchu wskazówek zegara",
+        "reset": "Resetuj",
+        "download": "Pobierz",
+        "downloading": "Przygotowywanie pobierania...",
         "processing": "Przetwarzanie...",
+        "previewLabel": "Podgląd",
+        "fullscreen": "Pełny ekran",
+        "downloadFailed": "Nie udało się przygotować pobierania.",
         "faq": {
-          "q1": "Jaka jest różnica między odbiciem poziomym a pionowym?",
-          "a1": "Odbicie poziome tworzy lustrzane odbicie z lewej na prawą, jak patrzenie w lustro. Odbicie pionowe tworzy odbicie z góry na dół.",
-          "q2": "Czy odbijanie zmniejsza jakość obrazu?",
-          "a2": "Nie. Obraz jest ponownie rysowany w oryginalnej rozdzielczości. Obrazy JPEG są ponownie kodowane z jakością 92%.",
-          "q3": "Czy moje pliki zostaną przesłane na serwer?",
-          "a3": "Nie. Całe przetwarzanie odbywa się w przeglądarce. Twoje dane nigdy nie opuszczają urządzenia — nic nie jest przesyłane na serwer.",
-          "q4": "Czy mogę używać tego narzędzia offline?",
-          "a4": "Tak. Po załadowaniu strony narzędzie działa całkowicie offline. Dla najlepszego doświadczenia zainstaluj PrivaDeck jako PWA z poziomu przeglądarki.",
+          "q1": "Jaka jest różnica między odbijaniem a obracaniem?",
+          "a1": "Odbijanie tworzy lustrzane odbicie obrazu (lewo/prawo lub góra/dół). Obracanie przekręca go o 90 stopni zgodnie z ruchem wskazówek zegara lub przeciwnie. Możesz łączyć wszystkie cztery operacje — na przykład odbij poziomo, a następnie obróć o 90 stopni w prawo.",
+          "q2": "Czy transformacja zmniejsza jakość obrazu?",
+          "a2": "Nie. Obraz jest przerysowywany w oryginalnej rozdzielczości. Obrazy JPEG są kodowane ponownie z jakością 92%.",
+          "q3": "Czy moje pliki będą wysyłane na serwer?",
+          "a3": "Nie. Całe przetwarzanie odbywa się w pełni w Twojej przeglądarce. Twoje dane nigdy nie opuszczają urządzenia — nic nie jest wysyłane na żaden serwer.",
+          "q4": "Czy mogę używać tego narzędzia bez połączenia?",
+          "a4": "Tak. Po załadowaniu strony narzędzie działa w pełni offline. Aby uzyskać najlepsze doświadczenie, zainstaluj PrivaDeck jako PWA z poziomu przeglądarki.",
           "q5": "Czy są limity rozmiaru pliku?",
-          "a5": "Nie ma limitów narzucanych przez serwer. Maksymalny rozmiar pliku zależy od dostępnej pamięci urządzenia i możliwości przeglądarki. Większość nowoczesnych urządzeń bez problemu obsługuje pliki do kilkuset MB."
+          "a5": "Nie ma limitów po stronie serwera. Maksymalny rozmiar pliku zależy od dostępnej pamięci urządzenia i możliwości przeglądarki. Większość nowoczesnych urządzeń obsługuje pliki o rozmiarze do kilkuset MB bez problemu.",
+          "q6": "Czy transformacje można nakładać lub cofać?",
+          "a6": "Tak. Operacje się kumulują — kliknięcie obróć, a następnie odbij zastosuje obie. Kliknij Resetuj, aby wrócić do oryginalnego obrazu. Transformacje są zapisywane w pliku finalnym dopiero po kliknięciu Pobierz."
         },
         "seoContent": {
           "intro": {
-            "title": "Co to jest Odbij obraz?",
-            "content": "<p><strong>Odbij obraz</strong> tworzy lustrzane odbicie obrazów poziomo (z lewej na prawą) lub pionowo (z góry na dół) jednym kliknięciem. Szybkie i proste — prześlij, odbij i pobierz.</p><p>Przydatne do korygowania lustrzanych selfie, tworzenia symetrycznych projektów lub naprawiania orientacji obrazu.</p>"
+            "title": "Czym jest Odbij i obróć?",
+            "content": "<p><strong>Odbij i obróć</strong> przekształca obrazy w Twojej przeglądarce za pomocą czterech operacji: odbicie poziome, odbicie pionowe, obrót o 90 stopni w prawo i obrót o 90 stopni w lewo. Operacje kumulują się, a podgląd aktualizuje się natychmiast po każdym kliknięciu.</p><p>Przydatne do korygowania lustrzanych selfie, obracania bocznie wykonanych zdjęć z telefonu, korygowania orientacji skanów lub przygotowywania obrazów do projektowania.</p>"
           },
           "howToUse": {
-            "title": "Jak używać Odbij obraz",
-            "content": "<ol><li>Prześlij obraz klikając strefę upuszczania lub przeciągając go na stronę</li><li>Kliknij <strong>Odbij poziomo</strong>, aby odbić lewo/prawo, lub <strong>Odbij pionowo</strong>, aby odbić góra/dół</li><li>Podgląd wyniku i pobierz obraz odbity</li></ol><p>Możesz zastosować oba odbicia, aby stworzyć efekt obrotu o 180°.</p>"
+            "title": "Jak używać Odbij i obróć",
+            "content": "<ol><li>Prześlij obraz, klikając strefę upuszczania lub przeciągając go na stronę</li><li>Klikaj dowolną kombinację przycisków <strong>Obróć</strong> i <strong>Odbij</strong> — podgląd aktualizuje się natychmiast</li><li>Użyj <strong>Resetuj</strong> w dowolnym momencie, aby wrócić do oryginału</li><li>Kliknij <strong>Pobierz</strong>, aby zapisać przekształcony obraz</li></ol>"
           },
           "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Odbicie poziome</strong>: Lustrzane odbicie obrazu z lewej na prawą</li><li><strong>Odbicie pionowe</strong>: Lustrzane odbicie obrazu z góry na dół</li><li><strong>Natychmiastowe przetwarzanie</strong>: Odbicie następuje natychmiast z Canvas API</li><li><strong>Zachowanie jakości</strong>: Brak utraty jakości podczas odbijania</li><li><strong>Obsługa wsadowa</strong>: Odbijaj wiele obrazów jednocześnie</li><li><strong>Podgląd</strong>: Zobacz wynik odbicia przed pobraniem</li></ul>"
+            "title": "Kluczowe funkcje",
+            "content": "<ul><li><strong>Cztery transformacje</strong>: odbicie poziome, odbicie pionowe, obrót o 90 stopni w prawo, obrót o 90 stopni w lewo</li><li><strong>Podgląd na żywo</strong>: zobacz wynik natychmiast po kliknięciu</li><li><strong>Operacje kumulujące się</strong>: swobodnie łącz wiele transformacji</li><li><strong>Reset jednym kliknięciem</strong>: wróć do oryginalnego obrazu w dowolnym momencie</li><li><strong>Zachowanie jakości</strong>: wyjście w oryginalnej rozdzielczości, JPEG zakodowany ponownie z jakością 92%</li><li><strong>100% lokalnie</strong>: Canvas API działa w pełni w Twojej przeglądarce — bez przesyłania</li></ul>"
           },
           "useCases": {
-            "title": "Typowe przypadki użycia",
-            "content": "<ul><li><strong>Korekta selfie</strong>: Cofnij lustrzane odbicie zdjęć selfie z przednich kamer</li><li><strong>Praca projektowa</strong>: Twórz wersje lustrzane dla symetrycznych układów</li><li><strong>Przygotowanie do druku</strong>: Odbijaj obrazy do druku na transfer żelazkowy</li><li><strong>Korekta zdjęć</strong>: Napraw obrazy, które zostały zeskanowane lub sfotografowane do tyłu</li><li><strong>Sztuka i projektowanie</strong>: Sprawdź kompozycję oglądając wersję lustrzaną</li></ul>"
+            "title": "Typowe zastosowania",
+            "content": "<ul><li><strong>Korekta selfie</strong>: odwróć lustrzane selfie z aparatów przednich</li><li><strong>Zdjęcia z telefonu</strong>: szybko obróć boczne zdjęcia do właściwej orientacji</li><li><strong>Zeskanowane dokumenty</strong>: napraw obrazy zeskanowane lub sfotografowane do góry nogami</li><li><strong>Praca projektowa</strong>: twórz lustrzane lub obrócone warianty do symetrycznych układów</li><li><strong>Przygotowanie do druku</strong>: odbij obrazy do druku transferowego</li></ul>"
           },
           "privacy": {
-            "title": "Odwracanie obrazów z priorytetem prywatności",
-            "content": "<p>Obrazy są odbijane <strong>lokalnie w przeglądarce</strong> używając Canvas API.</p><ul><li>Twoje obrazy <strong>nigdy nie opuszczają urządzenia</strong></li><li>Brak wymaganego przetwarzania po stronie serwera</li><li>Działa <strong>offline</strong> po załadowaniu strony</li></ul>"
+            "title": "Transformacja obrazów z priorytetem prywatności",
+            "content": "<p>Obrazy są przekształcane <strong>lokalnie w Twojej przeglądarce</strong> przy użyciu Canvas API.</p><ul><li>Twoje obrazy <strong>nigdy nie opuszczają Twojego urządzenia</strong></li><li>Brak konieczności przetwarzania na serwerze</li><li>Działa <strong>offline</strong> po załadowaniu strony</li></ul>"
           }
         }
       },

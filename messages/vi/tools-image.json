@@ -663,47 +663,60 @@
         }
       },
       "flip": {
-        "name": "Lật hình ảnh",
-        "description": "Lật hình ảnh theo chiều ngang hoặc dọc chỉ với một cú nhấp.",
-        "metaTitle": "Lật hình ảnh - Trình lật hình ảnh trực tuyến miễn phí",
-        "metaDescription": "Lật hình ảnh theo chiều ngang hoặc dọc trực tuyến miễn phí. Không cần tải lên, mọi xử lý diễn ra trong trình duyệt.",
-        "keywords": "lật hình ảnh, ảnh phản chiếu, lật ngang, lật dọc",
+        "name": "Lật & xoay",
+        "description": "Lật và xoay ảnh trong trình duyệt với xem trước trực tiếp.",
+        "metaTitle": "Lật và xoay ảnh - Công cụ chuyển đổi ảnh trực tuyến miễn phí",
+        "metaDescription": "Lật và xoay ảnh trong trình duyệt. Áp dụng lật ngang/dọc và xoay 90 độ với xem trước trực tiếp. Không cần tải lên, mọi xử lý tại chỗ.",
+        "keywords": "lật ảnh, xoay ảnh, ảnh phản chiếu, xoay 90 độ, công cụ chuyển đổi ảnh, lật ngang, lật dọc, công cụ xoay ảnh trực tuyến",
         "horizontal": "Ngang",
         "vertical": "Dọc",
-        "flipImage": "Lật hình ảnh",
+        "flip": "Lật",
+        "flipHorizontal": "Lật ngang",
+        "flipVertical": "Lật dọc",
+        "rotate": "Xoay",
+        "rotateCW": "Xoay 90 độ theo chiều kim đồng hồ",
+        "rotateCCW": "Xoay 90 độ ngược chiều kim đồng hồ",
+        "reset": "Đặt lại",
+        "download": "Tải xuống",
+        "downloading": "Đang chuẩn bị tải xuống...",
         "processing": "Đang xử lý...",
+        "previewLabel": "Xem trước",
+        "fullscreen": "Xem toàn màn hình",
+        "downloadFailed": "Không thể chuẩn bị tải xuống.",
         "faq": {
-          "q1": "Sự khác biệt giữa lật ngang và dọc là gì?",
-          "a1": "Lật ngang phản chiếu hình ảnh từ trái sang phải, giống như nhìn trong gương. Lật dọc phản chiếu hình ảnh từ trên xuống dưới.",
-          "q2": "Lật có làm giảm chất lượng hình ảnh không?",
-          "a2": "Không. Hình ảnh được vẽ lại ở độ phân giải gốc. Hình ảnh JPEG được mã hóa lại ở chất lượng 92%.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
+          "q1": "Lật và xoay khác nhau như thế nào?",
+          "a1": "Lật phản chiếu ảnh (trái/phải hoặc trên/dưới). Xoay quay nó 90 độ theo chiều kim đồng hồ hoặc ngược chiều kim đồng hồ. Bạn có thể kết hợp cả bốn thao tác — ví dụ, lật ngang rồi xoay 90 độ theo chiều kim đồng hồ.",
+          "q2": "Việc biến đổi có làm giảm chất lượng ảnh không?",
+          "a2": "Không. Ảnh được vẽ lại ở độ phân giải gốc. Ảnh JPEG được mã hóa lại ở chất lượng 92%.",
+          "q3": "Tệp của tôi có được tải lên máy chủ không?",
+          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt của bạn. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
+          "q4": "Tôi có thể sử dụng công cụ này khi không có mạng không?",
+          "a4": "Có. Sau khi trang được tải, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck dưới dạng PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
-          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
+          "a5": "Không có giới hạn từ phía máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng của thiết bị và khả năng của trình duyệt. Hầu hết thiết bị hiện đại xử lý tệp lên đến vài trăm MB mà không gặp vấn đề.",
+          "q6": "Có thể chồng các thao tác hoặc hoàn tác không?",
+          "a6": "Có. Các thao tác chồng lên nhau — nhấn xoay rồi lật sẽ áp dụng cả hai. Nhấn Đặt lại để trở về ảnh gốc. Các biến đổi chỉ được ghi vào tệp cuối cùng khi bạn nhấn Tải xuống."
         },
         "seoContent": {
           "intro": {
-            "title": "Lật hình ảnh là gì?",
-            "content": "<p><strong>Lật hình ảnh</strong> phản chiếu hình ảnh theo chiều ngang (trái sang phải) hoặc dọc (trên xuống dưới) chỉ với một cú nhấp. Nhanh chóng và đơn giản — tải lên, lật và tải xuống.</p><p>Hữu ích để sửa ảnh selfie bị phản chiếu, tạo thiết kế đối xứng hoặc sửa hướng hình ảnh.</p>"
+            "title": "Lật & xoay là gì?",
+            "content": "<p><strong>Lật & xoay</strong> biến đổi ảnh trong trình duyệt với bốn thao tác: lật ngang, lật dọc, xoay 90 độ theo chiều kim đồng hồ và xoay 90 độ ngược chiều kim đồng hồ. Các thao tác chồng lên nhau và xem trước được cập nhật ngay lập tức khi bạn nhấn.</p><p>Hữu ích để chỉnh selfie phản chiếu, xoay ảnh điện thoại chụp ngang, sửa hướng quét hoặc chuẩn bị ảnh cho công việc thiết kế.</p>"
           },
           "howToUse": {
-            "title": "Cách sử dụng công cụ Lật hình ảnh",
-            "content": "<ol><li>Tải lên hình ảnh bằng cách nhấp vào vùng thả hoặc kéo nó vào trang</li><li>Nhấp <strong>Lật ngang</strong> để phản chiếu trái/phải, hoặc <strong>Lật dọc</strong> để phản chiếu trên/dưới</li><li>Xem trước kết quả và tải xuống hình ảnh đã lật</li></ol><p>Bạn có thể áp dụng cả hai lật để tạo hiệu ứng xoay 180°.</p>"
+            "title": "Cách sử dụng Lật & xoay",
+            "content": "<ol><li>Tải lên ảnh bằng cách nhấp vào vùng thả hoặc kéo nó vào trang</li><li>Nhấn vào bất kỳ tổ hợp nào của các nút <strong>Xoay</strong> và <strong>Lật</strong> — xem trước cập nhật ngay lập tức</li><li>Sử dụng <strong>Đặt lại</strong> bất cứ lúc nào để trở về ảnh gốc</li><li>Nhấn <strong>Tải xuống</strong> để lưu ảnh đã biến đổi</li></ol>"
           },
           "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Lật ngang</strong>: Phản chiếu hình ảnh từ trái sang phải</li><li><strong>Lật dọc</strong>: Phản chiếu hình ảnh từ trên xuống dưới</li><li><strong>Xử lý tức thì</strong>: Lật diễn ra ngay lập tức với Canvas API</li><li><strong>Bảo toàn chất lượng</strong>: Không mất chất lượng khi lật</li><li><strong>Hỗ trợ hàng loạt</strong>: Lật nhiều hình ảnh cùng lúc</li><li><strong>Xem trước</strong>: Xem kết quả lật trước khi tải xuống</li></ul>"
+            "title": "Tính năng chính",
+            "content": "<ul><li><strong>Bốn biến đổi</strong>: Lật ngang, lật dọc, xoay 90 độ theo chiều kim đồng hồ, xoay 90 độ ngược chiều kim đồng hồ</li><li><strong>Xem trước trực tiếp</strong>: Thấy kết quả ngay khi nhấn</li><li><strong>Thao tác chồng được</strong>: Tự do kết hợp nhiều biến đổi</li><li><strong>Đặt lại một nhấp</strong>: Trở về ảnh gốc bất cứ lúc nào</li><li><strong>Bảo toàn chất lượng</strong>: Đầu ra ở độ phân giải gốc, JPEG mã hóa lại ở 92% chất lượng</li><li><strong>100% tại chỗ</strong>: Canvas API chạy hoàn toàn trong trình duyệt — không tải lên</li></ul>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
-            "content": "<ul><li><strong>Sửa ảnh selfie</strong>: Khử phản chiếu ảnh selfie từ camera trước</li><li><strong>Thiết kế</strong>: Tạo phiên bản phản chiếu cho bố cục đối xứng</li><li><strong>Chuẩn bị in ấn</strong>: Lật hình ảnh để in chuyển nhiệt</li><li><strong>Sửa ảnh</strong>: Sửa hình ảnh bị quét hoặc chụp ngược</li><li><strong>Nghệ thuật và thiết kế</strong>: Kiểm tra bố cục bằng cách xem phiên bản phản chiếu</li></ul>"
+            "content": "<ul><li><strong>Sửa selfie</strong>: Bỏ phản chiếu ảnh selfie từ camera trước</li><li><strong>Ảnh điện thoại</strong>: Nhanh chóng xoay ảnh chụp ngang về đúng hướng</li><li><strong>Tài liệu quét</strong>: Sửa ảnh quét hoặc chụp ngược</li><li><strong>Công việc thiết kế</strong>: Tạo phiên bản phản chiếu hoặc xoay cho bố cục đối xứng</li><li><strong>Chuẩn bị in</strong>: Lật ảnh để in chuyển nhiệt</li></ul>"
           },
           "privacy": {
-            "title": "Ưu tiên quyền riêng tư khi lật hình ảnh",
-            "content": "<p>Hình ảnh được lật <strong>cục bộ trong trình duyệt của bạn</strong> bằng Canvas API.</p><ul><li>Hình ảnh của bạn <strong>không bao giờ rời khỏi thiết bị</strong></li><li>Không cần xử lý máy chủ</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi trang tải xong</li></ul>"
+            "title": "Biến đổi ảnh ưu tiên quyền riêng tư",
+            "content": "<p>Ảnh được biến đổi <strong>cục bộ trong trình duyệt</strong> bằng Canvas API.</p><ul><li>Ảnh của bạn <strong>không bao giờ rời khỏi thiết bị</strong></li><li>Không cần xử lý phía máy chủ</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi trang được tải</li></ul>"
           }
         }
       },

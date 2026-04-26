@@ -663,47 +663,60 @@
         }
       },
       "flip": {
-        "name": "Afbeelding spiegelen",
-        "description": "Spiegel afbeeldingen horizontaal of verticaal met één klik.",
-        "metaTitle": "Afbeelding spiegelen - Gratis online spiegeltool",
-        "metaDescription": "Spiegel afbeeldingen gratis online horizontaal of verticaal. Geen upload nodig, alle verwerking gebeurt in je browser.",
-        "keywords": "afbeelding spiegelen, spiegel afbeelding, horizontaal spiegelen, verticaal spiegelen",
+        "name": "Spiegelen & draaien",
+        "description": "Spiegel en draai afbeeldingen in je browser met live voorbeeld.",
+        "metaTitle": "Afbeelding spiegelen en draaien - Gratis online beeldtransformator",
+        "metaDescription": "Spiegel en draai afbeeldingen in je browser. Pas horizontale/verticale spiegelingen en rotaties van 90 graden toe met live voorbeeld. Geen upload, alle verwerking lokaal.",
+        "keywords": "afbeelding spiegelen, afbeelding draaien, spiegelafbeelding, 90 graden draaien, beeldtransformator, horizontaal spiegelen, verticaal spiegelen, online afbeelding draaien",
         "horizontal": "Horizontaal",
         "vertical": "Verticaal",
-        "flipImage": "Afbeelding spiegelen",
-        "processing": "Verwerken...",
+        "flip": "Spiegelen",
+        "flipHorizontal": "Horizontaal spiegelen",
+        "flipVertical": "Verticaal spiegelen",
+        "rotate": "Draaien",
+        "rotateCW": "90 graden met de klok mee draaien",
+        "rotateCCW": "90 graden tegen de klok in draaien",
+        "reset": "Resetten",
+        "download": "Downloaden",
+        "downloading": "Download voorbereiden...",
+        "processing": "Bezig met verwerken...",
+        "previewLabel": "Voorbeeld",
+        "fullscreen": "Volledig scherm bekijken",
+        "downloadFailed": "Kon de download niet voorbereiden.",
         "faq": {
-          "q1": "Wat is het verschil tussen horizontaal en verticaal spiegelen?",
-          "a1": "Horizontaal spiegelen spiegelt de afbeelding van links naar rechts, alsof je in een spiegel kijkt. Verticaal spiegelen spiegelt van boven naar beneden.",
-          "q2": "Vermindert spiegelen de beeldkwaliteit?",
-          "a2": "Nee. De afbeelding wordt opnieuw getekend op de originele resolutie. JPEG-afbeeldingen worden opnieuw gecodeerd op 92% kwaliteit.",
+          "q1": "Wat is het verschil tussen spiegelen en draaien?",
+          "a1": "Spiegelen geeft de afbeelding in spiegelbeeld weer (links/rechts of boven/onder). Draaien roteert hem 90 graden met of tegen de klok in. Je kunt alle vier de operaties combineren — bijvoorbeeld eerst horizontaal spiegelen en daarna 90 graden met de klok mee draaien.",
+          "q2": "Vermindert transformeren de beeldkwaliteit?",
+          "a2": "Nee. De afbeelding wordt opnieuw getekend op de oorspronkelijke resolutie. JPEG-afbeeldingen worden opnieuw gecodeerd op 92% kwaliteit.",
           "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
+          "a3": "Nee. Alle verwerking gebeurt volledig in je browser. Je gegevens verlaten nooit je apparaat — er wordt niets naar een server geüpload.",
           "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
-          "q5": "Zijn er bestandsgroottebeperkingen?",
-          "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
+          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeer je PrivaDeck als PWA vanuit je browser.",
+          "q5": "Zijn er bestandsgroottelimieten?",
+          "a5": "Er zijn geen serverbeperkingen. De maximale bestandsgrootte hangt af van het beschikbare geheugen van je apparaat en de mogelijkheden van de browser. De meeste moderne apparaten verwerken bestanden van enkele honderden MB zonder problemen.",
+          "q6": "Kun je transformaties stapelen of ongedaan maken?",
+          "a6": "Ja. Bewerkingen stapelen op — klik op draaien en daarna op spiegelen om beide toe te passen. Klik op Resetten om terug te keren naar de originele afbeelding. Transformaties worden pas in het uiteindelijke bestand opgeslagen wanneer je op Downloaden klikt."
         },
         "seoContent": {
           "intro": {
-            "title": "Wat is Flip Image?",
-            "content": "<p><strong>Flip Image</strong> mirrors images horizontally (left to right) or vertically (top to bottom) in one click. Quick and simple — upload, flip, and download.</p><p>Useful for correcting mirrored selfies, creating symmetrical designs, or fixing image orientation.</p>"
+            "title": "Wat is Spiegelen & draaien?",
+            "content": "<p><strong>Spiegelen & draaien</strong> transformeert afbeeldingen in je browser met vier bewerkingen: horizontaal spiegelen, verticaal spiegelen, 90 graden met de klok mee draaien en 90 graden tegen de klok in draaien. Bewerkingen stapelen op en het voorbeeld wordt direct bijgewerkt bij elke klik.</p><p>Handig voor het corrigeren van gespiegelde selfies, het draaien van zijwaarts gemaakte telefoonfoto's, het corrigeren van scanoriëntatie of het voorbereiden van afbeeldingen voor designwerk.</p>"
           },
           "howToUse": {
-            "title": "Hoe te gebruiken Flip Image",
-            "content": "<ol><li>Upload an image by clicking the dropzone or dragging it onto the page</li><li>Click <strong>Flip Horizontal</strong> to mirror left/right, or <strong>Flip Vertical</strong> to mirror top/bottom</li><li>Preview the result and download the flipped image</li></ol><p>You can apply both flips to create a 180° rotation effect.</p>"
+            "title": "Spiegelen & draaien gebruiken",
+            "content": "<ol><li>Upload een afbeelding door op de drop-zone te klikken of de afbeelding op de pagina te slepen</li><li>Klik op elke combinatie van de knoppen <strong>Draaien</strong> en <strong>Spiegelen</strong> — het voorbeeld wordt direct bijgewerkt</li><li>Gebruik <strong>Resetten</strong> op elk moment om terug te keren naar het origineel</li><li>Klik op <strong>Downloaden</strong> om de getransformeerde afbeelding op te slaan</li></ol>"
           },
           "features": {
             "title": "Belangrijkste functies",
-            "content": "<ul><li><strong>Horizontal Flip</strong>: Mirror image left to right</li><li><strong>Vertical Flip</strong>: Mirror image top to bottom</li><li><strong>Instant Processing</strong>: Flip happens immediately with Canvas API</li><li><strong>Quality Preservation</strong>: No quality loss during flipping</li><li><strong>Batch Support</strong>: Flip multiple images at once</li><li><strong>Preview</strong>: See the flipped result before downloading</li></ul>"
+            "content": "<ul><li><strong>Vier transformaties</strong>: horizontaal spiegelen, verticaal spiegelen, 90 graden met de klok mee draaien, 90 graden tegen de klok in draaien</li><li><strong>Live voorbeeld</strong>: zie het resultaat direct bij elke klik</li><li><strong>Stapelbare bewerkingen</strong>: combineer meerdere transformaties vrij</li><li><strong>Eén-klik resetten</strong>: keer op elk moment terug naar het origineel</li><li><strong>Kwaliteitsbehoud</strong>: uitvoer in originele resolutie, JPEG opnieuw gecodeerd op 92%</li><li><strong>100% lokaal</strong>: Canvas API draait volledig in je browser — geen upload</li></ul>"
           },
           "useCases": {
-            "title": "Veelvoorkomende gebruiksmogelijkheden",
-            "content": "<ul><li><strong>Selfie Correction</strong>: Un-mirror selfie photos from front-facing cameras</li><li><strong>Design Work</strong>: Create mirrored versions for symmetrical layouts</li><li><strong>Print Preparation</strong>: Flip images for iron-on transfer printing</li><li><strong>Photo Correction</strong>: Fix images that were scanned or photographed backwards</li><li><strong>Art & Design</strong>: Check composition by viewing a mirrored version</li></ul>"
+            "title": "Veelvoorkomende toepassingen",
+            "content": "<ul><li><strong>Selfie-correctie</strong>: ont-spiegel selfies van frontale camera's</li><li><strong>Telefoonfoto's</strong>: draai snel zijwaarts gemaakte foto's naar de juiste oriëntatie</li><li><strong>Gescande documenten</strong>: corrigeer afbeeldingen die ondersteboven gescand of gefotografeerd zijn</li><li><strong>Designwerk</strong>: maak gespiegelde of gedraaide varianten voor symmetrische lay-outs</li><li><strong>Drukvoorbereiding</strong>: spiegel afbeeldingen voor strijktransfer-printing</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First afbeeldingsomkering",
-            "content": "<p>Images are flipped <strong>locally in your browser</strong> using the Canvas API.</p><ul><li>Your images <strong>never leave your device</strong></li><li>No server processing required</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Privacy-eerst beeldtransformatie",
+            "content": "<p>Afbeeldingen worden <strong>lokaal in je browser</strong> getransformeerd via de Canvas API.</p><ul><li>Je afbeeldingen <strong>verlaten nooit je apparaat</strong></li><li>Geen serververwerking nodig</li><li>Werkt <strong>offline</strong> nadat de pagina is geladen</li></ul>"
           }
         }
       },

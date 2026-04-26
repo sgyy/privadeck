@@ -663,47 +663,60 @@
         }
       },
       "flip": {
-        "name": "Espelhar imagem",
-        "description": "Espelhe imagens na horizontal ou na vertical com um clique.",
-        "metaTitle": "Espelhar imagem - Ferramenta gratuita online",
-        "metaDescription": "Espelhe imagens na horizontal ou na vertical online gratuitamente. Sem envio necessário, todo o processamento acontece no seu navegador.",
-        "keywords": "espelhar imagem, imagem espelhada, espelhar horizontal, espelhar vertical",
+        "name": "Espelhar e rodar",
+        "description": "Espelhe e rode imagens no navegador com pré-visualização em tempo real.",
+        "metaTitle": "Espelhar e rodar imagem - Transformador de imagens gratuito online",
+        "metaDescription": "Espelhe e rode imagens no seu navegador. Aplique espelhamentos horizontais/verticais e rotações de 90 graus com pré-visualização em tempo real. Sem carregamento, todo o processamento é local.",
+        "keywords": "espelhar imagem, rodar imagem, imagem espelho, rodar 90 graus, transformador de imagens, espelhamento horizontal, espelhamento vertical, rotador de imagens online",
         "horizontal": "Horizontal",
         "vertical": "Vertical",
-        "flipImage": "Espelhar imagem",
+        "flip": "Espelhar",
+        "flipHorizontal": "Espelhar horizontalmente",
+        "flipVertical": "Espelhar verticalmente",
+        "rotate": "Rodar",
+        "rotateCW": "Rodar 90 graus no sentido horário",
+        "rotateCCW": "Rodar 90 graus no sentido anti-horário",
+        "reset": "Repor",
+        "download": "Transferir",
+        "downloading": "A preparar transferência...",
         "processing": "A processar...",
+        "previewLabel": "Pré-visualização",
+        "fullscreen": "Ver em ecrã inteiro",
+        "downloadFailed": "Não foi possível preparar a transferência.",
         "faq": {
-          "q1": "Qual é a diferença entre espelhamento horizontal e vertical?",
-          "a1": "O espelhamento horizontal inverte a imagem da esquerda para a direita, como olhar num espelho. O espelhamento vertical inverte de cima para baixo.",
-          "q2": "Espelhar reduz a qualidade da imagem?",
-          "a2": "Não. A imagem é redesenhada na resolução original. Imagens JPEG são recodificadas com qualidade de 92%.",
+          "q1": "Qual a diferença entre espelhar e rodar?",
+          "a1": "Espelhar reflete a imagem (esquerda/direita ou cima/baixo). Rodar vira-a 90 graus no sentido horário ou anti-horário. Pode combinar todas as quatro operações — por exemplo, espelhe horizontalmente e depois rode 90 graus no sentido horário.",
+          "q2": "A transformação reduz a qualidade da imagem?",
+          "a2": "Não. A imagem é redesenhada na sua resolução original. As imagens JPEG são recodificadas a 92% de qualidade.",
           "q3": "Os meus ficheiros serão enviados para um servidor?",
-          "a3": "Não. Todo o processamento acontece inteiramente no seu navegador. Os seus dados nunca saem do seu dispositivo — nada é enviado para nenhum servidor.",
-          "q4": "Posso utilizar esta ferramenta offline?",
-          "a4": "Sim. Depois que a página carregar, a ferramenta funciona completamente offline. Para a melhor experiência, instale o PrivaDeck como PWA pelo seu navegador.",
-          "q5": "Existem limites de tamanho de ficheiro?",
-          "a5": "Não há limites impostos pelo servidor. O tamanho máximo do ficheiro depende da memória disponível do seu dispositivo e dos recursos do navegador. A maioria dos dispositivos modernos lida com ficheiros de várias centenas de MB sem problemas."
+          "a3": "Não. Todo o processamento ocorre inteiramente no seu navegador. Os seus dados nunca saem do seu dispositivo — nada é enviado para qualquer servidor.",
+          "q4": "Posso utilizar esta ferramenta sem ligação?",
+          "a4": "Sim. Depois da página carregar, a ferramenta funciona completamente sem ligação à internet. Para a melhor experiência, instale o PrivaDeck como PWA a partir do seu navegador.",
+          "q5": "Há limites de tamanho de ficheiro?",
+          "a5": "Não há limites impostos pelo servidor. O tamanho máximo do ficheiro depende da memória disponível no seu dispositivo e das capacidades do navegador. A maioria dos dispositivos modernos lida com ficheiros até várias centenas de MB sem problemas.",
+          "q6": "As transformações podem ser acumuladas ou desfeitas?",
+          "a6": "Sim. As operações acumulam-se — clicar em rodar e depois em espelhar aplica ambas. Clique em Repor para voltar à imagem original. As transformações só são aplicadas ao ficheiro final quando clica em Transferir."
         },
         "seoContent": {
           "intro": {
-            "title": "O que é Flip Image?",
-            "content": "<p><strong>Flip Image</strong> mirrors images horizontally (left to right) or vertically (top to bottom) in one click. Quick and simple — upload, flip, and download.</p><p>Useful for correcting mirrored selfies, creating symmetrical designs, or fixing image orientation.</p>"
+            "title": "O que é Espelhar e rodar?",
+            "content": "<p><strong>Espelhar e rodar</strong> transforma imagens no seu navegador com quatro operações: espelhamento horizontal, espelhamento vertical, rotação de 90 graus no sentido horário e rotação de 90 graus no sentido anti-horário. As operações acumulam-se e a pré-visualização atualiza-se instantaneamente a cada clique.</p><p>Útil para corrigir selfies espelhados, rodar fotografias de telemóvel tiradas de lado, corrigir a orientação de digitalizações ou preparar imagens para design.</p>"
           },
           "howToUse": {
-            "title": "Como Utilizar Flip Image",
-            "content": "<ol><li>Upload an image by clicking the dropzone or dragging it onto the page</li><li>Click <strong>Flip Horizontal</strong> to mirror left/right, or <strong>Flip Vertical</strong> to mirror top/bottom</li><li>Preview the result and download the flipped image</li></ol><p>You can apply both flips to create a 180° rotation effect.</p>"
+            "title": "Como utilizar Espelhar e rodar",
+            "content": "<ol><li>Carregue uma imagem clicando na zona de largar ou arrastando-a para a página</li><li>Clique em qualquer combinação dos botões <strong>Rodar</strong> e <strong>Espelhar</strong> — a pré-visualização atualiza-se imediatamente</li><li>Utilize <strong>Repor</strong> a qualquer momento para voltar ao original</li><li>Clique em <strong>Transferir</strong> para guardar a imagem transformada</li></ol>"
           },
           "features": {
-            "title": "Principais Características",
-            "content": "<ul><li><strong>Horizontal Flip</strong>: Mirror image left to right</li><li><strong>Vertical Flip</strong>: Mirror image top to bottom</li><li><strong>Instant Processing</strong>: Flip happens immediately with Canvas API</li><li><strong>Quality Preservation</strong>: No quality loss during flipping</li><li><strong>Batch Support</strong>: Flip multiple images at once</li><li><strong>Preview</strong>: See the flipped result before downloading</li></ul>"
+            "title": "Funcionalidades principais",
+            "content": "<ul><li><strong>Quatro transformações</strong>: Espelhamento horizontal, espelhamento vertical, rotação de 90 graus no sentido horário, rotação de 90 graus no sentido anti-horário</li><li><strong>Pré-visualização em tempo real</strong>: Veja o resultado instantaneamente</li><li><strong>Operações acumuláveis</strong>: Combine várias transformações livremente</li><li><strong>Reposição com um clique</strong>: Volte à imagem original a qualquer momento</li><li><strong>Preservação da qualidade</strong>: Saída na resolução original, JPEG recodificado a 92% de qualidade</li><li><strong>100% local</strong>: Canvas API corre inteiramente no seu navegador — sem carregamento</li></ul>"
           },
           "useCases": {
-            "title": "Casos de Uso Comuns",
-            "content": "<ul><li><strong>Selfie Correction</strong>: Un-mirror selfie photos from front-facing cameras</li><li><strong>Design Work</strong>: Create mirrored versions for symmetrical layouts</li><li><strong>Print Preparation</strong>: Flip images for iron-on transfer printing</li><li><strong>Photo Correction</strong>: Fix images that were scanned or photographed backwards</li><li><strong>Art & Design</strong>: Check composition by viewing a mirrored version</li></ul>"
+            "title": "Casos de utilização comuns",
+            "content": "<ul><li><strong>Correção de selfies</strong>: Des-espelha selfies tiradas com câmaras frontais</li><li><strong>Fotografias de telemóvel</strong>: Rode rapidamente fotografias tiradas de lado para a orientação correta</li><li><strong>Documentos digitalizados</strong>: Corrige imagens digitalizadas ou fotografadas ao contrário</li><li><strong>Trabalho de design</strong>: Crie variantes espelhadas ou rodadas para layouts simétricos</li><li><strong>Preparação para impressão</strong>: Espelhe imagens para impressão de transferência térmica</li></ul>"
           },
           "privacy": {
-            "title": "Prioriza Privacidade - Image Flipping",
-            "content": "<p>Images are flipped <strong>locally in your navegador</strong> using the Canvas API.</p><ul><li>Os seus images <strong>never leave your device</strong></li><li>No server processing required</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Transformação de imagens com privacidade em primeiro lugar",
+            "content": "<p>As imagens são transformadas <strong>localmente no seu navegador</strong> utilizando o Canvas API.</p><ul><li>As suas imagens <strong>nunca saem do seu dispositivo</strong></li><li>Nenhum processamento no servidor é necessário</li><li>Funciona <strong>sem ligação</strong> após o carregamento da página</li></ul>"
           }
         }
       },

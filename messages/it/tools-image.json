@@ -663,47 +663,60 @@
         }
       },
       "flip": {
-        "name": "Capovolgi immagine",
-        "description": "Capovolgere le immagini orizzontalmente o verticalmente con un clic.",
-        "metaTitle": "Capovolgi immagine - Strumento gratuito online",
-        "metaDescription": "Capovolgere le immagini orizzontalmente o verticalmente online gratis. Nessun caricamento necessario, tutta l'elaborazione avviene nel tuo browser.",
-        "keywords": "capovolgi immagine, immagine specchio, capovolgimento orizzontale, capovolgimento verticale",
+        "name": "Capovolgi e ruota",
+        "description": "Capovolgi e ruota le immagini nel browser con anteprima in tempo reale.",
+        "metaTitle": "Capovolgi e ruota immagine - Trasformatore di immagini gratuito online",
+        "metaDescription": "Capovolgi e ruota le immagini nel tuo browser. Applica capovolgimenti orizzontali/verticali e rotazioni di 90 gradi con anteprima in tempo reale. Nessun caricamento, tutta l'elaborazione locale.",
+        "keywords": "capovolgi immagine, ruota immagine, immagine specchio, ruota 90 gradi, trasformatore di immagini, capovolgimento orizzontale, capovolgimento verticale, rotatore di immagini online",
         "horizontal": "Orizzontale",
         "vertical": "Verticale",
-        "flipImage": "Capovolgi immagine",
+        "flip": "Capovolgi",
+        "flipHorizontal": "Capovolgi orizzontalmente",
+        "flipVertical": "Capovolgi verticalmente",
+        "rotate": "Ruota",
+        "rotateCW": "Ruota di 90 gradi in senso orario",
+        "rotateCCW": "Ruota di 90 gradi in senso antiorario",
+        "reset": "Reimposta",
+        "download": "Scarica",
+        "downloading": "Preparazione del download...",
         "processing": "Elaborazione in corso...",
+        "previewLabel": "Anteprima",
+        "fullscreen": "Visualizza a schermo intero",
+        "downloadFailed": "Impossibile preparare il download.",
         "faq": {
-          "q1": "Qual è la differenza tra capovolgimento orizzontale e verticale?",
-          "a1": "Il capovolgimento orizzontale riflette l'immagine da sinistra a destra, come uno specchio. Il capovolgimento verticale riflette l'immagine dall'alto in basso.",
-          "q2": "Il capovolgimento riduce la qualità dell'immagine?",
+          "q1": "Qual è la differenza tra capovolgere e ruotare?",
+          "a1": "Capovolgere specchia l'immagine (sinistra/destra o alto/basso). Ruotare la gira di 90 gradi in senso orario o antiorario. Puoi combinare tutte e quattro le operazioni — ad esempio, capovolgi orizzontalmente e poi ruota di 90 gradi in senso orario.",
+          "q2": "La trasformazione riduce la qualità dell'immagine?",
           "a2": "No. L'immagine viene ridisegnata alla sua risoluzione originale. Le immagini JPEG vengono ricodificate al 92% di qualità.",
           "q3": "I miei file verranno caricati su un server?",
           "a3": "No. Tutto il trattamento avviene interamente nel browser. I tuoi dati non lasciano mai il dispositivo — nulla viene caricato su alcun server.",
           "q4": "Posso usare questo strumento offline?",
           "a4": "Sì. Una volta caricata la pagina, lo strumento funziona completamente offline. Per la migliore esperienza, installa PrivaDeck come PWA dal tuo browser.",
           "q5": "Ci sono limiti di dimensione file?",
-          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi."
+          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi.",
+          "q6": "Le trasformazioni possono essere accumulate o annullate?",
+          "a6": "Sì. Le operazioni si accumulano — cliccando ruota e poi capovolgi vengono applicate entrambe. Clicca Reimposta per tornare all'immagine originale. Le trasformazioni vengono applicate al file finale solo quando clicchi Scarica."
         },
         "seoContent": {
           "intro": {
-            "title": "Che cos'è Flip Image?",
-            "content": "<p><strong>Flip Image</strong> specchia le immagini orizzontalmente (da sinistra a destra) o verticalmente (dall'alto in basso) con un clic. Rapido e semplice — carica, capovolgi e scarica.</p><p>Utile per correggere selfie specchiati, creare design simmetrici o sistemare l'orientamento delle immagini.</p>"
+            "title": "Cos'è Capovolgi e ruota?",
+            "content": "<p><strong>Capovolgi e ruota</strong> trasforma le immagini nel tuo browser con quattro operazioni: capovolgimento orizzontale, capovolgimento verticale, rotazione di 90 gradi in senso orario e rotazione di 90 gradi in senso antiorario. Le operazioni si accumulano e l'anteprima si aggiorna istantaneamente a ogni clic.</p><p>Utile per correggere selfie specchiati, ruotare foto del telefono scattate di lato, correggere l'orientamento delle scansioni o preparare immagini per il design.</p>"
           },
           "howToUse": {
-            "title": "Come utilizzare Flip Image",
-            "content": "<ol><li>Carica un'immagine cliccando sull'area di rilascio o trascinandola sulla pagina</li><li>Clicca su <strong>Capovolgi orizzontale</strong> per specchiare sinistra/destra, o <strong>Capovolgi verticale</strong> per specchiare alto/basso</li><li>Visualizza l'anteprima del risultato e scarica l'immagine capovolta</li></ol><p>Puoi applicare entrambi i capovolgimenti per creare un effetto di rotazione di 180°.</p>"
+            "title": "Come utilizzare Capovolgi e ruota",
+            "content": "<ol><li>Carica un'immagine cliccando sull'area di rilascio o trascinandola sulla pagina</li><li>Clicca su qualsiasi combinazione dei pulsanti <strong>Ruota</strong> e <strong>Capovolgi</strong> — l'anteprima si aggiorna immediatamente</li><li>Usa <strong>Reimposta</strong> in qualsiasi momento per tornare all'originale</li><li>Clicca su <strong>Scarica</strong> per salvare l'immagine trasformata</li></ol>"
           },
           "features": {
             "title": "Caratteristiche principali",
-            "content": "<ul><li><strong>Capovolgimento orizzontale</strong>: Specchia l'immagine da sinistra a destra</li><li><strong>Capovolgimento verticale</strong>: Specchia l'immagine dall'alto in basso</li><li><strong>Elaborazione istantanea</strong>: Il capovolgimento avviene immediatamente con Canvas API</li><li><strong>Preservazione qualità</strong>: Nessuna perdita di qualità durante il capovolgimento</li><li><strong>Supporto batch</strong>: Capovolgi più immagini contemporaneamente</li><li><strong>Anteprima</strong>: Vedi il risultato capovolto prima del download</li></ul>"
+            "content": "<ul><li><strong>Quattro trasformazioni</strong>: Capovolgimento orizzontale, capovolgimento verticale, rotazione di 90 gradi in senso orario, rotazione di 90 gradi in senso antiorario</li><li><strong>Anteprima in tempo reale</strong>: Vedi il risultato istantaneamente</li><li><strong>Operazioni accumulabili</strong>: Combina più trasformazioni liberamente</li><li><strong>Reimpostazione con un clic</strong>: Torna all'immagine originale in qualsiasi momento</li><li><strong>Conservazione della qualità</strong>: Output alla risoluzione originale, JPEG ricodificato al 92% di qualità</li><li><strong>100% locale</strong>: Canvas API si esegue interamente nel tuo browser — nessun caricamento</li></ul>"
           },
           "useCases": {
             "title": "Casi d'uso comuni",
-            "content": "<ul><li><strong>Correzione selfie</strong>: De-specchia le foto selfie dalle fotocamere frontali</li><li><strong>Lavoro di design</strong>: Crea versioni specchiate per layout simmetrici</li><li><strong>Preparazione stampa</strong>: Capovolgi le immagini per la stampa su transfer</li><li><strong>Correzione foto</strong>: Sistema le immagini scansionate o fotografate al contrario</li><li><strong>Arte e design</strong>: Controlla la composizione visualizzando una versione specchiata</li></ul>"
+            "content": "<ul><li><strong>Correzione selfie</strong>: De-specchia le foto selfie dalle fotocamere frontali</li><li><strong>Foto del telefono</strong>: Ruota rapidamente le foto scattate di lato nell'orientamento corretto</li><li><strong>Documenti scansionati</strong>: Sistema le immagini scansionate o fotografate al contrario</li><li><strong>Lavoro di design</strong>: Crea varianti specchiate o ruotate per layout simmetrici</li><li><strong>Preparazione stampa</strong>: Capovolgi le immagini per la stampa su transfer</li></ul>"
           },
           "privacy": {
-            "title": "Capovolgimento immagini con privacy come priorità",
-            "content": "<p>Le immagini vengono capovolte <strong>localmente nel tuo browser</strong> utilizzando Canvas API.</p><ul><li>Le tue immagini <strong>non lasciano mai il tuo dispositivo</strong></li><li>Nessuna elaborazione server richiesta</li><li>Funziona <strong>offline</strong> dopo il caricamento della pagina</li></ul>"
+            "title": "Trasformazione di immagini con privacy come priorità",
+            "content": "<p>Le immagini vengono trasformate <strong>localmente nel tuo browser</strong> utilizzando Canvas API.</p><ul><li>Le tue immagini <strong>non lasciano mai il tuo dispositivo</strong></li><li>Nessuna elaborazione server richiesta</li><li>Funziona <strong>offline</strong> dopo il caricamento della pagina</li></ul>"
           }
         }
       },
