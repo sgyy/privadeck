@@ -4,9 +4,9 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { Button } from "@/components/ui/Button";
-import { Select } from "@/components/ui/Select";
-import { Download, X } from "lucide-react";
+import { Download, FileText, RefreshCw, X } from "lucide-react";
 import { brandFilename } from "@/lib/brand";
+import { getPdfjs } from "@/lib/pdfjs";
 import {
   convertPdfToImages,
   downloadAsZip,
@@ -16,6 +16,8 @@ import {
 
 export default function PdfToImage() {
   const [file, setFile] = useState<File | null>(null);
+  const [pageCount, setPageCount] = useState<number | null>(null);
+  const [thumbnail, setThumbnail] = useState<string | null>(null);
   const [format, setFormat] = useState<"png" | "jpeg">("png");
   const [quality, setQuality] = useState(90);
   const [scale, setScale] = useState(2);
@@ -26,6 +28,7 @@ export default function PdfToImage() {
   const [previewIndex, setPreviewIndex] = useState<number | null>(null);
   const generationRef = useRef(0);
   const urlMapRef = useRef<Map<Blob, string>>(new Map());
+  const replaceInputRef = useRef<HTMLInputElement>(null);
   const t = useTranslations("tools.pdf.to-image");
   const tc = useTranslations("common");
 
@@ -72,6 +75,59 @@ export default function PdfToImage() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [previewIndex]);
+
+  async function handleFile(files: File[]) {
+    const f = files[0];
+    if (!f) return;
+    const gen = ++generationRef.current;
+    setFile(f);
+    setError("");
+    setResults([]);
+    setPageCount(null);
+    setThumbnail(null);
+    setProgress({ current: 0, total: 0 });
+    setPreviewIndex(null);
+    try {
+      const pdfjsLib = await getPdfjs();
+      const buf = await f.arrayBuffer();
+      const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
+      if (generationRef.current !== gen) return;
+      setPageCount(pdf.numPages);
+      const page = await pdf.getPage(1);
+      const viewport = page.getViewport({ scale: 1 });
+      const targetW = 160;
+      const thumbScale = targetW / viewport.width;
+      const scaled = page.getViewport({ scale: thumbScale });
+      const canvas = document.createElement("canvas");
+      canvas.width = scaled.width;
+      canvas.height = scaled.height;
+      const ctx = canvas.getContext("2d");
+      if (!ctx) return;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any -- pdfjs-dist v5 render() requires canvas prop not in type defs
+      await page.render({ canvasContext: ctx, viewport: scaled, canvas } as any).promise;
+      if (generationRef.current !== gen) return;
+      setThumbnail(canvas.toDataURL("image/png"));
+    } catch (e) {
+      console.warn("Failed to read PDF preview:", e);
+    }
+  }
+
+  function handleRemoveFile() {
+    generationRef.current++;
+    setFile(null);
+    setPageCount(null);
+    setThumbnail(null);
+    setResults([]);
+    setError("");
+    setProgress({ current: 0, total: 0 });
+    setPreviewIndex(null);
+  }
+
+  function onReplacePicked(e: React.ChangeEvent<HTMLInputElement>) {
+    const f = e.target.files?.[0];
+    e.target.value = "";
+    if (f) void handleFile([f]);
+  }
 
   function removePage(index: number) {
     setResults((prev) => prev.filter((_, i) => i !== index));
@@ -122,36 +178,133 @@ export default function PdfToImage() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="application/pdf" onFiles={(f) => { setFile(f[0]); setError(""); }} />
+      {!file && <FileDropzone accept="application/pdf" onFiles={handleFile} />}
 
       {file && (
-        <div className="flex flex-wrap items-end gap-4">
-          <div>
-            <label className="mb-1 block text-sm font-medium">{t("format")}</label>
-            <Select value={format} onChange={(e) => setFormat(e.target.value as "png" | "jpeg")}>
-              <option value="png">PNG</option>
-              <option value="jpeg">JPG</option>
-            </Select>
-          </div>
-
-          {format === "jpeg" && (
-            <div>
-              <label className="mb-1 block text-sm font-medium">{t("quality")}: {quality}%</label>
-              <input type="range" min={10} max={100} value={quality} onChange={(e) => setQuality(Number(e.target.value))} className="w-32" />
+        <>
+          {/* File info card */}
+          <div className="flex items-center gap-4 rounded-lg border border-border bg-muted/30 p-3">
+            <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center overflow-hidden rounded-md border border-border bg-card">
+              {thumbnail ? (
+                // eslint-disable-next-line @next/next/no-img-element -- data URL preview, optimization not applicable
+                <img src={thumbnail} alt={file.name} className="h-full w-full object-contain" />
+              ) : (
+                <FileText className="h-8 w-8 text-muted-foreground" />
+              )}
             </div>
-          )}
-
-          <div>
-            <label className="mb-1 block text-sm font-medium">{t("scale")}: {scale}x</label>
-            <input type="range" min={1} max={4} step={0.5} value={scale} onChange={(e) => setScale(Number(e.target.value))} className="w-32" />
+            <div className="min-w-0 flex-1">
+              <p className="truncate text-sm font-medium">{file.name}</p>
+              <p className="text-xs text-muted-foreground">
+                {pageCount !== null && <>{pageCount} {t("pages")} · </>}
+                {formatFileSize(file.size)}
+              </p>
+            </div>
+            <div className="flex flex-shrink-0 items-center gap-1">
+              <button
+                type="button"
+                disabled={converting}
+                onClick={() => replaceInputRef.current?.click()}
+                className="inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                <RefreshCw className="h-3.5 w-3.5" />
+                {tc("replaceFile")}
+              </button>
+              <button
+                type="button"
+                disabled={converting}
+                onClick={handleRemoveFile}
+                className="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-red-100 hover:text-red-600 disabled:cursor-not-allowed disabled:opacity-40 dark:hover:bg-red-950 dark:hover:text-red-400"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+            <input
+              ref={replaceInputRef}
+              type="file"
+              accept="application/pdf"
+              onChange={onReplacePicked}
+              className="hidden"
+            />
           </div>
 
-          <Button onClick={handleConvert} disabled={converting}>
-            {converting
-              ? `${t("converting")} (${progress.current}/${progress.total})`
-              : t("convert")}
-          </Button>
-        </div>
+          {/* Output format */}
+          <div className="space-y-2 rounded-lg border border-border bg-muted/20 p-3">
+            <label className="text-sm font-medium">{t("format")}</label>
+            <div className="flex flex-wrap gap-2">
+              <Button
+                variant={format === "png" ? "primary" : "outline"}
+                size="sm"
+                onClick={() => setFormat("png")}
+              >
+                PNG
+              </Button>
+              <Button
+                variant={format === "jpeg" ? "primary" : "outline"}
+                size="sm"
+                onClick={() => setFormat("jpeg")}
+              >
+                JPG
+              </Button>
+            </div>
+          </div>
+
+          {/* Scale + quality */}
+          <div className="space-y-3 rounded-lg border border-border bg-muted/20 p-3">
+            <div className="space-y-2">
+              <label className="flex items-center justify-between text-sm font-medium">
+                <span>{t("scale")}</span>
+                <span className="tabular-nums text-muted-foreground">{scale}x</span>
+              </label>
+              <input
+                type="range"
+                min={1}
+                max={4}
+                step={0.5}
+                value={scale}
+                onChange={(e) => setScale(Number(e.target.value))}
+                className="w-full accent-primary"
+              />
+            </div>
+
+            {format === "jpeg" && (
+              <div className="space-y-2">
+                <label className="flex items-center justify-between text-sm font-medium">
+                  <span>{t("quality")}</span>
+                  <span className="tabular-nums text-muted-foreground">{quality}%</span>
+                </label>
+                <input
+                  type="range"
+                  min={10}
+                  max={100}
+                  value={quality}
+                  onChange={(e) => setQuality(Number(e.target.value))}
+                  className="w-full accent-primary"
+                />
+              </div>
+            )}
+          </div>
+
+          {/* Convert button + progress */}
+          <div className="space-y-3">
+            <Button
+              onClick={handleConvert}
+              disabled={converting}
+              className="w-full sm:w-auto"
+            >
+              {converting
+                ? `${t("converting")} (${progress.current}/${progress.total})`
+                : t("convert")}
+            </Button>
+            {converting && progress.total > 0 && (
+              <div className="h-2 overflow-hidden rounded-full bg-muted">
+                <div
+                  className="h-full rounded-full bg-primary transition-all"
+                  style={{ width: `${(progress.current / progress.total) * 100}%` }}
+                />
+              </div>
+            )}
+          </div>
+        </>
       )}
 
       {error && (
