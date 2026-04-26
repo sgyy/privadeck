@@ -1,5 +1,4 @@
-export type OutputFormat = "image/jpeg" | "image/png";
-
+export type OutputFormat = "image/jpeg" | "image/png" | "image/gif";
 export type UserRotate = 0 | 90 | 180 | 270;
 
 export interface UserTransform {
@@ -27,6 +26,7 @@ export interface DecodedImage {
   img: HTMLImageElement;
   width: number;
   height: number;
+  frameCount: number;
 }
 
 export async function parseHeicExif(file: File): Promise<ExifInfo> {
@@ -70,12 +70,30 @@ export async function decodeHeic(file: File): Promise<DecodedImage> {
   const heic2any = (await import("heic2any")).default;
   const result = await heic2any({
     blob: file,
+    multiple: true,
     toType: "image/png",
   });
-  const blob = Array.isArray(result) ? result[0] : result;
+  const blobs = Array.isArray(result) ? result : [result];
+  const blob = blobs[0];
   const url = URL.createObjectURL(blob);
   const img = await loadImage(url);
-  return { blob, url, img, width: img.naturalWidth, height: img.naturalHeight };
+  return {
+    blob,
+    url,
+    img,
+    width: img.naturalWidth,
+    height: img.naturalHeight,
+    frameCount: blobs.length,
+  };
+}
+
+export async function convertHeicToGif(file: File): Promise<Blob> {
+  const heic2any = (await import("heic2any")).default;
+  const result = await heic2any({
+    blob: file,
+    toType: "image/gif",
+  });
+  return Array.isArray(result) ? result[0] : result;
 }
 
 function loadImage(url: string): Promise<HTMLImageElement> {
@@ -115,19 +133,15 @@ export function renderToCanvas(
   ctx.save();
   ctx.clearRect(0, 0, outW, outH);
 
-  // Move origin to center so rotations and flips compose around the middle
   ctx.translate(outW / 2, outH / 2);
 
-  // Apply user flip first in the output frame
   if (transform.flipH) ctx.scale(-1, 1);
   if (transform.flipV) ctx.scale(1, -1);
 
-  // Apply user rotate
   if (transform.rotate) {
     ctx.rotate((transform.rotate * Math.PI) / 180);
   }
 
-  // Apply EXIF orientation (drawn image is still in sensor frame, so we rotate/mirror it)
   applyExifOrientation(ctx, orient);
 
   ctx.drawImage(img, -baseW / 2, -baseH / 2);

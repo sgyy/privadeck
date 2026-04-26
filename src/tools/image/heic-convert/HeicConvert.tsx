@@ -9,6 +9,7 @@ import {
   Maximize2,
   RotateCcw,
   RotateCw,
+  Sparkles,
   Undo2,
 } from "lucide-react";
 import { SingleImageUpload } from "@/components/shared/SingleImageUpload";
@@ -16,6 +17,7 @@ import { ImageLightbox } from "@/components/shared/ImageLightbox";
 import { Button } from "@/components/ui/Button";
 import { createToolTracker, trackEvent } from "@/lib/analytics";
 import {
+  convertHeicToGif,
   decodeHeic,
   detectApple,
   encodeCanvas,
@@ -79,8 +81,8 @@ export default function HeicConvert() {
     setExif(null);
     setApple(null);
     setPreviewDataUrl(null);
+    setFormat("image/jpeg");
 
-    // Clean old decoded URL
     if (decodedUrlRef.current) {
       URL.revokeObjectURL(decodedUrlRef.current);
       decodedUrlRef.current = null;
@@ -98,7 +100,6 @@ export default function HeicConvert() {
         parseHeicExif(f),
         decodeHeic(f),
       ]);
-      // Drop stale results if the user picked another file mid-decode or unmounted
       if (!mountedRef.current || requestId !== requestIdRef.current) {
         URL.revokeObjectURL(decodedImage.url);
         return;
@@ -108,7 +109,6 @@ export default function HeicConvert() {
       setExif(exifInfo);
       setApple(appleSource);
       setDecoded(decodedImage);
-      // Analytics must not be able to abort a successful decode
       if (appleSource) {
         try {
           trackEvent("apple_detected", {
@@ -133,7 +133,6 @@ export default function HeicConvert() {
     }
   }, [t]);
 
-  // Re-render canvas whenever decoded image, exif, or transform changes
   useEffect(() => {
     if (!decoded || !canvasRef.current) return;
     renderToCanvas(decoded.img, canvasRef.current, exif?.orientation, transform);
@@ -147,7 +146,6 @@ export default function HeicConvert() {
       setPreviewDataUrl(dataUrl);
       setLightboxOpen(true);
     } catch (e) {
-      // toDataURL can fail when the canvas exceeds the browser's max area
       const rawMsg = e instanceof Error ? e.message : String(e);
       tracker.trackProcessError(`preview: ${rawMsg}`);
       setError(t("previewFailed"));
@@ -175,15 +173,19 @@ export default function HeicConvert() {
   }, []);
 
   const handleDownload = useCallback(async () => {
-    if (!canvasRef.current || !file) return;
+    if (!file) return;
+    if (format !== "image/gif" && !canvasRef.current) return;
     setDownloading(true);
     setError("");
     const start = Date.now();
     try {
-      const blob = await encodeCanvas(canvasRef.current, format, quality);
+      const blob =
+        format === "image/gif"
+          ? await convertHeicToGif(file)
+          : await encodeCanvas(canvasRef.current!, format, quality);
       if (!mountedRef.current) return;
       tracker.trackProcessComplete(Date.now() - start);
-      const ext = format === "image/jpeg" ? "jpg" : "png";
+      const ext = format === "image/gif" ? "gif" : format === "image/jpeg" ? "jpg" : "png";
       const base = file.name.replace(/\.[^.]+$/, "") || "converted";
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
@@ -206,6 +208,8 @@ export default function HeicConvert() {
   const rotateLabel = `${transform.rotate}°`;
   const modified =
     transform.rotate !== 0 || transform.flipH || transform.flipV;
+  const isGif = format === "image/gif";
+  const isBurst = (decoded?.frameCount ?? 0) > 1;
 
   return (
     <div className="space-y-4">
@@ -213,6 +217,7 @@ export default function HeicConvert() {
         file={file}
         onFileChange={handleFileChange}
         accept=".heic,.heif,image/heic,image/heif"
+        disabled={decoding || downloading}
       />
 
       {file && decoding && (
@@ -257,6 +262,14 @@ export default function HeicConvert() {
             </div>
           )}
 
+          {/* Burst badge */}
+          {isBurst && (
+            <div className="flex items-start gap-2 rounded-lg border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-800 dark:border-emerald-900 dark:bg-emerald-950 dark:text-emerald-300">
+              <Sparkles className="mt-0.5 h-4 w-4 flex-shrink-0" />
+              <span>{t("burstDetected", { count: decoded.frameCount })}</span>
+            </div>
+          )}
+
           {/* Transform controls */}
           <div className="space-y-3 rounded-lg border border-border bg-muted/20 p-3">
             <div className="flex flex-wrap items-center gap-2">
@@ -268,6 +281,7 @@ export default function HeicConvert() {
                 size="sm"
                 onClick={() => handleRotate("ccw")}
                 title={t("rotateLeft")}
+                disabled={isGif}
               >
                 <RotateCcw className="h-4 w-4" />
                 <span className="sr-only">{t("rotateLeft")}</span>
@@ -277,6 +291,7 @@ export default function HeicConvert() {
                 size="sm"
                 onClick={() => handleRotate("cw")}
                 title={t("rotateRight")}
+                disabled={isGif}
               >
                 <RotateCw className="h-4 w-4" />
                 <span className="sr-only">{t("rotateRight")}</span>
@@ -293,6 +308,7 @@ export default function HeicConvert() {
                 size="sm"
                 onClick={handleFlipH}
                 title={t("flipHorizontal")}
+                disabled={isGif}
               >
                 <FlipHorizontal className="h-4 w-4" />
                 <span className="sr-only">{t("flipHorizontal")}</span>
@@ -302,12 +318,13 @@ export default function HeicConvert() {
                 size="sm"
                 onClick={handleFlipV}
                 title={t("flipVertical")}
+                disabled={isGif}
               >
                 <FlipVertical className="h-4 w-4" />
                 <span className="sr-only">{t("flipVertical")}</span>
               </Button>
 
-              {modified && (
+              {modified && !isGif && (
                 <Button
                   variant="ghost"
                   size="sm"
@@ -319,13 +336,16 @@ export default function HeicConvert() {
                 </Button>
               )}
             </div>
+            {isGif && (
+              <p className="text-xs text-muted-foreground">{t("gifNote")}</p>
+            )}
           </div>
 
           {/* Format & quality */}
           <div className="space-y-3 rounded-lg border border-border bg-muted/20 p-3">
             <div className="space-y-2">
               <label className="text-sm font-medium">{t("outputFormat")}</label>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 <Button
                   variant={format === "image/jpeg" ? "primary" : "outline"}
                   size="sm"
@@ -340,6 +360,15 @@ export default function HeicConvert() {
                 >
                   PNG
                 </Button>
+                {isBurst && (
+                  <Button
+                    variant={format === "image/gif" ? "primary" : "outline"}
+                    size="sm"
+                    onClick={() => setFormat("image/gif")}
+                  >
+                    GIF
+                  </Button>
+                )}
               </div>
             </div>
 
