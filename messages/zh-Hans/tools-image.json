@@ -1078,6 +1078,39 @@
         "metaTitle": "HEIC 转 JPG/PNG 转换器 · 支持旋转与翻转 - 免费在线",
         "metaDescription": "将一张 HEIC 或 HEIF 照片转为 JPG 或 PNG，自动按 Apple Photos 的方式校正 EXIF 方向，并可手动旋转、翻转。100% 本地处理，零上传。",
         "keywords": "heic 转 jpg, heic 转 png, heif 转换器, iphone 照片转换, heic 方向校正, heic 旋转, heic 翻转, apple 照片转换",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "Apple 风格自动方向校正",
+            "description": "读取 EXIF Orientation 标签（1–8 八种取值）并将其烘焙到像素中，与 iPhone「照片」应用显示效果完全一致 —— 在 Windows 上再也不会出现躺倒的照片。"
+          },
+          "f2": {
+            "icon": "ArrowLeftRight",
+            "title": "手动旋转与翻转",
+            "description": "在自动校正的基础上，按 90° 步进微调旋转，或水平/垂直镜像翻转，所有调整都会即时刷新实时预览。"
+          },
+          "f3": {
+            "icon": "FileVideo",
+            "title": "连拍照片 → 动图 GIF",
+            "description": "自动识别 iPhone 连拍 HEIC 文件，一键导出为单个动图 GIF，附带实时编码进度。每一帧都会应用方向校正。"
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPG / PNG / GIF 多格式输出",
+            "description": "原始 HEIC 只需解码一次，即可在 JPEG、PNG 或 GIF（连拍专用）之间随意切换，无需重新上传。"
+          },
+          "f5": {
+            "icon": "Gauge",
+            "title": "JPEG 质量自由调节",
+            "description": "通过简单的滑块在 10%–100% 之间精确调节 JPEG 输出质量，灵活平衡文件体积与画质。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 本地处理 · 永不上传",
+            "description": "HEIC 解码（heic2any）、EXIF 解析（exifr）、重新编码全部在浏览器内完成，照片永不离开设备，并可作为 PWA 离线使用。"
+          }
+        },
         "selectedFile": "选定文件",
         "outputFormat": "输出格式",
         "quality": "质量",

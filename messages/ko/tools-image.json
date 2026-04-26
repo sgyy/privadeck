@@ -1088,6 +1088,39 @@
         "metaTitle": "HEIC → JPG/PNG 변환기 (회전·반전 지원) - 무료 온라인",
         "metaDescription": "HEIC 또는 HEIF 사진 한 장을 JPG 또는 PNG로 변환합니다. Apple Photos와 동일하게 EXIF 방향을 자동 보정하고 수동으로 회전·반전할 수 있습니다. 100% 로컬 처리, 업로드 없음.",
         "keywords": "heic를 jpg로, heic를 png로, heif 변환기, 아이폰 사진 변환, heic 방향 보정, heic 회전, heic 반전, apple 사진 변환",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "Apple 스타일 자동 방향 보정",
+            "description": "EXIF Orientation 태그(1~8 값)를 읽어 픽셀에 직접 적용하여, iPhone 사진 앱에서 보는 것과 동일한 방향으로 표시합니다. Windows에서 옆으로 누운 사진을 더는 보지 않아도 됩니다."
+          },
+          "f2": {
+            "icon": "ArrowLeftRight",
+            "title": "수동 회전 및 뒤집기",
+            "description": "자동 보정 위에 90° 단위 회전과 좌우/상하 미러링을 세밀하게 조정할 수 있습니다. 모든 조작이 실시간 미리보기에 즉시 반영됩니다."
+          },
+          "f3": {
+            "icon": "FileVideo",
+            "title": "연속 촬영 → 움직이는 GIF",
+            "description": "iPhone 버스트 HEIC를 자동으로 감지하여, 인코딩 진행률 표시와 함께 하나의 움직이는 GIF로 내보냅니다. 모든 프레임에 방향 보정이 적용됩니다."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPG · PNG · GIF 다중 포맷 출력",
+            "description": "HEIC를 한 번만 디코딩하면 JPEG, PNG 또는 GIF(연속 촬영 전용) 사이를 자유롭게 전환할 수 있습니다. 다시 업로드할 필요가 없습니다."
+          },
+          "f5": {
+            "icon": "Gauge",
+            "title": "JPEG 품질 자유 조절",
+            "description": "간단한 슬라이더로 JPEG 출력 품질을 10%에서 100%까지 정밀하게 조정하여 파일 크기와 화질의 균형을 맞출 수 있습니다."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 로컬 처리 · 업로드 없음",
+            "description": "디코딩(heic2any), EXIF 분석(exifr), 재인코딩이 모두 브라우저 안에서 실행됩니다. 사진은 기기를 떠나지 않으며 PWA로 오프라인에서도 동작합니다."
+          }
+        },
         "selectedFile": "선택된 파일",
         "outputFormat": "출력 형식",
         "quality": "품질",

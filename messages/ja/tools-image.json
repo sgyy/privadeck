@@ -1078,6 +1078,39 @@
         "metaTitle": "HEIC から JPG/PNG 変換（回転・反転対応） - 無料オンライン",
         "metaDescription": "HEIC/HEIF 写真を 1 枚単位で JPG または PNG に変換。Apple Photos と同じ方法で EXIF の向きを自動適用し、手動で回転・反転も可能。100% ローカル処理、アップロード不要。",
         "keywords": "heic から jpg, heic から png, heif 変換, iphone 写真 変換, heic 向き 補正, heic 回転, heic 反転, apple 写真 変換",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "Apple 流の自動向き補正",
+            "description": "EXIF の Orientation タグ（1〜8）を読み取ってピクセルに焼き付け、iPhone「写真」App での表示と完全に一致させます。Windows で写真が横倒しになる問題を解消します。"
+          },
+          "f2": {
+            "icon": "ArrowLeftRight",
+            "title": "手動の回転と反転",
+            "description": "自動補正に重ねて 90° ステップでの回転、水平／垂直のミラー反転を細かく調整できます。すべての操作はライブプレビューに即座に反映されます。"
+          },
+          "f3": {
+            "icon": "FileVideo",
+            "title": "連写写真 → アニメーション GIF",
+            "description": "iPhone のバースト HEIC を自動検出し、進捗インジケーター付きで 1 つのアニメーション GIF として書き出します。すべてのフレームに向き補正が適用されます。"
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "JPG / PNG / GIF 出力に対応",
+            "description": "HEIC は一度デコードするだけで、JPEG・PNG・GIF（連写用）を自由に切り替えて書き出せます。元ファイルを再アップロードする必要はありません。"
+          },
+          "f5": {
+            "icon": "Gauge",
+            "title": "JPEG 画質を自由に調整",
+            "description": "シンプルなスライダーで JPEG 出力品質を 10〜100% の範囲で調整し、ファイルサイズと画質のバランスを取れます。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% ローカル処理 — アップロード不要",
+            "description": "デコード（heic2any）、EXIF 解析（exifr）、再エンコードはすべてブラウザ内で実行されます。写真がデバイスを離れることはなく、PWA としてオフラインでも動作します。"
+          }
+        },
         "selectedFile": "選択ファイル",
         "outputFormat": "出力形式",
         "quality": "品質",
