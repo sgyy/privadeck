@@ -316,7 +316,7 @@ export default function PdfToImage() {
             {results.map((page, i) => (
               <div key={page.pageNumber} className="group relative overflow-hidden rounded-lg border border-border bg-card">
                 <button type="button" onClick={() => setPreviewIndex(i)} className="block w-full cursor-zoom-in">
-                  <img src={getUrl(page.blob)} alt={`Page ${page.pageNumber}`} className="w-full" />
+                  <img src={getUrl(page.blob)} alt={page.filename} className="w-full" />
                 </button>
                 <button
                   type="button"
@@ -349,7 +349,7 @@ export default function PdfToImage() {
       {previewIndex !== null && results[previewIndex] && (
         <ImageLightbox
           src={getUrl(results[previewIndex].blob)}
-          alt={`Page ${results[previewIndex].pageNumber}`}
+          alt={results[previewIndex].filename}
           onClose={() => setPreviewIndex(null)}
         />
       )}
