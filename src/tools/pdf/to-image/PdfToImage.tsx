@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
+import { ImageLightbox } from "@/components/shared/ImageLightbox";
 import { Button } from "@/components/ui/Button";
 import { Download, FileText, RefreshCw, X } from "lucide-react";
 import { brandFilename } from "@/lib/brand";
@@ -65,16 +66,6 @@ export default function PdfToImage() {
       map.clear();
     };
   }, []);
-
-  // Close preview on Escape
-  useEffect(() => {
-    if (previewIndex === null) return;
-    function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setPreviewIndex(null);
-    }
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [previewIndex]);
 
   async function handleFile(files: File[]) {
     const f = files[0];
@@ -355,26 +346,12 @@ export default function PdfToImage() {
         </div>
       )}
 
-      {/* Lightbox preview */}
       {previewIndex !== null && results[previewIndex] && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
-          onClick={() => setPreviewIndex(null)}
-        >
-          <button
-            type="button"
-            onClick={() => setPreviewIndex(null)}
-            className="absolute right-4 top-4 rounded-full bg-black/50 p-2 text-white hover:bg-black/70"
-          >
-            <X className="h-6 w-6" />
-          </button>
-          <img
-            src={getUrl(results[previewIndex].blob)}
-            alt={`Page ${results[previewIndex].pageNumber}`}
-            className="max-h-[90vh] max-w-[90vw] object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
+        <ImageLightbox
+          src={getUrl(results[previewIndex].blob)}
+          alt={`Page ${results[previewIndex].pageNumber}`}
+          onClose={() => setPreviewIndex(null)}
+        />
       )}
     </div>
   );
