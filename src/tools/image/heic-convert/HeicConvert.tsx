@@ -17,7 +17,7 @@ import { ImageLightbox } from "@/components/shared/ImageLightbox";
 import { Button } from "@/components/ui/Button";
 import { createToolTracker, trackEvent } from "@/lib/analytics";
 import {
-  convertHeicToGif,
+  convertFramesToGif,
   decodeHeic,
   detectApple,
   encodeCanvas,
@@ -50,6 +50,7 @@ export default function HeicConvert() {
   const [quality, setQuality] = useState(0.9);
   const [decoding, setDecoding] = useState(false);
   const [downloading, setDownloading] = useState(false);
+  const [gifProgress, setGifProgress] = useState<number | null>(null);
   const [error, setError] = useState("");
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [previewDataUrl, setPreviewDataUrl] = useState<string | null>(null);
@@ -173,15 +174,25 @@ export default function HeicConvert() {
   }, []);
 
   const handleDownload = useCallback(async () => {
-    if (!file) return;
+    if (!file || !decoded) return;
     if (format !== "image/gif" && !canvasRef.current) return;
     setDownloading(true);
     setError("");
+    if (format === "image/gif") setGifProgress(0);
     const start = Date.now();
     try {
       const blob =
         format === "image/gif"
-          ? await convertHeicToGif(file)
+          ? await convertFramesToGif(
+              decoded.frames,
+              exif?.orientation,
+              transform,
+              {
+                onProgress: (p) => {
+                  if (mountedRef.current) setGifProgress(p);
+                },
+              },
+            )
           : await encodeCanvas(canvasRef.current!, format, quality);
       if (!mountedRef.current) return;
       tracker.trackProcessComplete(Date.now() - start);
@@ -201,14 +212,16 @@ export default function HeicConvert() {
       tracker.trackProcessError(rawMsg);
       setError(t("downloadFailed"));
     } finally {
-      if (mountedRef.current) setDownloading(false);
+      if (mountedRef.current) {
+        setDownloading(false);
+        setGifProgress(null);
+      }
     }
-  }, [file, format, quality, t]);
+  }, [file, decoded, exif, transform, format, quality, t]);
 
   const rotateLabel = `${transform.rotate}°`;
   const modified =
     transform.rotate !== 0 || transform.flipH || transform.flipV;
-  const isGif = format === "image/gif";
   const isBurst = (decoded?.frameCount ?? 0) > 1;
 
   return (
@@ -281,7 +294,6 @@ export default function HeicConvert() {
                 size="sm"
                 onClick={() => handleRotate("ccw")}
                 title={t("rotateLeft")}
-                disabled={isGif}
               >
                 <RotateCcw className="h-4 w-4" />
                 <span className="sr-only">{t("rotateLeft")}</span>
@@ -291,7 +303,6 @@ export default function HeicConvert() {
                 size="sm"
                 onClick={() => handleRotate("cw")}
                 title={t("rotateRight")}
-                disabled={isGif}
               >
                 <RotateCw className="h-4 w-4" />
                 <span className="sr-only">{t("rotateRight")}</span>
@@ -308,7 +319,6 @@ export default function HeicConvert() {
                 size="sm"
                 onClick={handleFlipH}
                 title={t("flipHorizontal")}
-                disabled={isGif}
               >
                 <FlipHorizontal className="h-4 w-4" />
                 <span className="sr-only">{t("flipHorizontal")}</span>
@@ -318,13 +328,12 @@ export default function HeicConvert() {
                 size="sm"
                 onClick={handleFlipV}
                 title={t("flipVertical")}
-                disabled={isGif}
               >
                 <FlipVertical className="h-4 w-4" />
                 <span className="sr-only">{t("flipVertical")}</span>
               </Button>
 
-              {modified && !isGif && (
+              {modified && (
                 <Button
                   variant="ghost"
                   size="sm"
@@ -336,9 +345,6 @@ export default function HeicConvert() {
                 </Button>
               )}
             </div>
-            {isGif && (
-              <p className="text-xs text-muted-foreground">{t("gifNote")}</p>
-            )}
           </div>
 
           {/* Format & quality */}
@@ -395,7 +401,11 @@ export default function HeicConvert() {
             disabled={downloading}
             className="w-full sm:w-auto"
           >
-            {downloading ? t("downloading") : t("download")}
+            {downloading
+              ? gifProgress !== null
+                ? t("encodingGif", { percent: Math.round(gifProgress * 100) })
+                : t("downloading")
+              : t("download")}
           </Button>
         </>
       )}
