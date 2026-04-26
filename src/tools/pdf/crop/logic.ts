@@ -1,5 +1,4 @@
 import { PDFDocument } from "pdf-lib";
-import { getPdfjs } from "@/lib/pdfjs";
 
 export interface CropMargins {
   top: number;
@@ -32,17 +31,4 @@ export async function cropPdf(
   return new Blob([pdfBytes as BlobPart], { type: "application/pdf" });
 }
 
-export async function getPdfPageCount(file: File): Promise<number> {
-  const pdfjsLib = await getPdfjs();
-  const bytes = new Uint8Array(await file.arrayBuffer());
-  const pdf = await pdfjsLib.getDocument({ data: bytes }).promise;
-  const count = pdf.numPages;
-  pdf.destroy();
-  return count;
-}
-
-export function formatFileSize(bytes: number): string {
-  if (bytes < 1024) return `${bytes} B`;
-  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
-  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
-}
+export { formatFileSize } from "@/lib/utils/formatFileSize";

@@ -3,12 +3,13 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
+import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
+import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
 import {
   splitByPages,
   splitByRange,
-  getPdfPageCount,
   formatFileSize,
   type SplitResult,
 } from "./logic";
@@ -18,6 +19,7 @@ type SplitMode = "each" | "range";
 export default function SplitPdf() {
   const [file, setFile] = useState<File | null>(null);
   const [pageCount, setPageCount] = useState(0);
+  const [thumbnail, setThumbnail] = useState<string | null>(null);
   const [mode, setMode] = useState<SplitMode>("each");
   const [rangeInput, setRangeInput] = useState("");
   const [results, setResults] = useState<SplitResult[]>([]);
@@ -30,8 +32,24 @@ export default function SplitPdf() {
     if (!f) return;
     setFile(f);
     setResults([]);
-    const count = await getPdfPageCount(f);
-    setPageCount(count);
+    setError("");
+    setPageCount(0);
+    setThumbnail(null);
+    try {
+      const { pageCount: pc, thumbnail: thumb } = await getPdfPreview(f);
+      setPageCount(pc);
+      setThumbnail(thumb);
+    } catch (e) {
+      setError(String(e instanceof Error ? e.message : e));
+    }
+  }
+
+  function handleRemoveFile() {
+    setFile(null);
+    setPageCount(0);
+    setThumbnail(null);
+    setResults([]);
+    setError("");
   }
 
   function parseRanges(): [number, number][] {
@@ -74,18 +92,31 @@ export default function SplitPdf() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone
-        accept="application/pdf"
-        onFiles={handleFile}
-      />
+      {!file && (
+        <FileDropzone
+          accept="application/pdf"
+          onFiles={handleFile}
+        />
+      )}
 
-      {file && (
-        <div className="rounded-lg bg-muted/50 px-3 py-2 text-sm">
-          {file.name} — {pageCount} {t("pages")}
+      {error && (
+        <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
+          {error}
         </div>
       )}
 
       {file && (
+        <PdfFilePreview
+          file={file}
+          pageCount={pageCount > 0 ? pageCount : null}
+          thumbnail={thumbnail}
+          disabled={splitting}
+          onReplace={(f) => void handleFile([f])}
+          onRemove={handleRemoveFile}
+        />
+      )}
+
+      {file && pageCount > 0 && (
         <div className="space-y-3">
           <div className="flex gap-4">
             <label className="flex items-center gap-2 text-sm">
@@ -118,12 +149,6 @@ export default function SplitPdf() {
               <p className="mt-1 text-xs text-muted-foreground">
                 {t("rangeHint")}
               </p>
-            </div>
-          )}
-
-          {error && (
-            <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
-              {error}
             </div>
           )}
 

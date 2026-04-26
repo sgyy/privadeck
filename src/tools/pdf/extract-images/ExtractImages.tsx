@@ -3,11 +3,13 @@
 import { useState, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
+import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { Button } from "@/components/ui/Button";
 import {
   ImageResultList,
   type ImageResultItem,
 } from "@/components/shared/ImageResultList";
+import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
 import {
   extractImages,
   downloadImagesAsZip,
@@ -18,18 +20,38 @@ import { brandFilename } from "@/lib/brand";
 
 export default function ExtractImages() {
   const [file, setFile] = useState<File | null>(null);
+  const [pageCount, setPageCount] = useState<number | null>(null);
+  const [thumbnail, setThumbnail] = useState<string | null>(null);
   const [results, setResults] = useState<ExtractedImage[]>([]);
   const [progress, setProgress] = useState({ current: 0, total: 0 });
   const [extracting, setExtracting] = useState(false);
   const [error, setError] = useState("");
   const t = useTranslations("tools.pdf.extract-images");
 
-  function handleFile(files: File[]) {
+  async function handleFile(files: File[]) {
     const f = files[0];
     if (!f) return;
     setFile(f);
     setResults([]);
     setError("");
+    setPageCount(null);
+    setThumbnail(null);
+    try {
+      const { pageCount: pc, thumbnail: thumb } = await getPdfPreview(f);
+      setPageCount(pc);
+      setThumbnail(thumb);
+    } catch (e) {
+      setError(String(e instanceof Error ? e.message : e));
+    }
+  }
+
+  function handleRemoveFile() {
+    setFile(null);
+    setPageCount(null);
+    setThumbnail(null);
+    setResults([]);
+    setError("");
+    setProgress({ current: 0, total: 0 });
   }
 
   async function handleExtract() {
@@ -77,7 +99,7 @@ export default function ExtractImages() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="application/pdf" onFiles={handleFile} />
+      {!file && <FileDropzone accept="application/pdf" onFiles={handleFile} />}
 
       {error && (
         <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
@@ -87,9 +109,14 @@ export default function ExtractImages() {
 
       {file && (
         <div className="space-y-4">
-          <div className="rounded-lg bg-muted/50 px-3 py-2 text-sm">
-            {file.name} — {formatFileSize(file.size)}
-          </div>
+          <PdfFilePreview
+            file={file}
+            pageCount={pageCount}
+            thumbnail={thumbnail}
+            disabled={extracting}
+            onReplace={(f) => void handleFile([f])}
+            onRemove={handleRemoveFile}
+          />
 
           <Button onClick={handleExtract} disabled={extracting}>
             {extracting

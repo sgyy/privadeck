@@ -4,10 +4,11 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { ImageLightbox } from "@/components/shared/ImageLightbox";
+import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { Button } from "@/components/ui/Button";
-import { Download, FileText, RefreshCw, X } from "lucide-react";
+import { Download, X } from "lucide-react";
 import { brandFilename } from "@/lib/brand";
-import { getPdfjs } from "@/lib/pdfjs";
+import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
 import {
   convertPdfToImages,
   downloadAsZip,
@@ -29,7 +30,6 @@ export default function PdfToImage() {
   const [previewIndex, setPreviewIndex] = useState<number | null>(null);
   const generationRef = useRef(0);
   const urlMapRef = useRef<Map<Blob, string>>(new Map());
-  const replaceInputRef = useRef<HTMLInputElement>(null);
   const t = useTranslations("tools.pdf.to-image");
   const tc = useTranslations("common");
 
@@ -79,25 +79,10 @@ export default function PdfToImage() {
     setProgress({ current: 0, total: 0 });
     setPreviewIndex(null);
     try {
-      const pdfjsLib = await getPdfjs();
-      const buf = await f.arrayBuffer();
-      const pdf = await pdfjsLib.getDocument({ data: buf }).promise;
+      const { pageCount: pc, thumbnail: thumb } = await getPdfPreview(f);
       if (generationRef.current !== gen) return;
-      setPageCount(pdf.numPages);
-      const page = await pdf.getPage(1);
-      const viewport = page.getViewport({ scale: 1 });
-      const targetW = 160;
-      const thumbScale = targetW / viewport.width;
-      const scaled = page.getViewport({ scale: thumbScale });
-      const canvas = document.createElement("canvas");
-      canvas.width = scaled.width;
-      canvas.height = scaled.height;
-      const ctx = canvas.getContext("2d");
-      if (!ctx) return;
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any -- pdfjs-dist v5 render() requires canvas prop not in type defs
-      await page.render({ canvasContext: ctx, viewport: scaled, canvas } as any).promise;
-      if (generationRef.current !== gen) return;
-      setThumbnail(canvas.toDataURL("image/png"));
+      setPageCount(pc);
+      setThumbnail(thumb);
     } catch (e) {
       console.warn("Failed to read PDF preview:", e);
     }
@@ -112,12 +97,6 @@ export default function PdfToImage() {
     setError("");
     setProgress({ current: 0, total: 0 });
     setPreviewIndex(null);
-  }
-
-  function onReplacePicked(e: React.ChangeEvent<HTMLInputElement>) {
-    const f = e.target.files?.[0];
-    e.target.value = "";
-    if (f) void handleFile([f]);
   }
 
   function removePage(index: number) {
@@ -173,50 +152,14 @@ export default function PdfToImage() {
 
       {file && (
         <>
-          {/* File info card */}
-          <div className="flex items-center gap-4 rounded-lg border border-border bg-muted/30 p-3">
-            <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center overflow-hidden rounded-md border border-border bg-card">
-              {thumbnail ? (
-                // eslint-disable-next-line @next/next/no-img-element -- data URL preview, optimization not applicable
-                <img src={thumbnail} alt={file.name} className="h-full w-full object-contain" />
-              ) : (
-                <FileText className="h-8 w-8 text-muted-foreground" />
-              )}
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="truncate text-sm font-medium">{file.name}</p>
-              <p className="text-xs text-muted-foreground">
-                {pageCount !== null && <>{pageCount} {t("pages")} · </>}
-                {formatFileSize(file.size)}
-              </p>
-            </div>
-            <div className="flex flex-shrink-0 items-center gap-1">
-              <button
-                type="button"
-                disabled={converting}
-                onClick={() => replaceInputRef.current?.click()}
-                className="inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground disabled:cursor-not-allowed disabled:opacity-40"
-              >
-                <RefreshCw className="h-3.5 w-3.5" />
-                {tc("replaceFile")}
-              </button>
-              <button
-                type="button"
-                disabled={converting}
-                onClick={handleRemoveFile}
-                className="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-red-100 hover:text-red-600 disabled:cursor-not-allowed disabled:opacity-40 dark:hover:bg-red-950 dark:hover:text-red-400"
-              >
-                <X className="h-4 w-4" />
-              </button>
-            </div>
-            <input
-              ref={replaceInputRef}
-              type="file"
-              accept="application/pdf"
-              onChange={onReplacePicked}
-              className="hidden"
-            />
-          </div>
+          <PdfFilePreview
+            file={file}
+            pageCount={pageCount}
+            thumbnail={thumbnail}
+            disabled={converting}
+            onReplace={(f) => void handleFile([f])}
+            onRemove={handleRemoveFile}
+          />
 
           {/* Output format */}
           <div className="space-y-2 rounded-lg border border-border bg-muted/20 p-3">

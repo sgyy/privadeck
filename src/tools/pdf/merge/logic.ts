@@ -16,8 +16,4 @@ export async function mergePdfs(files: File[]): Promise<Blob> {
   return new Blob([bytes as BlobPart], { type: "application/pdf" });
 }
 
-export function formatFileSize(bytes: number): string {
-  if (bytes < 1024) return `${bytes} B`;
-  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
-  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
-}
+export { formatFileSize } from "@/lib/utils/formatFileSize";

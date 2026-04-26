@@ -3,17 +3,19 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
+import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { PdfPagePreview } from "@/components/shared/PdfPagePreview";
 import type { PDFDocumentProxy } from "pdfjs-dist";
-import { getPdfjs } from "@/lib/pdfjs";
+import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
 import { deletePages, formatFileSize } from "./logic";
 
 export default function DeletePages() {
   const [file, setFile] = useState<File | null>(null);
   const [pdfDoc, setPdfDoc] = useState<PDFDocumentProxy | null>(null);
   const [pageCount, setPageCount] = useState(0);
+  const [thumbnail, setThumbnail] = useState<string | null>(null);
   const [selected, setSelected] = useState<Set<number>>(new Set());
   const [result, setResult] = useState<Blob | null>(null);
   const [processing, setProcessing] = useState(false);
@@ -27,15 +29,27 @@ export default function DeletePages() {
     setSelected(new Set());
     setResult(null);
     setError("");
+    setPdfDoc(null);
+    setPageCount(0);
+    setThumbnail(null);
     try {
-      const pdfjsLib = await getPdfjs();
-      const arrayBuffer = await f.arrayBuffer();
-      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-      setPdfDoc(pdf);
-      setPageCount(pdf.numPages);
+      const { pdfDoc: doc, pageCount: pc, thumbnail: thumb } = await getPdfPreview(f);
+      setPdfDoc(doc);
+      setPageCount(pc);
+      setThumbnail(thumb);
     } catch (e) {
       setError(String(e instanceof Error ? e.message : e));
     }
+  }
+
+  function handleRemoveFile() {
+    setFile(null);
+    setPdfDoc(null);
+    setPageCount(0);
+    setThumbnail(null);
+    setSelected(new Set());
+    setResult(null);
+    setError("");
   }
 
   function togglePage(page: number) {
@@ -68,12 +82,23 @@ export default function DeletePages() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="application/pdf" onFiles={handleFile} />
+      {!file && <FileDropzone accept="application/pdf" onFiles={handleFile} />}
 
       {error && (
         <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
           {error}
         </div>
+      )}
+
+      {file && (
+        <PdfFilePreview
+          file={file}
+          pageCount={pageCount > 0 ? pageCount : null}
+          thumbnail={thumbnail}
+          disabled={processing}
+          onReplace={(f) => void handleFile([f])}
+          onRemove={handleRemoveFile}
+        />
       )}
 
       {pdfDoc && pageCount > 0 && (

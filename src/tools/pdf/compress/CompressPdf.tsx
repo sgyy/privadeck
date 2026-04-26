@@ -3,12 +3,16 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
+import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
+import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
 import { compressPdf, formatFileSize, type PdfQuality } from "./logic";
 
 export default function CompressPdf() {
   const [file, setFile] = useState<File | null>(null);
+  const [pageCount, setPageCount] = useState<number | null>(null);
+  const [thumbnail, setThumbnail] = useState<string | null>(null);
   const [quality, setQuality] = useState<PdfQuality>("medium");
   const [result, setResult] = useState<Blob | null>(null);
   const [processing, setProcessing] = useState(false);
@@ -16,10 +20,28 @@ export default function CompressPdf() {
   const [error, setError] = useState("");
   const t = useTranslations("tools.pdf.compress");
 
-  function handleFile(files: File[]) {
+  async function handleFile(files: File[]) {
     const f = files[0];
     if (!f) return;
     setFile(f);
+    setResult(null);
+    setError("");
+    setProgress({ current: 0, total: 0 });
+    setPageCount(null);
+    setThumbnail(null);
+    try {
+      const { pageCount: pc, thumbnail: thumb } = await getPdfPreview(f);
+      setPageCount(pc);
+      setThumbnail(thumb);
+    } catch (e) {
+      setError(String(e instanceof Error ? e.message : e));
+    }
+  }
+
+  function handleRemoveFile() {
+    setFile(null);
+    setPageCount(null);
+    setThumbnail(null);
     setResult(null);
     setError("");
     setProgress({ current: 0, total: 0 });
@@ -46,7 +68,7 @@ export default function CompressPdf() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="application/pdf" onFiles={handleFile} />
+      {!file && <FileDropzone accept="application/pdf" onFiles={handleFile} />}
 
       {error && (
         <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
@@ -56,9 +78,14 @@ export default function CompressPdf() {
 
       {file && (
         <div className="space-y-4">
-          <div className="rounded-lg bg-muted/50 px-3 py-2 text-sm">
-            {file.name} — {formatFileSize(file.size)}
-          </div>
+          <PdfFilePreview
+            file={file}
+            pageCount={pageCount}
+            thumbnail={thumbnail}
+            disabled={processing}
+            onReplace={(f) => void handleFile([f])}
+            onRemove={handleRemoveFile}
+          />
 
           <div className="space-y-2">
             <label className="text-sm font-medium">{t("quality")}</label>

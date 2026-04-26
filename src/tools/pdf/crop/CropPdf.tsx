@@ -3,13 +3,16 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
+import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
-import { cropPdf, getPdfPageCount, formatFileSize, type CropMargins } from "./logic";
+import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
+import { cropPdf, formatFileSize, type CropMargins } from "./logic";
 
 export default function CropPdf() {
   const [file, setFile] = useState<File | null>(null);
   const [pageCount, setPageCount] = useState(0);
+  const [thumbnail, setThumbnail] = useState<string | null>(null);
   const [margins, setMargins] = useState<CropMargins>({
     top: 0,
     bottom: 0,
@@ -27,12 +30,23 @@ export default function CropPdf() {
     setFile(f);
     setResult(null);
     setError("");
+    setPageCount(0);
+    setThumbnail(null);
     try {
-      const count = await getPdfPageCount(f);
-      setPageCount(count);
+      const { pageCount: pc, thumbnail: thumb } = await getPdfPreview(f);
+      setPageCount(pc);
+      setThumbnail(thumb);
     } catch (e) {
       setError(String(e instanceof Error ? e.message : e));
     }
+  }
+
+  function handleRemoveFile() {
+    setFile(null);
+    setPageCount(0);
+    setThumbnail(null);
+    setResult(null);
+    setError("");
   }
 
   function updateMargin(key: keyof CropMargins, value: string) {
@@ -66,7 +80,7 @@ export default function CropPdf() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="application/pdf" onFiles={handleFile} />
+      {!file && <FileDropzone accept="application/pdf" onFiles={handleFile} />}
 
       {error && (
         <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
@@ -76,9 +90,14 @@ export default function CropPdf() {
 
       {file && (
         <div className="space-y-4">
-          <div className="rounded-lg bg-muted/50 px-3 py-2 text-sm">
-            {file.name} — {pageCount} {t("pages")} — {formatFileSize(file.size)}
-          </div>
+          <PdfFilePreview
+            file={file}
+            pageCount={pageCount > 0 ? pageCount : null}
+            thumbnail={thumbnail}
+            disabled={processing}
+            onReplace={(f) => void handleFile([f])}
+            onRemove={handleRemoveFile}
+          />
 
           <div className="space-y-2">
             <label className="text-sm font-medium">{t("margins")}</label>

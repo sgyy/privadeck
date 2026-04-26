@@ -4,16 +4,19 @@ import { useState, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { ArrowUp, ArrowDown } from "lucide-react";
 import { FileDropzone } from "@/components/shared/FileDropzone";
+import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { PdfPagePreview } from "@/components/shared/PdfPagePreview";
 import type { PDFDocumentProxy } from "pdfjs-dist";
-import { getPdfjs } from "@/lib/pdfjs";
+import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
 import { rearrangePdf, formatFileSize } from "./logic";
 
 export default function RearrangePdf() {
   const [file, setFile] = useState<File | null>(null);
   const [pdfDoc, setPdfDoc] = useState<PDFDocumentProxy | null>(null);
+  const [pageCount, setPageCount] = useState(0);
+  const [thumbnail, setThumbnail] = useState<string | null>(null);
   const [pageOrder, setPageOrder] = useState<number[]>([]);
   const [result, setResult] = useState<Blob | null>(null);
   const [processing, setProcessing] = useState(false);
@@ -28,18 +31,33 @@ export default function RearrangePdf() {
     setResult(null);
     setError("");
     setPageOrder([]);
+    setPdfDoc(null);
+    setPageCount(0);
+    setThumbnail(null);
     // Destroy previous PDF document to free memory
     pdfDocRef.current?.destroy();
     try {
-      const pdfjsLib = await getPdfjs();
-      const arrayBuffer = await f.arrayBuffer();
-      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-      pdfDocRef.current = pdf;
-      setPdfDoc(pdf);
-      setPageOrder(Array.from({ length: pdf.numPages }, (_, i) => i));
+      const { pdfDoc: doc, pageCount: pc, thumbnail: thumb } = await getPdfPreview(f);
+      pdfDocRef.current = doc;
+      setPdfDoc(doc);
+      setPageCount(pc);
+      setThumbnail(thumb);
+      setPageOrder(Array.from({ length: pc }, (_, i) => i));
     } catch (e) {
       setError(String(e instanceof Error ? e.message : e));
     }
+  }
+
+  function handleRemoveFile() {
+    pdfDocRef.current?.destroy();
+    pdfDocRef.current = null;
+    setFile(null);
+    setPdfDoc(null);
+    setPageCount(0);
+    setThumbnail(null);
+    setPageOrder([]);
+    setResult(null);
+    setError("");
   }
 
   function moveUp(index: number) {
@@ -80,12 +98,23 @@ export default function RearrangePdf() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="application/pdf" onFiles={handleFile} />
+      {!file && <FileDropzone accept="application/pdf" onFiles={handleFile} />}
 
       {error && (
         <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
           {error}
         </div>
+      )}
+
+      {file && (
+        <PdfFilePreview
+          file={file}
+          pageCount={pageCount > 0 ? pageCount : null}
+          thumbnail={thumbnail}
+          disabled={processing}
+          onReplace={(f) => void handleFile([f])}
+          onRemove={handleRemoveFile}
+        />
       )}
 
       {pdfDoc && pageOrder.length > 0 && (

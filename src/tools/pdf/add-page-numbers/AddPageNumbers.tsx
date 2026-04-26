@@ -3,8 +3,10 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
+import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
+import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
 import {
   addPageNumbers,
   formatFileSize,
@@ -26,6 +28,7 @@ const FORMATS: NumberFormat[] = ["number", "pageN", "nOfTotal"];
 export default function AddPageNumbers() {
   const [file, setFile] = useState<File | null>(null);
   const [pageCount, setPageCount] = useState(0);
+  const [thumbnail, setThumbnail] = useState<string | null>(null);
   const [position, setPosition] = useState<NumberPosition>("bottom-center");
   const [fontSize, setFontSize] = useState(12);
   const [format, setFormat] = useState<NumberFormat>("number");
@@ -41,14 +44,23 @@ export default function AddPageNumbers() {
     setFile(f);
     setResult(null);
     setError("");
+    setPageCount(0);
+    setThumbnail(null);
     try {
-      const { PDFDocument } = await import("pdf-lib");
-      const bytes = await f.arrayBuffer();
-      const pdf = await PDFDocument.load(bytes);
-      setPageCount(pdf.getPageCount());
+      const { pageCount: pc, thumbnail: thumb } = await getPdfPreview(f);
+      setPageCount(pc);
+      setThumbnail(thumb);
     } catch (e) {
       setError(String(e instanceof Error ? e.message : e));
     }
+  }
+
+  function handleRemoveFile() {
+    setFile(null);
+    setPageCount(0);
+    setThumbnail(null);
+    setResult(null);
+    setError("");
   }
 
   async function handleApply() {
@@ -80,7 +92,7 @@ export default function AddPageNumbers() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="application/pdf" onFiles={handleFile} />
+      {!file && <FileDropzone accept="application/pdf" onFiles={handleFile} />}
 
       {error && (
         <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
@@ -88,92 +100,101 @@ export default function AddPageNumbers() {
         </div>
       )}
 
-      {file && pageCount > 0 && (
+      {file && (
         <>
-          <p className="text-sm text-muted-foreground">
-            {file.name} · {pageCount} {t("pages")}
-          </p>
+          <PdfFilePreview
+            file={file}
+            pageCount={pageCount > 0 ? pageCount : null}
+            thumbnail={thumbnail}
+            disabled={processing}
+            onReplace={(f) => void handleFile([f])}
+            onRemove={handleRemoveFile}
+          />
 
-          <div className="space-y-3">
-            {/* Position */}
-            <div className="space-y-1.5">
-              <label className="text-sm font-medium">{t("position")}</label>
-              <div className="flex flex-wrap gap-2">
-                {POSITIONS.map((pos) => (
-                  <Button
-                    key={pos}
-                    size="sm"
-                    variant={position === pos ? "primary" : "outline"}
-                    onClick={() => { setPosition(pos); setResult(null); }}
-                  >
-                    {t(`positions.${pos}`)}
-                  </Button>
-                ))}
+          {pageCount > 0 && (
+            <>
+              <div className="space-y-3">
+                {/* Position */}
+                <div className="space-y-1.5">
+                  <label className="text-sm font-medium">{t("position")}</label>
+                  <div className="flex flex-wrap gap-2">
+                    {POSITIONS.map((pos) => (
+                      <Button
+                        key={pos}
+                        size="sm"
+                        variant={position === pos ? "primary" : "outline"}
+                        onClick={() => { setPosition(pos); setResult(null); }}
+                      >
+                        {t(`positions.${pos}`)}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Format */}
+                <div className="space-y-1.5">
+                  <label className="text-sm font-medium">{t("format")}</label>
+                  <div className="flex flex-wrap gap-2">
+                    {FORMATS.map((fmt) => (
+                      <Button
+                        key={fmt}
+                        size="sm"
+                        variant={format === fmt ? "primary" : "outline"}
+                        onClick={() => { setFormat(fmt); setResult(null); }}
+                      >
+                        {formatLabels[fmt]}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Font Size */}
+                <div className="space-y-1.5">
+                  <label className="text-sm font-medium">
+                    {t("fontSize")}: {fontSize}px
+                  </label>
+                  <input
+                    type="range"
+                    min={8}
+                    max={24}
+                    value={fontSize}
+                    onChange={(e) => { setFontSize(Number(e.target.value)); setResult(null); }}
+                    className="w-full max-w-xs"
+                  />
+                </div>
+
+                {/* Start Page */}
+                <div className="space-y-1.5">
+                  <label className="text-sm font-medium">{t("startPage")}</label>
+                  <input
+                    type="number"
+                    min={1}
+                    max={pageCount}
+                    value={startPage}
+                    onChange={(e) => { setStartPage(Number(e.target.value)); setResult(null); }}
+                    className="w-20 rounded-md border bg-background px-2 py-1 text-sm"
+                  />
+                </div>
               </div>
-            </div>
 
-            {/* Format */}
-            <div className="space-y-1.5">
-              <label className="text-sm font-medium">{t("format")}</label>
-              <div className="flex flex-wrap gap-2">
-                {FORMATS.map((fmt) => (
-                  <Button
-                    key={fmt}
-                    size="sm"
-                    variant={format === fmt ? "primary" : "outline"}
-                    onClick={() => { setFormat(fmt); setResult(null); }}
-                  >
-                    {formatLabels[fmt]}
-                  </Button>
-                ))}
+              <div className="flex items-center gap-4">
+                <Button onClick={handleApply} disabled={processing}>
+                  {processing ? t("applying") : t("apply")}
+                </Button>
+                {result && (
+                  <DownloadButton
+                    data={result}
+                    filename={file.name.replace(/\.pdf$/i, "_numbered.pdf")}
+                  />
+                )}
               </div>
-            </div>
 
-            {/* Font Size */}
-            <div className="space-y-1.5">
-              <label className="text-sm font-medium">
-                {t("fontSize")}: {fontSize}px
-              </label>
-              <input
-                type="range"
-                min={8}
-                max={24}
-                value={fontSize}
-                onChange={(e) => { setFontSize(Number(e.target.value)); setResult(null); }}
-                className="w-full max-w-xs"
-              />
-            </div>
-
-            {/* Start Page */}
-            <div className="space-y-1.5">
-              <label className="text-sm font-medium">{t("startPage")}</label>
-              <input
-                type="number"
-                min={1}
-                max={pageCount}
-                value={startPage}
-                onChange={(e) => { setStartPage(Number(e.target.value)); setResult(null); }}
-                className="w-20 rounded-md border bg-background px-2 py-1 text-sm"
-              />
-            </div>
-          </div>
-
-          <div className="flex items-center gap-4">
-            <Button onClick={handleApply} disabled={processing}>
-              {processing ? t("applying") : t("apply")}
-            </Button>
-            {result && (
-              <DownloadButton
-                data={result}
-                filename={file.name.replace(/\.pdf$/i, "_numbered.pdf")}
-              />
-            )}
-          </div>
-
-          {result && (
-            <p className="text-sm text-muted-foreground">
-              {t("resultSize")}: {formatFileSize(result.size)}
-            </p>
+              {result && (
+                <p className="text-sm text-muted-foreground">
+                  {t("resultSize")}: {formatFileSize(result.size)}
+                </p>
+              )}
+            </>
           )}
         </>
       )}

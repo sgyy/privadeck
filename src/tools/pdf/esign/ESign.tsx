@@ -3,13 +3,16 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
+import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
-import { addSignature, getPageCount, formatFileSize } from "./logic";
+import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
+import { addSignature, formatFileSize } from "./logic";
 
 export default function ESign() {
   const [file, setFile] = useState<File | null>(null);
   const [pageCount, setPageCount] = useState(0);
+  const [thumbnail, setThumbnail] = useState<string | null>(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [posX, setPosX] = useState(350);
   const [posY, setPosY] = useState(50);
@@ -108,13 +111,31 @@ export default function ESign() {
     setFile(f);
     setResult(null);
     setError("");
+    setPageCount(0);
+    setThumbnail(null);
     try {
-      const count = await getPageCount(f);
-      setPageCount(count);
+      const { pageCount: pc, thumbnail: thumb } = await getPdfPreview(f);
+      setPageCount(pc);
+      setThumbnail(thumb);
       setPageNumber(1);
     } catch (e) {
       setError(String(e instanceof Error ? e.message : e));
     }
+  }
+
+  function handleRemoveFile() {
+    const canvas = canvasRef.current;
+    if (canvas) {
+      const ctx = canvas.getContext("2d");
+      if (ctx) ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    hasDrawnRef.current = false;
+    setFile(null);
+    setPageCount(0);
+    setThumbnail(null);
+    setResult(null);
+    setError("");
+    setPageNumber(1);
   }
 
   async function handleApply() {
@@ -147,7 +168,7 @@ export default function ESign() {
 
   return (
     <div className="space-y-4">
-      <FileDropzone accept="application/pdf" onFiles={handleFile} />
+      {!file && <FileDropzone accept="application/pdf" onFiles={handleFile} />}
 
       {error && (
         <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
@@ -157,10 +178,14 @@ export default function ESign() {
 
       {file && (
         <div className="space-y-4">
-          <div className="rounded-lg bg-muted/50 px-3 py-2 text-sm">
-            {file.name} — {formatFileSize(file.size)} — {pageCount}{" "}
-            {t("pages")}
-          </div>
+          <PdfFilePreview
+            file={file}
+            pageCount={pageCount > 0 ? pageCount : null}
+            thumbnail={thumbnail}
+            disabled={processing}
+            onReplace={(f) => void handleFile([f])}
+            onRemove={handleRemoveFile}
+          />
 
           {/* Signature pad */}
           <div className="space-y-2">
