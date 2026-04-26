@@ -1074,47 +1074,69 @@
       },
       "heic-convert": {
         "name": "HEIC Dönüştürücü",
-        "description": "HEIC/HEIF görsellerini JPG veya PNG formatına dönüştürün.",
-        "metaTitle": "HEIC - JPG/PNG Dönüştürücü — Ücretsiz Çevrimiçi HEIC Dönüştürücü",
-        "metaDescription": "HEIC ve HEIF görsellerini JPG veya PNG formatına dönüştürün. Ücretsiz çevrimiçi araç, yükleme gerekmez. Tarayıcınızda çalışır.",
-        "keywords": "heic jpg, heic png, heif dönüştürücü, iphone fotoğraf dönüştürücü, heic dönüştürücü çevrimiçi",
+        "description": "Tek bir HEIC/HEIF fotoğrafını Apple tarzı doğru yönlendirmeyle ve manuel döndür/çevir ile JPG veya PNG'ye dönüştürün.",
+        "metaTitle": "Döndür ve Çevir Destekli HEIC'ten JPG/PNG Dönüştürücü — Ücretsiz Çevrimiçi",
+        "metaDescription": "Bir HEIC veya HEIF fotoğrafını Apple Photos tarzı otomatik yönlendirme düzeltmesi ve manuel döndür/çevir ile JPG veya PNG'ye dönüştürün. %100 yerel, yükleme yok.",
+        "keywords": "heic jpg, heic png, heif dönüştürücü, iphone fotoğraf dönüştürücü, heic yönlendirme, heic döndürme, heic çevirme, apple fotoğraf dönüştürücü",
         "selectedFile": "Seçili dosya",
         "outputFormat": "Çıktı formatı",
         "quality": "Kalite",
         "convert": "Dönüştür",
         "processing": "Dönüştürülüyor...",
+        "download": "İndir",
+        "downloading": "İndirme hazırlanıyor...",
+        "decoding": "HEIC çözülüyor ve meta veriler okunuyor...",
+        "decodingFailed": "Bu HEIC dosyası çözülemedi.",
+        "downloadFailed": "İndirme hazırlanamadı.",
+        "previewFailed": "Tam ekran önizleme açılamadı.",
+        "preview": "Önizleme",
+        "fullscreen": "Tam ekran görüntüle",
+        "rotate": "Döndür",
+        "rotateLeft": "Saat yönünün tersine 90° döndür",
+        "rotateRight": "Saat yönünde 90° döndür",
+        "flip": "Çevir",
+        "flipHorizontal": "Yatay çevir",
+        "flipVertical": "Dikey çevir",
+        "reset": "Sıfırla",
+        "appleNote": "EXIF yönlendirmesi algılandı ve otomatik olarak uygulandı; Apple Photos'un gösterdiğiyle aynı.",
         "faq": {
           "q1": "HEIC dosyası nedir?",
-          "a1": "HEIC (High Efficiency Image Container), Apple cihazlarının varsayılan görsel formatıdır. Kaliteyi korurken JPEG'den daha iyi sıkıştırma sunar.",
+          "a1": "HEIC (High Efficiency Image Container), iOS 11'den itibaren Apple cihazlarının varsayılan fotoğraf formatıdır. Aynı kalitede JPEG'in yaklaşık yarısı kadar yer kaplar, ancak Windows'ta ve bazı eski Android cihazlarda doğal olarak açılmaz.",
           "q2": "Görselim bir sunucuya yükleniyor mu?",
-          "a2": "Hayır. Tüm dönüştürme işlemi tarayıcınızda yerel olarak gerçekleşir. Dosyalarınız asla cihazınızdan ayrılmaz.",
+          "a2": "Hayır. Çözme, EXIF analizi, döndürme/çevirme ve yeniden kodlama işlemlerinin tamamı tarayıcınızda yerel olarak gerçekleşir. Fotoğrafınız cihazınızdan ayrılmaz.",
           "q3": "Dosyalarım sunucuya yükleniyor mu?",
           "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
           "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
           "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
-          "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
+          "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler.",
+          "q6": "iPhone fotoğraflarım Windows'ta neden yan görünüyor?",
+          "a6": "iPhone'lar pikselleri sensör yönünde kaydeder ve asıl yönlendirmeyi EXIF Orientation etiketine yazar. Apple Photos ve çoğu modern görüntüleyici bu etikete uyar; ancak bazı Windows uygulamaları ile eski görüntüleyiciler onu göz ardı eder ve fotoğraf yan duruyor gibi görünür. Bu araç dönüştürme sırasında yönlendirmeyi doğrudan piksellere işler, böylece indirdiğiniz JPG veya PNG her yerde doğru görünür.",
+          "q7": "Dönüştürmeden sonra yönlendirme hâlâ yanlış. Ne yapmalıyım?",
+          "a7": "Önizlemenin üstündeki 90° sola/sağa döndür ve yatay/dikey çevir düğmelerini kullanın. Otomatik EXIF düzeltmesinin üzerine eklenir, bu sayede indirmeden önce istediğiniz yönlendirmeyi ayarlayabilirsiniz.",
+          "q8": "EXIF meta verileri çıktıda korunuyor mu?",
+          "a8": "Yönlendirme etiketi piksellere uygulandığı için çıktının artık buna ihtiyacı yoktur. GPS konumu, kamera modeli, çekim tarihi gibi diğer EXIF verileri aktarılmaz — dönüştürücü yalnızca temiz JPG veya PNG piksel verisi üretir. Meta verisiz olduğundan emin olmak isterseniz EXIF Kaldır aracını da birlikte kullanın."
         },
         "seoContent": {
           "intro": {
-            "title": "HEIC Dönüştürücü Nedir?",
-            "content": "<p><strong>HEIC Dönüştürücü</strong>, Apple HEIC/HEIF fotoğraflarını yaygın olarak uyumlu JPG veya PNG formatlarına dönüştürür. iPhone ve iPad'ler fotoğrafları varsayılan olarak HEIC formatında kaydeder — bu araç, yazılım yüklemeden onları her yerde kullanılabilecek formata dönüştürmenizi sağlar.</p><p>Birden fazla HEIC dosyasını aynı anda toplu dönüştürün; tümü tarayıcınızda yerel olarak işlenir.</p>"
+            "title": "HEIC Dönüştürücü nedir?",
+            "content": "<p><strong>HEIC Dönüştürücü</strong>, tek bir Apple HEIC veya HEIF fotoğrafını tamamen tarayıcınızda, geniş uyumluluğa sahip bir <strong>JPG</strong> veya <strong>PNG</strong> dosyasına dönüştürür. Araç, iPhone'ların fotoğrafları nasıl gerçekten sakladığına göre ayarlanmıştır: EXIF <code>Orientation</code> etiketini okur, piksellere uygular ve cihazınızda Apple Photos uygulamasında gördüğünüzün aynısını üretir.</p><p>Fotoğraf bir Apple cihazından geliyorsa araç marka ve modeli de algılar ve yönlendirmenin otomatik olarak düzeltildiğini belirten küçük bir rozet gösterir.</p>"
           },
           "howToUse": {
-            "title": "HEIC Dönüştürücü Nasıl Kullanılır?",
-            "content": "<ol><li>iPhone, iPad veya Mac'inizden bir ya da birden fazla HEIC/HEIF dosyası yükleyin</li><li>Çıktı formatını seçin: <strong>JPG</strong> veya <strong>PNG</strong></li><li>Tüm dosyaları işlemek için <strong>Dönüştür</strong>'e tıklayın</li><li>Dönüştürülen görselleri tek tek veya ZIP olarak indirin</li></ol><p>En iyi uyumluluk için JPG önerilir. Şeffaflık desteğine ihtiyaç duyuyorsanız PNG seçin.</p>"
+            "title": "HEIC Dönüştürücü nasıl kullanılır?",
+            "content": "<ol><li>iPhone, iPad veya Mac'inizden bir HEIC / HEIF fotoğrafı bırakın ya da seçin.</li><li>Görüntünün çözülmesini ve EXIF'in analiz edilmesini bekleyin. Önizleme, Apple'a uygun doğru yönde zaten görünür.</li><li>Gerekirse <strong>90° döndür</strong> ve <strong>Yatay / Dikey çevir</strong> ile ince ayar yapın. <strong>Sıfırla</strong> ile manuel ayarları geri alabilirsiniz.</li><li>Çıktı formatını seçin — en iyi uyumluluk için <strong>JPG</strong>, kayıpsız çıktı için <strong>PNG</strong> — ve isterseniz JPG kalitesini ayarlayın.</li><li>Son görüntüyü kaydetmek için <strong>İndir</strong>'e tıklayın. Yönlendirme piksellere işlenmiştir; fotoğraf her görüntüleyicide aynı görünür.</li></ol>"
           },
           "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>HEIC/HEIF Desteği</strong>: Apple'ın varsayılan fotoğraf formatını dönüştürme</li><li><strong>JPG ve PNG Çıktısı</strong>: Tercih ettiğiniz çıktı formatını seçme</li><li><strong>Toplu Dönüştürme</strong>: Birden fazla HEIC dosyasını aynı anda dönüştürme</li><li><strong>Kalite Koruma</strong>: Orijinal renkleri koruyan yüksek kaliteli dönüştürme</li><li><strong>heic2any ile Güçlendirilmiş</strong>: heic2any kütüphanesi kullanılarak güvenilir dönüştürme</li><li><strong>Sürükle ve Bırak</strong>: HEIC dosyalarını sayfaya sürüklemeniz yeterli</li></ul>"
+            "title": "Öne çıkan özellikler",
+            "content": "<ul><li><strong>Apple tarzı otomatik yönlendirme</strong>: EXIF <code>Orientation</code> etiketini (1–8) okur ve piksellere uygular; Apple Photos görünümüyle eşleşir.</li><li><strong>Apple cihaz algılama</strong>: Kaynak bir Apple cihazsa EXIF'ten okunan iPhone veya iPad modelini ve iOS sürümünü gösterir.</li><li><strong>Manuel döndürme ve çevirme</strong>: 90° adımlarla ayarlayın ve yatay/dikey aynalayın; otomatik yönlendirmenin üzerine uygulanır.</li><li><strong>Büyük canlı önizleme</strong>: Her döndürme veya çevirme yüksek çözünürlüklü canvas'ta yeniden çizilir; çıktı, gördüğünüzle eşleşir.</li><li><strong>JPG veya PNG çıktısı</strong>: Değişken JPEG kalitesi veya kayıpsız PNG; tüm düzenlemelerden sonra yalnızca bir kez yeniden kodlama.</li><li><strong>Tek fotoğraf iş akışı</strong>: Tek bir foto için odaklı arayüz — yükle, önizle, ayarla, indir.</li><li><strong>%100 yerel</strong>: HEIC çözme (heic2any) ve EXIF analizi (exifr) tarayıcınızda çalışır.</li></ul>"
           },
           "useCases": {
-            "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Fotoğraf Paylaşımı</strong>: iPhone fotoğraflarını Android veya Windows kullanıcılarıyla paylaşmak için JPG'ye dönüştürme</li><li><strong>Web Yükleme</strong>: HEIC kabul etmeyen web siteleri için HEIC'i JPG/PNG'ye dönüştürme</li><li><strong>Sosyal Medya</strong>: JPG/PNG gerektiren platformlar için iPhone fotoğraflarını hazırlama</li><li><strong>E-posta</strong>: Daha iyi e-posta uyumluluğu için JPG'ye dönüştürme</li><li><strong>Baskı</strong>: Baskı hizmetlerinin kabul ettiği formatlara dönüştürme</li></ul>"
+            "title": "Yaygın kullanım örnekleri",
+            "content": "<ul><li><strong>iPhone fotoğraflarını Windows veya Android kullanıcılarıyla paylaşma</strong>: yan fotoğraf sorunu olmadan JPG'ye dönüştürme.</li><li><strong>HEIC'i kabul etmeyen sosyal medya platformlarına gönderme</strong>, fotoğrafın çekildiği yönlendirmeyi koruyarak.</li><li><strong>E-posta ile fotoğraf gönderme</strong>, dikey veya yatay yönlendirmeyi garantileyerek.</li><li><strong>Photoshop, Lightroom veya tasarım araçlarına aktarma</strong>: HEIC yönlendirmesini yanlış işleyen araçlar için.</li><li><strong>Yan veya ters fotoğrafları düzeltme</strong>: indirme öncesinde manuel döndürme ve çevirme ile.</li><li><strong>Baskı hizmetleri</strong>: doğru yönlendirmeli JPG veya PNG gerektirenler için.</li></ul>"
           },
           "privacy": {
-            "title": "Gizlilik Odaklı HEIC Dönüştürme",
-            "content": "<p>HEIC dönüştürme, <strong>heic2any</strong> kütüphanesi kullanılarak <strong>tarayıcınızda yerel olarak</strong> çalışır.</p><ul><li>Fotoğraflarınız <strong>asla cihazınızdan çıkmaz</strong> — kişisel fotoğraflar için güvenli</li><li>Bulut işleme veya sunucu yüklemesi yok</li><li>İlk sayfa yüklemesinden sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
+            "title": "Gizlilik odaklı HEIC dönüştürme",
+            "content": "<p>Her adım <strong>tarayıcınızda yerel olarak</strong> çalışır.</p><ul><li>HEIC çözme, cihazınızda WebAssembly olarak çalışan <strong>heic2any</strong> kütüphanesini kullanır.</li><li>EXIF meta verileri istemci tarafında <strong>exifr</strong> ile okunur.</li><li>Fotoğrafınız ve meta verileri <strong>asla cihazınızdan ayrılmaz</strong> — hiçbir şey yüklenmez.</li><li>Sayfa yüklendikten sonra tamamen <strong>çevrimdışı</strong> çalışır; kişisel ve hassas fotoğraflar için güvenlidir.</li></ul>"
           }
         }
       },

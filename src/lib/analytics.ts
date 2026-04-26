@@ -75,6 +75,13 @@ interface ProcessErrorParams {
   error_message: string;
 }
 
+interface AppleDetectedParams {
+  tool_slug: string;
+  tool_category: string;
+  device_model?: string;
+  software?: string;
+}
+
 // ─── Event map ───
 
 interface EventParams {
@@ -91,6 +98,7 @@ interface EventParams {
   share_click: ShareClickParams;
   process_complete: ProcessCompleteParams;
   process_error: ProcessErrorParams;
+  apple_detected: AppleDetectedParams;
 }
 
 export type AnalyticsEvent = keyof EventParams;

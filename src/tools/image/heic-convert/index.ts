@@ -16,7 +16,6 @@ const definition: ToolDefinition = {
       questionKey: "tools.image.heic-convert.faq.q2",
       answerKey: "tools.image.heic-convert.faq.a2",
     },
-  
     {
       questionKey: "tools.image.heic-convert.faq.q3",
       answerKey: "tools.image.heic-convert.faq.a3",
@@ -29,8 +28,20 @@ const definition: ToolDefinition = {
       questionKey: "tools.image.heic-convert.faq.q5",
       answerKey: "tools.image.heic-convert.faq.a5",
     },
+    {
+      questionKey: "tools.image.heic-convert.faq.q6",
+      answerKey: "tools.image.heic-convert.faq.a6",
+    },
+    {
+      questionKey: "tools.image.heic-convert.faq.q7",
+      answerKey: "tools.image.heic-convert.faq.a7",
+    },
+    {
+      questionKey: "tools.image.heic-convert.faq.q8",
+      answerKey: "tools.image.heic-convert.faq.a8",
+    },
   ],
-  relatedSlugs: ["format-converter", "compress", "remove-exif"],
+  relatedSlugs: ["format-converter", "compress", "remove-exif", "flip"],
 };
 
 export default definition;

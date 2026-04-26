@@ -1074,47 +1074,69 @@
       },
       "heic-convert": {
         "name": "HEIC 変換",
-        "description": "HEIC/HEIF 画像を JPG または PNG 形式に変換します。",
-        "metaTitle": "HEIC から JPG/PNG 変換 - 無料オンライン HEIC 変換ツール",
-        "metaDescription": "HEIC・HEIF 画像を JPG または PNG 形式に変換。アップロード不要の無料オンラインツール。ブラウザで動作。",
-        "keywords": "heic から jpg, heic から png, heif 変換, iphone 写真変換, heic 変換 オンライン",
+        "description": "1 枚の HEIC/HEIF 写真を JPG または PNG に変換。Apple 方式で向きを自動補正し、手動での回転・反転にも対応。",
+        "metaTitle": "HEIC から JPG/PNG 変換（回転・反転対応） - 無料オンライン",
+        "metaDescription": "HEIC/HEIF 写真を 1 枚単位で JPG または PNG に変換。Apple Photos と同じ方法で EXIF の向きを自動適用し、手動で回転・反転も可能。100% ローカル処理、アップロード不要。",
+        "keywords": "heic から jpg, heic から png, heif 変換, iphone 写真 変換, heic 向き 補正, heic 回転, heic 反転, apple 写真 変換",
         "selectedFile": "選択ファイル",
         "outputFormat": "出力形式",
         "quality": "品質",
         "convert": "変換",
         "processing": "変換中...",
+        "download": "ダウンロード",
+        "downloading": "ダウンロードを準備中...",
+        "decoding": "HEIC をデコードし、メタデータを読み込み中...",
+        "decodingFailed": "この HEIC ファイルをデコードできませんでした。",
+        "downloadFailed": "ダウンロードの準備に失敗しました。",
+        "previewFailed": "全画面プレビューを開けませんでした。",
+        "preview": "プレビュー",
+        "fullscreen": "全画面表示",
+        "rotate": "回転",
+        "rotateLeft": "反時計回りに 90° 回転",
+        "rotateRight": "時計回りに 90° 回転",
+        "flip": "反転",
+        "flipHorizontal": "左右反転",
+        "flipVertical": "上下反転",
+        "reset": "リセット",
+        "appleNote": "EXIF の向きタグを検出し、Apple Photos と同じ見え方になるよう自動適用しました。",
         "faq": {
           "q1": "HEIC ファイルとは？",
-          "a1": "HEIC（High Efficiency Image Container）は Apple デバイスで使用されるデフォルトの画像形式です。品質を維持しながら JPEG より優れた圧縮率を提供します。",
+          "a1": "HEIC（High Efficiency Image Container）は iOS 11 以降、Apple デバイスの標準写真形式です。同じ画質で JPEG の約半分のファイルサイズを実現しますが、Windows や古い Android では標準では開けません。",
           "q2": "画像はサーバーにアップロードされますか？",
-          "a2": "いいえ。すべての変換はブラウザ内でローカルに行われます。ファイルがデバイスを離れることはありません。",
+          "a2": "いいえ。デコード、EXIF 解析、回転・反転の描画、再エンコードまですべてブラウザ内で実行され、写真がデバイスを離れることはありません。",
           "q3": "ファイルはサーバーにアップロードされますか？",
           "a3": "いいえ。すべての処理はブラウザ内で完結します。データがデバイスから出ることは一切ありません。サーバーへのアップロードは行われません。",
           "q4": "オフラインで使用できますか？",
           "a4": "はい。ページを一度読み込めば、完全にオフラインで動作します。より快適にご利用いただくには、ブラウザから PrivaDeck を PWA としてインストールしてください。",
           "q5": "ファイルサイズに制限はありますか？",
-          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能なメモリとブラウザの性能によって異なります。最近のデバイスであれば数百 MB までのファイルを問題なく処理できます。"
+          "a5": "サーバー側の制限はありません。最大ファイルサイズはデバイスの利用可能なメモリとブラウザの性能によって異なります。最近のデバイスであれば数百 MB までのファイルを問題なく処理できます。",
+          "q6": "Windows で iPhone の写真が横向き（または逆さま）に見えるのはなぜ？",
+          "a6": "iPhone はセンサー方向のまま画素を保存し、実際の表示向きは EXIF の Orientation タグに記録します。Apple Photos やほとんどのモダンなビューアはこのタグを尊重しますが、一部の Windows アプリや古いビューアは無視するため画像が回転して見えます。本ツールは変換時に向きを画素レベルに焼き込むので、ダウンロードした JPG / PNG はどのビューアでも正しい向きで表示されます。",
+          "q7": "変換後も向きが正しくない場合は？",
+          "a7": "プレビュー上の「左右 90° 回転」「左右反転 / 上下反転」ボタンを使ってください。これらは自動の EXIF 補正に上乗せされるので、ダウンロード前に向きを自由に微調整できます。",
+          "q8": "変換後に EXIF メタデータは残りますか？",
+          "a8": "向きは既に画素へ適用されているため、出力ファイル側で Orientation タグを残す必要はありません。GPS・カメラ機種・撮影日時などその他の EXIF 情報は出力ファイルに書き込まれず、純粋な JPG / PNG ピクセルデータのみが出力されます。完全にメタデータを除去したい場合は「EXIF 削除」ツールと併用してください。"
         },
         "seoContent": {
           "intro": {
             "title": "HEIC 変換とは？",
-            "content": "<p><strong>HEIC 変換</strong>は、Apple の HEIC/HEIF 写真を広く互換性のある JPG または PNG フォーマットに変換するツールです。iPhone と iPad はデフォルトで HEIC 形式で写真を保存しますが、このツールを使えばソフトウェアをインストールすることなくどこでも使えるフォーマットに変換できます。</p><p>複数の HEIC ファイルをまとめてバッチ変換でき、すべてブラウザ内でローカルに処理されます。</p>"
+            "content": "<p><strong>HEIC 変換</strong>は、Apple の HEIC / HEIF 写真を 1 枚単位で互換性の高い <strong>JPG</strong> または <strong>PNG</strong> に変換するブラウザ完結型のツールです。iPhone の実際の保存形式に合わせて最適化されており、EXIF の <code>Orientation</code> タグを読み取って画素に適用するため、iPhone の Apple Photos で見るのと同じ向きで表示されます。</p><p>写真が Apple デバイス由来であればメーカー・機種も自動検出し、プレビュー下にバッジを表示して向きが自動補正されたことを知らせます。</p>"
           },
           "howToUse": {
             "title": "HEIC 変換の使い方",
-            "content": "<ol><li>iPhone、iPad、Mac から1つまたは複数の HEIC/HEIF ファイルをアップロード</li><li>出力フォーマットを選択：<strong>JPG</strong> または <strong>PNG</strong></li><li><strong>変換</strong>をクリックしてすべてのファイルを処理</li><li>変換済みの画像を個別または ZIP でダウンロード</li></ol><p>互換性を優先する場合は JPG を推奨します。透明度が必要な場合は PNG を選択してください。</p>"
+            "content": "<ol><li>iPhone / iPad / Mac の HEIC または HEIF 写真を 1 枚ドロップまたは選択します。</li><li>デコードと EXIF 解析が完了するとプレビューが表示され、Apple と同じ向きで見えます。</li><li>必要に応じて <strong>90° 回転</strong>・<strong>左右 / 上下反転</strong>で微調整します。<strong>リセット</strong>で手動調整を取り消せます。</li><li>出力形式を選びます。互換性重視なら <strong>JPG</strong>、無損失なら <strong>PNG</strong>。JPG では品質スライダーを調整できます。</li><li><strong>ダウンロード</strong>を押して保存します。向きが画素に焼き込まれているため、どのビューアでも同じ見え方になります。</li></ol>"
           },
           "features": {
             "title": "主な機能",
-            "content": "<ul><li><strong>HEIC/HEIF 対応</strong>：Apple のデフォルト写真フォーマットを変換</li><li><strong>JPG・PNG 出力</strong>：好みの出力フォーマットを選択</li><li><strong>バッチ変換</strong>：複数の HEIC ファイルを同時に変換</li><li><strong>品質保持</strong>：元の色を維持した高品質変換</li><li><strong>heic2any 採用</strong>：heic2any ライブラリによる信頼性の高い変換</li><li><strong>ドラッグ＆ドロップ</strong>：HEIC ファイルをページにドラッグするだけ</li></ul>"
+            "content": "<ul><li><strong>Apple 方式の自動向き補正</strong>：EXIF <code>Orientation</code>（1〜8）を読み取り、Apple Photos と同じ表示に合わせます。</li><li><strong>Apple デバイス自動検出</strong>：EXIF の情報から iPhone / iPad の機種と iOS バージョンを表示します。</li><li><strong>手動での回転・反転</strong>：90° 単位の回転と左右・上下反転を、自動補正の上に追加適用できます。</li><li><strong>大きなリアルタイムプレビュー</strong>：操作のたびに高解像度キャンバスで再描画され、出力と一致します。</li><li><strong>JPG / PNG 出力</strong>：JPEG 品質の可変指定、または無損失 PNG。すべての編集後に一度だけ再エンコードします。</li><li><strong>1 枚集中ワークフロー</strong>：アップロード → プレビュー → 調整 → ダウンロードの分かりやすい流れ。</li><li><strong>100% ローカル</strong>：HEIC デコード（heic2any）と EXIF 解析（exifr）はすべてブラウザ内で実行されます。</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
-            "content": "<ul><li><strong>写真共有</strong>：Android や Windows ユーザーと共有するために iPhone の写真を JPG に変換</li><li><strong>Web アップロード</strong>：HEIC を受け付けない Web サイト用に JPG/PNG に変換</li><li><strong>SNS</strong>：JPG/PNG を必要とするプラットフォーム向けに iPhone の写真を準備</li><li><strong>メール</strong>：メールの互換性向上のために JPG に変換</li><li><strong>印刷</strong>：印刷サービスが受け付けるフォーマットに変換</li></ul>"
+            "content": "<ul><li><strong>Windows・Android ユーザーへの共有</strong>：横倒し問題なしで JPG に変換。</li><li><strong>SNS への投稿</strong>：HEIC を受け付けないサービス用に、撮影時と同じ向きで書き出し。</li><li><strong>メール添付</strong>：縦横の向きを確実に保ったまま添付。</li><li><strong>Photoshop / Lightroom への読み込み</strong>：HEIC の向きを誤認するツール向けに事前変換。</li><li><strong>向きが間違った写真の修正</strong>：手動の回転・反転で逆さまや鏡像を修正。</li><li><strong>印刷サービス</strong>：正しい向きの JPG / PNG で入稿。</li></ul>"
           },
           "privacy": {
             "title": "プライバシー優先の HEIC 変換",
-            "content": "<p>HEIC 変換は <strong>heic2any</strong> ライブラリを使用して<strong>ブラウザ内でローカルに</strong>実行されます。</p><ul><li>写真が<strong>デバイスの外に出ることは絶対にありません</strong>——個人写真も安全</li><li>クラウド処理なし、サーバーアップロードなし</li><li>初回ページ読み込み後は<strong>オフライン</strong>でも動作</li></ul>"
+            "content": "<p>すべての処理は<strong>ブラウザ内でローカル</strong>に実行されます。</p><ul><li>HEIC デコードは <strong>heic2any</strong> ライブラリを使用し、WebAssembly としてお使いの端末上で動作します。</li><li>EXIF メタデータは <strong>exifr</strong> でクライアント側で解析します。</li><li>写真とメタデータが<strong>デバイスを離れることは絶対にありません</strong>——アップロードは一切行われません。</li><li>ページ読み込み後は完全に<strong>オフライン</strong>で動作し、個人の大切な写真にも安心です。</li></ul>"
           }
         }
       },

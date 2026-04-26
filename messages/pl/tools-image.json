@@ -1074,47 +1074,69 @@
       },
       "heic-convert": {
         "name": "Konwerter HEIC",
-        "description": "Konwertuj obrazy HEIC/HEIF na format JPG lub PNG.",
-        "metaTitle": "Konwerter HEIC na JPG/PNG - Darmowy konwerter HEIC online",
-        "metaDescription": "Konwertuj obrazy HEIC i HEIF na format JPG lub PNG. Darmowe narzędzie online, bez przesyłania. Działa w przeglądarce.",
-        "keywords": "heic na jpg, heic na png, konwerter heif, konwerter zdjęć iphone, konwerter heic online",
+        "description": "Konwertuj jedno zdjęcie HEIC/HEIF na JPG lub PNG z automatyczną korekcją orientacji w stylu Apple oraz ręcznym obrotem i odbiciem.",
+        "metaTitle": "Konwerter HEIC na JPG/PNG z obrotem i odbiciem – Darmowy online",
+        "metaDescription": "Konwertuj jedno zdjęcie HEIC lub HEIF na JPG lub PNG z automatyczną korekcją orientacji w stylu Apple Photos oraz ręcznym obrotem i odbiciem. 100% lokalnie, bez przesyłania.",
+        "keywords": "heic na jpg, heic na png, konwerter heif, konwerter zdjęć iphone, orientacja heic, obrót heic, odbicie heic, konwerter zdjęć apple",
         "selectedFile": "Wybrany plik",
         "outputFormat": "Format wyjściowy",
         "quality": "Jakość",
         "convert": "Konwertuj",
         "processing": "Konwertowanie...",
+        "download": "Pobierz",
+        "downloading": "Przygotowywanie pobierania...",
+        "decoding": "Dekodowanie HEIC i odczyt metadanych...",
+        "decodingFailed": "Nie udało się zdekodować tego pliku HEIC.",
+        "downloadFailed": "Nie udało się przygotować pobierania.",
+        "previewFailed": "Nie udało się otworzyć podglądu pełnoekranowego.",
+        "preview": "Podgląd",
+        "fullscreen": "Pełny ekran",
+        "rotate": "Obróć",
+        "rotateLeft": "Obróć o 90° w lewo",
+        "rotateRight": "Obróć o 90° w prawo",
+        "flip": "Odbij",
+        "flipHorizontal": "Odbij w poziomie",
+        "flipVertical": "Odbij w pionie",
+        "reset": "Resetuj",
+        "appleNote": "Orientacja EXIF została wykryta i zastosowana automatycznie, zgodnie ze sposobem wyświetlania w Apple Photos.",
         "faq": {
           "q1": "Czym jest plik HEIC?",
-          "a1": "HEIC (High Efficiency Image Container) to domyślny format obrazu używany przez urządzenia Apple. Oferuje lepszą kompresję niż JPEG przy zachowaniu jakości.",
+          "a1": "HEIC (High Efficiency Image Container) to domyślny format zdjęć na urządzeniach Apple od iOS 11. Przy podobnej jakości zajmuje około połowy rozmiaru JPEG, lecz nie otwiera się natywnie w Windows ani na starszych urządzeniach Android.",
           "q2": "Czy mój obraz jest przesyłany na serwer?",
-          "a2": "Nie. Cała konwersja odbywa się lokalnie w przeglądarce. Twoje pliki nigdy nie opuszczają urządzenia.",
+          "a2": "Nie. Dekodowanie, analiza EXIF, obracanie/odbijanie i ponowne kodowanie odbywają się lokalnie w przeglądarce. Zdjęcie nie opuszcza urządzenia.",
           "q3": "Czy moje pliki zostaną przesłane na serwer?",
           "a3": "Nie. Całe przetwarzanie odbywa się w przeglądarce. Twoje dane nigdy nie opuszczają urządzenia — nic nie jest przesyłane na serwer.",
           "q4": "Czy mogę używać tego narzędzia offline?",
           "a4": "Tak. Po załadowaniu strony narzędzie działa całkowicie offline. Dla najlepszego doświadczenia zainstaluj PrivaDeck jako PWA z poziomu przeglądarki.",
           "q5": "Czy są limity rozmiaru pliku?",
-          "a5": "Nie ma limitów narzucanych przez serwer. Maksymalny rozmiar pliku zależy od dostępnej pamięci urządzenia i możliwości przeglądarki. Większość nowoczesnych urządzeń bez problemu obsługuje pliki do kilkuset MB."
+          "a5": "Nie ma limitów narzucanych przez serwer. Maksymalny rozmiar pliku zależy od dostępnej pamięci urządzenia i możliwości przeglądarki. Większość nowoczesnych urządzeń bez problemu obsługuje pliki do kilkuset MB.",
+          "q6": "Dlaczego zdjęcia z iPhone'a w Windows są obrócone?",
+          "a6": "iPhone zapisuje piksele w orientacji matrycy, a właściwy kierunek wyświetlania wpisuje do pola EXIF Orientation. Apple Photos i większość nowoczesnych przeglądarek respektuje ten tag, ale niektóre aplikacje Windows i starsze przeglądarki ignorują go — wtedy zdjęcie wygląda na obrócone. To narzędzie w trakcie konwersji wtapia orientację w same piksele, dzięki czemu pobrany JPG lub PNG wygląda poprawnie wszędzie.",
+          "q7": "Po konwersji orientacja nadal jest zła. Co mogę zrobić?",
+          "a7": "Użyj przycisków Obrót o 90° w lewo/prawo oraz Odbicie w poziomie/pionie nad podglądem. Nakładają się one na automatyczną korekcję EXIF, więc możesz ustawić dowolną orientację przed pobraniem.",
+          "q8": "Czy metadane EXIF są zachowywane w pliku wynikowym?",
+          "a8": "Tag orientacji jest w praktyce zapisany w pikselach, więc wyjście już go nie potrzebuje. Pozostałe dane EXIF, jak GPS, model aparatu czy data zdjęcia, nie są przenoszone — konwerter generuje wyłącznie świeże piksele JPG lub PNG. Jeśli chcesz mieć plik zagwarantowanie bez metadanych, użyj go wraz z narzędziem Usuń EXIF."
         },
         "seoContent": {
           "intro": {
-            "title": "Co to jest Konwerter HEIC?",
-            "content": "<p><strong>Konwerter HEIC</strong> konwertuje zdjęcia Apple HEIC/HEIF do szeroko kompatybilnych formatów JPG lub PNG. iPhone'y i iPady domyślnie zapisują zdjęcia w formacie HEIC — to narzędzie pozwala konwertować je do użycia w dowolnym miejscu bez instalowania oprogramowania.</p><p>Konwertuj wsadowo wiele plików HEIC jednocześnie, wszystko przetwarzane lokalnie w przeglądarce.</p>"
+            "title": "Czym jest Konwerter HEIC?",
+            "content": "<p><strong>Konwerter HEIC</strong> zamienia pojedyncze zdjęcie Apple HEIC lub HEIF w szeroko zgodny plik <strong>JPG</strong> lub <strong>PNG</strong>, w całości w Twojej przeglądarce. Narzędzie jest dopasowane do tego, jak iPhone'y faktycznie zapisują zdjęcia: odczytuje tag EXIF <code>Orientation</code>, stosuje go do pikseli i odtwarza to, co widzisz w aplikacji Zdjęcia od Apple na swoim urządzeniu.</p><p>Jeśli zdjęcie pochodzi z urządzenia Apple, narzędzie wykrywa też producenta i model oraz pokazuje mały znacznik potwierdzający, że orientacja została skorygowana automatycznie.</p>"
           },
           "howToUse": {
             "title": "Jak używać Konwertera HEIC",
-            "content": "<ol><li>Prześlij jeden lub więcej plików HEIC/HEIF z iPhone'a, iPada lub Maca</li><li>Wybierz format wyjściowy: <strong>JPG</strong> lub <strong>PNG</strong></li><li>Kliknij <strong>Konwertuj</strong>, aby przetworzyć wszystkie pliki</li><li>Pobierz przekonwertowane obrazy pojedynczo lub jako ZIP</li></ol><p>Dla najlepszej kompatybilności zalecany jest JPG. Wybierz PNG, jeśli potrzebujesz obsługi przezroczystości.</p>"
+            "content": "<ol><li>Przeciągnij lub wybierz jedno zdjęcie HEIC / HEIF z iPhone'a, iPada lub Maca.</li><li>Poczekaj chwilę na zdekodowanie obrazu i odczyt EXIF. Podgląd pojawi się już z prawidłową orientacją w stylu Apple.</li><li>W razie potrzeby użyj przycisków <strong>Obrót 90°</strong> i <strong>Odbicie poziome / pionowe</strong>. Kliknij <strong>Resetuj</strong>, aby cofnąć ręczne zmiany.</li><li>Wybierz format wyjściowy — <strong>JPG</strong> dla najlepszej zgodności, <strong>PNG</strong> dla bezstratnego wyjścia — i dopasuj jakość JPG, jeśli chcesz.</li><li>Kliknij <strong>Pobierz</strong>, aby zapisać końcowy obraz. Orientacja jest wtopiona w piksele, więc zdjęcie wygląda tak samo w każdej przeglądarce.</li></ol>"
           },
           "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Obsługa HEIC/HEIF</strong>: Konwertuj domyślny format zdjęć Apple</li><li><strong>Wyjście JPG i PNG</strong>: Wybierz preferowany format wyjściowy</li><li><strong>Konwersja wsadowa</strong>: Konwertuj wiele plików HEIC jednocześnie</li><li><strong>Zachowanie jakości</strong>: Konwersja wysokiej jakości zachowująca oryginalne kolory</li><li><strong>Oparte na heic2any</strong>: Niezawodna konwersja używając biblioteki heic2any</li><li><strong>Przeciągnij i upuść</strong>: Po prostu przeciągnij pliki HEIC na stronę</li></ul>"
+            "title": "Kluczowe funkcje",
+            "content": "<ul><li><strong>Automatyczna orientacja w stylu Apple</strong>: odczyt tagu EXIF <code>Orientation</code> (wartości 1–8) i zastosowanie go do pikseli, tak jak w Apple Photos.</li><li><strong>Wykrywanie urządzeń Apple</strong>: pokazuje model iPhone'a lub iPada oraz wersję iOS odczytane z EXIF, gdy źródłem jest sprzęt Apple.</li><li><strong>Ręczny obrót i odbicie</strong>: regulacja co 90°, odbicie w poziomie lub pionie nad automatyczną orientacją.</li><li><strong>Duży podgląd na żywo</strong>: każdy obrót lub odbicie rysuje ponownie wysokorozdzielczy canvas, więc wynik zgadza się z tym, co widzisz.</li><li><strong>Wyjście JPG lub PNG</strong>: zmienna jakość JPEG albo bezstratne PNG, jedno ponowne kodowanie po wszystkich zmianach.</li><li><strong>Przepływ dla jednego zdjęcia</strong>: skupiony interfejs dla jednego zdjęcia — wgranie, podgląd, korekta, pobranie.</li><li><strong>100% lokalnie</strong>: dekodowanie HEIC (przez heic2any) i analiza EXIF (przez exifr) działają w Twojej przeglądarce.</li></ul>"
           },
           "useCases": {
-            "title": "Typowe przypadki użycia",
-            "content": "<ul><li><strong>Udostępnianie zdjęć</strong>: Konwertuj zdjęcia iPhone'a na JPG do udostępniania użytkownikom Android lub Windows</li><li><strong>Przesyłanie WWW</strong>: Konwertuj HEIC na JPG/PNG dla stron nieakceptujących HEIC</li><li><strong>Media społecznościowe</strong>: Przygotuj zdjęcia iPhone'a dla platform wymagających JPG/PNG</li><li><strong>E-mail</strong>: Konwertuj na JPG dla lepszej kompatybilności e-mail</li><li><strong>Druk</strong>: Konwertuj do formatów akceptowanych przez usługi druku</li></ul>"
+            "title": "Typowe zastosowania",
+            "content": "<ul><li><strong>Udostępnianie zdjęć iPhone'a użytkownikom Windows lub Android</strong>: konwersja do JPG bez problemu z obróconym zdjęciem.</li><li><strong>Publikacja w mediach społecznościowych</strong>, które nie akceptują HEIC, z zachowaniem oryginalnej orientacji.</li><li><strong>Wysyłka zdjęć e-mailem</strong> z zagwarantowaną pionową lub poziomą orientacją.</li><li><strong>Import do Photoshopa, Lightrooma lub narzędzi graficznych</strong> źle interpretujących orientację HEIC.</li><li><strong>Korekta przekrzywionych lub odwróconych zdjęć</strong> ręcznym obrotem/odbiciem przed pobraniem.</li><li><strong>Usługi druku</strong> wymagające JPG lub PNG z poprawną orientacją.</li></ul>"
           },
           "privacy": {
             "title": "Konwersja HEIC z priorytetem prywatności",
-            "content": "<p>Konwersja HEIC działa <strong>lokalnie w przeglądarce</strong> używając biblioteki <strong>heic2any</strong>.</p><ul><li>Twoje zdjęcia <strong>nigdy nie opuszczają urządzenia</strong> — bezpieczne dla osobistych zdjęć</li><li>Brak przetwarzania w chmurze ani przesyłek na serwer</li><li>Działa <strong>offline</strong> po początkowym załadowaniu strony</li></ul>"
+            "content": "<p>Każdy krok odbywa się <strong>lokalnie w Twojej przeglądarce</strong>.</p><ul><li>Dekodowanie HEIC korzysta z biblioteki <strong>heic2any</strong> działającej jako WebAssembly na Twoim urządzeniu.</li><li>Metadane EXIF są odczytywane po stronie klienta za pomocą <strong>exifr</strong>.</li><li>Twoje zdjęcie wraz z metadanymi <strong>nigdy nie opuszcza urządzenia</strong> — nic nie jest przesyłane.</li><li>Działa <strong>offline</strong> po załadowaniu strony; bezpieczne dla osobistych i wrażliwych zdjęć.</li></ul>"
           }
         }
       },

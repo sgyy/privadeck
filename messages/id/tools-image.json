@@ -1074,47 +1074,69 @@
       },
       "heic-convert": {
         "name": "Konverter HEIC",
-        "description": "Konversi gambar HEIC/HEIF ke format JPG atau PNG.",
-        "metaTitle": "Konverter HEIC ke JPG/PNG - Konverter HEIC Online Gratis",
-        "metaDescription": "Konversi gambar HEIC dan HEIF ke format JPG atau PNG. Alat online gratis, tanpa unggahan. Bekerja di browser Anda.",
-        "keywords": "heic ke jpg, heic ke png, konverter heif, konverter foto iphone, konverter heic online",
+        "description": "Konversi satu foto HEIC/HEIF ke JPG atau PNG dengan orientasi ala Apple yang benar, ditambah putar dan balik manual.",
+        "metaTitle": "Konverter HEIC ke JPG/PNG dengan Putar & Balik - Gratis Online",
+        "metaDescription": "Konversi satu foto HEIC atau HEIF ke JPG atau PNG dengan koreksi orientasi otomatis ala Apple Photos, serta putar dan balik manual. 100% lokal, tanpa unggahan.",
+        "keywords": "heic ke jpg, heic ke png, konverter heif, konverter foto iphone, orientasi heic, putar heic, balik heic, konverter foto apple",
         "selectedFile": "File terpilih",
         "outputFormat": "Format output",
         "quality": "Kualitas",
         "convert": "Konversi",
         "processing": "Mengonversi...",
+        "download": "Unduh",
+        "downloading": "Menyiapkan unduhan...",
+        "decoding": "Mendekode HEIC dan membaca metadata...",
+        "decodingFailed": "Tidak dapat mendekode file HEIC ini.",
+        "downloadFailed": "Tidak dapat menyiapkan unduhan.",
+        "previewFailed": "Tidak dapat membuka pratinjau layar penuh.",
+        "preview": "Pratinjau",
+        "fullscreen": "Lihat layar penuh",
+        "rotate": "Putar",
+        "rotateLeft": "Putar 90° berlawanan arah jarum jam",
+        "rotateRight": "Putar 90° searah jarum jam",
+        "flip": "Balik",
+        "flipHorizontal": "Balik horizontal",
+        "flipVertical": "Balik vertikal",
+        "reset": "Reset",
+        "appleNote": "Orientasi EXIF terdeteksi dan diterapkan otomatis, sama seperti tampilan di Apple Photos.",
         "faq": {
           "q1": "Apa itu file HEIC?",
-          "a1": "HEIC (High Efficiency Image Container) adalah format gambar default yang digunakan perangkat Apple. Menawarkan kompresi lebih baik daripada JPEG sambil mempertahankan kualitas.",
+          "a1": "HEIC (High Efficiency Image Container) adalah format foto default perangkat Apple sejak iOS 11. Ukurannya sekitar setengah dari JPEG pada kualitas serupa, tetapi tidak bisa dibuka secara native di Windows atau Android lawas.",
           "q2": "Apakah gambar saya diunggah ke server?",
-          "a2": "Tidak. Semua konversi terjadi secara lokal di browser Anda. File Anda tidak pernah meninggalkan perangkat.",
+          "a2": "Tidak. Dekode, pembacaan EXIF, putar/balik, serta pengkodean ulang semuanya berjalan lokal di browser. Foto tidak pernah meninggalkan perangkat.",
           "q3": "Apakah file saya diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
           "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
           "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
-          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah.",
+          "q6": "Mengapa foto iPhone saya tampak miring di Windows?",
+          "a6": "iPhone menyimpan piksel dalam orientasi sensor dan mencatat rotasi sebenarnya di tag EXIF Orientation. Apple Photos dan sebagian besar viewer modern menghormati tag ini, tetapi beberapa aplikasi Windows dan viewer lama mengabaikannya, sehingga foto terlihat miring. Alat ini membenamkan orientasi ke dalam piksel saat konversi, jadi JPG atau PNG yang diunduh tampil benar di mana pun.",
+          "q7": "Setelah konversi, orientasi masih salah. Apa yang bisa dilakukan?",
+          "a7": "Gunakan tombol Putar 90° kiri/kanan dan Balik horizontal/vertikal di atas pratinjau. Keduanya ditumpuk di atas koreksi EXIF otomatis, sehingga Anda bisa mengatur orientasi apa pun sebelum mengunduh.",
+          "q8": "Apakah metadata EXIF dipertahankan di hasil?",
+          "a8": "Tag orientasi sudah diterapkan ke piksel, jadi output tidak memerlukannya lagi. Data EXIF lain seperti lokasi GPS, model kamera, dan waktu pengambilan tidak dibawa ke hasil — konverter hanya mengeluarkan data piksel JPG atau PNG baru. Untuk memastikan file bebas metadata, gabungkan dengan alat Hapus EXIF."
         },
         "seoContent": {
           "intro": {
-            "title": "Apa itu HEIC Converter?",
-            "content": "<p><strong>HEIC Converter</strong> mengonversi foto HEIC/HEIF Apple ke format JPG atau PNG yang kompatibel luas. iPhone dan iPad menyimpan foto dalam format HEIC secara default — alat ini memungkinkan Anda mengonversinya untuk digunakan di mana saja tanpa menginstal perangkat lunak.</p><p>Konversi batch beberapa file HEIC sekaligus, semuanya diproses secara lokal di browser Anda.</p>"
+            "title": "Apa itu Konverter HEIC?",
+            "content": "<p><strong>Konverter HEIC</strong> mengubah satu foto Apple HEIC atau HEIF menjadi file <strong>JPG</strong> atau <strong>PNG</strong> yang kompatibel luas, sepenuhnya di dalam browser Anda. Alat ini disesuaikan dengan cara iPhone menyimpan foto: ia membaca tag EXIF <code>Orientation</code>, menerapkannya ke piksel, dan menampilkan seperti di aplikasi Foto Apple di perangkat Anda.</p><p>Jika foto berasal dari perangkat Apple, alat ini juga mendeteksi merek dan model serta menampilkan lencana kecil yang menandakan bahwa orientasi telah dikoreksi otomatis.</p>"
           },
           "howToUse": {
-            "title": "Cara Menggunakan HEIC Converter",
-            "content": "<ol><li>Unggah satu atau lebih file HEIC/HEIF dari iPhone, iPad, atau Mac Anda</li><li>Pilih format output: <strong>JPG</strong> atau <strong>PNG</strong></li><li>Klik <strong>Konversi</strong> untuk memproses semua file</li><li>Unduh gambar yang dikonversi secara individual atau sebagai ZIP</li></ol><p>Untuk kompatibilitas terbaik, JPG direkomendasikan. Pilih PNG jika Anda memerlukan dukungan transparansi.</p>"
+            "title": "Cara menggunakan Konverter HEIC",
+            "content": "<ol><li>Seret atau pilih satu foto HEIC / HEIF dari iPhone, iPad, atau Mac Anda.</li><li>Tunggu beberapa saat saat gambar didekode dan EXIF dianalisis. Pratinjau muncul dengan orientasi ala Apple yang sudah benar.</li><li>Jika perlu, gunakan <strong>Putar 90°</strong> dan <strong>Balik horizontal / vertikal</strong>. Klik <strong>Reset</strong> untuk membatalkan pengaturan manual.</li><li>Pilih format output — <strong>JPG</strong> untuk kompatibilitas terbaik, <strong>PNG</strong> untuk output tanpa kehilangan kualitas — dan sesuaikan kualitas JPG bila perlu.</li><li>Klik <strong>Unduh</strong> untuk menyimpan gambar akhir. Orientasi sudah berada di piksel, sehingga tampilannya sama di viewer mana pun.</li></ol>"
           },
           "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Dukungan HEIC/HEIF</strong>: Konversi format foto default Apple</li><li><strong>Output JPG & PNG</strong>: Pilih format output pilihan Anda</li><li><strong>Konversi Batch</strong>: Konversi beberapa file HEIC secara bersamaan</li><li><strong>Preservasi Kualitas</strong>: Konversi berkualitas tinggi mempertahankan warna asli</li><li><strong>Ditenagai heic2any</strong>: Konversi andal menggunakan library heic2any</li><li><strong>Seret & Jatuhkan</strong>: Cukup seret file HEIC ke halaman</li></ul>"
+            "title": "Fitur utama",
+            "content": "<ul><li><strong>Orientasi otomatis ala Apple</strong>: membaca tag EXIF <code>Orientation</code> (nilai 1–8) dan menerapkannya ke piksel, cocok dengan tampilan Apple Photos.</li><li><strong>Deteksi perangkat Apple</strong>: menampilkan model iPhone atau iPad serta versi iOS yang dibaca dari EXIF saat sumber berasal dari perangkat Apple.</li><li><strong>Putar & balik manual</strong>: atur dengan langkah 90° serta cerminkan horizontal/vertikal di atas orientasi otomatis.</li><li><strong>Pratinjau langsung besar</strong>: setiap putar atau balik menggambar ulang canvas resolusi tinggi, jadi output selalu cocok dengan yang Anda lihat.</li><li><strong>Output JPG atau PNG</strong>: kualitas JPEG yang dapat diatur atau PNG tanpa kehilangan, satu kali pengkodean ulang setelah semua pengaturan.</li><li><strong>Alur satu foto</strong>: antarmuka terfokus untuk satu foto — unggah, pratinjau, atur, unduh.</li><li><strong>100% lokal</strong>: decoding HEIC (via heic2any) dan analisis EXIF (via exifr) berjalan di browser Anda.</li></ul>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Berbagi Foto</strong>: Konversi foto iPhone ke JPG untuk berbagi dengan pengguna Android atau Windows</li><li><strong>Unggah Web</strong>: Konversi HEIC ke JPG/PNG untuk website yang tidak menerima HEIC</li><li><strong>Media Sosial</strong>: Siapkan foto iPhone untuk platform yang memerlukan JPG/PNG</li><li><strong>Email</strong>: Konversi ke JPG untuk kompatibilitas email yang lebih baik</li><li><strong>Cetak</strong>: Konversi ke format yang diterima oleh layanan cetak</li></ul>"
+            "title": "Kasus penggunaan umum",
+            "content": "<ul><li><strong>Berbagi foto iPhone dengan pengguna Windows atau Android</strong>: konversi ke JPG tanpa masalah foto miring.</li><li><strong>Unggah ke media sosial</strong> yang tidak menerima HEIC, tetap menjaga orientasi asli.</li><li><strong>Kirim foto lewat email</strong> dengan jaminan orientasi potret atau lanskap.</li><li><strong>Impor ke Photoshop, Lightroom, atau alat desain</strong> yang salah menafsirkan orientasi HEIC.</li><li><strong>Perbaiki foto miring atau terbalik</strong> dengan putar dan balik manual sebelum diunduh.</li><li><strong>Layanan cetak</strong> yang membutuhkan JPG atau PNG dengan orientasi benar.</li></ul>"
           },
           "privacy": {
-            "title": "Mengutamakan Privasi - Konversi HEIC",
-            "content": "<p>Konversi HEIC berjalan <strong>secara lokal di browser Anda</strong> menggunakan library <strong>heic2any</strong>.</p><ul><li>Foto Anda <strong>tidak pernah meninggalkan perangkat</strong> — aman untuk foto pribadi</li><li>Tidak ada pemrosesan cloud atau unggahan server</li><li>Berfungsi <strong>offline</strong> setelah pemuatan halaman awal</li></ul>"
+            "title": "Konversi HEIC yang mengutamakan privasi",
+            "content": "<p>Setiap langkah berjalan <strong>lokal di browser Anda</strong>.</p><ul><li>Decoding HEIC menggunakan library <strong>heic2any</strong> yang berjalan sebagai WebAssembly di perangkat Anda.</li><li>Metadata EXIF dibaca dengan <strong>exifr</strong>, juga di sisi klien.</li><li>Foto dan metadatanya <strong>tidak pernah meninggalkan perangkat</strong> — tidak ada yang diunggah.</li><li>Bekerja <strong>offline</strong> setelah halaman dimuat; aman untuk foto pribadi dan sensitif.</li></ul>"
           }
         }
       },

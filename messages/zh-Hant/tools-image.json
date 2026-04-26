@@ -1074,47 +1074,69 @@
       },
       "heic-convert": {
         "name": "HEIC 轉換器",
-        "description": "將 HEIC/HEIF 圖片轉換為 JPG 或 PNG 格式。",
-        "metaTitle": "HEIC 轉 JPG/PNG - 免費線上 HEIC 轉換器",
-        "metaDescription": "將 HEIC 和 HEIF 圖片轉換為 JPG 或 PNG 格式。無需上傳的免費線上工具。在瀏覽器中運作。",
-        "keywords": "heic 轉 jpg, heic 轉 png, heif 轉換器, iphone 照片轉換器, heic 轉換器線上",
+        "description": "單張 HEIC/HEIF 照片轉換為 JPG 或 PNG，自動按 Apple 方式校正方向，並支援手動旋轉、翻轉。",
+        "metaTitle": "HEIC 轉 JPG/PNG · 支援旋轉與翻轉 - 免費線上",
+        "metaDescription": "將一張 HEIC 或 HEIF 照片轉為 JPG 或 PNG，自動按 Apple Photos 的方式校正 EXIF 方向，並可手動旋轉、翻轉。100% 本地處理，零上傳。",
+        "keywords": "heic 轉 jpg, heic 轉 png, heif 轉換器, iphone 照片轉換, heic 方向校正, heic 旋轉, heic 翻轉, apple 照片轉換",
         "selectedFile": "已選檔案",
         "outputFormat": "輸出格式",
         "quality": "品質",
         "convert": "轉換",
         "processing": "轉換中...",
+        "download": "下載",
+        "downloading": "正在準備下載...",
+        "decoding": "正在解碼 HEIC 並讀取中繼資料...",
+        "decodingFailed": "無法解碼此 HEIC 檔案。",
+        "downloadFailed": "下載準備失敗。",
+        "previewFailed": "無法開啟全螢幕預覽。",
+        "preview": "預覽",
+        "fullscreen": "全螢幕檢視",
+        "rotate": "旋轉",
+        "rotateLeft": "逆時針旋轉 90°",
+        "rotateRight": "順時針旋轉 90°",
+        "flip": "翻轉",
+        "flipHorizontal": "水平翻轉",
+        "flipVertical": "垂直翻轉",
+        "reset": "重設",
+        "appleNote": "已讀取到 EXIF 方向標籤並自動套用，與 Apple Photos 的顯示保持一致。",
         "faq": {
           "q1": "什麼是 HEIC 檔案？",
-          "a1": "HEIC（高效率圖片容器）是 Apple 裝置使用的預設圖片格式。在維持品質的同時提供比 JPEG 更好的壓縮率。",
+          "a1": "HEIC（高效率圖片容器）是 iOS 11 起 Apple 裝置預設的相片格式。在相同畫質下檔案體積約為 JPEG 的一半，但 Windows 和部分較舊 Android 裝置無法原生開啟。",
           "q2": "我的圖片會上傳到伺服器嗎？",
-          "a2": "不會。所有轉換都在瀏覽器中本機完成。您的檔案不會離開您的裝置。",
+          "a2": "不會。解碼、EXIF 解析、旋轉/翻轉渲染與再編碼全部在瀏覽器本機進行，照片不會離開您的裝置。",
           "q3": "我的檔案會上傳到伺服器嗎？",
           "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "這個工具能離線使用嗎？",
           "a4": "可以。頁面載入完成後，工具完全可以離線執行。為獲得最佳體驗，建議從瀏覽器將 PrivaDeck 安裝為 PWA 應用程式。",
           "q5": "檔案大小有限制嗎？",
-          "a5": "沒有伺服器端限制。最大檔案大小取決於您裝置的可用記憶體和瀏覽器能力。大多數現代裝置可以處理數百 MB 的檔案。"
+          "a5": "沒有伺服器端限制。最大檔案大小取決於您裝置的可用記憶體和瀏覽器能力。大多數現代裝置可以處理數百 MB 的檔案。",
+          "q6": "為什麼我的 iPhone 照片在 Windows 上躺倒了？",
+          "a6": "iPhone 會以感光元件方向儲存像素，同時把真正的顯示方向寫在 EXIF 的 Orientation 標籤裡。Apple Photos 及多數現代看圖軟體會讀取此標籤，但部分 Windows 程式與老舊看圖工具忽略它，畫面便會躺倒。本工具在轉換時會把方向直接烘焙到像素中，下載後的 JPG/PNG 在任何看圖軟體裡都能正確顯示。",
+          "q7": "轉換後方向仍然不對怎麼辦？",
+          "a7": "可以使用預覽上方的順時針/逆時針旋轉 90°，以及水平/垂直翻轉按鈕。它們會疊加在自動方向校正之上，下載前可以自由微調。",
+          "q8": "轉換後是否保留 EXIF 中繼資料？",
+          "a8": "方向已套用到像素層，輸出檔案不需再保留該標籤。其他 EXIF 資訊（GPS、相機型號、拍攝時間等）在轉換過程中不會寫入輸出檔—— 工具僅輸出純粹的 JPG/PNG 像素資料。若需徹底清除所有中繼資料，可再搭配「移除 EXIF」工具使用。"
         },
         "seoContent": {
           "intro": {
             "title": "什麼是 HEIC 轉換工具？",
-            "content": "<p><strong>HEIC 轉換工具</strong>可將 iPhone 和 iPad 拍攝的 HEIC/HEIF 格式照片轉換為通用的 JPG 或 PNG 格式。基於 heic2any 函式庫實現高品質轉換，解決 HEIC 照片在 Windows 和其他平台上無法開啟的問題。</p><p>所有轉換100%在瀏覽器中本地完成，照片不會上傳到任何伺服器。</p>"
+            "content": "<p><strong>HEIC 轉換工具</strong>可將一張 Apple HEIC / HEIF 照片轉換為相容性更佳的 <strong>JPG</strong> 或 <strong>PNG</strong>，全程在瀏覽器裡完成。它針對 iPhone 實際的儲存方式做了優化：會讀取 EXIF 中的 <code>Orientation</code> 標籤並將方向套用到像素，與您在 iPhone 上 Apple Photos 看到的效果保持一致。</p><p>若照片來自 Apple 裝置，工具還會自動辨識機型並在預覽下方顯示徽章，提示方向已自動校正。</p>"
           },
           "howToUse": {
             "title": "如何使用 HEIC 轉換工具",
-            "content": "<ol><li>上傳 HEIC 或 HEIF 格式的照片</li><li>選擇輸出格式：<strong>JPG</strong> 或 <strong>PNG</strong></li><li>調整輸出品質（JPG 格式）</li><li>點擊轉換並下載結果</li></ol><p>支援批次轉換多張 HEIC 照片。</p>"
+            "content": "<ol><li>拖入或選擇一張 iPhone / iPad / Mac 上的 HEIC 或 HEIF 照片。</li><li>等待片刻完成解碼與 EXIF 解析，預覽會以 Apple 方向正確顯示。</li><li>如需微調，使用<strong>旋轉 90°</strong>與<strong>水平/垂直翻轉</strong>按鈕；點擊<strong>重設</strong>可撤銷手動調整。</li><li>選擇輸出格式 —— <strong>JPG</strong> 體積小相容佳，<strong>PNG</strong> 無損保真；JPG 模式下可調品質。</li><li>點擊<strong>下載</strong>儲存。方向已烘焙到像素，在任何看圖軟體裡都顯示一致。</li></ol>"
           },
           "features": {
             "title": "核心功能",
-            "content": "<ul><li><strong>HEIC 轉 JPG</strong>：將 HEIC 照片轉為通用的 JPG 格式</li><li><strong>HEIC 轉 PNG</strong>：轉為無損的 PNG 格式</li><li><strong>品質控制</strong>：可調節 JPG 輸出品質</li><li><strong>批次轉換</strong>：同時轉換多張 HEIC 照片</li><li><strong>高品質輸出</strong>：基於 heic2any 函式庫的高保真轉換</li><li><strong>100%本地處理</strong>：轉換在瀏覽器中完成，照片不會上傳</li></ul>"
+            "content": "<ul><li><strong>Apple 風格自動方向</strong>：讀取 EXIF <code>Orientation</code>（1-8）並套用到像素，與 Apple Photos 顯示一致。</li><li><strong>Apple 裝置識別</strong>：當來源檔案來自 Apple 裝置時，自動顯示 iPhone / iPad 型號與 iOS 版本。</li><li><strong>手動旋轉與翻轉</strong>：90° 步進旋轉、水平/垂直鏡像，疊加在自動方向之上。</li><li><strong>大尺寸即時預覽</strong>：每次旋轉或翻轉都會在高解析度畫布上重繪，所見即所得。</li><li><strong>JPG 或 PNG 輸出</strong>：可調 JPEG 品質或無損 PNG，所有調整完成後只再編碼一次。</li><li><strong>單張專注模式</strong>：上傳 → 預覽 → 調整 → 下載，流程清晰。</li><li><strong>100% 本地</strong>：HEIC 解碼（heic2any）與 EXIF 解析（exifr）都在您的瀏覽器裡完成。</li></ul>"
           },
           "useCases": {
             "title": "常見用途",
-            "content": "<ul><li><strong>跨平台分享</strong>：將 iPhone 照片轉為 JPG 以便在 Windows、Android 上查看</li><li><strong>社群上傳</strong>：轉換為社群平台支援的格式後上傳</li><li><strong>電子郵件發送</strong>：將 HEIC 轉為 JPG 作為郵件附件發送</li><li><strong>網站使用</strong>：將 HEIC 照片轉為網頁可用的 JPG/PNG 格式</li><li><strong>批次處理</strong>：一次性轉換相簿中的多張 HEIC 照片</li></ul>"
+            "content": "<ul><li><strong>跨平台分享</strong>：將 iPhone 照片轉為 JPG，在 Windows / Android 上不再躺倒。</li><li><strong>上傳到社群平台</strong>：規避 HEIC 不被支援的問題，同時保留正確方向。</li><li><strong>作為郵件附件</strong>：確保橫直方向與您拍攝時一致。</li><li><strong>匯入 Photoshop / Lightroom</strong>：避開部分工具對 HEIC 方向的誤讀。</li><li><strong>修正方向錯誤</strong>：用手動旋轉/翻轉修正倒置或鏡像的照片。</li><li><strong>送印或沖洗</strong>：輸出符合印刷服務要求且方向正確的 JPG / PNG。</li></ul>"
           },
           "privacy": {
             "title": "隱私優先的 HEIC 轉換",
-            "content": "<p>HEIC 轉換<strong>完全在瀏覽器中</strong>透過 heic2any 函式庫本地完成。</p><ul><li>照片<strong>永遠不會離開您的裝置</strong>——安全轉換私人照片</li><li>無雲端處理，無伺服器上傳</li><li>頁面載入後可完全<strong>離線</strong>使用</li></ul>"
+            "content": "<p>所有步驟均在<strong>瀏覽器本地</strong>進行。</p><ul><li>HEIC 解碼基於 <strong>heic2any</strong> 函式庫，以 WebAssembly 在您的裝置上執行。</li><li>EXIF 中繼資料由 <strong>exifr</strong> 在本地解析。</li><li>照片與中繼資料<strong>永遠不會離開您的裝置</strong>，不會上傳。</li><li>頁面載入後可完全<strong>離線</strong>使用，適合隱私敏感的個人照片。</li></ul>"
           }
         }
       },

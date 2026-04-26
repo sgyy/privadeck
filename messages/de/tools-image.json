@@ -1074,47 +1074,69 @@
       },
       "heic-convert": {
         "name": "HEIC-Konverter",
-        "description": "HEIC/HEIF-Bilder in JPG- oder PNG-Format konvertieren.",
-        "metaTitle": "HEIC zu JPG/PNG Konverter - Kostenloser Online-HEIC-Konverter",
-        "metaDescription": "HEIC- und HEIF-Bilder in JPG- oder PNG-Format konvertieren. Kostenloses Online-Tool, kein Upload nötig. Funktioniert in Ihrem Browser.",
-        "keywords": "HEIC zu JPG, HEIC zu PNG, HEIF-Konverter, iPhone-Foto-Konverter, HEIC-Konverter online",
+        "description": "Ein einzelnes HEIC/HEIF-Foto nach JPG oder PNG konvertieren – mit Apple-korrekter Ausrichtung und manuellem Drehen und Spiegeln.",
+        "metaTitle": "HEIC zu JPG/PNG Konverter mit Drehen & Spiegeln – Kostenlos online",
+        "metaDescription": "Ein HEIC- oder HEIF-Foto in JPG oder PNG umwandeln – mit automatischer Ausrichtungskorrektur im Apple-Stil und manuellem Drehen und Spiegeln. 100 % lokal, kein Upload.",
+        "keywords": "HEIC zu JPG, HEIC zu PNG, HEIF-Konverter, iPhone-Foto-Konverter, HEIC Ausrichtung, HEIC drehen, HEIC spiegeln, Apple-Foto-Konverter",
         "selectedFile": "Ausgewählte Datei",
         "outputFormat": "Ausgabeformat",
         "quality": "Qualität",
         "convert": "Konvertieren",
         "processing": "Wird konvertiert...",
+        "download": "Herunterladen",
+        "downloading": "Download wird vorbereitet...",
+        "decoding": "HEIC wird dekodiert und Metadaten werden gelesen...",
+        "decodingFailed": "Diese HEIC-Datei konnte nicht dekodiert werden.",
+        "downloadFailed": "Download konnte nicht vorbereitet werden.",
+        "previewFailed": "Vollbild-Vorschau konnte nicht geöffnet werden.",
+        "preview": "Vorschau",
+        "fullscreen": "Vollbild anzeigen",
+        "rotate": "Drehen",
+        "rotateLeft": "Um 90° gegen den Uhrzeigersinn drehen",
+        "rotateRight": "Um 90° im Uhrzeigersinn drehen",
+        "flip": "Spiegeln",
+        "flipHorizontal": "Horizontal spiegeln",
+        "flipVertical": "Vertikal spiegeln",
+        "reset": "Zurücksetzen",
+        "appleNote": "Die EXIF-Ausrichtung wurde erkannt und automatisch angewendet – genauso wie Apple Photos dieses Bild anzeigt.",
         "faq": {
           "q1": "Was ist eine HEIC-Datei?",
-          "a1": "HEIC (High Efficiency Image Container) ist das Standard-Bildformat von Apple-Geräten. Es bietet bessere Komprimierung als JPEG bei gleichbleibender Qualität.",
+          "a1": "HEIC (High Efficiency Image Container) ist seit iOS 11 das Standard-Bildformat von Apple-Geräten. Es bietet bei gleicher Qualität etwa die halbe Dateigröße von JPEG, ist auf Windows und älteren Android-Geräten aber nicht nativ lesbar.",
           "q2": "Wird mein Bild auf einen Server hochgeladen?",
-          "a2": "Nein. Die gesamte Konvertierung erfolgt lokal in Ihrem Browser. Ihre Dateien verlassen niemals Ihr Gerät.",
+          "a2": "Nein. Dekodierung, EXIF-Analyse, Drehung/Spiegelung und erneute Kodierung laufen allesamt lokal in Ihrem Browser. Ihr Foto verlässt Ihr Gerät nicht.",
           "q3": "Werden meine Dateien auf einen Server hochgeladen?",
           "a3": "Nein. Die gesamte Verarbeitung erfolgt vollständig in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät — nichts wird auf einen Server hochgeladen.",
           "q4": "Kann ich dieses Tool offline verwenden?",
           "a4": "Ja. Sobald die Seite geladen ist, funktioniert das Tool vollständig offline. Installieren Sie PrivaDeck als PWA aus Ihrem Browser für das beste Erlebnis.",
           "q5": "Gibt es Dateigrößenbeschränkungen?",
-          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Speicher Ihres Geräts und den Browser-Funktionen ab. Die meisten modernen Geräte verarbeiten Dateien bis zu mehreren hundert MB problemlos."
+          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Speicher Ihres Geräts und den Browser-Funktionen ab. Die meisten modernen Geräte verarbeiten Dateien bis zu mehreren hundert MB problemlos.",
+          "q6": "Warum liegen meine iPhone-Fotos auf Windows auf der Seite?",
+          "a6": "iPhones speichern die Pixel in Sensor-Ausrichtung und notieren die gewünschte Drehung im EXIF-Tag Orientation. Apple Photos und die meisten modernen Viewer beachten dieses Tag, einige Windows-Apps und ältere Viewer ignorieren es jedoch – dann wirkt das Foto verdreht. Dieses Tool brennt die Ausrichtung beim Konvertieren in die Pixel ein, damit das heruntergeladene JPG oder PNG überall korrekt aussieht.",
+          "q7": "Die Ausrichtung ist nach der Konvertierung immer noch falsch. Was kann ich tun?",
+          "a7": "Verwenden Sie die Schaltflächen 90° links/rechts drehen und horizontal/vertikal spiegeln über der Vorschau. Sie werden zusätzlich zur automatischen EXIF-Korrektur angewendet, sodass Sie vor dem Download jede Ausrichtung einstellen können.",
+          "q8": "Werden EXIF-Metadaten in der Ausgabe beibehalten?",
+          "a8": "Das Orientation-Tag wird quasi in die Pixel geschrieben, daher muss es in der Ausgabe nicht mehr vorhanden sein. Andere EXIF-Daten wie GPS-Ort, Kameramodell oder Aufnahmedatum werden nicht übernommen – der Konverter liefert ausschließlich frische JPG- oder PNG-Pixeldaten. Wenn Sie eine garantiert metadatenfreie Datei möchten, kombinieren Sie dieses Tool mit dem EXIF-Entfernen-Tool."
         },
         "seoContent": {
           "intro": {
             "title": "Was ist der HEIC-Konverter?",
-            "content": "<p><strong>HEIC-Konverter</strong> konvertiert Apple HEIC/HEIF-Fotos in weit kompatible JPG- oder PNG-Formate. iPhones und iPads speichern Fotos standardmäßig im HEIC-Format — dieses Tool ermöglicht Ihnen, sie für die Verwendung überall ohne Software-Installation zu konvertieren.</p><p>Mehrere HEIC-Dateien auf einmal stapelweise konvertieren, alles lokal in Ihrem Browser verarbeitet.</p>"
+            "content": "<p><strong>HEIC-Konverter</strong> wandelt ein einzelnes Apple-HEIC- oder HEIF-Foto in eine weit kompatible <strong>JPG</strong>- oder <strong>PNG</strong>-Datei um – komplett in Ihrem Browser. Das Tool ist genau darauf abgestimmt, wie iPhones Fotos tatsächlich speichern: Es liest das EXIF-Tag <code>Orientation</code>, wendet es auf die Pixel an und zeigt das Foto so an, wie Sie es in der Apple-Fotos-App auf Ihrem Gerät sehen.</p><p>Stammt das Foto von einem Apple-Gerät, erkennt das Tool zusätzlich Hersteller und Modell und blendet einen kleinen Hinweis ein, der bestätigt, dass die Ausrichtung automatisch korrigiert wurde.</p>"
           },
           "howToUse": {
             "title": "So verwenden Sie den HEIC-Konverter",
-            "content": "<ol><li>Laden Sie eine oder mehrere HEIC/HEIF-Dateien von Ihrem iPhone, iPad oder Mac hoch</li><li>Wählen Sie das Ausgabeformat: <strong>JPG</strong> oder <strong>PNG</strong></li><li>Klicken Sie auf <strong>Konvertieren</strong>, um alle Dateien zu verarbeiten</li><li>Laden Sie konvertierte Bilder einzeln oder als ZIP herunter</li></ol><p>Für beste Kompatibilität wird JPG empfohlen. Wählen Sie PNG, wenn Sie Transparenzunterstützung benötigen.</p>"
+            "content": "<ol><li>Ein HEIC- oder HEIF-Foto von iPhone, iPad oder Mac per Drag-and-Drop ablegen oder auswählen.</li><li>Kurz warten, während das Bild dekodiert und seine EXIF-Daten gelesen werden. Die Vorschau erscheint bereits mit der Apple-korrekten Ausrichtung.</li><li>Bei Bedarf mit <strong>90° drehen</strong> und <strong>Horizontal / Vertikal spiegeln</strong> nachjustieren. <strong>Zurücksetzen</strong> hebt manuelle Anpassungen auf.</li><li>Ausgabeformat wählen – <strong>JPG</strong> für beste Kompatibilität, <strong>PNG</strong> für verlustfreie Ausgabe – und gegebenenfalls die JPG-Qualität einstellen.</li><li>Mit <strong>Herunterladen</strong> speichern. Die Ausrichtung ist in die Pixel eingebrannt, das Bild sieht in jedem Viewer gleich aus.</li></ol>"
           },
           "features": {
             "title": "Hauptfunktionen",
-            "content": "<ul><li><strong>HEIC/HEIF-Unterstützung</strong>: Apples Standard-Fotoformat konvertieren</li><li><strong>JPG & PNG-Ausgabe</strong>: Ihr bevorzugtes Ausgabeformat wählen</li><li><strong>Stapelkonvertierung</strong>: Mehrere HEIC-Dateien gleichzeitig konvertieren</li><li><strong>Qualitätserhaltung</strong>: Hochwertige Konvertierung mit Beibehaltung der Originalfarben</li><li><strong>Angetrieben von heic2any</strong>: Zuverlässige Konvertierung mit der heic2any-Bibliothek</li><li><strong>Drag & Drop</strong>: HEIC-Dateien einfach auf die Seite ziehen</li></ul>"
+            "content": "<ul><li><strong>Apple-konforme Auto-Ausrichtung</strong>: liest das EXIF-Tag <code>Orientation</code> (Werte 1–8) und überträgt die Drehung auf die Pixel – passend zur Darstellung in Apple Photos.</li><li><strong>Apple-Geräteerkennung</strong>: zeigt iPhone- oder iPad-Modell und iOS-Version aus den EXIF-Daten an, wenn das Foto von einem Apple-Gerät stammt.</li><li><strong>Manuelles Drehen und Spiegeln</strong>: Anpassung in 90°-Schritten sowie horizontales oder vertikales Spiegeln zusätzlich zur automatischen Ausrichtung.</li><li><strong>Große Live-Vorschau</strong>: Jede Drehung oder Spiegelung erzeugt sofort ein hochauflösendes Canvas-Preview, sodass die Ausgabe immer dem Sichtbaren entspricht.</li><li><strong>JPG- oder PNG-Ausgabe</strong>: variable JPEG-Qualität oder verlustfreies PNG, einmalige Neu-Kodierung nach allen Bearbeitungen.</li><li><strong>Ein-Bild-Workflow</strong>: fokussierte Oberfläche für jeweils ein Foto – hochladen, vorschauen, anpassen, herunterladen.</li><li><strong>100 % lokal</strong>: HEIC-Dekodierung (heic2any) und EXIF-Analyse (exifr) laufen vollständig in Ihrem Browser.</li></ul>"
           },
           "useCases": {
             "title": "Häufige Anwendungsfälle",
-            "content": "<ul><li><strong>Foto-Teilen</strong>: iPhone-Fotos in JPG für das Teilen mit Android- oder Windows-Nutzern konvertieren</li><li><strong>Web-Upload</strong>: HEIC in JPG/PNG für Websites konvertieren, die HEIC nicht akzeptieren</li><li><strong>Social Media</strong>: iPhone-Fotos für Plattformen vorbereiten, die JPG/PNG erfordern</li><li><strong>E-Mail</strong>: Für bessere E-Mail-Kompatibilität in JPG konvertieren</li><li><strong>Druck</strong>: In von Druckdiensten akzeptierte Formate konvertieren</li></ul>"
+            "content": "<ul><li><strong>iPhone-Fotos mit Windows- oder Android-Nutzern teilen</strong>: In JPG konvertieren ohne das Problem liegender Fotos.</li><li><strong>In sozialen Netzwerken posten</strong>, die kein HEIC akzeptieren, und trotzdem die gewünschte Ausrichtung behalten.</li><li><strong>Fotos per E-Mail verschicken</strong> mit garantierter Hoch- oder Querformat-Ausrichtung.</li><li><strong>In Photoshop, Lightroom oder Designtools importieren</strong>, die HEIC-Ausrichtungen falsch interpretieren.</li><li><strong>Schief hängende oder auf dem Kopf stehende Fotos korrigieren</strong>, indem Sie vor dem Download manuell drehen und spiegeln.</li><li><strong>Druck-Services</strong>, die JPG oder PNG mit korrekter Ausrichtung verlangen.</li></ul>"
           },
           "privacy": {
-            "title": "Datenschutzorientierte HEIC-Konvertierung",
-            "content": "<p>HEIC-Konvertierung läuft <strong>lokal in Ihrem Browser</strong> mit der <strong>heic2any</strong>-Bibliothek.</p><ul><li>Ihre Fotos <strong>verlassen niemals Ihr Gerät</strong> — sicher für persönliche Fotos</li><li>Keine Cloud-Verarbeitung oder Server-Uploads</li><li>Funktioniert <strong>offline</strong> nach dem ersten Laden der Seite</li></ul>"
+            "title": "HEIC-Konvertierung mit Fokus auf Datenschutz",
+            "content": "<p>Alle Schritte laufen <strong>lokal in Ihrem Browser</strong> ab.</p><ul><li>Die HEIC-Dekodierung nutzt die Bibliothek <strong>heic2any</strong>, die als WebAssembly auf Ihrem Gerät läuft.</li><li>EXIF-Metadaten werden clientseitig mit <strong>exifr</strong> ausgelesen.</li><li>Ihr Foto und seine Metadaten <strong>verlassen niemals Ihr Gerät</strong> – nichts wird hochgeladen.</li><li>Funktioniert <strong>offline</strong> nach dem ersten Laden der Seite – ideal für persönliche und sensible Fotos.</li></ul>"
           }
         }
       },

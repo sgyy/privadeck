@@ -1074,47 +1074,69 @@
       },
       "heic-convert": {
         "name": "Chuyển đổi HEIC",
-        "description": "Chuyển đổi hình ảnh HEIC/HEIF sang định dạng JPG hoặc PNG.",
-        "metaTitle": "Chuyển đổi HEIC sang JPG/PNG - Trình chuyển đổi HEIC trực tuyến miễn phí",
-        "metaDescription": "Chuyển đổi hình ảnh HEIC và HEIF sang định dạng JPG hoặc PNG. Công cụ trực tuyến miễn phí, không cần tải lên. Hoạt động trong trình duyệt.",
-        "keywords": "heic sang jpg, heic sang png, chuyển đổi heif, chuyển đổi ảnh iphone, chuyển đổi heic trực tuyến",
+        "description": "Chuyển đổi một ảnh HEIC/HEIF sang JPG hoặc PNG với hướng chuẩn kiểu Apple, kèm xoay và lật thủ công.",
+        "metaTitle": "Chuyển đổi HEIC sang JPG/PNG có xoay và lật - Miễn phí trực tuyến",
+        "metaDescription": "Chuyển một ảnh HEIC hoặc HEIF sang JPG hoặc PNG với hiệu chỉnh hướng tự động kiểu Apple Photos và xoay/lật thủ công. 100% cục bộ, không tải lên.",
+        "keywords": "heic sang jpg, heic sang png, chuyển đổi heif, chuyển đổi ảnh iphone, hướng heic, xoay heic, lật heic, chuyển đổi ảnh apple",
         "selectedFile": "Tệp đã chọn",
         "outputFormat": "Định dạng đầu ra",
         "quality": "Chất lượng",
         "convert": "Chuyển đổi",
         "processing": "Đang chuyển đổi...",
+        "download": "Tải xuống",
+        "downloading": "Đang chuẩn bị tải xuống...",
+        "decoding": "Đang giải mã HEIC và đọc siêu dữ liệu...",
+        "decodingFailed": "Không thể giải mã tệp HEIC này.",
+        "downloadFailed": "Không thể chuẩn bị tải xuống.",
+        "previewFailed": "Không thể mở xem trước toàn màn hình.",
+        "preview": "Xem trước",
+        "fullscreen": "Xem toàn màn hình",
+        "rotate": "Xoay",
+        "rotateLeft": "Xoay 90° ngược chiều kim đồng hồ",
+        "rotateRight": "Xoay 90° theo chiều kim đồng hồ",
+        "flip": "Lật",
+        "flipHorizontal": "Lật ngang",
+        "flipVertical": "Lật dọc",
+        "reset": "Đặt lại",
+        "appleNote": "Hướng EXIF đã được phát hiện và áp dụng tự động, khớp với cách Apple Photos hiển thị ảnh này.",
         "faq": {
           "q1": "Tệp HEIC là gì?",
-          "a1": "HEIC (High Efficiency Image Container) là định dạng hình ảnh mặc định được sử dụng bởi thiết bị Apple. Nó cung cấp nén tốt hơn JPEG trong khi duy trì chất lượng.",
-          "q2": "Hình ảnh của tôi có bị tải lên máy chủ không?",
-          "a2": "Không. Tất cả chuyển đổi diễn ra cục bộ trong trình duyệt. Tệp của bạn không bao giờ rời khỏi thiết bị.",
+          "a1": "HEIC (High Efficiency Image Container) là định dạng ảnh mặc định trên thiết bị Apple từ iOS 11. Cùng chất lượng, dung lượng chỉ bằng khoảng một nửa JPEG, nhưng không mở được nguyên bản trên Windows hay các thiết bị Android cũ.",
+          "q2": "Ảnh của tôi có bị tải lên máy chủ không?",
+          "a2": "Không. Việc giải mã, phân tích EXIF, xoay/lật và tái mã hóa đều diễn ra cục bộ trong trình duyệt. Ảnh không rời khỏi thiết bị của bạn.",
           "q3": "Tệp của tôi có bị tải lên máy chủ không?",
           "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
           "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
           "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
-          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
+          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề.",
+          "q6": "Vì sao ảnh iPhone bị xoay nghiêng khi mở trên Windows?",
+          "a6": "iPhone lưu pixel theo hướng cảm biến và ghi hướng hiển thị đúng vào thẻ EXIF Orientation. Apple Photos và hầu hết trình xem ảnh hiện đại tôn trọng thẻ này, nhưng một số ứng dụng Windows và trình xem cũ bỏ qua nó, khiến ảnh trông bị xoay. Công cụ này nướng hướng vào chính pixel khi chuyển đổi, vì vậy tệp JPG hoặc PNG tải xuống hiển thị đúng ở mọi nơi.",
+          "q7": "Sau khi chuyển đổi hướng vẫn sai thì phải làm sao?",
+          "a7": "Hãy dùng các nút Xoay 90° trái/phải và Lật ngang/dọc ở trên bản xem trước. Chúng xếp chồng lên hiệu chỉnh EXIF tự động, cho phép bạn chỉnh bất kỳ hướng nào trước khi tải xuống.",
+          "q8": "Siêu dữ liệu EXIF có được giữ trong kết quả không?",
+          "a8": "Thẻ hướng đã được áp vào pixel, nên đầu ra không cần giữ nó nữa. Các dữ liệu EXIF khác như vị trí GPS, kiểu máy, thời gian chụp không được chuyển sang — công cụ chỉ xuất pixel JPG hoặc PNG mới tinh. Nếu muốn tệp chắc chắn không còn siêu dữ liệu, hãy kết hợp với công cụ Xóa EXIF."
         },
         "seoContent": {
           "intro": {
             "title": "Chuyển đổi HEIC là gì?",
-            "content": "<p><strong>Chuyển đổi HEIC</strong> chuyển đổi ảnh HEIC/HEIF của Apple sang định dạng JPG hoặc PNG tương thích rộng rãi. iPhone và iPad lưu ảnh ở định dạng HEIC theo mặc định — công cụ này cho phép bạn chuyển đổi để sử dụng ở mọi nơi mà không cần cài đặt phần mềm.</p><p>Chuyển đổi hàng loạt nhiều tệp HEIC cùng lúc, tất cả được xử lý cục bộ trong trình duyệt của bạn.</p>"
+            "content": "<p><strong>Chuyển đổi HEIC</strong> biến một ảnh Apple HEIC hoặc HEIF thành tệp <strong>JPG</strong> hoặc <strong>PNG</strong> tương thích rộng rãi, hoàn toàn trong trình duyệt của bạn. Công cụ được tinh chỉnh theo cách iPhone thực sự lưu ảnh: đọc thẻ EXIF <code>Orientation</code>, áp dụng lên pixel và hiển thị đúng như trong ứng dụng Ảnh của Apple trên thiết bị bạn.</p><p>Nếu ảnh đến từ thiết bị Apple, công cụ còn nhận diện hãng và kiểu máy và hiển thị một huy hiệu nhỏ xác nhận hướng đã được chỉnh tự động.</p>"
           },
           "howToUse": {
-            "title": "Cách sử dụng công cụ Chuyển đổi HEIC",
-            "content": "<ol><li>Tải lên một hoặc nhiều tệp HEIC/HEIF từ iPhone, iPad hoặc Mac của bạn</li><li>Chọn định dạng đầu ra: <strong>JPG</strong> hoặc <strong>PNG</strong></li><li>Nhấp <strong>Chuyển đổi</strong> để xử lý tất cả tệp</li><li>Tải xuống hình ảnh đã chuyển đổi riêng lẻ hoặc dưới dạng ZIP</li></ol><p>Để tương thích tốt nhất, JPG được khuyến nghị. Chọn PNG nếu bạn cần hỗ trợ độ trong suốt.</p>"
+            "title": "Cách sử dụng Chuyển đổi HEIC",
+            "content": "<ol><li>Kéo thả hoặc chọn một ảnh HEIC / HEIF từ iPhone, iPad hoặc Mac của bạn.</li><li>Chờ vài giây để ảnh được giải mã và EXIF được phân tích. Bản xem trước hiện ra với hướng đúng kiểu Apple.</li><li>Nếu cần, dùng <strong>Xoay 90°</strong> và <strong>Lật ngang / dọc</strong>. Bấm <strong>Đặt lại</strong> để hủy các chỉnh sửa thủ công.</li><li>Chọn định dạng — <strong>JPG</strong> cho tương thích tốt nhất, <strong>PNG</strong> cho đầu ra không mất dữ liệu — và tinh chỉnh chất lượng JPG nếu muốn.</li><li>Bấm <strong>Tải xuống</strong> để lưu. Hướng đã nằm trong pixel, ảnh hiển thị giống nhau ở mọi trình xem.</li></ol>"
           },
           "features": {
             "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Hỗ trợ HEIC/HEIF</strong>: Chuyển đổi định dạng ảnh mặc định của Apple</li><li><strong>Đầu ra JPG và PNG</strong>: Chọn định dạng đầu ra ưa thích</li><li><strong>Chuyển đổi hàng loạt</strong>: Chuyển đổi nhiều tệp HEIC cùng lúc</li><li><strong>Bảo toàn chất lượng</strong>: Chuyển đổi chất lượng cao giữ nguyên màu gốc</li><li><strong>Sử dụng heic2any</strong>: Chuyển đổi đáng tin cậy bằng thư viện heic2any</li><li><strong>Kéo và thả</strong>: Chỉ cần kéo tệp HEIC vào trang</li></ul>"
+            "content": "<ul><li><strong>Tự động hướng kiểu Apple</strong>: đọc thẻ EXIF <code>Orientation</code> (giá trị 1–8) và áp lên pixel, giống cách Apple Photos hiển thị.</li><li><strong>Nhận diện thiết bị Apple</strong>: hiển thị mẫu iPhone hoặc iPad và phiên bản iOS đọc từ EXIF khi nguồn là thiết bị Apple.</li><li><strong>Xoay và lật thủ công</strong>: điều chỉnh theo bước 90° và lật ngang/dọc, xếp chồng trên hướng tự động.</li><li><strong>Xem trước trực tiếp kích thước lớn</strong>: mỗi lần xoay/lật, canvas độ phân giải cao được vẽ lại để đầu ra khớp với những gì bạn thấy.</li><li><strong>Đầu ra JPG hoặc PNG</strong>: chất lượng JPEG điều chỉnh được hoặc PNG không mất dữ liệu, chỉ tái mã hóa một lần sau khi chỉnh xong.</li><li><strong>Quy trình một ảnh</strong>: giao diện tập trung cho một ảnh — tải lên, xem trước, chỉnh, tải xuống.</li><li><strong>100% cục bộ</strong>: giải mã HEIC (qua heic2any) và phân tích EXIF (qua exifr) đều chạy trong trình duyệt của bạn.</li></ul>"
           },
           "useCases": {
-            "title": "Trường hợp sử dụng phổ biến",
-            "content": "<ul><li><strong>Chia sẻ ảnh</strong>: Chuyển đổi ảnh iPhone sang JPG để chia sẻ với người dùng Android hoặc Windows</li><li><strong>Tải lên web</strong>: Chuyển đổi HEIC sang JPG/PNG cho trang web không chấp nhận HEIC</li><li><strong>Mạng xã hội</strong>: Chuẩn bị ảnh iPhone cho nền tảng yêu cầu JPG/PNG</li><li><strong>Email</strong>: Chuyển đổi sang JPG để tương thích email tốt hơn</li><li><strong>In ấn</strong>: Chuyển đổi sang định dạng được dịch vụ in chấp nhận</li></ul>"
+            "title": "Tình huống sử dụng phổ biến",
+            "content": "<ul><li><strong>Chia sẻ ảnh iPhone với người dùng Windows hoặc Android</strong>: chuyển sang JPG mà không gặp sự cố ảnh nằm ngang.</li><li><strong>Đăng lên mạng xã hội</strong> không chấp nhận HEIC, giữ nguyên hướng ảnh như khi chụp.</li><li><strong>Gửi ảnh qua email</strong> với hướng dọc hoặc ngang được đảm bảo.</li><li><strong>Nhập vào Photoshop, Lightroom hoặc công cụ thiết kế</strong> vốn xử lý sai hướng HEIC.</li><li><strong>Sửa ảnh bị nghiêng hoặc lộn ngược</strong> bằng xoay/lật thủ công trước khi tải xuống.</li><li><strong>Dịch vụ in ấn</strong> yêu cầu JPG hoặc PNG có hướng đúng.</li></ul>"
           },
           "privacy": {
-            "title": "Ưu tiên quyền riêng tư khi chuyển đổi HEIC",
-            "content": "<p>Chuyển đổi HEIC chạy <strong>cục bộ trong trình duyệt của bạn</strong> bằng thư viện <strong>heic2any</strong>.</p><ul><li>Ảnh của bạn <strong>không bao giờ rời khỏi thiết bị</strong> — an toàn cho ảnh cá nhân</li><li>Không xử lý đám mây hoặc tải lên máy chủ</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi tải trang ban đầu</li></ul>"
+            "title": "Chuyển đổi HEIC ưu tiên quyền riêng tư",
+            "content": "<p>Mọi bước đều chạy <strong>cục bộ trong trình duyệt của bạn</strong>.</p><ul><li>Giải mã HEIC sử dụng thư viện <strong>heic2any</strong>, chạy dưới dạng WebAssembly trên thiết bị.</li><li>Siêu dữ liệu EXIF được đọc bằng <strong>exifr</strong>, cũng ở phía client.</li><li>Ảnh và siêu dữ liệu <strong>không bao giờ rời khỏi thiết bị</strong> — không có gì được tải lên.</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi trang tải xong; an toàn cho ảnh cá nhân và nhạy cảm.</li></ul>"
           }
         }
       },

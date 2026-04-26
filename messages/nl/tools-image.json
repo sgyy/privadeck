@@ -1074,47 +1074,69 @@
       },
       "heic-convert": {
         "name": "HEIC-converter",
-        "description": "Converteer HEIC/HEIF-afbeeldingen naar JPG- of PNG-formaat.",
-        "metaTitle": "HEIC naar JPG/PNG converter - Gratis online HEIC-converter",
-        "metaDescription": "Converteer HEIC- en HEIF-afbeeldingen naar JPG- of PNG-formaat. Gratis online tool, geen upload nodig. Werkt in je browser.",
-        "keywords": "heic naar jpg, heic naar png, heif converter, iphone foto converter, heic converter online",
+        "description": "Converteer één HEIC/HEIF-foto naar JPG of PNG met Apple-correcte oriëntatie, plus handmatig draaien en spiegelen.",
+        "metaTitle": "HEIC naar JPG/PNG converter met draaien en spiegelen - Gratis online",
+        "metaDescription": "Converteer één HEIC- of HEIF-foto naar JPG of PNG met automatische Apple-oriëntatiecorrectie en handmatig draaien en spiegelen. 100% lokaal, geen upload.",
+        "keywords": "heic naar jpg, heic naar png, heif converter, iphone foto converter, heic oriëntatie, heic draaien, heic spiegelen, apple foto converter",
         "selectedFile": "Geselecteerd bestand",
         "outputFormat": "Uitvoerformaat",
         "quality": "Kwaliteit",
         "convert": "Converteren",
         "processing": "Converteren...",
+        "download": "Downloaden",
+        "downloading": "Download wordt voorbereid...",
+        "decoding": "HEIC wordt gedecodeerd en metadata gelezen...",
+        "decodingFailed": "Kan dit HEIC-bestand niet decoderen.",
+        "downloadFailed": "Kon download niet voorbereiden.",
+        "previewFailed": "Kon volledig scherm voorbeeld niet openen.",
+        "preview": "Voorbeeld",
+        "fullscreen": "Volledig scherm",
+        "rotate": "Draaien",
+        "rotateLeft": "90° tegen de klok in draaien",
+        "rotateRight": "90° met de klok mee draaien",
+        "flip": "Spiegelen",
+        "flipHorizontal": "Horizontaal spiegelen",
+        "flipVertical": "Verticaal spiegelen",
+        "reset": "Resetten",
+        "appleNote": "EXIF-oriëntatie is gedetecteerd en automatisch toegepast, zoals Apple Photos deze afbeelding weergeeft.",
         "faq": {
           "q1": "Wat is een HEIC-bestand?",
-          "a1": "HEIC (High Efficiency Image Container) is het standaard afbeeldingsformaat van Apple-apparaten. Het biedt betere compressie dan JPEG met behoud van kwaliteit.",
+          "a1": "HEIC (High Efficiency Image Container) is sinds iOS 11 het standaardformaat voor foto's op Apple-apparaten. Bij gelijke kwaliteit is het bestand ongeveer half zo groot als een JPEG, maar het is niet standaard leesbaar op Windows of op oudere Android-apparaten.",
           "q2": "Wordt mijn afbeelding naar een server geüpload?",
-          "a2": "Nee. Alle conversie gebeurt lokaal in je browser. Je bestanden verlaten nooit je apparaat.",
+          "a2": "Nee. Decoderen, EXIF-analyse, draaien/spiegelen en opnieuw coderen gebeuren allemaal lokaal in je browser. Je foto verlaat je apparaat niet.",
           "q3": "Worden mijn bestanden naar een server geüpload?",
           "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
           "q4": "Kan ik deze tool offline gebruiken?",
           "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
-          "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
+          "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken.",
+          "q6": "Waarom staan mijn iPhone-foto's op Windows scheef?",
+          "a6": "iPhones slaan pixels op in de oriëntatie van de sensor en leggen de gewenste rotatie vast in de EXIF-tag Orientation. Apple Photos en de meeste moderne viewers respecteren die tag, maar sommige Windows-apps en oudere viewers negeren hem, waardoor de foto gedraaid lijkt. Deze tool brandt de oriëntatie bij het converteren in de pixels, zodat het gedownloade JPG of PNG overal correct wordt weergegeven.",
+          "q7": "De oriëntatie klopt na de conversie nog steeds niet. Wat kan ik doen?",
+          "a7": "Gebruik de knoppen 90° links/rechts draaien en horizontaal/verticaal spiegelen boven het voorbeeld. Ze komen bovenop de automatische EXIF-correctie, zodat je voor het downloaden elke oriëntatie kunt instellen.",
+          "q8": "Blijven EXIF-metadata behouden in de uitvoer?",
+          "a8": "De oriëntatietag wordt als het ware in de pixels gezet, dus de uitvoer heeft hem niet meer nodig. Andere EXIF-gegevens zoals GPS-locatie, cameramodel en opnametijd worden niet overgenomen — de converter produceert alleen schone JPG- of PNG-pixels. Wil je een gegarandeerd metadatavrij bestand, combineer dit dan met de tool EXIF Verwijderen."
         },
         "seoContent": {
           "intro": {
-            "title": "Wat is HEIC Converter?",
-            "content": "<p><strong>HEIC Converter</strong> converts Apple HEIC/HEIF photos to widely compatible JPG or PNG formats. iPhones and iPads save photos in HEIC format by default — this tool lets you convert them for use anywhere without installing software.</p><p>Batch convert multiple HEIC files at once, all processed locally in your browser.</p>"
+            "title": "Wat is HEIC-converter?",
+            "content": "<p><strong>HEIC-converter</strong> zet één Apple HEIC- of HEIF-foto volledig in je browser om naar een breed compatibel <strong>JPG</strong>- of <strong>PNG</strong>-bestand. De tool is afgestemd op hoe iPhones foto's daadwerkelijk opslaan: hij leest de EXIF-tag <code>Orientation</code>, past die toe op de pixels en toont hetzelfde als wat je in de Apple Foto's-app op je apparaat ziet.</p><p>Komt de foto van een Apple-apparaat, dan herkent de tool merk en model en toont een klein badge dat de oriëntatie automatisch is gecorrigeerd.</p>"
           },
           "howToUse": {
-            "title": "Hoe te gebruiken HEIC Converter",
-            "content": "<ol><li>Upload one or more HEIC/HEIF files from your iPhone, iPad, or Mac</li><li>Select the output format: <strong>JPG</strong> or <strong>PNG</strong></li><li>Click <strong>Convert</strong> to process all files</li><li>Download converted images individually or as a ZIP</li></ol><p>For best compatibility, JPG is recommended. Choose PNG if you need transparency support.</p>"
+            "title": "HEIC-converter gebruiken",
+            "content": "<ol><li>Sleep of selecteer één HEIC- / HEIF-foto vanaf je iPhone, iPad of Mac.</li><li>Wacht even terwijl de foto wordt gedecodeerd en de EXIF wordt gelezen. Het voorbeeld verschijnt al met de Apple-correcte oriëntatie.</li><li>Gebruik indien nodig <strong>90° draaien</strong> en <strong>Horizontaal / Verticaal spiegelen</strong>. Klik <strong>Resetten</strong> om handmatige aanpassingen ongedaan te maken.</li><li>Kies het uitvoerformaat — <strong>JPG</strong> voor de beste compatibiliteit, <strong>PNG</strong> voor verliesvrije uitvoer — en pas desgewenst de JPG-kwaliteit aan.</li><li>Klik op <strong>Downloaden</strong> om het eindresultaat op te slaan. De oriëntatie zit in de pixels; in elke viewer ziet de foto er hetzelfde uit.</li></ol>"
           },
           "features": {
             "title": "Belangrijkste functies",
-            "content": "<ul><li><strong>HEIC/HEIF Support</strong>: Convert Apple's default photo format</li><li><strong>JPG & PNG Output</strong>: Choose your preferred output format</li><li><strong>Batch Conversion</strong>: Convert multiple HEIC files simultaneously</li><li><strong>Quality Preservation</strong>: High-quality conversion maintaining original colors</li><li><strong>Powered by heic2any</strong>: Reliable conversion using the heic2any library</li><li><strong>Drag & Drop</strong>: Simply drag HEIC files onto the page</li></ul>"
+            "content": "<ul><li><strong>Apple-stijl auto-oriëntatie</strong>: leest de EXIF-tag <code>Orientation</code> (waarden 1–8) en past die toe op de pixels, net als Apple Photos.</li><li><strong>Apple-apparaatdetectie</strong>: toont iPhone- of iPad-model en iOS-versie uit EXIF wanneer de bron een Apple-apparaat is.</li><li><strong>Handmatig draaien en spiegelen</strong>: aanpassen in stappen van 90° en horizontaal/verticaal spiegelen boven op de auto-oriëntatie.</li><li><strong>Groot live voorbeeld</strong>: elke draaiing of spiegeling tekent een canvas in hoge resolutie opnieuw, zodat de uitvoer overeenkomt met wat je ziet.</li><li><strong>Uitvoer in JPG of PNG</strong>: variabele JPEG-kwaliteit of verliesvrij PNG, één keer opnieuw coderen na alle aanpassingen.</li><li><strong>Werkstroom voor één foto</strong>: een gerichte interface voor één foto — uploaden, bekijken, bijsnijden, downloaden.</li><li><strong>100% lokaal</strong>: HEIC-decodering (via heic2any) en EXIF-analyse (via exifr) draaien in je browser.</li></ul>"
           },
           "useCases": {
-            "title": "Veelvoorkomende gebruiksmogelijkheden",
-            "content": "<ul><li><strong>Photo Sharing</strong>: Convert iPhone photos to JPG for sharing with Android or Windows users</li><li><strong>Web Upload</strong>: Convert HEIC to JPG/PNG for websites that don't accept HEIC</li><li><strong>Social Media</strong>: Prepare iPhone photos for platforms requiring JPG/PNG</li><li><strong>Email</strong>: Convert to JPG for better email compatibility</li><li><strong>Print</strong>: Convert to formats accepted by print services</li></ul>"
+            "title": "Veelvoorkomende scenario's",
+            "content": "<ul><li><strong>iPhone-foto's delen met Windows- of Android-gebruikers</strong>: converteer naar JPG zonder het scheve-foto-probleem.</li><li><strong>Plaatsen op sociale media</strong> die geen HEIC accepteren, terwijl de oorspronkelijke oriëntatie behouden blijft.</li><li><strong>Foto's versturen per e-mail</strong> met gegarandeerde staand- of liggend-oriëntatie.</li><li><strong>Importeren in Photoshop, Lightroom of designtools</strong> die HEIC-oriëntatie verkeerd interpreteren.</li><li><strong>Scheve of ondersteboven foto's corrigeren</strong> met handmatig draaien/spiegelen vóór het downloaden.</li><li><strong>Printdiensten</strong> die JPG of PNG met correcte oriëntatie vereisen.</li></ul>"
           },
           "privacy": {
-            "title": "Privacy-First HEIC-conversie",
-            "content": "<p>HEIC conversion runs <strong>locally in your browser</strong> using the <strong>heic2any</strong> library.</p><ul><li>Your photos <strong>never leave your device</strong> — safe for personal photos</li><li>No cloud processing or server uploads</li><li>Works <strong>offline</strong> after initial page load</li></ul>"
+            "title": "HEIC-conversie met privacy voorop",
+            "content": "<p>Alle stappen gebeuren <strong>lokaal in je browser</strong>.</p><ul><li>HEIC-decodering gebruikt de bibliotheek <strong>heic2any</strong> en draait als WebAssembly op je apparaat.</li><li>EXIF-metadata worden gelezen met <strong>exifr</strong>, ook aan de clientkant.</li><li>Je foto en de bijbehorende metadata <strong>verlaten je apparaat nooit</strong> — er wordt niets geüpload.</li><li>Werkt <strong>offline</strong> na het laden van de pagina; veilig voor persoonlijke en gevoelige foto's.</li></ul>"
           }
         }
       },
