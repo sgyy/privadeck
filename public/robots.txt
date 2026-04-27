@@ -206,4 +206,75 @@ Disallow: /icons/
 Disallow: /zh/
 Disallow: /pt/
 
+# --- Chinese AI / Search crawlers ---
+
+# Baidu (ERNIE / Wenxin Yiyan)
+User-agent: Baiduspider
+Allow: /
+Disallow: /_next/
+Disallow: /sw.js
+Disallow: /manifest.json
+Disallow: /icons/
+Disallow: /zh/
+Disallow: /pt/
+
+User-agent: Baiduspider-render
+Allow: /
+Disallow: /_next/
+Disallow: /sw.js
+Disallow: /manifest.json
+Disallow: /icons/
+Disallow: /zh/
+Disallow: /pt/
+
+# Sogou (Tencent Hunyuan ecosystem)
+User-agent: Sogou web spider
+Allow: /
+Disallow: /_next/
+Disallow: /sw.js
+Disallow: /manifest.json
+Disallow: /icons/
+Disallow: /zh/
+Disallow: /pt/
+
+# 360 Search (Zhinao AI)
+User-agent: 360Spider
+Allow: /
+Disallow: /_next/
+Disallow: /sw.js
+Disallow: /manifest.json
+Disallow: /icons/
+Disallow: /zh/
+Disallow: /pt/
+
+# Shenma / UC (Alibaba Qwen ecosystem)
+User-agent: YisouSpider
+Allow: /
+Disallow: /_next/
+Disallow: /sw.js
+Disallow: /manifest.json
+Disallow: /icons/
+Disallow: /zh/
+Disallow: /pt/
+
+# NetEase Youdao (translation / Youdao AI)
+User-agent: YoudaoBot
+Allow: /
+Disallow: /_next/
+Disallow: /sw.js
+Disallow: /manifest.json
+Disallow: /icons/
+Disallow: /zh/
+Disallow: /pt/
+
+# Huawei Petal Search (Pangu ecosystem)
+User-agent: PetalBot
+Allow: /
+Disallow: /_next/
+Disallow: /sw.js
+Disallow: /manifest.json
+Disallow: /icons/
+Disallow: /zh/
+Disallow: /pt/
+
 Sitemap: https://privadeck.app/sitemap.xml

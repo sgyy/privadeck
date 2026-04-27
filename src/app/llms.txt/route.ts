@@ -53,14 +53,17 @@ export async function GET() {
 
   for (const cat of categories) {
     const catTools = tools.filter((t) => t.category === cat.key);
-    if (catTools.length === 0) continue;
-    lines.push(`### ${CATEGORY_DISPLAY[cat.key]} (${catTools.length})`);
-    lines.push("");
-    for (const tool of catTools) {
+    const valid = catTools.flatMap((tool) => {
       const entry = categoryMessages[cat.key]?.tools?.[cat.key]?.[tool.slug];
-      if (!entry?.name || !entry?.description) continue;
+      if (!entry?.name || !entry?.description) return [];
+      return [{ tool, name: entry.name, description: entry.description }];
+    });
+    if (valid.length === 0) continue;
+    lines.push(`### ${CATEGORY_DISPLAY[cat.key]} (${valid.length})`);
+    lines.push("");
+    for (const { tool, name, description } of valid) {
       const url = `${SITE}/en/tools/${cat.key}/${tool.slug}/`;
-      lines.push(`- [${entry.name}](${url}): ${entry.description}`);
+      lines.push(`- [${name}](${url}): ${description}`);
     }
     lines.push("");
   }
@@ -78,6 +81,12 @@ export async function GET() {
   lines.push(`- [Sitemap](${SITE}/sitemap.xml)`);
   lines.push(
     `- [llms-full.txt](${SITE}/llms-full.txt) — full tool descriptions, use cases, and FAQ corpus for AI ingestion`
+  );
+  lines.push(
+    `- [llms.zh-Hans.txt](${SITE}/llms.zh-Hans.txt) — Simplified Chinese version (中文版)`
+  );
+  lines.push(
+    `- [llms-full.zh-Hans.txt](${SITE}/llms-full.zh-Hans.txt) — Simplified Chinese full corpus (中文完整知识库)`
   );
   lines.push("");
 

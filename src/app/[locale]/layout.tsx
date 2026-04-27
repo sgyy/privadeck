@@ -46,8 +46,10 @@ export default async function LocaleLayout({
       style={fontFallback ? { ["--font-locale-sans" as string]: fontFallback } : undefined}
     >
       <head>
-        <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
-        <link rel="alternate" type="text/plain" title="llms-full.txt" href="/llms-full.txt" />
+        <link rel="alternate" type="text/plain" hrefLang="en" title="llms.txt" href="/llms.txt" />
+        <link rel="alternate" type="text/plain" hrefLang="en" title="llms-full.txt" href="/llms-full.txt" />
+        <link rel="alternate" type="text/plain" hrefLang="zh-Hans" title="llms.zh-Hans.txt" href="/llms.zh-Hans.txt" />
+        <link rel="alternate" type="text/plain" hrefLang="zh-Hans" title="llms-full.zh-Hans.txt" href="/llms-full.zh-Hans.txt" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Script id="theme-init" strategy="beforeInteractive">{themeInitScript}</Script>
