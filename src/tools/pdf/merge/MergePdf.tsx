@@ -1,32 +1,40 @@
 "use client";
 
-import { useState, useRef, useCallback, useEffect, useMemo, memo } from "react";
+import { useState, useRef, useCallback, useEffect, useMemo } from "react";
 import { useTranslations } from "next-intl";
-import {
-  X,
-  ArrowUp,
-  ArrowDown,
-  ChevronDown,
-  ChevronUp,
-  RotateCcw,
-  RotateCw,
-  Image as ImageIcon,
-  FileText,
-  Eye,
-  EyeOff,
-  Plus,
-  Trash2,
-} from "lucide-react";
+import { Eye } from "lucide-react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
+import {
+  DndContext,
+  closestCenter,
+  PointerSensor,
+  KeyboardSensor,
+  useSensor,
+  useSensors,
+  type DragEndEvent,
+} from "@dnd-kit/core";
+import {
+  SortableContext,
+  arrayMove,
+  rectSortingStrategy,
+  sortableKeyboardCoordinates,
+} from "@dnd-kit/sortable";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { DownloadButton } from "@/components/shared/DownloadButton";
-import { PdfPagePreview } from "@/components/shared/PdfPagePreview";
-import { PdfBlobPreview } from "@/components/shared/PdfBlobPreview";
+import { PdfFullscreenPreview } from "@/components/shared/PdfFullscreenPreview";
 import { Button } from "@/components/ui/Button";
 import { Accordion, AccordionItem } from "@/components/ui/Accordion";
 import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
 import { createToolTracker } from "@/lib/analytics";
 import { mergeItems, formatFileSize, type MergeItem } from "./logic";
+import {
+  MergeItemCard,
+  AddMoreCard,
+  AddBlankCard,
+  ClearAllCard,
+  type MergeCardData,
+} from "./MergeItemCard";
+import { PdfDetailDialog } from "./PdfDetailDialog";
 
 const tracker = createToolTracker("merge", "pdf");
 
@@ -42,7 +50,6 @@ type PdfItemState = {
   thumbnail: string | null;
   selectedPages: Set<number>;
   rotations: Record<number, number>;
-  expanded: boolean;
   loading: boolean;
   error: string;
 };
@@ -81,7 +88,7 @@ export default function MergePdf() {
   const [result, setResult] = useState<Blob | null>(null);
   const [sortMode, setSortMode] = useState<SortMode>("manual");
   const [previewOpen, setPreviewOpen] = useState(false);
-  const [showClearConfirm, setShowClearConfirm] = useState(false);
+  const [detailItemId, setDetailItemId] = useState<string | null>(null);
 
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
@@ -95,10 +102,18 @@ export default function MergePdf() {
   const removedIdsRef = useRef<Set<string>>(new Set());
   const mergingRef = useRef(false);
 
+  // Drag-and-drop sensors. distance:5 prevents nested clicks (X / detail) from
+  // accidentally entering a drag.
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: { distance: 5 },
+    }),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    }),
+  );
+
   useEffect(() => {
-    // Reset on (re)mount — StrictMode mounts twice in dev; without this the
-    // second mount would inherit unmountedRef.current === true from the first
-    // unmount and silently destroy every freshly loaded pdfDoc.
     unmountedRef.current = false;
     return () => {
       unmountedRef.current = true;
@@ -109,7 +124,16 @@ export default function MergePdf() {
     };
   }, []);
 
+  // Auto-close detail dialog if its item is removed externally (e.g. clearAll).
+  useEffect(() => {
+    if (!detailItemId) return;
+    if (!items.find((it) => it.id === detailItemId)) {
+      setDetailItemId(null);
+    }
+  }, [items, detailItemId]);
+
   const handleFiles = useCallback((files: File[]) => {
+    setError("");
     const accepted: ItemState[] = [];
     for (const file of files) {
       if (isPdf(file)) {
@@ -122,7 +146,6 @@ export default function MergePdf() {
           thumbnail: null,
           selectedPages: new Set(),
           rotations: {},
-          expanded: false,
           loading: true,
           error: "",
         });
@@ -147,10 +170,8 @@ export default function MergePdf() {
       try {
         const { pdfDoc, pageCount, thumbnail } = await getPdfPreview(
           item.file,
-          { thumbnailWidth: 80 },
+          { thumbnailWidth: 200 },
         );
-        // If the component unmounted or the item was removed while loading,
-        // destroy the freshly-created pdfDoc to avoid leaking PDFDocumentProxy.
         if (
           unmountedRef.current ||
           removedIdsRef.current.has(item.id)
@@ -206,19 +227,7 @@ export default function MergePdf() {
     if (target?.kind === "image") URL.revokeObjectURL(target.thumbnailUrl);
     setItems((prev) => prev.filter((it) => it.id !== id));
     setResult(null);
-  }, []);
-
-  const moveItem = useCallback((id: string, dir: -1 | 1) => {
-    setItems((prev) => {
-      const idx = prev.findIndex((it) => it.id === id);
-      const next = idx + dir;
-      if (idx < 0 || next < 0 || next >= prev.length) return prev;
-      const out = [...prev];
-      [out[idx], out[next]] = [out[next], out[idx]];
-      return out;
-    });
-    setSortMode("manual");
-    setResult(null);
+    setError("");
   }, []);
 
   const togglePage = useCallback((id: string, page: number) => {
@@ -229,6 +238,31 @@ export default function MergePdf() {
         if (next.has(page)) next.delete(page);
         else next.add(page);
         return { ...it, selectedPages: next };
+      }),
+    );
+    setResult(null);
+  }, []);
+
+  const selectAllPagesForItem = useCallback((id: string) => {
+    setItems((prev) =>
+      prev.map((it) => {
+        if (it.id !== id || it.kind !== "pdf") return it;
+        return {
+          ...it,
+          selectedPages: new Set(
+            Array.from({ length: it.pageCount }, (_, i) => i + 1),
+          ),
+        };
+      }),
+    );
+    setResult(null);
+  }, []);
+
+  const deselectAllPagesForItem = useCallback((id: string) => {
+    setItems((prev) =>
+      prev.map((it) => {
+        if (it.id !== id || it.kind !== "pdf") return it;
+        return { ...it, selectedPages: new Set<number>() };
       }),
     );
     setResult(null);
@@ -252,24 +286,11 @@ export default function MergePdf() {
     [],
   );
 
-  const toggleExpand = useCallback((id: string) => {
-    setItems((prev) =>
-      prev.map((it) => {
-        if (it.id !== id || it.kind !== "pdf") return it;
-        return { ...it, expanded: !it.expanded };
-      }),
-    );
-  }, []);
-
-  const insertBlankAfter = useCallback((idx: number) => {
-    setItems((prev) => {
-      const blank: BlankItemState = { id: uid(), kind: "blank" };
-      const out = [...prev];
-      out.splice(idx + 1, 0, blank);
-      return out;
-    });
+  const insertBlankAtEnd = useCallback(() => {
+    setItems((prev) => [...prev, { id: uid(), kind: "blank" }]);
     setSortMode("manual");
     setResult(null);
+    setError("");
   }, []);
 
   const clearAll = useCallback(() => {
@@ -281,12 +302,13 @@ export default function MergePdf() {
     setItems([]);
     setResult(null);
     setError("");
-    setShowClearConfirm(false);
     setPreviewOpen(false);
+    setDetailItemId(null);
   }, []);
 
   const applySort = useCallback((mode: SortMode) => {
     setSortMode(mode);
+    setError("");
     if (mode === "manual") return;
     setItems((prev) => {
       const sorted = [...prev];
@@ -314,6 +336,19 @@ export default function MergePdf() {
     setResult(null);
   }, []);
 
+  const handleDragEnd = useCallback((event: DragEndEvent) => {
+    const { active, over } = event;
+    if (!over || active.id === over.id) return;
+    setItems((prev) => {
+      const oldIdx = prev.findIndex((it) => it.id === active.id);
+      const newIdx = prev.findIndex((it) => it.id === over.id);
+      if (oldIdx < 0 || newIdx < 0) return prev;
+      return arrayMove(prev, oldIdx, newIdx);
+    });
+    setSortMode("manual");
+    setResult(null);
+  }, []);
+
   const validCount = useMemo(
     () =>
       items.filter((it) => {
@@ -324,10 +359,23 @@ export default function MergePdf() {
     [items],
   );
 
+  const detailItem = useMemo(() => {
+    if (!detailItemId) return null;
+    const it = items.find((x) => x.id === detailItemId);
+    if (!it || it.kind !== "pdf" || !it.pdfDoc) return null;
+    return it;
+  }, [items, detailItemId]);
+
   const handleMerge = useCallback(async () => {
-    // Synchronous guard against double-click; setMerging(true) is async and
-    // can let a second click slip past the disabled prop in the same tick.
-    if (validCount < 2 || mergingRef.current) return;
+    if (mergingRef.current) return;
+    const currentItems = itemsRef.current;
+    const valid = currentItems.filter((it) => {
+      if (it.kind === "pdf")
+        return !it.loading && !it.error && it.selectedPages.size > 0;
+      return true;
+    });
+    if (valid.length < 2) return;
+
     mergingRef.current = true;
     setMerging(true);
     setError("");
@@ -336,30 +384,24 @@ export default function MergePdf() {
     const start = Date.now();
 
     try {
-      const ready: MergeItem[] = items
-        .filter((it) => {
-          if (it.kind === "pdf")
-            return !it.loading && !it.error && it.selectedPages.size > 0;
-          return true;
-        })
-        .map((it) => {
-          if (it.kind === "pdf") {
-            const pageIndices = Array.from(it.selectedPages)
-              .sort((a, b) => a - b)
-              .map((p) => p - 1);
-            return {
-              id: it.id,
-              kind: "pdf",
-              file: it.file,
-              pageIndices,
-              rotations: it.rotations,
-            };
-          }
-          if (it.kind === "image") {
-            return { id: it.id, kind: "image", file: it.file };
-          }
-          return { id: it.id, kind: "blank" };
-        });
+      const ready: MergeItem[] = valid.map((it) => {
+        if (it.kind === "pdf") {
+          const pageIndices = Array.from(it.selectedPages)
+            .sort((a, b) => a - b)
+            .map((p) => p - 1);
+          return {
+            id: it.id,
+            kind: "pdf",
+            file: it.file,
+            pageIndices,
+            rotations: it.rotations,
+          };
+        }
+        if (it.kind === "image") {
+          return { id: it.id, kind: "image", file: it.file };
+        }
+        return { id: it.id, kind: "blank" };
+      });
 
       const blob = await mergeItems(ready, {
         metadata: {
@@ -380,11 +422,9 @@ export default function MergePdf() {
       mergingRef.current = false;
       setMerging(false);
     }
-  }, [items, title, author, subject, keywords, validCount]);
+  }, [title, author, subject, keywords]);
 
   const computedFilename = useMemo(() => {
-    // Strip path separators and characters disallowed in filenames on Windows/macOS/Linux,
-    // then trim leading/trailing underscores so an all-illegal input doesn't yield "___.pdf".
     const sanitize = (s: string) =>
       s.replace(/[/\\:*?"<>|\x00-\x1f]/g, "_").replace(/^_+|_+$/g, "");
     if (customFilename.trim()) {
@@ -402,17 +442,49 @@ export default function MergePdf() {
     return "merged.pdf";
   }, [customFilename, items]);
 
+  const itemIds = useMemo(() => items.map((it) => it.id), [items]);
+
+  const cardData: MergeCardData[] = useMemo(
+    () =>
+      items.map((it) => {
+        if (it.kind === "pdf") {
+          return {
+            id: it.id,
+            kind: "pdf",
+            fileName: it.file.name,
+            fileSize: it.file.size,
+            thumbnail: it.thumbnail,
+            selectedCount: it.selectedPages.size,
+            pageCount: it.pageCount,
+            loading: it.loading,
+            error: it.error,
+          };
+        }
+        if (it.kind === "image") {
+          return {
+            id: it.id,
+            kind: "image",
+            fileName: it.file.name,
+            fileSize: it.file.size,
+            thumbnailUrl: it.thumbnailUrl,
+          };
+        }
+        return { id: it.id, kind: "blank" };
+      }),
+    [items],
+  );
+
   return (
     <div className="space-y-4">
-      <FileDropzone
-        accept={ACCEPT}
-        multiple
-        onFiles={handleFiles}
-        analyticsSlug="merge"
-        analyticsCategory="pdf"
-      />
-
-      {items.length > 0 && (
+      {items.length === 0 ? (
+        <FileDropzone
+          accept={ACCEPT}
+          multiple
+          onFiles={handleFiles}
+          analyticsSlug="merge"
+          analyticsCategory="pdf"
+        />
+      ) : (
         <>
           <div className="flex flex-wrap items-center gap-2 rounded-lg border border-border bg-muted/30 px-3 py-2">
             <span className="text-xs font-medium text-muted-foreground">
@@ -442,66 +514,41 @@ export default function MergePdf() {
                 {t(label)}
               </button>
             ))}
-            <div className="ms-auto">
-              {showClearConfirm ? (
-                <span className="flex items-center gap-1.5">
-                  <span className="text-xs text-muted-foreground">
-                    {t("clearAllConfirm")}
-                  </span>
-                  <Button variant="outline" size="sm" onClick={clearAll}>
-                    {t("clearAllYes")}
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setShowClearConfirm(false)}
-                  >
-                    {t("clearAllCancel")}
-                  </Button>
-                </span>
-              ) : (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setShowClearConfirm(true)}
-                  disabled={merging}
-                >
-                  <Trash2 className="h-3.5 w-3.5" />
-                  {t("clearAll")}
-                </Button>
-              )}
-            </div>
+            <span className="ms-auto text-[11px] text-muted-foreground">
+              {t("dragHint")}
+            </span>
           </div>
 
-          <div className="space-y-2">
-            {items.map((item, idx) => (
-              <ItemRow
-                key={item.id}
-                item={item}
-                index={idx}
-                total={items.length}
-                disabled={merging}
-                onRemove={removeItem}
-                onMove={moveItem}
-                onToggleExpand={toggleExpand}
-                onTogglePage={togglePage}
-                onRotatePage={rotatePage}
-              />
-            ))}
-            <button
-              type="button"
-              onClick={() => insertBlankAfter(items.length - 1)}
-              disabled={merging}
-              className="flex w-full items-center justify-center gap-1.5 rounded-lg border border-dashed border-border py-2 text-xs text-muted-foreground transition-colors hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              <Plus className="h-3.5 w-3.5" />
-              {t("addBlankPage")}
-            </button>
-          </div>
+          <DndContext
+            sensors={sensors}
+            collisionDetection={closestCenter}
+            onDragEnd={handleDragEnd}
+          >
+            <SortableContext items={itemIds} strategy={rectSortingStrategy}>
+              <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6">
+                {cardData.map((c) => (
+                  <MergeItemCard
+                    key={c.id}
+                    data={c}
+                    disabled={merging}
+                    onClick={() => setDetailItemId(c.id)}
+                    onRemove={() => removeItem(c.id)}
+                  />
+                ))}
+                <AddMoreCard
+                  accept={ACCEPT}
+                  onAdd={handleFiles}
+                  disabled={merging}
+                />
+                <AddBlankCard onAdd={insertBlankAtEnd} disabled={merging} />
+                <ClearAllCard onClear={clearAll} disabled={merging} />
+              </div>
+            </SortableContext>
+          </DndContext>
 
           <Accordion>
             <AccordionItem title={t("advancedOptions")}>
-              <div className="space-y-3 pt-2">
+              <div className="grid gap-3 pt-2 sm:grid-cols-2">
                 <Field
                   label={t("metadataTitle")}
                   value={title}
@@ -524,6 +571,7 @@ export default function MergePdf() {
                   placeholder={t("metadataKeywordsPlaceholder")}
                 />
                 <Field
+                  className="sm:col-span-2"
                   label={t("customFilename")}
                   value={customFilename}
                   onChange={setCustomFilename}
@@ -542,21 +590,18 @@ export default function MergePdf() {
       )}
 
       <div className="flex flex-wrap items-center gap-3">
-        <Button onClick={handleMerge} disabled={validCount < 2 || merging} size="lg">
+        <Button
+          onClick={handleMerge}
+          disabled={validCount < 2 || merging}
+          size="lg"
+        >
           {merging ? t("merging") : t("merge")}
         </Button>
         {result && (
           <>
-            <Button
-              variant="outline"
-              onClick={() => setPreviewOpen((v) => !v)}
-            >
-              {previewOpen ? (
-                <EyeOff className="h-4 w-4" />
-              ) : (
-                <Eye className="h-4 w-4" />
-              )}
-              {previewOpen ? t("hidePreview") : t("showPreview")}
+            <Button variant="outline" onClick={() => setPreviewOpen(true)}>
+              <Eye className="h-4 w-4" />
+              {t("previewFullscreen")}
             </Button>
             <DownloadButton
               data={result}
@@ -574,7 +619,29 @@ export default function MergePdf() {
         </p>
       )}
 
-      {result && previewOpen && <PdfBlobPreview blob={result} />}
+      {detailItem && (
+        <PdfDetailDialog
+          open={!!detailItemId}
+          onOpenChange={(o) => !o && setDetailItemId(null)}
+          fileName={detailItem.file.name}
+          fileSize={detailItem.file.size}
+          pageCount={detailItem.pageCount}
+          pdfDoc={detailItem.pdfDoc!}
+          selectedPages={detailItem.selectedPages}
+          rotations={detailItem.rotations}
+          onTogglePage={(p) => togglePage(detailItem.id, p)}
+          onSelectAll={() => selectAllPagesForItem(detailItem.id)}
+          onDeselectAll={() => deselectAllPagesForItem(detailItem.id)}
+          onRotatePage={(idx, delta) => rotatePage(detailItem.id, idx, delta)}
+        />
+      )}
+
+      <PdfFullscreenPreview
+        blob={result}
+        title={computedFilename}
+        open={previewOpen}
+        onOpenChange={setPreviewOpen}
+      />
     </div>
   );
 }
@@ -584,14 +651,16 @@ function Field({
   value,
   onChange,
   placeholder,
+  className,
 }: {
   label: string;
   value: string;
   onChange: (s: string) => void;
   placeholder?: string;
+  className?: string;
 }) {
   return (
-    <label className="block">
+    <label className={`block ${className ?? ""}`}>
       <span className="mb-1 block text-xs font-medium text-foreground">
         {label}
       </span>
@@ -605,208 +674,3 @@ function Field({
     </label>
   );
 }
-
-const ItemRow = memo(function ItemRow({
-  item,
-  index,
-  total,
-  disabled,
-  onRemove,
-  onMove,
-  onToggleExpand,
-  onTogglePage,
-  onRotatePage,
-}: {
-  item: ItemState;
-  index: number;
-  total: number;
-  disabled: boolean;
-  onRemove: (id: string) => void;
-  onMove: (id: string, dir: -1 | 1) => void;
-  onToggleExpand: (id: string) => void;
-  onTogglePage: (id: string, page: number) => void;
-  onRotatePage: (id: string, originalIdx: number, delta: number) => void;
-}) {
-  const t = useTranslations("tools.pdf.merge");
-
-  return (
-    <div className="rounded-lg border border-border bg-card">
-      <div className="flex items-center gap-3 p-2">
-        <div className="flex flex-col gap-0.5">
-          <button
-            type="button"
-            onClick={() => onMove(item.id, -1)}
-            disabled={index === 0 || disabled}
-            className="rounded p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground disabled:cursor-not-allowed disabled:opacity-30"
-            aria-label={t("moveUp")}
-          >
-            <ArrowUp className="h-4 w-4" />
-          </button>
-          <button
-            type="button"
-            onClick={() => onMove(item.id, 1)}
-            disabled={index === total - 1 || disabled}
-            className="rounded p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground disabled:cursor-not-allowed disabled:opacity-30"
-            aria-label={t("moveDown")}
-          >
-            <ArrowDown className="h-4 w-4" />
-          </button>
-        </div>
-
-        <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center overflow-hidden rounded-md border border-border bg-muted">
-          {item.kind === "pdf" && item.thumbnail && (
-            // eslint-disable-next-line @next/next/no-img-element -- data URL preview
-            <img
-              src={item.thumbnail}
-              alt=""
-              className="h-full w-full object-contain"
-            />
-          )}
-          {item.kind === "pdf" &&
-            !item.thumbnail &&
-            (item.loading ? (
-              <span className="text-[10px] text-muted-foreground">
-                {t("loading")}
-              </span>
-            ) : (
-              <FileText className="h-6 w-6 text-muted-foreground" />
-            ))}
-          {item.kind === "image" && (
-            // eslint-disable-next-line @next/next/no-img-element -- blob URL preview
-            <img
-              src={item.thumbnailUrl}
-              alt=""
-              className="h-full w-full object-cover"
-            />
-          )}
-          {item.kind === "blank" && (
-            <div className="flex h-full w-full items-center justify-center bg-muted/60">
-              <FileText className="h-5 w-5 text-muted-foreground/40" />
-            </div>
-          )}
-        </div>
-
-        <div className="min-w-0 flex-1">
-          {item.kind === "blank" ? (
-            <>
-              <p className="truncate text-sm font-medium">{t("blankItem")}</p>
-              <p className="text-xs text-muted-foreground">
-                {t("blankFollowsPrevious")}
-              </p>
-            </>
-          ) : (
-            <>
-              <p className="truncate text-sm font-medium">
-                {item.file.name}
-                {item.kind === "image" && (
-                  <span className="ml-2 inline-flex items-center gap-1 rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-medium text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
-                    <ImageIcon className="h-3 w-3" />
-                    {t("imageItem")}
-                  </span>
-                )}
-              </p>
-              <p className="text-xs text-muted-foreground">
-                {item.kind === "pdf" && item.pageCount > 0 && (
-                  <>
-                    {t("selectedOf", {
-                      selected: item.selectedPages.size,
-                      total: item.pageCount,
-                    })}
-                    {" · "}
-                  </>
-                )}
-                {item.kind === "pdf" && item.error && (
-                  <span className="text-red-600">{item.error} · </span>
-                )}
-                {formatFileSize(item.file.size)}
-              </p>
-            </>
-          )}
-        </div>
-
-        {item.kind === "pdf" && item.pdfDoc && (
-          <button
-            type="button"
-            onClick={() => onToggleExpand(item.id)}
-            disabled={disabled}
-            aria-expanded={item.expanded}
-            className="flex items-center gap-1 rounded-md px-2 py-1 text-xs text-muted-foreground transition-colors hover:bg-muted hover:text-foreground disabled:cursor-not-allowed disabled:opacity-50"
-          >
-            {item.expanded ? (
-              <ChevronUp className="h-3.5 w-3.5" />
-            ) : (
-              <ChevronDown className="h-3.5 w-3.5" />
-            )}
-            {item.expanded ? t("collapse") : t("expand")}
-          </button>
-        )}
-
-        <button
-          type="button"
-          onClick={() => onRemove(item.id)}
-          disabled={disabled}
-          className="flex-shrink-0 rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-red-100 hover:text-red-600 disabled:cursor-not-allowed disabled:opacity-50 dark:hover:bg-red-950 dark:hover:text-red-400"
-          aria-label={t("removeFile")}
-        >
-          <X className="h-4 w-4" />
-        </button>
-      </div>
-
-      {item.kind === "pdf" && item.expanded && item.pdfDoc && (
-        <div className="border-t border-border p-3">
-          <p className="mb-2 text-xs text-muted-foreground">
-            {t("pageSelectHint")}
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {Array.from({ length: item.pageCount }, (_, i) => i + 1).map(
-              (page) => {
-                const originalIdx = page - 1;
-                const rotation = item.rotations[originalIdx] ?? 0;
-                return (
-                  <div key={page} className="relative">
-                    <PdfPagePreview
-                      pdf={item.pdfDoc!}
-                      pageNumber={page}
-                      width={100}
-                      selected={item.selectedPages.has(page)}
-                      onClick={() => onTogglePage(item.id, page)}
-                    />
-                    <div className="absolute right-1 top-1 flex gap-0.5">
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          onRotatePage(item.id, originalIdx, -90);
-                        }}
-                        className="rounded bg-black/60 p-1.5 text-white transition-colors hover:bg-black/80"
-                        aria-label={t("rotateLeft")}
-                      >
-                        <RotateCcw className="h-3 w-3" />
-                      </button>
-                      <button
-                        type="button"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          onRotatePage(item.id, originalIdx, 90);
-                        }}
-                        className="rounded bg-black/60 p-1.5 text-white transition-colors hover:bg-black/80"
-                        aria-label={t("rotateRight")}
-                      >
-                        <RotateCw className="h-3 w-3" />
-                      </button>
-                    </div>
-                    {rotation !== 0 && (
-                      <div className="absolute bottom-5 left-0 right-0 bg-primary/80 py-0.5 text-center text-[10px] font-medium text-primary-foreground">
-                        {rotation}°
-                      </div>
-                    )}
-                  </div>
-                );
-              },
-            )}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-});
