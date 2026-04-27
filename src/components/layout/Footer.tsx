@@ -82,6 +82,11 @@ export function Footer({ toolNavData }: FooterProps) {
             </h4>
             <ul className="space-y-0.5">
               <li>
+                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {tf("aboutUs")}
+                </Link>
+              </li>
+              <li>
                 <Link href="/how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   {tf("howItWorks")}
                 </Link>
@@ -89,6 +94,11 @@ export function Footer({ toolNavData }: FooterProps) {
               <li>
                 <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   {tf("privacy")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  {tf("terms")}
                 </Link>
               </li>
             </ul>

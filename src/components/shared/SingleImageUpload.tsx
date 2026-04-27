@@ -118,6 +118,10 @@ export function SingleImageUpload({
             src={preview.url}
             alt={file.name}
             className="h-full w-full object-cover"
+            width={preview.dimensions?.width}
+            height={preview.dimensions?.height}
+            loading="lazy"
+            decoding="async"
             onError={() => setPreview((p) => p ? { ...p, error: true } : p)}
           />
         ) : (

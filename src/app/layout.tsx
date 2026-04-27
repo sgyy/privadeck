@@ -13,6 +13,10 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
+    title: "PrivaDeck",
+  },
+  icons: {
+    apple: "/icons/icon-192x192.png",
   },
   title: {
     default: "PrivaDeck - Free Online Privacy-First Tools",

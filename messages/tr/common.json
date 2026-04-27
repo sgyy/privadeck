@@ -142,8 +142,10 @@
   "footer": {
     "tagline": "Medya, PDF ve geliştirme için gizlilik öncelikli tarayıcı araçları. Tüm işlemler cihazınızda kalır.",
     "about": "Hakkında",
+    "aboutUs": "Hakkında",
     "howItWorks": "Nasıl Çalışır",
     "privacy": "Gizlilik",
+    "terms": "Şartlar",
     "allRightsReserved": "Tüm hakları saklıdır."
   },
   "privacy": {
@@ -236,6 +238,78 @@
     },
     "privacyCta": "Verilerinizi nasıl koruduğumuz hakkında daha fazla bilgi ister misiniz?",
     "privacyLink": "Gizlilik politikasını okuyun →"
+  },
+  "about": {
+    "metaTitle": "PrivaDeck Hakkında — Gizlilik öncelikli tarayıcı araçları",
+    "metaDescription": "PrivaDeck, medya, PDF ve geliştirici görevleri için ücretsiz, tarayıcı tabanlı bir araç kutusudur. Dosyalar asla cihazınızdan ayrılmaz. WebAssembly ve Web API'leri üzerine inşa edilmiştir.",
+    "title": "PrivaDeck Hakkında",
+    "subtitle": "Açık web üzerine kurulmuş ücretsiz, gizlilik öncelikli bir araç kutusu. Her dosya cihazınızda kalır.",
+    "missionTitle": "Misyonumuz",
+    "missionBody": "Çoğu çevrimiçi araç, dosyalarınızı işlemeden önce uzak bir sunucuya yükler. Bunun tam tersi olması gerektiğini düşündük. PrivaDeck size hızlı, ücretsiz, modern bir alternatif sunar — her işlem tarayıcınızın içinde çalışır, böylece dosyalarınız asla cihazınızdan ayrılmaz. Hesap yok, sunucu yok, sürpriz yok.",
+    "promiseTitle": "Tavizsiz gizlilik",
+    "promiseBody": "Dosya içeriğinizi, dosya adlarınızı veya bunlardan türetilen hiçbir şeyi toplamayız. İşlediğiniz şeylerin sunucu tarafı kaydı yoktur. Site, Cloudflare Pages'a dağıtılan statik bir dışa aktarımdır — sekmeyi kapattığınızda verileriniz kaybolur.",
+    "techTitle": "Şunlarla inşa edildi",
+    "tech": {
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "WebAssembly'ye derlenmiş FFmpeg, PDF.js ve diğer yerel kütüphaneler tarayıcınızda neredeyse yerel hızda çalışır."
+      },
+      "canvas": {
+        "title": "Canvas ve Web API'leri",
+        "description": "Görüntü kırpma, yeniden boyutlandırma ve format dönüştürme, GPU hızlandırmalı render için tarayıcının yerel Canvas API'sini kullanır."
+      },
+      "ffmpeg": {
+        "title": "FFmpeg.wasm",
+        "description": "Video ve sesi tamamen istemci tarafında kırpın, sıkıştırın ve dönüştürün — WebAssembly'ye derlenmiş FFmpeg ile çalışır."
+      },
+      "pdfLib": {
+        "title": "pdf-lib ve PDF.js",
+        "description": "Tamamen tarayıcıda çalışan kanıtlanmış kütüphanelerle PDF'leri birleştirin, bölün, döndürün ve düzenleyin."
+      }
+    },
+    "statsTitle": "Sayılarla",
+    "stats": {
+      "tools": "63 ücretsiz araç",
+      "locales": "21 dil",
+      "uploads": "0 sunucu yüklemesi",
+      "clientSide": "%100 tarayıcıda"
+    },
+    "ctaTitle": "Hemen deneyin",
+    "ctaToolsLabel": "Tüm araçları görüntüle",
+    "ctaHowItWorksLabel": "Nasıl çalışır"
+  },
+  "terms": {
+    "metaTitle": "Hizmet Şartları — PrivaDeck",
+    "metaDescription": "PrivaDeck Hizmet Şartları — ücretsiz, tarayıcı tabanlı, gizlilik öncelikli bir araç kutusu. Siteyi kullanarak bu şartları kabul edersiniz.",
+    "title": "Hizmet Şartları",
+    "subtitle": "PrivaDeck, kişisel ve ticari kullanım için ücretsiz olarak sunulur. Siteyi kullanarak bu şartları kabul edersiniz.",
+    "lastUpdated": "Son güncelleme: Nisan 2026",
+    "sections": {
+      "acceptance": {
+        "title": "Kabul",
+        "body": "PrivaDeck'e (privadeck.app) erişerek veya kullanarak bu şartlara bağlı kalmayı kabul edersiniz. Kabul etmiyorsanız siteyi kullanmayın."
+      },
+      "license": {
+        "title": "Ücretsiz Kullanım Lisansı",
+        "body": "PrivaDeck'teki tüm araçlar, kayıt veya oturum açma olmaksızın kişisel veya ticari her türlü yasal amaçla ücretsiz kullanılabilir. Site, dosyalarınızı tamamen tarayıcınızda işler — hiçbir şey yüklenmez."
+      },
+      "warranty": {
+        "title": "Garanti Yok",
+        "body": "PrivaDeck, açık veya zımni hiçbir garanti olmaksızın \"olduğu gibi\" ve \"mevcut olduğu şekilde\" sağlanır. Doğruluk, güvenilirlik, eksiksizlik, belirli bir amaca uygunluk veya kesintisiz kullanılabilirlik konusunda garanti vermeyiz."
+      },
+      "liability": {
+        "title": "Sorumluluk Yok",
+        "body": "Yasaların izin verdiği azami ölçüde, veri kaybı, dosya bozulması, iş kesintisi veya doğrudan, dolaylı, arızi veya sonuç olarak ortaya çıkan zararlar dahil olmak üzere siteyi kullanmanızdan kaynaklanan herhangi bir zarardan sorumlu değiliz. İşlemeden önce önemli dosyaların yedeklerini saklamak sizin sorumluluğunuzdadır."
+      },
+      "changes": {
+        "title": "Şartlardaki Değişiklikler",
+        "body": "Bu şartları herhangi bir zamanda önceden bildirimde bulunmaksızın güncelleyebiliriz. Geçerli sürüm her zaman bu sayfada mevcuttur. Değişikliklerden sonra siteyi kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir."
+      },
+      "governing": {
+        "title": "Geçerli Hukuk ve İletişim",
+        "body": "Bu şartlar, kendi yargı bölgenizde geçerli yerel hukuka tabidir. Sorularınız, geri bildirimleriniz veya endişeleriniz için lütfen GitHub deposumuzda bir issue açın veya sitede listelenen kanallar aracılığıyla bizimle iletişime geçin."
+      }
+    }
   },
   "toolNames": {
     "developer": {
@@ -503,7 +577,7 @@
   },
   "allTools": {
     "metaTitle": "Tüm Araçlar",
-    "metaDescription": "Görsel, video, ses, PDF ve geliştirici görevleri için 58'den fazla ücretsiz çevrimiçi araca göz atın. Yükleme yok, %100 gizli."
+    "metaDescription": "Görsel, video, ses, PDF ve geliştirici görevleri için 63'den fazla ücretsiz çevrimiçi araca göz atın. Yükleme yok, %100 gizli."
   },
   "notFound": {
     "title": "Sayfa Bulunamadı",

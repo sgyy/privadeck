@@ -11,6 +11,8 @@ export interface ConvertedPage {
   blob: Blob;
   filename: string;
   pageNumber: number;
+  width: number;
+  height: number;
 }
 
 export async function convertPdfToImages(
@@ -55,6 +57,8 @@ export async function convertPdfToImages(
       blob,
       filename: `${baseName}_page_${i}${ext}`,
       pageNumber: i,
+      width: viewport.width,
+      height: viewport.height,
     };
     results.push(converted);
     onPage?.(converted);

@@ -142,8 +142,10 @@
   "footer": {
     "tagline": "Herramientas de navegador con privacidad primero para medios, PDF y desarrollo. Todo el procesamiento se queda en tu dispositivo.",
     "about": "Acerca de",
+    "aboutUs": "Acerca de",
     "howItWorks": "Cómo funciona",
     "privacy": "Privacidad",
+    "terms": "Términos",
     "allRightsReserved": "Todos los derechos reservados."
   },
   "privacy": {
@@ -236,6 +238,78 @@
     },
     "privacyCta": "¿Quiere saber más sobre cómo protegemos sus datos?",
     "privacyLink": "Leer política de privacidad →"
+  },
+  "about": {
+    "metaTitle": "Acerca de PrivaDeck — Herramientas de navegador con privacidad primero",
+    "metaDescription": "PrivaDeck es una caja de herramientas gratuita basada en el navegador para tareas de medios, PDF y desarrollo. Los archivos nunca salen de tu dispositivo. Construida sobre WebAssembly y APIs web.",
+    "title": "Acerca de PrivaDeck",
+    "subtitle": "Una caja de herramientas gratuita y centrada en la privacidad, construida sobre la web abierta. Cada archivo se queda en tu dispositivo.",
+    "missionTitle": "Nuestra misión",
+    "missionBody": "La mayoría de las herramientas en línea suben tus archivos a un servidor remoto antes de procesarlos. Nos pareció lo contrario de lo que debería ser. PrivaDeck te ofrece una alternativa rápida, gratuita y moderna — cada operación se ejecuta dentro de tu navegador, así que tus archivos nunca salen de tu dispositivo. Sin cuentas, sin servidores, sin sorpresas.",
+    "promiseTitle": "Privacidad sin concesiones",
+    "promiseBody": "No recopilamos el contenido de tus archivos, los nombres de archivo ni nada derivado de ellos. No hay registro del lado del servidor de lo que procesas. El sitio es una exportación estática desplegada en Cloudflare Pages — cuando cierras la pestaña, tus datos desaparecen.",
+    "techTitle": "Construido con",
+    "tech": {
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "FFmpeg, PDF.js y otras bibliotecas nativas compiladas a WebAssembly se ejecutan a velocidad casi nativa dentro de tu navegador."
+      },
+      "canvas": {
+        "title": "Canvas y APIs web",
+        "description": "El recorte, redimensionado y conversión de formato de imágenes utiliza la API Canvas nativa del navegador para renderizado acelerado por GPU."
+      },
+      "ffmpeg": {
+        "title": "FFmpeg.wasm",
+        "description": "Recorta, comprime y convierte videos y audio totalmente del lado del cliente, impulsado por FFmpeg compilado a WebAssembly."
+      },
+      "pdfLib": {
+        "title": "pdf-lib y PDF.js",
+        "description": "Combina, divide, rota y edita PDFs con bibliotecas probadas que se ejecutan completamente en el navegador."
+      }
+    },
+    "statsTitle": "En cifras",
+    "stats": {
+      "tools": "63 herramientas gratuitas",
+      "locales": "21 idiomas",
+      "uploads": "0 subidas al servidor",
+      "clientSide": "100% en el navegador"
+    },
+    "ctaTitle": "Pruébalo ahora",
+    "ctaToolsLabel": "Ver todas las herramientas",
+    "ctaHowItWorksLabel": "Ver cómo funciona"
+  },
+  "terms": {
+    "metaTitle": "Términos de servicio — PrivaDeck",
+    "metaDescription": "Términos de servicio de PrivaDeck — una caja de herramientas gratuita, basada en el navegador y centrada en la privacidad. Al usar el sitio aceptas estos términos.",
+    "title": "Términos de servicio",
+    "subtitle": "PrivaDeck se ofrece gratuitamente para uso personal y comercial. Al usar el sitio aceptas estos términos.",
+    "lastUpdated": "Última actualización: abril de 2026",
+    "sections": {
+      "acceptance": {
+        "title": "Aceptación",
+        "body": "Al acceder o usar PrivaDeck (privadeck.app), aceptas estar sujeto a estos términos. Si no estás de acuerdo, no uses el sitio."
+      },
+      "license": {
+        "title": "Licencia de uso gratuito",
+        "body": "Todas las herramientas de PrivaDeck son gratuitas para cualquier propósito legal, personal o comercial, sin registro ni inicio de sesión. El sitio procesa tus archivos completamente en tu navegador — no se sube nada."
+      },
+      "warranty": {
+        "title": "Sin garantía",
+        "body": "PrivaDeck se proporciona \"tal cual\" y \"según disponibilidad\" sin garantías de ningún tipo, expresas o implícitas. No ofrecemos garantías sobre exactitud, fiabilidad, integridad, idoneidad para un propósito particular ni disponibilidad ininterrumpida."
+      },
+      "liability": {
+        "title": "Sin responsabilidad",
+        "body": "No somos responsables de ningún daño derivado de tu uso del sitio, incluida pérdida de datos, corrupción de archivos, interrupción de la actividad o cualquier daño directo, indirecto, incidental o consecuente — hasta el máximo permitido por la ley. Eres responsable de mantener copias de seguridad de archivos importantes antes de procesarlos."
+      },
+      "changes": {
+        "title": "Cambios a estos términos",
+        "body": "Podemos actualizar estos términos en cualquier momento sin aviso previo. La versión actual siempre está disponible en esta página. El uso continuado del sitio después de los cambios significa que aceptas los términos actualizados."
+      },
+      "governing": {
+        "title": "Ley aplicable y contacto",
+        "body": "Estos términos se rigen por la ley local aplicable en tu jurisdicción. Para preguntas, comentarios o dudas, abre un issue en nuestro repositorio de GitHub o contáctanos a través de los canales listados en el sitio."
+      }
+    }
   },
   "toolNames": {
     "developer": {
@@ -503,7 +577,7 @@
   },
   "allTools": {
     "metaTitle": "Todas las herramientas",
-    "metaDescription": "Explore más de 58 herramientas online gratuitas para imagen, video, audio, PDF y tareas de desarrollo. Sin cargas, 100% privado."
+    "metaDescription": "Explore más de 63 herramientas online gratuitas para imagen, video, audio, PDF y tareas de desarrollo. Sin cargas, 100% privado."
   },
   "notFound": {
     "title": "Página no encontrada",

@@ -94,6 +94,8 @@ export function ImageResultList({ results, onRemove }: ImageResultListProps) {
                 src={getUrl(item.blob)}
                 alt={item.filename}
                 className="aspect-square w-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </button>
 

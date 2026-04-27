@@ -142,8 +142,10 @@
   "footer": {
     "tagline": "Datenschutzorientierte Browser-Tools für Medien, PDF & Entwicklung. Alle Verarbeitung bleibt auf Ihrem Gerät.",
     "about": "Über uns",
+    "aboutUs": "Über uns",
     "howItWorks": "So funktioniert's",
     "privacy": "Datenschutz",
+    "terms": "AGB",
     "allRightsReserved": "Alle Rechte vorbehalten."
   },
   "privacy": {
@@ -236,6 +238,78 @@
     },
     "privacyCta": "Möchten Sie mehr über unseren Datenschutz erfahren?",
     "privacyLink": "Datenschutzrichtlinie lesen →"
+  },
+  "about": {
+    "metaTitle": "Über PrivaDeck — Privatsphäre-orientierte Browser-Tools",
+    "metaDescription": "PrivaDeck ist eine kostenlose, browserbasierte Toolbox für Medien-, PDF- und Entwickleraufgaben. Dateien verlassen niemals Ihr Gerät. Basiert auf WebAssembly und Web-APIs.",
+    "title": "Über PrivaDeck",
+    "subtitle": "Eine kostenlose, datenschutzorientierte Toolbox auf Basis offener Web-Standards. Jede Datei bleibt auf Ihrem Gerät.",
+    "missionTitle": "Unsere Mission",
+    "missionBody": "Die meisten Online-Tools laden Ihre Dateien zuerst auf einen entfernten Server hoch, bevor sie verarbeitet werden. Wir hielten das für falsch herum. PrivaDeck bietet Ihnen eine schnelle, kostenlose und moderne Alternative — jeder Vorgang läuft direkt in Ihrem Browser, sodass Ihre Dateien Ihr Gerät nie verlassen. Keine Konten, keine Server, keine Überraschungen.",
+    "promiseTitle": "Datenschutz ohne Kompromisse",
+    "promiseBody": "Wir erfassen weder Ihre Dateiinhalte noch Dateinamen oder davon abgeleitete Informationen. Es gibt kein serverseitiges Protokoll dessen, was Sie verarbeiten. Die Seite ist ein statischer Export, der auf Cloudflare Pages gehostet wird — wenn Sie den Tab schließen, sind Ihre Daten weg.",
+    "techTitle": "Aufgebaut auf",
+    "tech": {
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "FFmpeg, PDF.js und andere native Bibliotheken, die nach WebAssembly kompiliert wurden, laufen mit nahezu nativer Geschwindigkeit in Ihrem Browser."
+      },
+      "canvas": {
+        "title": "Canvas & Web-APIs",
+        "description": "Bildzuschnitt, -größenänderung und Formatkonvertierung nutzen die native Canvas-API des Browsers für GPU-beschleunigtes Rendering."
+      },
+      "ffmpeg": {
+        "title": "FFmpeg.wasm",
+        "description": "Videos und Audio vollständig clientseitig schneiden, komprimieren und konvertieren — angetrieben von FFmpeg, kompiliert nach WebAssembly."
+      },
+      "pdfLib": {
+        "title": "pdf-lib & PDF.js",
+        "description": "PDFs zusammenführen, teilen, drehen und bearbeiten mit erprobten Bibliotheken, die vollständig im Browser laufen."
+      }
+    },
+    "statsTitle": "In Zahlen",
+    "stats": {
+      "tools": "63 kostenlose Tools",
+      "locales": "21 Sprachen",
+      "uploads": "0 Server-Uploads",
+      "clientSide": "100 % im Browser"
+    },
+    "ctaTitle": "Jetzt ausprobieren",
+    "ctaToolsLabel": "Alle Tools durchsuchen",
+    "ctaHowItWorksLabel": "So funktioniert's"
+  },
+  "terms": {
+    "metaTitle": "Allgemeine Geschäftsbedingungen — PrivaDeck",
+    "metaDescription": "Allgemeine Geschäftsbedingungen für PrivaDeck — eine kostenlose, browserbasierte, datenschutzorientierte Toolbox. Mit der Nutzung der Seite stimmen Sie diesen Bedingungen zu.",
+    "title": "Allgemeine Geschäftsbedingungen",
+    "subtitle": "PrivaDeck wird kostenlos für die persönliche und kommerzielle Nutzung bereitgestellt. Mit der Nutzung der Seite akzeptieren Sie diese Bedingungen.",
+    "lastUpdated": "Zuletzt aktualisiert: April 2026",
+    "sections": {
+      "acceptance": {
+        "title": "Annahme",
+        "body": "Durch den Zugriff auf oder die Nutzung von PrivaDeck (privadeck.app) erklären Sie sich mit diesen Bedingungen einverstanden. Falls Sie nicht zustimmen, nutzen Sie die Seite bitte nicht."
+      },
+      "license": {
+        "title": "Lizenz zur kostenlosen Nutzung",
+        "body": "Alle Tools auf PrivaDeck können kostenlos für jeden rechtmäßigen Zweck — privat oder kommerziell — ohne Registrierung oder Anmeldung verwendet werden. Die Seite verarbeitet Ihre Dateien vollständig in Ihrem Browser — nichts wird hochgeladen."
+      },
+      "warranty": {
+        "title": "Keine Gewährleistung",
+        "body": "PrivaDeck wird „wie besehen“ und „wie verfügbar“ ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt. Wir übernehmen keine Garantie für Genauigkeit, Zuverlässigkeit, Vollständigkeit, Eignung für einen bestimmten Zweck oder unterbrechungsfreie Verfügbarkeit."
+      },
+      "liability": {
+        "title": "Haftungsausschluss",
+        "body": "Wir haften nicht für Schäden, die durch Ihre Nutzung der Seite entstehen, einschließlich Datenverlust, Dateibeschädigung, Betriebsunterbrechung oder direkter, indirekter, beiläufiger oder Folgeschäden — soweit gesetzlich zulässig. Sie sind verantwortlich für Sicherungskopien wichtiger Dateien vor der Verarbeitung."
+      },
+      "changes": {
+        "title": "Änderungen dieser Bedingungen",
+        "body": "Wir können diese Bedingungen jederzeit ohne vorherige Ankündigung aktualisieren. Die aktuelle Version ist stets auf dieser Seite verfügbar. Mit der weiteren Nutzung der Seite nach Änderungen akzeptieren Sie die aktualisierten Bedingungen."
+      },
+      "governing": {
+        "title": "Geltendes Recht & Kontakt",
+        "body": "Diese Bedingungen unterliegen dem geltenden lokalen Recht Ihrer Gerichtsbarkeit. Bei Fragen, Feedback oder Bedenken eröffnen Sie bitte ein Issue in unserem GitHub-Repository oder kontaktieren Sie uns über die auf der Seite aufgeführten Kanäle."
+      }
+    }
   },
   "toolNames": {
     "developer": {
@@ -503,7 +577,7 @@
   },
   "allTools": {
     "metaTitle": "Alle Tools",
-    "metaDescription": "Browse all 58+ free online tools for image, video, audio, PDF, and developer tasks. No uploads, 100% private."
+    "metaDescription": "Browse all 63+ free online tools for image, video, audio, PDF, and developer tasks. No uploads, 100% private."
   },
   "notFound": {
     "title": "Seite nicht gefunden",

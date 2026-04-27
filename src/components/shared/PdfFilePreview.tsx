@@ -33,7 +33,12 @@ export function PdfFilePreview({
       <div className="flex h-20 w-20 flex-shrink-0 items-center justify-center overflow-hidden rounded-md border border-border bg-card">
         {thumbnail ? (
           // eslint-disable-next-line @next/next/no-img-element -- data URL preview, optimization not applicable
-          <img src={thumbnail} alt={file.name} className="h-full w-full object-contain" />
+          <img
+            src={thumbnail}
+            alt={file.name}
+            className="h-full w-full object-contain"
+            decoding="async"
+          />
         ) : (
           <FileText className="h-8 w-8 text-muted-foreground" />
         )}

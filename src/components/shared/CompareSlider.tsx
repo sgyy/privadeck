@@ -9,6 +9,8 @@ interface CompareSliderProps {
   beforeLabel?: string;
   afterLabel?: string;
   savedPercent?: number;
+  width?: number;
+  height?: number;
 }
 
 export function CompareSlider({
@@ -17,6 +19,8 @@ export function CompareSlider({
   beforeLabel,
   afterLabel,
   savedPercent,
+  width,
+  height,
 }: CompareSliderProps) {
   const [position, setPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -63,7 +67,10 @@ export function CompareSlider({
       <div
         ref={containerRef}
         className="relative select-none overflow-hidden rounded-lg border border-border"
-        style={{ cursor: "col-resize" }}
+        style={{
+          cursor: "col-resize",
+          ...(width && height ? { aspectRatio: `${width}/${height}` } : {}),
+        }}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         role="group"
@@ -75,6 +82,9 @@ export function CompareSlider({
           alt={afterLabel || t("compareAfter")}
           className="block w-full"
           draggable={false}
+          width={width}
+          height={height}
+          decoding="async"
         />
 
         {/* Before image (clipped) */}
@@ -87,6 +97,9 @@ export function CompareSlider({
             alt={beforeLabel || t("compareBefore")}
             className="block w-full"
             draggable={false}
+            width={width}
+            height={height}
+            decoding="async"
           />
         </div>
 

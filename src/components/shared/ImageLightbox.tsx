@@ -7,9 +7,11 @@ interface ImageLightboxProps {
   src: string;
   alt?: string;
   onClose: () => void;
+  width?: number;
+  height?: number;
 }
 
-export function ImageLightbox({ src, alt = "", onClose }: ImageLightboxProps) {
+export function ImageLightbox({ src, alt = "", onClose, width, height }: ImageLightboxProps) {
   return (
     <Dialog open={true} onOpenChange={(val) => { if (!val) onClose(); }}>
       <DialogOverlay className="bg-black/80" />
@@ -27,6 +29,9 @@ export function ImageLightbox({ src, alt = "", onClose }: ImageLightboxProps) {
             src={src}
             alt={alt}
             className="max-h-[90vh] max-w-[90vw] object-contain"
+            width={width}
+            height={height}
+            decoding="async"
           />
         </div>
       </DialogContent>

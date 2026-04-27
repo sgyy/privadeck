@@ -142,8 +142,10 @@
   "footer": {
     "tagline": "Alat browser yang mengutamakan privasi untuk media, PDF & pengembangan. Semua pemrosesan tetap di perangkat Anda.",
     "about": "Tentang",
+    "aboutUs": "Tentang",
     "howItWorks": "Cara Kerja",
     "privacy": "Privasi",
+    "terms": "Ketentuan",
     "allRightsReserved": "Hak cipta dilindungi."
   },
   "privacy": {
@@ -236,6 +238,78 @@
     },
     "privacyCta": "Ingin tahu lebih lanjut tentang perlindungan data Anda?",
     "privacyLink": "Baca kebijakan privasi →"
+  },
+  "about": {
+    "metaTitle": "Tentang PrivaDeck — Alat Browser Mengutamakan Privasi",
+    "metaDescription": "PrivaDeck adalah toolbox gratis berbasis browser untuk tugas media, PDF, dan pengembang. File tidak pernah meninggalkan perangkat Anda. Dibangun dengan WebAssembly dan Web API.",
+    "title": "Tentang PrivaDeck",
+    "subtitle": "Toolbox gratis dan mengutamakan privasi yang dibangun di atas web terbuka. Setiap file tetap di perangkat Anda.",
+    "missionTitle": "Misi Kami",
+    "missionBody": "Sebagian besar alat online mengunggah file Anda ke server jarak jauh sebelum memprosesnya. Menurut kami itu terbalik. PrivaDeck memberi Anda alternatif yang cepat, gratis, dan modern — setiap operasi berjalan di dalam browser Anda, jadi file Anda tidak pernah meninggalkan perangkat Anda. Tanpa akun, tanpa server, tanpa kejutan.",
+    "promiseTitle": "Privasi Tanpa Kompromi",
+    "promiseBody": "Kami tidak mengumpulkan konten file Anda, nama file, atau apa pun yang berasal darinya. Tidak ada log sisi server tentang apa yang Anda proses. Situs ini adalah ekspor statis yang di-deploy ke Cloudflare Pages — saat Anda menutup tab, data Anda hilang.",
+    "techTitle": "Dibangun Dengan",
+    "tech": {
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "FFmpeg, PDF.js, dan pustaka native lainnya yang dikompilasi ke WebAssembly berjalan dengan kecepatan mendekati native di dalam browser Anda."
+      },
+      "canvas": {
+        "title": "Canvas & Web API",
+        "description": "Pemotongan, pengubahan ukuran, dan konversi format gambar menggunakan Canvas API native browser untuk rendering yang dipercepat GPU."
+      },
+      "ffmpeg": {
+        "title": "FFmpeg.wasm",
+        "description": "Pangkas, kompres, dan konversi video dan audio sepenuhnya di sisi klien, ditenagai oleh FFmpeg yang dikompilasi ke WebAssembly."
+      },
+      "pdfLib": {
+        "title": "pdf-lib & PDF.js",
+        "description": "Gabungkan, pisahkan, putar, dan edit PDF dengan pustaka teruji yang berjalan sepenuhnya di browser."
+      }
+    },
+    "statsTitle": "Dalam Angka",
+    "stats": {
+      "tools": "63 alat gratis",
+      "locales": "21 bahasa",
+      "uploads": "0 unggahan server",
+      "clientSide": "100% berbasis browser"
+    },
+    "ctaTitle": "Coba sekarang",
+    "ctaToolsLabel": "Lihat semua alat",
+    "ctaHowItWorksLabel": "Lihat cara kerja"
+  },
+  "terms": {
+    "metaTitle": "Ketentuan Layanan — PrivaDeck",
+    "metaDescription": "Ketentuan layanan PrivaDeck — toolbox gratis berbasis browser yang mengutamakan privasi. Dengan menggunakan situs ini Anda menyetujui ketentuan ini.",
+    "title": "Ketentuan Layanan",
+    "subtitle": "PrivaDeck disediakan gratis untuk penggunaan pribadi dan komersial. Dengan menggunakan situs ini Anda menerima ketentuan ini.",
+    "lastUpdated": "Terakhir diperbarui: April 2026",
+    "sections": {
+      "acceptance": {
+        "title": "Penerimaan",
+        "body": "Dengan mengakses atau menggunakan PrivaDeck (privadeck.app), Anda setuju untuk terikat oleh ketentuan ini. Jika Anda tidak setuju, jangan gunakan situs ini."
+      },
+      "license": {
+        "title": "Lisensi Penggunaan Gratis",
+        "body": "Semua alat di PrivaDeck gratis untuk digunakan untuk tujuan apa pun yang sah, pribadi atau komersial, tanpa pendaftaran atau pendaftaran. Situs memproses file Anda sepenuhnya di browser Anda — tidak ada yang diunggah."
+      },
+      "warranty": {
+        "title": "Tanpa Jaminan",
+        "body": "PrivaDeck disediakan \"sebagaimana adanya\" dan \"sebagaimana tersedia\" tanpa jaminan apa pun, baik tersurat maupun tersirat. Kami tidak memberikan jaminan tentang akurasi, keandalan, kelengkapan, kesesuaian untuk tujuan tertentu, atau ketersediaan tanpa gangguan."
+      },
+      "liability": {
+        "title": "Tanpa Tanggung Jawab",
+        "body": "Kami tidak bertanggung jawab atas kerugian apa pun yang timbul dari penggunaan situs Anda, termasuk kehilangan data, kerusakan file, gangguan bisnis, atau kerugian langsung, tidak langsung, insidental, atau konsekuensial — sampai batas maksimum yang diizinkan oleh hukum. Anda bertanggung jawab untuk menyimpan cadangan file penting sebelum diproses."
+      },
+      "changes": {
+        "title": "Perubahan Ketentuan Ini",
+        "body": "Kami dapat memperbarui ketentuan ini kapan saja tanpa pemberitahuan sebelumnya. Versi saat ini selalu tersedia di halaman ini. Penggunaan situs yang berkelanjutan setelah perubahan berarti Anda menerima ketentuan yang diperbarui."
+      },
+      "governing": {
+        "title": "Hukum yang Berlaku & Kontak",
+        "body": "Ketentuan ini diatur oleh hukum lokal yang berlaku di yurisdiksi Anda. Untuk pertanyaan, masukan, atau kekhawatiran, silakan buka issue di repositori GitHub kami atau hubungi kami melalui saluran yang tercantum di situs."
+      }
+    }
   },
   "toolNames": {
     "developer": {
@@ -503,7 +577,7 @@
   },
   "allTools": {
     "metaTitle": "Semua Alat",
-    "metaDescription": "Jelajahi semua 58+ alat online gratis untuk tugas gambar, video, audio, PDF, dan pengembang. Tanpa unggahan, 100% privat."
+    "metaDescription": "Jelajahi semua 63+ alat online gratis untuk tugas gambar, video, audio, PDF, dan pengembang. Tanpa unggahan, 100% privat."
   },
   "notFound": {
     "title": "Halaman Tidak Ditemukan",

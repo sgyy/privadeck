@@ -142,8 +142,10 @@
   "footer": {
     "tagline": "隐私优先的浏览器工具台，覆盖媒体、PDF 与开发场景。所有处理均在本地完成。",
     "about": "关于",
+    "aboutUs": "关于",
     "howItWorks": "工作原理",
     "privacy": "隐私保护",
+    "terms": "服务条款",
     "allRightsReserved": "保留所有权利。"
   },
   "privacy": {
@@ -236,6 +238,78 @@
     },
     "privacyCta": "想了解更多关于我们如何保护您的数据？",
     "privacyLink": "查看隐私政策 →"
+  },
+  "about": {
+    "metaTitle": "关于 PrivaDeck — 隐私优先的浏览器工具",
+    "metaDescription": "PrivaDeck 是一个免费的浏览器端工具箱，覆盖媒体、PDF 和开发场景。文件不离开您的设备。基于 WebAssembly 和 Web API 构建。",
+    "title": "关于 PrivaDeck",
+    "subtitle": "构建于开放 Web 之上的免费、隐私优先工具箱。每一个文件都留在您的设备上。",
+    "missionTitle": "我们的使命",
+    "missionBody": "大多数在线工具会先把您的文件上传到远程服务器再处理，这本末倒置。PrivaDeck 提供一个快速、免费、现代的替代方案——所有操作都在您的浏览器中运行，文件永远不会离开您的设备。无需账号、无服务器、无意外。",
+    "promiseTitle": "毫不妥协的隐私",
+    "promiseBody": "我们不收集您的文件内容、文件名或任何派生信息。服务器端不存在关于您处理内容的日志。本站为静态导出，部署于 Cloudflare Pages——关闭标签页后，您的数据即消失。",
+    "techTitle": "技术栈",
+    "tech": {
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "FFmpeg、PDF.js 等原生库被编译为 WebAssembly，在浏览器内以接近原生的速度运行。"
+      },
+      "canvas": {
+        "title": "Canvas 与 Web API",
+        "description": "图像裁剪、缩放和格式转换使用浏览器原生 Canvas API，享受 GPU 加速渲染。"
+      },
+      "ffmpeg": {
+        "title": "FFmpeg.wasm",
+        "description": "完全在客户端裁剪、压缩和转换视频与音频，由编译为 WebAssembly 的 FFmpeg 提供支持。"
+      },
+      "pdfLib": {
+        "title": "pdf-lib 与 PDF.js",
+        "description": "通过经过实战检验的库合并、拆分、旋转和编辑 PDF，全部在浏览器中运行。"
+      }
+    },
+    "statsTitle": "数据一览",
+    "stats": {
+      "tools": "63 款免费工具",
+      "locales": "21 种语言",
+      "uploads": "0 次服务器上传",
+      "clientSide": "100% 浏览器端"
+    },
+    "ctaTitle": "立即体验",
+    "ctaToolsLabel": "浏览全部工具",
+    "ctaHowItWorksLabel": "查看工作原理"
+  },
+  "terms": {
+    "metaTitle": "服务条款 — PrivaDeck",
+    "metaDescription": "PrivaDeck 服务条款——免费、浏览器端、隐私优先的工具箱。使用本站即表示您同意这些条款。",
+    "title": "服务条款",
+    "subtitle": "PrivaDeck 免费提供，可用于个人和商业用途。使用本站即表示您接受这些条款。",
+    "lastUpdated": "最后更新：2026 年 4 月",
+    "sections": {
+      "acceptance": {
+        "title": "接受条款",
+        "body": "通过访问或使用 PrivaDeck（privadeck.app），您同意受这些条款约束。如不同意，请勿使用本站。"
+      },
+      "license": {
+        "title": "免费使用许可",
+        "body": "PrivaDeck 上的所有工具可免费用于任何合法用途，包括个人或商业用途，无需注册或登录。本站完全在您的浏览器内处理文件——不上传任何内容。"
+      },
+      "warranty": {
+        "title": "无担保",
+        "body": "PrivaDeck 按\"现状\"和\"可用情况\"提供，不附带任何形式的明示或默示担保。我们不保证准确性、可靠性、完整性、特定用途的适用性或不间断的可用性。"
+      },
+      "liability": {
+        "title": "责任限制",
+        "body": "在法律允许的最大范围内，我们对因您使用本站而产生的任何损害概不负责，包括数据丢失、文件损坏、业务中断，以及任何直接、间接、附带或后果性损害。处理前请自行备份重要文件。"
+      },
+      "changes": {
+        "title": "条款变更",
+        "body": "我们可能随时更新这些条款，恕不另行通知。最新版本始终在此页面提供。条款变更后您继续使用本站，即视为接受更新后的条款。"
+      },
+      "governing": {
+        "title": "适用法律与联系方式",
+        "body": "这些条款受您所在司法管辖区的当地法律管辖。如有问题、反馈或疑虑，请在我们的 GitHub 仓库提交 issue，或通过站点上列出的渠道联系我们。"
+      }
+    }
   },
   "toolNames": {
     "developer": {
@@ -503,7 +577,7 @@
   },
   "allTools": {
     "metaTitle": "全部工具",
-    "metaDescription": "浏览 58+ 免费在线工具，涵盖图片、视频、音频、PDF 和开发者工具。无需上传，100% 隐私保护。"
+    "metaDescription": "浏览 63+ 免费在线工具，涵盖图片、视频、音频、PDF 和开发者工具。无需上传，100% 隐私保护。"
   },
   "notFound": {
     "title": "页面未找到",

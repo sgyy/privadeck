@@ -72,8 +72,10 @@ export async function GET() {
   lines.push("");
   lines.push(`- [Homepage](${SITE}/en/)`);
   lines.push(`- [All tools](${SITE}/en/tools/)`);
+  lines.push(`- [About PrivaDeck](${SITE}/en/about/)`);
   lines.push(`- [How it works](${SITE}/en/how-it-works/)`);
   lines.push(`- [Privacy policy](${SITE}/en/privacy/)`);
+  lines.push(`- [Terms of service](${SITE}/en/terms/)`);
   lines.push("");
 
   lines.push("## Optional");

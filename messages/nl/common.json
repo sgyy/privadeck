@@ -142,8 +142,10 @@
   "footer": {
     "tagline": "Privacy-first browsertools voor media, PDF & ontwikkeling. Alle verwerking blijft op je apparaat.",
     "about": "Over",
+    "aboutUs": "Over",
     "howItWorks": "Hoe het werkt",
     "privacy": "Privacy",
+    "terms": "Voorwaarden",
     "allRightsReserved": "Alle rechten voorbehouden."
   },
   "privacy": {
@@ -236,6 +238,78 @@
     },
     "privacyCta": "Wilt u meer weten over hoe we uw gegevens beschermen?",
     "privacyLink": "Lees het privacybeleid →"
+  },
+  "about": {
+    "metaTitle": "Over PrivaDeck — Privacy-eerst browsertools",
+    "metaDescription": "PrivaDeck is een gratis, browser-gebaseerde toolbox voor media-, PDF- en ontwikkelaarstaken. Bestanden verlaten nooit je apparaat. Gebouwd op WebAssembly en web-API's.",
+    "title": "Over PrivaDeck",
+    "subtitle": "Een gratis, privacy-eerst toolbox gebouwd op het open web. Elk bestand blijft op je apparaat.",
+    "missionTitle": "Onze missie",
+    "missionBody": "De meeste online tools uploaden je bestanden naar een externe server voordat ze worden verwerkt. Wij vonden dat omgekeerd. PrivaDeck biedt een snel, gratis, modern alternatief — elke bewerking draait in je browser, dus je bestanden verlaten nooit je apparaat. Geen accounts, geen servers, geen verrassingen.",
+    "promiseTitle": "Privacy zonder compromis",
+    "promiseBody": "We verzamelen niet de inhoud van je bestanden, bestandsnamen of iets daarvan afgeleid. Er is geen serverlog van wat je verwerkt. De site is een statische export die op Cloudflare Pages draait — wanneer je het tabblad sluit, zijn je gegevens weg.",
+    "techTitle": "Gebouwd met",
+    "tech": {
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "FFmpeg, PDF.js en andere native bibliotheken gecompileerd naar WebAssembly draaien op bijna native snelheid in je browser."
+      },
+      "canvas": {
+        "title": "Canvas en web-API's",
+        "description": "Bijsnijden, vergroten/verkleinen en formaatconversie van afbeeldingen gebruiken de native Canvas-API van de browser voor GPU-versnelde rendering."
+      },
+      "ffmpeg": {
+        "title": "FFmpeg.wasm",
+        "description": "Knip, comprimeer en converteer video's en audio volledig clientside, aangedreven door FFmpeg gecompileerd naar WebAssembly."
+      },
+      "pdfLib": {
+        "title": "pdf-lib en PDF.js",
+        "description": "Voeg PDF's samen, splits, draai en bewerk ze met beproefde bibliotheken die volledig in de browser draaien."
+      }
+    },
+    "statsTitle": "In cijfers",
+    "stats": {
+      "tools": "63 gratis tools",
+      "locales": "21 talen",
+      "uploads": "0 server-uploads",
+      "clientSide": "100% in de browser"
+    },
+    "ctaTitle": "Probeer het nu",
+    "ctaToolsLabel": "Bekijk alle tools",
+    "ctaHowItWorksLabel": "Zie hoe het werkt"
+  },
+  "terms": {
+    "metaTitle": "Servicevoorwaarden — PrivaDeck",
+    "metaDescription": "Servicevoorwaarden voor PrivaDeck — een gratis, browser-gebaseerde, privacy-eerst toolbox. Door de site te gebruiken ga je akkoord met deze voorwaarden.",
+    "title": "Servicevoorwaarden",
+    "subtitle": "PrivaDeck wordt gratis aangeboden voor persoonlijk en commercieel gebruik. Door de site te gebruiken accepteer je deze voorwaarden.",
+    "lastUpdated": "Laatst bijgewerkt: april 2026",
+    "sections": {
+      "acceptance": {
+        "title": "Aanvaarding",
+        "body": "Door PrivaDeck (privadeck.app) te bezoeken of gebruiken, ga je akkoord met deze voorwaarden. Als je niet akkoord gaat, gebruik de site dan niet."
+      },
+      "license": {
+        "title": "Licentie voor gratis gebruik",
+        "body": "Alle tools op PrivaDeck zijn gratis te gebruiken voor elk wettig doel, persoonlijk of commercieel, zonder registratie of aanmelding. De site verwerkt je bestanden volledig in je browser — er wordt niets geüpload."
+      },
+      "warranty": {
+        "title": "Geen garantie",
+        "body": "PrivaDeck wordt geleverd \"zoals het is\" en \"zoals beschikbaar\" zonder enige uitdrukkelijke of impliciete garanties. We geven geen garantie op nauwkeurigheid, betrouwbaarheid, volledigheid, geschiktheid voor een bepaald doel of ononderbroken beschikbaarheid."
+      },
+      "liability": {
+        "title": "Geen aansprakelijkheid",
+        "body": "We zijn niet aansprakelijk voor enige schade die voortvloeit uit je gebruik van de site, inclusief gegevensverlies, bestandscorruptie, bedrijfsonderbreking of directe, indirecte, incidentele of gevolgschade — voor zover wettelijk toegestaan. Je bent verantwoordelijk voor het maken van back-ups van belangrijke bestanden vóór de verwerking."
+      },
+      "changes": {
+        "title": "Wijzigingen in deze voorwaarden",
+        "body": "We kunnen deze voorwaarden op elk moment zonder voorafgaande kennisgeving bijwerken. De huidige versie is altijd beschikbaar op deze pagina. Voortgezet gebruik van de site na wijzigingen betekent dat je de bijgewerkte voorwaarden accepteert."
+      },
+      "governing": {
+        "title": "Toepasselijk recht en contact",
+        "body": "Deze voorwaarden worden beheerst door het toepasselijke lokale recht van jouw rechtsgebied. Voor vragen, feedback of zorgen, open een issue in onze GitHub-repository of neem contact met ons op via de kanalen die op de site zijn vermeld."
+      }
+    }
   },
   "toolNames": {
     "developer": {
@@ -503,7 +577,7 @@
   },
   "allTools": {
     "metaTitle": "Alle tools",
-    "metaDescription": "Bekijk alle 58+ gratis online tools voor afbeelding, video, audio, PDF en ontwikkelaarstaken. Geen uploads, 100% privé."
+    "metaDescription": "Bekijk alle 63+ gratis online tools voor afbeelding, video, audio, PDF en ontwikkelaarstaken. Geen uploads, 100% privé."
   },
   "notFound": {
     "title": "Pagina niet gevonden",

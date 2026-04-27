@@ -142,8 +142,10 @@
   "footer": {
     "tagline": "미디어, PDF, 개발을 위한 프라이버시 우선 브라우저 도구. 모든 처리가 기기에서 이루어집니다.",
     "about": "소개",
+    "aboutUs": "소개",
     "howItWorks": "작동 방식",
     "privacy": "개인정보",
+    "terms": "이용약관",
     "allRightsReserved": "All rights reserved."
   },
   "privacy": {
@@ -236,6 +238,78 @@
     },
     "privacyCta": "데이터 보호 방법에 대해 더 알고 싶으신가요?",
     "privacyLink": "개인정보 처리방침 읽기 →"
+  },
+  "about": {
+    "metaTitle": "PrivaDeck 소개 — 개인정보 보호 우선 브라우저 도구",
+    "metaDescription": "PrivaDeck은 미디어, PDF, 개발 작업을 위한 무료 브라우저 기반 도구 모음입니다. 파일은 절대 기기를 벗어나지 않습니다. WebAssembly와 Web API로 구축되었습니다.",
+    "title": "PrivaDeck 소개",
+    "subtitle": "오픈 웹 위에 구축된 무료, 개인정보 보호 우선 도구 모음. 모든 파일이 기기에 머무릅니다.",
+    "missionTitle": "우리의 미션",
+    "missionBody": "대부분의 온라인 도구는 처리하기 전에 파일을 원격 서버에 업로드합니다. 우리는 그것이 거꾸로라고 생각했습니다. PrivaDeck은 빠르고, 무료이고, 현대적인 대안을 제공합니다 — 모든 작업이 브라우저 내부에서 실행되므로 파일이 기기를 벗어나지 않습니다. 계정 없음, 서버 없음, 깜짝 놀랄 일 없음.",
+    "promiseTitle": "타협 없는 개인정보 보호",
+    "promiseBody": "파일 내용, 파일 이름 또는 그로부터 파생된 정보를 수집하지 않습니다. 처리한 내용에 대한 서버 측 로그가 없습니다. 사이트는 Cloudflare Pages에 배포된 정적 내보내기입니다 — 탭을 닫으면 데이터가 사라집니다.",
+    "techTitle": "기반 기술",
+    "tech": {
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "WebAssembly로 컴파일된 FFmpeg, PDF.js 및 기타 네이티브 라이브러리가 브라우저 내부에서 거의 네이티브 속도로 실행됩니다."
+      },
+      "canvas": {
+        "title": "Canvas 및 Web API",
+        "description": "이미지 자르기, 크기 조정, 형식 변환은 GPU 가속 렌더링을 위한 브라우저 네이티브 Canvas API를 사용합니다."
+      },
+      "ffmpeg": {
+        "title": "FFmpeg.wasm",
+        "description": "WebAssembly로 컴파일된 FFmpeg을 통해 비디오와 오디오의 자르기, 압축, 변환을 완전히 클라이언트 측에서 수행합니다."
+      },
+      "pdfLib": {
+        "title": "pdf-lib 및 PDF.js",
+        "description": "검증된 라이브러리로 PDF를 병합, 분할, 회전, 편집하며 모두 브라우저에서 실행됩니다."
+      }
+    },
+    "statsTitle": "숫자로 보기",
+    "stats": {
+      "tools": "63개 무료 도구",
+      "locales": "21개 언어",
+      "uploads": "0회 서버 업로드",
+      "clientSide": "100% 브라우저 기반"
+    },
+    "ctaTitle": "지금 사용해보기",
+    "ctaToolsLabel": "모든 도구 보기",
+    "ctaHowItWorksLabel": "작동 방식 보기"
+  },
+  "terms": {
+    "metaTitle": "이용약관 — PrivaDeck",
+    "metaDescription": "PrivaDeck 이용약관 — 무료, 브라우저 기반, 개인정보 보호 우선 도구 모음. 사이트를 사용함으로써 본 약관에 동의한 것으로 간주됩니다.",
+    "title": "이용약관",
+    "subtitle": "PrivaDeck은 개인 및 상업적 용도로 무료 제공됩니다. 사이트를 사용함으로써 본 약관에 동의한 것으로 간주됩니다.",
+    "lastUpdated": "최종 업데이트: 2026년 4월",
+    "sections": {
+      "acceptance": {
+        "title": "동의",
+        "body": "PrivaDeck (privadeck.app)에 접속하거나 사용함으로써, 본 약관의 구속을 받는 것에 동의합니다. 동의하지 않는 경우 사이트를 사용하지 마십시오."
+      },
+      "license": {
+        "title": "무료 사용 라이선스",
+        "body": "PrivaDeck의 모든 도구는 등록이나 가입 없이 개인 또는 상업적 용도로 합법적인 목적으로 무료 사용할 수 있습니다. 사이트는 파일을 완전히 브라우저 내에서 처리하며 — 아무것도 업로드되지 않습니다."
+      },
+      "warranty": {
+        "title": "무보증",
+        "body": "PrivaDeck은 명시적이든 묵시적이든 어떠한 종류의 보증 없이 \"있는 그대로\" 및 \"이용 가능한 상태로\" 제공됩니다. 정확성, 신뢰성, 완전성, 특정 목적에의 적합성 또는 중단 없는 이용 가능성에 대한 보증을 제공하지 않습니다."
+      },
+      "liability": {
+        "title": "책임 제한",
+        "body": "법률이 허용하는 최대 한도 내에서, 데이터 손실, 파일 손상, 업무 중단 또는 직접적, 간접적, 부수적 또는 결과적 손해를 포함한 사이트 사용으로 인한 손해에 대해 당사는 책임을 지지 않습니다. 처리 전 중요한 파일의 백업을 유지할 책임은 사용자에게 있습니다."
+      },
+      "changes": {
+        "title": "약관 변경",
+        "body": "당사는 사전 통지 없이 언제든지 본 약관을 업데이트할 수 있습니다. 현재 버전은 항상 이 페이지에서 확인할 수 있습니다. 변경 후 사이트를 계속 사용하면 업데이트된 약관에 동의하는 것으로 간주됩니다."
+      },
+      "governing": {
+        "title": "준거법 및 연락처",
+        "body": "본 약관은 귀하의 관할권에서 적용되는 현지 법률의 적용을 받습니다. 질문, 피드백 또는 우려 사항이 있으시면 GitHub 저장소에서 issue를 열거나 사이트에 나열된 채널을 통해 연락해 주십시오."
+      }
+    }
   },
   "toolNames": {
     "developer": {
@@ -503,7 +577,7 @@
   },
   "allTools": {
     "metaTitle": "모든 도구",
-    "metaDescription": "이미지, 동영상, 오디오, PDF 및 개발자 작업을 위한 58개 이상의 무 온라인 도구를 둘러보세요. 업로드 없음, 100% 프라이버시."
+    "metaDescription": "이미지, 동영상, 오디오, PDF 및 개발자 작업을 위한 63개 이상의 무 온라인 도구를 둘러보세요. 업로드 없음, 100% 프라이버시."
   },
   "notFound": {
     "title": "페이지를 찾을 수 없습니다",

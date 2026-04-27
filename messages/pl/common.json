@@ -142,8 +142,10 @@
   "footer": {
     "tagline": "Narzędzia przeglądarkowe z priorytetem prywatności — multimedia, PDF i programowanie. Całe przetwarzanie odbywa się na Twoim urządzeniu.",
     "about": "O nas",
+    "aboutUs": "O nas",
     "howItWorks": "Jak to działa",
     "privacy": "Prywatność",
+    "terms": "Regulamin",
     "allRightsReserved": "Wszelkie prawa zastrzeżone."
   },
   "privacy": {
@@ -236,6 +238,78 @@
     },
     "privacyCta": "Chcesz dowiedzieć się więcej o ochronie Twoich danych?",
     "privacyLink": "Przeczytaj politykę prywatności →"
+  },
+  "about": {
+    "metaTitle": "O PrivaDeck — Narzędzia przeglądarkowe z priorytetem prywatności",
+    "metaDescription": "PrivaDeck to darmowy zestaw narzędzi przeglądarkowych do zadań multimedialnych, PDF i programistycznych. Pliki nigdy nie opuszczają Twojego urządzenia. Zbudowany na WebAssembly i Web API.",
+    "title": "O PrivaDeck",
+    "subtitle": "Darmowy zestaw narzędzi z priorytetem prywatności zbudowany na otwartym webie. Każdy plik zostaje na Twoim urządzeniu.",
+    "missionTitle": "Nasza misja",
+    "missionBody": "Większość narzędzi online przesyła Twoje pliki na zdalny serwer przed ich przetworzeniem. Uznaliśmy to za niewłaściwe podejście. PrivaDeck oferuje szybką, darmową, nowoczesną alternatywę — każda operacja działa wewnątrz Twojej przeglądarki, więc Twoje pliki nigdy nie opuszczają urządzenia. Bez kont, bez serwerów, bez niespodzianek.",
+    "promiseTitle": "Prywatność bez kompromisów",
+    "promiseBody": "Nie zbieramy zawartości Twoich plików, ich nazw ani żadnych pochodnych. Nie istnieje żaden log po stronie serwera tego, co przetwarzasz. Witryna jest statycznym eksportem wdrożonym na Cloudflare Pages — gdy zamkniesz kartę, Twoje dane znikają.",
+    "techTitle": "Zbudowane na",
+    "tech": {
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "FFmpeg, PDF.js i inne natywne biblioteki skompilowane do WebAssembly działają z prędkością zbliżoną do natywnej w Twojej przeglądarce."
+      },
+      "canvas": {
+        "title": "Canvas i Web API",
+        "description": "Kadrowanie, zmiana rozmiaru i konwersja formatu obrazów wykorzystują natywne API Canvas przeglądarki dla renderowania przyspieszanego przez GPU."
+      },
+      "ffmpeg": {
+        "title": "FFmpeg.wasm",
+        "description": "Przycinaj, kompresuj i konwertuj wideo i audio całkowicie po stronie klienta, dzięki FFmpeg skompilowanemu do WebAssembly."
+      },
+      "pdfLib": {
+        "title": "pdf-lib i PDF.js",
+        "description": "Łącz, dziel, obracaj i edytuj pliki PDF za pomocą sprawdzonych bibliotek działających całkowicie w przeglądarce."
+      }
+    },
+    "statsTitle": "W liczbach",
+    "stats": {
+      "tools": "63 darmowe narzędzia",
+      "locales": "21 języków",
+      "uploads": "0 wysyłek na serwer",
+      "clientSide": "100% w przeglądarce"
+    },
+    "ctaTitle": "Wypróbuj teraz",
+    "ctaToolsLabel": "Przeglądaj wszystkie narzędzia",
+    "ctaHowItWorksLabel": "Zobacz jak działa"
+  },
+  "terms": {
+    "metaTitle": "Regulamin — PrivaDeck",
+    "metaDescription": "Regulamin PrivaDeck — darmowy zestaw narzędzi przeglądarkowych z priorytetem prywatności. Korzystając z witryny akceptujesz niniejszy regulamin.",
+    "title": "Regulamin",
+    "subtitle": "PrivaDeck jest udostępniany bezpłatnie do użytku osobistego i komercyjnego. Korzystając z witryny akceptujesz niniejszy regulamin.",
+    "lastUpdated": "Ostatnia aktualizacja: kwiecień 2026",
+    "sections": {
+      "acceptance": {
+        "title": "Akceptacja",
+        "body": "Korzystając z PrivaDeck (privadeck.app) lub uzyskując do niego dostęp, zgadzasz się być związany niniejszym regulaminem. Jeśli się nie zgadzasz, nie korzystaj z witryny."
+      },
+      "license": {
+        "title": "Licencja darmowego użytkowania",
+        "body": "Wszystkie narzędzia w PrivaDeck są darmowe do użycia w dowolnym legalnym celu, osobistym lub komercyjnym, bez rejestracji ani logowania. Witryna przetwarza Twoje pliki w całości w Twojej przeglądarce — nic nie jest przesyłane."
+      },
+      "warranty": {
+        "title": "Brak gwarancji",
+        "body": "PrivaDeck jest dostarczany \"tak jak jest\" i \"w miarę dostępności\" bez żadnych gwarancji, wyraźnych ani dorozumianych. Nie udzielamy gwarancji co do dokładności, niezawodności, kompletności, przydatności do określonego celu ani nieprzerwanej dostępności."
+      },
+      "liability": {
+        "title": "Brak odpowiedzialności",
+        "body": "W maksymalnym zakresie dozwolonym przez prawo nie ponosimy odpowiedzialności za jakiekolwiek szkody wynikające z korzystania z witryny, w tym utratę danych, uszkodzenie plików, przerwy w działalności biznesowej lub jakiekolwiek szkody bezpośrednie, pośrednie, przypadkowe lub wynikowe. Jesteś odpowiedzialny za tworzenie kopii zapasowych ważnych plików przed ich przetworzeniem."
+      },
+      "changes": {
+        "title": "Zmiany w regulaminie",
+        "body": "Możemy aktualizować niniejszy regulamin w dowolnym momencie bez wcześniejszego powiadomienia. Aktualna wersja jest zawsze dostępna na tej stronie. Dalsze korzystanie z witryny po wprowadzeniu zmian oznacza akceptację zaktualizowanego regulaminu."
+      },
+      "governing": {
+        "title": "Prawo właściwe i kontakt",
+        "body": "Niniejszy regulamin podlega prawu lokalnemu obowiązującemu w Twojej jurysdykcji. W razie pytań, opinii lub wątpliwości otwórz issue w naszym repozytorium GitHub lub skontaktuj się z nami za pośrednictwem kanałów wymienionych na stronie."
+      }
+    }
   },
   "toolNames": {
     "developer": {
@@ -503,7 +577,7 @@
   },
   "allTools": {
     "metaTitle": "Wszystkie narzędzia",
-    "metaDescription": "Przeglądaj wszystkie 58+ darmowe narzędzia online dla obrazów, wideo, audio, PDF i zadań deweloperskich. Bez przesyłania, 100% prywatności."
+    "metaDescription": "Przeglądaj wszystkie 63+ darmowe narzędzia online dla obrazów, wideo, audio, PDF i zadań deweloperskich. Bez przesyłania, 100% prywatności."
   },
   "notFound": {
     "title": "Strona nie znaleziona",

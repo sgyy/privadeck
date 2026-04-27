@@ -90,6 +90,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
       alternates: { languages: buildAlternates(() => "/how-it-works/") },
     });
+
+    // 关于
+    entries.push({
+      url: `${BASE_URL}/${locale}/about/`,
+      changeFrequency: "yearly",
+      priority: 0.5,
+      alternates: { languages: buildAlternates(() => "/about/") },
+    });
+
+    // 服务条款
+    entries.push({
+      url: `${BASE_URL}/${locale}/terms/`,
+      changeFrequency: "yearly",
+      priority: 0.3,
+      alternates: { languages: buildAlternates(() => "/terms/") },
+    });
   }
 
   return entries;

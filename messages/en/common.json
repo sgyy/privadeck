@@ -142,8 +142,10 @@
   "footer": {
     "tagline": "Privacy-first browser tools for media, PDF & development. All processing stays on your device.",
     "about": "About",
+    "aboutUs": "About",
     "howItWorks": "How It Works",
     "privacy": "Privacy",
+    "terms": "Terms",
     "allRightsReserved": "All rights reserved."
   },
   "privacy": {
@@ -236,6 +238,78 @@
     },
     "privacyCta": "Want to learn more about how we protect your data?",
     "privacyLink": "Read our Privacy Policy →"
+  },
+  "about": {
+    "metaTitle": "About PrivaDeck — Privacy-First Browser Tools",
+    "metaDescription": "PrivaDeck is a free, browser-based toolbox for media, PDF, and developer tasks. Files never leave your device. Built on WebAssembly and Web APIs.",
+    "title": "About PrivaDeck",
+    "subtitle": "A free, privacy-first toolbox built on the open web. Every file stays on your device.",
+    "missionTitle": "Our Mission",
+    "missionBody": "Most online tools upload your files to a remote server before processing them. We thought that was backwards. PrivaDeck gives you a fast, free, modern alternative — every operation runs inside your browser, so your files never leave your device. No accounts, no servers, no surprises.",
+    "promiseTitle": "Privacy Without Compromise",
+    "promiseBody": "We don't collect your file contents, file names, or anything derived from them. There is no server-side log of what you process. The site is a static export deployed to Cloudflare Pages — when you close the tab, your data is gone.",
+    "techTitle": "Built On",
+    "tech": {
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "FFmpeg, PDF.js, and other native libraries compiled to WebAssembly run at near-native speed inside your browser."
+      },
+      "canvas": {
+        "title": "Canvas & Web APIs",
+        "description": "Image cropping, resizing, and format conversion use the browser's native Canvas API for GPU-accelerated rendering."
+      },
+      "ffmpeg": {
+        "title": "FFmpeg.wasm",
+        "description": "Trim, compress, and convert videos and audio entirely client-side, powered by FFmpeg compiled to WebAssembly."
+      },
+      "pdfLib": {
+        "title": "pdf-lib & PDF.js",
+        "description": "Merge, split, rotate, and edit PDFs with battle-tested libraries that run completely in the browser."
+      }
+    },
+    "statsTitle": "By the numbers",
+    "stats": {
+      "tools": "63 free tools",
+      "locales": "21 languages",
+      "uploads": "0 server uploads",
+      "clientSide": "100% browser-based"
+    },
+    "ctaTitle": "Try it now",
+    "ctaToolsLabel": "Browse all tools",
+    "ctaHowItWorksLabel": "See how it works"
+  },
+  "terms": {
+    "metaTitle": "Terms of Service — PrivaDeck",
+    "metaDescription": "Terms of service for PrivaDeck — a free, browser-based privacy-first toolbox. By using the site you agree to these terms.",
+    "title": "Terms of Service",
+    "subtitle": "PrivaDeck is provided free of charge for personal and commercial use. By using the site you accept these terms.",
+    "lastUpdated": "Last updated: April 2026",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptance",
+        "body": "By accessing or using PrivaDeck (privadeck.app), you agree to be bound by these terms. If you do not agree, do not use the site."
+      },
+      "license": {
+        "title": "Free Use License",
+        "body": "All tools on PrivaDeck are free to use for any lawful purpose, personal or commercial, without registration or sign-up. The site processes your files entirely in your browser — nothing is uploaded."
+      },
+      "warranty": {
+        "title": "No Warranty",
+        "body": "PrivaDeck is provided \"as is\" and \"as available\" without warranties of any kind, express or implied. We make no guarantees about accuracy, reliability, completeness, fitness for a particular purpose, or uninterrupted availability."
+      },
+      "liability": {
+        "title": "No Liability",
+        "body": "We are not liable for any damages arising from your use of the site, including data loss, file corruption, business interruption, or any direct, indirect, incidental, or consequential damages — to the maximum extent permitted by law. You are responsible for keeping backups of important files before processing."
+      },
+      "changes": {
+        "title": "Changes to These Terms",
+        "body": "We may update these terms at any time without prior notice. The current version is always available at this page. Continued use of the site after changes means you accept the updated terms."
+      },
+      "governing": {
+        "title": "Governing Law & Contact",
+        "body": "These terms are governed by applicable local law in your jurisdiction. For questions, feedback, or concerns, please open an issue on our GitHub repository or contact us through the channels listed on the site."
+      }
+    }
   },
   "toolNames": {
     "developer": {
@@ -503,7 +577,7 @@
   },
   "allTools": {
     "metaTitle": "All Tools",
-    "metaDescription": "Browse all 58+ free online tools for image, video, audio, PDF, and developer tasks. No uploads, 100% private."
+    "metaDescription": "Browse all 63+ free online tools for image, video, audio, PDF, and developer tasks. No uploads, 100% private."
   },
   "notFound": {
     "title": "Page Not Found",

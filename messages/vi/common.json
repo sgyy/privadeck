@@ -142,8 +142,10 @@
   "footer": {
     "tagline": "Công cụ trình duyệt ưu tiên quyền riêng tư cho media, PDF & phát triển. Mọi xử lý đều diễn ra trên thiết bị của bạn.",
     "about": "Giới thiệu",
+    "aboutUs": "Giới thiệu",
     "howItWorks": "Cách hoạt động",
     "privacy": "Quyền riêng tư",
+    "terms": "Điều khoản",
     "allRightsReserved": "Đã đăng ký bản quyền."
   },
   "privacy": {
@@ -236,6 +238,78 @@
     },
     "privacyCta": "Muốn tìm hiểu thêm về cách chúng tôi bảo vệ dữ liệu của bạn?",
     "privacyLink": "Đọc chính sách quyền riêng tư →"
+  },
+  "about": {
+    "metaTitle": "Giới thiệu PrivaDeck — Công cụ trình duyệt ưu tiên quyền riêng tư",
+    "metaDescription": "PrivaDeck là bộ công cụ miễn phí trên trình duyệt cho các tác vụ media, PDF và lập trình viên. Tệp không bao giờ rời khỏi thiết bị của bạn. Được xây dựng trên WebAssembly và Web API.",
+    "title": "Giới thiệu PrivaDeck",
+    "subtitle": "Bộ công cụ miễn phí, ưu tiên quyền riêng tư, được xây dựng trên web mở. Mọi tệp đều ở trên thiết bị của bạn.",
+    "missionTitle": "Sứ mệnh của chúng tôi",
+    "missionBody": "Hầu hết các công cụ trực tuyến tải tệp của bạn lên máy chủ từ xa trước khi xử lý. Chúng tôi nghĩ điều đó ngược đời. PrivaDeck mang lại cho bạn một giải pháp thay thế nhanh, miễn phí và hiện đại — mọi thao tác đều chạy bên trong trình duyệt của bạn, vì vậy tệp không bao giờ rời khỏi thiết bị. Không tài khoản, không máy chủ, không bất ngờ.",
+    "promiseTitle": "Quyền riêng tư không thỏa hiệp",
+    "promiseBody": "Chúng tôi không thu thập nội dung tệp, tên tệp hoặc bất cứ thứ gì phái sinh từ chúng. Không có nhật ký phía máy chủ về những gì bạn xử lý. Trang web là một bản xuất tĩnh được triển khai trên Cloudflare Pages — khi bạn đóng tab, dữ liệu của bạn biến mất.",
+    "techTitle": "Được xây dựng trên",
+    "tech": {
+      "wasm": {
+        "title": "WebAssembly",
+        "description": "FFmpeg, PDF.js và các thư viện gốc khác được biên dịch sang WebAssembly chạy với tốc độ gần như gốc bên trong trình duyệt của bạn."
+      },
+      "canvas": {
+        "title": "Canvas và Web API",
+        "description": "Cắt, đổi kích thước và chuyển đổi định dạng hình ảnh sử dụng API Canvas gốc của trình duyệt để dựng hình tăng tốc bằng GPU."
+      },
+      "ffmpeg": {
+        "title": "FFmpeg.wasm",
+        "description": "Cắt, nén và chuyển đổi video và âm thanh hoàn toàn ở phía máy khách, được hỗ trợ bởi FFmpeg biên dịch sang WebAssembly."
+      },
+      "pdfLib": {
+        "title": "pdf-lib và PDF.js",
+        "description": "Hợp nhất, chia, xoay và chỉnh sửa PDF với các thư viện đã được kiểm chứng chạy hoàn toàn trong trình duyệt."
+      }
+    },
+    "statsTitle": "Theo con số",
+    "stats": {
+      "tools": "63 công cụ miễn phí",
+      "locales": "21 ngôn ngữ",
+      "uploads": "0 lần tải lên máy chủ",
+      "clientSide": "100% trong trình duyệt"
+    },
+    "ctaTitle": "Thử ngay",
+    "ctaToolsLabel": "Xem tất cả công cụ",
+    "ctaHowItWorksLabel": "Xem cách hoạt động"
+  },
+  "terms": {
+    "metaTitle": "Điều khoản dịch vụ — PrivaDeck",
+    "metaDescription": "Điều khoản dịch vụ của PrivaDeck — bộ công cụ miễn phí, dựa trên trình duyệt, ưu tiên quyền riêng tư. Bằng cách sử dụng trang web, bạn đồng ý với các điều khoản này.",
+    "title": "Điều khoản dịch vụ",
+    "subtitle": "PrivaDeck được cung cấp miễn phí cho mục đích sử dụng cá nhân và thương mại. Bằng cách sử dụng trang web, bạn chấp nhận các điều khoản này.",
+    "lastUpdated": "Cập nhật lần cuối: tháng 4 năm 2026",
+    "sections": {
+      "acceptance": {
+        "title": "Chấp nhận",
+        "body": "Bằng cách truy cập hoặc sử dụng PrivaDeck (privadeck.app), bạn đồng ý bị ràng buộc bởi các điều khoản này. Nếu bạn không đồng ý, vui lòng không sử dụng trang web."
+      },
+      "license": {
+        "title": "Giấy phép sử dụng miễn phí",
+        "body": "Tất cả các công cụ trên PrivaDeck đều miễn phí sử dụng cho bất kỳ mục đích hợp pháp nào, cá nhân hoặc thương mại, không cần đăng ký hoặc đăng nhập. Trang web xử lý tệp của bạn hoàn toàn trong trình duyệt — không có gì được tải lên."
+      },
+      "warranty": {
+        "title": "Không có bảo đảm",
+        "body": "PrivaDeck được cung cấp \"nguyên trạng\" và \"theo tình trạng có sẵn\" mà không có bất kỳ bảo đảm nào, dù rõ ràng hay ngụ ý. Chúng tôi không đưa ra bảo đảm nào về tính chính xác, độ tin cậy, tính đầy đủ, sự phù hợp cho mục đích cụ thể hoặc tính khả dụng không gián đoạn."
+      },
+      "liability": {
+        "title": "Không chịu trách nhiệm",
+        "body": "Trong phạm vi tối đa pháp luật cho phép, chúng tôi không chịu trách nhiệm về bất kỳ thiệt hại nào phát sinh từ việc bạn sử dụng trang web, bao gồm mất dữ liệu, hỏng tệp, gián đoạn kinh doanh hoặc bất kỳ thiệt hại trực tiếp, gián tiếp, ngẫu nhiên hoặc do hậu quả nào. Bạn có trách nhiệm sao lưu các tệp quan trọng trước khi xử lý."
+      },
+      "changes": {
+        "title": "Thay đổi các điều khoản",
+        "body": "Chúng tôi có thể cập nhật các điều khoản này bất cứ lúc nào mà không cần thông báo trước. Phiên bản hiện tại luôn có sẵn trên trang này. Việc tiếp tục sử dụng trang web sau khi có thay đổi đồng nghĩa với việc bạn chấp nhận các điều khoản đã cập nhật."
+      },
+      "governing": {
+        "title": "Luật áp dụng và liên hệ",
+        "body": "Các điều khoản này được điều chỉnh bởi luật địa phương áp dụng trong khu vực pháp lý của bạn. Đối với câu hỏi, phản hồi hoặc lo ngại, vui lòng mở một issue trong kho GitHub của chúng tôi hoặc liên hệ qua các kênh được liệt kê trên trang."
+      }
+    }
   },
   "toolNames": {
     "developer": {
@@ -503,7 +577,7 @@
   },
   "allTools": {
     "metaTitle": "Tất cả công cụ",
-    "metaDescription": "Khám phá hơn 58+ công cụ trực tuyến miễn phí cho hình ảnh, video, âm thanh, PDF và lập trình. Không tải lên, bảo mật 100%."
+    "metaDescription": "Khám phá hơn 63+ công cụ trực tuyến miễn phí cho hình ảnh, video, âm thanh, PDF và lập trình. Không tải lên, bảo mật 100%."
   },
   "notFound": {
     "title": "Không tìm thấy trang",

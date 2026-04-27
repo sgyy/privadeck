@@ -73,8 +73,10 @@ export async function GET() {
   lines.push("");
   lines.push(`- [首页](${SITE}/${LOCALE}/)`);
   lines.push(`- [全部工具](${SITE}/${LOCALE}/tools/)`);
+  lines.push(`- [关于 PrivaDeck](${SITE}/${LOCALE}/about/)`);
   lines.push(`- [工作原理](${SITE}/${LOCALE}/how-it-works/)`);
   lines.push(`- [隐私政策](${SITE}/${LOCALE}/privacy/)`);
+  lines.push(`- [服务条款](${SITE}/${LOCALE}/terms/)`);
   lines.push("");
 
   lines.push("## 可选资源");

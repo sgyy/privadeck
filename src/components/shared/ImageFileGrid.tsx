@@ -118,6 +118,10 @@ export function ImageFileGrid({
                   src={previews[i]}
                   alt={file.name}
                   className="h-full w-full object-cover"
+                  width={dimensions.get(file)?.width}
+                  height={dimensions.get(file)?.height}
+                  loading="lazy"
+                  decoding="async"
                 />
               )}
             </div>
