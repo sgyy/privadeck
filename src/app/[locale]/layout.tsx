@@ -45,6 +45,10 @@ export default async function LocaleLayout({
       className={fontClasses}
       style={fontFallback ? { ["--font-locale-sans" as string]: fontFallback } : undefined}
     >
+      <head>
+        <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt" />
+        <link rel="alternate" type="text/plain" title="llms-full.txt" href="/llms-full.txt" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Script id="theme-init" strategy="beforeInteractive">{themeInitScript}</Script>
         <ThemeProvider>
