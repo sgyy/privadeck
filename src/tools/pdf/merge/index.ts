@@ -16,7 +16,6 @@ const definition: ToolDefinition = {
       questionKey: "tools.pdf.merge.faq.q2",
       answerKey: "tools.pdf.merge.faq.a2",
     },
-  
     {
       questionKey: "tools.pdf.merge.faq.q3",
       answerKey: "tools.pdf.merge.faq.a3",
@@ -28,6 +27,18 @@ const definition: ToolDefinition = {
     {
       questionKey: "tools.pdf.merge.faq.q5",
       answerKey: "tools.pdf.merge.faq.a5",
+    },
+    {
+      questionKey: "tools.pdf.merge.faq.q6",
+      answerKey: "tools.pdf.merge.faq.a6",
+    },
+    {
+      questionKey: "tools.pdf.merge.faq.q7",
+      answerKey: "tools.pdf.merge.faq.a7",
+    },
+    {
+      questionKey: "tools.pdf.merge.faq.q8",
+      answerKey: "tools.pdf.merge.faq.a8",
     },
   ],
   relatedSlugs: ["split", "delete-pages", "to-image"],
