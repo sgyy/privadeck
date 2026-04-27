@@ -30,14 +30,6 @@
             "title": "什麼是音訊裁剪工具？",
             "content": "<p><strong>音訊裁剪</strong>將音訊檔案切割到您需要的長度，透過設定精確的開始和結束時間。盡可能使用串流複製實現<strong>無損裁剪</strong>——無重新編碼、無品質損失。採用 FFmpeg.wasm 專業音訊編輯。</p>"
           },
-          "howToUse": {
-            "title": "如何使用音訊裁剪",
-            "content": "<ol><li>上傳音訊檔案（支援 MP3、WAV、OGG、AAC、FLAC）</li><li>設定<strong>開始時間</strong>和<strong>結束時間</strong>用於要保留的片段</li><li>預覽選定的音訊範圍</li><li>點擊<strong>裁剪</strong>擷取片段</li><li>下載裁剪的音訊</li></ol>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>無損裁剪</strong>：串流複製模式保留原始音訊品質</li><li><strong>精確計時</strong>：秒級精度的開始和結束時間設定</li><li><strong>音訊預覽</strong>：裁剪前播放選定範圍</li><li><strong>多種格式</strong>：支援 MP3、WAV、OGG、AAC 和 FLAC</li><li><strong>採用 FFmpeg.wasm</strong>：專業音訊處理在瀏覽器中</li><li><strong>快速處理</strong>：串流複製比重新編碼快得多</li></ul>"
-          },
           "useCases": {
             "title": "常見用途",
             "content": "<ul><li><strong>來電鈴聲</strong>：從您最喜愛的歌曲中切割片段用於手機鈴聲</li><li><strong>Podcast</strong>：從 Podcast 錄音中修剪開場白、結尾或靜音</li><li><strong>音樂編輯</strong>：從歌曲中擷取特定部分</li><li><strong>語音備忘錄</strong>：修剪語音錄音到相關部分</li><li><strong>音效</strong>：從較長的音訊檔案中切割特定的聲音</li></ul>"
@@ -75,14 +67,6 @@
             "title": "什麼是音訊轉換工具？",
             "content": "<p><strong>音訊轉換</strong>在熱門音訊格式間變換檔案：MP3、WAV、OGG、AAC 和 FLAC。在有損和無損格式間轉換以實現相容性、音質或檔案大小優化。採用 FFmpeg.wasm 可靠音訊編碼。</p>"
           },
-          "howToUse": {
-            "title": "如何使用音訊轉換",
-            "content": "<ol><li>上傳任何支援格式的音訊檔案</li><li>選擇目標格式：<strong>MP3</strong>、<strong>WAV</strong>、<strong>OGG</strong>、<strong>AAC</strong> 或 <strong>FLAC</strong></li><li>點擊<strong>轉換</strong>處理</li><li>下載轉換後的音訊檔案</li></ol><p>MP3 適合通用相容性，FLAC 適合無損音質，OGG 適合開源專案。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>五種格式</strong>：在 MP3、WAV、OGG、AAC 和 FLAC 間轉換</li><li><strong>有損與無損</strong>：在壓縮（MP3、OGG、AAC）和無損（WAV、FLAC）間選擇</li><li><strong>批次轉換</strong>：一次轉換多個檔案</li><li><strong>採用 FFmpeg.wasm</strong>：專業音訊編碼在瀏覽器中</li><li><strong>品質保留</strong>：高品質轉碼與最優設定</li><li><strong>預覽</strong>：下載前播放轉換後的音訊</li></ul>"
-          },
           "useCases": {
             "title": "常見用途",
             "content": "<ul><li><strong>相容性</strong>：將 OGG 或 FLAC 轉為 MP3 以支援更廣泛的裝置</li><li><strong>品質升級</strong>：將 MP3 轉為 WAV/FLAC 用於音訊編輯工作流程</li><li><strong>網路音訊</strong>：為 HTML5 音訊元素轉為 OGG</li><li><strong>Podcast 發佈</strong>：將錄音轉為 MP3 用於 Podcast 發佈</li><li><strong>封存</strong>：轉為 FLAC 用於無損音訊封存</li></ul>"
@@ -119,14 +103,6 @@
           "intro": {
             "title": "什麼是音訊擷取工具？",
             "content": "<p><strong>音訊擷取</strong>從影片檔案中剔除音訊軌道，並將其儲存為 MP3、WAV 或 AAC。從音樂影片、訪談或錄製的演講中擷取音訊——採用 FFmpeg.wasm 快速擷取。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用音訊擷取",
-            "content": "<ol><li>上傳影片檔案（支援 MP4、WebM、MKV、AVI）</li><li>選擇輸出音訊格式：<strong>MP3</strong>、<strong>WAV</strong> 或 <strong>AAC</strong></li><li>點擊<strong>擷取</strong>拉取音訊軌道</li><li>下載擷取的音訊檔案</li></ol>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>三種輸出格式</strong>：以 MP3、WAV 或 AAC 擷取</li><li><strong>快速擷取</strong>：盡可能使用串流複製實現即時擷取</li><li><strong>多種影片輸入</strong>：支援 MP4、WebM、MKV 和 AVI</li><li><strong>採用 FFmpeg.wasm</strong>：專業音訊擷取在瀏覽器中</li><li><strong>品質保留</strong>：串流複製時保留原始音訊品質</li><li><strong>預覽</strong>：下載前播放擷取的音訊</li></ul>"
           },
           "useCases": {
             "title": "常見用途",
@@ -166,14 +142,6 @@
           "intro": {
             "title": "什麼是音量調節工具？",
             "content": "<p><strong>音量調節</strong>增加或減少音訊音量到 300%。增強安靜的錄音、降低響亮的音訊或標準化音量水準——在儲存前即時預聽。採用 FFmpeg.wasm 精確音量控制。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用音量調節",
-            "content": "<ol><li>上傳音訊檔案（支援 MP3、WAV、OGG、AAC、FLAC）</li><li>調整<strong>音量滑桿</strong>（原始音量的 50% 到 300%）</li><li>即時預聽調整後的音訊</li><li>點擊<strong>套用</strong>處理</li><li>下載音量調整後的音訊</li></ol><p>謹慎使用 200% 以上的音量——對安靜錄音的極端放大可能導致失真。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>音量範圍</strong>：從原始音量的 50% 到 300% 調整</li><li><strong>即時預聽</strong>：處理前聆聽音量變化</li><li><strong>多種格式</strong>：支援 MP3、WAV、OGG、AAC 和 FLAC</li><li><strong>採用 FFmpeg.wasm</strong>：專業音訊處理在瀏覽器中</li><li><strong>精確控制</strong>：用滑桿微調音量</li><li><strong>品質輸出</strong>：高品質音訊處理</li></ul>"
           },
           "useCases": {
             "title": "常見用途",

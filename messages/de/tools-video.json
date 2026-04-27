@@ -27,14 +27,6 @@
             "title": "Was ist Video stumm schalten?",
             "content": "<p><strong>Video stumm schalten</strong> entfernt die Audiospur aus Videodateien, während die Videoqualität erhalten bleibt. Stumme Versionen von Videos für Hintergrundschleifen, Präsentationen oder Social-Media-Posts erstellen, wo kein Ton benötigt wird.</p><p>Basiert auf FFmpeg.wasm — vollständige Videoverarbeitung lokal in Ihrem Browser.</p>"
           },
-          "howToUse": {
-            "title": "So nutzen Sie Video stumm schalten",
-            "content": "<ol><li>Eine Videodatei hochladen (MP4, WebM, MKV, AVI unterstützt)</li><li>Klicken Sie auf <strong>Stumm schalten</strong>, um die Audiospur zu entfernen</li><li>Das stumme Video herunterladen</li></ol><p>Der Videostream wird ohne Neukodierung kopiert, sodass die Verarbeitung schnell ist und die Qualität erhalten bleibt.</p>"
-          },
-          "features": {
-            "title": "Wichtige Funktionen",
-            "content": "<ul><li><strong>Audiospur entfernen</strong>: Audio vollständig entfernen, während das Video unberührt bleibt</li><li><strong>Keine Neukodierung</strong>: Videostream wird direkt kopiert — kein Qualitätsverlust</li><li><strong>Schnelle Verarbeitung</strong>: Stream-Copy ist viel schneller als Neukodierung</li><li><strong>Mehrere Formate</strong>: Unterstützt MP4, WebM, MKV und AVI als Eingabe</li><li><strong>Basiert auf FFmpeg.wasm</strong>: Industriestandard-Videoverarbeitung in Ihrem Browser</li><li><strong>Vorschau</strong>: Video vor und nach dem Stummschalten abspielen</li></ul>"
-          },
           "useCases": {
             "title": "Typische Anwendungsfälle",
             "content": "<ul><li><strong>Präsentationen</strong>: Ablenkenden Ton aus Hintergrundvideos in Folien entfernen</li><li><strong>Social Media</strong>: Stumme Schleifen für Instagram- oder TikTok-Hintergründe erstellen</li><li><strong>Webdesign</strong>: Stumme Hero-Videos für Website-Hintergründe vorbereiten</li><li><strong>Datenschutz</strong>: Gespräche oder identifizierbare Audioinhalte aus Aufnahmen entfernen</li><li><strong>Videobearbeitung</strong>: Audio entfernen, bevor es durch einen anderen Soundtrack ersetzt wird</li></ul>"
@@ -107,14 +99,6 @@
           "intro": {
             "title": "Was ist Video schneiden?",
             "content": "<p><strong>Video schneiden</strong> kürzt Videoclips auf die gewünschte Länge mit präziser Start- und Endzeitsteuerung. Zeiten bis auf 0,1-Sekunden-Genauigkeit einstellen, die Auswahl vorhören und den geschnittenen Clip herunterladen.</p><p>Verwendet FFmpeg.wasm für professionelles Video-Trimmen direkt in Ihrem Browser.</p>"
-          },
-          "howToUse": {
-            "title": "So nutzen Sie Video schneiden",
-            "content": "<ol><li>Eine Videodatei hochladen</li><li>Die <strong>Startzeit</strong> und <strong>Endzeit</strong> für den zu behaltenden Clip festlegen</li><li>Den ausgewählten Bereich im Videoplayer vorhören</li><li>Klicken Sie auf <strong>Schneiden</strong>, um den Clip zu extrahieren</li><li>Das geschnittene Video herunterladen</li></ol><p>Unterstützt präzise Zeitauswahl mit 0,1-Sekunden-Schritten.</p>"
-          },
-          "features": {
-            "title": "Wichtige Funktionen",
-            "content": "<ul><li><strong>Präzises Timing</strong>: Start- und Endzeiten mit 0,1-Sekunden-Genauigkeit festlegen</li><li><strong>Videovorschau</strong>: Den ausgewählten Bereich vor dem Schneiden abspielen</li><li><strong>Schnelle Verarbeitung</strong>: Stream-Copy-Modus für sofortiges Schneiden ohne Neukodierung</li><li><strong>Mehrere Formate</strong>: Unterstützt MP4, WebM, MKV und AVI</li><li><strong>Basiert auf FFmpeg.wasm</strong>: Professionelle Videoverarbeitung im Browser</li><li><strong>Qualitätserhaltung</strong>: Kein Qualitätsverlust beim Stream-Copy</li></ul>"
           },
           "useCases": {
             "title": "Typische Anwendungsfälle",
@@ -221,14 +205,6 @@
             "title": "Was ist Video drehen?",
             "content": "<p><strong>Video drehen</strong> dreht Videodateien in 90°-Schritten nach links oder rechts, um Ausrichtungsprobleme zu beheben. Korrigieren Sie seitliche Handyvideos, kopfstehende Aufnahmen oder passen Sie die Ausrichtung für bestimmte Anzeigebedürfnisse an — alles im Browser mit Live-Vorschau.</p>"
           },
-          "howToUse": {
-            "title": "So verwenden Sie Video drehen",
-            "content": "<ol><li>Laden Sie eine Videodatei hoch</li><li>Klicken Sie auf <strong>Nach links drehen</strong> oder <strong>Nach rechts drehen</strong>, um die Drehung in Echtzeit zu sehen</li><li>Klicken Sie auf <strong>Drehen &amp; Herunterladen</strong>, um in einem Schritt zu verarbeiten und herunterzuladen</li></ol>"
-          },
-          "features": {
-            "title": "Hauptfunktionen",
-            "content": "<ul><li><strong>Schrittweises Drehen</strong>: Links oder rechts 90° drehen, mehrfaches Klicken für 180° oder 270°</li><li><strong>Live-Vorschau</strong>: Video-Drehung in Echtzeit mit sanfter CSS-Animation ansehen</li><li><strong>Mehrere Formate</strong>: Unterstützt MP4, WebM, MKV, AVI und mehr</li><li><strong>WebCodecs-basiert</strong>: Schnelle, hardwarebeschleunigte Videoverarbeitung im Browser</li><li><strong>Ein-Klick-Download</strong>: Verarbeitung und Speichern in einem Schritt — keine Zwischenschritte</li><li><strong>Audio erhalten</strong>: Audiospur bleibt nach der Drehung synchronisiert</li></ul>"
-          },
           "useCases": {
             "title": "Häufige Anwendungsfälle",
             "content": "<ul><li><strong>Handyvideos</strong>: Seitliche Handyvideos korrigieren</li><li><strong>Kameraaufnahmen</strong>: Ausrichtung von schräg montierten Kameras korrigieren</li><li><strong>Bildschirmaufnahmen</strong>: Bildschirmaufnahmen für Hochformat drehen</li><li><strong>Social Media</strong>: Ausrichtung an Plattformanforderungen anpassen (Hochformat/Querformat)</li><li><strong>Präsentationen</strong>: Videoausrichtung in Folien korrigieren</li></ul>"
@@ -269,14 +245,6 @@
           "intro": {
             "title": "Was ist Video zu GIF?",
             "content": "<p><strong>Video zu GIF</strong> konvertiert Videoclips in animierte GIF-Bilder mit Kontrolle über Bildrate, Auflösung und Qualität. Teilbare GIFs aus beliebigen Videos für Social Media, Chat oder Dokumentation erstellen.</p><p>Basiert auf FFmpeg.wasm für hochwertige GIF-Generierung direkt in Ihrem Browser.</p>"
-          },
-          "howToUse": {
-            "title": "So nutzen Sie Video zu GIF",
-            "content": "<ol><li>Eine Videodatei hochladen</li><li>Start- und Endzeit für den GIF-Clip festlegen</li><li><strong>Bildrate</strong> (fps) und Ausgabe-<strong>Breite</strong> anpassen</li><li>Klicken Sie auf <strong>Konvertieren</strong>, um das GIF zu generieren</li><li>Das animierte GIF vorhören und herunterladen</li></ol><p>Niedrigere Bildraten und kleinere Breiten erzeugen kleinere GIF-Dateien.</p>"
-          },
-          "features": {
-            "title": "Wichtige Funktionen",
-            "content": "<ul><li><strong>Bildratensteuerung</strong>: GIF-Bildrate festlegen (z.B. 10, 15, 24 fps)</li><li><strong>Größensteuerung</strong>: Ausgabebreite für Dateigrößenoptimierung anpassen</li><li><strong>Zeitauswahl</strong>: Auswählen, welcher Teil des Videos konvertiert werden soll</li><li><strong>Vorschau</strong>: GIF vor dem Download ansehen</li><li><strong>Basiert auf FFmpeg.wasm</strong>: Hochwertige Palettengenerierung für optimale GIF-Farben</li><li><strong>Mehrere Eingabeformate</strong>: Von MP4, WebM, MKV, AVI konvertieren</li></ul>"
           },
           "useCases": {
             "title": "Typische Anwendungsfälle",
@@ -360,14 +328,6 @@
           "intro": {
             "title": "Was ist Video zu WebP?",
             "content": "<p><strong>Video zu WebP</strong> konvertiert Videoclips in animierte WebP-Bilder. WebP-Animationen sind <strong>25-35% kleiner</strong> als vergleichbare GIFs bei besserer Farbwiedergabe und Transparenzunterstützung.</p><p>Die moderne Alternative zu GIFs für den Web-Einsatz.</p>"
-          },
-          "howToUse": {
-            "title": "So nutzen Sie Video zu WebP",
-            "content": "<ol><li>Eine Videodatei hochladen</li><li>Start- und Endzeit für den Animationsclip festlegen</li><li>Bildrate und Ausgabeabmessungen anpassen</li><li>Klicken Sie auf <strong>Konvertieren</strong>, um das animierte WebP zu generieren</li><li>Die WebP-Animation herunterladen</li></ol>"
-          },
-          "features": {
-            "title": "Wichtige Funktionen",
-            "content": "<ul><li><strong>Kleiner als GIF</strong>: WebP-Animationen sind 25-35% kleiner als vergleichbare GIFs</li><li><strong>Bessere Farben</strong>: Volle 24-Bit-Farbtiefe (vs. GIFs 256-Farben-Limit)</li><li><strong>Transparenz</strong>: Alpha-Kanal-Unterstützung für transparente Animationen</li><li><strong>Bildratensteuerung</strong>: Einstellbare fps für Größenoptimierung</li><li><strong>Basiert auf FFmpeg.wasm</strong>: Professionelle Kodierung im Browser</li><li><strong>Breite Browser-Unterstützung</strong>: Wird von allen modernen Browsern unterstützt</li></ul>"
           },
           "useCases": {
             "title": "Typische Anwendungsfälle",
@@ -493,14 +453,6 @@
             "title": "Was ist Video komprimieren?",
             "content": "<p><strong>Video komprimieren</strong> ist ein leistungsstarker browserbasierter Videokompressor, der die Dateigröße reduziert, ohne auf einen Server hochzuladen. Wählen Sie aus drei Qualitätsvoreinstellungen für schnelle Komprimierung oder wechseln Sie in den <strong>Erweiterten Modus</strong> für volle Kontrolle über CRF, Kodierungsgeschwindigkeit, Auflösung, Bildrate, Audio-Bitrate und Max-Bitrate-Begrenzung.</p><p>Angetrieben von FFmpeg.wasm mit H.264/AAC-Kodierung — die Ausgabe wird überall abgespielt. Das Tool zeigt detaillierte Video-Metadaten (Auflösung, Dauer, Bitrate, FPS) und zeigt einen Vorher-Nachher-Vergleich nach der Komprimierung.</p>"
           },
-          "howToUse": {
-            "title": "So nutzen Sie Video komprimieren",
-            "content": "<ol><li>Laden Sie eine Videodatei hoch — das Tool zeigt sofort Auflösung, Dauer, Bitrate und Bildrate an</li><li>Wählen Sie den <strong>Einfachen Modus</strong> (Hoch/Mittel/Niedrig-Voreinstellungen) oder wechseln Sie in den <strong>Erweiterten Modus</strong>, um CRF, Kodierungsgeschwindigkeit, Auflösung, FPS und Audio-Bitrate feinabzustimmen</li><li>Klicken Sie auf <strong>Komprimieren</strong> — ein Fortschrittsbalken zeigt den Kodierungsfortschritt an</li><li>Vergleichen Sie Quell- und komprimiertes Video: Dateigröße, Auflösung, Bitrate und Reduzierungsprozentsatz</li><li>Sehen Sie sich das komprimierte Video in der Vorschau an und laden Sie es herunter</li></ol><p>Auflösungs- und Bildratenoptionen, die die Quelle überschreiten, werden automatisch deaktiviert, um unnötiges Hochskalieren zu verhindern.</p>"
-          },
-          "features": {
-            "title": "Wichtige Funktionen",
-            "content": "<ul><li><strong>Einfacher &amp; Erweiterter Modus</strong>: Schnelle Voreinstellungen für Anfänger; volle Parameterkontrolle für erfahrene Benutzer</li><li><strong>Video-Metadaten-Anzeige</strong>: Sehen Sie Auflösung, Dauer, Bitrate und FPS für Quell- und komprimiertes Video</li><li><strong>Intelligente Hochskalierungsverhinderung</strong>: Optionen, die die Quellauflösung oder -bildrate überschreiten, werden deaktiviert</li><li><strong>Einstellbarer CRF</strong>: Feinabstimmung des Qualitätsfaktors von 0 (verlustfrei) bis 51</li><li><strong>9 Kodierungsgeschwindigkeiten</strong>: Von ultraschnell bis sehr langsam — langsamer = kleinere Datei bei gleicher Qualität</li><li><strong>Auflösungs- &amp; FPS-Steuerung</strong>: Herunterskalieren auf 1080p, 720p, 480p oder 360p; Bildrate auf 30, 24 oder 15 fps reduzieren</li><li><strong>Audio-Bitrate-Auswahl</strong>: Wählen Sie zwischen 64k und 256k AAC-Audio</li><li><strong>Max-Bitrate-Begrenzung</strong>: Optional maximale Video-Bitrate für Streaming-Kompatibilität begrenzen</li><li><strong>Vorher-Nachher-Vergleich</strong>: Vollständige Vorher-Nachher-Statistiktabelle mit Komprimierungsprozentsatz</li><li><strong>H.264 + AAC-Ausgabe</strong>: MP4-Format für universelle Gerätekompatibilität</li></ul>"
-          },
           "useCases": {
             "title": "Typische Anwendungsfälle",
             "content": "<ul><li><strong>E-Mail-Anhänge</strong>: Videos unter 25 MB für Gmail, Outlook oder Unternehmensmail komprimieren</li><li><strong>Messaging-Apps</strong>: Videos für WhatsApp (16 MB Limit), Telegram, Signal oder iMessage verkleinern</li><li><strong>Social Media</strong>: Dateigröße für schnellere Uploads auf Instagram, TikTok, X oder YouTube optimieren</li><li><strong>Cloud-Speicher</strong>: Dateigröße reduzieren, um Google Drive, Dropbox oder iCloud-Speicher zu sparen</li><li><strong>Web- &amp; CMS-Upload</strong>: Upload-Größenlimits für WordPress, Shopify oder eigene Portale einhalten</li><li><strong>Video-Archivierung</strong>: Große Aufnahmen mit Hochqualitätsvoreinstellung für Langzeitspeicherung komprimieren</li><li><strong>Sharing mit geringer Bandbreite</strong>: Niedrigqualitätsvoreinstellung für schnellen Transfer über langsame Verbindungen verwenden</li></ul>"
@@ -589,14 +541,6 @@
             "title": "Was ist Videoformat konvertieren?",
             "content": "<p><strong>Videoformat konvertieren</strong> wandelt Videos zwischen gängigen Formaten um: MP4, WebM, MKV und AVI. Eine WebM-Aufnahme für breitere Kompatibilität in MP4 konvertieren? Oder AVI in WebM für den Web-Einsatz? Dieses Tool erledigt es.</p><p>Basiert auf FFmpeg.wasm für zuverlässige Formatkonvertierung in Ihrem Browser.</p>"
           },
-          "howToUse": {
-            "title": "So nutzen Sie Videoformat konvertieren",
-            "content": "<ol><li>Eine Videodatei in einem unterstützten Format hochladen</li><li>Das Zielformat auswählen: <strong>MP4</strong>, <strong>WebM</strong>, <strong>MKV</strong> oder <strong>AVI</strong></li><li>Klicken Sie auf <strong>Konvertieren</strong>, um die Verarbeitung zu starten</li><li>Das konvertierte Video herunterladen</li></ol><p>MP4 (H.264) wird für maximale Kompatibilität geräte- und plattformübergreifend empfohlen.</p>"
-          },
-          "features": {
-            "title": "Wichtige Funktionen",
-            "content": "<ul><li><strong>Vier Formate</strong>: Zwischen MP4, WebM, MKV und AVI konvertieren</li><li><strong>H.264-Kodierung</strong>: MP4-Ausgabe verwendet H.264 für universelle Kompatibilität</li><li><strong>VP8/VP9 für WebM</strong>: Korrekte Codec-Auswahl für jedes Format</li><li><strong>Basiert auf FFmpeg.wasm</strong>: Professionelle Kodierung im Browser</li><li><strong>Vorschau</strong>: Das konvertierte Video vor dem Download abspielen</li><li><strong>Audio erhalten</strong>: Audiospur wird korrekt transkodiert</li></ul>"
-          },
           "useCases": {
             "title": "Typische Anwendungsfälle",
             "content": "<ul><li><strong>Kompatibilität</strong>: WebM-Bildschirmaufnahmen in universell abspielbare MP4 konvertieren</li><li><strong>Web-Optimierung</strong>: Videos für kleinere Dateigrößen im Web in WebM konvertieren</li><li><strong>Legacy-Unterstützung</strong>: Moderne Formate in AVI für ältere Mediaplayer konvertieren</li><li><strong>Bearbeitung</strong>: In ein von Ihrem Video-Editor unterstütztes Format konvertieren</li><li><strong>Plattformübergreifend</strong>: Sicherstellen, dass Videos auf jedem Gerät oder jeder Plattform abspielen</li></ul>"
@@ -667,14 +611,6 @@
           "intro": {
             "title": "Was ist Videogröße ändern?",
             "content": "<p><strong>Videogröße ändern</strong> ändert die Videoauflösung mit Voreinstellungen (720p, 480p, 360p) oder benutzerdefinierten Abmessungen. Große Videos für Web, Mobilgeräte oder Social Media verkleinern oder Auflösung für spezifische Plattformanforderungen anpassen.</p>"
-          },
-          "howToUse": {
-            "title": "So nutzen Sie Videogröße ändern",
-            "content": "<ol><li>Eine Videodatei hochladen</li><li>Eine Voreinstellungsauflösung wählen (<strong>720p</strong>, <strong>480p</strong>, <strong>360p</strong>) oder benutzerdefinierte Abmessungen eingeben</li><li>Klicken Sie auf <strong>Skalieren</strong>, um zu verarbeiten</li><li>Das skalierte Video herunterladen</li></ol><p>Das Seitenverhältnis wird automatisch beibehalten, um Verzerrungen zu vermeiden.</p>"
-          },
-          "features": {
-            "title": "Wichtige Funktionen",
-            "content": "<ul><li><strong>Voreingestellte Auflösungen</strong>: 720p, 480p oder 360p schnell auswählen</li><li><strong>Benutzerdefinierte Abmessungen</strong>: Spezifische Breite und Höhe eingeben</li><li><strong>Seitenverhältnissperre</strong>: Videoproportionen automatisch beibehalten</li><li><strong>Basiert auf FFmpeg.wasm</strong>: Professionelle Video-Skalierung</li><li><strong>Mehrere Formate</strong>: MP4, WebM, MKV und AVI skalieren</li><li><strong>Vorschau</strong>: Das skalierte Video vor dem Download abspielen</li></ul>"
           },
           "useCases": {
             "title": "Typische Anwendungsfälle",
@@ -762,14 +698,6 @@
           "intro": {
             "title": "Was ist Video-Info?",
             "content": "<p><strong>Video-Info</strong> ist ein kostenloses Online-Tool, das detaillierte Metadaten aus Ihren Videodateien analysiert und anzeigt. Es zeigt technische Informationen wie <strong>Video-Codec</strong>, <strong>Audio-Codec</strong>, <strong>Bitrate</strong>, <strong>Bildrate</strong> und <strong>Stream-Details</strong> — alles ohne Upload Ihrer Datei.</p>"
-          },
-          "howToUse": {
-            "title": "So nutzen Sie Video-Info",
-            "content": "<ol><li><strong>Laden</strong> Sie Ihre Videodatei per Drag-and-Drop oder Dateiauswahl hoch.</li><li>Sehen Sie sich sofort die grundlegenden Metadaten (Auflösung, Dauer, geschätzte Bitrate) an.</li><li>Klicken Sie auf <strong>Video analysieren</strong>, um eine tiefe FFmpeg-basierte Inspektion durchzuführen.</li><li>Überprüfen Sie detaillierte Codec-, Stream- und Container-Informationen.</li><li>Verwenden Sie die <strong>Kopieren</strong>-Schaltfläche, um alle Metadaten als Text zu exportieren.</li></ol>"
-          },
-          "features": {
-            "title": "Wichtige Funktionen",
-            "content": "<ul><li><strong>Zweistufige Analyse</strong>: Sofortige browserbasierte Metadaten plus tiefe FFmpeg-Inspektion</li><li><strong>Stream-Level-Detail</strong>: Separate Video- und Audio-Stream-Informationen</li><li><strong>Codec-Erkennung</strong>: Identifiziert H.264, H.265, VP9, AV1, AAC, Opus und mehr</li><li><strong>Ein-Klick-Kopieren</strong>: Exportieren Sie alle Metadaten als formatierten Text</li><li><strong>Breite Formatunterstützung</strong>: MP4, WebM, MKV, AVI, MOV und mehr</li></ul>"
           },
           "useCases": {
             "title": "Typische Anwendungsfälle",

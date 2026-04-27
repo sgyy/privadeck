@@ -27,14 +27,6 @@
             "title": "動画ミュートとは？",
             "content": "<p><strong>動画ミュート</strong>は、動画ファイルから音声トラックを削除しながら映像品質をそのまま維持するツールです。バックグラウンドループ、プレゼンテーション、音声不要なソーシャルメディア投稿用に無音バージョンの動画を作成できます。</p><p>FFmpeg.wasm を使用してブラウザ内でフル動画処理を実行します。</p>"
           },
-          "howToUse": {
-            "title": "動画ミュートの使い方",
-            "content": "<ol><li>動画ファイルをアップロード（MP4、WebM、MKV、AVI 対応）</li><li><strong>音声を削除</strong>をクリックして音声トラックを除去</li><li>無音の動画をダウンロード</li></ol><p>動画ストリームは再エンコードなしにコピーされるため、処理が高速で品質が保持されます。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>音声トラック除去</strong>：映像を維持したまま音声を完全に削除</li><li><strong>再エンコード不要</strong>：動画ストリームを直接コピー — 品質劣化なし</li><li><strong>高速処理</strong>：ストリームコピーは再エンコードより大幅に高速</li><li><strong>複数フォーマット対応</strong>：MP4、WebM、MKV、AVI の入力に対応</li><li><strong>FFmpeg.wasm 搭載</strong>：業界標準の動画処理をブラウザで実現</li><li><strong>プレビュー機能</strong>：ミュート前後の動画を再生して確認</li></ul>"
-          },
           "useCases": {
             "title": "主な活用例",
             "content": "<ul><li><strong>プレゼンテーション</strong>：スライドのバックグラウンド動画から邪魔な音声を除去</li><li><strong>ソーシャルメディア</strong>：Instagram や TikTok のバックグラウンド用に無音ループ動画を作成</li><li><strong>Web デザイン</strong>：ウェブサイトの背景用に無音ヒーロー動画を準備</li><li><strong>プライバシー保護</strong>：録画から会話や個人を特定できる音声を除去</li><li><strong>動画編集</strong>：別のサウンドトラックに差し替える前に音声を除去</li></ul>"
@@ -107,14 +99,6 @@
           "intro": {
             "title": "動画トリミングとは？",
             "content": "<p><strong>動画トリミング</strong>は、開始・終了時間を精密に制御して動画クリップを希望の長さにカットするツールです。0.1 秒精度で時間を設定し、選択範囲をプレビューしてからトリミングしたクリップをダウンロードできます。</p><p>ブラウザ内でプロ品質の動画トリミングを実現する FFmpeg.wasm を使用しています。</p>"
-          },
-          "howToUse": {
-            "title": "動画トリミングの使い方",
-            "content": "<ol><li>動画ファイルをアップロード</li><li>保持したいクリップの<strong>開始時間</strong>と<strong>終了時間</strong>を設定</li><li>動画プレーヤーで選択した範囲をプレビュー</li><li><strong>トリミング</strong>をクリックしてクリップを切り出す</li><li>トリミングした動画をダウンロード</li></ol><p>0.1 秒刻みで精密な時間選択が可能です。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>精密なタイミング設定</strong>：0.1 秒精度で開始・終了時間を設定</li><li><strong>動画プレビュー</strong>：トリミング前に選択した範囲を再生確認</li><li><strong>高速処理</strong>：再エンコードなしの瞬時トリミングを可能にするストリームコピーモード</li><li><strong>複数フォーマット対応</strong>：MP4、WebM、MKV、AVI に対応</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質の動画処理</li><li><strong>品質保持</strong>：ストリームコピー時に品質劣化なし</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
@@ -221,14 +205,6 @@
             "title": "動画回転ツールとは？",
             "content": "<p><strong>動画回転</strong>は動画ファイルを 90° 単位で回転して向きの問題を修正します。横向きのスマホ動画、逆さの録画、特定の表示ニーズに対応——すべてブラウザ内でリアルタイムプレビュー付き。</p>"
           },
-          "howToUse": {
-            "title": "動画回転の使い方",
-            "content": "<ol><li>動画ファイルをアップロード</li><li><strong>左に回転</strong>または<strong>右に回転</strong>をクリックしてリアルタイムでプレビュー</li><li><strong>回転してダウンロード</strong>をクリックしてワンステップで処理＆ダウンロード</li></ol>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>累積回転</strong>：左または右に 90° 回転、複数クリックで 180° や 270° も可能</li><li><strong>リアルタイムプレビュー</strong>：スムーズな CSS アニメーションで回転をリアルタイムで確認</li><li><strong>複数形式対応</strong>：MP4、WebM、MKV、AVI などに対応</li><li><strong>WebCodecs 駆動</strong>：ブラウザ内で高速・ハードウェアアクセラレーション付きの動画処理</li><li><strong>ワンクリップダウンロード</strong>：ワンステップで処理＆保存、中間ステップ不要</li><li><strong>音声同期維持</strong>：回転後も音声トラックは同期されたまま</li></ul>"
-          },
           "useCases": {
             "title": "よくある用途",
             "content": "<ul><li><strong>スマホ動画</strong>：横向きに録画されたスマホ動画を修正</li><li><strong>カメラ素材</strong>：傾けて設置したカメラの向きを補正</li><li><strong>画面録画</strong>：縦表示用に画面録画を回転</li><li><strong>SNS</strong>：プラットフォームの要件に合わせて向きを調整（縦/横）</li><li><strong>プレゼン</strong>：スライド内の動画の向きを修正</li></ul>"
@@ -269,14 +245,6 @@
           "intro": {
             "title": "動画を GIF に変換とは？",
             "content": "<p><strong>動画を GIF に変換</strong>は、フレームレート、解像度、品質を制御しながら動画クリップをアニメーション GIF 画像に変換するツールです。ソーシャルメディア、チャット、ドキュメント用にあらゆる動画から共有可能な GIF を作成できます。</p><p>ブラウザ内で高品質な GIF 生成を実現する FFmpeg.wasm を使用しています。</p>"
-          },
-          "howToUse": {
-            "title": "動画を GIF に変換する使い方",
-            "content": "<ol><li>動画ファイルをアップロード</li><li>GIF クリップの開始時間と終了時間を設定</li><li><strong>フレームレート</strong>（fps）と出力<strong>幅</strong>を調整</li><li><strong>変換</strong>をクリックして GIF を生成</li><li>アニメーション GIF をプレビューしてダウンロード</li></ol><p>フレームレートを下げるか幅を小さくすると GIF のファイルサイズが小さくなります。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>フレームレート制御</strong>：GIF のフレームレートを設定（例：10、15、24 fps）</li><li><strong>サイズ制御</strong>：ファイルサイズ最適化のために出力幅を調整</li><li><strong>時間選択</strong>：動画のどの部分を変換するかを選択</li><li><strong>プレビュー機能</strong>：ダウンロード前に GIF を確認</li><li><strong>FFmpeg.wasm 搭載</strong>：最適な GIF カラーのための高品質パレット生成</li><li><strong>複数入力フォーマット</strong>：MP4、WebM、MKV、AVI から変換</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
@@ -360,14 +328,6 @@
           "intro": {
             "title": "動画を WebP に変換とは？",
             "content": "<p><strong>動画を WebP に変換</strong>は、動画クリップをアニメーション WebP 画像に変換するツールです。WebP アニメーションは同等の GIF より<strong>25〜35% 小さく</strong>、より優れた色再現と透明度をサポートします。</p><p>ウェブ用 GIF のモダンな代替フォーマットです。</p>"
-          },
-          "howToUse": {
-            "title": "動画を WebP に変換する使い方",
-            "content": "<ol><li>動画ファイルをアップロード</li><li>アニメーションクリップの開始時間と終了時間を設定</li><li>フレームレートと出力サイズを調整</li><li><strong>変換</strong>をクリックしてアニメーション WebP を生成</li><li>WebP アニメーションをダウンロード</li></ol>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>GIF より小さい</strong>：WebP アニメーションは同等の GIF より 25〜35% 小さい</li><li><strong>優れた色品質</strong>：24 ビットフルカラー（GIF の 256 色制限に対して）</li><li><strong>透明度対応</strong>：透明アニメーション用のアルファチャンネルサポート</li><li><strong>フレームレート制御</strong>：ファイルサイズ最適化のための fps 調整</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質のエンコーディング</li><li><strong>幅広いブラウザ対応</strong>：すべてのモダンブラウザでサポート</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
@@ -493,14 +453,6 @@
             "title": "動画圧縮とは？",
             "content": "<p><strong>動画圧縮</strong>は、サーバーにアップロードすることなくファイルサイズを縮小する強力なブラウザベースの動画圧縮ツールです。クイック圧縮用の3つの品質プリセットから選択するか、<strong>アドバンスモード</strong>に切り替えてCRF、エンコード速度、解像度、フレームレート、オーディオビットレート、最大ビットレート上限を完全に制御できます。</p><p>FFmpeg.wasmを搭載し、H.264/AACエンコーディング — 出力はどこでも再生可能です。このツールは詳細な動画メタデータ（解像度、再生時間、ビットレート、FPS）を表示し、圧縮後に並べて比較を表示します。</p>"
           },
-          "howToUse": {
-            "title": "動画圧縮の使い方",
-            "content": "<ol><li>動画ファイルをアップロード — ツールは即座に解像度、再生時間、ビットレート、フレームレートを表示</li><li><strong>シンプルモード</strong>（高/中/低プリセット）を選択するか、<strong>アドバンスモード</strong>に切り替えてCRF、エンコード速度、解像度、FPS、オーディオビットレートを微調整</li><li><strong>圧縮</strong>をクリック — プログレスバーでエンコーディングを追跡</li><li>元動画と圧縮後を比較：ファイルサイズ、解像度、ビットレート、削減率</li><li>圧縮した動画をプレビューしてダウンロード</li></ol><p>元の解像度やフレームレートを超えるオプションは、不要なアップスケーリングを防ぐため自動的に無効化されます。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>シンプル＆アドバンスモード</strong>：初心者向けクイックプリセット、パワーユーザー向け完全パラメータ制御</li><li><strong>動画メタデータ表示</strong>：元動画と圧縮後の解像度、再生時間、ビットレート、FPSを表示</li><li><strong>スマートアップスケール防止</strong>：元の解像度やフレームレートを超えるオプションは無効化</li><li><strong>調整可能なCRF</strong>：品質係数を0（ロスレス）から51まで微調整</li><li><strong>9段階のエンコード速度</strong>：超高速から非常に遅いまで — 遅いほど同じ品質でより小さいファイル</li><li><strong>解像度＆FPS制御</strong>：1080p、720p、480p、360pにダウンスケール、フレームレートを30、24、15fpsに削減</li><li><strong>オーディオビットレート選択</strong>：64k〜256kのAACオーディオから選択</li><li><strong>最大ビットレート上限</strong>：ストリーミング互換性のためピークビデオビットレートをオプションで制限</li><li><strong>並べて比較</strong>：圧縮率付きの完全な前後統計テーブル</li><li><strong>H.264 + AAC出力</strong>：どのデバイスでも互換性のあるMP4形式</li></ul>"
-          },
           "useCases": {
             "title": "一般的な使用例",
             "content": "<ul><li><strong>メール添付</strong>：Gmail、Outlook、企業メール用に25MB未満に動画を圧縮</li><li><strong>メッセージアプリ</strong>：WhatsApp（16MB制限）、Telegram、Signal、iMessage用に動画を縮小</li><li><strong>SNS</strong>：Instagram、TikTok、X、YouTubeへのより速いアップロードのためファイルサイズを最適化</li><li><strong>クラウドストレージ</strong>：Google Drive、Dropbox、iCloudの容量を節約するためファイルサイズを削減</li><li><strong>Web＆CMSアップロード</strong>：WordPress、Shopify、カスタムポータルのアップロードサイズ制限を満たす</li><li><strong>動画アーカイブ</strong>：長期保存用に高品質プリセットで大きな録画を圧縮</li><li><strong>低帯域共有</strong>：低速接続での高速転送用に低品質プリセットを使用</li></ul>"
@@ -589,14 +541,6 @@
             "title": "動画フォーマット変換とは？",
             "content": "<p><strong>動画フォーマット変換</strong>は、MP4、WebM、MKV、AVI などの人気フォーマット間で動画を変換するツールです。WebM 録画を互換性の高い MP4 に変換したり、AVI を Web 用の WebM に変換したりする際に活用できます。</p><p>ブラウザ内で信頼性の高いフォーマット変換を実現する FFmpeg.wasm を使用しています。</p>"
           },
-          "howToUse": {
-            "title": "動画フォーマット変換の使い方",
-            "content": "<ol><li>対応フォーマットの動画ファイルをアップロード</li><li>出力フォーマットを選択：<strong>MP4</strong>、<strong>WebM</strong>、<strong>MKV</strong>、または <strong>AVI</strong></li><li><strong>変換</strong>をクリックして処理を開始</li><li>変換した動画をダウンロード</li></ol><p>デバイスとプラットフォームを問わず最大限の互換性のために MP4（H.264）を推奨します。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>4つのフォーマット</strong>：MP4、WebM、MKV、AVI 間で変換</li><li><strong>H.264 エンコーディング</strong>：ユニバーサル互換性のための MP4 出力</li><li><strong>WebM 用 VP8/VP9</strong>：各フォーマットに適したコーデック選択</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質のエンコーディング</li><li><strong>プレビュー機能</strong>：ダウンロード前に変換された動画を再生確認</li><li><strong>音声保持</strong>：音声トラックを適切にトランスコード</li></ul>"
-          },
           "useCases": {
             "title": "主な活用例",
             "content": "<ul><li><strong>互換性確保</strong>：WebM スクリーン録画を誰でも再生できる MP4 に変換</li><li><strong>Web 最適化</strong>：Web 上でファイルサイズを小さくするために動画を WebM に変換</li><li><strong>レガシーサポート</strong>：古いメディアプレーヤー用に現代的なフォーマットを AVI に変換</li><li><strong>編集ワークフロー</strong>：動画編集ソフトが対応するフォーマットに変換</li><li><strong>クロスプラットフォーム</strong>：あらゆるデバイスやプラットフォームで動画を再生できるように</li></ul>"
@@ -667,14 +611,6 @@
           "intro": {
             "title": "動画リサイズとは？",
             "content": "<p><strong>動画リサイズ</strong>は、プリセット（720p、480p、360p）またはカスタムサイズで動画の解像度を変更するツールです。Web、モバイル、ソーシャルメディア向けに大きな動画をダウンスケールしたり、特定のプラットフォーム要件に合わせて解像度を調整したりできます。</p>"
-          },
-          "howToUse": {
-            "title": "動画リサイズの使い方",
-            "content": "<ol><li>動画ファイルをアップロード</li><li>プリセット解像度（<strong>720p</strong>、<strong>480p</strong>、<strong>360p</strong>）を選択するか、カスタムサイズを入力</li><li><strong>リサイズ</strong>をクリックして処理を開始</li><li>リサイズした動画をダウンロード</li></ol><p>アスペクト比は変形防止のため自動的に維持されます。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>プリセット解像度</strong>：720p、480p、360p をクイック選択</li><li><strong>カスタムサイズ</strong>：特定の幅と高さを入力</li><li><strong>アスペクト比ロック</strong>：動画の比率を自動的に維持</li><li><strong>FFmpeg.wasm 搭載</strong>：プロ品質の動画スケーリング</li><li><strong>複数フォーマット対応</strong>：MP4、WebM、MKV、AVI をリサイズ</li><li><strong>プレビュー機能</strong>：ダウンロード前にリサイズされた動画を再生確認</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
@@ -762,14 +698,6 @@
           "intro": {
             "title": "ビデオ情報とは？",
             "content": "<p><strong>ビデオ情報</strong>は、動画ファイルから詳細なメタデータを検査して表示する無料のオンラインツールです。</p>"
-          },
-          "howToUse": {
-            "title": "ビデオ情報の使い方",
-            "content": "<ol><li>動画ファイルをアップロード</li><li>即座に基本メタデータを表示</li><li>詳細分析のために<strong>ビデオを分析</strong>をクリック</li><li>すべてのメタデータをテキストとしてコピー</li></ol>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li>2層分析</li><li>ストリームレベルの詳細</li><li>コーデック検出</li><li>ワンクリックコピー</li></ul>"
           },
           "useCases": {
             "title": "一般的な使用例",

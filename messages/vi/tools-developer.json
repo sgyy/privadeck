@@ -47,14 +47,6 @@
             "title": "Trình định dạng và Xem JSON chuyên nghiệp",
             "content": "<p><strong>JSON Formatter</strong> là công cụ JSON chuyên nghiệp miễn phí, kết hợp trình soạn thảo Monaco, chế độ xem dạng cây tương tác và xác thực thời gian thực trong một giao diện. Dán JSON lộn xộn hoặc đã rút gọn và ngay lập tức nhận được kết quả sạch, dễ đọc với tô sáng cú pháp, gấp mã và khám phá cây trực quan.</p><p>Dù bạn đang gỡ lỗi phản hồi API, kiểm tra cấu trúc dữ liệu lồng nhau sâu, xem xét tệp cấu hình hay chuẩn bị dữ liệu cho tài liệu — công cụ này cung cấp mọi thứ bạn cần mà không cần rời trình duyệt hay tải lên dù chỉ một byte.</p>"
           },
-          "howToUse": {
-            "title": "Cách sử dụng JSON Formatter",
-            "content": "<ol><li>Dán hoặc nhập JSON vào Monaco Editor bên trái — hoặc kéo và thả tệp <code>.json</code></li><li>Công cụ xác thực theo thời gian thực và hiển thị trạng thái <strong>Hợp lệ</strong> hoặc <strong>Không hợp lệ</strong> ngay lập tức</li><li>Nhấp <strong>Định dạng</strong> để in đẹp với thụt lề đã chọn, hoặc <strong>Rút gọn</strong> để nén</li><li>Chuyển sang chế độ xem <strong>Cây</strong> để khám phá cấu trúc trực quan, hoặc chế độ xem <strong>Mã</strong> để có kết quả tô sáng cú pháp</li><li>Sử dụng bộ lọc JSON Path (ví dụ: <code>$.data.users[0]</code>) để truy cập các giá trị cụ thể</li><li>Sao chép hoặc tải xuống kết quả chỉ bằng một lần nhấp</li></ol>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Monaco Editor</strong>: Trình soạn thảo mã giống hệt trong VS Code — với tô sáng cú pháp, khớp dấu ngoặc, gấp mã và xuống dòng tự động</li><li><strong>Chế độ xem dạng cây tương tác</strong>: Mở rộng và thu gọn các nút JSON trực quan, với số lượng mục ở mỗi cấp và điều hướng bàn phím đầy đủ</li><li><strong>Lọc JSON Path</strong>: Truy vấn các giá trị cụ thể bằng biểu thức đường dẫn như <code>$.address.city</code> hoặc <code>$.items[0].name</code></li><li><strong>Xác thực thời gian thực</strong>: Kiểm tra cú pháp ngay lập tức khi bạn gõ — không cần nhấn nút</li><li><strong>Pretty Print &amp; Rút gọn</strong>: Định dạng với thụt lề tùy chỉnh (2, 4 hoặc 8 khoảng trắng) hoặc nén thành một dòng</li><li><strong>Hỗ trợ kéo thả tệp</strong>: Thả tệp <code>.json</code> hoặc <code>.txt</code> trực tiếp vào trình soạn thảo</li><li><strong>Bảng chia đôi có thể thay đổi kích thước</strong>: Kéo thanh chia để cân bằng không gian soạn thảo và xem; nhấp đúp để đặt lại</li><li><strong>Chế độ xem mã tô sáng cú pháp</strong>: Kết quả phân màu với số dòng để dễ sao chép</li><li><strong>100% chạy trên trình duyệt</strong>: Không tải lên máy chủ — dữ liệu của bạn luôn nằm trên thiết bị</li></ul>"
-          },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
             "content": "<ul><li><strong>Phát triển &amp; Gỡ lỗi API</strong>: Dán phản hồi API thô, định dạng ngay lập tức và dùng chế độ xem dạng cây để điều hướng các đối tượng lồng nhau sâu</li><li><strong>Tệp cấu hình</strong>: Làm sạch <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code> hoặc Kubernetes manifests</li><li><strong>Khám phá dữ liệu</strong>: Dùng JSON Path để lọc tập dữ liệu lớn và tìm giá trị cụ thể mà không cần cuộn qua hàng nghìn dòng</li><li><strong>Xem xét mã</strong>: So sánh cấu trúc JSON trực quan qua chế độ xem dạng cây để phát hiện sự khác biệt nhanh chóng</li><li><strong>Tài liệu</strong>: Định dạng và xuất các ví dụ JSON có cấu trúc tốt cho tài liệu kỹ thuật và hướng dẫn</li><li><strong>Bản ghi cơ sở dữ liệu</strong>: Kiểm tra và định dạng JSON lưu trữ trong MongoDB, CouchDB hoặc các cột PostgreSQL JSONB</li></ul>"
@@ -187,14 +179,6 @@
             "title": "Visual JSON Editor for Developers",
             "content": "<p><strong>JSON Editor</strong> is a browser-based JSON editor with three view modes: <strong>Text</strong> for raw editing with Monaco Editor, <strong>Tree</strong> for visual structure editing, and <strong>Preview</strong> for read-only syntax-highlighted display.</p><p>In Tree mode, double-click a key or value to edit it in place. Right-click any node for the full context menu: insert before or after, duplicate, change type, delete, copy path. Undo and redo are available at every step. When you paste invalid JSON, one click repairs common mistakes like trailing commas, single quotes, and JavaScript comments.</p>"
           },
-          "howToUse": {
-            "title": "How to Use JSON Editor",
-            "content": "<ol><li>Paste, type, or drop a <code>.json</code> file into the editor</li><li>If the JSON is invalid, click <strong>Auto Repair</strong> to fix common mistakes</li><li>Use the <strong>view switcher</strong> to pick Text, Tree, or Preview mode</li><li>In <strong>Tree</strong> mode: double-click any key or value to edit in place; right-click for insert/duplicate/delete/change type/copy path</li><li>Use <strong>Ctrl+Z</strong> / <strong>Ctrl+Y</strong> to undo and redo</li><li>Click <strong>Format</strong>, <strong>Minify</strong>, or <strong>Smart</strong> to reformat, then <strong>Download</strong> or <strong>Copy</strong> to export</li></ol>"
-          },
-          "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Three View Modes</strong>: Text (Monaco), Tree (interactive), Preview (read-only) — switch anytime</li><li><strong>Visual Tree Editing</strong>: Double-click any key or value, right-click for the full context menu</li><li><strong>Full Type Switching</strong>: Convert any value between string, number, boolean, null, object, and array</li><li><strong>Undo / Redo</strong>: 50-step history with Ctrl+Z / Ctrl+Y shortcuts</li><li><strong>Auto Repair</strong>: Fixes trailing commas, single quotes, missing quotes, JavaScript comments, and more</li><li><strong>Smart Format</strong>: Inline short arrays/objects, expand long ones — compact yet readable</li><li><strong>Monaco Editor</strong>: The same code editor that powers VS Code, for raw text editing</li><li><strong>Path Display &amp; Copy</strong>: Click any node to see and copy its JSON Path</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
-          },
           "useCases": {
             "title": "Common Use Cases",
             "content": "<ul><li><strong>Config File Editing</strong>: Safely modify <code>package.json</code>, <code>tsconfig.json</code>, or Kubernetes manifests without syntax errors</li><li><strong>Test Data Crafting</strong>: Quickly build fixtures by duplicating nodes, changing types, and renaming keys</li><li><strong>API Response Debugging</strong>: Paste a response, restructure it, and diff against the expected shape</li><li><strong>Schema Migration</strong>: Compare two versions of a JSON document to see exactly what changed</li><li><strong>Fixing Broken JSON</strong>: Use Auto Repair to recover from trailing commas, stray quotes, or mixed delimiters</li><li><strong>Data Cleanup</strong>: Delete unwanted fields in bulk with right-click + Delete, then export the cleaned data</li></ul>"
@@ -240,14 +224,6 @@
           "intro": {
             "title": "Bộ mã hóa/giải mã Base64 là gì?",
             "content": "<p><strong>Bộ mã hóa/giải mã Base64</strong> chuyển đổi văn bản và tệp sang mã hóa Base64 và ngược lại. Base64 là sơ đồ mã hóa nhị phân sang văn bản được sử dụng rộng rãi để nhúng dữ liệu trong URL, email, HTML và JSON.</p><p>Mã hóa văn bản hoặc bất kỳ tệp nào (hình ảnh, PDF, ZIP) sang Base64, hoặc giải mã chuỗi Base64 thành văn bản hoặc tệp có thể tải xuống — tất cả trong trình duyệt của bạn, với hỗ trợ biến thể URL-safe và Data URI.</p>"
-          },
-          "howToUse": {
-            "title": "Cách sử dụng Bộ mã hóa/giải mã Base64",
-            "content": "<ol><li>Chọn chế độ <strong>Văn bản</strong> hoặc <strong>Tệp</strong> tùy theo đầu vào của bạn</li><li>Chọn hướng <strong>Mã hóa</strong> hoặc <strong>Giải mã</strong> — công cụ tự động phát hiện đầu vào Base64</li><li>Chọn biến thể <strong>Tiêu chuẩn</strong> hoặc <strong>URL-safe</strong> theo nhu cầu</li><li>Kết quả xuất hiện ngay lập tức khi bạn nhập — không cần nhấn nút nào</li><li>Sử dụng <strong>Sao chép</strong>, <strong>Tải xuống</strong> hoặc <strong>Hoán đổi</strong> để làm việc với đầu ra</li></ol><p>Khi mã hóa tệp, bật <strong>Đầu ra Data URI</strong> để nhận data URL sẵn sàng sử dụng để nhúng vào HTML/CSS.</p>"
-          },
-          "features": {
-            "title": "Tính năng chính",
-            "content": "<ul><li><strong>Chuyển đổi thời gian thực</strong>: Mã hóa hoặc giải mã ngay lập tức khi nhập — không cần nhấn nút</li><li><strong>Hỗ trợ văn bản &amp; tệp</strong>: Mã hóa bất kỳ tệp nào (hình ảnh, PDF, ZIP) sang Base64, hoặc giải mã Base64 thành tệp có thể tải xuống</li><li><strong>Base64 URL-safe</strong>: Biến thể RFC 4648 thay thế +/ bằng -_ và bỏ qua padding — lý tưởng cho JWT token và tham số URL</li><li><strong>Đầu ra Data URI</strong>: Tạo chuỗi <code>data:{mime};base64,...</code> sẵn sàng sử dụng để nhúng trong HTML, CSS hoặc JavaScript</li><li><strong>Xem trước hình ảnh</strong>: Tự động phát hiện và hiển thị xem trước khi giải mã dữ liệu hình ảnh Base64 (PNG, JPEG, GIF, WebP)</li><li><strong>Tự động phát hiện</strong>: Phát hiện thông minh liệu đầu vào của bạn có phải Base64 không và tự động chuyển sang chế độ giải mã</li><li><strong>Hoán đổi &amp; thống kê</strong>: Hoán đổi đầu ra thành đầu vào chỉ với một cú nhấp, với hiển thị kích thước byte và số ký tự theo thời gian thực</li><li><strong>Hỗ trợ UTF-8</strong>: Xử lý chính xác ký tự Unicode, emoji và văn bản đa byte</li><li><strong>Không giới hạn kích thước</strong>: Xử lý văn bản hoặc tệp có kích thước bất kỳ — chỉ bị giới hạn bởi bộ nhớ thiết bị của bạn</li></ul>"
           },
           "useCases": {
             "title": "Các trường hợp sử dụng phổ biến",
@@ -345,14 +321,6 @@
             "title": "Mã hóa/Giải mã URL là gì?",
             "content": "<p><strong>URL Encoder/Decoder</strong> chuyển đổi các ký tự đặc biệt trong URL sang dạng mã hóa phần trăm (percent-encoded) và ngược lại. Điều này rất cần thiết để tạo URL hợp lệ chứa khoảng trắng, dấu và, ký tự không phải ASCII hoặc các ký tự dành riêng khác.</p><p>Sử dụng công cụ để truyền tham số truy vấn một cách an toàn, mã hóa đường dẫn tệp hoặc gỡ lỗi URL bị lỗi định dạng.</p>"
           },
-          "howToUse": {
-            "title": "Cách sử dụng URL Encoder/Decoder",
-            "content": "<ol><li>Nhập văn bản hoặc thành phần URL vào trường nhập liệu</li><li>Chọn <strong>Mã hóa</strong> để mã hóa phần trăm các ký tự đặc biệt, hoặc <strong>Giải mã</strong> để chuyển URL đã mã hóa về văn bản dễ đọc</li><li>Kết quả cập nhật ngay lập tức</li><li>Nhấp <strong>Sao chép</strong> để chép kết quả đã mã hóa/giải mã</li></ol><p>Mã hóa tất cả ký tự không an toàn trong URL theo RFC 3986, bao gồm khoảng trắng, &amp;, =, ?, # và ký tự không phải ASCII.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Tuân thủ RFC 3986</strong>: Mã hóa chính xác tất cả ký tự dành riêng và không an toàn trong URL</li><li><strong>Xử lý thời gian thực</strong>: Kết quả cập nhật khi bạn gõ</li><li><strong>Hỗ trợ Unicode</strong>: Xử lý chính xác ký tự quốc tế và emoji trong URL</li><li><strong>Mã hóa thành phần</strong>: Mã hóa từng thành phần URL riêng lẻ (tham số truy vấn, đoạn đường dẫn)</li><li><strong>Sao chép một lần nhấp</strong>: Chép kết quả mã hóa ngay lập tức</li><li><strong>100% chạy trên trình duyệt</strong>: Không tải lên máy chủ — dữ liệu luôn nằm trên thiết bị của bạn</li></ul>"
-          },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
             "content": "<ul><li><strong>Tham số truy vấn</strong>: Mã hóa giá trị để đưa an toàn vào chuỗi truy vấn URL</li><li><strong>Yêu cầu API</strong>: Mã hóa đúng tham số yêu cầu cho REST API</li><li><strong>URL chuyển hướng</strong>: Mã hóa URL callback cho luồng OAuth và chuyển hướng</li><li><strong>Đường dẫn tệp</strong>: Mã hóa tên tệp chứa khoảng trắng hoặc ký tự đặc biệt cho máy chủ web</li><li><strong>Gỡ lỗi</strong>: Giải mã URL bị biến dạng để xem văn bản gốc</li></ul>"
@@ -390,14 +358,6 @@
             "title": "Nhận dạng chữ OCR là gì?",
             "content": "<p><strong>Nhận dạng chữ OCR</strong> trích xuất văn bản có thể đọc được từ hình ảnh bằng công nghệ nhận dạng ký tự quang học sử dụng Tesseract.js. Tải lên ảnh tài liệu, ảnh chụp màn hình, hóa đơn hoặc ghi chú viết tay, và nhận nội dung văn bản có thể sao chép, chỉnh sửa và sử dụng.</p><p>Hỗ trợ <strong>hơn 12 ngôn ngữ</strong> bao gồm tiếng Anh, tiếng Trung (Giản thể & Phồn thể), tiếng Nhật, tiếng Hàn, tiếng Tây Ban Nha, tiếng Pháp, tiếng Đức và nhiều ngôn ngữ khác — tất cả được xử lý cục bộ trong trình duyệt của bạn.</p>"
           },
-          "howToUse": {
-            "title": "Cách sử dụng Nhận dạng văn bản OCR",
-            "content": "<ol><li>Tải lên hình ảnh bằng cách nhấp vào vùng thả tệp hoặc kéo thả vào trang (hỗ trợ JPG, PNG, WebP, BMP)</li><li>Chọn ngôn ngữ của văn bản trong hình ảnh để đạt độ chính xác tốt nhất</li><li>Nhấp <strong>Trích xuất văn bản</strong> để bắt đầu nhận dạng</li><li>Kiểm tra văn bản đã trích xuất và sao chép vào clipboard</li></ol><p>Để có kết quả tốt nhất, hãy sử dụng hình ảnh rõ nét, độ tương phản cao và ánh sáng tốt. Văn bản in cho độ chính xác cao hơn chữ viết tay.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Hơn 12 ngôn ngữ</strong>: Nhận dạng văn bản tiếng Anh, tiếng Trung (Giản thể & Phồn thể), tiếng Nhật, tiếng Hàn, tiếng Tây Ban Nha, tiếng Pháp, tiếng Đức, tiếng Ý, tiếng Bồ Đào Nha, tiếng Nga và nhiều ngôn ngữ khác</li><li><strong>Nhiều định dạng hình ảnh</strong>: Hỗ trợ JPG, PNG, WebP, BMP và TIFF</li><li><strong>Sử dụng Tesseract.js</strong>: Công cụ OCR tiêu chuẩn ngành chạy hoàn toàn trong trình duyệt qua WebAssembly</li><li><strong>Độ chính xác cao</strong>: Kết quả tốt nhất trên văn bản in, hóa đơn, ảnh chụp màn hình và tài liệu quét</li><li><strong>Sao chép & chỉnh sửa</strong>: Văn bản đã trích xuất có thể chỉnh sửa và sao chép hoàn toàn</li><li><strong>100% xử lý cục bộ</strong>: Không tải lên máy chủ — tài liệu của bạn luôn riêng tư</li></ul>"
-          },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
             "content": "<ul><li><strong>Số hóa tài liệu</strong>: Chuyển đổi tài liệu in, hóa đơn hoặc thư thành văn bản có thể chỉnh sửa</li><li><strong>Trích xuất văn bản từ ảnh chụp màn hình</strong>: Lấy văn bản từ ảnh chụp màn hình trang web, thông báo lỗi hoặc nhật ký trò chuyện</li><li><strong>Chuẩn bị dịch thuật</strong>: Trích xuất văn bản ngoại ngữ từ hình ảnh để dịch</li><li><strong>Nhập liệu</strong>: Số hóa nhanh văn bản từ biểu mẫu, hóa đơn hoặc danh thiếp</li><li><strong>Khả năng tiếp cận</strong>: Giúp văn bản dạng hình ảnh có thể đọc được bằng trình đọc màn hình</li></ul>"
@@ -433,14 +393,6 @@
           "intro": {
             "title": "Giải nén ZIP là gì?",
             "content": "<p><strong>Giải nén ZIP</strong> cho phép bạn mở và trích xuất nội dung tệp nén ZIP trực tiếp trong trình duyệt. Xem trước tên tệp, kích thước và cấu trúc thư mục trước khi tải xuống từng tệp hoặc toàn bộ nội dung.</p><p>Không cần cài đặt phần mềm — chỉ cần thả tệp ZIP và duyệt nội dung ngay lập tức.</p>"
-          },
-          "howToUse": {
-            "title": "Cách sử dụng Giải nén ZIP",
-            "content": "<ol><li>Thả tệp ZIP vào trang hoặc nhấp để duyệt và chọn tệp</li><li>Xem nội dung lưu trữ: tên tệp, kích thước và cấu trúc thư mục</li><li>Nhấp vào từng tệp để tải xuống, hoặc giải nén tất cả cùng lúc</li></ol><p>Hỗ trợ tệp nén ZIP tiêu chuẩn. Tệp nén lớn có thể mất một chút thời gian để phân tích tùy thuộc vào thiết bị của bạn.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Xem trước tức thì</strong>: Xem tất cả tệp và thư mục bên trong ZIP mà không cần giải nén</li><li><strong>Giải nén chọn lọc</strong>: Tải xuống từng tệp mà không cần giải nén toàn bộ lưu trữ</li><li><strong>Hiển thị kích thước tệp</strong>: Xem kích thước nén và giải nén cho mỗi tệp</li><li><strong>Cấu trúc thư mục</strong>: Duyệt hệ thống phân cấp thư mục lồng nhau trong lưu trữ</li><li><strong>Sử dụng fflate</strong>: Giải nén hiệu suất cao bằng thư viện fflate</li><li><strong>Không giới hạn kích thước tệp</strong>: Chỉ bị giới hạn bởi bộ nhớ khả dụng của thiết bị</li></ul>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
@@ -480,14 +432,6 @@
           "intro": {
             "title": "Chuyển đổi CSV/JSON là gì?",
             "content": "<p><strong>CSV/JSON Converter</strong> chuyển đổi dữ liệu giữa định dạng CSV (giá trị phân tách bằng dấu phẩy) và JSON ngay lập tức. Chuyển dữ liệu bảng tính sang mảng JSON cho API, hoặc biến tập dữ liệu JSON thành CSV để mở trong Excel hoặc Google Sheets.</p><p>Xử lý tiêu đề, trường có dấu ngoặc kép và dấu phân cách tùy chỉnh — tất cả trong trình duyệt mà không tải lên dữ liệu.</p>"
-          },
-          "howToUse": {
-            "title": "Cách sử dụng Chuyển đổi CSV/JSON",
-            "content": "<ol><li>Dán dữ liệu CSV hoặc JSON vào khu vực nhập liệu</li><li>Chọn hướng chuyển đổi: <strong>CSV → JSON</strong> hoặc <strong>JSON → CSV</strong></li><li>Kết quả chuyển đổi xuất hiện ngay lập tức trong khu vực đầu ra</li><li>Sao chép kết quả hoặc tải xuống dưới dạng tệp</li></ol><p>Dữ liệu CSV nên sử dụng hàng đầu tiên làm tiêu đề cột. Dữ liệu JSON nên là mảng các đối tượng có khóa nhất quán.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Chuyển đổi hai chiều</strong>: Chuyển đổi CSV sang JSON và JSON sang CSV</li><li><strong>Tự động phát hiện tiêu đề</strong>: Sử dụng hàng CSV đầu tiên làm khóa đối tượng JSON</li><li><strong>Xử lý ký tự đặc biệt</strong>: Xử lý chính xác trường có dấu ngoặc kép, dấu phẩy trong trường và ngắt dòng</li><li><strong>Chuyển đổi tức thì</strong>: Kết quả xuất hiện ngay khi bạn dán dữ liệu</li><li><strong>Tải xuống đầu ra</strong>: Lưu dữ liệu đã chuyển đổi dưới dạng tệp .json hoặc .csv</li><li><strong>Hỗ trợ tập dữ liệu lớn</strong>: Xử lý hiệu quả hàng nghìn dòng</li></ul>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
@@ -584,14 +528,6 @@
             "title": "Tạo mã băm là gì?",
             "content": "<p><strong>Tạo mã băm</strong> tính toán giá trị băm mật mã cho văn bản hoặc tệp bằng các thuật toán MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 và CRC32. Công cụ cũng hỗ trợ HMAC (Hash-based Message Authentication Code) với khóa bí mật. Mã băm là dấu vân tay một chiều, dùng để xác minh tính toàn vẹn dữ liệu, so sánh tệp và xác thực tải xuống.</p><p>Tạo mã băm ngay lập tức trong trình duyệt với tính toán thời gian thực — lý tưởng để kiểm tra tính toàn vẹn tệp hoặc tạo tóm tắt nội dung.</p>"
           },
-          "howToUse": {
-            "title": "Cách sử dụng Tạo mã băm",
-            "content": "<ol><li>Nhập văn bản trực tiếp — mã băm được tính theo thời gian thực khi bạn gõ</li><li>Hoặc tải lên tệp (đơn lẻ hoặc hàng loạt) để băm tệp</li><li>Chuyển đổi giữa các định dạng đầu ra hex (chữ thường/chữ hoa) và Base64</li><li>Sử dụng trường xác minh để so sánh với mã băm đã biết</li><li>Bật chế độ HMAC để băm có khóa</li></ol><p>Để xác minh tính toàn vẹn tệp, hãy so sánh mã băm đã tạo với checksum do nguồn cung cấp tệp.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>8 thuật toán</strong>: MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>Hỗ trợ HMAC</strong>: Băm có khóa với thuật toán SHA để xác thực thông điệp</li><li><strong>Băm thời gian thực</strong>: Kết quả xuất hiện ngay lập tức khi bạn gõ</li><li><strong>Xác minh mã băm</strong>: So sánh với mã băm mong đợi với chỉ báo khớp trực quan</li><li><strong>Băm tệp hàng loạt</strong>: Băm nhiều tệp cùng lúc</li><li><strong>Nhiều định dạng đầu ra</strong>: Hex (chữ thường/chữ hoa) và Base64</li><li><strong>Sao chép & xuất</strong>: Sao chép từng hoặc tất cả mã băm, tải xuống dạng tệp văn bản</li><li><strong>Tiến trình tệp</strong>: Chỉ báo tiến trình cho xử lý tệp lớn</li></ul>"
-          },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
             "content": "<ul><li><strong>Toàn vẹn tệp</strong>: Xác minh tệp tải xuống không bị giả mạo bằng cách so sánh checksum</li><li><strong>Khử trùng lặp nội dung</strong>: So sánh mã băm để tìm tệp trùng lặp</li><li><strong>Xác thực API</strong>: Tạo chữ ký HMAC cho các yêu cầu API</li><li><strong>Phân phối phần mềm</strong>: Tạo checksum cho bản phát hành tệp của bạn</li><li><strong>Kiểm toán bảo mật</strong>: Băm tệp để phát hiện sửa đổi trái phép</li></ul>"
@@ -629,14 +565,6 @@
           "intro": {
             "title": "Chuyển đổi màu sắc là gì?",
             "content": "<p><strong>Chuyển đổi màu sắc</strong> biến đổi màu giữa các định dạng HEX, RGB và HSL với bản xem trước trực quan trực tiếp. Nhập màu ở bất kỳ định dạng nào và ngay lập tức xem giá trị tương đương ở tất cả định dạng khác, cùng với mẫu màu.</p><p>Hoàn hảo cho nhà thiết kế và lập trình viên cần chuyển đổi giữa các ký hiệu màu cho CSS, công cụ thiết kế hoặc hướng dẫn thương hiệu.</p>"
-          },
-          "howToUse": {
-            "title": "Cách sử dụng Chuyển đổi màu sắc",
-            "content": "<ol><li>Nhập giá trị màu ở bất kỳ định dạng nào được hỗ trợ: HEX (ví dụ: #3B82F6), RGB (ví dụ: rgb(59, 130, 246)) hoặc HSL (ví dụ: hsl(217, 91%, 60%))</li><li>Xem chuyển đổi tức thì sang tất cả định dạng khác với bản xem trước màu trực tiếp</li><li>Nhấp vào bất kỳ giá trị nào để sao chép vào clipboard</li></ol><p>Bộ chọn màu cũng cho phép bạn chọn màu trực quan và nhận tất cả giá trị định dạng cùng lúc.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Hỗ trợ ba định dạng</strong>: Chuyển đổi giữa ký hiệu màu HEX, RGB và HSL</li><li><strong>Xem trước trực tiếp</strong>: Xem màu thực tế hiển thị khi bạn gõ hoặc điều chỉnh giá trị</li><li><strong>Bộ chọn màu trực quan</strong>: Chọn màu trực quan và nhận tất cả giá trị định dạng</li><li><strong>Chuyển đổi tức thì</strong>: Kết quả cập nhật theo thời gian thực khi bạn gõ</li><li><strong>Sao chép một lần nhấp</strong>: Sao chép bất kỳ giá trị định dạng màu nào vào clipboard</li><li><strong>Đầu ra sẵn sàng cho CSS</strong>: Giá trị được định dạng để sử dụng trực tiếp trong stylesheet CSS</li></ul>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
@@ -677,14 +605,6 @@
             "title": "Chuyển đổi JSON ↔ XML là gì?",
             "content": "<p><strong>JSON ↔ XML Converter</strong> chuyển đổi dữ liệu giữa định dạng JSON và XML. Chuyển đối tượng JSON sang tài liệu XML đúng chuẩn, hoặc phân tích XML ngược lại thành JSON — hữu ích khi tích hợp các hệ thống sử dụng định dạng dữ liệu khác nhau.</p><p>Xử lý chính xác cấu trúc lồng nhau, mảng và thuộc tính ở cả hai chiều.</p>"
           },
-          "howToUse": {
-            "title": "Cách sử dụng JSON ↔ XML Converter",
-            "content": "<ol><li>Dán dữ liệu JSON hoặc XML vào khu vực nhập liệu</li><li>Chọn hướng chuyển đổi: <strong>JSON → XML</strong> hoặc <strong>XML → JSON</strong></li><li>Đầu ra đã chuyển đổi xuất hiện ngay lập tức</li><li>Sao chép kết quả hoặc tải xuống dưới dạng tệp</li></ol><p>Mảng JSON được chuyển thành các phần tử XML lặp lại. Thuộc tính XML được bảo toàn trong quá trình chuyển đổi.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Chuyển đổi hai chiều</strong>: Chuyển JSON sang XML và XML sang JSON</li><li><strong>Hỗ trợ cấu trúc lồng nhau</strong>: Xử lý chính xác đối tượng và mảng lồng sâu</li><li><strong>Đầu ra được định dạng đẹp</strong>: Đầu ra XML được thụt lề đúng chuẩn để dễ đọc</li><li><strong>Xử lý mảng</strong>: Mảng JSON trở thành phần tử XML lặp lại với cấu trúc phù hợp</li><li><strong>Xử lý tức thì</strong>: Kết quả xuất hiện ngay lập tức</li><li><strong>Tải xuống đầu ra</strong>: Lưu kết quả dưới dạng tệp .json hoặc .xml</li></ul>"
-          },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
             "content": "<ul><li><strong>Tích hợp API</strong>: Chuyển đổi giữa JSON REST API và dịch vụ XML SOAP</li><li><strong>Hệ thống kế thừa</strong>: Chuyển dữ liệu XML từ hệ thống cũ sang JSON cho ứng dụng hiện đại</li><li><strong>Tệp cấu hình</strong>: Chuyển đổi giữa định dạng tệp cấu hình JSON và XML</li><li><strong>Di chuyển dữ liệu</strong>: Chuyển đổi định dạng dữ liệu trong quá trình di chuyển hệ thống</li><li><strong>Kiểm thử</strong>: Tạo dữ liệu kiểm thử XML từ JSON hoặc ngược lại</li></ul>"
@@ -721,14 +641,6 @@
           "intro": {
             "title": "Xem trước Markdown là gì?",
             "content": "<p><strong>Xem trước Markdown</strong> cho phép bạn viết Markdown và xem bản xem trước HTML trực tiếp cạnh nhau. Viết văn bản định dạng bằng cú pháp Markdown đơn giản và ngay lập tức xem cách nó hiển thị — hoàn hảo cho tệp README, bài viết blog và tài liệu kỹ thuật.</p><p>Hỗ trợ Markdown tiêu chuẩn bao gồm tiêu đề, danh sách, khối mã, liên kết, hình ảnh, bảng và nhiều hơn nữa.</p>"
-          },
-          "howToUse": {
-            "title": "Cách sử dụng Xem trước Markdown",
-            "content": "<ol><li>Gõ hoặc dán văn bản Markdown vào khung trình soạn thảo bên trái</li><li>Bản xem trước HTML đã render cập nhật theo thời gian thực ở bên phải</li><li>Sử dụng cú pháp Markdown tiêu chuẩn: # tiêu đề, **in đậm**, *in nghiêng*, - danh sách, ```khối mã```</li><li>Sao chép HTML đã render hoặc nguồn Markdown</li></ol><p>Chế độ xem chia đôi khung cho phép bạn viết và xem trước đồng thời mà không cần chuyển tab.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Xem trước trực tiếp</strong>: Xem HTML đã render cập nhật theo thời gian thực khi bạn gõ</li><li><strong>Chế độ xem cạnh nhau</strong>: Trình soạn thảo và bản xem trước hiển thị đồng thời</li><li><strong>Hỗ trợ đầy đủ Markdown</strong>: Tiêu đề, in đậm, in nghiêng, danh sách, khối mã, liên kết, hình ảnh, bảng, khối trích dẫn</li><li><strong>Tô sáng cú pháp</strong>: Khối mã với tô sáng theo ngôn ngữ cụ thể</li><li><strong>Sao chép đầu ra HTML</strong>: Sao chép HTML đã render để sử dụng trong trang web</li><li><strong>Giao diện đáp ứng</strong>: Hoạt động trên cả thiết bị desktop và di động</li></ul>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
@@ -770,14 +682,6 @@
           "intro": {
             "title": "Kiểm tra Regex là gì?",
             "content": "<p><strong>Kiểm tra Regex</strong> cho phép bạn viết và kiểm tra biểu thức chính quy với văn bản mẫu, tô sáng các kết quả khớp theo thời gian thực. Xem các nhóm khớp, thử các cờ khác nhau và gỡ lỗi mẫu regex ngay lập tức.</p><p>Công cụ thiết yếu cho lập trình viên làm việc với mẫu chuỗi, xác thực dữ liệu hoặc phân tích văn bản.</p>"
-          },
-          "howToUse": {
-            "title": "Cách sử dụng Kiểm tra Regex",
-            "content": "<ol><li>Nhập mẫu biểu thức chính quy vào trường mẫu</li><li>Đặt cờ khi cần: <strong>g</strong> (toàn cục), <strong>i</strong> (không phân biệt hoa thường), <strong>m</strong> (nhiều dòng)</li><li>Gõ hoặc dán văn bản kiểm tra vào vùng văn bản bên dưới</li><li>Các kết quả khớp được tô sáng theo thời gian thực khi bạn gõ</li></ol><p>Nhóm bắt được hiển thị bằng màu sắc riêng biệt, và chi tiết kết quả hiển thị toàn bộ kết quả khớp cùng bất kỳ nhóm nào đã bắt.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Khớp thời gian thực</strong>: Kết quả khớp được tô sáng ngay lập tức khi bạn gõ mẫu hoặc văn bản</li><li><strong>Hỗ trợ cờ</strong>: Bật/tắt cờ toàn cục (g), không phân biệt hoa thường (i) và nhiều dòng (m)</li><li><strong>Tô sáng nhóm</strong>: Nhóm bắt được hiển thị bằng dấu hiệu trực quan riêng biệt</li><li><strong>Chi tiết kết quả</strong>: Xem toàn bộ văn bản khớp, các nhóm và vị trí</li><li><strong>Phản hồi lỗi</strong>: Cú pháp regex không hợp lệ được phát hiện và báo cáo ngay lập tức</li><li><strong>Công cụ native</strong>: Sử dụng công cụ regex JavaScript tích hợp sẵn của trình duyệt</li></ul>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
@@ -822,14 +726,6 @@
             "title": "Chuyển đổi Unix Timestamp là gì?",
             "content": "<p><strong>Chuyển đổi Unix Timestamp</strong> chuyển đổi giữa Unix timestamp (giây kể từ ngày 1 tháng 1 năm 1970) và định dạng ngày/giờ dễ đọc. Nhập timestamp để xem ngày, hoặc chọn ngày để nhận timestamp.</p><p>Hiển thị Unix timestamp hiện tại theo thời gian thực và hỗ trợ cả định dạng giây và mili giây.</p>"
           },
-          "howToUse": {
-            "title": "Cách sử dụng Chuyển đổi Unix Timestamp",
-            "content": "<ol><li>Nhập Unix timestamp (giây hoặc mili giây) để xem ngày và giờ dễ đọc</li><li>Hoặc chọn ngày và giờ để nhận Unix timestamp tương ứng</li><li>Unix timestamp hiện tại được hiển thị trực tiếp và cập nhật theo thời gian thực</li><li>Sao chép bất kỳ giá trị nào chỉ bằng một lần nhấp</li></ol><p>Tự động phát hiện đầu vào là giây hay mili giây dựa trên độ dài giá trị.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Chuyển đổi hai chiều</strong>: Timestamp → ngày và ngày → timestamp</li><li><strong>Đồng hồ trực tiếp</strong>: Unix timestamp hiện tại được hiển thị và cập nhật theo thời gian thực</li><li><strong>Giây & mili giây</strong>: Hỗ trợ cả Unix giây và mili giây JavaScript</li><li><strong>Giờ địa phương & UTC</strong>: Hiển thị thời gian ở cả múi giờ địa phương và UTC</li><li><strong>Kết quả tức thì</strong>: Chuyển đổi diễn ra theo thời gian thực khi bạn gõ</li><li><strong>Sao chép một lần nhấp</strong>: Sao chép bất kỳ giá trị nào vào clipboard</li></ul>"
-          },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
             "content": "<ul><li><strong>Gỡ lỗi</strong>: Chuyển đổi timestamp từ phản hồi API sang ngày dễ đọc để gỡ lỗi</li><li><strong>Truy vấn cơ sở dữ liệu</strong>: Chuyển đổi giữa các định dạng timestamp cho truy vấn SQL</li><li><strong>Phân tích nhật ký</strong>: Dịch Unix timestamp trong tệp nhật ký sang thời gian dễ đọc</li><li><strong>Lên lịch</strong>: Tính toán timestamp tương lai/quá khứ cho cron job hoặc tác vụ đã lên lịch</li><li><strong>Làm việc đa múi giờ</strong>: So sánh timestamp giữa các múi giờ khác nhau</li></ul>"
@@ -868,14 +764,6 @@
           "intro": {
             "title": "Chuyển đổi YAML ↔ JSON là gì?",
             "content": "<p><strong>YAML ↔ JSON Converter</strong> chuyển đổi dữ liệu giữa định dạng YAML và JSON. Cú pháp thân thiện với con người của YAML khiến nó phổ biến cho tệp cấu hình, trong khi JSON là tiêu chuẩn cho API và trao đổi dữ liệu.</p><p>Chuyển đổi cấu hình Kubernetes, pipeline CI/CD hoặc bất kỳ tệp YAML nào sang JSON và ngược lại — ngay lập tức trong trình duyệt của bạn.</p>"
-          },
-          "howToUse": {
-            "title": "Cách sử dụng Chuyển đổi YAML ↔ JSON",
-            "content": "<ol><li>Dán dữ liệu YAML hoặc JSON vào khu vực nhập liệu</li><li>Chọn hướng chuyển đổi: <strong>YAML → JSON</strong> hoặc <strong>JSON → YAML</strong></li><li>Đầu ra đã chuyển đổi xuất hiện ngay lập tức</li><li>Sao chép kết quả hoặc tải xuống dưới dạng tệp</li></ol><p>Hỗ trợ đầy đủ đặc tả YAML bao gồm chuỗi nhiều dòng, anchor và cấu trúc lồng nhau phức tạp.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Chuyển đổi hai chiều</strong>: Chuyển YAML sang JSON và JSON sang YAML</li><li><strong>Hỗ trợ YAML đầy đủ</strong>: Xử lý chuỗi nhiều dòng, anchor, alias và mọi tính năng YAML</li><li><strong>Đầu ra được định dạng đẹp</strong>: Cả đầu ra JSON và YAML đều được định dạng đúng chuẩn</li><li><strong>Báo cáo lỗi</strong>: Thông báo lỗi rõ ràng cho cú pháp YAML hoặc JSON không hợp lệ</li><li><strong>Xử lý tức thì</strong>: Kết quả xuất hiện ngay lập tức</li><li><strong>Sử dụng js-yaml</strong>: Chuyển đổi đáng tin cậy bằng thư viện js-yaml tiêu chuẩn ngành</li></ul>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
@@ -917,14 +805,6 @@
             "title": "So sánh văn bản là gì?",
             "content": "<p><strong>So sánh văn bản</strong> so sánh hai đoạn văn bản và làm nổi bật sự khác biệt theo từng dòng. Xem chính xác những gì được thêm, xóa hoặc thay đổi — giống như phiên bản đơn giản hóa của <code>git diff</code> trong trình duyệt.</p><p>Lý tưởng để so sánh phiên bản mã, tệp cấu hình, bản nháp tài liệu hoặc bất kỳ nội dung văn bản nào.</p>"
           },
-          "howToUse": {
-            "title": "Cách sử dụng So sánh văn bản",
-            "content": "<ol><li>Dán văn bản gốc vào bảng bên trái</li><li>Dán văn bản đã chỉnh sửa vào bảng bên phải</li><li>Sự khác biệt được tô sáng ngay lập tức: xanh cho phần thêm, đỏ cho phần xóa</li><li>Cuộn qua diff để xem lại tất cả thay đổi</li></ol><p>Hoạt động tốt nhất với văn bản có cấu trúc như mã, cấu hình hoặc tài liệu có ngắt dòng rõ ràng.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>So sánh từng dòng</strong>: Xem chính xác dòng nào khác biệt giữa hai văn bản</li><li><strong>Diff tô màu</strong>: Phần thêm màu xanh, phần xóa màu đỏ — rõ ràng ngay cái nhìn đầu tiên</li><li><strong>So sánh tức thì</strong>: Kết quả xuất hiện ngay khi bạn dán văn bản</li><li><strong>Chế độ xem cạnh nhau</strong>: Cả hai văn bản hiển thị cùng lúc với sự khác biệt được căn chỉnh</li><li><strong>Hỗ trợ văn bản lớn</strong>: So sánh tài liệu dài hiệu quả</li><li><strong>Không giới hạn dòng</strong>: Xử lý bất kỳ độ dài văn bản nào mà không bị hạn chế</li></ul>"
-          },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
             "content": "<ul><li><strong>Đánh giá mã</strong>: So sánh hai phiên bản tệp mã để xem những gì đã thay đổi</li><li><strong>Thay đổi cấu hình</strong>: Phát hiện khác biệt giữa tệp cấu hình môi trường phát triển và sản xuất</li><li><strong>Phiên bản tài liệu</strong>: So sánh các bản nháp tài liệu hoặc hợp đồng</li><li><strong>Bản ghi cơ sở dữ liệu</strong>: So sánh bản ghi xuất để tìm sai lệch dữ liệu</li><li><strong>Gỡ lỗi</strong>: So sánh kết quả dự kiến và thực tế trong kịch bản kiểm thử</li></ul>"
@@ -964,14 +844,6 @@
           "intro": {
             "title": "Bộ đếm từ là gì?",
             "content": "<p><strong>Bộ đếm từ</strong> phân tích văn bản của bạn và ngay lập tức hiển thị số từ, số ký tự, số câu, số đoạn văn và thời gian đọc ước tính. Công cụ thiết yếu cho nhà văn, sinh viên và người sáng tạo nội dung cần đáp ứng yêu cầu về độ dài.</p><p>Chỉ cần dán văn bản và nhận tất cả thống kê theo thời gian thực.</p>"
-          },
-          "howToUse": {
-            "title": "Cách sử dụng Bộ đếm từ",
-            "content": "<ol><li>Gõ hoặc dán văn bản vào khu vực nhập liệu</li><li>Thống kê cập nhật theo thời gian thực khi bạn gõ: số từ, ký tự, câu, đoạn văn và thời gian đọc</li><li>Sử dụng kết quả để kiểm tra yêu cầu độ dài hoặc ước tính thời gian đọc</li></ol><p>Thời gian đọc được ước tính ở tốc độ đọc trung bình 200 từ mỗi phút.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Đếm từ</strong>: Đếm từ chính xác với xử lý đúng dấu câu và khoảng trắng</li><li><strong>Đếm ký tự</strong>: Tổng ký tự có và không có khoảng trắng</li><li><strong>Đếm câu</strong>: Đếm số câu dựa trên dấu câu</li><li><strong>Đếm đoạn văn</strong>: Đếm số đoạn văn phân tách bằng ngắt dòng</li><li><strong>Thời gian đọc</strong>: Ước tính thời gian đọc ở tốc độ trung bình</li><li><strong>Cập nhật thời gian thực</strong>: Tất cả thống kê cập nhật ngay lập tức khi bạn gõ</li></ul>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
@@ -1016,14 +888,6 @@
             "title": "Bộ chuyển đổi chữ hoa/thường là gì?",
             "content": "<p><strong>Bộ chuyển đổi chữ hoa/thường</strong> biến đổi văn bản giữa nhiều định dạng chữ bao gồm UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case và CONSTANT_CASE.</p><p>Công cụ thiết yếu cho lập trình viên đổi tên biến, nhà văn định dạng tiêu đề, hoặc bất kỳ ai cần thay đổi nhanh kiểu chữ văn bản.</p>"
           },
-          "howToUse": {
-            "title": "Cách sử dụng Bộ chuyển đổi chữ hoa/thường",
-            "content": "<ol><li>Gõ hoặc dán văn bản vào khu vực nhập liệu</li><li>Nhấp vào nút định dạng chữ mong muốn: UPPER, lower, Title, Sentence, camelCase, PascalCase, snake_case, kebab-case hoặc CONSTANT_CASE</li><li>Văn bản đã chuyển đổi xuất hiện ngay lập tức</li><li>Sao chép kết quả chỉ bằng một lần nhấp</li></ol><p>Bạn có thể kết hợp chuyển đổi — chuyển sang lowercase trước, rồi sang camelCase để có kết quả sạch.</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Hơn 9 định dạng chữ</strong>: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE</li><li><strong>Chuyển đổi tức thì</strong>: Kết quả xuất hiện ngay khi bạn nhấp vào định dạng</li><li><strong>Hỗ trợ nhiều dòng</strong>: Chuyển đổi nhiều dòng văn bản cùng lúc</li><li><strong>Phân tích thông minh</strong>: Tách từ chính xác từ camelCase, snake_case hoặc định dạng khác</li><li><strong>Sao chép một lần nhấp</strong>: Sao chép văn bản đã chuyển đổi vào clipboard</li><li><strong>Xử lý hàng loạt</strong>: Xử lý nhiều dòng đồng thời</li></ul>"
-          },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
             "content": "<ul><li><strong>Đặt tên biến</strong>: Chuyển đổi giữa JavaScript camelCase, Python snake_case và CSS kebab-case</li><li><strong>Trường cơ sở dữ liệu</strong>: Chuyển đổi tên cột giữa các quy ước đặt tên khác nhau</li><li><strong>Định dạng nội dung</strong>: Chuyển tiêu đề sang Title Case cho headline và heading</li><li><strong>Thiết kế API</strong>: Chuẩn hóa tên trường trong lược đồ yêu cầu/phản hồi JSON</li><li><strong>Tái cấu trúc mã</strong>: Đổi tên định danh khi chuyển đổi giữa các quy ước đặt tên</li></ul>"
@@ -1063,14 +927,6 @@
           "intro": {
             "title": "Trình tạo Lorem Ipsum là gì?",
             "content": "<p><strong>Trình tạo Lorem Ipsum</strong> tạo văn bản giữ chỗ cho bản nháp thiết kế, wireframe và prototype. Tạo văn bản Lorem Ipsum kinh điển theo đoạn văn, câu hoặc từ với kiểm soát chính xác về số lượng.</p><p>Phương pháp tiêu chuẩn ngành để lấp đầy bố cục bằng văn bản trông thực tế trước khi nội dung cuối cùng sẵn sàng.</p>"
-          },
-          "howToUse": {
-            "title": "Cách sử dụng Trình tạo Lorem Ipsum",
-            "content": "<ol><li>Chọn đơn vị: <strong>đoạn văn</strong>, <strong>câu</strong> hoặc <strong>từ</strong></li><li>Đặt số lượng bạn cần (ví dụ: 3 đoạn văn, 10 câu hoặc 50 từ)</li><li>Nhấp <strong>Tạo</strong> để tạo văn bản giữ chỗ</li><li>Sao chép kết quả để sử dụng trong thiết kế hoặc tài liệu</li></ol><p>Văn bản được tạo theo mẫu Lorem Ipsum kinh điển bắt đầu bằng \"Lorem ipsum dolor sit amet...\"</p>"
-          },
-          "features": {
-            "title": "Tính năng nổi bật",
-            "content": "<ul><li><strong>Ba chế độ đầu ra</strong>: Tạo theo đoạn văn, câu hoặc số từ</li><li><strong>Số lượng tùy chỉnh</strong>: Kiểm soát chính xác lượng văn bản được tạo</li><li><strong>Lorem Ipsum kinh điển</strong>: Sử dụng bộ từ Lorem Ipsum tiêu chuẩn</li><li><strong>Tạo tức thì</strong>: Văn bản xuất hiện ngay lập tức không độ trễ</li><li><strong>Sao chép một lần nhấp</strong>: Sao chép toàn bộ văn bản đã tạo vào clipboard</li><li><strong>Đầu ra nhất quán</strong>: Phân phối văn bản và độ dài đoạn văn trông tự nhiên</li></ul>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",

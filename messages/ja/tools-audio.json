@@ -30,14 +30,6 @@
             "title": "オーディオトリミングとは？",
             "content": "<p><strong>オーディオトリミング</strong>は、開始・終了時間を精密に設定してオーディオファイルを希望の長さにカットするツールです。可能な場合はストリームコピーを使用して<strong>ロスレストリミング</strong>を実現 — 再エンコードなし、品質劣化なし。</p><p>ブラウザ内でプロ品質のオーディオ編集を実現する FFmpeg.wasm を使用しています。</p>"
           },
-          "howToUse": {
-            "title": "オーディオトリミングの使い方",
-            "content": "<ol><li>オーディオファイルをアップロード（MP3、WAV、OGG、AAC、FLAC 対応）</li><li>保持したいセグメントの<strong>開始時間</strong>と<strong>終了時間</strong>を設定</li><li>選択したオーディオ範囲をプレビュー</li><li><strong>トリミング</strong>をクリックしてクリップを切り出す</li><li>トリミングしたオーディオをダウンロード</li></ol>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>ロスレストリミング</strong>：ストリームコピーモードで元のオーディオ品質を保持</li><li><strong>精密なタイミング設定</strong>：秒単位の精度で開始・終了時間を設定</li><li><strong>オーディオプレビュー</strong>：トリミング前に選択した範囲を再生確認</li><li><strong>複数フォーマット対応</strong>：MP3、WAV、OGG、AAC、FLAC に対応</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質のオーディオ処理</li><li><strong>高速処理</strong>：ストリームコピーは再エンコードより大幅に高速</li></ul>"
-          },
           "useCases": {
             "title": "主な活用例",
             "content": "<ul><li><strong>着信音</strong>：好きな曲のセクションをスマートフォンの着信音にカット</li><li><strong>ポッドキャスト</strong>：ポッドキャスト録音からイントロ、アウトロ、無音部分をトリミング</li><li><strong>音楽編集</strong>：楽曲から特定のセクションを抽出</li><li><strong>ボイスメモ</strong>：ボイス録音から関連する部分だけをトリミング</li><li><strong>効果音</strong>：長いオーディオファイルから特定の音を切り出す</li></ul>"
@@ -75,14 +67,6 @@
             "title": "オーディオ変換とは？",
             "content": "<p><strong>オーディオ変換</strong>は、MP3、WAV、OGG、AAC、FLAC などの人気フォーマット間でオーディオファイルを変換するツールです。互換性、品質、ファイルサイズの最適化のために非可逆・ロスレスフォーマット間で変換できます。</p><p>ブラウザ内で信頼性の高いオーディオエンコーディングを実現する FFmpeg.wasm を使用しています。</p>"
           },
-          "howToUse": {
-            "title": "オーディオ変換の使い方",
-            "content": "<ol><li>対応フォーマットのオーディオファイルをアップロード</li><li>出力フォーマットを選択：<strong>MP3</strong>、<strong>WAV</strong>、<strong>OGG</strong>、<strong>AAC</strong>、または <strong>FLAC</strong></li><li><strong>変換</strong>をクリックして処理を開始</li><li>変換したオーディオファイルをダウンロード</li></ol><p>ユニバーサル互換性には MP3、ロスレス品質には FLAC、オープンソースプロジェクトには OGG をお勧めします。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>5つのフォーマット</strong>：MP3、WAV、OGG、AAC、FLAC 間で変換</li><li><strong>非可逆・ロスレス対応</strong>：圧縮（MP3、OGG、AAC）とロスレス（WAV、FLAC）を選択</li><li><strong>一括変換</strong>：複数のファイルを一度に変換</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質のオーディオエンコーディング</li><li><strong>品質保持</strong>：最適な設定による高品質トランスコーディング</li><li><strong>プレビュー機能</strong>：ダウンロード前に変換されたオーディオを再生確認</li></ul>"
-          },
           "useCases": {
             "title": "主な活用例",
             "content": "<ul><li><strong>互換性確保</strong>：より広いデバイス対応のために OGG や FLAC を MP3 に変換</li><li><strong>品質向上</strong>：オーディオ編集ワークフロー用に MP3 を WAV/FLAC に変換</li><li><strong>Web オーディオ</strong>：HTML5 audio 要素用に OGG に変換</li><li><strong>ポッドキャスト制作</strong>：ポッドキャスト配信用に録音を MP3 に変換</li><li><strong>アーカイブ</strong>：ロスレスオーディオアーカイブ用に FLAC に変換</li></ul>"
@@ -119,14 +103,6 @@
           "intro": {
             "title": "オーディオ抽出とは？",
             "content": "<p><strong>オーディオ抽出</strong>は、動画ファイルからオーディオトラックを引き出して MP3、WAV、または AAC として保存するツールです。可能な場合は再エンコードなしで、あらゆる動画から音楽、セリフ、ナレーションを抽出できます。</p><p>ブラウザ内で高速なオーディオ抽出を実現する FFmpeg.wasm を使用しています。</p>"
-          },
-          "howToUse": {
-            "title": "オーディオ抽出の使い方",
-            "content": "<ol><li>動画ファイルをアップロード（MP4、WebM、MKV、AVI 対応）</li><li>出力オーディオフォーマットを選択：<strong>MP3</strong>、<strong>WAV</strong>、または <strong>AAC</strong></li><li><strong>抽出</strong>をクリックしてオーディオトラックを取り出す</li><li>抽出したオーディオファイルをダウンロード</li></ol>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>3つの出力フォーマット</strong>：MP3、WAV、または AAC として抽出</li><li><strong>高速抽出</strong>：可能な場合はストリームコピーで瞬時に抽出</li><li><strong>複数動画入力対応</strong>：MP4、WebM、MKV、AVI に対応</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質のオーディオ抽出</li><li><strong>品質保持</strong>：ストリームコピー時に元のオーディオ品質を維持</li><li><strong>プレビュー機能</strong>：ダウンロード前に抽出されたオーディオを再生確認</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
@@ -166,14 +142,6 @@
           "intro": {
             "title": "音量調整とは？",
             "content": "<p><strong>音量調整</strong>は、オーディオ音量を最大 300% まで上げたり下げたりできるツールです。静かな録音のブースト、大きすぎるオーディオの削減、音量レベルのノーマライズを — 保存前にリアルタイムプレビューで確認しながら行えます。</p><p>ブラウザ内で精密な音量制御を実現する FFmpeg.wasm を使用しています。</p>"
-          },
-          "howToUse": {
-            "title": "音量調整の使い方",
-            "content": "<ol><li>オーディオファイルをアップロード（MP3、WAV、OGG、AAC、FLAC 対応）</li><li><strong>音量スライダー</strong>を調整（50% から 300%）</li><li>リアルタイムで調整されたオーディオをプレビュー</li><li><strong>適用</strong>をクリックして処理を開始</li><li>音量調整されたオーディオをダウンロード</li></ol><p>200% を超える音量には注意が必要です — 極端な増幅は静かな録音に歪みをもたらす可能性があります。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>音量範囲</strong>：元の音量の 50% から 300% まで調整</li><li><strong>リアルタイムプレビュー</strong>：処理前に音量変化を確認</li><li><strong>複数フォーマット対応</strong>：MP3、WAV、OGG、AAC、FLAC に対応</li><li><strong>FFmpeg.wasm 搭載</strong>：ブラウザでプロ品質のオーディオ処理</li><li><strong>精密なコントロール</strong>：スライダーで音量を微調整</li><li><strong>高品質出力</strong>：高品質なオーディオ処理</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",

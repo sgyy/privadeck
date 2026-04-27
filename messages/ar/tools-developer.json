@@ -47,14 +47,6 @@
             "title": "منسّق JSON ومعاين احترافي",
             "content": "<p><strong>JSON Formatter</strong> أداة JSON مجانية احترافية تجمع بين محرر Monaco وعرض الشجرة التفاعلي والتحقق الفوري في واجهة واحدة. الصق JSON فوضوي أو مضغوط واحصل فورًا على مخرجات نظيفة مقروءة مع تمييز الصياغة وطي الكود واستكشاف الشجرة البصري.</p><p>سواء كنت تصحح استجابات API، أو تفحص هياكل بيانات متداخلة، أو تراجع ملفات الإعدادات، أو تُعد بيانات للتوثيق — تمنحك هذه الأداة كل ما تحتاجه دون مغادرة متصفحك أو رفع بايت واحد.</p>"
           },
-          "howToUse": {
-            "title": "كيفية استخدام منسّق JSON",
-            "content": "<ol><li>الصق أو اكتب JSON في Monaco Editor على اليسار — أو اسحب وأفلت ملف <code>.json</code></li><li>تتحقق الأداة فوريًا وتُظهر حالة <strong>صالح</strong> أو <strong>غير صالح</strong> على الفور</li><li>انقر على <strong>تنسيق</strong> للطباعة المنسقة بالمسافات البادئة التي اخترتها، أو <strong>تصغير</strong> للضغط</li><li>انتقل إلى عرض <strong>الشجرة</strong> لاستكشاف البنية بصريًا، أو عرض <strong>الكود</strong> للمخرجات مع تمييز الصياغة</li><li>استخدم مرشح JSON Path (مثل <code>$.data.users[0]</code>) للوصول إلى قيم محددة</li><li>انسخ أو نزّل النتيجة بنقرة واحدة</li></ol>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>Monaco Editor</strong>: نفس محرر الكود الذي يشغّل VS Code — مع تمييز الصياغة ومطابقة الأقواس وطي الكود والتفاف الكلمات</li><li><strong>عرض الشجرة التفاعلي</strong>: توسيع وطي عقد JSON بصريًا مع عدد العناصر في كل مستوى والتنقل الكامل بلوحة المفاتيح</li><li><strong>تصفية JSON Path</strong>: استعلام عن قيم محددة باستخدام تعبيرات مسار مثل <code>$.address.city</code> أو <code>$.items[0].name</code></li><li><strong>التحقق الفوري</strong>: فحص الصياغة فوريًا أثناء الكتابة — دون الحاجة لنقر زر</li><li><strong>طباعة منسقة &amp; تصغير</strong>: تنسيق بمسافات بادئة قابلة للتخصيص (2 أو 4 أو 8 مسافات) أو الضغط في سطر واحد</li><li><strong>دعم السحب والإفلات للملفات</strong>: أفلت ملفات <code>.json</code> أو <code>.txt</code> مباشرة في المحرر</li><li><strong>لوح مقسّم قابل للتغيير</strong>: اسحب الفاصل لتوازن مساحة المحرر والمعاين؛ انقر مزدوجًا لإعادة الضبط</li><li><strong>عرض الكود بتمييز الصياغة</strong>: مخرجات ملوّنة بأرقام الأسطر لسهولة النسخ واللصق</li><li><strong>100% في المتصفح</strong>: لا رفع للخادم — تبقى بياناتك على جهازك دائمًا</li></ul>"
-          },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
             "content": "<ul><li><strong>تطوير API &amp; تصحيح الأخطاء</strong>: الصق استجابات API الخام، ونسّقها فوريًا، واستخدم عرض الشجرة للتنقل في الكائنات المتداخلة</li><li><strong>ملفات الإعدادات</strong>: نظّف <code>package.json</code> و<code>tsconfig.json</code> و<code>.eslintrc</code> أو بيانات Kubernetes</li><li><strong>استكشاف البيانات</strong>: استخدم JSON Path لتصفية مجموعات البيانات الكبيرة والعثور على قيم محددة دون التمرير في آلاف الأسطر</li><li><strong>مراجعة الكود</strong>: قارن هياكل JSON بصريًا بعرض الشجرة لاكتشاف الفروق بسرعة</li><li><strong>التوثيق</strong>: نسّق وصدّر أمثلة JSON منظمة جيدًا للتوثيق التقني والدروس التعليمية</li><li><strong>سجلات قواعد البيانات</strong>: افحص ونسّق JSON المخزن في MongoDB أو CouchDB أو أعمدة PostgreSQL JSONB</li></ul>"
@@ -187,14 +179,6 @@
             "title": "Visual JSON Editor for Developers",
             "content": "<p><strong>JSON Editor</strong> is a browser-based JSON editor with three view modes: <strong>Text</strong> for raw editing with Monaco Editor, <strong>Tree</strong> for visual structure editing, and <strong>Preview</strong> for read-only syntax-highlighted display.</p><p>In Tree mode, double-click a key or value to edit it in place. Right-click any node for the full context menu: insert before or after, duplicate, change type, delete, copy path. Undo and redo are available at every step. When you paste invalid JSON, one click repairs common mistakes like trailing commas, single quotes, and JavaScript comments.</p>"
           },
-          "howToUse": {
-            "title": "How to Use JSON Editor",
-            "content": "<ol><li>Paste, type, or drop a <code>.json</code> file into the editor</li><li>If the JSON is invalid, click <strong>Auto Repair</strong> to fix common mistakes</li><li>Use the <strong>view switcher</strong> to pick Text, Tree, or Preview mode</li><li>In <strong>Tree</strong> mode: double-click any key or value to edit in place; right-click for insert/duplicate/delete/change type/copy path</li><li>Use <strong>Ctrl+Z</strong> / <strong>Ctrl+Y</strong> to undo and redo</li><li>Click <strong>Format</strong>, <strong>Minify</strong>, or <strong>Smart</strong> to reformat, then <strong>Download</strong> or <strong>Copy</strong> to export</li></ol>"
-          },
-          "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Three View Modes</strong>: Text (Monaco), Tree (interactive), Preview (read-only) — switch anytime</li><li><strong>Visual Tree Editing</strong>: Double-click any key or value, right-click for the full context menu</li><li><strong>Full Type Switching</strong>: Convert any value between string, number, boolean, null, object, and array</li><li><strong>Undo / Redo</strong>: 50-step history with Ctrl+Z / Ctrl+Y shortcuts</li><li><strong>Auto Repair</strong>: Fixes trailing commas, single quotes, missing quotes, JavaScript comments, and more</li><li><strong>Smart Format</strong>: Inline short arrays/objects, expand long ones — compact yet readable</li><li><strong>Monaco Editor</strong>: The same code editor that powers VS Code, for raw text editing</li><li><strong>Path Display &amp; Copy</strong>: Click any node to see and copy its JSON Path</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
-          },
           "useCases": {
             "title": "Common Use Cases",
             "content": "<ul><li><strong>Config File Editing</strong>: Safely modify <code>package.json</code>, <code>tsconfig.json</code>, or Kubernetes manifests without syntax errors</li><li><strong>Test Data Crafting</strong>: Quickly build fixtures by duplicating nodes, changing types, and renaming keys</li><li><strong>API Response Debugging</strong>: Paste a response, restructure it, and diff against the expected shape</li><li><strong>Schema Migration</strong>: Compare two versions of a JSON document to see exactly what changed</li><li><strong>Fixing Broken JSON</strong>: Use Auto Repair to recover from trailing commas, stray quotes, or mixed delimiters</li><li><strong>Data Cleanup</strong>: Delete unwanted fields in bulk with right-click + Delete, then export the cleaned data</li></ul>"
@@ -240,14 +224,6 @@
           "intro": {
             "title": "ما هو أداة ترميز/فك ترميز Base64؟",
             "content": "<p><strong>أداة ترميز/فك ترميز Base64</strong> تحول النصوص والملفات إلى ترميز Base64 والعكس. Base64 هو نظام ترميز من ثنائي إلى نص يُستخدم على نطاق واسع لتضمين البيانات في عناوين URL والبريد الإلكتروني وHTML وJSON.</p><p>قم بترميز النصوص أو أي ملف (صور، PDF، ZIP) إلى Base64، أو فك ترميز Base64 إلى نص أو ملفات قابلة للتنزيل — كل ذلك في متصفحك، مع دعم المتغير الآمن لعناوين URL وData URI.</p>"
-          },
-          "howToUse": {
-            "title": "كيفية استخدام أداة ترميز/فك ترميز Base64",
-            "content": "<ol><li>اختر وضع <strong>النص</strong> أو <strong>الملف</strong> حسب مدخلاتك</li><li>حدد اتجاه <strong>الترميز</strong> أو <strong>فك الترميز</strong> — الأداة تكتشف مدخلات Base64 تلقائياً</li><li>اختر المتغير <strong>القياسي</strong> أو <strong>الآمن لعناوين URL</strong> حسب الحاجة</li><li>تظهر النتائج فوراً أثناء الكتابة — لا حاجة للنقر على أي زر</li><li>استخدم <strong>النسخ</strong> أو <strong>التنزيل</strong> أو <strong>التبديل</strong> للتعامل مع المخرجات</li></ol><p>عند ترميز الملفات، فعّل <strong>مخرجات Data URI</strong> للحصول على عنوان data URL جاهز للاستخدام في تضمين HTML/CSS.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>تحويل فوري</strong>: ترميز أو فك ترميز فوري أثناء الكتابة — لا حاجة للنقر على أزرار</li><li><strong>دعم النصوص والملفات</strong>: ترميز أي ملف (صور، PDF، ZIP) إلى Base64، أو فك ترميز Base64 إلى ملف قابل للتنزيل</li><li><strong>Base64 آمن لعناوين URL</strong>: متغير RFC 4648 يستبدل +/ بـ -_ ويحذف الحشو — مثالي لرموز JWT ومعاملات URL</li><li><strong>مخرجات Data URI</strong>: إنشاء سلاسل <code>data:{mime};base64,...</code> جاهزة للاستخدام للتضمين في HTML أو CSS أو JavaScript</li><li><strong>معاينة الصور</strong>: اكتشاف وعرض معاينة تلقائية عند فك ترميز بيانات صور Base64 (PNG، JPEG، GIF، WebP)</li><li><strong>اكتشاف تلقائي</strong>: اكتشاف ذكي لمدخلات Base64 والتبديل تلقائياً إلى وضع فك الترميز</li><li><strong>تبديل وإحصائيات</strong>: تبديل المخرجات إلى المدخلات بنقرة واحدة، مع عرض حجم البايت وعدد الأحرف في الوقت الفعلي</li><li><strong>دعم UTF-8</strong>: معالجة صحيحة لأحرف Unicode والرموز التعبيرية والنصوص متعددة البايت</li><li><strong>بدون حدود للحجم</strong>: معالجة نصوص أو ملفات بأي حجم — محدود فقط بذاكرة جهازك</li></ul>"
           },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
@@ -345,14 +321,6 @@
             "title": "ما هو مرمّز/فاك ترميز URL؟",
             "content": "<p><strong>مرمّز/فاك ترميز URL</strong> يحوّل الأحرف الخاصة في URLs إلى معادلات percent-encoded وعكسياً. ضروري لإنشاء URLs صحيحة تحتوي على مسافات وأحرف غير ASCII.</p><p>استخدمه لتمرير معاملات الاستعلام بأمان أو ترميز مسارات الملفات أو تصحيح URLs معطلة.</p>"
           },
-          "howToUse": {
-            "title": "كيفية استخدام مرمّز URL",
-            "content": "<ol><li>أدخل نصك أو مكون URL</li><li>اختر <strong>ترميز</strong> أو <strong>فك ترميز</strong></li><li>تحدث النتيجة فوراً</li><li>انقر على <strong>نسخ</strong></li></ol><p>يرمّز جميع الأحرف غير الآمنة في URLs وفقاً لـ RFC 3986.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>متوافق RFC 3986</strong>: ترميز صحيح للأحرف</li><li><strong>معالجة فورية</strong>: النتائج تحدث فوراً</li><li><strong>دعم Unicode</strong>: يتعامل مع أحرف دولية</li><li><strong>ترميز المكونات</strong>: رمّز معاملات الاستعلام</li><li><strong>نسخ بنقرة واحدة</strong>: نسخ سريع</li><li><strong>قائم على المتصفح 100٪</strong>: لا توجد تحميلات</li></ul>"
-          },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
             "content": "<ul><li><strong>معاملات الاستعلام</strong>: رمّز القيم في query strings</li><li><strong>طلبات API</strong>: رمّز معاملات طلبات REST</li><li><strong>URLs إعادة التوجيه</strong>: رمّز URLs للتحويلات</li><li><strong>مسارات الملفات</strong>: رمّز أسماء الملفات</li><li><strong>التصحيح</strong>: فك ترميز URLs المعطلة</li></ul>"
@@ -390,14 +358,6 @@
             "title": "ما هو التعرف الضوئي على النص (OCR)؟",
             "content": "<p><strong>OCR Text Recognition</strong> استخرج النص من الصور باستخدام Tesseract.js. احمِ صورة أو لقطة شاشة أو إيصال، واحصل على النص الذي يمكنك نسخه وتحريره.</p><p>يدعم <strong>12+ لغة</strong> بما فيها الإنجليزية والصينية واليابانية والكورية والإسبانية والفرنسية — كل ذلك يتم معالجته محلياً في متصفحك.</p>"
           },
-          "howToUse": {
-            "title": "كيفية استخدام OCR",
-            "content": "<ol><li>احمِ صورة بالنقر أو السحب</li><li>اختر لغة النص</li><li>انقر على <strong>استخرج النص</strong></li><li>اعرض النص المستخرج وانسخه</li></ol><p>للحصول على أفضل النتائج، استخدم صوراً واضحة عالية التباين.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>12+ لغة</strong>: تعرّف على نصوص في لغات متعددة</li><li><strong>تنسيقات صور متعددة</strong>: JPG وPNG وWebP</li><li><strong>Tesseract.js</strong>: محرك OCR صناعي</li><li><strong>دقة عالية</strong>: أفضل النتائج على النصوص المطبوعة</li><li><strong>نسخ وتحرير</strong>: النص قابل للنسخ بالكامل</li><li><strong>معالجة محلية 100٪</strong>: لا توجد تحميلات خادمية</li></ul>"
-          },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
             "content": "<ul><li><strong>رقمنة المستندات</strong>: تحويل المستندات المطبوعة إلى نص</li><li><strong>استخراج النص من اللقطات</strong>: استخرج نصوص الويب</li><li><strong>التحضير للترجمة</strong>: استخرج النصوص الأجنبية</li><li><strong>إدخال البيانات</strong>: رقمنة نصوص النماذج</li><li><strong>الوصول</strong>: اجعل النصوص متاحة لقارئات الشاشة</li></ul>"
@@ -433,14 +393,6 @@
           "intro": {
             "title": "ما هو مستخرج ZIP؟",
             "content": "<p><strong>ZIP Extractor</strong> يتيح لك فتح واستخراج محتويات أرشيفات ZIP مباشرة في متصفحك. استعرض أسماء الملفات والأحجام والهيكل قبل تحميل الملفات الفردية.</p><p>لا تحتاج إلى تثبيت البرنامج — فقط اسحب ملف ZIP واستعرض محتوياته على الفور.</p>"
-          },
-          "howToUse": {
-            "title": "كيفية استخدام ZIP Extractor",
-            "content": "<ol><li>اسحب ملف ZIP أو انقر للاختيار</li><li>عرض محتويات الأرشيف</li><li>انقر على ملفات فردية للتحميل أو استخرج الكل</li></ol><p>يدعم الأرشيفات القياسية. قد تستغرق الأرشيفات الكبيرة وقتاً.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>معاينة فورية</strong>: شاهد الملفات قبل الاستخراج</li><li><strong>استخراج انتقائي</strong>: حمّل ملفات فردية فقط</li><li><strong>عرض حجم الملفات</strong>: شاهد الأحجام المضغوطة وغير المضغوطة</li><li><strong>هيكل المجلدات</strong>: تصفح الهيكل الهرمي</li><li><strong>fflate</strong>: فك ضغط عالي الأداء</li><li><strong>بدون حدود حجم</strong>: محدود فقط بذاكرة جهازك</li></ul>"
           },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
@@ -480,14 +432,6 @@
           "intro": {
             "title": "ما هو محوّل CSV/JSON؟",
             "content": "<p><strong>محوّل CSV/JSON</strong> يحوّل بيانات CSV إلى JSON والعكس على الفور. سهّل مبادلة البيانات بين تنسيقات الملفات الشائعة دون برنامج منفصل.</p><p>استخدمه لاستيراد البيانات من جداول البيانات أو تصدير نتائج الاستعلام أو تحويل ملفات الإعدادات.</p>"
-          },
-          "howToUse": {
-            "title": "كيفية استخدام محوّل CSV/JSON",
-            "content": "<ol><li>الصق بيانات CSV أو JSON في الحقل المناسب</li><li>انقر على زر التحويل (CSV → JSON أو JSON → CSV)</li><li>سيظهر الناتج المحوّل فوراً</li><li>انقر على <strong>نسخ</strong> أو <strong>حمّل</strong></li></ol><p>يتعامل مع الحقول المحاطة بعلامات اقتباس والبيانات المتداخلة تلقائياً.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>تحويل فوري</strong>: حوّل بين CSV و JSON على الفور</li><li><strong>معالجة الحقول</strong>: يتعامل مع الفواصل والعلامات بشكل صحيح</li><li><strong>تمييز بناء الجملة</strong>: شاهد النتائج مع التمييز</li><li><strong>نسخ/تحميل</strong>: انسخ أو حمّل النتائج</li><li><strong>بدون حدود حجم</strong>: معالجة أي حجم بيانات</li><li><strong>قائم على المتصفح 100٪</strong>: لا توجد تحميلات خادمية</li></ul>"
           },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
@@ -584,14 +528,6 @@
             "title": "ما هو مولّد الهاش؟",
             "content": "<p><strong>مولّد الهاش</strong> يحسب قيم الهاش التشفيرية للنصوص أو الملفات باستخدام خوارزميات MD5 و SHA-1 و SHA-256 و SHA-384 و SHA-512 و SHA3-256 و SHA3-512 و CRC32. كما يدعم HMAC (رمز مصادقة الرسائل المستند إلى الهاش) مع مفتاح سري. الهاش هو بصمة أحادية الاتجاه تُستخدم للتحقق من سلامة البيانات ومقارنة الملفات والتحقق من التنزيلات.</p><p>أنشئ قيم الهاش فوراً في متصفحك مع الحساب الفوري — مثالي للتحقق من سلامة الملفات أو إنشاء ملخصات المحتوى.</p>"
           },
-          "howToUse": {
-            "title": "كيفية استخدام مولّد الهاش",
-            "content": "<ol><li>أدخل النص مباشرة — يتم حساب الهاش فورياً أثناء الكتابة</li><li>أو ارفع ملفات (فردية أو دفعية) لحساب هاش الملفات</li><li>بدّل بين صيغ الإخراج: سداسي عشري (أحرف صغيرة/كبيرة) و Base64</li><li>استخدم حقل التحقق للمقارنة مع هاش معروف</li><li>فعّل وضع HMAC لحساب الهاش بالمفتاح</li></ol><p>للتحقق من سلامة الملفات، قارن الهاش المُنشأ مع المجموع الاختباري المقدّم من مصدر الملف.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>8 خوارزميات</strong>: MD5 و CRC32 و SHA-1 و SHA-256 و SHA-384 و SHA-512 و SHA3-256 و SHA3-512</li><li><strong>دعم HMAC</strong>: حساب هاش بالمفتاح باستخدام خوارزميات SHA لمصادقة الرسائل</li><li><strong>حساب فوري</strong>: تظهر النتائج فوراً أثناء الكتابة</li><li><strong>التحقق من الهاش</strong>: مقارنة مع قيم الهاش المتوقعة مع مؤشر مرئي للتطابق</li><li><strong>معالجة دفعية للملفات</strong>: حساب هاش ملفات متعددة دفعة واحدة</li><li><strong>صيغ إخراج متعددة</strong>: سداسي عشري (أحرف صغيرة/كبيرة) و Base64</li><li><strong>نسخ وتصدير</strong>: نسخ هاش فردي أو جميعها، تنزيل كملف نصي</li><li><strong>تقدم الملف</strong>: مؤشر تقدم لمعالجة الملفات الكبيرة</li></ul>"
-          },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
             "content": "<ul><li><strong>سلامة الملفات</strong>: تحقق من عدم التلاعب بالملفات المنزّلة بمقارنة المجاميع الاختبارية</li><li><strong>إزالة التكرار</strong>: قارن قيم الهاش للعثور على الملفات المكررة</li><li><strong>مصادقة API</strong>: أنشئ توقيعات HMAC لطلبات API</li><li><strong>توزيع البرمجيات</strong>: أنشئ مجاميع اختبارية لإصدارات ملفاتك</li><li><strong>التدقيق الأمني</strong>: احسب هاش الملفات لكشف التعديلات غير المصرّح بها</li></ul>"
@@ -629,14 +565,6 @@
           "intro": {
             "title": "ما هو محوّل الألوان؟",
             "content": "<p><strong>محوّل الألوان</strong> يحوّل الألوان بين صيغ HEX و RGB و HSL مع معاينة فورية. أدخل لوناً بأي صيغة واحصل على جميع التمثيلات الأخرى فوراً.</p><p>مفيد للمصممين والمطورين الذين يريدون نقل الألوان بين CSS و HTML و الأدوات الأخرى.</p>"
-          },
-          "howToUse": {
-            "title": "كيفية استخدام محوّل الألوان",
-            "content": "<ol><li>أدخل قيمة لون: #ff6600 أو rgb(255, 102, 0) أو hsl(24, 100%, 50%)</li><li>ستظهر المعاينة والصيغ الأخرى فوراً</li><li>انقر على أي صيغة لنسخها</li><li>استخدمها في CSS أو HTML الخاص بك</li></ol><p>يدعم الألوان المسماة و معاينة مباشرة.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>صيغ HEX</strong>: #ff6600 أو #f60</li><li><strong>صيغ RGB</strong>: rgb(255, 102, 0)</li><li><strong>صيغ HSL</strong>: hsl(24, 100%, 50%)</li><li><strong>معاينة مباشرة</strong>: شاهد اللون على الفور</li><li><strong>نسخ بنقرة واحدة</strong>: نسخ سريع</li><li><strong>قائم على المتصفح 100٪</strong>: بدون تحميلات</li></ul>"
           },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
@@ -677,14 +605,6 @@
             "title": "ما هو محوّل JSON ↔ XML؟",
             "content": "<p><strong>محوّل JSON ↔ XML</strong> يحوّل بيانات JSON إلى XML والعكس بسهولة. تحويل فوري بين صيغتي البيانات الشهيرتين بدون برنامج منفصل.</p><p>استخدمه لتحويل استجابات API أو ملفات الإعدادات أو البيانات المرسلة عبر SOAP.</p>"
           },
-          "howToUse": {
-            "title": "كيفية استخدام محوّل JSON/XML",
-            "content": "<ol><li>الصق JSON أو XML في الحقل المناسب</li><li>انقر على زر التحويل (JSON → XML أو XML → JSON)</li><li>سيظهر الناتج المحوّل فوراً</li><li>انقر على <strong>نسخ</strong> أو <strong>حمّل</strong></li></ol><p>يتعامل مع البيانات المتداخلة والمصفوفات تلقائياً.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>تحويل فوري</strong>: حوّل بين JSON و XML على الفور</li><li><strong>معالجة البيانات المتداخلة</strong>: يتعامل مع الهياكل المعقدة</li><li><strong>تمييز بناء الجملة</strong>: شاهد النتائج مع التمييز</li><li><strong>نسخ/تحميل</strong>: انسخ أو حمّل النتائج</li><li><strong>تنسيق جميل</strong>: مخرجات منسقة بشكل جيد</li><li><strong>قائم على المتصفح 100٪</strong>: لا توجد تحميلات</li></ul>"
-          },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
             "content": "<ul><li><strong>تحويل API</strong>: تحويل استجابات SOAP إلى JSON</li><li><strong>ملفات الإعدادات</strong>: تحويل ملفات XML إلى JSON</li><li><strong>تبادل البيانات</strong>: تحويل تنسيقات البيانات</li><li><strong>الاختبار</strong>: اختبار محولات البيانات</li><li><strong>إدارة البيانات</strong>: تنظيم البيانات بين الصيغ</li></ul>"
@@ -721,14 +641,6 @@
           "intro": {
             "title": "ما هو محرر معاينة Markdown؟",
             "content": "<p><strong>معاينة Markdown</strong> يتيح لك كتابة Markdown جنباً إلى جنب مع معاينة HTML المباشرة. شاهد كيف سيبدو محتواك أثناء الكتابة دون ترك المحرر.</p><p>مثالي للكتاب والمدونين والمطورين الذين يريدون التحكم الكامل على Markdown.</p>"
-          },
-          "howToUse": {
-            "title": "كيفية استخدام معاينة Markdown",
-            "content": "<ol><li>اكتب Markdown في الجانب الأيسر</li><li>شاهد معاينة HTML على الجانب الأيمن</li><li>استخدم الحقول والاختصارات: # للعناوين، ** للعريض</li><li>انقر على <strong>نسخ HTML</strong> لنسخ الناتج</li></ol><p>يدعم جميع ميزات Markdown الشهيرة.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>معاينة مباشرة</strong>: شاهد النتائج في الوقت الفعلي</li><li><strong>ميزات كاملة</strong>: عناوين، روابط، صور، جداول، كود</li><li><strong>تمييز بناء الجملة</strong>: كود ملون</li><li><strong>نسخ HTML</strong>: نسخ النتيجة مباشرة</li><li><strong>تحميل</strong>: حمّل كـ HTML أو Markdown</li><li><strong>قائم على المتصفح 100٪</strong>: بدون تحميلات</li></ul>"
           },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
@@ -770,14 +682,6 @@
           "intro": {
             "title": "ما هو اختبار Regex؟",
             "content": "<p><strong>اختبار التعبيرات النمطية (Regex Tester)</strong> يتيح لك اختبار أنماط regex مع مطابقة فورية وتمييز. أدخل نمطاً ونصاً تجريبياً واعرض المطابقات والتفاصيل على الفور.</p><p>أداة أساسية للمطورين الذين يعملون مع البحث والاستبدال ومعالجة النصوص.</p>"
-          },
-          "howToUse": {
-            "title": "كيفية استخدام اختبار Regex",
-            "content": "<ol><li>أدخل نمط regex في حقل النمط</li><li>أدخل النص التجريبي</li><li>اختر الأعلام (g, i, m, s) إذا لزم الأمر</li><li>اعرض المطابقات والتفاصيل على الفور</li><li>اختبر والتقط المجموعات</li></ol><p>شاهد تفاصيل كل مطابقة بما في ذلك المجموعات المسماة.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>أعلام Regex</strong>: global (g)، case-insensitive (i)، multiline (m)، dotall (s)</li><li><strong>تمييز مطابقات</strong>: اعرض المطابقات المميزة</li><li><strong>مجموعات مسماة</strong>: (?<name>...)</li><li><strong>تفاصيل مطابقة</strong>: شاهد كل مطابقة</li><li><strong>اختبار فوري</strong>: النتائج على الفور</li><li><strong>قائم على المتصفح 100٪</strong>: بدون تحميلات</li></ul>"
           },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
@@ -822,14 +726,6 @@
             "title": "ما هو محوّل الطوابع الزمنية Unix؟",
             "content": "<p><strong>محوّل الطوابع الزمنية Unix</strong> يحوّل بين طوابع Unix الزمنية (Epoch) والتواريخ المقروءة. أدخل طابع زمني واحصل على التاريخ والوقت بصيغ متعددة، أو حوّل تاريخاً إلى طابع زمني.</p><p>مفيد للمطورين والمسؤولين الذين يعملون مع السجلات والبيانات الزمنية.</p>"
           },
-          "howToUse": {
-            "title": "كيفية استخدام محوّل الطوابع الزمنية",
-            "content": "<ol><li>أدخل طابع Unix (ثوانٍ أو مللي ثانية)</li><li>أو اختر تاريخاً وتوقيتاً</li><li>شاهد التحويل في صيغ متعددة</li><li>انقر على <strong>نسخ</strong></li></ol><p>يدعم UTC والتوقيت المحلي و ISO 8601.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>طوابع Unix</strong>: ثوانٍ أو مللي ثانية</li><li><strong>صيغ متعددة</strong>: UTC والتوقيت المحلي و ISO 8601</li><li><strong>وقت الآن</strong>: زر لضبط الوقت الحالي</li><li><strong>تحويل ثنائي</strong>: اتجاهين</li><li><strong>عرض نسبي</strong>: \"منذ دقيقة\"</li><li><strong>قائم على المتصفح 100٪</strong>: بدون تحميلات</li></ul>"
-          },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
             "content": "<ul><li><strong>فحص السجلات</strong>: تحويل طوابع السجل</li><li><strong>تطوير API</strong>: اختبار معالجة الوقت</li><li><strong>قواعد البيانات</strong>: تحويل الطوابع الزمنية</li><li><strong>البرمجة النصية</strong>: حساب الفترات الزمنية</li><li><strong>الجدولة</strong>: تحويل أوقات الأحداث</li></ul>"
@@ -868,14 +764,6 @@
           "intro": {
             "title": "ما هو محوّل YAML ↔ JSON؟",
             "content": "<p><strong>محوّل YAML ↔ JSON</strong> يحوّل بيانات YAML إلى JSON والعكس بسهولة. تحويل فوري بين صيغتي البيانات بدون برنامج منفصل.</p><p>استخدمه لتحويل ملفات الإعدادات أو سجلات Docker Compose أو ملفات GitHub Actions.</p>"
-          },
-          "howToUse": {
-            "title": "كيفية استخدام محوّل YAML/JSON",
-            "content": "<ol><li>الصق YAML أو JSON في الحقل المناسب</li><li>انقر على زر التحويل (YAML → JSON أو JSON → YAML)</li><li>سيظهر الناتج المحوّل فوراً</li><li>انقر على <strong>نسخ</strong> أو <strong>حمّل</strong></li></ol><p>يتعامل مع جميع ميزات YAML القياسية.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>تحويل فوري</strong>: حوّل بين YAML و JSON على الفور</li><li><strong>معالجة متقدمة</strong>: المراسي والأسماء المستعارة</li><li><strong>تمييز بناء الجملة</strong>: شاهد النتائج مع التمييز</li><li><strong>نسخ/تحميل</strong>: انسخ أو حمّل النتائج</li><li><strong>تنسيق جميل</strong>: مخرجات منسقة بشكل جيد</li><li><strong>قائم على المتصفح 100٪</strong>: لا توجد تحميلات</li></ul>"
           },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
@@ -917,14 +805,6 @@
             "title": "ما هي أداة مقارنة النصوص (Diff)؟",
             "content": "<p><strong>مقارنة النصوص</strong> توازي بين نصين وتعرض الاختلافات بسطر واحد في كل مرة. اعرض بوضوح ما أضيف وما حُذف وما لم يتغير.</p><p>مفيدة للمطورين لمقارنة الملفات وملخصات التغييرات وفحص الأخطاء.</p>"
           },
-          "howToUse": {
-            "title": "كيفية استخدام مقارنة النصوص",
-            "content": "<ol><li>الصق النص الأصلي في الحقل الأول</li><li>الصق النص المُعدَّل في الحقل الثاني</li><li>انقر على <strong>مقارنة</strong></li><li>اعرض الفروقات بالألوان</li><li>انقر على <strong>نسخ</strong> للنتيجة</li></ol><p>الأخضر للإضافات، الأحمر للحذف، الرمادي للبقاء دون تغيير.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>عرض جنباً إلى جنب</strong>: مقارنة سطرية</li><li><strong>تمييز الألوان</strong>: أخضر وأحمر للفروقات</li><li><strong>خوارزمية LCS</strong>: اكتشاف دقيق للتغييرات</li><li><strong>نسخ النتائج</strong>: انسخ بصيغة unified diff</li><li><strong>أرقام الأسطر</strong>: تتبع سهل</li><li><strong>قائم على المتصفح 100٪</strong>: بدون تحميلات</li></ul>"
-          },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
             "content": "<ul><li><strong>مراجعة الكود</strong>: مقارنة تغييرات الملفات</li><li><strong>الكتابة</strong>: مقارنة المسودات</li><li><strong>البحث والاستبدال</strong>: التحقق من التغييرات</li><li><strong>التصحيح</strong>: إيجاد الخطأ</li><li><strong>التحكم في الإصدارات</strong>: فهم ملخصات Git</li></ul>"
@@ -964,14 +844,6 @@
           "intro": {
             "title": "ما هو عداد الكلمات؟",
             "content": "<p><strong>عداد الكلمات</strong> يعدّ الكلمات والأحرف والجمل والفقرات في نصك فوراً. احصل على إحصائيات مفصلة مع تقدير وقت القراءة.</p><p>مفيد للكتاب والطلاب والمطورين الذين يريدون تحليل النصوص بسرعة.</p>"
-          },
-          "howToUse": {
-            "title": "كيفية استخدام عداد الكلمات",
-            "content": "<ol><li>اكتب أو الصق نصك</li><li>اعرض العد فوراً</li><li>اطّلع على الإحصائيات</li><li>سيظهر وقت القراءة تلقائياً</li></ol><p>جميع الأرقام محدّثة في الوقت الفعلي.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>عد الكلمات</strong>: العدد الدقيق للكلمات</li><li><strong>عد الأحرف</strong>: شامل أو بدون مسافات</li><li><strong>عد الجمل</strong>: تقدير بناءً على النقاط</li><li><strong>عد الفقرات</strong>: حسب الأسطر الفارغة</li><li><strong>وقت القراءة</strong>: تقدير بناءً على 200 كلمة/دقيقة</li><li><strong>قائم على المتصفح 100٪</strong>: بدون تحميلات</li></ul>"
           },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
@@ -1016,14 +888,6 @@
             "title": "ما هو محوّل حالة الأحرف؟",
             "content": "<p><strong>محوّل حالة الأحرف</strong> يحوّل النص بين تنسيقات مختلفة: UPPERCASE و lowercase و Title Case و camelCase و snake_case والمزيد.</p><p>مفيد للمطورين لتنسيق أسماء المتغيرات والثوابت أو للكتاب لتنسيق رؤوس الأقسام.</p>"
           },
-          "howToUse": {
-            "title": "كيفية استخدام محوّل حالة الأحرف",
-            "content": "<ol><li>اكتب أو الصق نصك</li><li>انقر على أي تنسيق</li><li>شاهد النتيجة على الفور</li><li>انقر على <strong>نسخ</strong></li></ol><p>يتحول تلقائياً أثناء الكتابة.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>UPPERCASE</strong>: كل الأحرف كبيرة</li><li><strong>lowercase</strong>: كل الأحرف صغيرة</li><li><strong>Title Case</strong>: كل كلمة بحرف كبير</li><li><strong>camelCase</strong>: الحرف الأول صغير</li><li><strong>PascalCase</strong>: الحرف الأول كبير</li><li><strong>snake_case و kebab-case</strong>: للبرمجة</li></ul>"
-          },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",
             "content": "<ul><li><strong>أسماء المتغيرات</strong>: camelCase أو PascalCase</li><li><strong>الثوابت</strong>: CONSTANT_CASE</li><li><strong>رؤوس الأقسام</strong>: Title Case</li><li><strong>مسارات الملفات</strong>: kebab-case</li><li><strong>معرّفات HTML</strong>: kebab-case</li></ul>"
@@ -1063,14 +927,6 @@
           "intro": {
             "title": "ما هو مولّد Lorem Ipsum؟",
             "content": "<p><strong>مولّد Lorem Ipsum</strong> ينشئ نصاً بديلاً عشوائياً حسب احتياجاتك: فقرات كاملة أو جمل قصيرة أو كلمات فقط.</p><p>مفيد للمصممين والمطورين لملء التخطيطات والنماذج قبل إضافة المحتوى الفعلي.</p>"
-          },
-          "howToUse": {
-            "title": "كيفية استخدام مولّد Lorem Ipsum",
-            "content": "<ol><li>اختر نوع الإنشاء (فقرات/جمل/كلمات)</li><li>أدخل العدد المطلوب</li><li>اختياري: ابدأ بـ \"Lorem ipsum...\" الكلاسيكية</li><li>انقر على <strong>إنشاء</strong></li><li>انقر على <strong>نسخ</strong></li></ol><p>يُعاد توليد نص جديد كل مرة.</p>"
-          },
-          "features": {
-            "title": "الميزات الرئيسية",
-            "content": "<ul><li><strong>نصوص عشوائية</strong>: مختلفة في كل مرة</li><li><strong>أنواع متعددة</strong>: فقرات أو جمل أو كلمات</li><li><strong>البدء الكلاسيكي</strong>: \"Lorem ipsum dolor sit amet...\"</li><li><strong>نسخ سريع</strong>: زر نسخ مباشر</li><li><strong>بدون حدود</strong>: أي عدد من النصوص</li><li><strong>قائم على المتصفح 100٪</strong>: بدون تحميلات</li></ul>"
           },
           "useCases": {
             "title": "حالات الاستخدام الشائعة",

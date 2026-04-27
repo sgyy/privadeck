@@ -47,14 +47,6 @@
             "title": "Pemformat &amp; Penampil JSON Profesional",
             "content": "<p><strong>JSON Formatter</strong> adalah alat JSON gratis berkualitas profesional yang menggabungkan Monaco code editor, tampilan pohon interaktif, dan validasi real-time dalam satu antarmuka. Tempel JSON berantakan atau terminifikasi dan langsung dapatkan output bersih yang mudah dibaca manusia dengan penyorotan sintaksis, code folding, dan eksplorasi pohon visual.</p><p>Baik Anda men-debug respons API, memeriksa struktur data yang sangat bersarang, meninjau file konfigurasi, atau menyiapkan data untuk dokumentasi — alat ini memberi Anda semua yang dibutuhkan tanpa meninggalkan browser atau mengunggah satu byte pun.</p>"
           },
-          "howToUse": {
-            "title": "Cara Menggunakan Pemformat JSON",
-            "content": "<ol><li>Tempel atau ketik JSON ke Monaco Editor di sebelah kiri — atau drag dan drop file <code>.json</code></li><li>Alat ini memvalidasi secara real-time dan langsung menampilkan status <strong>Valid</strong> atau <strong>Tidak Valid</strong></li><li>Klik <strong>Format</strong> untuk pretty-print dengan indentasi pilihan Anda, atau <strong>Minifikasi</strong> untuk mengompresi</li><li>Beralih ke tampilan <strong>Pohon</strong> untuk menjelajahi struktur secara visual, atau tampilan <strong>Kode</strong> untuk output dengan penyorotan sintaksis</li><li>Gunakan filter JSON Path (misalnya <code>$.data.users[0]</code>) untuk mengakses nilai tertentu</li><li>Salin atau unduh hasilnya dengan satu klik</li></ol>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Monaco Editor</strong>: Code editor yang sama yang menggerakkan VS Code — dengan penyorotan sintaksis, bracket matching, code folding, dan word wrap</li><li><strong>Tampilan Pohon Interaktif</strong>: Perluas dan lipat node JSON secara visual, dengan jumlah item di setiap level dan navigasi keyboard penuh</li><li><strong>Pemfilteran JSON Path</strong>: Query nilai tertentu menggunakan ekspresi path seperti <code>$.address.city</code> atau <code>$.items[0].name</code></li><li><strong>Validasi Real-Time</strong>: Pemeriksaan sintaksis instan saat mengetik — tidak perlu klik tombol</li><li><strong>Pretty Print &amp; Minifikasi</strong>: Format dengan indentasi yang dapat dikustomisasi (2, 4, atau 8 spasi) atau kompresi ke satu baris</li><li><strong>Dukungan File Drag-and-Drop</strong>: Lepas file <code>.json</code> atau <code>.txt</code> langsung ke dalam editor</li><li><strong>Split Pane yang Dapat Diubah Ukuran</strong>: Seret pembatas untuk menyeimbangkan ruang editor dan penampil; double-click untuk reset</li><li><strong>Tampilan Kode dengan Penyorotan Sintaksis</strong>: Output berkode warna dengan nomor baris untuk copy-paste yang mudah</li><li><strong>100% Berbasis Browser</strong>: Tidak ada unggahan server — data Anda selalu ada di perangkat Anda</li></ul>"
-          },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Pengembangan &amp; Debugging API</strong>: Tempel respons API mentah, format seketika, dan gunakan tampilan pohon untuk menavigasi objek yang sangat bersarang</li><li><strong>File Konfigurasi</strong>: Bersihkan <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code>, atau manifes Kubernetes</li><li><strong>Eksplorasi Data</strong>: Gunakan JSON Path untuk memfilter dataset besar dan menemukan nilai tertentu tanpa menggulir ribuan baris</li><li><strong>Tinjauan Kode</strong>: Bandingkan struktur JSON secara visual dengan tampilan pohon untuk menemukan perbedaan dengan cepat</li><li><strong>Dokumentasi</strong>: Format dan ekspor contoh JSON terstruktur dengan baik untuk dokumentasi teknis dan tutorial</li><li><strong>Catatan Database</strong>: Periksa dan format JSON yang tersimpan di kolom MongoDB, CouchDB, atau PostgreSQL JSONB</li></ul>"
@@ -187,14 +179,6 @@
             "title": "Visual JSON Editor for Developers",
             "content": "<p><strong>JSON Editor</strong> is a browser-based JSON editor with three view modes: <strong>Text</strong> for raw editing with Monaco Editor, <strong>Tree</strong> for visual structure editing, and <strong>Preview</strong> for read-only syntax-highlighted display.</p><p>In Tree mode, double-click a key or value to edit it in place. Right-click any node for the full context menu: insert before or after, duplicate, change type, delete, copy path. Undo and redo are available at every step. When you paste invalid JSON, one click repairs common mistakes like trailing commas, single quotes, and JavaScript comments.</p>"
           },
-          "howToUse": {
-            "title": "How to Use JSON Editor",
-            "content": "<ol><li>Paste, type, or drop a <code>.json</code> file into the editor</li><li>If the JSON is invalid, click <strong>Auto Repair</strong> to fix common mistakes</li><li>Use the <strong>view switcher</strong> to pick Text, Tree, or Preview mode</li><li>In <strong>Tree</strong> mode: double-click any key or value to edit in place; right-click for insert/duplicate/delete/change type/copy path</li><li>Use <strong>Ctrl+Z</strong> / <strong>Ctrl+Y</strong> to undo and redo</li><li>Click <strong>Format</strong>, <strong>Minify</strong>, or <strong>Smart</strong> to reformat, then <strong>Download</strong> or <strong>Copy</strong> to export</li></ol>"
-          },
-          "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Three View Modes</strong>: Text (Monaco), Tree (interactive), Preview (read-only) — switch anytime</li><li><strong>Visual Tree Editing</strong>: Double-click any key or value, right-click for the full context menu</li><li><strong>Full Type Switching</strong>: Convert any value between string, number, boolean, null, object, and array</li><li><strong>Undo / Redo</strong>: 50-step history with Ctrl+Z / Ctrl+Y shortcuts</li><li><strong>Auto Repair</strong>: Fixes trailing commas, single quotes, missing quotes, JavaScript comments, and more</li><li><strong>Smart Format</strong>: Inline short arrays/objects, expand long ones — compact yet readable</li><li><strong>Monaco Editor</strong>: The same code editor that powers VS Code, for raw text editing</li><li><strong>Path Display &amp; Copy</strong>: Click any node to see and copy its JSON Path</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
-          },
           "useCases": {
             "title": "Common Use Cases",
             "content": "<ul><li><strong>Config File Editing</strong>: Safely modify <code>package.json</code>, <code>tsconfig.json</code>, or Kubernetes manifests without syntax errors</li><li><strong>Test Data Crafting</strong>: Quickly build fixtures by duplicating nodes, changing types, and renaming keys</li><li><strong>API Response Debugging</strong>: Paste a response, restructure it, and diff against the expected shape</li><li><strong>Schema Migration</strong>: Compare two versions of a JSON document to see exactly what changed</li><li><strong>Fixing Broken JSON</strong>: Use Auto Repair to recover from trailing commas, stray quotes, or mixed delimiters</li><li><strong>Data Cleanup</strong>: Delete unwanted fields in bulk with right-click + Delete, then export the cleaned data</li></ul>"
@@ -240,14 +224,6 @@
           "intro": {
             "title": "Apa itu Encoder/Decoder Base64?",
             "content": "<p><strong>Encoder/Decoder Base64</strong> mengonversi teks dan file ke encoding Base64 dan sebaliknya. Base64 adalah skema encoding biner-ke-teks yang umum digunakan untuk menyematkan data di URL, email, HTML, dan JSON.</p><p>Encode teks atau file apa pun (gambar, PDF, ZIP) ke Base64, atau decode string Base64 kembali ke teks atau file yang dapat diunduh — semua di browser Anda, dengan dukungan varian URL-safe dan Data URI.</p>"
-          },
-          "howToUse": {
-            "title": "Cara Menggunakan Encoder/Decoder Base64",
-            "content": "<ol><li>Pilih mode <strong>Teks</strong> atau <strong>File</strong> sesuai input Anda</li><li>Pilih arah <strong>Encode</strong> atau <strong>Decode</strong> — alat ini mendeteksi input Base64 secara otomatis</li><li>Pilih varian <strong>Standar</strong> atau <strong>URL-safe</strong> sesuai kebutuhan</li><li>Hasil muncul langsung saat Anda mengetik — tidak perlu klik tombol</li><li>Gunakan <strong>Salin</strong>, <strong>Unduh</strong>, atau <strong>Tukar</strong> untuk mengelola output</li></ol><p>Saat encoding file, aktifkan <strong>Output Data URI</strong> untuk mendapatkan data URL siap pakai untuk embedding HTML/CSS.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Konversi Real-Time</strong>: Encode atau decode secara instan saat mengetik — tidak perlu klik tombol</li><li><strong>Dukungan Teks &amp; File</strong>: Encode file apa pun (gambar, PDF, ZIP) ke Base64, atau decode Base64 ke file yang dapat diunduh</li><li><strong>Base64 URL-safe</strong>: Varian RFC 4648 yang mengganti +/ dengan -_ dan menghilangkan padding — ideal untuk token JWT dan parameter URL</li><li><strong>Output Data URI</strong>: Menghasilkan string <code>data:{mime};base64,...</code> siap pakai untuk embedding di HTML, CSS, atau JavaScript</li><li><strong>Preview Gambar</strong>: Mendeteksi dan menampilkan preview secara otomatis saat mendecode data gambar Base64 (PNG, JPEG, GIF, WebP)</li><li><strong>Deteksi Otomatis</strong>: Mendeteksi secara cerdas apakah input Anda adalah Base64 dan beralih ke mode decode secara otomatis</li><li><strong>Tukar &amp; Statistik</strong>: Tukar output ke input dengan satu klik, dengan tampilan ukuran byte dan jumlah karakter real-time</li><li><strong>Dukungan UTF-8</strong>: Menangani karakter Unicode, emoji, dan teks multibyte dengan benar</li><li><strong>Tanpa Batas Ukuran</strong>: Proses teks atau file berukuran apa pun — hanya dibatasi oleh memori perangkat Anda</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
@@ -345,14 +321,6 @@
             "title": "Apa itu URL Encoder/Decoder?",
             "content": "<p><strong>URL Encoder/Decoder</strong> mengubah karakter khusus dalam URL menjadi bentuk percent-encoded dan sebaliknya. Ini penting untuk membuat URL yang valid yang berisi spasi, ampersand, karakter non-ASCII, atau karakter khusus lainnya.</p><p>Gunakan untuk meneruskan parameter kueri dengan aman, mengenkode jalur file, atau men-debug URL yang rusak.</p>"
           },
-          "howToUse": {
-            "title": "Cara Menggunakan URL Encoder/Decoder",
-            "content": "<ol><li>Masukkan teks atau komponen URL Anda di bidang input</li><li>Pilih <strong>Enkode</strong> untuk percent-encode karakter khusus, atau <strong>Dekode</strong> untuk mengubah URL yang dienkode kembali menjadi teks yang dapat dibaca</li><li>Hasil diperbarui secara instan</li><li>Klik <strong>Salin</strong> untuk menyalin hasil yang dienkode/didekode</li></ol><p>Mengenkode semua karakter yang tidak aman dalam URL sesuai RFC 3986, termasuk spasi, &amp;, =, ?, #, dan karakter non-ASCII.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Sesuai RFC 3986</strong>: Mengenkode semua karakter URL yang dipesan dan tidak aman dengan benar</li><li><strong>Pemrosesan Real-Time</strong>: Hasil diperbarui saat Anda mengetik</li><li><strong>Dukungan Unicode</strong>: Menangani karakter internasional dan emoji dalam URL dengan benar</li><li><strong>Enkoding Komponen</strong>: Mengenkode komponen URL individual (parameter kueri, segmen jalur)</li><li><strong>Salin Sekali Klik</strong>: Salin hasil yang dienkode secara instan</li><li><strong>100% Berbasis Browser</strong>: Tidak ada unggahan server — data Anda tetap di perangkat Anda</li></ul>"
-          },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Parameter Kueri</strong>: Enkode nilai untuk dimasukkan dengan aman dalam string kueri URL</li><li><strong>Permintaan API</strong>: Enkode parameter permintaan dengan benar untuk REST API</li><li><strong>URL Redirect</strong>: Enkode URL callback untuk aliran OAuth dan redirect</li><li><strong>Jalur File</strong>: Enkode nama file dengan spasi atau karakter khusus untuk server web</li><li><strong>Debugging</strong>: Dekode URL yang kacau untuk melihat teks aslinya</li></ul>"
@@ -390,14 +358,6 @@
             "title": "Apa itu OCR Text Recognition?",
             "content": "<p><strong>OCR Text Recognition</strong> mengekstrak teks yang dapat dibaca dari gambar menggunakan pengenalan karakter optik yang didukung oleh Tesseract.js. Unggah foto dokumen, tangkapan layar, kuitansi, atau catatan tulisan tangan, dan dapatkan konten teks yang dapat Anda salin, edit, dan gunakan.</p><p>Mendukung <strong>12+ bahasa</strong> termasuk Inggris, Tionghoa, Jepang, Korea, Spanyol, Prancis, Jerman, dan lainnya — semuanya diproses secara lokal di browser Anda.</p>"
           },
-          "howToUse": {
-            "title": "Cara Menggunakan OCR Text Recognition",
-            "content": "<ol><li>Unggah gambar dengan mengklik area dropzone atau menyeretnya ke halaman (mendukung JPG, PNG, WebP, BMP)</li><li>Pilih bahasa teks dalam gambar untuk akurasi terbaik</li><li>Klik <strong>Ekstrak Teks</strong> untuk memulai pengenalan</li><li>Tinjau teks yang diekstrak dan salin ke clipboard Anda</li></ol><p>Untuk hasil terbaik, gunakan gambar yang jelas dengan kontras tinggi dan pencahayaan yang baik. Teks cetak menghasilkan akurasi lebih tinggi daripada tulisan tangan.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>12+ Bahasa</strong>: Kenali teks dalam bahasa Inggris, Tionghoa (Sederhana & Tradisional), Jepang, Korea, Spanyol, Prancis, Jerman, Italia, Portugis, Rusia, dan lainnya</li><li><strong>Berbagai Format Gambar</strong>: Menerima JPG, PNG, WebP, BMP, dan TIFF</li><li><strong>Digerakkan oleh Tesseract.js</strong>: Mesin OCR standar industri yang berjalan sepenuhnya di browser Anda melalui WebAssembly</li><li><strong>Akurasi Tinggi</strong>: Hasil terbaik pada teks cetak, kuitansi, tangkapan layar, dan dokumen pindai</li><li><strong>Salin & Edit</strong>: Teks yang diekstrak sepenuhnya dapat diedit dan disalin</li><li><strong>100% Pemrosesan Lokal</strong>: Tidak ada unggahan server — dokumen Anda tetap pribadi</li></ul>"
-          },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Digitalisasi Dokumen</strong>: Ubah dokumen cetak, kuitansi, atau surat menjadi teks yang dapat diedit</li><li><strong>Ekstraksi Teks Tangkapan Layar</strong>: Ambil teks dari tangkapan layar halaman web, pesan kesalahan, atau log chat</li><li><strong>Persiapan Terjemahan</strong>: Ekstrak teks bahasa asing dari gambar untuk diterjemahkan</li><li><strong>Entri Data</strong>: Digitalkan teks dengan cepat dari formulir, faktur, atau kartu nama</li><li><strong>Aksesibilitas</strong>: Jadikan teks berbasis gambar dapat diakses oleh pembaca layar</li></ul>"
@@ -433,14 +393,6 @@
           "intro": {
             "title": "Apa itu ZIP Extractor?",
             "content": "<p><strong>ZIP Extractor</strong> memungkinkan Anda membuka dan mengekstrak konten arsip ZIP langsung di browser Anda. Pratinjau nama file, ukuran, dan struktur folder sebelum mengunduh file individual atau seluruh isinya.</p><p>Tidak perlu menginstal perangkat lunak — cukup jatuhkan file ZIP Anda dan jelajahi isinya secara instan.</p>"
-          },
-          "howToUse": {
-            "title": "Cara Menggunakan ZIP Extractor",
-            "content": "<ol><li>Jatuhkan file ZIP ke halaman atau klik untuk menjelajah dan memilih satu</li><li>Lihat konten arsip: nama file, ukuran, dan hierarki folder</li><li>Klik file individual untuk mengunduhnya, atau ekstrak semuanya sekaligus</li></ol><p>Mendukung arsip ZIP standar. Arsip besar mungkin memerlukan beberapa saat untuk diurai tergantung pada perangkat Anda.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Pratinjau Instan</strong>: Lihat semua file dan folder di dalam ZIP tanpa mengekstrak</li><li><strong>Ekstraksi Selektif</strong>: Unduh file individual tanpa mengekstrak seluruh arsip</li><li><strong>Tampilan Ukuran File</strong>: Lihat ukuran terkompresi dan tidak terkompresi untuk setiap file</li><li><strong>Struktur Folder</strong>: Jelajahi hierarki direktori bersarang di dalam arsip</li><li><strong>Digerakkan oleh fflate</strong>: Dekompresi berkinerja tinggi menggunakan pustaka fflate</li><li><strong>Tanpa Batasan Ukuran File</strong>: Hanya dibatasi oleh memori yang tersedia di perangkat Anda</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
@@ -480,14 +432,6 @@
           "intro": {
             "title": "Apa itu CSV/JSON Converter?",
             "content": "<p><strong>CSV/JSON Converter</strong> mengubah data antara format CSV (comma-separated values) dan JSON secara instan. Konversi data spreadsheet ke array JSON untuk API, atau ubah dataset JSON menjadi CSV untuk Excel atau Google Sheets.</p><p>Menangani header, field berkutip, dan pembatas khusus — semuanya di browser Anda tanpa data yang diunggah.</p>"
-          },
-          "howToUse": {
-            "title": "Cara Menggunakan CSV/JSON Converter",
-            "content": "<ol><li>Tempel data CSV atau JSON Anda ke area input</li><li>Pilih arah konversi: <strong>CSV → JSON</strong> atau <strong>JSON → CSV</strong></li><li>Hasil konversi muncul secara instan di area output</li><li>Salin hasil atau unduh sebagai file</li></ol><p>Input CSV harus menggunakan baris pertama sebagai header kolom. Input JSON harus berupa array objek dengan kunci yang konsisten.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Konversi Dua Arah</strong>: Konversi CSV ke JSON dan JSON ke CSV</li><li><strong>Deteksi Header Otomatis</strong>: Menggunakan baris CSV pertama sebagai kunci objek JSON</li><li><strong>Menangani Karakter Khusus</strong>: Memproses field berkutip, koma dalam field, dan jeda baris dengan benar</li><li><strong>Konversi Instan</strong>: Hasil muncul segera saat Anda menempelkan data</li><li><strong>Unduh Output</strong>: Simpan data yang dikonversi sebagai file .json atau .csv</li><li><strong>Dukungan Dataset Besar</strong>: Menangani ribuan baris secara efisien</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
@@ -584,14 +528,6 @@
             "title": "Apa itu Generator Hash?",
             "content": "<p><strong>Generator Hash</strong> menghitung nilai hash kriptografi untuk teks atau file menggunakan algoritma MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512, dan CRC32. Alat ini juga mendukung HMAC (Hash-based Message Authentication Code) dengan kunci rahasia. Hash adalah sidik jari satu arah yang digunakan untuk memverifikasi integritas data, membandingkan file, dan memvalidasi unduhan.</p><p>Hasilkan hash secara instan di browser Anda dengan komputasi real-time — ideal untuk memverifikasi integritas file atau membuat intisari konten.</p>"
           },
-          "howToUse": {
-            "title": "Cara Menggunakan Generator Hash",
-            "content": "<ol><li>Masukkan teks langsung — hash dihitung secara real-time saat Anda mengetik</li><li>Atau unggah file (tunggal atau massal) untuk hashing file</li><li>Beralih antara format output hex (huruf kecil/besar) dan Base64</li><li>Gunakan kolom verifikasi untuk membandingkan dengan hash yang diketahui</li><li>Aktifkan mode HMAC untuk hashing dengan kunci</li></ol><p>Untuk verifikasi integritas file, bandingkan hash yang dihasilkan dengan checksum yang disediakan oleh sumber file.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>8 Algoritma</strong>: MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>Dukungan HMAC</strong>: Hashing dengan kunci menggunakan algoritma SHA untuk otentikasi pesan</li><li><strong>Hashing Real-Time</strong>: Hasil muncul secara instan saat Anda mengetik</li><li><strong>Verifikasi Hash</strong>: Bandingkan dengan hash yang diharapkan dengan indikator kecocokan visual</li><li><strong>Hashing File Massal</strong>: Hash beberapa file sekaligus</li><li><strong>Beberapa Format Output</strong>: Hex (huruf kecil/besar) dan Base64</li><li><strong>Salin & Ekspor</strong>: Salin hash individual atau semua, unduh sebagai file teks</li><li><strong>Progres File</strong>: Indikator progres untuk pemrosesan file besar</li></ul>"
-          },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Integritas File</strong>: Verifikasi file yang diunduh tidak diubah dengan membandingkan checksum</li><li><strong>Deduplikasi Konten</strong>: Bandingkan hash untuk menemukan file duplikat</li><li><strong>Otentikasi API</strong>: Hasilkan tanda tangan HMAC untuk permintaan API</li><li><strong>Distribusi Perangkat Lunak</strong>: Hasilkan checksum untuk rilis file Anda sendiri</li><li><strong>Audit Keamanan</strong>: Hash file untuk mendeteksi modifikasi yang tidak sah</li></ul>"
@@ -629,14 +565,6 @@
           "intro": {
             "title": "Apa itu Color Converter?",
             "content": "<p><strong>Color Converter</strong> mengubah warna antara format HEX, RGB, dan HSL dengan pratinjau visual langsung. Masukkan warna dalam format apa pun dan langsung lihat ekuivalennya dalam semua format lain, beserta contoh warna.</p><p>Sempurna untuk desainer dan pengembang yang perlu mengonversi antara notasi warna untuk CSS, alat desain, atau pedoman merek.</p>"
-          },
-          "howToUse": {
-            "title": "Cara Menggunakan Color Converter",
-            "content": "<ol><li>Masukkan nilai warna dalam format yang didukung: HEX (misalnya, #3B82F6), RGB (misalnya, rgb(59, 130, 246)), atau HSL (misalnya, hsl(217, 91%, 60%))</li><li>Lihat konversi instan ke semua format lain dengan pratinjau warna langsung</li><li>Klik nilai apa pun untuk menyalinnya ke clipboard Anda</li></ol><p>Pemilih warna juga memungkinkan Anda memilih warna secara visual dan mendapatkan semua nilai format sekaligus.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Dukungan Tiga Format</strong>: Konversi antara notasi warna HEX, RGB, dan HSL</li><li><strong>Pratinjau Langsung</strong>: Lihat warna aktual ditampilkan saat Anda mengetik atau menyesuaikan nilai</li><li><strong>Pemilih Warna Visual</strong>: Pilih warna secara visual dan dapatkan semua nilai format</li><li><strong>Konversi Instan</strong>: Hasil diperbarui secara real-time saat Anda mengetik</li><li><strong>Salin Sekali Klik</strong>: Salin nilai format warna apa pun ke clipboard</li><li><strong>Output Siap CSS</strong>: Nilai yang diformat untuk penggunaan langsung di stylesheet CSS</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
@@ -677,14 +605,6 @@
             "title": "Apa itu JSON ↔ XML Converter?",
             "content": "<p><strong>JSON ↔ XML Converter</strong> mengubah data antara format JSON dan XML. Konversi objek JSON menjadi dokumen XML yang terbentuk dengan baik, atau parse XML kembali menjadi JSON — berguna untuk mengintegrasikan sistem yang menggunakan format data berbeda.</p><p>Menangani struktur bersarang, array, dan atribut dengan benar di kedua arah.</p>"
           },
-          "howToUse": {
-            "title": "Cara Menggunakan JSON ↔ XML Converter",
-            "content": "<ol><li>Tempel data JSON atau XML Anda ke area input</li><li>Pilih arah konversi: <strong>JSON → XML</strong> atau <strong>XML → JSON</strong></li><li>Output yang dikonversi muncul secara instan</li><li>Salin hasil atau unduh sebagai file</li></ol><p>Array JSON dikonversi menjadi elemen XML berulang. Atribut XML dipertahankan selama konversi.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Konversi Dua Arah</strong>: Konversi JSON ke XML dan XML ke JSON</li><li><strong>Dukungan Struktur Bersarang</strong>: Menangani objek dan array yang sangat bersarang dengan benar</li><li><strong>Output Pretty-Printed</strong>: Output XML diindentasi dengan benar untuk keterbacaan</li><li><strong>Penanganan Array</strong>: Array JSON menjadi elemen XML berulang dengan struktur yang tepat</li><li><strong>Pemrosesan Instan</strong>: Hasil muncul segera</li><li><strong>Unduh Output</strong>: Simpan hasil sebagai file .json atau .xml</li></ul>"
-          },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Integrasi API</strong>: Konversi antara JSON REST API dan layanan XML SOAP</li><li><strong>Sistem Lama</strong>: Ubah data XML dari sistem lama menjadi JSON untuk aplikasi modern</li><li><strong>Konfigurasi</strong>: Konversi antara format file konfigurasi JSON dan XML</li><li><strong>Migrasi Data</strong>: Ubah format data selama migrasi sistem</li><li><strong>Pengujian</strong>: Hasilkan data pengujian XML dari JSON atau sebaliknya</li></ul>"
@@ -721,14 +641,6 @@
           "intro": {
             "title": "Apa itu Markdown Preview?",
             "content": "<p><strong>Markdown Preview</strong> memungkinkan Anda menulis Markdown dan melihat pratinjau HTML langsung secara berdampingan. Tulis teks terformat menggunakan sintaks Markdown sederhana dan langsung lihat bagaimana ia ditampilkan — sempurna untuk file README, posting blog, dan dokumentasi.</p><p>Mendukung Markdown standar termasuk judul, daftar, blok kode, tautan, gambar, tabel, dan lainnya.</p>"
-          },
-          "howToUse": {
-            "title": "Cara Menggunakan Markdown Preview",
-            "content": "<ol><li>Ketik atau tempel teks Markdown di panel editor di sebelah kiri</li><li>Pratinjau HTML yang dirender diperbarui secara real-time di sebelah kanan</li><li>Gunakan sintaks Markdown standar: # judul, **tebal**, *miring*, - daftar, ```blok kode```</li><li>Salin HTML yang dirender atau sumber Markdown</li></ol><p>Tampilan panel terpisah memungkinkan Anda menulis dan melihat pratinjau secara bersamaan tanpa beralih tab.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Pratinjau Langsung</strong>: Lihat HTML yang dirender diperbarui secara real-time saat Anda mengetik</li><li><strong>Tampilan Berdampingan</strong>: Editor dan pratinjau ditampilkan secara bersamaan</li><li><strong>Dukungan Markdown Lengkap</strong>: Judul, tebal, miring, daftar, blok kode, tautan, gambar, tabel, blockquote</li><li><strong>Penyorotan Sintaks</strong>: Blok kode dengan penyorotan khusus bahasa</li><li><strong>Salin Output HTML</strong>: Salin HTML yang dirender untuk digunakan di halaman web</li><li><strong>Tata Letak Responsif</strong>: Berfungsi di perangkat desktop dan seluler</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
@@ -770,14 +682,6 @@
           "intro": {
             "title": "Apa itu Regex Tester?",
             "content": "<p><strong>Regex Tester</strong> memungkinkan Anda menulis dan menguji ekspresi reguler terhadap teks sampel dengan penyorotan kecocokan secara real-time. Lihat grup yang cocok, uji flag berbeda, dan debug pola Anda secara instan.</p><p>Alat penting untuk pengembang yang bekerja dengan pola string, validasi data, atau parsing teks.</p>"
-          },
-          "howToUse": {
-            "title": "Cara Menggunakan Regex Tester",
-            "content": "<ol><li>Masukkan pola ekspresi reguler Anda di bidang pola</li><li>Atur flag sesuai kebutuhan: <strong>g</strong> (global), <strong>i</strong> (tidak peka huruf besar-kecil), <strong>m</strong> (multiline)</li><li>Ketik atau tempel teks uji di area teks di bawah</li><li>Kecocokan disorot secara real-time saat Anda mengetik</li></ol><p>Grup capture ditampilkan dengan warna yang berbeda, dan detail kecocokan menampilkan kecocokan penuh plus grup yang ditangkap.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Pencocokan Real-Time</strong>: Kecocokan disorot secara instan saat Anda mengetik pola atau teks</li><li><strong>Dukungan Flag</strong>: Toggle flag global (g), tidak peka huruf besar-kecil (i), dan multiline (m)</li><li><strong>Penyorotan Grup</strong>: Grup capture ditampilkan dengan penanda visual yang berbeda</li><li><strong>Detail Kecocokan</strong>: Lihat teks kecocokan penuh, grup, dan posisi</li><li><strong>Umpan Balik Kesalahan</strong>: Sintaks regex yang tidak valid ditangkap dan dilaporkan segera</li><li><strong>Mesin Native</strong>: Menggunakan mesin regex JavaScript bawaan browser Anda</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
@@ -822,14 +726,6 @@
             "title": "Apa itu Unix Timestamp Converter?",
             "content": "<p><strong>Unix Timestamp Converter</strong> mengonversi antara Unix timestamp (detik sejak 1 Januari 1970) dan format tanggal/waktu yang dapat dibaca manusia. Masukkan timestamp untuk melihat tanggal, atau pilih tanggal untuk mendapatkan timestamp.</p><p>Menampilkan Unix timestamp saat ini secara langsung dan mendukung format detik serta milidetik.</p>"
           },
-          "howToUse": {
-            "title": "Cara Menggunakan Unix Timestamp Converter",
-            "content": "<ol><li>Masukkan Unix timestamp (detik atau milidetik) untuk melihat tanggal dan waktu yang dapat dibaca manusia</li><li>Atau pilih tanggal dan waktu untuk mendapatkan Unix timestamp yang sesuai</li><li>Unix timestamp saat ini ditampilkan secara langsung dan diperbarui secara real-time</li><li>Salin nilai apa pun dengan satu klik</li></ol><p>Mendeteksi secara otomatis apakah input dalam detik atau milidetik berdasarkan panjang nilai.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Konversi Dua Arah</strong>: Timestamp → tanggal dan tanggal → timestamp</li><li><strong>Jam Langsung</strong>: Unix timestamp saat ini ditampilkan dan diperbarui secara real-time</li><li><strong>Detik & Milidetik</strong>: Mendukung detik Unix dan milidetik JavaScript</li><li><strong>Lokal & UTC</strong>: Menampilkan waktu dalam zona waktu lokal dan UTC</li><li><strong>Hasil Instan</strong>: Konversi terjadi secara real-time saat Anda mengetik</li><li><strong>Salin Sekali Klik</strong>: Salin nilai apa pun ke clipboard</li></ul>"
-          },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Debugging</strong>: Konversi timestamp respons API ke tanggal yang dapat dibaca untuk debugging</li><li><strong>Kueri Database</strong>: Konversi antara format timestamp untuk kueri SQL</li><li><strong>Analisis Log</strong>: Terjemahkan Unix timestamp dalam file log ke waktu yang dapat dibaca manusia</li><li><strong>Penjadwalan</strong>: Hitung timestamp masa lalu/mendatang untuk cron job atau tugas terjadwal</li><li><strong>Kerja Lintas Zona Waktu</strong>: Bandingkan timestamp di berbagai zona waktu</li></ul>"
@@ -868,14 +764,6 @@
           "intro": {
             "title": "Apa itu YAML ↔ JSON Converter?",
             "content": "<p><strong>YAML ↔ JSON Converter</strong> mengubah data antara format YAML dan JSON. Sintaks YAML yang ramah manusia membuatnya populer untuk file konfigurasi, sementara JSON adalah standar untuk API dan pertukaran data.</p><p>Konversi konfigurasi Kubernetes, pipeline CI/CD, atau file YAML apa pun ke JSON dan sebaliknya — secara instan di browser Anda.</p>"
-          },
-          "howToUse": {
-            "title": "Cara Menggunakan YAML ↔ JSON Converter",
-            "content": "<ol><li>Tempel data YAML atau JSON Anda ke area input</li><li>Pilih arah konversi: <strong>YAML → JSON</strong> atau <strong>JSON → YAML</strong></li><li>Output yang dikonversi muncul secara instan</li><li>Salin hasil atau unduh sebagai file</li></ol><p>Mendukung spesifikasi YAML lengkap termasuk string multi-baris, anchor, dan struktur bersarang kompleks.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Konversi Dua Arah</strong>: Konversi YAML ke JSON dan JSON ke YAML</li><li><strong>Dukungan YAML Lengkap</strong>: Menangani string multi-baris, anchor, alias, dan semua fitur YAML</li><li><strong>Output Pretty-Printed</strong>: Baik output JSON maupun YAML diformat dengan benar</li><li><strong>Pelaporan Kesalahan</strong>: Pesan kesalahan yang jelas untuk sintaks YAML atau JSON yang tidak valid</li><li><strong>Pemrosesan Instan</strong>: Hasil muncul segera</li><li><strong>Digerakkan oleh js-yaml</strong>: Konversi andal menggunakan pustaka js-yaml standar industri</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
@@ -917,14 +805,6 @@
             "title": "Apa itu Text Diff?",
             "content": "<p><strong>Text Diff</strong> membandingkan dua bagian teks dan menyoroti perbedaan baris per baris. Lihat dengan tepat apa yang ditambahkan, dihapus, atau diubah — seperti versi sederhana dari <code>git diff</code> di browser Anda.</p><p>Ideal untuk membandingkan versi kode, file konfigurasi, draf dokumen, atau konten teks apa pun.</p>"
           },
-          "howToUse": {
-            "title": "Cara Menggunakan Text Diff",
-            "content": "<ol><li>Tempel teks asli di panel kiri</li><li>Tempel teks yang dimodifikasi di panel kanan</li><li>Perbedaan disorot segera: hijau untuk penambahan, merah untuk penghapusan</li><li>Gulir melalui diff untuk meninjau semua perubahan</li></ol><p>Bekerja paling baik dengan teks terstruktur seperti kode, konfigurasi, atau dokumen dengan jeda baris yang jelas.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Perbandingan Baris per Baris</strong>: Lihat dengan tepat baris mana yang berbeda antara dua teks</li><li><strong>Diff Berkode Warna</strong>: Penambahan dalam hijau, penghapusan dalam merah — jelas dengan sekali lihat</li><li><strong>Perbandingan Instan</strong>: Hasil muncul segera saat Anda menempelkan teks</li><li><strong>Tampilan Berdampingan</strong>: Kedua teks ditampilkan bersama dengan perbedaan yang selaras</li><li><strong>Dukungan Teks Panjang</strong>: Bandingkan dokumen panjang secara efisien</li><li><strong>Tanpa Batas Baris</strong>: Tangani panjang teks berapa pun tanpa batasan</li></ul>"
-          },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Review Kode</strong>: Bandingkan dua versi file kode untuk melihat apa yang berubah</li><li><strong>Perubahan Konfigurasi</strong>: Temukan perbedaan antara file konfigurasi pengembangan dan produksi</li><li><strong>Revisi Dokumen</strong>: Bandingkan versi draf dokumen atau kontrak</li><li><strong>Rekam Database</strong>: Bandingkan rekaman yang diekspor untuk menemukan perbedaan data</li><li><strong>Debugging</strong>: Bandingkan output yang diharapkan vs aktual dalam skenario pengujian</li></ul>"
@@ -964,14 +844,6 @@
           "intro": {
             "title": "Apa itu Word Counter?",
             "content": "<p><strong>Word Counter</strong> menganalisis teks Anda dan secara instan menampilkan jumlah kata, jumlah karakter, jumlah kalimat, jumlah paragraf, dan perkiraan waktu baca. Penting bagi penulis, pelajar, dan pembuat konten yang perlu memenuhi persyaratan panjang.</p><p>Cukup tempel teks Anda dan dapatkan semua statistik secara real-time.</p>"
-          },
-          "howToUse": {
-            "title": "Cara Menggunakan Word Counter",
-            "content": "<ol><li>Ketik atau tempel teks Anda ke area input</li><li>Statistik diperbarui secara real-time saat Anda mengetik: kata, karakter, kalimat, paragraf, dan waktu baca</li><li>Gunakan hasil untuk memeriksa persyaratan panjang atau memperkirakan durasi baca</li></ol><p>Waktu baca diperkirakan pada kecepatan baca rata-rata 200 kata per menit.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Jumlah Kata</strong>: Penghitungan kata yang akurat dengan penanganan tanda baca dan spasi yang tepat</li><li><strong>Jumlah Karakter</strong>: Total karakter dengan dan tanpa spasi</li><li><strong>Jumlah Kalimat</strong>: Menghitung kalimat berdasarkan penanda tanda baca</li><li><strong>Jumlah Paragraf</strong>: Menghitung paragraf yang dipisahkan oleh jeda baris</li><li><strong>Waktu Baca</strong>: Perkiraan durasi baca pada kecepatan rata-rata</li><li><strong>Pembaruan Real-Time</strong>: Semua statistik diperbarui secara instan saat Anda mengetik</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
@@ -1016,14 +888,6 @@
             "title": "Apa itu Case Converter?",
             "content": "<p><strong>Case Converter</strong> mengubah teks antara beberapa format huruf termasuk UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, dan CONSTANT_CASE.</p><p>Penting untuk pengembang yang mengganti nama variabel, penulis yang memformat judul, atau siapa saja yang perlu mengubah kapitalisasi teks dengan cepat.</p>"
           },
-          "howToUse": {
-            "title": "Cara Menggunakan Case Converter",
-            "content": "<ol><li>Ketik atau tempel teks Anda ke area input</li><li>Klik tombol format huruf yang diinginkan: UPPER, lower, Title, Sentence, camelCase, PascalCase, snake_case, kebab-case, atau CONSTANT_CASE</li><li>Teks yang dikonversi muncul secara instan</li><li>Salin hasil dengan satu klik</li></ol><p>Anda dapat merangkai konversi — konversi ke lowercase terlebih dahulu, lalu ke camelCase untuk hasil yang bersih.</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>9+ Format Huruf</strong>: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE</li><li><strong>Konversi Instan</strong>: Hasil muncul segera saat Anda mengklik format</li><li><strong>Dukungan Multi-Baris</strong>: Konversi beberapa baris teks sekaligus</li><li><strong>Parsing Cerdas</strong>: Memisahkan kata dengan benar dari camelCase, snake_case, atau format lain</li><li><strong>Salin Sekali Klik</strong>: Salin teks yang dikonversi ke clipboard</li><li><strong>Pemrosesan Batch</strong>: Proses beberapa baris secara bersamaan</li></ul>"
-          },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Penamaan Variabel</strong>: Konversi antara JavaScript camelCase, Python snake_case, dan CSS kebab-case</li><li><strong>Field Database</strong>: Ubah nama kolom antara konvensi penamaan yang berbeda</li><li><strong>Pemformatan Konten</strong>: Konversi judul ke Title Case untuk headline dan heading</li><li><strong>Desain API</strong>: Standarisasi nama field dalam skema permintaan/respons JSON</li><li><strong>Refactoring Kode</strong>: Ganti nama identifier saat beralih antara konvensi penamaan</li></ul>"
@@ -1063,14 +927,6 @@
           "intro": {
             "title": "Apa itu Lorem Ipsum Generator?",
             "content": "<p><strong>Lorem Ipsum Generator</strong> membuat teks placeholder untuk mockup desain, wireframe, dan prototipe. Hasilkan teks Lorem Ipsum klasik berdasarkan paragraf, kalimat, atau kata dengan kontrol presisi atas jumlahnya.</p><p>Cara standar industri untuk mengisi tata letak dengan teks yang terlihat realistis sebelum konten final siap.</p>"
-          },
-          "howToUse": {
-            "title": "Cara Menggunakan Lorem Ipsum Generator",
-            "content": "<ol><li>Pilih unit: <strong>paragraf</strong>, <strong>kalimat</strong>, atau <strong>kata</strong></li><li>Atur jumlah yang Anda butuhkan (misalnya, 3 paragraf, 10 kalimat, atau 50 kata)</li><li>Klik <strong>Buat</strong> untuk membuat teks placeholder</li><li>Salin hasil untuk digunakan dalam desain atau dokumen Anda</li></ol><p>Teks yang dihasilkan mengikuti pola Lorem Ipsum klasik yang dimulai dengan \"Lorem ipsum dolor sit amet...\"</p>"
-          },
-          "features": {
-            "title": "Fitur Utama",
-            "content": "<ul><li><strong>Tiga Mode Output</strong>: Buat berdasarkan paragraf, kalimat, atau jumlah kata</li><li><strong>Jumlah yang Dapat Disesuaikan</strong>: Kontrol tepat berapa banyak teks yang dihasilkan</li><li><strong>Lorem Ipsum Klasik</strong>: Menggunakan kumpulan kata Lorem Ipsum standar</li><li><strong>Pembuatan Instan</strong>: Teks muncul segera tanpa penundaan</li><li><strong>Salin Sekali Klik</strong>: Salin semua teks yang dihasilkan ke clipboard</li><li><strong>Output Konsisten</strong>: Distribusi teks dan panjang paragraf yang terlihat alami</li></ul>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",

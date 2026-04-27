@@ -47,14 +47,6 @@
             "title": "プロフェッショナル JSON フォーマッター & ビューワー",
             "content": "<p><strong>JSON フォーマッター</strong>は、Monaco コードエディタ、インタラクティブなツリービュー、リアルタイム検証をひとつのインターフェースに統合した、無料のプロフェッショナル級 JSON ツールです。乱雑または圧縮された JSON を貼り付けるだけで、シンタックスハイライト、コード折りたたみ、ビジュアルツリー探索を備えた、すっきりと読みやすい出力を即座に得られます。</p><p>API レスポンスのデバッグ、深くネストされたデータ構造の確認、設定ファイルのレビュー、ドキュメント用データの準備など、ブラウザを離れることなく、また 1 バイトもアップロードせずに、必要なすべてを利用できます。</p>"
           },
-          "howToUse": {
-            "title": "JSON フォーマッターの使い方",
-            "content": "<ol><li>左側の Monaco エディタに JSON を貼り付けるか入力する — または <code>.json</code> ファイルをドラッグ＆ドロップ</li><li>ツールがリアルタイムで検証し、<strong>有効</strong>または<strong>無効</strong>のステータスを即座に表示</li><li><strong>フォーマット</strong>をクリックして選択したインデントで整形、または<strong>圧縮</strong>で 1 行に</li><li><strong>ツリー</strong>ビューで構造を視覚的に探索するか、<strong>コード</strong>ビューでシンタックスハイライト付き出力を確認</li><li>JSON Path フィルター（例：<code>$.data.users[0]</code>）を使って特定の値にドリルダウン</li><li>ワンクリックで結果をコピーまたはダウンロード</li></ol>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>Monaco エディタ</strong>：VS Code を支えるコードエディタ — シンタックスハイライト、ブラケットマッチング、コード折りたたみ、ワードラップ付き</li><li><strong>インタラクティブ ツリービュー</strong>：各レベルのアイテム数と完全なキーボードナビゲーションで、JSON ノードを視覚的に展開・折りたたみ</li><li><strong>JSON Path フィルタリング</strong>：<code>$.address.city</code> や <code>$.items[0].name</code> のようなパス式で特定の値をクエリ</li><li><strong>リアルタイム検証</strong>：入力しながら即座にシンタックスチェック — ボタンを押す必要なし</li><li><strong>整形 &amp; 圧縮</strong>：カスタマイズ可能なインデント（2、4、8 スペース）でフォーマット、または 1 行に圧縮</li><li><strong>ドラッグ＆ドロップ ファイルサポート</strong>：<code>.json</code> または <code>.txt</code> ファイルをエディタに直接ドロップ</li><li><strong>サイズ変更可能な分割ペイン</strong>：ディバイダーをドラッグしてエディタとビューワーのバランスを調整、ダブルクリックでリセット</li><li><strong>シンタックスハイライト付きコードビュー</strong>：行番号付きのカラーコード出力でコピーペーストが簡単</li><li><strong>100% ブラウザベース</strong>：サーバーへのアップロードなし — データは常にデバイス上に</li></ul>"
-          },
           "useCases": {
             "title": "主な使用シナリオ",
             "content": "<ul><li><strong>API 開発 &amp; デバッグ</strong>：生の API レスポンスを貼り付けて即座にフォーマットし、ツリービューで深くネストされたオブジェクトをナビゲート</li><li><strong>設定ファイル</strong>：<code>package.json</code>、<code>tsconfig.json</code>、<code>.eslintrc</code>、Kubernetes マニフェストを整理</li><li><strong>データ探索</strong>：JSON Path で大規模データセットをフィルタリングし、何千行もスクロールせずに特定の値を検索</li><li><strong>コードレビュー</strong>：ツリービューで JSON 構造を視覚的に比較して違いを素早く発見</li><li><strong>ドキュメント作成</strong>：技術ドキュメントやチュートリアル用に整形・エクスポートした JSON サンプルを用意</li><li><strong>データベースレコード</strong>：MongoDB、CouchDB、PostgreSQL JSONB カラムに格納された JSON を確認・整形</li></ul>"
@@ -187,14 +179,6 @@
             "title": "Visual JSON Editor for Developers",
             "content": "<p><strong>JSON Editor</strong> is a browser-based JSON editor with three view modes: <strong>Text</strong> for raw editing with Monaco Editor, <strong>Tree</strong> for visual structure editing, and <strong>Preview</strong> for read-only syntax-highlighted display.</p><p>In Tree mode, double-click a key or value to edit it in place. Right-click any node for the full context menu: insert before or after, duplicate, change type, delete, copy path. Undo and redo are available at every step. When you paste invalid JSON, one click repairs common mistakes like trailing commas, single quotes, and JavaScript comments.</p>"
           },
-          "howToUse": {
-            "title": "How to Use JSON Editor",
-            "content": "<ol><li>Paste, type, or drop a <code>.json</code> file into the editor</li><li>If the JSON is invalid, click <strong>Auto Repair</strong> to fix common mistakes</li><li>Use the <strong>view switcher</strong> to pick Text, Tree, or Preview mode</li><li>In <strong>Tree</strong> mode: double-click any key or value to edit in place; right-click for insert/duplicate/delete/change type/copy path</li><li>Use <strong>Ctrl+Z</strong> / <strong>Ctrl+Y</strong> to undo and redo</li><li>Click <strong>Format</strong>, <strong>Minify</strong>, or <strong>Smart</strong> to reformat, then <strong>Download</strong> or <strong>Copy</strong> to export</li></ol>"
-          },
-          "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Three View Modes</strong>: Text (Monaco), Tree (interactive), Preview (read-only) — switch anytime</li><li><strong>Visual Tree Editing</strong>: Double-click any key or value, right-click for the full context menu</li><li><strong>Full Type Switching</strong>: Convert any value between string, number, boolean, null, object, and array</li><li><strong>Undo / Redo</strong>: 50-step history with Ctrl+Z / Ctrl+Y shortcuts</li><li><strong>Auto Repair</strong>: Fixes trailing commas, single quotes, missing quotes, JavaScript comments, and more</li><li><strong>Smart Format</strong>: Inline short arrays/objects, expand long ones — compact yet readable</li><li><strong>Monaco Editor</strong>: The same code editor that powers VS Code, for raw text editing</li><li><strong>Path Display &amp; Copy</strong>: Click any node to see and copy its JSON Path</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
-          },
           "useCases": {
             "title": "Common Use Cases",
             "content": "<ul><li><strong>Config File Editing</strong>: Safely modify <code>package.json</code>, <code>tsconfig.json</code>, or Kubernetes manifests without syntax errors</li><li><strong>Test Data Crafting</strong>: Quickly build fixtures by duplicating nodes, changing types, and renaming keys</li><li><strong>API Response Debugging</strong>: Paste a response, restructure it, and diff against the expected shape</li><li><strong>Schema Migration</strong>: Compare two versions of a JSON document to see exactly what changed</li><li><strong>Fixing Broken JSON</strong>: Use Auto Repair to recover from trailing commas, stray quotes, or mixed delimiters</li><li><strong>Data Cleanup</strong>: Delete unwanted fields in bulk with right-click + Delete, then export the cleaned data</li></ul>"
@@ -240,14 +224,6 @@
           "intro": {
             "title": "Base64エンコーダー/デコーダーとは？",
             "content": "<p><strong>Base64エンコーダー/デコーダー</strong>は、テキストやファイルをBase64エンコーディングに変換したり、その逆を行います。Base64は、URL、メール、HTML、JSONにデータを埋め込むために広く使われるバイナリからテキストへのエンコーディングスキームです。</p><p>テキストや任意のファイル（画像、PDF、ZIP）をBase64にエンコード、またはBase64をテキストやダウンロード可能なファイルにデコード — すべてブラウザ内で、URLセーフ変換とData URIをサポート。</p>"
-          },
-          "howToUse": {
-            "title": "Base64エンコーダー/デコーダーの使い方",
-            "content": "<ol><li>入力に応じて<strong>テキスト</strong>または<strong>ファイル</strong>モードを選択</li><li><strong>エンコード</strong>または<strong>デコード</strong>の方向を選択 — ツールがBase64入力を自動検出します</li><li>必要に応じて<strong>標準</strong>または<strong>URLセーフ</strong>バリアントを選択</li><li>入力するとすぐに結果が表示されます — ボタンのクリックは不要</li><li><strong>コピー</strong>、<strong>ダウンロード</strong>、<strong>入れ替え</strong>で出力を活用</li></ol><p>ファイルエンコード時に<strong>Data URI出力</strong>を有効にすると、HTML/CSSに直接埋め込めるdata URLが生成されます。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>リアルタイム変換</strong>：入力しながら即座にエンコードまたはデコード — ボタンクリック不要</li><li><strong>テキスト＆ファイル対応</strong>：任意のファイル（画像、PDF、ZIP）をBase64にエンコード、またはBase64をダウンロード可能なファイルにデコード</li><li><strong>URLセーフBase64</strong>：+/を-_に置換しパディングを省略するRFC 4648バリアント — JWTトークンやURLパラメータに最適</li><li><strong>Data URI出力</strong>：HTML、CSS、JavaScriptに埋め込むためのすぐに使える<code>data:{mime};base64,...</code>文字列を生成</li><li><strong>画像プレビュー</strong>：Base64画像データ（PNG、JPEG、GIF、WebP）のデコード時に自動検出してプレビューを表示</li><li><strong>自動検出</strong>：入力がBase64かどうかをインテリジェントに検出し、自動的にデコードモードに切り替え</li><li><strong>入れ替え＆統計</strong>：ワンクリックで出力を入力に戻し、バイトサイズと文字数をリアルタイム表示</li><li><strong>UTF-8サポート</strong>：Unicode文字、絵文字、マルチバイトテキストを正しく処理</li><li><strong>サイズ制限なし</strong>：任意のサイズのテキストやファイルを処理 — デバイスメモリのみが制限</li></ul>"
           },
           "useCases": {
             "title": "一般的な使用例",
@@ -345,14 +321,6 @@
             "title": "URL エンコーダー/デコーダーとは？",
             "content": "<p><strong>URL エンコーダー/デコーダー</strong>は、URL 内の特殊文字をパーセントエンコードされた同等の形式に変換し、その逆変換も行います。スペース、アンパサンド、非 ASCII 文字、その他の予約文字を含む有効な URL を作成するために不可欠です。</p><p>クエリパラメータを安全に渡したり、ファイルパスをエンコードしたり、不正な URL をデバッグするために使用できます。</p>"
           },
-          "howToUse": {
-            "title": "URL エンコーダー/デコーダーの使い方",
-            "content": "<ol><li>入力フィールドにテキストまたは URL コンポーネントを入力する</li><li>特殊文字をパーセントエンコードするには<strong>エンコード</strong>、エンコードされた URL を読み取れるテキストに戻すには<strong>デコード</strong>を選択する</li><li>結果が即座に更新される</li><li><strong>コピー</strong>をクリックしてエンコード/デコードされた結果をコピーする</li></ol><p>RFC 3986 に従い、スペース、&amp;、=、?、#、非 ASCII 文字など URL で安全でないすべての文字をエンコードします。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>RFC 3986 準拠</strong>：予約済みおよび安全でない URL 文字をすべて正しくエンコード</li><li><strong>リアルタイム処理</strong>：入力に応じて結果が更新される</li><li><strong>Unicode サポート</strong>：URL 内の国際文字や絵文字を正しく処理</li><li><strong>コンポーネントエンコード</strong>：個々の URL コンポーネント（クエリパラメータ、パスセグメント）をエンコード</li><li><strong>ワンクリックコピー</strong>：エンコード結果を即座にコピー</li><li><strong>100% ブラウザベース</strong>：サーバーへのアップロードなし — データはデバイス上に留まります</li></ul>"
-          },
           "useCases": {
             "title": "主な活用例",
             "content": "<ul><li><strong>クエリパラメータ</strong>：URL クエリ文字列に安全に含めるために値をエンコード</li><li><strong>API リクエスト</strong>：REST API のリクエストパラメータを適切にエンコード</li><li><strong>リダイレクト URL</strong>：OAuth フローやリダイレクト用にコールバック URL をエンコード</li><li><strong>ファイルパス</strong>：ウェブサーバー向けにスペースや特殊文字を含むファイル名をエンコード</li><li><strong>デバッグ</strong>：壊れた URL をデコードして元のテキストを確認</li></ul>"
@@ -390,14 +358,6 @@
             "title": "OCR 文字認識とは？",
             "content": "<p><strong>OCR 文字認識</strong>は、Tesseract.js を使った光学文字認識により画像から読み取れるテキストを抽出します。文書、スクリーンショット、レシート、手書きメモの写真をアップロードするだけで、コピー・編集・利用できるテキストコンテンツが得られます。</p><p>英語、中国語、日本語、韓国語、スペイン語、フランス語、ドイツ語など<strong>12以上の言語</strong>に対応 — すべてブラウザ内でローカル処理されます。</p>"
           },
-          "howToUse": {
-            "title": "OCR 文字認識の使い方",
-            "content": "<ol><li>ドロップゾーンをクリックするかページにドラッグして画像をアップロードする（JPG、PNG、WebP、BMP 対応）</li><li>精度向上のため画像内テキストの言語を選択する</li><li><strong>テキストを抽出</strong>をクリックして認識を開始する</li><li>抽出されたテキストを確認してクリップボードにコピーする</li></ol><p>最良の結果を得るには、照明が良く高コントラストの鮮明な画像を使用してください。印刷されたテキストは手書きよりも高い精度が得られます。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>12以上の言語</strong>：英語、中国語（簡体字・繁体字）、日本語、韓国語、スペイン語、フランス語、ドイツ語、イタリア語、ポルトガル語、ロシア語などに対応</li><li><strong>複数の画像形式</strong>：JPG、PNG、WebP、BMP、TIFF に対応</li><li><strong>Tesseract.js 搭載</strong>：WebAssembly によりブラウザ内で完全に動作する業界標準 OCR エンジン</li><li><strong>高精度</strong>：印刷テキスト、レシート、スクリーンショット、スキャン文書で最良の結果</li><li><strong>コピー＆編集</strong>：抽出されたテキストは完全に編集・コピー可能</li><li><strong>100% ローカル処理</strong>：サーバーへのアップロードなし — 文書はプライベートに保たれます</li></ul>"
-          },
           "useCases": {
             "title": "主な活用例",
             "content": "<ul><li><strong>文書デジタル化</strong>：印刷文書、レシート、手紙を編集可能なテキストに変換</li><li><strong>スクリーンショットのテキスト抽出</strong>：ウェブページ、エラーメッセージ、チャットログのスクリーンショットからテキストを取得</li><li><strong>翻訳準備</strong>：翻訳のために画像から外国語テキストを抽出</li><li><strong>データ入力</strong>：フォーム、請求書、名刺のテキストを素早くデジタル化</li><li><strong>アクセシビリティ</strong>：画像ベースのテキストをスクリーンリーダーでアクセス可能に</li></ul>"
@@ -433,14 +393,6 @@
           "intro": {
             "title": "ZIP 解凍ツールとは？",
             "content": "<p><strong>ZIP 解凍ツール</strong>は、ZIP アーカイブの内容をブラウザ上で直接開いて解凍できるツールです。個別ファイルや全コンテンツをダウンロードする前に、ファイル名、サイズ、フォルダ構造をプレビューできます。</p><p>ソフトウェアのインストールは不要 — ZIP ファイルをドロップするだけで内容を即座に閲覧できます。</p>"
-          },
-          "howToUse": {
-            "title": "ZIP 解凍ツールの使い方",
-            "content": "<ol><li>ページに ZIP ファイルをドロップするか、クリックして選択する</li><li>アーカイブの内容を確認：ファイル名、サイズ、フォルダ階層</li><li>個別ファイルをクリックしてダウンロードするか、すべてを一度に解凍する</li></ol><p>標準的な ZIP アーカイブに対応。大きなアーカイブはデバイスによっては解析に少し時間がかかる場合があります。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>即時プレビュー</strong>：解凍せずに ZIP 内のすべてのファイルとフォルダを確認</li><li><strong>選択的解凍</strong>：アーカイブ全体を解凍せずに個別ファイルをダウンロード</li><li><strong>ファイルサイズ表示</strong>：各ファイルの圧縮前後のサイズを確認</li><li><strong>フォルダ構造</strong>：アーカイブ内のネストされたディレクトリ階層を閲覧</li><li><strong>fflate 搭載</strong>：fflate ライブラリによる高性能な解凍処理</li><li><strong>ファイルサイズ制限なし</strong>：デバイスの利用可能メモリのみが制限</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
@@ -480,14 +432,6 @@
           "intro": {
             "title": "CSV/JSON 変換ツールとは？",
             "content": "<p><strong>CSV/JSON 変換ツール</strong>は、CSV（カンマ区切り値）と JSON 形式のデータを即座に相互変換します。API 用にスプレッドシートデータを JSON 配列に変換したり、JSON データセットを Excel や Google スプレッドシート用の CSV に変換したりできます。</p><p>ヘッダー、引用符付きフィールド、カスタム区切り文字も処理 — すべてブラウザ内でデータアップロードなしに完結します。</p>"
-          },
-          "howToUse": {
-            "title": "CSV/JSON 変換ツールの使い方",
-            "content": "<ol><li>入力エリアに CSV または JSON データを貼り付ける</li><li>変換方向を選択：<strong>CSV → JSON</strong> または <strong>JSON → CSV</strong></li><li>変換結果が出力エリアに即座に表示される</li><li>結果をコピーするかファイルとしてダウンロードする</li></ol><p>CSV 入力では最初の行を列ヘッダーとして使用します。JSON 入力は一貫したキーを持つオブジェクトの配列である必要があります。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>双方向変換</strong>：CSV から JSON へ、JSON から CSV へ変換</li><li><strong>自動ヘッダー検出</strong>：CSV の最初の行を JSON オブジェクトのキーとして使用</li><li><strong>特殊文字対応</strong>：引用符付きフィールド、フィールド内のカンマ、改行を正しく処理</li><li><strong>即時変換</strong>：データを貼り付けると即座に結果が表示</li><li><strong>出力ダウンロード</strong>：変換データを .json または .csv ファイルとして保存</li><li><strong>大量データ対応</strong>：数千行を効率的に処理</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
@@ -584,14 +528,6 @@
             "title": "ハッシュ生成ツールとは？",
             "content": "<p><strong>ハッシュ生成ツール</strong>は、MD5、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256、SHA3-512、CRC32 アルゴリズムを使ってテキストやファイルの暗号学的ハッシュ値を計算します。HMAC（ハッシュベースメッセージ認証コード）による秘密鍵を使ったハッシュにも対応しています。ハッシュはデータの整合性検証、ファイルの比較、ダウンロードの確認に使われる一方向の指紋です。</p><p>ブラウザ内でリアルタイムにハッシュを生成 — ファイルの整合性検証やコンテンツダイジェストの作成に最適です。</p>"
           },
-          "howToUse": {
-            "title": "ハッシュ生成ツールの使い方",
-            "content": "<ol><li>テキストを直接入力 — 入力と同時にリアルタイムでハッシュを計算</li><li>またはファイル（単一またはバッチ）をアップロードしてファイルハッシュを計算</li><li>16進数（大文字/小文字）と Base64 の出力形式を切り替え</li><li>検証フィールドを使って既知のハッシュと比較</li><li>HMAC モードを有効にして鍵付きハッシュを計算</li></ol><p>ファイルの整合性検証には、生成されたハッシュをファイルの提供元が公開しているチェックサムと比較してください。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>8 種類のアルゴリズム</strong>：MD5、CRC32、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256、SHA3-512</li><li><strong>HMAC 対応</strong>：SHA アルゴリズムによる鍵付きハッシュでメッセージ認証</li><li><strong>リアルタイムハッシュ</strong>：入力と同時に結果を即座に表示</li><li><strong>ハッシュ検証</strong>：予想されるハッシュと比較し、一致結果を視覚的に表示</li><li><strong>バッチファイルハッシュ</strong>：複数のファイルを一度にハッシュ化</li><li><strong>複数の出力形式</strong>：16進数（大文字/小文字）と Base64</li><li><strong>コピー＆エクスポート</strong>：個別または全ハッシュをコピー、テキストファイルとしてダウンロード</li><li><strong>ファイル進捗</strong>：大きなファイルの処理中にプログレスインジケータを表示</li></ul>"
-          },
           "useCases": {
             "title": "主な活用例",
             "content": "<ul><li><strong>ファイル整合性</strong>：チェックサムを比較してダウンロードファイルが改ざんされていないことを確認</li><li><strong>コンテンツ重複排除</strong>：ハッシュを比較して重複ファイルを検出</li><li><strong>API 認証</strong>：API リクエスト用の HMAC 署名を生成</li><li><strong>ソフトウェア配布</strong>：自分のファイルリリース用にチェックサムを生成</li><li><strong>セキュリティ監査</strong>：不正な変更を検出するためにファイルをハッシュ化</li></ul>"
@@ -629,14 +565,6 @@
           "intro": {
             "title": "カラー変換ツールとは？",
             "content": "<p><strong>カラー変換ツール</strong>は、ライブのビジュアルプレビュー付きで HEX、RGB、HSL 形式間でカラーを変換します。任意の形式でカラーを入力すると、他のすべての形式への同等値がカラースウォッチと共に即座に表示されます。</p><p>CSS、デザインツール、またはブランドガイドライン用のカラー表記を変換する必要があるデザイナーや開発者に最適です。</p>"
-          },
-          "howToUse": {
-            "title": "カラー変換ツールの使い方",
-            "content": "<ol><li>対応する形式でカラー値を入力する：HEX（例：#3B82F6）、RGB（例：rgb(59, 130, 246)）、または HSL（例：hsl(217, 91%, 60%)）</li><li>ライブカラープレビューと共に他のすべての形式への即時変換を確認する</li><li>任意の値をクリックしてクリップボードにコピーする</li></ol><p>カラーピッカーを使えばビジュアルでカラーを選択し、すべての形式の値を一度に取得できます。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>3形式対応</strong>：HEX、RGB、HSL カラー表記間で変換</li><li><strong>ライブプレビュー</strong>：入力または値の調整に応じて実際のカラーがリアルタイムで表示</li><li><strong>ビジュアルカラーピッカー</strong>：視覚的にカラーを選択してすべての形式の値を取得</li><li><strong>即時変換</strong>：入力に応じてリアルタイムで結果が更新</li><li><strong>ワンクリックコピー</strong>：任意のカラー形式の値をクリップボードにコピー</li><li><strong>CSS 対応出力</strong>：CSS スタイルシートで直接使用できる形式で値を出力</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
@@ -677,14 +605,6 @@
             "title": "JSON ↔ XML 変換ツールとは？",
             "content": "<p><strong>JSON ↔ XML 変換ツール</strong>は、JSON と XML 形式のデータを相互変換します。JSON オブジェクトを整形式の XML ドキュメントに変換したり、XML を JSON に戻したりできます — 異なるデータ形式を使用するシステムを連携する際に便利です。</p><p>ネストされた構造、配列、属性を両方向で正しく処理します。</p>"
           },
-          "howToUse": {
-            "title": "JSON ↔ XML 変換ツールの使い方",
-            "content": "<ol><li>入力エリアに JSON または XML データを貼り付ける</li><li>変換方向を選択：<strong>JSON → XML</strong> または <strong>XML → JSON</strong></li><li>変換結果が即座に表示される</li><li>結果をコピーするかファイルとしてダウンロードする</li></ol><p>JSON 配列は繰り返しの XML 要素に変換されます。変換中に XML 属性は保持されます。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>双方向変換</strong>：JSON から XML へ、XML から JSON へ変換</li><li><strong>ネスト構造対応</strong>：深くネストされたオブジェクトと配列を正しく処理</li><li><strong>整形出力</strong>：読みやすいように適切にインデントされた XML 出力</li><li><strong>配列処理</strong>：JSON 配列が適切な構造の繰り返し XML 要素に変換</li><li><strong>即時処理</strong>：結果が即座に表示</li><li><strong>出力ダウンロード</strong>：結果を .json または .xml ファイルとして保存</li></ul>"
-          },
           "useCases": {
             "title": "主な活用例",
             "content": "<ul><li><strong>API 連携</strong>：JSON REST API と XML SOAP サービス間で変換</li><li><strong>レガシーシステム</strong>：古いシステムの XML データをモダンアプリ用の JSON に変換</li><li><strong>設定ファイル</strong>：JSON と XML の設定ファイル形式を変換</li><li><strong>データ移行</strong>：システム移行中にデータ形式を変換</li><li><strong>テスト</strong>：JSON から XML テストデータを生成、またはその逆</li></ul>"
@@ -721,14 +641,6 @@
           "intro": {
             "title": "Markdown プレビューとは？",
             "content": "<p><strong>Markdown プレビュー</strong>は、Markdown を記述しながらライブ HTML プレビューを並べて表示できるツールです。シンプルな Markdown 構文で書式付きテキストを記述すると、レンダリングされた結果が即座に確認できます — README ファイル、ブログ記事、ドキュメントの作成に最適です。</p><p>ヘッダー、リスト、コードブロック、リンク、画像、テーブルなどを含む標準 Markdown をサポートしています。</p>"
-          },
-          "howToUse": {
-            "title": "Markdown プレビューの使い方",
-            "content": "<ol><li>左側のエディタペインで Markdown テキストを入力または貼り付ける</li><li>右側でレンダリングされた HTML プレビューがリアルタイムで更新される</li><li>標準 Markdown 構文を使用：# 見出し、**太字**、*斜体*、- リスト、```コードブロック```</li><li>レンダリングされた HTML または Markdown ソースをコピーする</li></ol><p>分割ペイン表示でタブを切り替えることなく記述とプレビューを同時に行えます。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>ライブプレビュー</strong>：入力に応じてリアルタイムでレンダリングされた HTML が更新</li><li><strong>サイドバイサイド表示</strong>：エディタとプレビューを同時に表示</li><li><strong>フル Markdown サポート</strong>：ヘッダー、太字、斜体、リスト、コードブロック、リンク、画像、テーブル、引用</li><li><strong>シンタックスハイライト</strong>：言語固有のハイライト付きコードブロック</li><li><strong>HTML 出力コピー</strong>：ウェブページで使用するためにレンダリングされた HTML をコピー</li><li><strong>レスポンシブレイアウト</strong>：デスクトップとモバイルデバイスで動作</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
@@ -770,14 +682,6 @@
           "intro": {
             "title": "正規表現テスターとは？",
             "content": "<p><strong>正規表現テスター</strong>は、マッチのリアルタイムハイライトと共にサンプルテキストに対して正規表現を記述・テストできるツールです。マッチしたグループの確認、各種フラグのテスト、パターンのデバッグが即座に行えます。</p><p>文字列パターン、データ検証、テキスト解析に取り組む開発者に欠かせないツールです。</p>"
-          },
-          "howToUse": {
-            "title": "正規表現テスターの使い方",
-            "content": "<ol><li>パターンフィールドに正規表現パターンを入力する</li><li>必要に応じてフラグを設定：<strong>g</strong>（グローバル）、<strong>i</strong>（大文字小文字無視）、<strong>m</strong>（複数行）</li><li>下のテキストエリアにテストテキストを入力または貼り付ける</li><li>入力に応じてリアルタイムでマッチがハイライト表示される</li></ol><p>キャプチャグループは色分けして表示され、マッチ詳細にはフルマッチとキャプチャされたグループが表示されます。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>リアルタイムマッチング</strong>：パターンやテキストの入力と同時にマッチが即座にハイライト</li><li><strong>フラグサポート</strong>：グローバル (g)、大文字小文字無視 (i)、複数行 (m) フラグを切り替え</li><li><strong>グループハイライト</strong>：キャプチャグループを明確な視覚マーカーで表示</li><li><strong>マッチ詳細</strong>：フルマッチテキスト、グループ、位置を確認</li><li><strong>エラーフィードバック</strong>：無効な正規表現構文を即座に検出して報告</li><li><strong>ネイティブエンジン</strong>：ブラウザ組み込みの JavaScript 正規表現エンジンを使用</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
@@ -822,14 +726,6 @@
             "title": "Unix タイムスタンプ変換ツールとは？",
             "content": "<p><strong>Unix タイムスタンプ変換ツール</strong>は、Unix タイムスタンプ（1970年1月1日からの秒数）と人が読める日付/時刻形式を相互変換します。タイムスタンプを入力すると日付が表示され、日付を選択するとタイムスタンプが得られます。</p><p>現在の Unix タイムスタンプをライブ表示し、秒とミリ秒の両形式をサポートしています。</p>"
           },
-          "howToUse": {
-            "title": "Unix タイムスタンプ変換ツールの使い方",
-            "content": "<ol><li>Unix タイムスタンプ（秒またはミリ秒）を入力して人が読める日付と時刻を確認する</li><li>または日付と時刻を選択して対応する Unix タイムスタンプを取得する</li><li>現在の Unix タイムスタンプがライブ表示されリアルタイムで更新される</li><li>ワンクリックで任意の値をコピーする</li></ol><p>入力値の長さに基づいて秒またはミリ秒のどちらかを自動検出します。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>双方向変換</strong>：タイムスタンプ → 日付、日付 → タイムスタンプ</li><li><strong>ライブクロック</strong>：現在の Unix タイムスタンプをリアルタイムで表示・更新</li><li><strong>秒とミリ秒</strong>：Unix 秒と JavaScript ミリ秒の両方をサポート</li><li><strong>ローカルと UTC</strong>：ローカルタイムゾーンと UTC の両方で時刻を表示</li><li><strong>即時結果</strong>：入力に応じてリアルタイムで変換</li><li><strong>ワンクリックコピー</strong>：任意の値をクリップボードにコピー</li></ul>"
-          },
           "useCases": {
             "title": "主な活用例",
             "content": "<ul><li><strong>デバッグ</strong>：デバッグのために API レスポンスのタイムスタンプを読み取れる日付に変換</li><li><strong>データベースクエリ</strong>：SQL クエリ用にタイムスタンプ形式を変換</li><li><strong>ログ分析</strong>：ログファイル内の Unix タイムスタンプを人が読める時刻に変換</li><li><strong>スケジューリング</strong>：cron ジョブやスケジュールされたタスク用の将来/過去のタイムスタンプを計算</li><li><strong>タイムゾーン間の作業</strong>：異なるタイムゾーン間でタイムスタンプを比較</li></ul>"
@@ -868,14 +764,6 @@
           "intro": {
             "title": "YAML ↔ JSON 変換ツールとは？",
             "content": "<p><strong>YAML ↔ JSON 変換ツール</strong>は、YAML と JSON 形式のデータを相互変換します。YAML の人に優しい構文は設定ファイルで人気があり、JSON は API やデータ交換の標準形式です。</p><p>Kubernetes の設定、CI/CD パイプライン、あらゆる YAML ファイルを JSON に変換し、逆変換も — ブラウザ内で即座に完結します。</p>"
-          },
-          "howToUse": {
-            "title": "YAML ↔ JSON 変換ツールの使い方",
-            "content": "<ol><li>入力エリアに YAML または JSON データを貼り付ける</li><li>変換方向を選択：<strong>YAML → JSON</strong> または <strong>JSON → YAML</strong></li><li>変換結果が即座に表示される</li><li>結果をコピーするかファイルとしてダウンロードする</li></ol><p>複数行文字列、アンカー、複雑なネスト構造を含む完全な YAML 仕様をサポートしています。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>双方向変換</strong>：YAML から JSON へ、JSON から YAML へ変換</li><li><strong>完全な YAML サポート</strong>：複数行文字列、アンカー、エイリアス、すべての YAML 機能に対応</li><li><strong>整形出力</strong>：JSON と YAML の両方の出力が適切にフォーマット</li><li><strong>エラーレポート</strong>：無効な YAML または JSON 構文に対する明確なエラーメッセージ</li><li><strong>即時処理</strong>：結果が即座に表示</li><li><strong>js-yaml 搭載</strong>：業界標準の js-yaml ライブラリを使った信頼性の高い変換</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
@@ -917,14 +805,6 @@
             "title": "テキスト差分比較とは？",
             "content": "<p><strong>テキスト差分比較</strong>は、2つのテキストを比較して行ごとの差分をハイライト表示します。追加、削除、変更された内容が正確に確認できます — ブラウザ上の簡易版 <code>git diff</code> のようなツールです。</p><p>コードバージョンの比較、設定ファイルの確認、文書の下書き比較、あらゆるテキストコンテンツの比較に最適です。</p>"
           },
-          "howToUse": {
-            "title": "テキスト差分比較の使い方",
-            "content": "<ol><li>左パネルに元のテキストを貼り付ける</li><li>右パネルに変更後のテキストを貼り付ける</li><li>差分が即座にハイライト表示される：追加は緑、削除は赤</li><li>差分をスクロールしてすべての変更を確認する</li></ol><p>コード、設定ファイル、明確な改行のある文書など、構造化されたテキストで最も効果的に機能します。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>行ごとの比較</strong>：2つのテキスト間で差異のある行を正確に確認</li><li><strong>色分けされた差分</strong>：追加は緑、削除は赤 — ひと目で明確</li><li><strong>即時比較</strong>：テキストを貼り付けると即座に結果が表示</li><li><strong>サイドバイサイド表示</strong>：差分を揃えて両テキストを同時に表示</li><li><strong>長文テキスト対応</strong>：長い文書を効率的に比較</li><li><strong>行数制限なし</strong>：制限なくあらゆる長さのテキストを処理</li></ul>"
-          },
           "useCases": {
             "title": "主な活用例",
             "content": "<ul><li><strong>コードレビュー</strong>：コードファイルの2つのバージョンを比較して変更点を確認</li><li><strong>設定変更</strong>：開発環境と本番環境の設定ファイルの差異を確認</li><li><strong>文書リビジョン</strong>：文書や契約書の下書きバージョンを比較</li><li><strong>データベースレコード</strong>：エクスポートされたレコードを比較してデータの不一致を見つける</li><li><strong>デバッグ</strong>：テストシナリオで期待される出力と実際の出力を比較</li></ul>"
@@ -964,14 +844,6 @@
           "intro": {
             "title": "文字数カウンターとは？",
             "content": "<p><strong>文字数カウンター</strong>は、テキストを分析して単語数、文字数、文数、段落数、推定読了時間を即座に表示します。文章の長さ要件を満たす必要があるライター、学生、コンテンツクリエイターに不可欠なツールです。</p><p>テキストを貼り付けるだけで、すべての統計がリアルタイムで得られます。</p>"
-          },
-          "howToUse": {
-            "title": "文字数カウンターの使い方",
-            "content": "<ol><li>入力エリアにテキストを入力または貼り付ける</li><li>入力に応じてリアルタイムで統計が更新される：単語数、文字数、文数、段落数、読了時間</li><li>結果を使って文章の長さ要件を確認したり、読了時間を推定したりする</li></ol><p>読了時間は平均読書速度の毎分200単語を基準に算出されます。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>単語数カウント</strong>：句読点と空白を適切に処理した正確な単語数のカウント</li><li><strong>文字数カウント</strong>：スペースあり・なしの合計文字数</li><li><strong>文数カウント</strong>：句読点マーカーに基づく文数のカウント</li><li><strong>段落数カウント</strong>：改行で区切られた段落数のカウント</li><li><strong>読了時間</strong>：平均速度での推定読了時間</li><li><strong>リアルタイム更新</strong>：入力に応じてすべての統計が即座に更新</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",
@@ -1016,14 +888,6 @@
             "title": "大文字小文字変換ツールとは？",
             "content": "<p><strong>大文字小文字変換ツール</strong>は、UPPERCASE、lowercase、Title Case、Sentence case、camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE など複数のケース形式間でテキストを変換します。</p><p>変数名を変更する開発者、タイトルを書式設定するライター、テキストのケースをすばやく変更する必要がある誰にでも不可欠なツールです。</p>"
           },
-          "howToUse": {
-            "title": "大文字小文字変換ツールの使い方",
-            "content": "<ol><li>入力エリアにテキストを入力または貼り付ける</li><li>希望のケース形式ボタンをクリック：UPPER、lower、Title、Sentence、camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE</li><li>変換結果が即座に表示される</li><li>ワンクリックで結果をコピーする</li></ol><p>変換を連鎖させることもできます — 最初に lowercase に変換してから camelCase に変換するときれいな結果が得られます。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>9以上のケース形式</strong>：UPPERCASE、lowercase、Title Case、Sentence case、camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE</li><li><strong>即時変換</strong>：形式をクリックすると即座に結果が表示</li><li><strong>複数行対応</strong>：複数行のテキストを一度に変換</li><li><strong>スマート解析</strong>：camelCase、snake_case などの形式から単語を正しく分割</li><li><strong>ワンクリックコピー</strong>：変換されたテキストをクリップボードにコピー</li><li><strong>バッチ処理</strong>：複数行を同時に処理</li></ul>"
-          },
           "useCases": {
             "title": "主な活用例",
             "content": "<ul><li><strong>変数命名</strong>：JavaScript の camelCase、Python の snake_case、CSS の kebab-case 間で変換</li><li><strong>データベースフィールド</strong>：異なる命名規則間でカラム名を変換</li><li><strong>コンテンツ書式設定</strong>：見出しやヘッドライン用にタイトルを Title Case に変換</li><li><strong>API 設計</strong>：JSON リクエスト/レスポンスのスキーマでフィールド名を標準化</li><li><strong>コードリファクタリング</strong>：命名規則を切り替える際に識別子を改名</li></ul>"
@@ -1063,14 +927,6 @@
           "intro": {
             "title": "Lorem Ipsum ジェネレーターとは？",
             "content": "<p><strong>Lorem Ipsum ジェネレーター</strong>は、デザインのモックアップ、ワイヤーフレーム、プロトタイプ用のプレースホルダーテキストを作成します。段落、文、または単語単位で古典的な Lorem Ipsum テキストを正確な量のコントロールで生成できます。</p><p>最終的なコンテンツが準備できる前にレイアウトをリアルに見えるテキストで埋める業界標準の方法です。</p>"
-          },
-          "howToUse": {
-            "title": "Lorem Ipsum ジェネレーターの使い方",
-            "content": "<ol><li>単位を選択：<strong>段落</strong>、<strong>文</strong>、または<strong>単語</strong></li><li>必要な量を設定（例：3段落、10文、50単語）</li><li><strong>生成</strong>をクリックしてプレースホルダーテキストを作成する</li><li>デザインや文書で使用するために結果をコピーする</li></ol><p>生成されたテキストは \"Lorem ipsum dolor sit amet...\" から始まる古典的な Lorem Ipsum パターンに従います。</p>"
-          },
-          "features": {
-            "title": "主な機能",
-            "content": "<ul><li><strong>3つの出力モード</strong>：段落、文、単語数で生成</li><li><strong>カスタマイズ可能な量</strong>：生成するテキストの量を正確にコントロール</li><li><strong>古典的な Lorem Ipsum</strong>：標準の Lorem Ipsum ワードプールを使用</li><li><strong>即時生成</strong>：遅延なしでテキストが即座に表示</li><li><strong>ワンクリックコピー</strong>：生成されたすべてのテキストをクリップボードにコピー</li><li><strong>一貫した出力</strong>：自然に見えるテキストの分布と段落の長さ</li></ul>"
           },
           "useCases": {
             "title": "主な活用例",

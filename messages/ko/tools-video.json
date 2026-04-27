@@ -27,14 +27,6 @@
             "title": "동영상 음소거란?",
             "content": "<p><strong>동영상 음소거</strong>는 동영상 파일에서 오디오 트랙을 제거하면서 화질을 그대로 유지합니다. 배경 루프, 프레젠테이션, 또는 오디오가 필요 없는 소셜 미디어 게시물용 무음 동영상을 만드세요.</p><p>FFmpeg.wasm으로 구동 — 브라우저에서 로컬로 완전한 동영상 처리를 실행합니다.</p>"
           },
-          "howToUse": {
-            "title": "동영상 음소거 사용법",
-            "content": "<ol><li>동영상 파일 업로드 (MP4, WebM, MKV, AVI 지원)</li><li><strong>오디오 제거</strong>를 클릭하여 오디오 트랙 제거</li><li>무음 동영상 다운로드</li></ol><p>동영상 스트림은 재인코딩 없이 복사되므로 처리가 빠르고 화질이 유지됩니다.</p>"
-          },
-          "features": {
-            "title": "주요 기능",
-            "content": "<ul><li><strong>오디오 트랙 제거</strong>: 동영상을 그대로 유지하면서 오디오를 완전히 제거</li><li><strong>재인코딩 없음</strong>: 동영상 스트림을 직접 복사 — 화질 손실 없음</li><li><strong>빠른 처리</strong>: 스트림 복사는 재인코딩보다 훨씬 빠름</li><li><strong>다양한 형식</strong>: MP4, WebM, MKV, AVI 입력 지원</li><li><strong>FFmpeg.wasm 구동</strong>: 브라우저에서 업계 표준 동영상 처리</li><li><strong>미리보기</strong>: 음소거 전후 동영상 재생 가능</li></ul>"
-          },
           "useCases": {
             "title": "주요 활용 사례",
             "content": "<ul><li><strong>프레젠테이션</strong>: 슬라이드의 배경 동영상에서 방해되는 오디오 제거</li><li><strong>소셜 미디어</strong>: Instagram 또는 TikTok 배경용 무음 루프 동영상 제작</li><li><strong>웹 디자인</strong>: 웹사이트 배경용 무음 히어로 동영상 준비</li><li><strong>개인정보 보호</strong>: 녹화에서 대화나 식별 가능한 오디오 제거</li><li><strong>동영상 편집</strong>: 다른 사운드트랙으로 교체하기 전에 오디오 제거</li></ul>"
@@ -107,14 +99,6 @@
           "intro": {
             "title": "동영상 자르기란?",
             "content": "<p><strong>동영상 자르기</strong>는 정밀한 시작 및 종료 시간 컨트롤로 동영상 클립을 원하는 길이로 자릅니다. 0.1초 정밀도로 시간을 설정하고, 선택 범위를 미리 보고, 자른 클립을 다운로드하세요.</p><p>브라우저에서 직접 전문가 수준의 동영상 트리밍을 위해 FFmpeg.wasm을 사용합니다.</p>"
-          },
-          "howToUse": {
-            "title": "동영상 자르기 사용법",
-            "content": "<ol><li>동영상 파일 업로드</li><li>유지할 클립의 <strong>시작 시간</strong>과 <strong>종료 시간</strong> 설정</li><li>동영상 플레이어에서 선택 범위 미리보기</li><li><strong>자르기</strong>를 클릭하여 클립 추출</li><li>자른 동영상 다운로드</li></ol><p>0.1초 단위의 정밀한 시간 선택을 지원합니다.</p>"
-          },
-          "features": {
-            "title": "주요 기능",
-            "content": "<ul><li><strong>정밀한 타이밍</strong>: 0.1초 정확도로 시작 및 종료 시간 설정</li><li><strong>동영상 미리보기</strong>: 자르기 전에 선택 범위 재생</li><li><strong>빠른 처리</strong>: 재인코딩 없이 즉시 자르는 스트림 복사 모드</li><li><strong>다양한 형식</strong>: MP4, WebM, MKV, AVI 지원</li><li><strong>FFmpeg.wasm 구동</strong>: 브라우저에서 전문적인 동영상 처리</li><li><strong>화질 보존</strong>: 스트림 복사 시 화질 손실 없음</li></ul>"
           },
           "useCases": {
             "title": "주요 활용 사례",
@@ -221,14 +205,6 @@
             "title": "비디오 회전 도구란?",
             "content": "<p><strong>비디오 회전</strong>은 비디오 파일을 90° 단위로 회전하여 방향 문제를 수정합니다. 옆으로 찍은 휴대폰 동영상, 거꾸로 찍은 영상을 수정하거나 특정 표시 요구에 맞게 방향을 조정할 수 있습니다 — 브라우저에서 실시간 미리보기와 함께.</p>"
           },
-          "howToUse": {
-            "title": "비디오 회전 사용 방법",
-            "content": "<ol><li>비디오 파일 업로드</li><li><strong>왼쪽으로 회전</strong> 또는 <strong>오른쪽으로 회전</strong>을 클릭하여 실시간 미리보기</li><li><strong>회전 후 다운로드</strong>를 클릭하여 원스텝으로 처리 & 다운로드</li></ol>"
-          },
-          "features": {
-            "title": "주요 기능",
-            "content": "<ul><li><strong>누적 회전</strong>: 왼쪽 또는 오른쪽 90° 회전, 여러 번 클릭하면 180° 또는 270° 가능</li><li><strong>실시간 미리보기</strong>: 부드러운 CSS 애니메이션으로 회전을 실시간 확인</li><li><strong>다중 형식</strong>: MP4, WebM, MKV, AVI 등 지원</li><li><strong>WebCodecs 기반</strong>: 브라우저 내 고속・하드웨어 가속 비디오 처리</li><li><strong>원클릭 다운로드</strong>: 원스텝으로 처리 및 저장, 중간 스텝 불필요</li><li><strong>오디오 동기화 유지</strong>: 회전 후에도 오디오 트랙 동기화 유지</li></ul>"
-          },
           "useCases": {
             "title": "일반적인 용도",
             "content": "<ul><li><strong>휴대폰 비디오</strong>: 옆으로 찍은 휴대폰 영상 수정</li><li><strong>카메라 소스</strong>: 기울게 설치한 카메라의 방향 보정</li><li><strong>화면 녹</strong>: 세로 표시용 화면 녹화 회전</li><li><strong>SNS</strong>: 플랫폼 요구에 맞게 방향 조정 (세로/가로)</li><li><strong>프레젠테이션</strong>: 슬라이드 내 비디오 방향 수정</li></ul>"
@@ -269,14 +245,6 @@
           "intro": {
             "title": "동영상을 GIF로 변환이란?",
             "content": "<p><strong>동영상을 GIF로</strong>는 프레임 레이트, 해상도, 품질을 제어하면서 동영상 클립을 애니메이션 GIF 이미지로 변환합니다. 소셜 미디어, 채팅, 또는 문서화를 위해 모든 동영상에서 공유 가능한 GIF를 만드세요.</p><p>브라우저에서 직접 고품질 GIF 생성을 위해 FFmpeg.wasm으로 구동됩니다.</p>"
-          },
-          "howToUse": {
-            "title": "동영상을 GIF로 변환 사용법",
-            "content": "<ol><li>동영상 파일 업로드</li><li>GIF 클립의 시작 및 종료 시간 설정</li><li><strong>프레임 레이트</strong>(fps)와 출력 <strong>너비</strong> 조정</li><li><strong>변환</strong>을 클릭하여 GIF 생성</li><li>애니메이션 GIF 미리보기 및 다운로드</li></ol><p>낮은 프레임 레이트와 작은 너비는 더 작은 GIF 파일을 만듭니다.</p>"
-          },
-          "features": {
-            "title": "주요 기능",
-            "content": "<ul><li><strong>프레임 레이트 제어</strong>: GIF 프레임 레이트 설정 (예: 10, 15, 24 fps)</li><li><strong>크기 제어</strong>: 파일 크기 최적화를 위한 출력 너비 조정</li><li><strong>시간 선택</strong>: 동영상에서 변환할 부분 선택</li><li><strong>미리보기</strong>: 다운로드 전에 GIF 확인</li><li><strong>FFmpeg.wasm 구동</strong>: 최적의 GIF 색상을 위한 고품질 팔레트 생성</li><li><strong>다양한 입력 형식</strong>: MP4, WebM, MKV, AVI에서 변환</li></ul>"
           },
           "useCases": {
             "title": "주요 활용 사례",
@@ -360,14 +328,6 @@
           "intro": {
             "title": "동영상을 WebP로 변환이란?",
             "content": "<p><strong>동영상을 WebP로</strong>는 동영상 클립을 애니메이션 WebP 이미지로 변환합니다. WebP 애니메이션은 동등한 GIF보다 <strong>25-35% 작으며</strong> 더 나은 색상 재현과 투명도 지원을 제공합니다.</p><p>웹 사용을 위한 GIF의 현대적인 대안입니다.</p>"
-          },
-          "howToUse": {
-            "title": "동영상을 WebP로 변환 사용법",
-            "content": "<ol><li>동영상 파일 업로드</li><li>애니메이션 클립의 시작 및 종료 시간 설정</li><li>프레임 레이트와 출력 크기 조정</li><li><strong>변환</strong>을 클릭하여 애니메이션 WebP 생성</li><li>WebP 애니메이션 다운로드</li></ol>"
-          },
-          "features": {
-            "title": "주요 기능",
-            "content": "<ul><li><strong>GIF보다 작음</strong>: WebP 애니메이션은 동등한 GIF보다 25-35% 작음</li><li><strong>더 나은 색상</strong>: 전체 24비트 색 깊이 (GIF의 256색 한계 대비)</li><li><strong>투명도</strong>: 투명 애니메이션을 위한 알파 채널 지원</li><li><strong>프레임 레이트 제어</strong>: 크기 최적화를 위한 조절 가능한 fps</li><li><strong>FFmpeg.wasm 구동</strong>: 브라우저에서 전문적인 인코딩</li><li><strong>광범위한 브라우저 지원</strong>: 모든 최신 브라우저에서 지원</li></ul>"
           },
           "useCases": {
             "title": "주요 활용 사례",
@@ -493,14 +453,6 @@
             "title": "동영상 압축이란?",
             "content": "<p><strong>동영상 압축</strong>은 서버에 업로드하지 않고 파일 크기를 줄이는 강력한 브라우저 기반 동영상 압축기입니다. 빠른 압축을 위해 세 가지 품질 프리셋 중에서 선택하거나, CRF, 인코딩 속도, 해상도, 프레임 레이트, 오디오 비트레이트, 최대 비트레이트 상한을 완벽하게 제어하려면 <strong>고급 모드</strong>로 전환하세요.</p><p>FFmpeg.wasm과 H.264/AAC 인코딩으로 구동 — 출력은 어디서나 재생됩니다. 이 도구는 상세한 동영상 메타데이터(해상도, 재생 시간, 비트레이트, FPS)를 표시하고 압축 후 전후 비교를 보여줍니다.</p>"
           },
-          "howToUse": {
-            "title": "동영상 압축 사용 방법",
-            "content": "<ol><li>동영상 파일 업로드 — 도구가 즉시 해상도, 재생 시간, 비트레이트, 프레임 레이트를 표시합니다</li><li><strong>간단 모드</strong>(높음 / 중간 / 낮음 프리셋)를 선택하거나 <strong>고급 모드</strong>로 전환하여 CRF, 인코딩 속도, 해상도, FPS, 오디오 비트레이트를 미세 조정하세요</li><li><strong>압축</strong>을 클릭 — 진행 표시줄이 인코딩을 추적합니다</li><li>원본 대비 압축된 동영상 비교: 파일 크기, 해상도, 비트레이트, 감소율</li><li>압축된 동영상을 미리보고 다운로드하세요</li></ol><p>불필요한 업스케일을 방지하기 위해 원본 해상도 또는 프레임 레이트를 초과하는 옵션은 자동으로 비활성화됩니다.</p>"
-          },
-          "features": {
-            "title": "주요 기능",
-            "content": "<ul><li><strong>간단 및 고급 모드</strong>: 초보자를 위한 빠른 프리셋; 전문가를 위한 완전한 매개변수 제어</li><li><strong>동영상 메타데이터 표시</strong>: 원본 및 압축된 동영상 모두에 대해 해상도, 재생 시간, 비트레이트, FPS 확인</li><li><strong>스마트 업스케일 방지</strong>: 원본 해상도 또는 프레임 레이트를 초과하는 옵션은 비활성화됩니다</li><li><strong>조절 가능한 CRF</strong>: 0(무손실)에서 51까지 품질 계수를 미세 조정</li><li><strong>9가지 인코딩 속도</strong>: 초고속에서 매우 느림까지 — 느릴수록 동일한 품질에서 더 작은 파일</li><li><strong>해상도 및 FPS 제어</strong>: 1080p, 720p, 480p 또는 360p로 다운스케일; 프레임 레이트를 30, 24 또는 15 fps로 줄이기</li><li><strong>오디오 비트레이트 선택</strong>: 64k에서 256k AAC 오디오 중 선택</li><li><strong>최대 비트레이트 상한</strong>: 선택적으로 스트리밍 호환성을 위해 최대 동영상 비트레이트 제한</li><li><strong>전후 비교</strong>: 압축률이 포함된 전체 전후 통계 테이블</li><li><strong>H.264 + AAC 출력</strong>: 범용 기기 호환성을 위한 MP4 형식</li></ul>"
-          },
           "useCases": {
             "title": "일반적인 사용 사례",
             "content": "<ul><li><strong>이메일 첨부</strong>: Gmail, Outlook 또는 기업 메일용으로 25MB 미만으로 동영상 압축</li><li><strong>메신저 앱</strong>: WhatsApp(16MB 제한), Telegram, Signal 또는 iMessage용으로 동영상 축소</li><li><strong>소셜 미디어</strong>: Instagram, TikTok, X 또는 YouTube에 더 빠른 업로드를 위해 파일 크기 최적화</li><li><strong>클우드 스토리지</strong>: Google Drive, Dropbox 또는 iCloud 공간 절약을 위해 파일 크기 줄이기</li><li><strong>웹 및 CMS 업로드</strong>: WordPress, Shopify 또는 사용자 정의 포털의 업로드 크기 제한 충족</li><li><strong>동영상 아카이빙</strong>: 장기 저장을 위해 고품질 프리셋으로 대용량 녹화 압축</li><li><strong>저대역폭 공유</strong>: 느린 연결을 통해 빠른 전송을 위해 저품질 프리셋 사용</li></ul>"
@@ -589,14 +541,6 @@
             "title": "동영상 형식 변환이란?",
             "content": "<p><strong>동영상 형식 변환</strong>은 인기 있는 형식 간에 동영상을 변환합니다: MP4, WebM, MKV, AVI. 더 넓은 호환성을 위해 WebM 녹화를 MP4로 변환해야 하나요? 또는 웹 사용을 위해 AVI를 WebM으로? 이 도구가 처리해 드립니다.</p><p>브라우저에서 안정적인 형식 변환을 위해 FFmpeg.wasm으로 구동됩니다.</p>"
           },
-          "howToUse": {
-            "title": "동영상 형식 변환 사용법",
-            "content": "<ol><li>지원되는 형식의 동영상 파일 업로드</li><li>대상 형식 선택: <strong>MP4</strong>, <strong>WebM</strong>, <strong>MKV</strong>, 또는 <strong>AVI</strong></li><li><strong>변환</strong>을 클릭하여 처리 시작</li><li>변환된 동영상 다운로드</li></ol><p>기기 및 플랫폼 전반에 걸친 최대 호환성을 위해 MP4 (H.264)를 권장합니다.</p>"
-          },
-          "features": {
-            "title": "주요 기능",
-            "content": "<ul><li><strong>네 가지 형식</strong>: MP4, WebM, MKV, AVI 간 변환</li><li><strong>H.264 인코딩</strong>: 범용 호환성을 위한 H.264 MP4 출력</li><li><strong>WebM용 VP8/VP9</strong>: 각 형식에 맞는 코덱 선택</li><li><strong>FFmpeg.wasm 구동</strong>: 브라우저에서 전문적인 인코딩</li><li><strong>미리보기</strong>: 다운로드 전에 변환된 동영상 재생</li><li><strong>오디오 보존</strong>: 오디오 트랙이 적절히 트랜스코딩됨</li></ul>"
-          },
           "useCases": {
             "title": "주요 활용 사례",
             "content": "<ul><li><strong>호환성</strong>: WebM 화면 녹화를 어디서나 재생 가능한 MP4로 변환</li><li><strong>웹 최적화</strong>: 웹에서 더 작은 파일 크기를 위해 동영상을 WebM으로 변환</li><li><strong>레거시 지원</strong>: 오래된 미디어 플레이어를 위해 최신 형식을 AVI로 변환</li><li><strong>편집</strong>: 동영상 편집기가 지원하는 형식으로 변환</li><li><strong>크로스 플랫폼</strong>: 모든 기기 또는 플랫폼에서 동영상이 재생되도록 보장</li></ul>"
@@ -667,14 +611,6 @@
           "intro": {
             "title": "동영상 크기 조정이란?",
             "content": "<p><strong>동영상 크기 조정</strong>은 프리셋 옵션(720p, 480p, 360p) 또는 사용자 정의 크기로 동영상 해상도를 변경합니다. 웹, 모바일, 또는 소셜 미디어를 위해 대용량 동영상을 다운스케일하거나, 특정 플랫폼 요구사항에 맞게 해상도를 조정하세요.</p>"
-          },
-          "howToUse": {
-            "title": "동영상 크기 조정 사용법",
-            "content": "<ol><li>동영상 파일 업로드</li><li>프리셋 해상도 선택 (<strong>720p</strong>, <strong>480p</strong>, <strong>360p</strong>) 또는 사용자 정의 크기 입력</li><li><strong>크기 조정</strong>을 클릭하여 처리</li><li>크기 조정된 동영상 다운로드</li></ol><p>왜곡을 방지하기 위해 종횡비가 자동으로 유지됩니다.</p>"
-          },
-          "features": {
-            "title": "주요 기능",
-            "content": "<ul><li><strong>프리셋 해상도</strong>: 720p, 480p, 또는 360p 빠른 선택</li><li><strong>사용자 정의 크기</strong>: 특정 너비와 높이 입력</li><li><strong>종횡비 잠금</strong>: 동영상 비율 자동 유지</li><li><strong>FFmpeg.wasm 구동</strong>: 전문가 수준의 동영상 스케일링</li><li><strong>다양한 형식</strong>: MP4, WebM, MKV, AVI 크기 조정</li><li><strong>미리보기</strong>: 다운로드 전에 크기 조정된 동영상 재생</li></ul>"
           },
           "useCases": {
             "title": "주요 활용 사례",
@@ -762,14 +698,6 @@
           "intro": {
             "title": "동영상 정보가 무엇인가요?",
             "content": "<p><strong>동영상 정보</strong>는 동영상 파일에서 상세한 메타데이터를 검사하고 표시하는 물 온라인 도구입니다.</p>"
-          },
-          "howToUse": {
-            "title": "동영상 정보 사용 방법",
-            "content": "<ol><li>동영상 파일을 업로드하세요.</li><li>기본 메타데이터를 즉시 확인하세요.</li><li>심층 검사를 위해 <strong>동영상 분석</strong>을 클릭하세요.</li><li>모든 메타데이터를 텍스트로 복사하세요.</li></ol>"
-          },
-          "features": {
-            "title": "주요 기능",
-            "content": "<ul><li>이중 분석</li><li>스트림 수준 상세 정보</li><li>코덱 감지</li><li>원클릭 복사</li></ul>"
           },
           "useCases": {
             "title": "일반적인 사용 사례",

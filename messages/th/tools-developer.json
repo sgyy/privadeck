@@ -47,14 +47,6 @@
             "title": "ตัวจัดรูปแบบและตัวแสดง JSON ระดับมืออาชีพ",
             "content": "<p><strong>JSON Formatter</strong> คือเครื่องมือ JSON ระดับมืออาชีพฟรีที่รวม Monaco code editor มุมมองแบบต้นไม้แบบโต้ตอบ และการตรวจสอบแบบเรียลไทม์ไว้ในหน้าจอเดียว วาง JSON ที่ยุ่งเหยิงหรือย่อขนาดแล้วรับผลลัพธ์ที่สะอาดอ่านได้โดยมนุษย์พร้อมการเน้นไวยากรณ์ การพับโค้ด และการสำรวจแบบต้นไม้ด้วยภาพได้ทันที</p><p>ไม่ว่าจะดีบั๊ก API responses ตรวจสอบโครงสร้างข้อมูลที่ซ้อนกันลึก ตรวจสอบไฟล์การตั้งค่า หรือเตรียมข้อมูลสำหรับเอกสาร — เครื่องมือนี้มอบทุกสิ่งที่คุณต้องการโดยไม่ต้องออกจากเบราว์เซอร์หรืออัปโหลดแม้แต่ไบต์เดียว</p>"
           },
-          "howToUse": {
-            "title": "วิธีใช้ JSON Formatter",
-            "content": "<ol><li>วางหรือพิมพ์ JSON ใน Monaco Editor ด้านซ้าย — หรือลากและวางไฟล์ <code>.json</code></li><li>เครื่องมือตรวจสอบแบบเรียลไทม์และแสดงสถานะ <strong>ถูกต้อง</strong> หรือ <strong>ไม่ถูกต้อง</strong> ทันที</li><li>คลิก <strong>จัดรูปแบบ</strong> เพื่อพิมพ์สวยงามด้วยระยะย่อหน้าที่เลือก หรือ <strong>ย่อขนาด</strong> เพื่อบีบอัด</li><li>สลับไปยังมุมมอง <strong>ต้นไม้</strong> เพื่อสำรวจโครงสร้างด้วยภาพ หรือมุมมอง <strong>โค้ด</strong> สำหรับผลลัพธ์ที่เน้นไวยากรณ์</li><li>ใช้ตัวกรอง JSON Path (เช่น <code>$.data.users[0]</code>) เพื่อเจาะลึกค่าเฉพาะ</li><li>คัดลอกหรือดาวน์โหลดผลลัพธ์ด้วยคลิกเดียว</li></ol>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>Monaco Editor</strong>: code editor เดียวกับที่ขับเคลื่อน VS Code — พร้อมการเน้นไวยากรณ์ การจับคู่วงเล็บ การพับโค้ด และการตัดคำ</li><li><strong>มุมมองแบบต้นไม้แบบโต้ตอบ</strong>: ขยายและยุบ JSON nodes ด้วยภาพ พร้อมจำนวนรายการในทุกระดับและการนำทางด้วยแป้นพิมพ์ครบถ้วน</li><li><strong>การกรอง JSON Path</strong>: สืบค้นค่าเฉพาะโดยใช้ path expressions เช่น <code>$.address.city</code> หรือ <code>$.items[0].name</code></li><li><strong>การตรวจสอบแบบเรียลไทม์</strong>: ตรวจสอบไวยากรณ์ทันทีขณะที่คุณพิมพ์ — ไม่ต้องคลิกปุ่ม</li><li><strong>Pretty Print &amp; ย่อขนาด</strong>: จัดรูปแบบด้วยระยะย่อหน้าที่ปรับแต่งได้ (2, 4 หรือ 8 ช่องว่าง) หรือบีบอัดเป็นบรรทัดเดียว</li><li><strong>รองรับการลากและวางไฟล์</strong>: วางไฟล์ <code>.json</code> หรือ <code>.txt</code> ลงใน editor โดยตรง</li><li><strong>บานหน้าต่างแยกที่ปรับขนาดได้</strong>: ลากตัวแบ่งเพื่อปรับสมดุลพื้นที่ editor และตัวแสดง ดับเบิลคลิกเพื่อรีเซ็ต</li><li><strong>มุมมองโค้ดที่เน้นไวยากรณ์</strong>: ผลลัพธ์ที่มีสีพร้อมหมายเลขบรรทัดสำหรับการคัดลอกวางที่ง่าย</li><li><strong>ทำงานในเบราว์เซอร์ 100%</strong>: ไม่มีการอัปโหลดเซิร์ฟเวอร์ — ข้อมูลของคุณอยู่บนอุปกรณ์เสมอ</li></ul>"
-          },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
             "content": "<ul><li><strong>การพัฒนา &amp; ดีบั๊ก API</strong>: วาง API responses ดิบ จัดรูปแบบทันที และใช้มุมมองแบบต้นไม้นำทาง objects ที่ซ้อนกันลึก</li><li><strong>ไฟล์การตั้งค่า</strong>: ทำความสะอาด <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code> หรือ Kubernetes manifests</li><li><strong>การสำรวจข้อมูล</strong>: ใช้ JSON Path เพื่อกรองชุดข้อมูลขนาดใหญ่และค้นหาค่าเฉพาะโดยไม่ต้องเลื่อนผ่านหลายพันบรรทัด</li><li><strong>การรีวิวโค้ด</strong>: เปรียบเทียบโครงสร้าง JSON ด้วยภาพผ่านมุมมองแบบต้นไม้เพื่อระบุความแตกต่างได้รวดเร็ว</li><li><strong>เอกสาร</strong>: จัดรูปแบบและส่งออกตัวอย่าง JSON ที่มีโครงสร้างดีสำหรับเอกสารทางเทคนิคและบทช่วยสอน</li><li><strong>บันทึกฐานข้อมูล</strong>: ตรวจสอบและจัดรูปแบบ JSON ที่เก็บใน MongoDB, CouchDB หรือ PostgreSQL JSONB columns</li></ul>"
@@ -187,14 +179,6 @@
             "title": "Visual JSON Editor for Developers",
             "content": "<p><strong>JSON Editor</strong> is a browser-based JSON editor with three view modes: <strong>Text</strong> for raw editing with Monaco Editor, <strong>Tree</strong> for visual structure editing, and <strong>Preview</strong> for read-only syntax-highlighted display.</p><p>In Tree mode, double-click a key or value to edit it in place. Right-click any node for the full context menu: insert before or after, duplicate, change type, delete, copy path. Undo and redo are available at every step. When you paste invalid JSON, one click repairs common mistakes like trailing commas, single quotes, and JavaScript comments.</p>"
           },
-          "howToUse": {
-            "title": "How to Use JSON Editor",
-            "content": "<ol><li>Paste, type, or drop a <code>.json</code> file into the editor</li><li>If the JSON is invalid, click <strong>Auto Repair</strong> to fix common mistakes</li><li>Use the <strong>view switcher</strong> to pick Text, Tree, or Preview mode</li><li>In <strong>Tree</strong> mode: double-click any key or value to edit in place; right-click for insert/duplicate/delete/change type/copy path</li><li>Use <strong>Ctrl+Z</strong> / <strong>Ctrl+Y</strong> to undo and redo</li><li>Click <strong>Format</strong>, <strong>Minify</strong>, or <strong>Smart</strong> to reformat, then <strong>Download</strong> or <strong>Copy</strong> to export</li></ol>"
-          },
-          "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Three View Modes</strong>: Text (Monaco), Tree (interactive), Preview (read-only) — switch anytime</li><li><strong>Visual Tree Editing</strong>: Double-click any key or value, right-click for the full context menu</li><li><strong>Full Type Switching</strong>: Convert any value between string, number, boolean, null, object, and array</li><li><strong>Undo / Redo</strong>: 50-step history with Ctrl+Z / Ctrl+Y shortcuts</li><li><strong>Auto Repair</strong>: Fixes trailing commas, single quotes, missing quotes, JavaScript comments, and more</li><li><strong>Smart Format</strong>: Inline short arrays/objects, expand long ones — compact yet readable</li><li><strong>Monaco Editor</strong>: The same code editor that powers VS Code, for raw text editing</li><li><strong>Path Display &amp; Copy</strong>: Click any node to see and copy its JSON Path</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
-          },
           "useCases": {
             "title": "Common Use Cases",
             "content": "<ul><li><strong>Config File Editing</strong>: Safely modify <code>package.json</code>, <code>tsconfig.json</code>, or Kubernetes manifests without syntax errors</li><li><strong>Test Data Crafting</strong>: Quickly build fixtures by duplicating nodes, changing types, and renaming keys</li><li><strong>API Response Debugging</strong>: Paste a response, restructure it, and diff against the expected shape</li><li><strong>Schema Migration</strong>: Compare two versions of a JSON document to see exactly what changed</li><li><strong>Fixing Broken JSON</strong>: Use Auto Repair to recover from trailing commas, stray quotes, or mixed delimiters</li><li><strong>Data Cleanup</strong>: Delete unwanted fields in bulk with right-click + Delete, then export the cleaned data</li></ul>"
@@ -240,14 +224,6 @@
           "intro": {
             "title": "Base64 Encoder/Decoder คืออะไร?",
             "content": "<p><strong>Base64 Encoder/Decoder</strong> แปลงข้อความและไฟล์เป็นการเข้ารหัส Base64 และในทางกลับกัน Base64 เป็นรูปแบบการเข้ารหัสไบนารีเป็นข้อความที่ใช้กันอย่างแพร่หลายในการฝังข้อมูลใน URL, อีเมล, HTML และ JSON</p><p>เข้ารหัสข้อความหรือไฟล์ใดก็ได้ (รูปภาพ, PDF, ZIP) เป็น Base64 หรือถอดรหัสสตริง Base64 กลับเป็นข้อความหรือไฟล์ที่ดาวน์โหลดได้ — ทั้งหมดในเบราว์เซอร์ของคุณ พร้อมรองรับ URL-safe variant และ Data URI</p>"
-          },
-          "howToUse": {
-            "title": "วิธีใช้ Base64 Encoder/Decoder",
-            "content": "<ol><li>เลือกโหมด<strong>ข้อความ</strong>หรือ<strong>ไฟล์</strong>ตามอินพุตของคุณ</li><li>เลือกทิศทาง<strong>เข้ารหัส</strong>หรือ<strong>ถอดรหัส</strong> — เครื่องมือจะตรวจจับอินพุต Base64 อัตโนมัติ</li><li>เลือก variant <strong>มาตรฐาน</strong>หรือ <strong>URL-safe</strong> ตามต้องการ</li><li>ผลลัพธ์จะปรากฏทันทีขณะพิมพ์ — ไม่ต้องคลิกปุ่มใดๆ</li><li>ใช้<strong>คัดลอก</strong>, <strong>ดาวน์โหลด</strong> หรือ<strong>สลับ</strong>เพื่อจัดการกับเอาต์พุต</li></ol><p>เมื่อเข้ารหัสไฟล์ ให้เปิดใช้ <strong>Data URI output</strong> เพื่อรับ data URL ที่พร้อมใช้สำหรับการฝังใน HTML/CSS</p>"
-          },
-          "features": {
-            "title": "คุณสมบัติหลัก",
-            "content": "<ul><li><strong>แปลงแบบเรียลไทม์</strong>: เข้ารหัสหรือถอดรหัสทันทีขณะพิมพ์ — ไม่ต้องคลิกปุ่ม</li><li><strong>รองรับข้อความและไฟล์</strong>: เข้ารหัสไฟล์ใดก็ได้ (รูปภาพ, PDF, ZIP) เป็น Base64 หรือถอดรหัส Base64 เป็นไฟล์ที่ดาวน์โหลดได้</li><li><strong>Base64 URL-safe</strong>: RFC 4648 variant ที่แทนที่ +/ ด้วย -_ และตัดการเติม — เหมาะสำหรับ JWT token และ URL parameter</li><li><strong>Data URI output</strong>: สร้างสตริง <code>data:{mime};base64,...</code> พร้อมใช้สำหรับฝังใน HTML, CSS หรือ JavaScript</li><li><strong>ดูตัวอย่างรูปภาพ</strong>: ตรวจจับและแสดงตัวอย่างอัตโนมัติเมื่อถอดรหัสข้อมูลรูปภาพ Base64 (PNG, JPEG, GIF, WebP)</li><li><strong>ตรวจจับอัตโนมัติ</strong>: ตรวจจับอย่างชาญฉลาดว่าอินพุตของคุณเป็น Base64 หรือไม่ และสลับไปยังโหมดถอดรหัสอัตโนมัติ</li><li><strong>สลับและสถิติ</strong>: สลับเอาต์พุตกลับเป็นอินพุตด้วยคลิกเดียว พร้อมแสดงขนาดไบต์และจำนวนตัวอักษรแบบเรียลไทม์</li><li><strong>รองรับ UTF-8</strong>: จัดการอักขระ Unicode, อิโมจิ และข้อความหลายไบต์อย่างถูกต้อง</li><li><strong>ไม่จำกัดขนาด</strong>: ประมวลผลข้อความหรือไฟล์ขนาดใดก็ได้ — จำกัดเฉพาะหน่วยความจำอุปกรณ์ของคุณ</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
@@ -345,14 +321,6 @@
             "title": "URL Encoder/Decoder คืออะไร?",
             "content": "<p><strong>URL Encoder/Decoder</strong> แปลงอักขระพิเศษใน URL เป็นรูปแบบ percent-encoded และกลับ สิ่งนี้จำเป็นสำหรับการสร้าง URL ที่ถูกต้องซึ่งมีช่องว่าง เครื่องหมายแอมเพอร์แซนด์ อักขระที่ไม่ใช่ ASCII หรืออักขระสงวนอื่นๆ</p><p>ใช้เพื่อส่งพารามิเตอร์คิวรีอย่างปลอดภัย เข้ารหัสเส้นทางไฟล์ หรือดีบั๊ก URL ที่ผิดรูปแบบ</p>"
           },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือเข้ารหัส/ถอดรหัส URL",
-            "content": "<ol><li>ป้อนข้อความหรือส่วนประกอบ URL ในช่องป้อนข้อมูล</li><li>เลือก <strong>เข้ารหัส</strong> เพื่อเข้ารหัสอักขระพิเศษแบบ percent-encode หรือ <strong>ถอดรหัส</strong> เพื่อแปลง URL ที่เข้ารหัสกลับเป็นข้อความที่อ่านได้</li><li>ผลลัพธ์อัปเดตทันที</li><li>คลิก <strong>คัดลอก</strong> เพื่อคัดลอกผลลัพธ์ที่เข้ารหัส/ถอดรหัส</li></ol><p>เข้ารหัสอักขระทั้งหมดที่ไม่ปลอดภัยใน URL ตาม RFC 3986 รวมถึงช่องว่าง &amp;, =, ?, # และอักขระที่ไม่ใช่ ASCII</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>สอดคล้องกับ RFC 3986</strong>: เข้ารหัสอักขระสงวนและอักขระที่ไม่ปลอดภัยใน URL ได้อย่างถูกต้อง</li><li><strong>การประมวลผลแบบเรียลไทม์</strong>: ผลลัพธ์อัปเดตขณะที่คุณพิมพ์</li><li><strong>รองรับ Unicode</strong>: จัดการอักขระนานาชาติและอีโมจิใน URL ได้อย่างถูกต้อง</li><li><strong>การเข้ารหัสส่วนประกอบ</strong>: เข้ารหัสส่วนประกอบ URL แต่ละส่วน (พารามิเตอร์คิวรี เส้นทาง)</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: คัดลอกผลลัพธ์ที่เข้ารหัสทันที</li><li><strong>ทำงานบนเบราว์เซอร์ 100%</strong>: ไม่มีการอัปโหลดไปเซิร์ฟเวอร์ — ข้อมูลของคุณอยู่บนอุปกรณ์</li></ul>"
-          },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
             "content": "<ul><li><strong>พารามิเตอร์คิวรี</strong>: เข้ารหัสค่าเพื่อรวมอย่างปลอดภัยใน URL query strings</li><li><strong>คำขอ API</strong>: เข้ารหัสพารามิเตอร์คำขอสำหรับ REST APIs ได้อย่างถูกต้อง</li><li><strong>URL เปลี่ยนเส้นทาง</strong>: เข้ารหัส callback URLs สำหรับ OAuth flows และการเปลี่ยนเส้นทาง</li><li><strong>เส้นทางไฟล์</strong>: เข้ารหัสชื่อไฟล์ที่มีช่องว่างหรืออักขระพิเศษสำหรับเว็บเซิร์ฟเวอร์</li><li><strong>การดีบั๊ก</strong>: ถอดรหัส URL ที่ผิดรูปแบบเพื่อดูข้อความต้นฉบับ</li></ul>"
@@ -390,14 +358,6 @@
             "title": "OCR Text Recognition คืออะไร?",
             "content": "<p><strong>OCR Text Recognition</strong> ดึงข้อความที่อ่านได้จากรูปภาพโดยใช้การรู้จำอักขระด้วยแสงที่ขับเคลื่อนโดย Tesseract.js อัปโหลดรูปถ่ายเอกสาร ภาพหน้าจอ ใบเสร็จ หรือบันทึกลายมือ และรับเนื้อหาข้อความที่คุณสามารถคัดลอก แก้ไข และใช้ได้</p><p>รองรับ <strong>12+ ภาษา</strong> รวมถึงอังกฤษ จีน ญี่ปุ่น เกาหลี สเปน ฝรั่งเศส เยอรมัน และอื่นๆ — ทั้งหมดประมวลผลในเครื่องในเบราว์เซอร์ของคุณ</p>"
           },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือ OCR รู้จำข้อความ",
-            "content": "<ol><li>อัปโหลดรูปภาพโดยคลิกที่ dropzone หรือลากลงบนหน้าเว็บ (รองรับ JPG, PNG, WebP, BMP)</li><li>เลือกภาษาของข้อความในรูปภาพเพื่อความแม่นยำสูงสุด</li><li>คลิก <strong>ดึงข้อความ</strong> เพื่อเริ่มการรู้จำ</li><li>ตรวจสอบข้อความที่ดึงออกมาและคัดลอกไปยังคลิปบอร์ด</li></ol><p>สำหรับผลลัพธ์ที่ดีที่สุด ใช้รูปภาพที่ชัดเจน มีคอนทราสต์สูง แสงสว่างดี ข้อความพิมพ์จะให้ความแม่นยำสูงกว่าลายมือ</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>12+ ภาษา</strong>: รู้จำข้อความในอังกฤษ จีน (ตัวย่อและตัวเต็ม) ญี่ปุ่น เกาหลี สเปน ฝรั่งเศส เยอรมัน อิตาลี โปรตุเกส รัสเซีย และอื่นๆ</li><li><strong>หลายรูปแบบรูปภาพ</strong>: รองรับ JPG, PNG, WebP, BMP และ TIFF</li><li><strong>ขับเคลื่อนโดย Tesseract.js</strong>: เครื่องยนต์ OCR มาตรฐานอุตสาหกรรมทำงานทั้งหมดในเบราว์เซอร์ของคุณผ่าน WebAssembly</li><li><strong>ความแม่นยำสูง</strong>: ผลลัพธ์ดีที่สุดบนข้อความพิมพ์ ใบเสร็จ ภาพหน้าจอ และเอกสารที่สแกน</li><li><strong>คัดลอกและแก้ไข</strong>: ข้อความที่ดึงออกมาสามารถแก้ไขและคัดลอกได้เต็มรูปแบบ</li><li><strong>การประมวลผลในเครื่อง 100%</strong>: ไม่มีการอัปโหลดไปเซิร์ฟเวอร์ — เอกสารของคุณเป็นส่วนตัว</li></ul>"
-          },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
             "content": "<ul><li><strong>การดิจิทัลเอกสาร</strong>: แปลงเอกสารพิมพ์ ใบเสร็จ หรือจดหมายเป็นข้อความที่แก้ไขได้</li><li><strong>การดึงข้อความจากภาพหน้าจอ</strong>: ดึงข้อความจากภาพหน้าจอของเว็บเพจ ข้อความแสดงข้อผิดพลาด หรือบันทึกการแชท</li><li><strong>เตรียมการแปล</strong>: ดึงข้อความภาษาต่างประเทศจากรูปภาพเพื่อการแปล</li><li><strong>การป้อนข้อมูล</strong>: ดิจิทัลข้อความจากแบบฟอร์ม ใบแจ้งหนี้ หรือนามบัตรอย่างรวดเร็ว</li><li><strong>การช่วยการเข้าถึง</strong>: ทำให้ข้อความบนภาพเข้าถึงได้สำหรับโปรแกรมอ่านหน้าจอ</li></ul>"
@@ -433,14 +393,6 @@
           "intro": {
             "title": "ZIP Extractor คืออะไร?",
             "content": "<p><strong>ZIP Extractor</strong> ให้คุณเปิดและแตกไฟล์เนื้อหา ZIP archive โดยตรงในเบราว์เซอร์ของคุณ ดูตัวอย่างชื่อไฟล์ ขนาด และโครงสร้างโฟลเดอร์ก่อนดาวน์โหลดไฟล์แต่ละไฟล์หรือเนื้อหาทั้งหมด</p><p>ไม่ต้องติดตั้งซอฟต์แวร์ — เพียงลากไฟล์ ZIP ของคุณและเรียกดูเนื้อหาทันที</p>"
-          },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือแตกไฟล์ ZIP",
-            "content": "<ol><li>ลากไฟล์ ZIP ลงบนหน้าเว็บหรือคลิกเพื่อเรียกดูและเลือกไฟล์</li><li>ดูเนื้อหา archive: ชื่อไฟล์ ขนาด และลำดับชั้นโฟลเดอร์</li><li>คลิกไฟล์แต่ละไฟล์เพื่อดาวน์โหลด หรือแตกไฟล์ทั้งหมดในครั้งเดียว</li></ol><p>รองรับ ZIP archives มาตรฐาน Archives ขนาดใหญ่อาจใช้เวลาสักครู่ในการแยกวิเคราะห์ขึ้นอยู่กับอุปกรณ์ของคุณ</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>ดูตัวอย่างทันที</strong>: ดูไฟล์และโฟลเดอร์ทั้งหมดภายใน ZIP โดยไม่ต้องแตกไฟล์</li><li><strong>การแตกไฟล์แบบเลือก</strong>: ดาวน์โหลดไฟล์แต่ละไฟล์โดยไม่ต้องแตกไฟล์ archive ทั้งหมด</li><li><strong>แสดงขนาดไฟล์</strong>: ดูขนาดบีบอัดและไม่บีบอัดสำหรับแต่ละไฟล์</li><li><strong>โครงสร้างโฟลเดอร์</strong>: เรียกดูลำดับชั้นไดเรกทอรีที่ซ้อนกันใน archive</li><li><strong>ขับเคลื่อนโดย fflate</strong>: การคลายการบีบอัดประสิทธิภาพสูงโดยใช้ไลบรารี fflate</li><li><strong>ไม่จำกัดขนาดไฟล์</strong>: จำกัดเฉพาะหน่วยความจำที่มีอยู่ของอุปกรณ์</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
@@ -480,14 +432,6 @@
           "intro": {
             "title": "CSV/JSON Converter คืออะไร?",
             "content": "<p><strong>CSV/JSON Converter</strong> แปลงข้อมูลระหว่าง CSV (comma-separated values) และรูปแบบ JSON ทันที แปลงข้อมูลสเปรดชีตเป็นอาร์เรย์ JSON สำหรับ APIs หรือแปลงชุดข้อมูล JSON เป็น CSV สำหรับ Excel หรือ Google Sheets</p><p>จัดการ headers, quoted fields และตัวคั่นที่กำหนดเอง — ทั้งหมดในเบราว์เซอร์ของคุณโดยไม่มีการอัปโหลดข้อมูล</p>"
-          },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือแปลง CSV/JSON",
-            "content": "<ol><li>วางข้อมูล CSV หรือ JSON ของคุณลงในพื้นที่ป้อนข้อมูล</li><li>เลือกทิศทางการแปลง: <strong>CSV → JSON</strong> หรือ <strong>JSON → CSV</strong></li><li>ผลลัพธ์ที่แปลงแล้วปรากฏทันทีในพื้นที่เอาต์พุต</li><li>คัดลอกผลลัพธ์หรือดาวน์โหลดเป็นไฟล์</li></ol><p>ข้อมูลป้อน CSV ควรใช้แถวแรกเป็น column headers ข้อมูลป้อน JSON ควรเป็นอาร์เรย์ของอ็อบเจ็กต์ที่มีคีย์สม่ำเสมอ</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>การแปลงสองทิศทาง</strong>: แปลง CSV เป็น JSON และ JSON เป็น CSV</li><li><strong>การตรวจจับ Header อัตโนมัติ</strong>: ใช้แถว CSV แรกเป็น JSON object keys</li><li><strong>จัดการอักขระพิเศษ</strong>: ประมวลผล quoted fields, จุลภาคภายในฟิลด์ และการขึ้นบรรทัดใหม่ได้อย่างถูกต้อง</li><li><strong>การแปลงทันที</strong>: ผลลัพธ์ปรากฏทันทีเมื่อคุณวางข้อมูล</li><li><strong>ดาวน์โหลดเอาต์พุต</strong>: บันทึกข้อมูลที่แปลงแล้วเป็นไฟล์ .json หรือ .csv</li><li><strong>รองรับชุดข้อมูลขนาดใหญ่</strong>: จัดการหลายพันแถวได้อย่างมีประสิทธิภาพ</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
@@ -584,14 +528,6 @@
             "title": "ตัวสร้างแฮชคืออะไร?",
             "content": "<p><strong>ตัวสร้างแฮช</strong>คำนวณค่าแฮชเข้ารหัสสำหรับข้อความหรือไฟล์โดยใช้อัลกอริทึม MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 และ CRC32 นอกจากนี้ยังรองรับ HMAC (รหัสยืนยันข้อความแบบอิงแฮช) ด้วยคีย์ลับ แฮชเป็นลายนิ้วมือแบบทางเดียวที่ใช้เพื่อตรวจสอบความสมบูรณ์ของข้อมูล เปรียบเทียบไฟล์ และตรวจสอบการดาวน์โหลด</p><p>สร้างแฮชทันทีในเบราว์เซอร์ด้วยการคำนวณแบบเรียลไทม์ — เหมาะสำหรับตรวจสอบความสมบูรณ์ของไฟล์หรือสร้างสรุปเนื้อหา</p>"
           },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือสร้างแฮช",
-            "content": "<ol><li>ป้อนข้อความโดยตรง — แฮชถูกคำนวณแบบเรียลไทม์ขณะพิมพ์</li><li>หรืออัปโหลดไฟล์ (เดี่ยวหรือกลุ่ม) สำหรับการแฮชไฟล์</li><li>สลับระหว่างรูปแบบเอาต์พุต hex (ตัวพิมพ์เล็ก/ใหญ่) และ Base64</li><li>ใช้ช่องตรวจสอบเพื่อเปรียบเทียบกับแฮชที่รู้จัก</li><li>เปิดใช้งานโหมด HMAC สำหรับการแฮชด้วยคีย์</li></ol><p>สำหรับการตรวจสอบความสมบูรณ์ของไฟล์ เปรียบเทียบแฮชที่สร้างขึ้นกับ checksum ที่ให้มาโดยแหล่งที่มาของไฟล์</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>8 อัลกอริทึม</strong>: MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>รองรับ HMAC</strong>: การแฮชด้วยคีย์ใช้อัลกอริทึม SHA สำหรับยืนยันข้อความ</li><li><strong>แฮชแบบเรียลไทม์</strong>: ผลลัพธ์ปรากฏทันทีขณะพิมพ์</li><li><strong>การตรวจสอบแฮช</strong>: เปรียบเทียบกับแฮชที่คาดหวังพร้อมตัวบ่งชี้การจับคู่แบบเห็นภาพ</li><li><strong>แฮชไฟล์แบบกลุ่ม</strong>: แฮชหลายไฟล์พร้อมกัน</li><li><strong>หลายรูปแบบเอาต์พุต</strong>: Hex (ตัวพิมพ์เล็ก/ใหญ่) และ Base64</li><li><strong>คัดลอกและส่งออก</strong>: คัดลอกแฮชเดี่ยวหรือทั้งหมด ดาวน์โหลดเป็นไฟล์ข้อความ</li><li><strong>ความคืบหน้าของไฟล์</strong>: ตัวบ่งชี้ความคืบหน้าสำหรับการประมวลผลไฟล์ขนาดใหญ่</li></ul>"
-          },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
             "content": "<ul><li><strong>ความสมบูรณ์ของไฟล์</strong>: ตรวจสอบว่าไฟล์ที่ดาวน์โหลดไม่ถูกแก้ไขโดยเปรียบเทียบ checksum</li><li><strong>การลบข้อมูลซ้ำ</strong>: เปรียบเทียบแฮชเพื่อหาไฟล์ที่ซ้ำกัน</li><li><strong>การยืนยันตัวตน API</strong>: สร้างลายเซ็น HMAC สำหรับคำขอ API</li><li><strong>การจัดจำหน่ายซอฟต์แวร์</strong>: สร้าง checksum สำหรับการเผยแพร่ไฟล์ของคุณเอง</li><li><strong>การตรวจสอบความปลอดภัย</strong>: แฮชไฟล์เพื่อตรวจจับการแก้ไขที่ไม่ได้รับอนุญาต</li></ul>"
@@ -629,14 +565,6 @@
           "intro": {
             "title": "Color Converter คืออะไร?",
             "content": "<p><strong>Color Converter</strong> แปลงสีระหว่างรูปแบบ HEX, RGB และ HSL พร้อมตัวอย่างภาพสด ป้อนสีในรูปแบบใดก็ได้และดูค่าเทียบเท่าในรูปแบบอื่นๆ ทั้งหมดทันที พร้อมกับตัวอย่างสี</p><p>สมบูรณ์แบบสำหรับนักออกแบบและนักพัฒนาที่ต้องการแปลงระหว่างสัญลักษณ์สีสำหรับ CSS, เครื่องมือออกแบบ หรือแนวทางแบรนด์</p>"
-          },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือแปลงสี",
-            "content": "<ol><li>ป้อนค่าสีในรูปแบบที่รองรับ: HEX (เช่น #3B82F6), RGB (เช่น rgb(59, 130, 246)) หรือ HSL (เช่น hsl(217, 91%, 60%))</li><li>ดูการแปลงทันทีเป็นรูปแบบอื่นๆ ทั้งหมดพร้อมตัวอย่างสีสด</li><li>คลิกค่าใดก็ได้เพื่อคัดลอกไปยังคลิปบอร์ด</li></ol><p>ตัวเลือกสียังให้คุณเลือกสีด้วยภาพและรับค่ารูปแบบทั้งหมดในครั้งเดียว</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>รองรับสามรูปแบบ</strong>: แปลงระหว่างสัญลักษณ์สี HEX, RGB และ HSL</li><li><strong>ตัวอย่างสด</strong>: ดูสีจริงที่แสดงขณะที่คุณพิมพ์หรือปรับค่า</li><li><strong>ตัวเลือกสีภาพ</strong>: เลือกสีด้วยภาพและรับค่ารูปแบบทั้งหมด</li><li><strong>การแปลงทันที</strong>: ผลลัพธ์อัปเดตแบบเรียลไทม์ขณะที่คุณพิมพ์</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: คัดลอกค่าสีในรูปแบบใดก็ได้ไปยังคลิปบอร์ด</li><li><strong>เอาต์พุตพร้อมใช้ CSS</strong>: ค่าที่จัดรูปแบบสำหรับใช้โดยตรงใน CSS stylesheets</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
@@ -677,14 +605,6 @@
             "title": "JSON ↔ XML Converter คืออะไร?",
             "content": "<p><strong>JSON ↔ XML Converter</strong> แปลงข้อมูลระหว่างรูปแบบ JSON และ XML แปลงอ็อบเจ็กต์ JSON เป็นเอกสาร XML ที่มีรูปแบบถูกต้อง หรือแยกวิเคราะห์ XML กลับเป็น JSON — มีประโยชน์สำหรับการเชื่อมต่อระบบที่ใช้รูปแบบข้อมูลต่างกัน</p><p>จัดการโครงสร้างที่ซ้อนกัน อาร์เรย์ และแอตทริบิวต์ได้อย่างถูกต้องในทั้งสองทิศทาง</p>"
           },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือแปลง JSON ↔ XML",
-            "content": "<ol><li>วางข้อมูล JSON หรือ XML ของคุณลงในพื้นที่ป้อนข้อมูล</li><li>เลือกทิศทางการแปลง: <strong>JSON → XML</strong> หรือ <strong>XML → JSON</strong></li><li>เอาต์พุตที่แปลงแล้วปรากฏทันที</li><li>คัดลอกผลลัพธ์หรือดาวน์โหลดเป็นไฟล์</li></ol><p>อาร์เรย์ JSON จะถูกแปลงเป็นองค์ประกอบ XML ที่ซ้ำกัน แอตทริบิวต์ XML จะถูกรักษาไว้ระหว่างการแปลง</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>การแปลงสองทิศทาง</strong>: แปลง JSON เป็น XML และ XML เป็น JSON</li><li><strong>รองรับโครงสร้างที่ซ้อนกัน</strong>: จัดการอ็อบเจ็กต์และอาร์เรย์ที่ซ้อนกันลึกได้อย่างถูกต้อง</li><li><strong>เอาต์พุตพิมพ์สวยงาม</strong>: เอาต์พุต XML มีการย่อหน้าที่เหมาะสมเพื่อการอ่าน</li><li><strong>การจัดการอาร์เรย์</strong>: อาร์เรย์ JSON กลายเป็นองค์ประกอบ XML ที่ซ้ำกันด้วยโครงสร้างที่ถูกต้อง</li><li><strong>การประมวลผลทันที</strong>: ผลลัพธ์ปรากฏทันที</li><li><strong>ดาวน์โหลดเอาต์พุต</strong>: บันทึกผลลัพธ์เป็นไฟล์ .json หรือ .xml</li></ul>"
-          },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
             "content": "<ul><li><strong>การเชื่อมต่อ API</strong>: แปลงระหว่าง JSON REST APIs และ XML SOAP services</li><li><strong>ระบบเก่า</strong>: แปลงข้อมูล XML จากระบบเก่าเป็น JSON สำหรับแอปสมัยใหม่</li><li><strong>การตั้งค่า</strong>: แปลงระหว่างรูปแบบไฟล์การตั้งค่า JSON และ XML</li><li><strong>การย้ายข้อมูล</strong>: แปลงรูปแบบข้อมูลระหว่างการย้ายระบบ</li><li><strong>การทดสอบ</strong>: สร้างข้อมูลทดสอบ XML จาก JSON หรือกลับกัน</li></ul>"
@@ -721,14 +641,6 @@
           "intro": {
             "title": "Markdown Preview คืออะไร?",
             "content": "<p><strong>Markdown Preview</strong> ให้คุณเขียน Markdown และดูตัวอย่าง HTML สดคู่กัน เขียนข้อความที่จัดรูปแบบโดยใช้ไวยากรณ์ Markdown อย่างง่ายและดูวิธีการเรนเดอร์ทันที — เหมาะสำหรับไฟล์ README, โพสต์บล็อก และเอกสาร</p><p>รองรับ Markdown มาตรฐานรวมถึงหัวข้อ รายการ บล็อกโค้ด ลิงก์ รูปภาพ ตาราง และอื่นๆ</p>"
-          },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือดูตัวอย่าง Markdown",
-            "content": "<ol><li>พิมพ์หรือวางข้อความ Markdown ในบานหน้าต่างตัวแก้ไขทางซ้าย</li><li>ตัวอย่าง HTML ที่เรนเดอร์อัปเดตแบบเรียลไทม์ทางขวา</li><li>ใช้ไวยากรณ์ Markdown มาตรฐาน: # หัวข้อ, **ตัวหนา**, *ตัวเอียง*, - รายการ, ```บล็อกโค้ด```</li><li>คัดลอก HTML ที่เรนเดอร์หรือต้นฉบับ Markdown</li></ol><p>มุมมองแบ่งบานหน้าต่างให้คุณเขียนและดูตัวอย่างพร้อมกันโดยไม่ต้องสลับแท็บ</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>ตัวอย่างสด</strong>: ดู HTML ที่เรนเดอร์อัปเดตแบบเรียลไทม์ขณะที่คุณพิมพ์</li><li><strong>มุมมองคู่ขนาน</strong>: ตัวแก้ไขและตัวอย่างแสดงพร้อมกัน</li><li><strong>รองรับ Markdown เต็มรูปแบบ</strong>: หัวข้อ ตัวหนา ตัวเอียง รายการ บล็อกโค้ด ลิงก์ รูปภาพ ตาราง บล็อกอ้างอิง</li><li><strong>เน้นสีไวยากรณ์</strong>: บล็อกโค้ดพร้อมการเน้นสีเฉพาะภาษา</li><li><strong>คัดลอกเอาต์พุต HTML</strong>: คัดลอก HTML ที่เรนเดอร์เพื่อใช้ในเว็บเพจ</li><li><strong>เลย์เอาต์ตอบสนอง</strong>: ทำงานบนอุปกรณ์เดสก์ท็อปและมือถือ</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
@@ -770,14 +682,6 @@
           "intro": {
             "title": "Regex Tester คืออะไร?",
             "content": "<p><strong>Regex Tester</strong> ให้คุณเขียนและทดสอบนิพจน์ทั่วไปกับข้อความตัวอย่างพร้อมการเน้นผลจับคู่แบบเรียลไทม์ ดูกลุ่มที่จับคู่ ทดสอบแฟล็กต่างๆ และดีบั๊กรูปแบบของคุณทันที</p><p>เครื่องมือที่จำเป็นสำหรับนักพัฒนาที่ทำงานกับรูปแบบสตริง การตรวจสอบข้อมูล หรือการแยกวิเคราะห์ข้อความ</p>"
-          },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือทดสอบ Regex",
-            "content": "<ol><li>ป้อนรูปแบบนิพจน์ทั่วไปในช่องรูปแบบ</li><li>ตั้งค่าแฟล็กตามต้องการ: <strong>g</strong> (global), <strong>i</strong> (ไม่คำนึงตัวพิมพ์), <strong>m</strong> (multiline)</li><li>พิมพ์หรือวางข้อความทดสอบในพื้นที่ข้อความด้านล่าง</li><li>ผลจับคู่ถูกเน้นแบบเรียลไทม์ขณะที่คุณพิมพ์</li></ol><p>กลุ่มที่จับแสดงด้วยสีที่แตกต่างกัน และรายละเอียดการจับคู่แสดงการจับคู่ทั้งหมดบวกกับกลุ่มที่จับใดๆ</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>การจับคู่แบบเรียลไทม์</strong>: ผลจับคู่เน้นทันทีขณะที่คุณพิมพ์รูปแบบหรือข้อความ</li><li><strong>การรองรับแฟล็ก</strong>: สลับแฟล็ก global (g), ไม่คำนึงตัวพิมพ์ (i) และ multiline (m)</li><li><strong>การเน้นกลุ่ม</strong>: กลุ่มที่จับแสดงด้วยเครื่องหมายภาพที่แตกต่างกัน</li><li><strong>รายละเอียดการจับคู่</strong>: ดูข้อความที่จับคู่ทั้งหมด กลุ่ม และตำแหน่ง</li><li><strong>ข้อเสนอแนะข้อผิดพลาด</strong>: ไวยากรณ์ regex ที่ไม่ถูกต้องถูกจับและรายงานทันที</li><li><strong>เครื่องยนต์ดั้งเดิม</strong>: ใช้เครื่องยนต์ regex JavaScript ในตัวของเบราว์เซอร์</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
@@ -822,14 +726,6 @@
             "title": "Unix Timestamp Converter คืออะไร?",
             "content": "<p><strong>Unix Timestamp Converter</strong> แปลงระหว่าง Unix timestamps (วินาทีตั้งแต่วันที่ 1 มกราคม 1970) และรูปแบบวันที่/เวลาที่อ่านได้ ป้อน timestamp เพื่อดูวันที่ หรือเลือกวันที่เพื่อรับ timestamp</p><p>แสดง Unix timestamp ปัจจุบันแบบสดและรองรับทั้งรูปแบบวินาทีและมิลลิวินาที</p>"
           },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือแปลง Unix Timestamp",
-            "content": "<ol><li>ป้อน Unix timestamp (วินาทีหรือมิลลิวินาที) เพื่อดูวันที่และเวลาที่อ่านได้</li><li>หรือเลือกวันที่และเวลาเพื่อรับ Unix timestamp ที่สอดคล้อง</li><li>Unix timestamp ปัจจุบันแสดงแบบสดและอัปเดตแบบเรียลไทม์</li><li>คัดลอกค่าใดก็ได้ด้วยคลิกเดียว</li></ol><p>ตรวจจับโดยอัตโนมัติว่าข้อมูลป้อนอยู่ในวินาทีหรือมิลลิวินาทีตามความยาวของค่า</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>การแปลงสองทิศทาง</strong>: Timestamp → วันที่ และ วันที่ → timestamp</li><li><strong>นาฬิกาสด</strong>: Unix timestamp ปัจจุบันแสดงและอัปเดตแบบเรียลไทม์</li><li><strong>วินาทีและมิลลิวินาที</strong>: รองรับทั้ง Unix วินาทีและ JavaScript มิลลิวินาที</li><li><strong>ท้องถิ่นและ UTC</strong>: แสดงเวลาในทั้งโซนเวลาท้องถิ่นและ UTC</li><li><strong>ผลลัพธ์ทันที</strong>: การแปลงเกิดขึ้นแบบเรียลไทม์ขณะที่คุณพิมพ์</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: คัดลอกค่าใดก็ได้ไปยังคลิปบอร์ด</li></ul>"
-          },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
             "content": "<ul><li><strong>การดีบั๊ก</strong>: แปลง API response timestamps เป็นวันที่ที่อ่านได้สำหรับการดีบั๊ก</li><li><strong>คำสั่ง SQL</strong>: แปลงระหว่างรูปแบบ timestamp สำหรับคำสั่ง SQL</li><li><strong>การวิเคราะห์บันทึก</strong>: แปลง Unix timestamps ในไฟล์บันทึกเป็นเวลาที่อ่านได้</li><li><strong>การกำหนดเวลา</strong>: คำนวณ timestamps ในอนาคต/อดีตสำหรับ cron jobs หรืองานที่กำหนดเวลา</li><li><strong>การทำงานข้ามโซนเวลา</strong>: เปรียบเทียบ timestamps ในโซนเวลาต่างๆ</li></ul>"
@@ -868,14 +764,6 @@
           "intro": {
             "title": "YAML ↔ JSON Converter คืออะไร?",
             "content": "<p><strong>YAML ↔ JSON Converter</strong> แปลงข้อมูลระหว่างรูปแบบ YAML และ JSON ไวยากรณ์ที่เป็นมิตรกับมนุษย์ของ YAML ทำให้เป็นที่นิยมสำหรับไฟล์การตั้งค่า ในขณะที่ JSON เป็นมาตรฐานสำหรับ API และการแลกเปลี่ยนข้อมูล</p><p>แปลงการตั้งค่า Kubernetes, CI/CD pipelines หรือไฟล์ YAML ใดๆ เป็น JSON และกลับ — ทันทีในเบราว์เซอร์ของคุณ</p>"
-          },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือแปลง YAML ↔ JSON",
-            "content": "<ol><li>วางข้อมูล YAML หรือ JSON ของคุณลงในพื้นที่ป้อนข้อมูล</li><li>เลือกทิศทางการแปลง: <strong>YAML → JSON</strong> หรือ <strong>JSON → YAML</strong></li><li>เอาต์พุตที่แปลงแล้วปรากฏทันที</li><li>คัดลอกผลลัพธ์หรือดาวน์โหลดเป็นไฟล์</li></ol><p>รองรับข้อกำหนด YAML ทั้งหมดรวมถึงสตริงหลายบรรทัด anchors และโครงสร้างที่ซ้อนกันที่ซับซ้อน</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>การแปลงสองทิศทาง</strong>: แปลง YAML เป็น JSON และ JSON เป็น YAML</li><li><strong>รองรับ YAML เต็มรูปแบบ</strong>: จัดการสตริงหลายบรรทัด anchors aliases และฟีเจอร์ YAML ทั้งหมด</li><li><strong>เอาต์พุตพิมพ์สวยงาม</strong>: เอาต์พุตทั้ง JSON และ YAML จัดรูปแบบอย่างถูกต้อง</li><li><strong>การรายงานข้อผิดพลาด</strong>: ข้อความแสดงข้อผิดพลาดที่ชัดเจนสำหรับไวยากรณ์ YAML หรือ JSON ที่ไม่ถูกต้อง</li><li><strong>การประมวลผลทันที</strong>: ผลลัพธ์ปรากฏทันที</li><li><strong>ขับเคลื่อนโดย js-yaml</strong>: การแปลงที่เชื่อถือได้โดยใช้ไลบรารี js-yaml มาตรฐานอุตสาหกรรม</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
@@ -917,14 +805,6 @@
             "title": "Text Diff คืออะไร?",
             "content": "<p><strong>Text Diff</strong> เปรียบเทียบข้อความสองชิ้นและเน้นความแตกต่างทีละบรรทัด ดูอย่างแม่นยำว่ามีการเพิ่ม ลบ หรือเปลี่ยนแปลงอะไร — เหมือนกับเวอร์ชันง่ายของ <code>git diff</code> ในเบราว์เซอร์ของคุณ</p><p>เหมาะสำหรับการเปรียบเทียบเวอร์ชันโค้ด ไฟล์การตั้งค่า ร่างเอกสาร หรือเนื้อหาข้อความใดๆ</p>"
           },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือเปรียบเทียบข้อความ",
-            "content": "<ol><li>วางข้อความต้นฉบับในบานหน้าต่างซ้าย</li><li>วางข้อความที่แก้ไขในบานหน้าต่างขวา</li><li>ความแตกต่างถูกเน้นทันที: สีเขียวสำหรับการเพิ่ม สีแดงสำหรับการลบ</li><li>เลื่อนผ่าน diff เพื่อตรวจสอบการเปลี่ยนแปลงทั้งหมด</li></ol><p>ทำงานได้ดีที่สุดกับข้อความที่มีโครงสร้างเช่นโค้ด การตั้งค่า หรือเอกสารที่มีการขึ้นบรรทัดใหม่ที่ชัดเจน</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>การเปรียบเทียบทีละบรรทัด</strong>: ดูอย่างแม่นยำว่าบรรทัดใดแตกต่างกันระหว่างสองข้อความ</li><li><strong>Diff รหัสสี</strong>: การเพิ่มเป็นสีเขียว การลบเป็นสีแดง — เห็นได้ชัดในครั้งเดียว</li><li><strong>การเปรียบเทียบทันที</strong>: ผลลัพธ์ปรากฏทันทีเมื่อคุณวางข้อความ</li><li><strong>มุมมองคู่ขนาน</strong>: ทั้งสองข้อความแสดงพร้อมกันพร้อมความแตกต่างที่จัดแนว</li><li><strong>รองรับข้อความขนาดใหญ่</strong>: เปรียบเทียบเอกสารยาวๆ ได้อย่างมีประสิทธิภาพ</li><li><strong>ไม่จำกัดบรรทัด</strong>: จัดการข้อความทุกความยาวโดยไม่มีข้อจำกัด</li></ul>"
-          },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
             "content": "<ul><li><strong>การตรวจสอบโค้ด</strong>: เปรียบเทียบสองเวอร์ชันของไฟล์โค้ดเพื่อดูสิ่งที่เปลี่ยนแปลง</li><li><strong>การเปลี่ยนแปลงการตั้งค่า</strong>: หาความแตกต่างระหว่างไฟล์การตั้งค่าการพัฒนาและการผลิต</li><li><strong>การแก้ไขเอกสาร</strong>: เปรียบเทียบร่างเวอร์ชันของเอกสารหรือสัญญา</li><li><strong>บันทึกฐานข้อมูล</strong>: เปรียบเทียบบันทึกที่ส่งออกเพื่อหาความไม่สอดคล้องของข้อมูล</li><li><strong>การดีบั๊ก</strong>: เปรียบเทียบเอาต์พุตที่คาดหวังกับเอาต์พุตจริงในสถานการณ์ทดสอบ</li></ul>"
@@ -964,14 +844,6 @@
           "intro": {
             "title": "Word Counter คืออะไร?",
             "content": "<p><strong>Word Counter</strong> วิเคราะห์ข้อความของคุณและแสดงจำนวนคำ จำนวนตัวอักษร จำนวนประโยค จำนวนย่อหน้า และเวลาอ่านโดยประมาณทันที จำเป็นสำหรับนักเขียน นักเรียน และผู้สร้างเนื้อหาที่ต้องการให้เป็นไปตามข้อกำหนดความยาว</p><p>เพียงวางข้อความของคุณและรับสถิติทั้งหมดแบบเรียลไทม์</p>"
-          },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือนับคำ",
-            "content": "<ol><li>พิมพ์หรือวางข้อความของคุณลงในพื้นที่ป้อนข้อมูล</li><li>สถิติอัปเดตแบบเรียลไทม์ขณะที่คุณพิมพ์: คำ ตัวอักษร ประโยค ย่อหน้า และเวลาอ่าน</li><li>ใช้ผลลัพธ์เพื่อตรวจสอบข้อกำหนดความยาวหรือประมาณเวลาการอ่าน</li></ol><p>เวลาอ่านประมาณที่ความเร็วการอ่านเฉลี่ย 200 คำต่อนาที</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>การนับคำ</strong>: การนับคำที่แม่นยำด้วยการจัดการเครื่องหมายวรรคตอนและช่องว่างที่เหมาะสม</li><li><strong>การนับตัวอักษร</strong>: ตัวอักษรทั้งหมดทั้งมีและไม่มีช่องว่าง</li><li><strong>การนับประโยค</strong>: นับประโยคตามเครื่องหมายวรรคตอน</li><li><strong>การนับย่อหน้า</strong>: นับย่อหน้าที่คั่นด้วยการขึ้นบรรทัดใหม่</li><li><strong>เวลาอ่าน</strong>: ระยะเวลาการอ่านโดยประมาณที่ความเร็วเฉลี่ย</li><li><strong>การอัปเดตแบบเรียลไทม์</strong>: สถิติทั้งหมดอัปเดตทันทีขณะที่คุณพิมพ์</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
@@ -1016,14 +888,6 @@
             "title": "Case Converter คืออะไร?",
             "content": "<p><strong>Case Converter</strong> แปลงข้อความระหว่างรูปแบบตัวพิมพ์หลายแบบรวมถึง UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case และ CONSTANT_CASE</p><p>จำเป็นสำหรับนักพัฒนาที่เปลี่ยนชื่อตัวแปร นักเขียนที่จัดรูปแบบชื่อเรื่อง หรือใครก็ตามที่ต้องการเปลี่ยนตัวพิมพ์ข้อความอย่างรวดเร็ว</p>"
           },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือแปลงตัวพิมพ์",
-            "content": "<ol><li>พิมพ์หรือวางข้อความของคุณลงในพื้นที่ป้อนข้อมูล</li><li>คลิกปุ่มรูปแบบตัวพิมพ์ที่ต้องการ: UPPER, lower, Title, Sentence, camelCase, PascalCase, snake_case, kebab-case หรือ CONSTANT_CASE</li><li>ข้อความที่แปลงแล้วปรากฏทันที</li><li>คัดลอกผลลัพธ์ด้วยคลิกเดียว</li></ol><p>คุณสามารถเชื่อมโยงการแปลง — แปลงเป็น lowercase ก่อน แล้วเป็น camelCase สำหรับผลลัพธ์ที่สะอาด</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>9+ รูปแบบตัวพิมพ์</strong>: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE</li><li><strong>การแปลงทันที</strong>: ผลลัพธ์ปรากฏทันทีเมื่อคุณคลิกรูปแบบ</li><li><strong>รองรับหลายบรรทัด</strong>: แปลงข้อความหลายบรรทัดพร้อมกัน</li><li><strong>การแยกวิเคราะห์อัจฉริยะ</strong>: แยกคำจาก camelCase, snake_case หรือรูปแบบอื่นๆ ได้อย่างถูกต้อง</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: คัดลอกข้อความที่แปลงแล้วไปยังคลิปบอร์ด</li><li><strong>การประมวลผลแบบแบตช์</strong>: ประมวลผลหลายบรรทัดพร้อมกัน</li></ul>"
-          },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",
             "content": "<ul><li><strong>การตั้งชื่อตัวแปร</strong>: แปลงระหว่าง JavaScript camelCase, Python snake_case และ CSS kebab-case</li><li><strong>ฟิลด์ฐานข้อมูล</strong>: แปลงชื่อคอลัมน์ระหว่างข้อกำหนดการตั้งชื่อต่างๆ</li><li><strong>การจัดรูปแบบเนื้อหา</strong>: แปลงชื่อเรื่องเป็น Title Case สำหรับพาดหัวและหัวข้อ</li><li><strong>การออกแบบ API</strong>: มาตรฐานชื่อฟิลด์ใน schemas คำขอ/ตอบกลับ JSON</li><li><strong>การรีแฟคเตอร์โค้ด</strong>: เปลี่ยนชื่อ identifiers เมื่อสลับระหว่างข้อกำหนดการตั้งชื่อ</li></ul>"
@@ -1063,14 +927,6 @@
           "intro": {
             "title": "Lorem Ipsum Generator คืออะไร?",
             "content": "<p><strong>Lorem Ipsum Generator</strong> สร้างข้อความตัวอย่างสำหรับ mockups การออกแบบ wireframes และต้นแบบ สร้างข้อความ Lorem Ipsum คลาสสิกตามย่อหน้า ประโยค หรือคำด้วยการควบคุมปริมาณอย่างแม่นยำ</p><p>วิธีมาตรฐานของอุตสาหกรรมในการเติมเลย์เอาต์ด้วยข้อความที่ดูสมจริงก่อนที่เนื้อหาสุดท้ายจะพร้อม</p>"
-          },
-          "howToUse": {
-            "title": "วิธีใช้เครื่องมือสร้าง Lorem Ipsum",
-            "content": "<ol><li>เลือกหน่วย: <strong>ย่อหน้า</strong>, <strong>ประโยค</strong> หรือ <strong>คำ</strong></li><li>ตั้งค่าปริมาณที่คุณต้องการ (เช่น 3 ย่อหน้า 10 ประโยค หรือ 50 คำ)</li><li>คลิก <strong>สร้าง</strong> เพื่อสร้างข้อความตัวอย่าง</li><li>คัดลอกผลลัพธ์เพื่อใช้ในการออกแบบหรือเอกสารของคุณ</li></ol><p>ข้อความที่สร้างขึ้นเป็นไปตามรูปแบบ Lorem Ipsum คลาสสิก เริ่มต้นด้วย \"Lorem ipsum dolor sit amet...\"</p>"
-          },
-          "features": {
-            "title": "คุณลักษณะหลัก",
-            "content": "<ul><li><strong>สามโหมดเอาต์พุต</strong>: สร้างตามย่อหน้า ประโยค หรือจำนวนคำ</li><li><strong>ปริมาณที่ปรับแต่งได้</strong>: ควบคุมอย่างแม่นยำว่าจะสร้างข้อความมากแค่ไหน</li><li><strong>Lorem Ipsum คลาสสิก</strong>: ใช้คลังคำ Lorem Ipsum มาตรฐาน</li><li><strong>การสร้างทันที</strong>: ข้อความปรากฏทันทีโดยไม่มีความล่าช้า</li><li><strong>คัดลอกด้วยคลิกเดียว</strong>: คัดลอกข้อความที่สร้างทั้งหมดไปยังคลิปบอร์ด</li><li><strong>เอาต์พุตสม่ำเสมอ</strong>: การกระจายข้อความและความยาวย่อหน้าที่ดูเป็นธรรมชาติ</li></ul>"
           },
           "useCases": {
             "title": "กรณีการใช้งานทั่วไป",

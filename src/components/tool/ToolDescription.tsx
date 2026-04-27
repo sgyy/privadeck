@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 
-const DEFAULT_SECTIONS = ["intro", "howToUse", "features", "useCases", "privacy"];
+const DEFAULT_SECTIONS = ["intro", "useCases", "privacy"];
 
 interface ToolDescriptionProps {
   tool: { category: string; slug: string };

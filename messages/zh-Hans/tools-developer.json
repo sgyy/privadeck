@@ -80,14 +80,6 @@
             "title": "专业级 JSON 格式化与查看器",
             "content": "<p><strong>JSON 格式化工具</strong>是一款免费的专业级 JSON 处理工具，将 Monaco 代码编辑器、交互式树形视图和实时验证整合于一体。粘贴杂乱或压缩的 JSON，即刻获得排版清晰、语法高亮、支持代码折叠和可视化树形浏览的输出。</p><p>无论是调试 API 响应、检查深层嵌套的数据结构、审查配置文件，还是为文档准备数据示例——本工具提供一站式解决方案，无需离开浏览器，不会上传任何数据。</p>"
           },
-          "howToUse": {
-            "title": "如何使用 JSON 格式化工具",
-            "content": "<ol><li>在左侧 Monaco 编辑器中粘贴或输入 JSON，也可直接拖放 <code>.json</code> 文件</li><li>工具实时验证并即时显示 <strong>Valid</strong> 或 <strong>Invalid</strong> 状态</li><li>点击<strong>格式化</strong>按所选缩进美化输出，或点击<strong>压缩</strong>去除空白</li><li>切换到<strong>树形</strong>视图可视化浏览结构，或使用<strong>代码</strong>视图查看语法高亮输出</li><li>使用 JSON Path 过滤（如 <code>$.data.users[0]</code>）精准定位特定值</li><li>一键复制或下载结果</li></ol>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>Monaco 编辑器</strong>：与 VS Code 同款的代码编辑器——支持语法高亮、括号匹配、代码折叠和自动换行</li><li><strong>交互式树形视图</strong>：可视化展开和折叠 JSON 节点，每层显示元素数量，支持键盘导航</li><li><strong>JSON Path 过滤</strong>：使用路径表达式（如 <code>$.address.city</code> 或 <code>$.items[0].name</code>）查询特定值</li><li><strong>实时验证</strong>：输入时即时语法检查——无需点击按钮</li><li><strong>美化打印与压缩</strong>：支持自定义缩进（2、4 或 8 个空格）的格式化，或一键压缩为单行</li><li><strong>文件拖放支持</strong>：直接将 <code>.json</code> 或 <code>.txt</code> 文件拖入编辑器</li><li><strong>可拖拽分割面板</strong>：拖动分割线调整编辑器和查看器的空间比例，双击重置</li><li><strong>语法高亮代码视图</strong>：带行号的彩色代码输出，方便复制粘贴</li><li><strong>100%浏览器端处理</strong>：无需上传服务器——数据始终留在您的设备上</li></ul>"
-          },
           "useCases": {
             "title": "常见用途",
             "content": "<ul><li><strong>API 开发与调试</strong>：粘贴原始 API 响应，即时格式化，使用树形视图浏览深层嵌套对象</li><li><strong>配置文件</strong>：整理 <code>package.json</code>、<code>tsconfig.json</code>、<code>.eslintrc</code> 或 Kubernetes 配置清单</li><li><strong>数据探索</strong>：使用 JSON Path 过滤大数据集，无需滚动数千行即可找到特定值</li><li><strong>代码审查</strong>：通过树形视图直观对比 JSON 结构，快速发现差异</li><li><strong>技术文档</strong>：格式化并导出结构规范的 JSON 示例，用于文档和教程</li><li><strong>数据库记录</strong>：查看和格式化 MongoDB、CouchDB 或 PostgreSQL JSONB 字段中的 JSON 数据</li></ul>"
@@ -187,14 +179,6 @@
             "title": "面向开发者的可视化 JSON 编辑器",
             "content": "<p><strong>JSON 编辑器</strong>是一个在浏览器中运行的 JSON 编辑工具，提供三种视图模式：<strong>文本</strong>（基于 Monaco 的原始编辑）、<strong>树形</strong>（可视化结构编辑）和<strong>预览</strong>（只读语法高亮展示）。</p><p>在树形模式下，双击键或值即可原地编辑。右键任意节点即可打开完整菜单：在前/后插入、复制、切换类型、删除、复制路径。每一步都支持撤销和重做。粘贴无效 JSON 时，一键即可修复尾逗号、单引号、JavaScript 注释等常见错误。</p>"
           },
-          "howToUse": {
-            "title": "如何使用",
-            "content": "<ol><li>在编辑器中粘贴、输入或拖入 <code>.json</code> 文件</li><li>如果 JSON 无效，点击<strong>自动修复</strong>按钮来修正常见错误</li><li>用<strong>视图切换</strong>在文本、树形、预览三种模式间切换</li><li>在<strong>树形</strong>模式下：双击键或值即可原地编辑；右键打开菜单（插入/复制/删除/类型切换/复制路径）</li><li>使用 <strong>Ctrl+Z</strong> / <strong>Ctrl+Y</strong> 撤销与重做</li><li>点击<strong>格式化</strong>、<strong>压缩</strong>或<strong>智能</strong>重新排版，然后<strong>下载</strong>或<strong>复制</strong>导出</li></ol>"
-          },
-          "features": {
-            "title": "主要特性",
-            "content": "<ul><li><strong>三种视图模式</strong>：文本（Monaco）、树形（交互式）、预览（只读），随时切换</li><li><strong>可视化树形编辑</strong>：双击任意键或值，右键打开完整菜单</li><li><strong>类型切换</strong>：在字符串、数字、布尔、空值、对象、数组之间自由转换</li><li><strong>撤销 / 重做</strong>：支持 50 步历史，Ctrl+Z / Ctrl+Y 快捷键</li><li><strong>自动修复</strong>：修复尾逗号、单引号、缺失引号、JavaScript 注释等常见错误</li><li><strong>智能格式化</strong>：短数组/对象单行显示，长的展开 —— 紧凑且可读</li><li><strong>Monaco 编辑器</strong>：与 VS Code 同款的代码编辑器</li><li><strong>路径显示与复制</strong>：点击任意节点查看并复制其 JSON Path</li><li><strong>100% 浏览器运行</strong>：不上传服务器 —— 数据始终留在你的设备</li></ul>"
-          },
           "useCases": {
             "title": "常见用途",
             "content": "<ul><li><strong>配置文件编辑</strong>：安全地修改 <code>package.json</code>、<code>tsconfig.json</code>、Kubernetes 清单等，避免语法错误</li><li><strong>测试数据构造</strong>：通过复制节点、切换类型、重命名键来快速构造 fixture</li><li><strong>API 响应调试</strong>：粘贴响应、重新组织结构、与期望形状做差异对比</li><li><strong>Schema 迁移</strong>：对比两版 JSON，一目了然看出变更</li><li><strong>修复损坏的 JSON</strong>：用自动修复挽救尾逗号、异常引号、混用分隔符等问题</li><li><strong>数据清理</strong>：用右键批量删除不需要的字段后导出干净数据</li></ul>"
@@ -263,14 +247,6 @@
           "intro": {
             "title": "什么是 Base64 编解码工具？",
             "content": "<p><strong>Base64 编解码工具</strong>可将文本和文件转换为 Base64 编码，或将 Base64 解码还原。Base64 是一种二进制到文本的编码方案，广泛用于在 URL、电子邮件、HTML 和 JSON 中嵌入数据。</p><p>将文本或任意文件（图片、PDF、ZIP）编码为 Base64，或将 Base64 解码为文本或可下载文件——全部在浏览器中完成，支持 URL 安全变体和 Data URI 输出。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用 Base64 编解码工具",
-            "content": "<ol><li>根据输入类型选择<strong>文本</strong>或<strong>文件</strong>模式</li><li>选择<strong>编码</strong>或<strong>解码</strong>方向——工具会自动检测 Base64 输入</li><li>按需选择<strong>标准</strong>或 <strong>URL 安全</strong>变体</li><li>输入时结果即时显示——无需点击任何按钮</li><li>使用<strong>复制</strong>、<strong>下载</strong>或<strong>交换</strong>处理输出结果</li></ol><p>文件编码时，启用 <strong>Data URI 输出</strong>可获取可直接用于 HTML/CSS 嵌入的 data URL。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>实时转换</strong>：输入即编码或解码，无需点击按钮</li><li><strong>文本与文件支持</strong>：将任意文件（图片、PDF、ZIP）编码为 Base64，或将 Base64 解码为可下载文件</li><li><strong>URL 安全 Base64</strong>：RFC 4648 变体，用 -_ 替换 +/，省略填充符——适合 JWT 令牌和 URL 参数</li><li><strong>Data URI 输出</strong>：生成可直接使用的 <code>data:{mime};base64,...</code> 字符串，嵌入 HTML、CSS 或 JavaScript</li><li><strong>图片预览</strong>：解码 Base64 图片数据时自动检测并显示预览（PNG、JPEG、GIF、WebP）</li><li><strong>自动检测</strong>：智能识别输入是否为 Base64，自动切换到解码模式</li><li><strong>交换与统计</strong>：一键将输出交换到输入，实时显示字节大小和字符数</li><li><strong>UTF-8 支持</strong>：正确处理 Unicode 字符、表情符号和多字节文本</li><li><strong>无大小限制</strong>：处理任意大小的文本或文件，仅受设备内存限制</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
@@ -345,14 +321,6 @@
             "title": "什么是 URL 编解码工具？",
             "content": "<p><strong>URL 编解码工具</strong>可将文本中的特殊字符转换为 URL 安全的百分号编码格式，或将已编码的 URL 还原为可读文本。在构建 Web 应用和 API 时，正确的 URL 编码至关重要。</p><p>支持完整 URL 编码和组件编码两种模式，轻松处理查询参数、路径段和表单数据。</p>"
           },
-          "howToUse": {
-            "title": "如何使用 URL 编解码工具",
-            "content": "<ol><li>在输入框中输入需要编码或解码的文本</li><li>选择<strong>编码</strong>或<strong>解码</strong>操作</li><li>转换结果即时显示</li><li>点击<strong>复制</strong>将结果复制到剪贴板</li></ol><p>支持 <code>encodeURIComponent</code> 和 <code>encodeURI</code> 两种编码模式。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>组件编码</strong>：使用 encodeURIComponent 编码查询参数和路径段</li><li><strong>完整 URL 编码</strong>：使用 encodeURI 编码完整 URL，保留结构字符</li><li><strong>即时转换</strong>：输入即刻显示编解码结果</li><li><strong>Unicode 支持</strong>：正确处理中文、日文等非 ASCII 字符</li><li><strong>一键复制</strong>：快速复制编码结果</li><li><strong>100%本地处理</strong>：数据不会离开您的浏览器</li></ul>"
-          },
           "useCases": {
             "title": "常见用途",
             "content": "<ul><li><strong>API 开发</strong>：编码查询参数确保 API 请求正确传输</li><li><strong>前端开发</strong>：处理表单数据和 URL 中的特殊字符</li><li><strong>数据分析</strong>：解码跟踪链接和分析 URL 参数</li><li><strong>SEO 优化</strong>：检查和修正 URL 中的编码问题</li><li><strong>调试排错</strong>：解码复杂的 URL 查看真实参数值</li></ul>"
@@ -390,14 +358,6 @@
             "title": "什么是 OCR 文字识别工具？",
             "content": "<p><strong>OCR 文字识别工具</strong>基于 Tesseract.js 引擎，可从图片中提取文字内容。支持中文、英文、日文等12种以上语言，能够识别截图、扫描文档、照片中的文字。</p><p>所有识别过程100%在浏览器本地完成，图片不会上传到任何服务器——特别适合处理包含敏感信息的文档。</p>"
           },
-          "howToUse": {
-            "title": "如何使用 OCR 文字识别工具",
-            "content": "<ol><li>上传包含文字的图片（支持 JPG、PNG、WebP 等格式）</li><li>选择图片中文字所使用的语言</li><li>点击<strong>识别</strong>开始文字提取</li><li>查看识别结果，可一键复制或下载为文本文件</li></ol><p>识别准确率取决于图片质量、文字清晰度和字体类型。建议使用高分辨率、对比度良好的图片。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>多语言支持</strong>：支持中文、英文、日文、韩文等12种以上语言识别</li><li><strong>Tesseract.js 引擎</strong>：业界领先的开源 OCR 引擎，浏览器端运行</li><li><strong>多格式输入</strong>：支持 JPG、PNG、WebP、BMP 等常见图片格式</li><li><strong>识别进度显示</strong>：实时显示 OCR 处理进度</li><li><strong>结果导出</strong>：一键复制识别文字或下载为文本文件</li><li><strong>100%本地处理</strong>：图片不会上传到任何服务器</li></ul>"
-          },
           "useCases": {
             "title": "常见用途",
             "content": "<ul><li><strong>文档数字化</strong>：将纸质文档、扫描件中的文字提取为可编辑文本</li><li><strong>截图文字提取</strong>：从屏幕截图中快速提取文字内容</li><li><strong>翻译辅助</strong>：提取外语图片中的文字用于翻译</li><li><strong>数据录入</strong>：从票据、表格图片中提取数据</li><li><strong>无障碍访问</strong>：将图片中的文字信息转为可访问的文本格式</li></ul>"
@@ -433,14 +393,6 @@
           "intro": {
             "title": "什么是 ZIP 解压预览工具？",
             "content": "<p><strong>ZIP 解压预览工具</strong>可直接在浏览器中打开和预览 ZIP 压缩包的内容。无需安装解压软件，即可查看压缩包中的文件列表、目录结构，并选择性下载所需文件。</p><p>基于 fflate 库实现高效解压，所有处理100%在浏览器中本地完成。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用 ZIP 解压预览工具",
-            "content": "<ol><li>将 ZIP 文件拖拽到上传区域或点击选择文件</li><li>工具自动解析并显示压缩包内的文件结构</li><li>浏览文件列表，查看文件名、大小等信息</li><li>选择需要的文件进行下载</li></ol><p>支持标准 ZIP 格式，可处理包含多级目录结构的压缩包。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>即时预览</strong>：无需完全解压即可浏览压缩包内容</li><li><strong>目录结构</strong>：清晰展示压缩包内的文件和文件夹层次</li><li><strong>文件信息</strong>：显示每个文件的名称、大小和压缩比</li><li><strong>选择性下载</strong>：可单独下载压缩包中的特定文件</li><li><strong>高性能</strong>：基于 fflate 库，解压速度快</li><li><strong>无需安装</strong>：浏览器内直接使用，无需安装任何解压软件</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
@@ -480,14 +432,6 @@
           "intro": {
             "title": "什么是 CSV 与 JSON 互转工具？",
             "content": "<p><strong>CSV 与 JSON 互转工具</strong>可在 CSV（逗号分隔值）和 JSON 两种数据格式之间自由转换。将 CSV 表格数据转为结构化的 JSON 数组，或将 JSON 数据导出为 CSV 格式用于电子表格。</p><p>支持自定义分隔符、表头设置等选项，转换过程100%在浏览器中本地完成。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用 CSV 与 JSON 互转工具",
-            "content": "<ol><li>粘贴 CSV 或 JSON 数据到输入区域</li><li>选择转换方向：CSV → JSON 或 JSON → CSV</li><li>按需配置分隔符等选项</li><li>点击<strong>转换</strong>获取结果，可复制或下载</li></ol><p>CSV 转 JSON 时，第一行默认作为字段名。JSON 转 CSV 时，支持扁平化嵌套对象。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>双向转换</strong>：CSV 转 JSON 和 JSON 转 CSV 双向支持</li><li><strong>自定义分隔符</strong>：支持逗号、制表符、分号等多种分隔符</li><li><strong>表头识别</strong>：自动将首行识别为字段名生成 JSON 键</li><li><strong>即时预览</strong>：转换结果实时显示</li><li><strong>大文件支持</strong>：高效处理大数据量文件</li><li><strong>100%本地处理</strong>：数据不会上传到任何服务器</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
@@ -584,14 +528,6 @@
             "title": "什么是哈希生成工具？",
             "content": "<p><strong>哈希生成工具</strong>使用 MD5、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256、SHA3-512 和 CRC32 算法为文本或文件计算加密哈希值，同时支持 HMAC（基于哈希的消息认证码）密钥哈希。哈希是用于验证数据完整性、比较文件和验证下载的单向指纹。</p><p>在浏览器中实时计算哈希——非常适合验证文件完整性或生成内容摘要。</p>"
           },
-          "howToUse": {
-            "title": "如何使用哈希生成工具",
-            "content": "<ol><li>直接输入文本——哈希值在输入时实时计算</li><li>或上传文件（单个或批量）进行文件哈希</li><li>在十六进制（大写/小写）和 Base64 输出格式之间切换</li><li>使用验证字段与已知哈希值进行比较</li><li>启用 HMAC 模式进行密钥哈希</li></ol><p>要验证文件完整性，请将生成的哈希值与文件来源提供的校验和进行比较。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>8 种算法</strong>：MD5、CRC32、SHA-1、SHA-256、SHA-384、SHA-512、SHA3-256、SHA3-512</li><li><strong>HMAC 支持</strong>：使用 SHA 算法进行密钥哈希的消息认证</li><li><strong>实时哈希</strong>：输入时即时显示结果</li><li><strong>哈希验证</strong>：与预期哈希值比较并可视化显示匹配结果</li><li><strong>批量文件哈希</strong>：一次性对多个文件计算哈希</li><li><strong>多种输出格式</strong>：十六进制（大写/小写）和 Base64</li><li><strong>复制和导出</strong>：复制单个或全部哈希值，下载为文本文件</li><li><strong>文件进度</strong>：大文件处理时显示进度指示器</li></ul>"
-          },
           "useCases": {
             "title": "常见用途",
             "content": "<ul><li><strong>文件完整性</strong>：通过比较校验和验证下载文件未被篡改</li><li><strong>内容去重</strong>：通过比较哈希值查找重复文件</li><li><strong>API 认证</strong>：为 API 请求生成 HMAC 签名</li><li><strong>软件分发</strong>：为自己发布的文件生成校验和</li><li><strong>安全审计</strong>：通过哈希文件检测未授权的修改</li></ul>"
@@ -629,14 +565,6 @@
           "intro": {
             "title": "什么是颜色转换工具？",
             "content": "<p><strong>颜色转换工具</strong>可在 HEX、RGB、HSL 等常用颜色格式之间自由转换。输入任意格式的颜色值，即时获取其他格式的等效值，并提供实时颜色预览。</p><p>前端开发和设计工作中的必备工具，轻松在不同颜色表示方式间切换。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用颜色转换工具",
-            "content": "<ol><li>在输入框中输入颜色值（如 #FF5733、rgb(255,87,51) 或 hsl(11,100%,60%)）</li><li>工具自动识别格式并转换为其他所有格式</li><li>查看颜色预览确认转换结果</li><li>复制所需格式的颜色值</li></ol><p>支持带透明度的颜色值（如 RGBA、HSLA）。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>多格式支持</strong>：HEX、RGB、HSL 等格式自由互转</li><li><strong>实时预览</strong>：颜色预览块实时显示当前颜色</li><li><strong>自动识别</strong>：自动检测输入颜色的格式类型</li><li><strong>一键复制</strong>：快速复制所需格式的颜色代码</li><li><strong>透明度支持</strong>：支持 RGBA、HSLA 等带透明度的颜色</li><li><strong>100%本地处理</strong>：所有转换在浏览器中完成</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
@@ -677,14 +605,6 @@
             "title": "什么是 JSON 与 XML 互转工具？",
             "content": "<p><strong>JSON 与 XML 互转工具</strong>可在 JSON 和 XML 两种数据交换格式之间双向转换。将 JSON 数据转为 XML 文档结构，或将 XML 解析为 JSON 对象——常用于系统集成和数据格式适配。</p><p>转换过程100%在浏览器中完成，适合处理包含敏感信息的数据。</p>"
           },
-          "howToUse": {
-            "title": "如何使用 JSON 与 XML 互转工具",
-            "content": "<ol><li>粘贴 JSON 或 XML 数据到输入区域</li><li>选择转换方向：JSON → XML 或 XML → JSON</li><li>点击<strong>转换</strong>获取结果</li><li>复制转换结果或下载为文件</li></ol><p>支持嵌套结构、数组和各种数据类型的正确转换。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>双向转换</strong>：JSON 转 XML 和 XML 转 JSON 双向支持</li><li><strong>结构保持</strong>：正确处理嵌套对象、数组等复杂结构</li><li><strong>格式化输出</strong>：生成缩进规范、可读性强的输出</li><li><strong>错误提示</strong>：无效输入时提供清晰的错误信息</li><li><strong>大数据处理</strong>：高效处理大型 JSON/XML 文档</li><li><strong>100%浏览器端</strong>：数据不离开您的设备</li></ul>"
-          },
           "useCases": {
             "title": "常见用途",
             "content": "<ul><li><strong>系统集成</strong>：在使用 JSON 和 XML 的系统之间转换数据格式</li><li><strong>API 适配</strong>：将 REST API 的 JSON 响应转为 SOAP 服务所需的 XML</li><li><strong>配置迁移</strong>：将 XML 配置文件转为 JSON 格式</li><li><strong>数据迁移</strong>：在遗留 XML 系统和现代 JSON 系统之间迁移数据</li><li><strong>学习参考</strong>：对比理解 JSON 和 XML 的结构差异</li></ul>"
@@ -721,14 +641,6 @@
           "intro": {
             "title": "什么是 Markdown 实时预览工具？",
             "content": "<p><strong>Markdown 实时预览工具</strong>让您在编写 Markdown 的同时即时查看渲染效果。左侧编辑、右侧预览的分屏布局，所见即所得地创建格式优美的文档。</p><p>支持标准 Markdown 语法以及代码块、表格、任务列表等扩展语法，完全在浏览器中运行。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用 Markdown 实时预览工具",
-            "content": "<ol><li>在左侧编辑区域输入或粘贴 Markdown 文本</li><li>右侧自动实时渲染预览效果</li><li>使用工具栏按钮快速插入标题、加粗、链接等格式</li><li>复制渲染后的 HTML 或下载为文件</li></ol><p>支持标题、列表、链接、图片、代码块、表格、引用等全部标准语法。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>实时预览</strong>：编辑即刻渲染，所见即所得</li><li><strong>分屏布局</strong>：编辑区和预览区并排显示</li><li><strong>完整语法</strong>：支持标准 Markdown 和 GFM 扩展语法</li><li><strong>代码高亮</strong>：代码块支持语法高亮显示</li><li><strong>导出功能</strong>：可导出 HTML 或复制渲染结果</li><li><strong>100%浏览器端</strong>：无需服务器，本地即时渲染</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
@@ -770,14 +682,6 @@
           "intro": {
             "title": "什么是正则表达式测试工具？",
             "content": "<p><strong>正则表达式测试工具</strong>帮助您编写、测试和调试正则表达式。输入正则模式和测试文本，实时高亮显示匹配结果，支持捕获组和各种修饰符。</p><p>前端开发、数据清洗和文本处理中的实用工具，所有测试在浏览器中本地完成。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用正则表达式测试工具",
-            "content": "<ol><li>在正则输入框中输入正则表达式</li><li>设置修饰符（g 全局、i 忽略大小写、m 多行等）</li><li>在文本区域输入测试字符串</li><li>查看实时高亮的匹配结果和捕获组信息</li></ol><p>匹配内容会实时高亮显示，方便直观地验证正则表达式是否符合预期。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>实时匹配</strong>：输入即刻显示匹配结果</li><li><strong>高亮显示</strong>：匹配文本以彩色高亮标注</li><li><strong>捕获组</strong>：显示每个捕获组的匹配内容</li><li><strong>修饰符支持</strong>：支持 g、i、m、s、u 等修饰符</li><li><strong>匹配统计</strong>：显示匹配数量和位置信息</li><li><strong>100%本地处理</strong>：正则测试在浏览器中完成</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
@@ -822,14 +726,6 @@
             "title": "什么是时间戳转换工具？",
             "content": "<p><strong>时间戳转换工具</strong>可在 Unix 时间戳和人类可读的日期时间格式之间双向转换。支持秒级和毫秒级时间戳，还可获取当前时间的时间戳。</p><p>后端开发、日志分析和数据处理中的常用工具，帮助快速理解时间戳对应的确切时间。</p>"
           },
-          "howToUse": {
-            "title": "如何使用时间戳转换工具",
-            "content": "<ol><li>输入 Unix 时间戳（秒或毫秒）查看对应的日期时间</li><li>或选择日期时间获取对应的 Unix 时间戳</li><li>查看多种格式的转换结果（本地时间、UTC、ISO 8601 等）</li><li>点击复制所需的时间格式</li></ol><p>支持获取当前时间戳，以及常用时间点的快速转换。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>双向转换</strong>：时间戳转日期和日期转时间戳</li><li><strong>精度支持</strong>：支持秒级（10位）和毫秒级（13位）时间戳</li><li><strong>多种格式</strong>：输出本地时间、UTC、ISO 8601 等多种格式</li><li><strong>当前时间</strong>：一键获取当前时间的 Unix 时间戳</li><li><strong>时区显示</strong>：显示当前时区和 UTC 偏移</li><li><strong>100%本地处理</strong>：转换在浏览器中即时完成</li></ul>"
-          },
           "useCases": {
             "title": "常见用途",
             "content": "<ul><li><strong>后端开发</strong>：调试接口中的时间戳字段</li><li><strong>日志分析</strong>：将服务器日志中的时间戳转为可读时间</li><li><strong>数据库查询</strong>：生成用于查询条件的时间戳</li><li><strong>事件追踪</strong>：分析事件日志中的时间顺序</li><li><strong>API 调试</strong>：检查 API 请求和响应中的时间字段</li></ul>"
@@ -868,14 +764,6 @@
           "intro": {
             "title": "什么是 YAML 与 JSON 互转工具？",
             "content": "<p><strong>YAML 与 JSON 互转工具</strong>可在 YAML 和 JSON 两种配置文件格式之间双向转换。基于 js-yaml 库实现准确的格式解析和转换，支持复杂嵌套结构。</p><p>DevOps、后端开发和配置管理中的常用工具，所有处理100%在浏览器中本地完成。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用 YAML 与 JSON 互转工具",
-            "content": "<ol><li>粘贴 YAML 或 JSON 数据到输入区域</li><li>选择转换方向：YAML → JSON 或 JSON → YAML</li><li>点击<strong>转换</strong>获取结果</li><li>复制转换结果或下载为文件</li></ol><p>支持 YAML 的锚点引用、多文档等高级特性。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>双向转换</strong>：YAML 转 JSON 和 JSON 转 YAML 双向支持</li><li><strong>js-yaml 引擎</strong>：使用成熟的 js-yaml 库确保准确解析</li><li><strong>复杂结构</strong>：正确处理嵌套对象、数组、多行文本等</li><li><strong>格式化输出</strong>：生成缩进规范的可读输出</li><li><strong>错误提示</strong>：语法错误时提供行号和详细提示</li><li><strong>100%本地处理</strong>：数据不离开您的浏览器</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
@@ -917,14 +805,6 @@
             "title": "什么是文本差异对比工具？",
             "content": "<p><strong>文本差异对比工具</strong>可逐行比较两段文本的差异，以彩色高亮方式清晰展示新增、删除和修改的内容。类似于 Git diff 的可视化效果。</p><p>代码审查、文档版本比较和内容校对中的实用工具，所有对比在浏览器中本地完成。</p>"
           },
-          "howToUse": {
-            "title": "如何使用文本差异对比工具",
-            "content": "<ol><li>在左侧输入原始文本（旧版本）</li><li>在右侧输入修改后的文本（新版本）</li><li>工具自动计算并高亮显示差异</li><li>查看逐行对比结果：绿色为新增，红色为删除</li></ol><p>支持并排对比和统一视图两种显示模式。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>逐行对比</strong>：精确到行级别的差异检测</li><li><strong>彩色高亮</strong>：新增内容绿色、删除内容红色直观显示</li><li><strong>多种视图</strong>：支持并排和统一两种对比模式</li><li><strong>即时对比</strong>：输入即刻显示差异结果</li><li><strong>行号标注</strong>：清晰显示差异所在的行号</li><li><strong>100%本地处理</strong>：文本对比在浏览器中完成</li></ul>"
-          },
           "useCases": {
             "title": "常见用途",
             "content": "<ul><li><strong>代码审查</strong>：对比代码修改前后的差异</li><li><strong>文档版本</strong>：比较文档不同版本的改动</li><li><strong>内容校对</strong>：检查编辑修改是否正确</li><li><strong>配置对比</strong>：比较不同环境的配置文件差异</li><li><strong>翻译对照</strong>：对比原文和译文的结构差异</li></ul>"
@@ -964,14 +844,6 @@
           "intro": {
             "title": "什么是字数统计工具？",
             "content": "<p><strong>字数统计工具</strong>可即时统计文本的字数、字符数、句子数、段落数等关键指标。同时估算阅读时间和朗读时间，帮助您掌握文本的篇幅信息。</p><p>内容创作、学术写作和社交媒体发布中的实用工具，即时获取文字统计数据。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用字数统计工具",
-            "content": "<ol><li>在文本框中输入或粘贴文本内容</li><li>统计结果即时更新显示</li><li>查看字数、字符数（含/不含空格）、句子数、段落数</li><li>查看预估的阅读时间和朗读时间</li></ol><p>支持中文、英文等多种语言的文本统计。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>多维统计</strong>：字数、字符数、句子数、段落数一目了然</li><li><strong>时间估算</strong>：自动计算预估阅读时间和朗读时间</li><li><strong>实时更新</strong>：输入时统计数据即时变化</li><li><strong>多语言</strong>：正确统计中文、英文等不同语言的字数</li><li><strong>字符统计</strong>：分别显示含空格和不含空格的字符数</li><li><strong>100%本地处理</strong>：文本统计在浏览器中完成</li></ul>"
           },
           "useCases": {
             "title": "常见用途",
@@ -1016,14 +888,6 @@
             "title": "什么是大小写转换工具？",
             "content": "<p><strong>大小写转换工具</strong>支持9种以上文本大小写格式的快速转换，包括 UPPER CASE、lower case、Title Case、camelCase、PascalCase、snake_case、kebab-case、CONSTANT_CASE 和 Sentence case。</p><p>编程命名规范统一、文本格式化和内容处理中的高效工具，一键完成批量转换。</p>"
           },
-          "howToUse": {
-            "title": "如何使用大小写转换工具",
-            "content": "<ol><li>在输入框中输入或粘贴文本</li><li>选择目标大小写格式</li><li>转换结果即时显示</li><li>点击复制获取转换后的文本</li></ol><p>支持批量文本的一键转换，适合处理大量变量名或标题。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>9+格式</strong>：支持 UPPER、lower、Title、camelCase、PascalCase、snake_case 等</li><li><strong>即时转换</strong>：选择格式即刻显示结果</li><li><strong>批量处理</strong>：支持多行文本批量转换</li><li><strong>编程友好</strong>：包含 camelCase、snake_case、kebab-case 等编程常用格式</li><li><strong>一键复制</strong>：快速复制转换结果</li><li><strong>100%本地处理</strong>：文本转换在浏览器中完成</li></ul>"
-          },
           "useCases": {
             "title": "常见用途",
             "content": "<ul><li><strong>编程开发</strong>：将变量名转换为项目规范要求的命名格式</li><li><strong>数据库设计</strong>：统一字段名的命名风格（如 snake_case）</li><li><strong>内容编辑</strong>：将标题转为正确的 Title Case 格式</li><li><strong>API 设计</strong>：统一接口参数的命名规范</li><li><strong>代码重构</strong>：批量修改变量、函数的命名风格</li></ul>"
@@ -1063,14 +927,6 @@
           "intro": {
             "title": "什么是 Lorem Ipsum 生成工具？",
             "content": "<p><strong>Lorem Ipsum 生成工具</strong>可快速生成占位文本，用于网页设计、排版布局和界面原型的内容填充。支持按段落、句子或单词数量生成经典的 Lorem Ipsum 文本。</p><p>设计师和开发者在制作原型和设计稿时必备的文本生成工具。</p>"
-          },
-          "howToUse": {
-            "title": "如何使用 Lorem Ipsum 生成工具",
-            "content": "<ol><li>选择生成单位：段落、句子或单词</li><li>设置需要生成的数量</li><li>点击<strong>生成</strong>创建占位文本</li><li>复制生成的文本用于项目</li></ol><p>生成的文本遵循 Lorem Ipsum 经典格式，适合各类设计和开发场景。</p>"
-          },
-          "features": {
-            "title": "核心功能",
-            "content": "<ul><li><strong>灵活控制</strong>：按段落、句子或单词数量精确生成</li><li><strong>经典格式</strong>：遵循标准 Lorem Ipsum 文本格式</li><li><strong>即时生成</strong>：点击即得，无需等待</li><li><strong>一键复制</strong>：快速复制到剪贴板</li><li><strong>可定制</strong>：自由调整生成的文本长度</li><li><strong>100%本地处理</strong>：文本在浏览器中生成</li></ul>"
           },
           "useCases": {
             "title": "常见用途",

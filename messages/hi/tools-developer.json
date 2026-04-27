@@ -47,14 +47,6 @@
             "title": "प्रोफ़ेशनल JSON Formatter और Viewer",
             "content": "<p><strong>JSON Formatter</strong> एक मुफ़्त, professional-grade JSON टूल है जो Monaco code editor, इंटरेक्टिव ट्री व्यू और रियल-टाइम वैलिडेशन को एक ही इंटरफ़ेस में जोड़ता है। अव्यवस्थित या minified JSON पेस्ट करें और तुरंत syntax highlighting, code folding और visual tree exploration के साथ स्वच्छ, मानव-पठनीय आउटपुट प्राप्त करें।</p><p>चाहे आप API responses डिबग कर रहे हों, गहराई से nested data structures की जाँच कर रहे हों, configuration files की समीक्षा कर रहे हों, या दस्तावेज़ीकरण के लिए डेटा तैयार कर रहे हों — यह टूल आपको वह सब देता है जो आपको चाहिए, बिना ब्राउज़र छोड़े या एक भी byte अपलोड किए।</p>"
           },
-          "howToUse": {
-            "title": "JSON Formatter का उपयोग कैसे करें",
-            "content": "<ol><li>बाईं ओर Monaco Editor में JSON पेस्ट या टाइप करें — या <code>.json</code> फ़ाइल drag और drop करें</li><li>टूल रियल-टाइम में वैलिडेट करता है और तुरंत <strong>Valid</strong> या <strong>Invalid</strong> स्टेटस दिखाता है</li><li>अपने चुने हुए indentation के साथ pretty-print के लिए <strong>Format</strong> पर क्लिक करें, या compress करने के लिए <strong>Minify</strong> पर</li><li>संरचना को visually explore करने के लिए <strong>Tree</strong> व्यू पर स्विच करें, या syntax-highlighted आउटपुट के लिए <strong>Code</strong> व्यू पर</li><li>विशिष्ट मानों तक पहुँचने के लिए JSON Path filter (जैसे <code>$.data.users[0]</code>) का उपयोग करें</li><li>एक क्लिक से परिणाम कॉपी या डाउनलोड करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएँ",
-            "content": "<ul><li><strong>Monaco Editor</strong>: वही code editor जो VS Code को शक्ति देता है — syntax highlighting, bracket matching, code folding और word wrap के साथ</li><li><strong>इंटरेक्टिव ट्री व्यू</strong>: JSON nodes को visually expand और collapse करें, हर स्तर पर item counts और पूर्ण keyboard navigation के साथ</li><li><strong>JSON Path Filtering</strong>: <code>$.address.city</code> या <code>$.items[0].name</code> जैसे path expressions का उपयोग करके विशिष्ट मानों की क्वेरी करें</li><li><strong>रियल-टाइम वैलिडेशन</strong>: टाइप करते समय तत्काल syntax checking — बटन क्लिक करने की ज़रूरत नहीं</li><li><strong>Pretty Print &amp; Minify</strong>: कस्टमाइज़ेबल indentation (2, 4, या 8 spaces) के साथ फ़ॉर्मेट करें या एकल पंक्ति में compress करें</li><li><strong>Drag-and-Drop फ़ाइल सपोर्ट</strong>: <code>.json</code> या <code>.txt</code> फ़ाइलें सीधे editor में drop करें</li><li><strong>Resizable Split Pane</strong>: editor और viewer स्पेस को संतुलित करने के लिए divider खींचें; reset के लिए double-click करें</li><li><strong>Syntax-Highlighted Code View</strong>: आसान copy-paste के लिए line numbers के साथ color-coded आउटपुट</li><li><strong>100% Browser-Based</strong>: कोई सर्वर अपलोड नहीं — आपका डेटा हमेशा आपके डिवाइस पर रहता है</li></ul>"
-          },
           "useCases": {
             "title": "सामान्य उपयोग के मामले",
             "content": "<ul><li><strong>API Development &amp; Debugging</strong>: raw API responses पेस्ट करें, उन्हें तुरंत फ़ॉर्मेट करें, और गहराई से nested objects में navigate करने के लिए ट्री व्यू का उपयोग करें</li><li><strong>Configuration Files</strong>: <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code>, या Kubernetes manifests को साफ़ करें</li><li><strong>Data Exploration</strong>: बड़े datasets फ़िल्टर करने और हज़ारों lines scroll किए बिना विशिष्ट मान खोजने के लिए JSON Path का उपयोग करें</li><li><strong>Code Reviews</strong>: JSON structures को ट्री व्यू से visually compare करें और जल्दी अंतर पहचानें</li><li><strong>Documentation</strong>: technical docs और tutorials के लिए अच्छी तरह structured JSON examples फ़ॉर्मेट और export करें</li><li><strong>Database Records</strong>: MongoDB, CouchDB, या PostgreSQL JSONB columns में stored JSON को inspect और format करें</li></ul>"
@@ -187,14 +179,6 @@
             "title": "Visual JSON Editor for Developers",
             "content": "<p><strong>JSON Editor</strong> is a browser-based JSON editor with three view modes: <strong>Text</strong> for raw editing with Monaco Editor, <strong>Tree</strong> for visual structure editing, and <strong>Preview</strong> for read-only syntax-highlighted display.</p><p>In Tree mode, double-click a key or value to edit it in place. Right-click any node for the full context menu: insert before or after, duplicate, change type, delete, copy path. Undo and redo are available at every step. When you paste invalid JSON, one click repairs common mistakes like trailing commas, single quotes, and JavaScript comments.</p>"
           },
-          "howToUse": {
-            "title": "How to Use JSON Editor",
-            "content": "<ol><li>Paste, type, or drop a <code>.json</code> file into the editor</li><li>If the JSON is invalid, click <strong>Auto Repair</strong> to fix common mistakes</li><li>Use the <strong>view switcher</strong> to pick Text, Tree, or Preview mode</li><li>In <strong>Tree</strong> mode: double-click any key or value to edit in place; right-click for insert/duplicate/delete/change type/copy path</li><li>Use <strong>Ctrl+Z</strong> / <strong>Ctrl+Y</strong> to undo and redo</li><li>Click <strong>Format</strong>, <strong>Minify</strong>, or <strong>Smart</strong> to reformat, then <strong>Download</strong> or <strong>Copy</strong> to export</li></ol>"
-          },
-          "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Three View Modes</strong>: Text (Monaco), Tree (interactive), Preview (read-only) — switch anytime</li><li><strong>Visual Tree Editing</strong>: Double-click any key or value, right-click for the full context menu</li><li><strong>Full Type Switching</strong>: Convert any value between string, number, boolean, null, object, and array</li><li><strong>Undo / Redo</strong>: 50-step history with Ctrl+Z / Ctrl+Y shortcuts</li><li><strong>Auto Repair</strong>: Fixes trailing commas, single quotes, missing quotes, JavaScript comments, and more</li><li><strong>Smart Format</strong>: Inline short arrays/objects, expand long ones — compact yet readable</li><li><strong>Monaco Editor</strong>: The same code editor that powers VS Code, for raw text editing</li><li><strong>Path Display &amp; Copy</strong>: Click any node to see and copy its JSON Path</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
-          },
           "useCases": {
             "title": "Common Use Cases",
             "content": "<ul><li><strong>Config File Editing</strong>: Safely modify <code>package.json</code>, <code>tsconfig.json</code>, or Kubernetes manifests without syntax errors</li><li><strong>Test Data Crafting</strong>: Quickly build fixtures by duplicating nodes, changing types, and renaming keys</li><li><strong>API Response Debugging</strong>: Paste a response, restructure it, and diff against the expected shape</li><li><strong>Schema Migration</strong>: Compare two versions of a JSON document to see exactly what changed</li><li><strong>Fixing Broken JSON</strong>: Use Auto Repair to recover from trailing commas, stray quotes, or mixed delimiters</li><li><strong>Data Cleanup</strong>: Delete unwanted fields in bulk with right-click + Delete, then export the cleaned data</li></ul>"
@@ -240,14 +224,6 @@
           "intro": {
             "title": "Base64 एनकोडर/डिकोडर क्या है?",
             "content": "<p><strong>Base64 एनकोडर/डिकोडर</strong> टेक्स्ट और फाइलों को Base64 एनकोडिंग में बदलता है और इसके विपरीत भी। Base64 एक बाइनरी-से-टेक्स्ट एनकोडिंग स्कीम है जो URLs, ईमेल, HTML और JSON में डेटा एम्बेड करने के लिए व्यापक रूप से उपयोग की जाती है।</p><p>टेक्स्ट या किसी भी फाइल (इमेज, PDF, ZIP) को Base64 में एनकोड करें, या Base64 को टेक्स्ट या डाउनलोड योग्य फाइलों में डिकोड करें — सब कुछ आपके ब्राउज़र में, URL-safe वेरिएंट और Data URI सपोर्ट के साथ।</p>"
-          },
-          "howToUse": {
-            "title": "Base64 एनकोडर/डिकोडर का उपयोग कैसे करें",
-            "content": "<ol><li>अपने इनपुट के अनुसार <strong>टेक्स्ट</strong> या <strong>फाइल</strong> मोड चुनें</li><li><strong>एनकोड</strong> या <strong>डिकोड</strong> दिशा चुनें — टूल स्वचालित रूप से Base64 इनपुट पहचानता है</li><li>आवश्यकतानुसार <strong>स्टैंडर्ड</strong> या <strong>URL-safe</strong> वेरिएंट चुनें</li><li>टाइप करते ही परिणाम तुरंत दिखाई देते हैं — किसी बटन पर क्लिक करने की जरूरत नहीं</li><li>आउटपुट के साथ काम करने के लिए <strong>कॉपी</strong>, <strong>डाउनलोड</strong> या <strong>स्वैप</strong> का उपयोग करें</li></ol><p>फाइल एनकोडिंग के लिए, HTML/CSS एम्बेडिंग के लिए तैयार data URL पाने के लिए <strong>Data URI आउटपुट</strong> सक्षम करें।</p>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>रियल-टाइम रूपांतरण</strong>: टाइप करते ही तुरंत एनकोड या डिकोड — बटन क्लिक की जरूरत नहीं</li><li><strong>टेक्स्ट और फाइल सपोर्ट</strong>: किसी भी फाइल (इमेज, PDF, ZIP) को Base64 में एनकोड करें, या Base64 को डाउनलोड योग्य फाइल में डिकोड करें</li><li><strong>URL-safe Base64</strong>: RFC 4648 वेरिएंट जो +/ को -_ से बदलता है और पैडिंग हटाता है — JWT टोकन और URL पैरामीटर के लिए आदर्श</li><li><strong>Data URI आउटपुट</strong>: HTML, CSS या JavaScript में एम्बेड करने के लिए तैयार <code>data:{mime};base64,...</code> स्ट्रिंग जनरेट करें</li><li><strong>इमेज प्रीव्यू</strong>: Base64 इमेज डेटा (PNG, JPEG, GIF, WebP) डिकोड करते समय स्वचालित रूप से पहचान और प्रीव्यू दिखाएं</li><li><strong>ऑटो-डिटेक्शन</strong>: बुद्धिमानी से पहचानता है कि आपका इनपुट Base64 है और स्वचालित रूप से डिकोड मोड में स्विच करता है</li><li><strong>स्वैप और आंकड़े</strong>: एक क्लिक में आउटपुट को इनपुट में स्वैप करें, रियल-टाइम बाइट साइज और कैरेक्टर काउंट डिस्प्ले के साथ</li><li><strong>UTF-8 सपोर्ट</strong>: Unicode कैरेक्टर, इमोजी और मल्टीबाइट टेक्स्ट को सही ढंग से हैंडल करता है</li><li><strong>कोई साइज लिमिट नहीं</strong>: किसी भी साइज का टेक्स्ट या फाइल प्रोसेस करें — केवल आपके डिवाइस मेमोरी द्वारा सीमित</li></ul>"
           },
           "useCases": {
             "title": "सामान्य उपयोग के मामले",
@@ -345,14 +321,6 @@
             "title": "URL Encoder/Decoder क्या है?",
             "content": "<p><strong>URL Encoder/Decoder</strong> URLs में unsafe characters को encode करता है।</p><p>URLs को quickly encode करें, query parameters prepare करें।</p>"
           },
-          "howToUse": {
-            "title": "URL Encoder/Decoder का उपयोग कैसे करें",
-            "content": "<ol><li>URL paste करें</li><li>Encode या Decode चुनें</li><li>तुरंत result दिखता है</li><li>Copy करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>URL Encoding</strong>: Unsafe characters को percent-encoded में</li><li><strong>URL Decoding</strong>: Encoded URLs को normal में</li><li><strong>Component Encoding</strong>: Query parameters, paths</li><li><strong>Batch Processing</strong>: Multiple URLs</li></ul>"
-          },
           "useCases": {
             "title": "सामान्य उपयोग",
             "content": "<ul><li><strong>Query Parameters</strong>: Parameters encode करें</li><li><strong>API Requests</strong>: URLs format करें</li><li><strong>SEO</strong>: SEO-friendly URLs बनाएं</li></ul>"
@@ -390,14 +358,6 @@
             "title": "OCR (Optical Character Recognition) क्या है?",
             "content": "<p><strong>OCR Tool</strong> images से text को extract करता है।</p><p>Photos, screenshots, scanned documents से automatically text निकालें।</p>"
           },
-          "howToUse": {
-            "title": "OCR Tool का उपयोग कैसे करें",
-            "content": "<ol><li>Image upload करें</li><li>Language चुनें</li><li>Extract करें</li><li>Text को copy/download करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Multi-Language</strong>: 100+ languages</li><li><strong>Accurate</strong>: Advanced ML models</li><li><strong>Batch Processing</strong>: Multiple images</li><li><strong>Format Support</strong>: PNG, JPG, GIF, BMP</li></ul>"
-          },
           "useCases": {
             "title": "सामान्य उपयोग",
             "content": "<ul><li><strong>Digitization</strong>: Paper को digital में convert करें</li><li><strong>Extraction</strong>: Screenshots से data निकालें</li><li><strong>Invoices</strong>: Invoice data extract करें</li></ul>"
@@ -433,14 +393,6 @@
           "intro": {
             "title": "Archive Tool क्या है?",
             "content": "<p><strong>Archive Tool</strong> आपकी फाइलों को ZIP, TAR, 7Z आदि formats में compress करता है।</p><p>Storage बचाएं, file transfer को तेज करें और फाइलों को organize करें।</p>"
-          },
-          "howToUse": {
-            "title": "Archive Tool का उपयोग कैसे करें",
-            "content": "<ol><li>फाइलें upload करें या drag-drop करें</li><li>Format और compression level चुनें</li><li>Archive बनाएं</li><li>Download करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Multiple Formats</strong>: ZIP, TAR, 7Z support</li><li><strong>Batch Processing</strong>: कई फाइलें एक साथ</li><li><strong>Large File Support</strong>: GB तक की फाइलें</li><li><strong>Browser-Based</strong>: कोई software install न करें</li></ul>"
           },
           "useCases": {
             "title": "सामान्य उपयोग",
@@ -480,14 +432,6 @@
           "intro": {
             "title": "CSV to JSON Converter क्या है?",
             "content": "<p><strong>CSV to JSON Converter</strong> CSV files को JSON में convert करता है।</p><p>Data को तुरंत formats के बीच transfer करें।</p>"
-          },
-          "howToUse": {
-            "title": "CSV to JSON Converter का उपयोग कैसे करें",
-            "content": "<ol><li>CSV/JSON upload करें</li><li>Format चुनें</li><li>Delimiter set करें</li><li>Convert करें</li><li>Download करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>CSV to JSON</strong>: Tabular data convert करें</li><li><strong>JSON to CSV</strong>: Export करें</li><li><strong>Custom Delimiters</strong>: Commas, tabs, semicolons</li><li><strong>Large Files</strong>: Efficiently process करता है</li></ul>"
           },
           "useCases": {
             "title": "सामान्य उपयोग",
@@ -584,14 +528,6 @@
             "title": "हैश जनरेटर क्या है?",
             "content": "<p><strong>हैश जनरेटर</strong> MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 और CRC32 एल्गोरिदम का उपयोग करके टेक्स्ट या फ़ाइलों के लिए क्रिप्टोग्राफ़िक हैश मान की गणना करता है। यह गुप्त कुंजी के साथ HMAC (हैश-आधारित संदेश प्रमाणीकरण कोड) का भी समर्थन करता है। हैश एकतरफ़ा फ़िंगरप्रिंट हैं जो डेटा अखंडता सत्यापन, फ़ाइल तुलना और डाउनलोड सत्यापन के लिए उपयोग किए जाते हैं।</p><p>रियल-टाइम गणना के साथ अपने ब्राउज़र में तुरंत हैश जनरेट करें — फ़ाइल अखंडता सत्यापन या कंटेंट डाइजेस्ट बनाने के लिए आदर्श।</p>"
           },
-          "howToUse": {
-            "title": "हैश जनरेटर का उपयोग कैसे करें",
-            "content": "<ol><li>सीधे टेक्स्ट दर्ज करें — टाइप करते समय हैश रियल-टाइम में गणना होते हैं</li><li>या फ़ाइल हैशिंग के लिए फ़ाइलें (एकल या बैच) अपलोड करें</li><li>हेक्स (लोअरकेस/अपरकेस) और Base64 आउटपुट फ़ॉर्मेट के बीच स्विच करें</li><li>ज्ञात हैश से तुलना करने के लिए सत्यापन फ़ील्ड का उपयोग करें</li><li>कुंजी-आधारित हैशिंग के लिए HMAC मोड सक्षम करें</li></ol><p>फ़ाइल अखंडता सत्यापन के लिए, जनरेट किए गए हैश की तुलना फ़ाइल के स्रोत द्वारा प्रदान किए गए चेकसम से करें।</p>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>8 एल्गोरिदम</strong>: MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>HMAC समर्थन</strong>: संदेश प्रमाणीकरण के लिए SHA एल्गोरिदम के साथ कुंजी-आधारित हैशिंग</li><li><strong>रियल-टाइम हैशिंग</strong>: टाइप करते ही परिणाम तुरंत दिखाई देते हैं</li><li><strong>हैश सत्यापन</strong>: अपेक्षित हैश से तुलना करें और विज़ुअल मिलान संकेतक देखें</li><li><strong>बैच फ़ाइल हैशिंग</strong>: एक साथ कई फ़ाइलों को हैश करें</li><li><strong>कई आउटपुट फ़ॉर्मेट</strong>: हेक्स (लोअरकेस/अपरकेस) और Base64</li><li><strong>कॉपी और एक्सपोर्ट</strong>: व्यक्तिगत या सभी हैश कॉपी करें, टेक्स्ट फ़ाइल के रूप में डाउनलोड करें</li><li><strong>फ़ाइल प्रगति</strong>: बड़ी फ़ाइल प्रोसेसिंग के लिए प्रगति संकेतक</li></ul>"
-          },
           "useCases": {
             "title": "सामान्य उपयोग",
             "content": "<ul><li><strong>फ़ाइल अखंडता</strong>: चेकसम की तुलना करके सत्यापित करें कि डाउनलोड की गई फ़ाइलों के साथ छेड़छाड़ नहीं हुई है</li><li><strong>कंटेंट डीडुप्लिकेशन</strong>: डुप्लिकेट फ़ाइलें खोजने के लिए हैश की तुलना करें</li><li><strong>API प्रमाणीकरण</strong>: API अनुरोधों के लिए HMAC हस्ताक्षर जनरेट करें</li><li><strong>सॉफ़्टवेयर वितरण</strong>: अपनी फ़ाइल रिलीज़ के लिए चेकसम जनरेट करें</li><li><strong>सुरक्षा ऑडिट</strong>: अनधिकृत संशोधनों का पता लगाने के लिए फ़ाइलों को हैश करें</li></ul>"
@@ -629,14 +565,6 @@
           "intro": {
             "title": "Color Converter क्या है?",
             "content": "<p><strong>Color Converter</strong> colors को HEX, RGB, HSL, HSV formats में convert करता है।</p><p>Designers और developers के लिए तुरंत color conversions।</p>"
-          },
-          "howToUse": {
-            "title": "Color Converter का उपयोग कैसे करें",
-            "content": "<ol><li>Color format दीजिए</li><li>Color picker use करें</li><li>सभी formats दिखते हैं</li><li>कोई भी format copy करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>HEX/RGB Conversion</strong>: Formats switch करें</li><li><strong>HSL/HSV Support</strong>: Advanced color models</li><li><strong>Color Picker</strong>: Visual selection</li><li><strong>Named Colors</strong>: CSS colors</li></ul>"
           },
           "useCases": {
             "title": "सामान्य उपयोग",
@@ -677,14 +605,6 @@
             "title": "JSON to XML Converter क्या है?",
             "content": "<p><strong>JSON to XML Converter</strong> JSON को XML में convert करता है।</p><p>Data को तुरंत formats के बीच exchange करें।</p>"
           },
-          "howToUse": {
-            "title": "JSON to XML Converter का उपयोग कैसे करें",
-            "content": "<ol><li>JSON/XML paste करें</li><li>Format चुनें</li><li>Convert करें</li><li>Copy या download करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Bi-directional</strong>: JSON से XML और vice versa</li><li><strong>Pretty Print</strong>: Formatted output</li><li><strong>Error Handling</strong>: Invalid input से errors</li><li><strong>Large Data</strong>: Efficiently handle करता है</li></ul>"
-          },
           "useCases": {
             "title": "सामान्य उपयोग",
             "content": "<ul><li><strong>Data Migration</strong>: Legacy systems migrate करें</li><li><strong>API Integration</strong>: REST APIs integrate करें</li><li><strong>Configuration</strong>: Config files convert करें</li></ul>"
@@ -721,14 +641,6 @@
           "intro": {
             "title": "Markdown Preview क्या है?",
             "content": "<p><strong>Markdown Preview</strong> Markdown को real-time में HTML में preview दिखाता है।</p><p>तुरंत देखें कि आपका content कैसे दिखेगा।</p>"
-          },
-          "howToUse": {
-            "title": "Markdown Preview का उपयोग कैसे करें",
-            "content": "<ol><li>Left panel में लिखें</li><li>Right panel में preview दिखता है</li><li>Formatting adjust करें</li><li>Export करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Real-time Preview</strong>: Type करते हुए देखें</li><li><strong>Syntax Highlighting</strong>: Code blocks highlight</li><li><strong>GitHub Flavor</strong>: GFM support</li><li><strong>Tables</strong>: Markdown tables render</li></ul>"
           },
           "useCases": {
             "title": "सामान्य उपयोग",
@@ -770,14 +682,6 @@
           "intro": {
             "title": "Regex Tester क्या है?",
             "content": "<p><strong>Regex Tester</strong> regular expressions को test और validate करता है।</p><p>Regex patterns को quickly test करें, real-time results देखें।</p>"
-          },
-          "howToUse": {
-            "title": "Regex Tester का उपयोग कैसे करें",
-            "content": "<ol><li>Pattern दीजिए</li><li>Test text paste करें</li><li>Flags चुनें</li><li>Matches देखें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Real-time Matching</strong>: तुरंत results</li><li><strong>Flags Support</strong>: Global, case-insensitive, multiline</li><li><strong>Highlighting</strong>: Matches को highlight</li><li><strong>Capture Groups</strong>: Groups दिखाता है</li></ul>"
           },
           "useCases": {
             "title": "सामान्य उपयोग",
@@ -822,14 +726,6 @@
             "title": "Timestamp Converter क्या है?",
             "content": "<p><strong>Timestamp Converter</strong> Unix timestamps को dates में convert करता है।</p><p>Timestamps को quickly convert करें, timezone-aware conversions करें।</p>"
           },
-          "howToUse": {
-            "title": "Timestamp Converter का उपयोग कैसे करें",
-            "content": "<ol><li>Timestamp या date दीजिए</li><li>Timezone चुनें</li><li>Conversion automatically होता है</li><li>Copy करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Conversion</strong>: Unix से date और vice versa</li><li><strong>Timezone</strong>: Multiple timezones support</li><li><strong>Milliseconds</strong>: High precision</li><li><strong>Current Time</strong>: Now का timestamp</li></ul>"
-          },
           "useCases": {
             "title": "सामान्य उपयोग",
             "content": "<ul><li><strong>Log Analysis</strong>: Timestamps को dates में convert करें</li><li><strong>API Debug</strong>: Responses debug करें</li><li><strong>Database</strong>: Timestamps understand करें</li></ul>"
@@ -868,14 +764,6 @@
           "intro": {
             "title": "YAML to JSON Converter क्या है?",
             "content": "<p><strong>YAML to JSON Converter</strong> YAML configuration files को JSON में convert करता है।</p><p>Format को तुरंत convert करें, configuration files को compatible बनाएं।</p>"
-          },
-          "howToUse": {
-            "title": "YAML to JSON Converter का उपयोग कैसे करें",
-            "content": "<ol><li>YAML या JSON paste करें</li><li>Format चुनें</li><li>Convert करें</li><li>Copy या download करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>YAML to JSON</strong>: YAML को JSON में convert करें</li><li><strong>JSON to YAML</strong>: JSON को YAML में convert करें</li><li><strong>Formatting</strong>: Pretty-printed output</li><li><strong>Indentation</strong>: Custom indentation</li></ul>"
           },
           "useCases": {
             "title": "सामान्य उपयोग",
@@ -917,14 +805,6 @@
             "title": "Text Diff Checker क्या है?",
             "content": "<p><strong>Text Diff Checker</strong> दो texts के बीच differences को highlight करता है।</p><p>Changes को quickly identify करें, code review करें।</p>"
           },
-          "howToUse": {
-            "title": "Text Diff Checker का उपयोग कैसे करें",
-            "content": "<ol><li>दोनों texts paste करें</li><li>Differences automatically highlight होते हैं</li><li>Lines compare करें</li><li>Report download करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Line Highlighting</strong>: Changed lines दिखाता है</li><li><strong>Character-level</strong>: Detailed comparison</li><li><strong>Format Support</strong>: Code, text files</li><li><strong>Unified Diff</strong>: Standard format export</li></ul>"
-          },
           "useCases": {
             "title": "सामान्य उपयोग",
             "content": "<ul><li><strong>Code Review</strong>: Changes review करें</li><li><strong>Document Comparison</strong>: Versions compare करें</li><li><strong>Config Tracking</strong>: Changes track करें</li></ul>"
@@ -964,14 +844,6 @@
           "intro": {
             "title": "Word Counter क्या है?",
             "content": "<p><strong>Word Counter</strong> text में words, characters, sentences को count करता है।</p><p>तुरंत text statistics देखें, content length verify करें।</p>"
-          },
-          "howToUse": {
-            "title": "Word Counter का उपयोग कैसे करें",
-            "content": "<ol><li>Text paste करें</li><li>Statistics तुरंत दिखते हैं</li><li>Read time देखें</li><li>Breakdown analyze करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Word Count</strong>: Total words</li><li><strong>Character Count</strong>: With/without spaces</li><li><strong>Sentence Count</strong>: Total sentences</li><li><strong>Paragraph Count</strong>: Total paragraphs</li><li><strong>Read Time</strong>: Estimated reading time</li></ul>"
           },
           "useCases": {
             "title": "सामान्य उपयोग",
@@ -1016,14 +888,6 @@
             "title": "Case Converter क्या है?",
             "content": "<p><strong>Case Converter</strong> text को UPPERCASE, lowercase, Title Case, camelCase, snake_case में convert करता है।</p><p>Text manipulation तुरंत complete करें।</p>"
           },
-          "howToUse": {
-            "title": "Case Converter का उपयोग कैसे करें",
-            "content": "<ol><li>Text paste करें</li><li>Case format चुनें</li><li>तुरंत result दिखता है</li><li>Copy करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>UPPERCASE</strong>: बड़े letters</li><li><strong>lowercase</strong>: छोटे letters</li><li><strong>Title Case</strong>: हर word capital</li><li><strong>camelCase</strong>: Programming style</li><li><strong>snake_case</strong>: Underscores के साथ</li><li><strong>kebab-case</strong>: Hyphens के साथ</li></ul>"
-          },
           "useCases": {
             "title": "सामान्य उपयोग",
             "content": "<ul><li><strong>Programming</strong>: Variable names</li><li><strong>Documentation</strong>: Heading case</li><li><strong>Content</strong>: Titles format करें</li></ul>"
@@ -1063,14 +927,6 @@
           "intro": {
             "title": "Lorem Ipsum Generator क्या है?",
             "content": "<p><strong>Lorem Ipsum Generator</strong> placeholder text generate करता है।</p><p>Design में dummy content तुरंत add करें।</p>"
-          },
-          "howToUse": {
-            "title": "Lorem Ipsum Generator का उपयोग कैसे करें",
-            "content": "<ol><li>Paragraphs/words की संख्या specify करें</li><li>Generate करें</li><li>Text copy करें</li><li>Design में paste करें</li></ol>"
-          },
-          "features": {
-            "title": "मुख्य विशेषताएं",
-            "content": "<ul><li><strong>Paragraphs</strong>: Multiple generate करें</li><li><strong>Words</strong>: Exact word count</li><li><strong>Sentences</strong>: Custom sentences</li><li><strong>Customizable</strong>: Length adjust करें</li></ul>"
           },
           "useCases": {
             "title": "सामान्य उपयोग",

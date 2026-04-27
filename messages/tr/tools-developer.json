@@ -47,14 +47,6 @@
             "title": "Profesyonel JSON Biçimlendirici ve Görüntüleyici",
             "content": "<p><strong>JSON Formatter</strong>, Monaco kod editörü, etkileşimli ağaç görünümü ve gerçek zamanlı doğrulamayı tek bir arayüzde birleştiren ücretsiz, profesyonel düzeyde bir JSON aracıdır. Dağınık veya küçültülmüş JSON yapıştırın ve anında sözdizimi vurgulama, kod katlama ve görsel ağaç keşfi ile temiz, insan tarafından okunabilir çıktı elde edin.</p><p>API yanıtlarında hata ayıklama, derin iç içe veri yapılarını inceleme, yapılandırma dosyalarını gözden geçirme veya belgeleme için veri hazırlama — bu araç, tarayıcınızı terk etmeden veya tek bir bayt yüklemeden ihtiyacınız olan her şeyi sunar.</p>"
           },
-          "howToUse": {
-            "title": "JSON Biçimlendirici Nasıl Kullanılır",
-            "content": "<ol><li>JSON'u soldaki Monaco Editor'e yapıştırın veya yazın — ya da bir <code>.json</code> dosyasını sürükleyip bırakın</li><li>Araç gerçek zamanlı olarak doğrular ve anında <strong>Geçerli</strong> veya <strong>Geçersiz</strong> durumunu gösterir</li><li>Seçtiğiniz girintiyle güzel yazdırmak için <strong>Biçimlendir</strong>'e, sıkıştırmak için <strong>Küçült</strong>'e tıklayın</li><li>Yapıyı görsel olarak keşfetmek için <strong>Ağaç</strong> görünümüne, sözdizimi vurgulu çıktı için <strong>Kod</strong> görünümüne geçin</li><li>Belirli değerlere ulaşmak için JSON Path filtresini (ör. <code>$.data.users[0]</code>) kullanın</li><li>Sonucu tek tıklamayla kopyalayın veya indirin</li></ol>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Monaco Editor</strong>: VS Code'u destekleyen kod editörünün aynısı — sözdizimi vurgulama, köşeli ayraç eşleştirme, kod katlama ve sözcük sarmalama ile</li><li><strong>Etkileşimli Ağaç Görünümü</strong>: JSON düğümlerini görsel olarak genişletin ve daraltın; her seviyede öğe sayısı ve tam klavye navigasyonu ile</li><li><strong>JSON Path Filtreleme</strong>: <code>$.address.city</code> veya <code>$.items[0].name</code> gibi yol ifadeleri kullanarak belirli değerleri sorgulayın</li><li><strong>Gerçek Zamanlı Doğrulama</strong>: Yazarken anında sözdizimi denetimi — düğmeye tıklamaya gerek yok</li><li><strong>Pretty Print &amp; Küçültme</strong>: Özelleştirilebilir girintileme (2, 4 veya 8 boşluk) ile biçimlendirin veya tek satıra sıkıştırın</li><li><strong>Sürükle-Bırak Dosya Desteği</strong>: <code>.json</code> veya <code>.txt</code> dosyalarını doğrudan editöre bırakın</li><li><strong>Yeniden Boyutlandırılabilir Bölünmüş Bölme</strong>: Editör ve görüntüleyici alanını dengelemek için bölücüyü sürükleyin; sıfırlamak için çift tıklayın</li><li><strong>Sözdizimi Vurgulu Kod Görünümü</strong>: Kolay kopyala-yapıştır için satır numaralı renkli çıktı</li><li><strong>%100 Tarayıcı Tabanlı</strong>: Sunucu yüklemesi yok — verileriniz her zaman cihazınızda kalır</li></ul>"
-          },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
             "content": "<ul><li><strong>API Geliştirme &amp; Hata Ayıklama</strong>: Ham API yanıtlarını yapıştırın, anında biçimlendirin ve derin iç içe nesnelerde gezinmek için ağaç görünümünü kullanın</li><li><strong>Yapılandırma Dosyaları</strong>: <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code> veya Kubernetes manifestolarını temizleyin</li><li><strong>Veri Keşfi</strong>: Binlerce satırda kaydırmadan büyük veri kümelerini filtrelemek ve belirli değerleri bulmak için JSON Path kullanın</li><li><strong>Kod İncelemeleri</strong>: Farklılıkları hızlıca tespit etmek için ağaç görünümüyle JSON yapılarını görsel olarak karşılaştırın</li><li><strong>Dokümantasyon</strong>: Teknik belgeler ve eğitimler için iyi yapılandırılmış JSON örneklerini biçimlendirin ve dışa aktarın</li><li><strong>Veritabanı Kayıtları</strong>: MongoDB, CouchDB veya PostgreSQL JSONB sütunlarında depolanan JSON'u inceleyin ve biçimlendirin</li></ul>"
@@ -187,14 +179,6 @@
             "title": "Visual JSON Editor for Developers",
             "content": "<p><strong>JSON Editor</strong> is a browser-based JSON editor with three view modes: <strong>Text</strong> for raw editing with Monaco Editor, <strong>Tree</strong> for visual structure editing, and <strong>Preview</strong> for read-only syntax-highlighted display.</p><p>In Tree mode, double-click a key or value to edit it in place. Right-click any node for the full context menu: insert before or after, duplicate, change type, delete, copy path. Undo and redo are available at every step. When you paste invalid JSON, one click repairs common mistakes like trailing commas, single quotes, and JavaScript comments.</p>"
           },
-          "howToUse": {
-            "title": "How to Use JSON Editor",
-            "content": "<ol><li>Paste, type, or drop a <code>.json</code> file into the editor</li><li>If the JSON is invalid, click <strong>Auto Repair</strong> to fix common mistakes</li><li>Use the <strong>view switcher</strong> to pick Text, Tree, or Preview mode</li><li>In <strong>Tree</strong> mode: double-click any key or value to edit in place; right-click for insert/duplicate/delete/change type/copy path</li><li>Use <strong>Ctrl+Z</strong> / <strong>Ctrl+Y</strong> to undo and redo</li><li>Click <strong>Format</strong>, <strong>Minify</strong>, or <strong>Smart</strong> to reformat, then <strong>Download</strong> or <strong>Copy</strong> to export</li></ol>"
-          },
-          "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Three View Modes</strong>: Text (Monaco), Tree (interactive), Preview (read-only) — switch anytime</li><li><strong>Visual Tree Editing</strong>: Double-click any key or value, right-click for the full context menu</li><li><strong>Full Type Switching</strong>: Convert any value between string, number, boolean, null, object, and array</li><li><strong>Undo / Redo</strong>: 50-step history with Ctrl+Z / Ctrl+Y shortcuts</li><li><strong>Auto Repair</strong>: Fixes trailing commas, single quotes, missing quotes, JavaScript comments, and more</li><li><strong>Smart Format</strong>: Inline short arrays/objects, expand long ones — compact yet readable</li><li><strong>Monaco Editor</strong>: The same code editor that powers VS Code, for raw text editing</li><li><strong>Path Display &amp; Copy</strong>: Click any node to see and copy its JSON Path</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
-          },
           "useCases": {
             "title": "Common Use Cases",
             "content": "<ul><li><strong>Config File Editing</strong>: Safely modify <code>package.json</code>, <code>tsconfig.json</code>, or Kubernetes manifests without syntax errors</li><li><strong>Test Data Crafting</strong>: Quickly build fixtures by duplicating nodes, changing types, and renaming keys</li><li><strong>API Response Debugging</strong>: Paste a response, restructure it, and diff against the expected shape</li><li><strong>Schema Migration</strong>: Compare two versions of a JSON document to see exactly what changed</li><li><strong>Fixing Broken JSON</strong>: Use Auto Repair to recover from trailing commas, stray quotes, or mixed delimiters</li><li><strong>Data Cleanup</strong>: Delete unwanted fields in bulk with right-click + Delete, then export the cleaned data</li></ul>"
@@ -240,14 +224,6 @@
           "intro": {
             "title": "Base64 Kodlayıcı/Çözücü Nedir?",
             "content": "<p><strong>Base64 Kodlayıcı/Çözücü</strong> metin ve dosyaları Base64 kodlamasına dönüştürür ve tersini yapar. Base64, URL'lerde, e-postalarda, HTML ve JSON'da veri gömmek için yaygın olarak kullanılan ikili-metin kodlama şemasıdır.</p><p>Metin veya herhangi bir dosyayı (resimler, PDF'ler, ZIP'ler) Base64'e kodlayın veya Base64 dizelerini metne veya indirilebilir dosyalara çözün — tümü tarayıcınızda, URL-güvenli varyant ve Data URI desteğiyle.</p>"
-          },
-          "howToUse": {
-            "title": "Base64 Kodlayıcı/Çözücü Nasıl Kullanılır",
-            "content": "<ol><li>Girdinize göre <strong>Metin</strong> veya <strong>Dosya</strong> modunu seçin</li><li><strong>Kodla</strong> veya <strong>Çöz</strong> yönünü seçin — araç Base64 girdisini otomatik algılar</li><li>İhtiyaca göre <strong>Standart</strong> veya <strong>URL-güvenli</strong> varyantı seçin</li><li>Yazarken sonuçlar anında görünür — düğme tıklamaya gerek yok</li><li>Çıktıyla çalışmak için <strong>Kopyala</strong>, <strong>İndir</strong> veya <strong>Değiştir</strong> kullanın</li></ol><p>Dosya kodlarken, HTML/CSS gömme için hazır bir data URL almak üzere <strong>Data URI çıktısı</strong>nı etkinleştirin.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Gerçek zamanlı dönüşüm</strong>: Yazarken anında kodlayın veya çözün — düğme tıklamaya gerek yok</li><li><strong>Metin ve dosya desteği</strong>: Herhangi bir dosyayı (resimler, PDF'ler, ZIP'ler) Base64'e kodlayın veya Base64'ü indirilebilir bir dosyaya çözün</li><li><strong>URL-güvenli Base64</strong>: +/'yı -_ ile değiştiren ve dolguyu atlayan RFC 4648 varyantı — JWT tokenları ve URL parametreleri için ideal</li><li><strong>Data URI çıktısı</strong>: HTML, CSS veya JavaScript'e gömmek için kullanıma hazır <code>data:{mime};base64,...</code> dizeleri oluşturur</li><li><strong>Resim önizleme</strong>: Base64 resim verilerini (PNG, JPEG, GIF, WebP) çözerken otomatik olarak algılar ve önizleme gösterir</li><li><strong>Otomatik algılama</strong>: Girdinizin Base64 olup olmadığını akıllıca algılar ve otomatik olarak çözme moduna geçer</li><li><strong>Değiştir ve istatistikler</strong>: Çıktıyı tek tıkla girdiye değiştirin, gerçek zamanlı bayt boyutu ve karakter sayısı gösterimiyle</li><li><strong>UTF-8 desteği</strong>: Unicode karakterleri, emojileri ve çok baytlı metni doğru şekilde işler</li><li><strong>Boyut sınırı yok</strong>: Herhangi bir boyutta metin veya dosya işleyin — yalnızca cihaz belleğinizle sınırlı</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Senaryoları",
@@ -345,14 +321,6 @@
             "title": "URL Kodlayıcı/Çözücü Nedir?",
             "content": "<p><strong>URL Kodlayıcı/Çözücü</strong>, URL'lerdeki özel karakterleri yüzde kodlanmış karşılıklarına ve geriye dönüştürür. Bu, boşluklar, ve işaretleri, ASCII dışı karakterler veya diğer ayrılmış karakterler içeren geçerli URL'ler oluşturmak için gereklidir.</p><p>Sorgu parametrelerini güvenli şekilde iletmek, dosya yollarını kodlamak veya hatalı biçimlendirilmiş URL'leri hata ayıklamak için kullanın.</p>"
           },
-          "howToUse": {
-            "title": "URL Kodlayıcı/Çözücü Nasıl Kullanılır?",
-            "content": "<ol><li>Metin veya URL bileşeninizi giriş alanına girin</li><li>Özel karakterleri yüzde kodlamak için <strong>Kodla</strong>, kodlanmış URL'leri okunabilir metne geri dönüştürmek için <strong>Çöz</strong> seçeneğini belirleyin</li><li>Sonuç anında güncellenir</li><li>Kodlanmış/çözülmüş sonucu kopyalamak için <strong>Kopyala</strong>'ya tıklayın</li></ol><p>RFC 3986'ya göre URL'lerde güvenli olmayan tüm karakterleri kodlar; boşluklar, &amp;, =, ?, # ve ASCII dışı karakterler dahil.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>RFC 3986 Uyumlu</strong>: Tüm ayrılmış ve güvenli olmayan URL karakterlerini doğru şekilde kodlar</li><li><strong>Gerçek Zamanlı İşleme</strong>: Yazarken sonuçlar güncellenir</li><li><strong>Unicode Desteği</strong>: URL'lerdeki uluslararası karakterleri ve emojileri doğru şekilde işler</li><li><strong>Bileşen Kodlama</strong>: Tek tek URL bileşenlerini kodlar (sorgu parametreleri, yol segmentleri)</li><li><strong>Tek Tıklamayla Kopyala</strong>: Kodlanmış sonuçları anında kopyalayın</li><li><strong>%100 Tarayıcı Tabanlı</strong>: Sunucuya yükleme yok — verileriniz cihazınızda kalır</li></ul>"
-          },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
             "content": "<ul><li><strong>Sorgu Parametreleri</strong>: URL sorgu dizelerine güvenli ekleme için değerleri kodlayın</li><li><strong>API İstekleri</strong>: REST API'leri için istek parametrelerini doğru şekilde kodlayın</li><li><strong>Yeniden Yönlendirme URL'leri</strong>: OAuth akışları ve yönlendirmeler için geri arama URL'lerini kodlayın</li><li><strong>Dosya Yolları</strong>: Web sunucuları için boşluk veya özel karakter içeren dosya adlarını kodlayın</li><li><strong>Hata Ayıklama</strong>: Orijinal metni görmek için bozulmuş URL'leri çözün</li></ul>"
@@ -390,14 +358,6 @@
             "title": "OCR Metin Tanıma Nedir?",
             "content": "<p><strong>OCR Metin Tanıma</strong>, Tesseract.js destekli optik karakter tanıma kullanarak görsellerden okunabilir metin çıkarır. Bir belge, ekran görüntüsü, fiş veya el yazısı notun fotoğrafını yükleyin; kopyalayıp düzenleyebileceğiniz metin içeriğini elde edin.</p><p>İngilizce, Çince, Japonca, Korece, İspanyolca, Fransızca, Almanca ve daha fazlası dahil <strong>12'den fazla dili</strong> destekler — hepsi tarayıcınızda yerel olarak işlenir.</p>"
           },
-          "howToUse": {
-            "title": "OCR Metin Tanıma Nasıl Kullanılır?",
-            "content": "<ol><li>Bırakma alanına tıklayarak veya sayfaya sürükleyerek bir görsel yükleyin (JPG, PNG, WebP, BMP desteklenir)</li><li>En iyi doğruluk için görseldeki metnin dilini seçin</li><li>Tanımayı başlatmak için <strong>Metni Çıkar</strong>'a tıklayın</li><li>Çıkarılan metni inceleyin ve panonuza kopyalayın</li></ol><p>En iyi sonuçlar için iyi aydınlatmalı, net ve yüksek kontrastlı görseller kullanın. Baskılı metin, el yazısından daha yüksek doğruluk sağlar.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>12'den Fazla Dil</strong>: İngilizce, Çince (Basitleştirilmiş ve Geleneksel), Japonca, Korece, İspanyolca, Fransızca, Almanca, İtalyanca, Portekizce, Rusça ve daha fazlasında metin tanıma</li><li><strong>Çoklu Görsel Formatları</strong>: JPG, PNG, WebP, BMP ve TIFF kabul eder</li><li><strong>Tesseract.js Tabanlı</strong>: WebAssembly aracılığıyla tamamen tarayıcınızda çalışan endüstri standardı OCR motoru</li><li><strong>Yüksek Doğruluk</strong>: Baskılı metinler, fişler, ekran görüntüleri ve taranmış belgeler için en iyi sonuçlar</li><li><strong>Kopyala ve Düzenle</strong>: Çıkarılan metin tam olarak düzenlenebilir ve kopyalanabilir</li><li><strong>%100 Yerel İşleme</strong>: Sunucuya yükleme yok — belgeleriniz gizli kalır</li></ul>"
-          },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
             "content": "<ul><li><strong>Belge Dijitalleştirme</strong>: Basılı belgeler, fişler veya mektupları düzenlenebilir metne dönüştürün</li><li><strong>Ekran Görüntüsünden Metin Çıkarma</strong>: Web sayfaları, hata mesajları veya sohbet günlüklerinin ekran görüntülerinden metin alın</li><li><strong>Çeviri Hazırlığı</strong>: Çeviri için görsellerden yabancı dil metni çıkarın</li><li><strong>Veri Girişi</strong>: Form, fatura veya kartvizitlerden metni hızlıca dijitalleştirin</li><li><strong>Erişilebilirlik</strong>: Görsel tabanlı metni ekran okuyucular için erişilebilir hale getirin</li></ul>"
@@ -433,14 +393,6 @@
           "intro": {
             "title": "ZIP Çıkarıcı Nedir?",
             "content": "<p><strong>ZIP Çıkarıcı</strong>, ZIP arşiv içeriklerini doğrudan tarayıcınızda açıp çıkarmanıza olanak tanır. Tek tek dosyaları veya tüm içerikleri indirmeden önce dosya adlarını, boyutlarını ve klasör yapısını önizleyin.</p><p>Yazılım yüklemenize gerek yok — ZIP dosyanızı bırakın ve içeriğine anında göz atın.</p>"
-          },
-          "howToUse": {
-            "title": "ZIP Çıkarıcı Nasıl Kullanılır?",
-            "content": "<ol><li>Sayfaya bir ZIP dosyası bırakın veya tıklayarak bir dosya seçin</li><li>Arşiv içeriğini görüntüleyin: dosya adları, boyutlar ve klasör hiyerarşisi</li><li>Tek tek dosyaları indirmek için üzerlerine tıklayın veya her şeyi tek seferde çıkarın</li></ol><p>Standart ZIP arşivlerini destekler. Büyük arşivlerin ayrıştırılması cihazınıza bağlı olarak biraz zaman alabilir.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Anında Önizleme</strong>: ZIP içindeki tüm dosya ve klasörleri çıkarmadan görün</li><li><strong>Seçici Çıkarma</strong>: Tüm arşivi çıkarmadan tek tek dosyaları indirin</li><li><strong>Dosya Boyutu Gösterimi</strong>: Her dosya için sıkıştırılmış ve sıkıştırılmamış boyutları görün</li><li><strong>Klasör Yapısı</strong>: Arşiv içindeki iç içe dizin hiyerarşilerine göz atın</li><li><strong>fflate Tabanlı</strong>: fflate kütüphanesi kullanan yüksek performanslı açma işlemi</li><li><strong>Dosya Boyutu Sınırı Yok</strong>: Yalnızca cihazınızın kullanılabilir belleğiyle sınırlıdır</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
@@ -480,14 +432,6 @@
           "intro": {
             "title": "CSV/JSON Dönüştürücü Nedir?",
             "content": "<p><strong>CSV/JSON Dönüştürücü</strong>, CSV (virgülle ayrılmış değerler) ve JSON formatları arasında verileri anında dönüştürür. Tablo verilerini API'ler için JSON dizilerine dönüştürün veya JSON veri kümelerini Excel ya da Google Sheets için CSV'ye aktarın.</p><p>Başlıklar, tırnaklı alanlar ve özel sınırlayıcıları destekler — tümü tarayıcınızda veri yüklemeden.</p>"
-          },
-          "howToUse": {
-            "title": "CSV/JSON Dönüştürücü Nasıl Kullanılır?",
-            "content": "<ol><li>CSV veya JSON verilerinizi giriş alanına yapıştırın</li><li>Dönüştürme yönünü seçin: <strong>CSV → JSON</strong> veya <strong>JSON → CSV</strong></li><li>Dönüştürülen sonuç çıktı alanında anında görünür</li><li>Sonucu kopyalayın veya dosya olarak indirin</li></ol><p>CSV girişi ilk satırı sütun başlıkları olarak kullanmalıdır. JSON girişi tutarlı anahtarlara sahip bir nesne dizisi olmalıdır.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>İki Yönlü Dönüştürme</strong>: CSV'yi JSON'a ve JSON'u CSV'ye dönüştürün</li><li><strong>Otomatik Başlık Algılama</strong>: İlk CSV satırını JSON nesne anahtarları olarak kullanır</li><li><strong>Özel Karakterleri İşler</strong>: Tırnaklı alanları, alanların içindeki virgülleri ve satır sonlarını doğru şekilde işler</li><li><strong>Anında Dönüştürme</strong>: Veri yapıştırdığınızda sonuçlar hemen görünür</li><li><strong>Çıktı İndirme</strong>: Dönüştürülen verileri .json veya .csv dosyası olarak kaydedin</li><li><strong>Büyük Veri Seti Desteği</strong>: Binlerce satırı verimli şekilde işler</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
@@ -584,14 +528,6 @@
             "title": "Hash Oluşturucu Nedir?",
             "content": "<p><strong>Hash Oluşturucu</strong>, MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 ve CRC32 algoritmalarını kullanarak metin veya dosyalar için kriptografik hash değerleri hesaplar. Ayrıca gizli anahtarla HMAC (Hash-based Message Authentication Code) desteği sunar. Hash'ler, veri bütünlüğünü doğrulamak, dosyaları karşılaştırmak ve indirmeleri onaylamak için kullanılan tek yönlü parmak izleridir.</p><p>Gerçek zamanlı hesaplama ile hash'leri tarayıcınızda anında oluşturun — dosya bütünlüğünü doğrulamak veya içerik özetleri oluşturmak için idealdir.</p>"
           },
-          "howToUse": {
-            "title": "Hash Oluşturucu Nasıl Kullanılır?",
-            "content": "<ol><li>Doğrudan metin girin — siz yazarken hash'ler gerçek zamanlı olarak hesaplanır</li><li>Veya dosya hash'leme için dosya yükleyin (tekli veya toplu)</li><li>Hex (küçük/büyük harf) ve Base64 çıktı formatları arasında geçiş yapın</li><li>Bilinen bir hash ile karşılaştırmak için doğrulama alanını kullanın</li><li>Anahtarlı hash'leme için HMAC modunu etkinleştirin</li></ol><p>Dosya bütünlüğü doğrulaması için oluşturulan hash'i dosyanın kaynağı tarafından sağlanan sağlama toplamıyla karşılaştırın.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>8 Algoritma</strong>: MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>HMAC Desteği</strong>: Mesaj doğrulama için SHA algoritmaları ile anahtarlı hash'leme</li><li><strong>Gerçek Zamanlı Hash'leme</strong>: Siz yazarken sonuçlar anında görünür</li><li><strong>Hash Doğrulama</strong>: Görsel eşleşme göstergesiyle beklenen hash'lerle karşılaştırma</li><li><strong>Toplu Dosya Hash'leme</strong>: Birden fazla dosyayı aynı anda hash'leyin</li><li><strong>Çoklu Çıktı Formatı</strong>: Hex (küçük/büyük harf) ve Base64</li><li><strong>Kopyala ve Dışa Aktar</strong>: Tek tek veya tüm hash'leri kopyalayın, metin dosyası olarak indirin</li><li><strong>Dosya İlerlemesi</strong>: Büyük dosya işleme için ilerleme göstergesi</li></ul>"
-          },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
             "content": "<ul><li><strong>Dosya Bütünlüğü</strong>: Sağlama toplamlarını karşılaştırarak indirilen dosyaların değiştirilmediğini doğrulayın</li><li><strong>İçerik Tekilleştirme</strong>: Yinelenen dosyaları bulmak için hash'leri karşılaştırın</li><li><strong>API Kimlik Doğrulama</strong>: API istekleri için HMAC imzaları oluşturun</li><li><strong>Yazılım Dağıtımı</strong>: Kendi dosya sürümleriniz için sağlama toplamları oluşturun</li><li><strong>Güvenlik Denetimi</strong>: Yetkisiz değişiklikleri tespit etmek için dosyaları hash'leyin</li></ul>"
@@ -629,14 +565,6 @@
           "intro": {
             "title": "Renk Dönüştürücü Nedir?",
             "content": "<p><strong>Renk Dönüştürücü</strong>, renkleri HEX, RGB ve HSL formatları arasında canlı görsel önizlemeyle dönüştürür. Herhangi bir formatta bir renk girin; diğer tüm formatlardaki karşılığını ve renk örneğini anında görün.</p><p>CSS, tasarım araçları veya marka yönergeleri için renk gösterimleri arasında dönüştürme yapması gereken tasarımcılar ve geliştiriciler için mükemmeldir.</p>"
-          },
-          "howToUse": {
-            "title": "Renk Dönüştürücü Nasıl Kullanılır?",
-            "content": "<ol><li>Desteklenen herhangi bir formatta renk değeri girin: HEX (ör. #3B82F6), RGB (ör. rgb(59, 130, 246)) veya HSL (ör. hsl(217, 91%, 60%))</li><li>Canlı renk önizlemesiyle diğer tüm formatlara anında dönüşümü görün</li><li>Panonuza kopyalamak için herhangi bir değere tıklayın</li></ol><p>Renk seçici ayrıca görsel olarak renk seçmenize ve tüm format değerlerini aynı anda almanıza olanak tanır.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Üç Format Desteği</strong>: HEX, RGB ve HSL renk gösterimleri arasında dönüştürün</li><li><strong>Canlı Önizleme</strong>: Yazarken veya değerleri ayarlarken gerçek rengi görün</li><li><strong>Görsel Renk Seçici</strong>: Renkleri görsel olarak seçin ve tüm format değerlerini alın</li><li><strong>Anında Dönüştürme</strong>: Yazarken sonuçlar gerçek zamanlı olarak güncellenir</li><li><strong>Tek Tıklamayla Kopyala</strong>: Herhangi bir renk format değerini panoya kopyalayın</li><li><strong>CSS'e Hazır Çıktı</strong>: CSS stil sayfalarında doğrudan kullanım için biçimlendirilmiş değerler</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
@@ -677,14 +605,6 @@
             "title": "JSON ↔ XML Dönüştürücü Nedir?",
             "content": "<p><strong>JSON ↔ XML Dönüştürücü</strong>, JSON ve XML formatları arasında veri dönüştürür. JSON nesnelerini iyi biçimlendirilmiş XML belgelerine dönüştürün veya XML'i JSON'a geri ayrıştırın — farklı veri formatları kullanan sistemleri entegre etmek için kullanışlıdır.</p><p>Her iki yönde de iç içe yapıları, dizileri ve nitelikleri doğru şekilde işler.</p>"
           },
-          "howToUse": {
-            "title": "JSON ↔ XML Dönüştürücü Nasıl Kullanılır?",
-            "content": "<ol><li>JSON veya XML verilerinizi giriş alanına yapıştırın</li><li>Dönüştürme yönünü seçin: <strong>JSON → XML</strong> veya <strong>XML → JSON</strong></li><li>Dönüştürülen çıktı anında görünür</li><li>Sonucu kopyalayın veya dosya olarak indirin</li></ol><p>JSON dizileri, tekrarlanan XML öğelerine dönüştürülür. XML nitelikleri dönüştürme sırasında korunur.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>İki Yönlü Dönüştürme</strong>: JSON'u XML'e ve XML'i JSON'a dönüştürün</li><li><strong>İç İçe Yapı Desteği</strong>: Derin iç içe nesneleri ve dizileri doğru şekilde işler</li><li><strong>Düzgün Biçimlendirilmiş Çıktı</strong>: XML çıktısı okunabilirlik için düzgün girintilidir</li><li><strong>Dizi İşleme</strong>: JSON dizileri uygun yapıyla tekrarlanan XML öğelerine dönüşür</li><li><strong>Anında İşleme</strong>: Sonuçlar hemen görünür</li><li><strong>Çıktı İndirme</strong>: Sonuçları .json veya .xml dosyası olarak kaydedin</li></ul>"
-          },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
             "content": "<ul><li><strong>API Entegrasyonu</strong>: JSON REST API'leri ile XML SOAP hizmetleri arasında dönüştürün</li><li><strong>Eski Sistemler</strong>: Eski sistemlerdeki XML verilerini modern uygulamalar için JSON'a dönüştürün</li><li><strong>Yapılandırma</strong>: JSON ve XML yapılandırma dosya formatları arasında dönüştürün</li><li><strong>Veri Geçişi</strong>: Sistem geçişleri sırasında veri formatlarını dönüştürün</li><li><strong>Test</strong>: JSON'dan XML test verisi veya tersini oluşturun</li></ul>"
@@ -721,14 +641,6 @@
           "intro": {
             "title": "Markdown Önizleme Nedir?",
             "content": "<p><strong>Markdown Önizleme</strong>, Markdown yazmanıza ve HTML önizlemesini yan yana canlı olarak görmenize olanak tanır. Basit Markdown söz dizimini kullanarak biçimlendirilmiş metin yazın ve nasıl göründüğünü anında görün — README dosyaları, blog yazıları ve belgeler için mükemmeldir.</p><p>Başlıklar, listeler, kod blokları, bağlantılar, görseller, tablolar ve daha fazlası dahil standart Markdown'ı destekler.</p>"
-          },
-          "howToUse": {
-            "title": "Markdown Önizleme Nasıl Kullanılır?",
-            "content": "<ol><li>Sol taraftaki düzenleyici bölmesine Markdown metni yazın veya yapıştırın</li><li>Oluşturulan HTML önizlemesi sağda gerçek zamanlı olarak güncellenir</li><li>Standart Markdown söz dizimini kullanın: # başlıklar, **kalın**, *italik*, - listeler, ```kod blokları```</li><li>Oluşturulan HTML'yi veya Markdown kaynağını kopyalayın</li></ol><p>Bölünmüş bölme görünümü, sekme değiştirmeden aynı anda yazıp önizleme yapmanıza olanak tanır.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Canlı Önizleme</strong>: Yazarken oluşturulan HTML'nin gerçek zamanlı güncellendiğini görün</li><li><strong>Yan Yana Görünüm</strong>: Düzenleyici ve önizleme aynı anda görüntülenir</li><li><strong>Tam Markdown Desteği</strong>: Başlıklar, kalın, italik, listeler, kod blokları, bağlantılar, görseller, tablolar, alıntılar</li><li><strong>Söz Dizimi Vurgulama</strong>: Dile özgü vurgulama ile kod blokları</li><li><strong>HTML Çıktısını Kopyala</strong>: Web sayfalarında kullanmak için oluşturulan HTML'yi kopyalayın</li><li><strong>Duyarlı Düzen</strong>: Masaüstü ve mobil cihazlarda çalışır</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
@@ -770,14 +682,6 @@
           "intro": {
             "title": "Regex Test Aracı Nedir?",
             "content": "<p><strong>Regex Test Aracı</strong>, eşleşmelerin gerçek zamanlı vurgulanmasıyla örnek metne karşı düzenli ifadeler yazıp test etmenize olanak tanır. Eşleşen grupları görün, farklı bayrakları test edin ve kalıplarınızı anında hata ayıklayın.</p><p>Dize kalıpları, veri doğrulama veya metin ayrıştırmayla çalışan geliştiriciler için vazgeçilmez bir araç.</p>"
-          },
-          "howToUse": {
-            "title": "Regex Test Aracı Nasıl Kullanılır?",
-            "content": "<ol><li>Kalıp alanına düzenli ifade kalıbınızı girin</li><li>Gerektiğinde bayrakları ayarlayın: <strong>g</strong> (global), <strong>i</strong> (büyük/küçük harf duyarsız), <strong>m</strong> (çok satırlı)</li><li>Aşağıdaki metin alanına test metni yazın veya yapıştırın</li><li>Yazarken eşleşmeler gerçek zamanlı olarak vurgulanır</li></ol><p>Yakalama grupları farklı renklerle gösterilir; eşleşme detayları tam eşleşmeyi ve yakalanan grupları görüntüler.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Gerçek Zamanlı Eşleştirme</strong>: Kalıp veya metin yazarken eşleşmeler anında vurgulanır</li><li><strong>Bayrak Desteği</strong>: Global (g), büyük/küçük harf duyarsız (i) ve çok satırlı (m) bayrakları açıp kapatın</li><li><strong>Grup Vurgulama</strong>: Yakalama grupları farklı görsel işaretçilerle gösterilir</li><li><strong>Eşleşme Detayları</strong>: Tam eşleşme metnini, grupları ve konumları görün</li><li><strong>Hata Geri Bildirimi</strong>: Geçersiz regex söz dizimi anında yakalanır ve raporlanır</li><li><strong>Yerel Motor</strong>: Tarayıcınızın yerleşik JavaScript regex motorunu kullanır</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
@@ -822,14 +726,6 @@
             "title": "Unix Zaman Damgası Dönüştürücü Nedir?",
             "content": "<p><strong>Unix Zaman Damgası Dönüştürücü</strong>, Unix zaman damgaları (1 Ocak 1970'den bu yana geçen saniyeler) ile insan tarafından okunabilir tarih/saat formatları arasında dönüştürme yapar. Tarihi görmek için bir zaman damgası girin ya da zaman damgasını almak için bir tarih seçin.</p><p>Güncel Unix zaman damgasını canlı gösterir ve hem saniye hem de milisaniye formatlarını destekler.</p>"
           },
-          "howToUse": {
-            "title": "Unix Zaman Damgası Dönüştürücü Nasıl Kullanılır?",
-            "content": "<ol><li>İnsan tarafından okunabilir tarih ve saati görmek için bir Unix zaman damgası (saniye veya milisaniye) girin</li><li>Veya karşılık gelen Unix zaman damgasını almak için bir tarih ve saat seçin</li><li>Güncel Unix zaman damgası canlı olarak görüntülenir ve gerçek zamanlı güncellenir</li><li>Herhangi bir değeri tek tıkla kopyalayın</li></ol><p>Değer uzunluğuna göre girişin saniye mi yoksa milisaniye mi olduğunu otomatik olarak algılar.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>İki Yönlü Dönüştürme</strong>: Zaman damgası → tarih ve tarih → zaman damgası</li><li><strong>Canlı Saat</strong>: Güncel Unix zaman damgası görüntülenir ve gerçek zamanlı güncellenir</li><li><strong>Saniye ve Milisaniye</strong>: Hem Unix saniyelerini hem de JavaScript milisaniyelerini destekler</li><li><strong>Yerel Saat ve UTC</strong>: Saatleri hem yerel saat diliminde hem de UTC'de gösterir</li><li><strong>Anında Sonuçlar</strong>: Dönüştürme yazarken gerçek zamanlı olarak gerçekleşir</li><li><strong>Tek Tıklamayla Kopyala</strong>: Herhangi bir değeri panoya kopyalayın</li></ul>"
-          },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
             "content": "<ul><li><strong>Hata Ayıklama</strong>: Hata ayıklama için API yanıt zaman damgalarını okunabilir tarihlere dönüştürün</li><li><strong>Veritabanı Sorguları</strong>: SQL sorguları için zaman damgası formatları arasında dönüştürün</li><li><strong>Günlük Analizi</strong>: Günlük dosyalarındaki Unix zaman damgalarını insan tarafından okunabilir saatlere çevirin</li><li><strong>Zamanlama</strong>: Cron işleri veya zamanlanmış görevler için gelecek/geçmiş zaman damgaları hesaplayın</li><li><strong>Saat Dilimi Çalışması</strong>: Farklı saat dilimleri arasında zaman damgalarını karşılaştırın</li></ul>"
@@ -868,14 +764,6 @@
           "intro": {
             "title": "YAML ↔ JSON Dönüştürücü Nedir?",
             "content": "<p><strong>YAML ↔ JSON Dönüştürücü</strong>, YAML ve JSON formatları arasında veri dönüştürür. YAML'ın insan dostu söz dizimi, yapılandırma dosyaları için popüler kılarken JSON, API'ler ve veri alışverişi için standarttır.</p><p>Kubernetes yapılandırmalarını, CI/CD pipeline'larını veya herhangi bir YAML dosyasını JSON'a ve geriye anında tarayıcınızda dönüştürün.</p>"
-          },
-          "howToUse": {
-            "title": "YAML ↔ JSON Dönüştürücü Nasıl Kullanılır?",
-            "content": "<ol><li>YAML veya JSON verilerinizi giriş alanına yapıştırın</li><li>Dönüştürme yönünü seçin: <strong>YAML → JSON</strong> veya <strong>JSON → YAML</strong></li><li>Dönüştürülen çıktı anında görünür</li><li>Sonucu kopyalayın veya dosya olarak indirin</li></ol><p>Çok satırlı dizeler, çapalar ve karmaşık iç içe yapılar dahil tam YAML spesifikasyonunu destekler.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>İki Yönlü Dönüştürme</strong>: YAML'ı JSON'a ve JSON'u YAML'a dönüştürün</li><li><strong>Tam YAML Desteği</strong>: Çok satırlı dizeler, çapalar, takma adlar ve tüm YAML özelliklerini işler</li><li><strong>Düzgün Biçimlendirilmiş Çıktı</strong>: Hem JSON hem de YAML çıktısı düzgün biçimlendirilmiştir</li><li><strong>Hata Raporlama</strong>: Geçersiz YAML veya JSON söz dizimi için açık hata mesajları</li><li><strong>Anında İşleme</strong>: Sonuçlar hemen görünür</li><li><strong>js-yaml Tabanlı</strong>: Endüstri standardı js-yaml kütüphanesi kullanılarak güvenilir dönüştürme</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
@@ -917,14 +805,6 @@
             "title": "Metin Karşılaştırma Nedir?",
             "content": "<p><strong>Metin Karşılaştırma</strong>, iki metin parçasını karşılaştırır ve farklılıkları satır satır vurgular. Tarayıcınızda <code>git diff</code>'in basitleştirilmiş bir versiyonu gibi tam olarak neyin eklendiğini, kaldırıldığını veya değiştirildiğini görün.</p><p>Kod sürümlerini, yapılandırma dosyalarını, belge taslakları veya herhangi bir metin içeriğini karşılaştırmak için idealdir.</p>"
           },
-          "howToUse": {
-            "title": "Metin Karşılaştırma Nasıl Kullanılır?",
-            "content": "<ol><li>Orijinal metni sol panele yapıştırın</li><li>Değiştirilmiş metni sağ panele yapıştırın</li><li>Farklılıklar hemen vurgulanır: eklemeler için yeşil, silmeler için kırmızı</li><li>Tüm değişiklikleri incelemek için fark sonucunu kaydırın</li></ol><p>Kod, yapılandırmalar veya net satır sonlarına sahip belgeler gibi yapılandırılmış metinlerle en iyi sonuçları verir.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Satır Satır Karşılaştırma</strong>: İki metin arasında tam olarak hangi satırların farklı olduğunu görün</li><li><strong>Renk Kodlu Fark</strong>: Eklemeler yeşil, silmeler kırmızı — bir bakışta net</li><li><strong>Anında Karşılaştırma</strong>: Metin yapıştırdığınızda sonuçlar hemen görünür</li><li><strong>Yan Yana Görünüm</strong>: Her iki metin hizalanmış farklılıklarla birlikte görüntülenir</li><li><strong>Büyük Metin Desteği</strong>: Uzun belgeleri verimli şekilde karşılaştırır</li><li><strong>Satır Sınırı Yok</strong>: Herhangi bir uzunluktaki metni kısıtlama olmadan işleyin</li></ul>"
-          },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
             "content": "<ul><li><strong>Kod İncelemesi</strong>: Neyin değiştiğini görmek için bir kod dosyasının iki sürümünü karşılaştırın</li><li><strong>Yapılandırma Değişiklikleri</strong>: Geliştirme ve üretim yapılandırma dosyaları arasındaki farklılıkları bulun</li><li><strong>Belge Revizyonu</strong>: Belgelerin veya sözleşmelerin taslak sürümlerini karşılaştırın</li><li><strong>Veritabanı Kayıtları</strong>: Veri tutarsızlıklarını bulmak için dışa aktarılan kayıtları karşılaştırın</li><li><strong>Hata Ayıklama</strong>: Test senaryolarında beklenen ve gerçek çıktıyı karşılaştırın</li></ul>"
@@ -964,14 +844,6 @@
           "intro": {
             "title": "Kelime Sayacı Nedir?",
             "content": "<p><strong>Kelime Sayacı</strong>, metninizi analiz eder ve kelime sayısını, karakter sayısını, cümle sayısını, paragraf sayısını ve tahmini okuma süresini anında görüntüler. Uzunluk gereksinimlerini karşılaması gereken yazarlar, öğrenciler ve içerik oluşturucular için vazgeçilmezdir.</p><p>Metninizi yapıştırın ve tüm istatistikleri gerçek zamanlı olarak alın.</p>"
-          },
-          "howToUse": {
-            "title": "Kelime Sayacı Nasıl Kullanılır?",
-            "content": "<ol><li>Metninizi giriş alanına yazın veya yapıştırın</li><li>İstatistikler yazarken gerçek zamanlı olarak güncellenir: kelimeler, karakterler, cümleler, paragraflar ve okuma süresi</li><li>Uzunluk gereksinimlerini kontrol etmek veya okuma süresini tahmin etmek için sonuçları kullanın</li></ol><p>Okuma süresi, ortalama okuma hızı olan dakikada 200 kelime üzerinden tahmin edilir.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Kelime Sayısı</strong>: Noktalama ve boşlukların doğru işlenmesiyle hassas kelime sayımı</li><li><strong>Karakter Sayısı</strong>: Boşluklu ve boşluksuz toplam karakter sayısı</li><li><strong>Cümle Sayısı</strong>: Noktalama işaretlerine göre cümle sayımı</li><li><strong>Paragraf Sayısı</strong>: Satır sonlarıyla ayrılan paragrafları sayar</li><li><strong>Okuma Süresi</strong>: Ortalama hızda tahmini okuma süresi</li><li><strong>Gerçek Zamanlı Güncellemeler</strong>: Yazarken tüm istatistikler anında güncellenir</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
@@ -1016,14 +888,6 @@
             "title": "Büyük/Küçük Harf Dönüştürücü Nedir?",
             "content": "<p><strong>Büyük/Küçük Harf Dönüştürücü</strong>, metni BÜYÜK HARF, küçük harf, Başlık Harfi, Cümle başı büyük harf, camelCase, PascalCase, snake_case, kebab-case ve CONSTANT_CASE dahil birden fazla büyük/küçük harf formatı arasında dönüştürür.</p><p>Değişkenleri yeniden adlandıran geliştiriciler, başlıkları biçimlendiren yazarlar veya hızlıca metin büyük/küçük harf düzenini değiştirmesi gereken herkes için vazgeçilmezdir.</p>"
           },
-          "howToUse": {
-            "title": "Büyük/Küçük Harf Dönüştürücü Nasıl Kullanılır?",
-            "content": "<ol><li>Metninizi giriş alanına yazın veya yapıştırın</li><li>İstediğiniz büyük/küçük harf format düğmesine tıklayın: BÜYÜK HARF, küçük harf, Başlık Harfi, Cümle başı büyük harf, camelCase, PascalCase, snake_case, kebab-case veya CONSTANT_CASE</li><li>Dönüştürülen metin anında görünür</li><li>Sonucu tek tıkla kopyalayın</li></ol><p>Dönüşümleri zincirleme yapabilirsiniz — temiz sonuçlar için önce küçük harfe, ardından camelCase'e dönüştürün.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>9'dan Fazla Format</strong>: BÜYÜK HARF, küçük harf, Başlık Harfi, Cümle başı büyük harf, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE</li><li><strong>Anında Dönüştürme</strong>: Bir formata tıkladığınızda sonuçlar hemen görünür</li><li><strong>Çok Satırlı Destek</strong>: Aynı anda birden fazla metin satırını dönüştürün</li><li><strong>Akıllı Ayrıştırma</strong>: camelCase, snake_case veya diğer formatlardan kelimeleri doğru şekilde ayırır</li><li><strong>Tek Tıklamayla Kopyala</strong>: Dönüştürülen metni panoya kopyalayın</li><li><strong>Toplu İşleme</strong>: Birden fazla satırı aynı anda işleyin</li></ul>"
-          },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
             "content": "<ul><li><strong>Değişken Adlandırma</strong>: JavaScript camelCase, Python snake_case ve CSS kebab-case arasında dönüştürün</li><li><strong>Veritabanı Alanları</strong>: Sütun adlarını farklı adlandırma kuralları arasında dönüştürün</li><li><strong>İçerik Biçimlendirme</strong>: Başlıklar ve üst başlıklar için başlıkları Başlık Harfi formatına dönüştürün</li><li><strong>API Tasarımı</strong>: JSON istek/yanıt şemalarında alan adlarını standartlaştırın</li><li><strong>Kod Yeniden Düzenleme</strong>: Adlandırma kuralları arasında geçiş yaparken tanımlayıcıları yeniden adlandırın</li></ul>"
@@ -1063,14 +927,6 @@
           "intro": {
             "title": "Lorem Ipsum Oluşturucu Nedir?",
             "content": "<p><strong>Lorem Ipsum Oluşturucu</strong>, tasarım taslakları, tel çerçeveler ve prototipler için yer tutucu metin oluşturur. Klasik Lorem Ipsum metnini paragraflar, cümleler veya kelimeler olarak miktar üzerinde tam kontrol ile oluşturun.</p><p>Son içerik hazır olmadan önce düzenleri gerçekçi görünümlü metinle doldurmak için endüstri standardı yöntemdir.</p>"
-          },
-          "howToUse": {
-            "title": "Lorem Ipsum Oluşturucu Nasıl Kullanılır?",
-            "content": "<ol><li>Birimi seçin: <strong>paragraflar</strong>, <strong>cümleler</strong> veya <strong>kelimeler</strong></li><li>İhtiyacınız olan miktarı belirleyin (ör. 3 paragraf, 10 cümle veya 50 kelime)</li><li>Yer tutucu metni oluşturmak için <strong>Oluştur</strong>'a tıklayın</li><li>Tasarımınızda veya belgenizde kullanmak için sonucu kopyalayın</li></ol><p>Oluşturulan metin, \"Lorem ipsum dolor sit amet...\" ile başlayan klasik Lorem Ipsum kalıbını takip eder.</p>"
-          },
-          "features": {
-            "title": "Temel Özellikler",
-            "content": "<ul><li><strong>Üç Çıktı Modu</strong>: Paragraflar, cümleler veya kelime sayısına göre oluşturun</li><li><strong>Özelleştirilebilir Miktar</strong>: Ne kadar metin oluşturulacağını tam olarak kontrol edin</li><li><strong>Klasik Lorem Ipsum</strong>: Standart Lorem Ipsum kelime havuzunu kullanır</li><li><strong>Anında Oluşturma</strong>: Metin hemen görünür, gecikme yoktur</li><li><strong>Tek Tıklamayla Kopyala</strong>: Oluşturulan tüm metni panoya kopyalayın</li><li><strong>Tutarlı Çıktı</strong>: Doğal görünümlü metin dağılımı ve paragraf uzunlukları</li></ul>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",

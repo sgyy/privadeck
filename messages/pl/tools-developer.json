@@ -47,14 +47,6 @@
             "title": "Profesjonalny Formater i Przeglądarka JSON",
             "content": "<p><strong>Formater JSON</strong> to darmowe, profesjonalne narzędzie JSON łączące edytor kodu Monaco, interaktywny widók drzewa i walidację w czasie rzeczywistym w jednym interfejsie. Wklej nieczytelny lub zminifikowany JSON i natychmiast uzyskaj czyste, czytelne wyjście z podświetlaniem składni, zwijaniem kodu i wizualną eksploracją drzewa.</p><p>Niezależnie czy debugujesz odpowiedzi API, sprawdzasz głęboko zagnieżdżone struktury danych, przeglądasz pliki konfiguracyjne czy przygotowujesz dane do dokumentacji — to narzędzie daje Ci wszystko, czego potrzebujesz bez opuszczania przeglądarki lub przesyłania choćby jednego bajtu.</p>"
           },
-          "howToUse": {
-            "title": "Jak używać Formatera JSON",
-            "content": "<ol><li>Wklej lub wpisz JSON do Monaco Editor po lewej stronie — lub przeciągnij i upuść plik <code>.json</code></li><li>Narzędzie waliduje w czasie rzeczywistym i natychmiast pokazuje status <strong>Poprawny</strong> lub <strong>Niepoprawny</strong></li><li>Kliknij <strong>Formatuj</strong>, aby sformatować z wybranym wcięciem, lub <strong>Minifikuj</strong>, aby skompresować</li><li>Przełącz na widók <strong>Drzewo</strong>, aby wizualnie eksplorować strukturę, lub widók <strong>Kod</strong> dla podświetlonego składnią wyjścia</li><li>Użyj filtra JSON Path (np. <code>$.data.users[0]</code>), aby przejść do konkretnych wartości</li><li>Skopiuj lub pobierz wynik jednym kliknięciem</li></ol>"
-          },
-          "features": {
-            "title": "Kluczowe Funkcje",
-            "content": "<ul><li><strong>Monaco Editor</strong>: Ten sam edytor kodu, który napędza VS Code — z podświetlaniem składni, dopasowywaniem nawiasów, zwijaniem kodu i zawijaniem wierszy</li><li><strong>Interaktywny Widók Drzewa</strong>: Rozwijaj i zwijaj węzły JSON wizualnie, z licznikami elementów na każdym poziomie i pełną nawigacją klawiaturą</li><li><strong>Filtrowanie JSON Path</strong>: Wyszukuj konkretne wartości używając wyrażeń ścieżki jak <code>$.address.city</code> lub <code>$.items[0].name</code></li><li><strong>Walidacja w Czasie Rzeczywistym</strong>: Natychmiastowe sprawdzanie składni podczas pisania — bez konieczności klikania przycisku</li><li><strong>Pretty Print &amp; Minifikacja</strong>: Formatuj z konfigurowalnym wcięciem (2, 4 lub 8 spacji) lub kompresuj do jednej linii</li><li><strong>Obsługa Przeciągania i Upuszczania Plików</strong>: Upuść pliki <code>.json</code> lub <code>.txt</code> bezpośrednio do edytora</li><li><strong>Regulowany Panel Podziału</strong>: Przeciągnij separator, aby wyważyć przestrzeń edytora i przeglądarki; kliknij dwukrotnie, aby zresetować</li><li><strong>Podświetlony Składnią Widók Kodu</strong>: Kolorowe wyjście z numerami linii dla łatwego kopiowania</li><li><strong>100% Oparte na Przeglądarce</strong>: Bez przesyłania na serwer — Twoje dane pozostają na urządzeniu, zawsze</li></ul>"
-          },
           "useCases": {
             "title": "Typowe Zastosowania",
             "content": "<ul><li><strong>Tworzenie &amp; Debugowanie API</strong>: Wklej surowe odpowiedzi API, natychmiast je sformatuj i użyj widoku drzewa do nawigacji po głęboko zagnieżdżonych obiektach</li><li><strong>Pliki Konfiguracyjne</strong>: Wyczyść <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code> lub manifesty Kubernetes</li><li><strong>Eksploracja Danych</strong>: Użyj JSON Path do filtrowania dużych zbiorów danych i znajdowania konkretnych wartości bez przewijania tysięcy linii</li><li><strong>Przeglądy Kodu</strong>: Porównuj struktury JSON wizualnie z widokiem drzewa, aby szybko wykrywać różnice</li><li><strong>Dokumentacja</strong>: Formatuj i eksportuj dobrze ustrukturyzowane przykłady JSON dla dokumentacji technicznej i tutoriali</li><li><strong>Rekordy Baz Danych</strong>: Sprawdzaj i formatuj JSON przechowywany w kolumnach MongoDB, CouchDB lub PostgreSQL JSONB</li></ul>"
@@ -187,14 +179,6 @@
             "title": "Visual JSON Editor for Developers",
             "content": "<p><strong>JSON Editor</strong> is a browser-based JSON editor with three view modes: <strong>Text</strong> for raw editing with Monaco Editor, <strong>Tree</strong> for visual structure editing, and <strong>Preview</strong> for read-only syntax-highlighted display.</p><p>In Tree mode, double-click a key or value to edit it in place. Right-click any node for the full context menu: insert before or after, duplicate, change type, delete, copy path. Undo and redo are available at every step. When you paste invalid JSON, one click repairs common mistakes like trailing commas, single quotes, and JavaScript comments.</p>"
           },
-          "howToUse": {
-            "title": "How to Use JSON Editor",
-            "content": "<ol><li>Paste, type, or drop a <code>.json</code> file into the editor</li><li>If the JSON is invalid, click <strong>Auto Repair</strong> to fix common mistakes</li><li>Use the <strong>view switcher</strong> to pick Text, Tree, or Preview mode</li><li>In <strong>Tree</strong> mode: double-click any key or value to edit in place; right-click for insert/duplicate/delete/change type/copy path</li><li>Use <strong>Ctrl+Z</strong> / <strong>Ctrl+Y</strong> to undo and redo</li><li>Click <strong>Format</strong>, <strong>Minify</strong>, or <strong>Smart</strong> to reformat, then <strong>Download</strong> or <strong>Copy</strong> to export</li></ol>"
-          },
-          "features": {
-            "title": "Key Features",
-            "content": "<ul><li><strong>Three View Modes</strong>: Text (Monaco), Tree (interactive), Preview (read-only) — switch anytime</li><li><strong>Visual Tree Editing</strong>: Double-click any key or value, right-click for the full context menu</li><li><strong>Full Type Switching</strong>: Convert any value between string, number, boolean, null, object, and array</li><li><strong>Undo / Redo</strong>: 50-step history with Ctrl+Z / Ctrl+Y shortcuts</li><li><strong>Auto Repair</strong>: Fixes trailing commas, single quotes, missing quotes, JavaScript comments, and more</li><li><strong>Smart Format</strong>: Inline short arrays/objects, expand long ones — compact yet readable</li><li><strong>Monaco Editor</strong>: The same code editor that powers VS Code, for raw text editing</li><li><strong>Path Display &amp; Copy</strong>: Click any node to see and copy its JSON Path</li><li><strong>100% Browser-Based</strong>: No server uploads — your data stays on your device</li></ul>"
-          },
           "useCases": {
             "title": "Common Use Cases",
             "content": "<ul><li><strong>Config File Editing</strong>: Safely modify <code>package.json</code>, <code>tsconfig.json</code>, or Kubernetes manifests without syntax errors</li><li><strong>Test Data Crafting</strong>: Quickly build fixtures by duplicating nodes, changing types, and renaming keys</li><li><strong>API Response Debugging</strong>: Paste a response, restructure it, and diff against the expected shape</li><li><strong>Schema Migration</strong>: Compare two versions of a JSON document to see exactly what changed</li><li><strong>Fixing Broken JSON</strong>: Use Auto Repair to recover from trailing commas, stray quotes, or mixed delimiters</li><li><strong>Data Cleanup</strong>: Delete unwanted fields in bulk with right-click + Delete, then export the cleaned data</li></ul>"
@@ -240,14 +224,6 @@
           "intro": {
             "title": "Czym jest Koder/Dekoder Base64?",
             "content": "<p><strong>Koder/Dekoder Base64</strong> konwertuje tekst i pliki na kodowanie Base64 i z powrotem. Base64 to schemat kodowania binarnego na tekst, powszechnie używany do osadzania danych w adresach URL, e-mailach, HTML i JSON.</p><p>Koduj tekst lub dowolny plik (obrazy, PDF, ZIP) do Base64 lub dekoduj ciągi Base64 z powrotem do tekstu lub plików do pobrania — wszystko w przeglądarce, z wariantem bezpiecznym dla URL i obsługą Data URI.</p>"
-          },
-          "howToUse": {
-            "title": "Jak używać Kodera/Dekodera Base64",
-            "content": "<ol><li>Wybierz tryb <strong>Tekst</strong> lub <strong>Plik</strong> w zależności od danych wejściowych</li><li>Wybierz kierunek <strong>Koduj</strong> lub <strong>Dekoduj</strong> — narzędzie automatycznie wykrywa dane wejściowe Base64</li><li>Wybierz wariant <strong>Standardowy</strong> lub <strong>Bezpieczny dla URL</strong> według potrzeb</li><li>Wyniki pojawiają się natychmiast podczas pisania — nie trzeba klikać żadnych przycisków</li><li>Użyj <strong>Kopiuj</strong>, <strong>Pobierz</strong> lub <strong>Zamień</strong> do pracy z wynikami</li></ol><p>Podczas kodowania plików włącz <strong>Wyjście Data URI</strong>, aby uzyskać gotowy do użycia adres data URL do osadzania w HTML/CSS.</p>"
-          },
-          "features": {
-            "title": "Kluczowe funkcje",
-            "content": "<ul><li><strong>Konwersja w czasie rzeczywistym</strong>: Natychmiastowe kodowanie lub dekodowanie podczas pisania — nie trzeba klikać przycisków</li><li><strong>Obsługa tekstu i plików</strong>: Koduj dowolny plik (obrazy, PDF, ZIP) do Base64 lub dekoduj Base64 do pliku do pobrania</li><li><strong>Base64 bezpieczny dla URL</strong>: Wariant RFC 4648 zastępujący +/ przez -_ i pomijający dopełnienie — idealny dla tokenów JWT i parametrów URL</li><li><strong>Wyjście Data URI</strong>: Generuje gotowe do użycia ciągi <code>data:{mime};base64,...</code> do osadzania w HTML, CSS lub JavaScript</li><li><strong>Podgląd obrazów</strong>: Automatycznie wykrywa i wyświetla podgląd podczas dekodowania danych obrazów Base64 (PNG, JPEG, GIF, WebP)</li><li><strong>Automatyczne wykrywanie</strong>: Inteligentnie wykrywa, czy dane wejściowe to Base64 i automatycznie przełącza na tryb dekodowania</li><li><strong>Zamiana i statystyki</strong>: Zamień wyjście na wejście jednym kliknięciem, z wyświetlaniem rozmiaru w bajtach i liczby znaków w czasie rzeczywistym</li><li><strong>Obsługa UTF-8</strong>: Poprawnie obsługuje znaki Unicode, emoji i tekst wielobajtowy</li><li><strong>Bez limitów rozmiaru</strong>: Przetwarzaj tekst lub pliki dowolnego rozmiaru — ograniczone tylko pamięcią urządzenia</li></ul>"
           },
           "useCases": {
             "title": "Typowe przypadki użycia",
@@ -345,14 +321,6 @@
             "title": "Co to jest Koder/Dekoder URL?",
             "content": "<p><strong>Koder/Dekoder URL</strong> konwertuje znaki specjalne w adresach URL na ich procentowo zakodowane odpowiedniki i z powrotem. Jest to niezbędne do tworzenia prawidłowych adresów URL zawierających spacje, ampersandy, znaki nielacińskie lub inne zarezerwowane znaki.</p><p>Użyj go do bezpiecznego przekazywania parametrów zapytania, kodowania ścieżek plików lub debugowania nieprawidłowych adresów URL.</p>"
           },
-          "howToUse": {
-            "title": "Jak używać Kodera/Dekodera URL",
-            "content": "<ol><li>Wprowadź tekst lub komponent URL w polu wejściowym</li><li>Wybierz <strong>Koduj</strong>, aby procentowo zakodować znaki specjalne, lub <strong>Dekoduj</strong>, aby przekonwertować zakodowane adresy URL z powrotem do czytelnego tekstu</li><li>Wynik aktualizuje się natychmiast</li><li>Kliknij <strong>Kopiuj</strong>, aby skopiować zakodowany/zdekodowany wynik</li></ol><p>Koduje wszystkie znaki, które są niebezpieczne w adresach URL zgodnie z RFC 3986, w tym spacje, &amp;, =, ?, # i znaki nielacińskie.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Zgodne z RFC 3986</strong>: Poprawnie koduje wszystkie zarezerwowane i niebezpieczne znaki URL</li><li><strong>Przetwarzanie w czasie rzeczywistym</strong>: Wyniki aktualizują się podczas pisania</li><li><strong>Obsługa Unicode</strong>: Poprawnie obsługuje znaki międzynarodowe i emoji w adresach URL</li><li><strong>Kodowanie komponentów</strong>: Koduje poszczególne komponenty URL (parametry zapytania, segmenty ścieżki)</li><li><strong>Kopiowanie jednym kliknięciem</strong>: Natychmiast kopiuj zakodowane wyniki</li><li><strong>100% w przeglądarce</strong>: Brak przesyłania na serwer — Twoje dane pozostają na urządzeniu</li></ul>"
-          },
           "useCases": {
             "title": "Typowe przypadki użycia",
             "content": "<ul><li><strong>Parametry zapytania</strong>: Koduj wartości do bezpiecznego włączenia w ciągach zapytania URL</li><li><strong>Żądania API</strong>: Poprawnie koduj parametry żądań dla REST API</li><li><strong>Przekierowania URL</strong>: Koduj adresy URL zwrotne dla przepływów OAuth i przekierowań</li><li><strong>Ścieżki plików</strong>: Koduj nazwy plików ze spacjami lub znakami specjalnymi dla serwerów WWW</li><li><strong>Debugowanie</strong>: Dekoduj zniekształcone adresy URL, aby zobaczyć oryginalny tekst</li></ul>"
@@ -390,14 +358,6 @@
             "title": "Co to jest Rozpoznawanie tekstu OCR?",
             "content": "<p><strong>Rozpoznawanie tekstu OCR</strong> wyodrębnia czytelny tekst z obrazów używając optycznego rozpoznawania znaków opartego na Tesseract.js. Prześlij zdjęcie dokumentu, zrzut ekranu, paragon lub odręczną notatkę i uzyskaj tekst, który możesz skopiować, edytować i używać.</p><p>Obsługuje <strong>ponad 12 języków</strong>, w tym angielski, chiński, japoński, koreański, hiszpański, francuski, niemiecki i więcej — wszystko przetwarzane lokalnie w przeglądarce.</p>"
           },
-          "howToUse": {
-            "title": "Jak używać Rozpoznawania tekstu OCR",
-            "content": "<ol><li>Prześlij obraz klikając strefę upuszczania lub przeciągając go na stronę (obsługuje JPG, PNG, WebP, BMP)</li><li>Wybierz język tekstu na obrazie dla najlepszej dokładności</li><li>Kliknij <strong>Wyodrębnij tekst</strong>, aby rozpocząć rozpoznawanie</li><li>Przejrzyj wyodrębniony tekst i skopiuj go do schowka</li></ol><p>Dla najlepszych wyników użyj wyraźnych obrazów o wysokim kontraście z dobrym oświetleniem. Drukowany tekst daje wyższą dokładność niż pismo odręczne.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>12+ języków</strong>: Rozpoznawaj tekst w językach: angielski, chiński (uproszczony i tradycyjny), japoński, koreański, hiszpański, francuski, niemiecki, włoski, portugalski, rosyjski i więcej</li><li><strong>Wiele formatów obrazów</strong>: Akceptuje JPG, PNG, WebP, BMP i TIFF</li><li><strong>Oparte na Tesseract.js</strong>: Branżowy silnik OCR działający w całości w przeglądarce przez WebAssembly</li><li><strong>Wysoka dokładność</strong>: Najlepsze wyniki na drukowanym tekście, paragonach, zrzutach ekranu i zeskanowanych dokumentach</li><li><strong>Kopiuj i edytuj</strong>: Wyodrębniony tekst jest w pełni edytowalny i kopiowalny</li><li><strong>100% lokalne przetwarzanie</strong>: Brak przesyłania na serwer — Twoje dokumenty pozostają prywatne</li></ul>"
-          },
           "useCases": {
             "title": "Typowe przypadki użycia",
             "content": "<ul><li><strong>Digitizacja dokumentów</strong>: Konwertuj drukowane dokumenty, paragony lub listy na edytowalny tekst</li><li><strong>Wyodrębnianie tekstu ze zrzutów ekranu</strong>: Pobieraj tekst ze zrzutów stron WWW, komunikatów o błędach lub logów czatu</li><li><strong>Przygotowanie do tłumaczenia</strong>: Wyodrębniaj tekst w obcych językach z obrazów do tłumaczenia</li><li><strong>Wprowadzanie danych</strong>: Szybko digitalizuj tekst z formularzy, faktur lub wizytówek</li><li><strong>Dostępność</strong>: Uczyn tekst oparty na obrazach dostępnym dla czytników ekranu</li></ul>"
@@ -433,14 +393,6 @@
           "intro": {
             "title": "Co to jest Rozpakowywanie ZIP?",
             "content": "<p><strong>Rozpakowywanie ZIP</strong> pozwala otwierać i wyodrębniać zawartość archiwów ZIP bezpośrednio w przeglądarce. Podglądaj nazwy plików, rozmiary i strukturę folderów przed pobraniem poszczególnych plików lub całej zawartości.</p><p>Nie potrzeba instalacji oprogramowania — po prostu upuść plik ZIP i przeglądaj jego zawartość natychmiast.</p>"
-          },
-          "howToUse": {
-            "title": "Jak używać Rozpakowywania ZIP",
-            "content": "<ol><li>Upuść plik ZIP na stronę lub kliknij, aby przeglądać i wybrać jeden</li><li>Zobacz zawartość archiwum: nazwy plików, rozmiary i hierarchię folderów</li><li>Kliknij poszczególne pliki, aby je pobrać, lub wyodrębnij wszystko na raz</li></ol><p>Obsługuje standardowe archiwa ZIP. Duże archiwa mogą chwilę zająć do sparsowania w zależności od urządzenia.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Natknięty podgląd</strong>: Zobacz wszystkie pliki i foldery wewnątrz ZIP bez wyodrębniania</li><li><strong>Wybiórcze wyodrębnianie</strong>: Pobieraj poszczególne pliki bez wyodrębniania całego archiwum</li><li><strong>Wyświetlanie rozmiaru pliku</strong>: Zobacz rozmiary skompresowane i nieskompresowane dla każdego pliku</li><li><strong>Struktura folderów</strong>: Przeglądaj zagnieżdżone hierarchie katalogów w archiwum</li><li><strong>Oparte na fflate</strong>: Wysokowydajna dekompresja używając biblioteki fflate</li><li><strong>Brak limitów rozmiaru pliku</strong>: Ograniczone tylko przez dostępną pamięć urządzenia</li></ul>"
           },
           "useCases": {
             "title": "Typowe przypadki użycia",
@@ -480,14 +432,6 @@
           "intro": {
             "title": "Co to jest Konwerter CSV/JSON?",
             "content": "<p><strong>Konwerter CSV/JSON</strong> natychmiast transformuje dane między formatami CSV (wartości rozdzielone przecinkami) i JSON. Konwertuj dane arkusza kalkulacyjnego na tablice JSON dla API lub przekształcaj zestawy danych JSON w CSV dla Excel lub Google Sheets.</p><p>Obsługuje nagłówki, pola w cudzysłowach i niestandardowe separatory — wszystko w przeglądarce bez przesyłania danych.</p>"
-          },
-          "howToUse": {
-            "title": "Jak używać Konwertera CSV/JSON",
-            "content": "<ol><li>Wklej swoje dane CSV lub JSON w pole wejściowe</li><li>Wybierz kierunek konwersji: <strong>CSV → JSON</strong> lub <strong>JSON → CSV</strong></li><li>Przekonwertowany wynik pojawia się natychmiast w polu wyjściowym</li><li>Skopiuj wynik lub pobierz go jako plik</li></ol><p>Dane wejściowe CSV powinny używać pierwszego wiersza jako nagłówków kolumn. Dane wejściowe JSON powinny być tablicą obiektów z spójnymi kluczami.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Konwersja dwukierunkowa</strong>: Konwertuj CSV na JSON i JSON na CSV</li><li><strong>Automatyczne wykrywanie nagłówków</strong>: Używa pierwszego wiersza CSV jako kluczy obiektu JSON</li><li><strong>Obsługa znaków specjalnych</strong>: Poprawnie przetwarza pola w cudzysłowach, przecinki wewnątrz pól i znaki nowej linii</li><li><strong>Natknięta konwersja</strong>: Wyniki pojawiają się natychmiast po wklejeniu danych</li><li><strong>Pobierz wynik</strong>: Zapisz przekonwertowane dane jako pliki .json lub .csv</li><li><strong>Obsługa dużych zestawów danych</strong>: Efektywnie obsługuje tysiące wierszy</li></ul>"
           },
           "useCases": {
             "title": "Typowe przypadki użycia",
@@ -584,14 +528,6 @@
             "title": "Co to jest Generator hashy?",
             "content": "<p><strong>Generator hashy</strong> oblicza wartości skrótów kryptograficznych dla tekstu lub plików używając algorytmów MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 i CRC32. Obsługuje także HMAC (kod uwierzytelniania wiadomości oparty na hashu) z tajnym kluczem. Skróty są jednokierunkowymi odciskami palców używanymi do weryfikacji integralności danych, porównywania plików i walidacji pobierania.</p><p>Generuj skróty natychmiast w przeglądarce z obliczaniem w czasie rzeczywistym — idealne do weryfikacji integralności plików lub tworzenia streszczeń treści.</p>"
           },
-          "howToUse": {
-            "title": "Jak używać Generatora hashy",
-            "content": "<ol><li>Wprowadź tekst bezpośrednio — hashe są obliczane w czasie rzeczywistym podczas pisania</li><li>Lub prześlij pliki (pojedyncze lub wsadowo) do hashowania</li><li>Przełączaj między formatami wyjściowymi hex (małe/wielkie litery) i Base64</li><li>Użyj pola weryfikacji, aby porównać ze znanym hashem</li><li>Włącz tryb HMAC do hashowania z kluczem</li></ol><p>Dla weryfikacji integralności pliku porównaj wygenerowany skrót z sumą kontrolną dostarczoną przez źródło pliku.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>8 algorytmów</strong>: MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512</li><li><strong>Obsługa HMAC</strong>: Hashowanie z kluczem przy użyciu algorytmów SHA do uwierzytelniania wiadomości</li><li><strong>Hashowanie w czasie rzeczywistym</strong>: Wyniki pojawiają się natychmiast podczas pisania</li><li><strong>Weryfikacja hashy</strong>: Porównaj z oczekiwanymi hashami z wizualnym wskaźnikiem zgodności</li><li><strong>Wsadowe hashowanie plików</strong>: Hashuj wiele plików jednocześnie</li><li><strong>Wiele formatów wyjściowych</strong>: Hex (małe/wielkie litery) i Base64</li><li><strong>Kopiowanie i eksport</strong>: Kopiuj pojedyncze lub wszystkie hashe, pobierz jako plik tekstowy</li><li><strong>Postęp pliku</strong>: Wskaźnik postępu dla przetwarzania dużych plików</li></ul>"
-          },
           "useCases": {
             "title": "Typowe przypadki użycia",
             "content": "<ul><li><strong>Integralność plików</strong>: Weryfikuj, czy pobrane pliki nie zostały zmienione, porównując sumy kontrolne</li><li><strong>Deduplikacja treści</strong>: Porównuj skróty, aby znaleźć zduplikowane pliki</li><li><strong>Uwierzytelnianie API</strong>: Generuj sygnatury HMAC dla żądań API</li><li><strong>Dystrybucja oprogramowania</strong>: Generuj sumy kontrolne dla własnych wydań plików</li><li><strong>Audyt bezpieczeństwa</strong>: Hashuj pliki, aby wykryć nieautoryzowane modyfikacje</li></ul>"
@@ -629,14 +565,6 @@
           "intro": {
             "title": "Co to jest Konwerter kolorów?",
             "content": "<p><strong>Konwerter kolorów</strong> transformuje kolory między formatami HEX, RGB i HSL z podglądem wizualnym na żywo. Wprowadź kolor w dowolnym formacie i natychmiast zobacz jego odpowiednik we wszystkich innych formatach wraz z próbką koloru.</p><p>Idealne dla projektantów i deweloperów, którzy muszą konwertować między notacjami kolorów dla CSS, narzędzi projektowych lub wytycznych marki.</p>"
-          },
-          "howToUse": {
-            "title": "Jak używać Konwertera kolorów",
-            "content": "<ol><li>Wprowadź wartość koloru w dowolnym obsługiwanym formacie: HEX (np. #3B82F6), RGB (np. rgb(59, 130, 246)) lub HSL (np. hsl(217, 91%, 60%))</li><li>Zobacz natychmiastową konwersję na wszystkie inne formaty z podglądem koloru na żywo</li><li>Kliknij dowolną wartość, aby skopiować ją do schowka</li></ol><p>Wybieracz kolorów pozwala również wizualnie wybrać kolory i uzyskać wszystkie wartości formatów na raz.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Obsługa trzech formatów</strong>: Konwertuj między notacjami kolorów HEX, RGB i HSL</li><li><strong>Podgląd na żywo</strong>: Zobacz rzeczywisty kolor wyświetlany podczas pisania lub dostosowywania wartości</li><li><strong>Wizualny wybieracz kolorów</strong>: Wybieraj kolory wizualnie i uzyskuj wszystkie wartości formatów</li><li><strong>Natknięta konwersja</strong>: Wyniki aktualizują się w czasie rzeczywistym podczas pisania</li><li><strong>Kopiowanie jednym kliknięciem</strong>: Kopiuj dowolną wartość formatu koloru do schowka</li><li><strong>Wyjście gotowe do CSS</strong>: Wartości sformatowane do bezpośredniego użycia w arkuszach stylów CSS</li></ul>"
           },
           "useCases": {
             "title": "Typowe przypadki użycia",
@@ -677,14 +605,6 @@
             "title": "Co to jest Konwerter JSON ↔ XML?",
             "content": "<p><strong>Konwerter JSON ↔ XML</strong> transformuje dane między formatami JSON i XML. Konwertuj obiekty JSON na dobrze sformowane dokumenty XML lub parsuj XML z powrotem do JSON — przydatne do integrowania systemów używających różnych formatów danych.</p><p>Obsługuje zagnieżdżone struktury, tablice i atrybuty poprawnie w obu kierunkach.</p>"
           },
-          "howToUse": {
-            "title": "Jak używać Konwertera JSON ↔ XML",
-            "content": "<ol><li>Wklej swoje dane JSON lub XML w pole wejściowe</li><li>Wybierz kierunek konwersji: <strong>JSON → XML</strong> lub <strong>XML → JSON</strong></li><li>Przekonwertowane wyjście pojawia się natychmiast</li><li>Skopiuj wynik lub pobierz go jako plik</li></ol><p>Tablice JSON są konwertowane na powtarzające się elementy XML. Atrybuty XML są zachowywane podczas konwersji.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Konwersja dwukierunkowa</strong>: Konwertuj JSON na XML i XML na JSON</li><li><strong>Obsługa zagnieżdżonych struktur</strong>: Poprawnie obsługuje głęboko zagnieżdżone obiekty i tablice</li><li><strong>Wyjście upiększone</strong>: Wyjście XML jest odpowiednio wcięte dla czytelności</li><li><strong>Obsługa tablic</strong>: Tablice JSON stają się powtarzającymi się elementami XML z odpowiednią strukturą</li><li><strong>Przetwarzanie natychmiastowe</strong>: Wyniki pojawiają się natychmiast</li><li><strong>Pobierz wynik</strong>: Zapisz wyniki jako pliki .json lub .xml</li></ul>"
-          },
           "useCases": {
             "title": "Typowe przypadki użycia",
             "content": "<ul><li><strong>Integracja API</strong>: Konwertuj między JSON REST API i usługami XML SOAP</li><li><strong>Systemy dziedziczone</strong>: Przekształcaj dane XML ze starszych systemów do JSON dla nowoczesnych aplikacji</li><li><strong>Konfiguracja</strong>: Konwertuj między formatami plików konfiguracyjnych JSON i XML</li><li><strong>Migracja danych</strong>: Transformuj formaty danych podczas migracji systemów</li><li><strong>Testowanie</strong>: Generuj dane testowe XML z JSON lub na odwrót</li></ul>"
@@ -721,14 +641,6 @@
           "intro": {
             "title": "Co to jest Podgląd Markdown?",
             "content": "<p><strong>Podgląd Markdown</strong> pozwala pisać Markdown i zobaczyć podgląd HTML na żywo obok siebie. Pisz sformatowany tekst używając prostej składni Markdown i natychmiast zobacz, jak renderuje — idealne dla plików README, postów na blogu i dokumentacji.</p><p>Obsługuje standardowy Markdown, w tym nagłówki, listy, bloki kodu, linki, obrazy, tabele i więcej.</p>"
-          },
-          "howToUse": {
-            "title": "Jak używać Podglądu Markdown",
-            "content": "<ol><li>Wpisz lub wklej tekst Markdown w panelu edytora po lewej stronie</li><li>Renderowany podgląd HTML aktualizuje się w czasie rzeczywistym po prawej stronie</li><li>Użyj standardowej składni Markdown: # nagłówki, **pogrubienie**, *kursywa*, - listy, ```bloki kodu```</li><li>Skopiuj renderowany HTML lub źródło Markdown</li></ol><p>Widok podzielonego panelu pozwala pisać i przeglądać jednocześnie bez przełączania kart.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Podgląd na żywo</strong>: Zobacz renderowany HTML aktualizujący się w czasie rzeczywistym podczas pisania</li><li><strong>Widok obok siebie</strong>: Edytor i podgląd wyświetlane jednocześnie</li><li><strong>Pełna obsługa Markdown</strong>: Nagłówki, pogrubienie, kursywa, listy, bloki kodu, linki, obrazy, tabele, cytaty</li><li><strong>Podświetlanie składni</strong>: Bloki kodu z podświetlaniem specyficznym dla języka</li><li><strong>Kopiuj wyjście HTML</strong>: Kopiuj renderowany HTML do użycia na stronach WWW</li><li><strong>Responsywny układ</strong>: Działa na komputerach i urządzeniach mobilnych</li></ul>"
           },
           "useCases": {
             "title": "Typowe przypadki użycia",
@@ -770,14 +682,6 @@
           "intro": {
             "title": "Co to jest Tester wyrażeń regularnych?",
             "content": "<p><strong>Tester wyrażeń regularnych</strong> pozwala pisać i testować wyrażenia regularne na przykładowym tekście z podświetlaniem dopasowań w czasie rzeczywistym. Zobacz grupy dopasowań, testuj różne flagi i debuguj swoje wzorce natychmiast.</p><p>Niezbędne narzędzie dla deweloperów pracujących ze wzorcami ciągów, walidacją danych lub parsowaniem tekstu.</p>"
-          },
-          "howToUse": {
-            "title": "Jak używać Testera wyrażeń regularnych",
-            "content": "<ol><li>Wprowadź swój wzorzec wyrażenia regularnego w polu wzorca</li><li>Ustaw flagi według potrzeb: <strong>g</strong> (globalne), <strong>i</strong> (bez rozróżniania wielkości liter), <strong>m</strong> (wieloliniowe)</li><li>Wpisz lub wklej tekst testowy w polu tekstowym poniżej</li><li>Dopasowania są podświetlane w czasie rzeczywistym podczas pisania</li></ol><p>Grupy przechwytywania są pokazywane w różnych kolorach, a szczegóły dopasowania wyświetlają pełne dopasowanie plus wszystkie przechwycone grupy.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Dopasowanie w czasie rzeczywistym</strong>: Dopasowania podświetlają się natychmiast podczas pisania wzorca lub tekstu</li><li><strong>Obsługa flag</strong>: Przełączaj flagi globalne (g), bez rozróżniania wielkości liter (i) i wieloliniowe (m)</li><li><strong>Podświetlanie grup</strong>: Grupy przechwytywania pokazywane z różnymi znacznikami wizualnymi</li><li><strong>Szczegóły dopasowania</strong>: Zobacz pełny tekst dopasowania, grupy i pozycje</li><li><strong>Informacja zwrotna o błędach</strong>: Nieprawidłowa składnia regex jest wykrywana i raportowana natychmiast</li><li><strong>Silnik natywny</strong>: Używa wbudowanego silnika wyrażeń regularnych JavaScript przeglądarki</li></ul>"
           },
           "useCases": {
             "title": "Typowe przypadki użycia",
@@ -822,14 +726,6 @@
             "title": "Co to jest Konwerter znaczników czasu Unix?",
             "content": "<p><strong>Konwerter znaczników czasu Unix</strong> konwertuje między znacznikami czasu Unix (sekundy od 1 stycznia 1970) a czytelnymi formatami daty/godziny. Wprowadź znacznik czasu, aby zobaczyć datę, lub wybierz datę, aby uzyskać znacznik czasu.</p><p>Pokazuje aktualny znacznik czasu Unix na żywo i obsługuje formaty sekund i milisekund.</p>"
           },
-          "howToUse": {
-            "title": "Jak używać Konwertera znaczników czasu Unix",
-            "content": "<ol><li>Wprowadź znacznik czasu Unix (sekundy lub milisekundy), aby zobaczyć czytelną datę i godzinę</li><li>Lub wybierz datę i godzinę, aby uzyskać odpowiedni znacznik czasu Unix</li><li>Aktualny znacznik czasu Unix jest wyświetlany na żywo i aktualizuje się w czasie rzeczywistym</li><li>Skopiuj dowolną wartość jednym kliknięciem</li></ol><p>Automatycznie wykrywa, czy dane wejściowe są w sekundach czy milisekundach na podstawie długości wartości.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Konwersja dwukierunkowa</strong>: Znacznik czasu → data i data → znacznik czasu</li><li><strong>Zegar na żywo</strong>: Aktualny znacznik czasu Unix wyświetlany i aktualizowany w czasie rzeczywistym</li><li><strong>Sekundy i milisekundy</strong>: Obsługuje zarówno sekundy Unix, jak i milisekundy JavaScript</li><li><strong>Lokalny i UTC</strong>: Pokazuje czasy zarówno w lokalnej strefie czasowej, jak i UTC</li><li><strong>Wyniki natychmiastowe</strong>: Konwersja odbywa się w czasie rzeczywistym podczas pisania</li><li><strong>Kopiowanie jednym kliknięciem</strong>: Kopiuj dowolną wartość do schowka</li></ul>"
-          },
           "useCases": {
             "title": "Typowe przypadki użycia",
             "content": "<ul><li><strong>Debugowanie</strong>: Konwertuj znaczniki czasu odpowiedzi API na czytelne daty do debugowania</li><li><strong>Zapytania do bazy danych</strong>: Konwertuj między formatami znaczników czasu dla zapytań SQL</li><li><strong>Analiza logów</strong>: Tłumacz znaczniki czasu Unix w plikach logów na czytelne czasy</li><li><strong>Planowanie</strong>: Obliczaj przyszłe/przeszłe znaczniki czasu dla zadań cron lub zaplanowanych zadań</li><li><strong>Praca w różnych strefach czasowych</strong>: Porównuj znaczniki czasu w różnych strefach czasowych</li></ul>"
@@ -868,14 +764,6 @@
           "intro": {
             "title": "Co to jest Konwerter YAML ↔ JSON?",
             "content": "<p><strong>Konwerter YAML ↔ JSON</strong> transformuje dane między formatami YAML i JSON. Przyjazna dla człowieka składnia YAML sprawia, że jest popularna dla plików konfiguracyjnych, podczas gdy JSON jest standardem dla API i wymiany danych.</p><p>Konwertuj konfiguracje Kubernetes, potoki CI/CD lub dowolny plik YAML na JSON i z powrotem — natychmiast w przeglądarce.</p>"
-          },
-          "howToUse": {
-            "title": "Jak używać Konwertera YAML ↔ JSON",
-            "content": "<ol><li>Wklej swoje dane YAML lub JSON w pole wejściowe</li><li>Wybierz kierunek konwersji: <strong>YAML → JSON</strong> lub <strong>JSON → YAML</strong></li><li>Przekonwertowane wyjście pojawia się natychmiast</li><li>Skopiuj wynik lub pobierz go jako plik</li></ol><p>Obsługuje pełną specyfikację YAML, w tym wieloliniowe ciągi znaków, kotwice i złożone struktury zagnieżdżone.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Konwersja dwukierunkowa</strong>: Konwertuj YAML na JSON i JSON na YAML</li><li><strong>Pełna obsługa YAML</strong>: Obsługuje wieloliniowe ciągi znaków, kotwice, aliasy i wszystkie funkcje YAML</li><li><strong>Wyjście upiększone</strong>: Zarówno wyjście JSON, jak i YAML jest odpowiednio sformatowane</li><li><strong>Raportowanie błędów</strong>: Jasne komunikaty o błędach dla nieprawidłowej składni YAML lub JSON</li><li><strong>Przetwarzanie natychmiastowe</strong>: Wyniki pojawiają się natychmiast</li><li><strong>Oparte na js-yaml</strong>: Niezawodna konwersja używając branżowej biblioteki js-yaml</li></ul>"
           },
           "useCases": {
             "title": "Typowe przypadki użycia",
@@ -917,14 +805,6 @@
             "title": "Co to jest Porównywanie tekstu?",
             "content": "<p><strong>Porównywanie tekstu</strong> porównuje dwa fragmenty tekstu i podświetla różnice linia po linii. Zobacz dokładnie, co zostało dodane, usunięte lub zmienione — jak uproszczona wersja <code>git diff</code> w przeglądarce.</p><p>Idealne do porównywania wersji kodu, plików konfiguracyjnych, wersji roboczych dokumentów lub dowolnej treści tekstowej.</p>"
           },
-          "howToUse": {
-            "title": "Jak używać Porównywania tekstu",
-            "content": "<ol><li>Wklej oryginalny tekst w lewym panelu</li><li>Wklej zmodyfikowany tekst w prawym panelu</li><li>Różnice są podświetlane natychmiast: zielone dla dodatków, czerwone dla usunięć</li><li>Przewijaj przez diff, aby przejrzeć wszystkie zmiany</li></ol><p>Działa najlepiej ze strukturyzowanym tekstem, takim jak kod, konfiguracje lub dokumenty z wyraźnymi podziałami wierszy.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Porównanie linia po linii</strong>: Zobacz dokładnie, które linie różnią się między dwoma tekstami</li><li><strong>Kolorowe diff</strong>: Dodatki na zielono, usunięcia na czerwono — jasne na pierwszy rzut oka</li><li><strong>Natknięte porównanie</strong>: Wyniki pojawiają się natychmiast po wklejeniu tekstu</li><li><strong>Widok obok siebie</strong>: Oba teksty wyświetlane razem z wyrównanymi różnicami</li><li><strong>Obsługa dużych tekstów</strong>: Efektywnie porównuj obszerne dokumenty</li><li><strong>Brak limitu linii</strong>: Obsługuj dowolną długość tekstu bez ograniczeń</li></ul>"
-          },
           "useCases": {
             "title": "Typowe przypadki użycia",
             "content": "<ul><li><strong>Przegląd kodu</strong>: Porównaj dwie wersje pliku kodu, aby zobaczyć, co się zmieniło</li><li><strong>Zmiany konfiguracji</strong>: Zauważ różnice między plikami konfiguracyjnymi deweloperskimi i produkcyjnymi</li><li><strong>Wersje dokumentów</strong>: Porównaj wersje robocze dokumentów lub umów</li><li><strong>Rekordy bazy danych</strong>: Porównaj wyeksportowane rekordy, aby znaleźć niezgodności danych</li><li><strong>Debugowanie</strong>: Porównaj oczekiwane vs rzeczywiste wyjście w scenariuszach testowych</li></ul>"
@@ -964,14 +844,6 @@
           "intro": {
             "title": "Co to jest Licznik słów?",
             "content": "<p><strong>Licznik słów</strong> analizuje Twój tekst i natychmiast wyświetla liczbę słów, znaków, zdań, akapitów i szacowany czas czytania. Niezbędne dla pisarzy, studentów i twórców treści, którzy muszą spełnić wymagania dotyczące długości.</p><p>Po prostu wklej swój tekst i uzyskaj wszystkie statystyki w czasie rzeczywistym.</p>"
-          },
-          "howToUse": {
-            "title": "Jak używać Licznika słów",
-            "content": "<ol><li>Wpisz lub wklej swój tekst w pole wejściowe</li><li>Statystyki aktualizują się w czasie rzeczywistym podczas pisania: słowa, znaki, zdania, akapity i czas czytania</li><li>Użyj wyników, aby sprawdzić wymagania dotyczące długości lub oszacować czas czytania</li></ol><p>Czas czytania jest szacowany przy średniej prędkości czytania 200 słów na minutę.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Liczenie słów</strong>: Dokładne liczenie słów z właściwym obsługiwaniem interpunkcji i białych znaków</li><li><strong>Liczenie znaków</strong>: Całkowita liczba znaków z i bez spacji</li><li><strong>Liczenie zdań</strong>: Liczy zdania na podstawie znaków interpunkcyjnych</li><li><strong>Liczenie akapitów</strong>: Liczy akapity oddzielone podziałami wierszy</li><li><strong>Czas czytania</strong>: Szacowany czas czytania przy średniej prędkości</li><li><strong>Aktualizacje w czasie rzeczywistym</strong>: Wszystkie statystyki aktualizują się natychmiast podczas pisania</li></ul>"
           },
           "useCases": {
             "title": "Typowe przypadki użycia",
@@ -1016,14 +888,6 @@
             "title": "Co to jest Konwerter wielkości liter?",
             "content": "<p><strong>Konwerter wielkości liter</strong> transformuje tekst między wieloma formatami wielkości liter, w tym WIELKIE LITERY, małe litery, Pierwsza Wielka Litera, Początek zdania wielką literą, camelCase, PascalCase, snake_case, kebab-case i CONSTANT_CASE.</p><p>Niezbędne dla deweloperów zmieniających nazwy zmiennych, pisarzy formatujących tytuły lub każdego, kto musi szybko zmienić wielkość liter tekstu.</p>"
           },
-          "howToUse": {
-            "title": "Jak używać Konwertera wielkości liter",
-            "content": "<ol><li>Wpisz lub wklej swój tekst w pole wejściowe</li><li>Kliknij przycisk żądanego formatu wielkości liter: WIELKIE, małe, Pierwsza Wielka, Początek zdania, camelCase, PascalCase, snake_case, kebab-case lub CONSTANT_CASE</li><li>Przekonwertowany tekst pojawia się natychmiast</li><li>Skopiuj wynik jednym kliknięciem</li></ol><p>Możesz łączyć konwersje — najpierw konwertuj na małe litery, a potem na camelCase dla czystych wyników.</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>9+ formatów wielkości liter</strong>: WIELKIE LITERY, małe litery, Pierwsza Wielka Litera, Początek zdania wielką literą, camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE</li><li><strong>Natknięta konwersja</strong>: Wyniki pojawiają się natychmiast po kliknięciu formatu</li><li><strong>Obsługa wielu linii</strong>: Konwertuj wiele linii tekstu na raz</li><li><strong>Inteligentne parsowanie</strong>: Poprawnie dzieli słowa z camelCase, snake_case lub innych formatów</li><li><strong>Kopiowanie jednym kliknięciem</strong>: Kopiuj przekonwertowany tekst do schowka</li><li><strong>Przetwarzanie wsadowe</strong>: Przetwarzaj wiele linii jednocześnie</li></ul>"
-          },
           "useCases": {
             "title": "Typowe przypadki użycia",
             "content": "<ul><li><strong>Nazewnictwo zmiennych</strong>: Konwertuj między camelCase JavaScript, snake_case Python i kebab-case CSS</li><li><strong>Pola bazy danych</strong>: Transformuj nazwy kolumn między różnymi konwencjami nazewnictwa</li><li><strong>Formatowanie treści</strong>: Konwertuj tytuły na Pierwszą Wielką Literę dla nagłówków</li><li><strong>Projektowanie API</strong>: Standaryzuj nazwy pól w schematach żądań/odpowiedzi JSON</li><li><strong>Refaktoryzacja kodu</strong>: Zmieniaj nazwy identyfikatorów przy przełączaniu między konwencjami nazewnictwa</li></ul>"
@@ -1063,14 +927,6 @@
           "intro": {
             "title": "Co to jest Generator Lorem Ipsum?",
             "content": "<p><strong>Generator Lorem Ipsum</strong> tworzy tekst zastępczy dla makiet projektowych, szkieletów i prototypów. Generuj klasyczny tekst Lorem Ipsum według akapitów, zdań lub słów z precyzyjną kontrolą nad ilością.</p><p>Branżowy standardowy sposób na wypełnianie układów realistycznie wyglądającym tekstem przed przygotowaniem ostatecznej treści.</p>"
-          },
-          "howToUse": {
-            "title": "Jak używać Generatora Lorem Ipsum",
-            "content": "<ol><li>Wybierz jednostkę: <strong>akapity</strong>, <strong>zdania</strong> lub <strong>słowa</strong></li><li>Ustaw ilość, którą potrzebujesz (np. 3 akapity, 10 zdań lub 50 słów)</li><li>Kliknij <strong>Generuj</strong>, aby utworzyć tekst zastępczy</li><li>Skopiuj wynik do użycia w projekcie lub dokumencie</li></ol><p>Wygenerowany tekst podąża za klasycznym wzorcem Lorem Ipsum zaczynającym się od \"Lorem ipsum dolor sit amet...\"</p>"
-          },
-          "features": {
-            "title": "Kluczowe cechy",
-            "content": "<ul><li><strong>Trzy tryby wyjścia</strong>: Generuj według akapitów, zdań lub liczby słów</li><li><strong>Konfigurowalna ilość</strong>: Kontroluj dokładnie, ile tekstu jest generowane</li><li><strong>Klasyczny Lorem Ipsum</strong>: Używa standardowej puli słów Lorem Ipsum</li><li><strong>Natknięte generowanie</strong>: Tekst pojawia się natychmiast bez opóźnienia</li><li><strong>Kopiowanie jednym kliknięciem</strong>: Kopiuj cały wygenerowany tekst do schowka</li><li><strong>Spójne wyjście</strong>: Naturalnie wyglądający rozkład tekstu i długości akapitów</li></ul>"
           },
           "useCases": {
             "title": "Typowe przypadki użycia",
