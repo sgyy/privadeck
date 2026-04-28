@@ -8,10 +8,7 @@
 - [src/tools/pdf/merge/logic.ts](file://src/tools/pdf/merge/logic.ts)
 - [src/components/shared/PdfFullscreenPreview.tsx](file://src/components/shared/PdfFullscreenPreview.tsx)
 - [src/components/shared/PdfPagePreview.tsx](file://src/components/shared/PdfPagePreview.tsx)
-- [src/lib/pdf/getPdfPreview.ts](file://src/lib/pdf/getPdfPreview.ts)
-- [src/tools/pdf/images-to-pdf/logic.ts](file://src/tools/pdf/images-to-pdf/logic.ts)
-- [src/tools/pdf/to-image/logic.ts](file://src/tools/pdf/to-image/logic.ts)
-- [messages/en/tools-pdf.json](file://messages/en/tools-pdf.json)
+- [src/lib/utils/formatFileSize.ts](file://src/lib/utils/formatFileSize.ts)
 - [package.json](file://package.json)
 </cite>
 
@@ -91,7 +88,6 @@ subgraph "数据存储层"
 FileSystem[文件系统API<br/>本地存储]
 MemoryCache[内存缓存<br/>预览图缓存]
 Analytics[分析系统<br/>用户行为追踪]
-end
 UI --> MergeLogic
 UI --> Preview
 UI --> Card
