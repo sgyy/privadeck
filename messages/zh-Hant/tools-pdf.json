@@ -118,6 +118,39 @@
         "metaDescription": "按每頁、每 N 頁、奇偶頁、對半切、自訂範圍、按檔案大小或按書籤拆分 PDF。彩色預覽。ZIP 一鍵下載。100% 瀏覽器內運作，檔案不上傳。",
         "aiSummary": "PrivaDeck PDF 拆分——支援七種模式：每頁一份、每 N 頁一份、奇偶頁拆分、對半切、自訂範圍、按檔案大小、按書籤（目錄）拆分。彩色縮圖預覽即時顯示每頁歸屬於哪份輸出。支援 ZIP 打包下載。完全於瀏覽器中透過 pdf-lib 與 pdfjs-dist (WebAssembly) 執行；無需上傳、註冊或安裝。屬於 PrivaDeck 隱私優先工具集，請見 https://privadeck.app。",
         "keywords": "pdf 拆分, pdf 分割器, pdf 頁面擷取, 按大小拆分pdf, 按書籤拆分pdf, 奇偶頁拆分pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "7 種專業拆分模式",
+            "description": "依每頁、每 N 頁、奇偶頁、對半、自訂範圍、依檔案大小、依 PDF 大綱共 7 種模式拆分。挑選最契合您工作流程的模式 — 無需在多個工具之間切換。"
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "依書籤 / 大綱拆分",
+            "description": "自動偵測章節書籤,依節拆分為多個 PDF。每個輸出檔案繼承書籤名稱 — 拆解教科書、報告、論文集的最佳方式。"
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "依檔案大小限制拆分",
+            "description": "限制每個輸出 PDF 不超過 5 MB、10 MB 或自訂大小。工具自動塞入最大數量的頁面後開啟新檔案 — 郵件附件與上傳場景的理想選擇。"
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "可視化範圍選擇",
+            "description": "點擊兩個縮圖標記一段範圍,可重複新增。彩色高亮即時顯示每個輸出 PDF 包含哪些頁面 — 提交前所見即所得。"
+          },
+          "f5": {
+            "icon": "Hash",
+            "title": "ZIP 批次下載",
+            "description": "所有拆分後的 PDF 打包為單個 ZIP 一鍵下載。檔名保留頁碼或書籤標題,每段都易於辨識。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 零上傳",
+            "description": "PDF 全程在瀏覽器內透過 pdf-lib 與 pdfjs-dist 解析與拆分。機密報告、合約、個人記錄絕不離開您的裝置。"
+          }
+        },
         "pages": "頁",
         "splitEach": "逐頁拆分",
         "splitRange": "按範圍拆分",
@@ -212,10 +245,43 @@
       "delete-pages": {
         "name": "PDF 刪除頁面",
         "description": "從 PDF 文件中移除特定頁面。",
-        "metaTitle": "PDF 刪除頁面 - 線上移除 PDF 頁面",
-        "metaDescription": "從 PDF 中移除不需要的頁面。附頁面預覽的免費線上工具。",
+        "metaTitle": "刪除 PDF 頁面 - 縮圖勾選與批次移除",
+        "metaDescription": "透過縮圖勾選或範圍語法刪除 PDF 頁面。結果即時預覽、保留書籤、瞬間完成。免費、純瀏覽器,無需上傳。",
         "aiSummary": "從 PDF 中移除不需要的頁面。附頁面預覽的免費線上工具。",
         "keywords": "pdf 刪除頁面, pdf 移除頁面, pdf 頁面移除器",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "可視化縮圖勾選",
+            "description": "每頁渲染為縮圖,點擊即標記刪除。紅色覆蓋層一目了然 — 不再猜測哪頁對應哪頁碼。"
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "範圍語法批次刪除",
+            "description": "輸入「3-7、12、20-25」一次刪除幾十頁。配合點擊切換做精細調整 — 移除空白頁或機密章節最快的方式。"
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "結果即時預覽",
+            "description": "提交前看清留下哪些頁面。切換頁面時輸出頁數即時更新,下載前就知道最終文件長度。"
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "保留書籤與後設資料",
+            "description": "大綱書籤自動重新對應到保留頁,文件標題/作者/關鍵字原樣保留。結果仍像原文件,只是變短。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "瞬間完成 — 無需重新渲染",
+            "description": "頁面透過參照刪除而非重新生成。500 頁 PDF 一秒內處理完畢,因為沒有頁面被重新點陣化 — 僅更新參照。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 零上傳",
+            "description": "PDF 全程在瀏覽器內透過 pdf-lib 解析與刪除。包含個人身份、財務資料或保密協議的文件絕不離開您的裝置。"
+          }
+        },
         "selectPages": "點擊頁面以選擇刪除",
         "delete": "刪除所選",
         "deleting": "刪除中...",
@@ -251,8 +317,8 @@
       "to-image": {
         "name": "PDF 轉圖片",
         "description": "將 PDF 頁面轉換為 JPG 或 PNG 圖片。",
-        "metaTitle": "PDF 轉圖片 - 線上將 PDF 轉為 JPG/PNG",
-        "metaDescription": "將 PDF 頁面轉換為高品質 JPG·PNG 圖片。可調整 DPI 和品質。免費線上工具。",
+        "metaTitle": "PDF 轉圖片 - 轉 JPG/PNG 支援自訂 DPI",
+        "metaDescription": "將 PDF 頁面轉為 JPG 或 PNG 圖片,1× 至 4× 解析度縮放。逐頁輸出、ZIP 打包下載、零品質損失。免費、純瀏覽器,無需上傳。",
         "aiSummary": "將 PDF 頁面轉換為高品質 JPG·PNG 圖片。可調整 DPI 和品質。免費線上工具。",
         "keywords": "pdf 轉圖片, pdf 轉 jpg, pdf 轉 png, pdf 圖片轉換",
         "featureCards": {
@@ -325,10 +391,43 @@
       "images-to-pdf": {
         "name": "圖片轉 PDF",
         "description": "將多張圖片轉換為單一 PDF 文件。",
-        "metaTitle": "圖片轉 PDF - 免費線上圖片 PDF 轉換",
-        "metaDescription": "將 JPG、PNG 等圖片轉換為單一 PDF 文件。可重新排序頁面。免費線上工具。",
+        "metaTitle": "圖片轉 PDF - JPG / PNG / HEIC / WebP / AVIF 合一",
+        "metaDescription": "將 JPG、PNG、HEIC、WebP、AVIF 圖片合併為一份 PDF。自訂頁面大小、拖曳排序、自動品質優化。免費、純瀏覽器,無需上傳。",
         "aiSummary": "將 JPG、PNG 等圖片轉換為單一 PDF 文件。可重新排序頁面。免費線上工具。",
         "keywords": "圖片轉 pdf, jpg 轉 pdf, png 轉 pdf, 圖片 pdf 轉換",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "混合圖片格式",
+            "description": "任意組合放入 JPG、PNG、HEIC、WebP、AVIF、GIF 檔案。iPhone 的 HEIC 照片在本地解碼 — 無需先單獨轉換。"
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "自訂頁面尺寸",
+            "description": "輸出為 A4、US Letter、A3、方形或任意自訂尺寸。依需要設定每張圖的方向與邊距,匹配列印或分享要求。"
+          },
+          "f3": {
+            "icon": "GripVertical",
+            "title": "拖曳排序",
+            "description": "拖曳縮圖重新排序頁面。依您想要的圖片順序建立相簿、掃描合集或文件作品集。"
+          },
+          "f4": {
+            "icon": "Gauge",
+            "title": "自動品質優化",
+            "description": "每張圖按合適品質編碼,平衡檔案大小與清晰度。合併 PDF 大小可控、視覺無明顯損失 — 無需手動調參。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "瞬間合成",
+            "description": "50 張照片幾秒合成 PDF。瀏覽器串流處理圖片,即使在手機和筆電上記憶體佔用也保持穩定。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 留在裝置",
+            "description": "圖像解碼與 PDF 合成全程在瀏覽器內進行。家庭照片、身份掃描、旅行檔案絕不傳送到任何伺服器。"
+          }
+        },
         "convert": "轉換為 PDF",
         "converting": "轉換中...",
         "resultSize": "檔案大小",
@@ -362,10 +461,43 @@
       "rotate": {
         "name": "PDF 旋轉",
         "description": "將 PDF 的所有頁面旋轉 90、180 或 270 度。",
-        "metaTitle": "PDF 旋轉 - 線上免費旋轉 PDF 頁面",
-        "metaDescription": "將 PDF 頁面順時針、逆時針或 180 度旋轉。免費線上工具。",
+        "metaTitle": "旋轉 PDF 頁面 - 90 / 180 / 270° 無損線上旋轉",
+        "metaDescription": "整文件按 90° 順/逆時針或 180° 旋轉每一頁。無損後設資料級旋轉,長文件瞬間完成。免費、純瀏覽器,無需上傳。",
         "aiSummary": "將 PDF 頁面順時針、逆時針或 180 度旋轉。免費線上工具。",
         "keywords": "pdf 旋轉, pdf 頁面旋轉, pdf 方向變更",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "3 種旋轉角度",
+            "description": "按 90° 順時針、90° 逆時針或 180° 修正顛倒掃描。挑選與源 PDF 方向問題相符的角度。"
+          },
+          "f2": {
+            "icon": "Files",
+            "title": "整文件批次旋轉",
+            "description": "一次點擊旋轉 PDF 內每一頁相同角度。完美適用於橫向掃描誤成直向、或方向錯誤的掃描器輸出 PDF。"
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "無損後設資料旋轉",
+            "description": "透過 PDF 頁面方向後設資料旋轉,而非重新點陣化內容。輸出保留與源完全一致的文字清晰度、向量圖形與可選文字。"
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "儲存前預覽頁面",
+            "description": "下載前查看套用旋轉後的首頁效果。幾秒內識別錯誤方向 — 無需多次試下載。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "瞬間完成 — 長 PDF 也極快",
+            "description": "1000 頁文件旋轉一秒內完成,因為旋轉是後設資料標誌而非每頁重渲。即使是厚掃描書也無須長進度條等待。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 留在您的瀏覽器",
+            "description": "全部旋轉透過 pdf-lib 在本地完成。機密掃描、身份證件、合約絕不上傳 — 檔案不離開您的裝置。"
+          }
+        },
         "pages": "頁",
         "direction": "方向",
         "clockwise": "順時針 90°",
@@ -403,10 +535,43 @@
       "add-page-numbers": {
         "name": "新增頁碼",
         "description": "為 PDF 文件的每一頁新增頁碼。",
-        "metaTitle": "PDF 新增頁碼 - 免費線上工具",
-        "metaDescription": "為 PDF 新增頁碼。選擇位置、格式和字型大小。免費線上工具。",
+        "metaTitle": "為 PDF 加入頁碼 - 6 個位置自訂起始頁",
+        "metaDescription": "在 6 種位置之一為 PDF 頁面加入頁碼。自訂起始頁跳過封面、字級與格式可控。免費、純瀏覽器,無需上傳。",
         "aiSummary": "為 PDF 新增頁碼。選擇位置、格式和字型大小。免費線上工具。",
         "keywords": "pdf 頁碼, pdf 頁碼編號, pdf 頁碼新增",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "6 個位置可選",
+            "description": "在 6 個位置之一放置頁碼:上 / 下,搭配左 / 中 / 右。頁首、頁尾或角落 — 挑一個不與現有內容衝突的位置。"
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "自訂起始頁碼",
+            "description": "可從任意值開始編號,而非只能從 1 開始。適合接續前一文件的 PDF,或保持封面與目錄不編號、章節 1 才作為頁 1。"
+          },
+          "f3": {
+            "icon": "Braces",
+            "title": "格式與字級可控",
+            "description": "可選擇數字格式與字級。頁碼可低調融入或醒目突出 — 適配從正式報告到印刷書稿等多種文件風格。"
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "跳過封面與前言",
+            "description": "設定首個編號頁,封面、目錄與版權頁保持純淨。每份文件的編號範圍完全自訂。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "500 頁書也極快",
+            "description": "頁碼透過 pdf-lib 單次渲染加入。長篇手稿、講義、報告幾秒內完成編號 — 無需逐頁等待。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 本地處理",
+            "description": "頁碼透過 pdf-lib 在瀏覽器內加入。手稿、法律證物、專屬報告絕不離開您的裝置。"
+          }
+        },
         "pages": "頁",
         "position": "位置",
         "positions": {
@@ -454,9 +619,42 @@
         "name": "PDF 文字擷取",
         "description": "從 PDF 文件中擷取所有文字內容。",
         "metaTitle": "PDF 文字擷取 - 免費線上 PDF 文字擷取工具",
-        "metaDescription": "即時從 PDF 擷取文字。免費線上工具。",
+        "metaDescription": "從 PDF 單次擷取所有文字,保留段落與閱讀順序。一鍵複製到剪貼簿或下載為文字檔案。免費、純瀏覽器,無需上傳。",
         "aiSummary": "即時從 PDF 擷取文字。免費線上工具。",
         "keywords": "pdf 文字擷取, pdf 轉文字, pdf 文字複製",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "整文件一鍵擷取",
+            "description": "單次操作擷取整個 PDF 的全部文字 — 無需逐頁選擇。報告、論文、書籍的完整文字內容立刻可用於編輯或分析。"
+          },
+          "f2": {
+            "icon": "Braces",
+            "title": "保留閱讀順序",
+            "description": "透過 pdfjs-dist 從 PDF 版面重建斷行與段落。輸出不是一堵字牆 — 閱讀順序與人類閱讀頁面時的順序一致。"
+          },
+          "f3": {
+            "icon": "GripVertical",
+            "title": "複製或下載文字",
+            "description": "點複製將擷取的全部文字載入剪貼簿,可貼到 Word、Notion、ChatGPT 等。或下載為純文字檔案歸檔。"
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "可搜尋的純文字輸出",
+            "description": "用 Ctrl+F 或編輯器搜尋查找特定術語。便於快速驗證擷取是否捕捉到您需要的章節。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "200 頁文件也極快",
+            "description": "文字直接從 PDF 內容流讀取 — 數位建立的 PDF 無需 OCR。(掃描的純圖像文件請用 OCR 工具。)"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 零伺服器上傳",
+            "description": "文字擷取透過 pdfjs-dist 在瀏覽器內運行。法律簡報、醫療記錄、個人通信絕不傳送到任何伺服器。"
+          }
+        },
         "extract": "擷取文字",
         "extracting": "擷取中...",
         "extractedText": "擷取的文字",
@@ -492,9 +690,42 @@
         "name": "PDF 頁面重新排序",
         "description": "拖放重新排列 PDF 頁面順序。",
         "metaTitle": "PDF 頁面重新排序 - 免費線上 PDF 頁面順序變更工具",
-        "metaDescription": "拖放重新排列 PDF 頁面。免費線上工具。",
+        "metaDescription": "拖曳縮圖重新排序 PDF 頁面。上 / 下移動按鈕做精細調整、無損輸出、瞬間完成。免費、純瀏覽器,無需上傳。",
         "aiSummary": "拖放重新排列 PDF 頁面。免費線上工具。",
         "keywords": "pdf 頁面重新排序, pdf 頁面順序變更, pdf 頁面排序",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "拖曳即重排",
+            "description": "抓取任意頁面縮圖拖到目標位置 — 即時生效。流暢的拖曳幾秒內重排長文件,無需記憶複雜語法。"
+          },
+          "f2": {
+            "icon": "Eye",
+            "title": "可視化縮圖網格",
+            "description": "每頁渲染為縮圖,移動時所見即所得。提前發現重複頁、缺頁或方向錯誤,再確定最終順序。"
+          },
+          "f3": {
+            "icon": "ArrowLeftRight",
+            "title": "上 / 下移動按鈕",
+            "description": "每個縮圖配獨立的「上移」「下移」按鈕,一格一格微調位置。粗略拖曳後做精準修正的好幫手。"
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "適用任意 PDF 長度",
+            "description": "5 頁報告或 500 頁手冊都用同一套流程重排。縮圖虛擬化保證長文件下頁面回應不卡頓。"
+          },
+          "f5": {
+            "icon": "Star",
+            "title": "無損 — 保留原始品質",
+            "description": "頁面透過參照重新對應,而非重新點陣化。輸出 PDF 保留與源完全一致的文字品質、向量圖形與嵌入字型。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 零上傳",
+            "description": "全部重排在瀏覽器內透過 pdf-lib 完成。敏感的併購草案、董事會材料、HR 檔案絕不傳送到任何伺服器。"
+          }
+        },
         "dragHint": "拖曳以重新排序頁面",
         "pages": "頁",
         "page": "頁",
@@ -532,10 +763,43 @@
       "compress": {
         "name": "PDF 壓縮",
         "description": "以較低品質重新渲染頁面來縮減 PDF 檔案大小。",
-        "metaTitle": "PDF 壓縮 - 免費線上 PDF 壓縮工具",
-        "metaDescription": "壓縮 PDF 以縮減大小。選擇品質等級。免費線上工具。",
+        "metaTitle": "壓縮 PDF 線上 - 三檔品質預設縮小檔案大小",
+        "metaDescription": "以三檔品質預設壓縮 PDF,適配任意大小要求。即時顯示壓縮前後大小對比,單次完成。免費、純瀏覽器,無需上傳。",
         "aiSummary": "壓縮 PDF 以縮減大小。選擇品質等級。免費線上工具。",
         "keywords": "pdf 壓縮, pdf 壓縮器, pdf 大小縮減",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "三檔品質預設",
+            "description": "選擇低(最小,適合掃描件/照片)、中(均衡預設)或高(保留文字清晰度)。每檔以最佳品質重新渲染頁面 — 無需手動調整。"
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "即時大小削減",
+            "description": "壓縮完成的瞬間顯示原始大小、壓縮後大小與節省比例。如果結果未達目標,可立即換檔重壓。"
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "可調渲染品質",
+            "description": "壓縮透過依所選品質等級重新點陣化頁面實現。每檔在視覺清晰度與檔案大小之間取得平衡 — 依下游用途挑選。"
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "支援混合內容",
+            "description": "包含文字、掃描頁、嵌入圖片與向量圖形的 PDF 一次過壓縮。無需分開或預處理 — 投入檔案、選檔即可。"
+          },
+          "f5": {
+            "icon": "MonitorDown",
+            "title": "PWA 離線可用",
+            "description": "一次安裝 PrivaDeck 即可在斷網時使用壓縮工具。航班上、客戶會議室或任何頻寬受限或敏感的場景都能用。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 檔案保留本地",
+            "description": "全部壓縮透過 pdf.js 與 pdf-lib 在瀏覽器內完成。敏感合約、醫療掃描、財務 PDF 絕不接觸伺服器。"
+          }
+        },
         "quality": "品質",
         "high": "高",
         "medium": "中",
@@ -578,9 +842,42 @@
         "name": "PDF 浮水印",
         "description": "為 PDF 每一頁新增對角線文字浮水印。",
         "metaTitle": "PDF 新增浮水印 - 免費線上 PDF 浮水印工具",
-        "metaDescription": "為 PDF 新增文字浮水印。自訂不透明度和字型大小。免費線上工具。",
+        "metaDescription": "為 PDF 每頁加入自訂對角文字浮水印。透明度與字級可調、單次套用、對未浮水印內容無損。免費、純瀏覽器。",
         "aiSummary": "為 PDF 新增文字浮水印。自訂不透明度和字型大小。免費線上工具。",
         "keywords": "pdf 浮水印, pdf 新增浮水印, pdf 戳記",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "自訂浮水印文字",
+            "description": "輸入任意字串:「機密」、「草稿」、客戶名,或您想要的浮水印。支援多詞短語,預設設定即可用 — 輸入套用即可。"
+          },
+          "f2": {
+            "icon": "GripVertical",
+            "title": "對角版面確保可見",
+            "description": "浮水印在每頁對角放置,既最大化可見性又不遮蔽底層文字。法律 / 草稿文件的經典樣式,一鍵套用。"
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "透明度與字級可控",
+            "description": "調整透明度 — 從淡灰提示到醒目彩色印章;依文件紙張尺寸調字級。讓浮水印的強度匹配其用途。"
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "覆蓋每一頁",
+            "description": "浮水印統一套用於所有頁面 — 無需逐頁設定。多份 PDF 用同一設定批次列印一致品牌。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "長 PDF 也極快",
+            "description": "浮水印文字透過 pdf-lib 作為單層覆蓋加入到每頁。數百頁幾秒內完成浮水印 — 無需逐頁等待渲染。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 僅在瀏覽器內",
+            "description": "浮水印操作透過 pdf-lib 在本地完成。敏感原型、保密協議、待發布文件絕不上傳 — 浮水印本身就證明它們不該上傳。"
+          }
+        },
         "watermarkText": "浮水印文字",
         "textPlaceholder": "輸入浮水印文字...",
         "opacity": "不透明度",
@@ -617,10 +914,43 @@
       "crop": {
         "name": "PDF 裁剪",
         "description": "設定各邊要移除的邊距來裁剪 PDF 頁面。",
-        "metaTitle": "PDF 裁剪 - 免費線上 PDF 裁切工具",
-        "metaDescription": "移除各邊邊距來裁剪 PDF 頁面。免費線上工具。",
+        "metaTitle": "裁剪 PDF 頁面 - 設定 4 邊邊距 無損向量輸出",
+        "metaDescription": "為 PDF 頁面分別設定上、右、下、左邊距裁剪。點級精度輸入,套用於所有頁面,無損向量輸出。免費、純瀏覽器。",
         "aiSummary": "移除各邊邊距來裁剪 PDF 頁面。免費線上工具。",
         "keywords": "pdf 裁剪, pdf 裁切, pdf 邊距, pdf 裁切工具",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Hash",
+            "title": "4 邊獨立邊距",
+            "description": "分別設定上、右、下、左邊距。修剪掃描白邊、移除頁首頁尾,或聚焦於某一欄或某一文章區。"
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "點級精度輸入",
+            "description": "以 PDF 點(1 點 ≈ 0.35mm)為單位指定邊距,與印刷設計師所用的單位一致。準確命中冊頁、期刊、標準印刷版面的目標修剪尺寸。"
+          },
+          "f3": {
+            "icon": "Files",
+            "title": "全部頁面統一裁剪",
+            "description": "一組裁剪設定統一套用於整個文件。適合批次修剪每頁都有相同邊距問題或固定版面的掃描文件。"
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "保留向量內容",
+            "description": "裁剪透過 PDF 頁面邊界框實現 — 不重新點陣化。文字保持可選、向量圖形保持銳利,檔案大小幾乎不變。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "瞬間完成 — 1000 頁也快",
+            "description": "1000 頁文件裁剪一秒內完成,因為裁剪框是後設資料而非像素。厚掃描書也無需長進度條等待。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 留在本地",
+            "description": "裁剪操作透過 pdf-lib 在瀏覽器內運行。平面圖、醫療影像、機密文件絕不上傳到任何伺服器。"
+          }
+        },
         "pages": "頁",
         "margins": "裁剪邊距（點）",
         "marginsHint": "輸入各邊要裁剪的量（1 點 ≈ 0.35mm）",
@@ -660,10 +990,43 @@
       "esign": {
         "name": "PDF 電子簽名",
         "description": "繪製簽名並放置在 PDF 文件的任意頁面上。",
-        "metaTitle": "PDF 電子簽名 - 免費線上 PDF 簽名工具",
-        "metaDescription": "為 PDF 新增電子簽名。繪製簽名並放置在任意頁面。免費線上工具。",
+        "metaTitle": "PDF 線上簽名 - 滑鼠手繪簽名置於任意頁",
+        "metaDescription": "用滑鼠或觸控手繪電子簽名置於任意 PDF 頁面。簽名寬度可調、無損覆蓋、瞬間完成。免費、純瀏覽器,無需上傳。",
         "aiSummary": "為 PDF 新增電子簽名。繪製簽名並放置在任意頁面。免費線上工具。",
         "keywords": "pdf 電子簽名, pdf 線上簽名, 電子簽名 pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "滑鼠或觸控手繪",
+            "description": "桌面端用滑鼠、平板 / 手機用手指或觸控筆簽名。簽名板擷取流暢筆觸,呈現自然手寫效果。"
+          },
+          "f2": {
+            "icon": "Eye",
+            "title": "置於任意 PDF 頁",
+            "description": "從縮圖列表選擇目標頁,把簽名放到歸屬位置。最後一頁合約、多頁表單或任何需要首字簽名的位置都適用。"
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "簽名寬度可調",
+            "description": "為重要合約放大簽名,為緊湊表單縮小簽名。寬度調整保留原始寬高比,任意尺寸下手寫仍自然。"
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "無損覆蓋",
+            "description": "簽名作為向量層疊加到原始 PDF 上。底層文字與圖像保持像素完美 — 僅簽字頁新增您的簽名。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "瞬間完成 — 無需帳號",
+            "description": "一分鐘內簽好下載。無需註冊、無需信箱驗證、不用 DocuSign 帳號 — 手繪、放置、儲存即可。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 簽名留在本地",
+            "description": "簽名全程在瀏覽器內擷取、渲染與嵌入。包含您簽名的合約、保密協議、HR 表單絕不上傳到任何地方。"
+          }
+        },
         "drawSignature": "繪製您的簽名",
         "clearSignature": "清除",
         "page": "頁",
@@ -703,9 +1066,42 @@
         "name": "PDF 圖片擷取",
         "description": "從 PDF 檔案中擷取所有嵌入圖片並下載。",
         "metaTitle": "PDF 圖片擷取 - 免費線上 PDF 圖片擷取工具",
-        "metaDescription": "從 PDF 擷取所有圖片。個別或 ZIP 檔案下載。免費線上工具。",
+        "metaDescription": "以原始格式與品質從 PDF 擷取每張嵌入圖片。逐圖預覽、ZIP 一鍵下載、圖片密集檔案也極快。免費、純瀏覽器。",
         "aiSummary": "從 PDF 擷取所有圖片。個別或 ZIP 檔案下載。免費線上工具。",
         "keywords": "pdf 圖片擷取, pdf 圖片提取器, pdf 取得圖片",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "擷取所有嵌入圖片",
+            "description": "擷取 PDF 中每個圖片串流 — 照片、掃描插圖、圖表與內聯圖示。一次拿到文件的完整視覺內容,絕無遺漏。"
+          },
+          "f2": {
+            "icon": "Star",
+            "title": "原格式與品質",
+            "description": "每張圖儲存為原始編碼(JPEG、PNG 等),解析度與 PDF 內嵌一致。零重新編碼、零品質損失。"
+          },
+          "f3": {
+            "icon": "MonitorDown",
+            "title": "ZIP 一鍵下載",
+            "description": "所有擷取的圖片打包為單個 ZIP 下載。檔名包含頁碼,需要時可在源 PDF 內追溯每張圖。"
+          },
+          "f4": {
+            "icon": "Hash",
+            "title": "依頁碼標記",
+            "description": "每張擷取的圖片標記其所在頁碼。技術論文與報告中,圖與頁的可追溯性對引用或審稿尤為重要。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "串流擷取極快",
+            "description": "透過 pdfjs-dist 串流處理,百頁報告中數百張插圖幾秒擷取完畢。視覺作品集、圖密集技術論文都無需長等。"
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 僅在瀏覽器",
+            "description": "圖像擷取全程在瀏覽器內進行。機密設計稿、內部截圖、專屬圖表絕不離開您的裝置。"
+          }
+        },
         "extract": "擷取圖片",
         "extracting": "擷取中",
         "page": "頁",

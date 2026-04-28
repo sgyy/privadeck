@@ -118,6 +118,39 @@
         "metaDescription": "Dziel PDF na każdą stronę, co N stron, parzyste/nieparzyste, połówki, własne zakresy, według rozmiaru pliku lub zakładek. Kolorowy podgląd. Pobieranie ZIP. 100% w przeglądarce.",
         "aiSummary": "PrivaDeck Dzielenie PDF — siedem trybów: każda strona, co N stron, parzyste/nieparzyste, połówki, własne zakresy, według rozmiaru pliku, według zakładek (spis treści). Kolorowy podgląd miniatur pokazuje, do którego pliku wyjściowego należy każda strona. Pobieranie spakowane w ZIP. Wszystko w przeglądarce przez pdf-lib i pdfjs-dist (WebAssembly); bez przesyłania, rejestracji i instalacji. Część zestawu privacy-first PrivaDeck — https://privadeck.app",
         "keywords": "podziel pdf, dzielenie pdf, wyodrębnij strony pdf, podziel pdf po rozmiarze, podziel pdf po zakładkach",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "7 specjalistycznych trybów dzielenia",
+            "description": "Dziel po stronie, co N stron, parzyste/nieparzyste, na połowy, według niestandardowych zakresów, według rozmiaru pliku lub według zakładek PDF. Wybierz tryb pasujący do pracy."
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "Dzielenie według zakładek/spisu",
+            "description": "Automatycznie wykrywa zakładki rozdziałów i dzieli na jeden PDF na sekcję. Każdy plik wynikowy dziedziczy nazwę zakładki — idealne do podręczników, raportów i zbiorów."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Dzielenie według limitu rozmiaru",
+            "description": "Ogranicz każdy wynikowy PDF do 5 MB, 10 MB lub dowolnego niestandardowego rozmiaru. Narzędzie pakuje maksymalnie stron na plik — idealne do załączników i przesyłania."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Wizualny wybór zakresu",
+            "description": "Kliknij dwie miniatury, aby zaznaczyć zakres, powtórz, aby dodać kolejne. Kolorowe podświetlenia w czasie rzeczywistym pokazują, które strony trafią do każdego wynikowego PDF."
+          },
+          "f5": {
+            "icon": "Hash",
+            "title": "Pobieranie ZIP wsadowo",
+            "description": "Wszystkie podzielone PDFy spakowane w jeden ZIP do pobrania jednym kliknięciem. Nazwy plików zachowują numery stron lub tytuły zakładek — każdy fragment od razu identyfikowalny."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% prywatne — bez wysyłania",
+            "description": "PDFy są analizowane i dzielone w pełni w Twojej przeglądarce za pomocą pdf-lib i pdfjs-dist. Poufne raporty, umowy i osobiste zapisy nigdy nie opuszczają Twojego urządzenia."
+          }
+        },
         "pages": "strony",
         "splitEach": "Rozdziel każdą stronę",
         "splitRange": "Podziel według zakresu",
@@ -212,10 +245,43 @@
       "delete-pages": {
         "name": "Usuwanie stron PDF",
         "description": "Usuń określone strony z dokumentu PDF.",
-        "metaTitle": "Usuwanie stron PDF - Usuń strony z PDF online",
-        "metaDescription": "Usuń niechciane strony z plików PDF. Darmowe narzędzie online z wizualnym podglądem stron. Działa całkowicie w przeglądarce.",
+        "metaTitle": "Usuń strony PDF - Wizualna selekcja i masowe usuwanie",
+        "metaDescription": "Usuwaj strony z PDFów wizualną selekcją miniatur lub składnią zakresu. Podgląd na żywo, zachowuje zakładki, natychmiastowe. Za darmo, w przeglądarce, bez wysyłania.",
         "aiSummary": "Usuń niechciane strony z plików PDF. Darmowe narzędzie online z wizualnym podglądem stron. Działa całkowicie w przeglądarce.",
         "keywords": "usuń strony pdf, usuwanie stron pdf, narzędzie do usuwania stron pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "Wizualna selekcja miniatur",
+            "description": "Każda strona renderowana jako miniatura do kliknięcia w celu zaznaczenia do usunięcia. Czerwona nakładka potwierdza usunięcie na pierwszy rzut oka — żadnego zgadywania numerów."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Składnia zakresu do masowego usuwania",
+            "description": "Wpisz zakresy jak '3-7, 12, 20-25', aby usunąć dziesiątki stron jednocześnie. Połącz z przełączaniem kliknięciem dla precyzyjnej regulacji."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Podgląd wyniku na żywo",
+            "description": "Zobacz dokładnie, które strony zostają, przed potwierdzeniem. Liczba stron wynikowych aktualizuje się w czasie rzeczywistym — znasz końcową długość przed pobraniem."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Zachowuje zakładki i metadane",
+            "description": "Zakładki konspektu są przenoszone do zachowanych stron, a tytuł/autor/słowa kluczowe przenoszone bez zmian. Wynik wygląda jak oryginał, tylko krótszy."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Natychmiast — bez ponownego renderowania",
+            "description": "Strony są usuwane przez referencję, nie regenerowane. PDF 500-stronicowy przetwarza się w mniej niż sekundę — aktualizowane są tylko referencje."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% prywatne — bez wysyłania",
+            "description": "PDFy są analizowane i strony usuwane w pełni w przeglądarce za pomocą pdf-lib. Dokumenty z osobistymi ID, danymi finansowymi lub NDA nigdy nie opuszczają urządzenia."
+          }
+        },
         "selectPages": "Kliknij strony, aby wybrać do usunięcia",
         "delete": "Usuń zaznaczone",
         "deleting": "Usuwanie...",
@@ -251,8 +317,8 @@
       "to-image": {
         "name": "PDF na obraz",
         "description": "Konwertuj strony PDF na obrazy JPG lub PNG.",
-        "metaTitle": "PDF na obraz - Konwertuj PDF na JPG/PNG online",
-        "metaDescription": "Konwertuj strony PDF na wysokiej jakości obrazy JPG lub PNG. Darmowe narzędzie online z regulowanym DPI i jakością.",
+        "metaTitle": "PDF na obraz - JPG/PNG z regulowanym DPI online",
+        "metaDescription": "Konwertuj strony PDF na obrazy JPG lub PNG ze skalowaniem rozdzielczości 1×–4×. Wyjście pojedyncze strony, pobieranie ZIP, bez utraty jakości. Za darmo, w przeglądarce, bez wysyłania.",
         "aiSummary": "Konwertuj strony PDF na wysokiej jakości obrazy JPG lub PNG. Darmowe narzędzie online z regulowanym DPI i jakością.",
         "keywords": "pdf na obraz, pdf na jpg, pdf na png, konwertuj pdf na obraz",
         "featureCards": {
@@ -325,10 +391,43 @@
       "images-to-pdf": {
         "name": "Obrazy na PDF",
         "description": "Konwertuj wiele obrazów w jeden dokument PDF.",
-        "metaTitle": "Obrazy na PDF - Konwertuj obrazy na PDF online za darmo",
-        "metaDescription": "Konwertuj JPG, PNG i inne obrazy w jeden dokument PDF. Zmieniaj kolejność stron, darmowe narzędzie online. Bez przesyłania.",
+        "metaTitle": "Obrazy do PDF - JPG/PNG/HEIC/WebP/AVIF w jeden",
+        "metaDescription": "Połącz obrazy JPG, PNG, HEIC, WebP, AVIF w jeden PDF. Niestandardowe rozmiary stron, przeciąganie do reorganizacji, automatyczna optymalizacja jakości. Za darmo, w przeglądarce.",
         "aiSummary": "Konwertuj JPG, PNG i inne obrazy w jeden dokument PDF. Zmieniaj kolejność stron, darmowe narzędzie online. Bez przesyłania.",
         "keywords": "obrazy na pdf, jpg na pdf, png na pdf, konwertuj obrazy na pdf, zdjęcie na pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Mieszane formaty obrazów",
+            "description": "Upuść pliki JPG, PNG, HEIC, WebP, AVIF i GIF w dowolnej kombinacji. Zdjęcia HEIC z iPhone'a są dekodowane lokalnie — bez osobnego kroku konwersji."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Niestandardowe rozmiary stron",
+            "description": "Wyjście jako A4, US Letter, A3, kwadrat lub niestandardowe wymiary. Ustaw orientację per obraz z marginesami pasującymi do wymagań druku lub udostępniania."
+          },
+          "f3": {
+            "icon": "GripVertical",
+            "title": "Przeciąganie do reorganizacji",
+            "description": "Reorganizuj strony, przeciągając miniatury. Zbuduj albumy zdjęć, kompilacje skanów lub portfolia dokumentów w dokładnej kolejności obrazów."
+          },
+          "f4": {
+            "icon": "Gauge",
+            "title": "Automatyczna optymalizacja jakości",
+            "description": "Każdy obraz kodowany w odpowiedniej jakości, by zbalansować rozmiar pliku i ostrość. Połączony PDF pozostaje mały bez widocznej utraty."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Natychmiastowa kompozycja",
+            "description": "Nawet 50 zdjęć łączy się w PDF w sekundy. Potok przeglądarki strumieniuje obrazy po jednym — zużycie pamięci pozostaje przewidywalne."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% prywatne — pozostaje na urządzeniu",
+            "description": "Dekodowanie obrazów i składanie PDF w pełni w Twojej przeglądarce. Zdjęcia rodzinne, skany ID i dokumenty podróży nigdy nie są wysyłane na serwer."
+          }
+        },
         "convert": "Konwertuj na PDF",
         "converting": "Konwertowanie...",
         "resultSize": "Rozmiar pliku",
@@ -362,10 +461,43 @@
       "rotate": {
         "name": "Obracanie PDF",
         "description": "Obróć wszystkie strony PDF o 90, 180 lub 270 stopni.",
-        "metaTitle": "Obracanie PDF - Obracaj strony PDF online za darmo",
-        "metaDescription": "Obracaj strony PDF zgodnie z ruchem wskazówek zegara, przeciwnie do ruchu wskazówek zegara lub o 180 stopni. Darmowe narzędzie online, działa w przeglądarce.",
+        "metaTitle": "Obróć PDF - 90/180/270° bezstratny obrót online",
+        "metaDescription": "Obróć każdą stronę PDF o 90° w prawo/lewo lub 180°. Bezstratny obrót metadanych, natychmiastowy nawet na długich dokumentach. Za darmo, w przeglądarce, bez wysyłania.",
         "aiSummary": "Obracaj strony PDF zgodnie z ruchem wskazówek zegara, przeciwnie do ruchu wskazówek zegara lub o 180 stopni. Darmowe narzędzie online, działa w przeglądarce.",
         "keywords": "obróć pdf, obracanie stron pdf, przekręć pdf, orientacja pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "3 kąty obrotu",
+            "description": "Obróć o 90° w prawo, 90° w lewo lub 180° (korekta odwrócenia). Wybierz kąt pasujący do problemu orientacji w źródłowym PDF."
+          },
+          "f2": {
+            "icon": "Files",
+            "title": "Obrót całego dokumentu",
+            "description": "Jedno kliknięcie obraca każdą stronę PDF o ten sam kąt. Idealne dla skanów poziomych, które dotarły pionowo, lub PDFów z błędnie zorientowanego skanera."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Bezstratny obrót metadanych",
+            "description": "Strony obracają się przez metadane orientacji PDF, nie przez ponowne rasteryzowanie. Wyjście zachowuje oryginalną jakość tekstu, wektory i zaznaczalny tekst."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Podgląd strony przed zapisem",
+            "description": "Zobacz pierwszą stronę z wybranym obrotem przed pobraniem. Wykryj złe kierunki w sekundach — bez pobrań testowych."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Natychmiast — nawet długie PDFy",
+            "description": "Dokument 1000-stronicowy obraca się w mniej niż sekundę, ponieważ obrót to flaga metadanych, a nie renderowanie strony."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% prywatne — pozostaje w przeglądarce",
+            "description": "Cały obrót odbywa się lokalnie z pdf-lib. Poufne skany, dokumenty tożsamości i umowy nie są wysyłane — plik nie opuszcza urządzenia."
+          }
+        },
         "pages": "strony",
         "direction": "Kierunek",
         "clockwise": "90° w prawo",
@@ -403,10 +535,43 @@
       "add-page-numbers": {
         "name": "Dodaj numery stron",
         "description": "Dodaj numery stron do każdej strony dokumentu PDF.",
-        "metaTitle": "Dodaj numery stron do PDF - Darmowe narzędzie online",
-        "metaDescription": "Dodaj numery stron do dokumentów PDF. Wybierz pozycję, format i rozmiar czcionki. Darmowe narzędzie online, bez przesyłania.",
+        "metaTitle": "Dodaj numery stron PDF - 6 pozycji, własny start",
+        "metaDescription": "Dodaj numery stron do PDFów w jednej z 6 pozycji. Niestandardowy numer początkowy do pomijania okładek, kontrola rozmiaru czcionki i formatu. Za darmo, w przeglądarce.",
         "aiSummary": "Dodaj numery stron do dokumentów PDF. Wybierz pozycję, format i rozmiar czcionki. Darmowe narzędzie online, bez przesyłania.",
         "keywords": "dodaj numery stron pdf, numeracja stron pdf, ponumeruj strony pdf, stopka pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "6 opcji pozycji",
+            "description": "Umieść numery w jednej z 6 lokalizacji: góra/dół w połączeniu z lewa/środek/prawo. Nagłówek, stopka lub róg — wybierz coś, co nie koliduje z istniejącą zawartością."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Niestandardowy numer początkowy",
+            "description": "Rozpocznij numerowanie od dowolnej wartości, nie tylko 1. Przydatne dla PDFów kontynuujących inny dokument, lub by okładka i spis treści pozostały bez numeracji."
+          },
+          "f3": {
+            "icon": "Braces",
+            "title": "Format i rozmiar czcionki",
+            "description": "Wybierz format cyfr i rozmiar czcionki. Numery mogą subtelnie się wtopić lub wyróżniać pogrubieniem — pasuje od raportów formalnych po manuskrypty drukowane."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Pomiń okładkę i wstęp",
+            "description": "Określ pierwszą numerowaną stronę, by okładka, spis treści i prawa autorskie pozostały czyste. Zakres numeracji w pełni dostosowywalny dla każdego dokumentu."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Szybkie nawet na księgach 500-stronicowych",
+            "description": "Numery stron renderują się w pojedynczym przebiegu pdf-lib. Długie manuskrypty, skrypty wykładowe i raporty są numerowane w sekundach — bez czekania na stronę."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% prywatne — przetwarzanie lokalne",
+            "description": "Numery stron są dodawane przez pdf-lib w pełni w Twojej przeglądarce. Manuskrypty, dowody prawne i własnościowe raporty nigdy nie opuszczają urządzenia."
+          }
+        },
         "pages": "strony",
         "position": "Pozycja",
         "positions": {
@@ -457,6 +622,39 @@
         "metaDescription": "Wyodrębniaj tekst z plików PDF natychmiast. Kopiuj treść tekstową z dowolnego dokumentu PDF. Darmowe narzędzie online, działa w przeglądarce.",
         "aiSummary": "Wyodrębniaj tekst z plików PDF natychmiast. Kopiuj treść tekstową z dowolnego dokumentu PDF. Darmowe narzędzie online, działa w przeglądarce.",
         "keywords": "wyodrębnij tekst pdf, pdf na tekst, kopiuj tekst z pdf, ekstraktor tekstu pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Pełna ekstrakcja dokumentu",
+            "description": "Wyciągnij cały tekst z PDF w pojedynczym przebiegu — bez selekcji strona po stronie. Pełna treść tekstowa raportów, prac i książek gotowa do edycji lub analizy."
+          },
+          "f2": {
+            "icon": "Braces",
+            "title": "Zachowuje kolejność czytania",
+            "description": "Podziały linii i akapity zrekonstruowane z układu PDF przez pdfjs-dist. Wyjście to nie ściana tekstu — czyta się w kolejności, w której człowiek przeczytałby stronę."
+          },
+          "f3": {
+            "icon": "GripVertical",
+            "title": "Kopiuj lub pobierz tekst",
+            "description": "Naciśnij Kopiuj, a cały wyciągnięty tekst trafi do schowka, gotowy do wklejenia w Word, Notion, ChatGPT. Lub pobierz jako plik tekstowy do archiwizacji."
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "Wyjście tekstowe do wyszukiwania",
+            "description": "Użyj Ctrl+F lub wyszukiwania w edytorze, aby znaleźć określone terminy. Przydatne do szybkiego sprawdzenia, czy ekstrakcja uchwyciła potrzebną sekcję."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Szybkie — nawet na długich dokumentach",
+            "description": "PDF 200-stronicowy ekstraktuje się w sekundy, ponieważ pdfjs strumieniuje treść tekstową bezpośrednio. Bez OCR dla PDFów utworzonych cyfrowo."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% prywatne — bez wysyłania na serwer",
+            "description": "Ekstrakcja tekstu działa przez pdfjs-dist w Twojej przeglądarce. Dokumenty prawne, notatki medyczne i osobista korespondencja nigdy nie są wysyłane na serwer."
+          }
+        },
         "extract": "Wyodrębnij tekst",
         "extracting": "Wyodrębnianie...",
         "extractedText": "Wyodrębniony tekst",
@@ -492,9 +690,42 @@
         "name": "Zmiana kolejności stron PDF",
         "description": "Przeciągaj i upuszczaj, aby zmienić kolejność stron w dokumencie PDF.",
         "metaTitle": "Zmiana kolejności stron PDF - Darmowe narzędzie online",
-        "metaDescription": "Zmieniaj kolejność stron PDF przez przeciąganie i upuszczanie. Darmowe narzędzie online, działa w przeglądarce.",
+        "metaDescription": "Przeciągnij i upuść miniatury, aby zmienić kolejność stron PDF. Przyciski w górę/w dół do precyzyjnej regulacji, bezstratne wyjście, natychmiastowe. Za darmo, w przeglądarce.",
         "aiSummary": "Zmieniaj kolejność stron PDF przez przeciąganie i upuszczanie. Darmowe narzędzie online, działa w przeglądarce.",
         "keywords": "zmień kolejność pdf, zmiana kolejności stron pdf, kolejność stron pdf, sortuj strony pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "Przeciąganie i upuszczanie",
+            "description": "Chwyć dowolną miniaturę strony i upuść ją tam, gdzie chcesz — natychmiast. Reorganizuj długie dokumenty w sekundy z płynnym przeciąganiem, bez skomplikowanej składni."
+          },
+          "f2": {
+            "icon": "Eye",
+            "title": "Wizualna siatka miniatur",
+            "description": "Każda strona renderowana jako miniatura, by zawsze widzieć, co przesuwasz. Wykryj duplikaty, brakujące strony lub złą orientację przed finalizacją."
+          },
+          "f3": {
+            "icon": "ArrowLeftRight",
+            "title": "Przyciski w górę/w dół",
+            "description": "Przyciski 'W górę' / 'W dół' przy każdej miniaturze przesuwają strony o jeden slot na kliknięcie. Przydatne do precyzji po szybkim przeciąganiu."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Działa na dowolnej długości",
+            "description": "Reorganizuj raport 5-stronicowy lub podręcznik 500-stronicowy tym samym przepływem. Miniatury wirtualizują się — strona pozostaje responsywna na długich dokumentach."
+          },
+          "f5": {
+            "icon": "Star",
+            "title": "Bezstratne — oryginalna jakość",
+            "description": "Strony są przemapowywane przez referencję, nie ponownie rasteryzowane. Wyjściowy PDF zachowuje oryginalną jakość tekstu, wektory i osadzone czcionki."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% prywatne — bez wysyłania",
+            "description": "Cała reorganizacja odbywa się przez pdf-lib w Twojej przeglądarce. Wrażliwe szkice fuzji, materiały zarządu i pliki HR nigdy nie są wysyłane na serwer."
+          }
+        },
         "dragHint": "Przeciągnij, aby zmienić kolejność stron",
         "pages": "strony",
         "page": "Strona",
@@ -532,10 +763,43 @@
       "compress": {
         "name": "Kompresja PDF",
         "description": "Zmniejsz rozmiar pliku PDF przez ponowne renderowanie stron w niższej jakości.",
-        "metaTitle": "Kompresja PDF - Darmowy kompresor PDF online",
-        "metaDescription": "Kompresuj pliki PDF, aby zmniejszyć rozmiar. Wybierz poziom jakości. Darmowe narzędzie online, bez przesyłania.",
+        "metaTitle": "Kompresuj PDF online - 3 ustawienia jakości, za darmo",
+        "metaDescription": "Kompresuj PDFy z 3 ustawieniami jakości dla każdego wymogu rozmiaru. Natychmiastowe porównanie przed/po, jednoprzebiegowe przetwarzanie. Za darmo, w przeglądarce, bez wysyłania.",
         "aiSummary": "Kompresuj pliki PDF, aby zmniejszyć rozmiar. Wybierz poziom jakości. Darmowe narzędzie online, bez przesyłania.",
         "keywords": "kompresja pdf, kompresor pdf, zmniejsz rozmiar pdf, zmniejsz pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "3 ustawienia jakości",
+            "description": "Wybierz Niski (najmniejszy, do skanów/zdjęć), Średni (zrównoważony domyślny) lub Wysoki (zachowuje ostrość tekstu). Każde ustawienie renderuje strony z optymalną jakością."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Redukcja rozmiaru w czasie rzeczywistym",
+            "description": "Zobacz oryginalny rozmiar, skompresowany rozmiar i procent oszczędności zaraz po zakończeniu. Uruchom ponownie z innym ustawieniem, jeśli wynik nie spełnia celu."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Regulowana jakość renderowania",
+            "description": "Kompresja rasteryzuje strony na wybranym poziomie. Każde ustawienie balansuje ostrość wizualną i rozmiar pliku — wybierz zgodnie z planowanym użyciem."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Działa z mieszaną zawartością",
+            "description": "PDFy z tekstem, skanami, osadzonymi obrazami i grafikami wektorowymi kompresują się w jednym przebiegu. Bez separowania ani wstępnej obróbki — upuść plik i wybierz ustawienie."
+          },
+          "f5": {
+            "icon": "MonitorDown",
+            "title": "Działa offline jako PWA",
+            "description": "Zainstaluj PrivaDeck raz i używaj kompresora bez internetu. Przydatne podczas lotów, w salach narad lub gdziekolwiek pasmo jest niestabilne lub wrażliwe."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% prywatne — pliki lokalne",
+            "description": "Cała kompresja używa renderowania pdf.js i pdf-lib w Twojej przeglądarce. Wrażliwe umowy, skany medyczne i finansowe PDFy nigdy nie dotykają serwera."
+          }
+        },
         "quality": "Jakość",
         "high": "Wysoka",
         "medium": "Średnia",
@@ -578,9 +842,42 @@
         "name": "Znak wodny PDF",
         "description": "Dodaj ukośny tekstowy znak wodny do każdej strony PDF.",
         "metaTitle": "Dodaj znak wodny do PDF - Darmowe narzędzie online",
-        "metaDescription": "Dodaj tekstowe znaki wodne do dokumentów PDF. Dostosuj przezroczystość i rozmiar czcionki. Darmowe narzędzie online.",
+        "metaDescription": "Dodawaj niestandardowe diagonalne tekstowe znaki wodne do każdej strony PDF. Regulowana przezroczystość i rozmiar czcionki, jednoprzebiegowa aplikacja, bezstratne dla nieoznakowanej treści.",
         "aiSummary": "Dodaj tekstowe znaki wodne do dokumentów PDF. Dostosuj przezroczystość i rozmiar czcionki. Darmowe narzędzie online.",
         "keywords": "znak wodny pdf, dodaj znak wodny pdf, stempel pdf, nakładka tekstowa pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Niestandardowy tekst znaku wodnego",
+            "description": "Wpisz dowolną frazę: 'POUFNE', 'SZKIC', nazwę klienta lub własny znak wodny. Frazy wielowyrazowe wspierane z sensownymi domyślnymi rozmiarami."
+          },
+          "f2": {
+            "icon": "GripVertical",
+            "title": "Diagonalne umieszczenie",
+            "description": "Znak wodny pojawia się ukośnie na każdej stronie dla maksymalnej widoczności bez zasłaniania bazowego tekstu. Klasyczny styl dokumentów prawnych/szkicowych."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Przezroczystość i rozmiar",
+            "description": "Reguluj przezroczystość — od dyskretnej szarości po pogrubiony kolorowy stempel; dostosuj rozmiar czcionki do wymiarów strony. Niech intensywność pasuje do celu."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Stempel na każdej stronie",
+            "description": "Znak wodny stosowany jednolicie do wszystkich stron — bez konfiguracji per strona. Wiele PDFów z tym samym ustawieniem dla spójnego wsadowego brandingu."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Szybkie nawet na długich PDF",
+            "description": "Tekst znaku wodnego dodawany przez pdf-lib jako pojedyncza warstwa nakładki na stronę. Setki stron otrzymują znak wodny w sekundach."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% prywatne — tylko w przeglądarce",
+            "description": "Nakładanie znaku wodnego odbywa się lokalnie z pdf-lib. Wrażliwe prototypy, NDA i dokumenty przedpublikacyjne nigdy nie są wysyłane."
+          }
+        },
         "watermarkText": "Tekst znaku wodnego",
         "textPlaceholder": "Wprowadź tekst znaku wodnego...",
         "opacity": "Przezroczystość",
@@ -617,10 +914,43 @@
       "crop": {
         "name": "Przycinanie PDF",
         "description": "Przytnij strony PDF, ustawiając marginesy do usunięcia z każdej strony.",
-        "metaTitle": "Przycinanie PDF - Darmowe narzędzie do przycinania PDF online",
-        "metaDescription": "Przytnij strony PDF, usuwając marginesy z każdej strony. Darmowe narzędzie online, działa w przeglądarce.",
+        "metaTitle": "Przytnij PDF - 4-stronne marginesy, bezstratne wyjście",
+        "metaDescription": "Przytnij strony PDF, ustawiając niezależnie marginesy górny, prawy, dolny i lewy. Wprowadzanie z precyzją punktu, dotyczy wszystkich stron, bezstratne wyjście wektorowe. Za darmo.",
         "aiSummary": "Przytnij strony PDF, usuwając marginesy z każdej strony. Darmowe narzędzie online, działa w przeglądarce.",
         "keywords": "przytnij pdf, kadrowanie pdf, marginesy pdf, narzędzie do przycinania pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Hash",
+            "title": "4 niezależne marginesy",
+            "description": "Ustaw marginesy górny, prawy, dolny i lewy niezależnie. Przytnij białe ramki skanów, usuń nagłówki/stopki lub skup się na konkretnej kolumnie czy regionie artykułu."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Wprowadzanie z precyzją punktu",
+            "description": "Określ marginesy w punktach PDF (1 punkt ≈ 0,35 mm), tej samej jednostce, której używają projektanci druku. Osiągaj dokładne rozmiary trymowania."
+          },
+          "f3": {
+            "icon": "Files",
+            "title": "Takie samo przycięcie dla wszystkich stron",
+            "description": "Jedno ustawienie przycięcia stosuje się jednolicie do całego dokumentu. Przydatne do wsadowego przycinania skanów, gdzie każda strona ma ten sam problem marginesu."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Zachowuje treść wektorową",
+            "description": "Przycinanie używa ramek granic strony PDF — bez ponownego rasteryzowania. Tekst pozostaje zaznaczalny, grafiki wektorowe pozostają ostre, rozmiar pliku ledwo się zmienia."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Natychmiastowe — nawet 1000 stron",
+            "description": "Dokument 1000-stronicowy przycina się w mniej niż sekundę, ponieważ ramki przycięcia to metadane, nie piksele."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% prywatne — pozostaje lokalnie",
+            "description": "Operacje przycinania działają przez pdf-lib w przeglądarce. Plany pięter, obrazy medyczne i poufne dokumenty nigdy nie są wysyłane na serwer."
+          }
+        },
         "pages": "strony",
         "margins": "Marginesy przycinania (punkty)",
         "marginsHint": "Wprowadź wartość do przycięcia z każdej strony (1 punkt ≈ 0,35mm)",
@@ -660,10 +990,43 @@
       "esign": {
         "name": "Podpis elektroniczny PDF",
         "description": "Narysuj podpis i umieść go na dowolnej stronie dokumentu PDF.",
-        "metaTitle": "Podpis elektroniczny PDF - Darmowe narzędzie online",
-        "metaDescription": "Dodaj swój podpis elektroniczny do dokumentów PDF. Narysuj podpis i umieść go na dowolnej stronie. Darmowe narzędzie online.",
+        "metaTitle": "Podpisz PDF online - Narysuj podpis, umieść swobodnie",
+        "metaDescription": "Narysuj swój e-podpis myszą lub dotykiem i umieść go na dowolnej stronie PDF. Regulowana szerokość podpisu, bezstratna nakładka, natychmiastowe. Za darmo, w przeglądarce, bez wysyłania.",
         "aiSummary": "Dodaj swój podpis elektroniczny do dokumentów PDF. Narysuj podpis i umieść go na dowolnej stronie. Darmowe narzędzie online.",
         "keywords": "podpis pdf, podpisz pdf online, podpis elektroniczny pdf, narzędzie do podpisów pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "Rysuj myszą lub dotykiem",
+            "description": "Podpisz myszą na pulpicie lub palcem/rysikiem na tabletach i telefonach. Pad podpisu rejestruje płynne pociągnięcia dla naturalnie wyglądającego podpisu odręcznego."
+          },
+          "f2": {
+            "icon": "Eye",
+            "title": "Umieść na dowolnej stronie",
+            "description": "Wybierz docelową stronę z listy miniatur i upuść podpis tam, gdzie należy. Działa dla umów ostatniej strony, formularzy wielostronicowych lub inicjałów wszędzie."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Regulowana szerokość podpisu",
+            "description": "Skaluj podpis szerszy dla ważnych umów lub węższy dla kompaktowych pól formularzy. Regulacja szerokości zachowuje oryginalne proporcje."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Bezstratna nakładka",
+            "description": "Twój podpis jest dodawany jako wektorowa nakładka do oryginalnego PDF. Bazowy tekst i obrazy dokumentu pozostają piksel doskonałe."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Natychmiast — bez konta",
+            "description": "Podpisz i pobierz w mniej niż minutę. Bez rejestracji, bez weryfikacji e-mail, bez konta DocuSign — wystarczy narysować, umieścić i zapisać lokalnie."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% prywatne — podpis pozostaje lokalnie",
+            "description": "Podpis jest rejestrowany, renderowany i osadzany w pełni w Twojej przeglądarce. Umowy, NDA i formularze HR z Twoim podpisem nigdy nigdzie nie są wysyłane."
+          }
+        },
         "drawSignature": "Narysuj swój podpis",
         "clearSignature": "Wyczyść",
         "page": "Strona",
@@ -703,9 +1066,42 @@
         "name": "Wyodrębnij obrazy z PDF",
         "description": "Wyodrębnij wszystkie osadzone obrazy z pliku PDF i pobierz je.",
         "metaTitle": "Wyodrębnij obrazy z PDF - Darmowy ekstraktor obrazów PDF online",
-        "metaDescription": "Wyodrębnij wszystkie obrazy z dokumentów PDF. Pobierz pojedynczo lub jako plik ZIP. Darmowe narzędzie online.",
+        "metaDescription": "Wyciągnij każdy osadzony obraz z PDF w oryginalnym formacie i jakości. Podgląd per obraz, pobieranie ZIP jednym kliknięciem, szybkie nawet na bogatych obrazowo plikach. Za darmo.",
         "aiSummary": "Wyodrębnij wszystkie obrazy z dokumentów PDF. Pobierz pojedynczo lub jako plik ZIP. Darmowe narzędzie online.",
         "keywords": "wyodrębnij obrazy pdf, ekstraktor obrazów pdf, pobierz obrazy z pdf, pdf na obrazy",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Pobiera wszystkie osadzone obrazy",
+            "description": "Ekstraktuje każdy strumień obrazu w PDF, w tym zdjęcia, zeskanowane figury, wykresy i ikony liniowe. Nic nie jest pominięte — kompletna treść wizualna dokumentu."
+          },
+          "f2": {
+            "icon": "Star",
+            "title": "Oryginalny format i jakość",
+            "description": "Każdy obraz zapisany w oryginalnym kodowaniu (JPEG, PNG itp.) w rozdzielczości osadzonej w PDF. Bez ponownego kodowania, bez utraty jakości."
+          },
+          "f3": {
+            "icon": "MonitorDown",
+            "title": "Pobieranie ZIP jednym kliknięciem",
+            "description": "Wszystkie wyciągnięte obrazy spakowane w pojedynczy ZIP. Nazwy plików zawierają numer strony i indeks obrazu, by zlokalizować każdy w źródłowym PDF."
+          },
+          "f4": {
+            "icon": "Hash",
+            "title": "Tagowanie per strona",
+            "description": "Każdy wyciągnięty obraz oznaczony stroną pochodzenia. Przydatne dla artykułów technicznych i raportów, gdzie identyfikowalność figura-strona ma znaczenie."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Szybka ekstrakcja strumieniowa",
+            "description": "Raport 100-stronicowy z setkami figur ekstraktuje się w sekundy przez strumień pdfjs-dist. Bez długich oczekiwań dla portfolio wizualnych."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% prywatne — tylko przeglądarka",
+            "description": "Ekstrakcja obrazów odbywa się w pełni w Twojej przeglądarce. Poufne makiety projektowe, wewnętrzne zrzuty ekranu i własnościowe diagramy nigdy nie opuszczają urządzenia."
+          }
+        },
         "extract": "Wyodrębnij obrazy",
         "extracting": "Wyodrębnianie",
         "page": "Strona",

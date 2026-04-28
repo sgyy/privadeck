@@ -118,6 +118,39 @@
         "metaDescription": "Tách PDF mỗi trang, mỗi N trang, lẻ/chẵn, đôi nửa, phạm vi tùy chỉnh, theo kích thước tệp hoặc dấu trang. Xem trước theo màu. Tải ZIP. 100% trong trình duyệt.",
         "aiSummary": "PrivaDeck Tách PDF — bảy chế độ: mỗi trang, mỗi N trang, lẻ/chẵn, đôi nửa, phạm vi tùy chỉnh, theo kích thước tệp, theo dấu trang (mục lục). Xem trước hình thu nhỏ mã hóa màu cho biết trang nào thuộc tệp đầu ra nào. Tải xuống dạng gói ZIP. Mọi thứ chạy trong trình duyệt qua pdf-lib và pdfjs-dist (WebAssembly); không cần tải lên, đăng ký hay cài đặt. Một phần của bộ công cụ privacy-first PrivaDeck — https://privadeck.app",
         "keywords": "tách pdf, trình tách pdf, trích xuất trang pdf, tách pdf theo kích thước, tách pdf theo dấu trang",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "7 chế độ chia chuyên biệt",
+            "description": "Chia theo trang, mỗi N trang, lẻ/chẵn, làm đôi, theo phạm vi tùy chỉnh, theo kích thước tệp hoặc theo dấu trang PDF. Chọn chế độ phù hợp."
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "Chia theo dấu trang/đại cương",
+            "description": "Tự động phát hiện dấu trang chương và chia thành một PDF mỗi phần. Mỗi tệp đầu ra kế thừa tên dấu trang — hoàn hảo cho sách giáo khoa và báo cáo."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Chia theo giới hạn kích thước tệp",
+            "description": "Giới hạn mỗi PDF đầu ra ở 5 MB, 10 MB hoặc kích thước tùy chỉnh. Công cụ đóng gói tối đa số trang trên mỗi tệp — lý tưởng cho tệp đính kèm email."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Chọn phạm vi trực quan",
+            "description": "Nhấp hai hình thu nhỏ để đánh dấu phạm vi, lặp lại để thêm. Đánh dấu màu trực tiếp hiển thị các trang sẽ vào mỗi PDF trước khi xác nhận."
+          },
+          "f5": {
+            "icon": "Hash",
+            "title": "Tải xuống ZIP hàng loạt",
+            "description": "Tất cả PDF được chia được đóng gói vào một ZIP duy nhất để tải xuống một cú nhấp. Tên tệp giữ số trang hoặc tiêu đề dấu trang."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — không tải lên",
+            "description": "PDF được phân tích và chia hoàn toàn trong trình duyệt qua pdf-lib và pdfjs-dist. Báo cáo bảo mật, hợp đồng và hồ sơ cá nhân không bao giờ rời thiết bị."
+          }
+        },
         "pages": "trang",
         "splitEach": "Tách từng trang",
         "splitRange": "Tách theo phạm vi",
@@ -212,10 +245,43 @@
       "delete-pages": {
         "name": "Xóa trang PDF",
         "description": "Xóa các trang cụ thể khỏi tài liệu PDF.",
-        "metaTitle": "Xóa trang PDF - Xóa trang khỏi PDF trực tuyến",
-        "metaDescription": "Xóa các trang không mong muốn khỏi tệp PDF. Công cụ trực tuyến miễn phí với xem trước trang. Hoạt động hoàn toàn trong trình duyệt.",
+        "metaTitle": "Xóa Trang PDF - Lựa chọn trực quan & xóa hàng loạt",
+        "metaDescription": "Xóa các trang khỏi PDF với lựa chọn hình thu nhỏ trực quan hoặc cú pháp phạm vi. Xem trước kết quả trực tiếp, giữ dấu trang, tức thì. Miễn phí, trên trình duyệt.",
         "aiSummary": "Xóa các trang không mong muốn khỏi tệp PDF. Công cụ trực tuyến miễn phí với xem trước trang. Hoạt động hoàn toàn trong trình duyệt.",
         "keywords": "xóa trang pdf, xoá trang pdf, trình xóa trang pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "Chọn hình thu nhỏ trực quan",
+            "description": "Mỗi trang được kết xuất dưới dạng hình thu nhỏ để nhấp và đánh dấu xóa. Lớp phủ đỏ xác nhận xóa trong nháy mắt — không cần đoán số trang."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Cú pháp phạm vi cho xóa hàng loạt",
+            "description": "Nhập phạm vi như '3-7, 12, 20-25' để xóa hàng chục trang cùng lúc. Kết hợp với nhấp-bật/tắt cho điều chỉnh tinh tế — cách nhanh nhất."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Xem trước kết quả trực tiếp",
+            "description": "Xem chính xác các trang nào còn lại trước khi xác nhận. Số trang đầu ra cập nhật theo thời gian thực — bạn biết độ dài cuối cùng trước khi tải xuống."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Giữ dấu trang và metadata",
+            "description": "Dấu trang đại cương được ánh xạ lại các trang được giữ, và tiêu đề/tác giả/từ khóa được chuyển nguyên vẹn. Kết quả cảm thấy như tài liệu gốc."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Tức thì — không kết xuất lại",
+            "description": "Các trang được xóa bằng tham chiếu, không tái tạo. PDF 500 trang được xử lý dưới một giây — chỉ tham chiếu được cập nhật."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — không tải lên",
+            "description": "PDF được phân tích và các trang được xóa hoàn toàn trong trình duyệt với pdf-lib. Tài liệu với ID cá nhân, dữ liệu tài chính hoặc NDA không rời thiết bị."
+          }
+        },
         "selectPages": "Nhấp vào trang để chọn xóa",
         "delete": "Xóa đã chọn",
         "deleting": "Đang xóa...",
@@ -251,8 +317,8 @@
       "to-image": {
         "name": "PDF sang hình ảnh",
         "description": "Chuyển đổi trang PDF sang hình ảnh JPG hoặc PNG.",
-        "metaTitle": "PDF sang hình ảnh - Chuyển đổi PDF sang JPG/PNG trực tuyến",
-        "metaDescription": "Chuyển đổi trang PDF sang hình ảnh JPG hoặc PNG chất lượng cao. Công cụ trực tuyến miễn phí với DPI và chất lượng có thể điều chỉnh.",
+        "metaTitle": "PDF sang Hình ảnh - JPG/PNG với DPI có thể điều chỉnh trực tuyến",
+        "metaDescription": "Chuyển đổi các trang PDF thành hình ảnh JPG hoặc PNG với tỷ lệ độ phân giải 1×–4×. Đầu ra mỗi trang, tải xuống ZIP, không mất chất lượng. Miễn phí, trên trình duyệt.",
         "aiSummary": "Chuyển đổi trang PDF sang hình ảnh JPG hoặc PNG chất lượng cao. Công cụ trực tuyến miễn phí với DPI và chất lượng có thể điều chỉnh.",
         "keywords": "pdf sang hình ảnh, pdf sang jpg, pdf sang png, chuyển đổi pdf sang ảnh",
         "featureCards": {
@@ -325,10 +391,43 @@
       "images-to-pdf": {
         "name": "Hình ảnh sang PDF",
         "description": "Chuyển đổi nhiều hình ảnh thành một tài liệu PDF duy nhất.",
-        "metaTitle": "Hình ảnh sang PDF - Chuyển đổi ảnh sang PDF trực tuyến miễn phí",
-        "metaDescription": "Chuyển đổi JPG, PNG và hình ảnh khác thành một tài liệu PDF. Sắp xếp lại trang, công cụ trực tuyến miễn phí. Không cần tải lên.",
+        "metaTitle": "Hình ảnh sang PDF - JPG/PNG/HEIC/WebP/AVIF trong một",
+        "metaDescription": "Kết hợp hình ảnh JPG, PNG, HEIC, WebP, AVIF thành một PDF. Kích thước trang tùy chỉnh, kéo để sắp xếp lại, tối ưu hóa chất lượng tự động. Miễn phí, trên trình duyệt.",
         "aiSummary": "Chuyển đổi JPG, PNG và hình ảnh khác thành một tài liệu PDF. Sắp xếp lại trang, công cụ trực tuyến miễn phí. Không cần tải lên.",
         "keywords": "hình ảnh sang pdf, jpg sang pdf, png sang pdf, chuyển đổi ảnh sang pdf, ảnh chụp sang pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Định dạng hình ảnh hỗn hợp",
+            "description": "Thả các tệp JPG, PNG, HEIC, WebP, AVIF và GIF trong bất kỳ tổ hợp nào. Ảnh HEIC iPhone được giải mã cục bộ — không cần bước chuyển đổi riêng."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Kích thước trang tùy chỉnh",
+            "description": "Đầu ra dưới dạng A4, US Letter, A3, vuông hoặc bất kỳ kích thước tùy chỉnh nào. Đặt định hướng cho mỗi hình ảnh với lề phù hợp với yêu cầu in hoặc chia sẻ."
+          },
+          "f3": {
+            "icon": "GripVertical",
+            "title": "Kéo để sắp xếp lại",
+            "description": "Sắp xếp lại các trang bằng cách kéo hình thu nhỏ. Xây dựng album ảnh, bộ sưu tập bản quét hoặc danh mục đầu tư tài liệu theo thứ tự hình ảnh chính xác."
+          },
+          "f4": {
+            "icon": "Gauge",
+            "title": "Tối ưu hóa chất lượng tự động",
+            "description": "Mỗi hình ảnh được mã hóa ở chất lượng phù hợp để cân bằng kích thước tệp và độ sắc nét. PDF kết hợp vẫn nhỏ mà không có tổn thất rõ rệt."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Tổng hợp tức thì",
+            "description": "Ngay cả 50 ảnh kết hợp thành PDF trong vài giây. Đường ống trình duyệt truyền hình ảnh từng cái một — sử dụng bộ nhớ vẫn có thể đoán trước."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — vẫn trên thiết bị",
+            "description": "Giải mã hình ảnh và lắp ráp PDF hoàn toàn trong trình duyệt. Ảnh gia đình, bản quét nhận dạng và tài liệu du lịch không bao giờ được gửi đến máy chủ."
+          }
+        },
         "convert": "Chuyển sang PDF",
         "converting": "Đang chuyển đổi...",
         "resultSize": "Kích thước tệp",
@@ -362,10 +461,43 @@
       "rotate": {
         "name": "Xoay PDF",
         "description": "Xoay tất cả các trang PDF 90, 180 hoặc 270 độ.",
-        "metaTitle": "Xoay PDF - Xoay trang PDF trực tuyến miễn phí",
-        "metaDescription": "Xoay trang PDF theo chiều kim đồng hồ, ngược chiều kim đồng hồ hoặc 180 độ. Công cụ trực tuyến miễn phí, hoạt động trong trình duyệt.",
+        "metaTitle": "Xoay PDF - 90/180/270° xoay không mất dữ liệu trực tuyến",
+        "metaDescription": "Xoay mỗi trang PDF 90° theo chiều kim đồng hồ/ngược chiều hoặc 180°. Xoay metadata không mất dữ liệu, tức thì trên tài liệu dài. Miễn phí, trên trình duyệt.",
         "aiSummary": "Xoay trang PDF theo chiều kim đồng hồ, ngược chiều kim đồng hồ hoặc 180 độ. Công cụ trực tuyến miễn phí, hoạt động trong trình duyệt.",
         "keywords": "xoay pdf, xoay trang pdf, lật pdf, hướng pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "3 góc xoay",
+            "description": "Xoay 90° theo chiều kim đồng hồ, 90° ngược chiều hoặc 180° (sửa lộn ngược). Chọn góc tương ứng với vấn đề định hướng trong PDF nguồn của bạn."
+          },
+          "f2": {
+            "icon": "Files",
+            "title": "Xoay toàn bộ tài liệu",
+            "description": "Một cú nhấp xoay mỗi trang trong PDF cùng góc. Hoàn hảo cho bản quét ngang đến dọc, hoặc PDF từ máy quét định hướng sai."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Xoay metadata không mất dữ liệu",
+            "description": "Các trang xoay qua metadata định hướng PDF, không bằng cách rasterize lại nội dung. Đầu ra giữ chất lượng văn bản gốc, vector và văn bản có thể chọn."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Xem trước trang trước khi lưu",
+            "description": "Xem trang đầu tiên với xoay được chọn trước khi tải xuống. Phát hiện lựa chọn hướng sai trong vài giây — không cần tải xuống thử nghiệm."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Tức thì — ngay cả trên PDF dài",
+            "description": "Tài liệu 1000 trang xoay dưới một giây, vì xoay là cờ metadata, không phải kết xuất từng trang."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — vẫn ở trình duyệt",
+            "description": "Tất cả xoay xảy ra cục bộ với pdf-lib. Bản quét bảo mật, tài liệu nhận dạng và hợp đồng không được tải lên — tệp không rời thiết bị."
+          }
+        },
         "pages": "trang",
         "direction": "Hướng",
         "clockwise": "90° theo chiều kim đồng hồ",
@@ -403,10 +535,43 @@
       "add-page-numbers": {
         "name": "Thêm số trang",
         "description": "Thêm số trang vào mỗi trang của tài liệu PDF.",
-        "metaTitle": "Thêm số trang vào PDF - Công cụ trực tuyến miễn phí",
-        "metaDescription": "Thêm số trang vào tài liệu PDF. Chọn vị trí, định dạng và cỡ chữ. Công cụ trực tuyến miễn phí, không cần tải lên.",
+        "metaTitle": "Thêm Số Trang vào PDF - 6 vị trí, bắt đầu tùy chỉnh",
+        "metaDescription": "Thêm số trang vào PDF ở một trong 6 vị trí. Số bắt đầu tùy chỉnh để bỏ qua bìa, kiểm soát kích thước phông chữ và định dạng. Miễn phí, trên trình duyệt.",
         "aiSummary": "Thêm số trang vào tài liệu PDF. Chọn vị trí, định dạng và cỡ chữ. Công cụ trực tuyến miễn phí, không cần tải lên.",
         "keywords": "thêm số trang pdf, đánh số trang pdf, số trang pdf, chân trang pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "6 tùy chọn vị trí",
+            "description": "Đặt số ở một trong 6 vị trí: trên/dưới kết hợp với trái/giữa/phải. Tiêu đề, chân trang hoặc góc — chọn cái không xung đột với nội dung của bạn."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Số bắt đầu tùy chỉnh",
+            "description": "Bắt đầu đánh số từ bất kỳ giá trị nào, không chỉ 1. Hữu ích cho PDF tiếp tục một tài liệu khác, hoặc giữ bìa và mục lục không đánh số."
+          },
+          "f3": {
+            "icon": "Braces",
+            "title": "Kiểm soát định dạng và kích thước phông chữ",
+            "description": "Chọn định dạng số và kích thước phông chữ. Số có thể hòa trộn tinh tế hoặc nổi bật in đậm — phù hợp từ báo cáo trang trọng đến bản thảo in."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Bỏ qua bìa và phần đầu",
+            "description": "Chỉ định trang được đánh số đầu tiên để bìa, mục lục và bản quyền vẫn sạch. Phạm vi đánh số hoàn toàn có thể tùy chỉnh cho mỗi tài liệu."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Nhanh ngay cả trên sách 500 trang",
+            "description": "Số trang được kết xuất trong một lần qua pdf-lib. Bản thảo dài, ghi chú bài giảng và báo cáo được đánh số trong vài giây."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — xử lý cục bộ",
+            "description": "Số trang được thêm với pdf-lib hoàn toàn trong trình duyệt. Bản thảo, vật chứng pháp lý và báo cáo độc quyền không bao giờ rời thiết bị."
+          }
+        },
         "pages": "trang",
         "position": "Vị trí",
         "positions": {
@@ -457,6 +622,39 @@
         "metaDescription": "Trích xuất văn bản từ tệp PDF ngay lập tức. Sao chép nội dung văn bản từ bất kỳ tài liệu PDF nào. Công cụ trực tuyến miễn phí, hoạt động trong trình duyệt.",
         "aiSummary": "Trích xuất văn bản từ tệp PDF ngay lập tức. Sao chép nội dung văn bản từ bất kỳ tài liệu PDF nào. Công cụ trực tuyến miễn phí, hoạt động trong trình duyệt.",
         "keywords": "trích xuất văn bản pdf, pdf sang văn bản, sao chép văn bản từ pdf, trình trích xuất văn bản pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Trích xuất tài liệu hoàn chỉnh",
+            "description": "Lấy tất cả văn bản của PDF trong một lần — không lựa chọn từng trang. Nội dung văn bản đầy đủ của báo cáo, bài viết và sách sẵn sàng để chỉnh sửa hoặc phân tích."
+          },
+          "f2": {
+            "icon": "Braces",
+            "title": "Giữ thứ tự đọc",
+            "description": "Ngắt dòng và đoạn văn được tái tạo từ bố cục PDF qua pdfjs-dist. Đầu ra không phải là một bức tường văn bản — đọc theo thứ tự con người sẽ đọc trang."
+          },
+          "f3": {
+            "icon": "GripVertical",
+            "title": "Sao chép hoặc tải văn bản",
+            "description": "Nhấn Sao chép và toàn bộ văn bản trích xuất sẽ vào clipboard, sẵn sàng dán vào Word, Notion, ChatGPT. Hoặc tải xuống dưới dạng tệp văn bản thuần để lưu trữ."
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "Đầu ra văn bản có thể tìm kiếm",
+            "description": "Sử dụng Ctrl+F hoặc tìm kiếm trình chỉnh sửa của bạn để tìm các thuật ngữ cụ thể. Hữu ích để xác minh nhanh rằng việc trích xuất đã nắm bắt phần bạn cần."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Nhanh — ngay cả trên tài liệu dài",
+            "description": "PDF 200 trang trích xuất trong vài giây vì pdfjs truyền nội dung văn bản trực tiếp. Không cần OCR cho PDF được tạo kỹ thuật số."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — không tải lên máy chủ",
+            "description": "Trích xuất văn bản chạy qua pdfjs-dist trong trình duyệt. Bản ghi nhớ pháp lý, ghi chú y tế và thư từ cá nhân không bao giờ được gửi đến máy chủ."
+          }
+        },
         "extract": "Trích xuất văn bản",
         "extracting": "Đang trích xuất...",
         "extractedText": "Văn bản đã trích xuất",
@@ -492,9 +690,42 @@
         "name": "Sắp xếp lại trang PDF",
         "description": "Kéo và thả để sắp xếp lại thứ tự trang trong tài liệu PDF.",
         "metaTitle": "Sắp xếp lại trang PDF - Công cụ sắp xếp trang PDF trực tuyến miễn phí",
-        "metaDescription": "Sắp xếp lại trang PDF bằng kéo và thả. Công cụ trực tuyến miễn phí, hoạt động trong trình duyệt.",
+        "metaDescription": "Kéo và thả các hình thu nhỏ để sắp xếp lại các trang PDF. Nút lên/xuống để điều chỉnh tinh tế, đầu ra không mất dữ liệu, tức thì. Miễn phí, trên trình duyệt.",
         "aiSummary": "Sắp xếp lại trang PDF bằng kéo và thả. Công cụ trực tuyến miễn phí, hoạt động trong trình duyệt.",
         "keywords": "sắp xếp lại pdf, sắp xếp trang pdf, thứ tự trang pdf, sắp trang pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "Kéo và thả để sắp xếp lại",
+            "description": "Nắm bất kỳ hình thu nhỏ trang nào và thả nơi bạn muốn — ngay lập tức. Sắp xếp lại tài liệu dài trong vài giây với kéo và thả mượt mà."
+          },
+          "f2": {
+            "icon": "Eye",
+            "title": "Lưới hình thu nhỏ trực quan",
+            "description": "Mỗi trang được kết xuất dưới dạng hình thu nhỏ để bạn luôn thấy những gì bạn đang di chuyển. Phát hiện trang trùng lặp, thiếu hoặc định hướng sai trước khi hoàn tất."
+          },
+          "f3": {
+            "icon": "ArrowLeftRight",
+            "title": "Nút lên/xuống",
+            "description": "Nút 'Di chuyển lên' / 'Di chuyển xuống' cho mỗi hình thu nhỏ di chuyển các trang một khe mỗi lần nhấp. Hữu ích cho điều chỉnh tinh tế sau kéo thô."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Hoạt động trên mọi độ dài PDF",
+            "description": "Sắp xếp lại báo cáo 5 trang hoặc hướng dẫn 500 trang với cùng quy trình. Hình thu nhỏ ảo hóa — trang vẫn phản hồi nhanh trên tài liệu dài."
+          },
+          "f5": {
+            "icon": "Star",
+            "title": "Không mất — chất lượng gốc",
+            "description": "Các trang được ánh xạ lại bằng tham chiếu, không rasterize lại. PDF đầu ra giữ chất lượng văn bản gốc, vector và phông chữ nhúng như nguồn."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — không tải lên",
+            "description": "Tất cả sắp xếp lại xảy ra qua pdf-lib trong trình duyệt. Bản thảo sáp nhập nhạy cảm, gói hội đồng quản trị và tệp HR không được gửi đến máy chủ."
+          }
+        },
         "dragHint": "Kéo để sắp xếp lại trang",
         "pages": "trang",
         "page": "Trang",
@@ -532,10 +763,43 @@
       "compress": {
         "name": "Nén PDF",
         "description": "Giảm kích thước tệp PDF bằng cách render lại trang ở chất lượng thấp hơn.",
-        "metaTitle": "Nén PDF - Trình nén PDF trực tuyến miễn phí",
-        "metaDescription": "Nén tệp PDF để giảm kích thước. Chọn mức chất lượng. Công cụ trực tuyến miễn phí, không cần tải lên.",
+        "metaTitle": "Nén PDF Trực tuyến - 3 cài đặt chất lượng, miễn phí",
+        "metaDescription": "Nén PDF với 3 cài đặt chất lượng cho mọi yêu cầu kích thước. So sánh trước/sau tức thì, xử lý một lần. Miễn phí, trên trình duyệt, không tải lên.",
         "aiSummary": "Nén tệp PDF để giảm kích thước. Chọn mức chất lượng. Công cụ trực tuyến miễn phí, không cần tải lên.",
         "keywords": "nén pdf, trình nén pdf, giảm kích thước pdf, thu nhỏ pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "3 cài đặt chất lượng",
+            "description": "Chọn Thấp (nhỏ nhất, cho bản quét/ảnh), Trung bình (mặc định cân bằng) hoặc Cao (giữ độ sắc nét văn bản). Mỗi cài đặt kết xuất lại trang với chất lượng tối ưu."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Giảm kích thước thời gian thực",
+            "description": "Xem kích thước gốc, kích thước đã nén và phần trăm tiết kiệm ngay sau khi hoàn thành. Chạy lại với cài đặt khác nếu kết quả không đạt mục tiêu."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Chất lượng kết xuất có thể điều chỉnh",
+            "description": "Nén rasterize các trang ở mức được chọn. Mỗi cài đặt cân bằng độ sắc nét hình ảnh và kích thước tệp — chọn theo mục đích sử dụng."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Hoạt động với nội dung hỗn hợp",
+            "description": "PDF với văn bản, bản quét, hình ảnh nhúng và đồ họa vector nén trong một lần. Không cần tách biệt hoặc tiền xử lý."
+          },
+          "f5": {
+            "icon": "MonitorDown",
+            "title": "Hoạt động ngoại tuyến như PWA",
+            "description": "Cài đặt PrivaDeck một lần và sử dụng trình nén không cần internet. Hữu ích trên các chuyến bay, trong phòng họp khách hàng hoặc nơi băng thông không ổn định."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — tệp giữ tại chỗ",
+            "description": "Tất cả nén sử dụng kết xuất pdf.js và pdf-lib trong trình duyệt. Hợp đồng nhạy cảm, bản quét y tế và PDF tài chính không bao giờ chạm máy chủ."
+          }
+        },
         "quality": "Chất lượng",
         "high": "Cao",
         "medium": "Trung bình",
@@ -578,9 +842,42 @@
         "name": "Hình mờ PDF",
         "description": "Thêm hình mờ văn bản chéo vào mỗi trang PDF.",
         "metaTitle": "Thêm hình mờ vào PDF - Công cụ hình mờ PDF trực tuyến miễn phí",
-        "metaDescription": "Thêm hình mờ văn bản vào tài liệu PDF. Tùy chỉnh độ mờ và cỡ chữ. Công cụ trực tuyến miễn phí.",
+        "metaDescription": "Thêm hình mờ văn bản chéo tùy chỉnh vào mỗi trang PDF. Độ mờ và kích thước phông chữ có thể điều chỉnh, áp dụng một lần, không mất trên nội dung không có hình mờ.",
         "aiSummary": "Thêm hình mờ văn bản vào tài liệu PDF. Tùy chỉnh độ mờ và cỡ chữ. Công cụ trực tuyến miễn phí.",
         "keywords": "hình mờ pdf, thêm hình mờ pdf, đóng dấu pdf, chữ chồng pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Văn bản hình mờ tùy chỉnh",
+            "description": "Nhập bất kỳ cụm từ nào: 'BẢO MẬT', 'BẢN NHÁP', tên khách hàng hoặc hình mờ bạn chọn. Cụm từ nhiều từ được hỗ trợ với kích thước mặc định hợp lý."
+          },
+          "f2": {
+            "icon": "GripVertical",
+            "title": "Vị trí chéo",
+            "description": "Hình mờ xuất hiện chéo trên mỗi trang để có khả năng hiển thị tối đa mà không che khuất văn bản bên dưới. Kiểu cổ điển của tài liệu pháp lý/bản nháp."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Độ mờ và kích thước",
+            "description": "Điều chỉnh độ mờ — từ xám tinh tế đến tem màu đậm; điều chỉnh kích thước phông chữ theo kích thước trang."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Đóng dấu trên mỗi trang",
+            "description": "Hình mờ được áp dụng đồng đều cho tất cả các trang — không cần cấu hình từng trang. Nhiều PDF với cùng cài đặt cho thương hiệu hàng loạt nhất quán."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Nhanh ngay cả trên PDF dài",
+            "description": "Văn bản hình mờ được thêm qua pdf-lib dưới dạng lớp phủ duy nhất trên mỗi trang. Hàng trăm trang nhận hình mờ trong vài giây."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — chỉ trong trình duyệt",
+            "description": "Đánh dấu hình mờ xảy ra cục bộ với pdf-lib. Nguyên mẫu nhạy cảm, NDA và tài liệu tiền xuất bản không bao giờ được tải lên."
+          }
+        },
         "watermarkText": "Văn bản hình mờ",
         "textPlaceholder": "Nhập văn bản hình mờ...",
         "opacity": "Độ mờ",
@@ -617,10 +914,43 @@
       "crop": {
         "name": "Cắt PDF",
         "description": "Cắt trang PDF bằng cách đặt lề cần xóa từ mỗi cạnh.",
-        "metaTitle": "Cắt PDF - Công cụ cắt PDF trực tuyến miễn phí",
-        "metaDescription": "Cắt trang PDF bằng cách xóa lề từ mỗi cạnh. Công cụ trực tuyến miễn phí, hoạt động trong trình duyệt.",
+        "metaTitle": "Cắt PDF - Lề 4 cạnh, đầu ra vector không mất dữ liệu",
+        "metaDescription": "Cắt các trang PDF bằng cách đặt lề trên, phải, dưới, trái độc lập. Nhập điểm chính xác, áp dụng cho tất cả các trang, đầu ra vector không mất dữ liệu.",
         "aiSummary": "Cắt trang PDF bằng cách xóa lề từ mỗi cạnh. Công cụ trực tuyến miễn phí, hoạt động trong trình duyệt.",
         "keywords": "cắt pdf, cắt tỉa pdf, lề pdf, công cụ cắt pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Hash",
+            "title": "Lề 4 cạnh độc lập",
+            "description": "Đặt lề trên, phải, dưới và trái độc lập. Cắt viền trắng từ bản quét, loại bỏ tiêu đề/chân trang hoặc tập trung vào một cột hoặc khu vực bài viết cụ thể."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Nhập điểm chính xác",
+            "description": "Chỉ định lề trong điểm PDF (1 điểm ≈ 0,35mm), cùng đơn vị mà các nhà thiết kế in sử dụng. Đạt được kích thước cắt chính xác cho sách nhỏ và tạp chí."
+          },
+          "f3": {
+            "icon": "Files",
+            "title": "Cùng cắt cho tất cả các trang",
+            "description": "Một cài đặt cắt áp dụng đồng đều cho toàn bộ tài liệu. Hữu ích cho cắt hàng loạt bản quét nơi mỗi trang có cùng vấn đề lề."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Giữ nội dung vector",
+            "description": "Cắt sử dụng các hộp giới hạn trang PDF — không rasterize lại. Văn bản vẫn có thể chọn, đồ họa vector vẫn sắc nét, kích thước tệp hầu như không thay đổi."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Tức thì — ngay cả trên 1000 trang",
+            "description": "Tài liệu 1000 trang cắt trong dưới một giây vì hộp cắt là metadata, không phải pixel."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — vẫn cục bộ",
+            "description": "Hoạt động cắt chạy qua pdf-lib trong trình duyệt. Sơ đồ tầng, hình ảnh y tế và tài liệu mật không bao giờ được tải lên máy chủ."
+          }
+        },
         "pages": "trang",
         "margins": "Lề cắt (điểm)",
         "marginsHint": "Nhập lượng cần cắt từ mỗi cạnh (1 điểm ≈ 0,35mm)",
@@ -660,10 +990,43 @@
       "esign": {
         "name": "Ký điện tử PDF",
         "description": "Vẽ chữ ký và đặt lên bất kỳ trang nào của tài liệu PDF.",
-        "metaTitle": "Ký điện tử PDF - Công cụ chữ ký PDF trực tuyến miễn phí",
-        "metaDescription": "Thêm chữ ký điện tử vào tài liệu PDF. Vẽ chữ ký và đặt lên bất kỳ trang nào. Công cụ trực tuyến miễn phí.",
+        "metaTitle": "Ký PDF Trực tuyến - Vẽ chữ ký, đặt ở bất kỳ đâu",
+        "metaDescription": "Vẽ chữ ký điện tử của bạn bằng chuột hoặc cảm ứng và đặt nó trên bất kỳ trang PDF nào. Chiều rộng chữ ký có thể điều chỉnh, lớp phủ không mất dữ liệu, tức thì. Miễn phí.",
         "aiSummary": "Thêm chữ ký điện tử vào tài liệu PDF. Vẽ chữ ký và đặt lên bất kỳ trang nào. Công cụ trực tuyến miễn phí.",
         "keywords": "ký điện tử pdf, ký pdf trực tuyến, chữ ký điện tử pdf, công cụ chữ ký pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "Vẽ bằng chuột hoặc cảm ứng",
+            "description": "Ký bằng chuột trên máy tính để bàn hoặc bằng ngón tay/bút stylus trên máy tính bảng và điện thoại. Bảng ký nắm bắt nét vẽ mượt mà cho chữ ký viết tay tự nhiên."
+          },
+          "f2": {
+            "icon": "Eye",
+            "title": "Đặt trên bất kỳ trang PDF nào",
+            "description": "Chọn trang đích từ danh sách hình thu nhỏ và thả chữ ký nơi nó thuộc về. Hoạt động cho hợp đồng trang cuối, biểu mẫu nhiều trang hoặc chữ ký tắt."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Chiều rộng chữ ký có thể điều chỉnh",
+            "description": "Mở rộng chữ ký lớn hơn cho hợp đồng quan trọng hoặc hẹp hơn cho các trường biểu mẫu nhỏ gọn. Điều chỉnh chiều rộng giữ tỷ lệ khung hình gốc."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Lớp phủ không mất dữ liệu",
+            "description": "Chữ ký của bạn được thêm dưới dạng lớp phủ vector vào PDF gốc. Văn bản và hình ảnh tài liệu bên dưới vẫn hoàn hảo từng pixel."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Tức thì — không cần tài khoản",
+            "description": "Ký và tải xuống trong vòng chưa đầy một phút. Không đăng ký, không xác minh email, không tài khoản DocuSign."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — chữ ký vẫn cục bộ",
+            "description": "Chữ ký được ghi lại, kết xuất và nhúng hoàn toàn trong trình duyệt. Hợp đồng, NDA và biểu mẫu HR với chữ ký của bạn không bao giờ được tải lên bất kỳ đâu."
+          }
+        },
         "drawSignature": "Vẽ chữ ký của bạn",
         "clearSignature": "Xóa",
         "page": "Trang",
@@ -703,9 +1066,42 @@
         "name": "Trích xuất hình ảnh từ PDF",
         "description": "Trích xuất tất cả hình ảnh nhúng từ tệp PDF và tải xuống.",
         "metaTitle": "Trích xuất hình ảnh từ PDF - Trình trích xuất hình ảnh PDF trực tuyến miễn phí",
-        "metaDescription": "Trích xuất tất cả hình ảnh từ tài liệu PDF. Tải xuống riêng lẻ hoặc dưới dạng tệp ZIP. Công cụ trực tuyến miễn phí.",
+        "metaDescription": "Trích xuất mọi hình ảnh nhúng từ PDF ở định dạng và chất lượng gốc. Xem trước mỗi hình ảnh, tải xuống ZIP một cú nhấp, nhanh trên các tệp giàu hình ảnh. Miễn phí.",
         "aiSummary": "Trích xuất tất cả hình ảnh từ tài liệu PDF. Tải xuống riêng lẻ hoặc dưới dạng tệp ZIP. Công cụ trực tuyến miễn phí.",
         "keywords": "trích xuất ảnh pdf, trình trích xuất ảnh pdf, lấy ảnh từ pdf, pdf sang ảnh",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Kéo tất cả hình ảnh nhúng",
+            "description": "Trích xuất mọi luồng hình ảnh trong PDF, bao gồm ảnh, hình minh họa được quét, biểu đồ và biểu tượng nội tuyến. Không có gì bị bỏ sót — nội dung trực quan đầy đủ."
+          },
+          "f2": {
+            "icon": "Star",
+            "title": "Định dạng và chất lượng gốc",
+            "description": "Mỗi hình ảnh được lưu trong mã hóa gốc (JPEG, PNG, v.v.) ở độ phân giải nhúng trong PDF. Không mã hóa lại, không mất chất lượng."
+          },
+          "f3": {
+            "icon": "MonitorDown",
+            "title": "Tải xuống ZIP một cú nhấp",
+            "description": "Tất cả hình ảnh được trích xuất được đóng gói trong một ZIP duy nhất. Tên tệp bao gồm số trang và chỉ mục hình ảnh để định vị từng cái trong PDF nguồn."
+          },
+          "f4": {
+            "icon": "Hash",
+            "title": "Gắn thẻ theo trang",
+            "description": "Mỗi hình ảnh được trích xuất được gắn thẻ trang nguồn gốc. Hữu ích cho các bài báo kỹ thuật và báo cáo nơi truy xuất hình-trang quan trọng."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Trích xuất truyền tải nhanh",
+            "description": "Báo cáo 100 trang với hàng trăm hình minh họa trích xuất trong vài giây qua truyền tải pdfjs-dist. Không có chờ đợi lâu cho danh mục đầu tư trực quan."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — chỉ trình duyệt",
+            "description": "Trích xuất hình ảnh xảy ra hoàn toàn trong trình duyệt. Mô hình thiết kế bảo mật, ảnh chụp màn hình nội bộ và sơ đồ độc quyền không bao giờ rời thiết bị."
+          }
+        },
         "extract": "Trích xuất hình ảnh",
         "extracting": "Đang trích xuất",
         "page": "Trang",

@@ -118,6 +118,39 @@
         "metaDescription": "Dividi PDF ogni pagina, ogni N pagine, pari/dispari, metà, intervalli personalizzati, per dimensione file o per segnalibri. Anteprima a colori. Download ZIP. 100% browser.",
         "aiSummary": "PrivaDeck Dividi PDF — sette modalità: ogni pagina, ogni N pagine, pari/dispari, metà, intervalli personalizzati, per dimensione file, per segnalibri (sommario). Anteprima miniature con codice colore mostra a quale file di output appartiene ogni pagina. Download in pacchetto ZIP. Tutto avviene nel browser tramite pdf-lib e pdfjs-dist (WebAssembly); nessun upload, registrazione o installazione. Parte del kit privacy-first PrivaDeck — https://privadeck.app",
         "keywords": "dividi PDF, divisore PDF, estrai pagine PDF, dividi PDF per dimensione, dividi PDF per segnalibri, dividi PDF pari dispari",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "7 modalità di divisione specializzate",
+            "description": "Dividi per pagina, ogni N pagine, pari/dispari, a metà, per intervalli personalizzati, per dimensione file o per segnalibri PDF. Scegli la modalità adatta — niente concatenazione di strumenti."
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "Divisione per segnalibri/sommario",
+            "description": "Rileva automaticamente i segnalibri di capitolo e divide in un PDF per sezione. Ogni file eredita il nome del segnalibro — perfetto per scomporre manuali, report e atti."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Divisione per limite di dimensione",
+            "description": "Limita ogni PDF di output a 5 MB, 10 MB o qualsiasi dimensione personalizzata. Lo strumento impacchetta il massimo di pagine per file — ideale per allegati e caricamenti."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Selezione visiva di intervalli",
+            "description": "Clicca due miniature per marcare un intervallo, ripeti per aggiungerne altri. I colori in tempo reale mostrano quali pagine vanno in ciascun PDF prima di confermare."
+          },
+          "f5": {
+            "icon": "Hash",
+            "title": "Download ZIP in batch",
+            "description": "Tutti i PDF divisi in un singolo ZIP per il download con un clic. I nomi dei file conservano numeri di pagina o titoli dei segnalibri — ogni pezzo immediatamente identificabile."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — nessun caricamento",
+            "description": "I PDF sono analizzati e divisi interamente nel tuo browser con pdf-lib e pdfjs-dist. Report riservati, contratti e dati personali non lasciano mai il dispositivo."
+          }
+        },
         "pages": "pagine",
         "splitEach": "Dividi ogni pagina",
         "splitRange": "Dividi per intervallo",
@@ -212,10 +245,43 @@
       "delete-pages": {
         "name": "Elimina pagine PDF",
         "description": "Rimuovere pagine specifiche da un documento PDF.",
-        "metaTitle": "Elimina pagine PDF - Strumento gratuito online",
-        "metaDescription": "Rimuovere pagine indesiderate dai tuoi file PDF. Strumento gratuito con anteprima visiva. Funziona interamente nel tuo browser.",
+        "metaTitle": "Eliminare pagine PDF - Selezione visiva e rimozione in massa",
+        "metaDescription": "Elimina pagine da PDF con selezione visiva di miniature o sintassi di intervallo. Anteprima dal vivo, mantiene segnalibri, istantaneo. Gratis, nel browser, senza caricamenti.",
         "aiSummary": "Rimuovere pagine indesiderate dai tuoi file PDF. Strumento gratuito con anteprima visiva. Funziona interamente nel tuo browser.",
         "keywords": "elimina pagine PDF, rimuovi pagine PDF, eliminatore pagine PDF",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "Selezione visiva tramite miniature",
+            "description": "Ogni pagina renderizzata come miniatura da cliccare per contrassegnarla per l'eliminazione. Una sovrapposizione rossa conferma a colpo d'occhio — niente più tentativi di indovinare i numeri."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Sintassi di intervallo per eliminazione massiva",
+            "description": "Digita intervalli come «3-7, 12, 20-25» per eliminare decine di pagine in una volta. Combina con il clic di alternanza per la regolazione fine — il modo più veloce."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Anteprima dal vivo del risultato",
+            "description": "Vedi esattamente quali pagine restano prima di confermare. Il numero di pagine di output si aggiorna in tempo reale — conosci la lunghezza finale prima del download."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Mantiene segnalibri e metadati",
+            "description": "I segnalibri del sommario vengono rimappati alle pagine conservate, e titolo/autore/parole chiave si trasferiscono intatti. Il risultato sembra il documento originale, solo più corto."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Istantaneo — nessun ri-rendering",
+            "description": "Le pagine vengono rimosse per riferimento, non rigenerate. Un PDF di 500 pagine viene elaborato in meno di un secondo — solo i riferimenti vengono aggiornati."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — nessun caricamento",
+            "description": "I PDF vengono analizzati e le pagine rimosse interamente nel tuo browser con pdf-lib. Documenti con identificativi personali, dati finanziari o NDA non lasciano mai il dispositivo."
+          }
+        },
         "selectPages": "Clicca sulle pagine per selezionarle per l'eliminazione",
         "delete": "Elimina selezionate",
         "deleting": "Eliminazione in corso...",
@@ -251,8 +317,8 @@
       "to-image": {
         "name": "PDF a immagine",
         "description": "Convertire pagine PDF in immagini JPG o PNG.",
-        "metaTitle": "PDF a immagine - Converti PDF in JPG/PNG online",
-        "metaDescription": "Convertire pagine PDF in immagini JPG o PNG di alta qualità. Strumento gratuito online con DPI e qualità regolabili.",
+        "metaTitle": "PDF in immagine - JPG/PNG con DPI regolabile online",
+        "metaDescription": "Converti pagine PDF in immagini JPG o PNG con scaling di risoluzione 1× a 4×. Output per pagina, download ZIP, nessuna perdita di qualità. Gratis, nel browser, senza caricamenti.",
         "aiSummary": "Convertire pagine PDF in immagini JPG o PNG di alta qualità. Strumento gratuito online con DPI e qualità regolabili.",
         "keywords": "PDF a immagine, PDF a JPG, PDF a PNG, convertire PDF in immagine",
         "featureCards": {
@@ -325,10 +391,43 @@
       "images-to-pdf": {
         "name": "Immagini a PDF",
         "description": "Convertire più immagini in un unico documento PDF.",
-        "metaTitle": "Immagini a PDF - Converti immagini in PDF gratis online",
-        "metaDescription": "Convertire immagini JPG, PNG e altre in un unico documento PDF. Riordinare le pagine. Strumento gratuito online.",
+        "metaTitle": "Immagini in PDF - JPG/PNG/HEIC/WebP/AVIF in uno",
+        "metaDescription": "Combina immagini JPG, PNG, HEIC, WebP, AVIF in un PDF. Dimensioni di pagina personalizzate, trascina per riordinare, ottimizzazione automatica della qualità. Gratis, nel browser.",
         "aiSummary": "Convertire immagini JPG, PNG e altre in un unico documento PDF. Riordinare le pagine. Strumento gratuito online.",
         "keywords": "immagini a PDF, JPG a PDF, PNG a PDF, convertire immagini in PDF, foto a PDF",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Formati immagine misti",
+            "description": "Rilascia file JPG, PNG, HEIC, WebP, AVIF e GIF in qualsiasi combinazione. Le foto HEIC dell'iPhone vengono decodificate localmente — niente passo di conversione separato."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Dimensioni di pagina personalizzate",
+            "description": "Output come A4, US Letter, A3, quadrato o dimensioni personalizzate. Imposta orientamento per immagine con margini adatti ai tuoi requisiti di stampa o condivisione."
+          },
+          "f3": {
+            "icon": "GripVertical",
+            "title": "Trascina per riordinare",
+            "description": "Riordina le pagine trascinando le miniature. Costruisci album fotografici, raccolte di scansioni o portafogli documentali nell'ordine immagine esatto desiderato."
+          },
+          "f4": {
+            "icon": "Gauge",
+            "title": "Ottimizzazione automatica qualità",
+            "description": "Ogni immagine viene codificata alla qualità giusta per bilanciare dimensione e nitidezza. Il PDF combinato resta piccolo senza perdita visibile — niente regolazione manuale."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Composizione istantanea",
+            "description": "Anche 50 foto si combinano in PDF in pochi secondi. La pipeline del browser trasmette le immagini una alla volta — uso di memoria prevedibile su telefoni e laptop."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — resta sul dispositivo",
+            "description": "Decodifica immagini e assemblaggio PDF interamente nel tuo browser. Foto di famiglia, scansioni di identità e documenti di viaggio non vengono mai inviati a un server."
+          }
+        },
         "convert": "Converti in PDF",
         "converting": "Conversione in corso...",
         "resultSize": "Dimensione file",
@@ -362,10 +461,43 @@
       "rotate": {
         "name": "Ruota PDF",
         "description": "Ruotare tutte le pagine di un PDF di 90, 180 o 270 gradi.",
-        "metaTitle": "Ruota PDF - Strumento gratuito online",
-        "metaDescription": "Ruotare pagine PDF in senso orario, antiorario o di 180 gradi. Strumento gratuito online, funziona nel tuo browser.",
+        "metaTitle": "Ruotare PDF - 90/180/270° rotazione senza perdita online",
+        "metaDescription": "Ruota ogni pagina PDF di 90° in senso orario/antiorario o 180°. Rotazione metadati senza perdita, istantanea su documenti lunghi. Gratis, nel browser, senza caricamenti.",
         "aiSummary": "Ruotare pagine PDF in senso orario, antiorario o di 180 gradi. Strumento gratuito online, funziona nel tuo browser.",
         "keywords": "ruota PDF, rotazione pagine PDF, girare PDF, orientamento PDF",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "3 angoli di rotazione",
+            "description": "Ruota di 90° in senso orario, 90° antiorario o 180° (correzione capovolto). Scegli l'angolo che corrisponde al problema di orientamento del PDF sorgente."
+          },
+          "f2": {
+            "icon": "Files",
+            "title": "Rotazione dell'intero documento",
+            "description": "Un clic ruota ogni pagina del PDF dello stesso angolo. Perfetto per scansioni orizzontali arrivate in verticale o PDF da uno scanner orientato male."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Rotazione metadati senza perdita",
+            "description": "Le pagine ruotano tramite i metadati di orientamento PDF, non per ri-rasterizzazione. L'output mantiene qualità testo originale, vettoriale e testo selezionabile esattamente come la sorgente."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Anteprima pagina prima del salvataggio",
+            "description": "Visualizza la prima pagina con la rotazione scelta prima del download. Rileva selezioni di direzione errate in pochi secondi — niente download di prova."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Istantaneo — anche su PDF lunghi",
+            "description": "Un documento di 1000 pagine ruota in meno di un secondo, perché la rotazione è un flag di metadati e non un rendering per pagina."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — resta nel browser",
+            "description": "Tutta la rotazione avviene localmente con pdf-lib. Scansioni riservate, documenti d'identità e contratti non vengono caricati — il file non lascia il dispositivo."
+          }
+        },
         "pages": "pagine",
         "direction": "Direzione",
         "clockwise": "90° orario",
@@ -403,10 +535,43 @@
       "add-page-numbers": {
         "name": "Aggiungi numeri di pagina",
         "description": "Aggiungere numeri di pagina a ogni pagina di un documento PDF.",
-        "metaTitle": "Aggiungi numeri di pagina al PDF - Strumento gratuito online",
-        "metaDescription": "Aggiungere numeri di pagina ai tuoi documenti PDF. Scegliere posizione, formato e dimensione font. Strumento gratuito online.",
+        "metaTitle": "Numeri di pagina PDF - 6 posizioni, inizio personalizzabile",
+        "metaDescription": "Aggiungi numeri di pagina ai PDF in una di 6 posizioni. Numero iniziale personalizzato per saltare copertine, controllo dimensione carattere e formato. Gratis, nel browser.",
         "aiSummary": "Aggiungere numeri di pagina ai tuoi documenti PDF. Scegliere posizione, formato e dimensione font. Strumento gratuito online.",
         "keywords": "aggiungi numeri pagina PDF, numerazione pagine PDF, numerare pagine PDF, piè di pagina PDF",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "6 opzioni di posizione",
+            "description": "Posiziona i numeri in una di 6 ubicazioni: alto/basso combinato con sinistra/centro/destra. Intestazione, piè di pagina o angolo — scegli ciò che non confligge con il tuo contenuto."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Numero iniziale personalizzato",
+            "description": "Inizia la numerazione da qualsiasi valore, non solo 1. Utile per PDF che proseguono un altro documento, o per mantenere copertina e indice non numerati mentre il capitolo 1 inizia da pagina 1."
+          },
+          "f3": {
+            "icon": "Braces",
+            "title": "Formato e dimensione carattere",
+            "description": "Scegli formato dei numeri e dimensione del carattere. I numeri possono fondersi sottilmente o spiccare in grassetto — adatto da report formali a manoscritti stampati."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Salta copertina e materiale preliminare",
+            "description": "Specifica la prima pagina numerata per mantenere puliti copertina, indice e copyright. L'intervallo di numerazione completamente personalizzabile per documento."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Veloce anche su libri di 500 pagine",
+            "description": "I numeri di pagina si renderizzano in un singolo passaggio pdf-lib. Lunghi manoscritti, dispense e report si numerano in pochi secondi."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — elaborazione locale",
+            "description": "I numeri di pagina vengono aggiunti con pdf-lib interamente nel tuo browser. Manoscritti, prove legali e report proprietari non lasciano mai il dispositivo."
+          }
+        },
         "pages": "pagine",
         "position": "Posizione",
         "positions": {
@@ -457,6 +622,39 @@
         "metaDescription": "Estrarre testo dai file PDF istantaneamente. Copiare il contenuto testuale da qualsiasi documento PDF. Strumento gratuito online.",
         "aiSummary": "Estrarre testo dai file PDF istantaneamente. Copiare il contenuto testuale da qualsiasi documento PDF. Strumento gratuito online.",
         "keywords": "estrai testo PDF, PDF a testo, copia testo da PDF, estrattore testo PDF",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Estrazione documento completo",
+            "description": "Ottieni tutto il testo del PDF in un singolo passaggio — niente selezione pagina per pagina. Contenuto testuale completo di report, articoli e libri pronto per modifica o analisi."
+          },
+          "f2": {
+            "icon": "Braces",
+            "title": "Mantiene l'ordine di lettura",
+            "description": "Andate a capo e paragrafi ricostruiti dal layout PDF tramite pdfjs-dist. L'output non è un muro di testo — si legge nell'ordine in cui un umano leggerebbe la pagina."
+          },
+          "f3": {
+            "icon": "GripVertical",
+            "title": "Copia o scarica il testo",
+            "description": "Premi Copia e tutto il testo estratto finisce negli appunti, pronto per Word, Notion, ChatGPT. Oppure scarica come file di testo semplice per archiviare."
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "Output testo cercabile",
+            "description": "Usa Ctrl+F o la ricerca del tuo editor per trovare termini specifici. Utile per verificare rapidamente che l'estrazione abbia catturato la sezione necessaria."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Veloce — anche su documenti lunghi",
+            "description": "Un PDF di 200 pagine si estrae in pochi secondi perché pdfjs trasmette il contenuto testuale direttamente. Niente OCR per PDF creati digitalmente."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — nessun caricamento server",
+            "description": "L'estrazione testuale viene eseguita tramite pdfjs-dist nel tuo browser. Memorie legali, note mediche e corrispondenza personale non vengono mai inviate a un server."
+          }
+        },
         "extract": "Estrai testo",
         "extracting": "Estrazione in corso...",
         "extractedText": "Testo estratto",
@@ -492,9 +690,42 @@
         "name": "Riordina pagine PDF",
         "description": "Trascina e rilascia per riordinare le pagine in un documento PDF.",
         "metaTitle": "Riordina pagine PDF - Strumento gratuito online",
-        "metaDescription": "Riordinare le pagine PDF trascinando e rilasciando. Strumento gratuito online, funziona nel tuo browser.",
+        "metaDescription": "Trascina e rilascia miniature per riordinare le pagine PDF. Pulsanti su/giù per regolazioni fini, output senza perdita, istantaneo. Gratis, nel browser, senza caricamenti.",
         "aiSummary": "Riordinare le pagine PDF trascinando e rilasciando. Strumento gratuito online, funziona nel tuo browser.",
         "keywords": "riordina PDF, riordinare pagine PDF, ordine pagine PDF, ordinare pagine PDF",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "Trascina e rilascia per riordinare",
+            "description": "Afferra qualsiasi miniatura di pagina e rilasciala dove vuoi — istantaneamente. Riordina documenti lunghi in pochi secondi con trascinamento fluido, niente sintassi complessa."
+          },
+          "f2": {
+            "icon": "Eye",
+            "title": "Griglia visiva di miniature",
+            "description": "Ogni pagina renderizzata come miniatura per vedere sempre cosa stai spostando. Individua pagine duplicate, mancanti o mal orientate prima di finalizzare l'ordine."
+          },
+          "f3": {
+            "icon": "ArrowLeftRight",
+            "title": "Pulsanti su/giù",
+            "description": "Pulsanti «Sposta su» / «Sposta giù» per miniatura per spostare le pagine di uno slot alla volta. Utili per la regolazione fine dopo un trascinamento approssimativo."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Funziona su qualsiasi lunghezza",
+            "description": "Riordina un report di 5 pagine o un manuale di 500 con lo stesso flusso. Le miniature si virtualizzano — la pagina rimane reattiva su documenti lunghi."
+          },
+          "f5": {
+            "icon": "Star",
+            "title": "Senza perdita — qualità originale",
+            "description": "Le pagine vengono rimappate per riferimento, non ri-rasterizzate. Il PDF di output mantiene qualità testo originale, vettoriali e font incorporati come la sorgente."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — nessun caricamento",
+            "description": "Tutto il riordinamento avviene tramite pdf-lib nel tuo browser. Bozze sensibili, pacchetti del consiglio e file delle risorse umane non vengono mai inviati a un server."
+          }
+        },
         "dragHint": "Trascina per riordinare le pagine",
         "pages": "pagine",
         "page": "Pagina",
@@ -532,10 +763,43 @@
       "compress": {
         "name": "Comprimi PDF",
         "description": "Ridurre le dimensioni del file PDF ri-renderizzando le pagine a qualità inferiore.",
-        "metaTitle": "Comprimi PDF - Compressore PDF gratuito online",
-        "metaDescription": "Comprimere file PDF per ridurne le dimensioni. Scegliere il livello di qualità. Strumento gratuito online.",
+        "metaTitle": "Comprimere PDF online - 3 preset di qualità, gratis",
+        "metaDescription": "Comprimi PDF con 3 preset di qualità per qualsiasi requisito di dimensione. Confronto prima/dopo istantaneo, elaborazione in un solo passaggio. Gratis, nel browser, senza caricamenti.",
         "aiSummary": "Comprimere file PDF per ridurne le dimensioni. Scegliere il livello di qualità. Strumento gratuito online.",
         "keywords": "comprimi PDF, compressore PDF, riduci dimensione PDF, rimpicciolisci PDF",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "3 preset di qualità",
+            "description": "Scegli Basso (più piccolo, scansioni/foto), Medio (predefinito bilanciato) o Alto (mantiene la nitidezza del testo). Ogni preset rirenderizza con qualità ottimizzata — nessuna regolazione manuale."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Riduzione dimensioni in tempo reale",
+            "description": "Vedi dimensione originale, dimensione compressa e percentuale di risparmio al termine. Riavvia con un altro preset se il risultato non raggiunge l'obiettivo."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Qualità di rendering regolabile",
+            "description": "La compressione rasterizza le pagine al livello scelto. Ogni preset bilancia nitidezza visiva e dimensione — scegli in base all'uso previsto."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Funziona con contenuto misto",
+            "description": "I PDF con testo, scansioni, immagini incorporate e grafica vettoriale si comprimono in un passaggio. Niente separazione o pre-elaborazione — rilascia il file e scegli un preset."
+          },
+          "f5": {
+            "icon": "MonitorDown",
+            "title": "Funziona offline come PWA",
+            "description": "Installa PrivaDeck una volta e usa il compressore senza Internet. Utile sui voli, nelle sale riunione clienti o ovunque la banda sia instabile o sensibile."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — file in locale",
+            "description": "Tutta la compressione usa pdf.js e pdf-lib nel tuo browser. Contratti sensibili, scansioni mediche e PDF finanziari non toccano mai un server."
+          }
+        },
         "quality": "Qualità",
         "high": "Alta",
         "medium": "Media",
@@ -578,9 +842,42 @@
         "name": "Filigrana PDF",
         "description": "Aggiungere una filigrana di testo diagonale a ogni pagina di un PDF.",
         "metaTitle": "Aggiungi filigrana al PDF - Strumento gratuito online",
-        "metaDescription": "Aggiungere filigrane di testo ai documenti PDF. Personalizzare opacità e dimensione font. Strumento gratuito online.",
+        "metaDescription": "Aggiungi filigrane testuali diagonali personalizzate a ogni pagina PDF. Opacità e dimensione carattere regolabili, applicazione in un passaggio, senza perdita su contenuto non filigranato. Gratis.",
         "aiSummary": "Aggiungere filigrane di testo ai documenti PDF. Personalizzare opacità e dimensione font. Strumento gratuito online.",
         "keywords": "filigrana PDF, aggiungi filigrana PDF, timbra PDF, sovrapposizione testo PDF",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Testo filigrana personalizzato",
+            "description": "Digita qualsiasi frase: «RISERVATO», «BOZZA», nome cliente o la tua filigrana. Frasi multiple parole supportate con dimensioni predefinite sensate."
+          },
+          "f2": {
+            "icon": "GripVertical",
+            "title": "Posizionamento diagonale",
+            "description": "La filigrana appare in diagonale su ogni pagina per la massima visibilità senza oscurare il testo sottostante. Lo stile classico di documenti legali/bozza."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Opacità e dimensione",
+            "description": "Regola opacità — dal grigio discreto al timbro colorato deciso; adatta la dimensione del carattere alle dimensioni della pagina. Fai corrispondere l'intensità allo scopo."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Timbro su ogni pagina",
+            "description": "Filigrana applicata uniformemente a tutte le pagine — niente configurazione per pagina. PDF multipli con la stessa impostazione per branding in batch coerente."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Veloce anche su PDF lunghi",
+            "description": "Il testo della filigrana viene aggiunto tramite pdf-lib come singolo livello sovrapposto per pagina. Centinaia di pagine ricevono filigrana in pochi secondi."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — solo nel browser",
+            "description": "La filigranatura viene eseguita localmente con pdf-lib. Prototipi sensibili, NDA e documenti pre-pubblicazione non vengono mai caricati — la filigrana lo dimostra."
+          }
+        },
         "watermarkText": "Testo filigrana",
         "textPlaceholder": "Inserisci testo filigrana...",
         "opacity": "Opacità",
@@ -617,10 +914,43 @@
       "crop": {
         "name": "Ritaglia PDF",
         "description": "Ritagliare pagine PDF impostando i margini da rimuovere da ogni lato.",
-        "metaTitle": "Ritaglia PDF - Strumento gratuito online",
-        "metaDescription": "Ritagliare pagine PDF rimuovendo i margini da ogni lato. Strumento gratuito online, funziona nel tuo browser.",
+        "metaTitle": "Ritagliare PDF - Margini 4 lati, output vettoriale senza perdita",
+        "metaDescription": "Ritaglia pagine PDF impostando margini superiore, destro, inferiore, sinistro indipendentemente. Input precisione punto, applica a tutte le pagine, output vettoriale senza perdita. Gratis.",
         "aiSummary": "Ritagliare pagine PDF rimuovendo i margini da ogni lato. Strumento gratuito online, funziona nel tuo browser.",
         "keywords": "ritaglia PDF, taglia PDF, margini PDF, strumento ritaglio PDF",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Hash",
+            "title": "Margini indipendenti 4 lati",
+            "description": "Imposta margini superiore, destro, inferiore e sinistro in modo indipendente. Taglia bordi bianchi delle scansioni, rimuovi intestazioni/piè di pagina o focalizzati su una colonna specifica."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Input precisione punto",
+            "description": "Specifica i margini in punti PDF (1 punto ≈ 0,35 mm), la stessa unità usata dai designer di stampa. Raggiungi dimensioni di taglio esatte per opuscoli, riviste e layout di stampa standard."
+          },
+          "f3": {
+            "icon": "Files",
+            "title": "Stesso ritaglio su tutte le pagine",
+            "description": "Una sola impostazione di ritaglio si applica uniformemente all'intero documento. Utile per ritagliare in batch scansioni dove ogni pagina ha lo stesso problema di margine."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Mantiene il contenuto vettoriale",
+            "description": "Il ritaglio usa i box di confine pagina PDF — nessuna ri-rasterizzazione. Il testo rimane selezionabile, la grafica vettoriale resta nitida, la dimensione del file cambia appena."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Istantaneo — anche su 1000 pagine",
+            "description": "Un documento di 1000 pagine si ritaglia in meno di un secondo perché i box di taglio sono metadati, non pixel. Nessuna barra di avanzamento lunga."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — resta in locale",
+            "description": "Le operazioni di ritaglio vengono eseguite tramite pdf-lib nel tuo browser. Planimetrie, immagini mediche e documenti riservati non vengono mai caricati."
+          }
+        },
         "pages": "pagine",
         "margins": "Margini di ritaglio (punti)",
         "marginsHint": "Inserisci la quantità da ritagliare da ogni lato (1 punto ≈ 0,35 mm)",
@@ -660,10 +990,43 @@
       "esign": {
         "name": "Firma elettronica PDF",
         "description": "Disegnare una firma e posizionarla su qualsiasi pagina di un documento PDF.",
-        "metaTitle": "Firma elettronica PDF - Strumento gratuito online",
-        "metaDescription": "Aggiungere la tua firma elettronica ai documenti PDF. Disegnare la firma e posizionarla su qualsiasi pagina. Strumento gratuito online.",
+        "metaTitle": "Firmare PDF online - Disegna firma, posiziona ovunque",
+        "metaDescription": "Disegna la tua e-firma con mouse o touch e posizionala su qualsiasi pagina PDF. Larghezza firma regolabile, sovrapposizione senza perdita, istantaneo. Gratis, nel browser, senza caricamenti.",
         "aiSummary": "Aggiungere la tua firma elettronica ai documenti PDF. Disegnare la firma e posizionarla su qualsiasi pagina. Strumento gratuito online.",
         "keywords": "firma PDF, firma elettronica PDF, firma digitale PDF, strumento firma PDF",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "Disegnare con mouse o touch",
+            "description": "Firma con il mouse su desktop o con dito/stilo su tablet e telefoni. Il pad firma cattura tratti fluidi per una firma scritta a mano dall'aspetto naturale."
+          },
+          "f2": {
+            "icon": "Eye",
+            "title": "Posizionare su qualsiasi pagina",
+            "description": "Scegli la pagina target da una lista di miniature e rilascia la firma dove va posizionata. Funziona per contratti dell'ultima pagina, moduli multipagina o sigle ovunque servano."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Larghezza firma regolabile",
+            "description": "Scala la firma più larga per contratti importanti o più stretta per campi modulo compatti. La regolazione larghezza mantiene le proporzioni originali."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Sovrapposizione senza perdita",
+            "description": "La tua firma viene aggiunta come sovrapposizione vettoriale al PDF originale. Testo e immagini sottostanti rimangono perfetti al pixel."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Istantaneo — nessun account",
+            "description": "Firma e scarica in meno di un minuto. Niente registrazione, niente verifica email, nessun account DocuSign — basta disegnare, posizionare e salvare localmente."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — firma resta locale",
+            "description": "La firma viene catturata, renderizzata e incorporata interamente nel tuo browser. Contratti, NDA e moduli HR con la tua firma non vengono mai caricati da nessuna parte."
+          }
+        },
         "drawSignature": "Disegna la tua firma",
         "clearSignature": "Cancella",
         "page": "Pagina",
@@ -703,9 +1066,42 @@
         "name": "Estrai immagini da PDF",
         "description": "Estrarre tutte le immagini incorporate da un file PDF e scaricarle.",
         "metaTitle": "Estrai immagini da PDF - Estrattore gratuito online",
-        "metaDescription": "Estrarre tutte le immagini dai documenti PDF. Scaricare singolarmente o come file ZIP. Strumento gratuito online.",
+        "metaDescription": "Estrai ogni immagine incorporata da un PDF nel formato e qualità originali. Anteprima per immagine, download ZIP con un clic, veloce su file ricchi di immagini. Gratis, nel browser.",
         "aiSummary": "Estrarre tutte le immagini dai documenti PDF. Scaricare singolarmente o come file ZIP. Strumento gratuito online.",
         "keywords": "estrai immagini PDF, estrattore immagini PDF, ottieni immagini da PDF, PDF a immagini",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Estrae tutte le immagini incorporate",
+            "description": "Estrae ogni flusso immagine nel PDF, comprese foto, figure scansionate, grafici e icone in linea. Niente viene perso — contenuto visivo completo del documento."
+          },
+          "f2": {
+            "icon": "Star",
+            "title": "Formato e qualità originali",
+            "description": "Ogni immagine viene salvata nella codifica originale (JPEG, PNG ecc.) alla risoluzione incorporata nel PDF. Niente ricodifica, nessuna perdita di qualità rispetto alla sorgente."
+          },
+          "f3": {
+            "icon": "MonitorDown",
+            "title": "Download ZIP con un clic",
+            "description": "Tutte le immagini estratte impacchettate in un singolo ZIP. I nomi includono numero di pagina e indice immagine per individuare ciascuna nel PDF sorgente."
+          },
+          "f4": {
+            "icon": "Hash",
+            "title": "Etichettatura per pagina",
+            "description": "Ogni immagine estratta etichettata con la pagina di origine. Utile per articoli tecnici e report dove la tracciabilità figura-pagina conta per citazioni o revisioni."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Estrazione streaming veloce",
+            "description": "Un report di 100 pagine con centinaia di figure si estrae in pochi secondi tramite streaming pdfjs-dist. Niente attese lunghe per portafogli visivi."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — solo browser",
+            "description": "L'estrazione immagini avviene interamente nel tuo browser. Mockup di design riservati, screenshot interni e diagrammi proprietari non lasciano mai il dispositivo."
+          }
+        },
         "extract": "Estrai immagini",
         "extracting": "Estrazione in corso",
         "page": "Pagina",

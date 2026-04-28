@@ -118,6 +118,39 @@
         "metaDescription": "Pisahkan PDF setiap halaman, setiap N halaman, ganjil/genap, paruhan, rentang kustom, berdasarkan ukuran file atau bookmark. Pratinjau warna. Unduh ZIP. 100% browser.",
         "aiSummary": "PrivaDeck Pisahkan PDF — tujuh mode: setiap halaman, setiap N halaman, ganjil/genap, paruhan, rentang kustom, berdasarkan ukuran file, berdasarkan bookmark (daftar isi). Pratinjau thumbnail berkode warna menunjukkan halaman mana milik file output mana. Unduhan paket ZIP. Semuanya berjalan di browser via pdf-lib dan pdfjs-dist (WebAssembly); tanpa upload, registrasi, atau instalasi. Bagian dari toolkit privacy-first PrivaDeck — https://privadeck.app",
         "keywords": "pisahkan pdf, pemisah pdf, ekstrak halaman pdf, pisahkan pdf berdasarkan ukuran, pisahkan pdf berdasarkan bookmark",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "7 mode pemisahan khusus",
+            "description": "Pisahkan per halaman, setiap N halaman, ganjil/genap, menjadi setengah, berdasarkan rentang khusus, ukuran file, atau bookmark PDF. Pilih mode yang sesuai alur kerja."
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "Pemisahan berdasarkan bookmark/garis besar",
+            "description": "Mendeteksi bookmark bab secara otomatis dan memisahkan menjadi satu PDF per bagian. Setiap file output mewarisi nama bookmark — sempurna untuk buku teks dan laporan."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Pemisahan berdasarkan batas ukuran file",
+            "description": "Batasi setiap PDF output ke 5 MB, 10 MB, atau ukuran khusus. Alat mengemas halaman maksimum per file — ideal untuk lampiran email dan unggahan."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Pemilihan rentang visual",
+            "description": "Klik dua thumbnail untuk menandai rentang, ulangi untuk menambah lebih. Sorotan berkode warna langsung menunjukkan halaman mana ke setiap PDF."
+          },
+          "f5": {
+            "icon": "Hash",
+            "title": "Unduh ZIP batch",
+            "description": "Semua PDF yang dipisah dikemas ke dalam satu ZIP untuk unduhan satu klik. Nama file mempertahankan nomor halaman atau judul bookmark."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% pribadi — tanpa unggahan",
+            "description": "PDF dianalisis dan dipisahkan sepenuhnya di browser Anda melalui pdf-lib dan pdfjs-dist. Laporan rahasia, kontrak, dan catatan pribadi tidak pernah meninggalkan perangkat."
+          }
+        },
         "pages": "halaman",
         "splitEach": "Pisahkan setiap halaman",
         "splitRange": "Pisahkan berdasarkan rentang",
@@ -212,10 +245,43 @@
       "delete-pages": {
         "name": "Hapus Halaman PDF",
         "description": "Hapus halaman tertentu dari dokumen PDF.",
-        "metaTitle": "Hapus Halaman PDF - Hapus Halaman dari PDF Online",
-        "metaDescription": "Hapus halaman yang tidak diinginkan dari file PDF Anda. Alat online gratis dengan pratinjau halaman visual. Bekerja sepenuhnya di browser Anda.",
+        "metaTitle": "Hapus Halaman PDF - Pemilihan visual & penghapusan massal",
+        "metaDescription": "Hapus halaman dari PDF dengan pemilihan thumbnail visual atau sintaks rentang. Pratinjau hasil langsung, mempertahankan bookmark, seketika. Gratis, di browser, tanpa unggahan.",
         "aiSummary": "Hapus halaman yang tidak diinginkan dari file PDF Anda. Alat online gratis dengan pratinjau halaman visual. Bekerja sepenuhnya di browser Anda.",
         "keywords": "hapus halaman pdf, hapus halaman pdf, penghapus halaman pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "Pemilihan thumbnail visual",
+            "description": "Setiap halaman ditampilkan sebagai thumbnail untuk diklik dan ditandai untuk dihapus. Overlay merah mengonfirmasi penghapusan sekilas."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Sintaks rentang untuk penghapusan massal",
+            "description": "Ketik rentang seperti '3-7, 12, 20-25' untuk menghapus puluhan halaman sekaligus. Gabungkan dengan klik-toggle untuk penyesuaian halus."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Pratinjau hasil langsung",
+            "description": "Lihat tepatnya halaman mana yang tersisa sebelum mengonfirmasi. Jumlah halaman output diperbarui real-time — Anda tahu panjang akhir sebelum mengunduh."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Mempertahankan bookmark dan metadata",
+            "description": "Bookmark garis besar dipetakan ulang ke halaman yang disimpan, dan judul/penulis/kata kunci ditransfer utuh. Hasilnya terasa seperti dokumen asli."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Seketika — tanpa rendering ulang",
+            "description": "Halaman dihapus melalui referensi, tidak diregenerasi. PDF 500 halaman diproses dalam kurang dari satu detik — hanya referensi yang diperbarui."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% pribadi — tanpa unggahan",
+            "description": "PDF dianalisis dan halaman dihapus sepenuhnya di browser Anda melalui pdf-lib. Dokumen dengan ID pribadi, data keuangan, atau NDA tidak meninggalkan perangkat."
+          }
+        },
         "selectPages": "Klik halaman untuk memilih yang akan dihapus",
         "delete": "Hapus Terpilih",
         "deleting": "Menghapus...",
@@ -251,8 +317,8 @@
       "to-image": {
         "name": "PDF ke Gambar",
         "description": "Konversi halaman PDF ke gambar JPG atau PNG.",
-        "metaTitle": "PDF ke Gambar - Konversi PDF ke JPG/PNG Online",
-        "metaDescription": "Konversi halaman PDF ke gambar JPG atau PNG berkualitas tinggi. Alat online gratis dengan DPI dan kualitas yang dapat disesuaikan.",
+        "metaTitle": "PDF ke Gambar - JPG/PNG dengan DPI dapat disesuaikan online",
+        "metaDescription": "Konversi halaman PDF menjadi gambar JPG atau PNG dengan skala resolusi 1×–4×. Output per halaman, unduh ZIP, tanpa kehilangan kualitas. Gratis, di browser, tanpa unggahan.",
         "aiSummary": "Konversi halaman PDF ke gambar JPG atau PNG berkualitas tinggi. Alat online gratis dengan DPI dan kualitas yang dapat disesuaikan.",
         "keywords": "pdf ke gambar, pdf ke jpg, pdf ke png, konversi pdf ke gambar",
         "featureCards": {
@@ -325,10 +391,43 @@
       "images-to-pdf": {
         "name": "Gambar ke PDF",
         "description": "Konversi beberapa gambar menjadi satu dokumen PDF.",
-        "metaTitle": "Gambar ke PDF - Konversi Gambar ke PDF Online Gratis",
-        "metaDescription": "Konversi JPG, PNG, dan gambar lainnya menjadi satu dokumen PDF. Urutkan ulang halaman, alat online gratis. Tanpa unggahan.",
+        "metaTitle": "Gambar ke PDF - JPG/PNG/HEIC/WebP/AVIF dalam satu",
+        "metaDescription": "Gabungkan gambar JPG, PNG, HEIC, WebP, AVIF menjadi satu PDF. Ukuran halaman kustom, seret untuk menyusun ulang, optimasi kualitas otomatis. Gratis, di browser.",
         "aiSummary": "Konversi JPG, PNG, dan gambar lainnya menjadi satu dokumen PDF. Urutkan ulang halaman, alat online gratis. Tanpa unggahan.",
         "keywords": "gambar ke pdf, jpg ke pdf, png ke pdf, konversi gambar ke pdf, foto ke pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Format gambar campuran",
+            "description": "Jatuhkan file JPG, PNG, HEIC, WebP, AVIF, dan GIF dalam kombinasi apa pun. Foto HEIC iPhone didekode secara lokal — tidak perlu langkah konversi terpisah."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Ukuran halaman kustom",
+            "description": "Output sebagai A4, US Letter, A3, persegi, atau dimensi kustom apa pun. Atur orientasi per gambar dengan margin sesuai persyaratan cetak atau berbagi."
+          },
+          "f3": {
+            "icon": "GripVertical",
+            "title": "Seret untuk menyusun ulang",
+            "description": "Susun ulang halaman dengan menyeret thumbnail. Bangun album foto, kompilasi pindaian, atau portofolio dokumen dalam urutan gambar yang tepat."
+          },
+          "f4": {
+            "icon": "Gauge",
+            "title": "Optimasi kualitas otomatis",
+            "description": "Setiap gambar dikodekan pada kualitas yang tepat untuk menyeimbangkan ukuran file dan ketajaman. PDF gabungan tetap kecil tanpa kehilangan terlihat."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Komposisi seketika",
+            "description": "Bahkan 50 foto digabungkan menjadi PDF dalam hitungan detik. Pipeline browser mengalirkan gambar satu per satu — penggunaan memori tetap dapat diprediksi."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% pribadi — tetap di perangkat",
+            "description": "Decoding gambar dan perakitan PDF sepenuhnya di browser Anda. Foto keluarga, pindaian identitas, dan dokumen perjalanan tidak pernah dikirim ke server."
+          }
+        },
         "convert": "Konversi ke PDF",
         "converting": "Mengonversi...",
         "resultSize": "Ukuran file",
@@ -362,10 +461,43 @@
       "rotate": {
         "name": "Putar PDF",
         "description": "Putar semua halaman PDF sebesar 90, 180, atau 270 derajat.",
-        "metaTitle": "Putar PDF - Putar Halaman PDF Online Gratis",
-        "metaDescription": "Putar halaman PDF searah jarum jam, berlawanan jarum jam, atau 180 derajat. Alat online gratis, bekerja di browser Anda.",
+        "metaTitle": "Putar PDF - 90/180/270° rotasi tanpa kehilangan online",
+        "metaDescription": "Putar setiap halaman PDF 90° searah/berlawanan jarum jam atau 180°. Rotasi metadata tanpa kehilangan, seketika pada dokumen panjang. Gratis, di browser, tanpa unggahan.",
         "aiSummary": "Putar halaman PDF searah jarum jam, berlawanan jarum jam, atau 180 derajat. Alat online gratis, bekerja di browser Anda.",
         "keywords": "putar pdf, putar halaman pdf, balik pdf, orientasi pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "3 sudut rotasi",
+            "description": "Putar 90° searah jarum jam, 90° berlawanan jarum jam, atau 180° (perbaikan terbalik). Pilih sudut yang sesuai dengan masalah orientasi PDF sumber Anda."
+          },
+          "f2": {
+            "icon": "Files",
+            "title": "Rotasi seluruh dokumen",
+            "description": "Satu klik memutar setiap halaman dalam PDF dengan sudut yang sama. Sempurna untuk pindaian lanskap yang datang potret, atau PDF dari pemindai berorientasi salah."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Rotasi metadata tanpa kehilangan",
+            "description": "Halaman berputar melalui metadata orientasi PDF, bukan dengan me-rasterize ulang konten. Output mempertahankan kualitas teks asli, vektor, dan teks yang dapat dipilih."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Pratinjau halaman sebelum simpan",
+            "description": "Lihat halaman pertama dengan rotasi yang dipilih sebelum mengunduh. Deteksi pilihan arah yang salah dalam hitungan detik — tanpa unduhan uji coba."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Seketika — bahkan pada PDF panjang",
+            "description": "Dokumen 1000 halaman berputar dalam kurang dari satu detik, karena rotasi adalah bendera metadata, bukan rendering per halaman."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% pribadi — tetap di browser",
+            "description": "Semua rotasi terjadi secara lokal dengan pdf-lib. Pindaian rahasia, dokumen identitas, dan kontrak tidak diunggah — file tidak meninggalkan perangkat."
+          }
+        },
         "pages": "halaman",
         "direction": "Arah",
         "clockwise": "90° Searah Jarum Jam",
@@ -403,10 +535,43 @@
       "add-page-numbers": {
         "name": "Tambah Nomor Halaman",
         "description": "Tambahkan nomor halaman ke setiap halaman dokumen PDF.",
-        "metaTitle": "Tambah Nomor Halaman ke PDF - Alat Online Gratis",
-        "metaDescription": "Tambahkan nomor halaman ke dokumen PDF Anda. Pilih posisi, format, dan ukuran font. Alat online gratis, tanpa unggahan.",
+        "metaTitle": "Tambah Nomor Halaman PDF - 6 posisi, awal kustom",
+        "metaDescription": "Tambahkan nomor halaman ke PDF di salah satu dari 6 posisi. Nomor awal kustom untuk melewati sampul, kontrol ukuran font dan format. Gratis, di browser, tanpa unggahan.",
         "aiSummary": "Tambahkan nomor halaman ke dokumen PDF Anda. Pilih posisi, format, dan ukuran font. Alat online gratis, tanpa unggahan.",
         "keywords": "tambah nomor halaman pdf, penomoran halaman pdf, nomor halaman pdf, footer pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "6 opsi posisi",
+            "description": "Tempatkan nomor di salah satu dari 6 lokasi: atas/bawah dengan kiri/tengah/kanan. Header, footer, atau sudut — pilih yang tidak bertentangan dengan konten Anda."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Nomor awal kustom",
+            "description": "Mulai penomoran dari nilai apa pun, bukan hanya 1. Berguna untuk PDF yang melanjutkan dokumen lain, atau untuk menjaga sampul dan TOC tidak bernomor."
+          },
+          "f3": {
+            "icon": "Braces",
+            "title": "Kontrol format dan ukuran font",
+            "description": "Pilih format angka dan ukuran font. Nomor dapat menyatu halus atau menonjol tebal — sesuai dari laporan formal hingga manuskrip cetak."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Lewati sampul dan halaman depan",
+            "description": "Tentukan halaman bernomor pertama agar sampul, daftar isi, dan hak cipta tetap bersih. Rentang penomoran sepenuhnya dapat disesuaikan per dokumen."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Cepat bahkan pada buku 500 halaman",
+            "description": "Nomor halaman dirender dalam satu pass pdf-lib. Manuskrip panjang, catatan kuliah, dan laporan diberi nomor dalam hitungan detik."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% pribadi — pemrosesan lokal",
+            "description": "Nomor halaman ditambahkan dengan pdf-lib sepenuhnya di browser Anda. Manuskrip, dokumen hukum, dan laporan kepemilikan tidak pernah meninggalkan perangkat."
+          }
+        },
         "pages": "halaman",
         "position": "Posisi",
         "positions": {
@@ -457,6 +622,39 @@
         "metaDescription": "Ekstrak teks dari file PDF secara instan. Salin konten teks dari dokumen PDF apa pun. Alat online gratis, bekerja di browser Anda.",
         "aiSummary": "Ekstrak teks dari file PDF secara instan. Salin konten teks dari dokumen PDF apa pun. Alat online gratis, bekerja di browser Anda.",
         "keywords": "ekstrak teks pdf, pdf ke teks, salin teks dari pdf, pengekstrak teks pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Ekstraksi dokumen lengkap",
+            "description": "Dapatkan semua teks PDF dalam sekali jalan — tanpa pemilihan halaman demi halaman. Konten tekstual lengkap dari laporan, makalah, dan buku siap untuk diedit atau dianalisis."
+          },
+          "f2": {
+            "icon": "Braces",
+            "title": "Mempertahankan urutan baca",
+            "description": "Pemutus baris dan paragraf direkonstruksi dari tata letak PDF melalui pdfjs-dist. Output bukan tembok teks — terbaca dalam urutan manusia membaca halaman."
+          },
+          "f3": {
+            "icon": "GripVertical",
+            "title": "Salin atau unduh teks",
+            "description": "Tekan Salin dan semua teks yang diekstrak masuk ke clipboard, siap untuk Word, Notion, ChatGPT. Atau unduh sebagai file teks biasa untuk diarsipkan."
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "Output teks yang dapat dicari",
+            "description": "Gunakan Ctrl+F atau pencarian editor Anda untuk menemukan istilah tertentu. Berguna untuk verifikasi cepat bahwa ekstraksi menangkap bagian yang Anda butuhkan."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Cepat — bahkan pada dokumen panjang",
+            "description": "PDF 200 halaman diekstrak dalam hitungan detik karena pdfjs mengalirkan konten teks secara langsung. Tidak perlu OCR untuk PDF buatan digital."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% pribadi — tanpa unggahan server",
+            "description": "Ekstraksi teks berjalan melalui pdfjs-dist di browser Anda. Memo hukum, catatan medis, dan korespondensi pribadi tidak pernah dikirim ke server."
+          }
+        },
         "extract": "Ekstrak Teks",
         "extracting": "Mengekstrak...",
         "extractedText": "Teks Terekstrak",
@@ -492,9 +690,42 @@
         "name": "Susun Ulang Halaman PDF",
         "description": "Seret dan lepas untuk mengurutkan ulang halaman dalam dokumen PDF.",
         "metaTitle": "Susun Ulang Halaman PDF - Alat Pengurutan Halaman PDF Online Gratis",
-        "metaDescription": "Urutkan ulang halaman PDF dengan menyeret dan melepas. Alat online gratis, bekerja di browser Anda.",
+        "metaDescription": "Seret dan jatuhkan thumbnail untuk menyusun ulang halaman PDF. Tombol naik/turun untuk penyesuaian halus, output tanpa kehilangan, seketika. Gratis, di browser.",
         "aiSummary": "Urutkan ulang halaman PDF dengan menyeret dan melepas. Alat online gratis, bekerja di browser Anda.",
         "keywords": "susun ulang pdf, urutkan ulang halaman pdf, urutan halaman pdf, sortir halaman pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "Seret dan jatuhkan untuk menyusun ulang",
+            "description": "Ambil thumbnail halaman mana pun dan jatuhkan di mana Anda inginkan — seketika. Susun ulang dokumen panjang dalam hitungan detik dengan seret-jatuhkan halus."
+          },
+          "f2": {
+            "icon": "Eye",
+            "title": "Kisi thumbnail visual",
+            "description": "Setiap halaman dirender sebagai thumbnail sehingga Anda selalu melihat apa yang Anda pindahkan. Temukan halaman duplikat, hilang, atau orientasi salah sebelum menyelesaikan."
+          },
+          "f3": {
+            "icon": "ArrowLeftRight",
+            "title": "Tombol naik/turun",
+            "description": "Tombol 'Naik' / 'Turun' per thumbnail memindahkan halaman satu slot per klik. Berguna untuk penyesuaian halus setelah seret kasar."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Bekerja pada panjang PDF apa pun",
+            "description": "Susun ulang laporan 5 halaman atau manual 500 halaman dengan alur kerja yang sama. Thumbnail tervirtualisasi — halaman tetap responsif."
+          },
+          "f5": {
+            "icon": "Star",
+            "title": "Tanpa kehilangan — kualitas asli",
+            "description": "Halaman dipetakan ulang melalui referensi, tidak di-rasterize ulang. PDF output mempertahankan kualitas teks asli, vektor, dan font tertanam seperti sumber."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% pribadi — tanpa unggahan",
+            "description": "Semua penyusunan ulang terjadi melalui pdf-lib di browser Anda. Draf merger sensitif, paket dewan direksi, dan file HR tidak dikirim ke server."
+          }
+        },
         "dragHint": "Seret untuk mengurutkan ulang halaman",
         "pages": "halaman",
         "page": "Halaman",
@@ -532,10 +763,43 @@
       "compress": {
         "name": "Kompres PDF",
         "description": "Kurangi ukuran file PDF dengan merender ulang halaman pada kualitas lebih rendah.",
-        "metaTitle": "Kompres PDF - Kompresor PDF Online Gratis",
-        "metaDescription": "Kompres file PDF untuk mengurangi ukuran. Pilih tingkat kualitas. Alat online gratis, tanpa unggahan.",
+        "metaTitle": "Kompres PDF Online - 3 preset kualitas, gratis",
+        "metaDescription": "Kompres PDF dengan 3 preset kualitas untuk persyaratan ukuran apa pun. Perbandingan sebelum/sesudah seketika, pemrosesan satu-pass. Gratis, di browser, tanpa unggahan.",
         "aiSummary": "Kompres file PDF untuk mengurangi ukuran. Pilih tingkat kualitas. Alat online gratis, tanpa unggahan.",
         "keywords": "kompres pdf, kompresor pdf, kurangi ukuran pdf, perkecil pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "3 preset kualitas",
+            "description": "Pilih Rendah (terkecil, untuk pindaian/foto), Sedang (default seimbang), atau Tinggi (mempertahankan ketajaman teks). Setiap preset me-render halaman dengan kualitas optimal."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Pengurangan ukuran real-time",
+            "description": "Lihat ukuran asli, ukuran terkompres, dan persentase penghematan segera setelah selesai. Jalankan ulang dengan preset lain jika hasilnya tidak mencapai target."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Kualitas rendering yang dapat disesuaikan",
+            "description": "Kompresi me-rasterize halaman pada level yang dipilih. Setiap preset menyeimbangkan ketajaman visual dan ukuran file — pilih sesuai penggunaan."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Bekerja dengan konten campuran",
+            "description": "PDF dengan teks, pindaian, gambar tertanam, dan grafik vektor mengompres dalam satu pass. Tidak perlu pemisahan atau pra-pemrosesan."
+          },
+          "f5": {
+            "icon": "MonitorDown",
+            "title": "Bekerja offline sebagai PWA",
+            "description": "Instal PrivaDeck sekali dan gunakan kompresor tanpa internet. Berguna di penerbangan, ruang rapat klien, atau di mana bandwidth tidak stabil."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% pribadi — file tetap lokal",
+            "description": "Semua kompresi menggunakan rendering pdf.js dan pdf-lib di browser Anda. Kontrak sensitif, pindaian medis, dan PDF keuangan tidak pernah menyentuh server."
+          }
+        },
         "quality": "Kualitas",
         "high": "Tinggi",
         "medium": "Sedang",
@@ -578,9 +842,42 @@
         "name": "Watermark PDF",
         "description": "Tambahkan watermark teks diagonal ke setiap halaman PDF.",
         "metaTitle": "Tambah Watermark ke PDF - Alat Watermark PDF Online Gratis",
-        "metaDescription": "Tambahkan watermark teks ke dokumen PDF. Sesuaikan opasitas dan ukuran font. Alat online gratis.",
+        "metaDescription": "Tambahkan watermark teks diagonal kustom ke setiap halaman PDF. Opasitas dan ukuran font yang dapat disesuaikan, aplikasi satu-pass, tanpa kehilangan pada konten yang tidak diberi tanda air.",
         "aiSummary": "Tambahkan watermark teks ke dokumen PDF. Sesuaikan opasitas dan ukuran font. Alat online gratis.",
         "keywords": "watermark pdf, tambah watermark pdf, stempel pdf, overlay teks pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Teks watermark kustom",
+            "description": "Ketik frasa apa pun: 'RAHASIA', 'DRAFT', nama klien, atau watermark pilihan Anda. Frasa multi-kata didukung dengan ukuran default yang masuk akal."
+          },
+          "f2": {
+            "icon": "GripVertical",
+            "title": "Penempatan diagonal",
+            "description": "Watermark muncul secara diagonal di setiap halaman untuk visibilitas maksimum tanpa mengaburkan teks di bawahnya. Gaya klasik dokumen hukum/draft."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Opasitas dan ukuran",
+            "description": "Sesuaikan opasitas — dari abu-abu halus hingga stempel berwarna tebal; sesuaikan ukuran font dengan dimensi halaman."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Cap di setiap halaman",
+            "description": "Watermark diterapkan secara seragam ke semua halaman — tidak perlu konfigurasi per halaman. Beberapa PDF dengan pengaturan yang sama untuk branding batch konsisten."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Cepat bahkan pada PDF panjang",
+            "description": "Teks watermark ditambahkan melalui pdf-lib sebagai lapisan overlay tunggal per halaman. Ratusan halaman mendapatkan watermark dalam hitungan detik."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% pribadi — hanya di browser",
+            "description": "Pemberian watermark terjadi secara lokal dengan pdf-lib. Prototipe sensitif, NDA, dan dokumen pra-publikasi tidak pernah diunggah."
+          }
+        },
         "watermarkText": "Teks Watermark",
         "textPlaceholder": "Masukkan teks watermark...",
         "opacity": "Opasitas",
@@ -617,10 +914,43 @@
       "crop": {
         "name": "Potong PDF",
         "description": "Potong halaman PDF dengan mengatur margin yang akan dihapus dari setiap sisi.",
-        "metaTitle": "Potong PDF - Alat Pemotongan PDF Online Gratis",
-        "metaDescription": "Potong halaman PDF dengan menghapus margin dari setiap sisi. Alat online gratis, bekerja di browser Anda.",
+        "metaTitle": "Pangkas PDF - Margin 4 sisi, output vektor tanpa kehilangan",
+        "metaDescription": "Pangkas halaman PDF dengan menetapkan margin atas, kanan, bawah, kiri secara independen. Input presisi titik, berlaku untuk semua halaman, output vektor tanpa kehilangan.",
         "aiSummary": "Potong halaman PDF dengan menghapus margin dari setiap sisi. Alat online gratis, bekerja di browser Anda.",
         "keywords": "potong pdf, pangkas pdf, margin pdf, alat potong pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Hash",
+            "title": "Margin 4 sisi independen",
+            "description": "Atur margin atas, kanan, bawah, dan kiri secara independen. Pangkas batas putih pindaian, hapus header/footer, atau fokus pada kolom atau wilayah artikel tertentu."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Input presisi titik",
+            "description": "Tentukan margin dalam titik PDF (1 titik ≈ 0,35mm), unit yang sama yang digunakan desainer cetak. Capai ukuran trim yang tepat untuk brosur dan jurnal."
+          },
+          "f3": {
+            "icon": "Files",
+            "title": "Pangkasan sama untuk semua halaman",
+            "description": "Satu pengaturan pangkasan berlaku seragam untuk seluruh dokumen. Berguna untuk pemangkasan batch pindaian di mana setiap halaman memiliki masalah margin yang sama."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Mempertahankan konten vektor",
+            "description": "Pemangkasan menggunakan kotak batas halaman PDF — tanpa rasterisasi ulang. Teks tetap dapat dipilih, grafik vektor tetap tajam, ukuran file hampir tidak berubah."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Seketika — bahkan pada 1000 halaman",
+            "description": "Dokumen 1000 halaman dipangkas dalam kurang dari satu detik karena kotak pangkasan adalah metadata, bukan piksel."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% pribadi — tetap lokal",
+            "description": "Operasi pangkasan berjalan melalui pdf-lib di browser Anda. Denah lantai, gambar medis, dan dokumen rahasia tidak pernah diunggah ke server."
+          }
+        },
         "pages": "halaman",
         "margins": "Margin Potong (poin)",
         "marginsHint": "Masukkan jumlah yang akan dipotong dari setiap sisi (1 poin ≈ 0,35mm)",
@@ -660,10 +990,43 @@
       "esign": {
         "name": "Tanda Tangan Elektronik PDF",
         "description": "Gambar tanda tangan dan tempatkan di halaman mana pun dari dokumen PDF.",
-        "metaTitle": "Tanda Tangan Elektronik PDF - Alat Tanda Tangan PDF Online Gratis",
-        "metaDescription": "Tambahkan tanda tangan elektronik ke dokumen PDF. Gambar tanda tangan Anda dan tempatkan di halaman mana pun. Alat online gratis.",
+        "metaTitle": "Tanda Tangan PDF Online - Gambar tanda tangan, tempatkan bebas",
+        "metaDescription": "Gambar e-tanda tangan Anda dengan mouse atau sentuh dan tempatkan di halaman PDF mana pun. Lebar tanda tangan dapat disesuaikan, overlay tanpa kehilangan, seketika. Gratis.",
         "aiSummary": "Tambahkan tanda tangan elektronik ke dokumen PDF. Gambar tanda tangan Anda dan tempatkan di halaman mana pun. Alat online gratis.",
         "keywords": "tanda tangan elektronik pdf, tanda tangani pdf online, tanda tangan elektronik pdf, alat tanda tangan pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "Gambar dengan mouse atau sentuh",
+            "description": "Tanda tangani dengan mouse di desktop atau jari/stylus di tablet dan ponsel. Pad tanda tangan menangkap goresan halus untuk tanda tangan tulisan tangan yang tampak alami."
+          },
+          "f2": {
+            "icon": "Eye",
+            "title": "Tempatkan di halaman PDF mana pun",
+            "description": "Pilih halaman target dari daftar thumbnail dan jatuhkan tanda tangan di tempatnya. Bekerja untuk kontrak halaman terakhir, formulir multi-halaman, atau paraf."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Lebar tanda tangan dapat disesuaikan",
+            "description": "Skala tanda tangan lebih lebar untuk kontrak penting atau lebih sempit untuk bidang formulir kompak. Penyesuaian lebar mempertahankan rasio aspek asli."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Overlay tanpa kehilangan",
+            "description": "Tanda tangan Anda ditambahkan sebagai overlay vektor pada PDF asli. Teks dan gambar dokumen yang mendasarinya tetap pixel-perfect."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Seketika — tidak perlu akun",
+            "description": "Tanda tangani dan unduh dalam waktu kurang dari satu menit. Tidak perlu pendaftaran, tidak perlu verifikasi email, tidak perlu akun DocuSign."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% pribadi — tanda tangan tetap lokal",
+            "description": "Tanda tangan ditangkap, dirender, dan disematkan sepenuhnya di browser Anda. Kontrak, NDA, dan formulir HR dengan tanda tangan Anda tidak pernah diunggah ke mana pun."
+          }
+        },
         "drawSignature": "Gambar Tanda Tangan Anda",
         "clearSignature": "Hapus",
         "page": "Halaman",
@@ -703,9 +1066,42 @@
         "name": "Ekstrak Gambar dari PDF",
         "description": "Ekstrak semua gambar tertanam dari file PDF dan unduh.",
         "metaTitle": "Ekstrak Gambar dari PDF - Pengekstrak Gambar PDF Online Gratis",
-        "metaDescription": "Ekstrak semua gambar dari dokumen PDF. Unduh satu per satu atau sebagai file ZIP. Alat online gratis.",
+        "metaDescription": "Ekstrak setiap gambar tertanam dari PDF dalam format dan kualitas asli. Pratinjau per gambar, unduh ZIP satu klik, cepat pada file kaya gambar. Gratis, di browser.",
         "aiSummary": "Ekstrak semua gambar dari dokumen PDF. Unduh satu per satu atau sebagai file ZIP. Alat online gratis.",
         "keywords": "ekstrak gambar pdf, pengekstrak gambar pdf, ambil gambar dari pdf, pdf ke gambar",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Menarik semua gambar tertanam",
+            "description": "Mengekstrak setiap aliran gambar di PDF, termasuk foto, gambar yang dipindai, bagan, dan ikon inline. Tidak ada yang terlewatkan — konten visual lengkap dokumen."
+          },
+          "f2": {
+            "icon": "Star",
+            "title": "Format dan kualitas asli",
+            "description": "Setiap gambar disimpan dalam pengkodean aslinya (JPEG, PNG, dll.) pada resolusi yang tertanam dalam PDF. Tanpa pengkodean ulang, tanpa kehilangan kualitas."
+          },
+          "f3": {
+            "icon": "MonitorDown",
+            "title": "Unduh ZIP satu klik",
+            "description": "Semua gambar yang diekstrak dikemas ke dalam satu ZIP. Nama file mencakup nomor halaman dan indeks gambar untuk menemukan setiap gambar di PDF sumber."
+          },
+          "f4": {
+            "icon": "Hash",
+            "title": "Penandaan per halaman",
+            "description": "Setiap gambar yang diekstrak ditandai dengan halaman asalnya. Berguna untuk makalah teknis dan laporan di mana keterlacakan gambar-halaman penting untuk kutipan."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Ekstraksi streaming cepat",
+            "description": "Laporan 100 halaman dengan ratusan gambar diekstrak dalam hitungan detik melalui streaming pdfjs-dist. Tidak ada penantian lama untuk portofolio visual."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% pribadi — hanya browser",
+            "description": "Ekstraksi gambar terjadi sepenuhnya di browser Anda. Mockup desain rahasia, tangkapan layar internal, dan diagram kepemilikan tidak pernah meninggalkan perangkat."
+          }
+        },
         "extract": "Ekstrak Gambar",
         "extracting": "Mengekstrak",
         "page": "Halaman",

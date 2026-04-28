@@ -118,6 +118,39 @@
         "metaDescription": "Splits PDF's per pagina, per N pagina's, even/oneven, helften, aangepaste bereiken, op bestandsgrootte of op bladwijzers. Kleurvoorbeeld. ZIP-download. 100% browser, geen upload.",
         "aiSummary": "PrivaDeck PDF Splitsen — zeven modi: elke pagina, elke N pagina's, even/oneven, helften, aangepaste bereiken, op bestandsgrootte, op bladwijzers (inhoudsopgave). Kleurgecodeerde miniaturen tonen aan welk uitvoerbestand elke pagina toebehoort. ZIP-bundeldownload. Alles in de browser via pdf-lib en pdfjs-dist (WebAssembly); geen upload, geen registratie, geen installatie. Onderdeel van het privacy-first PrivaDeck-toolkit — https://privadeck.app",
         "keywords": "pdf splitsen, pdf splitter, pdf pagina's extraheren, pdf splitsen op grootte, pdf splitsen op bladwijzers, even oneven pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "7 gespecialiseerde splitsmodi",
+            "description": "Splits per pagina, elke N pagina's, oneven/even, in helften, op aangepaste bereiken, op bestandsgrootte of op PDF-bladwijzers. Kies de modus die past — geen tools aan elkaar koppelen."
+          },
+          "f2": {
+            "icon": "TreePine",
+            "title": "Splitsen op bladwijzers/overzicht",
+            "description": "Detecteert hoofdstukbladwijzers automatisch en splitst in één PDF per sectie. Elk uitvoerbestand erft de bladwijzernaam — perfect voor leerboeken, rapporten en conferentiebundels."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Splitsen op bestandsgroottelimiet",
+            "description": "Beperk elke uitvoer-PDF tot 5 MB, 10 MB of een aangepaste grootte. De tool perst maximaal aantal pagina's per bestand voordat een nieuwe begint — ideaal voor e-mailbijlagen en uploads."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Visuele bereikselectie",
+            "description": "Klik twee miniaturen om een bereik te markeren, herhaal voor meer. Live kleurgecodeerde markeringen tonen welke pagina's in elke uitvoer-PDF gaan vóór bevestiging."
+          },
+          "f5": {
+            "icon": "Hash",
+            "title": "ZIP batch-download",
+            "description": "Alle gesplitste PDFs in één ZIP voor één-klik download. Bestandsnamen behouden paginanummers of bladwijzertitels — elk stuk direct identificeerbaar."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — geen upload",
+            "description": "PDFs worden volledig in je browser geanalyseerd en gesplitst met pdf-lib en pdfjs-dist. Vertrouwelijke rapporten, contracten en persoonlijke gegevens verlaten nooit je apparaat."
+          }
+        },
         "pages": "pagina's",
         "splitEach": "Elke pagina splitsen",
         "splitRange": "Splitsen op bereik",
@@ -212,10 +245,43 @@
       "delete-pages": {
         "name": "PDF-pagina's verwijderen",
         "description": "Verwijder specifieke pagina's uit een PDF-document.",
-        "metaTitle": "PDF-pagina's verwijderen - Pagina's online uit PDF verwijderen",
-        "metaDescription": "Verwijder ongewenste pagina's uit je PDF-bestanden. Gratis online tool met visueel paginavoorbeeld. Werkt volledig in je browser.",
+        "metaTitle": "PDF-pagina's verwijderen - Visuele selectie en bulkverwijdering",
+        "metaDescription": "Verwijder pagina's uit PDFs met visuele miniatuurselectie of bereiksyntax. Live resultaatvoorbeeld, behoudt bladwijzers, direct. Gratis, in browser, geen upload.",
         "aiSummary": "Verwijder ongewenste pagina's uit je PDF-bestanden. Gratis online tool met visueel paginavoorbeeld. Werkt volledig in je browser.",
         "keywords": "pdf pagina's verwijderen, pdf pagina remover, pagina's uit pdf verwijderen",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Eye",
+            "title": "Visuele miniatuurselectie",
+            "description": "Elke pagina als miniatuur weergegeven om aan te klikken voor verwijdermarkering. Een rode overlay bevestigt verwijdering in één oogopslag — geen raden naar paginanummers."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Bereiksyntax voor bulkverwijdering",
+            "description": "Typ bereiken zoals '3-7, 12, 20-25' om tientallen pagina's tegelijk te verwijderen. Combineer met klik-omschakeling voor fijnafstelling — snelste manier."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Live voorbeeld van resultaat",
+            "description": "Zie precies welke pagina's overblijven vóór bevestiging. Het uitvoerpaginatal werkt in realtime bij — je kent de uiteindelijke documentlengte vóór download."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Behoudt bladwijzers en metadata",
+            "description": "Overzichtbladwijzers worden hertoegewezen aan behouden pagina's, en titel/auteur/sleutelwoorden worden ongewijzigd overgenomen. Het resultaat voelt als het origineel, alleen korter."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Direct — geen herrendering",
+            "description": "Pagina's worden per referentie verwijderd, niet opnieuw gegenereerd. Een PDF van 500 pagina's wordt in minder dan een seconde verwerkt — alleen referenties worden bijgewerkt."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — geen upload",
+            "description": "PDFs worden volledig in je browser geanalyseerd en pagina's verwijderd met pdf-lib. Documenten met persoonlijke ID's, financiële gegevens of NDA's verlaten nooit je apparaat."
+          }
+        },
         "selectPages": "Klik op pagina's om te selecteren voor verwijdering",
         "delete": "Geselecteerde verwijderen",
         "deleting": "Verwijderen...",
@@ -251,8 +317,8 @@
       "to-image": {
         "name": "PDF naar afbeelding",
         "description": "Converteer PDF-pagina's naar JPG- of PNG-afbeeldingen.",
-        "metaTitle": "PDF naar afbeelding - Converteer PDF naar JPG/PNG online",
-        "metaDescription": "Converteer PDF-pagina's naar hoogwaardige JPG- of PNG-afbeeldingen. Gratis online tool met instelbare DPI en kwaliteit.",
+        "metaTitle": "PDF naar afbeelding - JPG/PNG met instelbare DPI online",
+        "metaDescription": "Converteer PDF-pagina's naar JPG- of PNG-afbeeldingen met 1×–4× resolutieschaling. Per-pagina-uitvoer, ZIP-download, geen kwaliteitsverlies. Gratis, in browser, geen upload.",
         "aiSummary": "Converteer PDF-pagina's naar hoogwaardige JPG- of PNG-afbeeldingen. Gratis online tool met instelbare DPI en kwaliteit.",
         "keywords": "pdf naar afbeelding, pdf naar jpg, pdf naar png, pdf naar afbeelding converteren",
         "featureCards": {
@@ -325,10 +391,43 @@
       "images-to-pdf": {
         "name": "Afbeeldingen naar PDF",
         "description": "Converteer meerdere afbeeldingen naar één PDF-document.",
-        "metaTitle": "Afbeeldingen naar PDF - Gratis online afbeeldingen naar PDF converteren",
-        "metaDescription": "Converteer JPG, PNG en andere afbeeldingen naar één PDF-document. Herschik pagina's, gratis online tool. Geen upload nodig.",
+        "metaTitle": "Afbeeldingen naar PDF - JPG/PNG/HEIC/WebP/AVIF in één",
+        "metaDescription": "Combineer JPG-, PNG-, HEIC-, WebP-, AVIF-afbeeldingen tot één PDF. Aangepaste paginaformaten, slepen om te herordenen, automatische kwaliteitsoptimalisatie. Gratis, in browser.",
         "aiSummary": "Converteer JPG, PNG en andere afbeeldingen naar één PDF-document. Herschik pagina's, gratis online tool. Geen upload nodig.",
         "keywords": "afbeeldingen naar pdf, jpg naar pdf, png naar pdf, afbeeldingen naar pdf converteren, foto naar pdf",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Gemengde afbeeldingsformaten",
+            "description": "Sleep JPG-, PNG-, HEIC-, WebP-, AVIF- en GIF-bestanden in elke combinatie. iPhone HEIC-foto's worden lokaal gedecodeerd — geen aparte conversiestap nodig."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Aangepaste paginaformaten",
+            "description": "Uitvoer als A4, US Letter, A3, vierkant of aangepaste afmetingen. Stel oriëntatie per afbeelding in met marges aangepast aan je print- of deelbehoeften."
+          },
+          "f3": {
+            "icon": "GripVertical",
+            "title": "Slepen om te herordenen",
+            "description": "Herorden pagina's door miniaturen te slepen. Bouw fotoalbums, scancompilaties of documentportfolio's in de exacte gewenste afbeeldingsvolgorde."
+          },
+          "f4": {
+            "icon": "Gauge",
+            "title": "Automatische kwaliteitsoptimalisatie",
+            "description": "Elke afbeelding gecodeerd op de juiste kwaliteit om grootte en scherpte te balanceren. De gecombineerde PDF blijft klein zonder zichtbaar verlies."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Direct samenstellen",
+            "description": "Zelfs 50 foto's combineren tot een PDF in seconden. De browser-pijplijn streamt afbeeldingen één voor één — geheugengebruik blijft voorspelbaar."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — blijft op apparaat",
+            "description": "Afbeeldingdecodering en PDF-assemblage volledig in je browser. Familiefoto's, ID-scans en reisdocumenten worden nooit naar een server verzonden."
+          }
+        },
         "convert": "Converteren naar PDF",
         "converting": "Converteren...",
         "resultSize": "Bestandsgrootte",
@@ -362,10 +461,43 @@
       "rotate": {
         "name": "PDF roteren",
         "description": "Roteer alle pagina's van een PDF met 90, 180 of 270 graden.",
-        "metaTitle": "PDF roteren - Roteer PDF-pagina's online gratis",
-        "metaDescription": "Roteer PDF-pagina's met de klok mee, tegen de klok in of 180 graden. Gratis online tool, werkt in je browser.",
+        "metaTitle": "PDF roteren - 90/180/270° verliesvrije rotatie online",
+        "metaDescription": "Roteer elke PDF-pagina 90° met de klok mee/tegen of 180°. Verliesvrije metadata-rotatie, direct op lange documenten. Gratis, in browser, geen upload.",
         "aiSummary": "Roteer PDF-pagina's met de klok mee, tegen de klok in of 180 graden. Gratis online tool, werkt in je browser.",
         "keywords": "pdf roteren, pdf pagina's roteren, pdf draaien, pdf oriëntatie",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "3 rotatiehoeken",
+            "description": "Roteer 90° met de klok mee, 90° tegen de klok in of 180° (correctie ondersteboven). Kies de hoek die past bij het oriëntatieprobleem in je bron-PDF."
+          },
+          "f2": {
+            "icon": "Files",
+            "title": "Volledige documentrotatie",
+            "description": "Eén klik roteert elke pagina in de PDF met dezelfde hoek. Perfect voor liggende scans die rechtop zijn aangekomen of PDFs van een verkeerd georiënteerde scanner."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Verliesvrije metadata-rotatie",
+            "description": "Pagina's roteren via PDF-pagina-oriëntatiemetadata, niet door rerendering van inhoud. De uitvoer behoudt originele tekstkwaliteit, vectorafbeeldingen en selecteerbare tekst exact als de bron."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Paginavoorbeeld vóór opslaan",
+            "description": "Bekijk de eerste pagina met de gekozen rotatie vóór download. Detecteer verkeerde richtingsselecties in seconden — geen testdownloads nodig."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Direct — zelfs op lange PDFs",
+            "description": "Een document van 1000 pagina's roteert in minder dan een seconde, omdat rotatie een metadata-vlag is en geen rendering per pagina."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — blijft in browser",
+            "description": "Alle rotatie gebeurt lokaal met pdf-lib. Vertrouwelijke scans, ID-documenten en contracten worden niet geüpload — het bestand verlaat je apparaat niet."
+          }
+        },
         "pages": "pagina's",
         "direction": "Richting",
         "clockwise": "90° rechtsom",
@@ -403,10 +535,43 @@
       "add-page-numbers": {
         "name": "Paginanummers toevoegen",
         "description": "Voeg paginanummers toe aan elke pagina van een PDF-document.",
-        "metaTitle": "Paginanummers toevoegen aan PDF - Gratis online tool",
-        "metaDescription": "Voeg paginanummers toe aan je PDF-documenten. Kies positie, formaat en lettergrootte. Gratis online tool, geen upload nodig.",
+        "metaTitle": "Paginanummers in PDF - 6 posities, aanpasbare start",
+        "metaDescription": "Voeg paginanummers toe aan PDFs in een van 6 posities. Aanpasbaar startnummer om voorbladen over te slaan, lettergrootte- en formaatcontrole. Gratis, in browser.",
         "aiSummary": "Voeg paginanummers toe aan je PDF-documenten. Kies positie, formaat en lettergrootte. Gratis online tool, geen upload nodig.",
         "keywords": "paginanummers pdf, pdf paginanummering, pdf pagina's nummeren, pdf voettekst",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "6 positie-opties",
+            "description": "Plaats nummers op een van 6 plaatsen: boven/onder gecombineerd met links/midden/rechts. Koptekst, voettekst of hoek — kies wat niet botst met je bestaande inhoud."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Aanpasbaar startnummer",
+            "description": "Begin nummering vanaf elke waarde, niet alleen 1. Nuttig voor PDFs die een ander document voortzetten, of om voorblad en TOC niet te nummeren terwijl hoofdstuk 1 als pagina 1 begint."
+          },
+          "f3": {
+            "icon": "Braces",
+            "title": "Lettertype, grootte en formaat",
+            "description": "Kies cijferformaat en lettergrootte. Nummers kunnen subtiel opgaan of vetgedrukt opvallen — geschikt van formele rapporten tot afdrukmanuscripten."
+          },
+          "f4": {
+            "icon": "Eye",
+            "title": "Voorblad en voorwerk overslaan",
+            "description": "Geef de eerste genummerde pagina op zodat voorblad, inhoudsopgave en copyright schoon blijven. Het nummeringsbereik volledig aanpasbaar per document."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Snel zelfs op boeken van 500 pagina's",
+            "description": "Paginanummers renderen in een enkele pdf-lib-doorgang. Lange manuscripten, collegestencils en rapporten worden in seconden genummerd — geen wachten per pagina."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — lokale verwerking",
+            "description": "Paginanummers worden met pdf-lib volledig in je browser toegevoegd. Manuscripten, juridische bewijsstukken en eigendomsrapporten verlaten nooit je apparaat."
+          }
+        },
         "pages": "pagina's",
         "position": "Positie",
         "positions": {
@@ -457,6 +622,39 @@
         "metaDescription": "Extraheer direct tekst uit PDF-bestanden. Kopieer tekstinhoud uit elk PDF-document. Gratis online tool, werkt in je browser.",
         "aiSummary": "Extraheer direct tekst uit PDF-bestanden. Kopieer tekstinhoud uit elk PDF-document. Gratis online tool, werkt in je browser.",
         "keywords": "tekst uit pdf extraheren, pdf naar tekst, tekst uit pdf kopiëren, pdf tekstextractor",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Volledige documentextractie",
+            "description": "Haal alle tekst uit de PDF in één doorgang — geen pagina-voor-pagina-selectie. Volledige tekstinhoud van rapporten, papers en boeken klaar voor bewerking of analyse."
+          },
+          "f2": {
+            "icon": "Braces",
+            "title": "Behoudt leesvolgorde",
+            "description": "Regeleinden en alinea's gereconstrueerd uit de PDF-lay-out via pdfjs-dist. De uitvoer is geen tekstmuur — het leest in de volgorde waarin een mens de pagina zou lezen."
+          },
+          "f3": {
+            "icon": "GripVertical",
+            "title": "Tekst kopiëren of downloaden",
+            "description": "Druk op Kopiëren en alle geëxtraheerde tekst belandt op het klembord, klaar voor Word, Notion, ChatGPT. Of download als platte tekstbestand voor archivering."
+          },
+          "f4": {
+            "icon": "Search",
+            "title": "Doorzoekbare platte-tekst-uitvoer",
+            "description": "Gebruik Ctrl+F of de zoekfunctie van je editor om specifieke termen te vinden. Nuttig om snel te verifiëren dat extractie het benodigde gedeelte heeft vastgelegd."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Snel — zelfs op lange documenten",
+            "description": "Een PDF van 200 pagina's wordt in seconden geëxtraheerd omdat pdfjs tekstinhoud direct streamt. Geen OCR-doorgang nodig voor digitaal gemaakte PDFs."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — geen serverupload",
+            "description": "Tekstextractie loopt via pdfjs-dist in je browser. Juridische memo's, medische notities en persoonlijke correspondentie worden nooit naar een server gestuurd."
+          }
+        },
         "extract": "Tekst extraheren",
         "extracting": "Extraheren...",
         "extractedText": "Geëxtraheerde tekst",
@@ -492,9 +690,42 @@
         "name": "PDF-pagina's herschikken",
         "description": "Sleep pagina's om de volgorde in een PDF-document te wijzigen.",
         "metaTitle": "PDF-pagina's herschikken - Gratis online PDF-herschiktool",
-        "metaDescription": "Herschik PDF-pagina's door te slepen. Gratis online tool, werkt in je browser.",
+        "metaDescription": "Sleep en plaats miniaturen om PDF-pagina's te herschikken. Omhoog/omlaag-knoppen voor fijnafstelling, verliesvrije uitvoer, direct. Gratis, in browser, geen upload.",
         "aiSummary": "Herschik PDF-pagina's door te slepen. Gratis online tool, werkt in je browser.",
         "keywords": "pdf herschikken, pdf pagina's herordenen, pdf paginavolgorde, pdf pagina's sorteren",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "Slepen en plaatsen om te herschikken",
+            "description": "Pak elke paginaminiatuur en plaats hem waar je wilt — direct. Herschik lange documenten in seconden met soepel slepen, geen complexe syntax nodig."
+          },
+          "f2": {
+            "icon": "Eye",
+            "title": "Visueel miniatuurraster",
+            "description": "Elke pagina weergegeven als miniatuur zodat je altijd ziet wat je verplaatst. Spot dubbele pagina's, ontbrekende pagina's of verkeerde oriëntatie vóór finalisatie."
+          },
+          "f3": {
+            "icon": "ArrowLeftRight",
+            "title": "Omhoog/omlaag-knoppen",
+            "description": "Per-miniatuur 'Omhoog' / 'Omlaag'-knoppen verplaatsen pagina's één slot per klik. Nuttig voor fijnafstelling na ruwe slepen-en-plaatsen."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Werkt op elke PDF-lengte",
+            "description": "Herschik een rapport van 5 pagina's of een handleiding van 500 met dezelfde workflow. Miniaturen virtualiseren — pagina blijft responsief op lange documenten."
+          },
+          "f5": {
+            "icon": "Star",
+            "title": "Verliesvrij — originele kwaliteit",
+            "description": "Pagina's worden per referentie hertoegewezen, niet opnieuw gerasterd. De uitvoer-PDF behoudt originele tekstkwaliteit, vectoren en ingebedde lettertypes als de bron."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — geen upload",
+            "description": "Alle herschikking gebeurt via pdf-lib in je browser. Gevoelige fusieconcepten, bestuurspakketten en HR-bestanden worden nooit naar een server verzonden."
+          }
+        },
         "dragHint": "Sleep om pagina's te herschikken",
         "pages": "pagina's",
         "page": "Pagina",
@@ -532,10 +763,43 @@
       "compress": {
         "name": "PDF comprimeren",
         "description": "Verklein de PDF-bestandsgrootte door pagina's opnieuw te renderen op lagere kwaliteit.",
-        "metaTitle": "PDF comprimeren - Gratis online PDF-compressor",
-        "metaDescription": "Comprimeer PDF-bestanden om de grootte te verkleinen. Kies het kwaliteitsniveau. Gratis online tool, geen upload nodig.",
+        "metaTitle": "PDF comprimeren online - 3 kwaliteitsvoorinstellingen, gratis",
+        "metaDescription": "Comprimeer PDFs met 3 kwaliteitsvoorinstellingen voor elke groottevereiste. Direct voor/na vergelijking, single-pass verwerking. Gratis, in browser, geen upload.",
         "aiSummary": "Comprimeer PDF-bestanden om de grootte te verkleinen. Kies het kwaliteitsniveau. Gratis online tool, geen upload nodig.",
         "keywords": "pdf comprimeren, pdf compressor, pdf grootte verkleinen, pdf verkleinen",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Gauge",
+            "title": "3 kwaliteitsvoorinstellingen",
+            "description": "Kies Laag (kleinst, voor scans/foto's), Gemiddeld (gebalanceerde standaard) of Hoog (behoudt tekstscherpte). Elke voorinstelling rendert pagina's met geoptimaliseerde kwaliteit — geen handmatige aanpassing."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Realtime grootte-reductie",
+            "description": "Zie originele grootte, gecomprimeerde grootte en besparingspercentage direct na voltooiing. Voer opnieuw uit met andere voorinstelling als het resultaat het doel niet haalt."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Aanpasbare renderkwaliteit",
+            "description": "Compressie rastert pagina's op het gekozen niveau. Elke voorinstelling balanceert visuele scherpte en bestandsgrootte — kies passend bij het beoogde gebruik."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Werkt met gemengde inhoud",
+            "description": "PDFs met tekst, scans, ingebedde afbeeldingen en vectorgrafieken comprimeren in één doorgang. Geen scheiding of voorbewerking — sleep het bestand en kies een voorinstelling."
+          },
+          "f5": {
+            "icon": "MonitorDown",
+            "title": "Werkt offline als PWA",
+            "description": "Installeer PrivaDeck één keer en gebruik de compressor zonder internet. Nuttig in vluchten, klantvergaderkamers of overal waar bandbreedte onbetrouwbaar of gevoelig is."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — bestanden blijven lokaal",
+            "description": "Alle compressie gebruikt pdf.js-rendering en pdf-lib in je browser. Gevoelige contracten, medische scans en financiële PDFs raken nooit een server aan."
+          }
+        },
         "quality": "Kwaliteit",
         "high": "Hoog",
         "medium": "Middel",
@@ -578,9 +842,42 @@
         "name": "PDF-watermerk",
         "description": "Voeg een diagonaal tekstwatermerk toe aan elke pagina van een PDF.",
         "metaTitle": "Watermerk toevoegen aan PDF - Gratis online PDF-watermerktool",
-        "metaDescription": "Voeg tekstwatermerken toe aan PDF-documenten. Pas dekking en lettergrootte aan. Gratis online tool.",
+        "metaDescription": "Voeg aangepaste diagonale tekst-watermerken toe aan elke PDF-pagina. Aanpasbare ondoorzichtigheid en lettergrootte, single-pass-toepassing, verliesvrij op niet-watermerkinhoud. Gratis.",
         "aiSummary": "Voeg tekstwatermerken toe aan PDF-documenten. Pas dekking en lettergrootte aan. Gratis online tool.",
         "keywords": "pdf watermerk, watermerk toevoegen pdf, pdf stempel, pdf tekstoverlay",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Braces",
+            "title": "Aangepaste watermerktekst",
+            "description": "Typ elke zin: 'VERTROUWELIJK', 'CONCEPT', klantnaam of je gewenste watermerk. Frasen met meerdere woorden ondersteund met zinvolle standaardgroottes."
+          },
+          "f2": {
+            "icon": "GripVertical",
+            "title": "Diagonale plaatsing",
+            "description": "Watermerk verschijnt diagonaal op elke pagina voor maximale zichtbaarheid zonder de onderliggende tekst te verbergen. De klassieke stijl van juridische/conceptdocumenten."
+          },
+          "f3": {
+            "icon": "Star",
+            "title": "Ondoorzichtigheid en grootte",
+            "description": "Pas ondoorzichtigheid aan — van subtiel grijs tot vetgedrukt gekleurd stempel; pas lettergrootte aan paginadimensies aan. Laat de watermerkintensiteit het doel raken."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Stempel op elke pagina",
+            "description": "Watermerk uniform toegepast op alle pagina's — geen per-pagina-configuratie nodig. Meerdere PDFs met dezelfde instelling voor consistente batch-branding."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Snel zelfs op lange PDFs",
+            "description": "Watermerktekst toegevoegd via pdf-lib als enkele overlay-laag per pagina. Honderden pagina's krijgen watermerk in seconden — geen wachten per pagina."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — alleen in browser",
+            "description": "Watermerken gebeurt lokaal met pdf-lib. Gevoelige prototypes, NDA's en pre-publicatiedocumenten worden nooit geüpload."
+          }
+        },
         "watermarkText": "Watermerktekst",
         "textPlaceholder": "Voer watermerktekst in...",
         "opacity": "Dekking",
@@ -617,10 +914,43 @@
       "crop": {
         "name": "PDF bijsnijden",
         "description": "Snijd PDF-pagina's bij door marges aan elke zijde in te stellen.",
-        "metaTitle": "PDF bijsnijden - Gratis online PDF-bijsnijdtool",
-        "metaDescription": "Snijd PDF-pagina's bij door marges aan elke zijde te verwijderen. Gratis online tool, werkt in je browser.",
+        "metaTitle": "PDF bijsnijden - 4-zijdige marges, verliesvrije vectoruitvoer",
+        "metaDescription": "Snijd PDF-pagina's bij door boven-, rechter-, onder- en linkermarges onafhankelijk in te stellen. Punt-precieze invoer, past op alle pagina's, verliesvrije vectoruitvoer. Gratis.",
         "aiSummary": "Snijd PDF-pagina's bij door marges aan elke zijde te verwijderen. Gratis online tool, werkt in je browser.",
         "keywords": "pdf bijsnijden, pdf trimmen, pdf marges, pdf bijsnijdtool",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Hash",
+            "title": "4 onafhankelijke marges",
+            "description": "Stel boven-, rechter-, onder- en linkermarge onafhankelijk in. Snijd witte randen van scans af, verwijder kop-/voetteksten of focus op een specifieke kolom of artikelregio."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Punt-precieze invoer",
+            "description": "Specificeer marges in PDF-punten (1 punt ≈ 0,35 mm), dezelfde eenheid die printontwerpers gebruiken. Bereik exacte afsnijmaten voor brochures, tijdschriften en standaard drukindelingen."
+          },
+          "f3": {
+            "icon": "Files",
+            "title": "Zelfde bijsnijding voor alle pagina's",
+            "description": "Eén bijsnijdinstelling toegepast op het hele document uniform. Nuttig voor batch-snijden van scans waar elke pagina hetzelfde marge-probleem heeft."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Behoudt vectorinhoud",
+            "description": "Bijsnijden gebruikt PDF-pagina-grenskaders — geen rerendering. Tekst blijft selecteerbaar, vectorafbeeldingen blijven scherp, bestandsgrootte verandert nauwelijks."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Direct — zelfs bij 1000 pagina's",
+            "description": "Een document van 1000 pagina's wordt in minder dan een seconde bijgesneden omdat bijsnijdkaders metadata zijn, geen pixels."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — blijft lokaal",
+            "description": "Bijsnijbewerkingen worden uitgevoerd via pdf-lib in je browser. Plattegronden, medische beelden en vertrouwelijke documenten worden nooit geüpload."
+          }
+        },
         "pages": "pagina's",
         "margins": "Bijsnijdmarges (punten)",
         "marginsHint": "Voer het bij te snijden bedrag in voor elke zijde (1 punt ≈ 0,35mm)",
@@ -660,10 +990,43 @@
       "esign": {
         "name": "PDF elektronisch ondertekenen",
         "description": "Teken een handtekening en plaats deze op elke pagina van een PDF-document.",
-        "metaTitle": "PDF elektronisch ondertekenen - Gratis online PDF-handtekeningtool",
-        "metaDescription": "Voeg je elektronische handtekening toe aan PDF-documenten. Teken je handtekening en plaats deze op elke pagina. Gratis online tool.",
+        "metaTitle": "PDF online ondertekenen - Handtekening tekenen, vrij plaatsen",
+        "metaDescription": "Teken je e-handtekening met muis of touch en plaats hem op elke PDF-pagina. Aanpasbare handtekeningbreedte, verliesvrije overlay, direct. Gratis, in browser, geen upload.",
         "aiSummary": "Voeg je elektronische handtekening toe aan PDF-documenten. Teken je handtekening en plaats deze op elke pagina. Gratis online tool.",
         "keywords": "pdf ondertekenen, pdf online ondertekenen, elektronische handtekening pdf, pdf handtekeningtool",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "GripVertical",
+            "title": "Tekenen met muis of touch",
+            "description": "Teken met de muis op desktop of met vinger/stylus op tablets en telefoons. Het handtekeningenpad legt vloeiende streken vast voor een natuurlijk uitziende handtekening."
+          },
+          "f2": {
+            "icon": "Eye",
+            "title": "Op elke PDF-pagina plaatsen",
+            "description": "Kies de doelpagina uit een miniaturenlijst en plaats de handtekening waar hij hoort. Werkt voor laatste-pagina-contracten, multi-pagina-formulieren of initialen waar nodig."
+          },
+          "f3": {
+            "icon": "BarChart3",
+            "title": "Aanpasbare handtekeningbreedte",
+            "description": "Schaal de handtekening breder voor belangrijke contracten of smaller voor compacte formuliervelden. Breedteaanpassing behoudt de oorspronkelijke beeldverhouding."
+          },
+          "f4": {
+            "icon": "Star",
+            "title": "Verliesvrije overlay",
+            "description": "Je handtekening wordt toegevoegd als vector-overlay aan de originele PDF. Onderliggende documenttekst en afbeeldingen blijven pixelperfect."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Direct — geen account nodig",
+            "description": "Onderteken en download in minder dan een minuut. Geen registratie, geen e-mailverificatie, geen DocuSign-account — gewoon tekenen, plaatsen en lokaal opslaan."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — handtekening blijft lokaal",
+            "description": "De handtekening wordt volledig in je browser vastgelegd, weergegeven en ingebed. Contracten, NDA's en HR-formulieren met je handtekening worden nergens geüpload."
+          }
+        },
         "drawSignature": "Teken je handtekening",
         "clearSignature": "Wissen",
         "page": "Pagina",
@@ -703,9 +1066,42 @@
         "name": "Afbeeldingen uit PDF extraheren",
         "description": "Extraheer alle ingesloten afbeeldingen uit een PDF-bestand en download ze.",
         "metaTitle": "Afbeeldingen uit PDF extraheren - Gratis online PDF-afbeeldingsextractor",
-        "metaDescription": "Extraheer alle afbeeldingen uit PDF-documenten. Download individueel of als ZIP-bestand. Gratis online tool.",
+        "metaDescription": "Extraheer elke ingebedde afbeelding uit een PDF in originele formaat en kwaliteit. Voorvertoning per afbeelding, ZIP-één-klik-download, snel op afbeeldingrijke bestanden. Gratis.",
         "aiSummary": "Extraheer alle afbeeldingen uit PDF-documenten. Download individueel of als ZIP-bestand. Gratis online tool.",
         "keywords": "afbeeldingen uit pdf extraheren, pdf afbeeldingsextractor, afbeeldingen uit pdf halen, pdf naar afbeeldingen",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "Haalt alle ingebedde afbeeldingen",
+            "description": "Extraheert elke afbeeldingsstroom in de PDF — foto's, gescande figuren, grafieken en inline pictogrammen. Niets gemist — volledige visuele inhoud van het document."
+          },
+          "f2": {
+            "icon": "Star",
+            "title": "Originele formaat en kwaliteit",
+            "description": "Elke afbeelding opgeslagen in originele codering (JPEG, PNG enz.) op de in de PDF ingebedde resolutie. Geen herkodering, geen kwaliteitsverlies."
+          },
+          "f3": {
+            "icon": "MonitorDown",
+            "title": "ZIP één-klik-download",
+            "description": "Alle geëxtraheerde afbeeldingen in één ZIP gepakt. Bestandsnamen bevatten paginanummer en afbeeldingsindex om elk in de bron-PDF te lokaliseren."
+          },
+          "f4": {
+            "icon": "Hash",
+            "title": "Per-pagina-tagging",
+            "description": "Elke geëxtraheerde afbeelding getagd met de oorspronkelijke pagina. Nuttig voor technische papers en rapporten waar afbeelding-naar-pagina-traceerbaarheid telt voor citaten of reviews."
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "Snelle streaming-extractie",
+            "description": "Een rapport van 100 pagina's met honderden figuren extraheert in seconden via pdfjs-dist-streaming. Geen lange wachttijden voor visuele portfolio's."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — alleen browser",
+            "description": "Afbeeldingsextractie gebeurt volledig in je browser. Vertrouwelijke ontwerpmockups, interne screenshots en eigendomsdiagrammen verlaten nooit je apparaat."
+          }
+        },
         "extract": "Afbeeldingen extraheren",
         "extracting": "Extraheren",
         "page": "Pagina",
