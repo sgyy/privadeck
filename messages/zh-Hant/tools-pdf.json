@@ -113,11 +113,11 @@
       },
       "split": {
         "name": "PDF 拆分",
-        "description": "將 PDF 拆分為單獨頁面或自訂頁面範圍。",
-        "metaTitle": "PDF 拆分 - 免費線上 PDF 拆分工具",
-        "metaDescription": "將 PDF 拆分為單獨頁面或自訂範圍。在瀏覽器中運作的免費線上工具。",
-        "aiSummary": "將 PDF 拆分為單獨頁面或自訂範圍。在瀏覽器中運作的免費線上工具。",
-        "keywords": "pdf 拆分, pdf 分割器, pdf 頁面擷取",
+        "description": "按頁、按範圍、按檔案大小或按書籤拆分 PDF——全部於瀏覽器中完成。",
+        "metaTitle": "PDF 拆分 - 7 種模式含按大小與按書籤拆分，瀏覽器內運作",
+        "metaDescription": "按每頁、每 N 頁、奇偶頁、對半切、自訂範圍、按檔案大小或按書籤拆分 PDF。彩色預覽。ZIP 一鍵下載。100% 瀏覽器內運作，檔案不上傳。",
+        "aiSummary": "PrivaDeck PDF 拆分——支援七種模式：每頁一份、每 N 頁一份、奇偶頁拆分、對半切、自訂範圍、按檔案大小、按書籤（目錄）拆分。彩色縮圖預覽即時顯示每頁歸屬於哪份輸出。支援 ZIP 打包下載。完全於瀏覽器中透過 pdf-lib 與 pdfjs-dist (WebAssembly) 執行；無需上傳、註冊或安裝。屬於 PrivaDeck 隱私優先工具集，請見 https://privadeck.app。",
+        "keywords": "pdf 拆分, pdf 分割器, pdf 頁面擷取, 按大小拆分pdf, 按書籤拆分pdf, 奇偶頁拆分pdf",
         "pages": "頁",
         "splitEach": "逐頁拆分",
         "splitRange": "按範圍拆分",
@@ -126,30 +126,86 @@
         "split": "拆分",
         "splitting": "拆分中...",
         "results": "拆分結果",
+        "modes": {
+          "each": { "title": "每頁一份", "desc": "每一頁拆成獨立的 PDF。" },
+          "every": { "title": "每 N 頁", "desc": "每 N 個連續頁面合為一份 PDF。" },
+          "oddEven": { "title": "奇偶頁", "desc": "拆為兩份：奇數頁一份，偶數頁一份。" },
+          "half": { "title": "對半切", "desc": "拆為前半部分與後半部分兩份。" },
+          "range": { "title": "自訂範圍", "desc": "定義頁碼範圍，如 1-3, 5, 8-10。點擊兩頁即可加入範圍。" },
+          "size": { "title": "按檔案大小", "desc": "每份輸出大小不超過你設定的上限。" },
+          "outline": { "title": "按書籤", "desc": "依 PDF 目錄拆分——每個頂層書籤產生一份檔案。" }
+        },
+        "every": { "label": "每份頁數", "preview": "共 {count} 份" },
+        "half": { "preview": "前 {a} 頁 + 後 {b} 頁" },
+        "range": {
+          "mergeAll": "把所有範圍合併成單一 PDF",
+          "addRange": "加入範圍",
+          "clickToBuild": "提示：在下方縮圖上點擊兩頁即可加入一個範圍。"
+        },
+        "size": {
+          "label": "每份最大大小",
+          "unitMB": "MB",
+          "unitKB": "KB",
+          "probing": "正在計算分割點...",
+          "oversizedWarning": "第 {n} 頁本身已超過上限（{size}），將作為超大單頁輸出。"
+        },
+        "outline": {
+          "noOutline": "本 PDF 沒有書籤，請嘗試其他模式。",
+          "found": "發現 {count} 個書籤",
+          "willCreate": "將產生 {count} 個檔案"
+        },
+        "progress": {
+          "splitting": "正在拆分 {current}/{total}",
+          "probing": "計算中...",
+          "zipping": "正在打包 ZIP..."
+        },
+        "actions": {
+          "cancel": "取消",
+          "downloadAll": "全部打包為 ZIP 下載",
+          "downloadSingle": "下載"
+        },
+        "errors": {
+          "noFile": "請先選擇 PDF 檔案",
+          "invalidEvery": "請輸入 1 到 {max} 之間的數字",
+          "invalidSize": "請輸入大於 0 的大小",
+          "encrypted": "暫不支援加密 PDF",
+          "invalidPdf": "無法讀取此檔案，看起來不是有效的 PDF。",
+          "tooFewPagesForHalf": "至少需要 2 頁",
+          "largeWarning": "本 PDF 共 {count} 頁。逐頁拆分可能佔用大量記憶體，是否繼續？"
+        },
+        "preview": {
+          "color": "顏色表示該頁將被分到哪個輸出檔案。"
+        },
         "faq": {
-          "q1": "可以按特定頁面範圍拆分嗎？",
-          "a1": "可以，按單獨頁面或指定自訂範圍如 1-3、4-6、7-10。",
+          "q1": "支援哪些拆分模式？",
+          "a1": "共七種模式：每頁一份、每 N 頁一份、奇偶頁拆分、對半切、自訂範圍（可選合併）、按檔案大小、按 PDF 書籤拆分。可隨時切換模式，縮圖上的彩色預覽會即時更新。",
           "q2": "檔案會上傳到伺服器嗎？",
-          "a2": "不會。所有處理在瀏覽器中本機完成。",
+          "a2": "不會。所有處理透過 pdf-lib 與 pdfjs-dist 在瀏覽器本機完成，檔案不會離開您的裝置。",
           "q3": "我的檔案會上傳到伺服器嗎？",
           "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
           "q4": "這個工具能離線使用嗎？",
           "a4": "可以。頁面載入完成後，工具完全可以離線執行。為獲得最佳體驗，建議從瀏覽器將 PrivaDeck 安裝為 PWA 應用程式。",
           "q5": "檔案大小有限制嗎？",
-          "a5": "沒有伺服器端限制。最大檔案大小取決於您裝置的可用記憶體和瀏覽器能力。大多數現代裝置可以處理數百 MB 的檔案。"
+          "a5": "沒有伺服器端限制。最大檔案大小取決於您裝置的可用記憶體。對於超大 PDF（1000 頁以上），建議使用「每 N 頁」而非「每頁一份」以控制記憶體佔用。",
+          "q6": "「按檔案大小拆分」是怎麼運作的？",
+          "a6": "您輸入每份的最大大小（如 5 MB），工具會貪心地把盡量多的連續頁面塞進每個輸出，超過上限就開始下一份。如果某單頁本身已超過上限，仍會輸出該頁並標記為超大警告，而非跳過。",
+          "q7": "如果 PDF 沒有書籤怎麼辦？",
+          "a7": "「按書籤」標籤會被禁用並顯示提示，說明未找到 PDF 大綱。請改用「自訂範圍」或其他模式。已經帶書籤的 PDF（書籍、手冊、學術論文常見）非常適合該模式——每個頂層條目會產生一份檔案。",
+          "q8": "可以把所有拆分結果一次打包為 ZIP 下載嗎？",
+          "a8": "可以。當結果檔案多於一個時，點擊「全部打包為 ZIP 下載」即可。ZIP 內的檔名會自動去重（同名章節不會互相覆蓋）。"
         },
         "seoContent": {
           "intro": {
             "title": "什麼是 PDF 拆分工具？",
-            "content": "<p><strong>PDF 拆分</strong>將一個 PDF 分割成多個檔案——擷取單個頁面、頁面範圍，或將每一頁都拆成獨立的 PDF。非常適合從大型文件中擷取特定章節。</p>"
+            "content": "<p><strong>PDF 拆分</strong>使用七種彈性模式將一個 PDF 拆為多個檔案：每頁一份、每 N 頁、奇偶頁、對半切、自訂範圍、按檔案大小、按 PDF 書籤。彩色縮圖預覽會即時顯示每頁歸屬於哪份輸出，讓你確認無誤後再下載。</p>"
           },
           "useCases": {
             "title": "常見用途",
-            "content": "<ul><li><strong>頁面擷取</strong>：從大型文件中取出特定頁面</li><li><strong>章節分離</strong>：將書籍或手冊拆分成單個章節</li><li><strong>表單擷取</strong>：從多頁 PDF 中擷取特定表單</li><li><strong>選擇分享</strong>：從文件中分離並分享僅需要的頁面</li><li><strong>掃描整理</strong>：將多頁掃描分離成獨立文件</li></ul>"
+            "content": "<ul><li><strong>頁面擷取</strong>：用自訂範圍從大型文件中取出特定頁面</li><li><strong>章節分離</strong>：用書籤模式自動依章節拆分書籍或手冊</li><li><strong>郵件適配</strong>：用「按檔案大小」把大型 PDF 切成符合郵箱附件上限的小份</li><li><strong>雙面掃描修復</strong>：用「奇偶頁」拆分恢復雙面掃描錯亂的頁面</li><li><strong>表單擷取</strong>：從多頁 PDF 中擷取特定表單</li><li><strong>掃描整理</strong>：一鍵將多頁掃描分離成獨立文件</li></ul>"
           },
           "privacy": {
             "title": "隱私優先的 PDF 拆分",
-            "content": "<p>PDF 全部在瀏覽器本地使用 <strong>pdf-lib</strong> 進行拆分。</p><ul><li>您的文件<strong>永遠不會離開您的裝置</strong></li><li>無伺服器上傳或雲端處理</li><li>初始載入後可<strong>離線</strong>運作</li></ul>"
+            "content": "<p>PDF 全部在瀏覽器本地使用 <strong>pdf-lib</strong> 與 <strong>pdfjs-dist</strong> 進行拆分。</p><ul><li>您的文件<strong>永遠不會離開您的裝置</strong></li><li>無伺服器上傳或雲端處理——即使是大檔案也一樣</li><li>初始載入後可<strong>離線</strong>運作</li><li>競品付費才提供的功能（按大小、按書籤拆分），在這裡完全免費</li></ul>"
           }
         }
       },

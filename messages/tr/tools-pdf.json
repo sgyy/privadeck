@@ -113,11 +113,11 @@
       },
       "split": {
         "name": "PDF Böl",
-        "description": "Bir PDF'i tek tek sayfalara veya özel sayfa aralıklarına bölün.",
-        "metaTitle": "PDF Böl — Ücretsiz Çevrimiçi PDF Bölücü",
-        "metaDescription": "PDF dosyalarını tek tek sayfalara veya özel aralıklara bölün. Tarayıcınızda çalışan ücretsiz çevrimiçi araç.",
-        "aiSummary": "PDF dosyalarını tek tek sayfalara veya özel aralıklara bölün. Tarayıcınızda çalışan ücretsiz çevrimiçi araç.",
-        "keywords": "pdf böl, pdf bölücü, pdf sayfaları çıkar, pdf sayfaları ayır",
+        "description": "PDF'leri sayfalara, aralıklara, dosya boyutuna veya yer imlerine göre bölün — tamamen tarayıcıda.",
+        "metaTitle": "PDF Böl — Boyut & yer imi dahil 7 mod, tarayıcıda",
+        "metaDescription": "PDF'leri sayfa sayfa, her N sayfada bir, tek/çift, yarıya, özel aralıklarla, dosya boyutuna veya yer imlerine göre bölün. Renkli önizleme. ZIP indirme. %100 tarayıcı.",
+        "aiSummary": "PrivaDeck PDF Böl — yedi mod: her sayfa, her N sayfa, tek/çift, yarılar, özel aralıklar, dosya boyutuna göre, yer imlerine göre (içindekiler). Renk kodlu küçük resim önizlemesi her sayfanın hangi çıktı dosyasına ait olduğunu gösterir. ZIP paket indirme. Her şey tarayıcıda pdf-lib ve pdfjs-dist (WebAssembly) ile çalışır; yükleme, kayıt veya kurulum gerektirmez. Privacy-first PrivaDeck setinin parçası — https://privadeck.app",
+        "keywords": "pdf böl, pdf bölücü, pdf sayfaları çıkar, pdf boyuta göre böl, pdf yer imine göre böl",
         "pages": "sayfa",
         "splitEach": "Her sayfayı böl",
         "splitRange": "Aralığa göre böl",
@@ -126,30 +126,86 @@
         "split": "Böl",
         "splitting": "Bölünüyor...",
         "results": "Bölme Sonuçları",
+        "modes": {
+          "each": { "title": "Her sayfa", "desc": "Her sayfa kendi PDF'i olur." },
+          "every": { "title": "Her N sayfa", "desc": "Her N ardışık sayfayı tek bir PDF'te grupla." },
+          "oddEven": { "title": "Tek / Çift", "desc": "İki PDF: tek sayfalar ve çift sayfalar." },
+          "half": { "title": "Yarılar", "desc": "İlk yarı ve ikinci yarı olarak iki dosyaya böl." },
+          "range": { "title": "Özel aralıklar", "desc": "1-3, 5, 8-10 gibi aralıklar tanımlayın. Aralık eklemek için iki sayfaya tıklayın." },
+          "size": { "title": "Dosya boyutuna göre", "desc": "Her çıktı, seçtiğiniz maksimum boyutun altında kalır." },
+          "outline": { "title": "Yer imlerine göre", "desc": "PDF içindekiler tablosunu kullan — her üst düzey yer imi başına bir dosya." }
+        },
+        "every": { "label": "Parça başına sayfa", "preview": "{count} parça" },
+        "half": { "preview": "İlk {a} sayfa + Son {b} sayfa" },
+        "range": {
+          "mergeAll": "Tüm aralıkları tek bir PDF'te birleştir",
+          "addRange": "Aralık ekle",
+          "clickToBuild": "İpucu: aşağıdaki küçük resimlerde iki sayfaya tıklayarak bir aralık ekleyin."
+        },
+        "size": {
+          "label": "Parça başına maksimum boyut",
+          "unitMB": "MB",
+          "unitKB": "KB",
+          "probing": "Bölme noktaları kalibre ediliyor...",
+          "oversizedWarning": "{n} sayfa tek başına limiti ({size}) aşıyor; aşırı boyutlu tek parça olarak korundu."
+        },
+        "outline": {
+          "noOutline": "Bu PDF'in yer imi yok. Başka bir mod deneyin.",
+          "found": "{count} yer imi bulundu",
+          "willCreate": "{count} dosya oluşturulacak"
+        },
+        "progress": {
+          "splitting": "Bölünüyor {current} / {total}",
+          "probing": "Kalibre ediliyor...",
+          "zipping": "ZIP paketleniyor..."
+        },
+        "actions": {
+          "cancel": "İptal",
+          "downloadAll": "Hepsini ZIP olarak indir",
+          "downloadSingle": "İndir"
+        },
+        "errors": {
+          "noFile": "Önce bir PDF seçin",
+          "invalidEvery": "1 ile {max} arasında bir sayı girin",
+          "invalidSize": "Pozitif bir boyut girin",
+          "encrypted": "Şifreli PDF'ler desteklenmiyor",
+          "invalidPdf": "Bu dosya okunamadı. Geçerli bir PDF gibi görünmüyor.",
+          "tooFewPagesForHalf": "En az 2 sayfa gerekli",
+          "largeWarning": "Bu PDF {count} sayfa içeriyor. Her birini ayrı dosyaya bölmek çok bellek tüketebilir. Devam edilsin mi?"
+        },
+        "preview": {
+          "color": "Renk her sayfanın hangi çıktı dosyasına ait olduğunu gösterir."
+        },
         "faq": {
-          "q1": "PDF'i belirli sayfa aralıklarına bölebilir miyim?",
-          "a1": "Evet, tek tek sayfalara veya 1-3, 4-6, 7-10 gibi özel aralıklara bölebilirsiniz.",
+          "q1": "Hangi bölme modları kullanılabilir?",
+          "a1": "Yedi mod: her sayfa, her N sayfa, tek/çift, yarılar, özel aralıklar (isteğe bağlı birleştirme ile), dosya boyutuna göre ve PDF yer imlerine göre. Modlar arasında istediğiniz zaman geçiş yapın — küçük resimlerdeki renkli önizleme anlık güncellenir.",
           "q2": "Dosyalarım bir sunucuya yükleniyor mu?",
-          "a2": "Hayır. Tüm işlemler tarayıcınızda yerel olarak gerçekleşir. Dosyalarınız asla cihazınızdan ayrılmaz.",
+          "a2": "Hayır. Tüm işleme tarayıcınızda pdf-lib ve pdfjs-dist ile yerel olarak gerçekleşir. Dosyalarınız asla cihazınızdan ayrılmaz.",
           "q3": "Dosyalarım sunucuya yükleniyor mu?",
           "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
           "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
           "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
-          "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
+          "a5": "Sunucu kaynaklı sınır yoktur. Maksimum dosya boyutu cihazınızın kullanılabilir belleğine bağlıdır. Çok büyük PDF'ler (1000+ sayfa) için bellek kullanımını kontrol etmek için 'Her sayfa' yerine 'Her N sayfa' tercih edin.",
+          "q6": "'Boyuta göre böl' nasıl çalışır?",
+          "a6": "Parça başına maksimum boyut girersiniz (örn. 5 MB). Araç her çıktıya o limit altında olduğu kadar çok ardışık sayfayı açgözlüce paketler ve sonraki parçayı başlatır. Tek bir sayfa zaten limiti aşıyorsa, atlanmaz; aşırı boyut uyarısıyla yine de yayınlanır.",
+          "q7": "Ya PDF'imde yer imi yoksa?",
+          "a7": "'Yer imlerine göre' sekmesi PDF taslağı bulunamadığını açıklayan bir araç ipucuyla devre dışı bırakılır. 'Özel aralıklar' veya başka bir mod kullanın. Yer imi olan PDF'ler (kitaplar, kılavuzlar, bilimsel makaleler) bu modda harika çalışır — her üst düzey giriş bir çıktı dosyası olur.",
+          "q8": "Tüm parçaları tek ZIP olarak indirebilir miyim?",
+          "a8": "Evet. Sonuç birden fazla dosya içerdiğinde 'Hepsini ZIP olarak indir'e tıklayın. ZIP içindeki dosya adları otomatik olarak tekilleştirilir."
         },
         "seoContent": {
           "intro": {
             "title": "PDF Böl Nedir?",
-            "content": "<p><strong>PDF Böl</strong>, bir PDF'i ayrı dosyalara böler — tek tek sayfaları, sayfa aralıklarını çıkarın veya tek sayfalı dosyalara bölün. Büyük belgelerden belirli bölümleri çıkarmak için mükemmeldir.</p>"
+            "content": "<p><strong>PDF Böl</strong>, yedi esnek modla bir PDF'i ayrı dosyalara böler: her sayfa, her N sayfa, tek/çift, yarılar, özel aralıklar, dosya boyutuna göre ve PDF yer imlerine göre. Renk kodlu bir küçük resim önizlemesi onaylamadan önce hangi sayfaların hangi çıktıya gideceğini tam olarak gösterir.</p>"
           },
           "useCases": {
             "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Sayfa Çıkarma</strong>: Büyük bir belgeden belirli sayfaları alma</li><li><strong>Bölüm Ayırma</strong>: Bir kitabı veya kılavuzu bireysel bölümlere bölme</li><li><strong>Form Çıkarma</strong>: Çok sayfalı bir PDF'den belirli formları çıkarma</li><li><strong>Paylaşma</strong>: Bir belgeden yalnızca ilgili sayfaları çıkarıp paylaşma</li><li><strong>Dosyalama</strong>: Birleşik taramaları bireysel belgelere ayırma</li></ul>"
+            "content": "<ul><li><strong>Sayfa Çıkarma</strong>: Özel aralıklarla büyük belgeden belirli sayfaları alın</li><li><strong>Bölüm Ayırma</strong>: Yer imleriyle kitap veya kılavuzu otomatik bölümlere ayırın</li><li><strong>E-postaya hazır</strong>: 'Boyuta göre böl' ile büyük PDF'i ek limitinin altına parçalayın</li><li><strong>Çift taraflı tarama düzeltme</strong>: Karışan duplex taramaları 'Tek / Çift' ile yeniden oluşturun</li><li><strong>Form Çıkarma</strong>: Çok sayfalı bir PDF'den belirli formları çıkarın</li><li><strong>Dosyalama</strong>: Birleşik taramaları tek tıkla ayrı belgelere ayırın</li></ul>"
           },
           "privacy": {
             "title": "Gizlilik Odaklı PDF Bölme",
-            "content": "<p>PDF'ler, <strong>pdf-lib</strong> kullanılarak <strong>tamamen tarayıcınızda</strong> bölünür.</p><ul><li>Belgeleriniz <strong>asla cihazınızdan çıkmaz</strong></li><li>Sunucu yüklemesi veya bulut işleme yok</li><li>Sayfa yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
+            "content": "<p>PDF'ler <strong>pdf-lib</strong> ve <strong>pdfjs-dist</strong> kullanılarak <strong>tamamen tarayıcınızda</strong> bölünür.</p><ul><li>Belgeleriniz <strong>asla cihazınızdan çıkmaz</strong></li><li>Büyük dosyalarda bile sunucu yüklemesi veya bulut işleme yok</li><li>Sayfa yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li><li>Rakiplerin ücretli sunduğu özellikler (boyuta göre, yer imine göre) burada ücretsiz</li></ul>"
           }
         }
       },

@@ -113,11 +113,11 @@
       },
       "split": {
         "name": "Diviser un PDF",
-        "description": "Diviser un PDF en pages individuelles ou en plages personnalisées.",
-        "metaTitle": "Diviser un PDF - Outil gratuit en ligne",
-        "metaDescription": "Diviser des fichiers PDF en pages individuelles ou plages personnalisées. Outil gratuit en ligne fonctionnant dans votre navigateur.",
-        "aiSummary": "Diviser des fichiers PDF en pages individuelles ou plages personnalisées. Outil gratuit en ligne fonctionnant dans votre navigateur.",
-        "keywords": "diviser PDF, diviseur PDF, extraire pages PDF, séparer pages PDF",
+        "description": "Diviser un PDF par pages, plages, taille de fichier ou signets — entièrement dans votre navigateur.",
+        "metaTitle": "Diviser un PDF - 7 modes incl. par taille et signets, dans le navigateur",
+        "metaDescription": "Divisez un PDF page par page, toutes les N pages, pages paires/impaires, en deux moitiés, plages personnalisées, par taille ou par signets. Aperçu coloré. Téléchargement ZIP. 100% navigateur.",
+        "aiSummary": "PrivaDeck Diviser un PDF — sept modes : chaque page, toutes les N pages, paires/impaires, moitiés, plages personnalisées, par taille de fichier, par signets (table des matières). Aperçu en miniatures avec code couleur indiquant à quel fichier de sortie chaque page appartient. Téléchargement groupé en ZIP. Tout se passe dans le navigateur via pdf-lib et pdfjs-dist (WebAssembly) ; aucun envoi, aucune inscription, aucune installation. Fait partie du kit privacy-first PrivaDeck — https://privadeck.app",
+        "keywords": "diviser PDF, diviseur PDF, extraire pages PDF, diviser PDF par taille, diviser PDF par signets, diviser PDF pages paires impaires",
         "pages": "pages",
         "splitEach": "Diviser chaque page",
         "splitRange": "Diviser par plage",
@@ -126,30 +126,86 @@
         "split": "Diviser",
         "splitting": "Division en cours...",
         "results": "Résultats de division",
+        "modes": {
+          "each": { "title": "Chaque page", "desc": "Chaque page devient son propre PDF." },
+          "every": { "title": "Toutes les N pages", "desc": "Regrouper toutes les N pages consécutives en un PDF." },
+          "oddEven": { "title": "Impaires / Paires", "desc": "Deux PDFs : pages impaires d'un côté, paires de l'autre." },
+          "half": { "title": "Moitiés", "desc": "Diviser en première et seconde moitié." },
+          "range": { "title": "Plages personnalisées", "desc": "Définir des plages comme 1-3, 5, 8-10. Cliquez sur deux pages pour ajouter une plage." },
+          "size": { "title": "Par taille de fichier", "desc": "Chaque sortie reste sous la taille maximale choisie." },
+          "outline": { "title": "Par signets", "desc": "Utiliser la table des matières du PDF — un fichier par signet de premier niveau." }
+        },
+        "every": { "label": "Pages par partie", "preview": "{count} parties" },
+        "half": { "preview": "Premières {a} pages + Dernières {b} pages" },
+        "range": {
+          "mergeAll": "Fusionner toutes les plages en un seul PDF",
+          "addRange": "Ajouter une plage",
+          "clickToBuild": "Astuce : cliquez sur deux pages dans les miniatures ci-dessous pour ajouter une plage."
+        },
+        "size": {
+          "label": "Taille max par partie",
+          "unitMB": "Mo",
+          "unitKB": "Ko",
+          "probing": "Calibrage des points de division...",
+          "oversizedWarning": "La page {n} dépasse à elle seule la limite ({size}) ; conservée comme partie surdimensionnée."
+        },
+        "outline": {
+          "noOutline": "Ce PDF n'a pas de signets. Essayez un autre mode.",
+          "found": "{count} signets trouvés",
+          "willCreate": "{count} fichiers seront créés"
+        },
+        "progress": {
+          "splitting": "Division {current} sur {total}",
+          "probing": "Calibrage...",
+          "zipping": "Création du ZIP..."
+        },
+        "actions": {
+          "cancel": "Annuler",
+          "downloadAll": "Télécharger tout en ZIP",
+          "downloadSingle": "Télécharger"
+        },
+        "errors": {
+          "noFile": "Choisissez d'abord un PDF",
+          "invalidEvery": "Saisissez un nombre entre 1 et {max}",
+          "invalidSize": "Saisissez une taille positive",
+          "encrypted": "Les PDF chiffrés ne sont pas pris en charge",
+          "invalidPdf": "Impossible de lire ce fichier. Il ne semble pas être un PDF valide.",
+          "tooFewPagesForHalf": "Il faut au moins 2 pages",
+          "largeWarning": "Ce PDF a {count} pages. Diviser chacune en son propre fichier peut consommer beaucoup de mémoire. Continuer ?"
+        },
+        "preview": {
+          "color": "La couleur indique à quel fichier de sortie chaque page appartient."
+        },
         "faq": {
-          "q1": "Puis-je diviser un PDF en plages spécifiques ?",
-          "a1": "Oui, vous pouvez diviser par pages individuelles ou spécifier des plages personnalisées comme 1-3, 4-6, 7-10.",
+          "q1": "Quels modes de division sont disponibles ?",
+          "a1": "Sept modes : chaque page, toutes les N pages, impaires/paires, moitiés, plages personnalisées (avec fusion optionnelle), par taille de fichier, et par signets PDF. Changez de mode à tout moment et observez l'aperçu coloré des miniatures se mettre à jour.",
           "q2": "Mes fichiers sont-ils envoyés sur un serveur ?",
-          "a2": "Non. Tout le traitement se fait localement dans votre navigateur. Vos fichiers ne quittent jamais votre appareil.",
+          "a2": "Non. Tout le traitement se fait localement dans votre navigateur via pdf-lib et pdfjs-dist. Vos fichiers ne quittent jamais votre appareil.",
           "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
           "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
           "q4": "Puis-je utiliser cet outil hors connexion ?",
           "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
-          "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
+          "a5": "Pas de limites imposées par le serveur. La taille maximale dépend de la mémoire disponible de votre appareil. Pour les PDF très volumineux (1000+ pages), préférez 'Toutes les N pages' à 'Chaque page' pour maîtriser la mémoire.",
+          "q6": "Comment fonctionne 'Diviser par taille' ?",
+          "a6": "Vous saisissez une taille max par partie (par ex. 5 Mo). L'outil regroupe avidement autant de pages consécutives que possible sous cette limite, puis démarre la partie suivante. Si une seule page dépasse déjà la limite, elle est tout de même émise avec un avertissement de surdimensionnement plutôt qu'ignorée.",
+          "q7": "Et si mon PDF n'a pas de signets ?",
+          "a7": "L'onglet 'Par signets' sera désactivé avec une infobulle expliquant qu'aucun signet PDF n'a été trouvé. Utilisez 'Plages personnalisées' ou un autre mode. Les PDF déjà annotés (livres, manuels, articles scientifiques) fonctionnent parfaitement avec ce mode — chaque entrée de premier niveau devient un fichier de sortie.",
+          "q8": "Puis-je télécharger toutes les parties dans un seul ZIP ?",
+          "a8": "Oui. Lorsque le résultat contient plusieurs fichiers, cliquez sur 'Télécharger tout en ZIP' pour les regrouper. Les noms à l'intérieur du ZIP sont automatiquement dédupliqués."
         },
         "seoContent": {
           "intro": {
             "title": "Qu'est-ce que Diviser un PDF ?",
-            "content": "<p><strong>Diviser un PDF</strong> découpe un PDF en fichiers séparés — extrayez des pages individuelles, des plages de pages ou divisez-le en fichiers d'une seule page. Idéal pour extraire des sections spécifiques de grands documents.</p>"
+            "content": "<p><strong>Diviser un PDF</strong> découpe un PDF en plusieurs fichiers selon sept modes flexibles : chaque page, toutes les N pages, impaires/paires, moitiés, plages personnalisées, par taille de fichier, par signets PDF. Un aperçu en miniatures avec code couleur vous montre exactement quelles pages iront dans quel fichier avant validation.</p>"
           },
           "useCases": {
             "title": "Cas d'utilisation courants",
-            "content": "<ul><li><strong>Extraction de pages</strong> : Extrayez des pages spécifiques d'un grand document</li><li><strong>Séparation par chapitre</strong> : Divisez un livre ou un manuel en chapitres individuels</li><li><strong>Extraction de formulaires</strong> : Extrayez des formulaires spécifiques d'un PDF multi-pages</li><li><strong>Partage</strong> : Extrayez et partagez uniquement les pages pertinentes d'un document</li><li><strong>Classement</strong> : Séparez les scans combinés en documents individuels</li></ul>"
+            "content": "<ul><li><strong>Extraction de pages</strong> : Récupérez des pages précises avec des plages personnalisées</li><li><strong>Séparation par chapitre</strong> : Divisez automatiquement livres ou manuels par chapitre via les signets</li><li><strong>Adaptation e-mail</strong> : Utilisez 'Diviser par taille' pour découper un gros PDF sous la limite des pièces jointes</li><li><strong>Récupération scan recto-verso</strong> : 'Impaires / Paires' pour reconstituer un scan duplex désordonné</li><li><strong>Extraction de formulaires</strong> : Récupérez des formulaires précis dans un PDF multi-pages</li><li><strong>Classement</strong> : Séparez les scans combinés en documents individuels en un clic</li></ul>"
           },
           "privacy": {
             "title": "Division de PDF axée sur la confidentialité",
-            "content": "<p>Les PDF sont divisés <strong>entièrement dans votre navigateur</strong> à l'aide de <strong>pdf-lib</strong>.</p><ul><li>Vos documents <strong>ne quittent jamais votre appareil</strong></li><li>Pas d'envoi au serveur ni de traitement cloud</li><li>Fonctionne <strong>hors connexion</strong> après le chargement de la page</li></ul>"
+            "content": "<p>Les PDF sont divisés <strong>entièrement dans votre navigateur</strong> avec <strong>pdf-lib</strong> et <strong>pdfjs-dist</strong>.</p><ul><li>Vos documents <strong>ne quittent jamais votre appareil</strong></li><li>Aucun envoi vers un serveur ni traitement cloud — même pour les gros fichiers</li><li>Fonctionne <strong>hors connexion</strong> après chargement</li><li>Les fonctions payantes ailleurs (par taille, par signets) sont gratuites ici</li></ul>"
           }
         }
       },

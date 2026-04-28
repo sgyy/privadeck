@@ -47,10 +47,23 @@ export default async function ToolPage({
     loadCommonMessages(locale),
     loadCategoryMessages(locale, category),
   ]);
-  // Merge common messages with single tool's translations
+  // Merge common messages with single tool's translations.
+  // Preserve category-level shared scalar keys (e.g. tools.pdf.pages) used by shared components like PdfFilePreview.
+  const catData = (catMessages.tools as Record<string, Record<string, unknown>> | undefined)?.[category] ?? {};
+  const sharedSiblings: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(catData)) {
+    if (v === null || typeof v !== "object" || Array.isArray(v)) {
+      sharedSiblings[k] = v;
+    }
+  }
   const messages = {
     ...commonMessages,
-    tools: { [category]: { [slug]: catMessages.tools?.[category]?.[slug] ?? {} } },
+    tools: {
+      [category]: {
+        ...sharedSiblings,
+        [slug]: catData[slug] ?? {},
+      },
+    },
   };
 
   const needsFFmpeg = category === "video" || category === "audio";

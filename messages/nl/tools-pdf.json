@@ -113,11 +113,11 @@
       },
       "split": {
         "name": "PDF splitsen",
-        "description": "Splits een PDF in afzonderlijke pagina's of aangepaste paginabereiken.",
-        "metaTitle": "PDF splitsen - Gratis online PDF-splitter",
-        "metaDescription": "Splits PDF-bestanden in afzonderlijke pagina's of aangepaste bereiken. Gratis online tool die in je browser werkt.",
-        "aiSummary": "Splits PDF-bestanden in afzonderlijke pagina's of aangepaste bereiken. Gratis online tool die in je browser werkt.",
-        "keywords": "pdf splitsen, pdf splitter, pdf pagina's extraheren, pdf pagina's scheiden",
+        "description": "Splits PDF's per pagina, bereik, bestandsgrootte of bladwijzers — volledig in de browser.",
+        "metaTitle": "PDF splitsen - 7 modi incl. op grootte & bladwijzers, in de browser",
+        "metaDescription": "Splits PDF's per pagina, per N pagina's, even/oneven, helften, aangepaste bereiken, op bestandsgrootte of op bladwijzers. Kleurvoorbeeld. ZIP-download. 100% browser, geen upload.",
+        "aiSummary": "PrivaDeck PDF Splitsen — zeven modi: elke pagina, elke N pagina's, even/oneven, helften, aangepaste bereiken, op bestandsgrootte, op bladwijzers (inhoudsopgave). Kleurgecodeerde miniaturen tonen aan welk uitvoerbestand elke pagina toebehoort. ZIP-bundeldownload. Alles in de browser via pdf-lib en pdfjs-dist (WebAssembly); geen upload, geen registratie, geen installatie. Onderdeel van het privacy-first PrivaDeck-toolkit — https://privadeck.app",
+        "keywords": "pdf splitsen, pdf splitter, pdf pagina's extraheren, pdf splitsen op grootte, pdf splitsen op bladwijzers, even oneven pdf",
         "pages": "pagina's",
         "splitEach": "Elke pagina splitsen",
         "splitRange": "Splitsen op bereik",
@@ -126,30 +126,86 @@
         "split": "Splitsen",
         "splitting": "Splitsen...",
         "results": "Splitsresultaten",
+        "modes": {
+          "each": { "title": "Elke pagina", "desc": "Elke pagina wordt zijn eigen PDF." },
+          "every": { "title": "Elke N pagina's", "desc": "Groepeer elke N opeenvolgende pagina's in één PDF." },
+          "oddEven": { "title": "Oneven / Even", "desc": "Twee PDF's: oneven en even pagina's." },
+          "half": { "title": "Helften", "desc": "Splits in eerste en tweede helft." },
+          "range": { "title": "Aangepaste bereiken", "desc": "Definieer bereiken zoals 1-3, 5, 8-10. Klik op twee pagina's om een bereik toe te voegen." },
+          "size": { "title": "Op bestandsgrootte", "desc": "Elke uitvoer blijft onder een gekozen maximumgrootte." },
+          "outline": { "title": "Op bladwijzers", "desc": "Gebruik de inhoudsopgave van het PDF — één bestand per bladwijzer op het hoogste niveau." }
+        },
+        "every": { "label": "Pagina's per deel", "preview": "{count} delen" },
+        "half": { "preview": "Eerste {a} pagina's + Laatste {b} pagina's" },
+        "range": {
+          "mergeAll": "Alle bereiken samenvoegen tot één PDF",
+          "addRange": "Bereik toevoegen",
+          "clickToBuild": "Tip: klik op twee pagina's in de miniaturen hieronder om een bereik toe te voegen."
+        },
+        "size": {
+          "label": "Maximale grootte per deel",
+          "unitMB": "MB",
+          "unitKB": "KB",
+          "probing": "Splitspunten kalibreren...",
+          "oversizedWarning": "Pagina {n} alleen al overschrijdt de limiet ({size}); behouden als overdimensioneerd deel."
+        },
+        "outline": {
+          "noOutline": "Dit PDF heeft geen bladwijzers. Probeer een andere modus.",
+          "found": "{count} bladwijzers gevonden",
+          "willCreate": "Er worden {count} bestanden aangemaakt"
+        },
+        "progress": {
+          "splitting": "{current} van {total} splitsen",
+          "probing": "Kalibreren...",
+          "zipping": "ZIP inpakken..."
+        },
+        "actions": {
+          "cancel": "Annuleren",
+          "downloadAll": "Alles als ZIP downloaden",
+          "downloadSingle": "Downloaden"
+        },
+        "errors": {
+          "noFile": "Kies eerst een PDF",
+          "invalidEvery": "Voer een getal tussen 1 en {max} in",
+          "invalidSize": "Voer een positieve grootte in",
+          "encrypted": "Versleutelde PDF's worden niet ondersteund",
+          "invalidPdf": "Kan dit bestand niet lezen. Het lijkt geen geldig PDF te zijn.",
+          "tooFewPagesForHalf": "Minimaal 2 pagina's nodig",
+          "largeWarning": "Dit PDF heeft {count} pagina's. Elk in een eigen bestand splitsen kan veel geheugen gebruiken. Doorgaan?"
+        },
+        "preview": {
+          "color": "De kleur toont aan welk uitvoerbestand elke pagina toebehoort."
+        },
         "faq": {
-          "q1": "Kan ik een PDF splitsen in specifieke paginabereiken?",
-          "a1": "Ja, je kunt splitsen per individuele pagina of aangepaste bereiken opgeven zoals 1-3, 4-6, 7-10.",
+          "q1": "Welke splitsmodi zijn beschikbaar?",
+          "a1": "Zeven modi: elke pagina, elke N pagina's, oneven/even, helften, aangepaste bereiken (met optionele samenvoeging), op bestandsgrootte en op PDF-bladwijzers. Schakel op elk moment tussen modi en zie het kleurvoorbeeld op de miniaturen direct bijwerken.",
           "q2": "Worden mijn bestanden naar een server geüpload?",
-          "a2": "Nee. Alle verwerking gebeurt lokaal in je browser. Je bestanden verlaten nooit je apparaat.",
+          "a2": "Nee. Alle verwerking gebeurt lokaal in je browser via pdf-lib en pdfjs-dist. Je bestanden verlaten nooit je apparaat.",
           "q3": "Worden mijn bestanden naar een server geüpload?",
           "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
           "q4": "Kan ik deze tool offline gebruiken?",
           "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
-          "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
+          "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen. Bij zeer grote PDF's (1000+ pagina's) gebruik je liever 'Elke N pagina's' dan 'Elke pagina' om geheugengebruik te beperken.",
+          "q6": "Hoe werkt 'Op bestandsgrootte splitsen'?",
+          "a6": "Je voert een max grootte per deel in (bijv. 5 MB). De tool propt zo veel mogelijk opeenvolgende pagina's onder die limiet per uitvoer en start dan een volgend deel. Als één pagina al boven de limiet is, wordt deze toch geëmitteerd met een waarschuwing voor overdimensionering — niet overgeslagen.",
+          "q7": "Wat als mijn PDF geen bladwijzers heeft?",
+          "a7": "Het tabblad 'Op bladwijzers' wordt uitgeschakeld met een tooltip die uitlegt dat er geen PDF-overzicht is gevonden. Gebruik 'Aangepaste bereiken' of een andere modus. PDF's met bladwijzers (boeken, handleidingen, wetenschappelijke artikelen) werken hier perfect — elke bladwijzer op het hoogste niveau wordt een uitvoerbestand.",
+          "q8": "Kan ik alle delen als één ZIP downloaden?",
+          "a8": "Ja. Als het resultaat meer dan één bestand bevat, klik je op 'Alles als ZIP downloaden' om ze te bundelen. Bestandsnamen binnen de ZIP worden automatisch ontdubbeld."
         },
         "seoContent": {
           "intro": {
             "title": "Wat is PDF Splitsen?",
-            "content": "<p><strong>PDF Splitsen</strong> verdeelt een PDF in aparte bestanden — extraheer individuele pagina's, paginabereiken, of splits in bestanden van één pagina. Perfect voor het extraheren van specifieke secties uit grote documenten.</p>"
+            "content": "<p><strong>PDF Splitsen</strong> verdeelt een PDF in aparte bestanden met zeven flexibele modi: elke pagina, elke N pagina's, oneven/even, helften, aangepaste bereiken, op bestandsgrootte en op PDF-bladwijzers. Een kleurgecodeerde miniaturenpreview toont vóór bevestiging precies welke pagina's in welke uitvoer terechtkomen.</p>"
           },
           "useCases": {
             "title": "Veelvoorkomende gebruiksmogelijkheden",
-            "content": "<ul><li><strong>Pagina's extraheren</strong>: Haal specifieke pagina's uit een groot document</li><li><strong>Hoofdstukscheiding</strong>: Splits een boek of handleiding in individuele hoofdstukken</li><li><strong>Formulierextractie</strong>: Extraheer specifieke formulieren uit een PDF van meerdere pagina's</li><li><strong>Delen</strong>: Extraheer en deel alleen relevante pagina's uit een document</li><li><strong>Archivering</strong>: Scheid gecombineerde scans in individuele documenten</li></ul>"
+            "content": "<ul><li><strong>Pagina's extraheren</strong>: Haal specifieke pagina's met aangepaste bereiken</li><li><strong>Hoofdstukscheiding</strong>: Splits boeken of handleidingen automatisch per hoofdstuk via bladwijzers</li><li><strong>E-mailklaar</strong>: Gebruik 'Op grootte splitsen' om een groot PDF binnen de bijlage-limiet te krijgen</li><li><strong>Duplexscan herstellen</strong>: Gebruik 'Oneven / Even' om gemixte duplexscans te reconstrueren</li><li><strong>Formulierextractie</strong>: Extraheer specifieke formulieren uit een meerpaginaal PDF</li><li><strong>Archivering</strong>: Scheid gecombineerde scans met één klik in losse documenten</li></ul>"
           },
           "privacy": {
             "title": "Privacy-First PDF-splitsing",
-            "content": "<p>PDF's worden <strong>volledig in je browser gesplitst</strong> met <strong>pdf-lib</strong>.</p><ul><li>Je documenten <strong>verlaten nooit je apparaat</strong></li><li>Geen server uploads of cloudverwerking</li><li>Werkt <strong>offline</strong> nadat de pagina is geladen</li></ul>"
+            "content": "<p>PDF's worden <strong>volledig in je browser gesplitst</strong> met <strong>pdf-lib</strong> en <strong>pdfjs-dist</strong>.</p><ul><li>Je documenten <strong>verlaten nooit je apparaat</strong></li><li>Geen server-uploads of cloudverwerking — ook bij grote bestanden</li><li>Werkt <strong>offline</strong> na het laden van de pagina</li><li>Functies die concurrenten betalen maken (op grootte, op bladwijzers) zijn hier gratis</li></ul>"
           }
         }
       },

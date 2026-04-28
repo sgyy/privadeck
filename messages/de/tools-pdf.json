@@ -113,11 +113,11 @@
       },
       "split": {
         "name": "PDF teilen",
-        "description": "Ein PDF in einzelne Seiten oder benutzerdefinierte Seitenbereiche aufteilen.",
-        "metaTitle": "PDF teilen - Kostenloser Online-PDF-Teiler",
-        "metaDescription": "PDF-Dateien in einzelne Seiten oder benutzerdefinierte Bereiche aufteilen. Kostenloses Online-Tool, das in Ihrem Browser funktioniert.",
-        "aiSummary": "PDF-Dateien in einzelne Seiten oder benutzerdefinierte Bereiche aufteilen. Kostenloses Online-Tool, das in Ihrem Browser funktioniert.",
-        "keywords": "PDF teilen, PDF-Teiler, PDF-Seiten extrahieren, PDF-Seiten trennen",
+        "description": "PDFs nach Seiten, Bereichen, Dateigröße oder Lesezeichen teilen — alles im Browser.",
+        "metaTitle": "PDF teilen - 7 Modi inkl. nach Größe & Lesezeichen, im Browser",
+        "metaDescription": "Teilen Sie PDFs jede Seite, jede N Seiten, gerade/ungerade, Hälften, eigene Bereiche, nach Dateigröße oder Lesezeichen. Farbige Vorschau. ZIP-Download. 100% Browser, kein Upload.",
+        "aiSummary": "PrivaDeck PDF teilen — sieben Modi: jede Seite, jede N Seiten, gerade/ungerade, Hälften, eigene Bereiche, nach Dateigröße, nach Lesezeichen (Inhaltsverzeichnis). Farbcodierte Vorschau-Miniaturen zeigen, welche Seite in welche Ausgabedatei kommt. ZIP-Bündel-Download. Komplett im Browser über pdf-lib und pdfjs-dist (WebAssembly); kein Upload, keine Anmeldung, keine Installation. Teil des privacy-first PrivaDeck-Toolkits — https://privadeck.app",
+        "keywords": "PDF teilen, PDF-Teiler, PDF-Seiten extrahieren, PDF nach Größe teilen, PDF nach Lesezeichen teilen, gerade ungerade PDF teilen",
         "pages": "Seiten",
         "splitEach": "Jede Seite teilen",
         "splitRange": "Nach Bereich teilen",
@@ -126,30 +126,86 @@
         "split": "Teilen",
         "splitting": "Wird geteilt...",
         "results": "Teilungsergebnisse",
+        "modes": {
+          "each": { "title": "Jede Seite", "desc": "Jede Seite wird ein eigenes PDF." },
+          "every": { "title": "Alle N Seiten", "desc": "Je N aufeinanderfolgende Seiten in einem PDF gruppieren." },
+          "oddEven": { "title": "Ungerade / Gerade", "desc": "Zwei PDFs: ungerade Seiten und gerade Seiten." },
+          "half": { "title": "Hälften", "desc": "In erste und zweite Hälfte aufteilen." },
+          "range": { "title": "Eigene Bereiche", "desc": "Bereiche wie 1-3, 5, 8-10 definieren. Klicken Sie zwei Seiten an, um einen Bereich hinzuzufügen." },
+          "size": { "title": "Nach Dateigröße", "desc": "Jede Ausgabe bleibt unter einer von Ihnen gewählten maximalen Größe." },
+          "outline": { "title": "Nach Lesezeichen", "desc": "Verwendet das Inhaltsverzeichnis des PDFs — eine Datei pro Lesezeichen oberster Ebene." }
+        },
+        "every": { "label": "Seiten pro Teil", "preview": "{count} Teile" },
+        "half": { "preview": "Erste {a} Seiten + Letzte {b} Seiten" },
+        "range": {
+          "mergeAll": "Alle Bereiche zu einem einzigen PDF zusammenführen",
+          "addRange": "Bereich hinzufügen",
+          "clickToBuild": "Tipp: Klicken Sie unten zwei Seiten an, um einen Bereich hinzuzufügen."
+        },
+        "size": {
+          "label": "Maximale Größe pro Teil",
+          "unitMB": "MB",
+          "unitKB": "KB",
+          "probing": "Teilungspunkte werden berechnet...",
+          "oversizedWarning": "Seite {n} überschreitet allein das Limit ({size}); wird als überdimensionierter Einzelteil ausgegeben."
+        },
+        "outline": {
+          "noOutline": "Dieses PDF hat keine Lesezeichen. Probieren Sie einen anderen Modus.",
+          "found": "{count} Lesezeichen gefunden",
+          "willCreate": "Es werden {count} Dateien erstellt"
+        },
+        "progress": {
+          "splitting": "Teile {current} von {total}",
+          "probing": "Berechne...",
+          "zipping": "ZIP wird erstellt..."
+        },
+        "actions": {
+          "cancel": "Abbrechen",
+          "downloadAll": "Alle als ZIP herunterladen",
+          "downloadSingle": "Herunterladen"
+        },
+        "errors": {
+          "noFile": "Wählen Sie zuerst ein PDF",
+          "invalidEvery": "Geben Sie eine Zahl zwischen 1 und {max} ein",
+          "invalidSize": "Geben Sie eine positive Größe ein",
+          "encrypted": "Verschlüsselte PDFs werden nicht unterstützt",
+          "invalidPdf": "Diese Datei kann nicht gelesen werden. Sie scheint kein gültiges PDF zu sein.",
+          "tooFewPagesForHalf": "Mindestens 2 Seiten erforderlich",
+          "largeWarning": "Dieses PDF hat {count} Seiten. Jede einzeln zu teilen kann viel Speicher verbrauchen. Fortfahren?"
+        },
+        "preview": {
+          "color": "Die Farbe zeigt, zu welcher Ausgabedatei die jeweilige Seite gehört."
+        },
         "faq": {
-          "q1": "Kann ich ein PDF in bestimmte Seitenbereiche aufteilen?",
-          "a1": "Ja, Sie können nach einzelnen Seiten teilen oder benutzerdefinierte Bereiche wie 1-3, 4-6, 7-10 angeben.",
+          "q1": "Welche Teilungsmodi sind verfügbar?",
+          "a1": "Sieben Modi: jede Seite, alle N Seiten, ungerade/gerade, Hälften, eigene Bereiche (mit optionaler Zusammenführung), nach Dateigröße und nach PDF-Lesezeichen. Wechseln Sie jederzeit zwischen den Modi und beobachten Sie, wie sich die Farbvorschau auf den Miniaturen aktualisiert.",
           "q2": "Werden meine Dateien auf einen Server hochgeladen?",
-          "a2": "Nein. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser. Ihre Dateien verlassen niemals Ihr Gerät.",
+          "a2": "Nein. Die gesamte Verarbeitung erfolgt lokal in Ihrem Browser mit pdf-lib und pdfjs-dist. Ihre Dateien verlassen niemals Ihr Gerät.",
           "q3": "Werden meine Dateien auf einen Server hochgeladen?",
           "a3": "Nein. Die gesamte Verarbeitung erfolgt vollständig in Ihrem Browser. Ihre Daten verlassen niemals Ihr Gerät — nichts wird auf einen Server hochgeladen.",
           "q4": "Kann ich dieses Tool offline nutzen?",
           "a4": "Ja. Sobald die Seite geladen ist, funktioniert das Tool vollständig offline. Für das beste Erlebnis installieren Sie PrivaDeck als PWA in Ihrem Browser.",
           "q5": "Gibt es Dateigrößenbeschränkungen?",
-          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Arbeitsspeicher Ihres Geräts und den Browser-Möglichkeiten ab. Die meisten modernen Geräte verarbeiten Dateien bis zu mehreren hundert MB problemlos."
+          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Arbeitsspeicher Ihres Geräts ab. Bei sehr großen PDFs (über 1000 Seiten) bevorzugen Sie 'Alle N Seiten' statt 'Jede Seite', um den Speicherbedarf zu begrenzen.",
+          "q6": "Wie funktioniert 'Nach Dateigröße teilen'?",
+          "a6": "Sie geben eine maximale Größe pro Teil ein (z.B. 5 MB). Das Tool packt gierig so viele aufeinanderfolgende Seiten wie möglich unter diesem Limit in eine Ausgabe und beginnt dann den nächsten Teil. Liegt eine einzelne Seite bereits über dem Limit, wird sie trotzdem mit einer Überdimensionierungs-Warnung ausgegeben statt übersprungen.",
+          "q7": "Was, wenn mein PDF keine Lesezeichen hat?",
+          "a7": "Der Tab 'Nach Lesezeichen' wird mit einem Tooltip deaktiviert, der erklärt, dass keine PDF-Gliederung gefunden wurde. Verwenden Sie 'Eigene Bereiche' oder einen anderen Modus. PDFs mit Lesezeichen (Bücher, Handbücher, wissenschaftliche Arbeiten) funktionieren in diesem Modus hervorragend — jeder Eintrag oberster Ebene wird zu einer Ausgabedatei.",
+          "q8": "Kann ich alle Teile als einzelnes ZIP herunterladen?",
+          "a8": "Ja. Wenn das Ergebnis mehr als eine Datei umfasst, klicken Sie auf 'Alle als ZIP herunterladen'. Die Dateinamen im ZIP werden automatisch dedupliziert."
         },
         "seoContent": {
           "intro": {
             "title": "Was ist PDF teilen?",
-            "content": "<p><strong>PDF teilen</strong> unterteilt ein PDF in separate Dateien — einzelne Seiten, Seitenbereiche extrahieren oder in Einzelseiten-Dateien aufteilen. Ideal zum Herausziehen bestimmter Abschnitte aus umfangreichen Dokumenten.</p>"
+            "content": "<p><strong>PDF teilen</strong> zerlegt ein PDF in separate Dateien mit sieben flexiblen Modi: jede Seite, alle N Seiten, ungerade/gerade, Hälften, eigene Bereiche, nach Dateigröße und nach PDF-Lesezeichen. Eine farbcodierte Miniaturvorschau zeigt vor dem Bestätigen genau, welche Seiten in welche Ausgabe kommen.</p>"
           },
           "useCases": {
             "title": "Typische Anwendungsfälle",
-            "content": "<ul><li><strong>Seiten extrahieren</strong>: Bestimmte Seiten aus einem umfangreichen Dokument herausziehen</li><li><strong>Kapitel trennen</strong>: Ein Buch oder Handbuch in einzelne Kapitel aufteilen</li><li><strong>Formulare extrahieren</strong>: Bestimmte Formulare aus einer mehrseitigen PDF herausziehen</li><li><strong>Teilen</strong>: Nur relevante Seiten aus einem Dokument extrahieren und teilen</li><li><strong>Ablage</strong>: Kombinierte Scans in einzelne Dokumente trennen</li></ul>"
+            "content": "<ul><li><strong>Seiten extrahieren</strong>: Bestimmte Seiten aus einem umfangreichen Dokument mit eigenen Bereichen herausziehen</li><li><strong>Kapitel trennen</strong>: Bücher oder Handbücher automatisch über Lesezeichen in Kapitel aufteilen</li><li><strong>E-Mail-tauglich</strong>: 'Nach Dateigröße teilen' nutzen, um ein großes PDF auf E-Mail-Anhang-Limit zu kürzen</li><li><strong>Duplex-Scan retten</strong>: 'Ungerade / Gerade' verwenden, um durcheinander geratene Duplex-Scans zu rekonstruieren</li><li><strong>Formulare extrahieren</strong>: Bestimmte Formulare aus einer mehrseitigen PDF</li><li><strong>Ablage</strong>: Kombinierte Scans mit einem Klick in einzelne Dokumente trennen</li></ul>"
           },
           "privacy": {
             "title": "Datenschutz beim PDF-Teilen",
-            "content": "<p>PDFs werden <strong>vollständig in Ihrem Browser</strong> mit <strong>pdf-lib</strong> geteilt.</p><ul><li>Ihre Dokumente <strong>verlassen niemals Ihr Gerät</strong></li><li>Kein Server-Upload oder Cloud-Verarbeitung</li><li>Funktioniert <strong>offline</strong> nach dem Laden der Seite</li></ul>"
+            "content": "<p>PDFs werden <strong>vollständig in Ihrem Browser</strong> mit <strong>pdf-lib</strong> und <strong>pdfjs-dist</strong> geteilt.</p><ul><li>Ihre Dokumente <strong>verlassen niemals Ihr Gerät</strong></li><li>Kein Server-Upload, keine Cloud-Verarbeitung — auch bei großen Dateien</li><li>Funktioniert <strong>offline</strong> nach dem Laden</li><li>Funktionen, die Wettbewerber kostenpflichtig anbieten (nach Größe, nach Lesezeichen), sind hier kostenlos</li></ul>"
           }
         }
       },

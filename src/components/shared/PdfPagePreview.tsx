@@ -11,6 +11,8 @@ interface PdfPagePreviewProps {
   selected?: boolean;
   onClick?: () => void;
   className?: string;
+  accentClassName?: string;
+  badge?: string;
 }
 
 export function PdfPagePreview({
@@ -20,6 +22,8 @@ export function PdfPagePreview({
   selected,
   onClick,
   className,
+  accentClassName,
+  badge,
 }: PdfPagePreviewProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [loading, setLoading] = useState(true);
@@ -55,10 +59,13 @@ export function PdfPagePreview({
     <div
       onClick={onClick}
       className={cn(
-        "relative inline-block cursor-pointer rounded-lg border-2 overflow-hidden transition-all",
+        "relative inline-block rounded-lg border-2 overflow-hidden transition-all",
+        onClick ? "cursor-pointer" : "cursor-default",
         selected
           ? "border-primary ring-2 ring-primary/30"
-          : "border-border hover:border-primary/50",
+          : accentClassName
+            ? accentClassName
+            : "border-border hover:border-primary/50",
         className,
       )}
     >
@@ -74,6 +81,11 @@ export function PdfPagePreview({
       <div className="absolute bottom-0 left-0 right-0 bg-black/50 py-0.5 text-center text-xs text-white">
         {pageNumber}
       </div>
+      {badge && (
+        <div className="absolute top-1 right-1 rounded bg-black/70 px-1.5 py-0.5 text-[10px] font-semibold text-white">
+          {badge}
+        </div>
+      )}
     </div>
   );
 }

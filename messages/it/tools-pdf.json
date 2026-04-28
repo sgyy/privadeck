@@ -113,11 +113,11 @@
       },
       "split": {
         "name": "Dividi PDF",
-        "description": "Dividere un PDF in pagine singole o intervalli personalizzati.",
-        "metaTitle": "Dividi PDF - Strumento gratuito online",
-        "metaDescription": "Dividere file PDF in pagine singole o intervalli personalizzati. Strumento gratuito online che funziona nel tuo browser.",
-        "aiSummary": "Dividere file PDF in pagine singole o intervalli personalizzati. Strumento gratuito online che funziona nel tuo browser.",
-        "keywords": "dividi PDF, divisore PDF, estrai pagine PDF, separa pagine PDF",
+        "description": "Dividi PDF per pagine, intervalli, dimensione file o segnalibri — tutto nel browser.",
+        "metaTitle": "Dividi PDF - 7 modalità incl. per dimensione e segnalibri, nel browser",
+        "metaDescription": "Dividi PDF ogni pagina, ogni N pagine, pari/dispari, metà, intervalli personalizzati, per dimensione file o per segnalibri. Anteprima a colori. Download ZIP. 100% browser.",
+        "aiSummary": "PrivaDeck Dividi PDF — sette modalità: ogni pagina, ogni N pagine, pari/dispari, metà, intervalli personalizzati, per dimensione file, per segnalibri (sommario). Anteprima miniature con codice colore mostra a quale file di output appartiene ogni pagina. Download in pacchetto ZIP. Tutto avviene nel browser tramite pdf-lib e pdfjs-dist (WebAssembly); nessun upload, registrazione o installazione. Parte del kit privacy-first PrivaDeck — https://privadeck.app",
+        "keywords": "dividi PDF, divisore PDF, estrai pagine PDF, dividi PDF per dimensione, dividi PDF per segnalibri, dividi PDF pari dispari",
         "pages": "pagine",
         "splitEach": "Dividi ogni pagina",
         "splitRange": "Dividi per intervallo",
@@ -126,30 +126,86 @@
         "split": "Dividi",
         "splitting": "Divisione in corso...",
         "results": "Risultati divisione",
+        "modes": {
+          "each": { "title": "Ogni pagina", "desc": "Ogni pagina diventa il proprio PDF." },
+          "every": { "title": "Ogni N pagine", "desc": "Raggruppa ogni N pagine consecutive in un PDF." },
+          "oddEven": { "title": "Dispari / Pari", "desc": "Due PDF: uno per le pagine dispari, uno per le pari." },
+          "half": { "title": "Metà", "desc": "Dividi in prima e seconda metà." },
+          "range": { "title": "Intervalli personalizzati", "desc": "Definisci intervalli come 1-3, 5, 8-10. Clicca due pagine per aggiungere un intervallo." },
+          "size": { "title": "Per dimensione", "desc": "Ogni output rimane sotto la dimensione massima scelta." },
+          "outline": { "title": "Per segnalibri", "desc": "Usa il sommario del PDF — un file per ogni segnalibro di primo livello." }
+        },
+        "every": { "label": "Pagine per parte", "preview": "{count} parti" },
+        "half": { "preview": "Prime {a} pagine + Ultime {b} pagine" },
+        "range": {
+          "mergeAll": "Unisci tutti gli intervalli in un singolo PDF",
+          "addRange": "Aggiungi intervallo",
+          "clickToBuild": "Suggerimento: clicca due pagine sulle miniature per aggiungere un intervallo."
+        },
+        "size": {
+          "label": "Dimensione massima per parte",
+          "unitMB": "MB",
+          "unitKB": "KB",
+          "probing": "Calibrazione punti di divisione...",
+          "oversizedWarning": "La pagina {n} da sola supera il limite ({size}); mantenuta come parte sovradimensionata."
+        },
+        "outline": {
+          "noOutline": "Questo PDF non ha segnalibri. Prova un'altra modalità.",
+          "found": "Trovati {count} segnalibri",
+          "willCreate": "Verranno creati {count} file"
+        },
+        "progress": {
+          "splitting": "Divisione {current} di {total}",
+          "probing": "Calibrazione...",
+          "zipping": "Creazione ZIP..."
+        },
+        "actions": {
+          "cancel": "Annulla",
+          "downloadAll": "Scarica tutto come ZIP",
+          "downloadSingle": "Scarica"
+        },
+        "errors": {
+          "noFile": "Scegli prima un PDF",
+          "invalidEvery": "Inserisci un numero tra 1 e {max}",
+          "invalidSize": "Inserisci una dimensione positiva",
+          "encrypted": "I PDF cifrati non sono supportati",
+          "invalidPdf": "Impossibile leggere questo file. Non sembra essere un PDF valido.",
+          "tooFewPagesForHalf": "Servono almeno 2 pagine",
+          "largeWarning": "Questo PDF ha {count} pagine. Dividere ognuna nel proprio file può consumare molta memoria. Continuare?"
+        },
+        "preview": {
+          "color": "Il colore mostra a quale file di output appartiene ogni pagina."
+        },
         "faq": {
-          "q1": "Posso dividere un PDF in intervalli specifici?",
-          "a1": "Sì, puoi dividere per pagine singole o specificare intervalli personalizzati come 1-3, 4-6, 7-10.",
+          "q1": "Quali modalità di divisione sono disponibili?",
+          "a1": "Sette modalità: ogni pagina, ogni N pagine, dispari/pari, metà, intervalli personalizzati (con unione opzionale), per dimensione file e per segnalibri PDF. Cambia modalità in qualsiasi momento e osserva l'anteprima a colori delle miniature aggiornarsi.",
           "q2": "I miei file vengono caricati su un server?",
-          "a2": "No. Tutta l'elaborazione avviene localmente nel tuo browser. I tuoi file non lasciano mai il tuo dispositivo.",
+          "a2": "No. Tutta l'elaborazione avviene localmente nel browser tramite pdf-lib e pdfjs-dist. I tuoi file non lasciano mai il dispositivo.",
           "q3": "I miei file verranno caricati su un server?",
           "a3": "No. Tutto il trattamento avviene interamente nel browser. I tuoi dati non lasciano mai il dispositivo — nulla viene caricato su alcun server.",
           "q4": "Posso usare questo strumento offline?",
           "a4": "Sì. Una volta caricata la pagina, lo strumento funziona completamente offline. Per un'esperienza ottimale, installa PrivaDeck come PWA dal tuo browser.",
           "q5": "Ci sono limiti di dimensione file?",
-          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi."
+          "a5": "Non ci sono limiti imposti dal server. La dimensione massima dipende dalla memoria disponibile del tuo dispositivo. Per PDF molto grandi (1000+ pagine) preferisci 'Ogni N pagine' a 'Ogni pagina' per limitare l'uso di memoria.",
+          "q6": "Come funziona 'Dividi per dimensione'?",
+          "a6": "Inserisci una dimensione max per parte (es. 5 MB). Lo strumento impacchetta avidamente quante più pagine consecutive entrano sotto quel limite per ogni output, poi inizia la parte successiva. Se una singola pagina supera già il limite, viene comunque emessa con un avviso di sovradimensione invece di essere saltata.",
+          "q7": "Cosa succede se il PDF non ha segnalibri?",
+          "a7": "La scheda 'Per segnalibri' sarà disabilitata con un tooltip che spiega che non sono stati trovati segnalibri PDF. Usa 'Intervalli personalizzati' o un'altra modalità. I PDF con segnalibri (libri, manuali, articoli scientifici) funzionano benissimo con questa modalità — ogni voce di primo livello diventa un file di output.",
+          "q8": "Posso scaricare tutte le parti in un unico ZIP?",
+          "a8": "Sì. Quando il risultato ha più di un file, clicca 'Scarica tutto come ZIP' per impacchettarli in un unico archivio. I nomi dei file dentro lo ZIP sono deduplicati automaticamente."
         },
         "seoContent": {
           "intro": {
-            "title": "Che cos'è Split PDF?",
-            "content": "<p><strong>Split PDF</strong> divide un PDF in file separati — estrai pagine individuali, intervalli di pagine o dividi in file a pagina singola. Perfetto per estrarre sezioni specifiche da documenti di grandi dimensioni.</p>"
+            "title": "Che cos'è Dividi PDF?",
+            "content": "<p><strong>Dividi PDF</strong> divide un PDF in file separati con sette modalità flessibili: ogni pagina, ogni N pagine, dispari/pari, metà, intervalli personalizzati, per dimensione file e per segnalibri PDF. Un'anteprima miniature con codice colore mostra esattamente quali pagine finiranno in quale output prima di confermare.</p>"
           },
           "useCases": {
             "title": "Casi d'uso comuni",
-            "content": "<ul><li><strong>Estrai Pagine</strong>: Estrai pagine specifiche da un documento di grandi dimensioni</li><li><strong>Separazione Capitoli</strong>: Dividi un libro o manuale in capitoli individuali</li><li><strong>Estrazione Moduli</strong>: Estrai moduli specifici da un PDF multi-pagina</li><li><strong>Condivisione</strong>: Estrai e condividi solo le pagine rilevanti di un documento</li><li><strong>Archiviazione</strong>: Separa scansioni combinate in documenti individuali</li></ul>"
+            "content": "<ul><li><strong>Estrai Pagine</strong>: Estrai pagine specifiche con intervalli personalizzati</li><li><strong>Separazione Capitoli</strong>: Dividi automaticamente libri o manuali per capitolo usando i segnalibri</li><li><strong>Pronto per email</strong>: Usa 'Dividi per dimensione' per spezzare un PDF grande sotto il limite degli allegati</li><li><strong>Recupero scansione fronte-retro</strong>: Usa 'Dispari / Pari' per ricomporre scansioni duplex in ordine misto</li><li><strong>Estrazione Moduli</strong>: Estrai moduli specifici da un PDF multi-pagina</li><li><strong>Archiviazione</strong>: Separa scansioni combinate in documenti individuali con un clic</li></ul>"
           },
           "privacy": {
             "title": "Divisione PDF con privacy come priorità",
-            "content": "<p>I PDF vengono divisi <strong>interamente nel tuo browser</strong> utilizzando <strong>pdf-lib</strong>.</p><ul><li>I tuoi documenti <strong>non lasciano mai il tuo dispositivo</strong></li><li>Nessun caricamento su server o elaborazione cloud</li><li>Funziona <strong>offline</strong> dopo il caricamento della pagina</li></ul>"
+            "content": "<p>I PDF vengono divisi <strong>interamente nel tuo browser</strong> usando <strong>pdf-lib</strong> e <strong>pdfjs-dist</strong>.</p><ul><li>I tuoi documenti <strong>non lasciano mai il dispositivo</strong></li><li>Nessun caricamento su server o elaborazione cloud — anche per file grandi</li><li>Funziona <strong>offline</strong> dopo il caricamento</li><li>Funzioni che la concorrenza fa pagare (per dimensione, per segnalibri) qui sono gratuite</li></ul>"
           }
         }
       },

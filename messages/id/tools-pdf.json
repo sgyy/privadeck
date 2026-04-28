@@ -113,11 +113,11 @@
       },
       "split": {
         "name": "Pisahkan PDF",
-        "description": "Pisahkan PDF menjadi halaman individual atau rentang halaman kustom.",
-        "metaTitle": "Pisahkan PDF - Pemisah PDF Online Gratis",
-        "metaDescription": "Pisahkan file PDF menjadi halaman individual atau rentang kustom. Alat online gratis yang bekerja di browser Anda.",
-        "aiSummary": "Pisahkan file PDF menjadi halaman individual atau rentang kustom. Alat online gratis yang bekerja di browser Anda.",
-        "keywords": "pisahkan pdf, pemisah pdf, ekstrak halaman pdf, pisahkan halaman pdf",
+        "description": "Pisahkan PDF berdasarkan halaman, rentang, ukuran file, atau bookmark — semuanya di browser.",
+        "metaTitle": "Pisahkan PDF - 7 mode termasuk berdasarkan ukuran & bookmark",
+        "metaDescription": "Pisahkan PDF setiap halaman, setiap N halaman, ganjil/genap, paruhan, rentang kustom, berdasarkan ukuran file atau bookmark. Pratinjau warna. Unduh ZIP. 100% browser.",
+        "aiSummary": "PrivaDeck Pisahkan PDF — tujuh mode: setiap halaman, setiap N halaman, ganjil/genap, paruhan, rentang kustom, berdasarkan ukuran file, berdasarkan bookmark (daftar isi). Pratinjau thumbnail berkode warna menunjukkan halaman mana milik file output mana. Unduhan paket ZIP. Semuanya berjalan di browser via pdf-lib dan pdfjs-dist (WebAssembly); tanpa upload, registrasi, atau instalasi. Bagian dari toolkit privacy-first PrivaDeck — https://privadeck.app",
+        "keywords": "pisahkan pdf, pemisah pdf, ekstrak halaman pdf, pisahkan pdf berdasarkan ukuran, pisahkan pdf berdasarkan bookmark",
         "pages": "halaman",
         "splitEach": "Pisahkan setiap halaman",
         "splitRange": "Pisahkan berdasarkan rentang",
@@ -126,30 +126,86 @@
         "split": "Pisahkan",
         "splitting": "Memisahkan...",
         "results": "Hasil Pemisahan",
+        "modes": {
+          "each": { "title": "Setiap halaman", "desc": "Setiap halaman menjadi PDF tersendiri." },
+          "every": { "title": "Setiap N halaman", "desc": "Kelompokkan setiap N halaman berurutan menjadi satu PDF." },
+          "oddEven": { "title": "Ganjil / Genap", "desc": "Dua PDF: halaman ganjil dan halaman genap." },
+          "half": { "title": "Paruhan", "desc": "Pisahkan menjadi paruh pertama dan paruh kedua." },
+          "range": { "title": "Rentang kustom", "desc": "Definisikan rentang seperti 1-3, 5, 8-10. Klik dua halaman untuk menambah rentang." },
+          "size": { "title": "Berdasarkan ukuran file", "desc": "Setiap output tetap di bawah ukuran maksimum yang Anda pilih." },
+          "outline": { "title": "Berdasarkan bookmark", "desc": "Gunakan daftar isi PDF — satu file per bookmark tingkat atas." }
+        },
+        "every": { "label": "Halaman per bagian", "preview": "{count} bagian" },
+        "half": { "preview": "{a} halaman pertama + {b} halaman terakhir" },
+        "range": {
+          "mergeAll": "Gabungkan semua rentang menjadi satu PDF",
+          "addRange": "Tambah rentang",
+          "clickToBuild": "Tip: klik dua halaman pada thumbnail di bawah untuk menambah rentang."
+        },
+        "size": {
+          "label": "Ukuran maksimum per bagian",
+          "unitMB": "MB",
+          "unitKB": "KB",
+          "probing": "Mengkalibrasi titik pemisahan...",
+          "oversizedWarning": "Halaman {n} sendiri melebihi batas ({size}); tetap dihasilkan sebagai bagian tunggal yang melebihi."
+        },
+        "outline": {
+          "noOutline": "PDF ini tidak memiliki bookmark. Coba mode lain.",
+          "found": "Ditemukan {count} bookmark",
+          "willCreate": "{count} file akan dibuat"
+        },
+        "progress": {
+          "splitting": "Memisahkan {current} dari {total}",
+          "probing": "Mengkalibrasi...",
+          "zipping": "Mengemas ZIP..."
+        },
+        "actions": {
+          "cancel": "Batal",
+          "downloadAll": "Unduh semua sebagai ZIP",
+          "downloadSingle": "Unduh"
+        },
+        "errors": {
+          "noFile": "Pilih PDF dulu",
+          "invalidEvery": "Masukkan angka antara 1 dan {max}",
+          "invalidSize": "Masukkan ukuran positif",
+          "encrypted": "PDF terenkripsi tidak didukung",
+          "invalidPdf": "File ini tidak dapat dibaca. Sepertinya bukan PDF yang valid.",
+          "tooFewPagesForHalf": "Butuh minimal 2 halaman",
+          "largeWarning": "PDF ini memiliki {count} halaman. Memisahkan tiap halaman ke file sendiri bisa pakai banyak memori. Lanjutkan?"
+        },
+        "preview": {
+          "color": "Warna menunjukkan ke file output mana setiap halaman."
+        },
         "faq": {
-          "q1": "Bisakah saya memisahkan PDF ke rentang halaman tertentu?",
-          "a1": "Ya, Anda dapat memisahkan per halaman individual atau menentukan rentang kustom seperti 1-3, 4-6, 7-10.",
+          "q1": "Mode pemisahan apa yang tersedia?",
+          "a1": "Tujuh mode: setiap halaman, setiap N halaman, ganjil/genap, paruhan, rentang kustom (dengan opsi penggabungan), berdasarkan ukuran file, dan berdasarkan bookmark PDF. Beralih antar mode kapan saja — pratinjau warna pada thumbnail terupdate seketika.",
           "q2": "Apakah file saya diunggah ke server?",
-          "a2": "Tidak. Semua pemrosesan terjadi secara lokal di browser Anda. File Anda tidak pernah meninggalkan perangkat.",
+          "a2": "Tidak. Semua pemrosesan terjadi secara lokal di browser Anda via pdf-lib dan pdfjs-dist. File Anda tidak pernah meninggalkan perangkat.",
           "q3": "Apakah file saya akan diunggah ke server?",
           "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
           "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
           "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
-          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda. Untuk PDF sangat besar (1000+ halaman), gunakan 'Setiap N halaman' daripada 'Setiap halaman' agar memori tetap terkendali.",
+          "q6": "Bagaimana 'Pisahkan berdasarkan ukuran' bekerja?",
+          "a6": "Anda memasukkan ukuran maksimum per bagian (mis. 5 MB). Alat secara serakah mengemas sebanyak mungkin halaman berurutan yang muat di bawah batas tersebut per output, lalu mulai bagian berikutnya. Jika satu halaman saja sudah melebihi batas, halaman tersebut tetap dihasilkan dengan peringatan ukuran berlebih, bukan dilewati.",
+          "q7": "Bagaimana jika PDF saya tidak punya bookmark?",
+          "a7": "Tab 'Berdasarkan bookmark' akan dinonaktifkan dengan tooltip yang menjelaskan bahwa daftar isi PDF tidak ditemukan. Gunakan 'Rentang kustom' atau mode lain. PDF dengan bookmark (buku, manual, makalah ilmiah) bekerja sangat baik dengan mode ini — setiap entri tingkat atas menjadi file output.",
+          "q8": "Bisakah saya mengunduh semua bagian dalam satu ZIP?",
+          "a8": "Ya. Ketika hasil berisi lebih dari satu file, klik 'Unduh semua sebagai ZIP' untuk mengemasnya menjadi satu arsip. Nama file di dalam ZIP otomatis di-deduplikasi."
         },
         "seoContent": {
           "intro": {
-            "title": "Apa itu Split PDF?",
-            "content": "<p><strong>Split PDF</strong> membagi PDF menjadi file terpisah — ekstrak halaman individual, rentang halaman, atau pisahkan menjadi file satu halaman. Sempurna untuk mengekstrak bagian tertentu dari dokumen besar.</p>"
+            "title": "Apa itu Pisahkan PDF?",
+            "content": "<p><strong>Pisahkan PDF</strong> membagi PDF menjadi beberapa file dengan tujuh mode fleksibel: setiap halaman, setiap N halaman, ganjil/genap, paruhan, rentang kustom, berdasarkan ukuran file, dan berdasarkan bookmark PDF. Pratinjau thumbnail berkode warna menunjukkan tepat halaman mana akan masuk ke output mana sebelum konfirmasi.</p>"
           },
           "useCases": {
             "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Ekstrak Halaman</strong>: Ambil halaman tertentu dari dokumen besar</li><li><strong>Pemisahan Bab</strong>: Pisahkan buku atau manual menjadi bab-bab individual</li><li><strong>Ekstraksi Formulir</strong>: Ekstrak formulir tertentu dari PDF multi-halaman</li><li><strong>Berbagi</strong>: Ekstrak dan bagikan hanya halaman yang relevan dari dokumen</li><li><strong>Penyimpanan</strong>: Pisahkan pemindaian gabungan menjadi dokumen individual</li></ul>"
+            "content": "<ul><li><strong>Ekstrak Halaman</strong>: Ambil halaman tertentu dari dokumen besar dengan rentang kustom</li><li><strong>Pemisahan Bab</strong>: Pisahkan buku atau manual otomatis per bab via bookmark</li><li><strong>Siap Email</strong>: Pakai 'Pisahkan berdasarkan ukuran' untuk memecah PDF besar di bawah batas lampiran</li><li><strong>Pemulihan scan dupleks</strong>: 'Ganjil / Genap' untuk merekonstruksi scan bolak-balik yang teracak</li><li><strong>Ekstraksi Formulir</strong>: Ekstrak formulir tertentu dari PDF multi-halaman</li><li><strong>Penyimpanan</strong>: Pisahkan scan gabungan menjadi dokumen individual dengan satu klik</li></ul>"
           },
           "privacy": {
             "title": "Mengutamakan Privasi - PDF Splitting",
-            "content": "<p>PDF dipisahkan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>pdf-lib</strong>.</p><ul><li>Dokumen Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak ada unggahan server atau pemrosesan cloud</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
+            "content": "<p>PDF dipisahkan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>pdf-lib</strong> dan <strong>pdfjs-dist</strong>.</p><ul><li>Dokumen Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tanpa unggahan server atau pemrosesan cloud — bahkan untuk file besar</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li><li>Fitur yang berbayar di kompetitor (berdasarkan ukuran, bookmark) di sini gratis</li></ul>"
           }
         }
       },

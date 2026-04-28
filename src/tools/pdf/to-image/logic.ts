@@ -74,8 +74,17 @@ export async function downloadAsZip(
   const files: Record<string, Uint8Array> = {};
 
   for (const page of pages) {
+    const dot = page.filename.lastIndexOf(".");
+    const stem = dot > 0 ? page.filename.slice(0, dot) : page.filename;
+    const ext = dot > 0 ? page.filename.slice(dot) : "";
+    let key = page.filename;
+    let suffix = 1;
+    while (files[key] !== undefined) {
+      suffix++;
+      key = `${stem}_${suffix}${ext}`;
+    }
     const buffer = await page.blob.arrayBuffer();
-    files[page.filename] = new Uint8Array(buffer);
+    files[key] = new Uint8Array(buffer);
   }
 
   const zipped = zipSync(files);

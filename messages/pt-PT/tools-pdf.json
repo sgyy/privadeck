@@ -113,11 +113,11 @@
       },
       "split": {
         "name": "Dividir PDF",
-        "description": "Divida um PDF em páginas individuais ou intervalos personalizados.",
-        "metaTitle": "Dividir PDF - Divisor de PDF gratuito online",
-        "metaDescription": "Divida ficheiros PDF em páginas individuais ou intervalos personalizados. Ferramenta online gratuita que funciona no seu navegador.",
-        "aiSummary": "Divida ficheiros PDF em páginas individuais ou intervalos personalizados. Ferramenta online gratuita que funciona no seu navegador.",
-        "keywords": "dividir pdf, divisor de pdf, extrair páginas pdf, separar páginas pdf",
+        "description": "Divida PDFs por páginas, intervalos, tamanho de ficheiro ou marcadores — tudo no navegador.",
+        "metaTitle": "Dividir PDF - 7 modos incl. por tamanho e marcadores, no navegador",
+        "metaDescription": "Divida PDFs por cada página, cada N páginas, ímpares/pares, metades, intervalos personalizados, por tamanho ou por marcadores. Pré-visualização colorida. Transferência ZIP. 100% navegador.",
+        "aiSummary": "PrivaDeck Dividir PDF — sete modos: cada página, cada N páginas, ímpares/pares, metades, intervalos personalizados, por tamanho de ficheiro, por marcadores (índice). Pré-visualização em miniaturas com código de cores indica a que ficheiro de saída cada página pertence. Transferência empacotada em ZIP. Tudo no navegador via pdf-lib e pdfjs-dist (WebAssembly); sem carregamento, sem registo, sem instalação. Parte do kit privacy-first PrivaDeck — https://privadeck.app",
+        "keywords": "dividir pdf, divisor de pdf, extrair páginas pdf, dividir pdf por tamanho, dividir pdf por marcadores",
         "pages": "páginas",
         "splitEach": "Dividir cada página",
         "splitRange": "Dividir por intervalo",
@@ -126,30 +126,86 @@
         "split": "Dividir",
         "splitting": "A dividir...",
         "results": "Resultados da divisão",
+        "modes": {
+          "each": { "title": "Cada página", "desc": "Cada página torna-se o seu próprio PDF." },
+          "every": { "title": "Cada N páginas", "desc": "Agrupar cada N páginas consecutivas num PDF." },
+          "oddEven": { "title": "Ímpares / Pares", "desc": "Dois PDFs: um com páginas ímpares, outro com pares." },
+          "half": { "title": "Metades", "desc": "Dividir na primeira e segunda metade." },
+          "range": { "title": "Intervalos personalizados", "desc": "Defina intervalos como 1-3, 5, 8-10. Clique em duas páginas para adicionar um intervalo." },
+          "size": { "title": "Por tamanho", "desc": "Cada saída fica abaixo do tamanho máximo escolhido." },
+          "outline": { "title": "Por marcadores", "desc": "Use o índice do PDF — um ficheiro por marcador de nível superior." }
+        },
+        "every": { "label": "Páginas por parte", "preview": "{count} partes" },
+        "half": { "preview": "Primeiras {a} páginas + Últimas {b} páginas" },
+        "range": {
+          "mergeAll": "Combinar todos os intervalos num único PDF",
+          "addRange": "Adicionar intervalo",
+          "clickToBuild": "Sugestão: clique em duas páginas nas miniaturas abaixo para adicionar um intervalo."
+        },
+        "size": {
+          "label": "Tamanho máximo por parte",
+          "unitMB": "MB",
+          "unitKB": "KB",
+          "probing": "A calibrar pontos de divisão...",
+          "oversizedWarning": "A página {n} sozinha excede o limite ({size}); mantida como parte sobredimensionada."
+        },
+        "outline": {
+          "noOutline": "Este PDF não tem marcadores. Tente outro modo.",
+          "found": "{count} marcadores encontrados",
+          "willCreate": "Serão criados {count} ficheiros"
+        },
+        "progress": {
+          "splitting": "A dividir {current} de {total}",
+          "probing": "A calibrar...",
+          "zipping": "A empacotar ZIP..."
+        },
+        "actions": {
+          "cancel": "Cancelar",
+          "downloadAll": "Transferir tudo como ZIP",
+          "downloadSingle": "Transferir"
+        },
+        "errors": {
+          "noFile": "Escolha primeiro um PDF",
+          "invalidEvery": "Introduza um número entre 1 e {max}",
+          "invalidSize": "Introduza um tamanho positivo",
+          "encrypted": "Os PDFs cifrados não são suportados",
+          "invalidPdf": "Não foi possível ler este ficheiro. Não parece ser um PDF válido.",
+          "tooFewPagesForHalf": "São necessárias pelo menos 2 páginas",
+          "largeWarning": "Este PDF tem {count} páginas. Dividir cada uma no seu próprio ficheiro pode usar muita memória. Continuar?"
+        },
+        "preview": {
+          "color": "A cor mostra a que ficheiro de saída cada página pertence."
+        },
         "faq": {
-          "q1": "Posso dividir um PDF em intervalos de páginas específicos?",
-          "a1": "Sim, pode dividir por páginas individuais ou especificar intervalos personalizados como 1-3, 4-6, 7-10.",
+          "q1": "Que modos de divisão estão disponíveis?",
+          "a1": "Sete modos: cada página, cada N páginas, ímpares/pares, metades, intervalos personalizados (com fusão opcional), por tamanho de ficheiro e por marcadores PDF. Mude de modo a qualquer altura e veja a pré-visualização colorida das miniaturas atualizar-se.",
           "q2": "Os meus ficheiros são enviados para um servidor?",
-          "a2": "Não. Todo o processamento acontece localmente no seu navegador. Os seus ficheiros nunca saem do seu dispositivo.",
+          "a2": "Não. Todo o processamento acontece localmente no seu navegador via pdf-lib e pdfjs-dist. Os seus ficheiros nunca saem do dispositivo.",
           "q3": "Os meus ficheiros serão enviados para um servidor?",
           "a3": "Não. Todo o processamento acontece inteiramente no seu navegador. Os seus dados nunca saem do seu dispositivo — nada é enviado para nenhum servidor.",
           "q4": "Posso utilizar esta ferramenta offline?",
           "a4": "Sim. Depois que a página carregar, a ferramenta funciona completamente offline. Para a melhor experiência, instale o PrivaDeck como PWA pelo seu navegador.",
           "q5": "Existem limites de tamanho de ficheiro?",
-          "a5": "Não há limites impostos pelo servidor. O tamanho máximo do ficheiro depende da memória disponível do seu dispositivo e dos recursos do navegador. A maioria dos dispositivos modernos lida com ficheiros de várias centenas de MB sem problemas."
+          "a5": "Não há limites impostos pelo servidor. O tamanho máximo depende da memória disponível do dispositivo. Para PDFs muito grandes (1000+ páginas), prefira 'Cada N páginas' a 'Cada página' para controlar o uso de memória.",
+          "q6": "Como funciona 'Dividir por tamanho'?",
+          "a6": "Introduz um tamanho máximo por parte (ex. 5 MB). A ferramenta agrupa avidamente o máximo de páginas consecutivas que cabem nesse limite por saída e depois inicia a próxima parte. Se uma única página já excede o limite, ainda é emitida com um aviso de sobredimensionamento — não é saltada.",
+          "q7": "E se o meu PDF não tiver marcadores?",
+          "a7": "O separador 'Por marcadores' ficará desativado com uma tooltip a explicar que nenhum índice PDF foi encontrado. Use 'Intervalos personalizados' ou outro modo. PDFs com marcadores (livros, manuais, artigos científicos) funcionam muito bem neste modo — cada entrada de nível superior torna-se um ficheiro de saída.",
+          "q8": "Posso transferir todas as partes num único ZIP?",
+          "a8": "Sim. Quando o resultado tem mais do que um ficheiro, clique em 'Transferir tudo como ZIP' para os empacotar num único arquivo. Os nomes dentro do ZIP são deduplicados automaticamente."
         },
         "seoContent": {
           "intro": {
-            "title": "O que é Split PDF?",
-            "content": "<p><strong>Split PDF</strong> divides a PDF into separate files — extract individual pages, page ranges, or split into single-page files. Perfect for extracting specific sections from large documents.</p>"
+            "title": "O que é Dividir PDF?",
+            "content": "<p><strong>Dividir PDF</strong> separa um PDF em vários ficheiros com sete modos flexíveis: cada página, cada N páginas, ímpares/pares, metades, intervalos personalizados, por tamanho de ficheiro e por marcadores PDF. Uma pré-visualização em miniaturas com código de cores mostra exatamente que páginas vão para que saída antes de confirmar.</p>"
           },
           "useCases": {
             "title": "Casos de Uso Comuns",
-            "content": "<ul><li><strong>Extract Pages</strong>: Pull specific pages from a large document</li><li><strong>Chapter Separation</strong>: Split a book or manual into individual chapters</li><li><strong>Form Extraction</strong>: Extract specific forms from a multi-page PDF</li><li><strong>Sharing</strong>: Extract and share only relevant pages from a document</li><li><strong>Filing</strong>: Separate combined scans into individual documents</li></ul>"
+            "content": "<ul><li><strong>Extração de Páginas</strong>: Extraia páginas específicas com intervalos personalizados</li><li><strong>Separação por Capítulos</strong>: Divida livros ou manuais por capítulo automaticamente através de marcadores</li><li><strong>Pronto para email</strong>: Use 'Dividir por tamanho' para fragmentar um PDF grande dentro do limite de anexo</li><li><strong>Recuperação de digitalização duplex</strong>: Use 'Ímpares / Pares' para reconstruir digitalizações frente-e-verso fora de ordem</li><li><strong>Extração de Formulários</strong>: Extraia formulários específicos de um PDF de várias páginas</li><li><strong>Arquivamento</strong>: Separe digitalizações combinadas em documentos individuais com um clique</li></ul>"
           },
           "privacy": {
-            "title": "Prioriza Privacidade - PDF Splitting",
-            "content": "<p>PDFs are split <strong>entirely in your navegador</strong> using <strong>pdf-lib</strong>.</p><ul><li>Os seus documents <strong>never leave your device</strong></li><li>Sem carregamento de servidor or cloud processing</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
+            "title": "Divisão de PDF Focada em Privacidade",
+            "content": "<p>Os PDFs são divididos <strong>inteiramente no seu navegador</strong> usando <strong>pdf-lib</strong> e <strong>pdfjs-dist</strong>.</p><ul><li>Os seus documentos <strong>nunca saem do dispositivo</strong></li><li>Sem carregamento para servidor ou processamento na nuvem — mesmo para ficheiros grandes</li><li>Funciona <strong>offline</strong> após o carregamento</li><li>Funcionalidades pagas nos concorrentes (por tamanho, por marcadores) são gratuitas aqui</li></ul>"
           }
         }
       },

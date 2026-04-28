@@ -113,11 +113,11 @@
       },
       "split": {
         "name": "Tách PDF",
-        "description": "Tách PDF thành các trang riêng lẻ hoặc phạm vi trang tùy chỉnh.",
-        "metaTitle": "Tách PDF - Trình tách PDF trực tuyến miễn phí",
-        "metaDescription": "Tách tệp PDF thành các trang riêng lẻ hoặc phạm vi tùy chỉnh. Công cụ trực tuyến miễn phí hoạt động trong trình duyệt.",
-        "aiSummary": "Tách tệp PDF thành các trang riêng lẻ hoặc phạm vi tùy chỉnh. Công cụ trực tuyến miễn phí hoạt động trong trình duyệt.",
-        "keywords": "tách pdf, trình tách pdf, trích xuất trang pdf, chia trang pdf",
+        "description": "Tách PDF theo trang, phạm vi, kích thước tệp hoặc dấu trang — tất cả trong trình duyệt.",
+        "metaTitle": "Tách PDF - 7 chế độ gồm theo kích thước & dấu trang, trong trình duyệt",
+        "metaDescription": "Tách PDF mỗi trang, mỗi N trang, lẻ/chẵn, đôi nửa, phạm vi tùy chỉnh, theo kích thước tệp hoặc dấu trang. Xem trước theo màu. Tải ZIP. 100% trong trình duyệt.",
+        "aiSummary": "PrivaDeck Tách PDF — bảy chế độ: mỗi trang, mỗi N trang, lẻ/chẵn, đôi nửa, phạm vi tùy chỉnh, theo kích thước tệp, theo dấu trang (mục lục). Xem trước hình thu nhỏ mã hóa màu cho biết trang nào thuộc tệp đầu ra nào. Tải xuống dạng gói ZIP. Mọi thứ chạy trong trình duyệt qua pdf-lib và pdfjs-dist (WebAssembly); không cần tải lên, đăng ký hay cài đặt. Một phần của bộ công cụ privacy-first PrivaDeck — https://privadeck.app",
+        "keywords": "tách pdf, trình tách pdf, trích xuất trang pdf, tách pdf theo kích thước, tách pdf theo dấu trang",
         "pages": "trang",
         "splitEach": "Tách từng trang",
         "splitRange": "Tách theo phạm vi",
@@ -126,30 +126,86 @@
         "split": "Tách",
         "splitting": "Đang tách...",
         "results": "Kết quả tách",
+        "modes": {
+          "each": { "title": "Mỗi trang", "desc": "Mỗi trang trở thành PDF của riêng nó." },
+          "every": { "title": "Mỗi N trang", "desc": "Nhóm mỗi N trang liên tiếp thành một PDF." },
+          "oddEven": { "title": "Lẻ / Chẵn", "desc": "Hai PDF: một cho trang lẻ và một cho trang chẵn." },
+          "half": { "title": "Đôi nửa", "desc": "Tách thành nửa đầu và nửa sau." },
+          "range": { "title": "Phạm vi tùy chỉnh", "desc": "Định nghĩa phạm vi như 1-3, 5, 8-10. Nhấp hai trang để thêm phạm vi." },
+          "size": { "title": "Theo kích thước tệp", "desc": "Mỗi tệp đầu ra ở dưới kích thước tối đa bạn chọn." },
+          "outline": { "title": "Theo dấu trang", "desc": "Sử dụng mục lục PDF — một tệp cho mỗi dấu trang cấp cao nhất." }
+        },
+        "every": { "label": "Trang mỗi phần", "preview": "{count} phần" },
+        "half": { "preview": "{a} trang đầu + {b} trang cuối" },
+        "range": {
+          "mergeAll": "Gộp tất cả phạm vi thành một PDF",
+          "addRange": "Thêm phạm vi",
+          "clickToBuild": "Mẹo: nhấp hai trang trên hình thu nhỏ bên dưới để thêm phạm vi."
+        },
+        "size": {
+          "label": "Kích thước tối đa mỗi phần",
+          "unitMB": "MB",
+          "unitKB": "KB",
+          "probing": "Đang hiệu chỉnh điểm tách...",
+          "oversizedWarning": "Trang {n} một mình đã vượt giới hạn ({size}); giữ lại như một phần đơn lẻ vượt kích thước."
+        },
+        "outline": {
+          "noOutline": "PDF này không có dấu trang. Hãy thử chế độ khác.",
+          "found": "Tìm thấy {count} dấu trang",
+          "willCreate": "Sẽ tạo {count} tệp"
+        },
+        "progress": {
+          "splitting": "Đang tách {current} trên {total}",
+          "probing": "Đang hiệu chỉnh...",
+          "zipping": "Đang đóng gói ZIP..."
+        },
+        "actions": {
+          "cancel": "Hủy",
+          "downloadAll": "Tải tất cả dưới dạng ZIP",
+          "downloadSingle": "Tải xuống"
+        },
+        "errors": {
+          "noFile": "Hãy chọn PDF trước",
+          "invalidEvery": "Nhập số từ 1 đến {max}",
+          "invalidSize": "Nhập kích thước dương",
+          "encrypted": "Không hỗ trợ PDF được mã hóa",
+          "invalidPdf": "Không thể đọc tệp này. Có vẻ đây không phải là PDF hợp lệ.",
+          "tooFewPagesForHalf": "Cần ít nhất 2 trang",
+          "largeWarning": "PDF này có {count} trang. Tách mỗi trang thành tệp riêng có thể dùng nhiều bộ nhớ. Tiếp tục?"
+        },
+        "preview": {
+          "color": "Màu cho biết mỗi trang thuộc tệp đầu ra nào."
+        },
         "faq": {
-          "q1": "Tôi có thể tách PDF theo phạm vi trang cụ thể không?",
-          "a1": "Có, bạn có thể tách theo từng trang hoặc chỉ định phạm vi tùy chỉnh như 1-3, 4-6, 7-10.",
+          "q1": "Có những chế độ tách nào?",
+          "a1": "Bảy chế độ: mỗi trang, mỗi N trang, lẻ/chẵn, đôi nửa, phạm vi tùy chỉnh (có tùy chọn gộp), theo kích thước tệp và theo dấu trang PDF. Chuyển chế độ bất cứ lúc nào — xem trước màu trên hình thu nhỏ cập nhật ngay lập tức.",
           "q2": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a2": "Không. Tất cả xử lý diễn ra cục bộ trong trình duyệt. Tệp của bạn không bao giờ rời khỏi thiết bị.",
+          "a2": "Không. Mọi xử lý diễn ra cục bộ trong trình duyệt qua pdf-lib và pdfjs-dist. Tệp của bạn không bao giờ rời khỏi thiết bị.",
           "q3": "Tệp của tôi có bị tải lên máy chủ không?",
           "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
           "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
           "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
-          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
+          "a5": "Không có giới hạn từ máy chủ. Kích thước tối đa phụ thuộc vào bộ nhớ khả dụng của thiết bị. Với PDF rất lớn (1000+ trang), hãy ưu tiên 'Mỗi N trang' thay vì 'Mỗi trang' để kiểm soát bộ nhớ.",
+          "q6": "'Tách theo kích thước' hoạt động thế nào?",
+          "a6": "Bạn nhập kích thước tối đa cho mỗi phần (ví dụ 5 MB). Công cụ tham lam đóng gói tối đa số trang liên tiếp vừa với giới hạn vào mỗi đầu ra, rồi bắt đầu phần kế tiếp. Nếu một trang đơn đã vượt giới hạn, nó vẫn được xuất ra với cảnh báo vượt kích thước thay vì bỏ qua.",
+          "q7": "Nếu PDF của tôi không có dấu trang?",
+          "a7": "Tab 'Theo dấu trang' sẽ bị tắt với chú thích cho biết không tìm thấy mục lục PDF. Hãy dùng 'Phạm vi tùy chỉnh' hoặc chế độ khác. PDF có dấu trang (sách, sổ tay, bài báo khoa học) hoạt động rất tốt với chế độ này — mỗi mục cấp cao nhất trở thành một tệp đầu ra.",
+          "q8": "Tôi có thể tải tất cả các phần dưới dạng một ZIP không?",
+          "a8": "Có. Khi kết quả có nhiều hơn một tệp, nhấp 'Tải tất cả dưới dạng ZIP' để gộp chúng thành một kho lưu trữ. Tên tệp bên trong ZIP được khử trùng lặp tự động."
         },
         "seoContent": {
           "intro": {
             "title": "Tách PDF là gì?",
-            "content": "<p><strong>Tách PDF</strong> chia một tệp PDF thành các tệp riêng biệt — trích xuất từng trang, phạm vi trang, hoặc tách thành các tệp một trang. Hoàn hảo để trích xuất các phần cụ thể từ tài liệu lớn.</p>"
+            "content": "<p><strong>Tách PDF</strong> chia một tệp PDF thành nhiều tệp riêng với bảy chế độ linh hoạt: mỗi trang, mỗi N trang, lẻ/chẵn, đôi nửa, phạm vi tùy chỉnh, theo kích thước tệp và theo dấu trang PDF. Xem trước hình thu nhỏ mã hóa màu cho thấy chính xác trang nào sẽ vào tệp đầu ra nào trước khi xác nhận.</p>"
           },
           "useCases": {
             "title": "Trường hợp sử dụng phổ biến",
-            "content": "<ul><li><strong>Trích xuất trang</strong>: Rút các trang cụ thể từ tài liệu lớn</li><li><strong>Tách chương</strong>: Chia sách hoặc hướng dẫn thành từng chương riêng</li><li><strong>Trích xuất biểu mẫu</strong>: Trích xuất biểu mẫu cụ thể từ PDF nhiều trang</li><li><strong>Chia sẻ</strong>: Trích xuất và chia sẻ chỉ các trang liên quan từ tài liệu</li><li><strong>Lưu trữ</strong>: Tách các bản quét đã gộp thành tài liệu riêng lẻ</li></ul>"
+            "content": "<ul><li><strong>Trích xuất trang</strong>: Lấy các trang cụ thể bằng phạm vi tùy chỉnh</li><li><strong>Tách chương</strong>: Chia sách hoặc sổ tay theo chương tự động qua dấu trang</li><li><strong>Sẵn sàng cho email</strong>: Dùng 'Tách theo kích thước' để cắt PDF lớn xuống dưới giới hạn đính kèm</li><li><strong>Khôi phục quét hai mặt</strong>: Dùng 'Lẻ/Chẵn' để tái tạo bản quét song mặt bị xáo trộn</li><li><strong>Trích xuất biểu mẫu</strong>: Trích xuất biểu mẫu cụ thể từ PDF nhiều trang</li><li><strong>Lưu trữ</strong>: Tách các bản quét đã gộp thành tài liệu riêng lẻ chỉ với một cú nhấp</li></ul>"
           },
           "privacy": {
             "title": "Ưu tiên quyền riêng tư khi Tách PDF",
-            "content": "<p>Việc tách PDF diễn ra <strong>hoàn toàn trong trình duyệt</strong> của bạn bằng <strong>pdf-lib</strong>.</p><ul><li>Tài liệu của bạn <strong>không bao giờ rời khỏi thiết bị</strong></li><li>Không tải lên máy chủ hoặc xử lý đám mây</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi trang đã tải</li></ul>"
+            "content": "<p>Việc tách PDF diễn ra <strong>hoàn toàn trong trình duyệt</strong> của bạn bằng <strong>pdf-lib</strong> và <strong>pdfjs-dist</strong>.</p><ul><li>Tài liệu của bạn <strong>không bao giờ rời khỏi thiết bị</strong></li><li>Không tải lên máy chủ hay xử lý đám mây — kể cả với tệp lớn</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi trang đã tải</li><li>Tính năng đối thủ tính phí (theo kích thước, theo dấu trang) ở đây miễn phí</li></ul>"
           }
         }
       },

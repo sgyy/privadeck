@@ -81,7 +81,16 @@ export default function SplitPdf() {
         setOutlineSections([]);
       }
     } catch (e) {
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      const isEncrypted =
+        /encrypt/i.test(msg) ||
+        (e as { name?: string })?.name === "PasswordException";
+      setError(isEncrypted ? t("errors.encrypted") : t("errors.invalidPdf"));
+      setFile(null);
+      setPdfDoc(null);
+      setPageCount(0);
+      setThumbnail(null);
+      setOutlineSections(null);
     }
   }
 
@@ -228,6 +237,7 @@ export default function SplitPdf() {
         tracker.trackProcessError(msg);
         // map known logic-layer errors to localized messages
         let display = msg;
+        let known = true;
         if (msg === "no_outline") display = t("outline.noOutline");
         else if (msg === "no_ranges" || msg === "no_valid_ranges")
           display = t("rangeHint");
@@ -237,8 +247,9 @@ export default function SplitPdf() {
         else if (msg === "too_few_pages_for_half")
           display = t("errors.tooFewPagesForHalf");
         else if (/encrypt/i.test(msg)) display = t("errors.encrypted");
+        else known = false;
         setError(display);
-        console.error("Split failed:", e);
+        if (!known) console.error("Split failed:", e);
       }
     } finally {
       setSplitting(false);
@@ -263,7 +274,7 @@ export default function SplitPdf() {
         <FileDropzone accept="application/pdf" onFiles={handleFile} />
       )}
 
-      {error && (
+      {error && !file && (
         <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
           {error}
         </div>
@@ -282,23 +293,6 @@ export default function SplitPdf() {
 
       {file && pageCount > 0 && (
         <>
-          <ModeTabs mode={mode} onChange={setMode} disabledModes={disabledModes} />
-          <ModeOptionsPanel
-            mode={mode}
-            pageCount={pageCount}
-            everyN={everyN}
-            setEveryN={setEveryN}
-            rangeInput={rangeInput}
-            setRangeInput={setRangeInput}
-            mergeAllRanges={mergeAllRanges}
-            setMergeAllRanges={setMergeAllRanges}
-            maxSize={maxSize}
-            maxSizeUnit={maxSizeUnit}
-            setMaxSize={setMaxSize}
-            setMaxSizeUnit={setMaxSizeUnit}
-            outlineSections={outlineSections}
-          />
-
           {pdfDoc && (
             <ThumbnailGrid
               pdf={pdfDoc}
@@ -310,26 +304,59 @@ export default function SplitPdf() {
             />
           )}
 
-          <div className="flex items-center gap-3">
-            {!splitting ? (
-              <Button onClick={handleSplit} disabled={splitting}>
-                {t("split")}
-              </Button>
-            ) : (
-              <Button onClick={handleCancel} variant="outline">
-                {t("actions.cancel")}
-              </Button>
-            )}
-            {splitting && progress && (
-              <span className="text-xs text-muted-foreground">
-                {progress.phase === "probing"
-                  ? t("size.probing")
-                  : t("progress.splitting", {
-                      current: progress.current,
-                      total: progress.total,
-                    })}
-              </span>
-            )}
+          <div className="sticky bottom-3 z-10 max-h-[70vh] space-y-3 overflow-y-auto rounded-lg border border-border bg-card/95 p-3 shadow-lg backdrop-blur">
+            <ModeTabs
+              mode={mode}
+              onChange={(m) => {
+                setMode(m);
+                if (error) setError("");
+              }}
+              disabledModes={disabledModes}
+            />
+            <ModeOptionsPanel
+              mode={mode}
+              pageCount={pageCount}
+              everyN={everyN}
+              setEveryN={setEveryN}
+              rangeInput={rangeInput}
+              setRangeInput={setRangeInput}
+              mergeAllRanges={mergeAllRanges}
+              setMergeAllRanges={setMergeAllRanges}
+              maxSize={maxSize}
+              maxSizeUnit={maxSizeUnit}
+              setMaxSize={setMaxSize}
+              setMaxSizeUnit={setMaxSizeUnit}
+              outlineSections={outlineSections}
+            />
+            <div className="flex flex-wrap items-center gap-3 border-t border-border/50 pt-3">
+              {!splitting ? (
+                <Button onClick={handleSplit} disabled={splitting}>
+                  {t("split")}
+                </Button>
+              ) : (
+                <Button onClick={handleCancel} variant="outline">
+                  {t("actions.cancel")}
+                </Button>
+              )}
+              {splitting && progress && (
+                <span className="text-xs text-muted-foreground">
+                  {progress.phase === "probing"
+                    ? t("size.probing")
+                    : t("progress.splitting", {
+                        current: progress.current,
+                        total: progress.total,
+                      })}
+                </span>
+              )}
+              {error && !splitting && (
+                <span
+                  role="alert"
+                  className="max-w-md break-words text-sm text-red-600 dark:text-red-400"
+                >
+                  {error}
+                </span>
+              )}
+            </div>
           </div>
         </>
       )}
