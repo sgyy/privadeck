@@ -7,7 +7,10 @@ import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { CopyButton } from "@/components/shared/CopyButton";
 import { Button } from "@/components/ui/Button";
 import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
+import { createToolTracker } from "@/lib/analytics";
 import { extractText } from "./logic";
+
+const tracker = createToolTracker("extract-text", "pdf");
 
 export default function ExtractText() {
   const [file, setFile] = useState<File | null>(null);
@@ -48,12 +51,16 @@ export default function ExtractText() {
     setProcessing(true);
     setText("");
     setError("");
+    const t0 = performance.now();
     try {
       const result = await extractText(file);
       setText(result || t("noTextFound"));
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Extraction failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

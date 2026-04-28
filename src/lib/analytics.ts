@@ -82,6 +82,18 @@ interface AppleDetectedParams {
   software?: string;
 }
 
+interface ToolViewParams {
+  tool_slug: string;
+  tool_category: string;
+}
+
+interface ToolCardClickParams {
+  from_page: "home" | "category" | "header_menu";
+  to_slug: string;
+  to_category: string;
+  position?: number;
+}
+
 // ─── Event map ───
 
 interface EventParams {
@@ -99,6 +111,8 @@ interface EventParams {
   process_complete: ProcessCompleteParams;
   process_error: ProcessErrorParams;
   apple_detected: AppleDetectedParams;
+  tool_view: ToolViewParams;
+  tool_card_click: ToolCardClickParams;
 }
 
 export type AnalyticsEvent = keyof EventParams;
@@ -115,7 +129,7 @@ export function trackEvent<E extends AnalyticsEvent>(
   event: E,
   ...args: EventParams[E] extends Record<string, never> ? [] : [EventParams[E]]
 ): void {
-  if (typeof window === "undefined" || !window.gtag) return;
+  if (typeof window === "undefined") return;
 
   const raw = args[0] as Record<string, unknown> | undefined;
   const params = raw ? { ...raw } : {};
@@ -128,6 +142,11 @@ export function trackEvent<E extends AnalyticsEvent>(
     params.query = truncate(params.query);
   }
 
+  if (process.env.NODE_ENV !== "production") {
+    console.debug("[GA]", event, params);
+  }
+
+  if (!window.gtag) return;
   window.gtag("event", event, params);
 }
 
@@ -142,4 +161,22 @@ export function createToolTracker(slug: string, category: string) {
       trackEvent("process_error", { tool_slug: slug, tool_category: category, error_message });
     },
   };
+}
+
+export function trackToolView(slug: string, category: string) {
+  trackEvent("tool_view", { tool_slug: slug, tool_category: category });
+}
+
+export function trackToolCardClick(
+  from_page: ToolCardClickParams["from_page"],
+  to_slug: string,
+  to_category: string,
+  position?: number,
+) {
+  trackEvent("tool_card_click", {
+    from_page,
+    to_slug,
+    to_category,
+    ...(position !== undefined ? { position } : {}),
+  });
 }

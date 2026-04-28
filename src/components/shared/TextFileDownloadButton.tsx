@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { brandFilename } from "@/lib/brand";
 import { trackEvent } from "@/lib/analytics";
+import { useToolAnalytics } from "@/components/tool/ToolAnalyticsContext";
 
 interface TextFileDownloadButtonProps {
   text: string;
@@ -25,6 +26,9 @@ export function TextFileDownloadButton({
   analyticsCategory,
 }: TextFileDownloadButtonProps) {
   const t = useTranslations("common");
+  const ctx = useToolAnalytics();
+  const slug = analyticsSlug ?? ctx?.slug;
+  const category = analyticsCategory ?? ctx?.category;
 
   const blob = useMemo(
     () => new Blob([text], { type: mimeType }),
@@ -38,15 +42,15 @@ export function TextFileDownloadButton({
     a.download = brandFilename(filename);
     a.click();
     URL.revokeObjectURL(url);
-    if (analyticsSlug && analyticsCategory) {
+    if (slug && category) {
       const ext = filename.split(".").pop()?.toLowerCase() || "unknown";
       trackEvent("file_download", {
-        tool_slug: analyticsSlug,
-        tool_category: analyticsCategory,
+        tool_slug: slug,
+        tool_category: category,
         file_type: ext,
       });
     }
-  }, [blob, filename, analyticsSlug, analyticsCategory]);
+  }, [blob, filename, slug, category]);
 
   return (
     <Button

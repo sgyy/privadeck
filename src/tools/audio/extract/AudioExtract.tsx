@@ -9,9 +9,11 @@ import { Select } from "@/components/ui/Select";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { useIsClient } from "@/lib/hooks/useIsClient";
+import { createToolTracker } from "@/lib/analytics";
 import { extractAudio, type OutputFormat } from "./logic";
 
 const FORMATS: OutputFormat[] = ["mp3", "wav", "aac"];
+const tracker = createToolTracker("extract", "audio");
 
 export default function AudioExtract() {
   const isClient = useIsClient();
@@ -42,12 +44,16 @@ export default function AudioExtract() {
     setProcessing(true);
     setResult(null);
     setError("");
+    const start = performance.now();
     try {
       const blob = await extractAudio(file, format, setProgress);
       setResult(blob);
+      tracker.trackProcessComplete(Math.round(performance.now() - start));
     } catch (e) {
       console.error("Extract failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

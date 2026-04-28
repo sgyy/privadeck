@@ -10,7 +10,10 @@ import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError, canEncodeHevc, type VideoCodec } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { useIsClient } from "@/lib/hooks/useIsClient";
+import { createToolTracker } from "@/lib/analytics";
 import { convertVideoFormat, FORMATS, type VideoFormat } from "./logic";
+
+const tracker = createToolTracker("format-convert", "video");
 
 export default function VideoFormatConvert() {
   const isClient = useIsClient();
@@ -75,6 +78,7 @@ export default function VideoFormatConvert() {
     setError("");
     setIsCodecError(false);
     setProgress(0);
+    const t0 = performance.now();
     try {
       // Pass both output codec and source codec for smart stream copy detection
       const options = {
@@ -83,13 +87,16 @@ export default function VideoFormatConvert() {
       };
       const output = await convertVideoFormat(file, format, setProgress, options);
       setResult(output);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Convert failed:", e);
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
       if (e instanceof UnsupportedVideoCodecError) {
         setIsCodecError(true);
         setError(tc("unsupportedVideoCodec"));
       } else {
-        setError(String(e instanceof Error ? e.message : e));
+        setError(msg);
       }
     } finally {
       setProcessing(false);

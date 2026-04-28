@@ -1,13 +1,14 @@
 /* eslint-disable react-hooks/static-components */
 "use client";
 
-import { Suspense, lazy, type ComponentType, type LazyExoticComponent } from "react";
+import { Suspense, lazy, useEffect, useRef, type ComponentType, type LazyExoticComponent } from "react";
 import { getToolBySlug } from "@/lib/registry";
 import type { ToolCategory } from "@/lib/registry/types";
 import { ToolBreadcrumb } from "@/components/tool/ToolBreadcrumb";
 import { ToolPageShell } from "@/components/tool/ToolPageShell";
 import { RelatedTools } from "@/components/tool/RelatedTools";
 import { ToolFAQ } from "@/components/tool/ToolFAQ";
+import { trackToolView } from "@/lib/analytics";
 
 interface ToolPageClientProps {
   category: ToolCategory;
@@ -38,6 +39,15 @@ function getLazyComponent(cacheKey: string, factory: () => Promise<{ default: Co
 
 export function ToolPageClient({ category, slug }: ToolPageClientProps) {
   const tool = getToolBySlug(slug, category);
+  const viewSentRef = useRef<string>("");
+
+  useEffect(() => {
+    if (!tool) return;
+    const key = `${category}/${slug}`;
+    if (viewSentRef.current === key) return;
+    viewSentRef.current = key;
+    trackToolView(slug, category);
+  }, [tool, slug, category]);
 
   if (!tool) return null;
 

@@ -7,7 +7,10 @@ import { CopyButton } from "@/components/shared/CopyButton";
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
+import { createToolTracker } from "@/lib/analytics";
 import { recognizeText, OCR_LANGUAGES, type OcrResult } from "./logic";
+
+const tracker = createToolTracker("ocr", "developer");
 
 export default function Ocr() {
   const [file, setFile] = useState<File | null>(null);
@@ -30,12 +33,16 @@ export default function Ocr() {
     setProcessing(true);
     setResult(null);
     setError("");
+    const t0 = performance.now();
     try {
       const r = await recognizeText(file, language, setProgress);
       setResult(r);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("OCR failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

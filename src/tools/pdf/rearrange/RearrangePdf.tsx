@@ -10,7 +10,10 @@ import { Button } from "@/components/ui/Button";
 import { PdfPagePreview } from "@/components/shared/PdfPagePreview";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
+import { createToolTracker } from "@/lib/analytics";
 import { rearrangePdf, formatFileSize } from "./logic";
+
+const tracker = createToolTracker("rearrange", "pdf");
 
 export default function RearrangePdf() {
   const [file, setFile] = useState<File | null>(null);
@@ -85,12 +88,16 @@ export default function RearrangePdf() {
     setProcessing(true);
     setResult(null);
     setError("");
+    const t0 = performance.now();
     try {
       const blob = await rearrangePdf(file, pageOrder);
       setResult(blob);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Rearrange failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

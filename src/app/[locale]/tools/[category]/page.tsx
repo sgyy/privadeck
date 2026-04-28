@@ -1,10 +1,10 @@
 import { setRequestLocale } from "next-intl/server";
 import { useTranslations, NextIntlClientProvider } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { getToolsByCategory } from "@/lib/registry";
 import { categories } from "@/lib/registry/categories";
 import { locales } from "@/i18n/routing";
 import { Card } from "@/components/ui/Card";
+import { ToolCardLink } from "@/components/tool/ToolCardLink";
 import { generateCategoryMetadata } from "@/lib/seo/metadata";
 import type { ToolCategory } from "@/lib/registry/types";
 import { loadCommonMessages, loadCategoryMessages } from "@/lib/i18n/loadMessages";
@@ -85,8 +85,14 @@ function CategoryPageUI({ category }: { category: ToolCategory }) {
       </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {tools.map((tool) => (
-          <Link key={tool.slug} href={`/tools/${category}/${tool.slug}`}>
+        {tools.map((tool, i) => (
+          <ToolCardLink
+            key={tool.slug}
+            category={category}
+            slug={tool.slug}
+            position={i}
+            from="category"
+          >
             <Card className="p-4 transition-colors hover:bg-muted/50 h-full">
               <h3 className="font-medium">
                 {tt(`${category}.${tool.slug}.name`)}
@@ -95,7 +101,7 @@ function CategoryPageUI({ category }: { category: ToolCategory }) {
                 {tt(`${category}.${tool.slug}.description`)}
               </p>
             </Card>
-          </Link>
+          </ToolCardLink>
         ))}
       </div>
     </div>

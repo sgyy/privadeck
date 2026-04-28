@@ -8,7 +8,10 @@ import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { RotateCw, RotateCcw } from "lucide-react";
 import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
+import { createToolTracker } from "@/lib/analytics";
 import { rotatePdf, formatFileSize } from "./logic";
+
+const tracker = createToolTracker("rotate", "pdf");
 
 export default function RotatePdf() {
   const [file, setFile] = useState<File | null>(null);
@@ -50,6 +53,7 @@ export default function RotatePdf() {
     setProcessing(true);
     setResult(null);
     setError("");
+    const t0 = performance.now();
     try {
       // Apply same rotation to all pages
       const rotations: Record<number, number> = {};
@@ -58,9 +62,12 @@ export default function RotatePdf() {
       }
       const blob = await rotatePdf(file, rotations);
       setResult(blob);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Rotation failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

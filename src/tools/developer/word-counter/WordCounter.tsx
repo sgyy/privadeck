@@ -3,12 +3,21 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { TextArea } from "@/components/shared/TextArea";
+import { CopyButton } from "@/components/shared/CopyButton";
 import { countWords } from "./logic";
 
 export default function WordCounter() {
   const [text, setText] = useState("");
   const t = useTranslations("tools.developer.word-counter");
   const result = countWords(text);
+
+  const summary = [
+    `${t("words")}: ${result.words}`,
+    `${t("characters")}: ${result.characters}`,
+    `${t("sentences")}: ${result.sentences}`,
+    `${t("paragraphs")}: ${result.paragraphs}`,
+    `${t("readingTime")}: ${result.readingTimeMinutes} ${t("minutes")}`,
+  ].join("\n");
 
   return (
     <div className="space-y-4">
@@ -30,6 +39,12 @@ export default function WordCounter() {
           value={`${result.readingTimeMinutes} ${t("minutes")}`}
         />
       </div>
+
+      {text.trim() && (
+        <div className="flex justify-end">
+          <CopyButton text={summary} />
+        </div>
+      )}
     </div>
   );
 }

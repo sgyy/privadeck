@@ -9,7 +9,10 @@ import { ProcessingProgress } from "@/components/shared/ProcessingProgress";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { useIsClient } from "@/lib/hooks/useIsClient";
+import { createToolTracker } from "@/lib/analytics";
 import { muteVideo } from "./logic";
+
+const tracker = createToolTracker("mute", "video");
 
 export default function VideoMute() {
   const isClient = useIsClient();
@@ -38,12 +41,16 @@ export default function VideoMute() {
     setProcessing(true);
     setResult(null);
     setError("");
+    const t0 = performance.now();
     try {
       const blob = await muteVideo(file, setProgress);
       setResult(blob);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Mute failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

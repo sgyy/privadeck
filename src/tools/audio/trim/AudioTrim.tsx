@@ -8,7 +8,10 @@ import { Button } from "@/components/ui/Button";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { useIsClient } from "@/lib/hooks/useIsClient";
+import { createToolTracker } from "@/lib/analytics";
 import { trimAudio, formatTimeDisplay } from "./logic";
+
+const tracker = createToolTracker("trim", "audio");
 
 export default function AudioTrim() {
   const isClient = useIsClient();
@@ -56,12 +59,16 @@ export default function AudioTrim() {
     setProcessing(true);
     setResult(null);
     setError("");
+    const t0 = performance.now();
     try {
       const blob = await trimAudio(file, start, end, setProgress);
       setResult(blob);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Trim failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

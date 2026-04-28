@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { brandFilename } from "@/lib/brand";
 import { trackEvent } from "@/lib/analytics";
+import { useToolAnalytics } from "@/components/tool/ToolAnalyticsContext";
 
 interface DownloadButtonProps {
   data: Blob | string; // Blob or data URL
@@ -23,6 +24,9 @@ export function DownloadButton({
   analyticsCategory,
 }: DownloadButtonProps) {
   const t = useTranslations("common");
+  const ctx = useToolAnalytics();
+  const slug = analyticsSlug ?? ctx?.slug;
+  const category = analyticsCategory ?? ctx?.category;
 
   const handleDownload = useCallback(() => {
     const url =
@@ -34,15 +38,15 @@ export function DownloadButton({
     if (typeof data !== "string") {
       URL.revokeObjectURL(url);
     }
-    if (analyticsSlug && analyticsCategory) {
+    if (slug && category) {
       const ext = filename.split(".").pop()?.toLowerCase() || "unknown";
       trackEvent("file_download", {
-        tool_slug: analyticsSlug,
-        tool_category: analyticsCategory,
+        tool_slug: slug,
+        tool_category: category,
         file_type: ext,
       });
     }
-  }, [data, filename, analyticsSlug, analyticsCategory]);
+  }, [data, filename, slug, category]);
 
   return (
     <Button onClick={handleDownload} className={className}>

@@ -6,7 +6,10 @@ import { Button } from "@/components/ui/Button";
 import { CopyButton } from "@/components/shared/CopyButton";
 import { TextFileDownloadButton } from "@/components/shared/TextFileDownloadButton";
 import { TextDropZone } from "@/components/shared/TextDropZone";
+import { createToolTracker } from "@/lib/analytics";
 import { csvToJson, jsonToCsv } from "./logic";
+
+const tracker = createToolTracker("csv-json", "developer");
 
 export default function CsvJsonTool() {
   const [csv, setCsv] = useState("");
@@ -16,21 +19,29 @@ export default function CsvJsonTool() {
 
   function handleCsvToJson() {
     setError("");
+    const t0 = performance.now();
     try {
       const result = csvToJson(csv);
       setJson(result);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     }
   }
 
   function handleJsonToCsv() {
     setError("");
+    const t0 = performance.now();
     try {
       const result = jsonToCsv(json);
       setCsv(result);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     }
   }
 

@@ -9,12 +9,15 @@ import { Button } from "@/components/ui/Button";
 import { Download, X } from "lucide-react";
 import { brandFilename } from "@/lib/brand";
 import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
+import { createToolTracker } from "@/lib/analytics";
 import {
   convertPdfToImages,
   downloadAsZip,
   formatFileSize,
   type ConvertedPage,
 } from "./logic";
+
+const tracker = createToolTracker("to-image", "pdf");
 
 export default function PdfToImage() {
   const [file, setFile] = useState<File | null>(null);
@@ -113,6 +116,7 @@ export default function PdfToImage() {
     setConverting(true);
     setResults([]);
     setError("");
+    const t0 = performance.now();
     try {
       await convertPdfToImages(
         file,
@@ -126,10 +130,15 @@ export default function PdfToImage() {
           setResults((prev) => [...prev, page]);
         },
       );
+      if (generationRef.current === gen) {
+        tracker.trackProcessComplete(Math.round(performance.now() - t0));
+      }
     } catch (e) {
       if (generationRef.current !== gen) return;
       console.error("Conversion failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       if (generationRef.current === gen) setConverting(false);
     }

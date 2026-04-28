@@ -1,12 +1,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useMemo } from "react";
 import type { ToolDefinition } from "@/lib/registry/types";
 import { Shield } from "lucide-react";
 import { ToolHowItWorks } from "./ToolHowItWorks";
 import { ToolFeatureCards } from "./ToolFeatureCards";
 import { ToolWhySection } from "./ToolWhySection";
 import { ToolDescription } from "./ToolDescription";
+import { ToolAnalyticsProvider } from "./ToolAnalyticsContext";
 interface ToolPageShellProps {
   tool: ToolDefinition;
   children: React.ReactNode;
@@ -15,6 +17,10 @@ interface ToolPageShellProps {
 export function ToolPageShell({ tool, children }: ToolPageShellProps) {
   const t = useTranslations(`tools.${tool.category}.${tool.slug}`);
   const tc = useTranslations("common");
+  const analyticsValue = useMemo(
+    () => ({ slug: tool.slug, category: tool.category }),
+    [tool.slug, tool.category],
+  );
 
   return (
     <div className="space-y-6">
@@ -38,7 +44,7 @@ export function ToolPageShell({ tool, children }: ToolPageShellProps) {
       </div>
 
       <div className="rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm p-4 sm:p-6">
-        {children}
+        <ToolAnalyticsProvider value={analyticsValue}>{children}</ToolAnalyticsProvider>
       </div>
 
       <ToolHowItWorks category={tool.category} toolName={t("name")} toolSlug={tool.slug} />

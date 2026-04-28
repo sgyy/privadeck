@@ -22,7 +22,10 @@ import {
   ZoomOut,
   RefreshCw,
 } from "lucide-react";
+import { createToolTracker } from "@/lib/analytics";
 import { canvasToBlob } from "./logic";
+
+const tracker = createToolTracker("crop", "image");
 
 // --- Constants ---
 
@@ -177,6 +180,7 @@ export default function ImageCrop() {
 
     setCropping(true);
     setError("");
+    const t0 = performance.now();
     try {
       const canvas = cropper.getCanvas({
         imageSmoothingEnabled: true,
@@ -198,8 +202,10 @@ export default function ImageCrop() {
         { blob, filename: getOutputFilename(), meta },
         ...prev,
       ]);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Crop failed:", e);
+      tracker.trackProcessError(e instanceof Error ? e.message : String(e));
       setError(t("cropError"));
     } finally {
       setCropping(false);

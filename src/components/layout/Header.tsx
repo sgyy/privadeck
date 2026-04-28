@@ -10,7 +10,7 @@ import { categories } from "@/lib/registry/categories";
 import type { ToolCategory } from "@/lib/registry/types";
 import { cn } from "@/lib/utils/cn";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackToolCardClick } from "@/lib/analytics";
 import { getToolsByCategory } from "@/lib/utils/tools-by-category";
 
 interface HeaderProps {
@@ -185,6 +185,7 @@ function CategoryDropdown({
                         href={`/tools/${category}/${tool.slug}`}
                         role="menuitem"
                         tabIndex={-1}
+                        onClick={() => trackToolCardClick("header_menu", tool.slug, category)}
                         className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors hover:bg-muted"
                       >
                         <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent">
@@ -217,6 +218,7 @@ function CategoryDropdown({
                         href={`/tools/${category}/${tool.slug}`}
                         role="menuitem"
                         tabIndex={-1}
+                        onClick={() => trackToolCardClick("header_menu", tool.slug, category)}
                         className="whitespace-nowrap rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-muted hover:text-foreground text-card-foreground"
                       >
                         {tool.name}

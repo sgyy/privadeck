@@ -7,7 +7,10 @@ import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
+import { createToolTracker } from "@/lib/analytics";
 import { addSignature, formatFileSize } from "./logic";
+
+const tracker = createToolTracker("esign", "pdf");
 
 export default function ESign() {
   const [file, setFile] = useState<File | null>(null);
@@ -143,6 +146,7 @@ export default function ESign() {
     setProcessing(true);
     setResult(null);
     setError("");
+    const t0 = performance.now();
     try {
       const dataUrl = canvasRef.current.toDataURL("image/png");
 
@@ -158,9 +162,12 @@ export default function ESign() {
         height: sigHeight,
       });
       setResult(blob);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("E-Sign failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

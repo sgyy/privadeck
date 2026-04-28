@@ -6,7 +6,10 @@ import { Button } from "@/components/ui/Button";
 import { CopyButton } from "@/components/shared/CopyButton";
 import { TextFileDownloadButton } from "@/components/shared/TextFileDownloadButton";
 import { TextDropZone } from "@/components/shared/TextDropZone";
+import { createToolTracker } from "@/lib/analytics";
 import { jsonToXml, xmlToJson } from "./logic";
+
+const tracker = createToolTracker("json-xml", "developer");
 
 export default function JsonXmlTool() {
   const [json, setJson] = useState("");
@@ -16,21 +19,29 @@ export default function JsonXmlTool() {
 
   function handleJsonToXml() {
     setError("");
+    const t0 = performance.now();
     try {
       const result = jsonToXml(json);
       setXml(result);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     }
   }
 
   function handleXmlToJson() {
     setError("");
+    const t0 = performance.now();
     try {
       const result = xmlToJson(xml);
       setJson(result);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     }
   }
 

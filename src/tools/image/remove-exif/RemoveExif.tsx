@@ -67,13 +67,13 @@ export default function RemoveExif() {
 
   async function handleProcess() {
     if (files.length === 0 || noneSelected) return;
-    const started = performance.now();
     setProcessing(true);
     setResults([]);
     setProgress({ done: 0, total: files.length });
     setError("");
 
     for (const file of files) {
+      const t0 = performance.now();
       try {
         const r = await removeExif(file, options);
         const item: ImageResultItem = {
@@ -81,6 +81,7 @@ export default function RemoveExif() {
           filename: r.outputFilename,
         };
         setResults((prev) => [...prev, item]);
+        tracker.trackProcessComplete(Math.round(performance.now() - t0));
       } catch (e) {
         console.error(`EXIF removal failed for ${file.name}:`, e);
         const msg = e instanceof Error ? e.message : String(e);
@@ -92,7 +93,6 @@ export default function RemoveExif() {
       setProgress((prev) => ({ ...prev, done: prev.done + 1 }));
     }
     setProcessing(false);
-    tracker.trackProcessComplete(Math.round(performance.now() - started));
   }
 
   return (

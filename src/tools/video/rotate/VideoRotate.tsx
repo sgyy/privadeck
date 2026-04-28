@@ -9,9 +9,12 @@ import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { useIsClient } from "@/lib/hooks/useIsClient";
+import { createToolTracker } from "@/lib/analytics";
 import { rotateVideo, type RotateAngle } from "./logic";
 import { VideoPreviewPlayer } from "./VideoPreviewPlayer";
 import { brandFilename } from "@/lib/brand";
+
+const tracker = createToolTracker("rotate", "video");
 
 function normalizeRotation(prev: RotateAngle | 0, delta: -90 | 90): RotateAngle | 0 {
   const raw = (prev + delta + 360) % 360;
@@ -57,6 +60,7 @@ export default function VideoRotate() {
     setProcessing(true);
     setError("");
     setIsCodecError(false);
+    const t0 = performance.now();
     try {
       const blob = await rotateVideo(file, rotation, setProgress);
       // Auto-download
@@ -66,13 +70,16 @@ export default function VideoRotate() {
       a.download = brandFilename(`rotated_${rotation}_${file.name}`);
       a.click();
       URL.revokeObjectURL(url);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Transform failed:", e);
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
       if (e instanceof UnsupportedVideoCodecError) {
         setIsCodecError(true);
         setError(tc("unsupportedVideoCodec"));
       } else {
-        setError(String(e instanceof Error ? e.message : e));
+        setError(msg);
       }
     } finally {
       setProcessing(false);

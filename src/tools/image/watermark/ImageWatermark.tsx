@@ -9,7 +9,10 @@ import {
 } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
+import { createToolTracker } from "@/lib/analytics";
 import { addWatermark, type WatermarkOptions } from "./logic";
+
+const tracker = createToolTracker("watermark", "image");
 
 type Position = WatermarkOptions["position"];
 
@@ -195,6 +198,7 @@ export default function ImageWatermark() {
                     },
                     ...prev,
                   ]);
+                  tracker.trackProcessComplete(0);
                 }}
               >
                 {tc("save")}

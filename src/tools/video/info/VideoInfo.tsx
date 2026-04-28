@@ -14,7 +14,10 @@ import {
 } from "@/components/shared/VideoUploader";
 import { Accordion, AccordionItem } from "@/components/ui/Accordion";
 import { useIsClient } from "@/lib/hooks/useIsClient";
+import { createToolTracker } from "@/lib/analytics";
 import { probeVideo, generateThumbnails, type ProbeResult } from "./logic";
+
+const tracker = createToolTracker("info", "video");
 
 interface Thumbnail {
   time: number;
@@ -40,12 +43,16 @@ export default function VideoInfo() {
     setProbing(true);
     setError("");
     setProbeResult(null);
+    const t0 = performance.now();
     try {
       const result = await probeVideo(file);
       setProbeResult(result);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Probe failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProbing(false);
     }

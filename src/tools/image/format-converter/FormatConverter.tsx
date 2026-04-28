@@ -9,11 +9,14 @@ import {
 } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
+import { createToolTracker } from "@/lib/analytics";
 import {
   convertImage,
   formatFileSize,
   type OutputFormat,
 } from "./logic";
+
+const tracker = createToolTracker("format-converter", "image");
 
 export default function FormatConverter() {
   const [files, setFiles] = useState<File[]>([]);
@@ -33,6 +36,7 @@ export default function FormatConverter() {
     setError("");
 
     for (const file of files) {
+      const t0 = performance.now();
       try {
         const r = await convertImage(file, format, quality / 100);
         const item: ImageResultItem = {
@@ -41,12 +45,13 @@ export default function FormatConverter() {
           meta: `${r.width}×${r.height} · ${formatFileSize(r.originalSize)} → ${formatFileSize(r.convertedSize)}`,
         };
         setResults((prev) => [...prev, item]);
+        tracker.trackProcessComplete(Math.round(performance.now() - t0));
       } catch (e) {
         console.error(`Conversion failed for ${file.name}:`, e);
+        const msg = e instanceof Error ? e.message : String(e);
+        tracker.trackProcessError(msg);
         setError((prev) =>
-          prev
-            ? `${prev}\n${file.name}: ${e instanceof Error ? e.message : String(e)}`
-            : `${file.name}: ${e instanceof Error ? e.message : String(e)}`,
+          prev ? `${prev}\n${file.name}: ${msg}` : `${file.name}: ${msg}`,
         );
       }
       setProgress((prev) => ({ ...prev, done: prev.done + 1 }));

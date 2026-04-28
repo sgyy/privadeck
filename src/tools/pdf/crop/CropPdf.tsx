@@ -7,7 +7,10 @@ import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
+import { createToolTracker } from "@/lib/analytics";
 import { cropPdf, formatFileSize, type CropMargins } from "./logic";
+
+const tracker = createToolTracker("crop", "pdf");
 
 export default function CropPdf() {
   const [file, setFile] = useState<File | null>(null);
@@ -61,12 +64,16 @@ export default function CropPdf() {
     setProcessing(true);
     setResult(null);
     setError("");
+    const t0 = performance.now();
     try {
       const blob = await cropPdf(file, margins);
       setResult(blob);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Crop failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

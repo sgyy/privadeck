@@ -10,7 +10,10 @@ import { TimeRangeSlider } from "@/components/shared/TimeRangeSlider";
 import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { useIsClient } from "@/lib/hooks/useIsClient";
+import { createToolTracker } from "@/lib/analytics";
 import { videoToWebp, type WebpQuality } from "./logic";
+
+const tracker = createToolTracker("to-webp", "video");
 
 const MIN_DURATION = 0.5;
 const PRESET_DEFAULTS: Record<WebpQuality, { fps: number; quality: number }> = {
@@ -86,6 +89,7 @@ export default function VideoToWebp() {
     setProcessing(true);
     setResult(null);
     setError("");
+    const t0 = performance.now();
     try {
       const blob = await videoToWebp(
         file,
@@ -93,9 +97,12 @@ export default function VideoToWebp() {
         setProgress,
       );
       setResult(blob);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("WebP conversion failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

@@ -9,7 +9,10 @@ import { Button } from "@/components/ui/Button";
 import { PdfPagePreview } from "@/components/shared/PdfPagePreview";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
+import { createToolTracker } from "@/lib/analytics";
 import { deletePages, formatFileSize } from "./logic";
+
+const tracker = createToolTracker("delete-pages", "pdf");
 
 export default function DeletePages() {
   const [file, setFile] = useState<File | null>(null);
@@ -67,12 +70,16 @@ export default function DeletePages() {
     setProcessing(true);
     setResult(null);
     setError("");
+    const t0 = performance.now();
     try {
       const blob = await deletePages(file, selected);
       setResult(blob);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Delete pages failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

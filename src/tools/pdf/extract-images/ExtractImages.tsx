@@ -10,6 +10,7 @@ import {
   type ImageResultItem,
 } from "@/components/shared/ImageResultList";
 import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
+import { createToolTracker } from "@/lib/analytics";
 import {
   extractImages,
   downloadImagesAsZip,
@@ -17,6 +18,8 @@ import {
   type ExtractedImage,
 } from "./logic";
 import { brandFilename } from "@/lib/brand";
+
+const tracker = createToolTracker("extract-images", "pdf");
 
 export default function ExtractImages() {
   const [file, setFile] = useState<File | null>(null);
@@ -59,17 +62,21 @@ export default function ExtractImages() {
     setExtracting(true);
     setResults([]);
     setError("");
+    const t0 = performance.now();
     try {
       const images = await extractImages(file, (current, total) => {
         setProgress({ current, total });
       });
       setResults(images);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
       if (images.length === 0) {
         setError(t("noImagesFound"));
       }
     } catch (e) {
       console.error("Extract images failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setExtracting(false);
     }

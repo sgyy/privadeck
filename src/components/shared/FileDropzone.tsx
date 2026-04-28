@@ -5,6 +5,7 @@ import { Upload, Lock } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils/cn";
 import { trackEvent } from "@/lib/analytics";
+import { useToolAnalytics } from "@/components/tool/ToolAnalyticsContext";
 
 interface FileDropzoneProps {
   accept?: string;
@@ -48,6 +49,9 @@ export function FileDropzone({
   const t = useTranslations("common");
   const [dragCounter, setDragCounter] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
+  const ctx = useToolAnalytics();
+  const slug = analyticsSlug ?? ctx?.slug;
+  const category = analyticsCategory ?? ctx?.category;
 
   const handleFiles = useCallback(
     (fileList: FileList | null) => {
@@ -58,18 +62,18 @@ export function FileDropzone({
       }
       if (files.length > 0) {
         onFiles(files);
-        if (analyticsSlug && analyticsCategory) {
+        if (slug && category) {
           const ext = files[0].name.split(".").pop()?.toLowerCase() || "unknown";
           trackEvent("file_upload", {
-            tool_slug: analyticsSlug,
-            tool_category: analyticsCategory,
+            tool_slug: slug,
+            tool_category: category,
             file_type: ext,
             file_count: files.length,
           });
         }
       }
     },
-    [onFiles, maxSize, analyticsSlug, analyticsCategory],
+    [onFiles, maxSize, slug, category],
   );
 
   const activateInput = useCallback(() => {

@@ -89,7 +89,7 @@ export default function JsonEditor() {
       setTextOverride(null);
       tracker.trackProcessComplete(0);
     } catch (e) {
-      tracker.trackProcessError((e as Error).message);
+      tracker.trackProcessError(e instanceof Error ? e.message : String(e));
     }
   }, [text, historySet]);
 

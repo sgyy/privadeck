@@ -6,7 +6,10 @@ import { FileDropzone } from "@/components/shared/FileDropzone";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { X, GripVertical } from "lucide-react";
+import { createToolTracker } from "@/lib/analytics";
 import { imagesToPdf, formatFileSize } from "./logic";
+
+const tracker = createToolTracker("images-to-pdf", "pdf");
 
 export default function ImagesToPdf() {
   const [files, setFiles] = useState<File[]>([]);
@@ -60,12 +63,16 @@ export default function ImagesToPdf() {
     setProcessing(true);
     setResult(null);
     setError("");
+    const t0 = performance.now();
     try {
       const blob = await imagesToPdf(files);
       setResult(blob);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Conversion failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

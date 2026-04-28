@@ -9,6 +9,7 @@ import { isSharedArrayBufferSupported } from "@/lib/ffmpeg";
 import { isWebCodecsSupported, shouldSuggestHevcExtension, UnsupportedVideoCodecError, canEncodeHevc, type VideoCodec } from "@/lib/media-pipeline";
 import { useObjectUrl } from "@/lib/hooks/useObjectUrl";
 import { useIsClient } from "@/lib/hooks/useIsClient";
+import { createToolTracker } from "@/lib/analytics";
 import {
   VideoUploader,
   formatSize,
@@ -42,6 +43,8 @@ const RESOLUTIONS: ResolutionOption[] = [
 const FPS_OPTIONS: FpsOption[] = ["original", "30", "24", "15"];
 
 const AUDIO_BITRATES = ["64k", "96k", "128k", "192k", "256k"];
+
+const tracker = createToolTracker("compress", "video");
 
 export default function VideoCompress() {
   const isClient = useIsClient();
@@ -111,6 +114,7 @@ export default function VideoCompress() {
     setError("");
     setIsCodecError(false);
     setProgress(0);
+    const t0 = performance.now();
     try {
       // For simple mode, use preset with selected codec
       // For advanced mode, use full options with selected codec
@@ -125,13 +129,16 @@ export default function VideoCompress() {
         sourceMetadata.current?.fps,
       );
       setResult(blob);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Compress failed:", e);
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
       if (e instanceof UnsupportedVideoCodecError) {
         setIsCodecError(true);
         setError(tc("unsupportedVideoCodec"));
       } else {
-        setError(String(e instanceof Error ? e.message : e));
+        setError(msg);
       }
     } finally {
       setProcessing(false);

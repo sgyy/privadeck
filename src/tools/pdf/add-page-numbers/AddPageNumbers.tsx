@@ -7,12 +7,15 @@ import { PdfFilePreview } from "@/components/shared/PdfFilePreview";
 import { DownloadButton } from "@/components/shared/DownloadButton";
 import { Button } from "@/components/ui/Button";
 import { getPdfPreview } from "@/lib/pdf/getPdfPreview";
+import { createToolTracker } from "@/lib/analytics";
 import {
   addPageNumbers,
   formatFileSize,
   type NumberPosition,
   type NumberFormat,
 } from "./logic";
+
+const tracker = createToolTracker("add-page-numbers", "pdf");
 
 const POSITIONS: NumberPosition[] = [
   "bottom-center",
@@ -68,6 +71,7 @@ export default function AddPageNumbers() {
     setProcessing(true);
     setResult(null);
     setError("");
+    const t0 = performance.now();
     try {
       const blob = await addPageNumbers(file, {
         position,
@@ -76,9 +80,12 @@ export default function AddPageNumbers() {
         startPage,
       });
       setResult(blob);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Add page numbers failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

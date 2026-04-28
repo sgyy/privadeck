@@ -5,6 +5,7 @@ import { Copy, Check } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { trackEvent } from "@/lib/analytics";
+import { useToolAnalytics } from "@/components/tool/ToolAnalyticsContext";
 
 export function CopyButton({
   text,
@@ -19,6 +20,9 @@ export function CopyButton({
 }) {
   const [copied, setCopied] = useState(false);
   const t = useTranslations("common");
+  const ctx = useToolAnalytics();
+  const slug = analyticsSlug ?? ctx?.slug;
+  const category = analyticsCategory ?? ctx?.category;
 
   const handleCopy = useCallback(async () => {
     try {
@@ -28,10 +32,10 @@ export function CopyButton({
     }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
-    if (analyticsSlug && analyticsCategory) {
-      trackEvent("copy_click", { tool_slug: analyticsSlug, tool_category: analyticsCategory });
+    if (slug && category) {
+      trackEvent("copy_click", { tool_slug: slug, tool_category: category });
     }
-  }, [text, analyticsSlug, analyticsCategory]);
+  }, [text, slug, category]);
 
   return (
     <Button

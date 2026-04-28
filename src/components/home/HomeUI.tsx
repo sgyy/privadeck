@@ -7,6 +7,7 @@ import { categories } from "@/lib/registry/categories";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Shield, Zap, Globe } from "lucide-react";
+import { trackToolCardClick } from "@/lib/analytics";
 
 const decks = [
   { titleKey: "mediaDeck" as const, categories: ["image", "video", "audio"] as const },
@@ -57,6 +58,7 @@ export function HomeUI() {
                 <Link
                   key={`${tool.category}-${tool.slug}`}
                   href={`/tools/${tool.category}/${tool.slug}`}
+                  onClick={() => trackToolCardClick("home", tool.slug, tool.category, i)}
                 >
                   <Card
                     className="p-4 h-full gradient-border animate-fade-in"
@@ -86,13 +88,14 @@ export function HomeUI() {
         <h2 className="text-xl font-semibold mb-1">{t("metaDeck")}</h2>
         <p className="text-sm text-muted-foreground mb-4">{t("metaDeckDesc")}</p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {metaDeckSlugs.map((slug) => {
+          {metaDeckSlugs.map((slug, i) => {
             const tool = allTools.find((t) => t.slug === slug);
             if (!tool) return null;
             return (
               <Link
                 key={tool.slug}
                 href={`/tools/${tool.category}/${tool.slug}`}
+                onClick={() => trackToolCardClick("home", tool.slug, tool.category, i)}
               >
                 <Card className="p-4 h-full gradient-border">
                   <div className="flex-1 min-w-0">

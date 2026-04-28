@@ -9,7 +9,10 @@ import {
 } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
 import { Link2, Link2Off } from "lucide-react";
+import { createToolTracker } from "@/lib/analytics";
 import { resizeImage, getImageDimensions, fitDimensions, PRESETS } from "./logic";
+
+const tracker = createToolTracker("resize", "image");
 
 export default function ImageResize() {
   const [file, setFile] = useState<File | null>(null);
@@ -73,15 +76,19 @@ export default function ImageResize() {
     if (!file || width <= 0 || height <= 0) return;
     setResizing(true);
     setError("");
+    const t0 = performance.now();
     try {
       const blob = await resizeImage(file, { width, height });
       setResults((prev) => [
         { blob, filename: `resized_${file.name}`, meta: `${width}×${height}` },
         ...prev,
       ]);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Resize failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setResizing(false);
     }

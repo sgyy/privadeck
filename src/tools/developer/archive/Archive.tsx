@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { File as FileIcon, Folder, Download, Image as ImageIcon, FileCode } from "lucide-react";
+import { createToolTracker } from "@/lib/analytics";
 import {
   extractZip,
   downloadEntry,
@@ -11,6 +12,8 @@ import {
   getFileIcon,
   type ArchiveEntry,
 } from "./logic";
+
+const tracker = createToolTracker("archive", "developer");
 
 export default function Archive() {
   const [, setFile] = useState<File | null>(null);
@@ -26,11 +29,14 @@ export default function Archive() {
     setEntries([]);
     setError("");
     setExtracting(true);
+    const t0 = performance.now();
 
     try {
       const result = await extractZip(f);
       setEntries(result);
-    } catch {
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
+    } catch (e) {
+      tracker.trackProcessError(e instanceof Error ? e.message : "unsupportedFormat");
       setError(t("unsupportedFormat"));
     } finally {
       setExtracting(false);

@@ -9,7 +9,10 @@ import {
   type ImageResultItem,
 } from "@/components/shared/ImageResultList";
 import { Button } from "@/components/ui/Button";
+import { createToolTracker } from "@/lib/analytics";
 import { splitImage, downloadAsZip } from "./logic";
+
+const tracker = createToolTracker("split", "image");
 
 export default function SplitImage() {
   const [file, setFile] = useState<File | null>(null);
@@ -32,6 +35,7 @@ export default function SplitImage() {
     if (!file) return;
     setProcessing(true);
     setError("");
+    const t0 = performance.now();
     try {
       const pieces = await splitImage(file, rows, cols);
       const items: ImageResultItem[] = pieces.map((p) => ({
@@ -43,9 +47,12 @@ export default function SplitImage() {
 
       const zip = await downloadAsZip(pieces);
       setZipBlob(zip);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
       console.error("Split failed:", e);
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     } finally {
       setProcessing(false);
     }

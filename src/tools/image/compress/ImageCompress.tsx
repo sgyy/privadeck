@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
 import { Link2, Link2Off } from "lucide-react";
+import { createToolTracker } from "@/lib/analytics";
 import {
   compressImage,
   formatFileSize,
@@ -19,6 +20,8 @@ import {
   type OutputFormat,
   type CompressOptions,
 } from "./logic";
+
+const tracker = createToolTracker("compress", "image");
 
 const PRESET_KEYS: PresetKey[] = [
   "high-quality",
@@ -154,6 +157,7 @@ export default function ImageCompress() {
     };
 
     for (const f of files) {
+      const t0 = performance.now();
       try {
         const r = await compressImage(f, options);
         const savingsText =
@@ -164,12 +168,13 @@ export default function ImageCompress() {
           meta: `${formatFileSize(r.originalSize)} → ${formatFileSize(r.compressedSize)} (${savingsText})`,
         };
         setResults((prev) => [...prev, item]);
+        tracker.trackProcessComplete(Math.round(performance.now() - t0));
       } catch (e) {
         console.error(`Compression failed for ${f.name}:`, e);
+        const msg = e instanceof Error ? e.message : String(e);
+        tracker.trackProcessError(msg);
         setError((prev) =>
-          prev
-            ? `${prev}\n${f.name}: ${e instanceof Error ? e.message : String(e)}`
-            : `${f.name}: ${e instanceof Error ? e.message : String(e)}`,
+          prev ? `${prev}\n${f.name}: ${msg}` : `${f.name}: ${msg}`,
         );
       }
       setProgress((prev) => ({ ...prev, done: prev.done + 1 }));

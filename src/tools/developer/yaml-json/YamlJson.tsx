@@ -6,7 +6,10 @@ import { Button } from "@/components/ui/Button";
 import { CopyButton } from "@/components/shared/CopyButton";
 import { TextFileDownloadButton } from "@/components/shared/TextFileDownloadButton";
 import { TextDropZone } from "@/components/shared/TextDropZone";
+import { createToolTracker } from "@/lib/analytics";
 import { yamlToJson, jsonToYaml } from "./logic";
+
+const tracker = createToolTracker("yaml-json", "developer");
 
 export default function YamlJson() {
   const [yamlText, setYamlText] = useState("");
@@ -16,21 +19,29 @@ export default function YamlJson() {
 
   function handleYamlToJson() {
     setError("");
+    const t0 = performance.now();
     try {
       const result = yamlToJson(yamlText);
       setJsonText(result);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     }
   }
 
   function handleJsonToYaml() {
     setError("");
+    const t0 = performance.now();
     try {
       const result = jsonToYaml(jsonText);
       setYamlText(result);
+      tracker.trackProcessComplete(Math.round(performance.now() - t0));
     } catch (e) {
-      setError(String(e instanceof Error ? e.message : e));
+      const msg = e instanceof Error ? e.message : String(e);
+      tracker.trackProcessError(msg);
+      setError(msg);
     }
   }
 
