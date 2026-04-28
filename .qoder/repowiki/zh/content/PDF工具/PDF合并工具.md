@@ -3,11 +3,14 @@
 <cite>
 **本文档引用的文件**
 - [src/tools/pdf/merge/MergePdf.tsx](file://src/tools/pdf/merge/MergePdf.tsx)
+- [src/tools/pdf/merge/MergeItemCard.tsx](file://src/tools/pdf/merge/MergeItemCard.tsx)
+- [src/tools/pdf/merge/PdfDetailDialog.tsx](file://src/tools/pdf/merge/PdfDetailDialog.tsx)
 - [src/tools/pdf/merge/logic.ts](file://src/tools/pdf/merge/logic.ts)
-- [src/tools/pdf/images-to-pdf/logic.ts](file://src/tools/pdf/images-to-pdf/logic.ts)
-- [src/tools/pdf/to-image/logic.ts](file://src/tools/pdf/to-image/logic.ts)
+- [src/components/shared/PdfFullscreenPreview.tsx](file://src/components/shared/PdfFullscreenPreview.tsx)
 - [src/components/shared/PdfPagePreview.tsx](file://src/components/shared/PdfPagePreview.tsx)
 - [src/lib/pdf/getPdfPreview.ts](file://src/lib/pdf/getPdfPreview.ts)
+- [src/tools/pdf/images-to-pdf/logic.ts](file://src/tools/pdf/images-to-pdf/logic.ts)
+- [src/tools/pdf/to-image/logic.ts](file://src/tools/pdf/to-image/logic.ts)
 - [messages/en/tools-pdf.json](file://messages/en/tools-pdf.json)
 - [package.json](file://package.json)
 </cite>
@@ -20,6 +23,8 @@
 - 增强混合内容创建：PDF与图像混合队列处理
 - 扩展元数据编辑：标题、作者、主题、关键词自定义
 - 改进用户体验：拖拽排序、实时预览、批量操作
+- 新增组件：PdfFullscreenPreview、MergeItemCard、PdfDetailDialog
+- 更新预览组件：PdfBlobPreview → PdfFullscreenPreview
 
 ## 目录
 1. [简介](#简介)
@@ -67,8 +72,10 @@ PDF合并工具采用模块化的微服务架构，将PDF处理、图像处理�
 graph TB
 subgraph "用户界面层"
 UI[主界面组件<br/>MergePdf.tsx]
-Preview[预览组件<br/>PdfPagePreview.tsx]
+Preview[全屏预览组件<br/>PdfFullscreenPreview.tsx]
 Controls[控制面板<br/>排序/元数据]
+Card[卡片组件<br/>MergeItemCard.tsx]
+Dialog[详情对话框<br/>PdfDetailDialog.tsx]
 end
 subgraph "业务逻辑层"
 MergeLogic[合并逻辑<br/>mergeItems函数]
@@ -87,6 +94,8 @@ Analytics[分析系统<br/>用户行为追踪]
 end
 UI --> MergeLogic
 UI --> Preview
+UI --> Card
+UI --> Dialog
 MergeLogic --> PdfLib
 MergeLogic --> ImageLogic
 ImageLogic --> ImageConverter
@@ -97,7 +106,7 @@ UI --> Analytics
 ```
 
 **图表来源**
-- [src/tools/pdf/merge/MergePdf.tsx:1-813](file://src/tools/pdf/merge/MergePdf.tsx#L1-L813)
+- [src/tools/pdf/merge/MergePdf.tsx:1-677](file://src/tools/pdf/merge/MergePdf.tsx#L1-L677)
 - [src/tools/pdf/merge/logic.ts:1-141](file://src/tools/pdf/merge/logic.ts#L1-L141)
 
 ### 架构设计原则
@@ -147,7 +156,7 @@ PageScaling --> OutputGeneration[输出生成]
 ```
 
 **图表来源**
-- [src/tools/pdf/merge/MergePdf.tsx:67-73](file://src/tools/pdf/merge/MergePdf.tsx#L67-L73)
+- [src/tools/pdf/merge/MergePdf.tsx:74-80](file://src/tools/pdf/merge/MergePdf.tsx#L74-L80)
 
 ### 3. 队列管理系统
 
@@ -227,7 +236,7 @@ ReadyToMerge --> [*] : 开始合并
 ```
 
 **图表来源**
-- [src/tools/pdf/merge/MergePdf.tsx:224-235](file://src/tools/pdf/merge/MergePdf.tsx#L224-L235)
+- [src/tools/pdf/merge/MergePdf.tsx:233-244](file://src/tools/pdf/merge/MergePdf.tsx#L233-L244)
 
 ### 页面旋转控制
 
@@ -415,7 +424,7 @@ ProgressIndicator --> ResultPreview
 ```
 
 **图表来源**
-- [src/tools/pdf/merge/MergePdf.tsx:405-579](file://src/tools/pdf/merge/MergePdf.tsx#L405-L579)
+- [src/tools/pdf/merge/MergePdf.tsx:477-647](file://src/tools/pdf/merge/MergePdf.tsx#L477-L647)
 
 ### 交互设计原则
 
@@ -584,7 +593,7 @@ Scheduler->>User : 更新处理进度
 ```
 
 **图表来源**
-- [src/tools/pdf/merge/MergePdf.tsx:190-199](file://src/tools/pdf/merge/MergePdf.tsx#L190-L199)
+- [src/tools/pdf/merge/MergePdf.tsx:211-221](file://src/tools/pdf/merge/MergePdf.tsx#L211-L221)
 
 ### 缓存策略
 

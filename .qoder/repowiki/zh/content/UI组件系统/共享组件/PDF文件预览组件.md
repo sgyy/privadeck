@@ -2,23 +2,24 @@
 
 <cite>
 **本文档中引用的文件**
-- [PdfBlobPreview.tsx](file://src/components/shared/PdfBlobPreview.tsx)
+- [PdfFullscreenPreview.tsx](file://src/components/shared/PdfFullscreenPreview.tsx)
 - [PdfFilePreview.tsx](file://src/components/shared/PdfFilePreview.tsx)
 - [PdfPagePreview.tsx](file://src/components/shared/PdfPagePreview.tsx)
 - [pdfjs.ts](file://src/lib/pdfjs.ts)
 - [getPdfPreview.ts](file://src/lib/pdf/getPdfPreview.ts)
 - [formatFileSize.ts](file://src/lib/utils/formatFileSize.ts)
 - [MergePdf.tsx](file://src/tools/pdf/merge/MergePdf.tsx)
+- [PdfDetailDialog.tsx](file://src/tools/pdf/merge/PdfDetailDialog.tsx)
 - [package.json](file://package.json)
 - [README.md](file://README.md)
 </cite>
 
 ## 更新摘要
 **变更内容**
-- 新增PdfBlobPreview组件，提供基于iframe的浏览器内PDF预览功能
-- 更新PDF预览架构，支持多种预览方式（页面渲染vs浏览器预览）
-- 增强合并PDF工具的预览功能，支持实时预览合并结果
-- 优化PDF预览性能，提供更流畅的用户体验
+- PdfBlobPreview组件已被PdfFullscreenPreview组件替代，提供更强大的全屏预览功能
+- 新增PdfFullscreenPreview组件支持全屏查看、更好的可访问性支持、改进的资源管理（正确的对象URL清理）
+- 更新相关依赖，新增@dnd-kit拖拽功能支持，用于PDF文件排序和管理
+- 增强合并PDF工具的预览功能，支持实时全屏预览合并结果
 
 ## 目录
 1. [简介](#简介)
@@ -35,9 +36,9 @@
 
 PDF文件预览组件是Media Toolbox项目中的一个核心功能模块，专门用于在浏览器环境中提供PDF文件的可视化预览体验。该组件基于Mozilla的pdfjs-dist库构建，实现了完全在客户端运行的PDF渲染功能，确保用户隐私和数据安全。
 
-该项目采用现代React技术栈，使用Next.js框架和TypeScript进行开发，支持多语言国际化。PDF预览功能通过三个主要组件协同工作：文件信息预览组件、页面渲染预览组件和Blob预览组件，为用户提供完整的PDF浏览体验。
+该项目采用现代React技术栈，使用Next.js框架和TypeScript进行开发，支持多语言国际化。PDF预览功能通过三个主要组件协同工作：文件信息预览组件、页面渲染预览组件和全屏预览组件，为用户提供完整的PDF浏览体验。
 
-**更新** 新增的PdfBlobPreview组件提供了基于浏览器内置PDF查看器的预览功能，通过iframe实现，支持实时预览合并后的PDF文件。
+**更新** 新增的PdfFullscreenPreview组件替代了原有的PdfBlobPreview组件，提供了基于对话框的全屏PDF预览功能，支持实时预览合并后的PDF文件，并具备更好的可访问性支持。
 
 ## 项目结构
 
@@ -48,7 +49,7 @@ graph TB
 subgraph "组件层"
 PdfFilePreview[PdfFilePreview 组件]
 PdfPagePreview[PdfPagePreview 组件]
-PdfBlobPreview[PdfBlobPreview 组件]
+PdfFullscreenPreview[PdfFullscreenPreview 组件]
 end
 subgraph "工具层"
 ExtractText[文本提取工具]
@@ -67,10 +68,12 @@ Worker[PDF Worker]
 Canvas[Canvas 渲染]
 Intl[国际化系统]
 BlobURL[Blob URL管理]
+DndKit[@dnd-kit 拖拽系统]
 end
 PdfFilePreview --> Pdfjs
 PdfPagePreview --> Pdfjs
-PdfBlobPreview --> BlobURL
+PdfFullscreenPreview --> BlobURL
+PdfFullscreenPreview --> DndKit
 ExtractText --> Pdfjs
 ExtractImages --> Pdfjs
 MergePdf --> PdfLib
@@ -84,7 +87,7 @@ GetPdfPreview --> Pdfjs
 **图表来源**
 - [PdfFilePreview.tsx:1-91](file://src/components/shared/PdfFilePreview.tsx#L1-L91)
 - [PdfPagePreview.tsx:1-80](file://src/components/shared/PdfPagePreview.tsx#L1-L80)
-- [PdfBlobPreview.tsx:1-37](file://src/components/shared/PdfBlobPreview.tsx#L1-L37)
+- [PdfFullscreenPreview.tsx:1-76](file://src/components/shared/PdfFullscreenPreview.tsx#L1-L76)
 - [pdfjs.ts:1-16](file://src/lib/pdfjs.ts#L1-L16)
 - [getPdfPreview.ts:1-31](file://src/lib/pdf/getPdfPreview.ts#L1-L31)
 
@@ -102,15 +105,20 @@ PdfFilePreview组件负责显示单个PDF文件的基本信息，包括文件名
 ### 页面级预览组件
 PdfPagePreview组件专注于单个PDF页面的渲染和显示。它使用Canvas API将PDF页面转换为可交互的图像，支持页面选择和视觉反馈。
 
-### Blob级预览组件
-PdfBlobPreview组件提供基于浏览器内置PDF查看器的预览功能。它接收Blob对象作为输入，通过URL.createObjectURL创建临时URL，在iframe中显示PDF内容，支持实时预览合并后的PDF文件。
+### 全屏预览组件
+PdfFullscreenPreview组件是新增的核心组件，替代了原有的PdfBlobPreview组件。它提供基于对话框的全屏PDF预览功能，通过iframe实现，支持实时预览合并后的PDF文件。组件具备以下特性：
+- 基于Dialog组件的全屏预览界面
+- 完善的可访问性支持，包括aria-label和键盘导航
+- 改进的资源管理，正确清理对象URL
+- 支持自定义标题和尺寸控制
+- 内置关闭按钮和对话框覆盖层
 
-**更新** PdfBlobPreview组件是新增的核心组件，专门用于预览生成的PDF文件，提供最接近原生PDF查看器的用户体验。
+**更新** PdfFullscreenPreview组件替代了PdfBlobPreview组件，提供了更强大和用户友好的全屏预览体验。
 
 **章节来源**
 - [PdfFilePreview.tsx:8-26](file://src/components/shared/PdfFilePreview.tsx#L8-L26)
 - [PdfPagePreview.tsx:7-23](file://src/components/shared/PdfPagePreview.tsx#L7-L23)
-- [PdfBlobPreview.tsx:5-15](file://src/components/shared/PdfBlobPreview.tsx#L5-L15)
+- [PdfFullscreenPreview.tsx:13-18](file://src/components/shared/PdfFullscreenPreview.tsx#L13-L18)
 
 ## 架构概览
 
@@ -123,7 +131,7 @@ participant Preview as 预览组件
 participant Pdfjs as pdfjs-dist
 participant Worker as PDF Worker
 participant Canvas as Canvas渲染
-participant BlobPreview as Blob预览
+participant FullscreenPreview as 全屏预览
 User->>Preview : 上传PDF文件
 Preview->>Pdfjs : 初始化PDF库
 Pdfjs->>Worker : 加载PDF Worker
@@ -137,15 +145,15 @@ Worker-->>Pdfjs : 返回页面数据
 Pdfjs-->>Preview : 页面对象数组
 Preview->>Canvas : 渲染页面到画布
 Canvas-->>User : 显示PDF页面预览
-User->>BlobPreview : 预览合并后的PDF
-BlobPreview->>BlobPreview : 创建Blob URL
-BlobPreview-->>User : 在iframe中显示PDF
+User->>FullscreenPreview : 全屏预览合并后的PDF
+FullscreenPreview->>FullscreenPreview : 创建Blob URL并清理
+FullscreenPreview-->>User : 显示全屏PDF预览
 ```
 
 **图表来源**
 - [pdfjs.ts:3-13](file://src/lib/pdfjs.ts#L3-L13)
 - [PdfPagePreview.tsx:27-52](file://src/components/shared/PdfPagePreview.tsx#L27-L52)
-- [PdfBlobPreview.tsx:18-24](file://src/components/shared/PdfBlobPreview.tsx#L18-L24)
+- [PdfFullscreenPreview.tsx:29-40](file://src/components/shared/PdfFullscreenPreview.tsx#L29-L40)
 
 ## 详细组件分析
 
@@ -233,37 +241,48 @@ Cleanup --> End
 **章节来源**
 - [PdfPagePreview.tsx:16-79](file://src/components/shared/PdfPagePreview.tsx#L16-L79)
 
-### PdfBlobPreview 组件分析
+### PdfFullscreenPreview 组件分析
 
-PdfBlobPreview组件是新增的核心组件，专门用于预览生成的PDF文件。它提供了基于浏览器内置PDF查看器的预览功能。
+PdfFullscreenPreview组件是新增的核心组件，替代了原有的PdfBlobPreview组件。它提供了基于对话框的全屏PDF预览功能，具备以下特性：
 
 #### Blob URL管理
-组件使用URL.createObjectURL()创建临时URL，将Blob对象转换为可访问的URL，然后在iframe中显示。组件会在卸载时自动清理URL，防止内存泄漏。
+组件使用URL.createObjectURL()创建临时URL，将Blob对象转换为可访问的URL，然后在iframe中显示。组件会在卸载时自动清理URL，防止内存泄漏。清理过程包括：
+- 在effect cleanup中调用URL.revokeObjectURL()
+- 设置url状态为null以避免重新打开时的stale引用
+- 确保组件卸载时完全清理资源
 
 #### 组件接口设计
 组件接受以下属性：
 - `blob`: 要预览的PDF Blob对象
-- `height`: iframe的高度，默认600像素
-- `className`: 自定义CSS类名
+- `title`: 对话框标题，默认"PDF Preview"
+- `open`: 控制对话框打开状态
+- `onOpenChange`: 处理对话框状态变化的回调函数
 
 #### 渲染机制
-组件通过iframe的src属性加载PDF内容，提供最接近原生PDF查看器的用户体验。iframe支持标准的PDF查看器功能，如页面导航、缩放、打印等。
+组件通过对话框组件包装iframe实现全屏预览，提供接近原生PDF查看器的用户体验。对话框具备以下特点：
+- 黑色半透明覆盖层
+- 最大宽度1400px，高度92vh的容器
+- 内置关闭按钮和标题
+- 支持键盘导航和可访问性标签
 
 ```mermaid
 flowchart TD
-Start([组件挂载]) --> CreateURL[创建Blob URL]
+Start([组件挂载]) --> CheckBlob[检查blob和open状态]
+CheckBlob --> |有效| CreateURL[创建Blob URL]
+CheckBlob --> |无效| ReturnNull[返回null]
 CreateURL --> SetState[设置URL状态]
-SetState --> RenderIframe[渲染iframe]
-RenderIframe --> Display[显示PDF预览]
+SetState --> RenderDialog[渲染对话框]
+RenderDialog --> RenderIframe[渲染iframe]
+RenderIframe --> Display[显示全屏PDF预览]
 Display --> Cleanup[组件卸载时清理URL]
 Cleanup --> End([结束])
 ```
 
 **图表来源**
-- [PdfBlobPreview.tsx:18-24](file://src/components/shared/PdfBlobPreview.tsx#L18-L24)
+- [PdfFullscreenPreview.tsx:29-40](file://src/components/shared/PdfFullscreenPreview.tsx#L29-L40)
 
 **章节来源**
-- [PdfBlobPreview.tsx:11-36](file://src/components/shared/PdfBlobPreview.tsx#L11-L36)
+- [PdfFullscreenPreview.tsx:20-75](file://src/components/shared/PdfFullscreenPreview.tsx#L20-L75)
 
 ### pdfjs库配置分析
 
@@ -313,11 +332,12 @@ PdfjsDist[pdfjs-dist v5.5.207]
 PdfLib[pdf-lib 1.17.1]
 Fflate[fflate 0.8.2]
 NextIntl[next-intl 4.8.3]
+DndKit[@dnd-kit v6.3.1]
 End
 subgraph "内部组件"
 PdfFilePreview[PdfFilePreview]
 PdfPagePreview[PdfPagePreview]
-PdfBlobPreview[PdfBlobPreview]
+PdfFullscreenPreview[PdfFullscreenPreview]
 PdfjsConfig[pdfjs配置]
 FormatUtils[格式化工具]
 GetPdfPreview[PDF预览获取]
@@ -326,18 +346,22 @@ subgraph "工具实现"
 ExtractImages[图像提取逻辑]
 ExtractText[文本提取逻辑]
 MergePdf[MergePdf逻辑]
+PdfDetailDialog[Pdf详情对话框]
 End
 PdfFilePreview --> PdfjsDist
 PdfPagePreview --> PdfjsDist
-PdfBlobPreview --> BlobURL
+PdfFullscreenPreview --> BlobURL
+PdfFullscreenPreview --> DndKit
 PdfFilePreview --> NextIntl
 PdfPagePreview --> FormatUtils
-PdfBlobPreview --> GetPdfPreview
+PdfFullscreenPreview --> GetPdfPreview
 PdfjsConfig --> PdfjsDist
 ExtractImages --> PdfjsDist
 ExtractImages --> Fflate
 MergePdf --> PdfLib
 MergePdf --> GetPdfPreview
+MergePdf --> PdfDetailDialog
+PdfDetailDialog --> PdfPagePreview
 ```
 
 **图表来源**
@@ -357,25 +381,28 @@ PDF预览组件在设计时充分考虑了性能优化，特别是在处理大�
 - 取消机制：组件卸载时自动清理渲染任务
 - 按需加载：只在需要时才进行PDF页面渲染
 - 内存管理：及时释放Canvas和PDF对象的内存
-- Blob URL清理：PdfBlobPreview组件自动清理临时URL
+- Blob URL清理：PdfFullscreenPreview组件自动清理临时URL
 
 ### 用户体验优化
 - 加载指示器：渲染过程中显示加载状态
 - 错误处理：优雅处理渲染失败的情况
 - 响应式设计：支持不同屏幕尺寸的适配
 - 无障碍访问：提供适当的ARIA标签和键盘导航
-- 实时预览：合并PDF后立即显示预览结果
+- 实时预览：合并PDF后立即显示全屏预览结果
 
 ### 合并工具优化
 - 并发加载：使用Promise.all并发加载多个PDF
 - 进度跟踪：显示合并进度和状态
 - 内存管理：及时释放PDF文档对象
 - 错误恢复：单个文件加载失败不影响整体流程
+- 拖拽排序：使用@dnd-kit实现PDF文件的拖拽排序功能
+
+**更新** 新增的@dnd-kit依赖提供了强大的拖拽功能，支持PDF文件的拖拽排序、键盘导航和触摸设备支持。
 
 **章节来源**
 - [PdfPagePreview.tsx:27-52](file://src/components/shared/PdfPagePreview.tsx#L27-L52)
-- [PdfBlobPreview.tsx:18-24](file://src/components/shared/PdfBlobPreview.tsx#L18-L24)
-- [MergePdf.tsx:190-199](file://src/tools/pdf/merge/MergePdf.tsx#L190-L199)
+- [PdfFullscreenPreview.tsx:29-40](file://src/components/shared/PdfFullscreenPreview.tsx#L29-L40)
+- [MergePdf.tsx:105-114](file://src/tools/pdf/merge/MergePdf.tsx#L105-L114)
 
 ## 故障排除指南
 
@@ -406,18 +433,34 @@ PDF预览组件在设计时充分考虑了性能优化，特别是在处理大�
 2. 验证网络连接和文件可用性
 3. 检查CSP策略设置
 
-#### Blob预览问题
-**症状**：PdfBlobPreview组件无法显示PDF内容
+#### 全屏预览问题
+**症状**：PdfFullscreenPreview组件无法显示PDF内容
 **可能原因**：
 - Blob对象为空或已失效
 - URL.createObjectURL失败
-- iframe加载超时
+- 对话框组件渲染异常
+- 组件卸载时机不当导致URL清理过早
 
 **解决方法**：
 1. 验证Blob对象的有效性
 2. 检查Blob的类型和大小
-3. 确认iframe的src属性正确设置
-4. 查看浏览器控制台的错误信息
+3. 确认对话框组件的正确渲染
+4. 查看组件生命周期和URL清理时机
+5. 检查浏览器控制台的错误信息
+
+#### 拖拽功能问题
+**症状**：@dnd-kit拖拽功能无法正常使用
+**可能原因**：
+- 拖拽传感器配置错误
+- 事件处理器冲突
+- 样式或z-index问题
+- 触摸设备支持不足
+
+**解决方法**：
+1. 检查PointerSensor和KeyboardSensor的配置
+2. 验证sortable组件的items属性
+3. 确认CSS样式和交互元素的层级关系
+4. 测试触摸设备上的拖拽功能
 
 #### 性能问题
 **症状**：大PDF文件渲染缓慢或页面卡顿
@@ -430,11 +473,14 @@ PDF预览组件在设计时充分考虑了性能优化，特别是在处理大�
 1. 优化PDF文件大小
 2. 减少同时渲染的页面数量
 3. 提升设备硬件性能
-4. 使用PdfBlobPreview组件进行实时预览
+4. 使用PdfFullscreenPreview组件进行全屏预览
+
+**更新** 新增的全屏预览组件和拖拽功能可能带来额外的性能开销，需要合理配置和优化。
 
 **章节来源**
 - [PdfPagePreview.tsx:47-51](file://src/components/shared/PdfPagePreview.tsx#L47-L51)
-- [PdfBlobPreview.tsx:18-24](file://src/components/shared/PdfBlobPreview.tsx#L18-L24)
+- [PdfFullscreenPreview.tsx:29-40](file://src/components/shared/PdfFullscreenPreview.tsx#L29-L40)
+- [MergePdf.tsx:105-114](file://src/tools/pdf/merge/MergePdf.tsx#L105-L114)
 
 ## 结论
 
@@ -443,15 +489,17 @@ PDF文件预览组件是Media Toolbox项目中的重要组成部分，它成功�
 组件的主要优势包括：
 - **隐私保护**：所有PDF处理都在本地浏览器中完成，无需上传到服务器
 - **性能优化**：异步渲染和内存管理确保良好的用户体验
-- **功能完整**：支持基本的PDF文件信息显示、页面渲染和Blob预览
+- **功能完整**：支持基本的PDF文件信息显示、页面渲染和全屏预览
 - **易于集成**：清晰的接口设计便于在其他组件中复用
-- **实时预览**：新增的PdfBlobPreview组件提供最接近原生PDF查看器的体验
+- **实时预览**：新增的PdfFullscreenPreview组件提供最接近原生PDF查看器的体验
 
-**更新** 新增的PdfBlobPreview组件显著增强了PDF预览功能，特别是在合并PDF工具中提供了实时预览能力，用户可以立即看到合并结果的完整PDF视图，而不仅仅是页面缩略图。
+**更新** 新增的PdfFullscreenPreview组件显著增强了PDF预览功能，特别是在合并PDF工具中提供了实时全屏预览能力，用户可以立即看到合并结果的完整PDF视图，而不仅仅是页面缩略图。同时，@dnd-kit拖拽功能的引入使得PDF文件管理更加直观和高效。
 
 未来可以考虑的改进方向包括：
 - 添加PDF页面的缩放和滚动功能
 - 实现PDF页面的选择和标记功能
 - 增加PDF注释和高亮显示功能
 - 优化大文件的处理性能
-- 扩展PdfBlobPreview组件的功能，支持更多PDF查看器特性
+- 扩展全屏预览组件的功能，支持更多PDF查看器特性
+- 集成更多的可访问性功能，如屏幕阅读器支持
+- 实现PDF页面的批量操作和高级编辑功能
