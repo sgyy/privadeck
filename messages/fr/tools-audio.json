@@ -136,6 +136,39 @@
         "preset": "Préréglages",
         "presetMute": "Muet",
         "clipping": "Une amplification au-delà de 100 % peut provoquer une distorsion par écrêtage. Envisagez de réduire le niveau pour un son plus propre.",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Shield",
+            "title": "100 % Privé — Audio Jamais Téléchargé",
+            "description": "Tout le traitement du volume s'exécute localement dans votre navigateur via FFmpeg.wasm. Vos fichiers audio ne touchent jamais nos serveurs — confidentialité dès la conception."
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "Forme d'Onde et Aperçu en Direct",
+            "description": "Observez la forme d'onde s'adapter aux changements de gain et écoutez le résultat instantanément en déplaçant le curseur. Sans réencodage."
+          },
+          "f3": {
+            "icon": "Gauge",
+            "title": "Mode Double : Pourcentage et Décibels",
+            "description": "Basculez entre un contrôle 0-300 % en pourcentage et une précision de -20 à +20 dB. Échelle dB professionnelle, pourcentage simple pour tous."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Préréglages de Volume en Un Clic",
+            "description": "Muet, moitié, original, 150 % et double — atteignez les niveaux courants en un clic. Plus besoin de réglages fins du curseur."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "MP3, WAV, FLAC, M4A, OGG, AAC Pris en Charge",
+            "description": "Compatible avec tous les formats audio populaires. La sortie conserve le même format que l'entrée avec le MIME correct pour une lecture fiable."
+          },
+          "f6": {
+            "icon": "CircleCheck",
+            "title": "Alerte de Distorsion par Écrêtage",
+            "description": "La détection intégrée de clipping vous alerte quand un boost au-delà de 100 % peut distordre le signal. Détectez et corrigez avant l'export."
+          }
+        },
         "faq": {
           "q1": "Quels formats audio sont pris en charge ?",
           "a1": "La plupart des formats, dont MP3, WAV, OGG, AAC, FLAC et M4A, sont pris en charge.",

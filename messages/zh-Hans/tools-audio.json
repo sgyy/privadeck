@@ -136,6 +136,39 @@
         "preset": "预设",
         "presetMute": "静音",
         "clipping": "增益超过 100% 可能产生削波失真，建议降低音量以获得更清晰的音质。",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Shield",
+            "title": "100% 私密 — 音频不上传",
+            "description": "所有音量处理通过 FFmpeg.wasm 在浏览器本地完成。你的音频文件不会经过我们的服务器，从设计层面保障隐私。"
+          },
+          "f2": {
+            "icon": "BarChart3",
+            "title": "实时波形 + 即时预览",
+            "description": "拖动滑块时波形随增益缩放，无需重新编码即可立刻试听调整效果。"
+          },
+          "f3": {
+            "icon": "Gauge",
+            "title": "% 与 dB 双模式",
+            "description": "在 0-300% 百分比控制和 -20 到 +20 dB 精度之间切换。专业用户用 dB，普通用户用百分比。"
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "一键音量预设",
+            "description": "静音、50%、100%、150%、200% 五档预设，一次点击直达常用级别，省去精细拖动。"
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "支持 MP3、WAV、FLAC、M4A、OGG、AAC",
+            "description": "兼容所有主流音频格式。输出格式与输入一致，并附带正确的 MIME 类型确保各端播放兼容。"
+          },
+          "f6": {
+            "icon": "CircleCheck",
+            "title": "失真自动警告",
+            "description": "内置 Clipping 检测，超过 100% 增幅时即时提示可能失真。在导出前发现并修正问题。"
+          }
+        },
         "faq": {
           "q1": "支持哪些音频格式？",
           "a1": "支持大多数格式，包括 MP3、WAV、OGG、AAC、FLAC 和 M4A。",
