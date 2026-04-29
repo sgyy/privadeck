@@ -14,6 +14,72 @@
         "trim": "Cortar áudio",
         "processing": "Processando",
         "unsupported": "Esta ferramenta requer suporte a SharedArrayBuffer. Use um navegador moderno com HTTPS.",
+        "waveform": {
+          "label": "Forma de onda",
+          "loading": "Decodificando forma de onda…"
+        },
+        "precise": {
+          "start": "Início (mm:ss.ms)",
+          "end": "Fim (mm:ss.ms)",
+          "invalid": "Formato de tempo inválido. Use mm:ss.ms (por exemplo, 1:23.456).",
+          "hint": "Digite um tempo preciso e pressione Enter ou clique fora para aplicar."
+        },
+        "playSelection": "Reproduzir seleção",
+        "pauseSelection": "Pausar",
+        "loop": "Repetir seleção",
+        "mode": {
+          "label": "Modo de corte",
+          "keep": "Manter seleção",
+          "remove": "Remover seleção",
+          "removeWarning": "O modo Remover junta as partes antes e depois da sua seleção. A saída é recodificada em MP3, então a qualidade pode diferir um pouco do original."
+        },
+        "fade": {
+          "enable": "Adicionar fade in / fade out",
+          "in": "Fade in",
+          "out": "Fade out",
+          "warning": "Os fades exigem recodificação. A saída será em MP3."
+        },
+        "presets": {
+          "label": "Predefinições",
+          "ringtone30": "Toque de 30 s",
+          "ringtone40": "Toque de 40 s"
+        },
+        "hints": {
+          "shortcuts": "Arraste as alças da forma de onda ou digite tempos precisos em mm:ss.ms para definir os pontos de corte."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "BarChart3",
+            "title": "Forma de onda visual com seleção",
+            "description": "Veja todo o áudio como forma de onda, arraste as alças duplas para escolher a parte que precisa e acompanhe o cabeçote de reprodução em tempo real."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Entrada de tempo precisa em milissegundos",
+            "description": "Digite valores exatos em mm:ss.ms para travar os pontos de corte. O controle deslizante, a forma de onda e as caixas numéricas ficam sincronizados, ajuste do jeito que preferir."
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "Modo Manter sem perda de qualidade",
+            "description": "O modo Manter usa cópia de fluxo do FFmpeg, sem recodificação. O arquivo cortado mantém o codificador, a taxa de bits e a qualidade do original bit a bit."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Remover a seção central + fades",
+            "description": "Mude para o modo Remover para apagar um trecho e juntar o restante. Os fades opcionais de 0 a 3 segundos suavizam o corte para uma transição natural."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "Suporte a MP3, WAV, FLAC, M4A, OGG, AAC",
+            "description": "Funciona com todos os formatos de áudio populares. Repita a seleção no navegador antes de exportar para conferir se o corte ficou bom."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% privado — seu áudio nunca é enviado",
+            "description": "Todo o corte é feito localmente no seu navegador com FFmpeg.wasm. Seus arquivos de áudio nunca tocam nossos servidores — privacidade desde o início."
+          }
+        },
         "faq": {
           "q1": "Quais formatos de áudio são suportados?",
           "a1": "A maioria dos formatos são suportados, incluindo MP3, WAV, OGG, AAC, FLAC e M4A.",
@@ -24,7 +90,11 @@
           "q4": "Posso usar esta ferramenta offline?",
           "a4": "Sim. Depois que a página carregar, a ferramenta funciona completamente offline. Para a melhor experiência, instale o PrivaDeck como PWA pelo seu navegador.",
           "q5": "Existem limites de tamanho de arquivo?",
-          "a5": "Não há limites impostos pelo servidor. O tamanho máximo do arquivo depende da memória disponível do seu dispositivo e dos recursos do navegador. A maioria dos dispositivos modernos lida com arquivos de várias centenas de MB sem problemas."
+          "a5": "Não há limites impostos pelo servidor. O tamanho máximo do arquivo depende da memória disponível do seu dispositivo e dos recursos do navegador. A maioria dos dispositivos modernos lida com arquivos de várias centenas de MB sem problemas.",
+          "q6": "Qual é a diferença entre os modos Manter e Remover?",
+          "a6": "O modo Manter preserva o trecho selecionado via cópia de fluxo sem perda — mesmo codificador, taxa de bits e qualidade do original. O modo Remover apaga o trecho selecionado e une as partes restantes; isso exige recodificação para MP3.",
+          "q7": "Como funcionam as predefinições de toque?",
+          "a7": "Clique em «Toque de 30 s» ou «Toque de 40 s» para fixar o ponto final 30 ou 40 segundos após o ponto inicial atual. Ideal para criar rapidamente toques de telefone a partir de músicas longas."
         },
         "seoContent": {
           "intro": {

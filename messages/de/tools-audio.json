@@ -14,6 +14,72 @@
         "trim": "Audio schneiden",
         "processing": "Wird verarbeitet",
         "unsupported": "Dieses Tool erfordert SharedArrayBuffer-Unterstützung. Bitte verwenden Sie einen modernen Browser mit HTTPS.",
+        "waveform": {
+          "label": "Wellenform",
+          "loading": "Wellenform wird dekodiert…"
+        },
+        "precise": {
+          "start": "Start (mm:ss.ms)",
+          "end": "Ende (mm:ss.ms)",
+          "invalid": "Ungültiges Zeitformat. Bitte mm:ss.ms verwenden (z. B. 1:23.456).",
+          "hint": "Geben Sie eine genaue Zeit ein und drücken Sie Eingabe oder klicken Sie außerhalb, um sie anzuwenden."
+        },
+        "playSelection": "Auswahl abspielen",
+        "pauseSelection": "Pause",
+        "loop": "Auswahl wiederholen",
+        "mode": {
+          "label": "Schneidemodus",
+          "keep": "Auswahl behalten",
+          "remove": "Auswahl entfernen",
+          "removeWarning": "Im Modus Entfernen werden die Bereiche vor und nach der Auswahl zusammengefügt. Die Ausgabe wird in MP3 neu kodiert; die Qualität kann sich daher leicht vom Original unterscheiden."
+        },
+        "fade": {
+          "enable": "Ein-/Ausblenden hinzufügen",
+          "in": "Einblenden",
+          "out": "Ausblenden",
+          "warning": "Ein-/Ausblendungen erfordern eine Neukodierung. Die Ausgabe ist MP3."
+        },
+        "presets": {
+          "label": "Vorgaben",
+          "ringtone30": "30-s-Klingelton",
+          "ringtone40": "40-s-Klingelton"
+        },
+        "hints": {
+          "shortcuts": "Ziehen Sie die Wellenform-Griffe oder geben Sie genaue mm:ss.ms-Zeiten ein, um die Schnittpunkte festzulegen."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "BarChart3",
+            "title": "Wellenform mit Auswahlmarkierung",
+            "description": "Sehen Sie das gesamte Audio als Wellenform, ziehen Sie die zwei Griffe zur gewünschten Auswahl und beobachten Sie den Abspielkopf in Echtzeit."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Millisekundengenaue Zeiteingabe",
+            "description": "Geben Sie exakte mm:ss.ms-Werte ein, um die Schnittpunkte festzunageln. Schieberegler, Wellenform und Zahleneingaben bleiben synchron — feinjustieren wie Sie wollen."
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "Verlustfreier Behalten-Modus",
+            "description": "Der Behalten-Modus nutzt FFmpeg-Stream-Copy ohne Neukodierung. Die geschnittene Datei behält Encoder, Bitrate und Qualität des Originals Bit für Bit bei."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Mittleren Abschnitt entfernen + Blendungen",
+            "description": "Wechseln Sie in den Entfernen-Modus, um einen Abschnitt zu löschen und den Rest zu verbinden. Optionale 0–3-Sekunden-Blendungen sorgen für natürliche Übergänge."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "MP3, WAV, FLAC, M4A, OGG, AAC unterstützt",
+            "description": "Kompatibel mit allen gängigen Audioformaten. Hören Sie sich die Auswahl im Browser in Schleife an, bevor Sie exportieren."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privat — Audio wird nie hochgeladen",
+            "description": "Das gesamte Schneiden läuft lokal im Browser über FFmpeg.wasm. Ihre Audiodateien erreichen unsere Server nie — Datenschutz von Grund auf."
+          }
+        },
         "faq": {
           "q1": "Welche Audioformate werden unterstützt?",
           "a1": "Die meisten Formate einschließlich MP3, WAV, OGG, AAC, FLAC und M4A werden unterstützt.",
@@ -24,7 +90,11 @@
           "q4": "Kann ich dieses Tool offline nutzen?",
           "a4": "Ja. Sobald die Seite geladen ist, funktioniert das Tool vollständig offline. Für das beste Erlebnis installieren Sie PrivaDeck als PWA in Ihrem Browser.",
           "q5": "Gibt es Dateigrößenbeschränkungen?",
-          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Arbeitsspeicher Ihres Geräts und den Browser-Möglichkeiten ab. Die meisten modernen Geräte verarbeiten Dateien bis zu mehreren hundert MB problemlos."
+          "a5": "Es gibt keine serverseitigen Beschränkungen. Die maximale Dateigröße hängt vom verfügbaren Arbeitsspeicher Ihres Geräts und den Browser-Möglichkeiten ab. Die meisten modernen Geräte verarbeiten Dateien bis zu mehreren hundert MB problemlos.",
+          "q6": "Was ist der Unterschied zwischen Behalten und Entfernen?",
+          "a6": "Im Modus Behalten wird der ausgewählte Abschnitt verlustfrei per Stream-Copy übernommen — gleicher Encoder, Bitrate und Qualität wie das Original. Im Modus Entfernen wird der gewählte Bereich gelöscht und die umliegenden Teile werden zusammengefügt; dazu ist eine Neukodierung in MP3 nötig.",
+          "q7": "Wie funktionieren die Klingelton-Vorgaben?",
+          "a7": "Klicken Sie auf „30-s-Klingelton“ oder „40-s-Klingelton“, damit der Endpunkt automatisch auf 30 oder 40 Sekunden nach dem aktuellen Startpunkt gesetzt wird. Praktisch, um schnell Klingeltöne aus längeren Liedern zu erstellen."
         },
         "seoContent": {
           "intro": {

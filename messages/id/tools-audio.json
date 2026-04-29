@@ -14,6 +14,72 @@
         "trim": "Potong Audio",
         "processing": "Memproses",
         "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Silakan gunakan browser modern dengan HTTPS.",
+        "waveform": {
+          "label": "Bentuk gelombang",
+          "loading": "Mendekode bentuk gelombang…"
+        },
+        "precise": {
+          "start": "Mulai (mm:ss.ms)",
+          "end": "Akhir (mm:ss.ms)",
+          "invalid": "Format waktu tidak valid. Gunakan mm:ss.ms (misalnya 1:23.456).",
+          "hint": "Ketik waktu presisi lalu tekan Enter atau klik di luar untuk menerapkan."
+        },
+        "playSelection": "Putar pilihan",
+        "pauseSelection": "Jeda",
+        "loop": "Ulangi pilihan",
+        "mode": {
+          "label": "Mode pemotongan",
+          "keep": "Simpan pilihan",
+          "remove": "Hapus pilihan",
+          "removeWarning": "Mode Hapus menyambung bagian sebelum dan sesudah pilihan Anda. Output dikodekan ulang ke MP3, sehingga kualitas dapat sedikit berbeda dari aslinya."
+        },
+        "fade": {
+          "enable": "Tambahkan fade in / fade out",
+          "in": "Fade in",
+          "out": "Fade out",
+          "warning": "Fade memerlukan pengodean ulang. Output akan berformat MP3."
+        },
+        "presets": {
+          "label": "Praatur",
+          "ringtone30": "Nada dering 30 d",
+          "ringtone40": "Nada dering 40 d"
+        },
+        "hints": {
+          "shortcuts": "Seret pegangan bentuk gelombang atau ketik waktu presisi mm:ss.ms untuk menentukan titik potong."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "BarChart3",
+            "title": "Bentuk gelombang visual dengan pilihan",
+            "description": "Lihat seluruh audio sebagai bentuk gelombang, seret pegangan ganda untuk memilih bagian yang dibutuhkan, dan saksikan playhead bergerak secara real time."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Input waktu presisi milidetik",
+            "description": "Ketik nilai mm:ss.ms yang tepat untuk mengunci titik potong. Slider, bentuk gelombang, dan kotak angka selalu sinkron sehingga Anda bisa menyetel sesuai selera."
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "Mode Simpan tanpa kehilangan",
+            "description": "Mode Simpan menggunakan stream copy FFmpeg tanpa pengodean ulang. File hasil pemotongan mempertahankan encoder, bitrate, dan kualitas asli bit per bit."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Hapus bagian tengah + fade",
+            "description": "Beralih ke mode Hapus untuk menghapus segmen dan menyambung sisanya. Fade in / out opsional 0–3 detik membuat transisi terasa alami."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "Mendukung MP3, WAV, FLAC, M4A, OGG, AAC",
+            "description": "Mendukung semua format audio populer. Putar ulang pilihan di peramban sebelum mengekspor untuk memastikan potongan terdengar pas."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% privat — audio tidak pernah diunggah",
+            "description": "Seluruh pemotongan berjalan secara lokal di peramban via FFmpeg.wasm. File audio Anda tidak pernah menyentuh server kami — privasi sejak awal."
+          }
+        },
         "faq": {
           "q1": "Format audio apa yang didukung?",
           "a1": "Sebagian besar format termasuk MP3, WAV, OGG, AAC, FLAC, dan M4A didukung.",
@@ -24,7 +90,11 @@
           "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
           "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
-          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
+          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah.",
+          "q6": "Apa perbedaan mode Simpan dan Hapus?",
+          "a6": "Mode Simpan mempertahankan segmen yang dipilih dengan stream copy tanpa kehilangan kualitas — encoder, bitrate, dan kualitas tetap sama dengan aslinya. Mode Hapus menghapus segmen yang dipilih dan menyambung bagian sekitarnya; ini memerlukan pengodean ulang ke MP3.",
+          "q7": "Bagaimana praatur nada dering bekerja?",
+          "a7": "Klik «Nada dering 30 d» atau «Nada dering 40 d» untuk mengunci titik akhir 30 atau 40 detik setelah titik awal saat ini. Berguna untuk membuat nada dering ponsel dengan cepat dari lagu panjang."
         },
         "seoContent": {
           "intro": {

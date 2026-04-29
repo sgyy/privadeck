@@ -14,6 +14,72 @@
         "trim": "Taglia audio",
         "processing": "Elaborazione in corso",
         "unsupported": "Questo strumento richiede il supporto di SharedArrayBuffer. Usa un browser moderno con HTTPS.",
+        "waveform": {
+          "label": "Forma d'onda",
+          "loading": "Decodifica della forma d'onda…"
+        },
+        "precise": {
+          "start": "Inizio (mm:ss.ms)",
+          "end": "Fine (mm:ss.ms)",
+          "invalid": "Formato del tempo non valido. Usa mm:ss.ms (per esempio 1:23.456).",
+          "hint": "Digita un tempo preciso e premi Invio o fai clic fuori dal campo per applicarlo."
+        },
+        "playSelection": "Riproduci selezione",
+        "pauseSelection": "Pausa",
+        "loop": "Ripeti selezione",
+        "mode": {
+          "label": "Modalità di taglio",
+          "keep": "Mantieni selezione",
+          "remove": "Elimina selezione",
+          "removeWarning": "La modalità Elimina unisce le parti prima e dopo la selezione. L'output viene ricodificato in MP3, perciò la qualità può differire leggermente dall'originale."
+        },
+        "fade": {
+          "enable": "Aggiungi dissolvenza in apertura / chiusura",
+          "in": "Dissolvenza in apertura",
+          "out": "Dissolvenza in chiusura",
+          "warning": "Le dissolvenze richiedono la ricodifica. L'output sarà in MP3."
+        },
+        "presets": {
+          "label": "Preimpostazioni",
+          "ringtone30": "Suoneria 30 s",
+          "ringtone40": "Suoneria 40 s"
+        },
+        "hints": {
+          "shortcuts": "Trascina le maniglie della forma d'onda o digita tempi precisi in mm:ss.ms per impostare i punti di taglio."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "BarChart3",
+            "title": "Forma d'onda visiva con selezione",
+            "description": "Vedi tutto l'audio come forma d'onda, trascina le maniglie doppie per scegliere la parte che ti serve e osserva la testina muoversi in tempo reale."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Inserimento del tempo al millisecondo",
+            "description": "Digita valori esatti in mm:ss.ms per fissare i punti di taglio. Cursore, forma d'onda e campi numerici restano sincronizzati così puoi regolare come preferisci."
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "Modalità Mantieni senza perdita",
+            "description": "La modalità Mantieni usa la copia di flusso di FFmpeg, senza ricodifica. Il file tagliato conserva bit per bit codificatore, bitrate e qualità dell'originale."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Elimina la sezione centrale + dissolvenze",
+            "description": "Passa alla modalità Elimina per rimuovere un segmento e unire il resto. Le dissolvenze opzionali da 0 a 3 secondi rendono naturali le transizioni."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "Supporto MP3, WAV, FLAC, M4A, OGG, AAC",
+            "description": "Funziona con tutti i formati audio più diffusi. Ripeti la selezione nel browser prima di esportare per assicurarti che il taglio suoni bene."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privato — l'audio non viene mai caricato",
+            "description": "Tutto il taglio avviene localmente nel browser tramite FFmpeg.wasm. I tuoi file audio non raggiungono mai i nostri server — privacy per progettazione."
+          }
+        },
         "faq": {
           "q1": "Quali formati audio sono supportati?",
           "a1": "La maggior parte dei formati, tra cui MP3, WAV, OGG, AAC, FLAC e M4A, sono supportati.",
@@ -24,7 +90,11 @@
           "q4": "Posso usare questo strumento offline?",
           "a4": "Sì. Una volta caricata la pagina, lo strumento funziona completamente offline. Per la migliore esperienza, installa PrivaDeck come PWA dal tuo browser.",
           "q5": "Ci sono limiti di dimensione file?",
-          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi."
+          "a5": "Non ci sono limiti imposti dal server. La dimensione massima del file dipende dalla memoria disponibile sul tuo dispositivo e dalle capacità del browser. La maggior parte dei dispositivi moderni gestisce file fino a diverse centinaia di MB senza problemi.",
+          "q6": "Qual è la differenza tra Mantieni ed Elimina?",
+          "a6": "La modalità Mantieni preserva il segmento selezionato con copia di flusso senza perdita di qualità — stesso codificatore, bitrate e qualità dell'originale. La modalità Elimina rimuove il segmento selezionato e unisce le parti rimanenti; questo richiede la ricodifica in MP3.",
+          "q7": "Come funzionano le preimpostazioni della suoneria?",
+          "a7": "Fai clic su «Suoneria 30 s» o «Suoneria 40 s» per impostare il punto finale a 30 o 40 secondi dopo il punto iniziale corrente. Utile per creare velocemente suonerie da brani lunghi."
         },
         "seoContent": {
           "intro": {

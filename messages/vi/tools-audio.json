@@ -14,6 +14,72 @@
         "trim": "Cắt âm thanh",
         "processing": "Đang xử lý",
         "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Vui lòng sử dụng trình duyệt hiện đại với HTTPS.",
+        "waveform": {
+          "label": "Dạng sóng",
+          "loading": "Đang giải mã dạng sóng…"
+        },
+        "precise": {
+          "start": "Bắt đầu (mm:ss.ms)",
+          "end": "Kết thúc (mm:ss.ms)",
+          "invalid": "Định dạng thời gian không hợp lệ. Hãy dùng mm:ss.ms (ví dụ 1:23.456).",
+          "hint": "Nhập thời gian chính xác rồi nhấn Enter hoặc bấm ra ngoài để áp dụng."
+        },
+        "playSelection": "Phát vùng chọn",
+        "pauseSelection": "Tạm dừng",
+        "loop": "Lặp vùng chọn",
+        "mode": {
+          "label": "Chế độ cắt",
+          "keep": "Giữ vùng chọn",
+          "remove": "Xóa vùng chọn",
+          "removeWarning": "Chế độ Xóa nối phần trước và sau vùng chọn. Đầu ra được mã hóa lại sang MP3, nên chất lượng có thể khác đôi chút so với bản gốc."
+        },
+        "fade": {
+          "enable": "Thêm fade in / fade out",
+          "in": "Fade in",
+          "out": "Fade out",
+          "warning": "Hiệu ứng fade cần mã hóa lại. Đầu ra sẽ là MP3."
+        },
+        "presets": {
+          "label": "Cài sẵn",
+          "ringtone30": "Nhạc chuông 30 giây",
+          "ringtone40": "Nhạc chuông 40 giây"
+        },
+        "hints": {
+          "shortcuts": "Kéo các tay cầm dạng sóng hoặc nhập thời gian chính xác mm:ss.ms để đặt điểm cắt."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "BarChart3",
+            "title": "Dạng sóng trực quan và vùng chọn",
+            "description": "Xem toàn bộ âm thanh dưới dạng sóng, kéo hai tay cầm để chọn phần cần, và quan sát đầu phát di chuyển theo thời gian thực khi đang phát."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Nhập thời gian chính xác đến mili giây",
+            "description": "Gõ giá trị mm:ss.ms chính xác để cố định điểm cắt. Thanh trượt, dạng sóng và ô số luôn đồng bộ, bạn có thể tinh chỉnh theo cách mình thích."
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "Chế độ Giữ không mất dữ liệu",
+            "description": "Chế độ Giữ dùng sao chép luồng FFmpeg, không mã hóa lại. Tệp đã cắt giữ nguyên bộ mã hóa, bitrate và chất lượng gốc từng bit."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Xóa đoạn giữa + fade",
+            "description": "Chuyển sang chế độ Xóa để loại bỏ một đoạn và nối phần còn lại. Fade in / out tùy chọn 0–3 giây giúp chuyển tiếp tự nhiên."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "Hỗ trợ MP3, WAV, FLAC, M4A, OGG, AAC",
+            "description": "Hoạt động với mọi định dạng âm thanh phổ biến. Lặp vùng chọn trong trình duyệt trước khi xuất để đảm bảo phần cắt nghe ổn."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% riêng tư — âm thanh không bao giờ được tải lên",
+            "description": "Toàn bộ thao tác cắt chạy cục bộ trong trình duyệt qua FFmpeg.wasm. Tệp âm thanh của bạn không bao giờ chạm tới máy chủ của chúng tôi — riêng tư từ thiết kế."
+          }
+        },
         "faq": {
           "q1": "Hỗ trợ những định dạng âm thanh nào?",
           "a1": "Hầu hết các định dạng bao gồm MP3, WAV, OGG, AAC, FLAC và M4A được hỗ trợ.",
@@ -24,7 +90,11 @@
           "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
           "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
-          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
+          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề.",
+          "q6": "Sự khác biệt giữa chế độ Giữ và Xóa là gì?",
+          "a6": "Chế độ Giữ bảo toàn đoạn bạn chọn bằng sao chép luồng không mất dữ liệu — cùng bộ mã hóa, bitrate và chất lượng như bản gốc. Chế độ Xóa loại bỏ đoạn được chọn và nối các phần còn lại; điều này cần mã hóa lại sang MP3.",
+          "q7": "Cài sẵn nhạc chuông hoạt động thế nào?",
+          "a7": "Nhấn «Nhạc chuông 30 giây» hoặc «Nhạc chuông 40 giây» để khóa điểm kết thúc cách điểm bắt đầu hiện tại 30 hoặc 40 giây. Rất tiện để tạo nhạc chuông điện thoại từ bài hát dài."
         },
         "seoContent": {
           "intro": {

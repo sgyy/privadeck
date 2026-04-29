@@ -29,6 +29,14 @@ const definition: ToolDefinition = {
       questionKey: "tools.audio.trim.faq.q5",
       answerKey: "tools.audio.trim.faq.a5",
     },
+    {
+      questionKey: "tools.audio.trim.faq.q6",
+      answerKey: "tools.audio.trim.faq.a6",
+    },
+    {
+      questionKey: "tools.audio.trim.faq.q7",
+      answerKey: "tools.audio.trim.faq.a7",
+    },
   ],
   relatedSlugs: ["convert", "extract", "volume"],
 };

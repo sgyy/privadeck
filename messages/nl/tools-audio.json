@@ -14,6 +14,72 @@
         "trim": "Audio bijsnijden",
         "processing": "Verwerken",
         "unsupported": "Deze tool vereist SharedArrayBuffer-ondersteuning. Gebruik een moderne browser met HTTPS.",
+        "waveform": {
+          "label": "Golfvorm",
+          "loading": "Golfvorm decoderen…"
+        },
+        "precise": {
+          "start": "Begin (mm:ss.ms)",
+          "end": "Einde (mm:ss.ms)",
+          "invalid": "Ongeldige tijdnotatie. Gebruik mm:ss.ms (bijv. 1:23.456).",
+          "hint": "Typ een nauwkeurige tijd en druk op Enter of klik buiten het veld om toe te passen."
+        },
+        "playSelection": "Selectie afspelen",
+        "pauseSelection": "Pauze",
+        "loop": "Selectie herhalen",
+        "mode": {
+          "label": "Snijmodus",
+          "keep": "Selectie behouden",
+          "remove": "Selectie verwijderen",
+          "removeWarning": "De modus Verwijderen voegt de stukken vóór en na je selectie samen. De uitvoer wordt opnieuw naar MP3 gecodeerd, dus de kwaliteit kan iets afwijken van het origineel."
+        },
+        "fade": {
+          "enable": "Fade-in / fade-out toevoegen",
+          "in": "Fade-in",
+          "out": "Fade-out",
+          "warning": "Fades vereisen hercodering. De uitvoer wordt MP3."
+        },
+        "presets": {
+          "label": "Voorinstellingen",
+          "ringtone30": "Beltoon 30 s",
+          "ringtone40": "Beltoon 40 s"
+        },
+        "hints": {
+          "shortcuts": "Sleep de greep op de golfvorm of typ een nauwkeurige mm:ss.ms-tijd om de snijpunten in te stellen."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "BarChart3",
+            "title": "Visuele golfvorm met selectie",
+            "description": "Bekijk de hele audio als golfvorm, sleep de twee grepen om het gewenste deel te kiezen en zie de afspeelkop in realtime bewegen tijdens het afspelen."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Tijdsinvoer tot op de milliseconde",
+            "description": "Typ exacte mm:ss.ms-waarden om snijpunten vast te leggen. Schuifregelaar, golfvorm en numerieke vakken blijven gesynchroniseerd, dus stel af zoals jij wilt."
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "Verliesvrije Behouden-modus",
+            "description": "De modus Behouden gebruikt FFmpeg-stream copy zonder hercodering. Het bijgesneden bestand behoudt encoder, bitrate en kwaliteit van het origineel bit voor bit."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Middendeel verwijderen + fades",
+            "description": "Schakel over naar Verwijderen om een fragment te wissen en de rest aan elkaar te plakken. Optionele fade-in / fade-out van 0–3 s maakt overgangen natuurlijker."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "MP3, WAV, FLAC, M4A, OGG, AAC ondersteund",
+            "description": "Werkt met alle populaire audioformaten. Loop de selectie in de browser voor het exporteren om te controleren of de knip goed klinkt."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% privé — audio wordt nooit geüpload",
+            "description": "Het bijsnijden draait volledig lokaal in je browser via FFmpeg.wasm. Je audiobestanden bereiken nooit onze servers — privacy by design."
+          }
+        },
         "faq": {
           "q1": "Welke audioformaten worden ondersteund?",
           "a1": "De meeste formaten worden ondersteund, waaronder MP3, WAV, OGG, AAC, FLAC en M4A.",
@@ -24,7 +90,11 @@
           "q4": "Kan ik deze tool offline gebruiken?",
           "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
-          "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
+          "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken.",
+          "q6": "Wat is het verschil tussen Behouden en Verwijderen?",
+          "a6": "De modus Behouden bewaart het geselecteerde fragment via verliesvrije stream copy — dezelfde encoder, bitrate en kwaliteit als het origineel. De modus Verwijderen wist het geselecteerde fragment en voegt de omliggende delen samen; dat vereist hercodering naar MP3.",
+          "q7": "Hoe werken de beltoonvoorinstellingen?",
+          "a7": "Klik op «Beltoon 30 s» of «Beltoon 40 s» om het eindpunt 30 of 40 seconden na het huidige beginpunt vast te zetten. Handig om snel beltonen uit lange nummers te maken."
         },
         "seoContent": {
           "intro": {

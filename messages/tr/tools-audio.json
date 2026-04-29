@@ -14,6 +14,72 @@
         "trim": "Sesi Kırp",
         "processing": "İşleniyor",
         "unsupported": "Bu araç SharedArrayBuffer desteği gerektirir. Lütfen HTTPS ile modern bir tarayıcı kullanın.",
+        "waveform": {
+          "label": "Dalga formu",
+          "loading": "Dalga formu çözümleniyor…"
+        },
+        "precise": {
+          "start": "Başlangıç (mm:ss.ms)",
+          "end": "Bitiş (mm:ss.ms)",
+          "invalid": "Geçersiz zaman biçimi. mm:ss.ms kullanın (örneğin 1:23.456).",
+          "hint": "Tam bir zaman yazın, ardından Enter'a basın veya dışına tıklayarak uygulayın."
+        },
+        "playSelection": "Seçimi oynat",
+        "pauseSelection": "Duraklat",
+        "loop": "Seçimi tekrarla",
+        "mode": {
+          "label": "Kırpma modu",
+          "keep": "Seçimi koru",
+          "remove": "Seçimi kaldır",
+          "removeWarning": "Kaldır modu, seçiminizin önündeki ve sonrasındaki parçaları birleştirir. Çıktı MP3 olarak yeniden kodlanır, bu nedenle kalite orijinalden biraz farklı olabilir."
+        },
+        "fade": {
+          "enable": "Fade in / fade out ekle",
+          "in": "Fade in",
+          "out": "Fade out",
+          "warning": "Fade efektleri için yeniden kodlama gerekir. Çıktı MP3 olur."
+        },
+        "presets": {
+          "label": "Hazır ayarlar",
+          "ringtone30": "30 sn zil sesi",
+          "ringtone40": "40 sn zil sesi"
+        },
+        "hints": {
+          "shortcuts": "Dalga formu tutamaçlarını sürükleyin veya kesim noktalarını ayarlamak için aşağıdaki kutulara mm:ss.ms olarak tam süre yazın."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "BarChart3",
+            "title": "Görsel dalga formu ve seçim vurgusu",
+            "description": "Tüm sesi dalga formu olarak görün, ihtiyacınız olan bölümü seçmek için çift tutamacı sürükleyin ve oynatma kafasının gerçek zamanlı hareket etmesini izleyin."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Milisaniye hassasiyetinde zaman girişi",
+            "description": "Kesim noktalarını sabitlemek için tam mm:ss.ms değerleri yazın. Kaydırıcı, dalga formu ve sayı kutuları senkron çalışır, tercih ettiğiniz şekilde ince ayar yapın."
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "Kayıpsız Koru modu",
+            "description": "Koru modu, FFmpeg akış kopyalamasını yeniden kodlama olmadan kullanır. Kırpılan dosya, orijinal kodlayıcı, bit hızı ve kaliteyi bit bit korur."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Orta bölümü kaldır + fade",
+            "description": "Bir bölümü silmek ve geri kalanı birleştirmek için Kaldır moduna geçin. İsteğe bağlı 0–3 sn fade in / out, geçişleri doğal hissettirir."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "MP3, WAV, FLAC, M4A, OGG, AAC desteği",
+            "description": "Tüm popüler ses formatlarıyla çalışır. Dışa aktarmadan önce kesimin doğru duyulduğundan emin olmak için seçimi tarayıcıda döngüye alın."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "%100 gizli — sesleriniz asla yüklenmez",
+            "description": "Tüm kırpma işlemleri tarayıcınızda FFmpeg.wasm aracılığıyla yerel olarak çalışır. Ses dosyalarınız sunucularımıza asla ulaşmaz — tasarım gereği gizlilik."
+          }
+        },
         "faq": {
           "q1": "Hangi ses formatları destekleniyor?",
           "a1": "MP3, WAV, OGG, AAC, FLAC ve M4A dahil çoğu format desteklenir.",
@@ -24,7 +90,11 @@
           "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
           "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
-          "a5": "Sunucu kaynaklı bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar dosyaları sorunsuz işler."
+          "a5": "Sunucu kaynaklı bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar dosyaları sorunsuz işler.",
+          "q6": "Koru ve Kaldır modları arasındaki fark nedir?",
+          "a6": "Koru modu, seçtiğiniz bölümü kayıpsız akış kopyalamayla saklar — kodlayıcı, bit hızı ve kalite orijinaliyle birebir aynı kalır. Kaldır modu seçili bölümü siler ve çevresindeki parçaları birleştirir; bu MP3'e yeniden kodlama gerektirir.",
+          "q7": "Zil sesi hazır ayarları nasıl çalışır?",
+          "a7": "«30 sn zil sesi» veya «40 sn zil sesi» düğmesine tıklayın; bitiş noktası mevcut başlangıç noktasından 30 veya 40 saniye sonraya sabitlenir. Uzun şarkılardan hızlıca telefon zil sesi yapmak için idealdir."
         },
         "seoContent": {
           "intro": {

@@ -14,6 +14,72 @@
         "trim": "Przytnij audio",
         "processing": "Przetwarzanie",
         "unsupported": "To narzędzie wymaga obsługi SharedArrayBuffer. Użyj nowoczesnej przeglądarki z HTTPS.",
+        "waveform": {
+          "label": "Przebieg fali",
+          "loading": "Dekodowanie przebiegu fali…"
+        },
+        "precise": {
+          "start": "Początek (mm:ss.ms)",
+          "end": "Koniec (mm:ss.ms)",
+          "invalid": "Nieprawidłowy format czasu. Użyj mm:ss.ms (np. 1:23.456).",
+          "hint": "Wpisz dokładny czas i naciśnij Enter lub kliknij poza polem, aby zastosować."
+        },
+        "playSelection": "Odtwórz zaznaczenie",
+        "pauseSelection": "Pauza",
+        "loop": "Powtarzaj zaznaczenie",
+        "mode": {
+          "label": "Tryb przycinania",
+          "keep": "Zachowaj zaznaczenie",
+          "remove": "Usuń zaznaczenie",
+          "removeWarning": "Tryb Usuń łączy fragmenty sprzed i po zaznaczeniu. Wynik jest ponownie kodowany do MP3, więc jakość może nieznacznie różnić się od oryginału."
+        },
+        "fade": {
+          "enable": "Dodaj fade in / fade out",
+          "in": "Fade in",
+          "out": "Fade out",
+          "warning": "Płynne przejścia wymagają ponownego kodowania. Wynik będzie w MP3."
+        },
+        "presets": {
+          "label": "Ustawienia wstępne",
+          "ringtone30": "Dzwonek 30 s",
+          "ringtone40": "Dzwonek 40 s"
+        },
+        "hints": {
+          "shortcuts": "Przeciągnij uchwyty przebiegu fali lub wpisz dokładny czas mm:ss.ms, aby ustawić punkty cięcia."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "BarChart3",
+            "title": "Wizualny przebieg fali z zaznaczeniem",
+            "description": "Zobacz cały dźwięk jako falę, przeciągaj podwójne uchwyty, aby wybrać potrzebny fragment, i obserwuj głowicę w czasie rzeczywistym podczas odtwarzania."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Wprowadzanie czasu z dokładnością do milisekundy",
+            "description": "Wpisz dokładne wartości mm:ss.ms, aby zablokować punkty cięcia. Suwak, fala i pola liczbowe są zsynchronizowane, dostrajaj według uznania."
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "Bezstratny tryb Zachowaj",
+            "description": "Tryb Zachowaj używa kopii strumienia FFmpeg bez ponownego kodowania. Przycięty plik zachowuje koder, bitrate i jakość oryginału bit po bicie."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Usuń środek + płynne przejścia",
+            "description": "Przełącz na tryb Usuń, aby wyciąć fragment i skleić resztę. Opcjonalne fade in / out 0–3 s sprawiają, że cięcie brzmi naturalnie."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "Obsługa MP3, WAV, FLAC, M4A, OGG, AAC",
+            "description": "Działa ze wszystkimi popularnymi formatami audio. Odtwórz zaznaczenie w pętli w przeglądarce przed eksportem, by upewnić się, że cięcie brzmi dobrze."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % prywatność — audio nigdy nie jest przesyłane",
+            "description": "Cały proces przycinania odbywa się lokalnie w przeglądarce przez FFmpeg.wasm. Twoje pliki audio nigdy nie trafiają na nasze serwery — prywatność z założenia."
+          }
+        },
         "faq": {
           "q1": "Jakie formaty audio są obsługiwane?",
           "a1": "Obsługiwane są najpopularniejsze formaty, w tym MP3, WAV, OGG, AAC, FLAC i M4A.",
@@ -24,7 +90,11 @@
           "q4": "Czy mogę używać tego narzędzia offline?",
           "a4": "Tak. Po załadowaniu strony narzędzie działa całkowicie offline. Dla najlepszego doświadczenia zainstaluj PrivaDeck jako PWA z poziomu przeglądarki.",
           "q5": "Czy są limity rozmiaru pliku?",
-          "a5": "Nie ma limitów narzucanych przez serwer. Maksymalny rozmiar pliku zależy od dostępnej pamięci urządzenia i możliwości przeglądarki. Większość nowoczesnych urządzeń bez problemu obsługuje pliki do kilkuset MB."
+          "a5": "Nie ma limitów narzucanych przez serwer. Maksymalny rozmiar pliku zależy od dostępnej pamięci urządzenia i możliwości przeglądarki. Większość nowoczesnych urządzeń bez problemu obsługuje pliki do kilkuset MB.",
+          "q6": "Jaka jest różnica między trybem Zachowaj a Usuń?",
+          "a6": "Tryb Zachowaj zachowuje wybrany fragment przez bezstratną kopię strumienia — ten sam koder, bitrate i jakość co oryginał. Tryb Usuń wycina wybrany fragment i łączy pozostałe części; to wymaga ponownego kodowania do MP3.",
+          "q7": "Jak działają ustawienia wstępne dzwonków?",
+          "a7": "Kliknij «Dzwonek 30 s» lub «Dzwonek 40 s», aby ustawić punkt końcowy 30 lub 40 sekund po bieżącym początku. Idealne do szybkiego tworzenia dzwonków z długich utworów."
         },
         "seoContent": {
           "intro": {

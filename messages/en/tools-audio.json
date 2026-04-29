@@ -14,6 +14,72 @@
         "trim": "Trim Audio",
         "processing": "Processing",
         "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
+        "waveform": {
+          "label": "Waveform",
+          "loading": "Decoding waveform..."
+        },
+        "precise": {
+          "start": "Start (mm:ss.ms)",
+          "end": "End (mm:ss.ms)",
+          "invalid": "Invalid time format. Use mm:ss.ms (e.g. 1:23.456).",
+          "hint": "Type a precise time and press Enter or click outside to apply."
+        },
+        "playSelection": "Play Selection",
+        "pauseSelection": "Pause",
+        "loop": "Loop selection",
+        "mode": {
+          "label": "Trim mode",
+          "keep": "Keep selection",
+          "remove": "Remove selection",
+          "removeWarning": "Remove mode joins the parts before and after your selection. The output is re-encoded to MP3, so quality may differ slightly from the original."
+        },
+        "fade": {
+          "enable": "Add fade in / fade out",
+          "in": "Fade in",
+          "out": "Fade out",
+          "warning": "Fades require re-encoding. The output will be MP3."
+        },
+        "presets": {
+          "label": "Presets",
+          "ringtone30": "30s ringtone",
+          "ringtone40": "40s ringtone"
+        },
+        "hints": {
+          "shortcuts": "Drag the waveform handles or type precise mm:ss.ms times to set the cut points."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "BarChart3",
+            "title": "Visual Waveform With Selection",
+            "description": "See the entire audio as a waveform, drag the dual handles to select the part you need, and watch the playhead move in real time as it plays."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Millisecond-Precise Time Input",
+            "description": "Type exact mm:ss.ms values to lock in the cut points. The slider, waveform, and number boxes stay synchronized so you can fine-tune the way you prefer."
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "Lossless Keep Mode",
+            "description": "Keep mode uses FFmpeg stream copy with no re-encoding. The trimmed file keeps the original encoder, bitrate, and quality bit-for-bit."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Remove Middle Section + Fades",
+            "description": "Switch to Remove mode to delete a segment and join what's left. Optional 0–3 second fade in / out smooths the cut so transitions sound natural."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "MP3, WAV, FLAC, M4A, OGG, AAC",
+            "description": "Works with all popular audio formats. Loop the selection in your browser before exporting to make sure the cut sounds right."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100% Private - Audio Never Uploaded",
+            "description": "All trimming runs locally in your browser via FFmpeg.wasm. Your audio files never touch our servers - true privacy by design."
+          }
+        },
         "faq": {
           "q1": "Which audio formats are supported?",
           "a1": "Most formats including MP3, WAV, OGG, AAC, FLAC, and M4A are supported.",
@@ -24,7 +90,11 @@
           "q4": "Can I use this tool offline?",
           "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues.",
+          "q6": "What is the difference between Keep and Remove mode?",
+          "a6": "Keep mode preserves your selected segment using lossless stream copy — same encoder, bitrate, and quality as the original. Remove mode deletes the selected segment and joins the surrounding parts together; this requires re-encoding to MP3.",
+          "q7": "How do the ringtone presets work?",
+          "a7": "Click '30s ringtone' or '40s ringtone' to snap the end point to 30 or 40 seconds after your current start time. Useful for quickly creating phone ringtones from a longer song."
         },
         "seoContent": {
           "intro": {

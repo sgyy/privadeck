@@ -14,6 +14,72 @@
         "trim": "Découper l'audio",
         "processing": "Traitement en cours",
         "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
+        "waveform": {
+          "label": "Forme d'onde",
+          "loading": "Décodage de la forme d'onde…"
+        },
+        "precise": {
+          "start": "Début (mm:ss.ms)",
+          "end": "Fin (mm:ss.ms)",
+          "invalid": "Format de temps invalide. Utilisez mm:ss.ms (par exemple 1:23.456).",
+          "hint": "Saisissez un temps précis puis appuyez sur Entrée ou cliquez à l'extérieur pour appliquer."
+        },
+        "playSelection": "Lire la sélection",
+        "pauseSelection": "Pause",
+        "loop": "Boucler la sélection",
+        "mode": {
+          "label": "Mode de découpe",
+          "keep": "Conserver la sélection",
+          "remove": "Supprimer la sélection",
+          "removeWarning": "Le mode Supprimer raccorde les parties avant et après votre sélection. La sortie est ré-encodée en MP3, la qualité peut donc différer légèrement de l'original."
+        },
+        "fade": {
+          "enable": "Ajouter un fondu d'entrée / sortie",
+          "in": "Fondu d'entrée",
+          "out": "Fondu de sortie",
+          "warning": "Les fondus nécessitent un ré-encodage. La sortie sera en MP3."
+        },
+        "presets": {
+          "label": "Préréglages",
+          "ringtone30": "Sonnerie 30 s",
+          "ringtone40": "Sonnerie 40 s"
+        },
+        "hints": {
+          "shortcuts": "Faites glisser les poignées de la forme d'onde ou saisissez des temps précis en mm:ss.ms pour définir les points de coupe."
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "BarChart3",
+            "title": "Forme d'onde visuelle avec sélection",
+            "description": "Visualisez l'ensemble de l'audio sous forme d'onde, faites glisser les poignées doubles pour choisir la partie souhaitée et regardez la tête de lecture se déplacer en temps réel."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Saisie de temps à la milliseconde près",
+            "description": "Tapez des valeurs exactes en mm:ss.ms pour verrouiller les points de coupe. Curseur, forme d'onde et zones numériques restent synchronisés pour un réglage fin à votre manière."
+          },
+          "f3": {
+            "icon": "CircleCheck",
+            "title": "Mode Conserver sans perte",
+            "description": "Le mode Conserver utilise la copie de flux FFmpeg sans ré-encodage. Le fichier découpé conserve bit pour bit l'encodeur, le débit binaire et la qualité d'origine."
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "Supprimer une section + fondus",
+            "description": "Passez en mode Supprimer pour effacer un segment et raccorder le reste. Les fondus d'entrée et de sortie optionnels de 0 à 3 secondes adoucissent la coupe pour des transitions naturelles."
+          },
+          "f5": {
+            "icon": "Files",
+            "title": "MP3, WAV, FLAC, M4A, OGG, AAC pris en charge",
+            "description": "Compatible avec tous les formats audio populaires. Bouclez la sélection dans le navigateur avant d'exporter pour vérifier que la coupe sonne bien."
+          },
+          "f6": {
+            "icon": "Shield",
+            "title": "100 % privé — votre audio n'est jamais envoyé",
+            "description": "Tout le découpage s'exécute localement dans votre navigateur via FFmpeg.wasm. Vos fichiers audio ne touchent jamais nos serveurs — confidentialité dès la conception."
+          }
+        },
         "faq": {
           "q1": "Quels formats audio sont pris en charge ?",
           "a1": "La plupart des formats, dont MP3, WAV, OGG, AAC, FLAC et M4A, sont pris en charge.",
@@ -24,7 +90,11 @@
           "q4": "Puis-je utiliser cet outil hors connexion ?",
           "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
-          "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
+          "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème.",
+          "q6": "Quelle est la différence entre les modes Conserver et Supprimer ?",
+          "a6": "Le mode Conserver préserve votre segment sélectionné via une copie de flux sans perte — même encodeur, débit binaire et qualité que l'original. Le mode Supprimer efface le segment sélectionné et raccorde les parties restantes ; cela nécessite un ré-encodage en MP3.",
+          "q7": "Comment fonctionnent les préréglages de sonnerie ?",
+          "a7": "Cliquez sur « Sonnerie 30 s » ou « Sonnerie 40 s » pour fixer le point de fin à 30 ou 40 secondes après le point de départ actuel. Pratique pour créer rapidement des sonneries à partir de longues chansons."
         },
         "seoContent": {
           "intro": {
