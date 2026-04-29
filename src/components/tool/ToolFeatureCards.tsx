@@ -19,6 +19,9 @@ import {
   CircleCheck,
   Files,
   ArrowLeftRight,
+  Music,
+  Settings2,
+  Layers,
 } from "lucide-react";
 import type { ComponentType } from "react";
 
@@ -40,6 +43,9 @@ const ICON_MAP: Record<string, ComponentType<{ className?: string }>> = {
   CircleCheck,
   Files,
   ArrowLeftRight,
+  Music,
+  Settings2,
+  Layers,
 };
 
 interface ToolFeatureCardsProps {

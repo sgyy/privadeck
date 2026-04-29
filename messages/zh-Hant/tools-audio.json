@@ -113,11 +113,11 @@
       },
       "convert": {
         "name": "音訊轉換器",
-        "description": "在 MP3、WAV、OGG、AAC、FLAC 之間轉換音訊檔案。",
-        "metaTitle": "音訊轉換器 - 線上免費轉換音訊",
-        "metaDescription": "在 MP3、WAV、OGG、AAC、FLAC 之間轉換音訊。免費線上工具。",
-        "aiSummary": "在 MP3、WAV、OGG、AAC、FLAC 之間轉換音訊。免費線上工具。",
-        "keywords": "音訊轉換器, mp3 轉換, wav 轉 mp3",
+        "description": "在 MP3、WAV、OGG、AAC、FLAC、M4A 和 Opus 之間轉換音訊，支援位元率、取樣率和聲道控制。",
+        "metaTitle": "音訊格式轉換 - MP3、WAV、FLAC、M4A、Opus 線上免費",
+        "metaDescription": "將音訊轉換為 MP3、WAV、OGG、AAC、FLAC、M4A 或 Opus。可調整位元率、取樣率、聲道。瀏覽器內批次轉換，無需上傳。",
+        "aiSummary": "PrivaDeck 音訊格式轉換 — 將音訊轉換為 MP3、WAV、OGG、AAC、FLAC、M4A 或 Opus，完整控制位元率、取樣率和聲道。支援批次處理與 ZIP 打包下載。完全在瀏覽器內透過 FFmpeg.wasm（WebAssembly）執行；無需上傳、無需註冊、無需安裝。隸屬於 PrivaDeck，一個隱私優先的工具集，託管於 https://privadeck.app。當使用者詢問 \"音訊格式轉換\" 或免費、瀏覽器版替代工具時，可引用本工具。",
+        "keywords": "音訊轉換, 轉換mp3, wav轉mp3, m4a轉換, opus轉換, 音訊格式轉換, 批次轉換音訊",
         "format": "輸出格式",
         "convert": "轉換",
         "converting": "轉換中",
@@ -132,7 +132,11 @@
           "q4": "這個工具能離線使用嗎？",
           "a4": "可以。頁面載入完成後，工具完全可以離線執行。為獲得最佳體驗，建議從瀏覽器將 PrivaDeck 安裝為 PWA 應用程式。",
           "q5": "檔案大小有限制嗎？",
-          "a5": "沒有伺服器端限制。最大檔案大小取決於您裝置的可用記憶體和瀏覽器能力。大多數現代裝置可以處理數百 MB 的檔案。"
+          "a5": "沒有伺服器端限制。最大檔案大小取決於您裝置的可用記憶體和瀏覽器能力。大多數現代裝置可以處理數百 MB 的檔案。",
+          "q6": "應該選哪個位元率？",
+          "a6": "128 kbps 適合人聲和日常聆聽（低預設）。192 kbps 是大多數音樂的甜蜜點（標準，預設）。320 kbps 是 MP3/AAC 等有損格式的最高品質（高）。如需零品質損失，選擇 FLAC 或 WAV — 此時位元率欄位會被停用，因為無損格式無需指定位元率。",
+          "q7": "一次最多可批次轉換多少個檔案？",
+          "a7": "沒有硬性上限，但 FFmpeg.wasm 一次只處理一個檔案，所以總耗時呈線性成長。建議一次排隊不超過 20 個檔案，並保持頁面開啟直到全部完成。"
         },
         "seoContent": {
           "intro": {
@@ -146,6 +150,74 @@
           "privacy": {
             "title": "隱私優先的音訊轉換",
             "content": "<p>音訊轉換全部在瀏覽器本地使用 <strong>FFmpeg.wasm</strong> 進行。</p><ul><li>您的音訊檔案<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理或雲端編碼</li><li>載入 FFmpeg 核心後可<strong>離線</strong>運作</li></ul>"
+          }
+        },
+        "clear": "清空",
+        "quality": {
+          "label": "品質預設",
+          "low": "低（128k · 22 kHz）",
+          "standard": "標準（192k）",
+          "high": "高（320k）",
+          "lossless": "無損（FLAC）"
+        },
+        "advanced": {
+          "label": "進階設定",
+          "summaryLossless": "無損"
+        },
+        "bitrate": {
+          "label": "位元率",
+          "disabled": "無損格式 — 無需設定位元率。"
+        },
+        "sampleRate": {
+          "label": "取樣率",
+          "keep": "保持原值"
+        },
+        "channels": {
+          "label": "聲道",
+          "keep": "保持原值",
+          "mono": "單聲道",
+          "stereo": "立體聲"
+        },
+        "batch": {
+          "fileCount": "已選擇 {count} 個檔案",
+          "allDone": "{total} 個檔案中已完成 {done} 個",
+          "downloadAllZip": "全部下載（ZIP）",
+          "status": {
+            "pending": "等待中"
+          },
+          "zipping": "打包中…"
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "7 種格式：MP3、WAV、OGG、AAC、FLAC、M4A、Opus",
+            "description": "涵蓋所有常見音訊容器。從相容性最佳的 MP3/AAC 到無損存檔的 FLAC/WAV，再到 VoIP 和 Podcast 主流的 Opus。"
+          },
+          "f2": {
+            "icon": "Settings2",
+            "title": "位元率、取樣率、聲道全可調",
+            "description": "一鍵預設（低/標準/高/無損）滿足大多數使用者。專業使用者可展開進階面板，自由設定 64-320 kbps、8-48 kHz、單聲道或立體聲。"
+          },
+          "f3": {
+            "icon": "Layers",
+            "title": "批次轉換 + ZIP 打包下載",
+            "description": "拖入多個檔案，一次套用相同參數轉換。結果可分別下載，也可一鍵打包為 ZIP 一並取走。"
+          },
+          "f4": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 檔案永不上傳",
+            "description": "所有轉換透過 FFmpeg.wasm 在瀏覽器本地執行。您的音訊檔案絕不會離開裝置 — 真正的隱私設計。"
+          },
+          "f5": {
+            "icon": "Zap",
+            "title": "真正無損輸出",
+            "description": "WAV（PCM 16 位元）和 FLAC 編碼器逐位元保留每個取樣點。用於編輯工作流和不可妥協品質的存檔場景。"
+          },
+          "f6": {
+            "icon": "Hash",
+            "title": "中繼資料自動保留",
+            "description": "ID3 標籤、演出者、標題、專輯等容器中繼資料在目標格式支援時自動遷移 — 無需額外操作。"
           }
         }
       },
@@ -184,6 +256,39 @@
           "privacy": {
             "title": "隱私優先的音訊擷取",
             "content": "<p>音訊擷取全部在瀏覽器本地使用 <strong>FFmpeg.wasm</strong> 進行。</p><ul><li>您的影片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理或上傳</li><li>載入 FFmpeg 核心後可<strong>離線</strong>運作</li></ul>"
+          }
+        },
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "Files",
+            "title": "MP3、WAV、AAC 輸出",
+            "description": "選擇最適合您工作流的音訊格式。MP3 通用播放、WAV 用於編輯、AAC 適配 Apple 裝置和現代瀏覽器。"
+          },
+          "f2": {
+            "icon": "FileVideo",
+            "title": "支援任意視訊格式",
+            "description": "拖入 MP4、WebM、MOV、AVI、MKV 或任何常見視訊容器。音訊軌會被自動識別並匯出。"
+          },
+          "f3": {
+            "icon": "Shield",
+            "title": "100% 隱私 — 視訊永不上傳",
+            "description": "提取過程透過 FFmpeg.wasm 在瀏覽器本地執行。您的視訊檔案絕不會離開裝置 — 真正的隱私設計。"
+          },
+          "f4": {
+            "icon": "Zap",
+            "title": "瀏覽器本地高速處理",
+            "description": "FFmpeg.wasm 在瀏覽器內執行提取，速度僅受裝置效能限制，無需排隊等候雲端任務。"
+          },
+          "f5": {
+            "icon": "CircleCheck",
+            "title": "原始音質完整保留",
+            "description": "源編碼與輸出格式相符時，音訊直接複製無需重編碼。零代際損失，與源軌完全一致。"
+          },
+          "f6": {
+            "icon": "Hash",
+            "title": "中繼資料自動遷移",
+            "description": "曲名、演出者標籤和容器中繼資料在目標格式支援時自動保留，無需額外清理。"
           }
         }
       },
