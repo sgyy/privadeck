@@ -223,47 +223,74 @@
       },
       "extract": {
         "name": "Ekstrak Audio",
-        "description": "Ekstrak trek audio dari file video.",
-        "metaTitle": "Ekstrak Audio dari Video - Pengekstrak Audio Online Gratis",
-        "metaDescription": "Ekstrak audio dari file video sebagai MP3, WAV, atau AAC. Alat online gratis, tanpa unggahan.",
-        "aiSummary": "Ekstrak audio dari file video sebagai MP3, WAV, atau AAC. Alat online gratis, tanpa unggahan.",
-        "keywords": "ekstrak audio, video ke audio, ekstrak mp3 dari video, pengekstrak audio",
+        "description": "Ekstrak audio dari file video — 7 format, pemotongan rentang waktu, pemrosesan batch. 100 % lokal.",
+        "metaTitle": "Ekstrak Audio dari Video — MP3, FLAC, Opus | PrivaDeck",
+        "metaDescription": "Ekstrak audio dari MP4, WebM, MOV, dll. menjadi MP3, WAV, AAC, OGG, FLAC, M4A, atau Opus. Pemotongan rentang, fade in/out, batch — semuanya di browser, tanpa upload.",
+        "aiSummary": "Ekstraktor Audio PrivaDeck — Ekstrak audio dari video ke 7 format (MP3, WAV, AAC, OGG, FLAC, M4A, Opus) dengan kontrol bitrate/sample rate/kanal, pemotongan rentang opsional, fade in/out, dan batch multi-file dengan unduh ZIP. Berjalan sepenuhnya di browser via FFmpeg.wasm; tanpa upload, tanpa pendaftaran, tanpa instalasi. Bagian dari PrivaDeck, perangkat alat berorientasi privasi di https://privadeck.app.",
+        "keywords": "ekstrak audio, video ke audio, video ke MP3, ekstraktor audio, MP3 dari video, FLAC dari video, Opus dari video, ekstraksi audio batch, rentang waktu",
         "format": "Format Output",
         "extract": "Ekstrak Audio",
         "extracting": "Mengekstrak",
         "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Silakan gunakan browser modern dengan HTTPS.",
-        "faq": {
-          "q1": "Dari format video apa saya bisa mengekstrak audio?",
-          "a1": "Sebagian besar format video termasuk MP4, WebM, MOV, dan AVI didukung.",
-          "q2": "Format audio apa yang bisa diekspor?",
-          "a2": "Anda dapat mengekspor ke format MP3, WAV, atau AAC.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
-          "q5": "Apakah ada batasan ukuran file?",
-          "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
+        "clear": "Bersihkan",
+        "quality": {
+          "label": "Preset kualitas",
+          "low": "Rendah (128k · 22 kHz)",
+          "standard": "Standar (192k)",
+          "high": "Tinggi (320k)",
+          "lossless": "Tanpa kehilangan (FLAC)"
         },
-        "seoContent": {
-          "intro": {
-            "title": "Apa itu Extract Audio?",
-            "content": "<p><strong>Audio Extractor</strong> mengekstrak audio dari file video dan mengonversi ke format audio murni seperti MP3, WAV, FLAC, atau OGG. Sempurna untuk mengambil soundtrack dari video, membuat musik dari file multimedia, atau mengonversi format audio yang jarang digunakan.</p><p>Batch extract dari beberapa file video sekaligus.</p>"
+        "advanced": {
+          "label": "Pengaturan lanjutan",
+          "summaryLossless": "Tanpa kehilangan"
+        },
+        "bitrate": {
+          "label": "Bitrate",
+          "disabled": "Format tanpa kehilangan — bitrate tidak berlaku."
+        },
+        "sampleRate": {
+          "label": "Sample rate",
+          "keep": "Pertahankan asli"
+        },
+        "channels": {
+          "label": "Kanal",
+          "keep": "Pertahankan asli",
+          "mono": "Mono",
+          "stereo": "Stereo"
+        },
+        "batch": {
+          "fileCount": "{count} berkas dipilih",
+          "allDone": "{done} dari {total} berkas dikonversi",
+          "downloadAllZip": "Unduh semua (ZIP)",
+          "status": {
+            "pending": "Menunggu"
           },
-          "useCases": {
-            "title": "Kasus Penggunaan Umum",
-            "content": "<ul><li><strong>Soundtrack Extraction</strong>: Ambil musik dari film, acara TV, atau video YouTube</li><li><strong>Audio Format Conversion</strong>: Konversi file audio dalam format video ke format audio murni</li><li><strong>Music Library</strong>: Bangun koleksi musik dari video favorit Anda</li><li><strong>Podcast Creation</strong>: Ekstrak narasi dari video untuk podcast audio</li><li><strong>File Recovery</strong>: Pulihkan audio dari file video yang rusak</li></ul>"
-          },
-          "privacy": {
-            "title": "Mengutamakan Privasi - Audio Extraction",
-            "content": "<p>Ekstraksi audio terjadi <strong>sepenuhnya di browser</strong> menggunakan FFmpeg.wasm.</p><ul><li>File video <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak ada unggahan cloud, tanpa pemrosesan server</li><li><strong>Berfungsi offline</strong> setelah halaman dimuat</li><li>Aman untuk file pribadi dan konten berhak cipta untuk penggunaan pribadi</li></ul>"
-          }
+          "zipping": "Mengemas…"
+        },
+        "start": "Mulai",
+        "end": "Akhir",
+        "duration": "Durasi",
+        "precise": {
+          "start": "Mulai (mm:ss.ms)",
+          "end": "Akhir (mm:ss.ms)",
+          "invalid": "Format waktu tidak valid. Gunakan mm:ss.ms (misalnya 1:23.456).",
+          "hint": "Ketik waktu presisi lalu tekan Enter atau klik di luar untuk menerapkan."
+        },
+        "playSelection": "Putar pilihan",
+        "pauseSelection": "Jeda",
+        "fade": {
+          "enable": "Tambahkan fade in / fade out",
+          "in": "Fade in",
+          "out": "Fade out",
+          "warning": "Fade diterapkan saat ekstraksi dan memerlukan pengkodean ulang audio.",
+          "batchOutWarning": "Dalam mode batch, fade-out hanya diterapkan jika durasi tiap video diketahui saat decode."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Files",
-            "title": "Output MP3, WAV, AAC",
-            "description": "Pilih format audio yang sesuai dengan alur kerja Anda. MP3 untuk pemutaran universal, WAV untuk editing, AAC untuk perangkat Apple dan browser modern."
+            "title": "7 Format Output",
+            "description": "MP3, WAV, AAC, OGG, FLAC, M4A, dan Opus. Pilih codec dan kontainer yang sesuai alur kerja Anda."
           },
           "f2": {
             "icon": "FileVideo",
@@ -281,15 +308,49 @@
             "description": "FFmpeg.wasm menjalankan ekstraksi di browser Anda, jadi kecepatan dibatasi perangkat Anda, bukan antrean cloud. Tanpa menunggu."
           },
           "f5": {
-            "icon": "CircleCheck",
-            "title": "Kualitas audio asli dipertahankan",
-            "description": "Saat codec sumber cocok dengan format output, audio disalin tanpa enkode ulang. Tanpa kehilangan generasi — identik bit demi bit dengan trek sumber."
+            "icon": "SlidersHorizontal",
+            "title": "Kontrol Bitrate, Sample Rate & Kanal",
+            "description": "Setel halus: 64–320 kbps untuk format lossy, sample rate 8–48 kHz, mono atau stereo. Atau pilih preset kualitas dan ekspor."
           },
           "f6": {
-            "icon": "Hash",
-            "title": "Metadata diteruskan",
-            "description": "Judul trek, tag artis, dan metadata kontainer lainnya dipertahankan saat format target mendukung. Tanpa langkah pembersihan tambahan."
+            "icon": "Scissors",
+            "title": "Rentang Waktu + Fade In/Out",
+            "description": "Ekstrak hanya sebagian video dengan fade in/out halus — pengalaman Clideo dan Kapwing, namun sepenuhnya offline."
           }
+        },
+        "faq": {
+          "q1": "Format video apa saja yang bisa diekstrak audionya?",
+          "a1": "Sebagian besar format video termasuk MP4, WebM, MOV, MKV, dan AVI didukung — apa pun yang bisa dibaca FFmpeg di browser.",
+          "q2": "Format audio apa saja yang bisa diekspor?",
+          "a2": "MP3, WAV, AAC, OGG, FLAC, M4A, dan Opus. Bitrate, sample rate, dan kanal (mono/stereo) dapat dikonfigurasi untuk format lossy.",
+          "q3": "Apakah file saya diunggah ke server?",
+          "a3": "Tidak. Seluruh pemrosesan berlangsung sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah.",
+          "q4": "Apakah alat ini bisa dipakai offline?",
+          "a4": "Ya. Setelah halaman dimuat, alat berfungsi sepenuhnya offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA.",
+          "q5": "Apakah ada batas ukuran file?",
+          "a5": "Tidak ada batas dari server. Ukuran maksimum bergantung pada memori perangkat dan browser. Perangkat modern umumnya menangani ratusan MB tanpa masalah.",
+          "q6": "Apa arti preset kualitas?",
+          "a6": "Rendah ≈ 128 kbps / 22 kHz (kompak, cocok untuk suara). Standar ≈ 192 kbps (seimbang). Tinggi = 320 kbps (kualitas lossy terbaik). Lossless beralih ke FLAC dan mengabaikan bitrate.",
+          "q7": "Bisakah saya memotong satu bagian dan memproses banyak file sekaligus?",
+          "a7": "Bisa. Dengan satu video dimuat, aktifkan «Potong ke rentang waktu» untuk mengekstrak hanya bagian itu. Letakkan beberapa video bersamaan untuk mengekstrak dengan pengaturan bersama dan mengunduh ZIP."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Apa itu Extract Audio?",
+            "content": "<p><strong>Ekstrak Audio</strong> mengambil trek audio dari video apa pun dan menyimpannya dalam 7 format pilihan — MP3, WAV, AAC, OGG, FLAC, M4A, atau Opus — dengan kontrol penuh atas bitrate, sample rate, dan kanal.</p><p>Anda juga dapat memotong rentang waktu, menerapkan fade in/out, atau memproses beberapa video sekaligus dengan unduhan ZIP. Didukung FFmpeg.wasm — berjalan sepenuhnya di browser, tanpa upload, tanpa instalasi.</p>"
+          },
+          "useCases": {
+            "title": "Kasus Penggunaan Umum",
+            "content": "<ul><li><strong>Soundtrack Extraction</strong>: Ambil musik dari film, acara TV, atau video YouTube</li><li><strong>Audio Format Conversion</strong>: Konversi file audio dalam format video ke format audio murni</li><li><strong>Music Library</strong>: Bangun koleksi musik dari video favorit Anda</li><li><strong>Podcast Creation</strong>: Ekstrak narasi dari video untuk podcast audio</li><li><strong>File Recovery</strong>: Pulihkan audio dari file video yang rusak</li></ul>"
+          },
+          "privacy": {
+            "title": "Mengutamakan Privasi - Audio Extraction",
+            "content": "<p>Ekstraksi audio terjadi <strong>sepenuhnya di browser</strong> menggunakan FFmpeg.wasm.</p><ul><li>File video <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak ada unggahan cloud, tanpa pemrosesan server</li><li><strong>Berfungsi offline</strong> setelah halaman dimuat</li><li>Aman untuk file pribadi dan konten berhak cipta untuk penggunaan pribadi</li></ul>"
+          }
+        },
+        "timeRange": {
+          "enable": "Potong ke rentang waktu",
+          "batchHidden": "Rentang waktu hanya tersedia di mode video tunggal. Letakkan satu video untuk mengaktifkannya."
         }
       },
       "volume": {

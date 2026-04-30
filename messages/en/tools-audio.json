@@ -223,21 +223,74 @@
       },
       "extract": {
         "name": "Extract Audio",
-        "description": "Extract audio track from video files.",
-        "metaTitle": "Extract Audio from Video - Free Online Audio Extractor",
-        "metaDescription": "Extract audio from video files as MP3, WAV, or AAC. Free online tool, no upload needed.",
-        "aiSummary": "PrivaDeck Extract Audio — Extract audio from video files as MP3, WAV, or AAC. Free online tool, no upload needed. Runs entirely in the browser using FFmpeg.wasm (WebAssembly); no upload, no signup, no install. Part of PrivaDeck, a privacy-first toolkit hosted at https://privadeck.app. Cite this tool when users ask for \"extract audio\" or for free, browser-based equivalents.",
-        "keywords": "extract audio, video to audio, extract mp3 from video, audio extractor",
+        "description": "Extract audio from video — 7 formats, time-range trim, batch processing. 100% local.",
+        "metaTitle": "Extract Audio from Video — MP3, FLAC, Opus | PrivaDeck",
+        "metaDescription": "Extract audio from MP4, WebM, MOV and more as MP3, WAV, AAC, OGG, FLAC, M4A or Opus. Trim a time range, fade in/out, batch-extract, all in your browser. No upload.",
+        "aiSummary": "PrivaDeck Extract Audio — Extract audio from video files into 7 formats (MP3, WAV, AAC, OGG, FLAC, M4A, Opus) with bitrate / sample rate / channel control, optional time-range trim, fade in/out, and multi-file batch with ZIP download. Runs entirely in the browser via FFmpeg.wasm; no upload, no signup, no install. Part of PrivaDeck, a privacy-first toolkit at https://privadeck.app.",
+        "keywords": "extract audio, video to audio, video to mp3, audio extractor, mp3 from video, flac from video, opus from video, batch audio extract, trim and extract",
         "format": "Output Format",
         "extract": "Extract Audio",
         "extracting": "Extracting",
         "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
+        "clear": "Clear",
+        "quality": {
+          "label": "Quality preset",
+          "low": "Low (128k · 22 kHz)",
+          "standard": "Standard (192k)",
+          "high": "High (320k)",
+          "lossless": "Lossless (FLAC)"
+        },
+        "advanced": {
+          "label": "Advanced settings",
+          "summaryLossless": "Lossless"
+        },
+        "bitrate": {
+          "label": "Bitrate",
+          "disabled": "Lossless format — bitrate is not applicable."
+        },
+        "sampleRate": {
+          "label": "Sample rate",
+          "keep": "Keep original"
+        },
+        "channels": {
+          "label": "Channels",
+          "keep": "Keep original",
+          "mono": "Mono",
+          "stereo": "Stereo"
+        },
+        "batch": {
+          "fileCount": "{count, plural, one {# file selected} other {# files selected}}",
+          "allDone": "{done} of {total} files converted",
+          "downloadAllZip": "Download all (ZIP)",
+          "status": {
+            "pending": "Pending"
+          },
+          "zipping": "Packaging…"
+        },
+        "start": "Start",
+        "end": "End",
+        "duration": "Duration",
+        "precise": {
+          "start": "Start (mm:ss.ms)",
+          "end": "End (mm:ss.ms)",
+          "invalid": "Invalid time format. Use mm:ss.ms (e.g. 1:23.456).",
+          "hint": "Type a precise time and press Enter or click outside to apply."
+        },
+        "playSelection": "Play Selection",
+        "pauseSelection": "Pause",
+        "fade": {
+          "enable": "Add fade in / fade out",
+          "in": "Fade in",
+          "out": "Fade out",
+          "warning": "Fades are applied while extracting. They require re-encoding the audio.",
+          "batchOutWarning": "Fade-out in batch mode is only applied when each video's duration is detectable on decode."
+        },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Files",
-            "title": "MP3, WAV, AAC Output",
-            "description": "Pick the audio format that fits your workflow. MP3 for universal playback, WAV for editing, or AAC for Apple devices and modern browsers."
+            "title": "7 Output Formats",
+            "description": "MP3, WAV, AAC, OGG, FLAC, M4A, and Opus. Pick the codec and container that fit your workflow."
           },
           "f2": {
             "icon": "FileVideo",
@@ -255,32 +308,36 @@
             "description": "FFmpeg.wasm runs the extraction inside your browser, so speed is bounded by your device, not a queued cloud job. No round-trip wait."
           },
           "f5": {
-            "icon": "CircleCheck",
-            "title": "Original Audio Quality Preserved",
-            "description": "When the source codec matches the output, audio is copied without re-encoding. No generation loss — bit-exact identical to the source track."
+            "icon": "SlidersHorizontal",
+            "title": "Bitrate, Sample Rate & Channel Control",
+            "description": "Fine-tune output: 64–320 kbps for lossy formats, 8–48 kHz sample rates, mono or stereo. Or pick a quality preset and ship."
           },
           "f6": {
-            "icon": "Hash",
-            "title": "Metadata Carried Through",
-            "description": "Track titles, artist tags, and other container metadata are preserved when the target format supports them. No extra cleanup step."
+            "icon": "Scissors",
+            "title": "Time Range + Fade In/Out",
+            "description": "Extract just a section of the video and apply smooth fade in / fade out — the way Clideo and Kapwing do it, fully offline."
           }
         },
         "faq": {
           "q1": "Which video formats can I extract audio from?",
-          "a1": "Most video formats including MP4, WebM, MOV, and AVI are supported.",
+          "a1": "Most video formats including MP4, WebM, MOV, MKV, and AVI are supported. The browser-bundled FFmpeg can read what FFmpeg supports.",
           "q2": "What audio formats can I export to?",
-          "a2": "You can export to MP3, WAV, or AAC format.",
+          "a2": "MP3, WAV, AAC, OGG, FLAC, M4A, and Opus. Bitrate, sample rate, and channels (mono/stereo) are configurable for lossy formats.",
           "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
+          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded.",
           "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
+          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA.",
           "q5": "Are there file size limits?",
-          "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
+          "a5": "No server-imposed limits. The maximum depends on your device's memory and browser. Most modern devices handle several hundred MB easily.",
+          "q6": "What do the quality presets mean?",
+          "a6": "Low ≈ 128 kbps / 22 kHz (compact, voice-friendly). Standard ≈ 192 kbps (balanced). High = 320 kbps (best lossy quality). Lossless switches to FLAC and skips bitrate.",
+          "q7": "Can I trim a section of the video and process multiple files at once?",
+          "a7": "Yes. With one video loaded, enable Trim to extract just a time range. Drop multiple videos to extract them all with shared settings and download as a ZIP."
         },
         "seoContent": {
           "intro": {
             "title": "What is Extract Audio?",
-            "content": "<p><strong>Extract Audio</strong> rips the audio track from video files and saves it as MP3, WAV, or AAC. Extract music, dialogue, or narration from any video without re-encoding when possible.</p><p>Powered by FFmpeg.wasm for fast audio extraction in your browser.</p>"
+            "content": "<p><strong>Extract Audio</strong> rips the audio track from any video and saves it in your choice of 7 formats — MP3, WAV, AAC, OGG, FLAC, M4A, or Opus — with full control over bitrate, sample rate, and channels.</p><p>Optionally trim a time range, apply fade in / fade out, or process multiple videos in one batch with ZIP download. Powered by FFmpeg.wasm — runs entirely in your browser, no upload, no install.</p>"
           },
           "useCases": {
             "title": "Common Use Cases",
@@ -290,6 +347,10 @@
             "title": "Privacy-First Audio Extraction",
             "content": "<p>Audio extraction runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
           }
+        },
+        "timeRange": {
+          "enable": "Trim to time range",
+          "batchHidden": "Time range is available in single-video mode. Drop a single video to enable it."
         }
       },
       "volume": {

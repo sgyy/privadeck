@@ -223,47 +223,74 @@
       },
       "extract": {
         "name": "Trích xuất âm thanh",
-        "description": "Trích xuất track âm thanh từ tệp video.",
-        "metaTitle": "Trích xuất âm thanh từ video - Trình trích xuất âm thanh trực tuyến miễn phí",
-        "metaDescription": "Trích xuất âm thanh từ tệp video dưới dạng MP3, WAV hoặc AAC. Công cụ trực tuyến miễn phí, không cần tải lên.",
-        "aiSummary": "Trích xuất âm thanh từ tệp video dưới dạng MP3, WAV hoặc AAC. Công cụ trực tuyến miễn phí, không cần tải lên.",
-        "keywords": "trích xuất âm thanh, video sang âm thanh, trích mp3 từ video, trình trích xuất âm thanh",
+        "description": "Trích xuất âm thanh từ tệp video — 7 định dạng, cắt theo khoảng thời gian, xử lý hàng loạt. 100 % cục bộ.",
+        "metaTitle": "Trích xuất âm thanh từ video — MP3, FLAC, Opus | PrivaDeck",
+        "metaDescription": "Trích xuất âm thanh từ MP4, WebM, MOV và nhiều định dạng khác sang MP3, WAV, AAC, OGG, FLAC, M4A hoặc Opus. Cắt khoảng, fade in/out, xử lý hàng loạt — tất cả trong trình duyệt, không cần tải lên.",
+        "aiSummary": "Trình trích xuất âm thanh PrivaDeck — trích xuất âm thanh từ video sang 7 định dạng (MP3, WAV, AAC, OGG, FLAC, M4A, Opus) với điều khiển bitrate/tần số lấy mẫu/kênh, tùy chọn cắt khoảng thời gian, fade in/out và xử lý hàng loạt nhiều tệp với tải xuống ZIP. Chạy hoàn toàn trong trình duyệt qua FFmpeg.wasm; không tải lên, không đăng ký, không cài đặt. Một phần của PrivaDeck — bộ công cụ ưu tiên quyền riêng tư tại https://privadeck.app.",
+        "keywords": "trích xuất âm thanh, video sang âm thanh, video sang MP3, trình trích xuất âm thanh, MP3 từ video, FLAC từ video, Opus từ video, trích xuất âm thanh hàng loạt, khoảng thời gian",
         "format": "Định dạng đầu ra",
         "extract": "Trích xuất âm thanh",
         "extracting": "Đang trích xuất",
         "unsupported": "Công cụ này yêu cầu hỗ trợ SharedArrayBuffer. Vui lòng sử dụng trình duyệt hiện đại với HTTPS.",
-        "faq": {
-          "q1": "Có thể trích xuất âm thanh từ những định dạng video nào?",
-          "a1": "Hầu hết các định dạng video bao gồm MP4, WebM, MOV và AVI được hỗ trợ.",
-          "q2": "Có thể xuất sang những định dạng âm thanh nào?",
-          "a2": "Bạn có thể xuất sang định dạng MP3, WAV hoặc AAC.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
-          "q5": "Có giới hạn kích thước tệp không?",
-          "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
+        "clear": "Xóa",
+        "quality": {
+          "label": "Cài sẵn chất lượng",
+          "low": "Thấp (128k · 22 kHz)",
+          "standard": "Tiêu chuẩn (192k)",
+          "high": "Cao (320k)",
+          "lossless": "Không mất dữ liệu (FLAC)"
         },
-        "seoContent": {
-          "intro": {
-            "title": "Trích xuất âm thanh là gì?",
-            "content": "<p><strong>Trích xuất âm thanh</strong> tách track âm thanh từ tệp video và lưu dưới dạng MP3, WAV hoặc AAC. Trích xuất nhạc, hội thoại hoặc thuyết minh từ bất kỳ video nào mà không cần mã hóa lại khi có thể.</p><p>Được hỗ trợ bởi FFmpeg.wasm cho phép trích xuất âm thanh nhanh chóng trong trình duyệt.</p>"
+        "advanced": {
+          "label": "Cài đặt nâng cao",
+          "summaryLossless": "Không mất dữ liệu"
+        },
+        "bitrate": {
+          "label": "Bitrate",
+          "disabled": "Định dạng không mất dữ liệu — bitrate không áp dụng."
+        },
+        "sampleRate": {
+          "label": "Tần số mẫu",
+          "keep": "Giữ nguyên gốc"
+        },
+        "channels": {
+          "label": "Kênh",
+          "keep": "Giữ nguyên gốc",
+          "mono": "Mono",
+          "stereo": "Stereo"
+        },
+        "batch": {
+          "fileCount": "Đã chọn {count} tệp",
+          "allDone": "Đã chuyển đổi {done} trên {total} tệp",
+          "downloadAllZip": "Tải tất cả (ZIP)",
+          "status": {
+            "pending": "Đang chờ"
           },
-          "useCases": {
-            "title": "Trường hợp sử dụng phổ biến",
-            "content": "<ul><li><strong>Tách nhạc</strong>: Trích xuất âm thanh từ video ca nhạc</li><li><strong>Chuẩn bị podcast</strong>: Trích xuất âm thanh từ phỏng vấn hoặc ghi hình video</li><li><strong>Chuyển văn bản</strong>: Trích xuất âm thanh để xử lý chuyển giọng nói thành văn bản</li><li><strong>Thiết kế âm thanh</strong>: Tách hiệu ứng âm thanh hoặc âm thanh nền từ video</li><li><strong>Nghe chỉ âm thanh</strong>: Chuyển nội dung video sang âm thanh để nghe ngoại tuyến</li></ul>"
-          },
-          "privacy": {
-            "title": "Trích xuất âm thanh bảo mật",
-            "content": "<p>Trích xuất âm thanh chạy <strong>hoàn toàn trong trình duyệt</strong> bằng <strong>FFmpeg.wasm</strong>.</p><ul><li>Video của bạn <strong>không bao giờ rời khỏi thiết bị</strong></li><li>Không xử lý máy chủ hay tải lên</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi tải lõi FFmpeg</li></ul>"
-          }
+          "zipping": "Đang đóng gói…"
+        },
+        "start": "Bắt đầu",
+        "end": "Kết thúc",
+        "duration": "Thời lượng",
+        "precise": {
+          "start": "Bắt đầu (mm:ss.ms)",
+          "end": "Kết thúc (mm:ss.ms)",
+          "invalid": "Định dạng thời gian không hợp lệ. Hãy dùng mm:ss.ms (ví dụ 1:23.456).",
+          "hint": "Nhập thời gian chính xác rồi nhấn Enter hoặc bấm ra ngoài để áp dụng."
+        },
+        "playSelection": "Phát vùng chọn",
+        "pauseSelection": "Tạm dừng",
+        "fade": {
+          "enable": "Thêm fade in / fade out",
+          "in": "Fade in",
+          "out": "Fade out",
+          "warning": "Hiệu ứng fade được áp dụng khi trích xuất và yêu cầu mã hóa lại âm thanh.",
+          "batchOutWarning": "Ở chế độ hàng loạt, fade-out chỉ áp dụng khi thời lượng từng video được biết khi giải mã."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Files",
-            "title": "Đầu ra MP3, WAV, AAC",
-            "description": "Chọn định dạng phù hợp với quy trình của bạn. MP3 để phát phổ quát, WAV để chỉnh sửa, AAC cho thiết bị Apple và trình duyệt hiện đại."
+            "title": "7 định dạng đầu ra",
+            "description": "MP3, WAV, AAC, OGG, FLAC, M4A và Opus. Chọn codec và container phù hợp với quy trình của bạn."
           },
           "f2": {
             "icon": "FileVideo",
@@ -281,15 +308,49 @@
             "description": "FFmpeg.wasm chạy trích xuất trong trình duyệt của bạn, vì vậy tốc độ bị giới hạn bởi thiết bị của bạn, không phải hàng đợi đám mây. Không chờ đợi."
           },
           "f5": {
-            "icon": "CircleCheck",
-            "title": "Chất lượng âm thanh gốc được bảo toàn",
-            "description": "Khi codec nguồn khớp với định dạng đầu ra, âm thanh được sao chép mà không cần mã hóa lại. Không mất thế hệ — giống hệt từng bit với bản nhạc gốc."
+            "icon": "SlidersHorizontal",
+            "title": "Điều khiển Bitrate / Sample Rate / Channel",
+            "description": "Tinh chỉnh: 64–320 kbps cho định dạng có mất dữ liệu, sample rate 8–48 kHz, mono hoặc stereo. Hoặc chọn một preset chất lượng và xuất ngay."
           },
           "f6": {
-            "icon": "Hash",
-            "title": "Siêu dữ liệu được chuyển tiếp",
-            "description": "Tiêu đề bản nhạc, thẻ nghệ sĩ và siêu dữ liệu vùng chứa khác được bảo toàn khi định dạng đích hỗ trợ. Không cần bước dọn dẹp thêm."
+            "icon": "Scissors",
+            "title": "Khoảng thời gian + Fade In/Out",
+            "description": "Trích xuất chỉ một đoạn của video kèm fade in/out mượt — trải nghiệm Clideo và Kapwing nhưng hoàn toàn ngoại tuyến."
           }
+        },
+        "faq": {
+          "q1": "Tôi có thể trích xuất âm thanh từ những định dạng video nào?",
+          "a1": "Hầu hết các định dạng video bao gồm MP4, WebM, MOV, MKV và AVI đều được hỗ trợ — bất cứ thứ gì FFmpeg tích hợp trong trình duyệt có thể đọc.",
+          "q2": "Tôi có thể xuất sang những định dạng âm thanh nào?",
+          "a2": "MP3, WAV, AAC, OGG, FLAC, M4A và Opus. Với các định dạng có mất dữ liệu, có thể tùy chỉnh bitrate, tần số lấy mẫu và kênh (mono/stereo).",
+          "q3": "Tệp của tôi có được tải lên máy chủ không?",
+          "a3": "Không. Toàn bộ xử lý diễn ra hoàn toàn trong trình duyệt của bạn. Dữ liệu không bao giờ rời khỏi thiết bị — không có gì được tải lên.",
+          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
+          "a4": "Có. Sau khi tải trang, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài PrivaDeck dưới dạng PWA.",
+          "q5": "Có giới hạn kích thước tệp không?",
+          "a5": "Không có giới hạn từ máy chủ. Kích thước tối đa phụ thuộc vào bộ nhớ thiết bị và trình duyệt; các thiết bị hiện đại xử lý vài trăm MB dễ dàng.",
+          "q6": "Các mức chất lượng có ý nghĩa gì?",
+          "a6": "Thấp ≈ 128 kbps / 22 kHz (gọn, phù hợp giọng nói). Chuẩn ≈ 192 kbps (cân bằng). Cao = 320 kbps (chất lượng tốt nhất với mất dữ liệu). Lossless chuyển sang FLAC và bỏ qua bitrate.",
+          "q7": "Tôi có thể cắt một đoạn và xử lý nhiều tệp cùng lúc không?",
+          "a7": "Có. Với một video đang tải, bật «Cắt theo khoảng thời gian» để chỉ trích đoạn đó. Thả nhiều video cùng lúc để xử lý hàng loạt với cùng cài đặt và tải xuống ZIP."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Trích xuất âm thanh là gì?",
+            "content": "<p><strong>Trích xuất âm thanh</strong> lấy bản ghi âm từ bất kỳ video nào và lưu ở 7 định dạng tùy chọn — MP3, WAV, AAC, OGG, FLAC, M4A hoặc Opus — kiểm soát đầy đủ bitrate, sample rate và kênh.</p><p>Tùy chọn cắt khoảng thời gian, áp dụng fade in/out, hoặc xử lý hàng loạt nhiều video với tải xuống ZIP. Chạy trên FFmpeg.wasm — hoàn toàn trong trình duyệt, không tải lên, không cài đặt.</p>"
+          },
+          "useCases": {
+            "title": "Trường hợp sử dụng phổ biến",
+            "content": "<ul><li><strong>Tách nhạc</strong>: Trích xuất âm thanh từ video ca nhạc</li><li><strong>Chuẩn bị podcast</strong>: Trích xuất âm thanh từ phỏng vấn hoặc ghi hình video</li><li><strong>Chuyển văn bản</strong>: Trích xuất âm thanh để xử lý chuyển giọng nói thành văn bản</li><li><strong>Thiết kế âm thanh</strong>: Tách hiệu ứng âm thanh hoặc âm thanh nền từ video</li><li><strong>Nghe chỉ âm thanh</strong>: Chuyển nội dung video sang âm thanh để nghe ngoại tuyến</li></ul>"
+          },
+          "privacy": {
+            "title": "Trích xuất âm thanh bảo mật",
+            "content": "<p>Trích xuất âm thanh chạy <strong>hoàn toàn trong trình duyệt</strong> bằng <strong>FFmpeg.wasm</strong>.</p><ul><li>Video của bạn <strong>không bao giờ rời khỏi thiết bị</strong></li><li>Không xử lý máy chủ hay tải lên</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi tải lõi FFmpeg</li></ul>"
+          }
+        },
+        "timeRange": {
+          "enable": "Cắt theo khoảng thời gian",
+          "batchHidden": "Khoảng thời gian chỉ khả dụng ở chế độ video đơn. Thả một video duy nhất để bật."
         }
       },
       "volume": {

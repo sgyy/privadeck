@@ -223,47 +223,74 @@
       },
       "extract": {
         "name": "音訊擷取",
-        "description": "從影片檔案中擷取音訊軌。",
-        "metaTitle": "從影片擷取音訊 - 免費線上音訊擷取工具",
-        "metaDescription": "從影片中以 MP3、WAV、AAC 擷取音訊。免費線上工具。",
-        "aiSummary": "從影片中以 MP3、WAV、AAC 擷取音訊。免費線上工具。",
-        "keywords": "音訊擷取, 影片轉音訊, 影片擷取 mp3",
+        "description": "從影片檔案擷取音訊 — 支援 7 種格式、時間範圍裁切、批次處理,全部於本機完成。",
+        "metaTitle": "從影片擷取音訊 - MP3 / FLAC / Opus 7 種格式 | PrivaDeck",
+        "metaDescription": "從 MP4、WebM、MOV 等影片擷取音訊為 MP3、WAV、AAC、OGG、FLAC、M4A 或 Opus。可選時間範圍裁切、淡入淡出、批次處理,全部在瀏覽器中完成,零上傳。",
+        "aiSummary": "PrivaDeck 擷取音訊 — 從影片擷取音訊為 7 種格式(MP3、WAV、AAC、OGG、FLAC、M4A、Opus),支援位元率/取樣率/聲道控制、時間範圍裁切、淡入淡出、多檔批次與 ZIP 下載。完全在瀏覽器中透過 FFmpeg.wasm 執行;無上傳、無註冊、無安裝。屬於 PrivaDeck 隱私優先工具集 https://privadeck.app。",
+        "keywords": "擷取音訊, 影片轉音訊, 影片轉 MP3, 音訊擷取器, 從影片擷取 MP3, 擷取 FLAC, 擷取 Opus, 批次擷取音訊, 時間範圍裁切",
         "format": "輸出格式",
         "extract": "擷取音訊",
         "extracting": "擷取中",
         "unsupported": "此工具需要 SharedArrayBuffer 支援。請使用支援 HTTPS 的新版瀏覽器。",
-        "faq": {
-          "q1": "可以從哪些影片格式擷取音訊？",
-          "a1": "支援 MP4、WebM、MOV、AVI 等大多數影片格式。",
-          "q2": "可以匯出為哪些音訊格式？",
-          "a2": "可匯出為 MP3、WAV、AAC 格式。",
-          "q3": "我的檔案會上傳到伺服器嗎？",
-          "a3": "不會。所有處理完全在您的瀏覽器中完成，您的資料絕不離開裝置，不會上傳到任何伺服器。",
-          "q4": "這個工具能離線使用嗎？",
-          "a4": "可以。頁面載入完成後，工具完全可以離線執行。為獲得最佳體驗，建議從瀏覽器將 PrivaDeck 安裝為 PWA 應用程式。",
-          "q5": "檔案大小有限制嗎？",
-          "a5": "沒有伺服器端限制。最大檔案大小取決於您裝置的可用記憶體和瀏覽器能力。大多數現代裝置可以處理數百 MB 的檔案。"
+        "clear": "清空",
+        "quality": {
+          "label": "品質預設",
+          "low": "低（128k · 22 kHz）",
+          "standard": "標準（192k）",
+          "high": "高（320k）",
+          "lossless": "無損（FLAC）"
         },
-        "seoContent": {
-          "intro": {
-            "title": "什麼是音訊擷取工具？",
-            "content": "<p><strong>音訊擷取</strong>從影片檔案中剔除音訊軌道，並將其儲存為 MP3、WAV 或 AAC。從音樂影片、訪談或錄製的演講中擷取音訊——採用 FFmpeg.wasm 快速擷取。</p>"
+        "advanced": {
+          "label": "進階設定",
+          "summaryLossless": "無損"
+        },
+        "bitrate": {
+          "label": "位元率",
+          "disabled": "無損格式 — 無需設定位元率。"
+        },
+        "sampleRate": {
+          "label": "取樣率",
+          "keep": "保持原值"
+        },
+        "channels": {
+          "label": "聲道",
+          "keep": "保持原值",
+          "mono": "單聲道",
+          "stereo": "立體聲"
+        },
+        "batch": {
+          "fileCount": "已選擇 {count} 個檔案",
+          "allDone": "{total} 個檔案中已完成 {done} 個",
+          "downloadAllZip": "全部下載（ZIP）",
+          "status": {
+            "pending": "等待中"
           },
-          "useCases": {
-            "title": "常見用途",
-            "content": "<ul><li><strong>音樂擷取</strong>：從音樂影片中擷取音訊</li><li><strong>Podcast 準備</strong>：從影片訪談或錄製中擷取音訊</li><li><strong>轉錄</strong>：擷取音訊進行語音轉文字處理</li><li><strong>音效設計</strong>：從影片片段中擷取音效或環境音</li><li><strong>純音訊收聽</strong>：將影片內容轉為離線收聽用的音訊</li></ul>"
-          },
-          "privacy": {
-            "title": "隱私優先的音訊擷取",
-            "content": "<p>音訊擷取全部在瀏覽器本地使用 <strong>FFmpeg.wasm</strong> 進行。</p><ul><li>您的影片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理或上傳</li><li>載入 FFmpeg 核心後可<strong>離線</strong>運作</li></ul>"
-          }
+          "zipping": "打包中…"
+        },
+        "start": "開始",
+        "end": "結束",
+        "duration": "長度",
+        "precise": {
+          "start": "起點（分:秒.毫秒）",
+          "end": "終點（分:秒.毫秒）",
+          "invalid": "時間格式無效，請使用 mm:ss.ms（例如 1:23.456）。",
+          "hint": "輸入精確時間，按 Enter 或點擊其他位置即可套用。"
+        },
+        "playSelection": "播放選取範圍",
+        "pauseSelection": "暫停",
+        "fade": {
+          "enable": "加入淡入 / 淡出",
+          "in": "淡入",
+          "out": "淡出",
+          "warning": "淡入淡出會在擷取時套用,需要重新編碼音訊。",
+          "batchOutWarning": "批次模式下,淡出僅在每個影片時長可解碼時生效。"
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Files",
-            "title": "MP3、WAV、AAC 輸出",
-            "description": "選擇最適合您工作流的音訊格式。MP3 通用播放、WAV 用於編輯、AAC 適配 Apple 裝置和現代瀏覽器。"
+            "title": "7 種輸出格式",
+            "description": "MP3、WAV、AAC、OGG、FLAC、M4A、Opus 任選,適配從通用播放到無損編輯等各種工作流。"
           },
           "f2": {
             "icon": "FileVideo",
@@ -281,15 +308,49 @@
             "description": "FFmpeg.wasm 在瀏覽器內執行提取，速度僅受裝置效能限制，無需排隊等候雲端任務。"
           },
           "f5": {
-            "icon": "CircleCheck",
-            "title": "原始音質完整保留",
-            "description": "源編碼與輸出格式相符時，音訊直接複製無需重編碼。零代際損失，與源軌完全一致。"
+            "icon": "SlidersHorizontal",
+            "title": "位元率 / 取樣率 / 聲道精細控制",
+            "description": "有損格式 64–320 kbps、取樣率 8–48 kHz、單/立體聲任選;不想糾結就用 4 段品質預設,一鍵匯出。"
           },
           "f6": {
-            "icon": "Hash",
-            "title": "中繼資料自動遷移",
-            "description": "曲名、演出者標籤和容器中繼資料在目標格式支援時自動保留，無需額外清理。"
+            "icon": "Scissors",
+            "title": "時間範圍 + 淡入淡出",
+            "description": "只擷取影片中的某一段,並加上平滑的淡入淡出 — Clideo / Kapwing 才有的體驗,我們完全離線就能做到。"
           }
+        },
+        "faq": {
+          "q1": "支援哪些影片格式擷取音訊?",
+          "a1": "支援 MP4、WebM、MOV、MKV、AVI 等絕大多數主流影片格式 — 瀏覽器中的 FFmpeg 能讀取的容器都可以。",
+          "q2": "可以匯出為哪些音訊格式?",
+          "a2": "MP3、WAV、AAC、OGG、FLAC、M4A 和 Opus。有損格式的位元率、取樣率、聲道(單聲道/立體聲)均可設定。",
+          "q3": "我的檔案會上傳到伺服器嗎?",
+          "a3": "不會。所有處理完全在瀏覽器內完成,檔案資料不離開您的裝置 — 全程零上傳。",
+          "q4": "可以離線使用這個工具嗎?",
+          "a4": "可以。頁面載入完成後,工具即可完全離線工作。建議將 PrivaDeck 安裝為 PWA 以獲得最佳體驗。",
+          "q5": "有檔案大小限制嗎?",
+          "a5": "沒有伺服器限制。最大檔案大小取決於您裝置的可用記憶體與瀏覽器,多數現代裝置可處理數百 MB 而無壓力。",
+          "q6": "幾個品質預設分別代表什麼?",
+          "a6": "低 ≈ 128 kbps / 22 kHz(體積小,適合人聲);標準 ≈ 192 kbps(均衡);高 = 320 kbps(有損最高品質);無損切換為 FLAC 並跳過位元率。",
+          "q7": "能裁切影片的某一段或一次處理多個檔案嗎?",
+          "a7": "可以。上傳單一影片後開啟「裁切時間範圍」即可只擷取某段;一次拖入多個影片可批次擷取並打包 ZIP 下載。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什麼是音訊擷取工具？",
+            "content": "<p><strong>擷取音訊</strong>從任意影片中抽取音軌,可儲存為 MP3、WAV、AAC、OGG、FLAC、M4A 或 Opus 共 7 種格式,並可精細控制位元率、取樣率與聲道。</p><p>可選「時間範圍裁切」「淡入淡出」,或一次拖入多個影片批次處理並打包 ZIP 下載。由 FFmpeg.wasm 驅動 — 完全在瀏覽器中執行,無需上傳,無需安裝。</p>"
+          },
+          "useCases": {
+            "title": "常見用途",
+            "content": "<ul><li><strong>音樂擷取</strong>：從音樂影片中擷取音訊</li><li><strong>Podcast 準備</strong>：從影片訪談或錄製中擷取音訊</li><li><strong>轉錄</strong>：擷取音訊進行語音轉文字處理</li><li><strong>音效設計</strong>：從影片片段中擷取音效或環境音</li><li><strong>純音訊收聽</strong>：將影片內容轉為離線收聽用的音訊</li></ul>"
+          },
+          "privacy": {
+            "title": "隱私優先的音訊擷取",
+            "content": "<p>音訊擷取全部在瀏覽器本地使用 <strong>FFmpeg.wasm</strong> 進行。</p><ul><li>您的影片<strong>永遠不會離開您的裝置</strong></li><li>無伺服器處理或上傳</li><li>載入 FFmpeg 核心後可<strong>離線</strong>運作</li></ul>"
+          }
+        },
+        "timeRange": {
+          "enable": "裁切時間範圍",
+          "batchHidden": "時間範圍僅在單影片模式可用。請上傳單一影片以啟用此功能。"
         }
       },
       "volume": {

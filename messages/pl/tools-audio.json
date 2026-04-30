@@ -223,47 +223,74 @@
       },
       "extract": {
         "name": "Wyodrębnij audio",
-        "description": "Wyodrębnij ścieżkę audio z plików wideo.",
-        "metaTitle": "Wyodrębnij audio z wideo - Darmowy ekstraktor audio online",
-        "metaDescription": "Wyodrębnij audio z plików wideo jako MP3, WAV lub AAC. Darmowe narzędzie online, bez przesyłania.",
-        "aiSummary": "Wyodrębnij audio z plików wideo jako MP3, WAV lub AAC. Darmowe narzędzie online, bez przesyłania.",
-        "keywords": "wyodrębnij audio, wideo na audio, wyodrębnij mp3 z wideo, ekstraktor audio",
+        "description": "Wyodrębnij dźwięk z plików wideo — 7 formatów, przycinanie zakresu, przetwarzanie wsadowe. 100 % lokalnie.",
+        "metaTitle": "Wyodrębnij audio z wideo — MP3, FLAC, Opus | PrivaDeck",
+        "metaDescription": "Wyodrębnij audio z MP4, WebM, MOV i innych jako MP3, WAV, AAC, OGG, FLAC, M4A lub Opus. Przycinanie zakresu, ściszenie/rozciszenie, tryb wsadowy — wszystko w przeglądarce, bez wysyłania.",
+        "aiSummary": "Ekstraktor audio PrivaDeck — wyodrębnia dźwięk z plików wideo do 7 formatów (MP3, WAV, AAC, OGG, FLAC, M4A, Opus) z kontrolą bitrate/częstotliwości/kanałów, opcjonalnym przycinaniem zakresu, ściszeniem/rozciszeniem oraz przetwarzaniem wielu plików z pobieraniem ZIP. Działa w pełni w przeglądarce dzięki FFmpeg.wasm; bez przesyłania, rejestracji ani instalacji. Część PrivaDeck, zestawu narzędzi prywatności na https://privadeck.app.",
+        "keywords": "wyodrębnij audio, wideo do audio, wideo do MP3, ekstraktor audio, MP3 z wideo, FLAC z wideo, Opus z wideo, wsadowa ekstrakcja audio, zakres czasu",
         "format": "Format wyjściowy",
         "extract": "Wyodrębnij audio",
         "extracting": "Wyodrębnianie",
         "unsupported": "To narzędzie wymaga obsługi SharedArrayBuffer. Użyj nowoczesnej przeglądarki z HTTPS.",
-        "faq": {
-          "q1": "Z jakich formatów wideo mogę wyodrębnić audio?",
-          "a1": "Obsługiwane są najpopularniejsze formaty wideo, w tym MP4, WebM, MOV i AVI.",
-          "q2": "Do jakich formatów audio mogę eksportować?",
-          "a2": "Możesz eksportować do formatu MP3, WAV lub AAC.",
-          "q3": "Czy moje pliki zostaną przesłane na serwer?",
-          "a3": "Nie. Całe przetwarzanie odbywa się w przeglądarce. Twoje dane nigdy nie opuszczają urządzenia — nic nie jest przesyłane na serwer.",
-          "q4": "Czy mogę używać tego narzędzia offline?",
-          "a4": "Tak. Po załadowaniu strony narzędzie działa całkowicie offline. Dla najlepszego doświadczenia zainstaluj PrivaDeck jako PWA z poziomu przeglądarki.",
-          "q5": "Czy są limity rozmiaru pliku?",
-          "a5": "Nie ma limitów narzucanych przez serwer. Maksymalny rozmiar pliku zależy od dostępnej pamięci urządzenia i możliwości przeglądarki. Większość nowoczesnych urządzeń bez problemu obsługuje pliki do kilkuset MB."
+        "clear": "Wyczyść",
+        "quality": {
+          "label": "Predefinicja jakości",
+          "low": "Niska (128k · 22 kHz)",
+          "standard": "Standard (192k)",
+          "high": "Wysoka (320k)",
+          "lossless": "Bezstratna (FLAC)"
         },
-        "seoContent": {
-          "intro": {
-            "title": "Co to jest Extract Audio?",
-            "content": "<p><strong>Extract Audio</strong> rips the audio track from video files and saves it as MP3, WAV, or AAC. Extract music, dialogue, or narration from any video without re-encoding when possible.</p><p>Powered by FFmpeg.wasm for fast audio extraction in your browser.</p>"
+        "advanced": {
+          "label": "Ustawienia zaawansowane",
+          "summaryLossless": "Bezstratne"
+        },
+        "bitrate": {
+          "label": "Bitrate",
+          "disabled": "Format bezstratny — bitrate nie ma zastosowania."
+        },
+        "sampleRate": {
+          "label": "Częstotliwość próbkowania",
+          "keep": "Zachowaj oryginał"
+        },
+        "channels": {
+          "label": "Kanały",
+          "keep": "Zachowaj oryginał",
+          "mono": "Mono",
+          "stereo": "Stereo"
+        },
+        "batch": {
+          "fileCount": "{count, plural, one {Wybrano # plik} few {Wybrano # pliki} many {Wybrano # plików} other {Wybrano # pliku}}",
+          "allDone": "Skonwertowano {done} z {total} plików",
+          "downloadAllZip": "Pobierz wszystko (ZIP)",
+          "status": {
+            "pending": "Oczekuje"
           },
-          "useCases": {
-            "title": "Typowe przypadki użycia",
-            "content": "<ul><li><strong>Music Ripping</strong>: Extract audio from music videos</li><li><strong>Podcast Prep</strong>: Extract audio from video interviews or recordings</li><li><strong>Transcription</strong>: Extract audio for speech-to-text processing</li><li><strong>Sound Design</strong>: Pull sound effects or ambient audio from video clips</li><li><strong>Audio-Only Listening</strong>: Convert video content to audio for offline listening</li></ul>"
-          },
-          "privacy": {
-            "title": "Wyodrębnianie audio z priorytetem prywatności",
-            "content": "<p>Audio extraction runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
-          }
+          "zipping": "Pakowanie…"
+        },
+        "start": "Początek",
+        "end": "Koniec",
+        "duration": "Czas trwania",
+        "precise": {
+          "start": "Początek (mm:ss.ms)",
+          "end": "Koniec (mm:ss.ms)",
+          "invalid": "Nieprawidłowy format czasu. Użyj mm:ss.ms (np. 1:23.456).",
+          "hint": "Wpisz dokładny czas i naciśnij Enter lub kliknij poza polem, aby zastosować."
+        },
+        "playSelection": "Odtwórz zaznaczenie",
+        "pauseSelection": "Pauza",
+        "fade": {
+          "enable": "Dodaj fade in / fade out",
+          "in": "Fade in",
+          "out": "Fade out",
+          "warning": "Płynne przejścia są stosowane podczas wyodrębniania i wymagają ponownego kodowania dźwięku.",
+          "batchOutWarning": "W trybie wsadowym rozciszenie jest stosowane tylko wtedy, gdy długość każdego wideo jest znana po dekodowaniu."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Files",
-            "title": "Wyjście MP3, WAV, AAC",
-            "description": "Wybierz format pasujący do twojego workflow. MP3 do uniwersalnego odtwarzania, WAV do edycji, AAC do urządzeń Apple i nowoczesnych przeglądarek."
+            "title": "7 formatów wyjściowych",
+            "description": "MP3, WAV, AAC, OGG, FLAC, M4A i Opus. Wybierz kodek i kontener pasujący do Twojego procesu pracy."
           },
           "f2": {
             "icon": "FileVideo",
@@ -281,15 +308,49 @@
             "description": "FFmpeg.wasm uruchamia ekstrakcję w przeglądarce, więc prędkość zależy od urządzenia, a nie kolejki w chmurze. Bez czasu oczekiwania."
           },
           "f5": {
-            "icon": "CircleCheck",
-            "title": "Oryginalna jakość audio zachowana",
-            "description": "Gdy kodek źródłowy pasuje do wyjścia, audio jest kopiowane bez ponownego kodowania. Bez utraty pokoleniowej — bit po bicie identyczne ze ścieżką źródłową."
+            "icon": "SlidersHorizontal",
+            "title": "Kontrola bitrate, próbkowania i kanałów",
+            "description": "Precyzyjne ustawienia: 64–320 kbps dla formatów stratnych, próbkowanie 8–48 kHz, mono lub stereo. Albo jeden klik w preset jakości."
           },
           "f6": {
-            "icon": "Hash",
-            "title": "Metadane przeniesione",
-            "description": "Tytuły utworów, tagi wykonawców i inne metadane kontenera są zachowywane, gdy format docelowy je obsługuje. Bez dodatkowego kroku czyszczenia."
+            "icon": "Scissors",
+            "title": "Zakres czasu + Płynne przejścia",
+            "description": "Wyodrębnij tylko fragment wideo z płynnym ściszeniem/rozciszeniem — doświadczenie Clideo i Kapwing, ale całkowicie offline."
           }
+        },
+        "faq": {
+          "q1": "Z jakich formatów wideo mogę wyodrębnić dźwięk?",
+          "a1": "Większość formatów wideo w tym MP4, WebM, MOV, MKV i AVI — wszystko, co potrafi odczytać FFmpeg w przeglądarce.",
+          "q2": "Do jakich formatów audio mogę eksportować?",
+          "a2": "MP3, WAV, AAC, OGG, FLAC, M4A i Opus. Dla formatów stratnych można ustawić bitrate, częstotliwość próbkowania i kanały (mono/stereo).",
+          "q3": "Czy moje pliki są wysyłane na serwer?",
+          "a3": "Nie. Całe przetwarzanie odbywa się wyłącznie w Twojej przeglądarce. Twoje dane nigdy nie opuszczają urządzenia — nic nie jest przesyłane.",
+          "q4": "Czy mogę używać narzędzia offline?",
+          "a4": "Tak. Po wczytaniu strony narzędzie działa w pełni offline. Dla najlepszego doświadczenia zainstaluj PrivaDeck jako PWA.",
+          "q5": "Czy są limity rozmiaru plików?",
+          "a5": "Brak limitów po stronie serwera. Maksymalny rozmiar zależy od pamięci urządzenia i przeglądarki — nowoczesne urządzenia obsługują kilkaset MB bez problemu.",
+          "q6": "Co oznaczają presety jakości?",
+          "a6": "Niska ≈ 128 kbps / 22 kHz (kompakt, dobra dla głosu). Standard ≈ 192 kbps (zrównoważona). Wysoka = 320 kbps (najlepsza jakość stratna). Bezstratna przełącza na FLAC i pomija bitrate.",
+          "q7": "Czy mogę przyciąć fragment i przetwarzać wiele plików jednocześnie?",
+          "a7": "Tak. Po wczytaniu jednego wideo włącz «Przytnij do zakresu», aby wyodrębnić tylko fragment. Upuść kilka wideo razem, aby przetworzyć je ze wspólnymi ustawieniami i pobrać jako ZIP."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Co to jest Extract Audio?",
+            "content": "<p><strong>Wyodrębnianie dźwięku</strong> pobiera ścieżkę audio z dowolnego wideo i zapisuje ją w jednym z 7 formatów — MP3, WAV, AAC, OGG, FLAC, M4A lub Opus — z pełną kontrolą nad bitrate, częstotliwością próbkowania i kanałami.</p><p>Opcjonalnie możesz przyciąć zakres czasu, zastosować ściszenie/rozciszenie lub przetwarzać wiele plików wsadowo z pobieraniem ZIP. Napędzany przez FFmpeg.wasm — działa całkowicie w przeglądarce, bez wysyłania, bez instalacji.</p>"
+          },
+          "useCases": {
+            "title": "Typowe przypadki użycia",
+            "content": "<ul><li><strong>Music Ripping</strong>: Extract audio from music videos</li><li><strong>Podcast Prep</strong>: Extract audio from video interviews or recordings</li><li><strong>Transcription</strong>: Extract audio for speech-to-text processing</li><li><strong>Sound Design</strong>: Pull sound effects or ambient audio from video clips</li><li><strong>Audio-Only Listening</strong>: Convert video content to audio for offline listening</li></ul>"
+          },
+          "privacy": {
+            "title": "Wyodrębnianie audio z priorytetem prywatności",
+            "content": "<p>Audio extraction runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+          }
+        },
+        "timeRange": {
+          "enable": "Przytnij do zakresu",
+          "batchHidden": "Zakres czasu dostępny jest tylko w trybie pojedynczego wideo. Upuść jedno wideo, aby go włączyć."
         }
       },
       "volume": {

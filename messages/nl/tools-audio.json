@@ -223,47 +223,74 @@
       },
       "extract": {
         "name": "Audio extraheren",
-        "description": "Extraheer de audiotrack uit videobestanden.",
-        "metaTitle": "Audio uit video extraheren - Gratis online audio-extractor",
-        "metaDescription": "Extraheer audio uit videobestanden als MP3, WAV of AAC. Gratis online tool, geen upload nodig.",
-        "aiSummary": "Extraheer audio uit videobestanden als MP3, WAV of AAC. Gratis online tool, geen upload nodig.",
-        "keywords": "audio extraheren, video naar audio, mp3 uit video extraheren, audio-extractor",
+        "description": "Audio uit videobestanden halen — 7 formaten, tijdsbereik bijsnijden, batch-verwerking. 100 % lokaal.",
+        "metaTitle": "Audio uit video halen — MP3, FLAC, Opus | PrivaDeck",
+        "metaDescription": "Haal audio uit MP4, WebM, MOV en meer als MP3, WAV, AAC, OGG, FLAC, M4A of Opus. Tijdsbereik bijsnijden, fade in/out, batch — alles in je browser, zonder uploaden.",
+        "aiSummary": "PrivaDeck Audio-extractor — Haal audio uit videobestanden naar 7 formaten (MP3, WAV, AAC, OGG, FLAC, M4A, Opus) met bitrate-/samplerate-/kanaalbesturing, optioneel tijdsbereik bijsnijden, fade in/out en batchverwerking met ZIP-download. Draait volledig in de browser via FFmpeg.wasm; geen upload, registratie of installatie. Onderdeel van PrivaDeck, een privacygerichte toolkit op https://privadeck.app.",
+        "keywords": "audio extraheren, video naar audio, video naar MP3, audio-extractor, MP3 uit video, FLAC uit video, Opus uit video, batch audio extract, tijdsbereik",
         "format": "Uitvoerformaat",
         "extract": "Audio extraheren",
         "extracting": "Extraheren",
         "unsupported": "Deze tool vereist SharedArrayBuffer-ondersteuning. Gebruik een moderne browser met HTTPS.",
-        "faq": {
-          "q1": "Uit welke videoformaten kan ik audio extraheren?",
-          "a1": "De meeste videoformaten worden ondersteund, waaronder MP4, WebM, MOV en AVI.",
-          "q2": "Naar welke audioformaten kan ik exporteren?",
-          "a2": "Je kunt exporteren naar MP3, WAV of AAC-formaat.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
-          "q5": "Zijn er bestandsgroottebeperkingen?",
-          "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
+        "clear": "Wissen",
+        "quality": {
+          "label": "Kwaliteit-preset",
+          "low": "Laag (128k · 22 kHz)",
+          "standard": "Standaard (192k)",
+          "high": "Hoog (320k)",
+          "lossless": "Lossless (FLAC)"
         },
-        "seoContent": {
-          "intro": {
-            "title": "Wat is Extract Audio?",
-            "content": "<p><strong>Extract Audio</strong> rips the audio track from video files and saves it as MP3, WAV, or AAC. Extract music, dialogue, or narration from any video without re-encoding when possible.</p><p>Powered by FFmpeg.wasm for fast audio extraction in your browser.</p>"
+        "advanced": {
+          "label": "Geavanceerde instellingen",
+          "summaryLossless": "Lossless"
+        },
+        "bitrate": {
+          "label": "Bitrate",
+          "disabled": "Lossless formaat — bitrate is niet van toepassing."
+        },
+        "sampleRate": {
+          "label": "Samplerate",
+          "keep": "Origineel behouden"
+        },
+        "channels": {
+          "label": "Kanalen",
+          "keep": "Origineel behouden",
+          "mono": "Mono",
+          "stereo": "Stereo"
+        },
+        "batch": {
+          "fileCount": "{count, plural, one {# bestand geselecteerd} other {# bestanden geselecteerd}}",
+          "allDone": "{done} van {total} bestanden geconverteerd",
+          "downloadAllZip": "Alles downloaden (ZIP)",
+          "status": {
+            "pending": "In afwachting"
           },
-          "useCases": {
-            "title": "Veelvoorkomende gebruiksmogelijkheden",
-            "content": "<ul><li><strong>Music Ripping</strong>: Extract audio from music videos</li><li><strong>Podcast Prep</strong>: Extract audio from video interviews or recordings</li><li><strong>Transcription</strong>: Extract audio for speech-to-text processing</li><li><strong>Sound Design</strong>: Pull sound effects or ambient audio from video clips</li><li><strong>Audio-Only Listening</strong>: Convert video content to audio for offline listening</li></ul>"
-          },
-          "privacy": {
-            "title": "Privacy-First audio-extractie",
-            "content": "<p>Audio extraction runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
-          }
+          "zipping": "Inpakken…"
+        },
+        "start": "Start",
+        "end": "Einde",
+        "duration": "Duur",
+        "precise": {
+          "start": "Begin (mm:ss.ms)",
+          "end": "Einde (mm:ss.ms)",
+          "invalid": "Ongeldige tijdnotatie. Gebruik mm:ss.ms (bijv. 1:23.456).",
+          "hint": "Typ een nauwkeurige tijd en druk op Enter of klik buiten het veld om toe te passen."
+        },
+        "playSelection": "Selectie afspelen",
+        "pauseSelection": "Pauze",
+        "fade": {
+          "enable": "Fade-in / fade-out toevoegen",
+          "in": "Fade-in",
+          "out": "Fade-out",
+          "warning": "Fades worden tijdens de extractie toegepast en vereisen het opnieuw coderen van de audio.",
+          "batchOutWarning": "In batchmodus wordt fade-out alleen toegepast wanneer de duur van elke video bij decodering bekend is."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Files",
-            "title": "MP3, WAV, AAC uitvoer",
-            "description": "Kies het formaat dat past bij je workflow. MP3 voor universele weergave, WAV voor bewerken, AAC voor Apple-apparaten en moderne browsers."
+            "title": "7 uitvoerformaten",
+            "description": "MP3, WAV, AAC, OGG, FLAC, M4A en Opus. Kies codec en container die bij je workflow passen."
           },
           "f2": {
             "icon": "FileVideo",
@@ -281,15 +308,49 @@
             "description": "FFmpeg.wasm voert de extractie in je browser uit, dus snelheid wordt bepaald door je apparaat, niet door een cloudwachtrij. Geen wachttijd."
           },
           "f5": {
-            "icon": "CircleCheck",
-            "title": "Originele audiokwaliteit behouden",
-            "description": "Wanneer de bron-codec overeenkomt met het uitvoerformaat, wordt audio gekopieerd zonder hercodering. Geen generatieverlies — bit voor bit identiek aan het bronspoor."
+            "icon": "SlidersHorizontal",
+            "title": "Bitrate, samplerate en kanalen instellen",
+            "description": "Fijn afstellen: 64–320 kbps voor formaten met verlies, samplerates van 8–48 kHz, mono of stereo. Of pak gewoon een kwaliteitspreset."
           },
           "f6": {
-            "icon": "Hash",
-            "title": "Metadata doorgegeven",
-            "description": "Tracktitels, artiestentags en andere containermetadata blijven behouden wanneer het doelformaat ze ondersteunt. Geen extra opschoonstap nodig."
+            "icon": "Scissors",
+            "title": "Tijdsbereik + Fade In/Out",
+            "description": "Haal alleen een fragment uit de video en pas een soepele fade toe — zoals Clideo en Kapwing, maar volledig offline."
           }
+        },
+        "faq": {
+          "q1": "Uit welke videoformaten kan ik audio halen?",
+          "a1": "De meeste videoformaten waaronder MP4, WebM, MOV, MKV en AVI worden ondersteund — alles wat de in de browser geleverde FFmpeg kan lezen.",
+          "q2": "Naar welke audioformaten kan ik exporteren?",
+          "a2": "MP3, WAV, AAC, OGG, FLAC, M4A en Opus. Voor formaten met verlies zijn bitrate, samplerate en kanalen (mono/stereo) instelbaar.",
+          "q3": "Worden mijn bestanden naar een server geüpload?",
+          "a3": "Nee. Alle verwerking gebeurt volledig in je browser. Je gegevens verlaten je apparaat nooit — er wordt niets geüpload.",
+          "q4": "Kan ik deze tool offline gebruiken?",
+          "a4": "Ja. Zodra de pagina is geladen werkt de tool volledig offline. Voor de beste ervaring kun je PrivaDeck als PWA installeren.",
+          "q5": "Zijn er bestandsgroottelimieten?",
+          "a5": "Geen serverlimieten. De maximumgrootte hangt af van het beschikbare geheugen van je apparaat en de browser; moderne apparaten verwerken honderden MB zonder problemen.",
+          "q6": "Wat betekenen de kwaliteitsvoorinstellingen?",
+          "a6": "Laag ≈ 128 kbps / 22 kHz (compact, geschikt voor spraak). Standaard ≈ 192 kbps (gebalanceerd). Hoog = 320 kbps (beste kwaliteit met verlies). Verliesvrij schakelt naar FLAC en negeert de bitrate.",
+          "q7": "Kan ik een fragment bijsnijden en meerdere bestanden tegelijk verwerken?",
+          "a7": "Ja. Met één video geladen activeer je «Bijsnijden op tijdsbereik» om alleen een fragment te halen. Sleep meerdere video's om ze met dezelfde instellingen te verwerken en als ZIP te downloaden."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Wat is Extract Audio?",
+            "content": "<p><strong>Audio extraheren</strong> haalt de audiotrack uit elke video en slaat hem op in 7 formaten naar keuze — MP3, WAV, AAC, OGG, FLAC, M4A of Opus — met volledige controle over bitrate, samplerate en kanalen.</p><p>Optioneel kun je een tijdsbereik bijsnijden, fade in/out toepassen, of meerdere video's in batch verwerken met ZIP-download. Aangedreven door FFmpeg.wasm — draait volledig in je browser, geen upload, geen installatie.</p>"
+          },
+          "useCases": {
+            "title": "Veelvoorkomende gebruiksmogelijkheden",
+            "content": "<ul><li><strong>Music Ripping</strong>: Extract audio from music videos</li><li><strong>Podcast Prep</strong>: Extract audio from video interviews or recordings</li><li><strong>Transcription</strong>: Extract audio for speech-to-text processing</li><li><strong>Sound Design</strong>: Pull sound effects or ambient audio from video clips</li><li><strong>Audio-Only Listening</strong>: Convert video content to audio for offline listening</li></ul>"
+          },
+          "privacy": {
+            "title": "Privacy-First audio-extractie",
+            "content": "<p>Audio extraction runs <strong>entirely in your browser</strong> using <strong>FFmpeg.wasm</strong>.</p><ul><li>Your videos <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after FFmpeg core is loaded</li></ul>"
+          }
+        },
+        "timeRange": {
+          "enable": "Bijsnijden op tijdsbereik",
+          "batchHidden": "Tijdsbereik is alleen beschikbaar in modus voor enkele video. Plaats één video om het in te schakelen."
         }
       },
       "volume": {

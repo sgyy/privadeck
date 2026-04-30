@@ -223,47 +223,74 @@
       },
       "extract": {
         "name": "Ses Çıkar",
-        "description": "Video dosyalarından ses parçasını çıkarın.",
-        "metaTitle": "Videodan Ses Çıkar — Ücretsiz Çevrimiçi Ses Çıkarıcı",
-        "metaDescription": "Video dosyalarından MP3, WAV veya AAC olarak ses çıkarın. Ücretsiz çevrimiçi araç, yükleme gerekmez.",
-        "aiSummary": "Video dosyalarından MP3, WAV veya AAC olarak ses çıkarın. Ücretsiz çevrimiçi araç, yükleme gerekmez.",
-        "keywords": "ses çıkar, videodan ses, videodan mp3 çıkar, ses çıkarıcı",
+        "description": "Video dosyalarından sesi çıkarın — 7 format, zaman aralığı kırpma, toplu işleme. %100 yerel.",
+        "metaTitle": "Videodan ses çıkar — MP3, FLAC, Opus | PrivaDeck",
+        "metaDescription": "MP4, WebM, MOV ve daha fazlasından sesi MP3, WAV, AAC, OGG, FLAC, M4A veya Opus olarak çıkarın. Zaman aralığı kırpma, fade in/out, toplu işleme — hepsi tarayıcınızda, yükleme olmadan.",
+        "aiSummary": "PrivaDeck Ses Çıkarıcı — Videolardan sesi 7 formatta (MP3, WAV, AAC, OGG, FLAC, M4A, Opus) çıkarır; bit hızı/örnekleme hızı/kanal kontrolü, isteğe bağlı zaman aralığı kırpma, fade in/out ve çoklu dosya toplu işleme ile ZIP indirme dahil. FFmpeg.wasm aracılığıyla tamamen tarayıcıda çalışır; yükleme, kayıt veya kurulum yok. Gizlilik öncelikli araç seti PrivaDeck'in (https://privadeck.app) parçası.",
+        "keywords": "ses çıkar, video ses dönüştürme, video MP3, ses çıkarıcı, videodan MP3, videodan FLAC, videodan Opus, toplu ses çıkarma, zaman aralığı",
         "format": "Çıktı Formatı",
         "extract": "Sesi Çıkar",
         "extracting": "Çıkarılıyor",
         "unsupported": "Bu araç SharedArrayBuffer desteği gerektirir. Lütfen HTTPS ile modern bir tarayıcı kullanın.",
-        "faq": {
-          "q1": "Hangi video formatlarından ses çıkarabilirim?",
-          "a1": "MP4, WebM, MOV ve AVI dahil çoğu video formatı desteklenir.",
-          "q2": "Hangi ses formatlarına dışa aktarabilirim?",
-          "a2": "MP3, WAV veya AAC formatına dışa aktarabilirsiniz.",
-          "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
-          "q5": "Dosya boyutu sınırı var mı?",
-          "a5": "Sunucu kaynaklı bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar dosyaları sorunsuz işler."
+        "clear": "Temizle",
+        "quality": {
+          "label": "Kalite ön ayarı",
+          "low": "Düşük (128k · 22 kHz)",
+          "standard": "Standart (192k)",
+          "high": "Yüksek (320k)",
+          "lossless": "Kayıpsız (FLAC)"
         },
-        "seoContent": {
-          "intro": {
-            "title": "Ses Çıkar Nedir?",
-            "content": "<p><strong>Ses Çıkar</strong>, video dosyalarından ses parçasını alıp MP3, WAV veya AAC olarak kaydeder. Mümkün olduğunda yeniden kodlama yapmadan herhangi bir videodan müzik, diyalog veya anlatım çıkarın.</p><p>Tarayıcınızda hızlı ses çıkarma için FFmpeg.wasm ile güçlendirilmiştir.</p>"
+        "advanced": {
+          "label": "Gelişmiş ayarlar",
+          "summaryLossless": "Kayıpsız"
+        },
+        "bitrate": {
+          "label": "Bit hızı",
+          "disabled": "Kayıpsız format — bit hızı uygulanmaz."
+        },
+        "sampleRate": {
+          "label": "Örnekleme hızı",
+          "keep": "Orijinali koru"
+        },
+        "channels": {
+          "label": "Kanallar",
+          "keep": "Orijinali koru",
+          "mono": "Mono",
+          "stereo": "Stereo"
+        },
+        "batch": {
+          "fileCount": "{count, plural, one {# dosya seçildi} other {# dosya seçildi}}",
+          "allDone": "{total} dosyadan {done} tanesi dönüştürüldü",
+          "downloadAllZip": "Hepsini indir (ZIP)",
+          "status": {
+            "pending": "Beklemede"
           },
-          "useCases": {
-            "title": "Yaygın Kullanım Örnekleri",
-            "content": "<ul><li><strong>Müzik Çıkarma</strong>: Müzik videolarından ses çıkarın</li><li><strong>Podcast Hazırlığı</strong>: Video röportaj veya kayıtlarından ses çıkarın</li><li><strong>Transkripsiyon</strong>: Konuşmadan metne işleme için ses çıkarın</li><li><strong>Ses Tasarımı</strong>: Video kliplerinden ses efektleri veya ortam sesleri alın</li><li><strong>Yalnızca Ses Dinleme</strong>: Çevrimdışı dinleme için video içeriğini sese dönüştürün</li></ul>"
-          },
-          "privacy": {
-            "title": "Gizlilik Odaklı Ses Çıkarma",
-            "content": "<p>Ses çıkarma işlemi <strong>FFmpeg.wasm</strong> kullanılarak tamamen <strong>tarayıcınızda</strong> çalışır.</p><ul><li>Videolarınız <strong>cihazınızdan asla ayrılmaz</strong></li><li>Sunucu işleme veya yükleme yoktur</li><li>FFmpeg çekirdeği yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
-          }
+          "zipping": "Paketleniyor…"
+        },
+        "start": "Başlangıç",
+        "end": "Bitiş",
+        "duration": "Süre",
+        "precise": {
+          "start": "Başlangıç (mm:ss.ms)",
+          "end": "Bitiş (mm:ss.ms)",
+          "invalid": "Geçersiz zaman biçimi. mm:ss.ms kullanın (örneğin 1:23.456).",
+          "hint": "Tam bir zaman yazın, ardından Enter'a basın veya dışına tıklayarak uygulayın."
+        },
+        "playSelection": "Seçimi oynat",
+        "pauseSelection": "Duraklat",
+        "fade": {
+          "enable": "Fade in / fade out ekle",
+          "in": "Fade in",
+          "out": "Fade out",
+          "warning": "Geçişler çıkarma sırasında uygulanır ve sesin yeniden kodlanmasını gerektirir.",
+          "batchOutWarning": "Toplu modda fade-out yalnızca her videonun süresi çözümleme sırasında bilindiğinde uygulanır."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Files",
-            "title": "MP3, WAV, AAC çıktı",
-            "description": "İş akışınıza uyan formatı seçin. Evrensel oynatma için MP3, düzenleme için WAV, Apple cihazları ve modern tarayıcılar için AAC."
+            "title": "7 çıktı formatı",
+            "description": "MP3, WAV, AAC, OGG, FLAC, M4A ve Opus. İş akışınıza uyan kodek ve kapsayıcıyı seçin."
           },
           "f2": {
             "icon": "FileVideo",
@@ -281,15 +308,49 @@
             "description": "FFmpeg.wasm çıkarma işlemini tarayıcınızda çalıştırır, yani hız cihazınızla sınırlıdır, bulut kuyruğuyla değil. Bekleme yok."
           },
           "f5": {
-            "icon": "CircleCheck",
-            "title": "Orijinal ses kalitesi korunur",
-            "description": "Kaynak codec çıktıyla eşleştiğinde ses yeniden kodlanmadan kopyalanır. Nesil kaybı yok — kaynak parçayla bit bit özdeş."
+            "icon": "SlidersHorizontal",
+            "title": "Bit hızı / örnekleme / kanal kontrolü",
+            "description": "İnce ayar: kayıplı formatlar için 64–320 kbps, 8–48 kHz örnekleme, mono veya stereo. Ya da bir kalite ön ayarı seçip çıkış al."
           },
           "f6": {
-            "icon": "Hash",
-            "title": "Üst veriler aktarılır",
-            "description": "Parça başlıkları, sanatçı etiketleri ve diğer kapsayıcı üst verileri hedef format desteklediğinde korunur. Ek temizlik adımı yok."
+            "icon": "Scissors",
+            "title": "Zaman Aralığı + Fade In/Out",
+            "description": "Yalnızca videonun bir bölümünü pürüzsüz fade ile çıkarın — Clideo ve Kapwing deneyimi, ama tamamen çevrimdışı."
           }
+        },
+        "faq": {
+          "q1": "Hangi video formatlarından ses çıkarabilirim?",
+          "a1": "MP4, WebM, MOV, MKV ve AVI dahil çoğu video formatı desteklenir — tarayıcıdaki FFmpeg'in okuyabildiği her şey.",
+          "q2": "Hangi ses formatlarına dışa aktarabilirim?",
+          "a2": "MP3, WAV, AAC, OGG, FLAC, M4A ve Opus. Kayıplı formatlar için bit hızı, örnekleme hızı ve kanallar (mono/stereo) yapılandırılabilir.",
+          "q3": "Dosyalarım bir sunucuya yüklenecek mi?",
+          "a3": "Hayır. Tüm işlem tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızı asla terk etmez — hiçbir şey yüklenmez.",
+          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
+          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i PWA olarak yükleyin.",
+          "q5": "Dosya boyutu sınırı var mı?",
+          "a5": "Sunucu kaynaklı sınır yok. Maksimum boyut cihazınızın belleği ve tarayıcısına bağlıdır; modern cihazlar yüzlerce MB'ı sorunsuz işler.",
+          "q6": "Kalite ön ayarları ne anlama gelir?",
+          "a6": "Düşük ≈ 128 kbps / 22 kHz (kompakt, ses için uygun). Standart ≈ 192 kbps (dengeli). Yüksek = 320 kbps (en iyi kayıplı kalite). Kayıpsız FLAC'a geçer ve bit hızını yok sayar.",
+          "q7": "Bir bölümü kırpıp aynı anda birden fazla dosyayı işleyebilir miyim?",
+          "a7": "Evet. Tek bir video yüklendiğinde «Zaman aralığında kırp» seçeneğini açın ve yalnızca bir bölümü çıkarın. Birden çok videoyu aynı anda bırakırsanız ortak ayarlarla toplu çıkarma ve ZIP indirme yapılır."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "Ses Çıkar Nedir?",
+            "content": "<p><strong>Ses çıkarma</strong>, herhangi bir videodan ses parçasını alır ve 7 formattan birinde kaydeder — MP3, WAV, AAC, OGG, FLAC, M4A veya Opus — bit hızı, örnekleme hızı ve kanallar üzerinde tam kontrol ile.</p><p>İsteğe bağlı olarak zaman aralığını kırpabilir, fade in/out uygulayabilir veya birden fazla videoyu toplu olarak işleyip ZIP olarak indirebilirsiniz. FFmpeg.wasm ile çalışır — tamamen tarayıcıda, yükleme veya kurulum yok.</p>"
+          },
+          "useCases": {
+            "title": "Yaygın Kullanım Örnekleri",
+            "content": "<ul><li><strong>Müzik Çıkarma</strong>: Müzik videolarından ses çıkarın</li><li><strong>Podcast Hazırlığı</strong>: Video röportaj veya kayıtlarından ses çıkarın</li><li><strong>Transkripsiyon</strong>: Konuşmadan metne işleme için ses çıkarın</li><li><strong>Ses Tasarımı</strong>: Video kliplerinden ses efektleri veya ortam sesleri alın</li><li><strong>Yalnızca Ses Dinleme</strong>: Çevrimdışı dinleme için video içeriğini sese dönüştürün</li></ul>"
+          },
+          "privacy": {
+            "title": "Gizlilik Odaklı Ses Çıkarma",
+            "content": "<p>Ses çıkarma işlemi <strong>FFmpeg.wasm</strong> kullanılarak tamamen <strong>tarayıcınızda</strong> çalışır.</p><ul><li>Videolarınız <strong>cihazınızdan asla ayrılmaz</strong></li><li>Sunucu işleme veya yükleme yoktur</li><li>FFmpeg çekirdeği yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
+          }
+        },
+        "timeRange": {
+          "enable": "Zaman aralığında kırp",
+          "batchHidden": "Zaman aralığı yalnızca tek video modunda kullanılabilir. Etkinleştirmek için tek bir video bırakın."
         }
       },
       "volume": {

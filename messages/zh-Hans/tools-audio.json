@@ -223,47 +223,74 @@
       },
       "extract": {
         "name": "提取音频",
-        "description": "从视频文件中提取音频轨道。",
-        "metaTitle": "提取视频音频 - 免费在线音频提取工具",
-        "metaDescription": "从视频文件中提取音频为 MP3、WAV 或 AAC。免费在线工具，无需上传。",
-        "aiSummary": "从视频文件中提取音频为 MP3、WAV 或 AAC。免费在线工具，无需上传。",
-        "keywords": "提取音频, 视频转音频, 提取mp3, 音频提取器",
+        "description": "从视频文件提取音频 — 支持 7 种格式、时间范围裁剪、批量处理，全部本地完成。",
+        "metaTitle": "从视频提取音频 - MP3 / FLAC / Opus 7 种格式 | PrivaDeck",
+        "metaDescription": "从 MP4、WebM、MOV 等视频中提取音频为 MP3、WAV、AAC、OGG、FLAC、M4A 或 Opus。可选时间范围裁剪、淡入淡出、批量处理，全部在浏览器中完成，零上传。",
+        "aiSummary": "PrivaDeck 提取音频 — 从视频文件提取音频为 7 种格式（MP3、WAV、AAC、OGG、FLAC、M4A、Opus），支持比特率/采样率/声道控制、时间范围裁剪、淡入淡出、多文件批量与 ZIP 下载。完全在浏览器中通过 FFmpeg.wasm 运行;无上传、无注册、无安装。属于 PrivaDeck 隐私优先工具集 https://privadeck.app。",
+        "keywords": "提取音频, 视频转音频, 视频转 MP3, 音频提取器, 从视频提取 MP3, 提取 FLAC, 提取 Opus, 批量提取音频, 时间范围裁剪",
         "format": "输出格式",
         "extract": "提取音频",
         "extracting": "提取中",
         "unsupported": "此工具需要 SharedArrayBuffer 支持。请使用支持 HTTPS 的现代浏览器。",
-        "faq": {
-          "q1": "可以从哪些视频格式提取音频？",
-          "a1": "支持大多数视频格式，包括 MP4、WebM、MOV 和 AVI。",
-          "q2": "可以导出为哪些音频格式？",
-          "a2": "可以导出为 MP3、WAV 或 AAC 格式。",
-          "q3": "我的文件会上传到服务器吗？",
-          "a3": "不会。所有处理完全在您的浏览器中完成，您的数据绝不离开设备，不会上传到任何服务器。",
-          "q4": "这个工具能离线使用吗？",
-          "a4": "可以。页面加载完成后，工具完全可以离线运行。为获得最佳体验，建议从浏览器将 PrivaDeck 安装为 PWA 应用。",
-          "q5": "文件大小有限制吗？",
-          "a5": "没有服务器端限制。最大文件大小取决于您设备的可用内存和浏览器能力。大多数现代设备可以处理数百 MB 的文件。"
+        "clear": "清空",
+        "quality": {
+          "label": "品质预设",
+          "low": "低（128k · 22 kHz）",
+          "standard": "标准（192k）",
+          "high": "高（320k）",
+          "lossless": "无损（FLAC）"
         },
-        "seoContent": {
-          "intro": {
-            "title": "什么是提取音频工具？",
-            "content": "<p><strong>提取音频</strong>从视频文件中剔除音频轨道，并将其保存为 MP3、WAV 或 AAC。从音乐视频、访谈或录制的讲座中提取音频——采用 FFmpeg.wasm 快速提取。</p>"
+        "advanced": {
+          "label": "高级设置",
+          "summaryLossless": "无损"
+        },
+        "bitrate": {
+          "label": "比特率",
+          "disabled": "无损格式 — 无需设置比特率。"
+        },
+        "sampleRate": {
+          "label": "采样率",
+          "keep": "保持原值"
+        },
+        "channels": {
+          "label": "声道",
+          "keep": "保持原值",
+          "mono": "单声道",
+          "stereo": "立体声"
+        },
+        "batch": {
+          "fileCount": "已选择 {count} 个文件",
+          "allDone": "{total} 个文件中已完成 {done} 个",
+          "downloadAllZip": "全部下载（ZIP）",
+          "status": {
+            "pending": "等待中"
           },
-          "useCases": {
-            "title": "常见用途",
-            "content": "<ul><li><strong>音乐提取</strong>：从音乐视频中提取音频</li><li><strong>播客准备</strong>：从视频采访或录制中提取音频</li><li><strong>转录</strong>：提取音频进行语音转文本处理</li><li><strong>音效设计</strong>：从视频片段中提取音效或环境音</li><li><strong>离线听音</strong>：将视频内容转为离线听音用的音频</li></ul>"
-          },
-          "privacy": {
-            "title": "隐私优先的音频提取",
-            "content": "<p>音频提取全部在浏览器本地使用 <strong>FFmpeg.wasm</strong> 进行。</p><ul><li>您的视频<strong>永远不会离开您的设备</strong></li><li>无服务器处理或上传</li><li>加载 FFmpeg 核心后可<strong>离线</strong>工作</li></ul>"
-          }
+          "zipping": "打包中…"
+        },
+        "start": "开始",
+        "end": "结束",
+        "duration": "时长",
+        "precise": {
+          "start": "起点（分:秒.毫秒）",
+          "end": "终点（分:秒.毫秒）",
+          "invalid": "时间格式无效，请使用 mm:ss.ms（例如 1:23.456）。",
+          "hint": "输入精确时间，按回车或点击其他位置即可应用。"
+        },
+        "playSelection": "播放选区",
+        "pauseSelection": "暂停",
+        "fade": {
+          "enable": "添加淡入 / 淡出",
+          "in": "淡入",
+          "out": "淡出",
+          "warning": "淡入淡出会在提取时应用,需要重新编码音频。",
+          "batchOutWarning": "批量模式下,淡出仅在每个视频时长可解码时生效。"
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Files",
-            "title": "MP3、WAV、AAC 输出",
-            "description": "选择最适合您工作流的音频格式。MP3 通用播放、WAV 用于编辑、AAC 适配 Apple 设备和现代浏览器。"
+            "title": "7 种输出格式",
+            "description": "MP3、WAV、AAC、OGG、FLAC、M4A、Opus 任选,适配从通用播放到无损编辑等各种工作流。"
           },
           "f2": {
             "icon": "FileVideo",
@@ -281,15 +308,49 @@
             "description": "FFmpeg.wasm 在浏览器内执行提取，速度仅受设备性能限制，无需排队等候云端任务。"
           },
           "f5": {
-            "icon": "CircleCheck",
-            "title": "原始音质完整保留",
-            "description": "源编码与输出格式匹配时，音频直接复制无需重编码。零代际损失，与源轨完全一致。"
+            "icon": "SlidersHorizontal",
+            "title": "比特率 / 采样率 / 声道精细控制",
+            "description": "有损格式 64–320 kbps、采样率 8–48 kHz、单/立体声任选;不想纠结就用 4 档质量预设,一键导出。"
           },
           "f6": {
-            "icon": "Hash",
-            "title": "元数据自动迁移",
-            "description": "曲名、艺术家标签和容器元数据在目标格式支持时自动保留，无需额外清理。"
+            "icon": "Scissors",
+            "title": "时间范围 + 淡入淡出",
+            "description": "只提取视频中的某一段,并加上平滑的淡入淡出 — Clideo / Kapwing 才有的体验,我们完全离线就能做到。"
           }
+        },
+        "faq": {
+          "q1": "支持哪些视频格式提取音频?",
+          "a1": "支持 MP4、WebM、MOV、MKV、AVI 等绝大多数主流视频格式 — 浏览器中的 FFmpeg 能读取的容器都可以。",
+          "q2": "可以导出为哪些音频格式?",
+          "a2": "MP3、WAV、AAC、OGG、FLAC、M4A 和 Opus。有损格式的比特率、采样率、声道(单声道/立体声)均可配置。",
+          "q3": "我的文件会上传到服务器吗?",
+          "a3": "不会。所有处理完全在浏览器内完成,文件数据不离开您的设备 — 全程零上传。",
+          "q4": "可以离线使用这个工具吗?",
+          "a4": "可以。页面加载完成后,工具即可完全离线工作。建议把 PrivaDeck 安装为 PWA 获得最佳体验。",
+          "q5": "有文件大小限制吗?",
+          "a5": "没有服务器限制。最大文件大小取决于您设备的可用内存与浏览器,大多数现代设备可处理数百 MB 而无压力。",
+          "q6": "几个质量预设分别代表什么?",
+          "a6": "低 ≈ 128 kbps / 22 kHz(体积小,适合人声);标准 ≈ 192 kbps(均衡);高 = 320 kbps(有损最高品质);无损切换为 FLAC 并跳过比特率。",
+          "q7": "能裁剪视频的某一段或一次处理多个文件吗?",
+          "a7": "可以。上传单个视频后开启「裁剪时间范围」即可只提取某段;一次拖入多个视频可批量提取并打包 ZIP 下载。"
+        },
+        "seoContent": {
+          "intro": {
+            "title": "什么是提取音频工具？",
+            "content": "<p><strong>提取音频</strong>从任意视频中抽取音轨,可保存为 MP3、WAV、AAC、OGG、FLAC、M4A 或 Opus 共 7 种格式,并可精细控制比特率、采样率与声道。</p><p>可选「时间范围裁剪」「淡入淡出」,或一次拖入多个视频批量处理并打包 ZIP 下载。由 FFmpeg.wasm 驱动 — 完全在浏览器中运行,无需上传,无需安装。</p>"
+          },
+          "useCases": {
+            "title": "常见用途",
+            "content": "<ul><li><strong>音乐提取</strong>：从音乐视频中提取音频</li><li><strong>播客准备</strong>：从视频采访或录制中提取音频</li><li><strong>转录</strong>：提取音频进行语音转文本处理</li><li><strong>音效设计</strong>：从视频片段中提取音效或环境音</li><li><strong>离线听音</strong>：将视频内容转为离线听音用的音频</li></ul>"
+          },
+          "privacy": {
+            "title": "隐私优先的音频提取",
+            "content": "<p>音频提取全部在浏览器本地使用 <strong>FFmpeg.wasm</strong> 进行。</p><ul><li>您的视频<strong>永远不会离开您的设备</strong></li><li>无服务器处理或上传</li><li>加载 FFmpeg 核心后可<strong>离线</strong>工作</li></ul>"
+          }
+        },
+        "timeRange": {
+          "enable": "裁剪时间范围",
+          "batchHidden": "时间范围仅在单视频模式可用。请上传单个视频以启用此功能。"
         }
       },
       "volume": {

@@ -60,8 +60,25 @@ export function getExtension(format: AudioFormat): string {
   return FORMAT_META[format].ext;
 }
 
+export function getCodec(format: AudioFormat): string {
+  return FORMAT_META[format].codec;
+}
+
+/** Some formats need an explicit muxer because the extension alone is ambiguous
+ *  (e.g. m4a → ipod, aac → adts). Returns undefined when no override is needed. */
+export function getMuxer(format: AudioFormat): string | undefined {
+  return FORMAT_META[format].muxer;
+}
+
 export function getBitrateOptions(format: AudioFormat): readonly number[] {
   return format === "opus" ? OPUS_BITRATES : STANDARD_BITRATES;
+}
+
+/** libopus rejects > 256 kbps, other codecs cap at 320. Centralised so the
+ *  same clamp applies whether convertAudio or extractAudio is the caller. */
+export function clampBitrate(format: AudioFormat, bitrate: number): number {
+  const cap = format === "opus" ? 256 : 320;
+  return Math.max(8, Math.min(cap, bitrate));
 }
 
 function buildArgs(

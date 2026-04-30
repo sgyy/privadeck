@@ -223,47 +223,74 @@
       },
       "extract": {
         "name": "오디오 추출",
-        "description": "동영상 파일에서 오디오 트랙을 추출합니다.",
-        "metaTitle": "동영상에서 오디오 추출 - 무료 온라인 오디오 추출 도구",
-        "metaDescription": "동영상에서 MP3, WAV, AAC로 오디오 추출. 무료 온라인 도구.",
-        "aiSummary": "동영상에서 MP3, WAV, AAC로 오디오 추출. 무료 온라인 도구.",
-        "keywords": "오디오 추출, 동영상에서 오디오, 동영상에서 mp3 추출",
+        "description": "동영상 파일에서 오디오 추출 — 7 가지 포맷, 시간 범위 자르기, 배치 처리. 100% 로컬 처리.",
+        "metaTitle": "동영상에서 오디오 추출 - MP3 / FLAC / Opus 7 포맷 | PrivaDeck",
+        "metaDescription": "MP4, WebM, MOV 등의 동영상에서 오디오를 MP3, WAV, AAC, OGG, FLAC, M4A, Opus 로 추출. 시간 범위 자르기, 페이드 인/아웃, 배치 처리 지원. 모두 브라우저 내에서 처리되며 업로드 없음.",
+        "aiSummary": "PrivaDeck 오디오 추출기 — 동영상에서 오디오를 7 가지 포맷(MP3, WAV, AAC, OGG, FLAC, M4A, Opus)으로 추출합니다. 비트레이트/샘플레이트/채널 제어, 시간 범위 자르기, 페이드 인/아웃, 다중 파일 배치 처리 및 ZIP 다운로드를 지원. FFmpeg.wasm 으로 브라우저 내 완결, 업로드/가입/설치 불필요. 프라이버시 우선 도구 모음 PrivaDeck https://privadeck.app 의 일부.",
+        "keywords": "오디오 추출, 동영상 오디오 추출, 비디오 to MP3, 오디오 추출기, FLAC 추출, Opus 추출, 배치 오디오 추출, 시간 범위 자르기",
         "format": "출력 형식",
         "extract": "오디오 추출",
         "extracting": "추출 중",
         "unsupported": "이 도구는 SharedArrayBuffer 지원이 필요합니다. HTTPS를 지원하는 최신 브라우저를 사용하세요.",
-        "faq": {
-          "q1": "어떤 동영상 형식에서 오디오를 추출할 수 있나요?",
-          "a1": "MP4, WebM, MOV, AVI 등 대부분의 동영상 형식을 지원합니다.",
-          "q2": "어떤 오디오 형식으로 내보낼 수 있나요?",
-          "a2": "MP3, WAV, AAC 형식으로 내보낼 수 있습니다.",
-          "q3": "파일이 서버에 업로드되나요?",
-          "a3": "아니요. 모든 처리는 브라우저 내에서 완전히 이루어집니다. 데이터가 기기를 떠나지 않으며 어떤 서버에도 업로드되지 않습니다.",
-          "q4": "오프라인에서도 사용할 수 있나요?",
-          "a4": "네. 페이지가 로드되면 도구는 완전히 오프라인에서 작동합니다. 최상의 경험을 위해 브라우저에서 PrivaDeck을 PWA로 설치하세요.",
-          "q5": "파일 크기 제한이 있나요?",
-          "a5": "서버에서 부과하는 제한은 없습니다. 최대 파일 크기는 기기의 사용 가능한 메모리와 브라우저 기능에 따라 다릅니다. 대부분의 현대 기기는 문제없이 수백 MB까지의 파일을 처리합니다."
+        "clear": "지우기",
+        "quality": {
+          "label": "품질 프리셋",
+          "low": "낮음(128k · 22 kHz)",
+          "standard": "표준(192k)",
+          "high": "고음질(320k)",
+          "lossless": "무손실(FLAC)"
         },
-        "seoContent": {
-          "intro": {
-            "title": "오디오 추출이란?",
-            "content": "<p><strong>오디오 추출</strong>은 동영상 파일에서 오디오 트랙을 추출합니다. 동영상의 배경음악, 대화, 또는 효과음을 오디오 파일로 저장하세요.</p><p>MP3, WAV, OGG, AAC, FLAC 출력 형식을 지원합니다.</p>"
+        "advanced": {
+          "label": "고급 설정",
+          "summaryLossless": "무손실"
+        },
+        "bitrate": {
+          "label": "비트레이트",
+          "disabled": "무손실 포맷 — 비트레이트는 적용되지 않습니다."
+        },
+        "sampleRate": {
+          "label": "샘플링 레이트",
+          "keep": "원본 유지"
+        },
+        "channels": {
+          "label": "채널",
+          "keep": "원본 유지",
+          "mono": "모노",
+          "stereo": "스테레오"
+        },
+        "batch": {
+          "fileCount": "{count}개 파일 선택됨",
+          "allDone": "{total}개 중 {done}개 변환 완료",
+          "downloadAllZip": "모두 다운로드(ZIP)",
+          "status": {
+            "pending": "대기 중"
           },
-          "useCases": {
-            "title": "주요 활용 사례",
-            "content": "<ul><li><strong>음악 추출</strong>: 뮤직 비디오에서 오디오 추출</li><li><strong>팟캐스트 준비</strong>: 동영상 인터뷰 또는 녹화에서 오디오 추출</li><li><strong>트랜스크립션</strong>: 음성-텍스트 처리를 위한 오디오 추출</li><li><strong>사운드 디자인</strong>: 동영상 클립에서 음향 효과 또는 주변음 추출</li><li><strong>오디오 전용 청취</strong>: 오프라인 청취를 위해 동영상 콘텐츠를 오디오로 변환</li></ul>"
-          },
-          "privacy": {
-            "title": "프라이버시 우선 오디오 추출",
-            "content": "<p>오디오 추출은 <strong>FFmpeg.wasm</strong>을 사용하여 <strong>브라우저에서 완전히</strong> 실행됩니다.</p><ul><li>동영상이 <strong>기기를 떠나지 않습니다</strong></li><li>서버 처리나 업로드 없음</li><li>FFmpeg 코어 로드 후 <strong>오프라인</strong>에서도 작동</li></ul>"
-          }
+          "zipping": "패키징 중…"
+        },
+        "start": "시작",
+        "end": "끝",
+        "duration": "길이",
+        "precise": {
+          "start": "시작 (mm:ss.ms)",
+          "end": "종료 (mm:ss.ms)",
+          "invalid": "시간 형식이 잘못되었습니다. mm:ss.ms 형식을 사용하세요(예: 1:23.456).",
+          "hint": "정확한 시간을 입력한 후 Enter 키를 누르거나 다른 곳을 클릭하면 적용됩니다."
+        },
+        "playSelection": "선택 영역 재생",
+        "pauseSelection": "일시정지",
+        "fade": {
+          "enable": "페이드 인 / 페이드 아웃 추가",
+          "in": "페이드 인",
+          "out": "페이드 아웃",
+          "warning": "페이드는 추출 시 적용되며 오디오 재인코딩이 필요합니다.",
+          "batchOutWarning": "배치 모드에서 페이드 아웃은 각 동영상의 길이를 디코딩 시점에 알 수 있을 때만 적용됩니다."
         },
         "featureCards": {
           "count": "6",
           "f1": {
             "icon": "Files",
-            "title": "MP3, WAV, AAC 출력",
-            "description": "워크플로에 맞는 오디오 포맷 선택. MP3는 보편 재생, WAV는 편집용, AAC는 Apple 기기와 모던 브라우저용."
+            "title": "7 가지 출력 포맷",
+            "description": "MP3, WAV, AAC, OGG, FLAC, M4A, Opus 중 선택. 범용 재생부터 무손실 편집까지 작업 흐름에 맞게 고를 수 있습니다."
           },
           "f2": {
             "icon": "FileVideo",
@@ -281,15 +308,49 @@
             "description": "FFmpeg.wasm 이 브라우저에서 추출을 실행. 속도는 기기 성능에 의존하며 클라우드 대기열 대기 시간 없음."
           },
           "f5": {
-            "icon": "CircleCheck",
-            "title": "원본 오디오 품질 보존",
-            "description": "소스 코덱이 출력 포맷과 일치하면 재인코딩 없이 복사. 세대 손실 제로, 원본 트랙과 비트 단위로 동일."
+            "icon": "SlidersHorizontal",
+            "title": "비트레이트 / 샘플레이트 / 채널 세밀 제어",
+            "description": "손실 포맷은 64–320 kbps, 샘플레이트 8–48 kHz, 모노/스테레오 선택 가능. 고민 없이 4 단계 품질 프리셋으로 바로 내보내기."
           },
           "f6": {
-            "icon": "Hash",
-            "title": "메타데이터 자동 전달",
-            "description": "트랙 제목, 아티스트 태그, 컨테이너 메타데이터가 대상 포맷에서 지원되면 자동 유지. 추가 정리 단계 불필요."
+            "icon": "Scissors",
+            "title": "시간 범위 + 페이드 인/아웃",
+            "description": "동영상의 특정 구간만 추출하고 부드러운 페이드 인/아웃을 적용 — Clideo 와 Kapwing 의 핵심 경험을 완전 오프라인으로 구현."
           }
+        },
+        "faq": {
+          "q1": "어떤 동영상 포맷에서 오디오를 추출할 수 있나요?",
+          "a1": "MP4, WebM, MOV, MKV, AVI 등 대부분의 주요 동영상 포맷을 지원합니다. 브라우저 내 FFmpeg 가 읽을 수 있는 컨테이너는 모두 처리 가능합니다.",
+          "q2": "어떤 오디오 포맷으로 내보낼 수 있나요?",
+          "a2": "MP3, WAV, AAC, OGG, FLAC, M4A, Opus. 손실 포맷은 비트레이트, 샘플레이트, 채널(모노/스테레오)을 설정할 수 있습니다.",
+          "q3": "파일이 서버에 업로드되나요?",
+          "a3": "아니요. 모든 처리는 브라우저에서 완결됩니다. 파일 데이터는 기기를 벗어나지 않으며 업로드되지 않습니다.",
+          "q4": "오프라인에서 사용할 수 있나요?",
+          "a4": "네. 페이지가 로드된 후에는 완전히 오프라인에서 작동합니다. 최상의 경험을 위해 PrivaDeck 을 PWA 로 설치하세요.",
+          "q5": "파일 크기 제한이 있나요?",
+          "a5": "서버 측 제한은 없습니다. 최대 크기는 기기의 가용 메모리와 브라우저에 따라 달라지며, 최신 기기는 수백 MB 정도는 문제없이 처리합니다.",
+          "q6": "품질 프리셋은 무엇을 의미하나요?",
+          "a6": "낮음 ≈ 128 kbps / 22 kHz(소용량, 음성 친화). 표준 ≈ 192 kbps(균형). 높음 = 320 kbps(손실 최고 품질). 무손실은 FLAC 로 전환되며 비트레이트는 무시됩니다.",
+          "q7": "동영상의 일부만 추출하거나 여러 파일을 한 번에 처리할 수 있나요?",
+          "a7": "네. 단일 동영상을 로드한 후 「시간 범위 자르기」를 활성화하면 지정 구간만 추출할 수 있습니다. 여러 동영상을 동시에 드롭하면 공통 설정으로 일괄 추출하고 ZIP 으로 다운로드할 수 있습니다."
+        },
+        "seoContent": {
+          "intro": {
+            "title": "오디오 추출이란?",
+            "content": "<p><strong>오디오 추출</strong>은 모든 동영상에서 오디오 트랙을 추출하여 MP3, WAV, AAC, OGG, FLAC, M4A, Opus 등 7 가지 포맷 중 선택해 저장할 수 있습니다. 비트레이트, 샘플레이트, 채널을 세밀하게 제어할 수 있습니다.</p><p>필요에 따라 시간 범위 자르기, 페이드 인/아웃, 여러 동영상의 배치 처리(ZIP 다운로드)도 가능합니다. FFmpeg.wasm 으로 동작 — 브라우저 내 완결, 업로드 및 설치 불필요.</p>"
+          },
+          "useCases": {
+            "title": "주요 활용 사례",
+            "content": "<ul><li><strong>음악 추출</strong>: 뮤직 비디오에서 오디오 추출</li><li><strong>팟캐스트 준비</strong>: 동영상 인터뷰 또는 녹화에서 오디오 추출</li><li><strong>트랜스크립션</strong>: 음성-텍스트 처리를 위한 오디오 추출</li><li><strong>사운드 디자인</strong>: 동영상 클립에서 음향 효과 또는 주변음 추출</li><li><strong>오디오 전용 청취</strong>: 오프라인 청취를 위해 동영상 콘텐츠를 오디오로 변환</li></ul>"
+          },
+          "privacy": {
+            "title": "프라이버시 우선 오디오 추출",
+            "content": "<p>오디오 추출은 <strong>FFmpeg.wasm</strong>을 사용하여 <strong>브라우저에서 완전히</strong> 실행됩니다.</p><ul><li>동영상이 <strong>기기를 떠나지 않습니다</strong></li><li>서버 처리나 업로드 없음</li><li>FFmpeg 코어 로드 후 <strong>오프라인</strong>에서도 작동</li></ul>"
+          }
+        },
+        "timeRange": {
+          "enable": "시간 범위 자르기",
+          "batchHidden": "시간 범위는 단일 동영상 모드에서만 사용 가능합니다. 단일 동영상을 업로드하여 활성화하세요."
         }
       },
       "volume": {
