@@ -29,6 +29,10 @@ const definition: ToolDefinition = {
       questionKey: "tools.developer.timestamp.faq.q5",
       answerKey: "tools.developer.timestamp.faq.a5",
     },
+    {
+      questionKey: "tools.developer.timestamp.faq.q6",
+      answerKey: "tools.developer.timestamp.faq.a6",
+    },
   ],
   relatedSlugs: ["hash-generator", "base64", "url-encoder"],
 };
