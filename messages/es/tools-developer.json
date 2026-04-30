@@ -786,6 +786,39 @@
         "jwtValid": "Válido",
         "invalidJwt": "JWT no válido",
         "jwtNoTimestamps": "Este JWT no contiene claims iat, nbf ni exp.",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "Conversión bidireccional marca de tiempo ↔ fecha",
+            "description": "Convierte al instante en ambos sentidos. Escribe una marca de tiempo Unix para ver la fecha, o elige una fecha para obtener la marca — misma entrada, salida emparejada, sin viajes de ida y vuelta."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Segundos, milisegundos, microsegundos y nanosegundos",
+            "description": "Compatibilidad nativa con las cuatro precisiones, con detección automática según la magnitud. Muestra cualquier marca en s, ms, µs y ns en paralelo; cualquier unidad se copia con un clic."
+          },
+          "f3": {
+            "icon": "Settings2",
+            "title": "Cobertura completa de zonas horarias IANA",
+            "description": "Búsqueda entre más de 400 zonas IANA con desfase UTC en tiempo real. Detección de zona local y formato consciente del horario de verano (DST) para trabajo preciso entre regiones."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Conversión por lotes con exportación CSV",
+            "description": "Pega hasta 5.000 líneas mezclando marcas de tiempo y fechas, cada fila se detecta automáticamente y se descarga un CSV limpio con la entrada original y todos los formatos de salida."
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "Fragmentos de código listos para usar",
+            "description": "Genera fragmentos de conversión listos para pegar en Python, JavaScript, Go, Bash y SQL — mantén integraciones de API y consultas a base de datos coherentes entre stacks."
+          },
+          "f6": {
+            "icon": "KeyRound",
+            "title": "Decodificador JWT iat / nbf / exp",
+            "description": "Pega cualquier JWT para decodificar el payload localmente y visualizar Issued At, Not Before y Expires con insignias de estado (Valid / Expired / Not Yet Valid). Solo se decodifica el payload — la firma nunca se lee ni se valida."
+          }
+        },
         "faq": {
           "q1": "¿Qué es una marca de tiempo Unix?",
           "a1": "Es el número de segundos transcurridos desde el 1 de enero de 1970 a las 00:00:00 UTC (la época Unix).",

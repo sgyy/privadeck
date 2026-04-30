@@ -786,6 +786,39 @@
         "jwtValid": "Válido",
         "invalidJwt": "JWT inválido",
         "jwtNoTimestamps": "Este JWT não contém claims iat, nbf ou exp.",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "Conversão bidirecional timestamp ↔ data",
+            "description": "Conversão instantânea nos dois sentidos. Digite um timestamp Unix para ver a data, ou escolha uma data para obter o timestamp — mesma entrada, saída pareada, sem idas e voltas."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Segundos, milissegundos, microssegundos e nanossegundos",
+            "description": "Suporte nativo a todas as quatro precisões, com detecção automática pela magnitude. Veja qualquer timestamp em s, ms, µs e ns lado a lado e copie qualquer unidade com um clique."
+          },
+          "f3": {
+            "icon": "Settings2",
+            "title": "Cobertura completa de fusos IANA",
+            "description": "Pesquise em mais de 400 fusos IANA com offset UTC em tempo real. Inclui detecção do fuso local e formatação ciente do horário de verão (DST) para trabalho preciso entre regiões."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Conversão em lote com exportação CSV",
+            "description": "Cole até 5.000 linhas misturando timestamps e datas, cada linha é detectada automaticamente e baixe um CSV limpo com a entrada original e todos os formatos de saída."
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "Trechos de código prontos para colar",
+            "description": "Gera trechos de conversão prontos para colar em Python, JavaScript, Go, Bash e SQL — mantendo integrações de API e consultas de banco consistentes entre stacks."
+          },
+          "f6": {
+            "icon": "KeyRound",
+            "title": "Decodificador JWT iat / nbf / exp",
+            "description": "Cole qualquer JWT para decodificar o payload localmente e visualizar Issued At, Not Before e Expires com selos de status (Valid / Expired / Not Yet Valid). Apenas o payload é decodificado — a assinatura nunca é lida nem validada."
+          }
+        },
         "faq": {
           "q1": "O que é um timestamp Unix?",
           "a1": "É o número de segundos decorridos desde 1º de janeiro de 1970 às 00:00:00 UTC (a época Unix).",

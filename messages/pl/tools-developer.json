@@ -786,6 +786,39 @@
         "jwtValid": "Ważny",
         "invalidJwt": "Nieprawidłowy JWT",
         "jwtNoTimestamps": "Ten JWT nie zawiera claimów iat, nbf ani exp.",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "Dwukierunkowa konwersja timestamp ↔ data",
+            "description": "Błyskawiczna konwersja w obie strony. Wpisz timestamp Unix, aby zobaczyć datę, albo wybierz datę, aby uzyskać timestamp — jedno wejście, sparowane wyjście, bez krążenia."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Sekundy, milisekundy, mikrosekundy i nanosekundy",
+            "description": "Natywna obsługa wszystkich czterech precyzji z automatycznym wykrywaniem na podstawie rzędu wielkości. Każdy timestamp pokazany jednocześnie w s, ms, µs i ns; dowolną jednostkę kopiujesz jednym kliknięciem."
+          },
+          "f3": {
+            "icon": "Settings2",
+            "title": "Pełne pokrycie stref czasowych IANA",
+            "description": "Wyszukiwanie wśród ponad 400 stref IANA z aktualnym przesunięciem UTC. Automatyczne wykrywanie strefy lokalnej i formatowanie świadome czasu letniego (DST) dla precyzyjnej pracy między regionami."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Konwersja wsadowa z eksportem CSV",
+            "description": "Wklej do 5 000 wierszy mieszających timestampy i daty, każdy wiersz rozpoznawany automatycznie, a następnie pobierz czysty plik CSV zawierający oryginalne wejście i wszystkie formaty wyjściowe."
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "Gotowe do wklejenia fragmenty kodu",
+            "description": "Generuje gotowe do wklejenia fragmenty konwersji dla Pythona, JavaScriptu, Go, Basha i SQL — utrzymuje spójność integracji API i zapytań do baz danych w różnych stosach technologicznych."
+          },
+          "f6": {
+            "icon": "KeyRound",
+            "title": "Dekoder JWT iat / nbf / exp",
+            "description": "Wklej dowolny JWT, aby zdekodować payload lokalnie i zobaczyć Issued At, Not Before i Expires z odznakami statusu (Valid / Expired / Not Yet Valid). Dekodowany jest tylko payload — podpis nie jest odczytywany ani weryfikowany."
+          }
+        },
         "faq": {
           "q1": "Czym jest timestamp Unix?",
           "a1": "To liczba sekund od 1 stycznia 1970 o 00:00:00 UTC (epoki Uniksa).",

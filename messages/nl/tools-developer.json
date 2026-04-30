@@ -786,6 +786,39 @@
         "jwtValid": "Geldig",
         "invalidJwt": "Ongeldig JWT",
         "jwtNoTimestamps": "Dit JWT bevat geen iat-, nbf- of exp-claims.",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "Bidirectioneel: tijdstempel ↔ datum",
+            "description": "Direct in beide richtingen converteren. Typ een Unix-tijdstempel om de datum te zien of kies een datum om de tijdstempel te krijgen — dezelfde invoer, gekoppelde uitvoer, geen heen-en-weer."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Seconden, milliseconden, microseconden, nanoseconden",
+            "description": "Native ondersteuning voor alle vier precisies met automatische detectie op basis van de grootteorde. Toon elke tijdstempel naast elkaar in s, ms, µs en ns en kopieer elke eenheid met één klik."
+          },
+          "f3": {
+            "icon": "Settings2",
+            "title": "Volledige IANA-tijdzonedekking",
+            "description": "Zoek door meer dan 400 IANA-zones met live UTC-offset. Inclusief detectie van de lokale zone en zomertijd­bewuste (DST) opmaak voor nauwkeurig werk over regio's heen."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Batchconversie met CSV-export",
+            "description": "Plak tot 5.000 regels met gemengde tijdstempels en datums, elke rij wordt automatisch herkend en je downloadt een nette CSV met de originele invoer en alle uitvoerformaten."
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "Kant-en-klare codefragmenten",
+            "description": "Genereert plak-klare conversiefragmenten voor Python, JavaScript, Go, Bash en SQL — houd API-integraties en databasequery's consistent over je stacks heen."
+          },
+          "f6": {
+            "icon": "KeyRound",
+            "title": "JWT iat / nbf / exp-decoder",
+            "description": "Plak een JWT om de payload lokaal te decoderen en Issued At, Not Before en Expires met statusbadges (Valid / Expired / Not Yet Valid) te visualiseren. Alleen de payload wordt gedecodeerd — de handtekening wordt nooit gelezen of gevalideerd."
+          }
+        },
         "faq": {
           "q1": "Wat is een Unix-tijdstempel?",
           "a1": "Het aantal seconden sinds 1 januari 1970 om 00:00:00 UTC (de Unix-epoch).",

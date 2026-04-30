@@ -786,6 +786,39 @@
         "jwtValid": "Valid",
         "invalidJwt": "JWT tidak valid",
         "jwtNoTimestamps": "JWT ini tidak memiliki klaim iat, nbf, atau exp.",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "Konversi dua arah timestamp ↔ tanggal",
+            "description": "Konversi instan dua arah. Ketik timestamp Unix untuk melihat tanggal, atau pilih tanggal untuk mendapatkan timestamp — satu input, output berpasangan, tanpa bolak-balik."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Detik, milidetik, mikrodetik, dan nanodetik",
+            "description": "Dukungan native untuk keempat presisi dengan deteksi otomatis berdasarkan besaran nilai. Tampilkan timestamp apa pun dalam s, ms, µs, dan ns berdampingan; salin satuan apa pun dengan satu klik."
+          },
+          "f3": {
+            "icon": "Settings2",
+            "title": "Cakupan zona waktu IANA lengkap",
+            "description": "Cari di lebih dari 400 zona IANA dengan tampilan offset UTC langsung. Dilengkapi deteksi zona lokal dan format yang sadar Daylight Saving Time (DST) untuk pekerjaan lintas wilayah yang akurat."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Konversi batch dengan ekspor CSV",
+            "description": "Tempel hingga 5.000 baris campuran timestamp dan tanggal, setiap baris terdeteksi otomatis, lalu unduh CSV rapi yang berisi input asli dan semua format output."
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "Cuplikan kode siap pakai",
+            "description": "Menghasilkan cuplikan konversi siap tempel untuk Python, JavaScript, Go, Bash, dan SQL — menjaga integrasi API dan kueri basis data tetap konsisten di berbagai stack."
+          },
+          "f6": {
+            "icon": "KeyRound",
+            "title": "Decoder JWT iat / nbf / exp",
+            "description": "Tempel JWT apa pun untuk mendekode payload secara lokal dan memvisualisasikan Issued At, Not Before, serta Expires dengan badge status (Valid / Expired / Not Yet Valid). Hanya payload yang didekode — tanda tangan tidak pernah dibaca maupun divalidasi."
+          }
+        },
         "faq": {
           "q1": "Apa itu timestamp Unix?",
           "a1": "Jumlah detik sejak 1 Januari 1970 00:00:00 UTC (epoch Unix).",

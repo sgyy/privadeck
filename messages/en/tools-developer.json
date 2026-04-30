@@ -786,6 +786,39 @@
         "jwtValid": "Valid",
         "invalidJwt": "Invalid JWT",
         "jwtNoTimestamps": "This JWT contains no iat, nbf, or exp claims.",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "Bidirectional Timestamp ↔ Date",
+            "description": "Convert in both directions instantly. Type a Unix timestamp to see the date, or pick a date to get the timestamp — same input, paired output, zero round-trips."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Seconds, Milliseconds, Microseconds, Nanoseconds",
+            "description": "Native support for all four precisions with Auto-detect by magnitude. View any timestamp in s, ms, µs, and ns side by side and copy any unit with one click."
+          },
+          "f3": {
+            "icon": "Settings2",
+            "title": "Full IANA Time Zone Coverage",
+            "description": "Search across 400+ IANA zones with live UTC offset display. Includes Local zone detection and DST-aware formatting for accurate cross-region work."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Batch Convert with CSV Export",
+            "description": "Paste up to 5,000 lines of mixed timestamps and dates, auto-detect each row, and download a clean CSV with original input plus all output formats."
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "Copy-Ready Code Snippets",
+            "description": "Generate ready-to-paste conversion snippets for Python, JavaScript, Go, Bash, and SQL — keep API integrations and database queries consistent across stacks."
+          },
+          "f6": {
+            "icon": "KeyRound",
+            "title": "JWT iat / nbf / exp Decoder",
+            "description": "Paste any JWT to decode the payload locally and visualize Issued At, Not Before, and Expires claims with status badges (Valid / Expired / Not Yet Valid). Only the payload is decoded — signatures are never read or validated."
+          }
+        },
         "faq": {
           "q1": "What is a Unix timestamp?",
           "a1": "A Unix timestamp is the number of seconds that have elapsed since January 1, 1970 00:00:00 UTC (the Unix epoch).",

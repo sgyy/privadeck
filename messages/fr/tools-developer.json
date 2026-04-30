@@ -786,6 +786,39 @@
         "jwtValid": "Valide",
         "invalidJwt": "JWT invalide",
         "jwtNoTimestamps": "Ce JWT ne contient pas de claims iat, nbf ou exp.",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "Conversion bidirectionnelle horodatage ↔ date",
+            "description": "Conversion instantanée dans les deux sens. Saisissez un horodatage Unix pour voir la date, ou choisissez une date pour obtenir l'horodatage — même entrée, sortie appariée, sans aller-retours."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Secondes, millisecondes, microsecondes, nanosecondes",
+            "description": "Prise en charge native des quatre précisions avec détection automatique selon l'ordre de grandeur. Affiche tout horodatage en s, ms, µs et ns côte à côte ; chaque unité est copiable en un clic."
+          },
+          "f3": {
+            "icon": "Settings2",
+            "title": "Couverture complète des fuseaux IANA",
+            "description": "Recherche parmi plus de 400 fuseaux IANA avec affichage en direct du décalage UTC. Détection automatique du fuseau local et formatage tenant compte de l'heure d'été (DST) pour un travail multi-régions précis."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Conversion par lots avec export CSV",
+            "description": "Collez jusqu'à 5 000 lignes mêlant horodatages et dates, chaque ligne est détectée automatiquement, puis téléchargez un CSV propre avec l'entrée originale et tous les formats de sortie."
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "Extraits de code prêts à coller",
+            "description": "Génère des extraits de conversion prêts à l'emploi pour Python, JavaScript, Go, Bash et SQL — pour des intégrations d'API et des requêtes SQL cohérentes entre vos stacks."
+          },
+          "f6": {
+            "icon": "KeyRound",
+            "title": "Décodeur JWT iat / nbf / exp",
+            "description": "Collez un JWT pour décoder localement le payload et visualiser Issued At, Not Before et Expires avec badges (Valid / Expired / Not Yet Valid). Seul le payload est décodé — la signature n'est jamais lue ni validée."
+          }
+        },
         "faq": {
           "q1": "Qu'est-ce qu'un horodatage Unix ?",
           "a1": "Un horodatage Unix est le nombre de secondes écoulées depuis le 1ᵉʳ janvier 1970 à 00:00:00 UTC (l'époque Unix).",

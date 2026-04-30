@@ -786,6 +786,39 @@
         "jwtValid": "有效",
         "invalidJwt": "无效的 JWT",
         "jwtNoTimestamps": "此 JWT 不包含 iat、nbf 或 exp 字段。",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "时间戳 ↔ 日期 双向转换",
+            "description": "双向即时转换。输入 Unix 时间戳查看日期,或选择日期获取时间戳——同一输入,双向输出,无需多次往返。"
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "秒、毫秒、微秒、纳秒全精度",
+            "description": "原生支持四种精度,并按数值大小自动识别单位。任意时间戳同时显示 s / ms / µs / ns,一键复制任一单位。"
+          },
+          "f3": {
+            "icon": "Settings2",
+            "title": "完整 IANA 时区覆盖",
+            "description": "在 400+ IANA 时区中搜索,实时显示 UTC 偏移量。包含本地时区识别与夏令时(DST)感知格式化,适用于跨地区精确协作。"
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "批量转换 + CSV 导出",
+            "description": "一次粘贴最多 5,000 行混合时间戳与日期,逐行自动识别,导出包含原始输入与全部输出格式的整洁 CSV。"
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "即用代码片段",
+            "description": "自动生成可直接粘贴的 Python、JavaScript、Go、Bash 与 SQL 转换代码,跨技术栈保持 API 集成与数据库查询的一致写法。"
+          },
+          "f6": {
+            "icon": "KeyRound",
+            "title": "JWT iat / nbf / exp 解码",
+            "description": "粘贴任意 JWT,本地解码 payload 并以状态徽章(Valid / Expired / Not Yet Valid)展示 Issued At、Not Before、Expires。仅解码 payload,不读取也不验证签名。"
+          }
+        },
         "faq": {
           "q1": "什么是 Unix 时间戳?",
           "a1": "Unix 时间戳是从 1970 年 1 月 1 日 00:00:00 UTC(Unix 纪元)以来经过的秒数。",

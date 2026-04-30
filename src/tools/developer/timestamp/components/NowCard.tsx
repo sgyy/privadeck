@@ -1,10 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Clock } from "lucide-react";
+import { Check, Clock, Copy } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { CopyButton } from "@/components/shared/CopyButton";
 
 export function NowCard({ onUseNow }: { onUseNow: (ms: number) => void }) {
   const t = useTranslations("tools.developer.timestamp");
@@ -17,44 +16,94 @@ export function NowCard({ onUseNow }: { onUseNow: (ms: number) => void }) {
     return () => window.clearInterval(id);
   }, []);
 
-  const safeMs = ms ?? 0;
-  const seconds = ms != null ? Math.floor(safeMs / 1000) : 0;
-  const iso = ms != null ? new Date(safeMs).toISOString() : "";
+  const seconds = ms != null ? String(Math.floor(ms / 1000)) : "—";
+  const msStr = ms != null ? String(ms) : "—";
+  const iso = ms != null ? new Date(ms).toISOString() : "—";
 
   return (
     <div className="rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 via-emerald-500/5 to-transparent p-4 sm:p-5">
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <div className="flex items-start gap-3">
-          <div className="rounded-lg bg-primary/10 p-2 text-primary">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <div className="flex min-w-0 items-center gap-3">
+          <div className="shrink-0 rounded-lg bg-primary/10 p-2 text-primary">
             <Clock className="h-5 w-5" aria-hidden="true" />
           </div>
-          <div>
+          <div className="min-w-0">
             <div className="text-sm font-semibold">{t("nowCardTitle")}</div>
             <div className="text-xs text-muted-foreground">{t("nowCardSubtitle")}</div>
           </div>
         </div>
-        <Button size="sm" variant="outline" onClick={() => ms != null && onUseNow(ms)} disabled={ms == null}>
+        <Button
+          size="sm"
+          variant="outline"
+          onClick={() => ms != null && onUseNow(ms)}
+          disabled={ms == null}
+        >
           {t("useThisTimestamp")}
         </Button>
       </div>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-3">
-        <NowField label={t("tsSeconds")} value={ms != null ? String(seconds) : "—"} />
-        <NowField label={t("tsMilliseconds")} value={ms != null ? String(safeMs) : "—"} />
-        <NowField label={t("isoFormat")} value={iso || "—"} />
+      <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 font-mono text-xs">
+        <InlineValue label="s" value={seconds} disabled={ms == null} />
+        <InlineValue label="ms" value={msStr} disabled={ms == null} />
+        <InlineValue label="ISO" value={iso} disabled={ms == null} truncate />
       </div>
     </div>
   );
 }
 
-function NowField({ label, value }: { label: string; value: string }) {
+function InlineValue({
+  label,
+  value,
+  truncate,
+  disabled,
+}: {
+  label: string;
+  value: string;
+  truncate?: boolean;
+  disabled?: boolean;
+}) {
   return (
-    <div className="flex items-center justify-between gap-2 rounded-lg border border-border bg-background/60 px-3 py-2">
-      <div className="min-w-0 flex-1">
-        <div className="text-[10px] uppercase tracking-wide text-muted-foreground">{label}</div>
-        <div className="truncate font-mono text-sm">{value}</div>
-      </div>
-      <CopyButton text={value} className="shrink-0" />
-    </div>
+    <span className={truncate ? "flex min-w-0 max-w-full items-center gap-1.5" : "flex items-center gap-1.5"}>
+      <span className="text-[10px] uppercase tracking-wide text-muted-foreground">{label}</span>
+      <span className={truncate ? "min-w-0 truncate" : ""} title={value}>
+        {value}
+      </span>
+      <InlineCopy text={value} disabled={disabled} />
+    </span>
+  );
+}
+
+function InlineCopy({ text, disabled }: { text: string; disabled?: boolean }) {
+  const tc = useTranslations("common");
+  const [copied, setCopied] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+  }, []);
+
+  const handleCopy = useCallback(async () => {
+    if (disabled) return;
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      if (timerRef.current) clearTimeout(timerRef.current);
+      timerRef.current = setTimeout(() => setCopied(false), 1500);
+    } catch {
+      /* ignore */
+    }
+  }, [text, disabled]);
+
+  return (
+    <button
+      type="button"
+      onClick={handleCopy}
+      disabled={disabled}
+      title={tc(copied ? "copied" : "copy")}
+      aria-label={tc(copied ? "copied" : "copy")}
+      className="shrink-0 rounded p-0.5 text-muted-foreground transition-colors hover:bg-muted/60 hover:text-foreground disabled:opacity-40 disabled:hover:bg-transparent"
+    >
+      {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+    </button>
   );
 }

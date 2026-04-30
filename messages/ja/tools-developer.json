@@ -786,6 +786,39 @@
         "jwtValid": "有効",
         "invalidJwt": "無効な JWT",
         "jwtNoTimestamps": "この JWT には iat、nbf、exp が含まれていません。",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "タイムスタンプ ↔ 日時 の双方向変換",
+            "description": "両方向への即時変換。Unix タイムスタンプを入力すれば日時を、日時を選べばタイムスタンプを表示。同じ入力で対の出力が一度に得られます。"
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "秒・ミリ秒・マイクロ秒・ナノ秒に対応",
+            "description": "4 つの精度をネイティブに扱い、桁数からの自動判定にも対応。任意のタイムスタンプを s / ms / µs / ns で並列表示し、各単位をワンクリックでコピーできます。"
+          },
+          "f3": {
+            "icon": "Settings2",
+            "title": "完全な IANA タイムゾーン対応",
+            "description": "400 以上の IANA タイムゾーンを検索でき、UTC オフセットをリアルタイムに表示。ローカルタイムゾーンの自動検出と DST(夏時間)対応の整形で、地域をまたぐ業務にも正確に対応します。"
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "一括変換と CSV エクスポート",
+            "description": "最大 5,000 行までタイムスタンプと日付を混在させて貼り付けでき、行ごとに自動判定。元の入力と全出力フォーマットを含むクリーンな CSV をダウンロードできます。"
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "そのまま使えるコードスニペット",
+            "description": "Python・JavaScript・Go・Bash・SQL 用の貼り付け可能な変換コードを自動生成。複数のスタックにまたがる API 連携や DB クエリの記述を統一できます。"
+          },
+          "f6": {
+            "icon": "KeyRound",
+            "title": "JWT iat / nbf / exp デコーダ",
+            "description": "任意の JWT を貼り付けるとペイロードをローカルでデコードし、Issued At / Not Before / Expires をステータスバッジ(Valid / Expired / Not Yet Valid)付きで可視化。デコードするのはペイロードのみで、署名は読み取りも検証もしません。"
+          }
+        },
         "faq": {
           "q1": "Unix タイムスタンプとは?",
           "a1": "Unix タイムスタンプは 1970 年 1 月 1 日 00:00:00 UTC(Unix エポック)からの経過秒数です。",

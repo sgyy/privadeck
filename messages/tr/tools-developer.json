@@ -786,6 +786,39 @@
         "jwtValid": "Geçerli",
         "invalidJwt": "Geçersiz JWT",
         "jwtNoTimestamps": "Bu JWT iat, nbf veya exp talepleri içermiyor.",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "Çift yönlü zaman damgası ↔ tarih",
+            "description": "İki yönlü anlık dönüştürme. Bir Unix zaman damgası girin tarihi görün veya bir tarih seçin zaman damgasını alın — aynı giriş, eşleşmiş çıkış, gereksiz gidiş geliş yok."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Saniye, milisaniye, mikrosaniye ve nanosaniye",
+            "description": "Dört hassasiyetin tümü için yerel destek ve büyüklüğe göre otomatik birim algılama. Herhangi bir zaman damgasını s, ms, µs ve ns olarak yan yana görün; istediğiniz birimi tek tıkla kopyalayın."
+          },
+          "f3": {
+            "icon": "Settings2",
+            "title": "Tam IANA saat dilimi kapsamı",
+            "description": "400'den fazla IANA bölgesinde arama, anlık UTC ofset gösterimi. Yerel saat dilimi algılama ve yaz saati uygulamasına (DST) duyarlı biçimlendirme ile bölgeler arası işlerde tutarlılık."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Toplu dönüştürme ve CSV dışa aktarımı",
+            "description": "Karışık zaman damgası ve tarih içeren en fazla 5.000 satırı yapıştırın, her satır otomatik algılansın ve orijinal girişi ve tüm çıkış biçimlerini içeren temiz bir CSV indirin."
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "Yapıştırmaya hazır kod parçacıkları",
+            "description": "Python, JavaScript, Go, Bash ve SQL için hazır dönüştürme kod parçacıkları üretir — API entegrasyonlarını ve veritabanı sorgularını farklı yığınlar arasında tutarlı tutar."
+          },
+          "f6": {
+            "icon": "KeyRound",
+            "title": "JWT iat / nbf / exp çözücü",
+            "description": "Herhangi bir JWT'yi yapıştırın, payload yerelde çözülsün ve Issued At, Not Before ve Expires durum rozetleriyle (Valid / Expired / Not Yet Valid) görselleşsin. Yalnızca payload çözülür — imza okunmaz ve doğrulanmaz."
+          }
+        },
         "faq": {
           "q1": "Unix zaman damgası nedir?",
           "a1": "1 Ocak 1970 00:00:00 UTC'den (Unix dönemi) bu yana geçen saniye sayısıdır.",

@@ -1,9 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import { Check, Copy } from "lucide-react";
 import { Select } from "@/components/ui/Select";
-import { CopyButton } from "@/components/shared/CopyButton";
 import { PresetButtons } from "../components/PresetButtons";
 import { formatTimestamp, parseTimestamp, type FormatOutput, type TimestampUnit } from "../logic";
 
@@ -212,35 +212,79 @@ export function SingleTab({
 }
 
 function OutputTable({ output }: { output: FormatOutput }) {
-  const t = useTranslations("tools.developer.timestamp");
-  const rows: { labelKey: string; value: string }[] = [
+  const primary: { labelKey: string; value: string }[] = [
     { labelKey: "tsSeconds", value: output.ts.s },
     { labelKey: "tsMilliseconds", value: output.ts.ms },
+    { labelKey: "localFormat", value: output.local },
+    { labelKey: "utcFormat", value: output.utc },
+    { labelKey: "isoFormat", value: output.iso },
+    { labelKey: "relativeFormat", value: output.relative },
+  ];
+  const detail: { labelKey: string; value: string }[] = [
     { labelKey: "tsMicroseconds", value: output.ts.us },
     { labelKey: "tsNanoseconds", value: output.ts.ns },
-    { labelKey: "utcFormat", value: output.utc },
-    { labelKey: "localFormat", value: output.local },
-    { labelKey: "isoFormat", value: output.iso },
     { labelKey: "formatRfc2822", value: output.rfc2822 },
     { labelKey: "formatDateTime", value: output.dateTime },
     { labelKey: "formatDayOfYear", value: String(output.dayOfYear) },
     { labelKey: "formatIsoWeek", value: String(output.isoWeek) },
-    { labelKey: "relativeFormat", value: output.relative },
   ];
 
   return (
+    <div className="grid gap-4 lg:grid-cols-2">
+      <OutputColumn rows={primary} />
+      <OutputColumn rows={detail} />
+    </div>
+  );
+}
+
+function OutputColumn({ rows }: { rows: { labelKey: string; value: string }[] }) {
+  const t = useTranslations("tools.developer.timestamp");
+  return (
     <div className="divide-y divide-border rounded-lg border border-border bg-muted/30">
       {rows.map((r) => (
-        <div key={r.labelKey} className="flex items-center justify-between gap-3 px-4 py-2.5">
-          <div className="min-w-0 flex-1">
-            <div className="text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
-              {t(r.labelKey)}
-            </div>
-            <div className="break-all font-mono text-sm">{r.value}</div>
+        <div key={r.labelKey} className="flex items-center gap-3 px-3 py-1.5">
+          <div className="w-24 shrink-0 text-[11px] font-medium uppercase tracking-wide text-muted-foreground">
+            {t(r.labelKey)}
           </div>
-          <CopyButton text={r.value} className="shrink-0" />
+          <div className="min-w-0 flex-1 truncate font-mono text-sm" title={r.value}>
+            {r.value}
+          </div>
+          <RowCopy text={r.value} />
         </div>
       ))}
     </div>
+  );
+}
+
+function RowCopy({ text }: { text: string }) {
+  const tc = useTranslations("common");
+  const [copied, setCopied] = useState(false);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => () => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+  }, []);
+
+  const handleCopy = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      if (timerRef.current) clearTimeout(timerRef.current);
+      timerRef.current = setTimeout(() => setCopied(false), 1500);
+    } catch {
+      /* ignore */
+    }
+  }, [text]);
+
+  return (
+    <button
+      type="button"
+      onClick={handleCopy}
+      title={tc(copied ? "copied" : "copy")}
+      aria-label={tc(copied ? "copied" : "copy")}
+      className="shrink-0 rounded p-1 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+    >
+      {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
+    </button>
   );
 }

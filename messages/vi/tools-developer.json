@@ -786,6 +786,39 @@
         "jwtValid": "Còn hiệu lực",
         "invalidJwt": "JWT không hợp lệ",
         "jwtNoTimestamps": "JWT này không có claim iat, nbf hoặc exp.",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "Chuyển đổi hai chiều dấu thời gian ↔ ngày",
+            "description": "Chuyển đổi tức thì cả hai chiều. Nhập dấu thời gian Unix để xem ngày, hoặc chọn một ngày để lấy dấu thời gian — cùng đầu vào, đầu ra ghép cặp, không phải đi qua lại."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Giây, mili-giây, micro-giây và nano-giây",
+            "description": "Hỗ trợ gốc cả bốn độ chính xác với tự động phát hiện theo bậc độ lớn. Hiển thị mọi dấu thời gian theo s, ms, µs và ns cạnh nhau; sao chép bất kỳ đơn vị nào chỉ với một cú nhấp."
+          },
+          "f3": {
+            "icon": "Settings2",
+            "title": "Bao phủ đầy đủ múi giờ IANA",
+            "description": "Tìm trong hơn 400 múi giờ IANA với hiển thị offset UTC trực tiếp. Bao gồm phát hiện múi giờ cục bộ và định dạng nhận biết DST (giờ mùa hè) để làm việc xuyên khu vực chính xác."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Chuyển đổi hàng loạt và xuất CSV",
+            "description": "Dán tới 5.000 dòng dấu thời gian và ngày tháng trộn lẫn, từng dòng tự động nhận diện, rồi tải về tệp CSV gọn gàng chứa đầu vào gốc và tất cả định dạng đầu ra."
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "Đoạn mã sẵn sàng dùng",
+            "description": "Tạo các đoạn mã chuyển đổi sẵn để dán cho Python, JavaScript, Go, Bash và SQL — giữ cho việc tích hợp API và truy vấn cơ sở dữ liệu nhất quán giữa các stack."
+          },
+          "f6": {
+            "icon": "KeyRound",
+            "title": "Bộ giải mã JWT iat / nbf / exp",
+            "description": "Dán bất kỳ JWT nào để giải mã payload cục bộ và trực quan hóa Issued At, Not Before và Expires bằng huy hiệu trạng thái (Valid / Expired / Not Yet Valid). Chỉ payload được giải mã — chữ ký không bao giờ được đọc hay xác thực."
+          }
+        },
         "faq": {
           "q1": "Unix timestamp là gì?",
           "a1": "Là số giây đã trôi qua kể từ 00:00:00 UTC ngày 1 tháng 1 năm 1970 (epoch Unix).",

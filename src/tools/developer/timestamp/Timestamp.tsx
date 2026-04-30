@@ -26,12 +26,15 @@ export default function Timestamp() {
 
   return (
     <div className="space-y-5">
-      <NowCard onUseNow={(ms) => { setMainMs(ms); setActive("single"); }} />
-
-      <TimezoneSelector value={tz} onChange={setTz} />
+      <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(280px,360px)]">
+        <NowCard onUseNow={(ms) => { setMainMs(ms); setActive("single"); }} />
+        <div className="rounded-xl border border-border bg-muted/30 p-4 sm:p-5">
+          <TimezoneSelector value={tz} onChange={setTz} />
+        </div>
+      </div>
 
       <Tabs value={active} onValueChange={setActive}>
-        <TabsList aria-label="Timestamp tools">
+        <TabsList aria-label={t("name")}>
           <TabsTrigger value="single">{t("tabSingle")}</TabsTrigger>
           <TabsTrigger value="batch">{t("tabBatch")}</TabsTrigger>
           <TabsTrigger value="code">{t("tabCode")}</TabsTrigger>

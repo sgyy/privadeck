@@ -786,6 +786,39 @@
         "jwtValid": "Gültig",
         "invalidJwt": "Ungültiges JWT",
         "jwtNoTimestamps": "Dieses JWT enthält keine iat-, nbf- oder exp-Claims.",
+        "featureCards": {
+          "count": "6",
+          "f1": {
+            "icon": "ArrowLeftRight",
+            "title": "Bidirektional: Zeitstempel ↔ Datum",
+            "description": "Sofort in beide Richtungen umrechnen. Geben Sie einen Unix-Zeitstempel ein, um das Datum zu sehen, oder wählen Sie ein Datum, um den Zeitstempel zu erhalten — eine Eingabe, gepaarte Ausgabe, ohne Umweg."
+          },
+          "f2": {
+            "icon": "Hash",
+            "title": "Sekunden, Millisekunden, Mikrosekunden, Nanosekunden",
+            "description": "Native Unterstützung aller vier Präzisionen mit automatischer Erkennung anhand der Größenordnung. Jeder Zeitstempel wird gleichzeitig in s, ms, µs und ns angezeigt — jede Einheit per Klick kopierbar."
+          },
+          "f3": {
+            "icon": "Settings2",
+            "title": "Vollständige IANA-Zeitzonenabdeckung",
+            "description": "Suche über mehr als 400 IANA-Zonen mit Live-UTC-Offset. Inklusive lokaler Zonen­erkennung und sommerzeit­bewusster (DST) Formatierung für präzise Arbeit über Regionen hinweg."
+          },
+          "f4": {
+            "icon": "Files",
+            "title": "Stapelverarbeitung mit CSV-Export",
+            "description": "Bis zu 5.000 Zeilen mit gemischten Zeitstempeln und Daten einfügen, jede Zeile automatisch erkennen und eine saubere CSV mit Originaleingabe und allen Ausgabeformaten herunterladen."
+          },
+          "f5": {
+            "icon": "Braces",
+            "title": "Code-Snippets zum direkten Einfügen",
+            "description": "Erzeugt einfügefertige Konvertierungs­snippets für Python, JavaScript, Go, Bash und SQL — für konsistente API-Integration und Datenbank­abfragen über Stacks hinweg."
+          },
+          "f6": {
+            "icon": "KeyRound",
+            "title": "JWT iat / nbf / exp-Decoder",
+            "description": "Beliebiges JWT einfügen, um den Payload lokal zu decodieren und Issued At, Not Before und Expires mit Status-Badges (Valid / Expired / Not Yet Valid) anzuzeigen. Nur der Payload wird decodiert — die Signatur wird weder gelesen noch validiert."
+          }
+        },
         "faq": {
           "q1": "Was ist ein Unix-Timestamp?",
           "a1": "Ein Unix-Timestamp ist die Anzahl der Sekunden seit dem 1. Januar 1970 00:00:00 UTC (Unix-Epoche).",
