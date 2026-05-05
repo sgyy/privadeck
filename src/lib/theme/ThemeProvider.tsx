@@ -51,10 +51,12 @@ export function ThemeProvider({
 
   const resolvedTheme = theme === "system" ? systemTheme : (theme as "light" | "dark");
 
-  // Hydrate from localStorage + system preference on mount, and apply immediately
+  // Hydrate from localStorage + system preference on mount, and apply immediately.
+  // setState is required here: SSR has no window, so lazy useState init would mismatch hydration.
   useEffect(() => {
     const stored = getStoredTheme(defaultTheme);
     const sys = getSystemTheme();
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setThemeState(stored);
     setSystemTheme(sys);
     applyTheme(stored);

@@ -270,6 +270,7 @@ export default function PdfToImage() {
               <div key={page.pageNumber} className="group relative overflow-hidden rounded-lg border border-border bg-card">
                 <button type="button" onClick={() => setPreviewIndex(i)} className="block w-full cursor-zoom-in">
                   <div style={{ aspectRatio: `${page.width}/${page.height}` }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={getUrl(page.blob)}
                       alt={page.filename}

@@ -203,6 +203,7 @@ function FileInfoBar({
   return (
     <div className="flex items-center gap-3 rounded-lg border border-border bg-card px-3 py-2">
       {thumbnailUrl ? (
+        // eslint-disable-next-line @next/next/no-img-element
         <img
           src={thumbnailUrl}
           alt={file.name}

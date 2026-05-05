@@ -106,6 +106,7 @@ export default function ImageWatermark() {
         <>
           {(resultUrl || previewUrl) && (
             <div className="overflow-hidden rounded-lg border border-border">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={resultUrl || previewUrl}
                 alt="Preview"

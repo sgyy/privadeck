@@ -23,16 +23,18 @@ export function VideoPreviewPlayer({ src, transform, className }: VideoPreviewPl
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [muted, setMuted] = useState(false);
-  const [seeking, setSeeking] = useState(false);
+  const [, setSeeking] = useState(false);
+  const [prevSrc, setPrevSrc] = useState(src);
 
-  // Reset state when src changes
-  useEffect(() => {
+  // Reset state when src changes (adjusting state during render — official React pattern).
+  if (prevSrc !== src) {
+    setPrevSrc(src);
     setDuration(0);
     setCurrentTime(0);
     setPlaying(false);
     setMuted(false);
     setSeeking(false);
-  }, [src]);
+  }
 
   // Sync muted state
   useEffect(() => {

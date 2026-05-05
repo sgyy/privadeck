@@ -114,6 +114,7 @@ export function SingleImageUpload({
         onClick={() => { if (preview?.url && !preview.error) setLightboxOpen(true); }}
       >
         {preview?.url && !preview.error ? (
+          // eslint-disable-next-line @next/next/no-img-element
           <img
             src={preview.url}
             alt={file.name}

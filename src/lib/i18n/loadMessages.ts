@@ -32,7 +32,8 @@ const enToolCategoryCache: Record<string, AnyObj> = {};
 
 async function getEnCommon(): Promise<AnyObj> {
   if (!enCommonCache) {
-    const { toolNames: _, ...rest } = (
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { toolNames, ...rest } = (
       await import(`../../../messages/en/common.json`)
     ).default;
     enCommonCache = rest;
@@ -56,7 +57,8 @@ async function getEnToolCategory(category: string): Promise<AnyObj> {
  * Falls back to English for any missing keys.
  */
 export async function loadCommonMessages(locale: string) {
-  const { toolNames: _, ...rest } = (
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { toolNames, ...rest } = (
     await import(`../../../messages/${locale}/common.json`)
   ).default;
   if (locale === "en") return rest;

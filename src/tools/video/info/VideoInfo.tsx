@@ -183,6 +183,7 @@ export default function VideoInfo() {
                   <div className="grid grid-cols-5 gap-2">
                     {thumbnails.map((thumb) => (
                       <div key={thumb.time} className="space-y-1">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={thumb.dataUrl}
                           alt={`${formatTimestamp(thumb.time)}`}

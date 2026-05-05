@@ -33,9 +33,10 @@ export function ImageFileGrid({
 
   // Cleanup all preview URLs on unmount
   useEffect(() => {
+    const map = previewMapRef.current;
     return () => {
-      previewMapRef.current.forEach((url) => URL.revokeObjectURL(url));
-      previewMapRef.current.clear();
+      map.forEach((url) => URL.revokeObjectURL(url));
+      map.clear();
     };
   }, []);
 
@@ -114,6 +115,7 @@ export function ImageFileGrid({
           >
             <div className="aspect-square">
               {previews[i] && (
+                // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={previews[i]}
                   alt={file.name}

@@ -77,6 +77,7 @@ export function CompareSlider({
         aria-label={t("compareSlider")}
       >
         {/* After image (full width, behind) */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={afterSrc}
           alt={afterLabel || t("compareAfter")}
@@ -92,6 +93,7 @@ export function CompareSlider({
           className="absolute inset-0"
           style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
         >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={beforeSrc}
             alt={beforeLabel || t("compareBefore")}

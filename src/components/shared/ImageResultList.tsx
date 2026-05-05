@@ -90,6 +90,7 @@ export function ImageResultList({ results, onRemove }: ImageResultListProps) {
               onClick={() => setPreviewIndex(i)}
               className="block w-full cursor-zoom-in"
             >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={getUrl(item.blob)}
                 alt={item.filename}

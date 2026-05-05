@@ -257,6 +257,7 @@ export default function VideoToWebp() {
             <div className="space-y-3">
               <div className="overflow-hidden rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm">
                 <div className="bg-black/5 p-2 dark:bg-black/20">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={resultUrl}
                     alt="WebP preview"

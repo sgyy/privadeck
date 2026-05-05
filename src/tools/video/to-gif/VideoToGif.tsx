@@ -207,6 +207,7 @@ export default function VideoToGif() {
             <div className="space-y-3">
               <div className="overflow-hidden rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm">
                 <div className="bg-black/5 p-2 dark:bg-black/20">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={resultUrl} alt="GIF preview" className="mx-auto max-h-[400px] rounded" />
                 </div>
               </div>

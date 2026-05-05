@@ -54,6 +54,7 @@ export default function Ocr() {
 
       {previewUrl && (
         <div className="overflow-hidden rounded-lg border border-border">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={previewUrl} alt="Upload preview" className="max-h-[300px] w-full object-contain" />
         </div>
       )}
