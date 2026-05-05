@@ -1,117 +1,89 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useMemo } from "react";
-import { Shield } from "lucide-react";
+import { Shield, Zap, Globe } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { categories } from "@/lib/registry/categories";
-import type { ToolCategory } from "@/lib/registry/types";
-import type { ToolNavItem } from "@/lib/i18n/toolNavData";
-import { getToolsByCategory } from "@/lib/utils/tools-by-category";
 
-const MAX_TOOLS = 3;
-
-interface FooterProps {
-  toolNavData: ToolNavItem[];
-}
-
-function CategoryLinks({ category, tools }: { category: ToolCategory; tools: ToolNavItem[] }) {
-  const tcat = useTranslations("categories");
-  const displayTools = tools.slice(0, MAX_TOOLS);
-
-  return (
-    <div>
-      <h4 className="text-sm font-semibold text-foreground mb-1.5">
-        <Link href={`/tools/${category}`} className="hover:text-primary transition-colors">
-          {tcat(`${category}.name`)}
-        </Link>
-      </h4>
-      <ul className="space-y-0.5">
-        {displayTools.map((tool) => (
-          <li key={tool.slug}>
-            <Link
-              href={`/tools/${category}/${tool.slug}`}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {tool.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-export function Footer({ toolNavData }: FooterProps) {
+export function Footer() {
   const t = useTranslations("common");
   const tf = useTranslations("footer");
+  const th = useTranslations("home");
 
-  const toolsByCategory = useMemo(() => getToolsByCategory(toolNavData), [toolNavData]);
+  const aboutLinks = [
+    { href: "/about", label: tf("aboutUs") },
+    { href: "/how-it-works", label: tf("howItWorks") },
+    { href: "/privacy", label: tf("privacy") },
+    { href: "/terms", label: tf("terms") },
+  ];
 
   return (
-    <footer className="border-t border-border bg-muted/30">
-      <div className="mx-auto max-w-7xl px-4 py-6 lg:px-6">
-        {/* Top row: brand + 6 categories in a compact grid */}
-        <div className="flex flex-col lg:flex-row gap-6">
-          {/* Brand */}
-          <div className="lg:w-56 shrink-0">
-            <Link href="/" className="flex items-center gap-2 text-lg font-bold text-foreground">
-              <Shield className="h-5 w-5 text-primary" />
-              {t("siteName")}
-            </Link>
-            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-              {tf("tagline")}
-            </p>
-            <div className="mt-3 flex items-center gap-1.5 text-xs text-muted-foreground">
-              <Shield className="h-3.5 w-3.5 shrink-0" />
-              <span>{t("privacy")}</span>
-            </div>
-          </div>
+    <footer className="relative border-t border-border bg-muted/30">
+      <div className="absolute inset-0 dot-pattern opacity-30 dark:opacity-15 pointer-events-none" />
+      <div
+        className="absolute inset-x-0 top-0 h-px opacity-40"
+        style={{ background: "var(--gradient-primary)" }}
+      />
 
-          {/* 6 categories in a 3x2 grid (desktop) / 2x3 (tablet) / stacked (mobile) */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4 flex-1">
-            {categories.map((cat) => (
-              <CategoryLinks key={cat.key} category={cat.key} tools={toolsByCategory.get(cat.key) || []} />
-            ))}
-          </div>
+      <div className="relative mx-auto max-w-5xl px-4 py-10 lg:px-6">
+        {/* Brand */}
+        <Link
+          href="/"
+          className="flex items-center justify-center gap-2 text-2xl font-bold"
+        >
+          <Shield className="h-6 w-6 text-primary" />
+          <span className="text-gradient">{t("siteName")}</span>
+        </Link>
 
-          {/* About links + language */}
-          <div className="lg:w-28 shrink-0">
-            <h4 className="text-sm font-semibold text-foreground mb-1.5">
-              {tf("about")}
-            </h4>
-            <ul className="space-y-0.5">
-              <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {tf("aboutUs")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/how-it-works" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {tf("howItWorks")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {tf("privacy")}
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  {tf("terms")}
-                </Link>
-              </li>
-            </ul>
-          </div>
+        {/* Tagline */}
+        <p className="mt-3 text-center text-sm text-muted-foreground max-w-xl mx-auto leading-relaxed">
+          {tf("tagline")}
+        </p>
+
+        {/* Trust badges */}
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
+          <TrustBadge icon={<Shield className="h-4 w-4" />} label={th("featurePrivate")} />
+          <TrustBadge icon={<Zap className="h-4 w-4" />} label={th("featureInstant")} />
+          <TrustBadge icon={<Globe className="h-4 w-4" />} label={th("featureNoUpload")} />
         </div>
 
+        {/* About links */}
+        <nav className="mt-8 flex flex-wrap items-center justify-center gap-x-1 gap-y-2 text-sm">
+          {aboutLinks.map((link, i) => (
+            <span key={link.href} className="flex items-center gap-x-1">
+              <Link
+                href={link.href}
+                className="px-2 py-1 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+              >
+                {link.label}
+              </Link>
+              {i < aboutLinks.length - 1 && (
+                <span aria-hidden className="text-border select-none">
+                  &middot;
+                </span>
+              )}
+            </span>
+          ))}
+        </nav>
+
         {/* Bottom bar */}
-        <div className="mt-6 border-t border-border/50 pt-4">
-          <p className="text-center text-xs text-muted-foreground" suppressHydrationWarning>
+        <div className="mt-8 border-t border-border/50 pt-5">
+          <p
+            className="text-center text-xs text-muted-foreground"
+            suppressHydrationWarning
+          >
             &copy; {new Date().getFullYear()} {t("siteName")}. {tf("allRightsReserved")}
           </p>
         </div>
       </div>
     </footer>
+  );
+}
+
+function TrustBadge({ icon, label }: { icon: React.ReactNode; label: string }) {
+  return (
+    <div className="flex items-center gap-1.5 rounded-full border border-border/50 bg-card/60 backdrop-blur-sm px-3 py-1.5 text-xs text-muted-foreground hover:border-primary/40 hover:text-foreground hover:shadow-[var(--glow-primary)] transition-all duration-300">
+      <span className="text-primary">{icon}</span>
+      {label}
+    </div>
   );
 }

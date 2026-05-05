@@ -47,7 +47,7 @@ export function MainLayout({ children, toolNavData }: MainLayoutProps) {
           </div>
         </main>
 
-        <Footer toolNavData={toolNavData} />
+        <Footer />
         <MobileNav open={mobileNavOpen} onClose={closeMobileNav} toolNavData={toolNavData} />
         <SearchDialog open={searchOpen} onClose={closeSearch} toolNavData={toolNavData} />
       </div>
