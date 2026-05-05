@@ -8,7 +8,7 @@ import type { ToolCategory } from "@/lib/registry/types";
 import { loadCommonMessages, loadCategoryMessages } from "@/lib/i18n/loadMessages";
 import { ToolPageClient } from "./ToolPageClient";
 import { getTranslations } from "next-intl/server";
-import { generateToolJsonLd, generateFaqJsonLd, generateBreadcrumbJsonLd, SITE_URL } from "@/lib/seo/jsonld";
+import { generateToolJsonLd, generateFaqJsonLd, generateBreadcrumbJsonLd, generateAboutArticleJsonLd, stripHtml, SITE_URL } from "@/lib/seo/jsonld";
 
 export function generateStaticParams() {
   const slugs = getAllSlugs();
@@ -71,8 +71,37 @@ export default async function ToolPage({
   const tt = await getTranslations({ locale, namespace: `tools.${category}.${slug}` });
   const tn = await getTranslations({ locale, namespace: "nav" });
   const tc = await getTranslations({ locale, namespace: "categories" });
+  const tCommon = await getTranslations({ locale, namespace: "common" });
 
-  const toolJsonLd = generateToolJsonLd(tool, locale, tt("name"), tt("description"));
+  // Aggregate feature card titles (used as featureList in SoftwareApplication schema)
+  const featureList: string[] = [];
+  if (tt.has("featureCards.count")) {
+    const count = Number(tt.raw("featureCards.count"));
+    for (let i = 1; i <= count; i++) {
+      if (tt.has(`featureCards.f${i}.title`)) {
+        featureList.push(tt(`featureCards.f${i}.title`));
+      }
+    }
+  }
+
+  const keywords = tt.has("keywords") ? tt("keywords") : undefined;
+  const aiSummary = tt.has("aiSummary") ? tt("aiSummary") : undefined;
+
+  const toolJsonLd = generateToolJsonLd(tool, locale, tt("name"), tt("description"), {
+    featureList,
+    keywords,
+    longDescription: aiSummary,
+  });
+
+  // Aggregate about-section content for Article schema (helps SEO + AI crawlers)
+  const aboutContentParts = (["intro", "useCases", "privacy"] as const)
+    .filter((s) => tt.has(`seoContent.${s}.content`))
+    .map((s) => tt.raw(`seoContent.${s}.content`) as string);
+  const articleBody = aboutContentParts.length > 0 ? stripHtml(aboutContentParts.join(" ")) : "";
+  const aboutTitle = tCommon.has("aboutThisTool") ? tCommon("aboutThisTool") : "About This Tool";
+  const aboutArticleJsonLd = articleBody
+    ? generateAboutArticleJsonLd(tool, locale, tt("name"), aboutTitle, articleBody)
+    : null;
 
   const breadcrumbJsonLd = generateBreadcrumbJsonLd([
     { name: tn("home"), url: `${SITE_URL}/${locale}/` },
@@ -108,6 +137,12 @@ export default async function ToolPage({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
+      {aboutArticleJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutArticleJsonLd) }}
         />
       )}
       {needsFFmpeg && (
