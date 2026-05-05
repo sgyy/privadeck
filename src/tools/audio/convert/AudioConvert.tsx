@@ -47,6 +47,7 @@ const LOSSY_PRESETS: Record<Exclude<QualityPreset, "lossless">, { bitrate: numbe
 export default function AudioConvert() {
   const isClient = useIsClient();
   const t = useTranslations("tools.audio.convert");
+  const tc = useTranslations("common");
 
   const [queue, setQueue] = useState<QueueItem[]>([]);
   const [format, setFormat] = useState<AudioFormat>("mp3");
@@ -212,7 +213,7 @@ export default function AudioConvert() {
   if (!isSharedArrayBufferSupported()) {
     return (
       <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
-        <p className="text-sm text-muted-foreground">{t("unsupported")}</p>
+        <p className="text-sm text-muted-foreground">{tc("unsupported")}</p>
       </div>
     );
   }

@@ -18,12 +18,12 @@ const definition: ToolDefinition = {
     },
   
     {
-      questionKey: "tools.developer.ocr.faq.q3",
-      answerKey: "tools.developer.ocr.faq.a3",
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
     },
     {
-      questionKey: "tools.developer.ocr.faq.q4",
-      answerKey: "tools.developer.ocr.faq.a4",
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
     },
     {
       questionKey: "tools.developer.ocr.faq.q5",

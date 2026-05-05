@@ -74,7 +74,6 @@
         "addFilesHint": "PDF veya resimler",
         "dragHandle": "Yeniden sıralamak için sürükleyin",
         "dragHint": "Kartları sürükleyerek yeniden sıralayın",
-        "previewFullscreen": "Önizleme",
         "selectAllPages": "Tümünü seç",
         "deselectAllPages": "Seçimi kaldır",
         "closeDetail": "Kapat",
@@ -83,10 +82,6 @@
           "a1": "PDF'leri (isteğe bağlı olarak görüntüleri de) yükleyin, sıralayın, gerekirse belirli sayfaları seçip döndürün ve Birleştir'e tıklayın. Tüm işlem tarayıcınızda gerçekleşir — dosyalar asla yüklenmez.",
           "q2": "Dosya boyutu sınırı var mı?",
           "a2": "Sıkı bir sınır yok, ancak işlem tarayıcıda yapıldığı için çok büyük dosyalar yavaş olabilir.",
-          "q3": "Dosyalarım sunucuya yüklenecek mi?",
-          "a3": "Hayır. Tüm işlem tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla çıkmaz — hiçbir şey herhangi bir sunucuya gönderilmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak kurun.",
           "q5": "Dosya sayısında sınır var mı?",
           "a5": "Sunucu tarafında sınır yok. Maksimum sayı ve boyut cihazınızın bellek miktarına bağlıdır. Modern cihazların çoğu yüzlerce MB boyutunda onlarca dosyayı sorunsuz işler.",
           "q6": "Görüntü ve PDF'leri birlikte birleştirebilir miyim?",
@@ -151,7 +146,6 @@
             "description": "PDF'ler tarayıcınızda pdf-lib ve pdfjs-dist ile tamamen analiz edilir ve bölünür. Gizli raporlar, sözleşmeler ve kişisel kayıtlar cihazınızdan asla ayrılmaz."
           }
         },
-        "pages": "sayfa",
         "splitEach": "Her sayfayı böl",
         "splitRange": "Aralığa göre böl",
         "rangePlaceholder": "ör. 1-3, 4-6, 7-10",
@@ -160,16 +154,42 @@
         "splitting": "Bölünüyor...",
         "results": "Bölme Sonuçları",
         "modes": {
-          "each": { "title": "Her sayfa", "desc": "Her sayfa kendi PDF'i olur." },
-          "every": { "title": "Her N sayfa", "desc": "Her N ardışık sayfayı tek bir PDF'te grupla." },
-          "oddEven": { "title": "Tek / Çift", "desc": "İki PDF: tek sayfalar ve çift sayfalar." },
-          "half": { "title": "Yarılar", "desc": "İlk yarı ve ikinci yarı olarak iki dosyaya böl." },
-          "range": { "title": "Özel aralıklar", "desc": "1-3, 5, 8-10 gibi aralıklar tanımlayın. Aralık eklemek için iki sayfaya tıklayın." },
-          "size": { "title": "Dosya boyutuna göre", "desc": "Her çıktı, seçtiğiniz maksimum boyutun altında kalır." },
-          "outline": { "title": "Yer imlerine göre", "desc": "PDF içindekiler tablosunu kullan — her üst düzey yer imi başına bir dosya." }
+          "each": {
+            "title": "Her sayfa",
+            "desc": "Her sayfa kendi PDF'i olur."
+          },
+          "every": {
+            "title": "Her N sayfa",
+            "desc": "Her N ardışık sayfayı tek bir PDF'te grupla."
+          },
+          "oddEven": {
+            "title": "Tek / Çift",
+            "desc": "İki PDF: tek sayfalar ve çift sayfalar."
+          },
+          "half": {
+            "title": "Yarılar",
+            "desc": "İlk yarı ve ikinci yarı olarak iki dosyaya böl."
+          },
+          "range": {
+            "title": "Özel aralıklar",
+            "desc": "1-3, 5, 8-10 gibi aralıklar tanımlayın. Aralık eklemek için iki sayfaya tıklayın."
+          },
+          "size": {
+            "title": "Dosya boyutuna göre",
+            "desc": "Her çıktı, seçtiğiniz maksimum boyutun altında kalır."
+          },
+          "outline": {
+            "title": "Yer imlerine göre",
+            "desc": "PDF içindekiler tablosunu kullan — her üst düzey yer imi başına bir dosya."
+          }
         },
-        "every": { "label": "Parça başına sayfa", "preview": "{count} parça" },
-        "half": { "preview": "İlk {a} sayfa + Son {b} sayfa" },
+        "every": {
+          "label": "Parça başına sayfa",
+          "preview": "{count} parça"
+        },
+        "half": {
+          "preview": "İlk {a} sayfa + Son {b} sayfa"
+        },
         "range": {
           "mergeAll": "Tüm aralıkları tek bir PDF'te birleştir",
           "addRange": "Aralık ekle",
@@ -214,10 +234,6 @@
           "a1": "Yedi mod: her sayfa, her N sayfa, tek/çift, yarılar, özel aralıklar (isteğe bağlı birleştirme ile), dosya boyutuna göre ve PDF yer imlerine göre. Modlar arasında istediğiniz zaman geçiş yapın — küçük resimlerdeki renkli önizleme anlık güncellenir.",
           "q2": "Dosyalarım bir sunucuya yükleniyor mu?",
           "a2": "Hayır. Tüm işleme tarayıcınızda pdf-lib ve pdfjs-dist ile yerel olarak gerçekleşir. Dosyalarınız asla cihazınızdan ayrılmaz.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı sınır yoktur. Maksimum dosya boyutu cihazınızın kullanılabilir belleğine bağlıdır. Çok büyük PDF'ler (1000+ sayfa) için bellek kullanımını kontrol etmek için 'Her sayfa' yerine 'Her N sayfa' tercih edin.",
           "q6": "'Boyuta göre böl' nasıl çalışır?",
@@ -286,16 +302,11 @@
         "delete": "Seçilenleri Sil",
         "deleting": "Siliniyor...",
         "remaining": "Kalan",
-        "pages": "sayfa",
         "faq": {
           "q1": "Silinecek sayfaları nasıl seçerim?",
           "a1": "Bir PDF yükleyin ve kaldırmak istediğiniz sayfa küçük resimlerine tıklayın. Seçilen sayfalar vurgulanır. Bu sayfalar olmadan yeni bir PDF oluşturmak için sil düğmesine tıklayın.",
           "q2": "Sayfa silmeyi geri alabilir miyim?",
           "a2": "Orijinal dosya değiştirilmez. Seçilen sayfalar olmadan yeni bir PDF oluşturulur. Her zaman orijinali yeniden yükleyebilirsiniz.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
         },
@@ -359,17 +370,12 @@
         "scale": "Ölçek",
         "convert": "Dönüştür",
         "converting": "Dönüştürülüyor",
-        "pages": "sayfa",
         "downloadAll": "Tümünü İndir (ZIP)",
         "faq": {
           "q1": "Hangi görsel formatları destekleniyor?",
           "a1": "PDF sayfalarını PNG (kayıpsız) veya JPG (kalite kontrollü daha küçük dosya boyutu) olarak dönüştürebilirsiniz.",
           "q2": "Görsel çözünürlüğünü ayarlayabilir miyim?",
           "a2": "Evet, ölçek kaydırıcısını kullanın. 1x standart çözünürlük, 2x ikiye katlar, yüksek çözünürlüklü çıktı için 4x'e kadar.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
         },
@@ -436,10 +442,6 @@
           "a1": "JPG, PNG, GIF, WebP, BMP ve diğer yaygın görsel formatlarını dönüştürebilirsiniz. Standart dışı formatlar gömme öncesinde otomatik olarak dönüştürülür.",
           "q2": "Dönüştürmeden önce görselleri yeniden sıralayabilir miyim?",
           "a2": "Evet, her görsel küçük resmindeki ok düğmelerini kullanarak sırayı değiştirin. Son PDF sayfaları gösterilen sırayla eşleşir.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
         },
@@ -498,7 +500,6 @@
             "description": "Tüm döndürme yerel olarak pdf-lib ile gerçekleşir. Gizli taramalar, kimlik belgeleri ve sözleşmeler yüklenmez — dosya cihazınızdan ayrılmaz."
           }
         },
-        "pages": "sayfa",
         "direction": "Yön",
         "clockwise": "90° Saat Yönü",
         "counterClockwise": "90° Ters Yön",
@@ -510,10 +511,6 @@
           "a1": "Şu anda araç tüm sayfaları aynı açıyla döndürür. Sayfa bazlı döndürme için PDF'i birden fazla kez işleyebilirsiniz.",
           "q2": "Döndürme PDF içerik kalitesini etkiler mi?",
           "a2": "Hayır, döndürme yalnızca sayfa yönlendirme meta verilerini değiştirir. İçerik, metin ve görseller değişmeden kalır.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
         },
@@ -572,7 +569,6 @@
             "description": "Sayfa numaraları tarayıcınızda pdf-lib ile tamamen eklenir. Yazmalar, hukuki kanıtlar ve özel raporlar cihazınızdan asla ayrılmaz."
           }
         },
-        "pages": "sayfa",
         "position": "Konum",
         "positions": {
           "bottom-center": "Alt Orta",
@@ -593,10 +589,6 @@
           "a1": "Evet, sayfa numaralarını altı konumdan birine yerleştirebilirsiniz: üst veya alt, sol, orta veya sağ hizalama ile birlikte.",
           "q2": "Belirli sayfalarda numaralamayı atlayabilir miyim?",
           "a2": "Evet, ilk N sayfayı atlamak için 'Başlangıç sayfası' seçeneğini kullanın (kapak sayfaları veya içindekiler için kullanışlı).",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
         },
@@ -664,10 +656,6 @@
           "a1": "Bu araç yalnızca gömülü metni çıkarır. Taranmış PDF'ler (görseller) için metni tanımak üzere OCR aracımızı kullanın.",
           "q2": "Biçimlendirme korunuyor mu?",
           "a2": "Temel metin içeriği sayfa sayfa çıkarılır. Tablolar ve sütunlar gibi karmaşık biçimlendirme tam olarak korunmayabilir.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
         },
@@ -727,7 +715,6 @@
           }
         },
         "dragHint": "Yeniden sıralamak için sürükleyin",
-        "pages": "sayfa",
         "page": "Sayfa",
         "moveUp": "Yukarı taşı",
         "moveDown": "Aşağı taşı",
@@ -738,10 +725,6 @@
           "a1": "Bir PDF yükleyin, ardından sayfaları yukarı veya aşağı taşımak için ok düğmelerini kullanın. Yeni sayfa sırasıyla yeni bir PDF oluşturmak için Uygula'ya tıklayın.",
           "q2": "Orijinal PDF değiştiriliyor mu?",
           "a2": "Hayır, yeniden sıralanmış sayfalarla yeni bir PDF oluşturulur. Orijinal dosyanız asla değiştirilmez.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
         },
@@ -840,22 +823,16 @@
         "largeFileWarning": "Büyük dosya tespit edildi. Tarayıcı belleği sınırlıdır — işlem yavaş olabilir veya başarısız olabilir. 100 MB'ın altındaki dosyaları öneririz.",
         "compress": "Sıkıştır",
         "compressing": "Sıkıştırılıyor...",
-        "pages": "sayfa",
         "originalSize": "Orijinal boyut",
         "compressedSize": "Sıkıştırılmış boyut",
         "saved": "Boyut azaltma",
         "noReduction": "Boyut azaltma yok",
         "noReductionUsedOriginal": "Zaten optimum — orijinal dosya korundu.",
-        "previewFullscreen": "Önizleme",
         "faq": {
           "q1": "PDF sıkıştırma nasıl çalışır?",
           "a1": "İki mod mevcut. Görüntü optimizasyonu (varsayılan) gömülü JPEG görüntüleri yeniden sıkıştırırken metin katmanını korur, böylece çıktı aranabilir kalır. Tam rasterleştirme her sayfayı tek bir JPEG olarak yeniden işler — daha küçük dosyalar ancak metin seçilemez hale gelir. DPI ve JPEG kalitesini ince ayarlamak veya PDF meta verilerini temizlemek için Gelişmiş paneli kullanın.",
           "q2": "Metin seçilebilir kalacak mı?",
           "a2": "Evet Görüntü optimizasyonu modunda (varsayılan) — yalnızca gömülü görüntüler yeniden sıkıştırılır, böylece metin seçilebilir ve aranabilir kalır. Tam rasterleştirme modunda sayfalar görüntü haline gelir ve metin seçilemez; sayfaların zaten görüntü olduğu taranmış PDF'ler için bu modu seçin.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
         },
@@ -925,10 +902,6 @@
           "a1": "Evet, metin, opaklık (saydamlık) ve yazı boyutunu ayarlayabilirsiniz. Filigran her sayfaya çapraz olarak yerleştirilir.",
           "q2": "Filigran tüm sayfalara uygulanıyor mu?",
           "a2": "Evet, aynı filigran PDF'in her sayfasına uygulanır.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
         },
@@ -987,7 +960,6 @@
             "description": "Kırpma işlemleri tarayıcınızda pdf-lib aracılığıyla yürütülür. Zemin planları, tıbbi görüntüler ve gizli belgeler asla bir sunucuya yüklenmez."
           }
         },
-        "pages": "sayfa",
         "margins": "Kırpma Kenar Boşlukları (nokta)",
         "marginsHint": "Her taraftan kırpılacak miktarı girin (1 nokta ≈ 0,35mm)",
         "top": "Üst",
@@ -1001,10 +973,6 @@
           "a1": "PDF, ölçü birimi olarak noktaları kullanır. 1 nokta = 1/72 inç ≈ 0,35mm. Standart bir US Letter sayfası 612 × 792 noktadır.",
           "q2": "Kırpma dosya boyutunu küçültür mü?",
           "a2": "Kırpma görünür alanı değiştirir ancak gizli içeriği kaldırmaz, bu nedenle dosya boyutu önemli ölçüde azalmayabilir.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
         },
@@ -1066,7 +1034,6 @@
         "drawSignature": "İmzanızı Çizin",
         "clearSignature": "Temizle",
         "page": "Sayfa",
-        "pages": "sayfa",
         "points": "pt",
         "signatureWidth": "Genişlik",
         "apply": "İmza Uygula",
@@ -1076,10 +1043,6 @@
           "a1": "Hayır, her şey tarayıcınızda gerçekleşir. İmzanız ve PDF'iniz asla herhangi bir sunucuya yüklenmez.",
           "q2": "İmzayı belirli bir sayfaya yerleştirebilir miyim?",
           "a2": "Evet, hangi sayfayı imzalayacağınızı seçebilir ve imzanın tam konumunu (X, Y koordinatları) ve boyutunu ayarlayabilirsiniz.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
         },
@@ -1149,10 +1112,6 @@
           "a1": "Görseller mümkün olduğunda orijinal formatlarında (JPEG) çıkarılır. Diğer görseller PNG formatına dönüştürülür.",
           "q2": "Bu araç tüm görselleri çıkarıyor mu?",
           "a2": "PDF'den gömülü raster görselleri çıkarır. Vektör grafikler ve yol olarak işlenmiş metinler ayrı görseller olarak çıkarılmaz.",
-          "q3": "Dosyalarım sunucuya yükleniyor mu?",
-          "a3": "Hayır. Tüm işleme tamamen tarayıcınızda gerçekleşir. Verileriniz cihazınızdan asla ayrılmaz — hiçbir şey sunucuya yüklenmez.",
-          "q4": "Bu aracı çevrimdışı kullanabilir miyim?",
-          "a4": "Evet. Sayfa yüklendikten sonra araç tamamen çevrimdışı çalışır. En iyi deneyim için PrivaDeck'i tarayıcınızdan PWA olarak yükleyin.",
           "q5": "Dosya boyutu sınırı var mı?",
           "a5": "Sunucu kaynaklı herhangi bir sınır yoktur. Maksimum dosya boyutu, cihazınızın kullanılabilir belleğine ve tarayıcı özelliklerine bağlıdır. Modern cihazların çoğu birkaç yüz MB'a kadar olan dosyaları sorunsuz işler."
         },
@@ -1170,7 +1129,8 @@
             "content": "<p>Görsel çıkarma, <strong>pdfjs-dist</strong> kullanılarak <strong>tamamen tarayıcınızda</strong> çalışır.</p><ul><li>PDF'leriniz <strong>asla cihazınızdan çıkmaz</strong></li><li>Sunucu işleme veya yükleme yok</li><li>Sayfa yüklendikten sonra <strong>çevrimdışı</strong> çalışır</li></ul>"
           }
         }
-      }
+      },
+      "previewFullscreen": "Önizleme"
     }
   }
 }

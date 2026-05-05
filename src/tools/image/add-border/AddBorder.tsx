@@ -12,6 +12,7 @@ const tracker = createToolTracker("add-border", "image");
 
 export default function AddBorder() {
   const t = useTranslations("tools.image.add-border");
+  const tCat = useTranslations("tools.image");
   const [file, setFile] = useState<File | null>(null);
   const [borderWidth, setBorderWidth] = useState(20);
   const [color, setColor] = useState("#000000");
@@ -79,7 +80,7 @@ export default function AddBorder() {
       </div>
 
       <Button onClick={handleProcess} disabled={!file || processing}>
-        {processing ? t("processing") : t("addBorder")}
+        {processing ? tCat("processing") : t("addBorder")}
       </Button>
 
       {error && (

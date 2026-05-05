@@ -214,10 +214,6 @@
           "a1": "Base64 est un schéma d'encodage binaire vers texte qui convertit des données binaires en caractères ASCII. Il est couramment utilisé dans les URL de données, les pièces jointes d'e-mails et les charges utiles d'API.",
           "q2": "Puis-je encoder des fichiers ?",
           "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème.",
           "q6": "What is URL-safe Base64?",
@@ -229,7 +225,6 @@
             "content": "<p><strong>Encodeur/Décodeur Base64</strong> convertit du texte et des fichiers en encodage Base64 et inversement. Base64 est un schéma de codage binaire-vers-texte couramment utilisé pour intégrer des données dans les URL, e-mails, HTML et JSON.</p><p>Encodez du texte ou tout fichier (images, PDF, ZIP) en Base64, ou décodez des chaînes Base64 en texte ou fichiers téléchargeables — le tout dans votre navigateur, avec la variante URL-safe et le support Data URI.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Data URIs</strong> : Encodez des images ou des polices en Data URIs Base64 pour les intégrer dans HTML/CSS sans requêtes externes</li><li><strong>Tokens JWT</strong> : Décodez les payloads JWT avec Base64 URL-safe pour le débogage et l'inspection</li><li><strong>Authentification API</strong> : Encodez les identifiants pour les en-têtes HTTP Basic Authentication</li><li><strong>Transfert de fichiers</strong> : Convertissez des fichiers binaires en texte Base64 pour les inclure dans des API JSON, des e-mails ou des fichiers de configuration</li><li><strong>Pièces jointes</strong> : Encodez/décodez les pièces jointes MIME dans les protocoles de messagerie</li><li><strong>Débogage développeur</strong> : Inspectez rapidement les données encodées en Base64 dans les logs, tokens ou réponses API</li></ul>"
           },
           "privacy": {
@@ -313,10 +308,6 @@
           "a1": "L'encodage URL convertit les caractères spéciaux en format d'encodage pourcentage (ex : l'espace devient %20) afin qu'ils puissent être utilisés en toute sécurité dans les adresses web.",
           "q2": "Quelle est la différence entre Encoder et Encoder le composant ?",
           "a2": "Encoder convertit l'URL complète en préservant les caractères de structure comme / et ?. Encoder le composant encode tout, y compris ces caractères, ce qui est utile pour les valeurs de paramètres de requête.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -326,7 +317,6 @@
             "content": "<p><strong>L'Encodeur/Décodeur URL</strong> convertit les caractères spéciaux dans les URL en leurs équivalents encodés en pourcentage et inversement. C'est essentiel pour créer des URL valides contenant des espaces, des esperluettes, des caractères non-ASCII ou d'autres caractères réservés.</p><p>Utilisez-le pour transmettre des paramètres de requête en toute sécurité, encoder des chemins de fichiers ou déboguer des URL malformées.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Paramètres de requête</strong> : Encodez les valeurs pour les inclure en toute sécurité dans les chaînes de requête URL</li><li><strong>Requêtes API</strong> : Encodez correctement les paramètres de requête pour les API REST</li><li><strong>URL de redirection</strong> : Encodez les URL de rappel pour les flux OAuth et les redirections</li><li><strong>Chemins de fichiers</strong> : Encodez les noms de fichiers avec des espaces ou des caractères spéciaux pour les serveurs web</li><li><strong>Débogage</strong> : Décodez les URL altérées pour voir le texte original</li></ul>"
           },
           "privacy": {
@@ -351,10 +341,6 @@
           "a1": "Plus de 12 langues, dont l'anglais, le chinois (simplifié/traditionnel), le japonais, le coréen, l'espagnol, le français, l'allemand et d'autres.",
           "q2": "Quelle est la précision de l'OCR ?",
           "a2": "La précision dépend de la qualité de l'image et de la clarté du texte. Les images nettes et haute résolution avec un bon contraste produisent les meilleurs résultats.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -364,7 +350,6 @@
             "content": "<p><strong>La Reconnaissance de texte OCR</strong> extrait du texte lisible des images à l'aide de la reconnaissance optique de caractères alimentée par Tesseract.js. Téléchargez une photo d'un document, une capture d'écran, un reçu ou une note manuscrite, et obtenez le contenu textuel que vous pouvez copier, modifier et utiliser.</p><p>Prend en charge <strong>plus de 12 langues</strong> dont l'anglais, le chinois, le japonais, le coréen, l'espagnol, le français, l'allemand et plus encore — tout traité localement dans votre navigateur.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Numérisation de documents</strong> : Convertissez des documents imprimés, des reçus ou des lettres en texte modifiable</li><li><strong>Extraction de texte de captures d'écran</strong> : Extrayez le texte de captures d'écran de pages web, de messages d'erreur ou de journaux de chat</li><li><strong>Préparation à la traduction</strong> : Extrayez du texte en langue étrangère d'images pour la traduction</li><li><strong>Saisie de données</strong> : Numérisez rapidement du texte à partir de formulaires, de factures ou de cartes de visite</li><li><strong>Accessibilité</strong> : Rendez le texte basé sur des images accessible aux lecteurs d'écran</li></ul>"
           },
           "privacy": {
@@ -388,10 +373,6 @@
           "a1": "Les fichiers ZIP sont actuellement entièrement pris en charge. Les fichiers sont extraits entièrement dans votre navigateur.",
           "q2": "Puis-je télécharger des fichiers individuels depuis une archive ?",
           "a2": "Oui, vous pouvez parcourir le contenu de l'archive et télécharger n'importe quel fichier individuel en cliquant sur son bouton de téléchargement.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -401,7 +382,6 @@
             "content": "<p><strong>L'Extracteur ZIP</strong> vous permet d'ouvrir et d'extraire le contenu d'archives ZIP directement dans votre navigateur. Prévisualisez les noms de fichiers, les tailles et la structure des dossiers avant de télécharger des fichiers individuels ou l'intégralité du contenu.</p><p>Aucune installation de logiciel nécessaire — déposez simplement votre fichier ZIP et parcourez son contenu instantanément.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Inspection rapide de fichiers</strong> : Vérifiez ce qui se trouve dans un ZIP avant d'extraire tout</li><li><strong>Téléchargement de fichier unique</strong> : Extrayez uniquement le fichier dont vous avez besoin d'une grande archive</li><li><strong>Utilisation mobile</strong> : Ouvrez des fichiers ZIP sur téléphones et tablettes sans gestionnaire de fichiers</li><li><strong>Utilisateurs Chromebook</strong> : Extrayez des archives quand les outils natifs ne sont pas disponibles</li><li><strong>Pièces jointes d'e-mails</strong> : Inspectez rapidement les pièces jointes ZIP</li></ul>"
           },
           "privacy": {
@@ -428,10 +408,6 @@
           "a1": "Valeurs séparées par des virgules standard avec échappement optionnel par guillemets doubles. Les champs contenant des virgules, guillemets ou retours à la ligne sont correctement gérés.",
           "q2": "Le JSON imbriqué est-il pris en charge ?",
           "a2": "La conversion JSON vers CSV fonctionne mieux avec des tableaux plats d'objets. Les objets imbriqués sont convertis en leur représentation textuelle.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -441,7 +417,6 @@
             "content": "<p><strong>Le Convertisseur CSV/JSON</strong> transforme instantanément des données entre les formats CSV (valeurs séparées par des virgules) et JSON. Convertissez des données de tableur en tableaux JSON pour les API, ou transformez des ensembles de données JSON en CSV pour Excel ou Google Sheets.</p><p>Gère les en-têtes, les champs entre guillemets et les délimiteurs personnalisés — tout dans votre navigateur sans envoi de données.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Intégration API</strong> : Convertissez les exports de tableurs en JSON pour les charges utiles API</li><li><strong>Analyse de données</strong> : Transformez les réponses JSON des API en CSV pour Excel ou Google Sheets</li><li><strong>Migration de base de données</strong> : Convertissez entre les formats de données pendant l'import/export de base de données</li><li><strong>Rapports</strong> : Convertissez les journaux JSON ou les enregistrements en CSV pour les outils de reporting</li><li><strong>Prototypage</strong> : Créez rapidement des exemples de données JSON à partir de maquettes de tableurs</li></ul>"
           },
           "privacy": {
@@ -485,10 +460,6 @@
           "a1": "MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256 et SHA3-512 sont tous calculés simultanément. Les algorithmes SHA utilisent la Web Crypto API du navigateur, tandis que MD5, CRC32 et SHA-3 utilisent des implémentations JavaScript optimisées.",
           "q2": "Puis-je hacher des fichiers ?",
           "a2": "Oui, passez en mode Fichier et déposez n'importe quel fichier. Vous pouvez également hacher plusieurs fichiers à la fois grâce au traitement par lots. Le hash est calculé localement dans votre navigateur — le fichier n'est jamais envoyé.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème.",
           "q6": "MD5 est-il encore sûr ?",
@@ -537,7 +508,6 @@
             "content": "<p><strong>Le Générateur de hash</strong> calcule des valeurs de hachage cryptographique pour du texte ou des fichiers à l'aide des algorithmes MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512 et CRC32. Il prend également en charge HMAC (code d'authentification de message basé sur le hachage) avec une clé secrète. Les hachages sont des empreintes unidirectionnelles utilisées pour vérifier l'intégrité des données, comparer des fichiers et valider les téléchargements.</p><p>Générez des hachages instantanément dans votre navigateur avec un calcul en temps réel — idéal pour vérifier l'intégrité des fichiers ou créer des résumés de contenu.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Intégrité des fichiers</strong> : Vérifiez que les fichiers téléchargés n'ont pas été altérés en comparant les sommes de contrôle</li><li><strong>Déduplication de contenu</strong> : Comparez les hachages pour trouver les fichiers en double</li><li><strong>Authentification API</strong> : Générez des signatures HMAC pour les requêtes API</li><li><strong>Distribution de logiciels</strong> : Générez des sommes de contrôle pour vos propres versions de fichiers</li><li><strong>Audit de sécurité</strong> : Hachez des fichiers pour détecter les modifications non autorisées</li></ul>"
           },
           "privacy": {
@@ -563,10 +533,6 @@
           "a1": "Vous pouvez saisir des couleurs en HEX (#ff6600 ou #f60), RGB (rgb(255, 102, 0)) ou HSL (hsl(24, 100%, 50%)). Tous les autres formats sont affichés automatiquement.",
           "q2": "La transparence alpha est-elle prise en charge ?",
           "a2": "Actuellement, l'outil ne prend en charge que les couleurs opaques. La prise en charge de RGBA et HSLA sera ajoutée dans une future mise à jour.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -576,7 +542,6 @@
             "content": "<p><strong>Le Convertisseur de couleurs</strong> transforme les couleurs entre les formats HEX, RGB et HSL avec un aperçu visuel en direct. Saisissez une couleur dans n'importe quel format et voyez instantanément son équivalent dans tous les autres formats, avec un échantillon de couleur.</p><p>Parfait pour les designers et développeurs qui ont besoin de convertir entre les notations de couleurs pour CSS, les outils de design ou les chartes graphiques.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Développement CSS</strong> : Convertissez entre les formats de couleurs pour les feuilles de style</li><li><strong>Remise de design</strong> : Traduisez les couleurs des spécifications de design en valeurs prêtes pour le code</li><li><strong>Chartes graphiques</strong> : Convertissez les couleurs de la marque entre les formats pour la documentation</li><li><strong>Accessibilité</strong> : Ajustez la luminosité HSL pour répondre aux exigences de ratio de contraste</li><li><strong>Développement de thèmes</strong> : Générez des valeurs de couleurs pour les variables de thème clair/sombre</li></ul>"
           },
           "privacy": {
@@ -603,10 +568,6 @@
           "a1": "Les clés d'objet deviennent des noms d'éléments XML. Les tableaux produisent des éléments répétés avec le même nom. Les valeurs primitives deviennent du contenu textuel.",
           "q2": "Les attributs XML sont-ils préservés ?",
           "a2": "Les attributs XML ne sont pas préservés dans la sortie JSON. Seuls les noms d'éléments et le contenu textuel sont convertis.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -616,7 +577,6 @@
             "content": "<p><strong>Le Convertisseur JSON ↔ XML</strong> transforme des données entre les formats JSON et XML. Convertissez des objets JSON en documents XML bien formés, ou analysez du XML en JSON — utile pour intégrer des systèmes utilisant différents formats de données.</p><p>Gère correctement les structures imbriquées, les tableaux et les attributs dans les deux directions.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Intégration API</strong> : Convertissez entre les API REST JSON et les services SOAP XML</li><li><strong>Systèmes hérités</strong> : Transformez les données XML des anciens systèmes en JSON pour les applications modernes</li><li><strong>Configuration</strong> : Convertissez entre les formats de fichiers de configuration JSON et XML</li><li><strong>Migration de données</strong> : Transformez les formats de données lors des migrations de systèmes</li><li><strong>Tests</strong> : Générez des données de test XML à partir de JSON ou vice versa</li></ul>"
           },
           "privacy": {
@@ -641,10 +601,6 @@
           "a1": "Titres, gras, italique, liens, images, blocs de code, code en ligne, listes non ordonnées, citations et lignes horizontales.",
           "q2": "Puis-je copier la sortie HTML ?",
           "a2": "Oui, utilisez le bouton Copier le HTML pour copier le HTML généré dans votre presse-papiers.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -654,7 +610,6 @@
             "content": "<p><strong>L'Aperçu Markdown</strong> vous permet d'écrire du Markdown et de voir un aperçu HTML en direct côte à côte. Rédigez du texte formaté en utilisant la syntaxe Markdown simple et voyez instantanément comment il s'affiche — parfait pour les fichiers README, les articles de blog et la documentation.</p><p>Prend en charge le Markdown standard, y compris les en-têtes, listes, blocs de code, liens, images, tableaux et plus encore.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Fichiers README</strong> : Prévisualisez les fichiers README.md de GitHub avant de les soumettre</li><li><strong>Articles de blog</strong> : Rédigez et prévisualisez du contenu de blog écrit en Markdown</li><li><strong>Documentation</strong> : Rédigez de la documentation technique avec aperçu de formatage en direct</li><li><strong>Prise de notes</strong> : Prise de notes formatées rapide avec aperçu instantané</li><li><strong>Brouillons d'e-mails</strong> : Formatez du contenu avec Markdown pour des e-mails en texte enrichi</li></ul>"
           },
           "privacy": {
@@ -683,10 +638,6 @@
           "a1": "Les drapeaux Global (g), insensible à la casse (i), multiligne (m) et dotAll (s) sont disponibles.",
           "q2": "Les groupes de capture nommés sont-ils pris en charge ?",
           "a2": "Oui, les groupes nommés définis avec (?<nom>...) sont affichés dans les détails de correspondance.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -696,7 +647,6 @@
             "content": "<p><strong>Le Testeur de Regex</strong> vous permet d'écrire et de tester des expressions régulières sur un texte exemple avec mise en évidence en temps réel des correspondances. Voyez les groupes correspondants, testez différents drapeaux et déboguez vos motifs instantanément.</p><p>Un outil indispensable pour les développeurs travaillant avec des motifs de chaînes, la validation de données ou l'analyse de texte.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Développement de motifs</strong> : Construisez et déboguez des motifs regex avant de les utiliser dans le code</li><li><strong>Validation de données</strong> : Testez des motifs de validation d'e-mail, de numéro de téléphone ou personnalisés</li><li><strong>Analyse de texte</strong> : Développez des motifs pour extraire des données de fichiers journaux ou de texte</li><li><strong>Recherche et remplacement</strong> : Prévisualisez ce qu'un remplacement regex va correspondre avant de l'appliquer</li><li><strong>Apprentissage</strong> : Comprenez la syntaxe regex grâce à l'expérimentation interactive</li></ul>"
           },
           "privacy": {
@@ -826,8 +776,6 @@
           "a2": "Oui. Choisissez l'unité explicitement, ou laissez \"Auto\" — elle est détectée à partir de la grandeur du nombre.",
           "q3": "Mes données sont-elles envoyées à un serveur ?",
           "a3": "Non. Tous les traitements — décodage JWT et conversion par lot inclus — se font intégralement dans le navigateur. Rien n'est téléversé.",
-          "q4": "Puis-je l'utiliser hors-ligne ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors-ligne. Pour la meilleure expérience, installez PrivaDeck comme PWA.",
           "q5": "Y a-t-il une limite par lot ?",
           "a5": "L'entrée par lot est plafonnée à 5 000 lignes par exécution pour conserver la fluidité. L'export CSV concerne les résultats traités.",
           "q6": "La signature JWT est-elle vérifiée ?",
@@ -839,7 +787,6 @@
             "content": "<p><strong>Le Convertisseur d'horodatage Unix</strong> convertit entre les horodatages Unix (secondes depuis le 1er janvier 1970) et les formats de date/heure lisibles par l'homme. Saisissez un horodatage pour voir la date, ou choisissez une date pour obtenir l'horodatage.</p><p>Affiche l'horodatage Unix actuel en direct et prend en charge les formats en secondes et en millisecondes.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Débogage</strong> : Convertissez les horodatages de réponse API en dates lisibles pour le débogage</li><li><strong>Requêtes de base de données</strong> : Convertissez entre les formats d'horodatage pour les requêtes SQL</li><li><strong>Analyse de journaux</strong> : Traduisez les horodatages Unix dans les fichiers journaux en heures lisibles</li><li><strong>Planification</strong> : Calculez des horodatages futurs/passés pour des tâches cron ou planifiées</li><li><strong>Travail entre fuseaux horaires</strong> : Comparez des horodatages entre différents fuseaux horaires</li></ul>"
           },
           "privacy": {
@@ -866,10 +813,6 @@
           "a1": "Toutes les fonctionnalités YAML standard, y compris les objets imbriqués, tableaux, chaînes multilignes et ancres/alias via la bibliothèque js-yaml.",
           "q2": "Les commentaires sont-ils préservés lors de la conversion ?",
           "a2": "Non. Les commentaires YAML sont supprimés lors de l'analyse. Lors de la conversion de JSON en YAML, la sortie est du YAML propre sans commentaires.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -879,7 +822,6 @@
             "content": "<p><strong>Le Convertisseur YAML ↔ JSON</strong> transforme des données entre les formats YAML et JSON. La syntaxe conviviale de YAML le rend populaire pour les fichiers de configuration, tandis que JSON est le standard pour les API et l'échange de données.</p><p>Convertissez des configs Kubernetes, des pipelines CI/CD ou n'importe quel fichier YAML en JSON et inversement — instantanément dans votre navigateur.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>DevOps</strong> : Convertissez Kubernetes, Docker Compose ou Ansible YAML en JSON pour les appels API</li><li><strong>CI/CD</strong> : Transformez les configs YAML GitHub Actions ou GitLab CI en JSON</li><li><strong>Configuration</strong> : Convertissez entre les formats de fichiers de configuration YAML et JSON</li><li><strong>Développement API</strong> : Transformez les spécifications API YAML (OpenAPI) en format JSON</li><li><strong>Migration de données</strong> : Convertissez des données entre YAML et JSON pour différents systèmes</li></ul>"
           },
           "privacy": {
@@ -907,10 +849,6 @@
           "a1": "Un algorithme de Plus Longue Sous-séquence Commune (LCS) basé sur les lignes qui identifie les ajouts, suppressions et lignes inchangées.",
           "q2": "Puis-je copier la sortie diff ?",
           "a2": "Oui, utilisez le bouton de copie pour copier un format diff unifié avec les préfixes + et - pour les ajouts et suppressions.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -920,7 +858,6 @@
             "content": "<p><strong>Le Comparateur de texte</strong> compare deux textes et met en évidence les différences ligne par ligne. Voyez exactement ce qui a été ajouté, supprimé ou modifié — comme une version simplifiée de <code>git diff</code> dans votre navigateur.</p><p>Idéal pour comparer des versions de code, des fichiers de configuration, des brouillons de documents ou tout contenu textuel.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Revue de code</strong> : Comparez deux versions d'un fichier de code pour voir ce qui a changé</li><li><strong>Changements de config</strong> : Repérez les différences entre les fichiers de config de développement et de production</li><li><strong>Révision de documents</strong> : Comparez les versions brouillons de documents ou de contrats</li><li><strong>Enregistrements de base de données</strong> : Comparez les enregistrements exportés pour trouver les divergences de données</li><li><strong>Débogage</strong> : Comparez la sortie attendue et réelle dans les scénarios de test</li></ul>"
           },
           "privacy": {
@@ -950,8 +887,6 @@
           "a2": "Non, l'outil traite du texte de n'importe quelle longueur directement dans votre navigateur sans aucune limite.",
           "q3": "Comment le temps de lecture est-il calculé ?",
           "a3": "Le temps de lecture est estimé à 200 mots par minute, ce qui correspond à la vitesse de lecture moyenne d'un adulte.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -961,7 +896,6 @@
             "content": "<p><strong>Le Compteur de mots</strong> analyse votre texte et affiche instantanément le nombre de mots, de caractères, de phrases, de paragraphes et le temps de lecture estimé. Indispensable pour les écrivains, les étudiants et les créateurs de contenu qui doivent respecter des exigences de longueur.</p><p>Collez simplement votre texte et obtenez toutes les statistiques en temps réel.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Rédaction académique</strong> : Vérifiez le nombre de mots des essais ou des thèses par rapport aux exigences</li><li><strong>Contenu SEO</strong> : Assurez-vous que les articles de blog et les articles atteignent les objectifs de nombre de mots</li><li><strong>Réseaux sociaux</strong> : Vérifiez les limites de caractères pour les tweets, les publications LinkedIn ou les bios</li><li><strong>Traduction</strong> : Estimez les coûts de traduction en fonction du nombre de mots</li><li><strong>Planification de contenu</strong> : Calculez les temps de lecture des articles et des présentations</li></ul>"
           },
           "privacy": {
@@ -992,10 +926,6 @@
           "a1": "Nous prenons en charge MAJUSCULES, minuscules, Casse Titre, Casse de phrase, camelCase, PascalCase, snake_case, kebab-case et CONSTANT_CASE.",
           "q2": "Puis-je convertir des noms de variables de code ?",
           "a2": "Oui ! Utilisez les conversions camelCase, PascalCase, snake_case ou kebab-case pour les noms de variables de programmation.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -1005,7 +935,6 @@
             "content": "<p><strong>Le Convertisseur de casse</strong> transforme le texte entre plusieurs formats de casse, dont MAJUSCULES, minuscules, Casse Titre, Casse de phrase, camelCase, PascalCase, snake_case, kebab-case et CONSTANT_CASE.</p><p>Indispensable pour les développeurs qui renomment des variables, les rédacteurs qui formatent des titres, ou toute personne ayant besoin de changer rapidement la casse du texte.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Nommage de variables</strong> : Convertissez entre JavaScript camelCase, Python snake_case et CSS kebab-case</li><li><strong>Champs de base de données</strong> : Transformez les noms de colonnes entre différentes conventions de nommage</li><li><strong>Formatage de contenu</strong> : Convertissez les titres en Casse Titre pour les titres et les rubriques</li><li><strong>Conception d'API</strong> : Standardisez les noms de champs dans les schémas de requête/réponse JSON</li><li><strong>Refactorisation de code</strong> : Renommez les identifiants lors du changement de conventions de nommage</li></ul>"
           },
           "privacy": {
@@ -1033,10 +962,6 @@
           "a1": "Lorem Ipsum est un texte de remplissage couramment utilisé en design et en édition pour remplir les espaces où le contenu réel sera éventuellement placé.",
           "q2": "Puis-je personnaliser la sortie ?",
           "a2": "Oui, vous pouvez choisir de générer par paragraphes, phrases ou mots, définir le nombre et optionnellement commencer par l'ouverture classique de Lorem Ipsum.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -1046,7 +971,6 @@
             "content": "<p><strong>Le Générateur Lorem Ipsum</strong> crée du texte de remplissage pour les maquettes de design, les wireframes et les prototypes. Générez du texte Lorem Ipsum classique par paragraphes, phrases ou mots avec un contrôle précis sur la quantité.</p><p>La méthode standard de l'industrie pour remplir les mises en page avec du texte d'apparence réaliste avant que le contenu final ne soit prêt.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Design web</strong> : Remplissez les mises en page avec du texte réaliste pour tester la typographie et l'espacement</li><li><strong>Prototypage UI</strong> : Ajoutez du contenu de remplissage aux wireframes et maquettes</li><li><strong>Design imprimé</strong> : Remplissez les brochures, flyers et mises en page de livres avant le texte final</li><li><strong>Présentations</strong> : Ajoutez du texte de remplissage aux modèles de diapositives</li><li><strong>Tests</strong> : Générez des exemples de données textuelles pour tester le rendu ou la troncature du texte</li></ul>"
           },
           "privacy": {

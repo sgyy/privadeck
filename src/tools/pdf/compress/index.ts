@@ -18,12 +18,12 @@ const definition: ToolDefinition = {
     },
   
     {
-      questionKey: "tools.pdf.compress.faq.q3",
-      answerKey: "tools.pdf.compress.faq.a3",
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
     },
     {
-      questionKey: "tools.pdf.compress.faq.q4",
-      answerKey: "tools.pdf.compress.faq.a4",
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
     },
     {
       questionKey: "tools.pdf.compress.faq.q5",

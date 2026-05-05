@@ -34,6 +34,7 @@ export default function PdfToImage() {
   const generationRef = useRef(0);
   const urlMapRef = useRef<Map<Blob, string>>(new Map());
   const t = useTranslations("tools.pdf.to-image");
+  const tCat = useTranslations("tools.pdf");
   const tc = useTranslations("common");
 
   // Ref-based URL management: only create URLs for new blobs
@@ -259,8 +260,8 @@ export default function PdfToImage() {
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-medium">
               {converting
-                ? `${progress.current}/${progress.total} ${t("pages")}`
-                : `${results.length} ${t("pages")}`}
+                ? `${progress.current}/${progress.total} ${tCat("pages")}`
+                : `${results.length} ${tCat("pages")}`}
             </h3>
             {!converting && <Button variant="outline" size="sm" onClick={handleDownloadAll}>{t("downloadAll")}</Button>}
           </div>

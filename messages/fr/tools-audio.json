@@ -13,7 +13,6 @@
         "duration": "Durée",
         "trim": "Découper l'audio",
         "processing": "Traitement en cours",
-        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
         "waveform": {
           "label": "Forme d'onde",
           "loading": "Décodage de la forme d'onde…"
@@ -85,10 +84,6 @@
           "a1": "La plupart des formats, dont MP3, WAV, OGG, AAC, FLAC et M4A, sont pris en charge.",
           "q2": "La qualité audio est-elle préservée ?",
           "a2": "Oui, l'outil utilise le mode de copie de flux pour préserver la qualité originale sans réencodage.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème.",
           "q6": "Quelle est la différence entre les modes Conserver et Supprimer ?",
@@ -102,7 +97,6 @@
             "content": "<p><strong>Le Découpeur audio</strong> coupe les fichiers audio à la longueur souhaitée en définissant des heures de début et de fin précises. Utilise la copie de flux quand c'est possible pour un <strong>découpage sans perte</strong> — pas de réencodage, pas de dégradation de qualité.</p><p>Propulsé par FFmpeg.wasm pour un montage audio professionnel directement dans votre navigateur.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Sonneries</strong> : Coupez les sections favorites de chansons pour des sonneries de téléphone</li><li><strong>Podcasts</strong> : Découpez les intros, outros ou silences des enregistrements de podcasts</li><li><strong>Montage musical</strong> : Extrayez des sections spécifiques de chansons</li><li><strong>Mémos vocaux</strong> : Découpez les enregistrements vocaux aux parties pertinentes</li><li><strong>Effets sonores</strong> : Coupez des sons spécifiques de fichiers audio plus longs</li></ul>"
           },
           "privacy": {
@@ -121,16 +115,11 @@
         "format": "Format de sortie",
         "convert": "Convertir",
         "converting": "Conversion en cours",
-        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
         "faq": {
           "q1": "Quels formats audio sont pris en charge ?",
           "a1": "Conversion entre MP3, WAV, OGG, AAC et FLAC.",
           "q2": "Y a-t-il une limite de taille de fichier ?",
           "a2": "Le traitement se fait dans votre navigateur, les très gros fichiers peuvent donc être lents. Nous recommandons des fichiers de moins de 100 Mo.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème.",
           "q6": "Quel débit choisir ?",
@@ -144,7 +133,6 @@
             "content": "<p><strong>Le Convertisseur audio</strong> transforme les fichiers audio entre les formats populaires : MP3, WAV, OGG, AAC et FLAC. Convertissez entre les formats avec perte et sans perte pour la compatibilité, la qualité ou l'optimisation de la taille des fichiers.</p><p>Propulsé par FFmpeg.wasm pour un encodage audio fiable directement dans votre navigateur.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Compatibilité</strong> : Convertissez OGG ou FLAC en MP3 pour une meilleure prise en charge des appareils</li><li><strong>Mise à niveau de qualité</strong> : Convertissez MP3 en WAV/FLAC pour les flux de travail d'édition audio</li><li><strong>Audio web</strong> : Convertissez en OGG pour les éléments audio HTML5</li><li><strong>Podcast</strong> : Convertissez les enregistrements en MP3 pour la distribution de podcasts</li><li><strong>Archivage</strong> : Convertissez en FLAC pour l'archivage audio sans perte</li></ul>"
           },
           "privacy": {
@@ -231,7 +219,6 @@
         "format": "Format de sortie",
         "extract": "Extraire l'audio",
         "extracting": "Extraction en cours",
-        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
         "clear": "Effacer",
         "quality": {
           "label": "Préréglage qualité",
@@ -340,7 +327,6 @@
             "content": "<p><strong>Extraire l'audio</strong> récupère la piste audio de n'importe quelle vidéo et l'enregistre dans 7 formats au choix — MP3, WAV, AAC, OGG, FLAC, M4A ou Opus — avec un contrôle complet du débit, de la fréquence et des canaux.</p><p>Vous pouvez aussi découper un intervalle de temps, appliquer un fondu d'entrée/sortie, ou traiter plusieurs vidéos en lot avec téléchargement ZIP. Propulsé par FFmpeg.wasm — fonctionne entièrement dans votre navigateur, sans téléversement ni installation.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Extraction musicale</strong> : Extrayez l'audio des clips musicaux</li><li><strong>Préparation de podcasts</strong> : Extrayez l'audio des interviews ou enregistrements vidéo</li><li><strong>Transcription</strong> : Extrayez l'audio pour un traitement voix-vers-texte</li><li><strong>Design sonore</strong> : Tirez des effets sonores ou de l'audio ambiant de clips vidéo</li><li><strong>Écoute audio uniquement</strong> : Convertissez le contenu vidéo en audio pour une écoute hors ligne</li></ul>"
           },
           "privacy": {
@@ -365,7 +351,6 @@
         "stop": "Arrêter",
         "apply": "Appliquer",
         "processing": "Traitement en cours",
-        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
         "unitPercent": "%",
         "unitDb": "dB",
         "waveform": "Forme d'onde",
@@ -410,10 +395,6 @@
           "a1": "La plupart des formats, dont MP3, WAV, OGG, AAC, FLAC et M4A, sont pris en charge.",
           "q2": "Puis-je augmenter le volume au-delà du niveau original ?",
           "a2": "Oui, vous pouvez amplifier le volume jusqu'à 300 % de l'original. Attention, une amplification extrême peut introduire une distorsion par écrêtage.",
-          "q3": "Mes fichiers seront-ils envoyés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors ligne ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors ligne. Pour la meilleure expérience, installez PrivaDeck en tant que PWA depuis votre navigateur.",
           "q5": "Puis-je écouter un aperçu du changement de volume avant de l'appliquer ?",
           "a5": "Oui. Cliquez sur le bouton Aperçu pour entendre le son avec le niveau de volume ajusté. L'aperçu utilise le traitement audio intégré de votre navigateur pour une lecture instantanée."
         },
@@ -423,7 +404,6 @@
             "content": "<p><strong>Le Réglage du volume</strong> augmente ou diminue le volume audio jusqu'à 300 %. Amplifiez les enregistrements silencieux, réduisez l'audio trop fort ou normalisez les niveaux de volume — avec un aperçu en temps réel avant d'enregistrer.</p><p>Propulsé par FFmpeg.wasm pour un contrôle précis du volume dans votre navigateur.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Enregistrements silencieux</strong> : Amplifiez le volume des enregistrements vocaux ou interviews silencieux</li><li><strong>Audio trop fort</strong> : Réduisez le volume des enregistrements trop bruyants</li><li><strong>Nivellement de podcasts</strong> : Normalisez le volume entre différents segments de podcasts</li><li><strong>Ajustement musical</strong> : Ajustez le volume de la musique de fond pour les projets vidéo</li><li><strong>Audio de présentation</strong> : Amplifiez l'audio pour les enregistrements de présentations</li></ul>"
           },
           "privacy": {

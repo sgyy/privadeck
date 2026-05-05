@@ -53,6 +53,7 @@ export default function RemoveExif() {
   const [error, setError] = useState("");
   const [options, setOptions] = useState<RemoveExifOptions>(ALL_CATEGORIES);
   const t = useTranslations("tools.image.remove-exif");
+  const tCat = useTranslations("tools.image");
 
   const allSelected = isAllSelected(options);
   const noneSelected = isNoneSelected(options);
@@ -161,7 +162,7 @@ export default function RemoveExif() {
           onClick={handleProcess}
           disabled={files.length === 0 || processing || noneSelected}
         >
-          {processing ? t("processing") : t("removeExif")}
+          {processing ? tCat("processing") : t("removeExif")}
         </Button>
         {processing && (
           <span className="text-sm text-muted-foreground">

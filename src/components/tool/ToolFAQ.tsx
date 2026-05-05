@@ -16,15 +16,15 @@ export function ToolFAQ({ tool }: ToolFAQProps) {
 }
 
 function ToolFAQContent({ tool }: { tool: ToolDefinition }) {
-  const t = useTranslations(`tools.${tool.category}.${tool.slug}`);
+  // FAQ keys in registry are absolute paths and may live in the tool's own
+  // namespace OR in a shared namespace (e.g. "common.sharedFaq.q3"). Use the
+  // root translator so both forms resolve uniformly.
+  const t = useTranslations();
   const tc = useTranslations("common");
 
-  // FAQ keys in registry are absolute (e.g. "tools.developer.word-counter.faq.q1")
-  // Strip the prefix to get the relative key (e.g. "faq.q1")
-  const prefix = `tools.${tool.category}.${tool.slug}.`;
   const faqItems = tool.faq!.map((item) => ({
-    question: t(item.questionKey.replace(prefix, "")),
-    answer: t(item.answerKey.replace(prefix, "")),
+    question: t(item.questionKey),
+    answer: t(item.answerKey),
   }));
 
   return (

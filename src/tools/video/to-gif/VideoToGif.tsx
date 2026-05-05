@@ -45,6 +45,7 @@ export default function VideoToGif() {
   const [error, setError] = useState("");
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.video.to-gif");
+  const tc = useTranslations("common");
 
   const applyPreset = useCallback((q: GifQuality, srcFps: number) => {
     const d = PRESET_DEFAULTS[q];
@@ -64,7 +65,7 @@ export default function VideoToGif() {
   if (!isSharedArrayBufferSupported()) {
     return (
       <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
-        <p className="text-sm text-muted-foreground">{t("unsupported")}</p>
+        <p className="text-sm text-muted-foreground">{tc("unsupported")}</p>
       </div>
     );
   }

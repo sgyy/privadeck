@@ -17,12 +17,12 @@ const definition: ToolDefinition = {
       answerKey: "tools.developer.hash-generator.faq.a2",
     },
     {
-      questionKey: "tools.developer.hash-generator.faq.q3",
-      answerKey: "tools.developer.hash-generator.faq.a3",
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
     },
     {
-      questionKey: "tools.developer.hash-generator.faq.q4",
-      answerKey: "tools.developer.hash-generator.faq.a4",
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
     },
     {
       questionKey: "tools.developer.hash-generator.faq.q5",

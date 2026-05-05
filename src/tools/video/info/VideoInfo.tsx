@@ -37,6 +37,7 @@ export default function VideoInfo() {
   const probeTriggered = useRef(false);
 
   const t = useTranslations("tools.video.info");
+  const tc = useTranslations("common");
 
   const handleProbe = useCallback(async () => {
     if (!file || probing) return;
@@ -89,7 +90,7 @@ export default function VideoInfo() {
   if (!isSharedArrayBufferSupported()) {
     return (
       <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
-        <p className="text-sm text-muted-foreground">{t("unsupported")}</p>
+        <p className="text-sm text-muted-foreground">{tc("unsupported")}</p>
       </div>
     );
   }

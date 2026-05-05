@@ -17,12 +17,12 @@ const definition: ToolDefinition = {
     },
   
     {
-      questionKey: "tools.developer.lorem-ipsum.faq.q3",
-      answerKey: "tools.developer.lorem-ipsum.faq.a3",
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
     },
     {
-      questionKey: "tools.developer.lorem-ipsum.faq.q4",
-      answerKey: "tools.developer.lorem-ipsum.faq.a4",
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
     },
     {
       questionKey: "tools.developer.lorem-ipsum.faq.q5",

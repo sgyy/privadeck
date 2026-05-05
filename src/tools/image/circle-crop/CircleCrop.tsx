@@ -12,6 +12,7 @@ const tracker = createToolTracker("circle-crop", "image");
 
 export default function CircleCrop() {
   const t = useTranslations("tools.image.circle-crop");
+  const tCat = useTranslations("tools.image");
   const [file, setFile] = useState<File | null>(null);
   const [results, setResults] = useState<ImageResultItem[]>([]);
   const [processing, setProcessing] = useState(false);
@@ -46,7 +47,7 @@ export default function CircleCrop() {
       />
 
       <Button onClick={handleProcess} disabled={!file || processing}>
-        {processing ? t("processing") : t("cropCircle")}
+        {processing ? tCat("processing") : t("cropCircle")}
       </Button>
 
       {error && (

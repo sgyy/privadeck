@@ -55,6 +55,7 @@ const LOSSY_PRESETS: Record<
 export default function AudioExtract() {
   const isClient = useIsClient();
   const t = useTranslations("tools.audio.extract");
+  const tc = useTranslations("common");
 
   // ── Queue + format state (cloned from AudioConvert) ────────────────────
   const [queue, setQueue] = useState<QueueItem[]>([]);
@@ -453,7 +454,7 @@ export default function AudioExtract() {
   if (!isSharedArrayBufferSupported()) {
     return (
       <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
-        <p className="text-sm text-muted-foreground">{t("unsupported")}</p>
+        <p className="text-sm text-muted-foreground">{tc("unsupported")}</p>
       </div>
     );
   }

@@ -18,12 +18,12 @@ const definition: ToolDefinition = {
     },
   
     {
-      questionKey: "tools.developer.yaml-json.faq.q3",
-      answerKey: "tools.developer.yaml-json.faq.a3",
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
     },
     {
-      questionKey: "tools.developer.yaml-json.faq.q4",
-      answerKey: "tools.developer.yaml-json.faq.a4",
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
     },
     {
       questionKey: "tools.developer.yaml-json.faq.q5",

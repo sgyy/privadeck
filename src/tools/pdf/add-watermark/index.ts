@@ -18,12 +18,12 @@ const definition: ToolDefinition = {
     },
   
     {
-      questionKey: "tools.pdf.add-watermark.faq.q3",
-      answerKey: "tools.pdf.add-watermark.faq.a3",
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
     },
     {
-      questionKey: "tools.pdf.add-watermark.faq.q4",
-      answerKey: "tools.pdf.add-watermark.faq.a4",
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
     },
     {
       questionKey: "tools.pdf.add-watermark.faq.q5",

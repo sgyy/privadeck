@@ -24,6 +24,7 @@ export default function DeletePages() {
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   const t = useTranslations("tools.pdf.delete-pages");
+  const tCat = useTranslations("tools.pdf");
 
   async function handleFile(files: File[]) {
     const f = files[0];
@@ -147,7 +148,7 @@ export default function DeletePages() {
 
           {result && (
             <p className="text-sm text-muted-foreground">
-              {t("remaining")}: {pageCount - selected.size} {t("pages")} ·{" "}
+              {t("remaining")}: {pageCount - selected.size} {tCat("pages")} ·{" "}
               {formatFileSize(result.size)}
             </p>
           )}

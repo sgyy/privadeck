@@ -26,6 +26,7 @@ export default function RearrangePdf() {
   const [error, setError] = useState("");
   const pdfDocRef = useRef<PDFDocumentProxy | null>(null);
   const t = useTranslations("tools.pdf.rearrange");
+  const tCat = useTranslations("tools.pdf");
 
   async function handleFile(files: File[]) {
     const f = files[0];
@@ -127,7 +128,7 @@ export default function RearrangePdf() {
       {pdfDoc && pageOrder.length > 0 && (
         <>
           <p className="text-sm text-muted-foreground">
-            {t("dragHint")} ({pageOrder.length} {t("pages")})
+            {t("dragHint")} ({pageOrder.length} {tCat("pages")})
           </p>
           <div className="space-y-3">
             {pageOrder.map((pageIndex, position) => (

@@ -57,8 +57,6 @@
           "a2": "Nee. Alle beeldverwerking gebeurt lokaal in je browser. Je afbeeldingen verlaten nooit je apparaat.",
           "q3": "Kan ik meerdere afbeeldingen tegelijk converteren?",
           "a3": "Ja, je kunt meerdere afbeeldingen slepen en neerzetten en ze worden allemaal geconverteerd naar het geselecteerde formaat.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -127,8 +125,6 @@
           "a1": "Kies een compressiepreset (Hoge kwaliteit, Gebalanceerd of Klein bestand) of pas instellingen handmatig aan. De tool gebruikt lossy-compressie om de bestandsgrootte te verkleinen terwijl de visuele kwaliteit behouden blijft. Je kunt ook converteren tussen formaten — AVIF en WebP bieden meestal 25-50% kleinere bestanden dan JPEG bij vergelijkbare kwaliteit.",
           "q2": "Welke afbeeldingsformaten worden ondersteund?",
           "a2": "Je kunt JPEG, PNG, WebP, GIF en BMP afbeeldingen comprimeren. De tool laat je ook converteren tussen JPEG, PNG, WebP en AVIF uitvoerformaten, zodat je kunt comprimeren en converteren in één stap. AVIF is beschikbaar wanneer je browser dit ondersteunt.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
           "q4": "Wat doen de compressiepresets?",
           "a4": "Hoge kwaliteit behoudt maximale detail (90% kwaliteit, tot 10 MB). Gebalanceerd biedt een goede balans (75% kwaliteit, tot 2 MB). Klein bestand comprimeert agressief (50% kwaliteit, tot 1 MB, max 1920px). Aangepast laat je kwaliteit, bestandsgrootte, resolutie en afmetingen handmatig afstemmen.",
           "q5": "Kan ik EXIF-metadata behouden of verwijderen?",
@@ -328,10 +324,6 @@
           "a1": "Ja, de beeldverhouding is standaard vergrendeld. Klik op het koppelpictogram om te ontgrendelen voor vrije formaatwijziging.",
           "q2": "Welke presets zijn beschikbaar?",
           "a2": "Veelgebruikte presets zijn HD (1280×720), Full HD (1920×1080), 4K (3840×2160) en social media-formaten.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -375,10 +367,6 @@
           "a1": "Ja, selecteer de optie 'Herhalen (Tegel)' om herhalende watermerken schuin over de hele afbeelding toe te voegen.",
           "q2": "Kan ik de transparantie van het watermerk aanpassen?",
           "a2": "Ja, gebruik de dekkingsschuifregelaar om de transparantie in te stellen van nauwelijks zichtbaar tot volledig ondoorzichtig.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -518,7 +506,6 @@
             "content": "<p>Met de <strong>EXIF-editor</strong> kun je de verborgen metadata in een foto bekijken en bewerken — GPS-locatie, cameramodel, lens, opnamedatum, auteur, copyright en meer. Anders dan de meeste online editors blijft het oorspronkelijke bestandsformaat intact en vindt alle verwerking plaats in je browser.</p><p>Perfect om na een reis een verkeerde tijdstempel te corrigeren, GPS te wissen vóór je deelt of copyright op een geëxporteerde foto te stempelen.</p>"
           },
           "useCases": {
-            "title": "Veelvoorkomende gebruiksscenario's",
             "content": "<ul><li><strong>Vóór het delen</strong>: verwijder GPS-coördinaten uit een foto voordat je deze op sociale media plaatst</li><li><strong>Na een reis</strong>: corrigeer een verkeerde datum of tijdzone op een foto die is gemaakt terwijl de cameraklok niet klopte</li><li><strong>Copyright stempelen</strong>: voeg auteur, copyright en onderschrift toe aan een geëxporteerde foto</li><li><strong>Forensisch onderzoek &amp; audit</strong>: exporteer volledige EXIF/IPTC/XMP naar JSON of CSV voor documentatie</li><li><strong>Privacycheck</strong>: kijk precies welke metadata een foto bevat voordat je bepaalt wat je wilt verwijderen</li></ul>"
           },
           "privacy": {
@@ -568,7 +555,6 @@
           }
         },
         "removeExif": "EXIF-gegevens verwijderen",
-        "processing": "Verwerken...",
         "cleaned": "EXIF-gegevens succesvol verwijderd",
         "categoryTitle": "Kies welke datacategorieën te verwijderen",
         "categoryHint": "Standaard worden alle categorieën verwijderd. Vink iets uit om die data te behouden.",
@@ -591,10 +577,6 @@
           "a1": "Alle metadata wordt verwijderd, inclusief GPS-locatie, cameramodel, opnamedatum en andere ingesloten informatie. De afbeelding wordt opnieuw getekend op een schoon canvas.",
           "q2": "Heeft dit invloed op de beeldkwaliteit?",
           "a2": "De beeldkwaliteit blijft behouden op 95% voor JPEG. PNG-afbeeldingen worden lossless opnieuw geëxporteerd.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -640,10 +622,6 @@
           "a1": "Spiegelen geeft de afbeelding in spiegelbeeld weer (links/rechts of boven/onder). Draaien roteert hem 90 graden met of tegen de klok in. Je kunt alle vier de operaties combineren — bijvoorbeeld eerst horizontaal spiegelen en daarna 90 graden met de klok mee draaien.",
           "q2": "Vermindert transformeren de beeldkwaliteit?",
           "a2": "Nee. De afbeelding wordt opnieuw getekend op de oorspronkelijke resolutie. JPEG-afbeeldingen worden opnieuw gecodeerd op 92% kwaliteit.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking gebeurt volledig in je browser. Je gegevens verlaten nooit je apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeer je PrivaDeck als PWA vanuit je browser.",
           "q5": "Zijn er bestandsgroottelimieten?",
           "a5": "Er zijn geen serverbeperkingen. De maximale bestandsgrootte hangt af van het beschikbare geheugen van je apparaat en de mogelijkheden van de browser. De meeste moderne apparaten verwerken bestanden van enkele honderden MB zonder problemen.",
           "q6": "Kun je transformaties stapelen of ongedaan maken?",
@@ -672,16 +650,11 @@
         "aiSummary": "Converteer kleurenafbeeldingen gratis online naar grijswaarden. Geen upload nodig, alle verwerking gebeurt in je browser.",
         "keywords": "grijswaarden, zwart-wit, desatureren, afbeeldingsconverter",
         "convert": "Converteren naar grijswaarden",
-        "processing": "Verwerken...",
         "faq": {
           "q1": "Hoe werkt de grijswaardenconversie?",
           "a1": "De tool gebruikt het Canvas API grijswaardenfilter om alle kleurinformatie te verwijderen en elke pixel om te zetten naar een grijstint op basis van de luminantie.",
           "q2": "Kan ik de intensiteit van het grijswaardeneffect aanpassen?",
           "a2": "Deze tool past volledige grijswaardenconversie toe. Voor gedeeltelijke desaturatie kun je een speciale foto-editor gebruiken.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -709,16 +682,11 @@
         "keywords": "afbeelding pixeleren, mozaïekeffect, afbeelding censureren, pixel art",
         "pixelSize": "Pixelgrootte",
         "pixelate": "Afbeelding pixeleren",
-        "processing": "Verwerken...",
         "faq": {
           "q1": "Waarvoor kan ik pixelering gebruiken?",
           "a1": "Pixelering wordt vaak gebruikt om gevoelige informatie in screenshots te censureren, retro pixel-art-effecten te creëren of gezichten in foto's te anonimiseren.",
           "q2": "Kan ik het niveau van pixelering regelen?",
           "a2": "Ja. Gebruik de pixelgrootte-schuifregelaar om in te stellen van 2px (subtiel) tot 50px (zware pixelering).",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -747,16 +715,11 @@
         "borderWidth": "Randbreedte",
         "borderColor": "Randkleur",
         "addBorder": "Rand toevoegen",
-        "processing": "Verwerken...",
         "faq": {
           "q1": "Welke randopties zijn beschikbaar?",
           "a1": "Je kunt de randbreedte aanpassen van 1 tot 100 pixels en elke kleur kiezen met de kleurenkiezer.",
           "q2": "Welk formaat heeft de uitvoer?",
           "a2": "De uitvoer is altijd PNG om ervoor te zorgen dat de randkleur exact wordt behouden zoals gekozen.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -783,16 +746,11 @@
         "aiSummary": "Snijd afbeeldingen bij tot een cirkel met transparante achtergrond. Perfect voor profielfoto's en avatars. Gratis online tool.",
         "keywords": "rond bijsnijden, ronde afbeelding, avatar bijsnijden, profielfoto",
         "cropCircle": "Rond bijsnijden",
-        "processing": "Verwerken...",
         "faq": {
           "q1": "Hoe werkt rond bijsnijden?",
           "a1": "De tool neemt het midden van je afbeelding, gebruikt de kortste zijde als diameter en knipt het bij tot een perfecte cirkel. De achtergrond is transparant.",
           "q2": "Welk formaat heeft de uitvoer?",
           "a2": "De uitvoer is altijd PNG omdat dit transparantie ondersteunt, wat nodig is voor het ronde bijsnijden.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -820,16 +778,11 @@
         "keywords": "svg naar png, svg converter, vector naar raster, svg export",
         "scaleFactor": "Schaalfactor",
         "convert": "Converteren naar PNG",
-        "processing": "Verwerken...",
         "faq": {
           "q1": "Welke schaalfactoren zijn beschikbaar?",
           "a1": "Je kunt kiezen uit 1x (origineel formaat), 2x, 3x of 4x. Hogere schalen produceren grotere, meer gedetailleerde PNG-bestanden geschikt voor hoge-DPI-schermen.",
           "q2": "Worden alle SVG-functies ondersteund?",
           "a2": "De tool rendert SVG's met de ingebouwde SVG-engine van de browser. De meeste standaard SVG-functies worden ondersteund, maar externe bronnen of lettertypen worden mogelijk niet correct weergegeven.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -868,16 +821,11 @@
         "fontSize": "Lettergrootte",
         "color": "Kleur",
         "apply": "Tekst toevoegen",
-        "processing": "Verwerken...",
         "faq": {
           "q1": "Kan ik kiezen waar de tekst verschijnt?",
           "a1": "Ja, kies uit vijf posities: midden, linksboven, rechtsboven, linksonder of rechtsonder.",
           "q2": "Welke lettertypen zijn beschikbaar?",
           "a2": "De tool gebruikt het standaard sans-serif lettertype van de browser, dat per systeem verschilt maar altijd helder en leesbaar is.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -906,16 +854,11 @@
         "horizontal": "Horizontaal",
         "vertical": "Verticaal",
         "combine": "Afbeeldingen samenvoegen",
-        "processing": "Verwerken...",
         "faq": {
           "q1": "Welke lay-outopties zijn beschikbaar?",
           "a1": "Je kunt afbeeldingen horizontaal (naast elkaar) of verticaal (boven elkaar gestapeld) samenvoegen.",
           "q2": "Moeten de afbeeldingen dezelfde grootte hebben?",
           "a2": "Nee, afbeeldingen van verschillende grootten worden samengevoegd op hun originele afmetingen. Het canvas past zich aan om alle afbeeldingen te bevatten.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -944,17 +887,12 @@
         "rows": "Rijen",
         "columns": "Kolommen",
         "split": "Afbeelding splitsen",
-        "processing": "Verwerken...",
         "downloadAll": "Alles downloaden (ZIP)",
         "faq": {
           "q1": "Hoe werkt het splitsen van afbeeldingen?",
           "a1": "Kies het aantal rijen en kolommen. De afbeelding wordt verdeeld in gelijke stukken op basis van het opgegeven raster.",
           "q2": "Kan ik alle stukken tegelijk downloaden?",
           "a2": "Ja, gebruik de knop Alles downloaden (ZIP) om alle stukken in één ZIP-bestand te krijgen.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -1041,10 +979,6 @@
           "a1": "HEIC (High Efficiency Image Container) is sinds iOS 11 het standaardformaat voor foto's op Apple-apparaten. Bij gelijke kwaliteit is het bestand ongeveer half zo groot als een JPEG, maar het is niet standaard leesbaar op Windows of op oudere Android-apparaten.",
           "q2": "Wordt mijn afbeelding naar een server geüpload?",
           "a2": "Nee. Decoderen, EXIF-analyse, draaien/spiegelen en opnieuw coderen gebeuren allemaal lokaal in je browser. Je foto verlaat je apparaat niet.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken.",
           "q6": "Waarom staan mijn iPhone-foto's op Windows scheef?",
@@ -1086,10 +1020,6 @@
           "a1": "Beschikbare lay-outs hangen af van het aantal afbeeldingen dat je uploadt. Opties zijn onder andere 2x1, 1x2, 2x2, 3x1, 1x3 en 2x3 rasters.",
           "q2": "Kan ik de tussenruimte en achtergrond aanpassen?",
           "a2": "Ja, je kunt de tussenruimte tussen afbeeldingen instellen (0-20px) en elke achtergrondkleur kiezen met de kleurenkiezer.",
-          "q3": "Worden mijn bestanden naar een server geüpload?",
-          "a3": "Nee. Alle verwerking vindt volledig plaats in uw browser. Uw gegevens verlaten nooit uw apparaat — er wordt niets naar een server geüpload.",
-          "q4": "Kan ik deze tool offline gebruiken?",
-          "a4": "Ja. Zodra de pagina is geladen, werkt de tool volledig offline. Voor de beste ervaring installeert u PrivaDeck als PWA vanuit uw browser.",
           "q5": "Zijn er bestandsgroottebeperkingen?",
           "a5": "Er zijn geen serverlimieten. De maximale bestandsgrootte hangt af van het beschikbare geheugen van uw apparaat en de mogelijkheden van uw browser. De meeste moderne apparaten kunnen probleemloos bestanden tot enkele honderden MB verwerken."
         },
@@ -1107,7 +1037,8 @@
             "content": "<p>Collages are assembled <strong>entirely in your browser</strong> using Canvas API.</p><ul><li>Your photos <strong>never leave your device</strong></li><li>No server processing or cloud storage</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
           }
         }
-      }
+      },
+      "processing": "Verwerken..."
     }
   }
 }

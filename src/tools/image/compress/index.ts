@@ -18,8 +18,8 @@ const definition: ToolDefinition = {
     },
   
     {
-      questionKey: "tools.image.compress.faq.q3",
-      answerKey: "tools.image.compress.faq.a3",
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
     },
     {
       questionKey: "tools.image.compress.faq.q4",

@@ -81,13 +81,17 @@ export default async function ToolPage({
     { name: tt("name"), url: `${SITE_URL}/${locale}/tools/${category}/${slug}/` },
   ]);
 
-  const faqCount = tool.faq?.length ?? 0;
-  const faqItems = [];
-  for (let i = 1; i <= faqCount; i++) {
-    const q = tt.has(`faq.q${i}`) ? tt(`faq.q${i}`) : null;
-    const a = tt.has(`faq.a${i}`) ? tt(`faq.a${i}`) : null;
-    if (q && a) faqItems.push({ question: q, answer: a });
-  }
+  // FAQ keys in registry are absolute paths — they may point to tool-specific
+  // namespaces or shared (common.sharedFaq.*) entries. Use a root translator.
+  const tRoot = await getTranslations({ locale });
+  const faqItems = (tool.faq ?? [])
+    .map((item) => ({
+      question: tRoot.has(item.questionKey) ? tRoot(item.questionKey) : null,
+      answer: tRoot.has(item.answerKey) ? tRoot(item.answerKey) : null,
+    }))
+    .filter((it): it is { question: string; answer: string } =>
+      it.question !== null && it.answer !== null,
+    );
   const faqJsonLd = generateFaqJsonLd(faqItems);
 
   return (

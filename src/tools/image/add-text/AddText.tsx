@@ -29,6 +29,7 @@ export default function AddText() {
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   const t = useTranslations("tools.image.add-text");
+  const tCat = useTranslations("tools.image");
 
   function handleFileChange(f: File | null) {
     setFile(f);
@@ -134,7 +135,7 @@ export default function AddText() {
             onClick={handleApply}
             disabled={!text || processing}
           >
-            {processing ? t("processing") : t("apply")}
+            {processing ? tCat("processing") : t("apply")}
           </Button>
 
           {error && (

@@ -10,11 +10,26 @@ const definition: ToolDefinition = {
     structuredDataType: "WebApplication",
   },
   faq: [
-    { questionKey: "faq.q1", answerKey: "faq.a1" },
-    { questionKey: "faq.q2", answerKey: "faq.a2" },
-    { questionKey: "faq.q3", answerKey: "faq.a3" },
-    { questionKey: "faq.q4", answerKey: "faq.a4" },
-    { questionKey: "faq.q5", answerKey: "faq.a5" },
+    {
+      questionKey: "tools.audio.volume.faq.q1",
+      answerKey: "tools.audio.volume.faq.a1",
+    },
+    {
+      questionKey: "tools.audio.volume.faq.q2",
+      answerKey: "tools.audio.volume.faq.a2",
+    },
+    {
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
+    },
+    {
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
+    },
+    {
+      questionKey: "tools.audio.volume.faq.q5",
+      answerKey: "tools.audio.volume.faq.a5",
+    },
   ],
   relatedSlugs: ["trim", "convert", "extract"],
 };

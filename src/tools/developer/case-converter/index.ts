@@ -17,12 +17,12 @@ const definition: ToolDefinition = {
     },
   
     {
-      questionKey: "tools.developer.case-converter.faq.q3",
-      answerKey: "tools.developer.case-converter.faq.a3",
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
     },
     {
-      questionKey: "tools.developer.case-converter.faq.q4",
-      answerKey: "tools.developer.case-converter.faq.a4",
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
     },
     {
       questionKey: "tools.developer.case-converter.faq.q5",

@@ -81,6 +81,7 @@ function isImage(file: File): boolean {
 
 export default function MergePdf() {
   const t = useTranslations("tools.pdf.merge");
+  const tCat = useTranslations("tools.pdf");
 
   const [items, setItems] = useState<ItemState[]>([]);
   const [merging, setMerging] = useState(false);
@@ -601,7 +602,7 @@ export default function MergePdf() {
           <>
             <Button variant="outline" onClick={() => setPreviewOpen(true)}>
               <Eye className="h-4 w-4" />
-              {t("previewFullscreen")}
+              {tCat("previewFullscreen")}
             </Button>
             <DownloadButton
               data={result}

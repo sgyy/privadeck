@@ -23,6 +23,7 @@ export default function SplitImage() {
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   const t = useTranslations("tools.image.split");
+  const tCat = useTranslations("tools.image");
 
   function handleFileChange(f: File | null) {
     setFile(f);
@@ -98,7 +99,7 @@ export default function SplitImage() {
             </div>
 
             <Button onClick={handleSplit} disabled={processing}>
-              {processing ? t("processing") : t("split")}
+              {processing ? tCat("processing") : t("split")}
             </Button>
           </div>
 

@@ -10,16 +10,11 @@
         "keywords": "couper son vidéo, supprimer audio vidéo, vidéo muette, vidéo sans son",
         "mute": "Supprimer l'audio",
         "processing": "Traitement en cours",
-        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
         "faq": {
           "q1": "Comment fonctionne la suppression du son ?",
           "a1": "L'outil supprime la piste audio de la vidéo tout en gardant la qualité vidéo intacte. Aucun réencodage n'est nécessaire.",
           "q2": "Quels formats vidéo sont pris en charge ?",
           "a2": "Les formats les plus courants, dont MP4, WebM, MOV et AVI, sont pris en charge.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -29,7 +24,6 @@
             "content": "<p><strong>Couper le son de la vidéo</strong> supprime la piste audio des fichiers vidéo tout en préservant la qualité vidéo. Créez des versions silencieuses de vidéos pour des boucles en arrière-plan, des présentations ou des publications sur les réseaux sociaux où l'audio n'est pas nécessaire.</p><p>Propulsé par FFmpeg.wasm — traitement vidéo complet exécuté localement dans votre navigateur.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Présentations</strong> : Supprimez l'audio gênant des vidéos d'arrière-plan dans les diapositives</li><li><strong>Réseaux sociaux</strong> : Créez des vidéos en boucle silencieuses pour les arrière-plans Instagram ou TikTok</li><li><strong>Web design</strong> : Préparez des vidéos héros silencieuses pour les arrière-plans de sites web</li><li><strong>Confidentialité</strong> : Supprimez les conversations ou l'audio identifiable des enregistrements</li><li><strong>Montage vidéo</strong> : Retirez l'audio avant de le remplacer par une autre bande sonore</li></ul>"
           },
           "privacy": {
@@ -84,16 +78,11 @@
         "timeRange": "Plage de temps",
         "trim": "Découper la vidéo",
         "processing": "Traitement en cours",
-        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
         "faq": {
           "q1": "Puis-je découper les vidéos avec précision ?",
           "a1": "Oui, utilisez les curseurs de plage pour définir des points de début et fin exacts avec une précision de 0,1 seconde.",
           "q2": "La vidéo est-elle réencodée ?",
           "a2": "L'outil utilise le mode de copie de flux pour un traitement rapide sans perte de qualité.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -103,7 +92,6 @@
             "content": "<p><strong>Découper la vidéo</strong> coupe les clips vidéo à la longueur souhaitée avec des contrôles précis des heures de début et de fin. Réglez les temps avec une précision de 0,1 seconde, prévisualisez la sélection et téléchargez le clip découpé.</p><p>Utilise FFmpeg.wasm pour un découpage vidéo de qualité professionnelle directement dans votre navigateur.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Clips pour réseaux sociaux</strong> : Coupez les moments forts de vidéos longues pour les plateformes sociales</li><li><strong>Enregistrements de réunions</strong> : Extrayez les moments clés des réunions enregistrées</li><li><strong>Création de contenu</strong> : Découpez les séquences brutes pour créer des clips soignés</li><li><strong>Présentations</strong> : Coupez les clips vidéo à des longueurs exactes pour les présentations</li><li><strong>Vidéos personnelles</strong> : Découpez les vidéos de famille pour garder les meilleurs moments</li></ul>"
           },
           "privacy": {
@@ -163,10 +151,6 @@
           "a1": "Chaque clic tourne la vidéo de 90° (gauche ou droite). Vous pouvez cliquer plusieurs fois pour des rotations de 180° ou 270°.",
           "q2": "La rotation affecte-t-elle la qualité vidéo ?",
           "a2": "La vidéo est ré-encodée avec WebCodecs lors de la rotation. La qualité reste élevée, mais tout ré-encodage entraîne une légère perte de qualité.",
-          "q3": "Mes fichiers seront-ils téléchargés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé sur un serveur.",
-          "q4": "Puis-je utiliser cet outil hors ligne ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors ligne. Pour une meilleure expérience, installez PrivaDeck en tant que PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -232,16 +216,11 @@
         "outputSize": "Sortie",
         "convert": "Convertir en GIF",
         "converting": "Conversion en cours",
-        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
         "faq": {
           "q1": "Comment puis-je réduire la taille du fichier GIF ?",
           "a1": "Diminuez les FPS, réduisez la largeur ou raccourcissez la durée. L'outil utilise une palette optimisée pour le meilleur rapport qualité/taille.",
           "q2": "Quelle est la durée maximale pour un GIF ?",
           "a2": "Il n'y a pas de limite fixe, mais les GIFs plus longs produisent des fichiers très volumineux. Nous recommandons de garder les GIFs sous 10 secondes.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -251,7 +230,6 @@
             "content": "<p><strong>Vidéo en GIF</strong> convertit les clips vidéo en images GIF animées avec contrôle sur la fréquence d'images, la résolution et la qualité. Créez des GIFs partageables depuis n'importe quelle vidéo pour les réseaux sociaux, les chats ou la documentation.</p><p>Propulsé par FFmpeg.wasm pour une génération de GIF haute qualité directement dans votre navigateur.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Réseaux sociaux</strong> : Créez des GIFs de réaction ou des moments forts depuis des vidéos</li><li><strong>Documentation</strong> : Créez des démonstrations animées pour des tutoriels ou de la doc</li><li><strong>Chat et messagerie</strong> : Créez des GIFs personnalisés pour les chats de groupe et Slack</li><li><strong>Rapports de bugs</strong> : Enregistrez et partagez des reproductions de bugs animées</li><li><strong>Marketing</strong> : Créez du contenu animé accrocheur pour des campagnes</li></ul>"
           },
           "privacy": {
@@ -316,16 +294,11 @@
         "outputSize": "Sortie",
         "convert": "Convertir en WebP",
         "converting": "Conversion en cours",
-        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
         "faq": {
           "q1": "Pourquoi utiliser WebP au lieu de GIF ?",
           "a1": "Les fichiers WebP animés sont typiquement 25-35% plus petits que les GIFs équivalents tout en supportant une meilleure profondeur de couleur et transparence.",
           "q2": "Le WebP animé est-il largement pris en charge ?",
           "a2": "Oui, tous les navigateurs modernes prennent en charge le WebP animé. Seuls les très anciens navigateurs n'ont pas cette prise en charge.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -335,7 +308,6 @@
             "content": "<p><strong>Vidéo en WebP</strong> convertit les clips vidéo en images WebP animées. Les animations WebP sont <strong>25 à 35 % plus petites</strong> que les GIFs équivalents avec une meilleure reproduction des couleurs et la prise en charge de la transparence.</p><p>L'alternative moderne aux GIFs pour une utilisation sur le web.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Performance web</strong> : Remplacez les GIFs par des animations WebP plus légères sur les sites web</li><li><strong>Applications de chat</strong> : Créez des autocollants animés et des réactions</li><li><strong>Documentation</strong> : Démonstrations animées plus légères pour la documentation technique</li><li><strong>Réseaux sociaux</strong> : Créez du contenu animé là où WebP est pris en charge</li><li><strong>Design d'application</strong> : Créez des animations de chargement et des micro-interactions</li></ul>"
           },
           "privacy": {
@@ -393,7 +365,6 @@
         "originalSize": "Taille originale",
         "compressedSize": "Taille compressée",
         "saved": "Réduction de taille",
-        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
         "simpleMode": "Simple",
         "advancedMode": "Avancé",
         "sourceVideo": "Source",
@@ -460,7 +431,6 @@
             "content": "<p><strong>Compresser la vidéo</strong> est un puissant compresseur vidéo basé sur navigateur qui réduit la taille des fichiers sans les envoyer à un serveur. Choisissez parmi trois préréglages de qualité pour une compression rapide, ou passez en <strong>mode Avancé</strong> pour un contrôle total sur CRF, vitesse d'encodage, résolution, fréquence d'images, débit audio et plafond de débit max.</p><p>Propulsé par FFmpeg.wasm avec encodage H.264/AAC — la sortie se lit partout. L'outil affiche les métadonnées vidéo détaillées (résolution, durée, débit, FPS) et montre une comparaison côte à côte après compression.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Pièces jointes</strong> : Compressez les vidéos sous 25 Mo pour Gmail, Outlook ou messagerie d'entreprise</li><li><strong>Apps de messagerie</strong> : Réduisez les vidéos pour WhatsApp (limite 16 Mo), Telegram, Signal ou iMessage</li><li><strong>Réseaux sociaux</strong> : Optimisez la taille pour des envois plus rapides sur Instagram, TikTok, X ou YouTube</li><li><strong>Stockage cloud</strong> : Réduisez la taille pour économiser l'espace Google Drive, Dropbox ou iCloud</li><li><strong>Envois web et CMS</strong> : Respectez les limites de taille pour WordPress, Shopify ou portails personnalisés</li><li><strong>Archivage vidéo</strong> : Compressez les grands enregistrements avec le préréglage Haute qualité pour un stockage à long terme</li><li><strong>Partage à faible bande passante</strong> : Utilisez le préréglage Basse qualité pour un transfert rapide sur connexions lentes</li></ul>"
           },
           "privacy": {
@@ -524,7 +494,6 @@
         "format": "Format de sortie",
         "convert": "Convertir",
         "converting": "Conversion en cours",
-        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
         "codecLabel": "Codec vidéo",
         "codecHint": "H.264 : Meilleure compatibilité. H.265 : Fichier plus petit (jusqu'à 50% de réduction) mais peut ne pas fonctionner sur les anciens appareils.",
         "codecChecking": "Vérification du support H.265...",
@@ -536,10 +505,6 @@
           "a1": "Vous pouvez convertir entre MP4, WebM, MKV et AVI. MP4 et AVI utilisent l'encodage H.264, WebM utilise VP9, et MKV utilise la copie de flux pour une conversion rapide.",
           "q2": "La qualité vidéo changera-t-elle ?",
           "a2": "La conversion en MKV utilise la copie de flux, préservant la qualité exactement. Les autres conversions réencodent avec des réglages de haute qualité.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -549,7 +514,6 @@
             "content": "<p><strong>Convertir le format vidéo</strong> transforme les vidéos entre les formats populaires : MP4, WebM, MKV et AVI. Besoin de convertir un enregistrement WebM en MP4 pour une meilleure compatibilité ? Ou un AVI en WebM pour une utilisation web ? Cet outil s'en charge.</p><p>Propulsé par FFmpeg.wasm pour une conversion de format fiable dans votre navigateur.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Compatibilité</strong> : Convertissez les enregistrements d'écran WebM en MP4 universellement lisible</li><li><strong>Optimisation web</strong> : Convertissez les vidéos en WebM pour des fichiers plus légers sur le web</li><li><strong>Support héritage</strong> : Convertissez les formats modernes en AVI pour les anciens lecteurs multimédias</li><li><strong>Montage</strong> : Convertissez vers un format pris en charge par votre éditeur vidéo</li><li><strong>Multi-plateforme</strong> : Assurez-vous que les vidéos sont lisibles sur n'importe quel appareil ou plateforme</li></ul>"
           },
           "privacy": {
@@ -602,16 +566,11 @@
         "width": "Largeur",
         "resize": "Redimensionner",
         "processing": "Redimensionnement en cours",
-        "unsupported": "Cet outil nécessite la prise en charge de SharedArrayBuffer. Veuillez utiliser un navigateur moderne avec HTTPS.",
         "faq": {
           "q1": "Quels préréglages de résolution sont disponibles ?",
           "a1": "720p (1280px de large), 480p (854px de large) et 360p (640px de large). Vous pouvez aussi saisir une largeur personnalisée.",
           "q2": "Le rapport d'aspect est-il préservé ?",
           "a2": "Oui, la hauteur est automatiquement calculée pour maintenir le rapport d'aspect original.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
-          "q4": "Puis-je utiliser cet outil hors connexion ?",
-          "a4": "Oui. Une fois la page chargée, l'outil fonctionne entièrement hors connexion. Pour une meilleure expérience, installez PrivaDeck comme PWA depuis votre navigateur.",
           "q5": "Y a-t-il des limites de taille de fichier ?",
           "a5": "Il n'y a pas de limites imposées par le serveur. La taille maximale du fichier dépend de la mémoire disponible de votre appareil et des capacités du navigateur. La plupart des appareils modernes gèrent des fichiers de plusieurs centaines de Mo sans problème."
         },
@@ -621,7 +580,6 @@
             "content": "<p><strong>Redimensionner la vidéo</strong> modifie la résolution vidéo avec des options prédéfinies (720p, 480p, 360p) ou des dimensions personnalisées. Réduisez les grandes vidéos pour le web, les mobiles ou les réseaux sociaux, ou ajustez la résolution selon les exigences spécifiques de la plateforme.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li><strong>Réseaux sociaux</strong> : Redimensionnez selon les exigences d'Instagram, TikTok ou YouTube</li><li><strong>Optimisation mobile</strong> : Réduisez les vidéos 4K/1080p pour une lecture sur mobile</li><li><strong>Intégration web</strong> : Redimensionnez pour des dimensions optimales du lecteur web</li><li><strong>Économies de stockage</strong> : Réduisez la résolution pour économiser de l'espace de stockage</li><li><strong>E-mail</strong> : Réduisez les vidéos pour des tailles de fichier adaptées aux e-mails</li></ul>"
           },
           "privacy": {
@@ -696,8 +654,6 @@
           "a1": "Il détecte le codec vidéo (H.264, VP9, AV1, etc.), le codec audio (AAC, Opus, MP3, etc.), la résolution, la fréquence d'images, le débit, le format de pixel, le taux d'échantillonnage, la disposition des canaux et le format de conteneur.",
           "q2": "Quels formats vidéo sont pris en charge ?",
           "a2": "La plupart des formats courants dont MP4, WebM, MKV, AVI, MOV et plus sont pris en charge via FFmpeg.",
-          "q3": "Mes fichiers seront-ils téléversés sur un serveur ?",
-          "a3": "Non. Tout le traitement se fait entièrement dans votre navigateur. Vos données ne quittent jamais votre appareil — rien n'est envoyé à un serveur.",
           "q4": "En quoi cela diffère-t-il de simplement vérifier les propriétés du fichier ?",
           "a4": "Les propriétés de fichier du système d'exploitation montrent généralement seulement des informations basiques comme la taille et le type. Cet outil utilise FFmpeg pour extraire des métadonnées détaillées au niveau du flux, y compris le codec exact, le profil, le format de pixel et les débits par flux.",
           "q5": "Puis-je utiliser cet outil hors connexion ?",
@@ -709,7 +665,6 @@
             "content": "<p><strong>Info Vidéo</strong> est un outil en ligne gratuit qui inspecte et affiche les métadonnées détaillées de vos fichiers vidéo.</p>"
           },
           "useCases": {
-            "title": "Cas d'utilisation courants",
             "content": "<ul><li>Vérification pré-traitement</li><li>Vérification de compatibilité</li><li>Débogage des problèmes de lecture</li><li>Évaluation de qualité</li></ul>"
           },
           "privacy": {

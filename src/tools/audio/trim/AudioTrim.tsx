@@ -71,6 +71,7 @@ export default function AudioTrim() {
   const fileUrl = useObjectUrl(file);
   const resultUrl = useObjectUrl(result);
   const t = useTranslations("tools.audio.trim");
+  const tc = useTranslations("common");
   const startInputId = useId();
   const endInputId = useId();
 
@@ -317,7 +318,7 @@ export default function AudioTrim() {
   if (!isSharedArrayBufferSupported()) {
     return (
       <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
-        <p className="text-sm text-muted-foreground">{t("unsupported")}</p>
+        <p className="text-sm text-muted-foreground">{tc("unsupported")}</p>
       </div>
     );
   }

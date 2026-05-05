@@ -17,12 +17,12 @@ const definition: ToolDefinition = {
       answerKey: "tools.pdf.merge.faq.a2",
     },
     {
-      questionKey: "tools.pdf.merge.faq.q3",
-      answerKey: "tools.pdf.merge.faq.a3",
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
     },
     {
-      questionKey: "tools.pdf.merge.faq.q4",
-      answerKey: "tools.pdf.merge.faq.a4",
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
     },
     {
       questionKey: "tools.pdf.merge.faq.q5",

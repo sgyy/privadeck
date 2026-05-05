@@ -10,16 +10,11 @@
         "keywords": "bisukan video, hapus audio dari video, video tanpa suara, video senyap",
         "mute": "Hapus Audio",
         "processing": "Memproses",
-        "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Silakan gunakan browser modern dengan HTTPS.",
         "faq": {
           "q1": "Bagaimana cara kerja pembisuan video?",
           "a1": "Alat ini menghapus trek audio dari video sambil mempertahankan kualitas video. Tidak perlu encoding ulang.",
           "q2": "Format video apa yang didukung?",
           "a2": "Sebagian besar format umum termasuk MP4, WebM, MOV, dan AVI didukung.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -29,7 +24,6 @@
             "content": "<p><strong>Mute Video</strong> menghapus trek audio dari file video sambil menjaga kualitas video tetap utuh. Buat versi senyap dari video untuk loop latar belakang, presentasi, atau postingan media sosial yang tidak memerlukan audio.</p><p>Ditenagai oleh FFmpeg.wasm — pemrosesan video lengkap berjalan secara lokal di browser Anda.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Presentasi</strong>: Hapus audio yang mengganggu dari video latar di slide</li><li><strong>Media Sosial</strong>: Buat video loop senyap untuk latar Instagram atau TikTok</li><li><strong>Desain Web</strong>: Siapkan video hero senyap untuk latar belakang situs</li><li><strong>Privasi</strong>: Hapus percakapan atau audio yang dapat diidentifikasi dari rekaman</li><li><strong>Editing Video</strong>: Hapus audio sebelum mengganti dengan trek suara yang berbeda</li></ul>"
           },
           "privacy": {
@@ -84,16 +78,11 @@
         "timeRange": "Rentang Waktu",
         "trim": "Potong Video",
         "processing": "Memproses",
-        "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Silakan gunakan browser modern dengan HTTPS.",
         "faq": {
           "q1": "Bisakah saya memotong video dengan presisi?",
           "a1": "Ya, gunakan slider rentang untuk mengatur titik awal dan akhir yang tepat dengan presisi 0,1 detik.",
           "q2": "Apakah video di-encode ulang?",
           "a2": "Alat ini menggunakan mode stream copy untuk pemrosesan cepat tanpa kehilangan kualitas.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -103,7 +92,6 @@
             "content": "<p><strong>Trim Video</strong> memotong klip video ke panjang yang diinginkan dengan kontrol waktu awal dan akhir yang presisi. Atur waktu hingga presisi 0,1 detik, pratinjau pilihan, dan unduh klip yang sudah dipotong.</p><p>Menggunakan FFmpeg.wasm untuk pemotongan video tingkat profesional langsung di browser Anda.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Klip Media Sosial</strong>: Potong sorotan dari video yang lebih panjang untuk platform sosial</li><li><strong>Rekaman Rapat</strong>: Ekstrak momen kunci dari rekaman rapat</li><li><strong>Pembuatan Konten</strong>: Potong rekaman mentah untuk membuat klip yang dipoles</li><li><strong>Presentasi</strong>: Potong klip video ke panjang yang tepat untuk presentasi</li><li><strong>Video Pribadi</strong>: Potong video rumahan untuk menyimpan momen terbaik</li></ul>"
           },
           "privacy": {
@@ -163,10 +151,6 @@
           "a1": "Setiap klik memutar video 90° (kiri atau kanan). Anda dapat klik beberapa kali untuk rotasi 180° atau 270°.",
           "q2": "Apakah rotasi memengaruhi kualitas video?",
           "a2": "Video dienkode ulang dengan WebCodecs selama rotasi. Kualitas tetap tinggi, tetapi setiap enkoding ulang menyebabkan penurunan kualitas ringan.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Bisakah saya menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batas ukuran file?",
           "a5": "Tidak ada batasan dari server. Ukuran file maksimum tergantung pada memori perangkat yang tersedia dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file ratusan MB tanpa masalah."
         },
@@ -209,7 +193,6 @@
             "content": "<p><strong>Putar Video</strong> memutar file video dalam langkah 90° ke kiri atau kanan untuk memperbaiki masalah orientasi. Perbaiki video ponsel yang direkam miring, rekaman terbalik, atau sesuaikan orientasi untuk kebutuhan tampilan tertentu — semuanya di browser dengan pratinjau langsung.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Video Ponsel</strong>: Perbaiki video yang direkam miring di ponsel</li><li><strong>Materi Kamera</strong>: Perbaiki orientasi dari kamera yang dipasang miring</li><li><strong>Rekaman Layar</strong>: Putar rekaman layar untuk tampilan potret</li><li><strong>Media Sosial</strong>: Sesuaikan orientasi dengan persyaratan platform (potret/lansekap)</li><li><strong>Presentasi</strong>: Perbaiki orientasi video di slide</li></ul>"
           },
           "privacy": {
@@ -232,16 +215,11 @@
         "outputSize": "Output",
         "convert": "Konversi ke GIF",
         "converting": "Mengonversi",
-        "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Silakan gunakan browser modern dengan HTTPS.",
         "faq": {
           "q1": "Bagaimana cara mengurangi ukuran file GIF?",
           "a1": "Turunkan FPS, kurangi lebar, atau persingkat durasi. Alat ini menggunakan palet teroptimasi untuk rasio kualitas-ukuran terbaik.",
           "q2": "Berapa panjang maksimum GIF?",
           "a2": "Tidak ada batas ketat, tetapi GIF yang lebih panjang menghasilkan file yang sangat besar. Kami sarankan GIF di bawah 10 detik.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -251,7 +229,6 @@
             "content": "<p><strong>Video to GIF</strong> mengonversi klip video menjadi gambar GIF animasi dengan kontrol atas frame rate, resolusi, dan kualitas. Buat GIF yang dapat dibagikan dari video apa pun untuk media sosial, obrolan, atau dokumentasi.</p><p>Ditenagai oleh FFmpeg.wasm untuk pembuatan GIF berkualitas tinggi langsung di browser Anda.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Media Sosial</strong>: Buat GIF reaksi atau sorotan dari video</li><li><strong>Dokumentasi</strong>: Buat demonstrasi animasi untuk tutorial atau dokumentasi</li><li><strong>Obrolan & Pesan</strong>: Buat GIF khusus untuk obrolan grup dan Slack</li><li><strong>Laporan Bug</strong>: Rekam dan bagikan reproduksi bug animasi</li><li><strong>Pemasaran</strong>: Buat konten animasi yang menarik untuk kampanye</li></ul>"
           },
           "privacy": {
@@ -316,16 +293,11 @@
         "outputSize": "Output",
         "convert": "Konversi ke WebP",
         "converting": "Mengonversi",
-        "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Silakan gunakan browser modern dengan HTTPS.",
         "faq": {
           "q1": "Mengapa menggunakan WebP daripada GIF?",
           "a1": "File WebP animasi biasanya 25-35% lebih kecil dari GIF setara sambil mendukung kedalaman warna dan transparansi yang lebih baik.",
           "q2": "Apakah WebP animasi didukung secara luas?",
           "a2": "Ya, semua browser modern mendukung WebP animasi. Hanya browser yang sangat lama yang tidak mendukung.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -335,7 +307,6 @@
             "content": "<p><strong>Video to WebP</strong> mengonversi klip video menjadi gambar WebP animasi. Animasi WebP <strong>25-35% lebih kecil</strong> dari GIF setara dengan reproduksi warna yang lebih baik dan dukungan transparansi.</p><p>Alternatif modern untuk GIF untuk penggunaan web.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Performa Web</strong>: Ganti GIF dengan animasi WebP yang lebih kecil di situs web</li><li><strong>Aplikasi Obrolan</strong>: Buat stiker animasi dan reaksi</li><li><strong>Dokumentasi</strong>: Demo animasi yang lebih kecil untuk dokumentasi teknis</li><li><strong>Media Sosial</strong>: Buat konten animasi di mana WebP didukung</li><li><strong>Desain Aplikasi</strong>: Buat animasi pemuatan dan interaksi mikro</li></ul>"
           },
           "privacy": {
@@ -393,7 +364,6 @@
         "originalSize": "Ukuran asli",
         "compressedSize": "Ukuran terkompres",
         "saved": "Pengurangan ukuran",
-        "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Silakan gunakan browser modern dengan HTTPS.",
         "simpleMode": "Sederhana",
         "advancedMode": "Lanjutan",
         "sourceVideo": "Sumber",
@@ -460,7 +430,6 @@
             "content": "<p><strong>Kompres Video</strong> adalah kompresor video berbasis browser yang kuat yang mengurangi ukuran file tanpa mengunggah ke server mana pun. Pilih dari tiga preset kualitas untuk kompresi cepat, atau beralih ke <strong>Mode Lanjutan</strong> untuk kontrol penuh atas CRF, kecepatan encoding, resolusi, frame rate, bitrate audio, dan batas bitrate maks.</p><p>Ditenagai oleh FFmpeg.wasm dengan encoding H.264/AAC — output diputar di mana saja. Alat ini menampilkan metadata video terperinci (resolusi, durasi, bitrate, FPS) dan menunjukkan perbandingan berdampingan setelah kompresi.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Lampiran Email</strong>: Kompres video di bawah 25 MB untuk Gmail, Outlook, atau email perusahaan</li><li><strong>Aplikasi Pesan</strong>: Perkecil video untuk WhatsApp (batas 16 MB), Telegram, Signal, atau iMessage</li><li><strong>Media Sosial</strong>: Optimalkan ukuran file untuk unggahan lebih cepat ke Instagram, TikTok, X, atau YouTube</li><li><strong>Penyimpanan Cloud</strong>: Kurangi ukuran file untuk menghemat ruang Google Drive, Dropbox, atau iCloud</li><li><strong>Unggah Web & CMS</strong>: Penuhi batas ukuran unggah untuk WordPress, Shopify, atau portal kustom</li><li><strong>Arsip Video</strong>: Kompres rekaman besar dengan preset Kualitas Tinggi untuk penyimpanan jangka panjang</li><li><strong>Berbagi Bandwidth Rendah</strong>: Gunakan preset Kualitas Rendah untuk transfer cepat melalui koneksi lambat</li></ul>"
           },
           "privacy": {
@@ -524,7 +493,6 @@
         "format": "Format Output",
         "convert": "Konversi",
         "converting": "Mengonversi",
-        "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Silakan gunakan browser modern dengan HTTPS.",
         "codecLabel": "Kodek Video",
         "codecHint": "H.264: Kompatibilitas terbaik. H.265: Ukuran file lebih kecil (hingga 50% lebih kecil) tetapi mungkin tidak berfungsi di perangkat lama.",
         "codecChecking": "Memeriksa dukungan H.265...",
@@ -536,10 +504,6 @@
           "a1": "Anda dapat mengonversi antara format MP4, WebM, MKV, dan AVI. MP4 dan AVI menggunakan encoding H.264, WebM menggunakan VP9, dan MKV menggunakan stream copy untuk konversi cepat.",
           "q2": "Apakah kualitas video berubah?",
           "a2": "Konversi ke MKV menggunakan stream copy sehingga kualitas dipertahankan persis. Konversi lain meng-encode ulang dengan pengaturan kualitas tinggi.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -549,7 +513,6 @@
             "content": "<p><strong>Convert Video Format</strong> mengubah video antara format populer: MP4, WebM, MKV, dan AVI. Perlu mengonversi rekaman WebM ke MP4 untuk kompatibilitas yang lebih luas? Atau AVI ke WebM untuk penggunaan web? Alat ini menanganinya.</p><p>Ditenagai oleh FFmpeg.wasm untuk konversi format yang andal di browser Anda.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Kompatibilitas</strong>: Konversi rekaman layar WebM ke MP4 yang dapat diputar secara universal</li><li><strong>Optimalisasi Web</strong>: Konversi video ke WebM untuk ukuran file lebih kecil di web</li><li><strong>Dukungan Lawas</strong>: Konversi format modern ke AVI untuk pemutar media lama</li><li><strong>Editing</strong>: Konversi ke format yang didukung editor video Anda</li><li><strong>Lintas Platform</strong>: Pastikan video diputar di perangkat atau platform apa pun</li></ul>"
           },
           "privacy": {
@@ -602,16 +565,11 @@
         "width": "Lebar",
         "resize": "Ubah Ukuran",
         "processing": "Mengubah ukuran",
-        "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Silakan gunakan browser modern dengan HTTPS.",
         "faq": {
           "q1": "Preset resolusi apa yang tersedia?",
           "a1": "720p (lebar 1280px), 480p (lebar 854px), dan 360p (lebar 640px). Anda juga dapat memasukkan lebar kustom.",
           "q2": "Apakah rasio aspek dipertahankan?",
           "a2": "Ya, tinggi dihitung secara otomatis untuk mempertahankan rasio aspek asli.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -621,7 +579,6 @@
             "content": "<p><strong>Resize Video</strong> mengubah resolusi video dengan opsi preset (720p, 480p, 360p) atau dimensi kustom. Turunkan skala video besar untuk web, seluler, atau media sosial, atau sesuaikan resolusi untuk persyaratan platform tertentu.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Media Sosial</strong>: Ubah ukuran untuk persyaratan Instagram, TikTok, atau YouTube</li><li><strong>Optimalisasi Seluler</strong>: Turunkan skala video 4K/1080p untuk tampilan seluler</li><li><strong>Embed Web</strong>: Ubah ukuran untuk dimensi pemutar web optimal</li><li><strong>Penghematan Penyimpanan</strong>: Kurangi resolusi untuk menghemat ruang penyimpanan</li><li><strong>Email</strong>: Turunkan skala video untuk ukuran file yang ramah email</li></ul>"
           },
           "privacy": {
@@ -672,7 +629,6 @@
         "keywords": "info video, metadata video, codec video, info media, pemeriksa video",
         "probe": "Analisis Video",
         "probing": "Menganalisis…",
-        "unsupported": "Alat ini memerlukan dukungan SharedArrayBuffer. Silakan gunakan browser modern dengan HTTPS.",
         "fileInfo": "Informasi File",
         "containerInfo": "Informasi Kontainer",
         "videoStream": "Stream Video",
@@ -696,8 +652,6 @@
           "a1": "Alat ini mendeteksi codec video (H.264, VP9, AV1, dll.), codec audio (AAC, Opus, MP3, dll.), resolusi, frame rate, bitrate, format piksel, laju sampel, tata letak kanal, dan format kontainer.",
           "q2": "Format video apa saja yang didukung?",
           "a2": "Sebagian besar format umum termasuk MP4, WebM, MKV, AVI, MOV, dan lainnya didukung melalui FFmpeg.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
           "q4": "Bagaimana ini berbeda dari hanya memeriksa properti file?",
           "a4": "Properti file sistem operasi biasanya hanya menampilkan informasi dasar seperti ukuran file dan tipe. Alat ini menggunakan FFmpeg untuk mengekstrak metadata level stream terperinci termasuk codec yang tepat, profil, format piksel, dan bitrate per stream.",
           "q5": "Apakah saya bisa menggunakan alat ini secara offline?",
@@ -709,7 +663,6 @@
             "content": "<p><strong>Info Video</strong> adalah alat online gratis yang memeriksa dan menampilkan metadata terperinci dari file video Anda.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li>Pemeriksaan pra-pemrosesan</li><li>Pemeriksaan kompatibilitas</li><li>Debug masalah pemutaran</li><li>Penilaian kualitas</li></ul>"
           },
           "privacy": {

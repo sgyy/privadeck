@@ -12,6 +12,7 @@ const tracker = createToolTracker("svg-to-png", "image");
 
 export default function SvgToPng() {
   const t = useTranslations("tools.image.svg-to-png");
+  const tCat = useTranslations("tools.image");
   const [file, setFile] = useState<File | null>(null);
   const [scale, setScale] = useState(1);
   const [results, setResults] = useState<ImageResultItem[]>([]);
@@ -65,7 +66,7 @@ export default function SvgToPng() {
       </div>
 
       <Button onClick={handleProcess} disabled={!file || processing}>
-        {processing ? t("processing") : t("convert")}
+        {processing ? tCat("processing") : t("convert")}
       </Button>
 
       {error && (

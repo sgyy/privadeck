@@ -49,7 +49,6 @@
             "content": "<p><strong>JSON Formatter</strong> adalah alat JSON gratis berkualitas profesional yang menggabungkan Monaco code editor, tampilan pohon interaktif, dan validasi real-time dalam satu antarmuka. Tempel JSON berantakan atau terminifikasi dan langsung dapatkan output bersih yang mudah dibaca manusia dengan penyorotan sintaksis, code folding, dan eksplorasi pohon visual.</p><p>Baik Anda men-debug respons API, memeriksa struktur data yang sangat bersarang, meninjau file konfigurasi, atau menyiapkan data untuk dokumentasi — alat ini memberi Anda semua yang dibutuhkan tanpa meninggalkan browser atau mengunggah satu byte pun.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Pengembangan &amp; Debugging API</strong>: Tempel respons API mentah, format seketika, dan gunakan tampilan pohon untuk menavigasi objek yang sangat bersarang</li><li><strong>File Konfigurasi</strong>: Bersihkan <code>package.json</code>, <code>tsconfig.json</code>, <code>.eslintrc</code>, atau manifes Kubernetes</li><li><strong>Eksplorasi Data</strong>: Gunakan JSON Path untuk memfilter dataset besar dan menemukan nilai tertentu tanpa menggulir ribuan baris</li><li><strong>Tinjauan Kode</strong>: Bandingkan struktur JSON secara visual dengan tampilan pohon untuk menemukan perbedaan dengan cepat</li><li><strong>Dokumentasi</strong>: Format dan ekspor contoh JSON terstruktur dengan baik untuk dokumentasi teknis dan tutorial</li><li><strong>Catatan Database</strong>: Periksa dan format JSON yang tersimpan di kolom MongoDB, CouchDB, atau PostgreSQL JSONB</li></ul>"
           },
           "privacy": {
@@ -214,10 +213,6 @@
           "a1": "Base64 adalah skema enkoding biner-ke-teks yang mengubah data biner menjadi karakter ASCII. Ini umum digunakan dalam URL data, lampiran email, dan muatan API.",
           "q2": "Bisakah saya mengenkode file?",
           "a2": "Yes. Switch to the File tab to encode any file (images, PDFs, ZIPs, etc.) to Base64. You can also decode a Base64 string back to a downloadable file.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah.",
           "q6": "What is URL-safe Base64?",
@@ -229,7 +224,6 @@
             "content": "<p><strong>Encoder/Decoder Base64</strong> mengonversi teks dan file ke encoding Base64 dan sebaliknya. Base64 adalah skema encoding biner-ke-teks yang umum digunakan untuk menyematkan data di URL, email, HTML, dan JSON.</p><p>Encode teks atau file apa pun (gambar, PDF, ZIP) ke Base64, atau decode string Base64 kembali ke teks atau file yang dapat diunduh — semua di browser Anda, dengan dukungan varian URL-safe dan Data URI.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Data URI</strong>: Encode gambar atau font sebagai Base64 Data URI untuk embedding di HTML/CSS tanpa request file eksternal</li><li><strong>Token JWT</strong>: Decode payload JWT menggunakan Base64 URL-safe untuk debugging dan inspeksi</li><li><strong>Autentikasi API</strong>: Encode kredensial untuk header HTTP Basic Authentication</li><li><strong>Transfer File</strong>: Konversi file biner ke teks Base64 untuk dimasukkan dalam JSON API, email, atau file konfigurasi</li><li><strong>Lampiran Email</strong>: Encode/decode lampiran MIME dalam protokol email</li><li><strong>Debugging Developer</strong>: Inspeksi cepat data terenkode Base64 di log, token, atau respons API</li></ul>"
           },
           "privacy": {
@@ -313,10 +307,6 @@
           "a1": "Enkoding URL mengubah karakter khusus menjadi format percent-encoded (misalnya, spasi menjadi %20) sehingga dapat digunakan dengan aman dalam alamat web.",
           "q2": "Apa perbedaan antara Enkode dan Enkode Komponen?",
           "a2": "Enkode mengubah seluruh URL dengan mempertahankan karakter struktur seperti / dan ?. Enkode Komponen mengenkode semuanya termasuk karakter tersebut, berguna untuk nilai parameter kueri.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -326,7 +316,6 @@
             "content": "<p><strong>URL Encoder/Decoder</strong> mengubah karakter khusus dalam URL menjadi bentuk percent-encoded dan sebaliknya. Ini penting untuk membuat URL yang valid yang berisi spasi, ampersand, karakter non-ASCII, atau karakter khusus lainnya.</p><p>Gunakan untuk meneruskan parameter kueri dengan aman, mengenkode jalur file, atau men-debug URL yang rusak.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Parameter Kueri</strong>: Enkode nilai untuk dimasukkan dengan aman dalam string kueri URL</li><li><strong>Permintaan API</strong>: Enkode parameter permintaan dengan benar untuk REST API</li><li><strong>URL Redirect</strong>: Enkode URL callback untuk aliran OAuth dan redirect</li><li><strong>Jalur File</strong>: Enkode nama file dengan spasi atau karakter khusus untuk server web</li><li><strong>Debugging</strong>: Dekode URL yang kacau untuk melihat teks aslinya</li></ul>"
           },
           "privacy": {
@@ -351,10 +340,6 @@
           "a1": "Lebih dari 12 bahasa termasuk Inggris, Tionghoa (Sederhana/Tradisional), Jepang, Korea, Spanyol, Prancis, Jerman, dan lainnya.",
           "q2": "Seberapa akurat OCR-nya?",
           "a2": "Akurasi bergantung pada kualitas gambar dan kejelasan teks. Gambar yang jelas, beresolusi tinggi dengan kontras yang baik menghasilkan hasil terbaik.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -364,7 +349,6 @@
             "content": "<p><strong>OCR Text Recognition</strong> mengekstrak teks yang dapat dibaca dari gambar menggunakan pengenalan karakter optik yang didukung oleh Tesseract.js. Unggah foto dokumen, tangkapan layar, kuitansi, atau catatan tulisan tangan, dan dapatkan konten teks yang dapat Anda salin, edit, dan gunakan.</p><p>Mendukung <strong>12+ bahasa</strong> termasuk Inggris, Tionghoa, Jepang, Korea, Spanyol, Prancis, Jerman, dan lainnya — semuanya diproses secara lokal di browser Anda.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Digitalisasi Dokumen</strong>: Ubah dokumen cetak, kuitansi, atau surat menjadi teks yang dapat diedit</li><li><strong>Ekstraksi Teks Tangkapan Layar</strong>: Ambil teks dari tangkapan layar halaman web, pesan kesalahan, atau log chat</li><li><strong>Persiapan Terjemahan</strong>: Ekstrak teks bahasa asing dari gambar untuk diterjemahkan</li><li><strong>Entri Data</strong>: Digitalkan teks dengan cepat dari formulir, faktur, atau kartu nama</li><li><strong>Aksesibilitas</strong>: Jadikan teks berbasis gambar dapat diakses oleh pembaca layar</li></ul>"
           },
           "privacy": {
@@ -388,10 +372,6 @@
           "a1": "Saat ini file ZIP didukung sepenuhnya. File diekstrak seluruhnya di browser Anda.",
           "q2": "Bisakah saya mengunduh file individual dari arsip?",
           "a2": "Ya, Anda dapat menjelajahi isi arsip dan mengunduh file apa pun dengan mengklik tombol unduhnya.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -401,7 +381,6 @@
             "content": "<p><strong>ZIP Extractor</strong> memungkinkan Anda membuka dan mengekstrak konten arsip ZIP langsung di browser Anda. Pratinjau nama file, ukuran, dan struktur folder sebelum mengunduh file individual atau seluruh isinya.</p><p>Tidak perlu menginstal perangkat lunak — cukup jatuhkan file ZIP Anda dan jelajahi isinya secara instan.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Inspeksi File Cepat</strong>: Periksa apa yang ada di dalam ZIP sebelum mengekstrak semuanya</li><li><strong>Unduh File Tunggal</strong>: Ekstrak hanya file yang Anda butuhkan dari arsip besar</li><li><strong>Penggunaan Seluler</strong>: Buka file ZIP di ponsel dan tablet tanpa pengelola file</li><li><strong>Pengguna Chromebook</strong>: Ekstrak arsip saat alat native tidak tersedia</li><li><strong>Lampiran Email</strong>: Intip dengan cepat di dalam lampiran ZIP</li></ul>"
           },
           "privacy": {
@@ -428,10 +407,6 @@
           "a1": "Comma-separated values standar dengan eskaping kutip ganda opsional. Field yang mengandung koma, kutip, atau baris baru ditangani dengan benar.",
           "q2": "Apakah mendukung JSON bersarang?",
           "a2": "JSON ke CSV bekerja paling baik dengan array objek datar. Objek bersarang dikonversi ke representasi string-nya.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -441,7 +416,6 @@
             "content": "<p><strong>CSV/JSON Converter</strong> mengubah data antara format CSV (comma-separated values) dan JSON secara instan. Konversi data spreadsheet ke array JSON untuk API, atau ubah dataset JSON menjadi CSV untuk Excel atau Google Sheets.</p><p>Menangani header, field berkutip, dan pembatas khusus — semuanya di browser Anda tanpa data yang diunggah.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Integrasi API</strong>: Konversi ekspor spreadsheet ke JSON untuk payload API</li><li><strong>Analisis Data</strong>: Ubah respons API JSON menjadi CSV untuk Excel atau Google Sheets</li><li><strong>Migrasi Database</strong>: Konversi antara format data selama impor/ekspor database</li><li><strong>Pelaporan</strong>: Konversi log atau rekaman JSON ke CSV untuk alat pelaporan</li><li><strong>Prototipe</strong>: Buat data JSON sampel dengan cepat dari mockup spreadsheet</li></ul>"
           },
           "privacy": {
@@ -485,10 +459,6 @@
           "a1": "MD5, CRC32, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, dan SHA3-512 semuanya dihitung secara bersamaan. Algoritma SHA menggunakan Web Crypto API browser, sementara MD5, CRC32, dan SHA-3 menggunakan implementasi JavaScript yang dioptimalkan.",
           "q2": "Bisakah saya meng-hash file?",
           "a2": "Ya, beralih ke mode File dan jatuhkan file apa pun. Anda juga bisa meng-hash beberapa file sekaligus dengan pemrosesan massal. Hash dihitung secara lokal di browser Anda — file tidak pernah diunggah.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah.",
           "q6": "Apakah MD5 masih aman?",
@@ -537,7 +507,6 @@
             "content": "<p><strong>Generator Hash</strong> menghitung nilai hash kriptografi untuk teks atau file menggunakan algoritma MD5, SHA-1, SHA-256, SHA-384, SHA-512, SHA3-256, SHA3-512, dan CRC32. Alat ini juga mendukung HMAC (Hash-based Message Authentication Code) dengan kunci rahasia. Hash adalah sidik jari satu arah yang digunakan untuk memverifikasi integritas data, membandingkan file, dan memvalidasi unduhan.</p><p>Hasilkan hash secara instan di browser Anda dengan komputasi real-time — ideal untuk memverifikasi integritas file atau membuat intisari konten.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Integritas File</strong>: Verifikasi file yang diunduh tidak diubah dengan membandingkan checksum</li><li><strong>Deduplikasi Konten</strong>: Bandingkan hash untuk menemukan file duplikat</li><li><strong>Otentikasi API</strong>: Hasilkan tanda tangan HMAC untuk permintaan API</li><li><strong>Distribusi Perangkat Lunak</strong>: Hasilkan checksum untuk rilis file Anda sendiri</li><li><strong>Audit Keamanan</strong>: Hash file untuk mendeteksi modifikasi yang tidak sah</li></ul>"
           },
           "privacy": {
@@ -563,10 +532,6 @@
           "a1": "Anda dapat memasukkan warna sebagai HEX (#ff6600 atau #f60), RGB (rgb(255, 102, 0)), atau HSL (hsl(24, 100%, 50%)). Semua format lain ditampilkan secara otomatis.",
           "q2": "Apakah mendukung alpha/transparansi?",
           "a2": "Saat ini alat ini hanya mendukung warna opak. Dukungan RGBA dan HSLA akan ditambahkan di pembaruan mendatang.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -576,7 +541,6 @@
             "content": "<p><strong>Color Converter</strong> mengubah warna antara format HEX, RGB, dan HSL dengan pratinjau visual langsung. Masukkan warna dalam format apa pun dan langsung lihat ekuivalennya dalam semua format lain, beserta contoh warna.</p><p>Sempurna untuk desainer dan pengembang yang perlu mengonversi antara notasi warna untuk CSS, alat desain, atau pedoman merek.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Pengembangan CSS</strong>: Konversi antara format warna untuk stylesheet</li><li><strong>Serah Terima Desain</strong>: Terjemahkan warna spesifikasi desain ke nilai siap kode</li><li><strong>Pedoman Merek</strong>: Konversi warna merek antara format untuk dokumentasi</li><li><strong>Aksesibilitas</strong>: Sesuaikan kecerahan HSL untuk memenuhi persyaratan rasio kontras</li><li><strong>Pengembangan Tema</strong>: Hasilkan nilai warna untuk variabel tema terang/gelap</li></ul>"
           },
           "privacy": {
@@ -603,10 +567,6 @@
           "a1": "Kunci objek menjadi nama elemen XML. Array menghasilkan elemen berulang dengan nama yang sama. Nilai primitif menjadi konten teks.",
           "q2": "Apakah atribut XML dipertahankan?",
           "a2": "Atribut XML tidak dipertahankan dalam output JSON. Hanya nama elemen dan konten teks yang dikonversi.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -616,7 +576,6 @@
             "content": "<p><strong>JSON ↔ XML Converter</strong> mengubah data antara format JSON dan XML. Konversi objek JSON menjadi dokumen XML yang terbentuk dengan baik, atau parse XML kembali menjadi JSON — berguna untuk mengintegrasikan sistem yang menggunakan format data berbeda.</p><p>Menangani struktur bersarang, array, dan atribut dengan benar di kedua arah.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Integrasi API</strong>: Konversi antara JSON REST API dan layanan XML SOAP</li><li><strong>Sistem Lama</strong>: Ubah data XML dari sistem lama menjadi JSON untuk aplikasi modern</li><li><strong>Konfigurasi</strong>: Konversi antara format file konfigurasi JSON dan XML</li><li><strong>Migrasi Data</strong>: Ubah format data selama migrasi sistem</li><li><strong>Pengujian</strong>: Hasilkan data pengujian XML dari JSON atau sebaliknya</li></ul>"
           },
           "privacy": {
@@ -641,10 +600,6 @@
           "a1": "Judul, tebal, miring, tautan, gambar, blok kode, kode inline, daftar tidak berurutan, blockquote, dan garis horizontal.",
           "q2": "Bisakah saya menyalin output HTML?",
           "a2": "Ya, gunakan tombol Salin HTML untuk menyalin HTML yang dihasilkan ke clipboard Anda.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -654,7 +609,6 @@
             "content": "<p><strong>Markdown Preview</strong> memungkinkan Anda menulis Markdown dan melihat pratinjau HTML langsung secara berdampingan. Tulis teks terformat menggunakan sintaks Markdown sederhana dan langsung lihat bagaimana ia ditampilkan — sempurna untuk file README, posting blog, dan dokumentasi.</p><p>Mendukung Markdown standar termasuk judul, daftar, blok kode, tautan, gambar, tabel, dan lainnya.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>File README</strong>: Pratinjau file README.md GitHub sebelum commit</li><li><strong>Posting Blog</strong>: Draf dan pratinjau konten blog yang ditulis dalam Markdown</li><li><strong>Dokumentasi</strong>: Tulis dokumentasi teknis dengan pratinjau pemformatan langsung</li><li><strong>Catatan</strong>: Pembuatan catatan terformat cepat dengan pratinjau instan</li><li><strong>Draf Email</strong>: Format konten menggunakan Markdown untuk email rich-text</li></ul>"
           },
           "privacy": {
@@ -683,10 +637,6 @@
           "a1": "Flag global (g), tidak peka huruf besar-kecil (i), multiline (m), dan dotAll (s) tersedia.",
           "q2": "Apakah mendukung named capture group?",
           "a2": "Ya, grup bernama yang didefinisikan dengan (?<name>...) ditampilkan dalam detail kecocokan.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -696,7 +646,6 @@
             "content": "<p><strong>Regex Tester</strong> memungkinkan Anda menulis dan menguji ekspresi reguler terhadap teks sampel dengan penyorotan kecocokan secara real-time. Lihat grup yang cocok, uji flag berbeda, dan debug pola Anda secara instan.</p><p>Alat penting untuk pengembang yang bekerja dengan pola string, validasi data, atau parsing teks.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Pengembangan Pola</strong>: Bangun dan debug pola regex sebelum digunakan dalam kode</li><li><strong>Validasi Data</strong>: Uji pola validasi email, nomor telepon, atau kustom</li><li><strong>Parsing Teks</strong>: Kembangkan pola untuk mengekstrak data dari file log atau teks</li><li><strong>Cari & Ganti</strong>: Pratinjau apa yang akan cocok dengan pengganti regex sebelum menerapkan</li><li><strong>Pembelajaran</strong>: Pahami sintaks regex melalui eksperimen interaktif</li></ul>"
           },
           "privacy": {
@@ -826,8 +775,6 @@
           "a2": "Ya. Pilih satuan dari menu atau biarkan \"Otomatis\" — satuan dideteksi dari besar angkanya.",
           "q3": "Apakah data saya diunggah ke server?",
           "a3": "Tidak. Semua proses — termasuk dekode JWT dan batch — terjadi di browser. Tidak ada yang diunggah.",
-          "q4": "Bisakah dipakai offline?",
-          "a4": "Bisa. Setelah halaman dimuat, alat ini berjalan offline. Pasang PrivaDeck sebagai PWA untuk pengalaman terbaik.",
           "q5": "Apakah ada batas batch?",
           "a5": "Maks. 5.000 baris per eksekusi agar halaman tetap responsif. Ekspor CSV mencerminkan hasil yang diproses.",
           "q6": "Apakah tanda tangan JWT diverifikasi?",
@@ -839,7 +786,6 @@
             "content": "<p><strong>Unix Timestamp Converter</strong> mengonversi antara Unix timestamp (detik sejak 1 Januari 1970) dan format tanggal/waktu yang dapat dibaca manusia. Masukkan timestamp untuk melihat tanggal, atau pilih tanggal untuk mendapatkan timestamp.</p><p>Menampilkan Unix timestamp saat ini secara langsung dan mendukung format detik serta milidetik.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Debugging</strong>: Konversi timestamp respons API ke tanggal yang dapat dibaca untuk debugging</li><li><strong>Kueri Database</strong>: Konversi antara format timestamp untuk kueri SQL</li><li><strong>Analisis Log</strong>: Terjemahkan Unix timestamp dalam file log ke waktu yang dapat dibaca manusia</li><li><strong>Penjadwalan</strong>: Hitung timestamp masa lalu/mendatang untuk cron job atau tugas terjadwal</li><li><strong>Kerja Lintas Zona Waktu</strong>: Bandingkan timestamp di berbagai zona waktu</li></ul>"
           },
           "privacy": {
@@ -866,10 +812,6 @@
           "a1": "Semua fitur YAML standar termasuk objek bersarang, array, string multi-baris, dan anchor/alias melalui pustaka js-yaml.",
           "q2": "Apakah konversi mempertahankan komentar?",
           "a2": "Tidak. Komentar YAML dihapus selama parsing. Saat mengonversi JSON ke YAML, outputnya adalah YAML bersih tanpa komentar.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -879,7 +821,6 @@
             "content": "<p><strong>YAML ↔ JSON Converter</strong> mengubah data antara format YAML dan JSON. Sintaks YAML yang ramah manusia membuatnya populer untuk file konfigurasi, sementara JSON adalah standar untuk API dan pertukaran data.</p><p>Konversi konfigurasi Kubernetes, pipeline CI/CD, atau file YAML apa pun ke JSON dan sebaliknya — secara instan di browser Anda.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>DevOps</strong>: Konversi YAML Kubernetes, Docker Compose, atau Ansible ke JSON untuk panggilan API</li><li><strong>CI/CD</strong>: Ubah konfigurasi YAML GitHub Actions atau GitLab CI ke JSON</li><li><strong>Konfigurasi</strong>: Konversi antara format file konfigurasi YAML dan JSON</li><li><strong>Pengembangan API</strong>: Ubah spesifikasi API YAML (OpenAPI) ke format JSON</li><li><strong>Migrasi Data</strong>: Konversi data antara YAML dan JSON untuk sistem yang berbeda</li></ul>"
           },
           "privacy": {
@@ -907,10 +848,6 @@
           "a1": "Algoritma Longest Common Subsequence (LCS) berbasis baris yang mengidentifikasi penambahan, penghapusan, dan baris yang tidak berubah.",
           "q2": "Bisakah saya menyalin output diff?",
           "a2": "Ya, gunakan tombol salin untuk menyalin format diff unified dengan awalan + dan - untuk penambahan dan penghapusan.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -920,7 +857,6 @@
             "content": "<p><strong>Text Diff</strong> membandingkan dua bagian teks dan menyoroti perbedaan baris per baris. Lihat dengan tepat apa yang ditambahkan, dihapus, atau diubah — seperti versi sederhana dari <code>git diff</code> di browser Anda.</p><p>Ideal untuk membandingkan versi kode, file konfigurasi, draf dokumen, atau konten teks apa pun.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Review Kode</strong>: Bandingkan dua versi file kode untuk melihat apa yang berubah</li><li><strong>Perubahan Konfigurasi</strong>: Temukan perbedaan antara file konfigurasi pengembangan dan produksi</li><li><strong>Revisi Dokumen</strong>: Bandingkan versi draf dokumen atau kontrak</li><li><strong>Rekam Database</strong>: Bandingkan rekaman yang diekspor untuk menemukan perbedaan data</li><li><strong>Debugging</strong>: Bandingkan output yang diharapkan vs aktual dalam skenario pengujian</li></ul>"
           },
           "privacy": {
@@ -950,8 +886,6 @@
           "a2": "Tidak, alat ini memproses teks dengan panjang berapa pun langsung di browser Anda tanpa batasan.",
           "q3": "Bagaimana waktu baca dihitung?",
           "a3": "Waktu baca diperkirakan pada 200 kata per menit, yang merupakan kecepatan baca rata-rata orang dewasa.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -961,7 +895,6 @@
             "content": "<p><strong>Word Counter</strong> menganalisis teks Anda dan secara instan menampilkan jumlah kata, jumlah karakter, jumlah kalimat, jumlah paragraf, dan perkiraan waktu baca. Penting bagi penulis, pelajar, dan pembuat konten yang perlu memenuhi persyaratan panjang.</p><p>Cukup tempel teks Anda dan dapatkan semua statistik secara real-time.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Penulisan Akademik</strong>: Periksa jumlah kata esai atau tesis terhadap persyaratan</li><li><strong>Konten SEO</strong>: Pastikan posting blog dan artikel memenuhi jumlah kata target</li><li><strong>Media Sosial</strong>: Periksa batas karakter untuk tweet, posting LinkedIn, atau bio</li><li><strong>Terjemahan</strong>: Perkirakan biaya terjemahan berdasarkan jumlah kata</li><li><strong>Perencanaan Konten</strong>: Hitung waktu baca untuk artikel dan presentasi</li></ul>"
           },
           "privacy": {
@@ -992,10 +925,6 @@
           "a1": "Kami mendukung UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, dan CONSTANT_CASE.",
           "q2": "Bisakah saya mengubah nama variabel kode?",
           "a2": "Ya! Gunakan konversi camelCase, PascalCase, snake_case, atau kebab-case untuk nama variabel pemrograman.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -1005,7 +934,6 @@
             "content": "<p><strong>Case Converter</strong> mengubah teks antara beberapa format huruf termasuk UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, kebab-case, dan CONSTANT_CASE.</p><p>Penting untuk pengembang yang mengganti nama variabel, penulis yang memformat judul, atau siapa saja yang perlu mengubah kapitalisasi teks dengan cepat.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Penamaan Variabel</strong>: Konversi antara JavaScript camelCase, Python snake_case, dan CSS kebab-case</li><li><strong>Field Database</strong>: Ubah nama kolom antara konvensi penamaan yang berbeda</li><li><strong>Pemformatan Konten</strong>: Konversi judul ke Title Case untuk headline dan heading</li><li><strong>Desain API</strong>: Standarisasi nama field dalam skema permintaan/respons JSON</li><li><strong>Refactoring Kode</strong>: Ganti nama identifier saat beralih antara konvensi penamaan</li></ul>"
           },
           "privacy": {
@@ -1033,10 +961,6 @@
           "a1": "Lorem Ipsum adalah teks placeholder yang umum digunakan dalam desain dan penerbitan untuk mengisi ruang di mana konten asli akan ditempatkan nantinya.",
           "q2": "Bisakah saya menyesuaikan hasilnya?",
           "a2": "Ya, Anda dapat memilih untuk membuat berdasarkan paragraf, kalimat, atau kata, mengatur jumlah, dan opsional memulai dengan pembuka Lorem Ipsum klasik.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -1046,7 +970,6 @@
             "content": "<p><strong>Lorem Ipsum Generator</strong> membuat teks placeholder untuk mockup desain, wireframe, dan prototipe. Hasilkan teks Lorem Ipsum klasik berdasarkan paragraf, kalimat, atau kata dengan kontrol presisi atas jumlahnya.</p><p>Cara standar industri untuk mengisi tata letak dengan teks yang terlihat realistis sebelum konten final siap.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Desain Web</strong>: Isi tata letak halaman dengan teks realistis untuk menguji tipografi dan spasi</li><li><strong>Prototipe UI</strong>: Tambahkan konten placeholder ke wireframe dan mockup</li><li><strong>Desain Cetak</strong>: Isi brosur, flyer, dan tata letak buku sebelum copy final</li><li><strong>Presentasi</strong>: Tambahkan teks placeholder ke template slide</li><li><strong>Pengujian</strong>: Hasilkan data teks sampel untuk menguji rendering teks atau pemotongan</li></ul>"
           },
           "privacy": {

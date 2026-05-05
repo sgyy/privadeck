@@ -17,6 +17,7 @@ export default function CombineImages() {
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   const t = useTranslations("tools.image.combine");
+  const tCat = useTranslations("tools.image");
 
   function handleFilesChange(newFiles: File[]) {
     setFiles(newFiles);
@@ -74,7 +75,7 @@ export default function CombineImages() {
             onClick={handleCombine}
             disabled={files.length < 2 || processing}
           >
-            {processing ? t("processing") : t("combine")}
+            {processing ? tCat("processing") : t("combine")}
           </Button>
         </div>
       )}

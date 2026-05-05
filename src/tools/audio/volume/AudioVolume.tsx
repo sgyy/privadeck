@@ -50,6 +50,7 @@ export default function AudioVolume() {
   const resultUrl = useObjectUrl(result);
 
   const t = useTranslations("tools.audio.volume");
+  const tc = useTranslations("common");
 
   const unsupported = !isSharedArrayBufferSupported();
 
@@ -214,7 +215,7 @@ export default function AudioVolume() {
     <div className="space-y-4">
       {unsupported ? (
         <div className="rounded-lg border border-border bg-muted/50 p-6 text-center">
-          <p className="text-sm text-muted-foreground">{t("unsupported")}</p>
+          <p className="text-sm text-muted-foreground">{tc("unsupported")}</p>
         </div>
       ) : (
         <>

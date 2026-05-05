@@ -22,8 +22,8 @@ const definition: ToolDefinition = {
       answerKey: "tools.developer.timestamp.faq.a3",
     },
     {
-      questionKey: "tools.developer.timestamp.faq.q4",
-      answerKey: "tools.developer.timestamp.faq.a4",
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
     },
     {
       questionKey: "tools.developer.timestamp.faq.q5",

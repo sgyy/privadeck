@@ -10,16 +10,11 @@
         "keywords": "mute video, remove audio from video, silent video, video no sound",
         "mute": "Remove Audio",
         "processing": "Processing",
-        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
         "faq": {
           "q1": "How does video muting work?",
           "a1": "The tool removes the audio track from the video while keeping the video quality intact. No re-encoding is needed.",
           "q2": "Which video formats are supported?",
           "a2": "Most common formats including MP4, WebM, MOV, and AVI are supported.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -62,7 +57,6 @@
             "content": "<p><strong>Mute Video</strong> removes the audio track from video files while keeping the video quality intact. Create silent versions of videos for background loops, presentations, or social media posts where audio isn't needed.</p><p>Powered by FFmpeg.wasm — full video processing running locally in your browser.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Presentations</strong>: Remove distracting audio from background videos in slides</li><li><strong>Social Media</strong>: Create silent looping videos for Instagram or TikTok backgrounds</li><li><strong>Web Design</strong>: Prepare silent hero videos for website backgrounds</li><li><strong>Privacy</strong>: Remove conversations or identifiable audio from recordings</li><li><strong>Video Editing</strong>: Strip audio before replacing with a different soundtrack</li></ul>"
           },
           "privacy": {
@@ -84,16 +78,11 @@
         "timeRange": "Time Range",
         "trim": "Trim Video",
         "processing": "Processing",
-        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
         "faq": {
           "q1": "Can I trim videos precisely?",
           "a1": "Yes, use the range sliders to set exact start and end points with 0.1 second precision.",
           "q2": "Is the video re-encoded?",
           "a2": "The tool uses stream copy mode for fast processing without quality loss.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -136,7 +125,6 @@
             "content": "<p><strong>Trim Video</strong> cuts video clips to your desired length with precise start and end time controls. Set times down to 0.1-second precision, preview the selection, and download the trimmed clip.</p><p>Uses FFmpeg.wasm for professional-grade video trimming directly in your browser.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Social Media Clips</strong>: Cut highlights from longer videos for social platforms</li><li><strong>Meeting Recordings</strong>: Extract key moments from recorded meetings</li><li><strong>Content Creation</strong>: Trim raw footage to create polished clips</li><li><strong>Presentations</strong>: Cut video clips to exact lengths for presentations</li><li><strong>Personal Videos</strong>: Trim home videos to keep the best moments</li></ul>"
           },
           "privacy": {
@@ -157,16 +145,11 @@
         "reset": "Reset",
         "processAndDownload": "Rotate & Download",
         "processing": "Processing",
-        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
         "faq": {
           "q1": "What rotation angles are available?",
           "a1": "Each click rotates the video 90° counter-clockwise (left) or clockwise (right). You can click multiple times for 180° or 270° rotations.",
           "q2": "Does rotating affect video quality?",
           "a2": "The video is re-encoded during rotation using WebCodecs. Quality is maintained at a high level, but some generation loss is normal with any re-encoding.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -209,7 +192,6 @@
             "content": "<p><strong>Rotate Video</strong> rotates video files left or right by 90° increments to fix orientation issues. Correct sideways phone videos, fix upside-down recordings, or adjust orientation for specific display needs — all in your browser with live preview.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Phone Videos</strong>: Fix sideways videos recorded on mobile phones</li><li><strong>Camera Footage</strong>: Correct orientation from cameras mounted at angles</li><li><strong>Screen Recordings</strong>: Rotate screen recordings for vertical display</li><li><strong>Social Media</strong>: Adjust orientation for platform requirements (portrait/landscape)</li><li><strong>Presentations</strong>: Fix video orientation for use in slides</li></ul>"
           },
           "privacy": {
@@ -232,16 +214,11 @@
         "outputSize": "Output",
         "convert": "Convert to GIF",
         "converting": "Converting",
-        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
         "faq": {
           "q1": "How can I reduce GIF file size?",
           "a1": "Lower the FPS, reduce the width, or shorten the duration. The tool uses an optimized palette for best quality-to-size ratio.",
           "q2": "What's the maximum length for a GIF?",
           "a2": "There's no hard limit, but longer GIFs produce very large files. We recommend keeping GIFs under 10 seconds.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -251,7 +228,6 @@
             "content": "<p><strong>Video to GIF</strong> converts video clips into animated GIF images with control over frame rate, resolution, and quality. Create shareable GIFs from any video for social media, chat, or documentation.</p><p>Powered by FFmpeg.wasm for high-quality GIF generation directly in your browser.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Social Media</strong>: Create reaction GIFs or highlights from videos</li><li><strong>Documentation</strong>: Create animated demonstrations for tutorials or docs</li><li><strong>Chat & Messaging</strong>: Make custom GIFs for group chats and Slack</li><li><strong>Bug Reports</strong>: Record and share animated bug reproductions</li><li><strong>Marketing</strong>: Create eye-catching animated content for campaigns</li></ul>"
           },
           "privacy": {
@@ -316,16 +292,11 @@
         "outputSize": "Output",
         "convert": "Convert to WebP",
         "converting": "Converting",
-        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
         "faq": {
           "q1": "Why use WebP instead of GIF?",
           "a1": "Animated WebP files are typically 25-35% smaller than equivalent GIFs while supporting better color depth and transparency.",
           "q2": "Is animated WebP widely supported?",
           "a2": "Yes, all modern browsers support animated WebP. Only very old browsers lack support.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -368,7 +339,6 @@
             "content": "<p><strong>Video to WebP</strong> converts video clips into animated WebP images. WebP animations are <strong>25-35% smaller</strong> than equivalent GIFs with better color reproduction and transparency support.</p><p>The modern alternative to GIFs for web use.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Web Performance</strong>: Replace GIFs with smaller WebP animations on websites</li><li><strong>Chat Apps</strong>: Create animated stickers and reactions</li><li><strong>Documentation</strong>: Smaller animated demos for technical documentation</li><li><strong>Social Media</strong>: Create animated content where WebP is supported</li><li><strong>App Design</strong>: Create loading animations and micro-interactions</li></ul>"
           },
           "privacy": {
@@ -393,7 +363,6 @@
         "originalSize": "Original size",
         "compressedSize": "Compressed size",
         "saved": "Size reduction",
-        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
         "simpleMode": "Simple",
         "advancedMode": "Advanced",
         "sourceVideo": "Source",
@@ -505,7 +474,6 @@
             "content": "<p><strong>Compress Video</strong> is a powerful browser-based video compressor that reduces file size without uploading to any server. Choose from three quality presets for quick compression, or switch to <strong>Advanced Mode</strong> for full control over CRF, encoding speed, resolution, frame rate, audio bitrate, and max bitrate cap.</p><p>Powered by FFmpeg.wasm with H.264/AAC encoding — the output plays everywhere. The tool displays detailed video metadata (resolution, duration, bitrate, FPS) and shows a side-by-side comparison after compression.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Email Attachments</strong>: Compress videos under 25 MB for Gmail, Outlook, or corporate mail</li><li><strong>Messaging Apps</strong>: Shrink videos for WhatsApp (16 MB limit), Telegram, Signal, or iMessage</li><li><strong>Social Media</strong>: Optimize file size for faster uploads to Instagram, TikTok, X, or YouTube</li><li><strong>Cloud Storage</strong>: Reduce file size to save Google Drive, Dropbox, or iCloud space</li><li><strong>Web &amp; CMS Upload</strong>: Meet upload size limits for WordPress, Shopify, or custom portals</li><li><strong>Video Archiving</strong>: Compress large recordings with High Quality preset for long-term storage</li><li><strong>Low-Bandwidth Sharing</strong>: Use Low Quality preset for quick transfer over slow connections</li></ul>"
           },
           "privacy": {
@@ -524,7 +492,6 @@
         "format": "Output Format",
         "convert": "Convert",
         "converting": "Converting",
-        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
         "codecLabel": "Video Codec",
         "codecHint": "H.264: Best compatibility. H.265: Smaller file size (up to 50% smaller) but may not play on older devices.",
         "codecChecking": "Checking H.265 support...",
@@ -536,10 +503,6 @@
           "a1": "You can convert between MP4, WebM, MKV, and AVI formats. MP4 and AVI use H.264 encoding, WebM uses VP9, and MKV uses stream copy for fast conversion.",
           "q2": "Will the video quality change?",
           "a2": "Converting to MKV uses stream copy so quality is preserved exactly. Other conversions re-encode with high quality settings.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -582,7 +545,6 @@
             "content": "<p><strong>Convert Video Format</strong> transforms videos between popular formats: MP4, WebM, MKV, and AVI. Need to convert a WebM recording to MP4 for wider compatibility? Or an AVI to WebM for web use? This tool handles it.</p><p>Powered by FFmpeg.wasm for reliable format conversion in your browser.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Compatibility</strong>: Convert WebM screen recordings to universally playable MP4</li><li><strong>Web Optimization</strong>: Convert videos to WebM for smaller file sizes on the web</li><li><strong>Legacy Support</strong>: Convert modern formats to AVI for older media players</li><li><strong>Editing</strong>: Convert to a format your video editor supports</li><li><strong>Cross-Platform</strong>: Ensure videos play on any device or platform</li></ul>"
           },
           "privacy": {
@@ -602,16 +564,11 @@
         "width": "Width",
         "resize": "Resize",
         "processing": "Resizing",
-        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
         "faq": {
           "q1": "What resolution presets are available?",
           "a1": "720p (1280px wide), 480p (854px wide), and 360p (640px wide). You can also enter a custom width.",
           "q2": "Is the aspect ratio preserved?",
           "a2": "Yes, the height is automatically calculated to maintain the original aspect ratio.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -654,7 +611,6 @@
             "content": "<p><strong>Resize Video</strong> changes video resolution with preset options (720p, 480p, 360p) or custom dimensions. Downscale large videos for web, mobile, or social media, or adjust resolution for specific platform requirements.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Social Media</strong>: Resize for Instagram, TikTok, or YouTube requirements</li><li><strong>Mobile Optimization</strong>: Downscale 4K/1080p videos for mobile viewing</li><li><strong>Web Embedding</strong>: Resize for optimal web player dimensions</li><li><strong>Storage Savings</strong>: Reduce resolution to save storage space</li><li><strong>Email</strong>: Downscale videos for email-friendly file sizes</li></ul>"
           },
           "privacy": {
@@ -672,7 +628,6 @@
         "keywords": "video info, video metadata, video codec, media info, video inspector, ffprobe",
         "probe": "Analyze Video",
         "probing": "Analyzing…",
-        "unsupported": "This tool requires SharedArrayBuffer support. Please use a modern browser with HTTPS.",
         "fileInfo": "File Information",
         "containerInfo": "Container Information",
         "videoStream": "Video Stream",
@@ -702,8 +657,6 @@
           "a1": "It detects video codec (H.264, VP9, AV1, etc.), audio codec (AAC, Opus, MP3, etc.), resolution, frame rate, bitrate, pixel format, sample rate, channel layout, and container format.",
           "q2": "Which video formats are supported?",
           "a2": "Most common formats including MP4, WebM, MKV, AVI, MOV, and more are supported through FFmpeg.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
           "q4": "How is this different from just checking file properties?",
           "a4": "Operating system file properties usually show only basic information like file size and type. This tool uses FFmpeg to extract detailed stream-level metadata including exact codec, profile, pixel format, and per-stream bitrates.",
           "q5": "Can I use this tool offline?",
@@ -748,7 +701,6 @@
             "content": "<p><strong>Video Info</strong> is a free online tool that inspects and displays detailed metadata from your video files. It reveals technical information like <strong>video codec</strong>, <strong>audio codec</strong>, <strong>bitrate</strong>, <strong>frame rate</strong>, and <strong>stream details</strong> — all without uploading your file.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Pre-processing check</strong>: verify codec and quality before compressing or converting</li><li><strong>Compatibility check</strong>: ensure videos meet platform requirements (YouTube, social media)</li><li><strong>Debugging</strong>: diagnose playback issues by checking codec and container details</li><li><strong>Quality assessment</strong>: check bitrate and resolution to evaluate video quality</li></ul>"
           },
           "privacy": {

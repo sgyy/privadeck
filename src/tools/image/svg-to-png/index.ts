@@ -18,12 +18,12 @@ const definition: ToolDefinition = {
     },
   
     {
-      questionKey: "tools.image.svg-to-png.faq.q3",
-      answerKey: "tools.image.svg-to-png.faq.a3",
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
     },
     {
-      questionKey: "tools.image.svg-to-png.faq.q4",
-      answerKey: "tools.image.svg-to-png.faq.a4",
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
     },
     {
       questionKey: "tools.image.svg-to-png.faq.q5",

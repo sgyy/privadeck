@@ -17,12 +17,12 @@ const definition: ToolDefinition = {
       answerKey: "tools.image.heic-convert.faq.a2",
     },
     {
-      questionKey: "tools.image.heic-convert.faq.q3",
-      answerKey: "tools.image.heic-convert.faq.a3",
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
     },
     {
-      questionKey: "tools.image.heic-convert.faq.q4",
-      answerKey: "tools.image.heic-convert.faq.a4",
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
     },
     {
       questionKey: "tools.image.heic-convert.faq.q5",

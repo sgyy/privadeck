@@ -74,7 +74,6 @@
         "addFilesHint": "PDFs or images",
         "dragHandle": "Drag to reorder",
         "dragHint": "Drag cards to reorder",
-        "previewFullscreen": "Preview",
         "selectAllPages": "Select all",
         "deselectAllPages": "Deselect all",
         "closeDetail": "Close",
@@ -83,10 +82,6 @@
           "a1": "Upload PDFs (and optionally images), reorder them, optionally pick specific pages and rotate them, then click Merge. All processing happens in your browser — files are never uploaded.",
           "q2": "Is there a file size limit?",
           "a2": "There's no hard limit, but very large files may be slow since processing happens in your browser.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file count limits?",
           "a5": "There are no server-imposed limits. The maximum number and size of files depends on your device's available memory. Most modern devices handle dozens of multi-hundred-MB files without issues.",
           "q6": "Can I merge images and PDFs together?",
@@ -102,7 +97,6 @@
             "content": "<p><strong>Merge PDF</strong> combines multiple PDFs — and now images (JPG, PNG, HEIC, WebP, AVIF) — into a single document with full page-level control. Reorder files, expand any PDF to pick or rotate individual pages, insert blank divider pages, and edit document metadata, all locally in your browser using pdf-lib.</p><p>No page limits, no file size limits, no watermarks. Preview the result before you download.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Expense Reports</strong>: Bundle scanned receipts (HEIC from iPhone) with invoice PDFs into one submission</li><li><strong>Long Reports</strong>: Insert blank divider pages between sections to separate chapters</li><li><strong>Stakeholder Bundles</strong>: Pick only the relevant pages from each source report when packaging for review</li><li><strong>Document Bundles</strong>: Merge applications, contracts, and supporting images for legal submissions</li><li><strong>Presentation Decks</strong>: Combine individual slide PDFs and rotate any landscape pages to portrait</li><li><strong>Photo Albums</strong>: Turn a folder of JPG/HEIC photos into a single shareable PDF</li></ul>"
           },
           "privacy": {
@@ -151,7 +145,6 @@
             "description": "PDFs are parsed and split entirely in your browser with pdf-lib and pdfjs-dist. Confidential reports, contracts, and personal records never leave your device."
           }
         },
-        "pages": "pages",
         "splitEach": "Split each page",
         "splitRange": "Split by range",
         "rangePlaceholder": "e.g. 1-3, 4-6, 7-10",
@@ -160,16 +153,42 @@
         "splitting": "Splitting...",
         "results": "Split Results",
         "modes": {
-          "each": { "title": "Every page", "desc": "Each page becomes its own PDF." },
-          "every": { "title": "Every N pages", "desc": "Group every N consecutive pages into one PDF." },
-          "oddEven": { "title": "Odd / Even", "desc": "Two PDFs: one for odd pages, one for even pages." },
-          "half": { "title": "Halves", "desc": "Split into the first half and the second half." },
-          "range": { "title": "Custom ranges", "desc": "Define page ranges like 1-3, 5, 8-10. Click two pages to add a range." },
-          "size": { "title": "By file size", "desc": "Each output stays under a maximum file size you choose." },
-          "outline": { "title": "By bookmarks", "desc": "Use the PDF's table of contents — one file per top-level bookmark." }
+          "each": {
+            "title": "Every page",
+            "desc": "Each page becomes its own PDF."
+          },
+          "every": {
+            "title": "Every N pages",
+            "desc": "Group every N consecutive pages into one PDF."
+          },
+          "oddEven": {
+            "title": "Odd / Even",
+            "desc": "Two PDFs: one for odd pages, one for even pages."
+          },
+          "half": {
+            "title": "Halves",
+            "desc": "Split into the first half and the second half."
+          },
+          "range": {
+            "title": "Custom ranges",
+            "desc": "Define page ranges like 1-3, 5, 8-10. Click two pages to add a range."
+          },
+          "size": {
+            "title": "By file size",
+            "desc": "Each output stays under a maximum file size you choose."
+          },
+          "outline": {
+            "title": "By bookmarks",
+            "desc": "Use the PDF's table of contents — one file per top-level bookmark."
+          }
         },
-        "every": { "label": "Pages per part", "preview": "{count} parts" },
-        "half": { "preview": "First {a} pages + Last {b} pages" },
+        "every": {
+          "label": "Pages per part",
+          "preview": "{count} parts"
+        },
+        "half": {
+          "preview": "First {a} pages + Last {b} pages"
+        },
         "range": {
           "mergeAll": "Merge all ranges into a single PDF",
           "addRange": "Add range",
@@ -214,10 +233,6 @@
           "a1": "Seven modes: every page, every N pages, odd/even, halves, custom ranges (with optional merge), by file size, and by PDF bookmarks. Switch between them at any time and watch the color preview update on the thumbnails.",
           "q2": "Are my files uploaded to a server?",
           "a2": "No. All processing happens locally in your browser using pdf-lib and pdfjs-dist. Your files never leave your device.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory. For very large PDFs (1000+ pages), prefer 'Every N pages' over 'Every page' to keep memory usage in check.",
           "q6": "How does 'Split by file size' work?",
@@ -233,7 +248,6 @@
             "content": "<p><strong>Split PDF</strong> divides a PDF into separate files using seven flexible modes: every page, every N pages, odd/even, halves, custom ranges, by file size, and by PDF bookmarks. A live color-coded thumbnail preview shows you exactly which pages will end up in which output before you commit.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Extract Pages</strong>: Pull specific pages from a large document with custom ranges</li><li><strong>Chapter Separation</strong>: Split a book or manual into chapters automatically using bookmarks</li><li><strong>Email-Ready Splits</strong>: Use 'Split by file size' to chunk a large PDF into pieces under your email attachment limit</li><li><strong>Two-Sided Print Recovery</strong>: Use 'Odd / Even' to recover pages from a duplex scan that printed mixed orders</li><li><strong>Form Extraction</strong>: Extract specific forms from a multi-page PDF</li><li><strong>Filing</strong>: Separate combined scans into individual documents in one click</li></ul>"
           },
           "privacy": {
@@ -286,16 +300,11 @@
         "delete": "Delete Selected",
         "deleting": "Deleting...",
         "remaining": "Remaining",
-        "pages": "pages",
         "faq": {
           "q1": "How do I select pages to delete?",
           "a1": "Upload a PDF and click on the page thumbnails you want to remove. Selected pages are highlighted. Click the delete button to create a new PDF without those pages.",
           "q2": "Can I undo page deletion?",
           "a2": "The original file is not modified. A new PDF is created without the selected pages. You can always re-upload the original.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -305,7 +314,6 @@
             "content": "<p><strong>Delete PDF Pages</strong> removes specific pages from a PDF document. Preview all pages as thumbnails, select the ones to remove, and download the cleaned-up PDF.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Document Cleanup</strong>: Remove blank or unnecessary pages from scanned documents</li><li><strong>Confidential Removal</strong>: Delete sensitive pages before sharing a document</li><li><strong>Draft Cleanup</strong>: Remove outdated pages from report drafts</li><li><strong>Form Processing</strong>: Remove instruction pages from completed forms</li><li><strong>Archive Prep</strong>: Clean up documents before archiving</li></ul>"
           },
           "privacy": {
@@ -359,17 +367,12 @@
         "scale": "Scale",
         "convert": "Convert",
         "converting": "Converting",
-        "pages": "pages",
         "downloadAll": "Download All (ZIP)",
         "faq": {
           "q1": "What image formats are supported?",
           "a1": "You can convert PDF pages to PNG (lossless) or JPG (smaller file size with quality control).",
           "q2": "Can I adjust the image resolution?",
           "a2": "Yes, use the scale slider. 1x gives standard resolution, 2x doubles it, up to 4x for high-resolution output.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -379,7 +382,6 @@
             "content": "<p><strong>PDF to Image</strong> converts PDF pages into high-quality JPG or PNG images. Set the DPI/quality level for your needs — from web-optimized thumbnails to high-resolution print images.</p><p>Convert all pages or select specific ones, powered by pdfjs-dist for accurate rendering.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Presentations</strong>: Convert PDF slides to images for PowerPoint or Google Slides</li><li><strong>Social Media</strong>: Share PDF content as images on social platforms</li><li><strong>Web Content</strong>: Convert PDF pages for use on websites</li><li><strong>Thumbnails</strong>: Generate page previews for document management systems</li><li><strong>Print Proofs</strong>: Create image proofs of PDF layouts</li></ul>"
           },
           "privacy": {
@@ -436,10 +438,6 @@
           "a1": "You can convert JPG, PNG, GIF, WebP, BMP, and other common image formats. Non-standard formats are automatically converted before embedding.",
           "q2": "Can I reorder the images before converting?",
           "a2": "Yes, use the arrow buttons on each image thumbnail to reorder them. The final PDF pages will match the order shown.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -449,7 +447,6 @@
             "content": "<p><strong>Images to PDF</strong> converts multiple images (JPG, PNG, WebP) into a single PDF document. Drag to reorder pages, and download a professional PDF with all your images in sequence.</p><p>Perfect for creating photo books, scan compilations, or image-based documents.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Scan Compilation</strong>: Combine multiple scanned pages into one PDF</li><li><strong>Photo Books</strong>: Create simple PDF photo books or albums</li><li><strong>Portfolio</strong>: Compile artwork or photography into a PDF portfolio</li><li><strong>Receipts</strong>: Combine receipt photos into a single expense report</li><li><strong>Archiving</strong>: Archive image collections as searchable PDF documents</li></ul>"
           },
           "privacy": {
@@ -498,7 +495,6 @@
             "description": "All rotation happens locally with pdf-lib. Confidential scans, ID documents, and contracts never get uploaded — the file never leaves your device."
           }
         },
-        "pages": "pages",
         "direction": "Direction",
         "clockwise": "90° CW",
         "counterClockwise": "90° CCW",
@@ -510,10 +506,6 @@
           "a1": "Currently the tool rotates all pages by the same angle. For per-page rotation, you can apply different rotations by processing the PDF multiple times.",
           "q2": "Does rotation affect the PDF content quality?",
           "a2": "No, rotation only changes the page orientation metadata. The content, text, and images remain unchanged.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -523,7 +515,6 @@
             "content": "<p><strong>Rotate PDF</strong> rotates all pages in a PDF by 90°, 180°, or 270°. Fix upside-down scans, landscape documents, or incorrectly oriented pages in seconds.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Scan Correction</strong>: Fix upside-down or sideways scanned pages</li><li><strong>Landscape to Portrait</strong>: Rotate landscape documents for easier reading</li><li><strong>Print Preparation</strong>: Correct orientation before printing</li><li><strong>Document Assembly</strong>: Fix mixed-orientation pages in merged documents</li><li><strong>Presentation Fix</strong>: Correct rotated slides in PDF presentations</li></ul>"
           },
           "privacy": {
@@ -572,7 +563,6 @@
             "description": "Page numbers are added with pdf-lib entirely in your browser. Manuscripts, legal exhibits, and proprietary reports never leave your device."
           }
         },
-        "pages": "pages",
         "position": "Position",
         "positions": {
           "bottom-center": "Bottom Center",
@@ -593,10 +583,6 @@
           "a1": "Yes, you can place page numbers at any of six positions: top or bottom, combined with left, center, or right alignment.",
           "q2": "Can I skip numbering on certain pages?",
           "a2": "Yes, use the 'Start from page' option to skip the first N pages (useful for title pages or table of contents).",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -606,7 +592,6 @@
             "content": "<p><strong>Add Page Numbers</strong> stamps sequential page numbers onto every page of a PDF. Choose from 6 positions (top/bottom × left/center/right) and customize the number format.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Reports</strong>: Add page numbers to business reports and proposals</li><li><strong>Legal Documents</strong>: Number pages for court filings and contracts</li><li><strong>Manuscripts</strong>: Add page numbers to book or thesis drafts</li><li><strong>Meeting Materials</strong>: Number handout pages for easy reference</li><li><strong>Manuals</strong>: Add page numbers to instruction manuals or guides</li></ul>"
           },
           "privacy": {
@@ -664,10 +649,6 @@
           "a1": "This tool extracts embedded text only. For scanned PDFs (images), use our OCR tool to recognize text from images.",
           "q2": "Is the formatting preserved?",
           "a2": "Basic text content is extracted page by page. Complex formatting like tables and columns may not be perfectly preserved.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -677,7 +658,6 @@
             "content": "<p><strong>Extract Text from PDF</strong> pulls all text content from PDF documents page by page. Extract text for copying, searching, editing, or further processing — powered by pdfjs-dist for accurate text extraction.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Content Reuse</strong>: Extract text from PDFs for editing in Word or Google Docs</li><li><strong>Data Mining</strong>: Pull text data from PDF reports for analysis</li><li><strong>Search</strong>: Make PDF content searchable by extracting text</li><li><strong>Translation</strong>: Extract text for machine or manual translation</li><li><strong>Accessibility</strong>: Convert PDF text to plain text for screen readers</li></ul>"
           },
           "privacy": {
@@ -727,7 +707,6 @@
           }
         },
         "dragHint": "Drag to reorder pages",
-        "pages": "pages",
         "page": "Page",
         "moveUp": "Move up",
         "moveDown": "Move down",
@@ -738,10 +717,6 @@
           "a1": "Upload a PDF, then use the arrow buttons to move pages up or down. Click Apply to create a new PDF with the new page order.",
           "q2": "Is the original PDF modified?",
           "a2": "No, a new PDF is created with the reordered pages. Your original file is never changed.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -751,7 +726,6 @@
             "content": "<p><strong>Rearrange PDF Pages</strong> lets you reorder pages in a PDF by dragging and dropping page thumbnails. Move pages to any position, then download the rearranged document.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Document Assembly</strong>: Fix page order in merged documents</li><li><strong>Presentation Reorder</strong>: Rearrange slide order in PDF presentations</li><li><strong>Report Organization</strong>: Move sections around in assembled reports</li><li><strong>Scan Reordering</strong>: Fix misordered scanned pages</li><li><strong>Custom Ordering</strong>: Create a custom page sequence for specific needs</li></ul>"
           },
           "privacy": {
@@ -840,22 +814,16 @@
         "largeFileWarning": "Large file detected. Browser memory is limited — processing may be slow or fail. We recommend files under 100 MB.",
         "compress": "Compress",
         "compressing": "Compressing...",
-        "pages": "pages",
         "originalSize": "Original size",
         "compressedSize": "Compressed size",
         "saved": "Size reduction",
         "noReduction": "No size reduction",
         "noReductionUsedOriginal": "Already optimal — kept the original file.",
-        "previewFullscreen": "Preview",
         "faq": {
           "q1": "How does PDF compression work?",
           "a1": "Two modes are available. Image Optimize (default) recompresses embedded JPEG images while keeping the text layer intact, so the output stays searchable. Full Rasterize re-renders each page as one JPEG image — smaller files but text becomes non-selectable. Use the Advanced panel to fine-tune DPI and JPEG quality, or to clear PDF metadata.",
           "q2": "Will text remain selectable?",
           "a2": "Yes when using Image Optimize mode (the default) — only embedded images are recompressed, so text stays selectable and searchable. In Full Rasterize mode, pages become images and text is no longer selectable; choose this mode for scanned PDFs where pages are already images.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -865,7 +833,6 @@
             "content": "<p><strong>Compress PDF</strong> reduces PDF file size by re-rendering pages at optimized quality levels. Choose from High, Medium, or Low compression to balance file size against visual quality.</p><p>Ideal for reducing large PDFs for email attachments or web uploads.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Email</strong>: Reduce PDF size to fit within email attachment limits</li><li><strong>Web Upload</strong>: Compress for faster uploads to web forms and portals</li><li><strong>Storage</strong>: Reduce archive sizes for document storage</li><li><strong>Sharing</strong>: Create smaller files for messaging apps and file sharing</li><li><strong>Submission</strong>: Meet file size requirements for online submissions</li></ul>"
           },
           "privacy": {
@@ -925,10 +892,6 @@
           "a1": "Yes, you can adjust the text, opacity (transparency), and font size. The watermark is placed diagonally across each page.",
           "q2": "Is the watermark applied to all pages?",
           "a2": "Yes, the same watermark is applied to every page of the PDF.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -938,7 +901,6 @@
             "content": "<p><strong>PDF Watermark</strong> adds diagonal text watermarks to every page of a PDF document. Mark documents as DRAFT, CONFIDENTIAL, SAMPLE, or any custom text with adjustable opacity and color.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Draft Documents</strong>: Mark preliminary versions as DRAFT</li><li><strong>Confidentiality</strong>: Label sensitive documents as CONFIDENTIAL</li><li><strong>Sample Copies</strong>: Mark preview copies as SAMPLE</li><li><strong>Legal</strong>: Add COPY or ORIGINAL watermarks to legal documents</li><li><strong>Proofing</strong>: Mark proof copies to prevent use as finals</li></ul>"
           },
           "privacy": {
@@ -987,7 +949,6 @@
             "description": "Crop operations run via pdf-lib in your browser. Floor plans, medical images, and confidential documents never get uploaded to any server."
           }
         },
-        "pages": "pages",
         "margins": "Crop Margins (points)",
         "marginsHint": "Enter the amount to crop from each side (1 point ≈ 0.35mm)",
         "top": "Top",
@@ -1001,10 +962,6 @@
           "a1": "PDF uses points as its unit of measurement. 1 point = 1/72 inch ≈ 0.35mm. A standard US Letter page is 612 × 792 points.",
           "q2": "Does cropping reduce file size?",
           "a2": "Cropping changes the visible area but does not remove the hidden content, so file size may not decrease significantly.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -1014,7 +971,6 @@
             "content": "<p><strong>Crop PDF</strong> trims margins from PDF pages by adjusting the crop box. Remove unwanted whitespace or borders from all pages at once by specifying crop margins in points.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Margin Removal</strong>: Trim excessive whitespace from document margins</li><li><strong>Print Optimization</strong>: Remove print margins for edge-to-edge printing</li><li><strong>Slide Cleanup</strong>: Crop borders from converted presentation slides</li><li><strong>Scan Cleanup</strong>: Remove scanner borders from scanned documents</li><li><strong>Display Optimization</strong>: Reduce margins for better on-screen reading</li></ul>"
           },
           "privacy": {
@@ -1066,7 +1022,6 @@
         "drawSignature": "Draw Your Signature",
         "clearSignature": "Clear",
         "page": "Page",
-        "pages": "pages",
         "points": "pt",
         "signatureWidth": "Width",
         "apply": "Apply Signature",
@@ -1076,10 +1031,6 @@
           "a1": "No, everything happens in your browser. Your signature and PDF are never uploaded to any server.",
           "q2": "Can I place the signature on a specific page?",
           "a2": "Yes, you can choose which page to sign and set the exact position (X, Y coordinates) and size of the signature.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -1089,7 +1040,6 @@
             "content": "<p><strong>E-Sign PDF</strong> lets you draw your signature and place it on any page of a PDF document. Create a digital signature using your mouse or touchscreen, then position and resize it on the document.</p><p>Simple electronic signing without any account or subscription required.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Contracts</strong>: Sign agreements and contracts electronically</li><li><strong>Forms</strong>: Add signatures to application or consent forms</li><li><strong>Approvals</strong>: Sign off on documents and proposals</li><li><strong>Letters</strong>: Add a personal signature to formal letters</li><li><strong>Receipts</strong>: Sign delivery or receipt confirmations</li></ul>"
           },
           "privacy": {
@@ -1149,10 +1099,6 @@
           "a1": "Images are extracted in their original format when possible (JPEG). Other images are converted to PNG format.",
           "q2": "Does this tool extract all images?",
           "a2": "It extracts embedded raster images from the PDF. Vector graphics and text rendered as paths are not extracted as separate images.",
-          "q3": "Will my files be uploaded to a server?",
-          "a3": "No. All processing happens entirely in your browser. Your data never leaves your device — nothing is uploaded to any server.",
-          "q4": "Can I use this tool offline?",
-          "a4": "Yes. Once the page has loaded, the tool works completely offline. For the best experience, install PrivaDeck as a PWA from your browser.",
           "q5": "Are there file size limits?",
           "a5": "There are no server-imposed limits. The maximum file size depends on your device's available memory and browser capabilities. Most modern devices handle files up to several hundred MB without issues."
         },
@@ -1162,7 +1108,6 @@
             "content": "<p><strong>Extract Images from PDF</strong> finds and extracts all embedded images from a PDF document. Download individual images or all images as a ZIP file — useful for recovering graphics from PDF reports, brochures, or presentations.</p>"
           },
           "useCases": {
-            "title": "Common Use Cases",
             "content": "<ul><li><strong>Asset Recovery</strong>: Extract logos, photos, or graphics from PDF documents</li><li><strong>Content Reuse</strong>: Pull images from presentations or brochures for reuse</li><li><strong>Research</strong>: Extract charts, diagrams, or figures from academic papers</li><li><strong>Archiving</strong>: Save individual images from PDF photo albums</li><li><strong>Design</strong>: Recover design assets from PDF proofs or mockups</li></ul>"
           },
           "privacy": {
@@ -1170,7 +1115,8 @@
             "content": "<p>Image extraction runs <strong>entirely in your browser</strong> using <strong>pdfjs-dist</strong>.</p><ul><li>Your PDFs <strong>never leave your device</strong></li><li>No server processing or uploads</li><li>Works <strong>offline</strong> after the page loads</li></ul>"
           }
         }
-      }
+      },
+      "previewFullscreen": "Preview"
     }
   }
 }

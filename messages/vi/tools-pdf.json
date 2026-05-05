@@ -74,7 +74,6 @@
         "addFilesHint": "PDF hoặc hình ảnh",
         "dragHandle": "Kéo để sắp xếp lại",
         "dragHint": "Kéo thẻ để sắp xếp lại",
-        "previewFullscreen": "Xem trước",
         "selectAllPages": "Chọn tất cả",
         "deselectAllPages": "Bỏ chọn tất cả",
         "closeDetail": "Đóng",
@@ -83,10 +82,6 @@
           "a1": "Tải lên PDF (tuỳ chọn cả hình ảnh), sắp xếp lại, có thể chọn các trang cụ thể và xoay, sau đó nhấn Gộp. Toàn bộ xử lý diễn ra trong trình duyệt của bạn — tệp không bao giờ được tải lên.",
           "q2": "Có giới hạn kích thước tệp không?",
           "a2": "Không có giới hạn cứng, nhưng tệp rất lớn có thể chậm vì xử lý xảy ra trong trình duyệt.",
-          "q3": "Tệp của tôi có được tải lên máy chủ không?",
-          "a3": "Không. Toàn bộ xử lý diễn ra hoàn toàn trong trình duyệt của bạn. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không gì được tải lên bất kỳ máy chủ nào.",
-          "q4": "Tôi có thể dùng công cụ này khi ngoại tuyến không?",
-          "a4": "Có. Khi trang đã tải xong, công cụ chạy hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, cài PrivaDeck dưới dạng PWA từ trình duyệt.",
           "q5": "Có giới hạn số lượng tệp không?",
           "a5": "Không có giới hạn ở phía máy chủ. Số lượng và kích thước tối đa phụ thuộc vào bộ nhớ khả dụng của thiết bị. Hầu hết thiết bị hiện đại xử lý hàng chục tệp vài trăm MB không vấn đề.",
           "q6": "Tôi có thể gộp hình ảnh và PDF cùng lúc không?",
@@ -151,7 +146,6 @@
             "description": "PDF được phân tích và chia hoàn toàn trong trình duyệt qua pdf-lib và pdfjs-dist. Báo cáo bảo mật, hợp đồng và hồ sơ cá nhân không bao giờ rời thiết bị."
           }
         },
-        "pages": "trang",
         "splitEach": "Tách từng trang",
         "splitRange": "Tách theo phạm vi",
         "rangePlaceholder": "ví dụ: 1-3, 4-6, 7-10",
@@ -160,16 +154,42 @@
         "splitting": "Đang tách...",
         "results": "Kết quả tách",
         "modes": {
-          "each": { "title": "Mỗi trang", "desc": "Mỗi trang trở thành PDF của riêng nó." },
-          "every": { "title": "Mỗi N trang", "desc": "Nhóm mỗi N trang liên tiếp thành một PDF." },
-          "oddEven": { "title": "Lẻ / Chẵn", "desc": "Hai PDF: một cho trang lẻ và một cho trang chẵn." },
-          "half": { "title": "Đôi nửa", "desc": "Tách thành nửa đầu và nửa sau." },
-          "range": { "title": "Phạm vi tùy chỉnh", "desc": "Định nghĩa phạm vi như 1-3, 5, 8-10. Nhấp hai trang để thêm phạm vi." },
-          "size": { "title": "Theo kích thước tệp", "desc": "Mỗi tệp đầu ra ở dưới kích thước tối đa bạn chọn." },
-          "outline": { "title": "Theo dấu trang", "desc": "Sử dụng mục lục PDF — một tệp cho mỗi dấu trang cấp cao nhất." }
+          "each": {
+            "title": "Mỗi trang",
+            "desc": "Mỗi trang trở thành PDF của riêng nó."
+          },
+          "every": {
+            "title": "Mỗi N trang",
+            "desc": "Nhóm mỗi N trang liên tiếp thành một PDF."
+          },
+          "oddEven": {
+            "title": "Lẻ / Chẵn",
+            "desc": "Hai PDF: một cho trang lẻ và một cho trang chẵn."
+          },
+          "half": {
+            "title": "Đôi nửa",
+            "desc": "Tách thành nửa đầu và nửa sau."
+          },
+          "range": {
+            "title": "Phạm vi tùy chỉnh",
+            "desc": "Định nghĩa phạm vi như 1-3, 5, 8-10. Nhấp hai trang để thêm phạm vi."
+          },
+          "size": {
+            "title": "Theo kích thước tệp",
+            "desc": "Mỗi tệp đầu ra ở dưới kích thước tối đa bạn chọn."
+          },
+          "outline": {
+            "title": "Theo dấu trang",
+            "desc": "Sử dụng mục lục PDF — một tệp cho mỗi dấu trang cấp cao nhất."
+          }
         },
-        "every": { "label": "Trang mỗi phần", "preview": "{count} phần" },
-        "half": { "preview": "{a} trang đầu + {b} trang cuối" },
+        "every": {
+          "label": "Trang mỗi phần",
+          "preview": "{count} phần"
+        },
+        "half": {
+          "preview": "{a} trang đầu + {b} trang cuối"
+        },
         "range": {
           "mergeAll": "Gộp tất cả phạm vi thành một PDF",
           "addRange": "Thêm phạm vi",
@@ -214,10 +234,6 @@
           "a1": "Bảy chế độ: mỗi trang, mỗi N trang, lẻ/chẵn, đôi nửa, phạm vi tùy chỉnh (có tùy chọn gộp), theo kích thước tệp và theo dấu trang PDF. Chuyển chế độ bất cứ lúc nào — xem trước màu trên hình thu nhỏ cập nhật ngay lập tức.",
           "q2": "Tệp của tôi có bị tải lên máy chủ không?",
           "a2": "Không. Mọi xử lý diễn ra cục bộ trong trình duyệt qua pdf-lib và pdfjs-dist. Tệp của bạn không bao giờ rời khỏi thiết bị.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn từ máy chủ. Kích thước tối đa phụ thuộc vào bộ nhớ khả dụng của thiết bị. Với PDF rất lớn (1000+ trang), hãy ưu tiên 'Mỗi N trang' thay vì 'Mỗi trang' để kiểm soát bộ nhớ.",
           "q6": "'Tách theo kích thước' hoạt động thế nào?",
@@ -286,16 +302,11 @@
         "delete": "Xóa đã chọn",
         "deleting": "Đang xóa...",
         "remaining": "Còn lại",
-        "pages": "trang",
         "faq": {
           "q1": "Làm thế nào để chọn trang cần xóa?",
           "a1": "Tải lên PDF và nhấp vào ảnh thu nhỏ của trang muốn xóa. Trang được chọn sẽ được đánh dấu. Nhấp nút xóa để tạo PDF mới không có các trang đó.",
           "q2": "Tôi có thể hoàn tác xóa trang không?",
           "a2": "Tệp gốc không bị sửa đổi. PDF mới được tạo không có các trang đã chọn. Bạn luôn có thể tải lại tệp gốc.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
         },
@@ -359,17 +370,12 @@
         "scale": "Tỷ lệ",
         "convert": "Chuyển đổi",
         "converting": "Đang chuyển đổi",
-        "pages": "trang",
         "downloadAll": "Tải tất cả (ZIP)",
         "faq": {
           "q1": "Hỗ trợ những định dạng hình ảnh nào?",
           "a1": "Bạn có thể chuyển đổi trang PDF sang PNG (không mất dữ liệu) hoặc JPG (kích thước tệp nhỏ hơn với kiểm soát chất lượng).",
           "q2": "Tôi có thể điều chỉnh độ phân giải hình ảnh không?",
           "a2": "Có, sử dụng thanh trượt tỷ lệ. 1x cho độ phân giải tiêu chuẩn, 2x gấp đôi, lên đến 4x cho đầu ra độ phân giải cao.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
         },
@@ -436,10 +442,6 @@
           "a1": "Bạn có thể chuyển đổi JPG, PNG, GIF, WebP, BMP và các định dạng ảnh phổ biến khác. Định dạng không tiêu chuẩn được tự động chuyển đổi trước khi nhúng.",
           "q2": "Tôi có thể sắp xếp lại hình ảnh trước khi chuyển đổi không?",
           "a2": "Có, sử dụng nút mũi tên trên mỗi ảnh thu nhỏ để sắp xếp lại. Các trang PDF cuối cùng sẽ khớp với thứ tự hiển thị.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
         },
@@ -498,7 +500,6 @@
             "description": "Tất cả xoay xảy ra cục bộ với pdf-lib. Bản quét bảo mật, tài liệu nhận dạng và hợp đồng không được tải lên — tệp không rời thiết bị."
           }
         },
-        "pages": "trang",
         "direction": "Hướng",
         "clockwise": "90° theo chiều kim đồng hồ",
         "counterClockwise": "90° ngược chiều kim đồng hồ",
@@ -510,10 +511,6 @@
           "a1": "Hiện tại công cụ xoay tất cả trang cùng một góc. Để xoay từng trang, bạn có thể xử lý PDF nhiều lần với các góc xoay khác nhau.",
           "q2": "Xoay có ảnh hưởng đến chất lượng nội dung PDF không?",
           "a2": "Không, xoay chỉ thay đổi siêu dữ liệu hướng trang. Nội dung, văn bản và hình ảnh vẫn không thay đổi.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
         },
@@ -572,7 +569,6 @@
             "description": "Số trang được thêm với pdf-lib hoàn toàn trong trình duyệt. Bản thảo, vật chứng pháp lý và báo cáo độc quyền không bao giờ rời thiết bị."
           }
         },
-        "pages": "trang",
         "position": "Vị trí",
         "positions": {
           "bottom-center": "Dưới giữa",
@@ -593,10 +589,6 @@
           "a1": "Có, bạn có thể đặt số trang ở sáu vị trí: trên hoặc dưới, kết hợp với căn trái, giữa hoặc phải.",
           "q2": "Tôi có thể bỏ qua đánh số ở một số trang không?",
           "a2": "Có, sử dụng tùy chọn 'Bắt đầu từ trang' để bỏ qua N trang đầu (hữu ích cho trang bìa hoặc mục lục).",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
         },
@@ -664,10 +656,6 @@
           "a1": "Công cụ này chỉ trích xuất văn bản nhúng. Đối với PDF đã quét (hình ảnh), sử dụng công cụ OCR của chúng tôi để nhận dạng văn bản từ hình ảnh.",
           "q2": "Định dạng có được bảo toàn không?",
           "a2": "Nội dung văn bản cơ bản được trích xuất theo từng trang. Định dạng phức tạp như bảng và cột có thể không được bảo toàn hoàn hảo.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
         },
@@ -727,7 +715,6 @@
           }
         },
         "dragHint": "Kéo để sắp xếp lại trang",
-        "pages": "trang",
         "page": "Trang",
         "moveUp": "Di chuyển lên",
         "moveDown": "Di chuyển xuống",
@@ -738,10 +725,6 @@
           "a1": "Tải lên PDF, sau đó sử dụng nút mũi tên để di chuyển trang lên hoặc xuống. Nhấp Áp dụng để tạo PDF mới với thứ tự trang mới.",
           "q2": "PDF gốc có bị sửa đổi không?",
           "a2": "Không, PDF mới được tạo với các trang đã sắp xếp lại. Tệp gốc không bao giờ bị thay đổi.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
         },
@@ -840,22 +823,16 @@
         "largeFileWarning": "Đã phát hiện tệp lớn. Bộ nhớ trình duyệt có hạn — quá trình xử lý có thể chậm hoặc thất bại. Chúng tôi khuyến nghị tệp dưới 100 MB.",
         "compress": "Nén",
         "compressing": "Đang nén...",
-        "pages": "trang",
         "originalSize": "Kích thước gốc",
         "compressedSize": "Kích thước sau nén",
         "saved": "Giảm kích thước",
         "noReduction": "Không giảm được kích thước",
         "noReductionUsedOriginal": "Đã tối ưu — giữ lại tệp gốc.",
-        "previewFullscreen": "Xem trước",
         "faq": {
           "q1": "Nén PDF hoạt động như thế nào?",
           "a1": "Có hai chế độ. Tối ưu hóa hình ảnh (mặc định) nén lại các hình ảnh JPEG đã nhúng trong khi giữ lớp văn bản nguyên vẹn, vì vậy đầu ra vẫn có thể tìm kiếm được. Rasterize hoàn toàn kết xuất lại mỗi trang dưới dạng một JPEG — tệp nhỏ hơn nhưng văn bản không thể chọn được. Sử dụng bảng nâng cao để tinh chỉnh DPI và chất lượng JPEG, hoặc xóa siêu dữ liệu PDF.",
           "q2": "Văn bản có còn chọn được không?",
           "a2": "Có trong chế độ Tối ưu hóa hình ảnh (mặc định) — chỉ các hình ảnh đã nhúng được nén lại, vì vậy văn bản vẫn có thể chọn và tìm kiếm được. Trong chế độ Rasterize hoàn toàn, các trang trở thành hình ảnh và văn bản không thể chọn được; chọn chế độ này cho PDF được quét trong đó các trang đã là hình ảnh.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
         },
@@ -925,10 +902,6 @@
           "a1": "Có, bạn có thể điều chỉnh văn bản, độ mờ (độ trong suốt) và cỡ chữ. Hình mờ được đặt chéo trên mỗi trang.",
           "q2": "Hình mờ có được áp dụng cho tất cả trang không?",
           "a2": "Có, cùng một hình mờ được áp dụng cho mỗi trang PDF.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
         },
@@ -987,7 +960,6 @@
             "description": "Hoạt động cắt chạy qua pdf-lib trong trình duyệt. Sơ đồ tầng, hình ảnh y tế và tài liệu mật không bao giờ được tải lên máy chủ."
           }
         },
-        "pages": "trang",
         "margins": "Lề cắt (điểm)",
         "marginsHint": "Nhập lượng cần cắt từ mỗi cạnh (1 điểm ≈ 0,35mm)",
         "top": "Trên",
@@ -1001,10 +973,6 @@
           "a1": "PDF sử dụng điểm làm đơn vị đo. 1 điểm = 1/72 inch ≈ 0,35mm. Trang US Letter tiêu chuẩn là 612 × 792 điểm.",
           "q2": "Cắt có giảm kích thước tệp không?",
           "a2": "Cắt thay đổi vùng hiển thị nhưng không xóa nội dung ẩn, nên kích thước tệp có thể không giảm đáng kể.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
         },
@@ -1066,7 +1034,6 @@
         "drawSignature": "Vẽ chữ ký của bạn",
         "clearSignature": "Xóa",
         "page": "Trang",
-        "pages": "trang",
         "points": "pt",
         "signatureWidth": "Chiều rộng",
         "apply": "Áp dụng chữ ký",
@@ -1076,10 +1043,6 @@
           "a1": "Không, mọi thứ diễn ra trong trình duyệt. Chữ ký và PDF của bạn không bao giờ được tải lên bất kỳ máy chủ nào.",
           "q2": "Tôi có thể đặt chữ ký lên trang cụ thể không?",
           "a2": "Có, bạn có thể chọn trang cần ký và đặt vị trí chính xác (tọa độ X, Y) và kích thước chữ ký.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
         },
@@ -1149,10 +1112,6 @@
           "a1": "Hình ảnh được trích xuất ở định dạng gốc khi có thể (JPEG). Hình ảnh khác được chuyển đổi sang định dạng PNG.",
           "q2": "Công cụ này có trích xuất tất cả hình ảnh không?",
           "a2": "Nó trích xuất hình ảnh raster nhúng từ PDF. Đồ họa vector và văn bản render dưới dạng đường dẫn không được trích xuất thành hình ảnh riêng.",
-          "q3": "Tệp của tôi có bị tải lên máy chủ không?",
-          "a3": "Không. Mọi xử lý diễn ra hoàn toàn trong trình duyệt. Dữ liệu của bạn không bao giờ rời khỏi thiết bị — không có gì được tải lên máy chủ.",
-          "q4": "Tôi có thể sử dụng công cụ này ngoại tuyến không?",
-          "a4": "Có. Sau khi trang đã tải xong, công cụ hoạt động hoàn toàn ngoại tuyến. Để có trải nghiệm tốt nhất, hãy cài đặt PrivaDeck như PWA từ trình duyệt của bạn.",
           "q5": "Có giới hạn kích thước tệp không?",
           "a5": "Không có giới hạn nào từ máy chủ. Kích thước tệp tối đa phụ thuộc vào bộ nhớ khả dụng và khả năng của trình duyệt trên thiết bị của bạn. Hầu hết các thiết bị hiện đại đều xử lý tốt tệp lên đến vài trăm MB mà không gặp vấn đề."
         },
@@ -1170,7 +1129,8 @@
             "content": "<p>Việc trích xuất hình ảnh chạy <strong>hoàn toàn trong trình duyệt</strong> của bạn bằng <strong>pdfjs-dist</strong>.</p><ul><li>PDF của bạn <strong>không bao giờ rời khỏi thiết bị</strong></li><li>Không xử lý máy chủ hoặc tải lên</li><li>Hoạt động <strong>ngoại tuyến</strong> sau khi trang đã tải</li></ul>"
           }
         }
-      }
+      },
+      "previewFullscreen": "Xem trước"
     }
   }
 }

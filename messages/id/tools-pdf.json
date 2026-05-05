@@ -74,7 +74,6 @@
         "addFilesHint": "PDF atau gambar",
         "dragHandle": "Seret untuk mengatur ulang",
         "dragHint": "Seret kartu untuk mengatur ulang",
-        "previewFullscreen": "Pratinjau",
         "selectAllPages": "Pilih semua",
         "deselectAllPages": "Batalkan semua",
         "closeDetail": "Tutup",
@@ -83,10 +82,6 @@
           "a1": "Unggah PDF (juga gambar opsional), atur urutan, pilih halaman tertentu dan putar bila perlu, lalu klik Gabung. Semua pemrosesan terjadi di browser Anda — file tidak pernah diunggah.",
           "q2": "Apakah ada batas ukuran file?",
           "a2": "Tidak ada batas keras, tetapi file yang sangat besar mungkin lambat karena pemrosesan terjadi di browser Anda.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat Anda — tidak ada yang diunggah ke server manapun.",
-          "q4": "Bisakah saya menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini bekerja sepenuhnya offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batas jumlah file?",
           "a5": "Tidak ada batas dari sisi server. Jumlah dan ukuran maksimum bergantung pada memori perangkat Anda. Sebagian besar perangkat modern menangani lusinan file ratusan MB tanpa masalah.",
           "q6": "Bisakah saya menggabungkan gambar dan PDF bersama?",
@@ -151,7 +146,6 @@
             "description": "PDF dianalisis dan dipisahkan sepenuhnya di browser Anda melalui pdf-lib dan pdfjs-dist. Laporan rahasia, kontrak, dan catatan pribadi tidak pernah meninggalkan perangkat."
           }
         },
-        "pages": "halaman",
         "splitEach": "Pisahkan setiap halaman",
         "splitRange": "Pisahkan berdasarkan rentang",
         "rangePlaceholder": "mis. 1-3, 4-6, 7-10",
@@ -160,16 +154,42 @@
         "splitting": "Memisahkan...",
         "results": "Hasil Pemisahan",
         "modes": {
-          "each": { "title": "Setiap halaman", "desc": "Setiap halaman menjadi PDF tersendiri." },
-          "every": { "title": "Setiap N halaman", "desc": "Kelompokkan setiap N halaman berurutan menjadi satu PDF." },
-          "oddEven": { "title": "Ganjil / Genap", "desc": "Dua PDF: halaman ganjil dan halaman genap." },
-          "half": { "title": "Paruhan", "desc": "Pisahkan menjadi paruh pertama dan paruh kedua." },
-          "range": { "title": "Rentang kustom", "desc": "Definisikan rentang seperti 1-3, 5, 8-10. Klik dua halaman untuk menambah rentang." },
-          "size": { "title": "Berdasarkan ukuran file", "desc": "Setiap output tetap di bawah ukuran maksimum yang Anda pilih." },
-          "outline": { "title": "Berdasarkan bookmark", "desc": "Gunakan daftar isi PDF — satu file per bookmark tingkat atas." }
+          "each": {
+            "title": "Setiap halaman",
+            "desc": "Setiap halaman menjadi PDF tersendiri."
+          },
+          "every": {
+            "title": "Setiap N halaman",
+            "desc": "Kelompokkan setiap N halaman berurutan menjadi satu PDF."
+          },
+          "oddEven": {
+            "title": "Ganjil / Genap",
+            "desc": "Dua PDF: halaman ganjil dan halaman genap."
+          },
+          "half": {
+            "title": "Paruhan",
+            "desc": "Pisahkan menjadi paruh pertama dan paruh kedua."
+          },
+          "range": {
+            "title": "Rentang kustom",
+            "desc": "Definisikan rentang seperti 1-3, 5, 8-10. Klik dua halaman untuk menambah rentang."
+          },
+          "size": {
+            "title": "Berdasarkan ukuran file",
+            "desc": "Setiap output tetap di bawah ukuran maksimum yang Anda pilih."
+          },
+          "outline": {
+            "title": "Berdasarkan bookmark",
+            "desc": "Gunakan daftar isi PDF — satu file per bookmark tingkat atas."
+          }
         },
-        "every": { "label": "Halaman per bagian", "preview": "{count} bagian" },
-        "half": { "preview": "{a} halaman pertama + {b} halaman terakhir" },
+        "every": {
+          "label": "Halaman per bagian",
+          "preview": "{count} bagian"
+        },
+        "half": {
+          "preview": "{a} halaman pertama + {b} halaman terakhir"
+        },
         "range": {
           "mergeAll": "Gabungkan semua rentang menjadi satu PDF",
           "addRange": "Tambah rentang",
@@ -214,10 +234,6 @@
           "a1": "Tujuh mode: setiap halaman, setiap N halaman, ganjil/genap, paruhan, rentang kustom (dengan opsi penggabungan), berdasarkan ukuran file, dan berdasarkan bookmark PDF. Beralih antar mode kapan saja — pratinjau warna pada thumbnail terupdate seketika.",
           "q2": "Apakah file saya diunggah ke server?",
           "a2": "Tidak. Semua pemrosesan terjadi secara lokal di browser Anda via pdf-lib dan pdfjs-dist. File Anda tidak pernah meninggalkan perangkat.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda. Untuk PDF sangat besar (1000+ halaman), gunakan 'Setiap N halaman' daripada 'Setiap halaman' agar memori tetap terkendali.",
           "q6": "Bagaimana 'Pisahkan berdasarkan ukuran' bekerja?",
@@ -233,7 +249,6 @@
             "content": "<p><strong>Pisahkan PDF</strong> membagi PDF menjadi beberapa file dengan tujuh mode fleksibel: setiap halaman, setiap N halaman, ganjil/genap, paruhan, rentang kustom, berdasarkan ukuran file, dan berdasarkan bookmark PDF. Pratinjau thumbnail berkode warna menunjukkan tepat halaman mana akan masuk ke output mana sebelum konfirmasi.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Ekstrak Halaman</strong>: Ambil halaman tertentu dari dokumen besar dengan rentang kustom</li><li><strong>Pemisahan Bab</strong>: Pisahkan buku atau manual otomatis per bab via bookmark</li><li><strong>Siap Email</strong>: Pakai 'Pisahkan berdasarkan ukuran' untuk memecah PDF besar di bawah batas lampiran</li><li><strong>Pemulihan scan dupleks</strong>: 'Ganjil / Genap' untuk merekonstruksi scan bolak-balik yang teracak</li><li><strong>Ekstraksi Formulir</strong>: Ekstrak formulir tertentu dari PDF multi-halaman</li><li><strong>Penyimpanan</strong>: Pisahkan scan gabungan menjadi dokumen individual dengan satu klik</li></ul>"
           },
           "privacy": {
@@ -286,16 +301,11 @@
         "delete": "Hapus Terpilih",
         "deleting": "Menghapus...",
         "remaining": "Tersisa",
-        "pages": "halaman",
         "faq": {
           "q1": "Bagaimana cara memilih halaman untuk dihapus?",
           "a1": "Unggah PDF dan klik thumbnail halaman yang ingin dihapus. Halaman terpilih akan disorot. Klik tombol hapus untuk membuat PDF baru tanpa halaman tersebut.",
           "q2": "Bisakah saya membatalkan penghapusan halaman?",
           "a2": "File asli tidak dimodifikasi. PDF baru dibuat tanpa halaman yang dipilih. Anda selalu dapat mengunggah ulang file asli.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -305,7 +315,6 @@
             "content": "<p><strong>Delete PDF Pages</strong> menghapus halaman tertentu dari dokumen PDF. Pratinjau semua halaman sebagai thumbnail, pilih yang akan dihapus, dan unduh PDF yang telah dibersihkan.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Pembersihan Dokumen</strong>: Hapus halaman kosong atau tidak perlu dari dokumen yang dipindai</li><li><strong>Penghapusan Rahasia</strong>: Hapus halaman sensitif sebelum membagikan dokumen</li><li><strong>Pembersihan Draft</strong>: Hapus halaman usang dari draft laporan</li><li><strong>Pemrosesan Formulir</strong>: Hapus halaman instruksi dari formulir yang telah diisi</li><li><strong>Persiapan Arsip</strong>: Bersihkan dokumen sebelum mengarsipkan</li></ul>"
           },
           "privacy": {
@@ -359,17 +368,12 @@
         "scale": "Skala",
         "convert": "Konversi",
         "converting": "Mengonversi",
-        "pages": "halaman",
         "downloadAll": "Unduh Semua (ZIP)",
         "faq": {
           "q1": "Format gambar apa yang didukung?",
           "a1": "Anda dapat mengonversi halaman PDF ke PNG (lossless) atau JPG (ukuran file lebih kecil dengan kontrol kualitas).",
           "q2": "Bisakah saya mengatur resolusi gambar?",
           "a2": "Ya, gunakan slider skala. 1x memberikan resolusi standar, 2x menggandakannya, hingga 4x untuk output beresolusi tinggi.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -379,7 +383,6 @@
             "content": "<p><strong>PDF to Image</strong> mengonversi halaman PDF menjadi gambar JPG atau PNG berkualitas tinggi. Atur tingkat DPI/kualitas sesuai kebutuhan — dari thumbnail yang dioptimalkan web hingga gambar cetak beresolusi tinggi.</p><p>Konversi semua halaman atau pilih halaman tertentu, ditenagai oleh pdfjs-dist untuk rendering yang akurat.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Presentasi</strong>: Konversi slide PDF menjadi gambar untuk PowerPoint atau Google Slides</li><li><strong>Media Sosial</strong>: Bagikan konten PDF sebagai gambar di platform sosial</li><li><strong>Konten Web</strong>: Konversi halaman PDF untuk digunakan di situs web</li><li><strong>Thumbnail</strong>: Hasilkan pratinjau halaman untuk sistem manajemen dokumen</li><li><strong>Proof Cetak</strong>: Buat bukti gambar dari tata letak PDF</li></ul>"
           },
           "privacy": {
@@ -436,10 +439,6 @@
           "a1": "Anda dapat mengonversi JPG, PNG, GIF, WebP, BMP, dan format gambar umum lainnya. Format non-standar dikonversi secara otomatis sebelum disematkan.",
           "q2": "Bisakah saya mengurutkan ulang gambar sebelum mengonversi?",
           "a2": "Ya, gunakan tombol panah pada setiap thumbnail gambar untuk mengurutkan ulang. Halaman PDF akhir akan sesuai dengan urutan yang ditampilkan.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -449,7 +448,6 @@
             "content": "<p><strong>Images to PDF</strong> mengonversi beberapa gambar (JPG, PNG, WebP) menjadi satu dokumen PDF. Seret untuk mengatur ulang halaman, dan unduh PDF profesional dengan semua gambar Anda secara berurutan.</p><p>Sempurna untuk membuat buku foto, kompilasi pemindaian, atau dokumen berbasis gambar.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Kompilasi Pemindaian</strong>: Gabungkan beberapa halaman yang dipindai menjadi satu PDF</li><li><strong>Buku Foto</strong>: Buat buku foto PDF sederhana atau album</li><li><strong>Portofolio</strong>: Kompilasi karya seni atau fotografi menjadi portofolio PDF</li><li><strong>Kuitansi</strong>: Gabungkan foto kuitansi menjadi satu laporan pengeluaran</li><li><strong>Pengarsipan</strong>: Arsipkan koleksi gambar sebagai dokumen PDF yang dapat dicari</li></ul>"
           },
           "privacy": {
@@ -498,7 +496,6 @@
             "description": "Semua rotasi terjadi secara lokal dengan pdf-lib. Pindaian rahasia, dokumen identitas, dan kontrak tidak diunggah — file tidak meninggalkan perangkat."
           }
         },
-        "pages": "halaman",
         "direction": "Arah",
         "clockwise": "90° Searah Jarum Jam",
         "counterClockwise": "90° Berlawanan Jarum Jam",
@@ -510,10 +507,6 @@
           "a1": "Saat ini alat ini memutar semua halaman dengan sudut yang sama. Untuk rotasi per halaman, Anda dapat memproses PDF beberapa kali dengan rotasi berbeda.",
           "q2": "Apakah rotasi memengaruhi kualitas konten PDF?",
           "a2": "Tidak, rotasi hanya mengubah metadata orientasi halaman. Konten, teks, dan gambar tetap tidak berubah.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -523,7 +516,6 @@
             "content": "<p><strong>Rotate PDF</strong> memutar semua halaman dalam PDF sebesar 90°, 180°, atau 270°. Perbaiki pemindaian terbalik, dokumen landscape, atau halaman yang salah orientasinya dalam hitungan detik.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Koreksi Pemindaian</strong>: Perbaiki halaman yang dipindai terbalik atau miring</li><li><strong>Landscape ke Portrait</strong>: Putar dokumen landscape untuk memudahkan pembacaan</li><li><strong>Persiapan Cetak</strong>: Koreksi orientasi sebelum mencetak</li><li><strong>Perakitan Dokumen</strong>: Perbaiki halaman dengan orientasi campuran dalam dokumen yang digabungkan</li><li><strong>Perbaikan Presentasi</strong>: Koreksi slide yang diputar dalam presentasi PDF</li></ul>"
           },
           "privacy": {
@@ -572,7 +564,6 @@
             "description": "Nomor halaman ditambahkan dengan pdf-lib sepenuhnya di browser Anda. Manuskrip, dokumen hukum, dan laporan kepemilikan tidak pernah meninggalkan perangkat."
           }
         },
-        "pages": "halaman",
         "position": "Posisi",
         "positions": {
           "bottom-center": "Bawah Tengah",
@@ -593,10 +584,6 @@
           "a1": "Ya, Anda dapat menempatkan nomor halaman di enam posisi: atas atau bawah, dikombinasikan dengan perataan kiri, tengah, atau kanan.",
           "q2": "Bisakah saya melewati penomoran pada halaman tertentu?",
           "a2": "Ya, gunakan opsi 'Mulai dari halaman' untuk melewati N halaman pertama (berguna untuk halaman judul atau daftar isi).",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -606,7 +593,6 @@
             "content": "<p><strong>Add Page Numbers</strong> memberi cap nomor halaman berurutan pada setiap halaman PDF. Pilih dari 6 posisi (atas/bawah × kiri/tengah/kanan) dan sesuaikan format nomor.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Laporan</strong>: Tambahkan nomor halaman ke laporan bisnis dan proposal</li><li><strong>Dokumen Hukum</strong>: Beri nomor halaman untuk pengajuan pengadilan dan kontrak</li><li><strong>Naskah</strong>: Tambahkan nomor halaman ke draft buku atau tesis</li><li><strong>Materi Rapat</strong>: Beri nomor halaman handout untuk referensi mudah</li><li><strong>Manual</strong>: Tambahkan nomor halaman ke manual instruksi atau panduan</li></ul>"
           },
           "privacy": {
@@ -664,10 +650,6 @@
           "a1": "Alat ini hanya mengekstrak teks tertanam. Untuk PDF yang dipindai (gambar), gunakan alat OCR kami untuk mengenali teks dari gambar.",
           "q2": "Apakah formatnya dipertahankan?",
           "a2": "Konten teks dasar diekstrak halaman per halaman. Format kompleks seperti tabel dan kolom mungkin tidak dipertahankan dengan sempurna.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -677,7 +659,6 @@
             "content": "<p><strong>Extract Text from PDF</strong> menarik semua konten teks dari dokumen PDF halaman per halaman. Ekstrak teks untuk disalin, dicari, diedit, atau diproses lebih lanjut — ditenagai oleh pdfjs-dist untuk ekstraksi teks yang akurat.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Penggunaan Ulang Konten</strong>: Ekstrak teks dari PDF untuk diedit di Word atau Google Docs</li><li><strong>Penggalian Data</strong>: Ambil data teks dari laporan PDF untuk analisis</li><li><strong>Pencarian</strong>: Jadikan konten PDF dapat dicari dengan mengekstrak teks</li><li><strong>Terjemahan</strong>: Ekstrak teks untuk terjemahan mesin atau manual</li><li><strong>Aksesibilitas</strong>: Konversi teks PDF ke teks biasa untuk screen reader</li></ul>"
           },
           "privacy": {
@@ -727,7 +708,6 @@
           }
         },
         "dragHint": "Seret untuk mengurutkan ulang halaman",
-        "pages": "halaman",
         "page": "Halaman",
         "moveUp": "Pindah ke atas",
         "moveDown": "Pindah ke bawah",
@@ -738,10 +718,6 @@
           "a1": "Unggah PDF, lalu gunakan tombol panah untuk memindahkan halaman ke atas atau bawah. Klik Terapkan untuk membuat PDF baru dengan urutan halaman baru.",
           "q2": "Apakah PDF asli dimodifikasi?",
           "a2": "Tidak, PDF baru dibuat dengan halaman yang disusun ulang. File asli Anda tidak pernah diubah.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -751,7 +727,6 @@
             "content": "<p><strong>Rearrange PDF Pages</strong> memungkinkan Anda mengatur ulang halaman dalam PDF dengan menyeret dan melepas thumbnail halaman. Pindahkan halaman ke posisi mana pun, lalu unduh dokumen yang telah diatur ulang.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Perakitan Dokumen</strong>: Perbaiki urutan halaman dalam dokumen yang digabungkan</li><li><strong>Atur Ulang Presentasi</strong>: Atur ulang urutan slide dalam presentasi PDF</li><li><strong>Organisasi Laporan</strong>: Pindahkan bagian-bagian dalam laporan yang dirakit</li><li><strong>Atur Ulang Pemindaian</strong>: Perbaiki halaman yang dipindai dengan urutan salah</li><li><strong>Urutan Kustom</strong>: Buat urutan halaman kustom untuk kebutuhan tertentu</li></ul>"
           },
           "privacy": {
@@ -840,22 +815,16 @@
         "largeFileWarning": "File besar terdeteksi. Memori peramban terbatas — pemrosesan mungkin lambat atau gagal. Kami merekomendasikan file di bawah 100 MB.",
         "compress": "Kompres",
         "compressing": "Mengompres...",
-        "pages": "halaman",
         "originalSize": "Ukuran asli",
         "compressedSize": "Ukuran terkompres",
         "saved": "Pengurangan ukuran",
         "noReduction": "Tidak ada pengurangan ukuran",
         "noReductionUsedOriginal": "Sudah optimal — file asli dipertahankan.",
-        "previewFullscreen": "Pratinjau",
         "faq": {
           "q1": "Bagaimana cara kerja kompresi PDF?",
           "a1": "Dua mode tersedia. Optimasi gambar (default) mengompres ulang gambar JPEG yang disematkan sambil menjaga lapisan teks tetap utuh, sehingga output tetap dapat dicari. Rasterisasi penuh merender ulang setiap halaman sebagai satu JPEG — file lebih kecil tetapi teks tidak lagi dapat dipilih. Gunakan panel lanjutan untuk menyetel halus DPI dan kualitas JPEG, atau untuk menghapus metadata PDF.",
           "q2": "Apakah teks tetap bisa dipilih?",
           "a2": "Ya dalam mode Optimasi gambar (default) — hanya gambar yang disematkan yang dikompresi ulang, sehingga teks tetap dapat dipilih dan dicari. Dalam mode Rasterisasi penuh, halaman menjadi gambar dan teks tidak lagi dapat dipilih; pilih mode ini untuk PDF yang dipindai di mana halaman sudah berupa gambar.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -865,7 +834,6 @@
             "content": "<p><strong>Compress PDF</strong> mengurangi ukuran file PDF dengan merender ulang halaman pada tingkat kualitas yang dioptimalkan. Pilih dari kompresi Tinggi, Sedang, atau Rendah untuk menyeimbangkan ukuran file dengan kualitas visual.</p><p>Ideal untuk mengurangi PDF besar untuk lampiran email atau unggahan web.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Email</strong>: Kurangi ukuran PDF agar sesuai batas lampiran email</li><li><strong>Unggahan Web</strong>: Kompres untuk unggahan lebih cepat ke formulir dan portal web</li><li><strong>Penyimpanan</strong>: Kurangi ukuran arsip untuk penyimpanan dokumen</li><li><strong>Berbagi</strong>: Buat file lebih kecil untuk aplikasi pesan dan berbagi file</li><li><strong>Pengiriman</strong>: Penuhi persyaratan ukuran file untuk pengiriman online</li></ul>"
           },
           "privacy": {
@@ -925,10 +893,6 @@
           "a1": "Ya, Anda dapat mengatur teks, opasitas (transparansi), dan ukuran font. Watermark ditempatkan secara diagonal di setiap halaman.",
           "q2": "Apakah watermark diterapkan ke semua halaman?",
           "a2": "Ya, watermark yang sama diterapkan ke setiap halaman PDF.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -938,7 +902,6 @@
             "content": "<p><strong>PDF Watermark</strong> menambahkan watermark teks diagonal ke setiap halaman dokumen PDF. Tandai dokumen sebagai DRAFT, CONFIDENTIAL, SAMPLE, atau teks kustom lainnya dengan opasitas dan warna yang dapat disesuaikan.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Dokumen Draft</strong>: Tandai versi awal sebagai DRAFT</li><li><strong>Kerahasiaan</strong>: Beri label dokumen sensitif sebagai CONFIDENTIAL</li><li><strong>Salinan Contoh</strong>: Tandai salinan pratinjau sebagai SAMPLE</li><li><strong>Hukum</strong>: Tambahkan watermark COPY atau ORIGINAL ke dokumen hukum</li><li><strong>Pemeriksaan</strong>: Tandai salinan proof untuk mencegah penggunaan sebagai final</li></ul>"
           },
           "privacy": {
@@ -987,7 +950,6 @@
             "description": "Operasi pangkasan berjalan melalui pdf-lib di browser Anda. Denah lantai, gambar medis, dan dokumen rahasia tidak pernah diunggah ke server."
           }
         },
-        "pages": "halaman",
         "margins": "Margin Potong (poin)",
         "marginsHint": "Masukkan jumlah yang akan dipotong dari setiap sisi (1 poin ≈ 0,35mm)",
         "top": "Atas",
@@ -1001,10 +963,6 @@
           "a1": "PDF menggunakan poin sebagai satuan ukuran. 1 poin = 1/72 inci ≈ 0,35mm. Halaman US Letter standar adalah 612 × 792 poin.",
           "q2": "Apakah pemotongan mengurangi ukuran file?",
           "a2": "Pemotongan mengubah area yang terlihat tetapi tidak menghapus konten tersembunyi, jadi ukuran file mungkin tidak berkurang secara signifikan.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -1014,7 +972,6 @@
             "content": "<p><strong>Crop PDF</strong> memangkas margin dari halaman PDF dengan menyesuaikan crop box. Hapus whitespace atau border yang tidak diinginkan dari semua halaman sekaligus dengan menentukan margin potong dalam poin.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Penghapusan Margin</strong>: Pangkas whitespace berlebih dari margin dokumen</li><li><strong>Optimasi Cetak</strong>: Hapus margin cetak untuk pencetakan tepi-ke-tepi</li><li><strong>Pembersihan Slide</strong>: Potong border dari slide presentasi yang dikonversi</li><li><strong>Pembersihan Pemindaian</strong>: Hapus border pemindai dari dokumen yang dipindai</li><li><strong>Optimasi Tampilan</strong>: Kurangi margin untuk pembacaan di layar yang lebih baik</li></ul>"
           },
           "privacy": {
@@ -1066,7 +1023,6 @@
         "drawSignature": "Gambar Tanda Tangan Anda",
         "clearSignature": "Hapus",
         "page": "Halaman",
-        "pages": "halaman",
         "points": "pt",
         "signatureWidth": "Lebar",
         "apply": "Terapkan Tanda Tangan",
@@ -1076,10 +1032,6 @@
           "a1": "Tidak, semuanya terjadi di browser Anda. Tanda tangan dan PDF Anda tidak pernah diunggah ke server mana pun.",
           "q2": "Bisakah saya menempatkan tanda tangan di halaman tertentu?",
           "a2": "Ya, Anda dapat memilih halaman mana yang akan ditandatangani dan mengatur posisi tepat (koordinat X, Y) dan ukuran tanda tangan.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -1089,7 +1041,6 @@
             "content": "<p><strong>E-Sign PDF</strong> memungkinkan Anda menggambar tanda tangan dan menempatkannya di halaman mana pun dari dokumen PDF. Buat tanda tangan digital menggunakan mouse atau layar sentuh, lalu posisikan dan ubah ukurannya pada dokumen.</p><p>Penandatanganan elektronik sederhana tanpa perlu akun atau langganan.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Kontrak</strong>: Tandatangani perjanjian dan kontrak secara elektronik</li><li><strong>Formulir</strong>: Tambahkan tanda tangan ke formulir aplikasi atau persetujuan</li><li><strong>Persetujuan</strong>: Tandatangani dokumen dan proposal</li><li><strong>Surat</strong>: Tambahkan tanda tangan pribadi ke surat resmi</li><li><strong>Kuitansi</strong>: Tandatangani konfirmasi pengiriman atau penerimaan</li></ul>"
           },
           "privacy": {
@@ -1149,10 +1100,6 @@
           "a1": "Gambar diekstrak dalam format aslinya jika memungkinkan (JPEG). Gambar lain dikonversi ke format PNG.",
           "q2": "Apakah alat ini mengekstrak semua gambar?",
           "a2": "Ini mengekstrak gambar raster tertanam dari PDF. Grafik vektor dan teks yang dirender sebagai path tidak diekstrak sebagai gambar terpisah.",
-          "q3": "Apakah file saya akan diunggah ke server?",
-          "a3": "Tidak. Semua pemrosesan terjadi sepenuhnya di browser Anda. Data Anda tidak pernah meninggalkan perangkat — tidak ada yang diunggah ke server mana pun.",
-          "q4": "Apakah saya bisa menggunakan alat ini secara offline?",
-          "a4": "Ya. Setelah halaman dimuat, alat ini berfungsi sepenuhnya secara offline. Untuk pengalaman terbaik, instal PrivaDeck sebagai PWA dari browser Anda.",
           "q5": "Apakah ada batasan ukuran file?",
           "a5": "Tidak ada batasan yang diberlakukan server. Ukuran file maksimum tergantung pada memori perangkat Anda dan kemampuan browser. Sebagian besar perangkat modern dapat menangani file hingga beberapa ratus MB tanpa masalah."
         },
@@ -1162,7 +1109,6 @@
             "content": "<p><strong>Extract Images from PDF</strong> menemukan dan mengekstrak semua gambar tertanam dari dokumen PDF. Unduh gambar individual atau semua gambar sebagai file ZIP — berguna untuk memulihkan grafik dari laporan PDF, brosur, atau presentasi.</p>"
           },
           "useCases": {
-            "title": "Kasus Penggunaan Umum",
             "content": "<ul><li><strong>Pemulihan Aset</strong>: Ekstrak logo, foto, atau grafik dari dokumen PDF</li><li><strong>Penggunaan Ulang Konten</strong>: Ambil gambar dari presentasi atau brosur untuk digunakan ulang</li><li><strong>Riset</strong>: Ekstrak bagan, diagram, atau gambar dari makalah akademis</li><li><strong>Pengarsipan</strong>: Simpan gambar individual dari album foto PDF</li><li><strong>Desain</strong>: Pulihkan aset desain dari proof atau mockup PDF</li></ul>"
           },
           "privacy": {
@@ -1170,7 +1116,8 @@
             "content": "<p>Ekstraksi gambar berjalan <strong>sepenuhnya di browser Anda</strong> menggunakan <strong>pdfjs-dist</strong>.</p><ul><li>PDF Anda <strong>tidak pernah meninggalkan perangkat</strong></li><li>Tidak ada pemrosesan server atau unggahan</li><li>Berfungsi <strong>secara offline</strong> setelah halaman dimuat</li></ul>"
           }
         }
-      }
+      },
+      "previewFullscreen": "Pratinjau"
     }
   }
 }

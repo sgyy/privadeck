@@ -14,6 +14,7 @@ interface ResultsPanelProps {
 
 export function ResultsPanel({ results, zipName }: ResultsPanelProps) {
   const t = useTranslations("tools.pdf.split");
+  const tCat = useTranslations("tools.pdf");
   const [zipping, setZipping] = useState(false);
   const [zipBlob, setZipBlob] = useState<Blob | null>(null);
 
@@ -60,7 +61,7 @@ export function ResultsPanel({ results, zipName }: ResultsPanelProps) {
                 {r.filename}
               </p>
               <p className="text-xs text-muted-foreground">
-                {r.pageCount} {t("pages")} · {formatFileSize(r.blob.size)}
+                {r.pageCount} {tCat("pages")} · {formatFileSize(r.blob.size)}
                 {r.label && (
                   <span className="ml-2 rounded bg-muted px-1.5 py-0.5">
                     {r.label}

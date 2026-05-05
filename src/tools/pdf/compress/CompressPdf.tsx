@@ -63,6 +63,7 @@ export default function CompressPdf() {
   const [encrypted, setEncrypted] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
   const t = useTranslations("tools.pdf.compress");
+  const tCat = useTranslations("tools.pdf");
 
   function clearResult() {
     setResult(null);
@@ -463,7 +464,7 @@ export default function CompressPdf() {
                     }`
                   : progress.kind === "image"
                     ? `${t("processingImages")} ${progress.current}/${progress.total}`
-                    : `${t("compressing")} ${progress.current}/${progress.total} ${t("pages")}`}
+                    : `${t("compressing")} ${progress.current}/${progress.total} ${tCat("pages")}`}
               </p>
             </div>
           )}
@@ -482,7 +483,7 @@ export default function CompressPdf() {
               <>
                 <Button variant="outline" onClick={() => setPreviewOpen(true)}>
                   <Eye className="h-4 w-4" />
-                  {t("previewFullscreen")}
+                  {tCat("previewFullscreen")}
                 </Button>
                 <DownloadButton
                   data={result}
@@ -554,7 +555,7 @@ export default function CompressPdf() {
                 {t("compressionReport")}{" "}
                 <span className="text-xs text-muted-foreground">
                   ({report.items.length}{" "}
-                  {modeUsed === "rasterize" ? t("pages") : t("processingImages").toLowerCase()})
+                  {modeUsed === "rasterize" ? tCat("pages") : t("processingImages").toLowerCase()})
                 </span>
               </button>
               {reportOpen && (() => {

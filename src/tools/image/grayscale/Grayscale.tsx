@@ -12,6 +12,7 @@ const tracker = createToolTracker("grayscale", "image");
 
 export default function Grayscale() {
   const t = useTranslations("tools.image.grayscale");
+  const tCat = useTranslations("tools.image");
   const [file, setFile] = useState<File | null>(null);
   const [results, setResults] = useState<ImageResultItem[]>([]);
   const [processing, setProcessing] = useState(false);
@@ -48,7 +49,7 @@ export default function Grayscale() {
       />
 
       <Button onClick={handleProcess} disabled={!file || processing}>
-        {processing ? t("processing") : t("convert")}
+        {processing ? tCat("processing") : t("convert")}
       </Button>
 
       {error && (

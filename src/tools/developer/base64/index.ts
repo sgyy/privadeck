@@ -17,12 +17,12 @@ const definition: ToolDefinition = {
       answerKey: "tools.developer.base64.faq.a2",
     },
     {
-      questionKey: "tools.developer.base64.faq.q3",
-      answerKey: "tools.developer.base64.faq.a3",
+      questionKey: "common.sharedFaq.q3",
+      answerKey: "common.sharedFaq.a3",
     },
     {
-      questionKey: "tools.developer.base64.faq.q4",
-      answerKey: "tools.developer.base64.faq.a4",
+      questionKey: "common.sharedFaq.q4",
+      answerKey: "common.sharedFaq.a4",
     },
     {
       questionKey: "tools.developer.base64.faq.q5",

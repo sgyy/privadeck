@@ -12,6 +12,7 @@ const tracker = createToolTracker("pixelate", "image");
 
 export default function Pixelate() {
   const t = useTranslations("tools.image.pixelate");
+  const tCat = useTranslations("tools.image");
   const [file, setFile] = useState<File | null>(null);
   const [pixelSize, setPixelSize] = useState(10);
   const [results, setResults] = useState<ImageResultItem[]>([]);
@@ -67,7 +68,7 @@ export default function Pixelate() {
       </div>
 
       <Button onClick={handleProcess} disabled={!file || processing}>
-        {processing ? t("processing") : t("pixelate")}
+        {processing ? tCat("processing") : t("pixelate")}
       </Button>
 
       {error && (

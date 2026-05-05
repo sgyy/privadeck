@@ -57,8 +57,6 @@
           "a2": "No. Todo el procesamiento de imágenes se realiza localmente en tu navegador. Tus imágenes nunca salen de tu dispositivo.",
           "q3": "¿Puedo convertir varias imágenes a la vez?",
           "a3": "Sí, puedes arrastrar y soltar varias imágenes y todas se convertirán al formato seleccionado.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -128,8 +126,6 @@
           "a1": "Elige un preajuste de compresión (Alta calidad, Equilibrado o Archivo pequeño) o personaliza los ajustes manualmente. La herramienta usa compresión con pérdida para reducir el tamaño del archivo manteniendo la calidad visual. También puedes convertir entre formatos — AVIF y WebP suelen ofrecer archivos un 25-50% más pequeños que JPEG a calidad similar.",
           "q2": "¿Qué formatos de imagen son compatibles?",
           "a2": "Puedes comprimir imágenes JPEG, PNG, WebP, GIF y BMP. La herramienta también permite convertir entre formatos de salida JPEG, PNG, WebP y AVIF, por lo que puedes comprimir y convertir en un solo paso. AVIF está disponible cuando tu navegador lo admite.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
           "q4": "¿Qué hacen los preajustes de compresión?",
           "a4": "Alta calidad preserva el máximo detalle (90% calidad, hasta 10 MB). Equilibrado ofrece un buen compromiso (75% calidad, hasta 2 MB). Archivo pequeño comprime agresivamente (50% calidad, hasta 1 MB, máx. 1920px). Personalizado permite ajustar manualmente calidad, tamaño, resolución y dimensiones.",
           "q5": "¿Puedo conservar o eliminar los metadatos EXIF?",
@@ -204,7 +200,6 @@
             "content": "<p><strong>Herramienta de Recorte de Imagen</strong> es un recortador de imágenes en línea completo que va más allá del simple recorte. Rota, voltea, endereza, amplía y recorta imágenes con precisión de píxel — todo en tu navegador, sin necesidad de instalar software.</p><p>Elige entre recorte libre, 8 relaciones de aspecto estándar o 6 preajustes de redes sociales para obtener las dimensiones exactas que necesitas.</p>"
           },
           "useCases": {
-            "title": "Casos de uso comunes",
             "content": "<ul><li><strong>Contenido para redes sociales</strong>: Recorta a tamaños exactos para Instagram, Facebook, YouTube y más</li><li><strong>Fotos de perfil</strong>: Crea recortes cuadrados para avatares y fotos de perfil</li><li><strong>Corrección fotográfica</strong>: Endereza fotos inclinadas y elimina bordes no deseados</li><li><strong>Web y correo electrónico</strong>: Recorta imágenes para banners web, encabezados de correo y publicaciones de blog</li><li><strong>E-commerce</strong>: Prepara imágenes de productos con relaciones de aspecto consistentes</li></ul>"
           },
           "privacy": {
@@ -328,10 +323,6 @@
           "a1": "Sí, la relación de aspecto está bloqueada por defecto. Haz clic en el icono de enlace para desbloquearla y redimensionar libremente.",
           "q2": "¿Qué presets están disponibles?",
           "a2": "Los presets comunes incluyen HD (1280x720), Full HD (1920x1080), 4K (3840x2160) y tamaños para redes sociales.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -375,10 +366,6 @@
           "a1": "Sí, selecciona la opción Mosaico (Repetir) para agregar marcas de agua repetidas en ángulo por toda la imagen.",
           "q2": "¿Puedo ajustar la transparencia de la marca de agua?",
           "a2": "Sí, usa el control de opacidad para ajustar la transparencia desde apenas visible hasta completamente opaco.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -568,7 +555,6 @@
           }
         },
         "removeExif": "Eliminar datos EXIF",
-        "processing": "Procesando...",
         "cleaned": "Datos EXIF eliminados correctamente",
         "categoryTitle": "Selecciona las categorías a eliminar",
         "categoryHint": "De forma predeterminada se eliminan todas. Desmarca una categoría para conservar esos datos.",
@@ -591,10 +577,6 @@
           "a1": "Se eliminan todos los metadatos, incluyendo ubicación GPS, modelo de cámara, fecha de captura y otra información incrustada. La imagen se redibuja en un lienzo limpio.",
           "q2": "¿Afecta esto la calidad de la imagen?",
           "a2": "La calidad de imagen se preserva al 95% para JPEG. Las imágenes PNG se reexportan sin pérdida.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -631,7 +613,6 @@
         "reset": "Restablecer",
         "download": "Descargar",
         "downloading": "Preparando descarga...",
-        "processing": "Procesando...",
         "previewLabel": "Vista previa",
         "fullscreen": "Ver pantalla completa",
         "downloadFailed": "No se pudo preparar la descarga.",
@@ -640,10 +621,6 @@
           "a1": "Voltear refleja la imagen (izquierda/derecha o arriba/abajo). Rotar la gira 90 grados a la derecha o a la izquierda. Puedes combinar las cuatro operaciones — por ejemplo, voltear horizontalmente y luego rotar 90 grados a la derecha.",
           "q2": "¿La transformación reduce la calidad de la imagen?",
           "a2": "No. La imagen se redibuja en su resolución original. Las imágenes JPEG se recodifican al 92% de calidad.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas.",
           "q6": "¿Las transformaciones se pueden acumular o deshacer?",
@@ -672,16 +649,11 @@
         "aiSummary": "Convertir imágenes a color a escala de grises en línea gratis. Sin necesidad de subir archivos, todo el procesamiento ocurre en tu navegador.",
         "keywords": "escala de grises, blanco y negro, desaturar, convertidor de imagen",
         "convert": "Convertir a escala de grises",
-        "processing": "Procesando...",
         "faq": {
           "q1": "¿Cómo funciona la conversión a escala de grises?",
           "a1": "La herramienta convierte cada píxel a un tono de gris usando una fórmula de luminancia estándar (0.299R + 0.587G + 0.114B), preservando el brillo percibido.",
           "q2": "¿Puedo ajustar la intensidad del efecto de escala de grises?",
           "a2": "Esta herramienta aplica una conversión completa a escala de grises. Para desaturación parcial, considera usar un editor de fotos dedicado.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -709,16 +681,11 @@
         "keywords": "pixelar imagen, efecto mosaico, censurar imagen, pixel art",
         "pixelSize": "Tamaño de píxel",
         "pixelate": "Pixelar imagen",
-        "processing": "Procesando...",
         "faq": {
           "q1": "¿Para qué puedo usar el pixelado?",
           "a1": "El pixelado se usa comúnmente para censurar información sensible en capturas de pantalla, crear efectos retro de pixel art o anonimizar rostros en fotos.",
           "q2": "¿Puedo controlar el nivel de pixelado?",
           "a2": "Sí. Usa el control de tamaño de píxel para ajustar de 2px (sutil) a 50px (pixelado fuerte).",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -747,16 +714,11 @@
         "borderWidth": "Ancho del borde",
         "borderColor": "Color del borde",
         "addBorder": "Agregar borde",
-        "processing": "Procesando...",
         "faq": {
           "q1": "¿Qué opciones de borde están disponibles?",
           "a1": "Puedes personalizar el ancho del borde de 1 a 100 píxeles y elegir cualquier color usando el selector de color.",
           "q2": "¿Qué formato tiene la salida?",
           "a2": "La salida siempre es PNG para asegurar que el color del borde se preserve exactamente como fue elegido.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -783,16 +745,11 @@
         "aiSummary": "Recortar imágenes en un círculo con fondo transparente. Perfecto para fotos de perfil y avatares. Herramienta gratuita en línea.",
         "keywords": "recorte circular, imagen redonda, recorte de avatar, foto de perfil",
         "cropCircle": "Recortar en círculo",
-        "processing": "Procesando...",
         "faq": {
           "q1": "¿Cómo funciona el recorte circular?",
           "a1": "La herramienta toma el centro de tu imagen, usa la dimensión más corta como diámetro y la recorta en un círculo perfecto. El fondo es transparente.",
           "q2": "¿Qué formato tiene la salida?",
           "a2": "La salida siempre es PNG porque admite transparencia, necesaria para el recorte circular.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -820,16 +777,11 @@
         "keywords": "SVG a PNG, convertidor SVG, vector a raster, exportar SVG",
         "scaleFactor": "Factor de escala",
         "convert": "Convertir a PNG",
-        "processing": "Procesando...",
         "faq": {
           "q1": "¿Qué factores de escala están disponibles?",
           "a1": "Puedes elegir 1x (tamaño original), 2x, 3x o 4x. Escalas mayores producen archivos PNG más grandes y detallados para pantallas de alta resolución.",
           "q2": "¿Son compatibles todas las funciones SVG?",
           "a2": "La herramienta renderiza SVGs usando el motor SVG integrado del navegador. La mayoría de funciones SVG estándar son compatibles, pero recursos externos o fuentes podrían no renderizarse correctamente.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -868,16 +820,11 @@
         "fontSize": "Tamaño de fuente",
         "color": "Color",
         "apply": "Agregar texto",
-        "processing": "Procesando...",
         "faq": {
           "q1": "¿Puedo elegir dónde aparece el texto?",
           "a1": "Sí, elige entre cinco posiciones: centro, superior izquierda, superior derecha, inferior izquierda o inferior derecha.",
           "q2": "¿Qué fuentes están disponibles?",
           "a2": "La herramienta usa la fuente sans-serif predeterminada del navegador, que varía según el sistema pero siempre es limpia y legible.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -906,16 +853,11 @@
         "horizontal": "Horizontal",
         "vertical": "Vertical",
         "combine": "Combinar imágenes",
-        "processing": "Procesando...",
         "faq": {
           "q1": "¿Qué opciones de diseño están disponibles?",
           "a1": "Puedes combinar imágenes horizontalmente (lado a lado) o verticalmente (apiladas de arriba a abajo).",
           "q2": "¿Las imágenes deben ser del mismo tamaño?",
           "a2": "No, las imágenes de diferentes tamaños se combinan en sus dimensiones originales. El lienzo se expande para acomodar todas las imágenes.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -944,17 +886,12 @@
         "rows": "Filas",
         "columns": "Columnas",
         "split": "Dividir imagen",
-        "processing": "Procesando...",
         "downloadAll": "Descargar todo (ZIP)",
         "faq": {
           "q1": "¿Cómo funciona la división de imágenes?",
           "a1": "Elige el número de filas y columnas. La imagen se divide en piezas del mismo tamaño según la cuadrícula que especifiques.",
           "q2": "¿Puedo descargar todas las piezas a la vez?",
           "a2": "Sí, usa el botón Descargar todo (ZIP) para obtener todas las piezas en un solo archivo ZIP.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -1041,10 +978,6 @@
           "a1": "HEIC (High Efficiency Image Container) es el formato de imagen predeterminado de los dispositivos Apple desde iOS 11. Ofrece aproximadamente la mitad del tamaño de un JPEG con calidad similar, pero no se lee de forma nativa en Windows ni en dispositivos Android más antiguos.",
           "q2": "¿Se sube mi imagen a un servidor?",
           "a2": "No. La decodificación, el análisis de EXIF, la rotación/volteo y la reconversión ocurren localmente en tu navegador. Tu foto nunca sale de tu dispositivo.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas.",
           "q6": "¿Por qué mis fotos de iPhone se ven de lado en Windows?",
@@ -1086,10 +1019,6 @@
           "a1": "Los diseños disponibles dependen del número de imágenes que subas. Las opciones incluyen cuadrículas 2x1, 1x2, 2x2, 3x1, 1x3 y 2x3.",
           "q2": "¿Puedo personalizar el espacio y el fondo?",
           "a2": "Sí, puedes ajustar el espacio entre imágenes (0-20px) y elegir cualquier color de fondo usando el selector de color.",
-          "q3": "¿Se subirán mis archivos a un servidor?",
-          "a3": "No. Todo el procesamiento ocurre completamente en tu navegador. Tus datos nunca salen de tu dispositivo — nada se sube a ningún servidor.",
-          "q4": "¿Puedo usar esta herramienta sin conexión?",
-          "a4": "Sí. Una vez que la página se ha cargado, la herramienta funciona completamente sin conexión. Para la mejor experiencia, instala PrivaDeck como PWA desde tu navegador.",
           "q5": "¿Hay límites de tamaño de archivo?",
           "a5": "No hay límites impuestos por el servidor. El tamaño máximo del archivo depende de la memoria disponible en tu dispositivo y las capacidades del navegador. La mayoría de los dispositivos modernos procesan archivos de hasta varios cientos de MB sin problemas."
         },
@@ -1107,7 +1036,8 @@
             "content": "<p>Los collages se ensamblan <strong>completamente en tu navegador</strong> usando Canvas API.</p><ul><li>Tus fotos <strong>nunca salen de tu dispositivo</strong></li><li>Sin procesamiento en servidor ni almacenamiento en la nube</li><li>Funciona <strong>sin conexión</strong> después de cargar la página</li></ul>"
           }
         }
-      }
+      },
+      "processing": "Procesando..."
     }
   }
 }
