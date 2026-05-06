@@ -33,6 +33,7 @@ const tracker = createToolTracker("flip", "image");
 
 export default function Flip() {
   const t = useTranslations("tools.image.flip");
+  const tc = useTranslations("common");
   const [file, setFile] = useState<File | null>(null);
   const [decoded, setDecoded] = useState<DecodedImage | null>(null);
   const [transform, setTransform] = useState<Transform>(INITIAL_TRANSFORM);
@@ -189,7 +190,7 @@ export default function Flip() {
             <button
               type="button"
               onClick={openLightbox}
-              aria-label={t("fullscreen")}
+              aria-label={tc("fullscreen")}
               className="absolute right-2 top-2 rounded-full bg-black/50 p-2 text-white transition-colors hover:bg-black/70"
             >
               <Maximize2 className="h-4 w-4" />

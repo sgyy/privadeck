@@ -212,7 +212,6 @@
           "zipping": "正在打包 ZIP..."
         },
         "actions": {
-          "cancel": "取消",
           "downloadAll": "全部打包為 ZIP 下載",
           "downloadSingle": "下載"
         },
@@ -644,6 +643,30 @@
         "extracting": "擷取中...",
         "extractedText": "擷取的文字",
         "noTextFound": "在此 PDF 中找不到文字內容。",
+        "password": "密碼",
+        "passwordPrompt": "此 PDF 受密碼保護。請輸入密碼以繼續。",
+        "unlock": "解鎖",
+        "wrongPassword": "密碼錯誤，請重試。",
+        "pageRange": "頁面範圍（可選）",
+        "pageRangeHint": "例如：1-3, 5, 7-10 — 留空表示全部 {total} 頁",
+        "outputFormat": "輸出格式",
+        "format": {
+          "plain": "純文字",
+          "markdown": "Markdown",
+          "json": "JSON"
+        },
+        "progress": "第 {current} / {total} 頁",
+        "ocrProgress": "OCR 第 {current}/{total} 頁（{pct}%）",
+        "ocrPrompt": "這看起來是掃描版 PDF。要執行 OCR 從頁面影像辨識文字嗎？",
+        "runOcr": "執行 OCR",
+        "pagesCount": "共 {count} 頁",
+        "searchPlaceholder": "在擷取的文字中搜尋…",
+        "matchCount": "{current} / {total}",
+        "prevMatch": "上一個相符",
+        "nextMatch": "下一個相符",
+        "viewRaw": "查看原始",
+        "viewRendered": "查看渲染",
+        "jumpToPage": "跳到頁面…",
         "faq": {
           "q1": "掃描的 PDF 也能使用嗎？",
           "a1": "此工具只擷取嵌入文字。掃描的 PDF（圖片）請使用 OCR 工具。",
@@ -781,7 +804,6 @@
         "targetSizeHint": "將依次嘗試多檔品質參數，達到目標即停止。目標越小嘗試次數越多，處理時間越長。",
         "targetNotMet": "未能壓縮到 {target} MB，已返回所能產出的最小結果。",
         "iteration": "嘗試",
-        "cancel": "取消",
         "mode": "壓縮模式",
         "modeAuto": "智慧自動（推薦）",
         "modeAutoDesc": "取樣首頁內容，自動選擇最適合的模式。",

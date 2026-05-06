@@ -212,7 +212,6 @@
           "zipping": "Packaging ZIP..."
         },
         "actions": {
-          "cancel": "Cancel",
           "downloadAll": "Download all as ZIP",
           "downloadSingle": "Download"
         },
@@ -644,6 +643,30 @@
         "extracting": "Extracting...",
         "extractedText": "Extracted Text",
         "noTextFound": "No text content found in this PDF.",
+        "password": "Password",
+        "passwordPrompt": "This PDF is password-protected. Enter the password to continue.",
+        "unlock": "Unlock",
+        "wrongPassword": "Incorrect password. Please try again.",
+        "pageRange": "Page Range (optional)",
+        "pageRangeHint": "e.g. 1-3, 5, 7-10 — leave blank for all {total} pages",
+        "outputFormat": "Output Format",
+        "format": {
+          "plain": "Plain Text",
+          "markdown": "Markdown",
+          "json": "JSON"
+        },
+        "progress": "Page {current} of {total}",
+        "ocrProgress": "OCR page {current}/{total} ({pct}%)",
+        "ocrPrompt": "This looks like a scanned PDF. Run OCR to recognize text from page images?",
+        "runOcr": "Run OCR",
+        "pagesCount": "{count} pages",
+        "searchPlaceholder": "Search in extracted text…",
+        "matchCount": "{current} / {total}",
+        "prevMatch": "Previous match",
+        "nextMatch": "Next match",
+        "viewRaw": "View raw",
+        "viewRendered": "View rendered",
+        "jumpToPage": "Jump to page…",
         "faq": {
           "q1": "Does this work with scanned PDFs?",
           "a1": "This tool extracts embedded text only. For scanned PDFs (images), use our OCR tool to recognize text from images.",
@@ -781,7 +804,6 @@
         "targetSizeHint": "We try up to four quality presets and stop when the result fits. Smaller targets take longer because more presets are attempted.",
         "targetNotMet": "Could not reach {target} MB. Returned the smallest result we could produce.",
         "iteration": "Attempt",
-        "cancel": "Cancel",
         "mode": "Compression mode",
         "modeAuto": "Smart auto (recommended)",
         "modeAutoDesc": "Samples the first pages and picks the best mode automatically.",

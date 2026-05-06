@@ -64,6 +64,7 @@ export default function CompressPdf() {
   const abortRef = useRef<AbortController | null>(null);
   const t = useTranslations("tools.pdf.compress");
   const tCat = useTranslations("tools.pdf");
+  const tc = useTranslations("common");
 
   function clearResult() {
     setResult(null);
@@ -476,7 +477,7 @@ export default function CompressPdf() {
             {processing && (
               <Button variant="outline" onClick={handleCancel}>
                 <X className="h-4 w-4" />
-                {t("cancel")}
+                {tc("cancel")}
               </Button>
             )}
             {result && (

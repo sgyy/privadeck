@@ -213,7 +213,6 @@
           "zipping": "Đang đóng gói ZIP..."
         },
         "actions": {
-          "cancel": "Hủy",
           "downloadAll": "Tải tất cả dưới dạng ZIP",
           "downloadSingle": "Tải xuống"
         },
@@ -651,6 +650,30 @@
         "extracting": "Đang trích xuất...",
         "extractedText": "Văn bản đã trích xuất",
         "noTextFound": "Không tìm thấy nội dung văn bản trong PDF này.",
+        "password": "Mật khẩu",
+        "passwordPrompt": "PDF này được bảo vệ bằng mật khẩu. Nhập mật khẩu để tiếp tục.",
+        "unlock": "Mở khóa",
+        "wrongPassword": "Mật khẩu không đúng. Vui lòng thử lại.",
+        "pageRange": "Phạm vi trang (tùy chọn)",
+        "pageRangeHint": "vd. 1-3, 5, 7-10 — để trống cho tất cả {total} trang",
+        "outputFormat": "Định dạng đầu ra",
+        "format": {
+          "plain": "Văn bản thuần",
+          "markdown": "Markdown",
+          "json": "JSON"
+        },
+        "progress": "Trang {current} / {total}",
+        "ocrProgress": "OCR trang {current}/{total} ({pct}%)",
+        "ocrPrompt": "Đây có vẻ là PDF được quét. Chạy OCR để nhận diện văn bản từ ảnh trang?",
+        "runOcr": "Chạy OCR",
+        "pagesCount": "{count} trang",
+        "searchPlaceholder": "Tìm trong văn bản đã trích xuất…",
+        "matchCount": "{current} / {total}",
+        "prevMatch": "Kết quả trước",
+        "nextMatch": "Kết quả tiếp theo",
+        "viewRaw": "Xem thô",
+        "viewRendered": "Xem hiển thị",
+        "jumpToPage": "Đến trang…",
         "faq": {
           "q1": "Có hoạt động với PDF đã quét không?",
           "a1": "Công cụ này chỉ trích xuất văn bản nhúng. Đối với PDF đã quét (hình ảnh), sử dụng công cụ OCR của chúng tôi để nhận dạng văn bản từ hình ảnh.",
@@ -790,7 +813,6 @@
         "targetSizeHint": "Chúng tôi thử tối đa bốn cài đặt chất lượng và dừng khi kết quả phù hợp. Mục tiêu nhỏ hơn mất nhiều thời gian hơn vì nhiều cài đặt được thử.",
         "targetNotMet": "Không thể đạt {target} MB. Đã trả về kết quả nhỏ nhất có thể tạo được.",
         "iteration": "Lần thử",
-        "cancel": "Hủy",
         "mode": "Chế độ nén",
         "modeAuto": "Tự động thông minh (khuyến nghị)",
         "modeAutoDesc": "Lấy mẫu các trang đầu tiên và tự động chọn chế độ tốt nhất.",

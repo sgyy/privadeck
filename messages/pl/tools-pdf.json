@@ -213,7 +213,6 @@
           "zipping": "Pakowanie ZIP..."
         },
         "actions": {
-          "cancel": "Anuluj",
           "downloadAll": "Pobierz wszystko jako ZIP",
           "downloadSingle": "Pobierz"
         },
@@ -645,6 +644,30 @@
         "extracting": "Wyodrębnianie...",
         "extractedText": "Wyodrębniony tekst",
         "noTextFound": "Nie znaleziono treści tekstowej w tym PDF.",
+        "password": "Hasło",
+        "passwordPrompt": "Ten PDF jest chroniony hasłem. Wprowadź hasło, aby kontynuować.",
+        "unlock": "Odblokuj",
+        "wrongPassword": "Nieprawidłowe hasło. Spróbuj ponownie.",
+        "pageRange": "Zakres stron (opcjonalnie)",
+        "pageRangeHint": "np. 1-3, 5, 7-10 — pozostaw puste dla wszystkich {total} stron",
+        "outputFormat": "Format wyjściowy",
+        "format": {
+          "plain": "Zwykły tekst",
+          "markdown": "Markdown",
+          "json": "JSON"
+        },
+        "progress": "Strona {current} z {total}",
+        "ocrProgress": "OCR strona {current}/{total} ({pct}%)",
+        "ocrPrompt": "To wygląda na zeskanowany PDF. Uruchomić OCR, aby rozpoznać tekst z obrazów stron?",
+        "runOcr": "Uruchom OCR",
+        "pagesCount": "{count} stron",
+        "searchPlaceholder": "Szukaj w wyodrębnionym tekście…",
+        "matchCount": "{current} / {total}",
+        "prevMatch": "Poprzedni wynik",
+        "nextMatch": "Następny wynik",
+        "viewRaw": "Podgląd źródła",
+        "viewRendered": "Podgląd renderowany",
+        "jumpToPage": "Przejdź do strony…",
         "faq": {
           "q1": "Czy to działa ze skanowanymi plikami PDF?",
           "a1": "To narzędzie wyodrębnia tylko osadzony tekst. W przypadku skanowanych plików PDF (obrazów) użyj naszego narzędzia OCR do rozpoznawania tekstu z obrazów.",
@@ -782,7 +805,6 @@
         "targetSizeHint": "Próbujemy do czterech predefiniowanych ustawień jakości i zatrzymujemy się, gdy wynik pasuje. Mniejsze cele zajmują więcej czasu, ponieważ próbujemy więcej ustawień.",
         "targetNotMet": "Nie udało się osiągnąć {target} MB. Zwrócono najmniejszy możliwy wynik.",
         "iteration": "Próba",
-        "cancel": "Anuluj",
         "mode": "Tryb kompresji",
         "modeAuto": "Inteligentny auto (zalecane)",
         "modeAutoDesc": "Próbkuje pierwsze strony i automatycznie wybiera najlepszy tryb.",

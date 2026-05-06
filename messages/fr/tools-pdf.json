@@ -213,7 +213,6 @@
           "zipping": "Création du ZIP..."
         },
         "actions": {
-          "cancel": "Annuler",
           "downloadAll": "Télécharger tout en ZIP",
           "downloadSingle": "Télécharger"
         },
@@ -645,6 +644,30 @@
         "extracting": "Extraction en cours...",
         "extractedText": "Texte extrait",
         "noTextFound": "Aucun contenu textuel trouvé dans ce PDF.",
+        "password": "Mot de passe",
+        "passwordPrompt": "Ce PDF est protégé par mot de passe. Saisissez le mot de passe pour continuer.",
+        "unlock": "Déverrouiller",
+        "wrongPassword": "Mot de passe incorrect. Veuillez réessayer.",
+        "pageRange": "Plage de pages (facultatif)",
+        "pageRangeHint": "ex. 1-3, 5, 7-10 — laissez vide pour toutes les {total} pages",
+        "outputFormat": "Format de sortie",
+        "format": {
+          "plain": "Texte brut",
+          "markdown": "Markdown",
+          "json": "JSON"
+        },
+        "progress": "Page {current} sur {total}",
+        "ocrProgress": "OCR page {current}/{total} ({pct}%)",
+        "ocrPrompt": "Ce PDF semble être numérisé. Lancer l'OCR pour reconnaître le texte depuis les images ?",
+        "runOcr": "Lancer l'OCR",
+        "pagesCount": "{count} pages",
+        "searchPlaceholder": "Rechercher dans le texte extrait…",
+        "matchCount": "{current} / {total}",
+        "prevMatch": "Correspondance précédente",
+        "nextMatch": "Correspondance suivante",
+        "viewRaw": "Vue brute",
+        "viewRendered": "Vue rendue",
+        "jumpToPage": "Aller à la page…",
         "faq": {
           "q1": "Cela fonctionne-t-il avec les PDF numérisés ?",
           "a1": "Cet outil extrait uniquement le texte intégré. Pour les PDF numérisés (images), utilisez notre outil OCR pour reconnaître le texte des images.",
@@ -782,7 +805,6 @@
         "targetSizeHint": "Nous essayons jusqu'à quatre préréglages de qualité et nous arrêtons lorsque le résultat convient. Les cibles plus petites prennent plus de temps car plus de préréglages sont essayés.",
         "targetNotMet": "Impossible d'atteindre {target} Mo. Renvoyé le plus petit résultat que nous pouvions produire.",
         "iteration": "Tentative",
-        "cancel": "Annuler",
         "mode": "Mode de compression",
         "modeAuto": "Intelligent automatique (recommandé)",
         "modeAutoDesc": "Échantillonne les premières pages et choisit automatiquement le meilleur mode.",

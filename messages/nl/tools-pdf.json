@@ -213,7 +213,6 @@
           "zipping": "ZIP inpakken..."
         },
         "actions": {
-          "cancel": "Annuleren",
           "downloadAll": "Alles als ZIP downloaden",
           "downloadSingle": "Downloaden"
         },
@@ -651,6 +650,30 @@
         "extracting": "Extraheren...",
         "extractedText": "Geëxtraheerde tekst",
         "noTextFound": "Geen tekstinhoud gevonden in deze PDF.",
+        "password": "Wachtwoord",
+        "passwordPrompt": "Deze PDF is met een wachtwoord beveiligd. Voer het wachtwoord in om door te gaan.",
+        "unlock": "Ontgrendelen",
+        "wrongPassword": "Onjuist wachtwoord. Probeer het opnieuw.",
+        "pageRange": "Paginabereik (optioneel)",
+        "pageRangeHint": "bv. 1-3, 5, 7-10 — laat leeg voor alle {total} pagina's",
+        "outputFormat": "Uitvoerformaat",
+        "format": {
+          "plain": "Platte tekst",
+          "markdown": "Markdown",
+          "json": "JSON"
+        },
+        "progress": "Pagina {current} van {total}",
+        "ocrProgress": "OCR pagina {current}/{total} ({pct}%)",
+        "ocrPrompt": "Dit lijkt een gescande PDF. OCR uitvoeren om tekst uit pagina-afbeeldingen te herkennen?",
+        "runOcr": "OCR uitvoeren",
+        "pagesCount": "{count} pagina's",
+        "searchPlaceholder": "Zoeken in geëxtraheerde tekst…",
+        "matchCount": "{current} / {total}",
+        "prevMatch": "Vorige resultaat",
+        "nextMatch": "Volgende resultaat",
+        "viewRaw": "Onbewerkt bekijken",
+        "viewRendered": "Weergegeven bekijken",
+        "jumpToPage": "Ga naar pagina…",
         "faq": {
           "q1": "Werkt dit met gescande PDF's?",
           "a1": "Deze tool extraheert alleen ingesloten tekst. Voor gescande PDF's (afbeeldingen) gebruik je onze OCR-tool om tekst uit afbeeldingen te herkennen.",
@@ -790,7 +813,6 @@
         "targetSizeHint": "We proberen maximaal vier kwaliteitsvoorinstellingen en stoppen wanneer het resultaat past. Kleinere doelen duren langer omdat meer voorinstellingen worden geprobeerd.",
         "targetNotMet": "Kon {target} MB niet bereiken. Het kleinst mogelijke resultaat werd geretourneerd.",
         "iteration": "Poging",
-        "cancel": "Annuleren",
         "mode": "Compressiemodus",
         "modeAuto": "Slim automatisch (aanbevolen)",
         "modeAutoDesc": "Bemonstert de eerste pagina's en kiest automatisch de beste modus.",

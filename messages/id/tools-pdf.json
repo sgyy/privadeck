@@ -213,7 +213,6 @@
           "zipping": "Mengemas ZIP..."
         },
         "actions": {
-          "cancel": "Batal",
           "downloadAll": "Unduh semua sebagai ZIP",
           "downloadSingle": "Unduh"
         },
@@ -645,6 +644,30 @@
         "extracting": "Mengekstrak...",
         "extractedText": "Teks Terekstrak",
         "noTextFound": "Tidak ada konten teks ditemukan dalam PDF ini.",
+        "password": "Kata sandi",
+        "passwordPrompt": "PDF ini dilindungi kata sandi. Masukkan kata sandi untuk melanjutkan.",
+        "unlock": "Buka kunci",
+        "wrongPassword": "Kata sandi salah. Silakan coba lagi.",
+        "pageRange": "Rentang halaman (opsional)",
+        "pageRangeHint": "contoh 1-3, 5, 7-10 — biarkan kosong untuk semua {total} halaman",
+        "outputFormat": "Format output",
+        "format": {
+          "plain": "Teks biasa",
+          "markdown": "Markdown",
+          "json": "JSON"
+        },
+        "progress": "Halaman {current} dari {total}",
+        "ocrProgress": "OCR halaman {current}/{total} ({pct}%)",
+        "ocrPrompt": "Ini sepertinya PDF hasil pindai. Jalankan OCR untuk mengenali teks dari gambar halaman?",
+        "runOcr": "Jalankan OCR",
+        "pagesCount": "{count} halaman",
+        "searchPlaceholder": "Cari di teks yang diekstrak…",
+        "matchCount": "{current} / {total}",
+        "prevMatch": "Hasil sebelumnya",
+        "nextMatch": "Hasil berikutnya",
+        "viewRaw": "Lihat asli",
+        "viewRendered": "Lihat tertayang",
+        "jumpToPage": "Lompat ke halaman…",
         "faq": {
           "q1": "Apakah ini berfungsi dengan PDF yang dipindai?",
           "a1": "Alat ini hanya mengekstrak teks tertanam. Untuk PDF yang dipindai (gambar), gunakan alat OCR kami untuk mengenali teks dari gambar.",
@@ -782,7 +805,6 @@
         "targetSizeHint": "Kami mencoba hingga empat preset kualitas dan berhenti saat hasilnya sesuai. Target lebih kecil membutuhkan waktu lebih lama karena lebih banyak preset dicoba.",
         "targetNotMet": "Tidak bisa mencapai {target} MB. Mengembalikan hasil terkecil yang dapat kami hasilkan.",
         "iteration": "Percobaan",
-        "cancel": "Batal",
         "mode": "Mode kompresi",
         "modeAuto": "Otomatis pintar (direkomendasikan)",
         "modeAutoDesc": "Mengambil sampel halaman pertama dan memilih mode terbaik secara otomatis.",

@@ -14,19 +14,34 @@ export class PdfEncryptedError extends Error {
   }
 }
 
+export class PdfWrongPasswordError extends Error {
+  constructor() {
+    super("PDF_WRONG_PASSWORD");
+    this.name = "PdfWrongPasswordError";
+  }
+}
+
 export async function getPdfPreview(
   file: Blob,
-  options?: { thumbnailWidth?: number },
+  options?: { thumbnailWidth?: number; password?: string },
 ): Promise<PdfPreview> {
   const targetW = options?.thumbnailWidth ?? 160;
   const pdfjsLib = await getPdfjs();
   const buf = await file.arrayBuffer();
   let pdfDoc: PDFDocumentProxy;
   try {
-    pdfDoc = await pdfjsLib.getDocument({ data: buf }).promise;
+    pdfDoc = await pdfjsLib.getDocument({
+      data: buf,
+      password: options?.password,
+    }).promise;
   } catch (e) {
     const name = (e as { name?: string })?.name;
+    const code = (e as { code?: number })?.code;
     if (name === "PasswordException") {
+      // pdf.js: code 1 = NEED_PASSWORD, 2 = INCORRECT_PASSWORD
+      if (options?.password !== undefined || code === 2) {
+        throw new PdfWrongPasswordError();
+      }
       throw new PdfEncryptedError();
     }
     throw e;

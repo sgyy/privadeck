@@ -212,7 +212,6 @@
           "zipping": "ZIP wird erstellt..."
         },
         "actions": {
-          "cancel": "Abbrechen",
           "downloadAll": "Alle als ZIP herunterladen",
           "downloadSingle": "Herunterladen"
         },
@@ -650,6 +649,30 @@
         "extracting": "Wird extrahiert...",
         "extractedText": "Extrahierter Text",
         "noTextFound": "Kein Textinhalt in diesem PDF gefunden.",
+        "password": "Passwort",
+        "passwordPrompt": "Diese PDF ist passwortgeschützt. Geben Sie das Passwort ein, um fortzufahren.",
+        "unlock": "Entsperren",
+        "wrongPassword": "Falsches Passwort. Bitte versuchen Sie es erneut.",
+        "pageRange": "Seitenbereich (optional)",
+        "pageRangeHint": "z. B. 1-3, 5, 7-10 — leer lassen für alle {total} Seiten",
+        "outputFormat": "Ausgabeformat",
+        "format": {
+          "plain": "Reiner Text",
+          "markdown": "Markdown",
+          "json": "JSON"
+        },
+        "progress": "Seite {current} von {total}",
+        "ocrProgress": "OCR Seite {current}/{total} ({pct}%)",
+        "ocrPrompt": "Dies scheint ein gescanntes PDF zu sein. OCR ausführen, um Text aus den Seitenbildern zu erkennen?",
+        "runOcr": "OCR ausführen",
+        "pagesCount": "{count} Seiten",
+        "searchPlaceholder": "Im extrahierten Text suchen…",
+        "matchCount": "{current} / {total}",
+        "prevMatch": "Vorheriger Treffer",
+        "nextMatch": "Nächster Treffer",
+        "viewRaw": "Rohansicht",
+        "viewRendered": "Gerenderte Ansicht",
+        "jumpToPage": "Zu Seite springen…",
         "faq": {
           "q1": "Funktioniert dies mit gescannten PDFs?",
           "a1": "Dieses Tool extrahiert nur eingebetteten Text. Für gescannte PDFs (Bilder) verwenden Sie unser OCR-Tool zur Texterkennung aus Bildern.",
@@ -789,7 +812,6 @@
         "targetSizeHint": "Wir versuchen bis zu vier Qualitätsvoreinstellungen und stoppen, sobald das Ergebnis passt. Kleinere Ziele dauern länger, da mehr Voreinstellungen versucht werden.",
         "targetNotMet": "Konnte {target} MB nicht erreichen. Das kleinstmögliche Ergebnis wurde zurückgegeben.",
         "iteration": "Versuch",
-        "cancel": "Abbrechen",
         "mode": "Komprimierungsmodus",
         "modeAuto": "Smart Auto (empfohlen)",
         "modeAutoDesc": "Tastet die ersten Seiten ab und wählt automatisch den besten Modus.",

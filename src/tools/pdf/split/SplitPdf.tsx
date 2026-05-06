@@ -35,6 +35,7 @@ const tracker = createToolTracker("split", "pdf");
 
 export default function SplitPdf() {
   const t = useTranslations("tools.pdf.split");
+  const tc = useTranslations("common");
 
   const [file, setFile] = useState<File | null>(null);
   const [pdfDoc, setPdfDoc] = useState<PDFDocumentProxy | null>(null);
@@ -335,7 +336,7 @@ export default function SplitPdf() {
                 </Button>
               ) : (
                 <Button onClick={handleCancel} variant="outline">
-                  {t("actions.cancel")}
+                  {tc("cancel")}
                 </Button>
               )}
               {splitting && progress && (

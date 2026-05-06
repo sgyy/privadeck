@@ -213,7 +213,6 @@
           "zipping": "ZIP 作成中..."
         },
         "actions": {
-          "cancel": "キャンセル",
           "downloadAll": "ZIP でまとめてダウンロード",
           "downloadSingle": "ダウンロード"
         },
@@ -651,6 +650,30 @@
         "extracting": "抽出中...",
         "extractedText": "抽出されたテキスト",
         "noTextFound": "この PDF にテキスト内容が見つかりません。",
+        "password": "パスワード",
+        "passwordPrompt": "この PDF はパスワード保護されています。続行するにはパスワードを入力してください。",
+        "unlock": "ロック解除",
+        "wrongPassword": "パスワードが正しくありません。もう一度お試しください。",
+        "pageRange": "ページ範囲（オプション）",
+        "pageRangeHint": "例：1-3, 5, 7-10 — 空欄の場合は全 {total} ページ",
+        "outputFormat": "出力形式",
+        "format": {
+          "plain": "プレーンテキスト",
+          "markdown": "Markdown",
+          "json": "JSON"
+        },
+        "progress": "{current} / {total} ページ",
+        "ocrProgress": "OCR {current}/{total} ページ（{pct}%）",
+        "ocrPrompt": "これはスキャン PDF のようです。OCR でページ画像からテキストを認識しますか？",
+        "runOcr": "OCR を実行",
+        "pagesCount": "{count} ページ",
+        "searchPlaceholder": "抽出されたテキストを検索…",
+        "matchCount": "{current} / {total}",
+        "prevMatch": "前の一致",
+        "nextMatch": "次の一致",
+        "viewRaw": "元のテキスト",
+        "viewRendered": "レンダリング表示",
+        "jumpToPage": "ページに移動…",
         "faq": {
           "q1": "スキャンされた PDF でも使えますか？",
           "a1": "埋め込みテキストのみ抽出します。スキャン PDF は OCR ツールをご利用ください。",
@@ -790,7 +813,6 @@
         "targetSizeHint": "最大 4 つの品質プリセットを順に試し、結果が目標に収まった時点で停止します。目標が小さいほど試行回数が増え、処理時間が長くなります。",
         "targetNotMet": "{target} MB まで圧縮できませんでした。可能な限り小さい結果を返しました。",
         "iteration": "試行",
-        "cancel": "キャンセル",
         "mode": "圧縮モード",
         "modeAuto": "スマート自動（推奨）",
         "modeAutoDesc": "最初のページをサンプリングし、最適なモードを自動的に選択します。",
