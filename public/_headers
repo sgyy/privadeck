@@ -10,6 +10,10 @@
 /llms-full.zh-Hans.txt
   Content-Type: text/plain; charset=utf-8
 
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Cross-Origin-Resource-Policy: same-origin
+
 /*
   Cross-Origin-Embedder-Policy: require-corp
   Cross-Origin-Opener-Policy: same-origin

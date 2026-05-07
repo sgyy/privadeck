@@ -1,157 +1,181 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { SingleImageUpload } from "@/components/shared/SingleImageUpload";
-import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
-import { Button } from "@/components/ui/Button";
-import { Select } from "@/components/ui/Select";
-import { createToolTracker } from "@/lib/analytics";
-import { addTextToImage, type TextPosition } from "./logic";
+import {
+  ImageResultList,
+  type ImageResultItem,
+} from "@/components/shared/ImageResultList";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs";
+import { EditorProvider, useEditor } from "./EditorContext";
+import { EditorCanvas } from "./components/EditorCanvas";
+import { TextStyleControls } from "./components/TextStyleControls";
+import { EffectsControls } from "./components/EffectsControls";
+import { BackgroundControls } from "./components/BackgroundControls";
+import { StylePresets } from "./components/StylePresets";
+import { LayerPanel } from "./components/LayerPanel";
+import { ExportPanel } from "./components/ExportPanel";
+import { BatchPanel } from "./components/BatchPanel";
+import { HistoryControls } from "./components/HistoryControls";
+import { preloadFonts } from "./lib/fonts";
 
-const POSITIONS: TextPosition[] = [
-  "center",
-  "top-left",
-  "top-right",
-  "bottom-left",
-  "bottom-right",
-];
-
-const tracker = createToolTracker("add-text", "image");
-
-export default function AddText() {
+function EditorShell() {
+  const { state, dispatch } = useEditor();
   const [file, setFile] = useState<File | null>(null);
-  const [text, setText] = useState("");
-  const [fontSize, setFontSize] = useState(48);
-  const [color, setColor] = useState("#ffffff");
-  const [position, setPosition] = useState<TextPosition>("center");
+  const [loading, setLoading] = useState(false);
+  // Lifted out of ExportPanel/BatchPanel so a single full-width result grid
+  // sits below the canvas. The 340px aside is too narrow for the card grid
+  // to render well otherwise.
   const [results, setResults] = useState<ImageResultItem[]>([]);
-  const [processing, setProcessing] = useState(false);
-  const [error, setError] = useState("");
+  // Cancellation token for in-flight createImageBitmap calls. Without this,
+  // rapid file swaps can dispatch out-of-order — the slower load wins,
+  // overwrites the newer bitmap in state, and orphans it (state never points
+  // at it again so EditorContext's cleanup never closes it).
+  const inflightRef = useRef<{ cancelled: boolean } | null>(null);
   const t = useTranslations("tools.image.add-text");
-  const tCat = useTranslations("tools.image");
 
-  function handleFileChange(f: File | null) {
-    setFile(f);
-    setResults([]);
-    setError("");
-  }
+  useEffect(() => {
+    preloadFonts();
+  }, []);
 
-  async function handleApply() {
-    if (!file || !text) return;
-    setProcessing(true);
-    setError("");
-    setResults([]);
-    const start = Date.now();
-    try {
-      const blob = await addTextToImage(file, {
-        text,
-        fontSize,
-        color,
-        position,
-      });
-      tracker.trackProcessComplete(Date.now() - start);
-      const baseName = file.name.replace(/\.[^.]+$/, "") || "image";
-      const rawExt = blob.type.split("/")[1] || "png";
-      const ext = rawExt === "jpeg" ? "jpg" : rawExt;
-      setResults((prev) => [...prev, { blob, filename: `text_${baseName}.${ext}` }]);
-    } catch (e) {
-      const msg = e instanceof Error ? e.message : "Processing failed";
-      tracker.trackProcessError(msg);
-      setError(msg);
-    } finally {
-      setProcessing(false);
-    }
-  }
+  // ImageBitmap lifecycle is owned by EditorProvider via a useEffect cleanup
+  // keyed on state.imageBitmap. We just dispatch new bitmaps here; the old
+  // one is closed asynchronously after React commits the swap.
+  const handleFileChange = useCallback(
+    async (f: File | null) => {
+      // Cancel any earlier in-flight load
+      if (inflightRef.current) inflightRef.current.cancelled = true;
+      const token = { cancelled: false };
+      inflightRef.current = token;
+
+      setFile(f);
+      if (!f) {
+        dispatch({ type: "CLEAR_IMAGE" });
+        return;
+      }
+      setLoading(true);
+      try {
+        const bitmap = await createImageBitmap(f);
+        if (token.cancelled) {
+          bitmap.close();
+          return;
+        }
+        dispatch({
+          type: "SET_IMAGE",
+          payload: {
+            bitmap,
+            naturalSize: { w: bitmap.width, h: bitmap.height },
+          },
+        });
+      } catch (e) {
+        if (!token.cancelled) console.error("Failed to load image", e);
+      } finally {
+        if (!token.cancelled) setLoading(false);
+      }
+    },
+    [dispatch],
+  );
+
+  const baseName = file?.name.replace(/\.[^.]+$/, "") || "image";
 
   return (
     <div className="space-y-4">
-      <SingleImageUpload
-        file={file}
-        onFileChange={handleFileChange}
-        accept="image/*"
-      />
+      <SingleImageUpload file={file} onFileChange={handleFileChange} accept="image/*" />
 
-      {file && (
-        <>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div>
-              <label className="mb-1 block text-sm font-medium">
-                {t("text")}
-              </label>
-              <input
-                type="text"
-                value={text}
-                onChange={(e) => setText(e.target.value)}
-                placeholder={t("textPlaceholder")}
-                className="w-full rounded-lg border border-border bg-background px-3 py-2 text-sm"
-              />
-            </div>
+      {loading && (
+        <div className="text-sm text-muted-foreground">{t("loading")}</div>
+      )}
 
-            <div>
-              <label className="mb-1 block text-sm font-medium">
-                {t("position")}
-              </label>
-              <Select
-                value={position}
-                onChange={(e) => setPosition(e.target.value as TextPosition)}
-              >
-                {POSITIONS.map((p) => (
-                  <option key={p} value={p}>
-                    {t(`positions.${p}`)}
-                  </option>
-                ))}
-              </Select>
+      {state.imageNaturalSize && (
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_340px]">
+          <div className="space-y-3">
+            <div className="flex items-center justify-between">
+              <HistoryControls />
+              <span className="text-xs text-muted-foreground">
+                {state.imageNaturalSize.w}×{state.imageNaturalSize.h}px
+              </span>
             </div>
-
-            <div>
-              <label className="mb-1 block text-sm font-medium">
-                {t("fontSize")}: {fontSize}px
-              </label>
-              <input
-                type="range"
-                min={12}
-                max={120}
-                value={fontSize}
-                onChange={(e) => setFontSize(Number(e.target.value))}
-                className="w-full"
-              />
-            </div>
-
-            <div>
-              <label className="mb-1 block text-sm font-medium">
-                {t("color")}
-              </label>
-              <input
-                type="color"
-                value={color}
-                onChange={(e) => setColor(e.target.value)}
-                className="h-10 w-16 cursor-pointer rounded border border-border"
-              />
-            </div>
+            <EditorCanvas />
           </div>
 
-          <Button
-            onClick={handleApply}
-            disabled={!text || processing}
-          >
-            {processing ? tCat("processing") : t("apply")}
-          </Button>
+          <aside className="space-y-3 rounded-lg border border-border bg-card p-3">
+            <LayerPanel />
+            <hr className="border-border" />
 
-          {error && (
-            <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
-              {error}
-            </div>
-          )}
+            <Tabs defaultValue="style">
+              <TabsList className="w-full flex-wrap">
+                <TabsTrigger value="style" className="flex-1">
+                  {t("tabStyle")}
+                </TabsTrigger>
+                <TabsTrigger value="effects" className="flex-1">
+                  {t("tabEffects")}
+                </TabsTrigger>
+                <TabsTrigger value="background" className="flex-1">
+                  {t("tabBackground")}
+                </TabsTrigger>
+                <TabsTrigger value="presets" className="flex-1">
+                  {t("tabPresets")}
+                </TabsTrigger>
+              </TabsList>
 
-          {results.length > 0 && (
-            <ImageResultList
-              results={results}
-              onRemove={(i) => setResults((prev) => prev.filter((_, idx) => idx !== i))}
-            />
-          )}
-        </>
+              <TabsContent value="style">
+                <TextStyleControls />
+              </TabsContent>
+              <TabsContent value="effects">
+                <EffectsControls />
+              </TabsContent>
+              <TabsContent value="background">
+                <BackgroundControls />
+              </TabsContent>
+              <TabsContent value="presets">
+                <StylePresets />
+              </TabsContent>
+            </Tabs>
+
+            <hr className="border-border" />
+
+            <Tabs defaultValue="export">
+              <TabsList className="w-full">
+                <TabsTrigger value="export" className="flex-1">
+                  {t("tabExport")}
+                </TabsTrigger>
+                <TabsTrigger value="batch" className="flex-1">
+                  {t("tabBatch")}
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value="export">
+                <ExportPanel
+                  baseFilename={baseName}
+                  onResult={(item) => setResults((prev) => [item, ...prev])}
+                />
+              </TabsContent>
+              <TabsContent value="batch">
+                <BatchPanel
+                  onResult={(item) => setResults((prev) => [item, ...prev])}
+                />
+              </TabsContent>
+            </Tabs>
+          </aside>
+        </div>
+      )}
+
+      {results.length > 0 && (
+        <ImageResultList
+          results={results}
+          onRemove={(i) =>
+            setResults((prev) => prev.filter((_, idx) => idx !== i))
+          }
+        />
       )}
     </div>
+  );
+}
+
+export default function AddText() {
+  return (
+    <EditorProvider>
+      <EditorShell />
+    </EditorProvider>
   );
 }
