@@ -176,6 +176,42 @@ export function EffectsControls() {
       </fieldset>
 
       <fieldset className="space-y-2 rounded border border-border p-3">
+        <legend className="px-1 text-xs font-medium">{t("curve")}</legend>
+        <div className="flex gap-1">
+          {(["none", "arc"] as const).map((mode) => (
+            <button
+              key={mode}
+              type="button"
+              onClick={() => updateSelected({ curveMode: mode })}
+              className={`flex-1 rounded border px-2 py-1 text-xs ${
+                selectedLayer.curveMode === mode
+                  ? "border-primary bg-primary/10 text-primary"
+                  : "border-border hover:bg-muted"
+              }`}
+            >
+              {t(mode === "none" ? "curveNone" : "curveArc")}
+            </button>
+          ))}
+        </div>
+        {selectedLayer.curveMode === "arc" && (
+          <div>
+            <label className="mb-1 block text-xs">
+              {t("curvature")}: {selectedLayer.curvature}
+            </label>
+            <input
+              type="range"
+              min={-100}
+              max={100}
+              step={1}
+              value={selectedLayer.curvature}
+              onChange={(e) => updateSelected({ curvature: Number(e.target.value) })}
+              className="w-full"
+            />
+          </div>
+        )}
+      </fieldset>
+
+      <fieldset className="space-y-2 rounded border border-border p-3">
         <legend className="px-1 text-xs font-medium">
           <label className="flex cursor-pointer items-center gap-1">
             <input

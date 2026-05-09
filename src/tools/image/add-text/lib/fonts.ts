@@ -47,11 +47,55 @@ export const FONT_REGISTRY: FontDef[] = [
     ],
   },
   {
+    key: "open-sans",
+    family: "Open Sans",
+    category: "sans",
+    preload: false,
+    weights: [
+      { weight: 400, style: "normal", url: "/fonts/open-sans-400.woff2" },
+      { weight: 700, style: "normal", url: "/fonts/open-sans-700.woff2" },
+    ],
+  },
+  {
+    key: "raleway",
+    family: "Raleway",
+    category: "sans",
+    preload: false,
+    weights: [
+      { weight: 400, style: "normal", url: "/fonts/raleway-400.woff2" },
+      { weight: 700, style: "normal", url: "/fonts/raleway-700.woff2" },
+    ],
+  },
+  {
+    key: "oswald",
+    family: "Oswald",
+    category: "sans",
+    preload: false,
+    weights: [
+      { weight: 400, style: "normal", url: "/fonts/oswald-400.woff2" },
+      { weight: 700, style: "normal", url: "/fonts/oswald-700.woff2" },
+    ],
+  },
+  {
+    key: "anton",
+    family: "Anton",
+    category: "display",
+    preload: false,
+    weights: [{ weight: 400, style: "normal", url: "/fonts/anton-400.woff2" }],
+  },
+  {
     key: "bebas-neue",
     family: "Bebas Neue",
     category: "display",
     preload: true,
     weights: [{ weight: 400, style: "normal", url: "/fonts/bebas-neue-400.woff2" }],
+  },
+  {
+    key: "righteous",
+    family: "Righteous",
+    category: "display",
+    preload: false,
+    weights: [{ weight: 400, style: "normal", url: "/fonts/righteous-400.woff2" }],
   },
   {
     key: "playfair-display",
@@ -74,6 +118,16 @@ export const FONT_REGISTRY: FontDef[] = [
     ],
   },
   {
+    key: "noto-serif",
+    family: "Noto Serif",
+    category: "serif",
+    preload: false,
+    weights: [
+      { weight: 400, style: "normal", url: "/fonts/noto-serif-400.woff2" },
+      { weight: 700, style: "normal", url: "/fonts/noto-serif-700.woff2" },
+    ],
+  },
+  {
     key: "pacifico",
     family: "Pacifico",
     category: "script",
@@ -86,6 +140,26 @@ export const FONT_REGISTRY: FontDef[] = [
     category: "script",
     preload: true,
     weights: [{ weight: 400, style: "normal", url: "/fonts/lobster-400.woff2" }],
+  },
+  {
+    key: "dancing-script",
+    family: "Dancing Script",
+    category: "script",
+    preload: false,
+    weights: [
+      { weight: 400, style: "normal", url: "/fonts/dancing-script-400.woff2" },
+      { weight: 700, style: "normal", url: "/fonts/dancing-script-700.woff2" },
+    ],
+  },
+  {
+    key: "caveat",
+    family: "Caveat",
+    category: "script",
+    preload: false,
+    weights: [
+      { weight: 400, style: "normal", url: "/fonts/caveat-400.woff2" },
+      { weight: 700, style: "normal", url: "/fonts/caveat-700.woff2" },
+    ],
   },
   {
     key: "permanent-marker",

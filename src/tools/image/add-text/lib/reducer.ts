@@ -2,6 +2,8 @@ export type Align = "left" | "center" | "right";
 export type BgMode = "none" | "full" | "line" | "word";
 export type FontWeight = 400 | 500 | 600 | 700;
 export type FontStyle = "normal" | "italic";
+export type CurveMode = "none" | "arc";
+export type FillMode = "solid" | "gradient";
 
 export interface TextLayer {
   id: string;
@@ -17,6 +19,11 @@ export interface TextLayer {
   lineHeight: number;
   wrapWidthNorm: number | null;
   color: string;
+  fillMode: FillMode;
+  /** Linear gradient angle in degrees (0 = right, 90 = down, etc.). */
+  gradientAngle: number;
+  gradientStartColor: string;
+  gradientEndColor: string;
   opacity: number;
   strokeColor: string;
   strokeWidth: number;
@@ -32,6 +39,10 @@ export interface TextLayer {
   bgPaddingY: number;
   bgRadius: number;
   rotationDeg: number;
+  /** Curve mode: "none" = straight (default), "arc" = bend along an arc. */
+  curveMode: CurveMode;
+  /** -100 = full half-circle bowed downward, 0 = flat, 100 = full half-circle bowed upward. */
+  curvature: number;
   locked: boolean;
   visible: boolean;
 }
@@ -74,10 +85,14 @@ export function createDefaultLayer(overrides: Partial<TextLayer> = {}): TextLaye
     lineHeight: 1.2,
     wrapWidthNorm: null,
     color: "#ffffff",
+    fillMode: "solid",
+    gradientAngle: 90,
+    gradientStartColor: "#ffffff",
+    gradientEndColor: "#06B6D4",
     opacity: 1,
     strokeColor: "#000000",
     strokeWidth: 0,
-    shadowEnabled: false,
+    shadowEnabled: true,
     shadowColor: "#000000",
     shadowBlur: 8,
     shadowOffsetX: 2,
@@ -89,6 +104,8 @@ export function createDefaultLayer(overrides: Partial<TextLayer> = {}): TextLaye
     bgPaddingY: 6,
     bgRadius: 4,
     rotationDeg: 0,
+    curveMode: "none",
+    curvature: 0,
     locked: false,
     visible: true,
     ...overrides,
@@ -130,7 +147,13 @@ export function editorReducer(state: EditorState, action: Action): EditorState {
       };
 
     case "ADD_LAYER": {
-      const newLayer = createDefaultLayer(action.payload);
+      // Scale default font size to the image so 64px doesn't look tiny on a
+      // 4K photo or overflow a 400px thumbnail. Caller-provided fontSizePx
+      // (e.g. presets, duplicate) still wins via the spread order below.
+      const autoFontSize = state.imageNaturalSize
+        ? Math.max(16, Math.min(200, Math.round(state.imageNaturalSize.h * 0.06)))
+        : 64;
+      const newLayer = createDefaultLayer({ fontSizePx: autoFontSize, ...action.payload });
       const layers = [...state.layers, newLayer];
       return {
         ...state,

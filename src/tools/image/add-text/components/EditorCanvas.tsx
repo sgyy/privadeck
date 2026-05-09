@@ -13,17 +13,54 @@ import {
   type Point,
 } from "../lib/canvasPoint";
 import { findLayerAtPoint, measureLayerBox } from "../lib/hitTest";
+import {
+  ROTATE_OFFSET_PX,
+  cursorForHandle,
+  hitTestHandle,
+  type HandleId,
+} from "../lib/handles";
+import { computeCenterSnap, type SnapGuide } from "../lib/snap";
 import type { TextLayer } from "../lib/reducer";
+
+type DragMode =
+  | { kind: "move"; startXNorm: number; startYNorm: number }
+  | { kind: "resize"; handleId: HandleId; startFontSize: number; startDist: number }
+  | {
+      kind: "rotate";
+      /** Last pointer angle (rad). Mutated each frame so we accumulate
+       * incremental deltas instead of one-shot diffs from the start angle —
+       * the latter snaps by ±360° when the pointer crosses atan2's ±π edge. */
+      prevPointerAngle: number;
+      startRotationDeg: number;
+      accumDeg: number;
+    };
 
 interface DragState {
   layerId: string;
   startPointer: Point;
-  startXNorm: number;
-  startYNorm: number;
+  mode: DragMode;
   snapshot: TextLayer[];
 }
 
-type CursorState = "default" | "move" | "grabbing";
+interface DragHud {
+  /** Right-aligned inline label for the active drag, e.g. "64px" or "30°". */
+  text: string;
+}
+
+const FONT_MIN = 12;
+const FONT_MAX = 400;
+const ROTATE_SNAP_STEP = 15;
+
+function clamp(n: number, min: number, max: number): number {
+  return Math.max(min, Math.min(max, n));
+}
+
+function normalizeDeg(deg: number): number {
+  let d = deg % 360;
+  if (d > 180) d -= 360;
+  if (d < -180) d += 360;
+  return d;
+}
 
 export function EditorCanvas() {
   const { state, dispatch, isDraggingRef } = useEditor();
@@ -33,7 +70,9 @@ export function EditorCanvas() {
   const overlayCanvasRef = useRef<HTMLCanvasElement>(null);
   const dragRef = useRef<DragState | null>(null);
   const [containerWidth, setContainerWidth] = useState(0);
-  const [cursor, setCursor] = useState<CursorState>("default");
+  const [cursor, setCursor] = useState<string>("default");
+  const [hud, setHud] = useState<DragHud | null>(null);
+  const [snapGuides, setSnapGuides] = useState<SnapGuide[]>([]);
 
   const editorScale = useMemo(() => {
     if (!state.imageNaturalSize || containerWidth === 0) return 0;
@@ -56,13 +95,19 @@ export function EditorCanvas() {
   // hijack). React does not synthesise this as `onPointerCancel`, so we have
   // to listen to the native `lostpointercapture` event directly. Without this
   // `isDraggingRef` can stick at true forever, silencing every later auto-commit.
+  // Note: this event ALSO fires on every normal `releasePointerCapture`, so we
+  // skip when the pointerup handler already cleared dragRef — otherwise we'd
+  // clobber the hover-aware cursor that pointerup just set.
   useEffect(() => {
     const el = overlayCanvasRef.current;
     if (!el) return;
     const onLost = () => {
+      if (!dragRef.current) return;
       dragRef.current = null;
       isDraggingRef.current = false;
       setCursor("default");
+      setHud(null);
+      setSnapGuides((prev) => (prev.length > 0 ? [] : prev));
     };
     el.addEventListener("lostpointercapture", onLost);
     return () => el.removeEventListener("lostpointercapture", onLost);
@@ -103,7 +148,7 @@ export function EditorCanvas() {
     });
   }, [state.imageBitmap, state.imageNaturalSize, state.layers, editorScale]);
 
-  // Paint the overlay canvas (selection box)
+  // Paint the overlay canvas (selection box + handles)
   useEffect(() => {
     const canvas = overlayCanvasRef.current;
     if (!canvas || !state.imageNaturalSize || editorScale === 0) return;
@@ -117,6 +162,7 @@ export function EditorCanvas() {
     if (!selected || !state.imageNaturalSize) return;
     const box = measureLayerBox(selected, state.imageNaturalSize);
     const lineWidth = Math.max(2 / editorScale, 1);
+    const hs = 10 / editorScale; // handle size in original-image px
 
     ctx.save();
     ctx.translate(box.cx, box.cy);
@@ -126,19 +172,54 @@ export function EditorCanvas() {
     ctx.setLineDash([6 / editorScale, 4 / editorScale]);
     ctx.strokeRect(-box.width / 2, -box.height / 2, box.width, box.height);
     ctx.setLineDash([]);
-    // Corner handles
-    const hs = 8 / editorScale;
-    ctx.fillStyle = "#06B6D4";
-    for (const [hx, hy] of [
+
+    // 4 corner handles — white fill + cyan border so they read on any background
+    const corners: [number, number][] = [
       [-box.width / 2, -box.height / 2],
       [box.width / 2, -box.height / 2],
       [box.width / 2, box.height / 2],
       [-box.width / 2, box.height / 2],
-    ]) {
+    ];
+    for (const [hx, hy] of corners) {
+      ctx.fillStyle = "#ffffff";
       ctx.fillRect(hx - hs / 2, hy - hs / 2, hs, hs);
+      ctx.strokeRect(hx - hs / 2, hy - hs / 2, hs, hs);
     }
+
+    // Rotation handle: line from top-center out to a circle above the box
+    const rx = 0;
+    const ry = -box.height / 2 - ROTATE_OFFSET_PX;
+    ctx.beginPath();
+    ctx.moveTo(0, -box.height / 2);
+    ctx.lineTo(rx, ry);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(rx, ry, hs / 2, 0, Math.PI * 2);
+    ctx.fillStyle = "#ffffff";
+    ctx.fill();
+    ctx.stroke();
+
     ctx.restore();
-  }, [state.layers, state.selectedLayerId, state.imageNaturalSize, editorScale]);
+
+    // Snap guides — draw in canvas space (no rotation), full image extent.
+    if (snapGuides.length > 0) {
+      ctx.strokeStyle = "#06B6D4";
+      ctx.lineWidth = lineWidth;
+      ctx.setLineDash([4 / editorScale, 4 / editorScale]);
+      for (const g of snapGuides) {
+        ctx.beginPath();
+        if (g.axis === "x") {
+          ctx.moveTo(g.pos, 0);
+          ctx.lineTo(g.pos, state.imageNaturalSize.h);
+        } else {
+          ctx.moveTo(0, g.pos);
+          ctx.lineTo(state.imageNaturalSize.w, g.pos);
+        }
+        ctx.stroke();
+      }
+      ctx.setLineDash([]);
+    }
+  }, [state.layers, state.selectedLayerId, state.imageNaturalSize, editorScale, snapGuides]);
 
   // Pointer handlers
   const handlePointerDown = useCallback(
@@ -148,19 +229,71 @@ export function EditorCanvas() {
       if (!canvas) return;
       e.preventDefault();
       canvas.setPointerCapture(e.pointerId);
+      setSnapGuides((prev) => (prev.length > 0 ? [] : prev));
 
       const cssPt = getCanvasCssPoint(e, canvas);
       const origPt = cssToOriginal(cssPt, editorScale);
-      const hitId = findLayerAtPoint(state.layers, state.imageNaturalSize, origPt);
 
+      // First, check whether the pointer landed on a handle of the currently
+      // selected layer. Handle hits beat body hits because handles often overlap
+      // the layer's bbox edges.
+      const selected = state.layers.find((l) => l.id === state.selectedLayerId);
+      const handleTol = 12 / editorScale;
+      const handleId = selected
+        ? hitTestHandle(selected, state.imageNaturalSize, origPt, handleTol)
+        : null;
+
+      if (selected && handleId) {
+        const snapshot = state.layers.map((l) => ({ ...l }));
+        const cx = selected.xNorm * state.imageNaturalSize.w;
+        const cy = selected.yNorm * state.imageNaturalSize.h;
+        if (handleId === "rotate") {
+          dragRef.current = {
+            layerId: selected.id,
+            startPointer: origPt,
+            mode: {
+              kind: "rotate",
+              prevPointerAngle: Math.atan2(origPt.y - cy, origPt.x - cx),
+              startRotationDeg: selected.rotationDeg,
+              accumDeg: 0,
+            },
+            snapshot,
+          };
+          setCursor("crosshair");
+          setHud({ text: `${Math.round(selected.rotationDeg)}°` });
+        } else {
+          const dist = Math.hypot(origPt.x - cx, origPt.y - cy);
+          dragRef.current = {
+            layerId: selected.id,
+            startPointer: origPt,
+            mode: {
+              kind: "resize",
+              handleId,
+              startFontSize: selected.fontSizePx,
+              startDist: Math.max(dist, 1),
+            },
+            snapshot,
+          };
+          setCursor(cursorForHandle(handleId));
+          setHud({ text: `${selected.fontSizePx}px` });
+        }
+        isDraggingRef.current = true;
+        return;
+      }
+
+      // Body hit → move drag, or click empty space to deselect.
+      const hitId = findLayerAtPoint(state.layers, state.imageNaturalSize, origPt);
       if (hitId) {
         const layer = state.layers.find((l) => l.id === hitId)!;
         dispatch({ type: "SELECT_LAYER", payload: { id: hitId } });
         dragRef.current = {
           layerId: hitId,
           startPointer: origPt,
-          startXNorm: layer.xNorm,
-          startYNorm: layer.yNorm,
+          mode: {
+            kind: "move",
+            startXNorm: layer.xNorm,
+            startYNorm: layer.yNorm,
+          },
           snapshot: state.layers.map((l) => ({ ...l })),
         };
         isDraggingRef.current = true;
@@ -169,9 +302,17 @@ export function EditorCanvas() {
         dispatch({ type: "SELECT_LAYER", payload: { id: null } });
         dragRef.current = null;
         setCursor("default");
+        setHud(null);
       }
     },
-    [state.imageNaturalSize, state.layers, editorScale, dispatch, isDraggingRef],
+    [
+      state.imageNaturalSize,
+      state.layers,
+      state.selectedLayerId,
+      editorScale,
+      dispatch,
+      isDraggingRef,
+    ],
   );
 
   const handlePointerMove = useCallback(
@@ -185,26 +326,111 @@ export function EditorCanvas() {
       const drag = dragRef.current;
       if (drag) {
         e.preventDefault();
-        const dx = origPt.x - drag.startPointer.x;
-        const dy = origPt.y - drag.startPointer.y;
-        const newOrigX = drag.startXNorm * state.imageNaturalSize.w + dx;
-        const newOrigY = drag.startYNorm * state.imageNaturalSize.h + dy;
-        const { xNorm, yNorm } = originalToNormalized(
-          { x: newOrigX, y: newOrigY },
-          state.imageNaturalSize,
+        const layer = state.layers.find((l) => l.id === drag.layerId);
+        if (!layer) return;
+
+        if (drag.mode.kind === "move") {
+          const dx = origPt.x - drag.startPointer.x;
+          const dy = origPt.y - drag.startPointer.y;
+          let newOrigX = drag.mode.startXNorm * state.imageNaturalSize.w + dx;
+          let newOrigY = drag.mode.startYNorm * state.imageNaturalSize.h + dy;
+          if (!e.shiftKey) {
+            const snap = computeCenterSnap(
+              drag.layerId,
+              { x: newOrigX, y: newOrigY },
+              state.layers,
+              state.imageNaturalSize,
+              6 / editorScale,
+            );
+            if (snap.snappedX !== null) newOrigX = snap.snappedX;
+            if (snap.snappedY !== null) newOrigY = snap.snappedY;
+            setSnapGuides(snap.guides);
+          } else {
+            // Functional setState bails out on identity match, so this stays
+            // cheap when Shift is held continuously — no need to capture
+            // `snapGuides` in the callback's deps.
+            setSnapGuides((prev) => (prev.length > 0 ? [] : prev));
+          }
+          const { xNorm, yNorm } = originalToNormalized(
+            { x: newOrigX, y: newOrigY },
+            state.imageNaturalSize,
+          );
+          dispatch({
+            type: "UPDATE_LAYER",
+            payload: { id: drag.layerId, patch: { xNorm, yNorm } },
+          });
+          return;
+        }
+
+        if (drag.mode.kind === "resize") {
+          const cx = layer.xNorm * state.imageNaturalSize.w;
+          const cy = layer.yNorm * state.imageNaturalSize.h;
+          const currentDist = Math.hypot(origPt.x - cx, origPt.y - cy);
+          const ratio = currentDist / drag.mode.startDist;
+          const newSize = clamp(
+            Math.round(drag.mode.startFontSize * ratio),
+            FONT_MIN,
+            FONT_MAX,
+          );
+          if (newSize !== layer.fontSizePx) {
+            dispatch({
+              type: "UPDATE_LAYER",
+              payload: { id: drag.layerId, patch: { fontSizePx: newSize } },
+            });
+          }
+          setHud({ text: `${newSize}px` });
+          return;
+        }
+
+        // rotate — accumulate incremental deltas. Each frame we look at the
+        // step from the previous pointer angle, normalise that step into
+        // (-π, π] (so a wrap across atan2's ±π boundary becomes a tiny step,
+        // not a 360° snap), then add it to the running accum.
+        const cx = layer.xNorm * state.imageNaturalSize.w;
+        const cy = layer.yNorm * state.imageNaturalSize.h;
+        const currentAngle = Math.atan2(origPt.y - cy, origPt.x - cx);
+        let stepRad = currentAngle - drag.mode.prevPointerAngle;
+        if (stepRad > Math.PI) stepRad -= 2 * Math.PI;
+        else if (stepRad < -Math.PI) stepRad += 2 * Math.PI;
+        drag.mode.prevPointerAngle = currentAngle;
+        drag.mode.accumDeg += (stepRad * 180) / Math.PI;
+        let newDeg = normalizeDeg(
+          drag.mode.startRotationDeg + drag.mode.accumDeg,
         );
-        dispatch({
-          type: "UPDATE_LAYER",
-          payload: { id: drag.layerId, patch: { xNorm, yNorm } },
-        });
+        if (e.shiftKey) {
+          newDeg = Math.round(newDeg / ROTATE_SNAP_STEP) * ROTATE_SNAP_STEP;
+        }
+        if (newDeg !== layer.rotationDeg) {
+          dispatch({
+            type: "UPDATE_LAYER",
+            payload: { id: drag.layerId, patch: { rotationDeg: newDeg } },
+          });
+        }
+        setHud({ text: `${Math.round(newDeg)}°` });
         return;
       }
 
-      // Hover: cheap hit-test to flip the cursor between move and default.
+      // Hover: figure out the right cursor. Handles on the selected layer beat
+      // body hits — same priority as in pointerdown.
+      const selected = state.layers.find((l) => l.id === state.selectedLayerId);
+      const handleTol = 12 / editorScale;
+      const handleId = selected
+        ? hitTestHandle(selected, state.imageNaturalSize, origPt, handleTol)
+        : null;
+      if (handleId) {
+        setCursor(cursorForHandle(handleId));
+        return;
+      }
       const hitId = findLayerAtPoint(state.layers, state.imageNaturalSize, origPt);
       setCursor(hitId ? "move" : "default");
     },
-    [state.imageNaturalSize, state.layers, editorScale, dispatch],
+    [
+      state.imageNaturalSize,
+      state.layers,
+      state.selectedLayerId,
+      editorScale,
+      dispatch,
+    ],
   );
 
   const handlePointerUp = useCallback(
@@ -217,11 +443,7 @@ export function EditorCanvas() {
       if (drag) {
         const original = drag.snapshot.find((l) => l.id === drag.layerId);
         const current = state.layers.find((l) => l.id === drag.layerId);
-        if (
-          original &&
-          current &&
-          (original.xNorm !== current.xNorm || original.yNorm !== current.yNorm)
-        ) {
+        if (original && current && JSON.stringify(original) !== JSON.stringify(current)) {
           dispatch({
             type: "COMMIT_HISTORY",
             payload: { snapshot: drag.snapshot },
@@ -230,18 +452,36 @@ export function EditorCanvas() {
       }
       dragRef.current = null;
       isDraggingRef.current = false;
-      // Recompute hover state from the final pointer position so the cursor
-      // settles on `move` if the pointer is still over a layer, `default` otherwise.
+      setHud(null);
+      setSnapGuides((prev) => (prev.length > 0 ? [] : prev));
+      // Recompute hover cursor from the final pointer position so the cursor
+      // settles to the right state after release.
       if (state.imageNaturalSize && canvas) {
         const cssPt = getCanvasCssPoint(e, canvas);
         const origPt = cssToOriginal(cssPt, editorScale);
-        const hitId = findLayerAtPoint(state.layers, state.imageNaturalSize, origPt);
-        setCursor(hitId ? "move" : "default");
+        const selected = state.layers.find((l) => l.id === state.selectedLayerId);
+        const handleTol = 12 / editorScale;
+        const handleId = selected
+          ? hitTestHandle(selected, state.imageNaturalSize, origPt, handleTol)
+          : null;
+        if (handleId) {
+          setCursor(cursorForHandle(handleId));
+        } else {
+          const hitId = findLayerAtPoint(state.layers, state.imageNaturalSize, origPt);
+          setCursor(hitId ? "move" : "default");
+        }
       } else {
         setCursor("default");
       }
     },
-    [state.layers, state.imageNaturalSize, editorScale, dispatch, isDraggingRef],
+    [
+      state.layers,
+      state.imageNaturalSize,
+      state.selectedLayerId,
+      editorScale,
+      dispatch,
+      isDraggingRef,
+    ],
   );
 
   if (!state.imageNaturalSize) {
@@ -271,6 +511,11 @@ export function EditorCanvas() {
           onPointerUp={handlePointerUp}
           onPointerCancel={handlePointerUp}
         />
+        {hud && (
+          <div className="pointer-events-none absolute right-2 top-2 rounded bg-black/70 px-2 py-1 font-mono text-xs text-white tabular-nums">
+            {hud.text}
+          </div>
+        )}
       </div>
     </div>
   );

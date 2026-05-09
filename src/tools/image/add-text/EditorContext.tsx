@@ -8,6 +8,7 @@ import {
   useMemo,
   useReducer,
   useRef,
+  useState,
   type Dispatch,
   type ReactNode,
 } from "react";
@@ -18,6 +19,16 @@ import {
   type EditorState,
   type TextLayer,
 } from "./lib/reducer";
+
+export interface SystemFont {
+  /** Synthetic key prefixed with `__sys-` so it never collides with FONT_REGISTRY or user fonts. */
+  key: string;
+  family: string;
+}
+
+export type LoadSystemFontsResult =
+  | { ok: true; count: number }
+  | { ok: false; reason: "unsupported" | "denied" | "error" };
 
 interface EditorContextValue {
   state: EditorState;
@@ -30,6 +41,11 @@ interface EditorContextValue {
    * debounce skips snapshotting so the explicit pointerup COMMIT_HISTORY is
    * the sole source of history for that drag. */
   isDraggingRef: React.MutableRefObject<boolean>;
+  /** Browser-discovered local system fonts. Populated only after the user
+   * grants permission via `loadSystemFonts`. Never persisted; never sent
+   * anywhere. */
+  systemFonts: SystemFont[];
+  loadSystemFonts: () => Promise<LoadSystemFontsResult>;
 }
 
 const EditorContext = createContext<EditorContextValue | null>(null);
@@ -49,6 +65,7 @@ export function EditorProvider({ children }: { children: ReactNode }) {
   const [state, dispatch] = useReducer(editorReducer, initialState);
   const lastCommittedRef = useRef<TextLayer[]>(state.layers);
   const isDraggingRef = useRef(false);
+  const [systemFonts, setSystemFonts] = useState<SystemFont[]>([]);
 
   // Own the ImageBitmap lifecycle: close the previous one only after React has
   // committed the new bitmap to the tree. Closing synchronously in the click
@@ -106,6 +123,36 @@ export function EditorProvider({ children }: { children: ReactNode }) {
     [state.selectedLayerId],
   );
 
+  const loadSystemFonts = useCallback(async (): Promise<LoadSystemFontsResult> => {
+    if (typeof window === "undefined") return { ok: false, reason: "unsupported" };
+    // Local Font Access API — Chrome/Edge 103+. Firefox / Safari have no
+    // implementation as of 2026-05.
+    const queryFn = (window as unknown as {
+      queryLocalFonts?: () => Promise<Array<{ family: string }>>;
+    }).queryLocalFonts;
+    if (typeof queryFn !== "function") return { ok: false, reason: "unsupported" };
+    try {
+      const fonts = await queryFn();
+      // Dedup by family — `queryLocalFonts` returns one entry per face
+      // (Bold, Italic, BoldItalic...) but the picker only needs the family.
+      const seen = new Set<string>();
+      const unique: SystemFont[] = [];
+      for (const f of fonts) {
+        if (!f.family || seen.has(f.family)) continue;
+        seen.add(f.family);
+        unique.push({ key: `__sys-${f.family}`, family: f.family });
+      }
+      unique.sort((a, b) => a.family.localeCompare(b.family));
+      setSystemFonts(unique);
+      return { ok: true, count: unique.length };
+    } catch (e) {
+      // The spec rejects with NotAllowedError on permission denial. Anything
+      // else (SecurityError, TypeError) we surface as a generic error.
+      const name = (e as { name?: string } | null)?.name;
+      return { ok: false, reason: name === "NotAllowedError" ? "denied" : "error" };
+    }
+  }, []);
+
   const value = useMemo<EditorContextValue>(
     () => ({
       state,
@@ -115,8 +162,16 @@ export function EditorProvider({ children }: { children: ReactNode }) {
       canRedo: state.history.future.length > 0,
       updateSelected,
       isDraggingRef,
+      systemFonts,
+      loadSystemFonts,
     }),
-    [state, selectedLayer, updateSelected],
+    [
+      state,
+      selectedLayer,
+      updateSelected,
+      systemFonts,
+      loadSystemFonts,
+    ],
   );
 
   return <EditorContext.Provider value={value}>{children}</EditorContext.Provider>;

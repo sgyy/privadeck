@@ -75,41 +75,103 @@ export function TextStyleControls() {
         />
       </div>
 
-      <div className="flex gap-3">
-        <div>
-          <label className="mb-1 block text-xs font-medium">{t("color")}</label>
-          <input
-            type="color"
-            value={selectedLayer.color}
-            onChange={(e) => updateSelected({ color: e.target.value })}
-            className="h-9 w-14 cursor-pointer rounded border border-border"
-          />
+      <fieldset className="space-y-2 rounded border border-border p-3">
+        <legend className="px-1 text-xs font-medium">{t("fill")}</legend>
+        <div className="flex gap-1">
+          {(["solid", "gradient"] as const).map((mode) => (
+            <button
+              key={mode}
+              type="button"
+              onClick={() => updateSelected({ fillMode: mode })}
+              className={`flex-1 rounded border px-2 py-1 text-xs ${
+                selectedLayer.fillMode === mode
+                  ? "border-primary bg-primary/10 text-primary"
+                  : "border-border hover:bg-muted"
+              }`}
+            >
+              {t(mode === "solid" ? "fillSolid" : "fillGradient")}
+            </button>
+          ))}
         </div>
-
-        <div className="flex-1">
-          <label className="mb-1 block text-xs font-medium">{t("alignment")}</label>
-          <div className="flex gap-1">
-            {(
-              [
-                { value: "left" as Align, Icon: AlignLeft },
-                { value: "center" as Align, Icon: AlignCenter },
-                { value: "right" as Align, Icon: AlignRight },
-              ]
-            ).map(({ value, Icon }) => (
-              <button
-                key={value}
-                type="button"
-                onClick={() => updateSelected({ align: value })}
-                className={`flex h-9 flex-1 items-center justify-center rounded border ${
-                  selectedLayer.align === value
-                    ? "border-primary bg-primary/10 text-primary"
-                    : "border-border hover:bg-muted"
-                }`}
-              >
-                <Icon className="h-4 w-4" />
-              </button>
-            ))}
+        {selectedLayer.fillMode === "solid" ? (
+          <div>
+            <label className="mb-1 block text-xs">{t("color")}</label>
+            <input
+              type="color"
+              value={selectedLayer.color}
+              onChange={(e) => updateSelected({ color: e.target.value })}
+              className="h-9 w-14 cursor-pointer rounded border border-border"
+            />
           </div>
+        ) : (
+          <>
+            <div className="flex gap-3">
+              <div>
+                <label className="mb-1 block text-xs">{t("gradientStart")}</label>
+                <input
+                  type="color"
+                  value={selectedLayer.gradientStartColor}
+                  onChange={(e) =>
+                    updateSelected({ gradientStartColor: e.target.value })
+                  }
+                  className="h-9 w-14 cursor-pointer rounded border border-border"
+                />
+              </div>
+              <div>
+                <label className="mb-1 block text-xs">{t("gradientEnd")}</label>
+                <input
+                  type="color"
+                  value={selectedLayer.gradientEndColor}
+                  onChange={(e) =>
+                    updateSelected({ gradientEndColor: e.target.value })
+                  }
+                  className="h-9 w-14 cursor-pointer rounded border border-border"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="mb-1 block text-xs">
+                {t("gradientAngle")}: {selectedLayer.gradientAngle}°
+              </label>
+              <input
+                type="range"
+                min={0}
+                max={360}
+                step={1}
+                value={selectedLayer.gradientAngle}
+                onChange={(e) =>
+                  updateSelected({ gradientAngle: Number(e.target.value) })
+                }
+                className="w-full"
+              />
+            </div>
+          </>
+        )}
+      </fieldset>
+
+      <div>
+        <label className="mb-1 block text-xs font-medium">{t("alignment")}</label>
+        <div className="flex gap-1">
+          {(
+            [
+              { value: "left" as Align, Icon: AlignLeft },
+              { value: "center" as Align, Icon: AlignCenter },
+              { value: "right" as Align, Icon: AlignRight },
+            ]
+          ).map(({ value, Icon }) => (
+            <button
+              key={value}
+              type="button"
+              onClick={() => updateSelected({ align: value })}
+              className={`flex h-9 flex-1 items-center justify-center rounded border ${
+                selectedLayer.align === value
+                  ? "border-primary bg-primary/10 text-primary"
+                  : "border-border hover:bg-muted"
+              }`}
+            >
+              <Icon className="h-4 w-4" />
+            </button>
+          ))}
         </div>
       </div>
     </div>

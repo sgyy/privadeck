@@ -18,12 +18,20 @@ const LATIN_FONTS = [
   { key: "inter", family: "Inter", weights: [400, 700] },
   { key: "roboto", family: "Roboto", weights: [400, 700] },
   { key: "montserrat", family: "Montserrat", weights: [400, 700] },
+  { key: "open-sans", family: "Open+Sans", weights: [400, 700] },
+  { key: "raleway", family: "Raleway", weights: [400, 700] },
+  { key: "oswald", family: "Oswald", weights: [400, 700] },
+  { key: "anton", family: "Anton", weights: [400] },
   { key: "bebas-neue", family: "Bebas+Neue", weights: [400] },
+  { key: "righteous", family: "Righteous", weights: [400] },
   { key: "playfair-display", family: "Playfair+Display", weights: [400, 700] },
   { key: "merriweather", family: "Merriweather", weights: [400, 700] },
+  { key: "noto-serif", family: "Noto+Serif", weights: [400, 700] },
   { key: "pacifico", family: "Pacifico", weights: [400] },
   { key: "lobster", family: "Lobster", weights: [400] },
   { key: "permanent-marker", family: "Permanent+Marker", weights: [400] },
+  { key: "dancing-script", family: "Dancing+Script", weights: [400, 700] },
+  { key: "caveat", family: "Caveat", weights: [400, 700] },
 ];
 
 const CJK_FONTS = [

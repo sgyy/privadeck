@@ -43,10 +43,14 @@ function drawLayer(
 ): void {
   // When shadow is on and opacity < 1, the inline 3-pass would composite the
   // fill twice through globalAlpha. Render to an offscreen canvas at α=1 and
-  // composite once via drawImage to keep the math right.
+  // composite once via drawImage to keep the math right. Arc text skips this
+  // path — its bounding box doesn't match the offscreen sizing math, so it
+  // accepts the alpha-doubling artifact in this rare combination.
+  const isArc = layer.curveMode === "arc" && layer.curvature !== 0;
   if (
     layer.shadowEnabled &&
     layer.opacity < 1 &&
+    !isArc &&
     typeof document !== "undefined"
   ) {
     drawLayerOffscreen(ctx, layer, size);
@@ -74,16 +78,38 @@ function drawLayerInline(
   }
 
   ctx.font = buildFontString(layer);
-  ctx.fillStyle = layer.color;
   ctx.strokeStyle = layer.strokeColor;
   ctx.lineWidth = layer.strokeWidth;
   ctx.lineJoin = "round";
   ctx.lineCap = "round";
   ctx.textBaseline = "middle";
 
+  // Arc text takes a different path: single line, no background frame, every
+  // glyph is rotated to follow the tangent. wrapWidth and bg are ignored.
+  // We deliberately don't call applyFillStyle here — a CanvasGradient created
+  // in the layer-local frame would be sampled per-character at the arc's
+  // vertical apex (≈ y=0), so every glyph would end up the same colour.
+  // drawArcLine handles gradient mode by lerping per-character instead.
+  if (layer.curveMode === "arc" && layer.curvature !== 0) {
+    ctx.fillStyle = layer.color;
+    drawArcLine(ctx, layer);
+    ctx.restore();
+    return;
+  }
+
   const lines = getWrappedLines(ctx, layer, size);
   const totalHeight = lines.length * lineHeight;
   const startY = -totalHeight / 2 + lineHeight / 2;
+
+  let maxLineW = 0;
+  for (const line of lines) {
+    const w = measureSpacedTextWidth(ctx, line, layer.letterSpacing);
+    if (w > maxLineW) maxLineW = w;
+  }
+  applyFillStyle(ctx, layer, {
+    width: Math.max(maxLineW, layer.fontSizePx),
+    height: Math.max(totalHeight, layer.fontSizePx),
+  });
 
   drawBackground(ctx, layer, lines, lineHeight, startY);
 
@@ -95,6 +121,128 @@ function drawLayerInline(
   }
 
   ctx.restore();
+}
+
+interface FillBbox {
+  width: number;
+  height: number;
+}
+
+function applyFillStyle(
+  ctx: CanvasRenderingContext2D,
+  layer: TextLayer,
+  bbox: FillBbox,
+): void {
+  if (layer.fillMode !== "gradient") {
+    ctx.fillStyle = layer.color;
+    return;
+  }
+  // Compute endpoints so the gradient covers the bbox along the requested angle,
+  // centered at the local origin (which sits at the text block center).
+  const angle = (layer.gradientAngle * Math.PI) / 180;
+  const dx = Math.cos(angle);
+  const dy = Math.sin(angle);
+  const span = (Math.abs(dx) * bbox.width + Math.abs(dy) * bbox.height) / 2;
+  const grad = ctx.createLinearGradient(-span * dx, -span * dy, span * dx, span * dy);
+  grad.addColorStop(0, layer.gradientStartColor);
+  grad.addColorStop(1, layer.gradientEndColor);
+  ctx.fillStyle = grad;
+}
+
+function drawArcLine(ctx: CanvasRenderingContext2D, layer: TextLayer): void {
+  const text = layer.text.replace(/\n/g, " ");
+  const chars = Array.from(text);
+  if (chars.length === 0) return;
+  const widths = chars.map((c) => measureSpacedTextWidth(ctx, c, 0));
+  const totalWidth =
+    widths.reduce((a, b) => a + b, 0) + Math.max(0, chars.length - 1) * layer.letterSpacing;
+  if (totalWidth <= 0) return;
+
+  const totalAngle = (layer.curvature / 100) * Math.PI;
+  const alpha = Math.abs(totalAngle) / 2;
+  const R = totalWidth / (2 * Math.sin(alpha));
+  const sgn = Math.sign(layer.curvature) || 1;
+  const useGradient = layer.fillMode === "gradient";
+
+  const prevAlign = ctx.textAlign;
+  ctx.textAlign = "center";
+
+  let walked = -totalWidth / 2;
+  for (let i = 0; i < chars.length; i++) {
+    const w = widths[i];
+    const charArc = walked + w / 2;
+    walked += w + layer.letterSpacing;
+    const theta = charArc / R;
+
+    const x = R * Math.sin(theta);
+    const y = -sgn * R * (1 - Math.cos(theta));
+    const rot = -sgn * theta;
+
+    if (useGradient) {
+      const t = chars.length > 1 ? i / (chars.length - 1) : 0;
+      ctx.fillStyle = lerpHexColor(
+        layer.gradientStartColor,
+        layer.gradientEndColor,
+        t,
+      );
+    }
+
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(rot);
+    drawCharWithEffects(ctx, layer, chars[i]);
+    ctx.restore();
+  }
+
+  ctx.textAlign = prevAlign;
+}
+
+function lerpHexColor(a: string, b: string, t: number): string {
+  const parse = (h: string): [number, number, number] | null => {
+    if (!h.startsWith("#")) return null;
+    if (h.length === 4) {
+      return [
+        parseInt(h[1] + h[1], 16),
+        parseInt(h[2] + h[2], 16),
+        parseInt(h[3] + h[3], 16),
+      ];
+    }
+    if (h.length === 7) {
+      return [
+        parseInt(h.slice(1, 3), 16),
+        parseInt(h.slice(3, 5), 16),
+        parseInt(h.slice(5, 7), 16),
+      ];
+    }
+    return null;
+  };
+  const A = parse(a);
+  const B = parse(b);
+  if (!A || !B) return a;
+  const r = Math.round(A[0] + (B[0] - A[0]) * t);
+  const g = Math.round(A[1] + (B[1] - A[1]) * t);
+  const bl = Math.round(A[2] + (B[2] - A[2]) * t);
+  return `rgb(${r}, ${g}, ${bl})`;
+}
+
+function drawCharWithEffects(
+  ctx: CanvasRenderingContext2D,
+  layer: TextLayer,
+  char: string,
+): void {
+  if (layer.shadowEnabled && layer.shadowBlur >= 0) {
+    ctx.save();
+    ctx.shadowColor = layer.shadowColor;
+    ctx.shadowBlur = layer.shadowBlur;
+    ctx.shadowOffsetX = layer.shadowOffsetX;
+    ctx.shadowOffsetY = layer.shadowOffsetY;
+    ctx.fillText(char, 0, 0);
+    ctx.restore();
+  }
+  if (layer.strokeWidth > 0) {
+    ctx.strokeText(char, 0, 0);
+  }
+  ctx.fillText(char, 0, 0);
 }
 
 function drawLayerOffscreen(

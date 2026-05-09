@@ -15,8 +15,16 @@ export function BackgroundControls() {
     );
   }
 
+  // Arc renderer skips the bg pass — see renderer.ts drawLayerInline. Grey
+  // out the controls so the user isn't typing into a no-op.
+  const isArc =
+    selectedLayer.curveMode === "arc" && selectedLayer.curvature !== 0;
+
   return (
-    <div className="space-y-3">
+    <div
+      className={`space-y-3 ${isArc ? "pointer-events-none opacity-50" : ""}`}
+      aria-disabled={isArc}
+    >
       <div>
         <label className="mb-1 block text-xs font-medium">{t("bgMode")}</label>
         <div className="grid grid-cols-2 gap-1">
