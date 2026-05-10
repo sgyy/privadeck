@@ -71,6 +71,7 @@ export default function VideoInfo() {
   useEffect(() => {
     if (!browserMeta || !file) return;
     let cancelled = false;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional loading flag for the async work below
     setThumbLoading(true);
     generateThumbnails(file)
       .then((thumbs) => {

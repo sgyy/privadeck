@@ -19,7 +19,12 @@ export default function ImagesToPdf() {
   const [error, setError] = useState("");
   const t = useTranslations("tools.pdf.images-to-pdf");
   const previewsRef = useRef(previews);
-  previewsRef.current = previews;
+
+  // Keep the ref in sync with the latest previews so the unmount cleanup can
+  // revoke whatever URLs are current at unmount time.
+  useEffect(() => {
+    previewsRef.current = previews;
+  }, [previews]);
 
   // Revoke all preview URLs on unmount
   useEffect(() => {

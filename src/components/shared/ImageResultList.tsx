@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { Download, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
@@ -18,46 +18,54 @@ interface ImageResultListProps {
   onRemove: (index: number) => void;
 }
 
+// useLayoutEffect on the client, useEffect on the server (avoids the SSR
+// warning while still syncing before paint when running in the browser).
+const useIsoLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
+
 export function ImageResultList({ results, onRemove }: ImageResultListProps) {
   const t = useTranslations("common");
   const [previewIndex, setPreviewIndex] = useState<number | null>(null);
-  const urlCacheRef = useRef(new Map<Blob, string>());
 
-  // Sync the cache during render rather than in useMemo. React StrictMode
-  // double-mounts components in dev: it mounts → runs effect cleanup → mounts
-  // again. If we cached URLs through useMemo, the simulated unmount cleanup
-  // would revoke the URLs while useMemo's memoized result kept handing the now-
-  // dead URLs to <img>. Reading and mutating the ref directly during render
-  // means the second mount re-syncs the cache from scratch and the JSX always
-  // sees a freshly-created URL. The cache.has() check keeps it idempotent under
-  // StrictMode's intentional double render.
-  const cache = urlCacheRef.current;
-  const currentBlobs = new Set(results.map((r) => r.blob));
-  for (const [blob, url] of cache) {
-    if (!currentBlobs.has(blob)) {
-      URL.revokeObjectURL(url);
-      cache.delete(blob);
-    }
-  }
-  for (const r of results) {
-    if (!cache.has(r.blob)) {
-      cache.set(r.blob, URL.createObjectURL(r.blob));
-    }
-  }
+  // Persistent blob→URL cache. Incremental updates: new blobs get a new URL,
+  // removed blobs get their URL revoked, blobs that are still present keep
+  // their existing URL. This matters for streaming/append-style result
+  // updates — recomputing all URLs on every change would invalidate already-
+  // rendered <img> tags. The map lives in a ref; an effect publishes a copy
+  // into state so render can read it without violating react-hooks/refs.
+  const cacheRef = useRef<Map<Blob, string>>(new Map());
+  const [urlMap, setUrlMap] = useState<ReadonlyMap<Blob, string>>(() => new Map());
 
-  // Free every URL on real unmount. StrictMode's simulated unmount also runs
-  // this — but the next render rebuilds the cache from scratch (above), so the
-  // <img> tags always end up with valid URLs.
+  useIsoLayoutEffect(() => {
+    const cache = cacheRef.current;
+    const currentBlobs = new Set(results.map((r) => r.blob));
+    let changed = false;
+    for (const [blob, url] of [...cache]) {
+      if (!currentBlobs.has(blob)) {
+        URL.revokeObjectURL(url);
+        cache.delete(blob);
+        changed = true;
+      }
+    }
+    for (const r of results) {
+      if (!cache.has(r.blob)) {
+        cache.set(r.blob, URL.createObjectURL(r.blob));
+        changed = true;
+      }
+    }
+    if (changed) setUrlMap(new Map(cache));
+  }, [results]);
+
+  // Revoke any remaining URLs on unmount.
   useEffect(() => {
+    const cache = cacheRef.current;
     return () => {
       for (const url of cache.values()) URL.revokeObjectURL(url);
       cache.clear();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- cache is a stable ref
   }, []);
 
   function getUrl(blob: Blob): string {
-    return cache.get(blob) ?? "";
+    return urlMap.get(blob) ?? "";
   }
 
   function handleDownload(item: ImageResultItem) {

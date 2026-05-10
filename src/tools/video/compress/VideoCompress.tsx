@@ -59,13 +59,18 @@ export default function VideoCompress() {
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState("");
   const [isCodecError, setIsCodecError] = useState(false);
-  const sourceMetadata = useRef<VideoMetadata | null>(null);
+  const [sourceMetadata, setSourceMetadata] = useState<VideoMetadata | null>(null);
   const [outputMetadata, setOutputMetadata] = useState<VideoMetadata | null>(null);
 
-  // Codec selection state
-  const [outputCodec, setOutputCodec] = useState<VideoCodec>("avc");
-  const [canUseHevc, setCanUseHevc] = useState(false);
-  const [checkingHevcSupport, setCheckingHevcSupport] = useState(false);
+  // Codec selection state. The user's manual choice (if any) overrides the
+  // auto-derived default; switching files clears the override.
+  const [outputCodecOverride, setOutputCodecOverride] = useState<VideoCodec | null>(null);
+  const [hevcSupport, setHevcSupport] = useState<boolean | undefined>(undefined);
+  const canUseHevc = hevcSupport === true;
+  const checkingHevcSupport = hevcSupport === undefined;
+  const autoOutputCodec: VideoCodec =
+    sourceMetadata?.codec === "hevc" && canUseHevc ? "hevc" : "avc";
+  const outputCodec = outputCodecOverride ?? autoOutputCodec;
 
   const outputVideoRef = useRef<HTMLVideoElement>(null);
   const resultUrl = useObjectUrl(result);
@@ -73,26 +78,21 @@ export default function VideoCompress() {
   const t = useTranslations("tools.video.compress");
   const tc = useTranslations("common");
 
-  // Check H.265 encoding support when component mounts
+  // Probe H.265 encoder support on mount — a one-shot async capability check.
   useEffect(() => {
-    if (!isWebCodecsSupported()) return;
-    setCheckingHevcSupport(true);
-    canEncodeHevc().then((supported) => {
-      setCanUseHevc(supported);
-      setCheckingHevcSupport(false);
-    });
-  }, []);
-
-  // Set default output codec based on source video codec
-  useEffect(() => {
-    if (!sourceMetadata.current?.codec) return;
-    const sourceCodec = sourceMetadata.current.codec;
-    if (sourceCodec === "hevc" && canUseHevc) {
-      setOutputCodec("hevc");
-    } else {
-      setOutputCodec("avc");
+    if (!isWebCodecsSupported()) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-time capability detection
+      setHevcSupport(false);
+      return;
     }
-  }, [sourceMetadata.current?.codec, canUseHevc]);
+    let cancelled = false;
+    canEncodeHevc().then((supported) => {
+      if (!cancelled) setHevcSupport(supported);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   if (!isClient) {
     return null;
@@ -125,8 +125,8 @@ export default function VideoCompress() {
         file,
         options,
         setProgress,
-        sourceMetadata.current?.height,
-        sourceMetadata.current?.fps,
+        sourceMetadata?.height,
+        sourceMetadata?.fps,
       );
       setResult(blob);
       tracker.trackProcessComplete(Math.round(performance.now() - t0));
@@ -204,12 +204,13 @@ export default function VideoCompress() {
           setFile(f);
           setResult(null);
           setOutputMetadata(null);
-          sourceMetadata.current = null;
+          setSourceMetadata(null);
+          setOutputCodecOverride(null);
           setError("");
           setIsCodecError(false);
         }}
         onMetadataLoaded={(meta) => {
-          sourceMetadata.current = meta;
+          setSourceMetadata(meta);
         }}
         onCodecWarning={(warning) => setIsCodecError(warning?.isUnsupported ?? false)}
       />
@@ -263,7 +264,7 @@ export default function VideoCompress() {
                     <Button
                       variant={outputCodec === "avc" ? "primary" : "outline"}
                       size="sm"
-                      onClick={() => setOutputCodec("avc")}
+                      onClick={() => setOutputCodecOverride("avc")}
                     >
                       H.264 (AVC)
                     </Button>
@@ -271,7 +272,7 @@ export default function VideoCompress() {
                       variant={outputCodec === "hevc" ? "primary" : "outline"}
                       size="sm"
                       disabled={!canUseHevc}
-                      onClick={() => setOutputCodec("hevc")}
+                      onClick={() => setOutputCodecOverride("hevc")}
                     >
                       H.265 (HEVC)
                     </Button>
@@ -299,7 +300,7 @@ export default function VideoCompress() {
                     <Button
                       variant={outputCodec === "avc" ? "primary" : "outline"}
                       size="sm"
-                      onClick={() => setOutputCodec("avc")}
+                      onClick={() => setOutputCodecOverride("avc")}
                     >
                       H.264 (AVC)
                     </Button>
@@ -307,7 +308,7 @@ export default function VideoCompress() {
                       variant={outputCodec === "hevc" ? "primary" : "outline"}
                       size="sm"
                       disabled={!canUseHevc}
-                      onClick={() => setOutputCodec("hevc")}
+                      onClick={() => setOutputCodecOverride("hevc")}
                     >
                       H.265 (HEVC)
                     </Button>
@@ -373,8 +374,8 @@ export default function VideoCompress() {
                     {RESOLUTIONS.map((r) => {
                       const exceedsSource =
                         r !== "original" &&
-                        sourceMetadata.current &&
-                        RESOLUTION_HEIGHT[r] > sourceMetadata.current.height;
+                        sourceMetadata &&
+                        RESOLUTION_HEIGHT[r] > sourceMetadata.height;
                       return (
                         <Button
                           key={r}
@@ -401,8 +402,8 @@ export default function VideoCompress() {
                     {FPS_OPTIONS.map((f) => {
                       const exceedsSource =
                         f !== "original" &&
-                        sourceMetadata.current?.fps &&
-                        Number(f) > sourceMetadata.current.fps;
+                        sourceMetadata?.fps &&
+                        Number(f) > sourceMetadata.fps;
                       return (
                         <Button
                           key={f}
@@ -505,7 +506,7 @@ export default function VideoCompress() {
 
           {/* Compress button */}
           <div className="flex items-center gap-4">
-            <Button onClick={handleCompress} disabled={processing || !sourceMetadata.current || isCodecError}>
+            <Button onClick={handleCompress} disabled={processing || !sourceMetadata || isCodecError}>
               {processing
                 ? `${t("processing")} ${progress}%`
                 : t("compress")}
@@ -560,14 +561,14 @@ export default function VideoCompress() {
                         {formatSize(result.size)}
                       </td>
                     </tr>
-                    {sourceMetadata.current && outputMetadata && (
+                    {sourceMetadata && outputMetadata && (
                       <>
                         <tr className="border-b border-border/20">
                           <td className="px-4 py-2 text-muted-foreground">
                             {t("resolutionLabel")}
                           </td>
                           <td className="px-4 py-2 text-right font-mono">
-                            {sourceMetadata.current.width} × {sourceMetadata.current.height}
+                            {sourceMetadata.width} × {sourceMetadata.height}
                           </td>
                           <td className="px-4 py-2 text-right font-mono">
                             {outputMetadata.width} × {outputMetadata.height}
@@ -578,7 +579,7 @@ export default function VideoCompress() {
                             {t("duration")}
                           </td>
                           <td className="px-4 py-2 text-right font-mono">
-                            {formatDuration(sourceMetadata.current.duration)}
+                            {formatDuration(sourceMetadata.duration)}
                           </td>
                           <td className="px-4 py-2 text-right font-mono">
                             {formatDuration(outputMetadata.duration)}
@@ -589,19 +590,19 @@ export default function VideoCompress() {
                             {t("bitrate")}
                           </td>
                           <td className="px-4 py-2 text-right font-mono">
-                            {formatBitrate(sourceMetadata.current.estimatedBitrate)}
+                            {formatBitrate(sourceMetadata.estimatedBitrate)}
                           </td>
                           <td className="px-4 py-2 text-right font-mono">
                             {formatBitrate(outputMetadata.estimatedBitrate)}
                           </td>
                         </tr>
-                        {(sourceMetadata.current?.fps || outputMetadata.fps) && (
+                        {(sourceMetadata?.fps || outputMetadata.fps) && (
                           <tr className="border-b border-border/20">
                             <td className="px-4 py-2 text-muted-foreground">
                               {t("fpsLabel")}
                             </td>
                             <td className="px-4 py-2 text-right font-mono">
-                              {sourceMetadata.current?.fps ? `${sourceMetadata.current.fps} fps` : "-"}
+                              {sourceMetadata?.fps ? `${sourceMetadata.fps} fps` : "-"}
                             </td>
                             <td className="px-4 py-2 text-right font-mono">
                               {outputMetadata.fps ? `${outputMetadata.fps} fps` : "-"}

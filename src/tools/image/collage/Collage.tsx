@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { ImageFileGrid } from "@/components/shared/ImageFileGrid";
 import { ImageResultList, type ImageResultItem } from "@/components/shared/ImageResultList";
@@ -17,7 +17,7 @@ const tracker = createToolTracker("collage", "image");
 
 export default function Collage() {
   const [files, setFiles] = useState<File[]>([]);
-  const [layout, setLayout] = useState<CollageLayout>("2x1");
+  const [requestedLayout, setLayout] = useState<CollageLayout>("2x1");
   const [gap, setGap] = useState(4);
   const [bgColor, setBgColor] = useState("#ffffff");
   const [results, setResults] = useState<ImageResultItem[]>([]);
@@ -29,12 +29,12 @@ export default function Collage() {
     [files.length],
   );
 
-  // Reset layout if current one is no longer available
-  useEffect(() => {
-    if (availableLayouts.length > 0 && !availableLayouts.includes(layout)) {
-      setLayout(availableLayouts[0]);
-    }
-  }, [availableLayouts, layout]);
+  // Effective layout: fall back to first available if current selection is no
+  // longer applicable to the current file count.
+  const layout =
+    availableLayouts.length > 0 && !availableLayouts.includes(requestedLayout)
+      ? availableLayouts[0]
+      : requestedLayout;
 
   function handleFilesChange(newFiles: File[]) {
     setFiles(newFiles);

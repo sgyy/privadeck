@@ -125,14 +125,6 @@ export default function MergePdf() {
     };
   }, []);
 
-  // Auto-close detail dialog if its item is removed externally (e.g. clearAll).
-  useEffect(() => {
-    if (!detailItemId) return;
-    if (!items.find((it) => it.id === detailItemId)) {
-      setDetailItemId(null);
-    }
-  }, [items, detailItemId]);
-
   const handleFiles = useCallback((files: File[]) => {
     setError("");
     const accepted: ItemState[] = [];

@@ -267,16 +267,17 @@ export function VideoUploader({
     e.target.value = "";
   }
 
-  // Clear codec warning when file is cleared externally or changed to a different file
+  // Clear codec warning when file is cleared externally or changed to a
+  // different file. The previous warning belongs to the previous file and
+  // would be misleading until async detection resolves for the new one.
   useEffect(() => {
     if (!file) {
-      // File was cleared
       if (codecWarning) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- invalidate stale derived warning
         setCodecWarning(null);
         onCodecWarning?.(null);
       }
     } else if (prevFileRef.current && file !== prevFileRef.current) {
-      // File changed to a different one - clear old warning before new detection
       setCodecWarning(null);
       onCodecWarning?.(null);
     }

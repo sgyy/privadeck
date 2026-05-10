@@ -28,36 +28,38 @@ export default function VideoFormatConvert() {
   const [error, setError] = useState("");
   const [isCodecError, setIsCodecError] = useState(false);
 
-  // Codec selection state
-  const [outputCodec, setOutputCodec] = useState<VideoCodec>("avc");
-  const [canUseHevc, setCanUseHevc] = useState(false);
-  const [checkingHevcSupport, setCheckingHevcSupport] = useState(false);
+  // Codec selection state. The user's manual choice (if any) overrides the
+  // auto-derived default; switching files clears the override.
+  const [outputCodecOverride, setOutputCodecOverride] = useState<VideoCodec | null>(null);
+  // Tri-state: undefined while we're still probing capabilities on mount.
+  const [hevcSupport, setHevcSupport] = useState<boolean | undefined>(undefined);
+  const canUseHevc = hevcSupport === true;
+  const checkingHevcSupport = hevcSupport === undefined;
   // Track source codec as state for proper reactivity
   const [sourceCodec, setSourceCodec] = useState<VideoCodec | undefined>(undefined);
+  const autoOutputCodec: VideoCodec =
+    sourceCodec === "hevc" && canUseHevc ? "hevc" : "avc";
+  const outputCodec = outputCodecOverride ?? autoOutputCodec;
 
   const resultUrl = useObjectUrl(result?.blob ?? null);
   const t = useTranslations("tools.video.format-convert");
   const tc = useTranslations("common");
 
-  // Check H.265 encoding support when component mounts
+  // Probe H.265 encoder support on mount — a one-shot async capability check.
   useEffect(() => {
-    if (!isWebCodecsSupported()) return;
-    setCheckingHevcSupport(true);
-    canEncodeHevc().then((supported) => {
-      setCanUseHevc(supported);
-      setCheckingHevcSupport(false);
-    });
-  }, []);
-
-  // Set default output codec based on source video codec
-  useEffect(() => {
-    if (!sourceCodec) return;
-    if (sourceCodec === "hevc" && canUseHevc) {
-      setOutputCodec("hevc");
-    } else {
-      setOutputCodec("avc");
+    if (!isWebCodecsSupported()) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-time capability detection
+      setHevcSupport(false);
+      return;
     }
-  }, [sourceCodec, canUseHevc]);
+    let cancelled = false;
+    canEncodeHevc().then((supported) => {
+      if (!cancelled) setHevcSupport(supported);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   if (!isClient) {
     return null;
@@ -113,6 +115,7 @@ export default function VideoFormatConvert() {
           setError("");
           setIsCodecError(false);
           setSourceCodec(undefined);
+          setOutputCodecOverride(null);
         }}
         onMetadataLoaded={(meta) => {
           setSourceCodec(meta.codec);
@@ -147,7 +150,7 @@ export default function VideoFormatConvert() {
               <Button
                 variant={outputCodec === "avc" ? "primary" : "outline"}
                 size="sm"
-                onClick={() => setOutputCodec("avc")}
+                onClick={() => setOutputCodecOverride("avc")}
               >
                 H.264 (AVC)
               </Button>
@@ -155,7 +158,7 @@ export default function VideoFormatConvert() {
                 variant={outputCodec === "hevc" ? "primary" : "outline"}
                 size="sm"
                 disabled={!canUseHevc}
-                onClick={() => setOutputCodec("hevc")}
+                onClick={() => setOutputCodecOverride("hevc")}
               >
                 H.265 (HEVC)
               </Button>

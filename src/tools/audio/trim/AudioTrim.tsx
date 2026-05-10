@@ -83,16 +83,10 @@ export default function AudioTrim() {
 
   // Decode the file once for waveform display. Skip large files.
   useEffect(() => {
-    if (!file) {
-      setAudioBuffer(null);
-      return;
-    }
-    if (file.size > WAVEFORM_MAX_SIZE) {
-      setAudioBuffer(null);
-      return;
-    }
+    if (!file || file.size > WAVEFORM_MAX_SIZE) return;
     let cancelled = false;
     const ctx = new AudioContext();
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- loading flag for the async decode below
     setDecoding(true);
     (async () => {
       try {
@@ -111,12 +105,16 @@ export default function AudioTrim() {
     };
   }, [file]);
 
-  // Keep precise inputs synced with start/end (state -> input direction).
+  // Keep precise inputs synced with start/end. The text input is controlled
+  // (allows transient invalid input while typing) but must mirror external
+  // updates from the range slider.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- mirror external state into controlled input
     setStartInput(formatTimePrecise(start));
     setStartInvalid(false);
   }, [start]);
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- mirror external state into controlled input
     setEndInput(formatTimePrecise(end));
     setEndInvalid(false);
   }, [end]);
@@ -128,17 +126,6 @@ export default function AudioTrim() {
     },
     [],
   );
-
-  // Clamp fade values when the selection shrinks below them so the slider
-  // reading matches what trimAudioWithFade will actually use.
-  useEffect(() => {
-    const dur = end - start;
-    if (fadeIn > dur) setFadeIn(Math.max(0, dur));
-    if (fadeOut > dur) setFadeOut(Math.max(0, dur));
-    // Intentionally not depending on fadeIn/fadeOut to avoid re-running on
-    // user-driven slider moves; only react to selection-length changes.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [start, end]);
 
   const handleFile = useCallback((files: File[]) => {
     // Invalidate any in-flight processing so its setResult cannot land here.
@@ -209,7 +196,7 @@ export default function AudioTrim() {
     }
   }
 
-  const tick = useCallback(() => {
+  function tick() {
     const audio = audioRef.current;
     if (!audio || audio.paused) {
       rafRef.current = null;
@@ -221,7 +208,7 @@ export default function AudioTrim() {
       audio.currentTime = startRef.current;
     }
     rafRef.current = requestAnimationFrame(tick);
-  }, []);
+  }
 
   function handleAudioPlay() {
     if (rafRef.current === null) rafRef.current = requestAnimationFrame(tick);
@@ -279,12 +266,18 @@ export default function AudioTrim() {
     const guardedProgress = (p: number) => {
       if (gen === processGenRef.current) setProgress(p);
     };
+    // Clamp fades to the current selection length so the slider value the
+    // user sees matches what trimAudioWithFade will use, without mutating
+    // fadeIn/fadeOut state on every selection change.
+    const selectionDur = Math.max(0, end - start);
+    const effectiveFadeIn = Math.min(fadeIn, selectionDur);
+    const effectiveFadeOut = Math.min(fadeOut, selectionDur);
     try {
       let blob: Blob;
       if (mode === "remove") {
         blob = await trimAudioRemove(file, start, end, duration, guardedProgress);
-      } else if (fadeEnabled && (fadeIn > 0 || fadeOut > 0)) {
-        blob = await trimAudioWithFade(file, start, end, fadeIn, fadeOut, guardedProgress);
+      } else if (fadeEnabled && (effectiveFadeIn > 0 || effectiveFadeOut > 0)) {
+        blob = await trimAudioWithFade(file, start, end, effectiveFadeIn, effectiveFadeOut, guardedProgress);
       } else {
         blob = await trimAudio(file, start, end, guardedProgress);
       }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { AlertCircle, FileArchive, Loader2, Music, Settings2 } from "lucide-react";
 import { FileDropzone } from "@/components/shared/FileDropzone";
@@ -116,24 +116,19 @@ export default function AudioExtract() {
     [],
   );
 
-  // Keep precise inputs synced with start/end.
+  // Keep precise inputs synced with start/end. The text input is controlled
+  // (allows transient invalid input while typing) but must reflect external
+  // updates from the range slider — that two-way sync is a legitimate effect.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- mirror external state into controlled input
     setStartInput(formatTimePrecise(start));
     setStartInvalid(false);
   }, [start]);
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- mirror external state into controlled input
     setEndInput(formatTimePrecise(end));
     setEndInvalid(false);
   }, [end]);
-
-  // Clamp fade values when selection shrinks below them.
-  useEffect(() => {
-    const dur = end - start;
-    if (fadeIn > dur) setFadeIn(Math.max(0, dur));
-    if (fadeOut > dur) setFadeOut(Math.max(0, dur));
-    // Only react to selection length, not the slider values themselves.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [start, end]);
 
   const formatLossless = isLossless(format);
   const bitrateOpts = getBitrateOptions(format);
@@ -224,7 +219,7 @@ export default function AudioExtract() {
     }
   }
 
-  const tick = useCallback(() => {
+  function tick() {
     const video = videoRef.current;
     if (!video || video.paused) {
       rafRef.current = null;
@@ -234,7 +229,7 @@ export default function AudioExtract() {
       video.currentTime = startRef.current;
     }
     rafRef.current = requestAnimationFrame(tick);
-  }, []);
+  }
 
   function handleVideoPlay() {
     if (rafRef.current === null) rafRef.current = requestAnimationFrame(tick);
@@ -292,7 +287,14 @@ export default function AudioExtract() {
       // doesn't need source duration; fadeOut does, so we probe per-file
       // duration in batch mode (cheap metadata-only video load).
       const useRange = !isBatch && rangeEnabled && duration > 0 && end > start;
-      const useFade = fadeEnabled && (fadeIn > 0 || fadeOut > 0);
+      // Clamp user-set fades to the current selection length. We avoid mutating
+      // fadeIn/fadeOut state on every selection change so the user's slider
+      // values are preserved when the selection grows again.
+      const selectionDur = useRange ? end - start : 0;
+      const fadeMax = !isBatch && useRange ? Math.max(0, selectionDur) : Infinity;
+      const effectiveFadeIn = Math.min(fadeIn, fadeMax);
+      const effectiveFadeOut = Math.min(fadeOut, fadeMax);
+      const useFade = fadeEnabled && (effectiveFadeIn > 0 || effectiveFadeOut > 0);
 
       let successCount = 0;
       for (let i = 0; i < queue.length; i++) {
@@ -314,14 +316,14 @@ export default function AudioExtract() {
           options.end = end;
         }
         if (useFade) {
-          options.fadeIn = fadeIn;
-          options.fadeOut = fadeOut;
+          options.fadeIn = effectiveFadeIn;
+          options.fadeOut = effectiveFadeOut;
           // Need source duration for fadeOut positioning. Single-file: usually
           // already have it from <video onLoadedMetadata>, but fall back to a
           // probe if the user clicked Extract before metadata arrived. Batch:
           // probe per-file. fadeIn doesn't need duration, so it still works
           // even when probing fails.
-          if (!useRange && fadeOut > 0) {
+          if (!useRange && effectiveFadeOut > 0) {
             let probed = isBatch ? 0 : duration;
             if (probed <= 0) probed = await getDurationFromFile(item.file);
             if (probed > 0) options.duration = probed;

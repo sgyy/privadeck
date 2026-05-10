@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { VideoUploader, formatSize } from "@/components/shared/VideoUploader";
 import { DownloadButton } from "@/components/shared/DownloadButton";
@@ -61,17 +61,11 @@ export default function VideoToWebp() {
     setQualityPreset(q);
   }, []);
 
-  // Derived values
+  // Derived values. The slider's `max` already clamps width on every metadata
+  // change because onMetadataLoaded resets width as part of file load.
   const maxWidth = videoWidth > 0 ? even(videoWidth) : 1280;
   const maxFps = videoFps > 0 ? Math.min(30, videoFps) : 30;
   const outputHeight = calcOutputHeight(width, videoWidth, videoHeight);
-
-  // Reset width if it exceeds the new max (e.g. when a smaller video is loaded)
-  useEffect(() => {
-    if (maxWidth > 0 && width > maxWidth) {
-      setWidth(maxWidth);
-    }
-  }, [maxWidth, width]);
 
   if (!isClient) {
     return null;

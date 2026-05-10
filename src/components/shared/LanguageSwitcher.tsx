@@ -19,27 +19,28 @@ export function LanguageSwitcher({ dropdownDirection = "down" }: LanguageSwitche
   const ref = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
+  function openMenu() {
+    setOpen(true);
+    setFocusedIndex(0);
+    requestAnimationFrame(() => {
+      listRef.current?.querySelector<HTMLElement>('[role="option"]')?.focus();
+    });
+  }
+
+  function closeMenu() {
+    setOpen(false);
+    setFocusedIndex(-1);
+  }
+
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
-        setOpen(false);
-        setFocusedIndex(-1);
+        closeMenu();
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
-
-  useEffect(() => {
-    if (open) {
-      setFocusedIndex(0);
-      requestAnimationFrame(() => {
-        listRef.current?.querySelector<HTMLElement>('[role="option"]')?.focus();
-      });
-    } else {
-      setFocusedIndex(-1);
-    }
-  }, [open]);
 
   function switchLocale(newLocale: Locale) {
     trackEvent("language_change", { from_locale: locale, to_locale: newLocale });
@@ -60,15 +61,16 @@ export function LanguageSwitcher({ dropdownDirection = "down" }: LanguageSwitche
     switch (e.key) {
       case "ArrowDown":
         e.preventDefault();
-        if (!open) setOpen(true);
+        if (!open) openMenu();
         break;
       case "Enter":
       case " ":
         e.preventDefault();
-        setOpen((v) => !v);
+        if (open) closeMenu();
+        else openMenu();
         break;
       case "Escape":
-        setOpen(false);
+        closeMenu();
         break;
     }
   }
@@ -92,7 +94,7 @@ export function LanguageSwitcher({ dropdownDirection = "down" }: LanguageSwitche
         break;
       case "Escape":
         e.preventDefault();
-        setOpen(false);
+        closeMenu();
         triggerRef.current?.focus();
         break;
     }
@@ -103,7 +105,7 @@ export function LanguageSwitcher({ dropdownDirection = "down" }: LanguageSwitche
       <button
         ref={triggerRef}
         type="button"
-        onClick={() => setOpen(!open)}
+        onClick={() => (open ? closeMenu() : openMenu())}
         onKeyDown={handleTriggerKeyDown}
         className="inline-flex h-10 items-center gap-1.5 rounded-lg px-2.5 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
         aria-label={t("switchLanguage")}

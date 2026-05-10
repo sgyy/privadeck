@@ -56,10 +56,24 @@ export default function HashGenerator() {
   const [copiedAll, setCopiedAll] = useState(false);
 
   // ---------------------------------------------------------------------------
+  // Helpers (declared before the effect that uses them)
+  // ---------------------------------------------------------------------------
+  const getKeyBytes = useCallback((): ArrayBuffer | null => {
+    if (computeMode !== "hmac" || !hmacKey.trim()) return null;
+    try {
+      if (hmacKeyFormat === "hex") return parseHexKey(hmacKey);
+      return new TextEncoder().encode(hmacKey).buffer as ArrayBuffer;
+    } catch {
+      return null;
+    }
+  }, [computeMode, hmacKey, hmacKeyFormat]);
+
+  // ---------------------------------------------------------------------------
   // Real-time text hashing
   // ---------------------------------------------------------------------------
   useEffect(() => {
     if (inputMode !== "text" || !text.trim()) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- clear stale results when input becomes empty
       setRawResults(null);
       return;
     }
@@ -81,8 +95,7 @@ export default function HashGenerator() {
     }, 150);
 
     return () => clearTimeout(debounceRef.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [text, inputMode, computeMode, hmacKey, hmacKeyFormat]);
+  }, [text, inputMode, computeMode, getKeyBytes]);
 
   // ---------------------------------------------------------------------------
   // File hashing
@@ -127,19 +140,6 @@ export default function HashGenerator() {
     } finally {
       setProcessing(false);
       setFileProgress(undefined);
-    }
-  }
-
-  // ---------------------------------------------------------------------------
-  // Helpers
-  // ---------------------------------------------------------------------------
-  function getKeyBytes(): ArrayBuffer | null {
-    if (computeMode !== "hmac" || !hmacKey.trim()) return null;
-    try {
-      if (hmacKeyFormat === "hex") return parseHexKey(hmacKey);
-      return new TextEncoder().encode(hmacKey).buffer as ArrayBuffer;
-    } catch {
-      return null;
     }
   }
 

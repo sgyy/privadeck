@@ -33,12 +33,9 @@ export default function ExifEditor() {
   const [lastDownload, setLastDownload] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!file) {
-      setThumbnailUrl(null);
-      setDimensions(null);
-      return;
-    }
+    if (!file) return;
     const url = URL.createObjectURL(file);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- expose newly created object URL to render
     setThumbnailUrl(url);
     const img = new Image();
     img.onload = () => setDimensions({ w: img.naturalWidth, h: img.naturalHeight });
@@ -47,14 +44,8 @@ export default function ExifEditor() {
   }, [file]);
 
   useEffect(() => {
-    if (!file) {
-      setRecord(null);
-      setEdits(emptyEditableFields());
-      return;
-    }
+    if (!file) return;
     let cancelled = false;
-    setError("");
-    setLastDownload(null);
     (async () => {
       try {
         const r = await readExif(file);
@@ -73,16 +64,25 @@ export default function ExifEditor() {
     };
   }, [file]);
 
-  const handleUpload = useCallback((files: File[]) => {
-    if (files.length === 0) return;
-    setFile(files[0]);
-  }, []);
-
-  const handleRemove = useCallback(() => {
-    setFile(null);
+  const resetForNewFile = useCallback(() => {
+    setRecord(null);
+    setEdits(emptyEditableFields());
+    setThumbnailUrl(null);
+    setDimensions(null);
     setError("");
     setLastDownload(null);
   }, []);
+
+  const handleUpload = useCallback((files: File[]) => {
+    if (files.length === 0) return;
+    resetForNewFile();
+    setFile(files[0]);
+  }, [resetForNewFile]);
+
+  const handleRemove = useCallback(() => {
+    resetForNewFile();
+    setFile(null);
+  }, [resetForNewFile]);
 
   const handleReset = useCallback(() => {
     if (record) setEdits(editableFieldsFromRecord(record));

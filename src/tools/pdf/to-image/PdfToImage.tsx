@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { FileDropzone } from "@/components/shared/FileDropzone";
 import { ImageLightbox } from "@/components/shared/ImageLightbox";
@@ -19,6 +19,9 @@ import {
 
 const tracker = createToolTracker("to-image", "pdf");
 
+// useLayoutEffect on the client, useEffect on the server (silences SSR warning).
+const useIsoLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
+
 export default function PdfToImage() {
   const [file, setFile] = useState<File | null>(null);
   const [pageCount, setPageCount] = useState<number | null>(null);
@@ -32,44 +35,50 @@ export default function PdfToImage() {
   const [error, setError] = useState("");
   const [previewIndex, setPreviewIndex] = useState<number | null>(null);
   const generationRef = useRef(0);
-  const urlMapRef = useRef<Map<Blob, string>>(new Map());
   const t = useTranslations("tools.pdf.to-image");
   const tCat = useTranslations("tools.pdf");
   const tc = useTranslations("common");
 
-  // Ref-based URL management: only create URLs for new blobs
-  const getUrl = useCallback((blob: Blob) => {
-    const map = urlMapRef.current;
-    let url = map.get(blob);
-    if (!url) {
-      url = URL.createObjectURL(blob);
-      map.set(blob, url);
-    }
-    return url;
-  }, []);
+  // Persistent blob→URL cache. Conversion streams pages in via repeated
+  // setResults((prev) => [...prev, page]) calls, so we must NOT recreate URLs
+  // on every change — that would invalidate the <img src> of already-rendered
+  // pages. Instead, keep the cache in a ref and incrementally add/revoke
+  // entries; publish a state copy so render can read it without violating
+  // react-hooks/refs.
+  const cacheRef = useRef<Map<Blob, string>>(new Map());
+  const [urlMap, setUrlMap] = useState<ReadonlyMap<Blob, string>>(() => new Map());
 
-  // Cleanup URLs for blobs no longer in results
-  useEffect(() => {
-    const map = urlMapRef.current;
+  useIsoLayoutEffect(() => {
+    const cache = cacheRef.current;
     const currentBlobs = new Set(results.map((r) => r.blob));
-    for (const [blob, url] of map) {
+    let changed = false;
+    for (const [blob, url] of [...cache]) {
       if (!currentBlobs.has(blob)) {
         URL.revokeObjectURL(url);
-        map.delete(blob);
+        cache.delete(blob);
+        changed = true;
       }
     }
+    for (const r of results) {
+      if (!cache.has(r.blob)) {
+        cache.set(r.blob, URL.createObjectURL(r.blob));
+        changed = true;
+      }
+    }
+    if (changed) setUrlMap(new Map(cache));
   }, [results]);
 
-  // Cleanup all URLs on unmount
   useEffect(() => {
-    const map = urlMapRef.current;
+    const cache = cacheRef.current;
     return () => {
-      for (const url of map.values()) {
-        URL.revokeObjectURL(url);
-      }
-      map.clear();
+      for (const url of cache.values()) URL.revokeObjectURL(url);
+      cache.clear();
     };
   }, []);
+
+  function getUrl(blob: Blob): string {
+    return urlMap.get(blob) ?? "";
+  }
 
   async function handleFile(files: File[]) {
     const f = files[0];

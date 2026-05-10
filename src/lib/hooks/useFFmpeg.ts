@@ -32,9 +32,11 @@ export function useFFmpeg(options?: { preload?: boolean }) {
 
   useEffect(() => {
     if (options?.preload) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- mount-time preload kicks off async loading
       load();
     }
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return { status, load };
 }

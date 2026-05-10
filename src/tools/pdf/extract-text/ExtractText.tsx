@@ -76,7 +76,10 @@ export default function ExtractText() {
 
   const abortRef = useRef<AbortController | null>(null);
 
+  // SSR returns "eng" (no navigator); detect the actual locale only after the
+  // client mounts to avoid hydration mismatch on SSR'd HTML.
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional CSR-only override after hydration
     setOcrLang(detectOcrLang());
   }, []);
 
