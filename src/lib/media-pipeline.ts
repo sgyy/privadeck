@@ -159,7 +159,7 @@ export async function detectSourceVideoCodec(file: File): Promise<VideoCodec | u
     if (!videoTrack) return undefined;
 
     // codec is "avc", "hevc", "vp9", "av1", or "vp8"
-    const codec = videoTrack.codec;
+    const codec = await videoTrack.getCodec();
     if (codec === "hevc") {
       return "hevc";
     }
