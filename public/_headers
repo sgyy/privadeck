@@ -10,11 +10,42 @@
 /llms-full.zh-Hans.txt
   Content-Type: text/plain; charset=utf-8
 
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
   Cross-Origin-Resource-Policy: same-origin
 
+# 预留:目前 FFmpeg wasm 走 unpkg + SW 自身缓存,无本地 .wasm
+/*.wasm
+  Cache-Control: public, max-age=31536000, immutable
+  Cross-Origin-Resource-Policy: same-origin
+
+/icons/*
+  Cache-Control: public, max-age=2592000
+
+/og-default.png
+  Cache-Control: public, max-age=2592000
+
+/favicon.ico
+  Cache-Control: public, max-age=2592000
+
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+/robots.txt
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+/manifest.json
+  Content-Type: application/manifest+json; charset=utf-8
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
 /*
+  Cache-Control: public, max-age=0, s-maxage=86400, must-revalidate
   Cross-Origin-Embedder-Policy: require-corp
   Cross-Origin-Opener-Policy: same-origin
   X-Content-Type-Options: nosniff
