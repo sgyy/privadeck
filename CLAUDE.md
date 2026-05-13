@@ -6,11 +6,13 @@
 
 ```bash
 pnpm dev          # 启动开发服务器 (Next.js 16 + Turbopack)
-pnpm build        # 静态导出到 out/ 目录 (SSG)
+pnpm build        # 静态导出到 out/ 目录 (SSG，使用 webpack，非 Turbopack)
 pnpm lint         # ESLint 代码检查
 ```
 
 构建产物输出到 `out/`（21 个 locale 约 1500 个静态 HTML 页面）。部署到 Cloudflare Pages，构建命令 `pnpm build`，输出目录 `out`。
+
+**注意：** `output: "export"` 只在 `NODE_ENV=production` 启用（见 `next.config.ts`）。`pnpm dev` 跑的是普通 Next.js dev server（含 `headers()` 提供 COEP/COOP）；只有 `pnpm build` 才走静态导出。
 
 ## 架构
 
@@ -39,9 +41,16 @@ pnpm lint         # ESLint 代码检查
 
 ### 国际化 (i18n)
 
-使用 `next-intl`，支持 21 个 locale，包括地区变体（zh-Hans/zh-Hant、pt-BR/pt-PT）。默认英语。无中间件（与静态导出不兼容）。根路径 `/` 通过 Route Group `(home)` 直接渲染英文首页（可索引），语言建议由 `src/components/shared/LocaleSuggestionBanner.tsx` + `src/lib/i18n/detectLocale.ts` 在客户端完成（不自动跳转）。阿拉伯语 (ar) 为 RTL。`/zh` URL 通过 `public/_redirects` 重定向到 `/zh-Hans`。
+使用 `next-intl`，支持 21 个 locale，包括地区变体（zh-Hans/zh-Hant、pt-BR/pt-PT）。默认英语。无中间件（与静态导出不兼容）。根路径 `/` 通过 Route Group `(home)` 直接渲染英文首页（可索引），语言建议由 `src/components/shared/LocaleSuggestionBanner.tsx` + `src/lib/i18n/detectLocale.ts` 在客户端完成（不自动跳转）。阿拉伯语 (ar) 为 RTL。`public/_redirects` 中配置了短链兜底：`/zh*` → `/zh-Hans/`、`/pt*` → `/pt-BR/`。
 
 翻译文件位于 `messages/{locale}/`。工具翻译遵循命名空间模式 `tools.{category}.{slug}.{key}`，键包括：name、description、metaTitle、metaDescription、keywords、faq.q1/a1 等。
+
+**消息加载入口：** `src/lib/i18n/loadMessages.ts` 导出三个加载器：
+- `loadCommonMessages(locale)` — 加载 common.json（不含 toolNames），用于 layout Provider
+- `loadCategoryMessages(locale, category)` — 加载单分类工具消息，用于工具/分类页
+- `loadAllToolMessages(locale)` — 合并所有分类的工具消息，用于首页和 /tools 列表页
+
+三个加载器都会对非英文 locale 进行 `deepMerge(enFallback, localeMessages)` —— 任何缺失键会静默回退成英文。**这意味着调试时如果某文案显示为英文，可能是源语言键缺失而非展示错误。** 政策依然要求所有 locale 一次性补齐母语翻译，不能依赖回退。
 
 **任何涉及 i18n 的内容变更（添加工具、分类、UI 文案等）必须一次性更新全部 21 个 locale 文件。** 每个 locale 有拆分的消息文件：`messages/{locale}/common.json`（导航用 toolNames）+ `messages/{locale}/tools-{category}.json`（工具专用文案）。两者都必须更新。以 `en` 为源语言。**所有 21 个 locale 必须提供对应语言的完整翻译，不得仅用英文占位。** 添加、修改翻译键时，须一次性完成全部语言的翻译并提交。
 
