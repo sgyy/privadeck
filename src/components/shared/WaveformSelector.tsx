@@ -65,7 +65,7 @@ export function WaveformSelector({
     const half = height / 2;
     const samplesPerPixel = Math.max(1, Math.floor(audioBuffer.length / w));
 
-    const fillColor = getComputedStyle(canvas).color || "#06B6D4";
+    const fillColor = getComputedStyle(canvas).color || "#22D3EE";
     ctx.fillStyle = fillColor;
 
     for (let x = 0; x < w; x++) {

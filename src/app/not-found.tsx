@@ -56,7 +56,7 @@ export default function RootNotFound() {
                 href="/"
                 className="flex items-center gap-2 text-lg font-bold text-foreground"
               >
-                <Shield className="h-6 w-6 text-primary drop-shadow-[0_0_6px_rgba(6,182,212,0.4)]" />
+                <Shield className="h-6 w-6 text-primary drop-shadow-[0_0_6px_rgba(6,182,212,0.4)] dark:drop-shadow-[0_0_6px_rgba(34,211,238,0.4)]" />
                 <span>PrivaDeck</span>
               </Link>
               <nav className="hidden lg:flex items-center gap-1 ml-6">

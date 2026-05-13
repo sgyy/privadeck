@@ -17,23 +17,23 @@ interface SectionStyle {
 const SECTION_STYLES: Record<string, SectionStyle> = {
   intro: {
     Icon: BookOpen,
-    accentBar: "before:bg-cyan-500",
-    iconBg: "bg-cyan-100 dark:bg-cyan-950/40",
-    iconColor: "text-cyan-600 dark:text-cyan-400",
+    accentBar: "before:bg-cyan-500 dark:before:bg-cyan-400",
+    iconBg: "bg-cyan-100 dark:bg-cyan-500/10",
+    iconColor: "text-cyan-600 dark:text-cyan-300",
     anchor: "what-is",
   },
   useCases: {
     Icon: Sparkles,
-    accentBar: "before:bg-amber-500",
-    iconBg: "bg-amber-100 dark:bg-amber-950/40",
-    iconColor: "text-amber-600 dark:text-amber-400",
+    accentBar: "before:bg-amber-500 dark:before:bg-amber-400",
+    iconBg: "bg-amber-100 dark:bg-amber-500/10",
+    iconColor: "text-amber-600 dark:text-amber-300",
     anchor: "use-cases",
   },
   privacy: {
     Icon: ShieldCheck,
-    accentBar: "before:bg-emerald-500",
-    iconBg: "bg-emerald-100 dark:bg-emerald-950/40",
-    iconColor: "text-emerald-600 dark:text-emerald-400",
+    accentBar: "before:bg-emerald-500 dark:before:bg-emerald-400",
+    iconBg: "bg-emerald-100 dark:bg-emerald-500/10",
+    iconColor: "text-emerald-600 dark:text-emerald-300",
     anchor: "privacy",
   },
 };
@@ -85,7 +85,7 @@ export function ToolDescription({ tool, sections }: ToolDescriptionProps) {
 
       {aiSummary && (
         <div
-          className="mb-5 rounded-2xl border border-border/60 bg-gradient-to-br from-cyan-50/70 via-card to-emerald-50/50 dark:from-cyan-950/20 dark:via-card dark:to-emerald-950/20 p-5 sm:p-6"
+          className="mb-5 rounded-2xl border border-border/60 bg-gradient-to-br from-cyan-50/70 via-card to-emerald-50/50 dark:from-cyan-500/5 dark:via-card dark:to-emerald-500/5 p-5 sm:p-6"
         >
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/15">
@@ -96,7 +96,7 @@ export function ToolDescription({ tool, sections }: ToolDescriptionProps) {
                 {aiSummary}
               </p>
               <div className="flex flex-wrap gap-2">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200/70 bg-emerald-50/80 px-2.5 py-1 text-xs font-medium text-emerald-700 dark:border-emerald-800/70 dark:bg-emerald-950/50 dark:text-emerald-300">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200/70 bg-emerald-50/80 px-2.5 py-1 text-xs font-medium text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/5 dark:text-emerald-300">
                   <Shield className="h-3.5 w-3.5" />
                   {tc("localOnlyIndicator")}
                 </span>

@@ -33,12 +33,12 @@ export function ToolPageShell({ tool, children }: ToolPageShellProps) {
       />
 
       {/* Local-Only privacy indicator */}
-      <div className="flex items-center gap-2 rounded-lg border border-emerald-200/70 bg-emerald-50/80 backdrop-blur-sm px-4 py-2.5 dark:border-emerald-800/70 dark:bg-emerald-950/80">
+      <div className="flex items-center gap-2 rounded-lg border border-emerald-200/70 bg-emerald-50/80 backdrop-blur-sm px-4 py-2.5 dark:border-emerald-500/20 dark:bg-emerald-500/5">
         <span className="relative flex h-2.5 w-2.5 shrink-0">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75 dark:opacity-50" />
+          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500 dark:bg-emerald-400" />
         </span>
-        <Shield className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
+        <Shield className="h-4 w-4 text-emerald-600 dark:text-emerald-300" />
         <span className="text-sm font-medium text-emerald-700 dark:text-emerald-300">
           {tc("localOnlyIndicator")}
         </span>
