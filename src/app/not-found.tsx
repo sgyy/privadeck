@@ -1,12 +1,12 @@
 import "./globals.css";
 import Link from "next/link";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Shield } from "lucide-react";
 import { getAllTools } from "@/lib/registry";
 import { categories } from "@/lib/registry/categories";
 import type { Metadata } from "next";
 import enCommon from "../../messages/en/common.json";
 import { NotFound404 } from "@/components/shared/NotFound404";
+import { geistSans, geistMono } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   robots: {
@@ -14,16 +14,6 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const toolNames = enCommon.toolNames as Record<
   string,

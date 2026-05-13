@@ -1,15 +1,10 @@
-import {
-  Geist,
-  Geist_Mono,
-  Noto_Sans_SC,
-  Noto_Sans_TC,
-  Noto_Sans_JP,
-  Noto_Sans_KR,
-  Noto_Sans_Arabic,
-  Noto_Sans_Devanagari,
-  Noto_Sans_Thai,
-} from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import type { Locale } from "@/i18n/routing";
+
+/**
+ * Geist: 现代 Latin UI 字体，构建时自托管，体积小 (~50-100KB)。
+ * CJK/Arabic/Thai/Devanagari: 使用各平台原生系统字体，零额外下载。
+ */
 
 export const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,115 +16,53 @@ export const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const notoSansSC = Noto_Sans_SC({
-  variable: "--font-noto-sans-sc",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  preload: false,
-  display: "swap",
-});
-
-const notoSansTC = Noto_Sans_TC({
-  variable: "--font-noto-sans-tc",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  preload: false,
-  display: "swap",
-});
-
-const notoSansJP = Noto_Sans_JP({
-  variable: "--font-noto-sans-jp",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  preload: false,
-  display: "swap",
-});
-
-const notoSansKR = Noto_Sans_KR({
-  variable: "--font-noto-sans-kr",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  preload: false,
-  display: "swap",
-});
-
-const notoSansArabic = Noto_Sans_Arabic({
-  variable: "--font-noto-sans-arabic",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  preload: false,
-  display: "swap",
-});
-
-const notoSansDevanagari = Noto_Sans_Devanagari({
-  variable: "--font-noto-sans-devanagari",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  preload: false,
-  display: "swap",
-});
-
-const notoSansThai = Noto_Sans_Thai({
-  variable: "--font-noto-sans-thai",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  preload: false,
-  display: "swap",
-});
-
-const notoFontClasses: Record<Locale, string> = {
+/**
+ * 各 locale 的系统字体栈（仅用于非 Latin 书写系统）。
+ * Latin 语言直接使用 Geist，无需额外字体栈。
+ */
+const localeFontStacks: Record<Locale, string> = {
+  // Latin 语言 - 直接使用 Geist，无需覆盖
   en: "",
-  "zh-Hans": notoSansSC.variable,
-  "zh-Hant": notoSansTC.variable,
-  ja: notoSansJP.variable,
-  ko: notoSansKR.variable,
-  ar: notoSansArabic.variable,
-  hi: notoSansDevanagari.variable,
-  th: notoSansThai.variable,
   es: "",
   fr: "",
   de: "",
   "pt-BR": "",
   "pt-PT": "",
-  vi: "",
-  id: "",
   it: "",
   nl: "",
   pl: "",
-  ru: "",
   tr: "",
-  uk: "",
-};
-
-const notoFontFallback: Record<Locale, string> = {
-  en: "",
-  "zh-Hans": "var(--font-noto-sans-sc)",
-  "zh-Hant": "var(--font-noto-sans-tc)",
-  ja: "var(--font-noto-sans-jp)",
-  ko: "var(--font-noto-sans-kr)",
-  ar: "var(--font-noto-sans-arabic)",
-  hi: "var(--font-noto-sans-devanagari)",
-  th: "var(--font-noto-sans-thai)",
-  es: "",
-  fr: "",
-  de: "",
-  "pt-BR": "",
-  "pt-PT": "",
   vi: "",
   id: "",
-  it: "",
-  nl: "",
-  pl: "",
+
+  // Cyrillic - system-ui 在各平台均良好支持西里尔字母
   ru: "",
-  tr: "",
   uk: "",
+
+  // 简体中文
+  "zh-Hans":
+    '"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", "WenQuanYi Micro Hei", system-ui, sans-serif',
+
+  // 繁体中文
+  "zh-Hant":
+    '"PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", "Noto Sans CJK TC", "Source Han Sans TC", system-ui, sans-serif',
+
+  // 日文
+  ja: '"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, "Noto Sans CJK JP", "Source Han Sans JP", system-ui, sans-serif',
+
+  // 韩文
+  ko: '"Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", "Source Han Sans KR", system-ui, sans-serif',
+
+  // 阿拉伯文
+  ar: '"Segoe UI", Tahoma, system-ui, sans-serif',
+
+  // 印地语（天城文）
+  hi: '"Kohinoor Devanagari", "Noto Sans Devanagari", Mangal, system-ui, sans-serif',
+
+  // 泰文
+  th: '"Leelawadee UI", Thonburi, system-ui, sans-serif',
 };
 
-export function getLocaleFontVariables(locale: Locale): { fontClasses: string; fontFallback?: string } {
-  const classes = notoFontClasses[locale] || "";
-  const fallback = notoFontFallback[locale] || "";
-  return {
-    fontClasses: classes,
-    fontFallback: fallback || undefined,
-  };
+export function getLocaleFontFallback(locale: Locale): string | undefined {
+  return localeFontStacks[locale] || undefined;
 }

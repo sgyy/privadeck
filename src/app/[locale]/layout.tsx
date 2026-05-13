@@ -9,7 +9,7 @@ import { loadCommonMessages } from "@/lib/i18n/loadMessages";
 import { buildToolNavData } from "@/lib/i18n/toolNavData";
 import { BaseLayout } from "@/components/layout/BaseLayout";
 import { GoogleAnalyticsScripts } from "@/components/shared/GoogleAnalyticsScripts";
-import { geistSans, geistMono, getLocaleFontVariables } from "@/lib/fonts";
+import { geistSans, geistMono, getLocaleFontFallback } from "@/lib/fonts";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -34,7 +34,7 @@ export default async function LocaleLayout({
     buildToolNavData(locale),
   ]);
 
-  const { fontClasses, fontFallback } = getLocaleFontVariables(locale as Locale);
+  const fontFallback = getLocaleFontFallback(locale as Locale);
   const dir = rtlLocales.includes(locale as Locale) ? "rtl" : "ltr";
 
   return (
@@ -42,7 +42,6 @@ export default async function LocaleLayout({
       lang={locale}
       dir={dir}
       suppressHydrationWarning
-      className={fontClasses}
       style={fontFallback ? { ["--font-locale-sans" as string]: fontFallback } : undefined}
     >
       <head>
