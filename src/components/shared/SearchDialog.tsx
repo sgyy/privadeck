@@ -7,15 +7,9 @@ import { Search } from "lucide-react";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 import { trackEvent } from "@/lib/analytics";
 import { Dialog, DialogOverlay, DialogContent, DialogTitle, DialogClose } from "@/components/ui/Dialog";
+import { DynamicToolIcon } from "@/components/shared/DynamicToolIcon";
+import { getCategoryTheme } from "@/lib/theme/categoryThemes";
 import { cn } from "@/lib/utils/cn";
-
-const categoryColors: Record<string, string> = {
-  developer: "bg-purple-500",
-  image: "bg-pink-500",
-  pdf: "bg-red-500",
-  video: "bg-orange-500",
-  audio: "bg-green-500",
-};
 
 interface SearchDialogProps {
   open: boolean;
@@ -154,7 +148,20 @@ export function SearchDialog({ open, onClose, toolNavData }: SearchDialogProps) 
                     i === selectedIndex ? "bg-primary/10 ring-1 ring-primary/20" : "hover:bg-muted",
                   )}
                 >
-                  <span className={cn("h-2 w-2 shrink-0 rounded-full", categoryColors[tool.category] || "bg-gray-500")} />
+                  <span className={cn(
+                    "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg",
+                    getCategoryTheme(tool.category).iconBg,
+                    getCategoryTheme(tool.category).iconBgDark,
+                  )}>
+                    <DynamicToolIcon
+                      name={tool.icon}
+                      className={cn(
+                        getCategoryTheme(tool.category).iconColor,
+                        getCategoryTheme(tool.category).iconColorDark,
+                      )}
+                      size={16}
+                    />
+                  </span>
                   <div className="min-w-0 flex-1">
                     <p className="font-medium">
                       {tool.name}

@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 import { useMemo } from "react";
 import type { ToolDefinition } from "@/lib/registry/types";
 import { Shield } from "lucide-react";
+import { ToolPageHeader } from "./ToolPageHeader";
 import { ToolHowItWorks } from "./ToolHowItWorks";
 import { ToolFeatureCards } from "./ToolFeatureCards";
 import { ToolWhySection } from "./ToolWhySection";
@@ -24,12 +25,12 @@ export function ToolPageShell({ tool, children }: ToolPageShellProps) {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
-          {t("name")}
-        </h1>
-        <p className="mt-2 text-muted-foreground">{t("description")}</p>
-      </div>
+      <ToolPageHeader
+        icon={tool.icon}
+        category={tool.category}
+        name={t("name")}
+        description={t("description")}
+      />
 
       {/* Local-Only privacy indicator */}
       <div className="flex items-center gap-2 rounded-lg border border-emerald-200/70 bg-emerald-50/80 backdrop-blur-sm px-4 py-2.5 dark:border-emerald-800/70 dark:bg-emerald-950/80">

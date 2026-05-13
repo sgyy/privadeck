@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { getToolBySlug } from "@/lib/registry";
 import type { ToolCategory } from "@/lib/registry/types";
-import { Card } from "@/components/ui/Card";
+import { ToolCard } from "@/components/shared/ToolCard";
 import { useToolNavData } from "@/lib/i18n/ToolNavContext";
 import { trackEvent } from "@/lib/analytics";
 
@@ -42,12 +42,12 @@ export function RelatedTools({ slugs, currentSlug, category }: RelatedToolsProps
             href={`/tools/${tool.category}/${tool.slug}`}
             onClick={() => trackEvent("related_tool_click", { from_slug: currentSlug, to_slug: tool.slug, to_category: tool.category })}
           >
-            <Card className="p-4 gradient-border">
-              <h3 className="font-medium text-sm">{tool.navName}</h3>
-              <p className="mt-1 text-xs text-muted-foreground line-clamp-2">
-                {tool.navDescription}
-              </p>
-            </Card>
+            <ToolCard
+              icon={tool.icon}
+              category={tool.category}
+              name={tool.navName}
+              description={tool.navDescription}
+            />
           </Link>
         ))}
       </div>

@@ -5,7 +5,9 @@ import { Link } from "@/i18n/navigation";
 import { getAllTools } from "@/lib/registry";
 import { categories } from "@/lib/registry/categories";
 import { Card } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
+import { ToolCard } from "@/components/shared/ToolCard";
+import { DynamicToolIcon } from "@/components/shared/DynamicToolIcon";
+import { getCategoryTheme } from "@/lib/theme/categoryThemes";
 import { Shield, Zap, Globe } from "lucide-react";
 import { trackToolCardClick } from "@/lib/analytics";
 
@@ -26,22 +28,21 @@ export function HomeUI() {
   return (
     <div className="space-y-12">
       {/* Hero */}
-      <section className="relative text-center py-12 sm:py-16">
+      <section className="relative py-12 sm:py-16">
         <div className="absolute inset-0 dot-pattern opacity-40 dark:opacity-20 pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.04] to-transparent pointer-events-none" />
-        <div className="relative">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-gradient">
-          {t("hero")}
-        </h1>
-        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-          {t("heroSub")}
-        </p>
-
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <FeatureBadge icon={<Shield className="h-4 w-4" />} label={t("featurePrivate")} />
-          <FeatureBadge icon={<Zap className="h-4 w-4" />} label={t("featureInstant")} />
-          <FeatureBadge icon={<Globe className="h-4 w-4" />} label={t("featureNoUpload")} />
-        </div>
+        <div className="relative text-center max-w-3xl mx-auto">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-gradient">
+            {t("hero")}
+          </h1>
+          <p className="mt-4 text-lg text-muted-foreground">
+            {t("heroSub")}
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <FeatureBadge icon={<Shield className="h-4 w-4" />} label={t("featurePrivate")} />
+            <FeatureBadge icon={<Zap className="h-4 w-4" />} label={t("featureInstant")} />
+            <FeatureBadge icon={<Globe className="h-4 w-4" />} label={t("featureNoUpload")} />
+          </div>
         </div>
       </section>
 
@@ -59,23 +60,17 @@ export function HomeUI() {
                   key={`${tool.category}-${tool.slug}`}
                   href={`/tools/${tool.category}/${tool.slug}`}
                   onClick={() => trackToolCardClick("home", tool.slug, tool.category, i)}
+                  className="animate-fade-in"
+                  style={{ animationDelay: `${i * 50}ms` }}
                 >
-                  <Card
-                    className="p-4 h-full gradient-border animate-fade-in"
-                    style={{ animationDelay: `${i * 50}ms` }}
-                  >
-                    <div className="flex-1 min-w-0">
-                      <h3 className="font-medium">
-                        {tt(`${tool.category}.${tool.slug}.name`)}
-                      </h3>
-                      <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
-                        {tt(`${tool.category}.${tool.slug}.description`)}
-                      </p>
-                      <Badge variant="secondary" className="mt-2">
-                        {tcat(`${tool.category}.name`)}
-                      </Badge>
-                    </div>
-                  </Card>
+                  <ToolCard
+                    icon={tool.icon}
+                    category={tool.category}
+                    name={tt(`${tool.category}.${tool.slug}.name`)}
+                    description={tt(`${tool.category}.${tool.slug}.description`)}
+                    showBadge
+                    badgeLabel={tcat(`${tool.category}.name`)}
+                  />
                 </Link>
               ))}
             </div>
@@ -97,19 +92,14 @@ export function HomeUI() {
                 href={`/tools/${tool.category}/${tool.slug}`}
                 onClick={() => trackToolCardClick("home", tool.slug, tool.category, i)}
               >
-                <Card className="p-4 h-full gradient-border">
-                  <div className="flex-1 min-w-0">
-                    <h3 className="font-medium">
-                      {tt(`${tool.category}.${tool.slug}.name`)}
-                    </h3>
-                    <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
-                      {tt(`${tool.category}.${tool.slug}.description`)}
-                    </p>
-                    <Badge variant="secondary" className="mt-2">
-                      {tcat(`${tool.category}.name`)}
-                    </Badge>
-                  </div>
-                </Card>
+                <ToolCard
+                  icon={tool.icon}
+                  category={tool.category}
+                  name={tt(`${tool.category}.${tool.slug}.name`)}
+                  description={tt(`${tool.category}.${tool.slug}.description`)}
+                  showBadge
+                  badgeLabel={tcat(`${tool.category}.name`)}
+                />
               </Link>
             );
           })}
@@ -122,14 +112,22 @@ export function HomeUI() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((cat) => {
             const catTools = allTools.filter((t) => t.category === cat.key);
+            const theme = getCategoryTheme(cat.key);
             return (
               <Link key={cat.key} href={`/tools/${cat.key}`}>
-                <Card className="p-5 gradient-border">
-                  <h3 className="font-semibold">{tcat(`${cat.key}.name`)}</h3>
+                <Card className="p-5 group hover:shadow-[var(--shadow-card-hover)] transition-all duration-200">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div
+                      className={`h-10 w-10 rounded-lg flex items-center justify-center ${theme.iconBg} ${theme.iconBgDark}`}
+                    >
+                      <DynamicToolIcon name={cat.icon} className={`${theme.iconColor} ${theme.iconColorDark}`} size={20} />
+                    </div>
+                    <h3 className="font-semibold">{tcat(`${cat.key}.name`)}</h3>
+                  </div>
                   <p className="mt-1 text-sm text-muted-foreground">
                     {tcat(`${cat.key}.description`)}
                   </p>
-                  <p className="mt-3 text-xs text-primary">
+                  <p className="mt-3 text-xs font-medium text-primary">
                     {t("toolCount", { count: catTools.length })}
                   </p>
                 </Card>

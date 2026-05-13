@@ -1,0 +1,118 @@
+"use client";
+
+import type { LucideIcon } from "lucide-react";
+import {
+  Volume2,
+  FileAudio,
+  FileVideo,
+  Scaling,
+  FileDown,
+  Scissors,
+  Stamp,
+  Video,
+  AudioLines,
+  Hash,
+  FileImage,
+  Film,
+  FileSearch,
+  PenLine,
+  ImageDown,
+  Palette,
+  Binary,
+  ArrowUpDown,
+  Crop,
+  FileOutput,
+  Code,
+  RotateCw,
+  Type,
+  Braces,
+  ImagePlus,
+  CaseSensitive,
+  BookOpen,
+  Link,
+  FileText,
+  FileCode,
+  FilePlus2,
+  FilePenLine,
+  Grid2x2,
+  LayoutGrid,
+  Regex,
+  FileCode2,
+  FileDiff,
+  Circle,
+  Square,
+  Contrast,
+  Clock,
+  Columns,
+  ScanText,
+  Image,
+  Table,
+  FlipHorizontal2,
+  Grid3x3,
+  Music,
+} from "lucide-react";
+
+const ICON_MAP: Record<string, LucideIcon> = {
+  Volume2,
+  FileAudio,
+  FileVideo,
+  Scaling,
+  FileDown,
+  Scissors,
+  Stamp,
+  Video,
+  AudioLines,
+  Hash,
+  FileImage,
+  Film,
+  FileSearch,
+  PenLine,
+  ImageDown,
+  Palette,
+  Binary,
+  ArrowUpDown,
+  Crop,
+  FileOutput,
+  Code,
+  RotateCw,
+  Type,
+  Braces,
+  ImagePlus,
+  CaseSensitive,
+  BookOpen,
+  Link,
+  FileText,
+  FileCode,
+  FilePlus2,
+  FilePenLine,
+  Grid2x2,
+  LayoutGrid,
+  Regex,
+  FileCode2,
+  FileDiff,
+  Circle,
+  Square,
+  Contrast,
+  Clock,
+  Columns,
+  ScanText,
+  Image,
+  Table,
+  FlipHorizontal2,
+  Grid3x3,
+  Music,
+};
+
+interface DynamicToolIconProps {
+  name: string;
+  className?: string;
+  size?: number;
+}
+
+export function DynamicToolIcon({ name, className = "", size = 20 }: DynamicToolIconProps) {
+  const IconComponent = ICON_MAP[name];
+  if (!IconComponent) {
+    return <span className={`inline-block h-5 w-5 ${className}`}>&#8226;</span>;
+  }
+  return <IconComponent className={className} size={size} />;
+}

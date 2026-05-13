@@ -3,8 +3,10 @@ import { useTranslations, NextIntlClientProvider } from "next-intl";
 import { getToolsByCategory } from "@/lib/registry";
 import { categories } from "@/lib/registry/categories";
 import { locales } from "@/i18n/routing";
-import { Card } from "@/components/ui/Card";
 import { ToolCardLink } from "@/components/tool/ToolCardLink";
+import { ToolCard } from "@/components/shared/ToolCard";
+import { DynamicToolIcon } from "@/components/shared/DynamicToolIcon";
+import { getCategoryTheme } from "@/lib/theme/categoryThemes";
 import { generateCategoryMetadata } from "@/lib/seo/metadata";
 import type { ToolCategory } from "@/lib/registry/types";
 import { loadCommonMessages, loadCategoryMessages } from "@/lib/i18n/loadMessages";
@@ -68,14 +70,27 @@ function CategoryPageUI({ category }: { category: ToolCategory }) {
   const tt = useTranslations("tools");
   const tCommon = useTranslations("common");
   const tools = getToolsByCategory(category);
+  const theme = getCategoryTheme(category);
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
-          {tc(`${category}.name`)}
-        </h1>
-        <p className="mt-2 text-muted-foreground">
+      {/* Category Hero Banner */}
+      <div className={`rounded-2xl border border-border/50 bg-gradient-to-br ${theme.heroBg} ${theme.heroBgDark} p-6 sm:p-8`}>
+        <div className="flex items-center gap-3 mb-3">
+          <div
+            className={`h-11 w-11 rounded-xl flex items-center justify-center ${theme.iconBg} ${theme.iconBgDark}`}
+          >
+            <DynamicToolIcon
+              name={categories.find((c) => c.key === category)?.icon || "Code"}
+              className={`${theme.iconColor} ${theme.iconColorDark}`}
+              size={22}
+            />
+          </div>
+          <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
+            {tc(`${category}.name`)}
+          </h1>
+        </div>
+        <p className="text-muted-foreground">
           {tc(`${category}.description`)}
         </p>
       </div>
@@ -93,14 +108,12 @@ function CategoryPageUI({ category }: { category: ToolCategory }) {
             position={i}
             from="category"
           >
-            <Card className="p-4 transition-colors hover:bg-muted/50 h-full">
-              <h3 className="font-medium">
-                {tt(`${category}.${tool.slug}.name`)}
-              </h3>
-              <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
-                {tt(`${category}.${tool.slug}.description`)}
-              </p>
-            </Card>
+            <ToolCard
+              icon={tool.icon}
+              category={category}
+              name={tt(`${category}.${tool.slug}.name`)}
+              description={tt(`${category}.${tool.slug}.description`)}
+            />
           </ToolCardLink>
         ))}
       </div>

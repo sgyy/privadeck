@@ -25,6 +25,8 @@ pnpm lint         # ESLint 代码检查
 2. 在 `src/lib/registry/index.ts` 中添加 import 和数组条目
 3. 在全部 21 个 locale 的翻译文件中添加 `tools.{category}.{slug}` 下的翻译键
 
+`ToolDefinition.icon` 是 lucide 图标名字符串。UI 通过 `src/components/shared/DynamicToolIcon.tsx` 的 `ICON_MAP` 查表渲染——如果工具用了 map 中尚未收录的图标名，UI 会静默 fallback 成 `•`。**添加新图标的工具时，必须同步把图标加到 `DynamicToolIcon.tsx` 的 import 和 ICON_MAP 中。**
+
 **添加新分类**需要在 `src/lib/registry/categories.ts` 和 `types.ts` 的 `ToolCategory` 类型中添加，以及所有 locale 文件中的 `categories.{key}` 翻译。
 
 ### 服务端/客户端边界

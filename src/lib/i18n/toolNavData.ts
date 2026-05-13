@@ -1,6 +1,8 @@
+import type { ToolCategory } from "@/lib/registry/types";
+
 export interface ToolNavItem {
   slug: string;
-  category: string;
+  category: ToolCategory;
   icon: string;
   featured: boolean;
   name: string;

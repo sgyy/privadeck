@@ -2,12 +2,14 @@
 
 import { useTranslations } from "next-intl";
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";
-import { Menu, Search, Shield, ChevronDown, Share2, ImageDown, FileOutput, Scaling, Crop, Scissors, FileDown, Film, FileAudio, AudioLines, FilePlus2, FileImage, Braces, Binary, Hash, FileVideo, Volume2, Link as LinkIcon } from "lucide-react";
+import { Menu, Search, Shield, ChevronDown, Share2 } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { LanguageSwitcher } from "@/components/shared/LanguageSwitcher";
 import { categories } from "@/lib/registry/categories";
 import type { ToolCategory } from "@/lib/registry/types";
+import { DynamicToolIcon } from "@/components/shared/DynamicToolIcon";
+import { getCategoryTheme } from "@/lib/theme/categoryThemes";
 import { cn } from "@/lib/utils/cn";
 import type { ToolNavItem } from "@/lib/i18n/toolNavData";
 import { trackEvent, trackToolCardClick } from "@/lib/analytics";
@@ -125,6 +127,7 @@ function CategoryDropdown({
 }) {
   const t = useTranslations("common");
   const tNav = useTranslations("nav");
+  const theme = getCategoryTheme(category);
 
   const featured = tools.filter((item) => item.featured);
   const others = tools.filter((item) => !item.featured);
@@ -188,8 +191,8 @@ function CategoryDropdown({
                         onClick={() => trackToolCardClick("header_menu", tool.slug, category)}
                         className="flex items-start gap-3 rounded-lg px-3 py-2.5 transition-colors hover:bg-muted"
                       >
-                        <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent">
-                          <ToolIcon name={tool.icon} />
+                        <div className={cn("mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg", theme.iconBg, theme.iconBgDark)}>
+                          <DynamicToolIcon name={tool.icon} className={cn(theme.iconColor, theme.iconColorDark)} size={16} />
                         </div>
                         <div className="min-w-0">
                           <div className="text-sm font-medium truncate">
@@ -289,16 +292,4 @@ function ShareButton() {
       <Share2 className="h-5 w-5" />
     </button>
   );
-}
-
-const TOOL_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
-  ImageDown, FileOutput, Scaling, Crop, Scissors, FileDown, Film,
-  FileAudio, AudioLines, FilePlus2, FileImage, Braces, Binary, Hash,
-  FileVideo, Volume2, Link: LinkIcon,
-};
-
-function ToolIcon({ name }: { name: string }) {
-  const Icon = TOOL_ICONS[name];
-  if (Icon) return <Icon className="h-4 w-4" />;
-  return <span className="text-sm font-bold text-accent-foreground">•</span>;
 }
