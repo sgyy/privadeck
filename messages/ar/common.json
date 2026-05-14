@@ -67,11 +67,11 @@
     "ffmpegLoading": "Initializing secure processing engine...",
     "ffmpegLoadingHint": "One-time WebAssembly download (~30MB)",
     "categoryIntro": {
-      "developer": "A comprehensive suite of developer utilities that run entirely in your browser. Format, convert, encode, decode, and analyze data without sending anything to a server. Perfect for handling sensitive configuration files, API keys, and proprietary code.",
-      "image": "Professional image editing tools powered by client-side processing. Resize, compress, convert, crop, and enhance your images with zero upload latency and complete privacy. Supports all major formats including HEIC, WebP, SVG, and more.",
-      "pdf": "Complete PDF toolkit for merging, splitting, compressing, and editing PDF documents. All processing happens locally in your browser — ideal for confidential contracts, financial documents, and sensitive business files.",
-      "video": "Browser-based video editing powered by FFmpeg WebAssembly. Trim, compress, convert, and transform videos without uploading to any server. Supports MP4, WebM, MOV, and more.",
-      "audio": "Edit and convert audio files directly in your browser using FFmpeg WebAssembly. Trim, convert formats, and extract audio from video — all processed locally on your device."
+      "developer": "مجموعة شاملة من أدوات المطورين تعمل بالكامل في متصفحك. تنسيق JSON والتحقق منه، وترميز وفك ترميز Base64 وعناوين URL، واختبار التعبيرات النمطية (regex)، والتحويل بين YAML وJSON وXML، وإنشاء تجزئات التشفير، ومعاينة Markdown، والمزيد — دون إرسال أي بيانات إلى خادم. مثالية لمفاتيح API وملفات التكوين والتعليمات البرمجية الاحتكارية.",
+      "image": "أدوات تحرير صور احترافية مدعومة بالكامل من متصفحك. تغيير الحجم والضغط وتحسين الصور؛ والتحويل بين صيغ HEIC وWebP وPNG وJPG وSVG؛ والقص وإضافة العلامات المائية وإزالة بيانات EXIF الوصفية، والمزيد — بدون أي تأخير في التحميل ومع خصوصية كاملة.",
+      "pdf": "مجموعة أدوات PDF كاملة تعمل بالكامل في متصفحك. دمج المستندات وتقسيمها، واستخراج الصفحات وإعادة ترتيبها، وضغط الملفات، وإضافة العلامات المائية وأرقام الصفحات، والتحويل بين PDF والصور، والتوقيع الإلكتروني — كل ذلك يتم معالجته محلياً. مثالية للعقود السرية والتقارير المالية وملفات الأعمال الحساسة.",
+      "video": "تحرير فيديو في المتصفح مدعوم بـ FFmpeg WebAssembly. قص المقاطع، وضغط الفيديو، والتحويل بين صيغ MP4 وMKV وAVI، والتدوير، وكتم الصوت، وإنشاء صور GIF متحركة، وتغيير الحجم — دون تحميل إطار واحد إلى أي خادم. يدعم MP4 وWebM وMOV والمزيد.",
+      "audio": "تحرير وتحويل الملفات الصوتية في متصفحك باستخدام FFmpeg WebAssembly. قص المقاطع الصوتية، والتحويل بين صيغ MP3 وWAV وOGG وAAC وFLAC، واستخراج المسارات الصوتية من الفيديو، وضبط مستوى الصوت — كل ذلك تتم معالجته محلياً، دون الحاجة إلى أي تحميل."
     },
     "ffmpegLoadError": "Failed to load processing engine. Please refresh and try again.",
     "unsupportedVideoCodec": "يستخدم هذا الفيديو ترميزًا غير مدعوم من متصفحك. يرجى تجربة متصفح آخر أو تحويل الفيديو إلى تنسيق مدعوم (مثل H.264).",
@@ -132,27 +132,27 @@
   "categories": {
     "developer": {
       "name": "أدوات المطورين",
-      "description": "تنسيق البيانات وترميزها وفك ترميزها",
+      "description": "تنسيق البيانات وتحويلها وترميزها وفك ترميزها وتحليلها",
       "keywords": "منسق JSON, مشفر base64, مفكك رموز url, ocr, مستخرج zip, مولد الهاش, مختبر regex, طابع زمني يونكس, معاينة markdown, عداد الكلمات"
     },
     "image": {
       "name": "أدوات الصور",
-      "description": "تحويل الصور وضغطها وتحريرها",
+      "description": "تغيير حجم الصور وضغطها وتحويلها وقصها وتحسينها",
       "keywords": "ضاغط الصور, تغيير حجم الصور, أداة قص الصور, محول webp, png إلى jpg, heic إلى jpg, إضافة علامة مائية, إزالة exif, قص دائري"
     },
     "pdf": {
       "name": "أدوات PDF",
-      "description": "دمج وتقسيم وتحويل وتحرير ملفات PDF",
+      "description": "دمج وتقسيم وضغط وتحويل وتحرير مستندات PDF",
       "keywords": "دمج pdf, تقسيم pdf, ضغط pdf, pdf إلى صورة, pdf إلى word, صور إلى pdf, إضافة أرقام الصفحات, علامة مائية pdf, توقيع pdf"
     },
     "video": {
       "name": "أدوات الفيديو",
-      "description": "قص وتحويل وتحرير الفيديو",
+      "description": "قص وضغط وتحويل وتدوير وتحرير مقاطع الفيديو",
       "keywords": "قص الفيديو, ضاغط الفيديو, فيديو إلى gif, فيديو إلى webp, تدوير الفيديو, كتم صوت الفيديو, تغيير حجم الفيديو"
     },
     "audio": {
       "name": "أدوات الصوت",
-      "description": "قص وتحويل واستخراج الصوت",
+      "description": "قص وتحويل واستخراج وضبط الملفات الصوتية",
       "keywords": "قص الصوت, محول الصوت, مقطع mp3, استخراج الصوت من الفيديو, معزز الصوت, wav إلى mp3"
     }
   },

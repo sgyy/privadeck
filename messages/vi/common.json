@@ -67,11 +67,11 @@
     "ffmpegLoading": "Đang khởi tạo công cụ xử lý bảo mật...",
     "ffmpegLoadingHint": "Tải WebAssembly lần đầu (~30MB)",
     "categoryIntro": {
-      "developer": "Bộ công cụ dành cho nhà phát triển chạy hoàn toàn trên trình duyệt. Định dạng, chuyển đổi, mã hóa, giải mã và phân tích dữ liệu mà không cần gửi bất cứ thứ gì lên máy chủ. Lý tưởng để xử lý tệp cấu hình nhạy cảm, khóa API và mã nguồn riêng.",
-      "image": "Công cụ chỉnh sửa ảnh chuyên nghiệp chạy trên trình duyệt. Thay đổi kích thước, nén, chuyển đổi, cắt và nâng cao chất lượng ảnh với độ trễ bằng không và bảo mật tuyệt đối. Hỗ trợ mọi định dạng phổ biến bao gồm HEIC, WebP, SVG và nhiều hơn nữa.",
-      "pdf": "Bộ công cụ PDF hoàn chỉnh để gộp, tách, nén và chỉnh sửa tài liệu PDF. Mọi xử lý đều diễn ra cục bộ trên trình duyệt — lý tưởng cho hợp đồng mật, tài liệu tài chính và tệp kinh doanh nhạy cảm.",
-      "video": "Chỉnh sửa video trên trình duyệt được hỗ trợ bởi FFmpeg WebAssembly. Cắt, nén, chuyển đổi và xử lý video mà không cần tải lên máy chủ. Hỗ trợ MP4, WebM, MOV và nhiều định dạng khác.",
-      "audio": "Chỉnh sửa và chuyển đổi tệp âm thanh trực tiếp trên trình duyệt bằng FFmpeg WebAssembly. Cắt, chuyển đổi định dạng và trích xuất âm thanh từ video — tất cả xử lý cục bộ trên thiết bị của bạn."
+      "developer": "Bộ công cụ toàn diện dành cho nhà phát triển chạy hoàn toàn trong trình duyệt của bạn. Định dạng và xác thực JSON, mã hóa và giải mã Base64 cùng URL, kiểm tra biểu thức chính quy, chuyển đổi giữa YAML, JSON và XML, tạo hash mật mã, xem trước Markdown và hơn thế nữa — mà không gửi bất kỳ dữ liệu nào đến máy chủ. Lý tưởng cho khóa API, tệp cấu hình và mã nguồn độc quyền.",
+      "image": "Công cụ chỉnh sửa ảnh chuyên nghiệp hoàn toàn chạy trong trình duyệt của bạn. Thay đổi kích thước, nén và tối ưu hóa ảnh; chuyển đổi giữa các định dạng HEIC, WebP, PNG, JPG và SVG; cắt, thêm hình mờ, xóa siêu dữ liệu EXIF và hơn thế nữa — với độ trễ tải lên bằng không và quyền riêng tư tuyệt đối.",
+      "pdf": "Bộ công cụ PDF hoàn chỉnh chạy hoàn toàn trong trình duyệt của bạn. Gộp và tách tài liệu, trích xuất và sắp xếp lại trang, nén tệp, thêm hình mờ và số trang, chuyển đổi giữa PDF và ảnh, và ký điện tử — tất cả được xử lý cục bộ. Lý tưởng cho hợp đồng mật, báo cáo tài chính và tệp kinh doanh nhạy cảm.",
+      "video": "Chỉnh sửa video trên trình duyệt được hỗ trợ bởi FFmpeg WebAssembly. Cắt clip, nén video, chuyển đổi giữa các định dạng MP4, MKV và AVI, xoay, tắt tiếng, tạo ảnh GIF động và thay đổi kích thước — mà không cần tải lên bất kỳ khung hình nào đến máy chủ. Hỗ trợ MP4, WebM, MOV và nhiều định dạng khác.",
+      "audio": "Chỉnh sửa và chuyển đổi tệp âm thanh trong trình duyệt của bạn bằng FFmpeg WebAssembly. Cắt clip, chuyển đổi giữa MP3, WAV, OGG, AAC và FLAC, trích xuất bản âm thanh từ video và điều chỉnh âm lượng — tất cả được xử lý cục bộ, không cần tải lên."
     },
     "ffmpegLoadError": "Không thể tải công cụ xử lý. Vui lòng tải lại trang và thử lại.",
     "unsupportedVideoCodec": "Video này sử dụng codec không được trình duyệt của bạn hỗ trợ. Vui lòng thử trình duyệt khác hoặc chuyển đổi video sang định dạng được hỗ trợ (ví dụ: H.264).",
@@ -132,27 +132,27 @@
   "categories": {
     "developer": {
       "name": "Công cụ lập trình",
-      "description": "Định dạng, mã hóa và giải mã dữ liệu",
+      "description": "Định dạng, chuyển đổi, mã hóa, giải mã và phân tích dữ liệu",
       "keywords": "trình định dạng json, bộ mã hóa base64, bộ giải mã url, ocr, trình giải nén zip, trình tạo mã băm, trình kiểm tra regex, dấu thời gian unix, xem trước markdown, bộ đếm từ"
     },
     "image": {
       "name": "Công cụ hình ảnh",
-      "description": "Chuyển đổi, nén và chỉnh sửa hình ảnh",
+      "description": "Thay đổi kích thước, nén, chuyển đổi, cắt và nâng cao hình ảnh",
       "keywords": "nén ảnh, thay đổi kích thước ảnh, cắt ảnh, chuyển đổi webp, png sang jpg, heic sang jpg, thêm hình mờ, xóa exif, cắt hình tròn"
     },
     "pdf": {
       "name": "Công cụ PDF",
-      "description": "Gộp, tách, chuyển đổi và chỉnh sửa file PDF",
+      "description": "Gộp, tách, nén, chuyển đổi và chỉnh sửa tài liệu PDF",
       "keywords": "gộp pdf, tách pdf, nén pdf, pdf sang ảnh, pdf sang word, ảnh sang pdf, thêm số trang, hình mờ pdf, ký pdf"
     },
     "video": {
       "name": "Công cụ Video",
-      "description": "Cắt, chuyển đổi và chỉnh sửa video",
+      "description": "Cắt, nén, chuyển đổi, xoay và chỉnh sửa video",
       "keywords": "cắt video, nén video, video sang gif, video sang webp, xoay video, tắt tiếng video, thay đổi kích thước video"
     },
     "audio": {
       "name": "Công cụ Âm thanh",
-      "description": "Cắt, chuyển đổi và trích xuất âm thanh",
+      "description": "Cắt, chuyển đổi, trích xuất và điều chỉnh tệp âm thanh",
       "keywords": "cắt âm thanh, chuyển đổi âm thanh, cắt mp3, trích xuất âm thanh từ video, tăng âm lượng, wav sang mp3"
     }
   },

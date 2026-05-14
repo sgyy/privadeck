@@ -67,11 +67,11 @@
     "ffmpegLoading": "Inicjalizowanie bezpiecznego silnika przetwarzania...",
     "ffmpegLoadingHint": "Jednorazowe pobieranie WebAssembly (~30MB)",
     "categoryIntro": {
-      "developer": "Kompleksowy zestaw narzędzi deweloperskich działających w całości w przeglądarce. Formatuj, konwertuj, koduj, dekoduj i analizuj dane bez przesyłania ich na serwer. Idealne do obsługi poufnych plików konfiguracyjnych, kluczy API i kodu własnościowego.",
-      "image": "Profesjonalne narzędzia do edycji obrazów oparte na przetwarzaniu po stronie klienta. Zmieniaj rozmiar, kompresuj, konwertuj, przycinaj i ulepszaj obrazy bez opóźnień związanych z przesyłaniem i z pełną prywatnością. Obsługuje wszystkie główne formaty, w tym HEIC, WebP, SVG i inne.",
-      "pdf": "Kompletny zestaw narzędzi PDF do łączenia, dzielenia, kompresowania i edycji dokumentów PDF. Całe przetwarzanie odbywa się lokalnie w przeglądarce — idealne dla poufnych umów, dokumentów finansowych i wrażliwych plików biznesowych.",
-      "video": "Edycja wideo w przeglądarce oparta na FFmpeg WebAssembly. Przycinaj, kompresuj, konwertuj i transformuj wideo bez przesyłania na serwer. Obsługuje MP4, WebM, MOV i inne.",
-      "audio": "Edytuj i konwertuj pliki audio bezpośrednio w przeglądarce za pomocą FFmpeg WebAssembly. Przycinaj, konwertuj formaty i wyodrębniaj audio z wideo — wszystko przetwarzane lokalnie na Twoim urządzeniu."
+      "developer": "Kompleksowy zestaw narzędzi deweloperskich działających w całości w przeglądarce. Formatuj i waliduj JSON, koduj i dekoduj Base64 oraz URL, testuj wyrażenia regularne, konwertuj pomiędzy YAML, JSON i XML, generuj skróty kryptograficzne, podglądaj Markdown i więcej — bez wysyłania jakichkolwiek danych na serwer. Idealny do obsługi kluczy API, plików konfiguracyjnych i kodu własnościowego.",
+      "image": "Profesjonalne narzędzia do edycji obrazów działające w całości w przeglądarce. Zmieniaj rozmiar, kompresuj i optymalizuj obrazy; konwertuj pomiędzy formatami HEIC, WebP, PNG, JPG i SVG; przycinaj, dodawaj znaki wodne, usuwaj metadane EXIF i więcej — z zerowym opóźnieniem przesyłania i pełną prywatnością.",
+      "pdf": "Kompletny zestaw narzędzi PDF działający w całości w przeglądarce. Scalaj i dziel dokumenty, wyodrębniaj i zmieniaj kolejność stron, kompresuj pliki, dodawaj znaki wodne i numery stron, konwertuj pomiędzy PDF a obrazami oraz podpisuj elektronicznie — wszystko przetwarzane lokalnie. Idealny do poufnych umów, raportów finansowych i wrażliwych plików biznesowych.",
+      "video": "Edycja wideo w przeglądarce oparta na FFmpeg WebAssembly. Przycinaj klipy, kompresuj filmy, konwertuj pomiędzy formatami MP4, MKV i AVI, obracaj, wyciszaj, twórz animowane GIF-y i zmieniaj rozmiar — bez przesyłania ani jednej klatki na jakikolwiek serwer. Obsługuje MP4, WebM, MOV i inne.",
+      "audio": "Edytuj i konwertuj pliki audio w przeglądarce za pomocą FFmpeg WebAssembly. Przycinaj klipy, konwertuj pomiędzy MP3, WAV, OGG, AAC i FLAC, wyodrębniaj ścieżki audio z wideo i dostosowuj głośność — wszystko przetwarzane lokalnie, bez konieczności przesyłania."
     },
     "ffmpegLoadError": "Nie udało się załadować silnika przetwarzania. Odśwież stronę i spróbuj ponownie.",
     "unsupportedVideoCodec": "Ten film używa kodeka nieobsługiwanego przez Twoją przeglądarkę. Spróbuj innej przeglądarki lub przekonwertuj film na obsługiwany format (np. H.264).",
@@ -132,27 +132,27 @@
   "categories": {
     "developer": {
       "name": "Narzędzia deweloperskie",
-      "description": "Formatuj, koduj i dekoduj dane",
+      "description": "Formatowanie, konwersja, kodowanie, dekodowanie i analiza danych",
       "keywords": "formater json, koder base64, dekoder url, ocr, ekstraktor zip, generator skrótów, tester regex, znacznik czasu unix, podgląd markdown, licznik słów"
     },
     "image": {
       "name": "Narzędzia graficzne",
-      "description": "Konwertuj, kompresuj i edytuj obrazy",
+      "description": "Zmiana rozmiaru, kompresja, konwersja, przycinanie i ulepszanie obrazów",
       "keywords": "kompresor obrazów, zmiana rozmiaru obrazu, przycinanie obrazu, konwerter webp, png na jpg, heic na jpg, dodaj znak wodny, usuń exif, przycinanie do koła"
     },
     "pdf": {
       "name": "Narzędzia PDF",
-      "description": "Łączenie, dzielenie, konwersja i edycja plików PDF",
+      "description": "Scalanie, dzielenie, kompresja, konwersja i edycja dokumentów PDF",
       "keywords": "łączanie pdf, dzielenie pdf, kompresja pdf, pdf na obraz, pdf na word, obrazy na pdf, numeracja stron, znak wodny pdf, podpis pdf"
     },
     "video": {
       "name": "Narzędzia wideo",
-      "description": "Przycinanie, konwersja i edycja wideo",
+      "description": "Przycinanie, kompresja, konwersja, obracanie i edycja wideo",
       "keywords": "przycinanie wideo, kompresor wideo, wideo na gif, wideo na webp, obracanie wideo, wyciszanie wideo, zmiana rozmiaru wideo"
     },
     "audio": {
       "name": "Narzędzia audio",
-      "description": "Przycinanie, konwersja i ekstrakcja audio",
+      "description": "Przycinanie, konwersja, ekstrakcja i dostosowywanie plików audio",
       "keywords": "przycinanie audio, konwerter audio, wycinanie mp3, wyodrębnianie dźwięku z wideo, wzmacniacz głośności, wav na mp3"
     }
   },

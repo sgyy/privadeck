@@ -67,11 +67,11 @@
     "ffmpegLoading": "Güvenli işleme motoru başlatılıyor...",
     "ffmpegLoadingHint": "Tek seferlik WebAssembly indirmesi (~30 MB)",
     "categoryIntro": {
-      "developer": "Tamamen tarayıcınızda çalışan kapsamlı bir geliştirici araçları paketi. Herhangi bir şeyi sunucuya göndermeden veri biçimlendirin, dönüştürün, kodlayın, çözün ve analiz edin. Hassas yapılandırma dosyaları, API anahtarları ve tescilli kodların işlenmesi için idealdir.",
-      "image": "İstemci tarafı işlemeyle güçlendirilmiş profesyonel görsel düzenleme araçları. Sıfır yükleme gecikmesi ve tam gizlilikle görsellerinizi yeniden boyutlandırın, sıkıştırın, dönüştürün, kırpın ve iyileştirin. HEIC, WebP, SVG ve daha fazlası dahil tüm büyük formatları destekler.",
-      "pdf": "PDF belgelerini birleştirme, bölme, sıkıştırma ve düzenleme için eksiksiz bir PDF araç seti. Tüm işlemler tarayıcınızda yerel olarak gerçekleşir; gizli sözleşmeler, finansal belgeler ve hassas iş dosyaları için idealdir.",
-      "video": "FFmpeg WebAssembly ile güçlendirilmiş tarayıcı tabanlı video düzenleme. Herhangi bir sunucuya yüklemeden videoları kırpın, sıkıştırın, dönüştürün ve dönüştürün. MP4, WebM, MOV ve daha fazlasını destekler.",
-      "audio": "FFmpeg WebAssembly kullanarak ses dosyalarını doğrudan tarayıcınızda düzenleyin ve dönüştürün. Sesi kırpın, format dönüştürün ve videodan ses çıkarın; tüm işlemler cihazınızda yerel olarak yapılır."
+      "developer": "Tamamen tarayıcınızda çalışan kapsamlı bir geliştirici araçları paketi. JSON'u biçimlendirin ve doğrulayın, Base64 ve URL'leri kodlayın ve çözün, düzenli ifadeleri test edin, YAML, JSON ve XML arasında dönüştürme yapın, kriptografik hash'ler oluşturun, Markdown önizlemesi yapın ve daha fazlası — hiçbir veriyi sunucuya göndermeden. API anahtarları, yapılandırma dosyaları ve tescilli kodlar için idealdir.",
+      "image": "Tamamen tarayıcınız tarafından desteklenen profesyonel görsel düzenleme araçları. Görselleri yeniden boyutlandırın, sıkıştırın ve optimize edin; HEIC, WebP, PNG, JPG ve SVG formatları arasında dönüştürün; kırpın, filigran ekleyin, EXIF meta verilerini kaldırın ve daha fazlası — sıfır yükleme gecikmesi ve tam gizlilikle.",
+      "pdf": "Tamamen tarayıcınızda çalışan eksiksiz bir PDF araç seti. Belgeleri birleştirin ve bölün, sayfaları ayıklayın ve yeniden düzenleyin, dosyaları sıkıştırın, filigran ve sayfa numaraları ekleyin, PDF ve görseller arasında dönüştürün ve elektronik olarak imzalayın — tümü yerel olarak işlenir. Gizli sözleşmeler, finansal raporlar ve hassas iş dosyaları için idealdir.",
+      "video": "FFmpeg WebAssembly ile desteklenen tarayıcı tabanlı video düzenleme. Klipleri kırpın, videoları sıkıştırın, MP4, MKV ve AVI formatları arasında dönüştürün, döndürün, sessize alın, animasyonlu GIF'ler oluşturun ve yeniden boyutlandırın — hiçbir sunucuya tek bir kare bile yüklemeden. MP4, WebM, MOV ve daha fazlasını destekler.",
+      "audio": "FFmpeg WebAssembly kullanarak tarayıcınızda ses dosyalarını düzenleyin ve dönüştürün. Klipleri kırpın, MP3, WAV, OGG, AAC ve FLAC arasında dönüştürün, videodan ses parçalarını çıkarın ve ses seviyesini ayarlayın — tümü yerel olarak işlenir, yükleme gerekmez."
     },
     "ffmpegLoadError": "İşleme motoru yüklenemedi. Lütfen sayfayı yenileyip tekrar deneyin.",
     "unsupportedVideoCodec": "Bu video, tarayıcınız tarafından desteklenmeyen bir codec kullanıyor. Lütfen başka bir tarayıcı deneyin veya videoyu desteklenen bir formata (örneğin H.264) dönüştürün.",
@@ -132,27 +132,27 @@
   "categories": {
     "developer": {
       "name": "Geliştirici Araçları",
-      "description": "Verileri biçimlendirin, kodlayın ve çözün",
+      "description": "Verileri biçimlendirme, dönüştürme, kodlama, çözme ve analiz etme",
       "keywords": "json biçimlendirici, base64 kodlayıcı, url çözücü, ocr, zip çıkarıcı, hash oluşturucu, regex test aracı, unix zaman damgası, markdown önizleme, kelime sayacı"
     },
     "image": {
       "name": "Görsel Araçları",
-      "description": "Görselleri dönüştürün, sıkıştırın ve düzenleyin",
+      "description": "Görselleri yeniden boyutlandırma, sıkıştırma, dönüştürme, kırpma ve iyileştirme",
       "keywords": "görsel sıkıştırıcı, görsel boyutlandırıcı, görsel kırpıcı, webp dönüştürücü, png'den jpg'ye, heic'ten jpg'ye, filigran ekle, exif kaldır, dairesel kırpma"
     },
     "pdf": {
       "name": "PDF Araçları",
-      "description": "PDF dosyalarını birleştirin, bölün, dönüştürün ve düzenleyin",
+      "description": "PDF belgelerini birleştirme, bölme, sıkıştırma, dönüştürme ve düzenleme",
       "keywords": "pdf birleştir, pdf böl, pdf sıkıştır, pdf'den görsele, pdf'den word'e, görselden pdf'ye, sayfa numarası ekle, pdf filigranı, pdf imzala"
     },
     "video": {
       "name": "Video Araçları",
-      "description": "Videoları kırpın, dönüştürün ve düzenleyin",
+      "description": "Videoları kırpma, sıkıştırma, dönüştürme, döndürme ve düzenleme",
       "keywords": "video kırpıcı, video sıkıştırıcı, video'dan gif'e, video'dan webp'ye, videoyu döndür, videoyu sessize al, video boyutlandırıcı"
     },
     "audio": {
       "name": "Ses Araçları",
-      "description": "Sesi kırpın, dönüştürün ve çıkarın",
+      "description": "Ses dosyalarını kırpma, dönüştürme, çıkarma ve ayarlama",
       "keywords": "ses kırpıcı, ses dönüştürücü, mp3 kesici, videodan ses çıkar, ses yükseltici, wav'dan mp3'e"
     }
   },

@@ -67,11 +67,11 @@
     "ffmpegLoading": "正在初始化安全處理引擎...",
     "ffmpegLoadingHint": "首次載入 WebAssembly 引擎（約 30MB）",
     "categoryIntro": {
-      "developer": "一套完整的開發者瀏覽器工具。格式化、轉換、編碼、解碼和分析資料，無需將任何內容傳送到伺服器。非常適合處理敏感設定檔、API 金鑰和專有程式碼。",
-      "image": "由客戶端處理驅動的專業圖片編輯工具。調整大小、壓縮、轉換、裁剪和增強圖片，零上傳延遲，完全隱私。支援所有主流格式，包括 HEIC、WebP、SVG 等。",
-      "pdf": "完整的 PDF 工具包，用於合併、拆分、壓縮和編輯 PDF 文件。所有處理均在瀏覽器本機完成——非常適合機密合約、財務文件和敏感商業檔案。",
-      "video": "基於 FFmpeg WebAssembly 的瀏覽器影片編輯工具。修剪、壓縮、轉換和變換影片，無需上傳到任何伺服器。支援 MP4、WebM、MOV 等格式。",
-      "audio": "直接在瀏覽器中使用 FFmpeg WebAssembly 編輯和轉換音訊檔案。修剪、轉換格式、從影片中擷取音訊——全部在您的裝置上本機處理。"
+      "developer": "完全在瀏覽器中運行的開發者工具集。格式化和驗證 JSON、編解碼 Base64 與 URL、測試正則表達式、在 YAML、JSON、XML 之間互相轉換、生成加密雜湊、預覽 Markdown 等——全程無需將任何資料傳送到伺服器。非常適合處理 API 金鑰、設定檔和專有程式碼。",
+      "image": "完全由瀏覽器驅動的專業圖片編輯工具。高效調整、壓縮和最佳化圖片，在 HEIC、WebP、PNG、JPG 和 SVG 格式間轉換，裁剪、添加浮水印、清除 EXIF 中繼資料等——零上傳延遲，完全隱私保護。",
+      "pdf": "完全在瀏覽器中運行的 PDF 工具包。合併與拆分文件、提取與重排頁面、壓縮檔案、添加浮水印和頁碼、PDF 與圖片互轉、電子簽章——全程本機處理。非常適合機密合約、財務報表和敏感商業文件。",
+      "video": "由 FFmpeg WebAssembly 驅動的瀏覽器影片編輯工具。裁剪片段、壓縮影片、在 MP4、MKV、AVI 格式間轉換、旋轉、靜音、製作 GIF 動畫、調整解析度——無需將任何幀上傳到伺服器。支援 MP4、WebM、MOV 等格式。",
+      "audio": "透過 FFmpeg WebAssembly 在瀏覽器中編輯和轉換音訊檔案。裁剪片段、在 MP3、WAV、OGG、AAC、FLAC 間互轉、從影片中提取音訊軌、調節音量——全程本機處理，無需上傳。"
     },
     "ffmpegLoadError": "處理引擎載入失敗，請重新整理頁面後重試。",
     "unsupportedVideoCodec": "此影片使用了您的瀏覽器不支援的編解碼器。請嘗試使用其他瀏覽器或將影片轉換為支援的格式（如 H.264）。",
@@ -132,27 +132,27 @@
   "categories": {
     "developer": {
       "name": "開發者工具",
-      "description": "格式化、編碼和解碼資料",
+      "description": "格式化、轉換、編碼、解碼和分析資料",
       "keywords": "json 格式化, base64 編碼器, url 解碼器, ocr, zip 解壓, 雜湊產生器, regex 測試器, unix 時間戳, markdown 預覽, 字數統計"
     },
     "image": {
       "name": "圖片工具",
-      "description": "轉換、壓縮和編輯圖片",
+      "description": "調整尺寸、壓縮、轉換、裁剪和增強圖片",
       "keywords": "圖片壓縮, 圖片調整大小, 圖片裁剪, webp 轉換器, png 轉 jpg, heic 轉 jpg, 新增浮水印, 移除 exif, 圓形裁剪"
     },
     "pdf": {
       "name": "PDF 工具",
-      "description": "合併、拆分、轉換和編輯 PDF 檔案",
+      "description": "合併、拆分、壓縮、轉換和編輯 PDF 文件",
       "keywords": "合併 pdf, 拆分 pdf, 壓縮 pdf, pdf 轉圖片, pdf 轉 word, 圖片轉 pdf, 新增頁碼, pdf 浮水印, 簽署 pdf"
     },
     "video": {
       "name": "影片工具",
-      "description": "裁剪、轉換和編輯影片",
+      "description": "裁剪、壓縮、轉換、旋轉和編輯影片",
       "keywords": "影片裁剪, 影片壓縮, 影片轉 gif, 影片轉 webp, 旋轉影片, 影片靜音, 影片調整大小"
     },
     "audio": {
       "name": "音訊工具",
-      "description": "裁剪、轉換和擷取音訊",
+      "description": "裁剪、轉換、擷取和調整音訊檔案",
       "keywords": "音訊裁剪, 音訊轉換器, mp3 剪輯, 從影片擷取音訊, 音量增強, wav 轉 mp3"
     }
   },

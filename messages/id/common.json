@@ -67,11 +67,11 @@
     "ffmpegLoading": "Menginisialisasi mesin pemrosesan aman...",
     "ffmpegLoadingHint": "Unduhan WebAssembly sekali (~30MB)",
     "categoryIntro": {
-      "developer": "Rangkaian lengkap alat pengembang yang berjalan sepenuhnya di browser Anda. Format, konversi, enkode, dekode, dan analisis data tanpa mengirim apa pun ke server. Sempurna untuk menangani file konfigurasi sensitif, kunci API, dan kode proprietary.",
-      "image": "Alat penyunting gambar profesional yang didukung pemrosesan sisi klien. Ubah ukuran, kompres, konversi, potong, dan tingkatkan gambar Anda tanpa latensi unggah dan privasi lengkap. Mendukung semua format utama termasuk HEIC, WebP, SVG, dan lainnya.",
-      "pdf": "Perangkat lengkap PDF untuk menggabungkan, memisahkan, mengompres, dan menyunting dokumen PDF. Semua pemrosesan terjadi secara lokal di browser Anda — ideal untuk kontrak rahasia, dokumen keuangan, dan file bisnis sensitif.",
-      "video": "Penyuntingan video berbasis browser yang didukung FFmpeg WebAssembly. Potong, kompres, konversi, dan transformasi video tanpa mengunggah ke server mana pun. Mendukung MP4, WebM, MOV, dan lainnya.",
-      "audio": "Sunting dan konversi file audio langsung di browser Anda menggunakan FFmpeg WebAssembly. Potong, konversi format, dan ekstrak audio dari video — semua diproses secara lokal di perangkat Anda."
+      "developer": "Rangkaian lengkap alat pengembang yang berjalan sepenuhnya di browser Anda. Format dan validasi JSON, encode dan decode Base64 dan URL, uji ekspresi reguler, konversi antara YAML, JSON, dan XML, hasilkan hash kriptografi, pratinjau Markdown, dan lainnya — tanpa mengirim data apa pun ke server. Ideal untuk kunci API, file konfigurasi, dan kode proprietary.",
+      "image": "Alat pengeditan gambar profesional yang sepenuhnya didukung oleh browser Anda. Ubah ukuran, kompres, dan optimalkan gambar; konversi antara format HEIC, WebP, PNG, JPG, dan SVG; potong, tambahkan watermark, hapus metadata EXIF, dan lainnya — dengan latensi unggah nol dan privasi lengkap.",
+      "pdf": "Toolkit PDF lengkap yang berjalan sepenuhnya di browser Anda. Gabung dan pisah dokumen, ekstrak dan atur ulang halaman, kompres file, tambahkan watermark dan nomor halaman, konversi antara PDF dan gambar, dan tanda tangan elektronik — semua diproses secara lokal. Ideal untuk kontrak rahasia, laporan keuangan, dan file bisnis sensitif.",
+      "video": "Pengeditan video berbasis browser yang didukung oleh FFmpeg WebAssembly. Potong klip, kompres video, konversi antara format MP4, MKV, dan AVI, putar, bisukan, buat GIF animasi, dan ubah ukuran — tanpa mengunggah satu frame pun ke server mana pun. Mendukung MP4, WebM, MOV, dan lainnya.",
+      "audio": "Edit dan konversi file audio di browser Anda menggunakan FFmpeg WebAssembly. Potong klip, konversi antara MP3, WAV, OGG, AAC, dan FLAC, ekstrak trek audio dari video, dan sesuaikan volume — semua diproses secara lokal, tidak perlu unggahan."
     },
     "ffmpegLoadError": "Gagal memuat mesin pemrosesan. Silakan muat ulang dan coba lagi.",
     "unsupportedVideoCodec": "Video ini menggunakan kodek yang tidak didukung oleh browser Anda. Silakan coba browser lain atau konversi video ke format yang didukung (misalnya H.264).",
@@ -132,27 +132,27 @@
   "categories": {
     "developer": {
       "name": "Alat Pengembang",
-      "description": "Format, enkode, dan dekode data",
+      "description": "Format, konversi, enkode, dekode, dan analisis data",
       "keywords": "pemformat json, enkode base64, dekode url, ocr, ekstraktor zip, generator hash, penguji regex, unix timestamp, pratinjau markdown, penghitung kata"
     },
     "image": {
       "name": "Alat Gambar",
-      "description": "Konversi, kompres, dan edit gambar",
+      "description": "Ubah ukuran, kompres, konversi, potong, dan tingkatkan gambar",
       "keywords": "kompresor gambar, ubah ukuran gambar, pemotong gambar, konverter webp, png ke jpg, heic ke jpg, tambah watermark, hapus exif, potong lingkaran"
     },
     "pdf": {
       "name": "Alat PDF",
-      "description": "Gabung, pisah, konversi dan edit file PDF",
+      "description": "Gabung, pisah, kompres, konversi, dan edit dokumen PDF",
       "keywords": "gabung pdf, pisah pdf, kompres pdf, pdf ke gambar, pdf ke word, gambar ke pdf, tambah nomor halaman, watermark pdf, tanda tangan pdf"
     },
     "video": {
       "name": "Alat Video",
-      "description": "Potong, konversi dan edit video",
+      "description": "Potong, kompres, konversi, putar, dan edit video",
       "keywords": "pemotong video, kompresor video, video ke gif, video ke webp, putar video, bisukan video, ubah ukuran video"
     },
     "audio": {
       "name": "Alat Audio",
-      "description": "Potong, konversi dan ekstrak audio",
+      "description": "Potong, konversi, ekstrak, dan sesuaikan file audio",
       "keywords": "pemotong audio, konverter audio, pemotong mp3, ekstrak audio dari video, pengatur volume, wav ke mp3"
     }
   },
