@@ -1,13 +1,23 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
-import { Check, Copy } from "lucide-react";
+import { ArrowLeftRight, Binary, CalendarClock, CalendarDays, Check, Copy, Eraser } from "lucide-react";
+import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
+import { CopyButton } from "@/components/shared/CopyButton";
 import { PresetButtons } from "../components/PresetButtons";
-import { formatTimestamp, parseTimestamp, type FormatOutput, type TimestampUnit } from "../logic";
+import {
+  formatTimestamp,
+  parseDateString,
+  parseTimestamp,
+  toDateTimeLocalString,
+  type FormatOutput,
+  type TimestampUnit,
+} from "../logic";
 
 type UnitChoice = TimestampUnit | "auto";
+type Direction = "ts2date" | "date2ts";
 
 function deriveTsString(ms: number | null, unit: UnitChoice): string {
   if (ms == null) return "";
@@ -30,70 +40,9 @@ const UNIT_OPTIONS: { value: UnitChoice; labelKey: string }[] = [
   { value: "ns", labelKey: "unitNanoseconds" },
 ];
 
-function toDateTimeLocalString(ms: number, tz: string): string {
-  const d = new Date(ms);
-  if (isNaN(d.getTime())) return "";
-  if (tz === "__local__") {
-    const pad = (n: number) => String(n).padStart(2, "0");
-    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
-  }
-  try {
-    const parts = new Intl.DateTimeFormat("en-US", {
-      timeZone: tz,
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: false,
-    }).formatToParts(d);
-    const map: Record<string, string> = {};
-    for (const p of parts) map[p.type] = p.value;
-    const hour = map.hour === "24" ? "00" : map.hour;
-    return `${map.year}-${map.month}-${map.day}T${hour}:${map.minute}:${map.second}`;
-  } catch {
-    return "";
-  }
-}
-
-function dateTimeLocalStringToMs(value: string, tz: string): number {
-  if (!value) return NaN;
-  if (tz === "__local__") {
-    const d = new Date(value);
-    return d.getTime();
-  }
-  const m = value.match(/^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})(?::(\d{2}))?$/);
-  if (!m) {
-    const d = new Date(value);
-    return d.getTime();
-  }
-  const [, y, mo, da, h, mi, se] = m;
-  const asUtc = Date.UTC(Number(y), Number(mo) - 1, Number(da), Number(h), Number(mi), Number(se ?? "0"));
-  try {
-    const probe = new Date(asUtc);
-    const parts = new Intl.DateTimeFormat("en-US", {
-      timeZone: tz,
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: false,
-    }).formatToParts(probe);
-    const map: Record<string, number> = {};
-    for (const p of parts) {
-      if (["year", "month", "day", "hour", "minute", "second"].includes(p.type)) {
-        map[p.type] = Number(p.value);
-      }
-    }
-    const probeAsUtc = Date.UTC(map.year, map.month - 1, map.day, map.hour === 24 ? 0 : map.hour, map.minute, map.second);
-    const offsetMs = probeAsUtc - asUtc;
-    return asUtc - offsetMs;
-  } catch {
-    return new Date(value).getTime();
-  }
+function deriveInput(ms: number | null, direction: Direction, unit: UnitChoice, tz: string): string {
+  if (ms == null) return "";
+  return direction === "ts2date" ? deriveTsString(ms, unit) : toDateTimeLocalString(ms, tz);
 }
 
 export function SingleTab({
@@ -106,50 +55,106 @@ export function SingleTab({
   setMainMs: (ms: number | null) => void;
 }) {
   const t = useTranslations("tools.developer.timestamp");
+  const [direction, setDirection] = useState<Direction>("ts2date");
   const [unit, setUnit] = useState<UnitChoice>("auto");
-  const [tsInput, setTsInput] = useState<string>(() => deriveTsString(mainMs, "auto"));
-  const [dateInput, setDateInput] = useState<string>(() => mainMs != null ? toDateTimeLocalString(mainMs, tz) : "");
+  const [inputValue, setInputValue] = useState<string>(() => deriveInput(mainMs, "ts2date", "auto", tz));
   const [error, setError] = useState("");
-  const [lastSync, setLastSync] = useState<{ mainMs: number | null; unit: UnitChoice; tz: string }>({ mainMs, unit, tz });
+  const [lastSyncMs, setLastSyncMs] = useState<number | null>(mainMs);
+  const pickerRef = useRef<HTMLInputElement>(null);
+  const inputId = useId();
 
-  if (lastSync.mainMs !== mainMs || lastSync.unit !== unit || lastSync.tz !== tz) {
-    setLastSync({ mainMs, unit, tz });
-    setTsInput(deriveTsString(mainMs, unit));
-    setDateInput(mainMs != null ? toDateTimeLocalString(mainMs, tz) : "");
+  // External mainMs change (mount default / NowCard "Use this" / presets):
+  // repopulate the input from mainMs. Self-emitted changes mark lastSyncMs in
+  // the same handler so this guard skips them and never clobbers typing.
+  if (mainMs !== lastSyncMs) {
+    setLastSyncMs(mainMs);
+    setInputValue(deriveInput(mainMs, direction, unit, tz));
     setError("");
   }
 
-  function handleTsChange(value: string) {
-    setTsInput(value);
-    if (!value.trim()) {
-      setMainMs(null);
-      setError("");
-      return;
-    }
-    try {
-      const { ms } = parseTimestamp(value, unit);
-      setMainMs(ms);
-      setError("");
-    } catch {
-      setError(t("invalidTimestamp"));
-    }
-  }
-
-  function handleDateChange(value: string) {
-    setDateInput(value);
-    if (!value) {
-      setMainMs(null);
-      setError("");
-      return;
-    }
-    const ms = dateTimeLocalStringToMs(value, tz);
-    if (isNaN(ms)) {
-      setError(t("invalidDate"));
-      return;
-    }
+  const emit = useCallback((ms: number | null) => {
     setMainMs(ms);
+    setLastSyncMs(ms);
+  }, [setMainMs]);
+
+  const parseInput = useCallback(
+    (value: string, dir: Direction, u: UnitChoice): { ms: number | null; error: string } => {
+      if (!value.trim()) return { ms: null, error: "" };
+      try {
+        const ms = dir === "ts2date" ? parseTimestamp(value, u).ms : parseDateString(value, tz);
+        return { ms, error: "" };
+      } catch {
+        return { ms: null, error: dir === "ts2date" ? t("invalidTimestamp") : t("invalidDate") };
+      }
+    },
+    [tz, t],
+  );
+
+  const applyInput = useCallback(
+    (value: string) => {
+      setInputValue(value);
+      const { ms, error: err } = parseInput(value, direction, unit);
+      setError(err);
+      if (!err) emit(ms);
+    },
+    [direction, unit, parseInput, emit],
+  );
+
+  // Re-interpret current date input when the selected timezone changes
+  // (tz-naive strings map to a different instant). ts2date only re-formats output.
+  useEffect(() => {
+    if (direction !== "date2ts" || !inputValue.trim()) return;
+    const { ms, error: err } = parseInput(inputValue, "date2ts", unit);
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setError(err);
+    if (!err) emit(ms);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tz]);
+
+  const switchDirection = useCallback(
+    (next: Direction) => {
+      if (next === direction) return;
+      setDirection(next);
+      setError("");
+      setInputValue(deriveInput(mainMs, next, unit, tz));
+    },
+    [direction, mainMs, unit, tz],
+  );
+
+  const handleUnitChange = useCallback(
+    (u: UnitChoice) => {
+      setUnit(u);
+      // Re-interpret the SAME typed string under the new unit; never rewrite it.
+      if (direction === "ts2date" && inputValue.trim()) {
+        const { ms, error: err } = parseInput(inputValue, "ts2date", u);
+        setError(err);
+        if (!err) emit(ms);
+      }
+    },
+    [direction, inputValue, parseInput, emit],
+  );
+
+  const handleClear = useCallback(() => {
+    setInputValue("");
     setError("");
-  }
+    emit(null);
+  }, [emit]);
+
+  const openPicker = useCallback(() => {
+    const el = pickerRef.current;
+    if (!el) return;
+    const withPicker = el as HTMLInputElement & { showPicker?: () => void };
+    if (typeof withPicker.showPicker === "function") {
+      try {
+        withPicker.showPicker();
+        return;
+      } catch {
+        /* fall through to focus */
+      }
+    }
+    el.focus();
+    el.click();
+  }, []);
 
   const output = useMemo<FormatOutput | null>(() => {
     if (mainMs == null) return null;
@@ -160,45 +165,107 @@ export function SingleTab({
     }
   }, [mainMs, tz]);
 
+  const primaryResult = useMemo(() => {
+    if (mainMs == null || !output) return "";
+    return direction === "ts2date" ? output.dateTime : deriveTsString(mainMs, unit);
+  }, [mainMs, output, direction, unit]);
+
+  const showResult = !error && mainMs != null && !!primaryResult;
+
   return (
     <div className="space-y-5">
-      <div className="grid gap-4 md:grid-cols-2">
-        <div className="space-y-2">
-          <label className="text-sm font-medium">{t("timestampLabel")}</label>
-          <div className="flex gap-2">
-            <input
-              type="text"
-              inputMode="numeric"
-              value={tsInput}
-              onChange={(e) => handleTsChange(e.target.value)}
-              placeholder={t("timestampPlaceholder")}
-              className="w-full rounded-lg border border-border bg-background p-3 font-mono text-sm"
-            />
-            <Select
-              value={unit}
-              onChange={(e) => setUnit(e.target.value as UnitChoice)}
-              aria-label={t("unit")}
-              className="shrink-0"
-            >
-              {UNIT_OPTIONS.map((o) => (
-                <option key={o.value} value={o.value}>{t(o.labelKey)}</option>
-              ))}
-            </Select>
-          </div>
+      <div className="flex flex-wrap items-center gap-2">
+        <div className="flex gap-1">
+          <Button
+            variant={direction === "ts2date" ? "primary" : "outline"}
+            size="sm"
+            onClick={() => switchDirection("ts2date")}
+          >
+            {t("directionTsToDate")}
+          </Button>
+          <Button
+            variant={direction === "date2ts" ? "primary" : "outline"}
+            size="sm"
+            onClick={() => switchDirection("date2ts")}
+          >
+            {t("directionDateToTs")}
+          </Button>
         </div>
-        <div className="space-y-2">
-          <label className="text-sm font-medium">{t("dateLabel")}</label>
-          <input
-            type="datetime-local"
-            value={dateInput}
-            onChange={(e) => handleDateChange(e.target.value)}
-            step="1"
-            className="w-full rounded-lg border border-border bg-background p-3 font-mono text-sm"
-          />
-        </div>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => switchDirection(direction === "ts2date" ? "date2ts" : "ts2date")}
+          title={t("swap")}
+          aria-label={t("swap")}
+        >
+          <ArrowLeftRight className="h-3.5 w-3.5" />
+          {t("swap")}
+        </Button>
       </div>
 
-      <PresetButtons tz={tz} currentMs={mainMs} onChange={(ms) => setMainMs(ms)} />
+      <div className="space-y-2">
+        <label htmlFor={inputId} className="text-sm font-medium">
+          {direction === "ts2date" ? t("timestampLabel") : t("dateLabel")}
+        </label>
+        <div className="flex gap-2">
+          <div className="flex h-12 min-w-0 flex-1 items-center gap-2 rounded-lg border-2 border-border bg-muted/60 px-3 transition-colors hover:border-primary/50 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/50">
+            {direction === "ts2date" ? (
+              <Binary className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
+            ) : (
+              <CalendarClock className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden="true" />
+            )}
+            <input
+              id={inputId}
+              type="text"
+              inputMode={direction === "ts2date" ? "numeric" : "text"}
+              value={inputValue}
+              onChange={(e) => applyInput(e.target.value)}
+              placeholder={direction === "ts2date" ? t("timestampPlaceholder") : t("dateInputPlaceholder")}
+              className="w-full bg-transparent font-mono text-base text-foreground outline-none placeholder:text-muted-foreground"
+            />
+          </div>
+          {direction === "date2ts" && (
+            <span className="relative shrink-0">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={openPicker}
+                title={t("pickDate")}
+                aria-label={t("pickDate")}
+                className="h-12 w-12"
+              >
+                <CalendarDays className="h-4 w-4" />
+              </Button>
+              <input
+                ref={pickerRef}
+                type="datetime-local"
+                step="1"
+                value={mainMs != null ? toDateTimeLocalString(mainMs, tz) : ""}
+                onChange={(e) => {
+                  if (e.target.value) applyInput(e.target.value);
+                }}
+                tabIndex={-1}
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 h-full w-full opacity-0"
+              />
+            </span>
+          )}
+          <Select
+            value={unit}
+            onChange={(e) => handleUnitChange(e.target.value as UnitChoice)}
+            aria-label={t("unit")}
+            className="h-12 shrink-0"
+          >
+            {UNIT_OPTIONS.map((o) => (
+              <option key={o.value} value={o.value}>{t(o.labelKey)}</option>
+            ))}
+          </Select>
+        </div>
+        <Button variant="ghost" size="sm" onClick={handleClear}>
+          <Eraser className="h-3.5 w-3.5" />
+          {t("clearInput")}
+        </Button>
+      </div>
 
       {error && (
         <div className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-900 dark:bg-red-950 dark:text-red-400">
@@ -206,7 +273,25 @@ export function SingleTab({
         </div>
       )}
 
-      {output && <OutputTable output={output} />}
+      {showResult && (
+        <div className="space-y-2">
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-sm font-medium">{t("resultLabel")}</span>
+            <CopyButton
+              text={primaryResult}
+              analyticsSlug="timestamp"
+              analyticsCategory="developer"
+            />
+          </div>
+          <div className="font-mono text-lg break-all text-foreground select-all">
+            {primaryResult}
+          </div>
+        </div>
+      )}
+
+      <PresetButtons tz={tz} currentMs={mainMs} onChange={(ms) => setMainMs(ms)} />
+
+      {!error && output && <OutputTable output={output} />}
     </div>
   );
 }

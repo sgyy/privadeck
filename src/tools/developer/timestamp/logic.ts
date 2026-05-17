@@ -88,6 +88,113 @@ export function parseTimestamp(input: string, unit: TimestampUnit | "auto"): { m
   return { ms, detectedUnit: detected };
 }
 
+// Tz-naive "wall clock" forms: 2024-01-15, 2024-01-15T10:30[:00][.fff], 2024-01-15 10:30[:00][.fff].
+// Intentionally NOT anchored to allow a trailing Z / +HH:MM to fall through to Date parsing.
+const WALL_CLOCK_RE =
+  /^(\d{4})-(\d{1,2})-(\d{1,2})(?:[T ](\d{1,2}):(\d{1,2})(?::(\d{1,2}))?(?:\.(\d{1,9}))?)?$/;
+
+function wallClockToMs(
+  y: number,
+  mo: number,
+  d: number,
+  h: number,
+  mi: number,
+  se: number,
+  frac: number,
+  tz: string,
+): number {
+  if (tz === LOCAL_TZ_VALUE) {
+    return new Date(y, mo - 1, d, h, mi, se, frac).getTime();
+  }
+  const asUtcNoFrac = Date.UTC(y, mo - 1, d, h, mi, se);
+  try {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: tz,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+    }).formatToParts(new Date(asUtcNoFrac));
+    const map: Record<string, number> = {};
+    for (const p of parts) {
+      if (["year", "month", "day", "hour", "minute", "second"].includes(p.type)) {
+        map[p.type] = Number(p.value);
+      }
+    }
+    const probeAsUtc = Date.UTC(
+      map.year,
+      map.month - 1,
+      map.day,
+      map.hour === 24 ? 0 : map.hour,
+      map.minute,
+      map.second,
+    );
+    const offsetMs = probeAsUtc - asUtcNoFrac;
+    return asUtcNoFrac + frac - offsetMs;
+  } catch {
+    return new Date(y, mo - 1, d, h, mi, se, frac).getTime();
+  }
+}
+
+// Parse a free-form date string into epoch ms. Strings carrying an explicit
+// timezone (Z, ±HH:MM, RFC2822 GMT, …) are treated as absolute instants and
+// `tz` only affects later display. Tz-naive wall-clock strings are interpreted
+// in the selected `tz`.
+export function parseDateString(input: string, tz: string): number {
+  const trimmed = input.trim();
+  if (!trimmed) throw new Error("Empty date");
+  const m = trimmed.match(WALL_CLOCK_RE);
+  if (m) {
+    const y = Number(m[1]);
+    const mo = Number(m[2]);
+    const d = Number(m[3]);
+    const h = m[4] != null ? Number(m[4]) : 0;
+    const mi = m[5] != null ? Number(m[5]) : 0;
+    const se = m[6] != null ? Number(m[6]) : 0;
+    const frac = m[7] != null ? Number((m[7] + "000").slice(0, 3)) : 0;
+    if (mo < 1 || mo > 12 || d < 1 || d > 31 || h > 23 || mi > 59 || se > 59) {
+      throw new Error("Invalid date");
+    }
+    const ms = wallClockToMs(y, mo, d, h, mi, se, frac, tz);
+    if (!isFiniteMs(ms)) throw new Error("Invalid date");
+    return ms;
+  }
+  const ms = new Date(trimmed).getTime();
+  if (!isFiniteMs(ms)) throw new Error("Invalid date");
+  return ms;
+}
+
+// Format epoch ms as a `YYYY-MM-DDTHH:mm:ss` wall-clock string in `tz`,
+// suitable for a native <input type="datetime-local"> value.
+export function toDateTimeLocalString(ms: number, tz: string): string {
+  const d = new Date(ms);
+  if (isNaN(d.getTime())) return "";
+  if (tz === LOCAL_TZ_VALUE) {
+    return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+  }
+  try {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: tz,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+    }).formatToParts(d);
+    const map: Record<string, string> = {};
+    for (const p of parts) map[p.type] = p.value;
+    const hour = map.hour === "24" ? "00" : map.hour;
+    return `${map.year}-${map.month}-${map.day}T${hour}:${map.minute}:${map.second}`;
+  } catch {
+    return "";
+  }
+}
+
 function formatInTz(date: Date, tz: string | undefined, opts: Intl.DateTimeFormatOptions): string {
   try {
     return new Intl.DateTimeFormat("en-US", { ...opts, timeZone: tz }).format(date);
