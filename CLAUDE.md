@@ -66,6 +66,8 @@ Tailwind CSS v4，基于 CSS 配置（无 `tailwind.config.ts`）。主题通过
 
 - `src/tools/` — 工具模块（每个包含 index.ts + 组件 + logic.ts）
 - `src/lib/registry/` — 工具注册表和类型
+- `src/lib/ffmpeg.ts` / `src/lib/hooks/useFFmpeg.ts` — FFmpeg.wasm 单例加载（音频 + video/info）
+- `src/lib/media-pipeline.ts` — mediabunny/WebCodecs 视频流水线，FFmpeg 兜底
 - `src/lib/seo/` — 元数据和 JSON-LD 生成器
 - `src/components/tool/` — 工具页面外壳组件（ToolPageShell、ToolBreadcrumb、RelatedTools、ToolFAQ）
 - `src/components/shared/` — 复用组件（FileDropzone、DownloadButton、CopyButton、SearchDialog 等）
@@ -78,6 +80,16 @@ Tailwind CSS v4，基于 CSS 配置（无 `tailwind.config.ts`）。主题通过
 - `index.ts` — 导出 `ToolDefinition`，包含 slug、category、icon（Lucide 图标名）、`featured`（布尔值）、`component: () => import("./Component")`、seo 配置、faq 键、related slugs
 - `{Name}.tsx` — `"use client"` 组件，默认导出，所有文案使用 `useTranslations()`
 - `logic.ts` — 纯处理函数，不导入 React
+
+### 媒体处理（FFmpeg.wasm 与 WebCodecs/Mediabunny 分流）
+
+处理路径**不是统一的 FFmpeg**，编辑视频/音频工具前务必确认走哪条：
+
+- **音频**（trim/convert/extract/volume）：全部走 `@/lib/ffmpeg` 的 `execWithMount`（纯 FFmpeg.wasm）。FFmpeg 单例加载器在 `src/lib/ffmpeg.ts` + `src/lib/hooks/useFFmpeg.ts`，core 从 `unpkg.com/@ffmpeg/core@0.12.6` 远程加载。
+- **视频**：`compress`、`format-convert`、`resize`、`rotate` 走 `src/lib/media-pipeline.ts`（基于 **mediabunny** 的 WebCodecs 流水线，硬件加速；浏览器不支持或操作不被支持时**自动回退 FFmpeg.wasm**）。仅 `video/info` 直接用 `@ffmpeg`。新增视频工具优先用 media-pipeline，不要默认 FFmpeg。
+- 图像 `compress`/`format-converter` 的 AVIF 编码用 `@jsquash/avif`。
+
+**Service Worker：** `public/sw.js`（cache 前缀 `privadeck-`）由 `src/components/layout/BaseLayout.tsx` 的 `<ServiceWorkerRegistration />` 注册，**永久缓存 FFmpeg wasm 与静态资源**。调试媒体工具时若改动未生效，先在 DevTools 清 SW 缓存 / 硬刷新——这不一定是代码问题。
 
 ### 数据分析
 
