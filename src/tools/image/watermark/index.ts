@@ -3,7 +3,7 @@ import type { ToolDefinition } from "@/lib/registry/types";
 const definition: ToolDefinition = {
   slug: "watermark",
   category: "image",
-  icon: "Image",
+  icon: "Stamp",
   featured: false,
   component: () => import("./ImageWatermark"),
   seo: { structuredDataType: "WebApplication" },
@@ -16,7 +16,14 @@ const definition: ToolDefinition = {
       questionKey: "tools.image.watermark.faq.q2",
       answerKey: "tools.image.watermark.faq.a2",
     },
-  
+    {
+      questionKey: "tools.image.watermark.faq.q6",
+      answerKey: "tools.image.watermark.faq.a6",
+    },
+    {
+      questionKey: "tools.image.watermark.faq.q7",
+      answerKey: "tools.image.watermark.faq.a7",
+    },
     {
       questionKey: "common.sharedFaq.q3",
       answerKey: "common.sharedFaq.a3",
@@ -30,7 +37,7 @@ const definition: ToolDefinition = {
       answerKey: "tools.image.watermark.faq.a5",
     },
   ],
-  relatedSlugs: ["crop", "resize", "compress"],
+  relatedSlugs: ["add-text", "crop", "compress"],
 };
 
 export default definition;

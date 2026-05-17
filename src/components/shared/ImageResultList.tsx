@@ -89,24 +89,34 @@ export function ImageResultList({ results, onRemove }: ImageResultListProps) {
   return (
     <>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-        {results.map((item, i) => (
+        {results.map((item, i) => {
+          const url = getUrl(item.blob);
+          return (
           <div
             key={`${item.filename}-${i}`}
             className="group relative overflow-hidden rounded-lg border border-border bg-card"
           >
             <button
               type="button"
-              onClick={() => setPreviewIndex(i)}
-              className="block w-full cursor-zoom-in"
+              onClick={() => {
+                if (url) setPreviewIndex(i);
+              }}
+              className={`block w-full ${url ? "cursor-zoom-in" : "cursor-default"}`}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={getUrl(item.blob)}
-                alt={item.filename}
-                className="aspect-square w-full object-cover"
-                loading="lazy"
-                decoding="async"
-              />
+              {url ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={url}
+                  alt={item.filename}
+                  className="aspect-square w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              ) : (
+                // URL is created in a layout effect; render a placeholder for
+                // the first paint so we never emit <img src=""> (Next warning).
+                <div className="aspect-square w-full animate-pulse bg-muted" />
+              )}
             </button>
 
             <button
@@ -137,16 +147,19 @@ export function ImageResultList({ results, onRemove }: ImageResultListProps) {
               </div>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
 
-      {previewIndex !== null && results[previewIndex] && (
-        <ImageLightbox
-          src={getUrl(results[previewIndex].blob)}
-          alt={results[previewIndex].filename}
-          onClose={() => setPreviewIndex(null)}
-        />
-      )}
+      {previewIndex !== null &&
+        results[previewIndex] &&
+        getUrl(results[previewIndex].blob) && (
+          <ImageLightbox
+            src={getUrl(results[previewIndex].blob)}
+            alt={results[previewIndex].filename}
+            onClose={() => setPreviewIndex(null)}
+          />
+        )}
     </>
   );
 }
