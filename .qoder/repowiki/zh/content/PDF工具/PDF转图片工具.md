@@ -4,25 +4,14 @@
 **本文档引用的文件**
 - [PdfToImage.tsx](file://src/tools/pdf/to-image/PdfToImage.tsx)
 - [logic.ts](file://src/tools/pdf/to-image/logic.ts)
-- [PdfFilePreview.tsx](file://src/components/shared/PdfFilePreview.tsx)
-- [ImageLightbox.tsx](file://src/components/shared/ImageLightbox.tsx)
-- [getPdfPreview.ts](file://src/lib/pdf/getPdfPreview.ts)
 - [pdfjs.ts](file://src/lib/pdfjs.ts)
-- [formatFileSize.ts](file://src/lib/utils/formatFileSize.ts)
+- [media-pipeline.ts](file://src/lib/media-pipeline.ts)
 - [tools-pdf.json](file://messages/zh-Hans/tools-pdf.json)
 - [index.ts](file://src/tools/pdf/to-image/index.ts)
-- [Button.tsx](file://src/components/ui/Button.tsx)
-- [Dialog.tsx](file://src/components/ui/Dialog.tsx)
+- [FileDropzone.tsx](file://src/components/shared/FileDropzone.tsx)
+- [ImageResultList.tsx](file://src/components/shared/ImageResultList.tsx)
 - [package.json](file://package.json)
 </cite>
-
-## 更新摘要
-**所做更改**
-- 新增PDF文件预览系统集成章节，详细介绍getPdfPreview功能
-- 更新用户界面架构，包含PdfFilePreview和ImageLightbox组件
-- 增强了PDF文件处理的用户体验和交互设计
-- 完善了文件大小格式化和进度显示机制
-- 优化了错误处理和状态管理
 
 ## 目录
 1. [简介](#简介)
@@ -41,9 +30,7 @@
 
 PDF转图片工具是一个基于浏览器的PDF页面转换解决方案，能够将PDF文档的每个页面转换为高质量的图片文件。该工具采用pdf.js渲染引擎，支持PNG和JPG格式输出，提供灵活的分辨率控制和质量参数配置，适用于缩略图生成、OCR预处理、网页展示等多种应用场景。
 
-**更新** 工具现已集成新的PDF文件预览系统，提供实时的文件信息显示和缩略图预览功能，显著提升了用户体验。
-
-该工具的核心优势在于完全在浏览器本地运行，无需上传文件到服务器，确保用户隐私和数据安全。同时，工具提供了直观的用户界面，支持批量处理和实时预览功能，并集成了现代化的PDF文件管理组件。
+该工具的核心优势在于完全在浏览器本地运行，无需上传文件到服务器，确保用户隐私和数据安全。同时，工具提供了直观的用户界面，支持批量处理和实时预览功能。
 
 ## 项目结构
 
@@ -58,43 +45,30 @@ C[index.ts<br/>工具定义]
 end
 subgraph "核心库"
 D[pdfjs.ts<br/>pdf.js集成]
-E[getPdfPreview.ts<br/>PDF预览功能]
-F[formatFileSize.ts<br/>文件大小格式化]
+E[media-pipeline.ts<br/>媒体管道]
 end
 subgraph "共享组件"
-G[PdfFilePreview.tsx<br/>PDF文件预览]
-H[ImageLightbox.tsx<br/>图片查看器]
-I[FileDropzone.tsx<br/>文件拖拽上传]
-J[ImageResultList.tsx<br/>结果列表展示]
-K[Button.tsx<br/>按钮组件]
-L[Dialog.tsx<br/>对话框组件]
+F[FileDropzone.tsx<br/>文件拖拽上传]
+G[ImageResultList.tsx<br/>结果列表展示]
 end
 subgraph "国际化"
-M[tools-pdf.json<br/>工具文案]
+H[tools-pdf.json<br/>工具文案]
 end
 A --> B
 B --> D
+A --> F
 A --> G
 A --> H
-A --> I
-A --> J
-A --> K
-A --> L
 B --> E
-B --> F
-A --> M
 ```
 
 **图表来源**
-- [PdfToImage.tsx:1-302](file://src/tools/pdf/to-image/PdfToImage.tsx#L1-L302)
-- [logic.ts:1-82](file://src/tools/pdf/to-image/logic.ts#L1-L82)
-- [PdfFilePreview.tsx:1-86](file://src/components/shared/PdfFilePreview.tsx#L1-L86)
-- [ImageLightbox.tsx:1-36](file://src/components/shared/ImageLightbox.tsx#L1-L36)
-- [getPdfPreview.ts:1-31](file://src/lib/pdf/getPdfPreview.ts#L1-L31)
+- [PdfToImage.tsx:1-229](file://src/tools/pdf/to-image/PdfToImage.tsx#L1-L229)
+- [logic.ts:1-86](file://src/tools/pdf/to-image/logic.ts#L1-L86)
 - [pdfjs.ts:1-16](file://src/lib/pdfjs.ts#L1-L16)
 
 **章节来源**
-- [PdfToImage.tsx:1-302](file://src/tools/pdf/to-image/PdfToImage.tsx#L1-L302)
+- [PdfToImage.tsx:1-229](file://src/tools/pdf/to-image/PdfToImage.tsx#L1-L229)
 - [index.ts:1-37](file://src/tools/pdf/to-image/index.ts#L1-L37)
 
 ## 核心组件
@@ -104,30 +78,10 @@ A --> M
 PdfToImage组件是工具的用户界面入口，负责处理用户交互和状态管理。该组件实现了以下核心功能：
 
 - **文件上传处理**：通过FileDropzone组件接收PDF文件
-- **PDF预览集成**：使用PdfFilePreview组件显示文件信息和缩略图
 - **参数配置**：提供格式选择、质量控制和缩放比例设置
 - **进度跟踪**：实时显示转换进度和页面状态
 - **结果展示**：网格形式展示转换后的图片
 - **批量操作**：支持单个下载和ZIP打包下载
-- **图片预览**：通过ImageLightbox组件提供全屏查看功能
-
-### PDF文件预览系统 (getPdfPreview)
-
-**新增** getPdfPreview函数提供了PDF文件的快速预览功能：
-
-- **缩略图生成**：自动生成PDF第一页的缩略图
-- **页面计数**：获取PDF文档的总页数
-- **异步加载**：使用Promise模式处理异步操作
-- **性能优化**：仅加载必要的PDF数据用于预览
-
-### 图片查看器 (ImageLightbox)
-
-**新增** ImageLightbox组件提供增强的图片查看体验：
-
-- **全屏显示**：支持全屏模式查看图片
-- **模态对话框**：使用Dialog组件实现现代化的模态界面
-- **键盘导航**：支持Esc键关闭和键盘快捷键
-- **响应式设计**：适配不同屏幕尺寸
 
 ### 转换逻辑 (logic.ts)
 
@@ -138,7 +92,6 @@ logic.ts模块封装了PDF到图片转换的核心算法，包括：
 - **渲染引擎**：调用pdf.js的渲染接口
 - **图像生成**：将渲染结果转换为Blob对象
 - **批量处理**：支持多页面并发转换
-- **文件大小格式化**：使用formatFileSize工具函数
 
 ### pdf.js集成 (pdfjs.ts)
 
@@ -149,10 +102,8 @@ pdfjs.ts模块负责pdf.js库的初始化和配置：
 - **全局配置**：确保Worker只初始化一次
 
 **章节来源**
-- [PdfToImage.tsx:19-302](file://src/tools/pdf/to-image/PdfToImage.tsx#L19-L302)
-- [logic.ts:16-82](file://src/tools/pdf/to-image/logic.ts#L16-L82)
-- [getPdfPreview.ts:10-31](file://src/lib/pdf/getPdfPreview.ts#L10-L31)
-- [ImageLightbox.tsx:12-36](file://src/components/shared/ImageLightbox.tsx#L12-L36)
+- [PdfToImage.tsx:17-229](file://src/tools/pdf/to-image/PdfToImage.tsx#L17-L229)
+- [logic.ts:16-86](file://src/tools/pdf/to-image/logic.ts#L16-L86)
 - [pdfjs.ts:1-16](file://src/lib/pdfjs.ts#L1-L16)
 
 ## 架构概览
@@ -162,23 +113,11 @@ PDF转图片工具采用分层架构设计，确保代码的可维护性和扩�
 ```mermaid
 sequenceDiagram
 participant U as 用户界面
-participant PF as PdfFilePreview
-participant GP as getPdfPreview
 participant L as 转换逻辑
 participant P as pdf.js引擎
 participant C as 浏览器Canvas
 participant F as 文件系统
-U->>PF : 上传PDF文件
-PF->>GP : 请求PDF预览
-GP->>P : 初始化pdf.js
-P->>GP : 加载PDF文档
-GP->>GP : 获取第一页视口
-GP->>C : 创建Canvas元素
-GP->>P : 渲染第一页到Canvas
-P->>GP : 渲染完成
-GP->>PF : 返回缩略图和页数
-PF->>U : 显示文件信息
-U->>L : 开始转换
+U->>L : 上传PDF文件
 L->>P : 初始化pdf.js
 P->>L : 加载PDF文档
 L->>L : 获取总页数
@@ -197,7 +136,6 @@ L->>U : 显示转换结果
 
 **图表来源**
 - [logic.ts:16-65](file://src/tools/pdf/to-image/logic.ts#L16-L65)
-- [getPdfPreview.ts:10-31](file://src/lib/pdf/getPdfPreview.ts#L10-L31)
 - [pdfjs.ts:3-12](file://src/lib/pdfjs.ts#L3-L12)
 
 该架构的主要特点：
@@ -206,7 +144,6 @@ L->>U : 显示转换结果
 2. **异步处理**：采用Promise和async/await模式处理耗时操作
 3. **内存管理**：及时释放Canvas和Blob对象，避免内存泄漏
 4. **错误处理**：完善的异常捕获和用户反馈机制
-5. **预览集成**：PDF文件预览与转换流程无缝衔接
 
 ## 详细组件分析
 
@@ -216,8 +153,6 @@ L->>U : 显示转换结果
 classDiagram
 class PdfToImage {
 +File file
-+number pageCount
-+string thumbnail
 +string format
 +number quality
 +number scale
@@ -226,24 +161,10 @@ class PdfToImage {
 +boolean converting
 +string error
 +number previewIndex
-+handleFile(files)
 +handleConvert()
 +handleDownloadAll()
 +removePage(index)
 +getUrl(blob)
-}
-class PdfFilePreview {
-+File file
-+number pageCount
-+string thumbnail
-+boolean disabled
-+onReplace(file)
-+onRemove()
-}
-class ImageLightbox {
-+string src
-+string alt
-+onClose()
 }
 class ConvertedPage {
 +Blob blob
@@ -251,7 +172,7 @@ class ConvertedPage {
 +number pageNumber
 }
 class FileDropzone {
-+string accept
++accept string
 +onFiles function
 +handleFiles(files)
 }
@@ -261,17 +182,13 @@ class ImageResultList {
 +handleDownload(item)
 +handleRemove(index)
 }
-PdfToImage --> PdfFilePreview : "使用"
-PdfToImage --> ImageLightbox : "使用"
 PdfToImage --> ConvertedPage : "生成"
 PdfToImage --> FileDropzone : "使用"
 PdfToImage --> ImageResultList : "展示"
 ```
 
 **图表来源**
-- [PdfToImage.tsx:19-302](file://src/tools/pdf/to-image/PdfToImage.tsx#L19-L302)
-- [PdfFilePreview.tsx:18-86](file://src/components/shared/PdfFilePreview.tsx#L18-L86)
-- [ImageLightbox.tsx:12-36](file://src/components/shared/ImageLightbox.tsx#L12-L36)
+- [PdfToImage.tsx:17-229](file://src/tools/pdf/to-image/PdfToImage.tsx#L17-L229)
 - [logic.ts:10-14](file://src/tools/pdf/to-image/logic.ts#L10-L14)
 
 ### 转换流程详解
@@ -300,7 +217,7 @@ LoopPages --> |否| Complete([转换完成])
 - [logic.ts:16-65](file://src/tools/pdf/to-image/logic.ts#L16-L65)
 
 **章节来源**
-- [PdfToImage.tsx:84-136](file://src/tools/pdf/to-image/PdfToImage.tsx#L84-L136)
+- [PdfToImage.tsx:84-110](file://src/tools/pdf/to-image/PdfToImage.tsx#L84-L110)
 - [logic.ts:16-65](file://src/tools/pdf/to-image/logic.ts#L16-L65)
 
 ## PDF渲染技术原理
@@ -314,15 +231,6 @@ PDF转图片工具基于Mozilla开发的pdf.js库，这是一个强大的JavaScr
 - **透明度处理**：正确处理半透明、遮罩和混合模式
 - **图像嵌入**：支持JPEG、FlateDecode等图像格式
 - **硬件加速**：利用Canvas API进行GPU加速渲染
-
-### PDF预览系统
-
-**新增** PDF预览系统提供了高效的文件信息获取：
-
-- **缩略图生成**：仅渲染PDF第一页生成缩略图
-- **性能优化**：避免加载整个PDF文档
-- **尺寸控制**：可配置缩略图的目标宽度
-- **异步处理**：不阻塞用户界面
 
 ### 渲染参数配置
 
@@ -343,7 +251,6 @@ pdf.js采用以下策略处理字体：
 
 **章节来源**
 - [pdfjs.ts:3-12](file://src/lib/pdfjs.ts#L3-L12)
-- [getPdfPreview.ts:10-31](file://src/lib/pdf/getPdfPreview.ts#L10-L31)
 - [logic.ts:32-44](file://src/tools/pdf/to-image/logic.ts#L32-L44)
 
 ## 输出格式与质量配置
@@ -378,7 +285,7 @@ pdf.js采用以下策略处理字体：
 - **4x**：四倍分辨率（约288 DPI）
 
 **章节来源**
-- [PdfToImage.tsx:23-25](file://src/tools/pdf/to-image/PdfToImage.tsx#L23-L25)
+- [PdfToImage.tsx:19-21](file://src/tools/pdf/to-image/PdfToImage.tsx#L19-L21)
 - [logic.ts:4-8](file://src/tools/pdf/to-image/logic.ts#L4-L8)
 
 ## 使用场景与最佳实践
@@ -406,10 +313,9 @@ pdf.js采用以下策略处理字体：
 2. **批处理优化**：合理安排页面转换顺序，避免同时处理过多页面
 3. **错误处理**：为网络不稳定的情况准备重试机制
 4. **用户体验**：提供进度条和取消功能
-5. **文件预览**：利用PDF预览系统提升用户交互体验
 
 **章节来源**
-- [tools-pdf.json:170-181](file://messages/zh-Hans/tools-pdf.json#L170-L181)
+- [tools-pdf.json:143-189](file://messages/zh-Hans/tools-pdf.json#L143-L189)
 
 ## 性能优化与内存管理
 
@@ -432,7 +338,7 @@ style RevokeURL fill:#fff3e0
 ```
 
 **图表来源**
-- [PdfToImage.tsx:36-68](file://src/tools/pdf/to-image/PdfToImage.tsx#L36-L68)
+- [PdfToImage.tsx:32-64](file://src/tools/pdf/to-image/PdfToImage.tsx#L32-L64)
 
 ### 性能优化技巧
 
@@ -440,7 +346,6 @@ style RevokeURL fill:#fff3e0
 2. **URL缓存**：使用Map缓存Object URL，避免重复创建
 3. **渐进式渲染**：先显示缩略图，再加载高清版本
 4. **并发控制**：限制同时处理的页面数量
-5. **预览优化**：PDF预览仅加载必要数据
 
 ### 大文件处理方案
 
@@ -452,7 +357,7 @@ style RevokeURL fill:#fff3e0
 - **错误恢复**：支持断点续传和错误恢复
 
 **章节来源**
-- [PdfToImage.tsx:36-68](file://src/tools/pdf/to-image/PdfToImage.tsx#L36-L68)
+- [PdfToImage.tsx:32-64](file://src/tools/pdf/to-image/PdfToImage.tsx#L32-L64)
 - [logic.ts:16-65](file://src/tools/pdf/to-image/logic.ts#L16-L65)
 
 ## 故障排除指南
@@ -514,16 +419,14 @@ Cleanup --> End([结束])
 ```
 
 **图表来源**
-- [PdfToImage.tsx:110-136](file://src/tools/pdf/to-image/PdfToImage.tsx#L110-L136)
+- [PdfToImage.tsx:84-109](file://src/tools/pdf/to-image/PdfToImage.tsx#L84-L109)
 
 **章节来源**
-- [PdfToImage.tsx:110-136](file://src/tools/pdf/to-image/PdfToImage.tsx#L110-L136)
+- [PdfToImage.tsx:84-109](file://src/tools/pdf/to-image/PdfToImage.tsx#L84-L109)
 
 ## 结论
 
 PDF转图片工具是一个功能完善、性能优异的浏览器端PDF处理解决方案。通过采用pdf.js渲染引擎和现代化的前端架构，该工具实现了高质量的PDF到图片转换，同时确保了用户数据的安全性和隐私保护。
-
-**更新** 新的PDF文件预览系统显著提升了用户体验，提供了实时的文件信息显示和缩略图预览功能。现代化的UI组件如PdfFilePreview和ImageLightbox为用户提供了更加直观和便捷的操作体验。
 
 ### 主要优势
 
@@ -532,8 +435,6 @@ PDF转图片工具是一个功能完善、性能优异的浏览器端PDF处理�
 3. **用户友好**：直观的界面设计和实时进度反馈
 4. **性能优化**：智能的内存管理和并发处理机制
 5. **扩展性强**：模块化设计便于功能扩展和维护
-6. **预览集成**：完整的PDF文件预览系统
-7. **现代化UI**：使用Dialog和Button等组件提供良好用户体验
 
 ### 技术特色
 
@@ -541,7 +442,5 @@ PDF转图片工具是一个功能完善、性能优异的浏览器端PDF处理�
 - **Canvas API优化**：通过Canvas进行高效的图像渲染
 - **异步处理模式**：避免阻塞用户界面
 - **内存安全设计**：完善的资源管理和清理机制
-- **预览系统集成**：PDF文件信息的快速获取和显示
-- **响应式设计**：适配不同设备和屏幕尺寸
 
 该工具为PDF文档处理提供了可靠的技术解决方案，适用于各种文档转换和预处理场景，是现代Web应用中PDF处理的理想选择。

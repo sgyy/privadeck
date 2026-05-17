@@ -1,25 +1,19 @@
 # PDF文件预览组件
 
 <cite>
-**本文档中引用的文件**
-- [PdfFullscreenPreview.tsx](file://src/components/shared/PdfFullscreenPreview.tsx)
+**本文档引用的文件**
 - [PdfFilePreview.tsx](file://src/components/shared/PdfFilePreview.tsx)
+- [PdfFullscreenPreview.tsx](file://src/components/shared/PdfFullscreenPreview.tsx)
 - [PdfPagePreview.tsx](file://src/components/shared/PdfPagePreview.tsx)
 - [pdfjs.ts](file://src/lib/pdfjs.ts)
 - [getPdfPreview.ts](file://src/lib/pdf/getPdfPreview.ts)
-- [formatFileSize.ts](file://src/lib/utils/formatFileSize.ts)
 - [MergePdf.tsx](file://src/tools/pdf/merge/MergePdf.tsx)
-- [PdfDetailDialog.tsx](file://src/tools/pdf/merge/PdfDetailDialog.tsx)
+- [SplitPdf.tsx](file://src/tools/pdf/split/SplitPdf.tsx)
+- [logic.ts（合并）](file://src/tools/pdf/merge/logic.ts)
+- [logic.ts（拆分）](file://src/tools/pdf/split/logic.ts)
+- [types.ts（压缩）](file://src/tools/pdf/compress/types.ts)
 - [package.json](file://package.json)
-- [README.md](file://README.md)
 </cite>
-
-## 更新摘要
-**变更内容**
-- PdfBlobPreview组件已被PdfFullscreenPreview组件替代，提供更强大的全屏预览功能
-- 新增PdfFullscreenPreview组件支持全屏查看、更好的可访问性支持、改进的资源管理（正确的对象URL清理）
-- 更新相关依赖，新增@dnd-kit拖拽功能支持，用于PDF文件排序和管理
-- 增强合并PDF工具的预览功能，支持实时全屏预览合并结果
 
 ## 目录
 1. [简介](#简介)
@@ -34,145 +28,144 @@
 
 ## 简介
 
-PDF文件预览组件是Media Toolbox项目中的一个核心功能模块，专门用于在浏览器环境中提供PDF文件的可视化预览体验。该组件基于Mozilla的pdfjs-dist库构建，实现了完全在客户端运行的PDF渲染功能，确保用户隐私和数据安全。
+PDF文件预览组件是媒体工具箱中的一个核心功能模块，提供了完整的PDF文件处理能力。该组件集成了文件上传、预览、全屏查看、页面渲染等功能，支持多种PDF操作如合并、拆分、压缩等。
 
-该项目采用现代React技术栈，使用Next.js框架和TypeScript进行开发，支持多语言国际化。PDF预览功能通过三个主要组件协同工作：文件信息预览组件、页面渲染预览组件和全屏预览组件，为用户提供完整的PDF浏览体验。
-
-**更新** 新增的PdfFullscreenPreview组件替代了原有的PdfBlobPreview组件，提供了基于对话框的全屏PDF预览功能，支持实时预览合并后的PDF文件，并具备更好的可访问性支持。
+该系统基于React构建，使用pdf.js进行PDF渲染，pdf-lib进行PDF文档操作，实现了从文件选择到最终输出的完整工作流程。
 
 ## 项目结构
 
-Media Toolbox是一个功能丰富的媒体处理工具集合，专注于在浏览器中提供各种媒体格式的转换和编辑功能。项目采用模块化架构设计，每个工具都独立封装并在注册表中统一管理。
+项目采用按功能模块组织的结构，PDF相关功能分布在以下位置：
 
 ```mermaid
 graph TB
 subgraph "组件层"
-PdfFilePreview[PdfFilePreview 组件]
-PdfPagePreview[PdfPagePreview 组件]
-PdfFullscreenPreview[PdfFullscreenPreview 组件]
+A[PdfFilePreview.tsx]
+B[PdfFullscreenPreview.tsx]
+C[PdfPagePreview.tsx]
 end
 subgraph "工具层"
-ExtractText[文本提取工具]
-ExtractImages[图像提取工具]
-MergePdf[MergePdf 工具]
-SplitPdf[SplitPdf 工具]
+D[MergePdf.tsx]
+E[SplitPdf.tsx]
 end
 subgraph "库层"
-Pdfjs[pdfjs-dist 库]
-PdfLib[pdf-lib 库]
-MediaPipeline[Media Pipeline]
-GetPdfPreview[PDF预览获取]
+F[pdfjs.ts]
+G[getPdfPreview.ts]
+H[merge/logic.ts]
+I[split/logic.ts]
 end
-subgraph "基础设施"
-Worker[PDF Worker]
-Canvas[Canvas 渲染]
-Intl[国际化系统]
-BlobURL[Blob URL管理]
-DndKit[@dnd-kit 拖拽系统]
+subgraph "类型定义"
+J[compress/types.ts]
 end
-PdfFilePreview --> Pdfjs
-PdfPagePreview --> Pdfjs
-PdfFullscreenPreview --> BlobURL
-PdfFullscreenPreview --> DndKit
-ExtractText --> Pdfjs
-ExtractImages --> Pdfjs
-MergePdf --> PdfLib
-MergePdf --> GetPdfPreview
-Pdfjs --> Worker
-PdfPagePreview --> Canvas
-PdfFilePreview --> Intl
-GetPdfPreview --> Pdfjs
+A --> F
+B --> F
+C --> F
+D --> A
+D --> B
+D --> G
+D --> H
+E --> A
+E --> G
+E --> I
+F --> K[pdfjs-dist]
+G --> F
+H --> L[pdf-lib]
+I --> L
+I --> M[fflate]
 ```
 
 **图表来源**
 - [PdfFilePreview.tsx:1-91](file://src/components/shared/PdfFilePreview.tsx#L1-L91)
-- [PdfPagePreview.tsx:1-80](file://src/components/shared/PdfPagePreview.tsx#L1-L80)
 - [PdfFullscreenPreview.tsx:1-76](file://src/components/shared/PdfFullscreenPreview.tsx#L1-L76)
-- [pdfjs.ts:1-16](file://src/lib/pdfjs.ts#L1-L16)
-- [getPdfPreview.ts:1-31](file://src/lib/pdf/getPdfPreview.ts#L1-L31)
+- [PdfPagePreview.tsx:1-92](file://src/components/shared/PdfPagePreview.tsx#L1-L92)
+- [MergePdf.tsx:1-670](file://src/tools/pdf/merge/MergePdf.tsx#L1-L670)
+- [SplitPdf.tsx:1-369](file://src/tools/pdf/split/SplitPdf.tsx#L1-L369)
 
 **章节来源**
-- [README.md:31](file://README.md#L31)
-- [package.json:11-38](file://package.json#L11-L38)
+- [package.json:11-34](file://package.json#L11-L34)
 
 ## 核心组件
 
-PDF文件预览组件由三个主要部分组成，每个部分都有特定的功能和职责：
+### PdfFilePreview 组件
 
-### 文件级预览组件
-PdfFilePreview组件负责显示单个PDF文件的基本信息，包括文件名、页数统计、文件大小和缩略图。它提供了文件替换和删除功能，使用户能够轻松管理上传的PDF文件。
+PdfFilePreview是PDF文件预览的核心组件，提供文件信息显示和交互功能：
 
-### 页面级预览组件
-PdfPagePreview组件专注于单个PDF页面的渲染和显示。它使用Canvas API将PDF页面转换为可交互的图像，支持页面选择和视觉反馈。
+- **文件信息展示**：显示文件名、页数、文件大小
+- **缩略图支持**：可选的PDF缩略图显示
+- **交互功能**：替换文件、删除文件按钮
+- **禁用状态**：支持禁用状态控制
 
-### 全屏预览组件
-PdfFullscreenPreview组件是新增的核心组件，替代了原有的PdfBlobPreview组件。它提供基于对话框的全屏PDF预览功能，通过iframe实现，支持实时预览合并后的PDF文件。组件具备以下特性：
-- 基于Dialog组件的全屏预览界面
-- 完善的可访问性支持，包括aria-label和键盘导航
-- 改进的资源管理，正确清理对象URL
-- 支持自定义标题和尺寸控制
-- 内置关闭按钮和对话框覆盖层
+### PdfFullscreenPreview 组件
 
-**更新** PdfFullscreenPreview组件替代了PdfBlobPreview组件，提供了更强大和用户友好的全屏预览体验。
+提供PDF文件的全屏预览功能：
+
+- **对话框界面**：模态对话框形式的全屏预览
+- **iframe集成**：使用浏览器内置PDF查看器
+- **动态URL管理**：安全的Blob URL创建和清理
+- **响应式设计**：适配不同屏幕尺寸
+
+### PdfPagePreview 组件
+
+用于渲染单个PDF页面的缩略图：
+
+- **Canvas渲染**：使用HTML5 Canvas渲染PDF页面
+- **缩放适配**：根据指定宽度自动计算缩放比例
+- **加载状态**：显示加载动画和页面号
+- **选中状态**：支持页面选中高亮显示
 
 **章节来源**
-- [PdfFilePreview.tsx:8-26](file://src/components/shared/PdfFilePreview.tsx#L8-L26)
-- [PdfPagePreview.tsx:7-23](file://src/components/shared/PdfPagePreview.tsx#L7-L23)
-- [PdfFullscreenPreview.tsx:13-18](file://src/components/shared/PdfFullscreenPreview.tsx#L13-L18)
+- [PdfFilePreview.tsx:8-91](file://src/components/shared/PdfFilePreview.tsx#L8-L91)
+- [PdfFullscreenPreview.tsx:13-76](file://src/components/shared/PdfFullscreenPreview.tsx#L13-L76)
+- [PdfPagePreview.tsx:7-92](file://src/components/shared/PdfPagePreview.tsx#L7-L92)
 
 ## 架构概览
 
-PDF预览系统的整体架构基于客户端渲染模式，所有PDF处理都在用户的浏览器中完成，无需服务器参与。这种设计确保了用户数据的隐私性和安全性。
+系统采用分层架构设计，各层职责明确：
 
 ```mermaid
-sequenceDiagram
-participant User as 用户
-participant Preview as 预览组件
-participant Pdfjs as pdfjs-dist
-participant Worker as PDF Worker
-participant Canvas as Canvas渲染
-participant FullscreenPreview as 全屏预览
-User->>Preview : 上传PDF文件
-Preview->>Pdfjs : 初始化PDF库
-Pdfjs->>Worker : 加载PDF Worker
-Preview->>Pdfjs : 获取PDF文档
-Pdfjs->>Worker : 解析PDF内容
-Worker-->>Pdfjs : 返回PDF数据
-Pdfjs-->>Preview : PDF文档对象
-Preview->>Pdfjs : 获取页面信息
-Pdfjs->>Worker : 请求页面数据
-Worker-->>Pdfjs : 返回页面数据
-Pdfjs-->>Preview : 页面对象数组
-Preview->>Canvas : 渲染页面到画布
-Canvas-->>User : 显示PDF页面预览
-User->>FullscreenPreview : 全屏预览合并后的PDF
-FullscreenPreview->>FullscreenPreview : 创建Blob URL并清理
-FullscreenPreview-->>User : 显示全屏PDF预览
+graph TB
+subgraph "用户界面层"
+UI1[文件上传区域]
+UI2[PDF卡片组件]
+UI3[全屏预览对话框]
+UI4[页面缩略图网格]
+end
+subgraph "业务逻辑层"
+BL1[MergePdf业务逻辑]
+BL2[SplitPdf业务逻辑]
+BL3[PDF处理工具]
+end
+subgraph "数据处理层"
+DL1[pdf-lib文档操作]
+DL2[pdf.js渲染引擎]
+DL3[文件压缩解压]
+end
+subgraph "外部依赖"
+ED1[浏览器PDF查看器]
+ED2[文件系统API]
+ED3[网络传输]
+end
+UI1 --> BL1
+UI2 --> BL1
+UI3 --> BL1
+UI4 --> BL2
+BL1 --> DL1
+BL2 --> DL1
+BL3 --> DL2
+DL1 --> ED1
+DL2 --> ED1
+BL1 --> ED2
+BL2 --> ED2
 ```
 
 **图表来源**
-- [pdfjs.ts:3-13](file://src/lib/pdfjs.ts#L3-L13)
-- [PdfPagePreview.tsx:27-52](file://src/components/shared/PdfPagePreview.tsx#L27-L52)
-- [PdfFullscreenPreview.tsx:29-40](file://src/components/shared/PdfFullscreenPreview.tsx#L29-L40)
+- [MergePdf.tsx:82-640](file://src/tools/pdf/merge/MergePdf.tsx#L82-L640)
+- [SplitPdf.tsx:36-369](file://src/tools/pdf/split/SplitPdf.tsx#L36-L369)
 
 ## 详细组件分析
 
-### PdfFilePreview 组件分析
+### PdfFilePreview 组件详细分析
 
-PdfFilePreview组件是一个功能完整的PDF文件信息展示组件，具有以下特性：
-
-#### 组件接口设计
-组件接受多个属性来控制其行为和外观：
-- `file`: 要预览的PDF文件对象
-- `pageCount`: PDF文档的总页数（可选）
-- `thumbnail`: PDF文件的缩略图URL（可选）
-- `disabled`: 是否禁用组件交互
-- `onReplace`: 文件替换回调函数
-- `onRemove`: 文件移除回调函数
-- `extraInfo`: 额外的显示信息
-
-#### 视觉设计与交互
-组件采用简洁的卡片式布局，左侧显示文件缩略图或占位图标，右侧显示文件信息，右侧包含操作按钮。支持文件替换和删除功能，提供直观的用户交互体验。
+PdfFilePreview组件实现了完整的PDF文件信息展示功能：
 
 ```mermaid
 classDiagram
@@ -192,314 +185,205 @@ class PdfFilePreview {
 +handleReplace() void
 +handleRemove() void
 }
-PdfFilePreview --> PdfFilePreviewProps : 使用
+PdfFilePreview --> PdfFilePreviewProps : "接收参数"
+PdfFilePreview --> FileText : "文件图标"
+PdfFilePreview --> RefreshCw : "替换按钮"
+PdfFilePreview --> X : "删除按钮"
 ```
 
 **图表来源**
 - [PdfFilePreview.tsx:8-26](file://src/components/shared/PdfFilePreview.tsx#L8-L26)
 
-**章节来源**
-- [PdfFilePreview.tsx:18-90](file://src/components/shared/PdfFilePreview.tsx#L18-L90)
+组件特性：
+- **国际化支持**：使用next-intl实现多语言支持
+- **文件信息格式化**：自动格式化文件大小显示
+- **事件处理**：封装文件替换和删除操作
+- **可访问性**：支持禁用状态和键盘导航
 
-### PdfPagePreview 组件分析
+### PdfFullscreenPreview 组件序列图
 
-PdfPagePreview组件专注于单个PDF页面的渲染和显示，是PDF预览系统的核心渲染组件。
+```mermaid
+sequenceDiagram
+participant User as 用户
+participant Component as PdfFullscreenPreview
+participant URL as Blob URL管理
+participant Browser as 浏览器PDF查看器
+User->>Component : 打开全屏预览
+Component->>URL : 创建Blob URL
+URL-->>Component : 返回临时URL
+Component->>Browser : 加载iframe
+Browser-->>User : 显示PDF内容
+User->>Component : 关闭预览
+Component->>URL : 释放Blob URL
+URL-->>Component : 清理完成
+```
 
-#### 渲染机制
-组件使用pdfjs-dist库提供的Canvas渲染功能，将PDF页面转换为高质量的图像输出。渲染过程包括：
-1. 获取PDF页面对象
-2. 计算合适的缩放比例
-3. 创建Canvas元素
-4. 使用PDF上下文渲染页面
-5. 将渲染结果显示在页面上
+**图表来源**
+- [PdfFullscreenPreview.tsx:20-40](file://src/components/shared/PdfFullscreenPreview.tsx#L20-L40)
 
-#### 性能优化
-组件实现了多种性能优化策略：
-- 异步渲染避免阻塞主线程
-- 取消机制防止组件卸载时的内存泄漏
-- 按需加载和渲染
-- 缓存机制减少重复计算
+### PdfPagePreview 组件算法流程
 
 ```mermaid
 flowchart TD
-Start([组件挂载]) --> GetPage[获取PDF页面]
-GetPage --> CalcScale[计算缩放比例]
-CalcScale --> CreateCanvas[创建Canvas元素]
-CreateCanvas --> RenderPage[渲染PDF页面]
+Start([组件挂载]) --> LoadPage[获取PDF页面]
+LoadPage --> CalcScale[计算缩放比例]
+CalcScale --> SetupCanvas[设置Canvas尺寸]
+SetupCanvas --> GetContext[获取2D上下文]
+GetContext --> RenderPage[渲染PDF页面到Canvas]
 RenderPage --> UpdateState[更新加载状态]
-UpdateState --> Display[显示渲染结果]
-Display --> End([渲染完成])
-GetPage --> Cancelled{组件是否取消?}
-Cancelled --> |是| Cleanup[清理资源]
-Cancelled --> |否| CalcScale
-Cleanup --> End
+UpdateState --> ShowCanvas[显示Canvas]
+CalcScale --> Error{错误处理}
+GetContext --> Error
+RenderPage --> Error
+Error --> SetLoadingFalse[设置加载失败]
 ```
 
 **图表来源**
-- [PdfPagePreview.tsx:27-52](file://src/components/shared/PdfPagePreview.tsx#L27-L52)
+- [PdfPagePreview.tsx:31-56](file://src/components/shared/PdfPagePreview.tsx#L31-L56)
 
 **章节来源**
-- [PdfPagePreview.tsx:16-79](file://src/components/shared/PdfPagePreview.tsx#L16-L79)
+- [PdfFilePreview.tsx:18-91](file://src/components/shared/PdfFilePreview.tsx#L18-L91)
+- [PdfFullscreenPreview.tsx:20-76](file://src/components/shared/PdfFullscreenPreview.tsx#L20-L76)
+- [PdfPagePreview.tsx:18-92](file://src/components/shared/PdfPagePreview.tsx#L18-L92)
 
-### PdfFullscreenPreview 组件分析
+### PDF处理工具链分析
 
-PdfFullscreenPreview组件是新增的核心组件，替代了原有的PdfBlobPreview组件。它提供了基于对话框的全屏PDF预览功能，具备以下特性：
-
-#### Blob URL管理
-组件使用URL.createObjectURL()创建临时URL，将Blob对象转换为可访问的URL，然后在iframe中显示。组件会在卸载时自动清理URL，防止内存泄漏。清理过程包括：
-- 在effect cleanup中调用URL.revokeObjectURL()
-- 设置url状态为null以避免重新打开时的stale引用
-- 确保组件卸载时完全清理资源
-
-#### 组件接口设计
-组件接受以下属性：
-- `blob`: 要预览的PDF Blob对象
-- `title`: 对话框标题，默认"PDF Preview"
-- `open`: 控制对话框打开状态
-- `onOpenChange`: 处理对话框状态变化的回调函数
-
-#### 渲染机制
-组件通过对话框组件包装iframe实现全屏预览，提供接近原生PDF查看器的用户体验。对话框具备以下特点：
-- 黑色半透明覆盖层
-- 最大宽度1400px，高度92vh的容器
-- 内置关闭按钮和标题
-- 支持键盘导航和可访问性标签
-
-```mermaid
-flowchart TD
-Start([组件挂载]) --> CheckBlob[检查blob和open状态]
-CheckBlob --> |有效| CreateURL[创建Blob URL]
-CheckBlob --> |无效| ReturnNull[返回null]
-CreateURL --> SetState[设置URL状态]
-SetState --> RenderDialog[渲染对话框]
-RenderDialog --> RenderIframe[渲染iframe]
-RenderIframe --> Display[显示全屏PDF预览]
-Display --> Cleanup[组件卸载时清理URL]
-Cleanup --> End([结束])
-```
-
-**图表来源**
-- [PdfFullscreenPreview.tsx:29-40](file://src/components/shared/PdfFullscreenPreview.tsx#L29-L40)
-
-**章节来源**
-- [PdfFullscreenPreview.tsx:20-75](file://src/components/shared/PdfFullscreenPreview.tsx#L20-L75)
-
-### pdfjs库配置分析
-
-pdfjs库的配置是整个PDF预览系统的基础，确保pdfjs-dist库正确初始化并设置Worker路径。
-
-#### Worker配置
-组件确保pdfjs-dist库只初始化一次，避免重复配置导致的性能问题。Worker路径通过动态URL构建，确保在不同部署环境下都能正确加载。
-
-#### 类型导出
-库还导出了PDFDocumentProxy类型，为其他组件提供类型安全的PDF文档操作能力。
-
-**章节来源**
-- [pdfjs.ts:1-16](file://src/lib/pdfjs.ts#L1-L16)
-
-### PDF预览获取工具
-
-getPdfPreview工具函数提供PDF文件的快速预览功能，用于生成缩略图和获取页面信息。
-
-#### 功能特性
-- 支持自定义缩略图宽度
-- 返回PDF文档对象、页数和缩略图数据URL
-- 使用Canvas渲染PDF第一页作为缩略图
-
-#### 性能优化
-- 异步处理避免阻塞主线程
-- Canvas渲染优化缩略图质量
-- 错误处理确保组件稳定性
-
-**章节来源**
-- [getPdfPreview.ts:10-30](file://src/lib/pdf/getPdfPreview.ts#L10-L30)
-
-### 文件大小格式化工具
-
-formatFileSize工具函数提供友好的文件大小显示格式，支持字节、KB、MB的自动转换。
-
-**章节来源**
-- [formatFileSize.ts:1-6](file://src/lib/utils/formatFileSize.ts#L1-L6)
-
-## 依赖关系分析
-
-PDF预览组件的依赖关系相对简单但功能完整，主要依赖于pdfjs-dist库、pdf-lib库和相关的工具函数。
+系统使用了完整的PDF处理工具链：
 
 ```mermaid
 graph LR
-subgraph "外部依赖"
-PdfjsDist[pdfjs-dist v5.5.207]
-PdfLib[pdf-lib 1.17.1]
-Fflate[fflate 0.8.2]
-NextIntl[next-intl 4.8.3]
-DndKit[@dnd-kit v6.3.1]
-End
-subgraph "内部组件"
-PdfFilePreview[PdfFilePreview]
-PdfPagePreview[PdfPagePreview]
-PdfFullscreenPreview[PdfFullscreenPreview]
-PdfjsConfig[pdfjs配置]
-FormatUtils[格式化工具]
-GetPdfPreview[PDF预览获取]
-End
-subgraph "工具实现"
-ExtractImages[图像提取逻辑]
-ExtractText[文本提取逻辑]
-MergePdf[MergePdf逻辑]
-PdfDetailDialog[Pdf详情对话框]
-End
-PdfFilePreview --> PdfjsDist
-PdfPagePreview --> PdfjsDist
-PdfFullscreenPreview --> BlobURL
-PdfFullscreenPreview --> DndKit
-PdfFilePreview --> NextIntl
-PdfPagePreview --> FormatUtils
-PdfFullscreenPreview --> GetPdfPreview
-PdfjsConfig --> PdfjsDist
-ExtractImages --> PdfjsDist
-ExtractImages --> Fflate
-MergePdf --> PdfLib
-MergePdf --> GetPdfPreview
-MergePdf --> PdfDetailDialog
-PdfDetailDialog --> PdfPagePreview
+subgraph "PDF渲染层"
+A[pdf.js]
+B[pdfjs-dist]
+end
+subgraph "PDF操作层"
+C[pdf-lib]
+D[HEIC转换]
+end
+subgraph "文件处理层"
+E[fflate ZIP]
+F[文件压缩]
+end
+subgraph "图像处理层"
+G[Canvas渲染]
+H[图像格式转换]
+end
+A --> C
+B --> A
+C --> E
+D --> H
+F --> G
 ```
 
 **图表来源**
-- [package.json:31](file://package.json#L31)
-- [package.json:19](file://package.json#L19)
-- [package.json:28](file://package.json#L28)
+- [getPdfPreview.ts:24-72](file://src/lib/pdf/getPdfPreview.ts#L24-L72)
+- [logic.ts（合并）:1-141](file://src/tools/pdf/merge/logic.ts#L1-L141)
+- [logic.ts（拆分）:1-462](file://src/tools/pdf/split/logic.ts#L1-L462)
 
 **章节来源**
-- [package.json:11-38](file://package.json#L11-L38)
+- [pdfjs.ts:1-16](file://src/lib/pdfjs.ts#L1-L16)
+- [getPdfPreview.ts:4-72](file://src/lib/pdf/getPdfPreview.ts#L4-L72)
+
+## 依赖关系分析
+
+系统依赖关系清晰，主要依赖包括：
+
+```mermaid
+graph TB
+subgraph "核心依赖"
+A[next]
+B[react]
+C[react-dom]
+D[next-intl]
+end
+subgraph "PDF处理依赖"
+E[pdfjs-dist]
+F[pdf-lib]
+G[heic2any]
+end
+subgraph "工具库依赖"
+H[fflate]
+I[@dnd-kit]
+J[tailwind-merge]
+end
+subgraph "UI组件依赖"
+K[lucide-react]
+L[clsx]
+M[tailwindcss]
+end
+A --> B
+B --> C
+D --> A
+E --> A
+F --> E
+G --> A
+H --> A
+I --> A
+J --> M
+K --> B
+L --> J
+```
+
+**图表来源**
+- [package.json:11-34](file://package.json#L11-L34)
+
+**章节来源**
+- [package.json:11-55](file://package.json#L11-L55)
 
 ## 性能考虑
 
-PDF预览组件在设计时充分考虑了性能优化，特别是在处理大型PDF文件时的用户体验。
+系统在性能方面采用了多项优化策略：
 
-### 渲染性能优化
-- 异步渲染：使用Promise和async/await避免阻塞UI线程
-- 取消机制：组件卸载时自动清理渲染任务
-- 按需加载：只在需要时才进行PDF页面渲染
-- 内存管理：及时释放Canvas和PDF对象的内存
-- Blob URL清理：PdfFullscreenPreview组件自动清理临时URL
+### 并发处理
+- **PDF加载并发**：合并工具支持最多3个PDF同时加载
+- **异步渲染**：页面渲染使用异步方式避免阻塞主线程
+- **内存管理**：及时释放Blob URL和PDF文档对象
 
-### 用户体验优化
-- 加载指示器：渲染过程中显示加载状态
-- 错误处理：优雅处理渲染失败的情况
-- 响应式设计：支持不同屏幕尺寸的适配
-- 无障碍访问：提供适当的ARIA标签和键盘导航
-- 实时预览：合并PDF后立即显示全屏预览结果
+### 渲染优化
+- **Canvas复用**：避免重复创建Canvas元素
+- **缩放计算**：智能计算缩放比例减少渲染开销
+- **懒加载**：仅在需要时渲染页面内容
 
-### 合并工具优化
-- 并发加载：使用Promise.all并发加载多个PDF
-- 进度跟踪：显示合并进度和状态
-- 内存管理：及时释放PDF文档对象
-- 错误恢复：单个文件加载失败不影响整体流程
-- 拖拽排序：使用@dnd-kit实现PDF文件的拖拽排序功能
-
-**更新** 新增的@dnd-kit依赖提供了强大的拖拽功能，支持PDF文件的拖拽排序、键盘导航和触摸设备支持。
-
-**章节来源**
-- [PdfPagePreview.tsx:27-52](file://src/components/shared/PdfPagePreview.tsx#L27-L52)
-- [PdfFullscreenPreview.tsx:29-40](file://src/components/shared/PdfFullscreenPreview.tsx#L29-L40)
-- [MergePdf.tsx:105-114](file://src/tools/pdf/merge/MergePdf.tsx#L105-L114)
+### 内存管理
+- **资源清理**：组件卸载时自动清理所有资源
+- **URL回收**：使用后立即释放Blob URL
+- **对象销毁**：PDF文档对象使用后及时销毁
 
 ## 故障排除指南
 
 ### 常见问题及解决方案
 
-#### PDF渲染失败
-**症状**：PDF页面无法正常显示，只显示加载状态
-**可能原因**：
-- PDF文件损坏或格式不支持
-- 浏览器兼容性问题
-- 内存不足导致渲染失败
+**PDF加密问题**
+- **症状**：打开加密PDF时报错
+- **原因**：缺少密码或密码错误
+- **解决**：捕获PdfEncryptedError和PdfWrongPasswordError异常
 
-**解决方法**：
-1. 验证PDF文件的完整性和格式
-2. 更新浏览器到最新版本
-3. 关闭其他占用内存的应用程序
-4. 尝试重新加载页面
+**Canvas渲染失败**
+- **症状**：页面缩略图无法显示
+- **原因**：Canvas 2D上下文不可用
+- **解决**：检查浏览器兼容性和Canvas支持
 
-#### Worker加载错误
-**症状**：控制台出现Worker相关的错误信息
-**可能原因**：
-- Worker文件路径配置错误
-- 网络问题导致Worker文件无法加载
-- CSP策略阻止Worker执行
-
-**解决方法**：
-1. 检查Worker文件的URL配置
-2. 验证网络连接和文件可用性
-3. 检查CSP策略设置
-
-#### 全屏预览问题
-**症状**：PdfFullscreenPreview组件无法显示PDF内容
-**可能原因**：
-- Blob对象为空或已失效
-- URL.createObjectURL失败
-- 对话框组件渲染异常
-- 组件卸载时机不当导致URL清理过早
-
-**解决方法**：
-1. 验证Blob对象的有效性
-2. 检查Blob的类型和大小
-3. 确认对话框组件的正确渲染
-4. 查看组件生命周期和URL清理时机
-5. 检查浏览器控制台的错误信息
-
-#### 拖拽功能问题
-**症状**：@dnd-kit拖拽功能无法正常使用
-**可能原因**：
-- 拖拽传感器配置错误
-- 事件处理器冲突
-- 样式或z-index问题
-- 触摸设备支持不足
-
-**解决方法**：
-1. 检查PointerSensor和KeyboardSensor的配置
-2. 验证sortable组件的items属性
-3. 确认CSS样式和交互元素的层级关系
-4. 测试触摸设备上的拖拽功能
-
-#### 性能问题
-**症状**：大PDF文件渲染缓慢或页面卡顿
-**可能原因**：
-- PDF文件过大
-- 设备性能不足
-- 同时渲染的页面过多
-
-**解决方法**：
-1. 优化PDF文件大小
-2. 减少同时渲染的页面数量
-3. 提升设备硬件性能
-4. 使用PdfFullscreenPreview组件进行全屏预览
-
-**更新** 新增的全屏预览组件和拖拽功能可能带来额外的性能开销，需要合理配置和优化。
+**内存泄漏**
+- **症状**：长时间使用后内存占用持续增长
+- **原因**：Blob URL未正确释放
+- **解决**：确保在组件卸载时调用URL.revokeObjectURL
 
 **章节来源**
-- [PdfPagePreview.tsx:47-51](file://src/components/shared/PdfPagePreview.tsx#L47-L51)
-- [PdfFullscreenPreview.tsx:29-40](file://src/components/shared/PdfFullscreenPreview.tsx#L29-L40)
-- [MergePdf.tsx:105-114](file://src/tools/pdf/merge/MergePdf.tsx#L105-L114)
+- [getPdfPreview.ts:10-22](file://src/lib/pdf/getPdfPreview.ts#L10-L22)
+- [PdfFullscreenPreview.tsx:32-39](file://src/components/shared/PdfFullscreenPreview.tsx#L32-L39)
 
 ## 结论
 
-PDF文件预览组件是Media Toolbox项目中的重要组成部分，它成功地实现了完全在客户端运行的PDF处理功能。通过精心设计的组件架构和性能优化策略，该组件为用户提供了流畅、安全、可靠的PDF预览体验。
+PDF文件预览组件是一个功能完整、架构清晰的PDF处理系统。它成功地整合了文件上传、预览、全屏查看、页面渲染等多种功能，为用户提供了一站式的PDF处理解决方案。
 
-组件的主要优势包括：
-- **隐私保护**：所有PDF处理都在本地浏览器中完成，无需上传到服务器
-- **性能优化**：异步渲染和内存管理确保良好的用户体验
-- **功能完整**：支持基本的PDF文件信息显示、页面渲染和全屏预览
-- **易于集成**：清晰的接口设计便于在其他组件中复用
-- **实时预览**：新增的PdfFullscreenPreview组件提供最接近原生PDF查看器的体验
+系统的主要优势包括：
+- **模块化设计**：组件职责明确，易于维护和扩展
+- **性能优化**：采用并发处理和智能缓存策略
+- **用户体验**：提供流畅的交互体验和友好的界面设计
+- **技术栈先进**：使用最新的React和PDF处理技术
 
-**更新** 新增的PdfFullscreenPreview组件显著增强了PDF预览功能，特别是在合并PDF工具中提供了实时全屏预览能力，用户可以立即看到合并结果的完整PDF视图，而不仅仅是页面缩略图。同时，@dnd-kit拖拽功能的引入使得PDF文件管理更加直观和高效。
-
-未来可以考虑的改进方向包括：
-- 添加PDF页面的缩放和滚动功能
-- 实现PDF页面的选择和标记功能
-- 增加PDF注释和高亮显示功能
-- 优化大文件的处理性能
-- 扩展全屏预览组件的功能，支持更多PDF查看器特性
-- 集成更多的可访问性功能，如屏幕阅读器支持
-- 实现PDF页面的批量操作和高级编辑功能
+未来可以考虑的功能增强包括：
+- 更丰富的PDF编辑功能
+- 支持更多PDF标准特性
+- 增强的错误处理和恢复机制
+- 更好的移动端适配
